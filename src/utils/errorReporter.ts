@@ -12,14 +12,12 @@ export interface ErrorReport {
   url: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   context?: Record<string, unknown>;
-}
 export interface ErrorReporterConfig {
   enableConsoleLogging: boolean;
   enableRemoteLogging: boolean;
   remoteEndpoint?: string;
   maxErrorsInMemory: number;
   captureContext: boolean;
-}
 const _defaultConfig: ErrorReporterConfig = {
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
@@ -36,16 +34,13 @@ export class ErrorReporter {
   private errorCount: Map<string, number> = new Map();
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
     this.config = { ...defaultConfig, ...config };
-  }
   /**
    * Get singleton instance
    */
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
     if (!ErrorReporter.instance) {
       ErrorReporter.instance = new ErrorReporter(config);
-    }
     return ErrorReporter.instance;
-  }
   /**
    * Report an error with full context
    */
@@ -70,16 +65,12 @@ export class ErrorReporter {
     this.errorQueue.push(errorReport);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {
       this.errorQueue.shift();
-    }
     // Console logging
     if (this.config.enableConsoleLogging) {
       this.logToConsole(errorReport);
-    }
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
       this.sendToRemote(errorReport);
-    }
-  }
   /**
    * Log error to console with formatting
    */
@@ -87,21 +78,13 @@ export class ErrorReporter {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {
-      }
     if (process.env['NODE_ENV'] === 'development') {
-      }
     if (process.env['NODE_ENV'] === 'development') {
-      }
     if (report.stack) {
       if (process.env['NODE_ENV'] === 'development') {
-        }
-    }
     if (report.context) {
       if (process.env['NODE_ENV'] === 'development') {
-        }
-    }
     console.groupEnd();
-  }
   /**
    * Get console styling based on severity
    */
@@ -113,7 +96,6 @@ export class ErrorReporter {
       critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
     };
     return styles[severity];
-  }
   /**
    * Send error to remote logging service
    */
@@ -131,15 +113,11 @@ export class ErrorReporter {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
         logger.warn('Failed to send error to remote endpoint:', error);
-      }
-    }
-  }
   /**
    * Get all errors in queue
    */
   getErrorQueue(): ErrorReport[] {
     return [...this.errorQueue];
-  }
   /**
    * Get error statistics
    */
@@ -153,14 +131,12 @@ export class ErrorReporter {
       uniqueErrors: this.errorCount.size,
       errorsByType: Object.fromEntries(this.errorCount)
     };
-  }
   /**
    * Clear error queue
    */
   clearQueue(): void {
     this.errorQueue = [];
     this.errorCount.clear();
-  }
   /**
    * Export errors as JSON
    */
@@ -174,8 +150,6 @@ export class ErrorReporter {
       null,
       2
     );
-  }
-}
 /**
  * Convenience function to report errors
  */

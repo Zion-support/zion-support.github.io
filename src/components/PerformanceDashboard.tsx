@@ -5,14 +5,12 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   fps: number;
-}
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
   [key: string]: number;
-}
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -37,7 +35,6 @@ const PerformanceDashboard: React.FC = () => {
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
-      }
       // Measure FPS (simplified)
       let _fps = 0;
       if ('requestAnimationFrame' in window) {
@@ -49,11 +46,9 @@ const PerformanceDashboard: React.FC = () => {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
             lastTime = currentTime;
-          }
           requestAnimationFrame(measureFPS);
         };
         requestAnimationFrame(measureFPS);
-      }
       setMetrics({
         loadTime,
         renderTime,
@@ -75,7 +70,6 @@ const PerformanceDashboard: React.FC = () => {
         Show Performance
       </button>
     );
-  }
   return (
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">

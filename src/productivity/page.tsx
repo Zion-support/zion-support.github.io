@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -118,7 +114,6 @@ const ProductivityPage: React.FC = () => {
       marketPrice: '$25-50/month',
       category: 'Habit Tracking',
       technologies: ['React Native', 'Python', 'MongoDB', 'AI/ML', 'Push Notifications']
-    }
   ];
 
   const categories = [...new Set(productivityTools.map(tool => tool.category))];

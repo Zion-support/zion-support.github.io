@@ -6,8 +6,6 @@ interface LoadingSpinnerProps {
   className?: string;
   text?: string;
   fullScreen?: boolean;
-}
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   className,
@@ -45,8 +43,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {spinner}
       </div>
     );
-  }
-
   return spinner;
 };
 

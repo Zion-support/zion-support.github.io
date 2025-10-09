@@ -5,7 +5,6 @@ interface ModernLoadingSpinnerProps {
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
   fullScreen?: boolean;
-}
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',

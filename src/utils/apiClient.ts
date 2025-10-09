@@ -9,20 +9,17 @@ export interface ApiClientConfig {
   retryDelay?: number;
   headers?: Record<string, string>;
   cacheOptions?: CacheOptions;
-}
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
   cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
-}
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
   headers: Headers;
-}
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -31,8 +28,6 @@ export class ApiError extends Error {
   ) {
     super(message);
     this.name = 'ApiError';
-  }
-}
 class ApiClient {
   private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
     baseURL: string;
@@ -50,7 +45,6 @@ class ApiClient {
       },
       cacheOptions: config.cacheOptions
     };
-  }
   /**
    * GET request
    */
@@ -63,7 +57,6 @@ class ApiClient {
       url,
       method: 'GET'
     });
-  }
   /**
    * POST request
    */
@@ -78,7 +71,6 @@ class ApiClient {
       method: 'POST',
       body: JSON.stringify(data)
     });
-  }
   /**
    * PUT request
    */
@@ -93,7 +85,6 @@ class ApiClient {
       method: 'PUT',
       body: JSON.stringify(data)
     });
-  }
   /**
    * DELETE request
    */
@@ -106,7 +97,6 @@ class ApiClient {
       url,
       method: 'DELETE'
     });
-  }
   /**
    * PATCH request
    */
@@ -121,7 +111,6 @@ class ApiClient {
       method: 'PATCH',
       body: JSON.stringify(data)
     });
-  }
   /**
    * Main request method with retry logic
    */
@@ -148,8 +137,6 @@ class ApiClient {
           statusText: 'OK (cached)',
           headers: new Headers()
         };
-      }
-    }
     // Create abort controller for timeout
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
@@ -177,18 +164,15 @@ class ApiClient {
             response.status,
             await response.text()
           );
-        }
         const contentType = response.headers.get('content-type');
         let data: T;
         if (contentType?.includes('application/json')) {
           data = await response.json();
         } else {
           data = (await response.text()) as T;
-        }
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
           cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
-        }
         return {
           data,
           status: response.status,
@@ -212,22 +196,15 @@ class ApiClient {
               method,
               attempt
             });
-          }
-        }
         // Don't retry on certain errors
         if (error instanceof ApiError && error.status < 500) {
           throw error;
-        }
         // Wait before retrying
         if (attempt < retries) {
           await this.delay(this.config.retryDelay * attempt);
-        }
-      }
-    }
     clearTimeout(timeoutId);
     this.abortControllers.delete(cacheKey);
     throw lastError || new Error('Request failed');
-  }
   /**
    * Cancel a pending request
    */
@@ -237,8 +214,6 @@ class ApiClient {
     if (controller) {
       controller.abort();
       this.abortControllers.delete(cacheKey);
-    }
-  }
   /**
    * Cancel all pending requests
    */
@@ -247,7 +222,6 @@ class ApiClient {
       controller.abort();
     });
     this.abortControllers.clear();
-  }
   /**
    * Update default config
    */
@@ -258,27 +232,22 @@ class ApiClient {
       headers: {
         ...this.config.headers,
         ...(config.headers || {})
-      }
     };
-  }
   /**
    * Set authorization header
    */
   setAuthToken(token: string): void {
     this.config.headers['Authorization'] = `Bearer ${token}`;
-  }
   /**
    * Remove authorization header
    */
   removeAuthToken(): void {
     delete this.config.headers['Authorization'];
-  }
   /**
    * Delay helper
    */
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
   /**
    * Health check
    */
@@ -288,9 +257,6 @@ class ApiClient {
       return response.status === 200;
     } catch {
       return false;
-    }
-  }
-}
 // Create default instance
 const apiClient = new ApiClient({
   baseURL: process.env.NEXT_PUBLIC_API_URL || '',
@@ -299,7 +265,6 @@ const apiClient = new ApiClient({
   retryDelay: 1000,
   cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
-  }
 });
 // Export both the class and default instance
 export { apiClient };

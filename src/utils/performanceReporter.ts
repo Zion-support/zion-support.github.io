@@ -9,7 +9,6 @@ export interface PerformanceMetric {
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   timestamp: number;
-}
 export interface PerformanceReport {
   metrics: PerformanceMetric[];
   navigation?: PerformanceNavigationTiming;
@@ -17,7 +16,6 @@ export interface PerformanceReport {
   timestamp: number;
   userAgent: string;
   url: string;
-}
 class PerformanceReporter {
   private metrics: PerformanceMetric[] = []
   private reportingInterval?: NodeJS.Timeout
@@ -28,11 +26,9 @@ class PerformanceReporter {
   init(config?: { enabled?: boolean; reportInterval?: number }): void {
     if (typeof window === 'undefined') {
       return
-    }
     this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production'
     if (!this.isEnabled) {
       return
-    }
     // Monitor Core Web Vitals
     this.monitorWebVitals()
     // Monitor navigation timing
@@ -44,19 +40,16 @@ class PerformanceReporter {
       this.reportingInterval = setInterval(() => {
         this.report()
       }, config.reportInterval)
-    }
     // Report on page unload
     window.addEventListener('beforeunload', () => {
       this.report()
     })
-  }
   /**
    * Monitor Core Web Vitals using PerformanceObserver
    */
   private monitorWebVitals(): void {
     if (typeof PerformanceObserver === 'undefined') {
       return
-    }
     try {
       // Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((entryList) => {
@@ -66,7 +59,6 @@ class PerformanceReporter {
           const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime || 
                        (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
           this.addMetric('LCP', value, this.getRating('lcp', value));
-        }
       })
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })
       // First Input Delay (FID)
@@ -76,7 +68,6 @@ class PerformanceReporter {
           if ('processingStart' in entry && 'startTime' in entry) {
             const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
             this.addMetric('FID', value, this.getRating('fid', value));
-          }
         })
       })
       fidObserver.observe({ type: 'first-input', buffered: true })
@@ -86,7 +77,6 @@ class PerformanceReporter {
         entryList.getEntries().forEach((entry) => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
-          }
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
       })
@@ -97,21 +87,17 @@ class PerformanceReporter {
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
-          }
         })
       })
       fcpObserver.observe({ type: 'paint', buffered: true })
     } catch (error) {
       logger.warn('Failed to setup Web Vitals monitoring', { error })
-    }
-  }
   /**
    * Monitor navigation timing
    */
   private monitorNavigationTiming(): void {
     if (typeof window === 'undefined' || !window.performance) {
       return
-    }
     window.addEventListener('load', () => {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -125,17 +111,14 @@ class PerformanceReporter {
           // Load Complete
           const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
-        }
       }, 0)
     })
-  }
   /**
    * Monitor resource timing
    */
   private monitorResourceTiming(): void {
     if (typeof window === 'undefined' || !window.performance) {
       return
-    }
     window.addEventListener('load', () => {
       setTimeout(() => {
         const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
@@ -153,7 +136,6 @@ class PerformanceReporter {
         })
       }, 0)
     })
-  }
   /**
    * Add a performance metric
    */
@@ -168,10 +150,8 @@ class PerformanceReporter {
     // Log poor performing metrics
     if (rating === 'poor') {
       logger.warn(`Poor ${name} performance`, { value, rating })
-    }
     // Send to analytics
     this.sendToAnalytics(metric)
-  }
   /**
    * Get performance rating based on thresholds
    */
@@ -188,22 +168,17 @@ class PerformanceReporter {
     const threshold = thresholds[metric.toLowerCase()]
     if (!threshold) {
       return 'good'
-    }
     if (value <= threshold.good) {
       return 'good'
-    }
     if (value <= threshold.poor) {
       return 'needs-improvement'
-    }
     return 'poor'
-  }
   /**
    * Send metric to analytics
    */
   private sendToAnalytics(metric: PerformanceMetric): void {
     if (typeof window === 'undefined') {
       return
-    }
     // Google Analytics
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
@@ -212,15 +187,12 @@ class PerformanceReporter {
         event_label: metric.rating,
         non_interaction: true
       })
-    }
-  }
   /**
    * Generate performance report
    */
   private generateReport(): PerformanceReport | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null
-    }
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
     return {
@@ -230,19 +202,15 @@ class PerformanceReporter {
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    }
-  }
   /**
    * Report performance data
    */
   report(): void {
     if (!this.isEnabled) {
       return
-    }
     const report = this.generateReport()
     if (!report) {
       return
-    }
     logger.info('Performance Report', {
       metrics: report.metrics,
       navigation: {
@@ -250,21 +218,16 @@ class PerformanceReporter {
           report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null
-      }
     })
     // Send to remote endpoint if configured
     // this.sendToEndpoint(report)
-  }
   /**
    * Cleanup and stop reporting
    */
   destroy(): void {
     if (this.reportingInterval) {
       clearInterval(this.reportingInterval)
-    }
     this.metrics = []
-  }
-}
 // Export singleton instance
 export const performanceReporter = new PerformanceReporter()
 // Auto-initialize in browser
@@ -273,5 +236,4 @@ if (typeof window !== 'undefined') {
     enabled: process.env['NODE_ENV'] === 'production',
     reportInterval: 60000, // Report every minute
   })
-}
 export default performanceReporter

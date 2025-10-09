@@ -54,7 +54,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       readingTime: '45 min read',
       featured: true,
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
-    }
   ];
   const categories = [
     { id: 'all', name: 'All Content' },

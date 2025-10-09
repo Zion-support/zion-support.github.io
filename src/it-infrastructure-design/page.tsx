@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Settings, Target, BarChart, Shield, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ITInfrastructureDesignPage: React.FC = () => {
       title: 'Security Design',
       description: 'Security-first infrastructure design principles',
       benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
-    }
   ];
 
   return (

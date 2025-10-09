@@ -29,7 +29,6 @@ const AIABTestingPage: React.FC = () => {
       title: 'Analytics & Reporting',
       description: 'Comprehensive testing analytics and reporting',
       benefits: ['Test metrics', 'Performance reports', 'Insight generation']
-    }
   ];
 
   return (

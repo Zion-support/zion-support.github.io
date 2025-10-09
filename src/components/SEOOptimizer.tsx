@@ -9,8 +9,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
   ogImage?: string;
   twitterCard?: string;
-}
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -35,8 +33,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
       meta.name = 'description';
       meta.content = description;
       document.head.appendChild(meta);
-    }
-
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
@@ -46,8 +42,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
       meta.name = 'keywords';
       meta.content = keywords.join(', ');
       document.head.appendChild(meta);
-    }
-
     // Update canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
@@ -57,8 +51,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
       canonical.rel = 'canonical';
       canonical.href = canonicalUrl;
       document.head.appendChild(canonical);
-    }
-
     // Update Open Graph tags
     const updateMetaProperty = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
@@ -69,7 +61,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
         meta.setAttribute('property', property);
         meta.content = content;
         document.head.appendChild(meta);
-      }
     };
 
     updateMetaProperty('og:title', fullTitle);
@@ -88,7 +79,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
         meta.setAttribute('name', name);
         meta.content = content;
         document.head.appendChild(meta);
-      }
     };
 
     updateMetaName('twitter:card', twitterCard);
@@ -102,7 +92,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
-    }
   }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
 
   return null;

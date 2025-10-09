@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 
@@ -138,7 +134,6 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$4,500-12,000/month',
       category: 'Data Management',
       technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
-    }
   ];
 
   const categories = [...new Set(iotServices.map(service => service.category))];

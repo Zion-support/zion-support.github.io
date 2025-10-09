@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 
@@ -43,7 +38,6 @@ const SmartAnalyticsPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
-    }
   ];
 
   const pricingPlans = [
@@ -92,7 +86,6 @@ const SmartAnalyticsPage: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
   ];
 
   return (

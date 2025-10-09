@@ -10,8 +10,6 @@ interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
-}
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -33,13 +31,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Apply high contrast mode
       if (enableHighContrast && prefersHighContrast) {
         document.documentElement.classList.add('high-contrast');
-      }
-
       // Apply reduced motion
       if (prefersReducedMotion) {
         document.documentElement.classList.add('reduced-motion');
-      }
-    }
   }, [enableHighContrast]);
 
   useEffect(() => {
@@ -53,17 +47,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         if (skipLink) {
           skipLink.focus();
           event.preventDefault();
-        }
-      }
-
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
           activeElement.blur();
-        }
-      }
-
       // Arrow key navigation for custom components
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         const focusableElements = document.querySelectorAll(
@@ -78,8 +66,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           event.preventDefault();
-        }
-      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -142,8 +128,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const titleElement = document.querySelector('title');
           if (titleElement && titleElement.textContent !== originalTitle) {
             announceToScreenReader(`Page changed to ${titleElement.textContent}`);
-          }
-        }
       });
     });
 

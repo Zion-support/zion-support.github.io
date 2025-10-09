@@ -16,8 +16,6 @@ interface MicroSAASCardProps {
     link?: string;
     popular?: boolean;
   };
-}
-
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
   return (
     <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>

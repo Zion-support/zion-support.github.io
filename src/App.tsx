@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -33,7 +33,36 @@ import AIMLPlatformPage from './ai-ml-platform/page';
 'use client';
 
 // Lazy load components for better performance
-const _HomePage = lazy(() => import('../app/page'));
+const HomePage = lazy(() => import('../app/page'));
+const PricingPage = lazy(() => import('./pricing/page'));
+const DemoPage = lazy(() => import('./demo/page'));
+const ConsultationPage = lazy(() => import('./consultation/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AIAutomationPage = lazy(() => import('./ai-automation/page'));
+const AIHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AIFintechPage = lazy(() => import('./ai-fintech/page'));
+const AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
+const AIDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
+const AICybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
+const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
+const AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
+const AIEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
+const AICustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
+const AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
+const AIDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
+const AILeadGenerationPage = lazy(() => import('./ai-lead-generation/page'));
+const AIDocumentProcessingPage = lazy(() => import('./ai-document-processing/page'));
+const AIProjectManagerPage = lazy(() => import('./ai-project-manager/page'));
+const AICodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
+const AIChatbotBuilderPage = lazy(() => import('./ai-chatbot-builder/page'));
+const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const RoboticsPage = lazy(() => import('./robotics/page'));
 
 // Import enhancement utilities
 
@@ -55,25 +84,6 @@ const LoadingSpinner: React.FC = () => (
 // Specialized Solutions Pages
 
 // Company Pages
-<<<<<<< HEAD
-
-// Support Pages
-
-
-// Support Pages
-=======
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import AboutPage from './about/page';
-import ContactPage from './contact/page';
-import ServicesPage from './services/page';
-import BlogPage from './blog/page';
-import CaseStudiesPage from './case-studies/page';
-
-// Support Pages
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 // Additional Pages
 
 // AI Services
@@ -157,7 +167,6 @@ const App: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
         },
         robots: 'index, follow',
         language: 'en',
@@ -217,24 +226,14 @@ const App: React.FC = () => {
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
         // Reports generated silently in development
-      }
-
       setIsInitialized(true);
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-<<<<<<< HEAD
-      // Continue even if enhancers fail
-      setIsInitialized(true);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
-    }
   };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
-  }
-
   return (
     <Router>
       <Routes>

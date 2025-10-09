@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ITAutomationPage: React.FC = () => {
       title: 'Monitoring Automation',
       description: 'Automated monitoring and alerting systems',
       benefits: ['Auto-monitoring', 'Smart alerts', 'Performance tracking']
-    }
   ];
 
   return (

@@ -4,7 +4,6 @@ interface ServiceCardProps {
   description: string;
   icon?: React.ReactNode;
   className?: string;
-}
 /**
  * Reusable ServiceCard component with accessibility features
  */

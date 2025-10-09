@@ -18,8 +18,6 @@ interface BlogPost {
     views: number;
     engagement: number;
   };
-}
-
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -121,7 +119,6 @@ export default function BlogPage() {
       image: '📚',
       featured: false,
       stats: { views: 11200, engagement: 93 }
-    }
   ], []);
 
   useEffect(() => {
@@ -161,8 +158,6 @@ export default function BlogPage() {
         </div>
       </div>
     );
-  }
-
 const BlogPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -176,5 +171,3 @@ const BlogPage: React.FC = () => {
     </div>
   );
 };
-
-}

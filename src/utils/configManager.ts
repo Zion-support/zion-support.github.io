@@ -42,7 +42,6 @@ export interface AppConfig {
     enableConsole: boolean;
     enableNetwork: boolean;
   };
-}
 const _defaultConfig: AppConfig = {
   environment: 'development',
   api: {
@@ -80,7 +79,6 @@ const _defaultConfig: AppConfig = {
     level: 'info',
     enableConsole: true,
     enableNetwork: false
-  }
 };
 const developmentConfig: Partial<AppConfig> = {
   environment: 'development',
@@ -102,7 +100,6 @@ const developmentConfig: Partial<AppConfig> = {
     level: 'debug',
     enableConsole: true,
     enableNetwork: false
-  }
 };
 const stagingConfig: Partial<AppConfig> = {
   environment: 'staging',
@@ -124,7 +121,6 @@ const stagingConfig: Partial<AppConfig> = {
     level: 'info',
     enableConsole: true,
     enableNetwork: true
-  }
 };
 const productionConfig: Partial<AppConfig> = {
   environment: 'production',
@@ -152,7 +148,6 @@ const productionConfig: Partial<AppConfig> = {
     enableCORS: true,
     enableRateLimiting: true,
     maxRequestsPerMinute: 60
-  }
 };
 const testConfig: Partial<AppConfig> = {
   environment: 'test',
@@ -174,7 +169,6 @@ const testConfig: Partial<AppConfig> = {
     level: 'error',
     enableConsole: false,
     enableNetwork: false
-  }
 };
 export class ConfigManager {
   private static instance: ConfigManager;
@@ -184,13 +178,10 @@ export class ConfigManager {
   constructor() {
     this.environment = this.detectEnvironment();
     this.config = this.loadConfig();
-  }
   static getInstance(): ConfigManager {
     if (!ConfigManager.instance) {
       ConfigManager.instance = new ConfigManager();
-    }
     return ConfigManager.instance;
-  }
   /**
    * Detect current environment
    */
@@ -200,13 +191,10 @@ export class ConfigManager {
       const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
       if (nextEnv) {
         return nextEnv as Environment;
-      }
       if (nodeEnv === 'test') return 'test';
       if (nodeEnv === 'production') return 'production';
       if (nodeEnv === 'development') return 'development';
-    }
     return 'development';
-  }
   /**
    * Load configuration based on environment
    */
@@ -225,11 +213,9 @@ export class ConfigManager {
       case 'test':
         config = this.mergeConfig(config, testConfig);
         break;
-    }
     // Apply overrides
     config = this.mergeConfig(config, this.overrides);
     return config;
-  }
   /**
    * Deep merge two config objects
    */
@@ -251,12 +237,8 @@ export class ConfigManager {
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {
             result[key] = value as typeof baseValue;
-          }
-        }
-      }
     );
     return result;
-  }
   /**
    * Get configuration value
    */
@@ -271,9 +253,7 @@ export class ConfigManager {
   ): AppConfig[K] | AppConfig[K][NK] {
     if (nestedKey !== undefined) {
       return this.config[key][nestedKey];
-    }
     return this.config[key];
-  }
   /**
    * Set configuration value
    */
@@ -304,11 +284,8 @@ export class ConfigManager {
         this.config[key] = Object.assign({}, defaultValue, {
           [nestedKeyOrValue]: value
         }) as AppConfig[K];
-      }
     } else {
       this.config[key] = nestedKeyOrValue as AppConfig[K];
-    }
-  }
   /**
    * Get default value for a config key
    */
@@ -350,96 +327,80 @@ export class ConfigManager {
         level: 'info',
         enableConsole: true,
         enableNetwork: false
-      }
     };
     return defaultValues[key];
-  }
   /**
    * Get full configuration
    */
   getConfig(): AppConfig {
     return { ...this.config };
-  }
   /**
    * Get environment
    */
   getEnvironment(): Environment {
     return this.environment;
-  }
   /**
    * Check if feature is enabled
    */
   isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
     return this.config.features[feature];
-  }
   /**
    * Enable feature
    */
   enableFeature(feature: keyof AppConfig['features']): void {
     this.config.features[feature] = true;
-  }
   /**
    * Disable feature
    */
   disableFeature(feature: keyof AppConfig['features']): void {
     this.config.features[feature] = false;
-  }
   /**
    * Get API configuration
    */
   getAPIConfig() {
     return { ...this.config.api };
-  }
   /**
    * Update API configuration
    */
   updateAPIConfig(config: Partial<AppConfig['api']>): void {
     this.config.api = { ...this.config.api, ...config };
-  }
   /**
    * Check if in production
    */
   isProduction(): boolean {
     return this.environment === 'production';
-  }
   /**
    * Check if in development
    */
   isDevelopment(): boolean {
     return this.environment === 'development';
-  }
   /**
    * Check if in test
    */
   isTest(): boolean {
     return this.environment === 'test';
-  }
   /**
    * Check if in staging
    */
   isStaging(): boolean {
     return this.environment === 'staging';
-  }
   /**
    * Override configuration
    */
   override(config: Partial<AppConfig>): void {
     this.overrides = config;
     this.config = this.loadConfig();
-  }
   /**
    * Reset configuration
    */
   reset(): void {
     this.overrides = {};
     this.config = this.loadConfig();
-  }
   /**
    * Export configuration as JSON
    */
   export(): string {
     return JSON.stringify(this.config, null, 2);
-  }
   /**
    * Validate configuration
    */
@@ -448,23 +409,17 @@ export class ConfigManager {
     // Validate API configuration
     if (!this.config.api.baseURL) {
       errors.push('API baseURL is required');
-    }
     if (this.config.api.timeout < 1000) {
       errors.push('API timeout must be at least 1000ms');
-    }
     if (this.config.api.retryAttempts < 0) {
       errors.push('API retryAttempts must be non-negative');
-    }
     // Validate security configuration
     if (this.config.security.maxRequestsPerMinute < 1) {
       errors.push('Security maxRequestsPerMinute must be at least 1');
-    }
     return {
       valid: errors.length === 0,
       errors
     };
-  }
-}
 // Export singleton instance
 export const configManager = ConfigManager.getInstance();
 export default ConfigManager;

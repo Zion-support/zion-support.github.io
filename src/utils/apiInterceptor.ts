@@ -9,13 +9,9 @@ class ErrorHandler {
   static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
-    }
     return ErrorHandler.instance;
-  }
   handleNetworkError(error: Error, url: string, config?: unknown): void {
     // console.error('Network error:', { error: error.message, url, config });
-  }
-}
 export interface APIConfig {
   baseURL: string;
   timeout: number;
@@ -29,7 +25,6 @@ export interface APIConfig {
     response?: (response: Response) => Response | Promise<Response>;
     error?: (error: Error) => Error | Promise<Error>;
   };
-}
 export interface RequestConfig {
   url: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
@@ -39,19 +34,16 @@ export interface RequestConfig {
   timeout?: number;
   cache?: boolean;
   retryAttempts?: number;
-}
 export interface APIResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
   headers: Headers;
   config: RequestConfig;
-}
 export interface CacheEntry {
   data: unknown;
   timestamp: number;
   expiresAt: number;
-}
 export class APIInterceptor {
   private static instance: APIInterceptor;
   private config: APIConfig;
@@ -70,13 +62,10 @@ export class APIInterceptor {
       interceptors: config.interceptors || {}
     };
     this.errorHandler = ErrorHandler.getInstance();
-  }
   static getInstance(config?: Partial<APIConfig>): APIInterceptor {
     if (!APIInterceptor.instance) {
       APIInterceptor.instance = new APIInterceptor(config);
-    }
     return APIInterceptor.instance;
-  }
   /**
    * Make API request
    */
@@ -88,12 +77,9 @@ export class APIInterceptor {
       const cachedResponse = this.getFromCache(cacheKey);
       if (cachedResponse) {
         return cachedResponse as APIResponse<T>;
-      }
-    }
     // Check for pending identical requests
     if (this.pendingRequests.has(cacheKey)) {
       return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;
-    }
     // Create the request promise
     const requestPromise = this.executeRequest<T>(fullConfig);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
@@ -102,12 +88,9 @@ export class APIInterceptor {
       // Cache successful GET requests
       if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
         this.setInCache(cacheKey, response);
-      }
       return response;
     } finally {
       this.pendingRequests.delete(cacheKey);
-    }
-  }
   /**
    * Execute the actual request
    */
@@ -118,7 +101,6 @@ export class APIInterceptor {
       let _finalConfig = config;
       if (this.config.interceptors?.request) {
         finalConfig = await this.config.interceptors.request(config);
-      }
       const url = this.buildURL(finalConfig);
       const _fetchOptions: RequestInit = {
         method: finalConfig.method,
@@ -133,12 +115,10 @@ export class APIInterceptor {
       // Handle non-2xx responses
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
       // Apply response interceptor
       let finalResponse = response;
       if (this.config.interceptors?.response) {
         finalResponse = await this.config.interceptors.response(response);
-      }
       // Parse response data
       const data = await this.parseResponse<T>(finalResponse);
       return {
@@ -159,15 +139,11 @@ export class APIInterceptor {
       if (attempt < (config.retryAttempts || this.config.retryAttempts)) {
         await this.delay(this.config.retryDelay * attempt);
         return this.executeRequest<T>(config, attempt + 1);
-      }
       // Apply error interceptor
       if (this.config.interceptors?.error) {
         const modifiedError = await this.config.interceptors.error(err);
         throw modifiedError;
-      }
       throw err;
-    }
-  }
   /**
    * GET request
    */
@@ -176,7 +152,6 @@ export class APIInterceptor {
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'GET' });
-  }
   /**
    * POST request
    */
@@ -186,7 +161,6 @@ export class APIInterceptor {
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'POST', body });
-  }
   /**
    * PUT request
    */
@@ -196,7 +170,6 @@ export class APIInterceptor {
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'PUT', body });
-  }
   /**
    * DELETE request
    */
@@ -205,7 +178,6 @@ export class APIInterceptor {
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'DELETE' });
-  }
   /**
    * PATCH request
    */
@@ -215,7 +187,6 @@ export class APIInterceptor {
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'PATCH', body });
-  }
   /**
    * Prepare request configuration
    */
@@ -230,7 +201,6 @@ export class APIInterceptor {
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
       cache: config.cache ?? this.config.enableCaching
     };
-  }
   /**
    * Build full URL with query parameters
    */
@@ -242,9 +212,7 @@ export class APIInterceptor {
         params.append(key, String(value));
       });
       url += `?${params.toString()}`;
-    }
     return url;
-  }
   /**
    * Build request headers
    */
@@ -257,7 +225,6 @@ export class APIInterceptor {
       headers.set(key, value);
     });
     return headers;
-  }
   /**
    * Create abort signal for timeout
    */
@@ -265,7 +232,6 @@ export class APIInterceptor {
     const controller = new AbortController();
     setTimeout(() => controller.abort(), timeout);
     return controller.signal;
-  }
   /**
    * Parse response based on content type
    */
@@ -273,19 +239,15 @@ export class APIInterceptor {
     const contentType = response.headers.get('content-type');
     if (contentType?.includes('application/json')) {
       return await response.json();
-    }
     if (contentType?.includes('text/')) {
       return (await response.text()) as T;
-    }
     return (await response.blob()) as T;
-  }
   /**
    * Get cache key for request
    */
   private getCacheKey(config: RequestConfig): string {
     const url = this.buildURL(config);
     return `${config.method}:${url}`;
-  }
   /**
    * Get response from cache
    */
@@ -295,9 +257,7 @@ export class APIInterceptor {
     if (Date.now() > entry.expiresAt) {
       this.cache.delete(key);
       return null;
-    }
     return entry.data as APIResponse;
-  }
   /**
    * Set response in cache
    */
@@ -307,13 +267,11 @@ export class APIInterceptor {
       timestamp: Date.now(),
       expiresAt: Date.now() + this.config.cacheTimeout
     });
-  }
   /**
    * Clear cache
    */
   clearCache(): void {
     this.cache.clear();
-  }
   /**
    * Clear expired cache entries
    */
@@ -322,9 +280,6 @@ export class APIInterceptor {
     for (const [key, entry] of this.cache.entries()) {
       if (now > entry.expiresAt) {
         this.cache.delete(key);
-      }
-    }
-  }
   /**
    * Get cache statistics
    */
@@ -339,26 +294,21 @@ export class APIInterceptor {
       expired,
       size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)
     };
-  }
   /**
    * Delay helper for retry logic
    */
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
   /**
    * Update configuration
    */
   updateConfig(config: Partial<APIConfig>): void {
     this.config = { ...this.config, ...config };
-  }
   /**
    * Get current configuration
    */
   getConfig(): APIConfig {
     return { ...this.config };
-  }
-}
 // Export singleton instance
 export const apiInterceptor = APIInterceptor.getInstance();
 export default APIInterceptor;

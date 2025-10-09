@@ -133,7 +133,6 @@ const BlockchainPage: React.FC = () => {
       marketPrice: '$30,000-100,000/project',
       category: 'Web3 Apps',
       technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']
-    }
   ];
 
   const categories = [...new Set(blockchainServices.map(service => service.category))];

@@ -1662,7 +1662,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'Ultimate Reality',
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
   ];
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -3369,7 +3368,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
   ];
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const categories = [

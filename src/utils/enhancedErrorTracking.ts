@@ -9,7 +9,6 @@ export interface ErrorContext {
   userId?: string;
   sessionId?: string;
   metadata?: Record<string, unknown>;
-}
 export interface TrackedError {
   message: string;
   stack?: string;
@@ -17,7 +16,6 @@ export interface TrackedError {
   timestamp: string;
   userAgent: string;
   url: string;
-}
 class EnhancedErrorTracker {
   private errors: TrackedError[] = [];
   private maxErrors = 100;
@@ -25,10 +23,8 @@ class EnhancedErrorTracker {
   constructor() {
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();
-  }
   private generateSessionId(): string {
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
-  }
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {
@@ -43,8 +39,6 @@ class EnhancedErrorTracker {
           action: 'Unhandled Promise Rejection'
         });
       });
-    }
-  }
   public trackError(error: Error, _context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {
@@ -62,40 +56,31 @@ class EnhancedErrorTracker {
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
       this.errors.shift();
-    }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
       // console.error('Tracked Error:', trackedError);
-    }
     // Send to analytics if available
     this.sendToAnalytics(trackedError);
-  }
   private sendToAnalytics(error: TrackedError): void {
     if (
       typeof window !== 'undefined' &&
       (
         window as {
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
       ).gtag
     ) {
       (
         window as unknown as {
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
       ).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         component: error.context.component
       });
-    }
-  }
   public getErrors(): TrackedError[] {
     return [...this.errors];
-  }
   public clearErrors(): void {
     this.errors = [];
-  }
   public getErrorStats(): {
     total: number;
     byComponent: Record<string, number>;
@@ -111,8 +96,6 @@ class EnhancedErrorTracker {
       byComponent,
       recent: this.errors.slice(-10)
     };
-  }
-}
 // Export singleton instance
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;

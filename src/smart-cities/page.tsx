@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Building, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const SmartCitiesPage: React.FC = () => {
       title: 'Citizen Services',
       description: 'Digital services and citizen engagement platforms',
       benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
-    }
   ];
 
   return (

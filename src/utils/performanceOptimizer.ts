@@ -24,14 +24,12 @@ interface PerformanceMetrics {
   fmp?: number;
   ttfb?: number;
   memory?: number;
-}
 interface OptimizationConfig {
   enableLazyLoading: boolean;
   enableCodeSplitting: boolean;
   enableImageOptimization: boolean;
   enableCaching: boolean;
   enableCompression: boolean;
-}
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {
   private _metrics: PerformanceMetrics = {
@@ -54,7 +52,6 @@ class PerformanceOptimizer {
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
-  }
   /**
    * Initialize performance monitoring
    */
@@ -67,13 +64,11 @@ class PerformanceOptimizer {
     });
     // Monitor render performance
     this.measureRenderTime();
-  }
   /**
    * Public init method for external initialization
    */
   public init(): void {
     this.initializePerformanceMonitoring();
-  }
   /**
    * Measure page load time
    */
@@ -84,10 +79,7 @@ class PerformanceOptimizer {
       const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      }
     } catch (error) {
-      }
-  }
   /**
    * Measure render time using PerformanceObserver
    */
@@ -100,15 +92,12 @@ class PerformanceOptimizer {
         entries.forEach((entry) => {
           if (entry.entryType === 'measure') {
             this.metrics.renderTime = entry.duration;
-          }
         });
       });
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
-      }
-  }
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -120,8 +109,6 @@ class PerformanceOptimizer {
       this.observers.push(observer)
     } catch {
       // Ignore if not supported
-    }
-  }
   private observeFID() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -135,8 +122,6 @@ class PerformanceOptimizer {
       this.observers.push(observer)
     } catch {
       // Ignore if not supported
-    }
-  }
   private observeCLS() {
     try {
       let _clsValue = 0
@@ -146,7 +131,6 @@ class PerformanceOptimizer {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value
-          }
         })
         this.metrics.cls = clsValue
       })
@@ -154,8 +138,6 @@ class PerformanceOptimizer {
       this.observers.push(observer)
     } catch {
       // Ignore if not supported
-    }
-  }
   private observeFCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -163,15 +145,12 @@ class PerformanceOptimizer {
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.metrics.fcp = entry.startTime
-          }
         })
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported
-    }
-  }
   private observeTTFB() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -180,23 +159,17 @@ class PerformanceOptimizer {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-          }
         })
       })
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported
-    }
-  }
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize
-      }
-    }
-  }
   /**
    * Measure memory usage
    */
@@ -211,8 +184,6 @@ class PerformanceOptimizer {
     }).memory;
     if (memory) {
       this.metrics.memoryUsage = memory.usedJSHeapSize;
-    }
-  }
   /**
    * Optimize images for better performance
    */
@@ -224,20 +195,15 @@ class PerformanceOptimizer {
       // Add loading="lazy" for better performance
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
-      }
       // Add proper alt text if missing
       if (!img.hasAttribute('alt')) {
         img.setAttribute('alt', 'Zion Tech Group content');
-      }
       // Optimize image format
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {
         // Convert to WebP if supported
         if (this.supportsWebP()) {
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
-        }
-      }
     });
-  }
   /**
    * Check if browser supports WebP
    */
@@ -247,7 +213,6 @@ class PerformanceOptimizer {
     canvas.width = 1;
     canvas.height = 1;
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-  }
   /**
    * Setup lazy loading for better performance
    */
@@ -267,19 +232,14 @@ class PerformanceOptimizer {
                 (element as HTMLImageElement).src = src;
               } else {
                 element.style.backgroundImage = `url(${src})`;
-              }
               element.removeAttribute('data-lazy');
               lazyObserver.unobserve(element);
-            }
-          }
         });
       });
       lazyElements.forEach((element) => {
         lazyObserver.observe(element);
       });
-    }
     this.metrics.lazyLoading = true;
-  }
   /**
    * Enable code splitting for better performance
    */
@@ -288,7 +248,6 @@ class PerformanceOptimizer {
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
     if (process.env.NODE_ENV === 'development') { }
-  }
   /**
    * Enable caching strategies
    */
@@ -303,13 +262,11 @@ class PerformanceOptimizer {
       .catch((error) => {
         if (process.env.NODE_ENV === 'development') { }
       });
-  }
   /**
    * Get current performance metrics
    */
   getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
-  }
   /**
    * Get performance score (0-100)
    */
@@ -325,14 +282,12 @@ class PerformanceOptimizer {
     if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB
     else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB
     return Math.max(0, score);
-  }
   /**
    * Generate performance report
    */
   generateReport(): string {
     const score = this.getPerformanceScore();
     return `Performance Score: ${score}`;
-  }
   /**
    * Lazy load images for better performance
    */
@@ -346,12 +301,10 @@ class PerformanceOptimizer {
           img.src = img.dataset.src || '';
           img.removeAttribute('data-src');
           imageObserver.unobserve(img);
-        }
       });
     });
     images.forEach(img => imageObserver.observe(img));
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
-  }
   /**
    * Add critical resource hints
    */
@@ -371,7 +324,6 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
-  }
   /**
    * Measure page load metrics
    */
@@ -393,7 +345,6 @@ class PerformanceOptimizer {
       cls: this.metrics.cls || 0,
       fmp: this.metrics.fmp || 0
     };
-  }
   /**
    * Report web vitals
    */
@@ -408,10 +359,7 @@ class PerformanceOptimizer {
             metric_value: value,
             metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
           });
-        }
       });
-    }
-  }
   /**
    * Cleanup observers and resources
    */
@@ -419,7 +367,6 @@ class PerformanceOptimizer {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
-  }
   /**
    * Generate comprehensive performance report
    */
@@ -439,7 +386,6 @@ ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
     `.trim();
-  }
   /**
    * Optimize the entire application
    */
@@ -449,9 +395,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCaching();
     if (process.env.NODE_ENV === 'development') { 
       logger.info('Performance optimization completed');
-    }
-  }
-}
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;

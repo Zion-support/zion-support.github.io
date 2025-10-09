@@ -6,14 +6,12 @@ interface ErrorBoundaryState {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
-}
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
-}
 interface ErrorReport {
   errorId: string | null;
   error: Error;
@@ -26,7 +24,6 @@ interface ErrorReport {
   url: string;
   userId: string | null;
   sessionId: string;
-}
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryState
@@ -41,14 +38,12 @@ class AdvancedErrorBoundary extends Component<
       errorInfo: null,
       errorId: null
     };
-  }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -61,16 +56,12 @@ class AdvancedErrorBoundary extends Component<
         error: error.message,
         errorInfo 
       });
-    }
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
     // Report error to external service
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-  }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const _errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
@@ -94,7 +85,6 @@ class AdvancedErrorBoundary extends Component<
       return localStorage.getItem('userId') || null;
     } catch {
       return null;
-    }
   };
   private getSessionId = (): string => {
     // Generate or retrieve session ID
@@ -103,11 +93,9 @@ class AdvancedErrorBoundary extends Component<
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
-      }
       return sessionId;
     } catch {
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
   };
   private generateErrorId = (): string => {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -127,7 +115,6 @@ class AdvancedErrorBoundary extends Component<
         context: 'ErrorReporting',
         error: reportError 
       });
-    }
   };
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
@@ -138,7 +125,6 @@ class AdvancedErrorBoundary extends Component<
         errorInfo: null,
         errorId: null
       });
-    }
   };
   private handleReload = () => {
     window.location.reload();
@@ -151,7 +137,6 @@ class AdvancedErrorBoundary extends Component<
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
-      }
       // Default error UI
       return (
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
@@ -252,8 +237,5 @@ class AdvancedErrorBoundary extends Component<
           </div>
         </div>
       );
-    }
     return this.props.children;
-  }
-}
 export default AdvancedErrorBoundary;

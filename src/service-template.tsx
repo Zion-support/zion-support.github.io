@@ -7,10 +7,6 @@ import Footer from './components/Footer';
 interface ServicePageProps {
   title: string;
   description: string;
-<<<<<<< HEAD
-  icon: React.ComponentType<{ className?: string }>;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
   services: Array<{
     title: string;
     description: string;
@@ -19,8 +15,6 @@ interface ServicePageProps {
     price: string;
   }>;
   benefits: string[];
-}
-
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

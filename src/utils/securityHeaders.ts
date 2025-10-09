@@ -9,7 +9,6 @@ export interface SecurityHeadersConfig {
   xContentTypeOptions?: string;
   referrerPolicy?: string;
   permissionsPolicy?: string;
-}
 export const _defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy
   contentSecurityPolicy: [
@@ -58,24 +57,17 @@ export function getSecurityHeaders(
   };
   if (config.contentSecurityPolicy) {
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;
-  }
   if (config.strictTransportSecurity) {
     headers['Strict-Transport-Security'] = config.strictTransportSecurity;
-  }
   if (config.xFrameOptions) {
     headers['X-Frame-Options'] = config.xFrameOptions;
-  }
   if (config.xContentTypeOptions) {
     headers['X-Content-Type-Options'] = config.xContentTypeOptions;
-  }
   if (config.referrerPolicy) {
     headers['Referrer-Policy'] = config.referrerPolicy;
-  }
   if (config.permissionsPolicy) {
     headers['Permissions-Policy'] = config.permissionsPolicy;
-  }
   return headers;
-}
 /**
  * Get security headers in Next.js format
  */
@@ -87,5 +79,4 @@ export function getNextSecurityHeaders(
     key,
     value
   }));
-}
 export default defaultSecurityHeaders;

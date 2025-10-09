@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIMobileBuilderPage: React.FC = () => {
       title: 'App Analytics',
       description: 'Comprehensive app performance and user analytics',
       benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
-    }
   ];
 
   return (

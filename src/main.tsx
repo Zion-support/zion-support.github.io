@@ -13,8 +13,6 @@ if ('serviceWorker' in navigator) {
         // Service Worker registration failed - handled silently
       });
   });
-}
-
 const _root = document.getElementById('root');
 if (root) {
   ReactDOM.createRoot(root).render(
@@ -22,4 +20,3 @@ if (root) {
       <App />
     </React.StrictMode>
   );
-}

@@ -8,7 +8,6 @@ export interface PerformanceMetric {
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   timestamp: number;
-}
 export interface WebVitals {
   FCP?: PerformanceMetric; // First Contentful Paint
   LCP?: PerformanceMetric; // Largest Contentful Paint
@@ -16,13 +15,11 @@ export interface WebVitals {
   CLS?: PerformanceMetric; // Cumulative Layout Shift
   TTFB?: PerformanceMetric; // Time to First Byte
   INP?: PerformanceMetric; // Interaction to Next Paint
-}
 export interface CustomMetric {
   name: string;
   value: number;
   unit: 'ms' | 'bytes' | 'count' | 'percentage';
   timestamp: number;
-}
 class PerformanceMonitoringService {
   private static instance: PerformanceMonitoringService;
   private _webVitals: WebVitals = {};
@@ -31,27 +28,22 @@ class PerformanceMonitoringService {
   private maxMetrics = 1000;
   private constructor() {
     this.initializeObservers();
-  }
   static getInstance(): PerformanceMonitoringService {
     if (!PerformanceMonitoringService.instance) {
       PerformanceMonitoringService.instance = new PerformanceMonitoringService();
-    }
     return PerformanceMonitoringService.instance;
-  }
   /**
    * Initialize performance observers
    */
   private initializeObservers(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
-    }
     try {
       // Observe paint metrics (FCP)
       const _paintObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
-          }
         });
       });
       paintObserver.observe({ type: 'paint', buffered: true });
@@ -62,7 +54,6 @@ class PerformanceMonitoringService {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime);
-        }
       });
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver);
@@ -73,7 +64,6 @@ class PerformanceMonitoringService {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
             clsValue += (entry as PerformanceEntry & { value: number }).value;
             this.recordWebVital('CLS', clsValue);
-          }
         });
       });
       clsObserver.observe({ type: 'layout-shift', buffered: true });
@@ -97,8 +87,6 @@ class PerformanceMonitoringService {
       this.observers.push(navObserver);
     } catch (error) {
       logger.error('Failed to initialize performance observers', error as Error);
-    }
-  }
   /**
    * Record a Web Vital metric
    */
@@ -114,7 +102,6 @@ class PerformanceMonitoringService {
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
     // Send to analytics
     this.sendToAnalytics(metric);
-  }
   /**
    * Get rating for a Web Vital metric
    */
@@ -132,7 +119,6 @@ class PerformanceMonitoringService {
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
     return 'poor';
-  }
   /**
    * Record a custom metric
    */
@@ -147,9 +133,7 @@ class PerformanceMonitoringService {
     // Maintain max metrics limit
     if (this.customMetrics.length > this.maxMetrics) {
       this.customMetrics.shift();
-    }
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
-  }
   /**
    * Send metric to analytics service
    */
@@ -161,23 +145,18 @@ class PerformanceMonitoringService {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(metric)
         });
-      }
     } catch (error) {
       logger.error('Failed to send metric to analytics', error as Error);
-    }
-  }
   /**
    * Get all Web Vitals
    */
   getWebVitals(): WebVitals {
     return { ...this.webVitals };
-  }
   /**
    * Get custom metrics
    */
   getCustomMetrics(): CustomMetric[] {
     return [...this.customMetrics];
-  }
   /**
    * Get performance score (0-100)
    */
@@ -190,10 +169,8 @@ class PerformanceMonitoringService {
         case 'needs-improvement': return 50;
         case 'poor': return 0;
         default: return 0;
-      }
     });
     return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.length);
-  }
   /**
    * Get performance summary
    */
@@ -208,26 +185,20 @@ class PerformanceMonitoringService {
     // Generate recommendations based on metrics
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');
-    }
     if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
       recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');
-    }
     if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
       recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');
-    }
     if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
       recommendations.push('Improve First Input Delay by reducing JavaScript execution time');
-    }
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
       recommendations.push('Improve Time to First Byte by optimizing server response time');
-    }
     return {
       score,
       webVitals: this.webVitals,
       customMetrics: this.customMetrics,
       recommendations
     };
-  }
   /**
    * Measure function execution time
    */
@@ -237,7 +208,6 @@ class PerformanceMonitoringService {
     const duration = performance.now() - start;
     this.recordCustomMetric(`fn_${name}`, duration, 'ms');
     return result;
-  }
   /**
    * Measure async function execution time
    */
@@ -247,15 +217,12 @@ class PerformanceMonitoringService {
     const duration = performance.now() - start;
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
     return result;
-  }
   /**
    * Mark a custom performance mark
    */
   mark(name: string): void {
     if (typeof performance !== 'undefined' && 'mark' in performance) {
       performance.mark(name);
-    }
-  }
   /**
    * Measure between two marks
    */
@@ -267,28 +234,21 @@ class PerformanceMonitoringService {
         if (measure) {
           this.recordCustomMetric(name, measure.duration, 'ms');
           return measure.duration;
-        }
       } catch (error) {
         logger.error('Failed to measure performance', error as Error);
-      }
-    }
     return null;
-  }
   /**
    * Clear all metrics
    */
   clearMetrics(): void {
     this.webVitals = {};
     this.customMetrics = [];
-  }
   /**
    * Disconnect all observers
    */
   disconnect(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-  }
-}
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService;
 // Export convenience enums and functions
@@ -297,7 +257,6 @@ export enum MetricUnit {
   Bytes = 'bytes',
   Count = 'count',
   Percentage = 'percentage'
-}
 // Simple metrics structure for testing
 interface MetricData {
   values: number[];
@@ -307,7 +266,6 @@ interface MetricData {
   max: number;
   unit: string;
   rating?: 'good' | 'needs-improvement' | 'poor';
-}
 const simpleMetrics = new Map<string, MetricData>();
 export const recordMetric = (name: string, value: number, unit: MetricUnit = MetricUnit.Milliseconds) => {
   // Record in our simple metrics store for testing
@@ -328,7 +286,6 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
       unit,
       rating: getRating(name, value)
     });
-  }
   // Also record in the main performance monitoring service
   performanceMonitoring.recordCustomMetric(name, value, unit);
 };
@@ -346,7 +303,6 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
-}
 export const getMetrics = (): Record<string, MetricData> => {
   const result: Record<string, MetricData> = {};
   simpleMetrics.forEach((value, key) => {
@@ -385,7 +341,6 @@ export const getPerformanceScore = (): number => {
       case 'needs-improvement': return 50;
       case 'poor': return 0;
       default: return 0;
-    }
   });
   const sum = scores.reduce((a: number, b: number) => a + b, 0);
   return Math.round(sum / scores.length);
@@ -395,18 +350,13 @@ export const getRecommendations = (): string[] => {
   const recommendations: string[] = [];
   if (metrics.FCP && metrics.FCP.rating !== 'good') {
     recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');
-  }
   if (metrics.LCP && metrics.LCP.rating !== 'good') {
     recommendations.push('Improve LCP by optimizing largest images and server response time');
-  }
   if (metrics.FID && metrics.FID.rating !== 'good') {
     recommendations.push('Improve FID by reducing JavaScript execution time');
-  }
   if (metrics.CLS && metrics.CLS.rating !== 'good') {
     recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');
-  }
   if (metrics.TTFB && metrics.TTFB.rating !== 'good') {
     recommendations.push('Improve TTFB by optimizing server response time and using CDN');
-  }
   return recommendations;
 };

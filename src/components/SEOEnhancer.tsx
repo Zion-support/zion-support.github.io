@@ -6,8 +6,6 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   children: React.ReactNode;
-}
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
@@ -66,8 +64,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           "price": "1500",
           "priceCurrency": "USD",
           "billingIncrement": "P1M"
-        }
-      }
     ],
     "serviceArea": {
       "@type": "GeoCircle",
@@ -77,7 +73,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         "longitude": "-75.5795"
       },
       "geoRadius": "1000000"
-    }
   };
 
   return (

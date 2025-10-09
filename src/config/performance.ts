@@ -24,7 +24,6 @@ export const _performanceConfig = {
     ttfb: {
       good: 800,
       needsImprovement: 1800
-    }
   },
   // Cache strategies
   cache: {
@@ -39,7 +38,6 @@ export const _performanceConfig = {
     api: {
       maxAge: 300, // 5 minutes
       staleWhileRevalidate: 30, // 30 seconds
-    }
   },
   // Resource hints
   preload: [
@@ -72,9 +70,6 @@ export const _performanceConfig = {
           minChunks: 2,
           priority: -20,
           reuseExistingChunk: true
-        }
-      }
-    }
   },
   // Performance monitoring
   monitoring: {
@@ -83,7 +78,6 @@ export const _performanceConfig = {
     reportInterval: 30000, // 30 seconds
     sendToAnalytics: true,
     logThreshold: 'needsImprovement'
-  }
 };
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;

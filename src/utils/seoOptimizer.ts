@@ -13,7 +13,6 @@ interface SEOConfig {
   facebookAppId?: string;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
-}
 interface PageSEOData {
   title: string;
   description: string;
@@ -28,13 +27,11 @@ interface PageSEOData {
   tags?: string[];
   noindex?: boolean;
   nofollow?: boolean;
-}
 class SEOOptimizer {
   private config: SEOConfig;
   private currentPageData: PageSEOData | null = null;
   constructor(config: SEOConfig) {
     this.config = config;
-  }
   /**
    * Initialize SEO optimization
    */
@@ -43,7 +40,6 @@ class SEOOptimizer {
     this.setupCanonicalUrls();
     // Meta tags are set individually
     this.setupPerformanceMonitoring();
-  }
   /**
    * Set page-specific SEO data
    */
@@ -51,7 +47,6 @@ class SEOOptimizer {
     this.currentPageData = data;
     this.updateMetaTags();
     this.updateStructuredData();
-  }
   /**
    * Generate optimized title
    */
@@ -60,7 +55,6 @@ class SEOOptimizer {
     return title.includes(this.config.siteName) 
       ? title 
       : `${title} | ${this.config.siteName}`;
-  }
   /**
    * Generate optimized description
    */
@@ -69,14 +63,12 @@ class SEOOptimizer {
     return description.length > 160 
       ? description.substring(0, 157) + '...' 
       : description;
-  }
   /**
    * Generate keywords string
    */
   generateKeywords(pageKeywords?: string[]): string {
     const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');
-  }
   /**
    * Update meta tags
    */
@@ -108,12 +100,10 @@ class SEOOptimizer {
       this.setMetaTag('twitter:title', title);
       this.setMetaTag('twitter:description', description);
       this.setMetaTag('twitter:image', image);
-    }
     // Additional meta tags
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
-  }
   /**
    * Set meta tag
    */
@@ -123,9 +113,7 @@ class SEOOptimizer {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
-    }
     meta.content = content;
-  }
   /**
    * Get robots content
    */
@@ -134,14 +122,11 @@ class SEOOptimizer {
     const directives = [];
     if (!this.currentPageData.noindex) {
       directives.push('noindex');
-    }
     if (!this.currentPageData.nofollow) {
       directives.push('follow');
     } else {
       directives.push('nofollow');
-    }
     return directives.join(', ');
-  }
   /**
    * Setup structured data
    */
@@ -155,10 +140,8 @@ class SEOOptimizer {
         '@type': 'SearchAction',
         target: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string'
-      }
     };
     this.addStructuredData(structuredData);
-  }
   /**
    * Update structured data for current page
    */
@@ -175,7 +158,6 @@ class SEOOptimizer {
         '@type': 'Organization',
         name: this.config.siteName,
         url: this.config.siteUrl
-      }
     };
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {
@@ -189,9 +171,7 @@ class SEOOptimizer {
         articleSection: this.currentPageData.section,
         keywords: this.generateKeywords()
       });
-    }
     this.addStructuredData(structuredData);
-  }
   /**
    * Add structured data to page
    */
@@ -200,7 +180,6 @@ class SEOOptimizer {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-  }
   /**
    * Setup canonical URLs
    */
@@ -209,7 +188,6 @@ class SEOOptimizer {
     canonical.rel = 'canonical';
     canonical.href = window.location.href;
     document.head.appendChild(canonical);
-  }
   /**
    * Setup performance monitoring for SEO
    */
@@ -222,7 +200,6 @@ class SEOOptimizer {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);
-        }
       }).observe({ entryTypes: ['largest-contentful-paint'] });
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
@@ -230,14 +207,9 @@ class SEOOptimizer {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
-          }
-        }
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue);
-        }
       }).observe({ entryTypes: ['layout-shift'] });
-    }
-  }
   /**
    * Track SEO-related metrics
    */
@@ -248,8 +220,6 @@ class SEOOptimizer {
         metric_value: Math.round(value),
         event_category: 'seo'
       });
-    }
-  }
   /**
    * Generate sitemap data
    */
@@ -261,9 +231,7 @@ class SEOOptimizer {
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
         priority: '1.0'
-      }
     ];
-  }
   /**
    * Generate robots.txt content
    */
@@ -277,7 +245,6 @@ Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/`;
-  }
   /**
    * Check for SEO issues
    */
@@ -289,7 +256,6 @@ Disallow: /static/`;
       issues.push('Title is too short (less than 30 characters)');
     } else if (title.length > 60) {
       issues.push('Title is too long (more than 60 characters)');
-    }
     // Check description length
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {
@@ -298,13 +264,11 @@ Disallow: /static/`;
       issues.push('Description is too short (less than 120 characters)');
     } else if (description.length > 160) {
       issues.push('Description is too long (more than 160 characters)');
-    }
     // Check for images without alt text
     const images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`);
-      }
     });
     // Check for heading structure
     const h1s = document.querySelectorAll('h1');
@@ -312,9 +276,7 @@ Disallow: /static/`;
       issues.push('Page is missing H1 tag');
     } else if (h1s.length > 1) {
       issues.push('Page has multiple H1 tags');
-    }
     return issues;
-  }
   /**
    * Get SEO score
    */
@@ -323,8 +285,6 @@ Disallow: /static/`;
     const maxIssues = 10; // Maximum possible issues
     const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
     return Math.round(score);
-  }
-}
 // Default configuration
 const defaultConfig: SEOConfig = {
   siteName: 'Zion Tech Group',

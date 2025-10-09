@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {FileText, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIDocumentProcessorPage: React.FC = () => {
       title: 'Document Analytics',
       description: 'Comprehensive document analytics and insights',
       benefits: ['Processing metrics', 'Quality analysis', 'Performance tracking']
-    }
   ];
 
   return (

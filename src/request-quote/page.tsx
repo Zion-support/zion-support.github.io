@@ -96,7 +96,6 @@ const RequestQuotePage: React.FC = () => {
       icon: Star,
       title: 'Expert Consultation',
       description: 'Free consultation with our technology experts'
-    }
   ];
 
   const whyChooseUs = [
@@ -119,7 +118,6 @@ const RequestQuotePage: React.FC = () => {
       icon: Star,
       title: '99.9% Uptime',
       description: 'Reliable, high-performance solutions'
-    }
   ];
 
   if (isSubmitted) {
@@ -178,8 +176,6 @@ const RequestQuotePage: React.FC = () => {
         <Footer />
       </>
     );
-  }
-
   return (
     <>
       <Navigation />

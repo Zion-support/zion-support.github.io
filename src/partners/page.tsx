@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
@@ -56,7 +50,6 @@ const PartnersPage: React.FC = () => {
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
       ]
-    }
   ];
 
   const benefits = [
@@ -79,7 +72,6 @@ const PartnersPage: React.FC = () => {
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
-    }
   ];
 
   const partnershipTiers = [
@@ -124,7 +116,6 @@ const PartnersPage: React.FC = () => {
       ],
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
-    }
   ];
 
   return (

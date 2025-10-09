@@ -22,7 +22,6 @@ export const throttle = <T extends (...args: any[]) => any>(
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-    }
   };
 };
 // Intersection Observer hook for lazy loading
@@ -46,7 +45,6 @@ export const useIntersectionObserver = (
       if (observer && element) {
         observer.observe(element);
         return () => observer.unobserve(element);
-      }
       return () => {};
     },
     [observer]
@@ -54,7 +52,6 @@ export const useIntersectionObserver = (
   const disconnect = useCallback(() => {
     if (observer) {
       observer.disconnect();
-    }
   }, [observer]);
   useEffect(() => {
     return () => disconnect();
@@ -80,7 +77,6 @@ export const useLazyImage = (src: string, placeholder?: string) => {
               setIsError(true);
             };
             img.src = src;
-          }
         });
       },
       [src, isLoaded, isError]
@@ -115,7 +111,6 @@ export const usePerformanceMonitoring = () => {
       updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics);
-    }
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -125,7 +120,6 @@ export const usePerformanceMonitoring = () => {
         getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
         getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
       });
-    }
     return () => {
       window.removeEventListener('load', updateMetrics);
     };
@@ -149,7 +143,6 @@ export const useMemoryMonitoring = () => {
           totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit
         });
-      }
     };
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
@@ -203,7 +196,6 @@ export const useBundleSizeMonitoring = () => {
           cssSize += size;
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
           imageSize += size;
-        }
       });
       setBundleSize({
         totalSize,
@@ -217,7 +209,6 @@ export const useBundleSizeMonitoring = () => {
       calculateBundleSize();
     } else {
       window.addEventListener('load', calculateBundleSize);
-    }
     return () => {
       window.removeEventListener('load', calculateBundleSize);
     };

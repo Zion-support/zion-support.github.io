@@ -8,7 +8,6 @@ export enum LogLevel {
   WARN = 2,
   ERROR = 3,
   FATAL = 4
-}
 export interface LogContext {
   component?: string;
   action?: string;
@@ -16,7 +15,6 @@ export interface LogContext {
   sessionId?: string;
   requestId?: string;
   [key: string]: unknown;
-}
 export interface LogMetadata {
   timestamp?: string;
   level?: LogLevel;
@@ -24,44 +22,37 @@ export interface LogMetadata {
   context?: LogContext;
   error?: Error;
   [key: string]: unknown;
-}
 class Logger {
   private logLevel: LogLevel;
   private isDevelopment: boolean;
   constructor() {
     this.logLevel = process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO;
     this.isDevelopment = process.env.NODE_ENV === 'development';
-  }
   /**
    * Set the minimum log level
    */
   setLogLevel(level: LogLevel): void {
     this.logLevel = level;
-  }
   /**
    * Get the current log level
    */
   getLogLevel(): LogLevel {
     return this.logLevel;
-  }
   /**
    * Log a debug message
    */
   debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.DEBUG, message, context, metadata);
-  }
   /**
    * Log an info message
    */
   info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.INFO, message, context, metadata);
-  }
   /**
    * Log a warning message
    */
   warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.WARN, message, context, metadata);
-  }
   /**
    * Log an error message
    */
@@ -85,15 +76,12 @@ class Logger {
     } else if (typeof errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata as LogContext;
       meta = contextOrMetadata as Record<string, unknown>;
-    }
     this.log(LogLevel.ERROR, message, context, { ...meta, error });
-  }
   /**
    * Log a fatal error message
    */
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.FATAL, message, context, metadata);
-  }
   /**
    * Core logging method
    */
@@ -106,7 +94,6 @@ class Logger {
     // Check if we should log this level
     if (level < this.logLevel) {
       return;
-    }
     const _logEntry: LogMetadata = {
       timestamp: new Date().toISOString(),
       level,
@@ -119,12 +106,9 @@ class Logger {
     // Output to console in development
     if (this.isDevelopment && typeof console !== 'undefined') {
       this.outputToConsole(level, formattedMessage, logEntry);
-    }
     // In production, you might want to send to a logging service
     if (!this.isDevelopment) {
       this.sendToLoggingService(logEntry);
-    }
-  }
   /**
    * Format a log entry for output
    */
@@ -134,7 +118,6 @@ class Logger {
     const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';
     const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
-  }
   /**
    * Format context object for display
    */
@@ -146,7 +129,6 @@ class Logger {
     if (context.sessionId) parts.push(`session:${context.sessionId}`);
     if (context.requestId) parts.push(`request:${context.requestId}`);
     return parts.join(', ');
-  }
   /**
    * Output to console with appropriate styling
    */
@@ -167,8 +149,6 @@ class Logger {
       case LogLevel.FATAL:
         // console.error(`%c${message}`, styles, entry);
         break;
-    }
-  }
   /**
    * Get console styles for different log levels
    */
@@ -186,8 +166,6 @@ class Logger {
         return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';
       default:
         return 'color: #6B7280; font-weight: normal;';
-    }
-  }
   /**
    * Send log entry to external logging service
    */
@@ -202,7 +180,6 @@ class Logger {
     // }).catch(err => {
     //   // console.error('Failed to send log to service:', err);
     // });
-  }
   /**
    * Get string representation of log level
    */
@@ -220,7 +197,4 @@ class Logger {
         return 'FATAL';
       default:
         return 'UNKNOWN';
-    }
-  }
-}
 export const logger = new Logger();

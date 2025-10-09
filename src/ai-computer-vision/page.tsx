@@ -29,7 +29,6 @@ const AIComputerVisionPage: React.FC = () => {
       title: 'Facial Recognition',
       description: 'Secure and accurate facial recognition technology',
       benefits: ['Identity verification', 'Access control', 'Privacy protection']
-    }
   ];
 
   const applications = [
@@ -56,7 +55,6 @@ const AIComputerVisionPage: React.FC = () => {
       description: 'Quality control and automated inspection systems',
       icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
-    }
   ];
 
   const pricing = [
@@ -97,7 +95,6 @@ const AIComputerVisionPage: React.FC = () => {
         'White-label solutions'
       ],
       popular: false
-    }
   ];
 
   return (

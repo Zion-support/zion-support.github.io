@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Bot, Cpu, Settings, Shield, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIRoboticsPage: React.FC = () => {
       title: 'Safety & Security',
       description: 'Built-in safety protocols and security measures',
       benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
-    }
   ];
 
   return (

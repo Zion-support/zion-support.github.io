@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Headphones, Shield, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ITSupportPage: React.FC = () => {
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',
       benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
-    }
   ];
 
   return (

@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Mic, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIVoiceAssistantPage: React.FC = () => {
       title: 'Custom Integration',
       description: 'Custom voice assistant integration',
       benefits: ['API integration', 'Custom commands', 'Third-party apps']
-    }
   ];
 
   return (

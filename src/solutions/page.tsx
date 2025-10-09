@@ -38,7 +38,6 @@ const SolutionsPage: React.FC = () => {
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
       description: 'Streamline operations with intelligent automation'
-    }
   ];
 
   const solutions = {
@@ -74,7 +73,6 @@ const SolutionsPage: React.FC = () => {
         pricing: 'Starting at $399/month',
         icon: Zap,
         color: 'text-yellow-400'
-      }
     ],
     it: [
       {
@@ -108,7 +106,6 @@ const SolutionsPage: React.FC = () => {
         pricing: 'Starting at $399/month',
         icon: BarChart,
         color: 'text-orange-400'
-      }
     ],
     security: [
       {
@@ -142,7 +139,6 @@ const SolutionsPage: React.FC = () => {
         pricing: 'Starting at $199/month',
         icon: Users,
         color: 'text-blue-400'
-      }
     ],
     automation: [
       {
@@ -176,7 +172,6 @@ const SolutionsPage: React.FC = () => {
         pricing: 'Starting at $249/month',
         icon: BarChart,
         color: 'text-green-400'
-      }
     ]
   };
 
@@ -200,7 +195,6 @@ const SolutionsPage: React.FC = () => {
       icon: Users,
       title: 'Expert Team',
       description: 'Certified professionals with years of industry experience'
-    }
   ];
 
   return (

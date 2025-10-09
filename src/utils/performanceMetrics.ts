@@ -10,7 +10,6 @@ export interface PerformanceMetric {
   timestamp: Date;
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
   metadata?: Record<string, unknown>;
-}
 export interface WebVitalsMetrics {
   FCP?: number; // First Contentful Paint
   LCP?: number; // Largest Contentful Paint
@@ -18,7 +17,6 @@ export interface WebVitalsMetrics {
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint
-}
 export interface PerformanceReport {
   metrics: PerformanceMetric[];
   webVitals: WebVitalsMetrics;
@@ -29,7 +27,6 @@ export interface PerformanceReport {
     recommendations: string[];
   };
   timestamp: Date;
-}
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics;
   private metrics: PerformanceMetric[] = [];
@@ -38,14 +35,10 @@ export class PerformanceMetrics {
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeObservers();
-    }
-  }
   static getInstance(): PerformanceMetrics {
     if (!PerformanceMetrics.instance) {
       PerformanceMetrics.instance = new PerformanceMetrics();
-    }
     return PerformanceMetrics.instance;
-  }
   /**
    * Initialize performance observers
    */
@@ -67,10 +60,7 @@ export class PerformanceMetrics {
                 metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
-                }
               });
-            }
-          }
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
@@ -86,8 +76,6 @@ export class PerformanceMetrics {
                 timestamp: new Date(),
                 category: 'load'
               });
-            }
-          }
         });
         paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver);
@@ -104,7 +92,6 @@ export class PerformanceMetrics {
               timestamp: new Date(),
               category: 'load'
             });
-          }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
@@ -114,7 +101,6 @@ export class PerformanceMetrics {
           for (const entry of list.getEntries()) {
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;
-          }
           this.webVitals.CLS = clsValue;
           this.recordMetric({
             name: 'CLS',
@@ -127,9 +113,6 @@ export class PerformanceMetrics {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {
-        }
-    }
-  }
   /**
    * Record a custom performance metric
    */
@@ -138,8 +121,6 @@ export class PerformanceMetrics {
     // Keep only last 1000 metrics
     if (this.metrics.length > 1000) {
       this.metrics.shift();
-    }
-  }
   /**
    * Record page load time
    */
@@ -158,9 +139,7 @@ export class PerformanceMetrics {
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
         domParsing: perfData.domComplete - perfData.domLoading
-      }
     });
-  }
   /**
    * Record network request timing
    */
@@ -174,9 +153,7 @@ export class PerformanceMetrics {
       metadata: {
         url,
         status
-      }
     });
-  }
   /**
    * Record memory usage
    */
@@ -194,9 +171,7 @@ export class PerformanceMetrics {
         total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-      }
     });
-  }
   /**
    * Measure function execution time
    */
@@ -212,7 +187,6 @@ export class PerformanceMetrics {
       category: 'runtime'
     });
     return result;
-  }
   /**
    * Measure async function execution time
    */
@@ -228,25 +202,21 @@ export class PerformanceMetrics {
       category: 'runtime'
     });
     return result;
-  }
   /**
    * Get all metrics
    */
   getMetrics(): PerformanceMetric[] {
     return [...this.metrics];
-  }
   /**
    * Get metrics by category
    */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
     return this.metrics.filter(m => m.category === category);
-  }
   /**
    * Get Web Vitals
    */
   getWebVitals(): WebVitalsMetrics {
     return { ...this.webVitals };
-  }
   /**
    * Calculate performance score (0-100)
    */
@@ -256,24 +226,19 @@ export class PerformanceMetrics {
     if (this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;
-    }
     // LCP scoring
     if (this.webVitals.LCP) {
       if (this.webVitals.LCP > 4000) score -= 25;
       else if (this.webVitals.LCP > 2500) score -= 12;
-    }
     // CLS scoring
     if (this.webVitals.CLS) {
       if (this.webVitals.CLS > 0.25) score -= 20;
       else if (this.webVitals.CLS > 0.1) score -= 10;
-    }
     // FID scoring
     if (this.webVitals.FID) {
       if (this.webVitals.FID > 300) score -= 15;
       else if (this.webVitals.FID > 100) score -= 8;
-    }
     return Math.max(0, Math.min(100, score));
-  }
   /**
    * Get performance recommendations
    */
@@ -283,20 +248,16 @@ export class PerformanceMetrics {
       recommendations.push(
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
       );
-    }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
       recommendations.push(
         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
       );
-    }
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
       recommendations.push(
         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
       );
-    }
     if (this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
-    }
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
@@ -304,9 +265,7 @@ export class PerformanceMetrics {
       recommendations.push(
         'Optimize network requests - consider caching and reducing payload sizes'
       );
-    }
     return recommendations;
-  }
   /**
    * Generate performance report
    */
@@ -324,28 +283,23 @@ export class PerformanceMetrics {
       },
       timestamp: new Date()
     };
-  }
   /**
    * Export metrics as JSON
    */
   exportMetrics(): string {
     return JSON.stringify(this.generateReport(), null, 2);
-  }
   /**
    * Clear all metrics
    */
   clearMetrics(): void {
     this.metrics = [];
     this.webVitals = {};
-  }
   /**
    * Cleanup observers
    */
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-  }
-}
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory: {
@@ -353,12 +307,10 @@ interface PerformanceWithMemory extends Performance {
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
   };
-}
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-}
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;

@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Globe, Headphones, Shield, Zap, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const GlobalITSupportPage: React.FC = () => {
       title: 'Rapid Response',
       description: 'Quick problem resolution and escalation',
       benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
-    }
   ];
 
   return (

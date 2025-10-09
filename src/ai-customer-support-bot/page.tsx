@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -32,7 +27,6 @@ const AICustomerSupportBotPage: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
-    }
   ];
 
   const pricingPlans = [
@@ -80,7 +74,6 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Custom training'
       ],
       popular: false
-    }
   ];
 
   const stats = [
@@ -102,7 +95,4 @@ const AICustomerSupportBotPage: React.FC = () => {
     </div>
   );
 };
-
-}
-
 export default AiCustomerSupportBotPage;

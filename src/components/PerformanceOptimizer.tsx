@@ -8,8 +8,6 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
   enableResourceHints?: boolean;
   enableServiceWorker?: boolean;
-}
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -30,22 +28,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (enableImageOptimization) {
       optimizeImages();
-    }
     if (enableLazyLoading) {
       setupLazyLoading();
-    }
     if (enablePreloading) {
       preloadCriticalResources();
-    }
     if (enableCodeSplitting) {
       setupCodeSplitting();
-    }
     if (enableResourceHints) {
       addResourceHints();
-    }
     if (enableServiceWorker) {
       registerServiceWorker();
-    }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
   const _optimizeImages = () => {
@@ -57,20 +49,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (img.getBoundingClientRect().top > window.innerHeight) {
         img.setAttribute('loading', 'lazy');
         optimized++;
-      }
-      
       // Add decoding="async" for better performance
       img.setAttribute('decoding', 'async');
       
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
         img.setAttribute('fetchpriority', 'high');
-      }
-      
       // Add proper alt text if missing
       if (!img.getAttribute('alt')) {
         img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions');
-      }
     });
     
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
@@ -86,8 +73,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img);
-            }
-          }
         });
       }, {
         rootMargin: '50px 0px',
@@ -98,7 +83,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       lazyImages.forEach((img) => observer.observe(img));
       
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
-    }
   };
 
   const preloadCriticalResources = () => {
@@ -112,7 +96,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         href: '/styles/critical.css',
         as: 'style',
         type: 'text/css'
-      }
     ];
 
     criticalResources.forEach((resource) => {
@@ -122,7 +105,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.as = resource.as;
       if (resource.type) {
         link.type = resource.type;
-      }
       document.head.appendChild(link);
     });
 
@@ -150,7 +132,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.href = hint.href;
       if (hint.crossorigin) {
         link.crossOrigin = hint.crossorigin;
-      }
       document.head.appendChild(link);
     });
 
@@ -164,8 +145,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
         // Service Worker registration failed - handled silently in production
-      }
-    }
   };
 
   // Performance monitoring
@@ -181,13 +160,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'
               });
-            }
-          }
-        }
       });
       
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    }
   }, []);
 
   return null;

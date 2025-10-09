@@ -5,8 +5,6 @@ interface OptimizedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
-}
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
     const _sizeClasses = {
@@ -49,7 +47,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         </svg>
       </div>
     );
-  }
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';

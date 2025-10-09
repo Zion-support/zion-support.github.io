@@ -14,8 +14,6 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
-}
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -46,19 +44,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           if (entry.isIntersecting) {
             setIsInView(true);
             observer.disconnect();
-          }
         });
       },
       {
         rootMargin: '50px',
         threshold: 0.1,
-      }
     );
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
-    }
-
     return () => observer.disconnect();
   }, [priority, isInView]);
 

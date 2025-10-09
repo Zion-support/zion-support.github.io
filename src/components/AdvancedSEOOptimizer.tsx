@@ -22,8 +22,6 @@ interface AdvancedSEOOptimizerProps {
   faqData?: { question: string; answer: string }[];
   organizationData?: any;
   websiteData?: any;
-}
-
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -67,17 +65,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     if (publishedTime) {
       updateMetaTag('og:published_time', publishedTime, 'property');
-    }
     if (modifiedTime) {
       updateMetaTag('og:modified_time', modifiedTime, 'property');
-    }
     if (section) {
       updateMetaTag('og:section', section, 'property');
-    }
     if (tags.length > 0) {
       updateMetaTag('og:tag', tags.join(', '), 'property');
-    }
-    
     // Update Twitter tags
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
     updateMetaTag('twitter:title', title, 'name');
@@ -92,33 +85,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Add alternate language links
     if (alternateLocales.length > 0) {
       addAlternateLanguageLinks(alternateLocales);
-    }
-    
     // Add breadcrumbs structured data
     if (breadcrumbs.length > 0) {
       addBreadcrumbStructuredData(breadcrumbs);
-    }
-    
     // Add FAQ structured data
     if (faqData.length > 0) {
       addFAQStructuredData(faqData);
-    }
-    
     // Add organization structured data
     if (organizationData) {
       addStructuredData(organizationData);
-    }
-    
     // Add website structured data
     if (websiteData) {
       addStructuredData(websiteData);
-    }
-    
     // Add custom structured data
     if (structuredData) {
       addStructuredData(structuredData);
-    }
-    
     // Add additional SEO meta tags
     addAdditionalSEOTags();
     
@@ -130,7 +111,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
-    }
     meta.content = content;
   };
 
@@ -140,7 +120,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
-    }
     canonical.href = url;
   };
 
@@ -178,7 +157,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         acceptedAnswer: {
           '@type': 'Answer',
           text: faq.answer
-        }
       }))
     };
     addStructuredData(faqStructuredData);
@@ -198,8 +176,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       viewport.name = 'viewport';
       viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
       document.head.appendChild(viewport);
-    }
-
     // Add theme color
     updateMetaTag('theme-color', '#4f46e5');
     updateMetaTag('msapplication-TileColor', '#4f46e5');

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 'use client';
@@ -45,7 +39,6 @@ const ExpenseTrackerPage: React.FC = () => {
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit: '100% compliance guarantee'
-    }
   ];
 
   const pricingPlans = [
@@ -97,7 +90,6 @@ const ExpenseTrackerPage: React.FC = () => {
         'Custom compliance rules'
       ],
       popular: false
-    }
   ];
 
   const integrations = [
@@ -132,7 +124,6 @@ const ExpenseTrackerPage: React.FC = () => {
       role: 'Operations Director',
       content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
       rating: 5
-    }
   ];
 
   return (

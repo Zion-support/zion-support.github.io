@@ -5,12 +5,10 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-}
 export const _usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
-    }
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
@@ -32,7 +30,6 @@ export const _usePerformanceOptimization = () => {
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
-      }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
@@ -45,8 +42,6 @@ export const _usePerformanceOptimization = () => {
         };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
-        }
-      }
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -58,7 +53,6 @@ export const _usePerformanceOptimization = () => {
         };
         metrics.firstInputDelay =
           (fidEntry.processingStart || 0) - entry.startTime;
-      }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
     // Cleanup observers after a delay
@@ -78,7 +72,6 @@ export const _usePerformanceOptimization = () => {
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
-        }
       });
     });
     images.forEach(img => imageObserver.observe(img));
@@ -92,7 +85,6 @@ export const _usePerformanceOptimization = () => {
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
-      }
       document.head.appendChild(link);
     });
   }, []);
@@ -104,12 +96,8 @@ export const _usePerformanceOptimization = () => {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
-        }
         if (process.env['NODE_ENV'] === 'development') { 
           if (import.meta.env.DEV) { 
-          } 
-        }
-      }
     }, 1000);
     // Optimize images
     optimizeImages();

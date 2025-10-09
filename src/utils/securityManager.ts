@@ -9,9 +9,7 @@ export class SecurityManager {
   static getInstance(): SecurityManager {
     if (!SecurityManager.instance) {
       SecurityManager.instance = new SecurityManager();
-    }
     return SecurityManager.instance;
-  }
   /**
    * Sanitize user input to prevent XSS attacks
    */
@@ -21,7 +19,6 @@ export class SecurityManager {
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
       .trim();
-  }
   /**
    * Validate and sanitize URL
    */
@@ -30,12 +27,9 @@ export class SecurityManager {
       const _parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {
         throw new Error('Invalid protocol');
-      }
       return parsed.toString();
     } catch {
       return '';
-    }
-  }
   /**
    * Generate secure random token
    */
@@ -47,9 +41,7 @@ export class SecurityManager {
       // Fallback for Node.js environment
       const crypto = require('crypto');
       crypto.randomFillSync(array);
-    }
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
   /**
    * Implement rate limiting
    */
@@ -63,16 +55,11 @@ export class SecurityManager {
     const validRequests = requests.filter((time: number) => time > windowStart);
     if (validRequests.length >= limit) {
       return false;
-    }
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }
   private getRateLimitStorage(): Map<string, number[]> {
     if (!global._rateLimitStorage) {
       global._rateLimitStorage = new Map();
-    }
     return global._rateLimitStorage;
-  }
-}
 export default SecurityManager.getInstance();

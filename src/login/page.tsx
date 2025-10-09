@@ -47,7 +47,6 @@ const LoginPage: React.FC = () => {
       icon: Phone,
       title: 'Mobile Ready',
       description: 'Access your account from any device, anywhere'
-    }
   ];
 
   return (

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
-=======
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -34,7 +27,6 @@ const preloadComponents = () => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
     }, 100);
-  }
 };
 
 // Loading skeleton component
@@ -65,7 +57,6 @@ const HomePage: React.FC = () => {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
-    }
   }, []);
 
   const microSAASServices = [
@@ -273,7 +264,6 @@ const HomePage: React.FC = () => {
       benefits: ['90% prediction accuracy', 'Proactive planning', 'Risk mitigation'],
       link: '/ai-predictive-analytics',
       popular: true
-    }
   ];
 
   const aiServices = [
@@ -378,7 +368,6 @@ const HomePage: React.FC = () => {
       price: '$1,700/month',
       features: ['Edge AI Models', 'IoT Integration', 'Real-time Processing', 'Offline Capabilities'],
       color: 'text-emerald-400'
-    }
   ];
 
   const itServices = [
@@ -483,7 +472,6 @@ const HomePage: React.FC = () => {
       price: '$1,599/month',
       features: ['Multi-language Support', 'Global Coverage', 'Time Zone Coverage', 'Local Expertise'],
       color: 'text-emerald-400'
-    }
   ];
 
   return (
@@ -525,7 +513,6 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
         }}
       />
       <PerformanceOptimizer

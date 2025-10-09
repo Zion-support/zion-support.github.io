@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Comprehensive e-commerce analytics and insights',
       benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics']
-    }
   ];
 
   return (

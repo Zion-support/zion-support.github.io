@@ -39,7 +39,6 @@ const CareersPage: React.FC = () => {
       description: 'Ensure security of AI systems and protect client data',
       requirements: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
       icon: Shield
-    }
   ];
 
   const benefits = [

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 
@@ -36,7 +32,6 @@ const AISocialMediaManagerPage: React.FC = () => {
       icon: MessageSquare,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
-    }
   ];
 
   const benefits = [
@@ -100,7 +95,6 @@ const AISocialMediaManagerPage: React.FC = () => {
         'White-label options'
       ],
       popular: false
-    }
   ];
 
   return (

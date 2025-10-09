@@ -18,7 +18,6 @@ const UnifiedContentPromotion: React.FC = () => {
       description: "Work with our team of experts to design and implement your AI strategy.",
       link: "/contact",
       icon: "👨‍💼"
-    }
   ];
   return (
     <div className="unified-content-promotion py-12">

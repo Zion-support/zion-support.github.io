@@ -7,7 +7,6 @@ interface LinkProps {
   rel?: string;
   onClick?: () => void;
   'aria-label'?: string;
-}
 export const Link: React.FC<LinkProps> = ({
   href,
   children,
@@ -21,12 +20,10 @@ export const Link: React.FC<LinkProps> = ({
   const _handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick();
-    }
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
       e.preventDefault();
       window.location.href = href;
-    }
   };
   return (
     <a

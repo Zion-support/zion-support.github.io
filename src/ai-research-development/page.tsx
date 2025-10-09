@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Brain, Code, FlaskConical, Target, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIResearchDevelopmentPage: React.FC = () => {
       title: 'Innovation Consulting',
       description: 'Strategic consulting for AI adoption and implementation',
       benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
-    }
   ];
 
   return (

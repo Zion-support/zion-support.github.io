@@ -6,15 +6,11 @@ interface Props {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
   enableReporting?: boolean;
-}
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
-}
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -24,16 +20,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: null,
     };
-  }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
-  }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -43,17 +35,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error:', error, errorInfo);
-    }
-
     // Report error to monitoring service
     if (this.props.enableReporting !== false) {
       this.reportError(error, errorInfo);
-    }
-
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
-  }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const _errorReport = {
       errorId: this.state.errorId,
@@ -79,7 +65,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           error_id: this.state.errorId,
         },
       });
-    }
   };
 
   private sendErrorReport = (errorReport: any) => {
@@ -105,7 +90,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
-    }
     return sessionId;
   };
 
@@ -149,7 +133,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
-      }
       const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
       return (
@@ -237,10 +220,5 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    }
-
     return this.props.children;
-  }
-}
-
 export default EnhancedErrorBoundary;

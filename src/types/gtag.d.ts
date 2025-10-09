@@ -6,7 +6,6 @@ interface GtagEvent {
   event_label?: string;
   value?: number;
   [key: string]: unknown;
-}
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 interface Window {
   gtag?: (
@@ -15,4 +14,3 @@ interface Window {
     config?: GtagEvent
   ) => void;
   dataLayer?: unknown[];
-}

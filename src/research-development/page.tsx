@@ -38,7 +38,6 @@ const ResearchDevelopmentPage: React.FC = () => {
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
       description: 'Researching next-generation technologies'
-    }
   ];
 
   const researchProjects = {
@@ -87,7 +86,6 @@ const ResearchDevelopmentPage: React.FC = () => {
         ],
         icon: Microscope,
         color: 'text-blue-400'
-      }
     ],
     quantum: [
       {
@@ -119,7 +117,6 @@ const ResearchDevelopmentPage: React.FC = () => {
         ],
         icon: Zap,
         color: 'text-yellow-400'
-      }
     ],
     autonomous: [
       {
@@ -151,7 +148,6 @@ const ResearchDevelopmentPage: React.FC = () => {
         ],
         icon: Users,
         color: 'text-purple-400'
-      }
     ],
     emerging: [
       {
@@ -183,7 +179,6 @@ const ResearchDevelopmentPage: React.FC = () => {
         ],
         icon: Globe,
         color: 'text-blue-400'
-      }
     ]
   };
 
@@ -219,7 +214,6 @@ const ResearchDevelopmentPage: React.FC = () => {
       year: '2024',
       impact: 'High',
       link: '#'
-    }
   ];
 
   const achievements = [
@@ -242,7 +236,6 @@ const ResearchDevelopmentPage: React.FC = () => {
       icon: Globe,
       title: 'Global Collaborations',
       description: 'Partnerships with leading universities and research institutions'
-    }
   ];
 
   return (

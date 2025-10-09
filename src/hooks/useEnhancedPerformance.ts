@@ -8,7 +8,6 @@ export interface UseEnhancedPerformanceOptions {
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
-}
 export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
@@ -24,7 +23,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     // Track component mount
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component);
-    }
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
@@ -37,12 +35,9 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
             component,
             Math.round(duration)
           );
-        }
-      }
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
-      }
     };
   }, [component, trackAnalytics, trackPerformance]);
   // Track render performance
@@ -56,7 +51,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
         component,
         renderCountRef.current
       );
-    }
   });
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
@@ -65,7 +59,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
           component,
           ...context
         });
-      }
     },
     [component, trackErrors]
   );
@@ -73,7 +66,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-      }
     },
     [component, trackAnalytics]
   );
@@ -90,9 +82,7 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
               duration,
               duration > 1000 ? 'slow' : 'fast'
             );
-          }
           return duration;
-        }
       };
     },
     [component, trackPerformance]
@@ -102,5 +92,4 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     trackUserAction,
     measureOperation
   };
-}
 export default useEnhancedPerformance;

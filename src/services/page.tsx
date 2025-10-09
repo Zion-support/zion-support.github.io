@@ -2,10 +2,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 
 const ServicesPage: React.FC = () => {
   const _aiServices = [
@@ -40,7 +36,6 @@ const ServicesPage: React.FC = () => {
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
       price: 'Starting at $1,800/month',
       popular: false
-    }
   ];
 
   const itServices = [
@@ -75,7 +70,6 @@ const ServicesPage: React.FC = () => {
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
       price: 'Starting at $2,000/month',
       popular: false
-    }
   ];
 
   const microSaasServices = [
@@ -110,7 +104,6 @@ const ServicesPage: React.FC = () => {
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
       price: 'Starting at $30/month',
       popular: false
-    }
   ];
 
   const benefits = [
@@ -133,7 +126,6 @@ const ServicesPage: React.FC = () => {
       icon: Clock,
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
-    }
   ];
 
   const stats = [

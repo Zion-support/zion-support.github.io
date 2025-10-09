@@ -5,7 +5,6 @@ interface SkeletonProps {
   height?: string | number;
   rounded?: boolean;
   animated?: boolean;
-}
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
   width,

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 const AnalyticsToolsPage: React.FC = () => {
@@ -54,7 +49,6 @@ const AnalyticsToolsPage: React.FC = () => {
       features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
       icon: '💳',
       category: 'Financial Analytics'
-    }
   ];
   const benefits = [
     {
@@ -76,7 +70,6 @@ const AnalyticsToolsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-    }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

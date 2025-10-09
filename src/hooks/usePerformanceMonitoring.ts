@@ -11,7 +11,6 @@ export const _usePerformanceMonitoring = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return () => {};
-    }
     try {
       // LCP - Largest Contentful Paint
       const lcpObserver = new PerformanceObserver(list => {
@@ -28,7 +27,6 @@ export const _usePerformanceMonitoring = () => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid);
-          }
         );
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -41,12 +39,9 @@ export const _usePerformanceMonitoring = () => {
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
               value?: number;
-            }
           ) => {
             if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
-            }
-          }
         );
         reportMetric('CLS', clsValue);
       });
@@ -57,7 +52,6 @@ export const _usePerformanceMonitoring = () => {
         entries.forEach(entry => {
           if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
-          }
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
@@ -69,7 +63,6 @@ export const _usePerformanceMonitoring = () => {
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
-          }
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
@@ -83,8 +76,6 @@ export const _usePerformanceMonitoring = () => {
             if (loadTime > 1000) {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
-            }
-          }
         });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
@@ -99,7 +90,6 @@ export const _usePerformanceMonitoring = () => {
       };
     } catch (error) {
       return () => {};
-    }
   }, [reportMetric]);
   // Monitor page load performance
   useEffect(() => {
@@ -120,7 +110,6 @@ export const _usePerformanceMonitoring = () => {
         Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(key.toUpperCase(), value);
         });
-      }
     };
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);

@@ -13,7 +13,6 @@ interface ErrorContext {
   action?: string;
   props?: Record<string, unknown>;
   state?: Record<string, unknown>;
-}
 interface ErrorReport {
   id: string;
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
@@ -33,7 +32,6 @@ interface ErrorReport {
   resolved: boolean;
   resolvedAt?: string;
   resolvedBy?: string;
-}
 interface ErrorHandlerConfig {
   enableConsoleLogging: boolean;
   enableRemoteReporting: boolean;
@@ -45,7 +43,6 @@ interface ErrorHandlerConfig {
   errorRetentionDays: number;
   remoteEndpoint?: string;
   apiKey?: string;
-}
 class EnhancedErrorHandler {
   private config: ErrorHandlerConfig;
   private errors: ErrorReport[] = [];
@@ -67,7 +64,6 @@ class EnhancedErrorHandler {
       ...config
     };
     this.initialize();
-  }
   /**
    * Initialize the error handler
    */
@@ -82,8 +78,6 @@ class EnhancedErrorHandler {
     this.setupErrorCleanup();
     this.isInitialized = true;
     if (process.env['NODE_ENV'] === 'development') {
-      }
-  }
   /**
    * Setup global error handlers
    */
@@ -99,7 +93,6 @@ class EnhancedErrorHandler {
         error: event.error
       });
     });
-  }
   /**
    * Setup unhandled promise rejection handler
    */
@@ -112,7 +105,6 @@ class EnhancedErrorHandler {
         reason: event.reason
       });
     });
-  }
   /**
    * Setup resource error handler
    */
@@ -131,11 +123,9 @@ class EnhancedErrorHandler {
             element: event.target?.constructor.name,
             src: target?.src || target?.href
           });
-        }
       },
       true
     );
-  }
   /**
    * Setup network error handler
    */
@@ -153,7 +143,6 @@ class EnhancedErrorHandler {
             status: response.status,
             statusText: response.statusText
           });
-        }
         return response;
       } catch (error) {
         this.handleError({
@@ -163,9 +152,7 @@ class EnhancedErrorHandler {
           error: error instanceof Error ? error : new Error(String(error))
         });
         throw error;
-      }
     };
-  }
   /**
    * Setup performance error handler
    */
@@ -184,14 +171,10 @@ class EnhancedErrorHandler {
                 duration: entry.duration,
                 category: 'performance'
               });
-            }
           });
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
-        }
-    }
-  }
   /**
    * Setup error recovery mechanisms
    */
@@ -201,7 +184,6 @@ class EnhancedErrorHandler {
     setInterval(() => {
       this.attemptErrorRecovery();
     }, 30000); // Check every 30 seconds
-  }
   /**
    * Setup error cleanup
    */
@@ -213,7 +195,6 @@ class EnhancedErrorHandler {
       },
       24 * 60 * 60 * 1000
     ); // Daily cleanup
-  }
   /**
    * Handle error with comprehensive processing
    */
@@ -237,10 +218,8 @@ class EnhancedErrorHandler {
     // Rate limiting
     if (!this.checkRateLimit()) {
       return;
-    }
     const errorReport = this.createErrorReport(errorData);
     this.processError(errorReport);
-  }
   /**
    * Create comprehensive error report
    */
@@ -287,7 +266,6 @@ class EnhancedErrorHandler {
       },
       resolved: false
     };
-  }
   /**
    * Process error report
    */
@@ -299,20 +277,15 @@ class EnhancedErrorHandler {
     // Console logging
     if (this.config.enableConsoleLogging) {
       this.logError(errorReport);
-    }
     // Remote reporting
     if (this.config.enableRemoteReporting) {
       this.reportToRemote(errorReport);
-    }
     // Error aggregation
     if (this.config.enableErrorAggregation) {
       this.aggregateError(errorReport);
-    }
     // Performance impact
     if (this.config.enablePerformanceImpact) {
       this.assessPerformanceImpact(errorReport);
-    }
-  }
   /**
    * Get error context
    */
@@ -324,7 +297,6 @@ class EnhancedErrorHandler {
       sessionId: this.getSessionId(),
       userId: this.getUserId()
     };
-  }
   /**
    * Determine error severity
    */
@@ -340,21 +312,16 @@ class EnhancedErrorHandler {
       errorData.status >= 500
     ) {
       return 'critical';
-    }
     if (
       errorData.type === 'javascript' &&
       errorData.message.includes('Cannot read property')
     ) {
       return 'high';
-    }
     if (errorData.type === 'resource' && errorData.element === 'img') {
       return 'medium';
-    }
     if (errorData.type === 'promise') {
       return 'medium';
-    }
     return 'low';
-  }
   /**
    * Categorize error
    */
@@ -364,24 +331,18 @@ class EnhancedErrorHandler {
   }): ErrorReport['category'] {
     if (errorData.type === 'network') {
       return 'network';
-    }
     if (errorData.type === 'resource') {
       return 'performance';
-    }
     if (
       errorData.message.includes('SecurityError') ||
       errorData.message.includes('CORS')
     ) {
       return 'security';
-    }
     if (errorData.message.includes('SyntaxError')) {
       return 'syntax';
-    }
     if (errorData.type === 'promise') {
       return 'runtime';
-    }
     return 'unknown';
-  }
   /**
    * Generate error tags
    */
@@ -393,24 +354,18 @@ class EnhancedErrorHandler {
     const tags: string[] = [];
     if (errorData.filename) {
       tags.push('client-side');
-    }
     if (errorData.type === 'network') {
       tags.push('network');
-    }
     if (errorData.type === 'resource') {
       tags.push('resource');
-    }
     if (errorData.duration && errorData.duration > 1000) {
       tags.push('slow');
-    }
     return tags;
-  }
   /**
    * Generate unique error ID
    */
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
   /**
    * Get session ID
    */
@@ -419,15 +374,12 @@ class EnhancedErrorHandler {
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
-    }
     return sessionId;
-  }
   /**
    * Get user ID
    */
   private getUserId(): string | undefined {
     return localStorage.getItem('user_id') || undefined;
-  }
   /**
    * Check rate limiting
    */
@@ -439,13 +391,10 @@ class EnhancedErrorHandler {
       this.errorRateLimit++;
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
         return false;
-      }
     } else {
       this.errorRateLimit = 1;
-    }
     this.lastErrorTime = now;
     return true;
-  }
   /**
    * Update error counters
    */
@@ -456,7 +405,6 @@ class EnhancedErrorHandler {
       errorReport.category,
       (this.errorCategories.get(errorReport.category) || 0) + 1
     );
-  }
   /**
    * Log error to console
    */
@@ -471,9 +419,7 @@ class EnhancedErrorHandler {
     // console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
       // console.error('Stack:', errorReport.stack);
-    }
     console.groupEnd();
-  }
   /**
    * Get severity emoji
    */
@@ -489,8 +435,6 @@ class EnhancedErrorHandler {
         return '🟢';
       default:
         return '❓';
-    }
-  }
   /**
    * Report to remote service
    */
@@ -506,14 +450,11 @@ class EnhancedErrorHandler {
         body: JSON.stringify(errorReport)
       });
     } catch (error) {
-      }
-  }
   /**
    * Aggregate error data
    */
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
-    }
   /**
    * Assess performance impact
    */
@@ -522,8 +463,6 @@ class EnhancedErrorHandler {
       errorReport.type === 'resource' ||
       errorReport.category === 'performance'
     ) {
-      }
-  }
   /**
    * Attempt error recovery
    */
@@ -535,11 +474,8 @@ class EnhancedErrorHandler {
     );
     if (recentErrors.length > 5) {
       if (process.env['NODE_ENV'] === 'development') { 
-        }
       // Implement recovery strategies here
       this.clearErrorState();
-    }
-  }
   /**
    * Clear error state
    */
@@ -549,8 +485,6 @@ class EnhancedErrorHandler {
     this.errorCategories.clear();
     this.errorRateLimit = 0;
     if (process.env['NODE_ENV'] === 'development') { 
-      }
-  }
   /**
    * Clean up old errors
    */
@@ -561,8 +495,6 @@ class EnhancedErrorHandler {
       error => new Date(error.context.timestamp) > cutoffDate
     );
     if (process.env['NODE_ENV'] === 'development') { 
-      }
-  }
   /**
    * Get error statistics
    */
@@ -598,7 +530,6 @@ class EnhancedErrorHandler {
       errorsBySeverity,
       recentErrors
     };
-  }
   /**
    * Export error data
    */
@@ -613,7 +544,6 @@ class EnhancedErrorHandler {
       null,
       2
     );
-  }
   /**
    * Manually report error
    */
@@ -625,8 +555,6 @@ class EnhancedErrorHandler {
     });
     this.processError(errorReport);
     return errorReport.id;
-  }
-}
 // Export singleton instance
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances

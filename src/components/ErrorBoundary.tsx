@@ -4,27 +4,19 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
-  }
-
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error
     };
-  }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -34,25 +26,17 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
     // Report error to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: true
       });
-    }
-
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
-
     // Report error to error tracking service
     this.reportError(error, errorInfo);
-  }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to your error tracking service
     // For example: Sentry, LogRocket, Bugsnag, etc.
@@ -83,7 +67,6 @@ class ErrorBoundary extends Component<Props, State> {
     if (!sessionId) {
       sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
       sessionStorage.setItem('sessionId', sessionId);
-    }
     return sessionId;
   };
 
@@ -118,8 +101,6 @@ class ErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
-      }
-
       // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -195,10 +176,5 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    }
-
     return this.props.children;
-  }
-}
-
 export default ErrorBoundary;

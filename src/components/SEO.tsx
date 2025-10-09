@@ -23,8 +23,6 @@ export interface SEOProps {
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: { locale: string; url: string }[];
-}
-
 const _defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
@@ -75,8 +73,6 @@ export const SEO: React.FC<SEOProps> = ({
   const generateStructuredData = () => {
     if (structuredData) {
       return structuredData;
-    }
-
     const baseStructuredData: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
@@ -91,16 +87,10 @@ export const SEO: React.FC<SEOProps> = ({
         '@type': 'Person',
         name: author,
       };
-    }
-
     if (publishDate) {
       baseStructuredData.datePublished = publishDate;
-    }
-
     if (modifiedDate) {
       baseStructuredData.dateModified = modifiedDate;
-    }
-
     return baseStructuredData;
   };
 

@@ -5,8 +5,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
-}
-
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
@@ -26,7 +24,6 @@ const PerformanceMonitor: React.FC = () => {
           event_label: 'CLS',
           value: Math.round(metric.value * 1000),
         });
-      }
     });
 
     onFCP((metric) => {
@@ -37,7 +34,6 @@ const PerformanceMonitor: React.FC = () => {
           event_label: 'FCP',
           value: Math.round(metric.value),
         });
-      }
     });
 
     onLCP((metric) => {
@@ -48,7 +44,6 @@ const PerformanceMonitor: React.FC = () => {
           event_label: 'LCP',
           value: Math.round(metric.value),
         });
-      }
     });
 
     onTTFB((metric) => {
@@ -59,7 +54,6 @@ const PerformanceMonitor: React.FC = () => {
           event_label: 'TTFB',
           value: Math.round(metric.value),
         });
-      }
     });
 
     // Monitor resource loading performance
@@ -76,14 +70,9 @@ const PerformanceMonitor: React.FC = () => {
                 duration: resource.duration,
                 size: resource.transferSize,
               });
-            }
-          }
-        }
       });
 
       observer.observe({ entryTypes: ['resource'] });
-    }
-
     // Monitor memory usage (if available)
     if ('memory' in performance) {
       const memory = (performance as any).memory;
@@ -92,8 +81,6 @@ const PerformanceMonitor: React.FC = () => {
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
         limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB',
       });
-    }
-
   }, []);
 
   // Don't render anything - this is a monitoring component

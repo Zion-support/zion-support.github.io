@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
-=======
-'use client';
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -42,7 +36,6 @@ const HelpPage: React.FC = () => {
       icon: MessageSquare,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10'
-    }
   ];
 
   const helpArticles = {
@@ -82,7 +75,6 @@ const HelpPage: React.FC = () => {
         difficulty: 'Intermediate',
         icon: BookOpen,
         color: 'text-blue-400'
-      }
     ],
     'troubleshooting': [
       {
@@ -120,7 +112,6 @@ const HelpPage: React.FC = () => {
         difficulty: 'Intermediate',
         icon: HelpCircle,
         color: 'text-red-400'
-      }
     ],
     'billing': [
       {
@@ -158,7 +149,6 @@ const HelpPage: React.FC = () => {
         difficulty: 'Beginner',
         icon: CheckCircle,
         color: 'text-green-400'
-      }
     ],
     'technical': [
       {
@@ -196,7 +186,6 @@ const HelpPage: React.FC = () => {
         difficulty: 'Intermediate',
         icon: MessageSquare,
         color: 'text-purple-400'
-      }
     ]
   };
 
@@ -228,7 +217,6 @@ const HelpPage: React.FC = () => {
       icon: Download,
       color: 'text-green-400',
       count: '25+ downloads'
-    }
   ];
 
   const supportChannels = [
@@ -263,7 +251,6 @@ const HelpPage: React.FC = () => {
       color: 'text-purple-400',
       availability: '24/7',
       responseTime: 'Community driven'
-    }
   ];
 
   const faqs = [
@@ -286,7 +273,6 @@ const HelpPage: React.FC = () => {
     {
       question: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
-    }
   ];
 
   const getCurrentArticles = () => {

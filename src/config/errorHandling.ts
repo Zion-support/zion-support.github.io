@@ -8,7 +8,6 @@ export enum ErrorSeverity {
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical'
-}
 export enum ErrorCategory {
   NETWORK = 'network',
   VALIDATION = 'validation',
@@ -19,7 +18,6 @@ export enum ErrorCategory {
   SYSTEM = 'system',
   THIRD_PARTY = 'third_party',
   UNKNOWN = 'unknown'
-}
 export interface ErrorConfig {
   enabled: boolean;
   logToConsole: boolean;
@@ -28,7 +26,6 @@ export interface ErrorConfig {
   maxStackTraceLength: number;
   ignoreErrors: RegExp[];
   severityThreshold: ErrorSeverity;
-}
 export const _errorHandlingConfig: ErrorConfig = {
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
@@ -61,7 +58,6 @@ export const _errorMessages = {
   generic: {
     unknown: 'An unexpected error occurred. Please try again.',
     retry: 'Please try again in a few moments.'
-  }
 };
 export class AppError extends Error {
   constructor(
@@ -73,6 +69,4 @@ export class AppError extends Error {
     super(message);
     this.name = 'AppError';
     Error.captureStackTrace(this, this.constructor);
-  }
-}
 export default errorHandlingConfig;

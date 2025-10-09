@@ -21,9 +21,7 @@ export const waitFor = async (
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
-    }
     await wait(interval);
-  }
 };
 /**
  * Mock fetch for testing
@@ -43,7 +41,6 @@ export const mockFetch = (
         text: async () => JSON.stringify(response)
       } as Response)
     ) as typeof fetch;
-  }
 };
 /**
  * Mock local storage
@@ -52,24 +49,17 @@ export class MockStorage implements Storage {
   private store: Map<string, string> = new Map();
   get length(): number {
     return this.store.size;
-  }
   clear(): void {
     this.store.clear();
-  }
   getItem(key: string): string | null {
     return this.store.get(key) || null;
-  }
   key(index: number): string | null {
     const keys = Array.from(this.store.keys());
     return keys[index] || null;
-  }
   removeItem(key: string): void {
     this.store.delete(key);
-  }
   setItem(key: string, value: string): void {
     this.store.set(key, value);
-  }
-}
 /**
  * Create a mock localStorage for testing
  */
@@ -88,7 +78,6 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
       },
       writable: true
     });
-  }
 };
 /**
  * Create a mock performance API
@@ -160,7 +149,6 @@ export const generateTestData = {
   },
   array: <T>(generator: () => T, length = 5): T[] => {
     return Array.from({ length }, generator);
-  }
 };
 /**
  * Deep clone an object
@@ -185,7 +173,6 @@ export class ConsoleSpy {
   constructor() {
     this.originalConsole = { ...console };
     this.mock();
-  }
   private mock(): void {
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '));
@@ -196,27 +183,20 @@ export class ConsoleSpy {
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '));
     };
-  }
   getLogs(): string[] {
     return [...this.logs];
-  }
   getErrors(): string[] {
     return [...this.errors];
-  }
   getWarnings(): string[] {
     return [...this.warnings];
-  }
   restore(): void {
     console.log = this.originalConsole.log;
     console.error = this.originalConsole.error;
     console.warn = this.originalConsole.warn;
-  }
   clear(): void {
     this.logs = [];
     this.errors = [];
     this.warnings = [];
-  }
-}
 /**
  * Create a deferred promise
  */
@@ -224,7 +204,6 @@ export interface Deferred<T> {
   promise: Promise<T>;
   resolve: (value: T) => void;
   reject: (reason?: unknown) => void;
-}
 export const createDeferred = <T>(): Deferred<T> => {
   let resolve!: (value: T) => void;
   let reject!: (reason?: unknown) => void;
@@ -250,9 +229,6 @@ export const retryWithBackoff = async <T>(
       lastError = error as Error;
       if (i < maxRetries - 1) {
         await wait(initialDelay * Math.pow(2, i));
-      }
-    }
-  }
   throw lastError!;
 };
 /**

@@ -6,14 +6,11 @@
 export interface ValidationRule<T = unknown> {
   validate: (value: T) => boolean;
   message: string;
-}
 export interface ValidationResult {
   valid: boolean;
   errors: string[];
-}
 export interface FieldValidation {
   [fieldName: string]: ValidationRule[];
-}
 /**
  * Common validation rules
  */
@@ -69,7 +66,6 @@ export const _validationRules = {
         return true;
       } catch {
         return false;
-      }
     },
     message
   }),
@@ -143,13 +139,10 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   for (const rule of rules) {
     if (!rule.validate(value)) {
       errors.push(rule.message);
-    }
-  }
   return {
     valid: errors.length === 0,
     errors
   };
-}
 /**
  * Validate entire form
  */
@@ -162,9 +155,7 @@ export function validateForm<T extends Record<string, unknown>>(
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);
-  }
   return results;
-}
 /**
  * Check if form is valid
  */
@@ -172,7 +163,6 @@ export function isFormValid<T extends Record<string, unknown>>(
   validationResults: Record<keyof T, ValidationResult>
 ): boolean {
   return Object.values(validationResults).every(result => result.valid);
-}
 /**
  * Get all form errors
  */
@@ -184,10 +174,7 @@ export function getFormErrors<T extends Record<string, unknown>>(
     const result = validationResults[fieldName];
     if (!result.valid) {
       errors[fieldName] = result.errors;
-    }
-  }
   return errors;
-}
 /**
  * Sanitize input string
  */
@@ -196,7 +183,6 @@ export function sanitizeInput(input: string): string {
     .trim()
     .replace(/[<>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
-}
 /**
  * Debounce function for form validation
  */
@@ -212,7 +198,5 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
     };
     if (timeout) {
       clearTimeout(timeout);
-    }
     timeout = setTimeout(later, wait);
   };
-}

@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AICustomerInsightsPage: React.FC = () => {
       title: 'Personalization',
       description: 'AI-driven personalization and recommendations',
       benefits: ['Personalized experiences', 'Product recommendations', 'Content customization']
-    }
   ];
 
   return (

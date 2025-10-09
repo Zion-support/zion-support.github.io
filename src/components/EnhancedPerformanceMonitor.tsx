@@ -9,14 +9,10 @@ interface PerformanceMetrics {
   fmp: number | null;
   tbt: number | null;
   si: number | null;
-}
-
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableReporting?: boolean;
   reportInterval?: number;
-}
-
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableReporting = true,
@@ -44,8 +40,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-      }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -61,7 +55,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-      }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -72,8 +65,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (!(entry as any).hadRecentInput) {
           clsValue += (entry as any).value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
-        }
-      }
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -81,15 +72,11 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-    }
-
     // First Meaningful Paint (FMP) - approximation
     const fmpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-meaningful-paint') {
           setMetrics(prev => ({ ...prev, fmp: entry.startTime }));
-        }
-      }
     });
     fmpObserver.observe({ entryTypes: ['paint'] });
 
@@ -99,8 +86,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'longtask') {
           totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT
-        }
-      }
       setMetrics(prev => ({ ...prev, tbt: totalBlockingTime }));
     });
     tbtObserver.observe({ entryTypes: ['longtask'] });
@@ -110,8 +95,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, si: entry.startTime }));
-        }
-      }
     });
     siObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -181,27 +164,19 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (metrics.fcp > 3000) score -= 30;
       else if (metrics.fcp > 1800) score -= 20;
       else if (metrics.fcp > 1000) score -= 10;
-    }
-
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {
       if (metrics.lcp > 4000) score -= 30;
       else if (metrics.lcp > 2500) score -= 20;
       else if (metrics.lcp > 1500) score -= 10;
-    }
-
     // FID scoring (0-100)
     if (metrics.fid !== null) {
       if (metrics.fid > 300) score -= 20;
       else if (metrics.fid > 100) score -= 10;
-    }
-
     // CLS scoring (0-100)
     if (metrics.cls !== null) {
       if (metrics.cls > 0.25) score -= 20;
       else if (metrics.cls > 0.1) score -= 10;
-    }
-
     return Math.max(0, score);
   }, []);
 
@@ -238,8 +213,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           cls: metrics.cls,
         },
       });
-    }
-
     // Callback for custom handling
     onMetricsUpdate?.(metrics);
 
@@ -271,7 +244,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         setIsVisible(prev => !prev);
-      }
     };
 
     window.addEventListener('keydown', handleKeyPress);

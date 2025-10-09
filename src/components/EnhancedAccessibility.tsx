@@ -8,8 +8,6 @@ interface AccessibilitySettings {
   focusVisible: boolean;
   zoomLevel: number;
   colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-}
-
 interface AccessibilityProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -18,8 +16,6 @@ interface AccessibilityProps {
   enableReducedMotion?: boolean;
   enableColorBlindSupport?: boolean;
   enableZoomControl?: boolean;
-}
-
 const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
@@ -49,8 +45,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
         console.error('Failed to load accessibility settings:', error);
-      }
-    }
   }, []);
 
   // Save settings to localStorage
@@ -65,7 +59,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       document.documentElement.classList.add('high-contrast');
     } else {
       document.documentElement.classList.remove('high-contrast');
-    }
   }, [settings.highContrast]);
 
   // Apply large text mode
@@ -74,7 +67,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       document.documentElement.style.fontSize = '1.2rem';
     } else {
       document.documentElement.style.fontSize = '1rem';
-    }
   }, [settings.largeText]);
 
   // Apply reduced motion
@@ -83,7 +75,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       document.documentElement.classList.add('reduced-motion');
     } else {
       document.documentElement.classList.remove('reduced-motion');
-    }
   }, [settings.reducedMotion]);
 
   // Apply color blind support
@@ -107,19 +98,13 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
-        }
-      }
-
       // Toggle accessibility panel
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {
         e.preventDefault();
         setIsVisible(prev => !prev);
-      }
-
       // Escape key to close panel
       if (e.key === 'Escape' && isVisible) {
         setIsVisible(false);
-      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -134,14 +119,12 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       const target = e.target as HTMLElement;
       if (target && settings.focusVisible) {
         target.classList.add('focus-visible');
-      }
     };
 
     const handleFocusOut = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
       if (target) {
         target.classList.remove('focus-visible');
-      }
     };
 
     document.addEventListener('focusin', handleFocusIn);
@@ -240,8 +223,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
         <Eye className="w-5 h-5" />
       </button>
     );
-  }
-
   return (
     <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">

@@ -41,7 +41,6 @@ export interface ErrorBoundaryConfig {
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
-}
 /**
  * Default error messages
  */
@@ -70,9 +69,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback
-    }
   };
-}
 /**
  * Default error fallback component
  */
@@ -121,7 +118,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
       </div>
     </div>
   );
-}
 /**
  * Network error fallback component
  */
@@ -159,7 +155,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
       </div>
     </div>
   );
-}
 /**
  * Not found error fallback component
  */
@@ -189,28 +184,21 @@ function NotFoundFallback(): JSX.Element {
       </div>
     </div>
   );
-}
 /**
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network';
-  }
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound';
-  }
   if (error.message.includes('timeout')) {
     return 'timeout';
-  }
   if (error.message.includes('500') || error.message.includes('server')) {
     return 'serverError';
-  }
   if (error.message.includes('validation')) {
     return 'validation';
-  }
   return 'default';
-}
 /**
  * Format error for logging
  */
@@ -224,5 +212,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
-}
 export default getErrorBoundaryConfig;

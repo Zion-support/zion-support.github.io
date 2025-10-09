@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Target, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Data-driven insights and business intelligence',
       benefits: ['Data analytics', 'Business intelligence', 'Performance metrics']
-    }
   ];
 
   return (

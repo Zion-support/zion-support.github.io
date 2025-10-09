@@ -21,7 +21,6 @@ export enum A11ySeverity {
   SERIOUS = 'SERIOUS',
   /** Critical issue that makes content inaccessible */
   CRITICAL = 'CRITICAL'
-}
 /**
  * WCAG success criteria levels
  */
@@ -32,7 +31,6 @@ export enum WCAGLevel {
   AA = 'AA',
   /** Level AAA - Enhanced accessibility */
   AAA = 'AAA'
-}
 /**
  * Accessibility issue interface
  */
@@ -55,7 +53,6 @@ export interface A11yIssue {
   fix?: string;
   /** Code example for the fix */
   codeExample?: string;
-}
 /**
  * Accessibility check result
  */
@@ -70,7 +67,6 @@ export interface A11yCheckResult {
   timestamp: Date;
   /** Overall accessibility score (0-100) */
   score: number;
-}
 /**
  * Accessibility Checker class
  *
@@ -111,7 +107,6 @@ export class AccessibilityChecker {
       timestamp: new Date(),
       score
     };
-  }
   /**
    * Check entire document for accessibility issues
    *
@@ -126,9 +121,7 @@ export class AccessibilityChecker {
         timestamp: new Date(),
         score: 100
       };
-    }
     return this.checkElement(document.body);
-  }
   /**
    * Check images for alt text
    *
@@ -152,7 +145,6 @@ export class AccessibilityChecker {
           fix: 'Add descriptive alt text to the image',
           codeExample: '<img src="..." alt="Description of image" />'
         });
-      }
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
         this.addIssue({
@@ -165,9 +157,7 @@ export class AccessibilityChecker {
           fix: 'Add role="presentation" to decorative images',
           codeExample: '<img src="..." alt="" role="presentation" />'
         });
-      }
     });
-  }
   /**
    * Check heading hierarchy
    *
@@ -192,7 +182,6 @@ export class AccessibilityChecker {
           fix: 'Maintain sequential heading hierarchy',
           codeExample: `Use h${previousLevel + 1} instead of h${level}`
         });
-      }
       // Check for empty headings
       if (!heading.textContent?.trim()) {
         this.addIssue({
@@ -204,7 +193,6 @@ export class AccessibilityChecker {
           element: heading.tagName.toLowerCase(),
           fix: 'Add descriptive text to the heading'
         });
-      }
       previousLevel = level;
     });
     // Check for multiple h1s
@@ -219,8 +207,6 @@ export class AccessibilityChecker {
         element: 'h1',
         fix: 'Use only one h1 per page for the main heading'
       });
-    }
-  }
   /**
    * Check links for accessibility
    *
@@ -246,7 +232,6 @@ export class AccessibilityChecker {
           fix: 'Add descriptive text or aria-label to the link',
           codeExample: '<Link to="..." aria-label="Description">...</Link>'
         });
-      }
       // Check for generic link text
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {
         this.addIssue({
@@ -259,7 +244,6 @@ export class AccessibilityChecker {
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use "Read full article" instead of "Read more"'
         });
-      }
       // Check for links opening in new window without warning
       const target = link.getAttribute('target');
       if (
@@ -278,9 +262,7 @@ export class AccessibilityChecker {
           codeExample:
             '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
         });
-      }
     });
-  }
   /**
    * Check buttons for accessibility
    *
@@ -305,9 +287,7 @@ export class AccessibilityChecker {
           fix: 'Add text content or aria-label to the button',
           codeExample: '<button aria-label="Close dialog">×</button>'
         });
-      }
     });
-  }
   /**
    * Check form elements for accessibility
    *
@@ -336,9 +316,7 @@ export class AccessibilityChecker {
           fix: 'Associate a label with the form control',
           codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
         });
-      }
     });
-  }
   /**
    * Check color contrast (basic check)
    *
@@ -361,9 +339,7 @@ export class AccessibilityChecker {
           element: el.tagName.toLowerCase(),
           fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
         });
-      }
     });
-  }
   /**
    * Check keyboard accessibility
    *
@@ -386,7 +362,6 @@ export class AccessibilityChecker {
           fix: 'Remove tabindex="-1" or use tabindex="0"',
           codeExample: '<button tabindex="0">Accessible button</button>'
         });
-      }
     });
     // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
@@ -405,9 +380,7 @@ export class AccessibilityChecker {
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
           codeExample: '<button onClick={handleClick}>Click me</button>'
         });
-      }
     });
-  }
   /**
    * Check ARIA usage
    *
@@ -450,7 +423,6 @@ export class AccessibilityChecker {
           element: el.tagName.toLowerCase(),
           fix: 'Use a valid ARIA role or remove the role attribute'
         });
-      }
       // Check aria-labelledby references
       const labelledBy = el.getAttribute('aria-labelledby');
       if (labelledBy) {
@@ -465,10 +437,7 @@ export class AccessibilityChecker {
             element: el.tagName.toLowerCase(),
             fix: 'Ensure the referenced element exists'
           });
-        }
-      }
     });
-  }
   /**
    * Check for proper use of landmark regions
    *
@@ -488,8 +457,6 @@ export class AccessibilityChecker {
         fix: 'Add a <main> element or role="main"',
         codeExample: '<main><!-- Main content --></main>'
       });
-    }
-  }
   /**
    * Add an issue to the list
    *
@@ -501,7 +468,6 @@ export class AccessibilityChecker {
       id: this.generateIssueId(),
       ...issue
     });
-  }
   /**
    * Generate unique issue ID
    *
@@ -510,7 +476,6 @@ export class AccessibilityChecker {
    */
   private generateIssueId(): string {
     return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
   /**
    * Calculate accessibility score based on issues
    *
@@ -531,7 +496,6 @@ export class AccessibilityChecker {
     // Score decreases with more/severe issues
     const score = Math.max(0, 100 - totalPenalty);
     return Math.round(score);
-  }
   /**
    * Get issues by severity
    *
@@ -540,7 +504,6 @@ export class AccessibilityChecker {
    */
   public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {
     return this.issues.filter(issue => issue.severity === severity);
-  }
   /**
    * Get issues by WCAG level
    *
@@ -549,7 +512,6 @@ export class AccessibilityChecker {
    */
   public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {
     return this.issues.filter(issue => issue.wcagLevel === level);
-  }
   /**
    * Generate accessibility report
    *
@@ -558,6 +520,3 @@ export class AccessibilityChecker {
   public generateReport(): string {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
-    }
-  }
-}

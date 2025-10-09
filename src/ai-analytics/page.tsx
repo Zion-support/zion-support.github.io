@@ -29,7 +29,6 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Custom Metrics',
       description: 'Customizable metrics and KPIs',
       benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
-    }
   ];
 
   return (

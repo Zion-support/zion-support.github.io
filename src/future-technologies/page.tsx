@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Rocket, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const FutureTechnologiesPage: React.FC = () => {
       title: 'Technology Integration',
       description: 'Integrate emerging technologies with existing systems',
       benefits: ['System integration', 'Migration support', 'Compatibility']
-    }
   ];
 
   return (

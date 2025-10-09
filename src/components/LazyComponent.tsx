@@ -7,8 +7,6 @@ interface LazyComponentProps {
   delay?: number;
   threshold?: number;
   rootMargin?: string;
-}
-
 // Higher-order component for lazy loading
 export const _withLazyLoading = <P extends object>(
   Component: ComponentType<P>,
@@ -42,18 +40,14 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
             setIsLoaded(true);
           }, delay);
           observer.disconnect();
-        }
       },
       {
         threshold,
         rootMargin,
-      }
     );
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
-    }
-
     return () => observer.disconnect();
   }, [delay, threshold, rootMargin]);
 

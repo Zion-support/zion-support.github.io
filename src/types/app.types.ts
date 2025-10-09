@@ -15,8 +15,6 @@ export interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
   customMetrics?: Record<string, number>;
-}
-
 /**
  * Performance Report Interface
  * Complete performance report structure
@@ -26,8 +24,6 @@ export interface PerformanceReport {
   resources: ResourceStats;
   memory: MemoryStats | null;
   timestamp: number;
-}
-
 /**
  * Resource Statistics Interface
  * Tracks resource loading statistics
@@ -38,8 +34,6 @@ export interface ResourceStats {
   styles: number;
   images: number;
   fonts: number;
-}
-
 /**
  * Memory Statistics Interface
  * Browser memory usage statistics
@@ -48,8 +42,6 @@ export interface MemoryStats {
   usedJSHeapSize: number;
   totalJSHeapSize: number;
   jsHeapSizeLimit: number;
-}
-
 /**
  * Performance Alert Interface
  * Structure for performance alerts and warnings
@@ -61,8 +53,6 @@ export interface PerformanceAlert {
   value: number;
   threshold: number;
   timestamp: number;
-}
-
 /**
  * Layout Shift Interface
  * Extends PerformanceEntry for layout shift tracking
@@ -70,8 +60,6 @@ export interface PerformanceAlert {
 export interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-}
-
 /**
  * Performance with Memory Interface
  * Extends Performance API with memory information
@@ -82,4 +70,3 @@ export interface PerformanceWithMemory extends Performance {
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
   };
-}

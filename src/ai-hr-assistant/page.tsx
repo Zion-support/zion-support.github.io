@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Users, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIHRAssistantPage: React.FC = () => {
       title: 'HR Analytics',
       description: 'Comprehensive HR analytics and insights',
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
-    }
   ];
 
   return (

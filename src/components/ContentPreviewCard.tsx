@@ -14,7 +14,6 @@ interface ContentPreviewCardProps {
     engagement: number;
   };
   excerpt?: string;
-}
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   // id,
   title,
@@ -31,7 +30,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   const _formatNumber = (num: number): string => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
-    }
     return num.toString();
   };
   const getCategoryColor = (category: string): string => {

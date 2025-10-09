@@ -46,7 +46,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {
         cost: '80% reduction'
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
-    }
   ];
   useEffect(() => {
     const timer = setInterval(() => {

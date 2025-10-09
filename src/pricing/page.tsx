@@ -60,7 +60,6 @@ const PricingPage: React.FC = () => {
         'SLA Guarantee'
       ],
       popular: false
-    }
   ];
 
   const addOns = [
@@ -81,7 +80,6 @@ const PricingPage: React.FC = () => {
       price: '$99/month',
       description: '24/7 priority support and faster response times',
       icon: Phone
-    }
   ];
 
   return (

@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -118,7 +114,6 @@ const BusinessAppsPage: React.FC = () => {
       marketPrice: '$600-1,800/month',
       category: 'E-commerce',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'Payment APIs']
-    }
   ];
 
   const categories = [...new Set(businessApps.map(app => app.category))];

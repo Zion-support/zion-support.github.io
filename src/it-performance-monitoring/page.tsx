@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {BarChart, Zap, Shield, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       title: 'Custom Dashboards',
       description: 'Customizable dashboards and reporting',
       benefits: ['Custom metrics', 'Visualization', 'Reporting']
-    }
   ];
 
   return (

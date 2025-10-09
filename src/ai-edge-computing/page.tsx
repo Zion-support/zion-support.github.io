@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Cpu, Zap, Globe, Shield, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIEdgeComputingPage: React.FC = () => {
       title: 'Secure Edge Computing',
       description: 'Enterprise-grade security for edge AI deployments',
       benefits: ['Data privacy', 'Secure communication', 'Access control']
-    }
   ];
 
   return (

@@ -18,7 +18,6 @@ export interface MiddlewareContext {
     headers?: Record<string, string>;
   };
   metadata: Record<string, unknown>;
-}
 export type Middleware = (
   context: MiddlewareContext,
   next: NextFunction
@@ -34,7 +33,6 @@ export class MiddlewareExecutor {
   use(middleware: Middleware): this {
     this.middlewares.push(middleware);
     return this;
-  }
   /**
    * Execute middleware chain
    */
@@ -43,13 +41,10 @@ export class MiddlewareExecutor {
     const _next = async (): Promise<unknown> => {
       if (index >= this.middlewares.length) {
         return context.response?.data;
-      }
       const middleware = this.middlewares[index++];
       return await middleware(context, next);
     };
     return await next();
-  }
-}
 /**
  * Logging middleware
  */
@@ -80,7 +75,6 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
       duration
     });
     throw error;
-  }
 };
 /**
  * Authentication middleware
@@ -89,7 +83,6 @@ export const authMiddleware: Middleware = async (context, next) => {
   const token = getAuthToken();
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token}`;
-  }
   return await next();
 };
 /**
@@ -98,7 +91,6 @@ export const authMiddleware: Middleware = async (context, next) => {
 function getAuthToken(): string | null {
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('authToken');
-}
 /**
  * Error handling middleware
  */
@@ -118,7 +110,6 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       ...standardError
     });
     throw standardError;
-  }
 };
 /**
  * Rate limiting middleware
@@ -133,7 +124,6 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
     const validTimestamps = timestamps.filter(t => now - t < windowMs);
     if (validTimestamps.length >= maxRequests) {
       throw new Error('Rate limit exceeded');
-    }
     validTimestamps.push(now);
     requests.set(key, validTimestamps);
     return await next();
@@ -147,13 +137,11 @@ export const cachingMiddleware = (ttl: number): Middleware => {
   return async (context, next) => {
     if (context.request.method !== 'GET') {
       return await next();
-    }
     const key = context.request.url;
     const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
       logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data;
-    }
     const result = await next();
     cache.set(key, {
       data: result,
@@ -180,12 +168,8 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
             {
               component: 'RetryMiddleware',
               url: context.request.url
-            }
           );
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
-        }
-      }
-    }
     throw lastError;
   };
 };
@@ -234,7 +218,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
     .use(authMiddleware)
     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
-}
 export default {
   MiddlewareExecutor,
   loggingMiddleware,

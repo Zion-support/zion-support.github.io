@@ -30,7 +30,6 @@ export const _preloadCriticalResources = () => {
     link.href = src
     document.head.appendChild(link)
   })
-}
 export const preloadRoute = (route: string) => {
   if (typeof window === 'undefined') return
   // Preload route-specific resources
@@ -47,8 +46,6 @@ export const preloadRoute = (route: string) => {
       link.href = resource
       document.head.appendChild(link)
     })
-  }
-}
 export const optimizeImages = () => {
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
@@ -66,14 +63,10 @@ export const optimizeImages = () => {
             img['src'] = img.dataset['src']
             img.removeAttribute('data-src')
             imageObserver.unobserve(img)
-          }
-        }
       })
     })
     const lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach(img => imageObserver.observe(img))
-  }
-}
 export const optimizeThirdPartyScripts = () => {
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
@@ -88,12 +81,9 @@ export const optimizeThirdPartyScripts = () => {
     })
   } else {
     loadAnalytics()
-  }
-}
 const loadAnalytics = () => {
   // Load Google Analytics after page load
   const gaScript = document.createElement('script')
   gaScript.async = true
   gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
   document.head.appendChild(gaScript)
-}

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
@@ -45,7 +38,6 @@ const CompliancePage: React.FC = () => {
       title: 'Privacy Rights',
       description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
       features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
-    }
   ];
 
   return (

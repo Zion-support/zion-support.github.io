@@ -7,23 +7,11 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-<<<<<<< HEAD
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-const __originalConsoleError = console.error;
-=======
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
-  }
   originalConsoleError(...args);
 };
 // Mock window.matchMedia
@@ -66,26 +54,10 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-<<<<<<< HEAD
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-// eslint-disable-next-line no-console
-const originalConsoleInfo = console.info;
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-=======
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
-  }
   originalConsoleWarn(...args);
 };
 // eslint-disable-next-line no-console
@@ -93,7 +65,6 @@ console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
-  }
   originalConsoleInfo(...args);
 };
 // Mock PerformanceObserver
@@ -104,21 +75,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
   disconnect() {}
   takeRecords() {
     return [];
-  }
 };
-<<<<<<< HEAD
-// Additional JSDOM navigation warning suppression
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const suppressNavigationWarnings = (...args: unknown[]) => {
-  if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
-=======
-// Suppress JSDOM navigation warnings
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
     return; // Suppress JSDOM navigation warnings
-  }
   originalConsoleError(...args);
 };
 // Mock window.location

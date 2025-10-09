@@ -11,8 +11,6 @@ interface LazyImageProps {
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
-}
-
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -37,18 +35,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
-        }
       },
       {
         threshold: 0.1,
         rootMargin: '50px',
-      }
     );
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
-    }
-
     return () => observer.disconnect();
   }, [priority]);
 

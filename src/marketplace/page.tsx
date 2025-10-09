@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
-=======
-'use client';
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -38,7 +32,6 @@ const MarketplacePage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description: 'Hardware and infrastructure solutions'
-    }
   ];
 
   const products = [
@@ -93,7 +86,6 @@ const MarketplacePage: React.FC = () => {
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
       vendor: 'QuantumSec',
       verified: true
-    }
   ];
 
   const talent = [
@@ -135,7 +127,6 @@ const MarketplacePage: React.FC = () => {
       image: '👩‍🔬',
       verified: true,
       available: false
-    }
   ];
 
   const equipment = [
@@ -166,7 +157,6 @@ const MarketplacePage: React.FC = () => {
       vendor: 'QuantumCloud',
       verified: true,
       inStock: true
-    }
   ];
 
   const getCurrentItems = () => {
@@ -179,7 +169,6 @@ const MarketplacePage: React.FC = () => {
         return equipment;
       default:
         return [];
-    }
   };
 
   const filteredItems = getCurrentItems().filter(item =>
@@ -211,7 +200,6 @@ const MarketplacePage: React.FC = () => {
       value: '4.8',
       label: 'Average Rating',
       color: 'text-yellow-400'
-    }
   ];
 
   const benefits = [
@@ -234,7 +222,6 @@ const MarketplacePage: React.FC = () => {
       icon: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
-    }
   ];
 
   return (

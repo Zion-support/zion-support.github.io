@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
@@ -55,7 +49,6 @@ const AIAnalyticsPage: React.FC = () => {
         'Risk assessment',
         'Automated responses'
       ]
-    }
   ];
 
   const useCases = [
@@ -82,7 +75,6 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Optimize business processes and identify areas for improvement',
       icon: Zap,
       color: 'text-yellow-400'
-    }
   ];
 
   const pricingTiers = [
@@ -134,7 +126,6 @@ const AIAnalyticsPage: React.FC = () => {
       ],
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
-    }
   ];
 
   const benefits = [
@@ -157,7 +148,6 @@ const AIAnalyticsPage: React.FC = () => {
       icon: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
-    }
   ];
 
   return (

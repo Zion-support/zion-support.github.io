@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
 const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
@@ -13,7 +12,6 @@ const PWAInstaller: React.FC = () => {
     const _checkInstalled = () => {
       if (window.matchMedia('(display-mode: standalone)').matches) {
         setIsInstalled(true);
-      }
     };
     checkInstalled();
     // Listen for beforeinstallprompt event
@@ -42,11 +40,9 @@ const PWAInstaller: React.FC = () => {
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
         } else {
-        }
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
     } catch (error) {
-      }
   };
   const handleDismiss = () => {
     setShowInstallPrompt(false);
@@ -56,7 +52,6 @@ const PWAInstaller: React.FC = () => {
   // Don't show if already installed or dismissed this session
   if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
     return null;
-  }
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-sm">
       <div className="bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">

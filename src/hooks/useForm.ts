@@ -18,7 +18,6 @@ export interface UseFormConfig<T extends Record<string, unknown>> {
   onSubmit: (values: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
-}
 export interface UseFormReturn<T extends Record<string, unknown>> {
   values: T;
   errors: Record<keyof T, string[]>;
@@ -34,7 +33,6 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   resetForm: () => void;
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
-}
 export function useForm<T extends Record<string, unknown>>({
   initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
@@ -73,7 +71,6 @@ export function useForm<T extends Record<string, unknown>>({
       let fieldValue: unknown = value;
       if (type === 'checkbox' && 'checked' in e.target) {
         fieldValue = (e.target as HTMLInputElement).checked;
-      }
       setValues(prev => ({
         ...prev,
         [fieldName]: fieldValue
@@ -81,7 +78,6 @@ export function useForm<T extends Record<string, unknown>>({
       // Validate on change if enabled
       if (validateOnChange && touched[fieldName]) {
         setTimeout(() => validateSingleField(fieldName), 0);
-      }
     },
     [validateOnChange, touched, validateSingleField]
   );
@@ -96,7 +92,6 @@ export function useForm<T extends Record<string, unknown>>({
       // Validate on blur if enabled
       if (validateOnBlur) {
         validateSingleField(fieldName);
-      }
     },
     [validateOnBlur, validateSingleField]
   );
@@ -114,14 +109,12 @@ export function useForm<T extends Record<string, unknown>>({
       const isValid = validateAllFields();
       if (!isValid) {
         return;
-      }
       setIsSubmitting(true);
       try {
         await onSubmit(values);
       } catch (error) {
       } finally {
         setIsSubmitting(false);
-      }
     },
     [values, validateAllFields]
   );
@@ -133,7 +126,6 @@ export function useForm<T extends Record<string, unknown>>({
     }));
     if (validateOnChange && touched[field]) {
       setTimeout(() => validateSingleField(field), 0);
-    }
   }, [validateOnChange, touched, validateSingleField]);
   // Set field error programmatically
   const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
@@ -175,4 +167,3 @@ export function useForm<T extends Record<string, unknown>>({
     validateField: validateSingleField,
     validateAllFields
   };
-}

@@ -7,8 +7,6 @@ interface SecurityEnhancerProps {
   enableXSSProtection?: boolean;
   enableClickjackingProtection?: boolean;
   enableContentTypeSniffingProtection?: boolean;
-}
-
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableCSP = true,
   enableHTTPSRedirect = true,
@@ -19,24 +17,14 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   useEffect(() => {
     if (enableCSP) {
       addContentSecurityPolicy();
-    }
-    
     if (enableHTTPSRedirect) {
       enforceHTTPS();
-    }
-    
     if (enableXSSProtection) {
       addXSSProtection();
-    }
-    
     if (enableClickjackingProtection) {
       addClickjackingProtection();
-    }
-    
     if (enableContentTypeSniffingProtection) {
       addContentTypeSniffingProtection();
-    }
-    
     // Add security headers
     addSecurityHeaders();
     
@@ -67,7 +55,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   const enforceHTTPS = () => {
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
-    }
   };
 
   const addXSSProtection = () => {
@@ -112,7 +99,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       // Only prevent on production
       if (process.env.NODE_ENV === 'production') {
         e.preventDefault();
-      }
     });
 
     // Prevent text selection (optional)
@@ -120,7 +106,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       // Only prevent on production
       if (process.env.NODE_ENV === 'production') {
         e.preventDefault();
-      }
     });
 
     // Prevent drag and drop
@@ -138,24 +123,18 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         // F12
         if (e.keyCode === 123) {
           e.preventDefault();
-        }
         // Ctrl+Shift+I
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
           e.preventDefault();
-        }
         // Ctrl+U
         if (e.ctrlKey && e.keyCode === 85) {
           e.preventDefault();
-        }
         // Ctrl+S
         if (e.ctrlKey && e.keyCode === 83) {
           e.preventDefault();
-        }
         // Ctrl+A
         if (e.ctrlKey && e.keyCode === 65) {
           e.preventDefault();
-        }
-      }
     });
 
     // Monitor for suspicious activity
@@ -175,8 +154,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
           // Could implement additional security measures here
-        }
-      }
     });
 
     // Track rapid keyboard input
@@ -186,8 +163,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
-          }
-      }
     });
   };
 

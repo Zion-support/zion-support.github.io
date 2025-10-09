@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
-=======
-'use client';
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -40,13 +34,9 @@ const SignupPage: React.FC = () => {
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
-    }
-    
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
       return;
-    }
-    
     setIsLoading(true);
     
     // Simulate signup process
@@ -72,7 +62,6 @@ const SignupPage: React.FC = () => {
       icon: Globe,
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
-    }
   ];
 
   const benefits = [

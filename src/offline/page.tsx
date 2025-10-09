@@ -1,11 +1,5 @@
 import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-
-'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 
 /**
  * Offline Page
@@ -73,7 +67,3 @@ const OfflinePage: React.FC = () => {
 };
 
 export default OfflinePage;
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03

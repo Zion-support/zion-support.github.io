@@ -34,12 +34,10 @@ interface NetworkConnection {
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
-}
 interface NavigatorWithConnection extends Navigator {
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
-}
 interface SystemMetrics {
   performance: {
     score: number;
@@ -74,13 +72,11 @@ interface SystemMetrics {
     rtt: number;
     saveData: boolean;
   };
-}
 interface SystemMonitorProps {
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-}
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
   refreshInterval = 5000,
   showDetails = true,
@@ -128,7 +124,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-    }
   }, []);
   // Initialize monitoring
   useEffect(() => {
@@ -158,7 +153,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const percentage = (used / limit) * 100;
       return { used, total, limit, percentage };
-    }
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
   // Get network information
@@ -172,7 +166,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         rtt: connection?.rtt || 0,
         saveData: connection?.saveData || false
       };
-    }
     return {
       effectiveType: 'unknown',
       downlink: 0,
@@ -215,7 +208,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
-    }
   };
   if (!metrics) {
     return (
@@ -226,7 +218,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
       </div>
     );
-  }
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">

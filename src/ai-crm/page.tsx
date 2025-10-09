@@ -1,12 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 
-const AICRMPage: React.FC = () => {
-
-const AiCrmPage: React.FC = () => {
-=======
-const AICRMPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -20,6 +14,5 @@ const AICRMPage: React.FC = () => {
   );
 };
 
-}
-
+export default Component;
 export default AiCrmPage;

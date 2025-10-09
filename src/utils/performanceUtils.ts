@@ -19,10 +19,8 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
     };
     if (timeout) {
       clearTimeout(timeout);
-    }
     timeout = setTimeout(later, wait);
   };
-}
 /**
  * Throttle function to limit execution rate
  */
@@ -36,9 +34,7 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-    }
   };
-}
 /**
  * Memoize function results
  */
@@ -50,12 +46,10 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
     const key = JSON.stringify(args);
     if (cache.has(key)) {
       return cache.get(key)!;
-    }
     const result = func(...args) as ReturnType<T>;
     cache.set(key, result);
     return result;
   }) as T;
-}
 /**
  * Lazy load a component with dynamic import
  */
@@ -66,9 +60,7 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
   const LazyComponent = React.lazy(importFunc);
   if (fallback) {
     return LazyComponent;
-  }
   return LazyComponent;
-}
 /**
  * Measure function execution time
  */
@@ -81,7 +73,6 @@ export async function measureTime<T>(
   const duration = performance.now() - start;
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   return { result, duration };
-}
 /**
  * Batch async operations
  */
@@ -95,9 +86,7 @@ export async function batchAsync<T, R>(
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
-  }
   return results;
-}
 /**
  * Create a request animation frame loop
  */
@@ -109,16 +98,12 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     const shouldContinue = callback(time);
     if (shouldContinue !== false) {
       rafId = requestAnimationFrame(loop);
-    }
-  }
   rafId = requestAnimationFrame(loop);
   return () => {
     running = false;
     if (rafId) {
       cancelAnimationFrame(rafId);
-    }
   };
-}
 /**
  * Idle callback wrapper
  */
@@ -128,13 +113,10 @@ export function runWhenIdle(
 ): number {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
     return window.requestIdleCallback(callback, options);
-  }
   // Fallback for browsers that don't support requestIdleCallback
   if (typeof window !== 'undefined') {
     return (window as Window).setTimeout(callback, 1) as unknown as number;
-  }
   return 0;
-}
 /**
  * Cancel idle callback
  */
@@ -144,9 +126,6 @@ export function cancelIdle(id: number): void {
       window.cancelIdleCallback(id);
     } else {
       (window as Window).clearTimeout(id);
-    }
-  }
-}
 /**
  * Virtual scroll helper
  */
@@ -158,7 +137,6 @@ export class VirtualScroller<T> {
     this.items = items;
     this.itemHeight = itemHeight;
     this.containerHeight = containerHeight;
-  }
   getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
     const start = Math.floor(scrollTop / this.itemHeight);
     const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
@@ -168,15 +146,11 @@ export class VirtualScroller<T> {
       end: Math.min(this.items.length, end),
       offsetY
     };
-  }
   getVisibleItems(scrollTop: number): T[] {
     const { start, end } = this.getVisibleRange(scrollTop);
     return this.items.slice(start, end);
-  }
   getTotalHeight(): number {
     return this.items.length * this.itemHeight;
-  }
-}
 /**
  * Image lazy loading helper
  */
@@ -194,13 +168,10 @@ export function setupLazyImages(
           img['src'] = src;
           img.removeAttribute('data-src');
           observer.unobserve(img);
-        }
-      }
     });
   }, options);
   images.forEach((img) => observer.observe(img));
   return () => observer.disconnect();
-}
 /**
  * Preload critical resources
  */
@@ -212,7 +183,6 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
     link.as = as;
     document.head.appendChild(link);
   });
-}
 /**
  * Check if code splitting is supported
  */
@@ -224,8 +194,6 @@ export function supportsCodeSplitting(): boolean {
     return true;
   } catch {
     return false;
-  }
-}
 /**
  * Optimize bundle loading
  */
@@ -234,7 +202,6 @@ export function prefetchBundle(url: string): void {
   link.rel = 'prefetch';
   link.href = url;
   document.head.appendChild(link);
-}
 /**
  * Memory usage monitor
  */
@@ -250,9 +217,7 @@ export function getMemoryUsage(): {
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit
     };
-  }
   return null;
-}
 /**
  * FPS Monitor
  */
@@ -271,21 +236,14 @@ export class FPSMonitor {
         this.lastTime = now;
         if (callback) {
           callback(this.fps);
-        }
-      }
       this.rafId = requestAnimationFrame(loop);
     };
     this.rafId = requestAnimationFrame(loop);
-  }
   stop(): void {
     if (this.rafId) {
       cancelAnimationFrame(this.rafId);
-    }
-  }
   getFPS(): number {
     return this.fps;
-  }
-}
 export default {
   debounce,
   throttle,

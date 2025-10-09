@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {TrendingUp, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AISalesForecastingPage: React.FC = () => {
       title: 'Scenario Planning',
       description: 'What-if analysis and scenario planning',
       benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
-    }
   ];
 
   return (

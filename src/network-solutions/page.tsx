@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Globe, Shield, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const NetworkSolutionsPage: React.FC = () => {
       title: 'Network Management',
       description: '24/7 network monitoring and management',
       benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting']
-    }
   ];
 
   return (

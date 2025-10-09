@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Shield, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AISecurityMonitorPage: React.FC = () => {
       title: 'Security Analytics',
       description: 'Comprehensive security analytics and reporting',
       benefits: ['Security metrics', 'Threat intelligence', 'Performance reports']
-    }
   ];
 
   return (

@@ -26,7 +26,6 @@ const CloudServicesPage: React.FC = () => {
       title: 'Cloud Analytics',
       description: 'Advanced analytics and monitoring for cloud resources',
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
-    }
   ];
   const benefits = [
     '99.9% Uptime Guarantee',

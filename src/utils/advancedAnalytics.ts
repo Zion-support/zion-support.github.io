@@ -15,7 +15,6 @@ interface UserEvent {
   userId?: string;
   url: string;
   metadata?: Record<string, unknown>;
-}
 interface UserSession {
   id: string;
   startTime: string;
@@ -30,7 +29,6 @@ interface UserSession {
   os: string;
   country?: string;
   city?: string;
-}
 interface AnalyticsConfig {
   enableTracking: boolean;
   enableHeatmaps: boolean;
@@ -40,7 +38,6 @@ interface AnalyticsConfig {
   enablePerformanceTracking: boolean;
   enableErrorTracking: boolean;
   enableUserJourneyTracking: boolean;
-}
 class AdvancedAnalytics {
   private static instance: AdvancedAnalytics;
   private config: AnalyticsConfig;
@@ -61,13 +58,10 @@ class AdvancedAnalytics {
     };
     this.currentSession = this.createNewSession();
     this.initializeTracking();
-  }
   static getInstance(): AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {
       AdvancedAnalytics.instance = new AdvancedAnalytics();
-    }
     return AdvancedAnalytics.instance;
-  }
   /**
    * Initialize comprehensive analytics tracking
    */
@@ -86,14 +80,11 @@ class AdvancedAnalytics {
     // Track performance
     if (this.config.enablePerformanceTracking) {
       this.trackPerformance();
-    }
     // Track user journey
     if (this.config.enableUserJourneyTracking) {
       this.trackUserJourney();
-    }
     // Setup network monitoring
     this.setupNetworkMonitoring();
-  }
   /**
    * Create new user session
    */
@@ -109,7 +100,6 @@ class AdvancedAnalytics {
       os: this.detectOS(),
       referrer: document.referrer
     };
-  }
   /**
    * Track page views
    */
@@ -129,12 +119,9 @@ class AdvancedAnalytics {
         viewport: {
           width: window.innerWidth,
           height: window.innerHeight
-        }
-      }
     };
     this.trackEvent(event);
     this.currentSession.pageViews++;
-  }
   /**
    * Track clicks
    */
@@ -160,12 +147,9 @@ class AdvancedAnalytics {
           position: {
             x: event.clientX,
             y: event.clientY
-          }
-        }
       };
       this.trackEvent(clickEvent);
     });
-  }
   /**
    * Track scrolls
    */
@@ -191,12 +175,10 @@ class AdvancedAnalytics {
             scrollPercentage: Math.round(
               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
             )
-          }
         };
         this.trackEvent(scrollEvent);
       }, 100);
     });
-  }
   /**
    * Track form submissions
    */
@@ -221,11 +203,9 @@ class AdvancedAnalytics {
           formAction: form.action,
           formMethod: form.method,
           fields: formFields
-        }
       };
       this.trackEvent(submitEvent);
     });
-  }
   /**
    * Track downloads
    */
@@ -247,12 +227,9 @@ class AdvancedAnalytics {
           metadata: {
             downloadUrl: link.href,
             downloadText: link.textContent?.substring(0, 100)
-          }
         };
         this.trackEvent(downloadEvent);
-      }
     });
-  }
   /**
    * Track performance metrics
    */
@@ -275,11 +252,8 @@ class AdvancedAnalytics {
               metadata: {
                 metric: entry.name,
                 value: entry.startTime
-              }
             };
             this.trackEvent(paintEvent);
-          }
-        }
       }).observe({ entryTypes: ['paint'] });
       // Track navigation timing
       window.addEventListener('load', () => {
@@ -301,12 +275,9 @@ class AdvancedAnalytics {
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart
-          }
         };
         this.trackEvent(performanceEvent);
       });
-    }
-  }
   /**
    * Track user journey
    */
@@ -317,13 +288,11 @@ class AdvancedAnalytics {
       if (window.location.href !== lastUrl) {
         this.trackPageView();
         lastUrl = window.location.href;
-      }
     });
     observer.observe(document.body, {
       childList: true,
       subtree: true
     });
-  }
   /**
    * Setup network monitoring
    */
@@ -335,7 +304,6 @@ class AdvancedAnalytics {
     window.addEventListener('offline', () => {
       this.isOnline = false;
     });
-  }
   /**
    * Track custom event
    */
@@ -345,12 +313,9 @@ class AdvancedAnalytics {
     // Keep queue size manageable
     if (this.eventQueue.length > this.maxQueueSize) {
       this.eventQueue.shift();
-    }
     // Send to analytics service
     if (this.isOnline) {
       this.sendEvent(event);
-    }
-  }
   /**
    * Send event to analytics service
    */
@@ -364,8 +329,6 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
-      }
-  }
   /**
    * Flush event queue when back online
    */
@@ -375,8 +338,6 @@ class AdvancedAnalytics {
     this.eventQueue = [];
     for (const event of eventsToSend) {
       await this.sendEvent(event);
-    }
-  }
   /**
    * Get element information for tracking
    */
@@ -400,7 +361,6 @@ class AdvancedAnalytics {
       category = 'link';
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
       category = 'form';
-    }
     // Create label
     let label = id || className || text?.substring(0, 50) || tagName;
     return {
@@ -411,7 +371,6 @@ class AdvancedAnalytics {
       className,
       text
     };
-  }
   /**
    * Check if link is a download
    */
@@ -421,7 +380,6 @@ class AdvancedAnalytics {
       !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
       link.getAttribute('data-download') === 'true'
     );
-  }
   /**
    * Detect device type
    */
@@ -430,7 +388,6 @@ class AdvancedAnalytics {
     if (width < 768) return 'mobile';
     if (width < 1024) return 'tablet';
     return 'desktop';
-  }
   /**
    * Detect browser
    */
@@ -441,7 +398,6 @@ class AdvancedAnalytics {
     if (userAgent.includes('Safari')) return 'Safari';
     if (userAgent.includes('Edge')) return 'Edge';
     return 'Unknown';
-  }
   /**
    * Detect operating system
    */
@@ -453,19 +409,16 @@ class AdvancedAnalytics {
     if (userAgent.includes('Android')) return 'Android';
     if (userAgent.includes('iOS')) return 'iOS';
     return 'Unknown';
-  }
   /**
    * Generate session ID
    */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
   /**
    * Generate event ID
    */
   private generateEventId(): string {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
   /**
    * Get user ID from storage or generate one
    */
@@ -474,9 +427,7 @@ class AdvancedAnalytics {
     if (!userId) {
       userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       localStorage.setItem('analytics_user_id', userId);
-    }
     return userId;
-  }
   /**
    * Get analytics summary
    */
@@ -513,7 +464,6 @@ class AdvancedAnalytics {
             existing.views++;
           } else {
             acc.push({ url: event.url, views: 1 });
-          }
           return acc;
         },
         [] as Array<{ url: string; views: number }>
@@ -529,7 +479,6 @@ class AdvancedAnalytics {
       topPages: topPages.slice(0, 10),
       conversionRate
     };
-  }
   /**
    * Send session data to analytics service
    */
@@ -543,8 +492,6 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
-      }
-  }
   /**
    * End current session
    */
@@ -556,11 +503,8 @@ class AdvancedAnalytics {
     // Send session data
     if (this.isOnline) {
       this.sendSessionData(this.currentSession);
-    }
     // Create new session
     this.currentSession = this.createNewSession();
-  }
-}
 // Export singleton instance
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;

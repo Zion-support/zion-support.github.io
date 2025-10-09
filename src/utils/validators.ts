@@ -6,7 +6,6 @@
 export interface ValidationResult {
   isValid: boolean;
   errors: string[];
-}
 /**
  * Email validation regex pattern
  */
@@ -24,58 +23,48 @@ const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
  */
 export function isValidEmail(email: string): boolean {
   return EMAIL_REGEX.test(email.trim());
-}
 /**
  * Validate phone number
  */
 export function isValidPhone(phone: string): boolean {
   return PHONE_REGEX.test(phone.trim());
-}
 /**
  * Validate URL
  */
 export function isValidUrl(url: string): boolean {
   return URL_REGEX.test(url.trim());
-}
 /**
  * Validate required field
  */
 export function isRequired(value: string | null | undefined): boolean {
   if (value === null || value === undefined) {
     return false;
-  }
   return value.toString().trim().length > 0;
-}
 /**
  * Validate minimum length
  */
 export function minLength(value: string, min: number): boolean {
   return value.trim().length >= min;
-}
 /**
  * Validate maximum length
  */
 export function maxLength(value: string, max: number): boolean {
   return value.trim().length <= max;
-}
 /**
  * Validate string contains only alphanumeric characters
  */
 export function isAlphanumeric(value: string): boolean {
   return /^[a-zA-Z0-9]+$/.test(value);
-}
 /**
  * Validate string contains only letters
  */
 export function isAlpha(value: string): boolean {
   return /^[a-zA-Z]+$/.test(value);
-}
 /**
  * Validate string contains only numbers
  */
 export function isNumeric(value: string): boolean {
   return /^[0-9]+$/.test(value);
-}
 /**
  * Validate password strength
  * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number
@@ -86,7 +75,6 @@ export function isStrongPassword(password: string): boolean {
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
-}
 /**
  * Get password strength score (0-4)
  */
@@ -98,7 +86,6 @@ export function getPasswordStrength(password: string): number {
   if (/[0-9]/.test(password)) score++;
   if (/[^a-zA-Z0-9]/.test(password)) score++;
   return Math.min(score, 4);
-}
 /**
  * Validate credit card number using Luhn algorithm
  */
@@ -106,7 +93,6 @@ export function isValidCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
-  }
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
@@ -115,19 +101,14 @@ export function isValidCreditCard(cardNumber: string): boolean {
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
-      }
-    }
     sum += digit;
     isEven = !isEven;
-  }
   return sum % 10 === 0;
-}
 /**
  * Validate US ZIP code
  */
 export function isValidZipCode(zipCode: string): boolean {
   return /^\d{5}(-\d{4})?$/.test(zipCode);
-}
 /**
  * Sanitize HTML to prevent XSS
  */
@@ -135,7 +116,6 @@ export function sanitizeHtml(html: string): string {
   const div = document.createElement('div');
   div.textContent = html;
   return div.innerHTML;
-}
 /**
  * Validate object against schema
  */
@@ -149,13 +129,10 @@ export function validateObject<T extends Record<string, unknown>>(
     const value = obj[key];
     if (!validator(value)) {
       errors.push(`Invalid value for field: ${String(key)}`);
-    }
-  }
   return {
     isValid: errors.length === 0,
     errors
   };
-}
 /**
  * Validate form data
  */
@@ -165,7 +142,6 @@ export interface FormField {
     validate: (value: string) => boolean;
     message: string;
   }>;
-}
 export function validateForm(
   fields: Record<string, FormField>
 ): Record<string, string[]> {
@@ -176,14 +152,9 @@ export function validateForm(
     for (const validator of field.validators) {
       if (!validator.validate(field.value)) {
         fieldErrors.push(validator.message);
-      }
-    }
     if (fieldErrors.length > 0) {
       errors[fieldName] = fieldErrors;
-    }
-  }
   return errors;
-}
 /**
  * Common form validators
  */

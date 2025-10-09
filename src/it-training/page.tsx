@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ITTrainingPage: React.FC = () => {
       title: 'Expert Instructors',
       description: 'Learn from industry experts and certified professionals',
       benefits: ['Real-world experience', 'Industry insights', 'Mentorship']
-    }
   ];
 
   return (

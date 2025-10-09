@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
-=======
-'use client';
-import React, { memo } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -48,7 +42,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       title: 'Mobile Optimized',
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
-    }
   ];
 
   const pricingPlans = [
@@ -103,7 +96,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       ],
       popular: false,
       color: 'green'
-    }
   ];
 
   const testimonials = [
@@ -130,7 +122,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
       rating: 5,
       avatar: '👩‍💻'
-    }
   ];
 
   const useCases = [
@@ -157,7 +148,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
-    }
   ];
 
   return (

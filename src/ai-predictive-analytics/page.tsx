@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {TrendingUp, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
       benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
-    }
   ];
 
   return (

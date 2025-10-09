@@ -10,11 +10,9 @@ export interface ServiceOptions {
   retries?: number;
   cache?: boolean;
   cacheDuration?: number;
-}
 export interface CacheEntry<T> {
   data: T;
   timestamp: number;
-}
 export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
@@ -28,7 +26,6 @@ export class BaseService {
       cacheDuration: 300000, // 5 minutes
       ...options
     };
-  }
   /**
    * Check if cached data is still valid
    */
@@ -37,7 +34,6 @@ export class BaseService {
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
-  }
   /**
    * Get data from cache
    */
@@ -46,10 +42,8 @@ export class BaseService {
     if (this.isCacheValid(key)) {
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
       return this.cache.get(key)?.data as T;
-    }
     this.cache.delete(key);
     return null;
-  }
   /**
    * Set data in cache
    */
@@ -59,7 +53,6 @@ export class BaseService {
       data,
       timestamp: Date.now()
     });
-  }
   /**
    * Clear cache for a specific key or all cache
    */
@@ -68,8 +61,6 @@ export class BaseService {
       this.cache.delete(key);
     } else {
       this.cache.clear();
-    }
-  }
   /**
    * Make a GET request
    */
@@ -78,7 +69,6 @@ export class BaseService {
     if (useCache) {
       const cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;
-    }
     try {
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
@@ -87,7 +77,6 @@ export class BaseService {
       });
       if (useCache) {
         this.setInCache(cacheKey, response.data);
-      }
       return response.data;
     } catch (error) {
       logger.error('GET request failed', error as Error, {
@@ -95,8 +84,6 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
   /**
    * Make a POST request
    */
@@ -114,8 +101,6 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
   /**
    * Make a PUT request
    */
@@ -133,8 +118,6 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
   /**
    * Make a PATCH request
    */
@@ -152,8 +135,6 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
   /**
    * Make a DELETE request
    */
@@ -171,8 +152,6 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
   /**
    * Handle service error
    */
@@ -182,6 +161,4 @@ export class BaseService {
       ...context
     });
     throw error;
-  }
-}
 export default BaseService;

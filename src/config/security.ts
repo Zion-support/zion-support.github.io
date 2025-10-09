@@ -21,7 +21,6 @@ export const _securityHeaders = {
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: true
-    }
   },
   // Security Headers
   headers: {
@@ -32,7 +31,6 @@ export const _securityHeaders = {
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
-  }
 };
 /**
  * Rate limiting configuration
@@ -64,7 +62,6 @@ export const sessionConfig = {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours
     sameSite: 'strict' as const
-  }
 };
 /**
  * Input validation patterns
@@ -85,19 +82,16 @@ export function sanitizeInput(input: string): string {
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
-}
 /**
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email);
-}
 /**
  * Validate URL
  */
 export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url);
-}
 /**
  * Generate secure token
  */
@@ -109,10 +103,7 @@ export function generateSecureToken(_length: number = 32): string {
     // Fallback for non-browser environments
     for (let _i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
-    }
-  }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-}
 export default {
   securityHeaders,
   rateLimitConfig,

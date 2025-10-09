@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {FileText, Target, Zap, Settings, CheckCircle} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIContentStudioPage: React.FC = () => {
       title: 'Content Analytics',
       description: 'Comprehensive content performance analytics',
       benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
-    }
   ];
 
   return (

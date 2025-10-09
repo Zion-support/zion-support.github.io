@@ -22,7 +22,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
       title: "Analytics",
       content: "Live insights and predictive analytics for better decisions.",
       icon: "📊"
-    }
   ];
   return (
     <section className='bg-gray-50 py-16 rounded-2xl'>

@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Shield, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ITDisasterRecoveryPage: React.FC = () => {
       title: 'Monitoring & Alerts',
       description: 'Real-time monitoring and alerting for disaster recovery',
       benefits: ['Health monitoring', 'Alert systems', 'Status reporting']
-    }
   ];
 
   return (

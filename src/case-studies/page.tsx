@@ -65,7 +65,6 @@ const CaseStudiesPage: React.FC = () => {
       },
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
-    }
   ];
 
   return (

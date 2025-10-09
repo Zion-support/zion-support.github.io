@@ -6,7 +6,6 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-}
 export const _usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -31,11 +30,8 @@ export const _usePerformance = () => {
               !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
             ) {
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
-            }
-          }
         });
         observer.observe({ entryTypes: ['layout-shift'] });
-      }
       // Measure FID (First Input Delay)
       let _firstInputDelay = 0;
       if ('PerformanceObserver' in window) {
@@ -44,11 +40,8 @@ export const _usePerformance = () => {
             if (entry.entryType === 'first-input') {
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
-            }
-          }
         });
         observer.observe({ entryTypes: ['first-input'] });
-      }
       const _performanceData: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded:
@@ -87,7 +80,6 @@ export const _usePerformance = () => {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
-    }
     return () => {
       window.removeEventListener('load', measurePerformance);
     };

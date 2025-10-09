@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Settings, Shield, BarChart, Zap, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const SystemAdministrationPage: React.FC = () => {
       title: 'Automation',
       description: 'Automated system administration tasks',
       benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
   ];
 
   return (

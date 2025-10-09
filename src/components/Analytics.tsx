@@ -17,7 +17,6 @@ const Analytics: React.FC = () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
         window.dataLayer.push(args);
-      }
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
@@ -31,8 +30,6 @@ const Analytics: React.FC = () => {
         page_location: window.location.href,
         page_path: pathname,
       });
-    }
-
     // Track performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -46,14 +43,9 @@ const Analytics: React.FC = () => {
                 name: 'load',
                 value: Math.round(loadTime),
               });
-            }
-          }
-        }
       });
 
       observer.observe({ entryTypes: ['navigation'] });
-    }
-
     // Track user interactions
     const trackInteraction = (eventName: string, category: string, label?: string) => {
       if (window.gtag) {
@@ -61,7 +53,6 @@ const Analytics: React.FC = () => {
           event_category: category,
           event_label: label,
         });
-      }
     };
 
     // Track button clicks
@@ -91,7 +82,6 @@ const Analytics: React.FC = () => {
       if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
         maxScroll = scrollPercent;
         trackInteraction('scroll', 'engagement', `${scrollPercent}%`);
-      }
     };
 
     window.addEventListener('scroll', trackScroll, { passive: true });
@@ -109,7 +99,4 @@ declare global {
   interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
-  }
-}
-
 export default Analytics;

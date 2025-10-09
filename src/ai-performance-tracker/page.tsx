@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {BarChart, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AIPerformanceTrackerPage: React.FC = () => {
       title: 'Custom Dashboards',
       description: 'Customizable performance dashboards and reports',
       benefits: ['Custom metrics', 'Visualization', 'Reporting']
-    }
   ];
 
   return (

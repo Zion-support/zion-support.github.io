@@ -51,7 +51,6 @@ const DeveloperToolsPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price: 'Starting at $179/month'
-    }
   ];
 
   return (

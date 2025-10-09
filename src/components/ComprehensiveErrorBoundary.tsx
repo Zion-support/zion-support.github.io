@@ -8,7 +8,6 @@ interface Props {
   enableErrorReporting?: boolean;
   maxRetries?: number;
   showRetryButton?: boolean;
-}
 interface State {
   hasError: boolean;
   error?: Error;
@@ -16,7 +15,6 @@ interface State {
   errorId?: string;
   retryCount: number;
   isRetrying: boolean;
-}
 class ComprehensiveErrorBoundary extends Component<Props, State> {
   private maxRetries: number;
   constructor(props: Props) {
@@ -28,7 +26,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
     this.maxRetries = props.maxRetries || 3;
-  }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
       hasError: true, 
@@ -37,7 +34,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       retryCount: 0,
       isRetrying: false
     };
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -45,11 +41,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     });
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-  }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting
     const _errorReport = {
@@ -70,12 +63,9 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
         custom_map: {
           error_id: this.state.errorId,
           retry_count: this.state.retryCount
-        }
       });
-    }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      }
   };
   private handleRetry = async () => {
     if (this.state.retryCount < this.maxRetries) {
@@ -89,7 +79,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
         retryCount: prevState.retryCount + 1,
         isRetrying: false
       }));
-    }
   };
   private handleReload = () => {
     window.location.reload();
@@ -98,7 +87,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-      }
       if (this.state.isRetrying) {
         return (
           <ModernLoadingSpinner 
@@ -107,7 +95,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             fullScreen={true}
           />
         );
-      }
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
@@ -168,8 +155,5 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    }
     return this.props.children;
-  }
-}
 export default ComprehensiveErrorBoundary;

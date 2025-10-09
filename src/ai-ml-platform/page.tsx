@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-=======
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -33,7 +27,6 @@ const AIMLPlatformPage: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
   ];
 
   const pricingPlans = [
@@ -81,7 +74,6 @@ const AIMLPlatformPage: React.FC = () => {
         'API access'
       ],
       popular: false
-    }
   ];
 
   const stats = [
@@ -103,7 +95,4 @@ const AIMLPlatformPage: React.FC = () => {
     </div>
   );
 };
-
-}
-
 export default AiMlPlatformPage;

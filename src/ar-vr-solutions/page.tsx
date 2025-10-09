@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const ARVRSolutionsPage: React.FC = () => {
       title: 'Hardware Integration',
       description: 'Integration with AR/VR hardware and devices',
       benefits: ['Device compatibility', 'Performance optimization', 'Hardware support']
-    }
   ];
 
   return (

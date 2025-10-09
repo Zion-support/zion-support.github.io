@@ -10,8 +10,6 @@ interface PerformanceMetrics {
   fcp: number;
   ttfb: number;
   tbt: number;
-}
-
 interface OptimizationConfig {
   enableImageOptimization: boolean;
   enableLazyLoading: boolean;
@@ -21,8 +19,6 @@ interface OptimizationConfig {
   enableResourceHints: boolean;
   enableCompression: boolean;
   enableCaching: boolean;
-}
-
 class PerformanceEnhancer {
   private config: OptimizationConfig;
   private metrics: PerformanceMetrics | null = null;
@@ -31,8 +27,6 @@ class PerformanceEnhancer {
   constructor(config: OptimizationConfig) {
     this.config = config;
     this.init();
-  }
-
   private init(): void {
     if (typeof window === 'undefined') return;
 
@@ -43,8 +37,6 @@ class PerformanceEnhancer {
     this.setupServiceWorker();
     this.optimizeFonts();
     this.setupCriticalCSS();
-  }
-
   private setupPerformanceMonitoring(): void {
     if (!('PerformanceObserver' in window)) return;
 
@@ -52,16 +44,12 @@ class PerformanceEnhancer {
       this.observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.analyzePerformanceEntry(entry);
-        }
       });
 
       // Monitor Core Web Vitals
       this.observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
     } catch (error) {
       console.warn('Performance monitoring setup failed:', error);
-    }
-  }
-
   private analyzePerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'largest-contentful-paint':
@@ -73,20 +61,15 @@ class PerformanceEnhancer {
       case 'layout-shift':
         if (!(entry as any).hadRecentInput) {
           this.metrics = { ...this.metrics, cls: (this.metrics?.cls || 0) + (entry as any).value } as PerformanceMetrics;
-        }
         break;
       case 'paint':
         if (entry.name === 'first-contentful-paint') {
           this.metrics = { ...this.metrics, fcp: entry.startTime } as PerformanceMetrics;
-        }
         break;
       case 'navigation':
         const _navEntry = entry as PerformanceNavigationTiming;
         this.metrics = { ...this.metrics, ttfb: navEntry.responseStart - navEntry.requestStart } as PerformanceMetrics;
         break;
-    }
-  }
-
   private optimizeImages(): void {
     if (!this.config.enableImageOptimization) return;
 
@@ -96,13 +79,10 @@ class PerformanceEnhancer {
       if (imageElement.dataset.src) {
         imageElement.src = imageElement.dataset.src;
         imageElement.removeAttribute('data-src');
-      }
     });
 
     // Add WebP support detection
     this.detectWebPSupport();
-  }
-
   private detectWebPSupport(): void {
     const webP = new Image();
     webP.onload = webP.onerror = () => {
@@ -110,11 +90,8 @@ class PerformanceEnhancer {
         document.documentElement.classList.add('webp');
       } else {
         document.documentElement.classList.add('no-webp');
-      }
     };
     webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-  }
-
   private setupLazyLoading(): void {
     if (!this.config.enableLazyLoading) return;
 
@@ -127,17 +104,12 @@ class PerformanceEnhancer {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               imageObserver.unobserve(img);
-            }
-          }
         });
       });
 
       document.querySelectorAll('img[data-src]').forEach((img) => {
         imageObserver.observe(img);
       });
-    }
-  }
-
   private setupResourceHints(): void {
     if (!this.config.enableResourceHints) return;
 
@@ -159,8 +131,6 @@ class PerformanceEnhancer {
 
     // Prefetch critical resources
     this.prefetchCriticalResources();
-  }
-
   private prefetchCriticalResources(): void {
     if (!this.config.enablePrefetching) return;
 
@@ -176,8 +146,6 @@ class PerformanceEnhancer {
       link.href = resource;
       document.head.appendChild(link);
     });
-  }
-
   private setupServiceWorker(): void {
     if (!this.config.enableServiceWorker) return;
 
@@ -191,9 +159,6 @@ class PerformanceEnhancer {
             console.log('SW registration failed: ', registrationError);
           });
       });
-    }
-  }
-
   private optimizeFonts(): void {
     // Add font-display: swap to all font faces
     const style = document.createElement('style');
@@ -201,19 +166,14 @@ class PerformanceEnhancer {
       @font-face {
         font-family: 'Orbitron';
         font-display: swap;
-      }
       @font-face {
         font-family: 'Rajdhani';
         font-display: swap;
-      }
       @font-face {
         font-family: 'Exo 2';
         font-display: swap;
-      }
     `;
     document.head.appendChild(style);
-  }
-
   private setupCriticalCSS(): void {
     // Inline critical CSS for above-the-fold content
     const criticalCSS = `
@@ -227,12 +187,8 @@ class PerformanceEnhancer {
     style.textContent = criticalCSS;
     style.setAttribute('data-critical', 'true');
     document.head.insertBefore(style, document.head.firstChild);
-  }
-
   public getMetrics(): PerformanceMetrics | null {
     return this.metrics;
-  }
-
   public optimizeBundle(): void {
     // Dynamic imports for non-critical components
     const lazyComponents = [
@@ -251,14 +207,10 @@ class PerformanceEnhancer {
             if (entry.isIntersecting) {
               this.loadComponent(component);
               observer.unobserve(entry.target);
-            }
           });
         });
         observer.observe(element);
-      }
     });
-  }
-
   private async loadComponent(componentName: string): Promise<void> {
     try {
       const module = await import(`../components/${componentName}.tsx`);
@@ -266,14 +218,7 @@ class PerformanceEnhancer {
       console.log(`${componentName} loaded dynamically`);
     } catch (error) {
       console.warn(`Failed to load ${componentName}:`, error);
-    }
-  }
-
   public cleanup(): void {
     if (this.observer) {
       this.observer.disconnect();
-    }
-  }
-}
-
 export default PerformanceEnhancer;

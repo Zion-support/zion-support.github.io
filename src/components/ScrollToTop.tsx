@@ -8,7 +8,6 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(true);
       } else {
         setIsVisible(false);
-      }
     };
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
@@ -21,7 +20,6 @@ const ScrollToTop: React.FC = () => {
   };
   if (!isVisible) {
     return null;
-  }
   return (
     <button
       onClick={scrollToTop}

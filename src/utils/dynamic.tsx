@@ -3,7 +3,6 @@ import React, { lazy, Suspense, ComponentType } from 'react';
 interface DynamicOptions {
   loading?: () => React.ReactElement;
   ssr?: boolean;
-}
 export function dynamic<T extends ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
   _options: DynamicOptions = {}
@@ -14,5 +13,4 @@ export function dynamic<T extends ComponentType<unknown>>(
       <LazyComponent {...props} />
     </Suspense>
   );
-}
 export default dynamic;

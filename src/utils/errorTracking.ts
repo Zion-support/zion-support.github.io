@@ -8,7 +8,6 @@ export enum ErrorSeverity {
   Medium = 'medium',
   High = 'high',
   Critical = 'critical'
-}
 export enum ErrorCategory {
   Network = 'network',
   Validation = 'validation',
@@ -16,7 +15,6 @@ export enum ErrorCategory {
   Runtime = 'runtime',
   Configuration = 'configuration',
   ExternalService = 'external_service'
-}
 export interface ErrorMetadata {
   category: ErrorCategory;
   severity: ErrorSeverity;
@@ -28,7 +26,6 @@ export interface ErrorMetadata {
   stackTrace?: string;
   userAgent?: string;
   url?: string;
-}
 export interface TrackedError {
   id: string;
   message: string;
@@ -36,7 +33,6 @@ export interface TrackedError {
   occurrences: number;
   firstSeen: number;
   lastSeen: number;
-}
 class ErrorTrackingService {
   private static instance: ErrorTrackingService;
   private errors: Map<string, TrackedError> = new Map();
@@ -44,13 +40,10 @@ class ErrorTrackingService {
   private maxStoredErrors = 1000;
   private constructor() {
     this.setupGlobalErrorHandlers();
-  }
   static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
       ErrorTrackingService.instance = new ErrorTrackingService();
-    }
     return ErrorTrackingService.instance;
-  }
   /**
    * Set up global error handlers
    */
@@ -65,7 +58,6 @@ class ErrorTrackingService {
           filename: event.filename,
           lineno: event.lineno,
           colno: event.colno
-        }
       });
     });
     // Handle unhandled promise rejections
@@ -76,7 +68,6 @@ class ErrorTrackingService {
         context: { reason: event.reason }
       });
     });
-  }
   /**
    * Track an error with metadata
    */
@@ -116,8 +107,6 @@ class ErrorTrackingService {
       if (this.errors.size > this.maxStoredErrors) {
         const oldestKey = Array.from(this.errors.keys())[0];
         this.errors.delete(oldestKey);
-      }
-    }
     // Log the error
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
       error_id: errorId,
@@ -127,9 +116,7 @@ class ErrorTrackingService {
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
       this.reportToExternalService(errorId);
-    }
     return errorId;
-  }
   /**
    * Generate a unique error ID based on the message
    */
@@ -140,21 +127,17 @@ class ErrorTrackingService {
       const char = message.charCodeAt(i);
       hash = (hash * 32) - hash + char;
       hash = hash & hash; // Convert to 32bit integer
-    }
     return `err_${Math.abs(hash).toString(36)}`;
-  }
   /**
    * Add an error listener
    */
   addListener(listener: (error: TrackedError) => void): void {
     this.errorListeners.push(listener);
-  }
   /**
    * Remove an error listener
    */
   removeListener(listener: (error: TrackedError) => void): void {
     this.errorListeners = this.errorListeners.filter(l => l !== listener);
-  }
   /**
    * Notify all listeners of a new error
    */
@@ -164,9 +147,7 @@ class ErrorTrackingService {
         listener(error);
       } catch (listenerError) {
         logger.error('Error in error listener', listenerError as Error);
-      }
     });
-  }
   /**
    * Report critical errors to external service
    */
@@ -180,29 +161,23 @@ class ErrorTrackingService {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(error)
         });
-      }
     } catch (reportError) {
       logger.error('Failed to report error to external service', reportError as Error);
-    }
-  }
   /**
    * Get all tracked errors
    */
   getErrors(): TrackedError[] {
     return Array.from(this.errors.values());
-  }
   /**
    * Get errors by category
    */
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {
     return this.getErrors().filter(e => e.metadata.category === category);
-  }
   /**
    * Get errors by severity
    */
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
     return this.getErrors().filter(e => e.metadata.severity === severity);
-  }
   /**
    * Get error statistics
    */
@@ -228,13 +203,11 @@ class ErrorTrackingService {
       bySeverity,
       topErrors
     };
-  }
   /**
    * Clear all errors
    */
   clearErrors(): void {
     this.errors.clear();
-  }
   /**
    * Clear errors older than specified time
    */
@@ -243,10 +216,6 @@ class ErrorTrackingService {
     for (const [id, error] of this.errors.entries()) {
       if (now - error.lastSeen > maxAge) {
         this.errors.delete(id);
-      }
-    }
-  }
-}
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage

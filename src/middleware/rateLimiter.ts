@@ -10,11 +10,9 @@ export interface RateLimitConfig {
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
-}
 interface RequestRecord {
   count: number;
   resetTime: number;
-}
 /**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
@@ -31,7 +29,6 @@ export class RateLimiter {
     };
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);
-  }
   /**
    * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
@@ -45,7 +42,6 @@ export class RateLimiter {
       const resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
-    }
     // Increment count
     if (record.count < this.config.max) {
       record.count++;
@@ -55,17 +51,14 @@ export class RateLimiter {
         remaining: this.config.max - record.count,
         resetTime: record.resetTime
       };
-    }
     // Limit exceeded
     return { allowed: false, remaining: 0, resetTime: record.resetTime };
-  }
   /**
    * Reset rate limit for identifier
    * @param identifier - Unique identifier
    */
   reset(identifier: string): void {
     this.requests.delete(identifier);
-  }
   /**
    * Cleanup expired entries
    */
@@ -74,16 +67,11 @@ export class RateLimiter {
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
         this.requests.delete(key);
-      }
-    }
-  }
   /**
    * Get current stats
    */
   getStats(): { totalTracked: number } {
     return { totalTracked: this.requests.size };
-  }
-}
 /**
  * Pre-configured rate limiters for common use cases
  */
@@ -134,7 +122,6 @@ export function getClientIdentifier(request: Request): string {
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
   // Fallback to a default identifier
   return 'unknown';
-}
 /**
  * Create rate limit middleware
  * @param limiter - Rate limiter instance
@@ -158,12 +145,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
             'X-RateLimit-Limit': String(limiter['config'].max),
             'X-RateLimit-Remaining': String(remaining),
             'X-RateLimit-Reset': String(resetTime)
-          }
-        }
       );
-    }
     // Request allowed - headers can be added to response later
     return null;
   };
-}
 export default RateLimiter;

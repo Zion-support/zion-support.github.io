@@ -58,7 +58,6 @@ export default function RootLayout({
           price: '1500',
           priceCurrency: 'USD',
           billingIncrement: 'P1M'
-        }
       },
       {
         '@type': 'Offer',
@@ -71,8 +70,6 @@ export default function RootLayout({
           price: '2500',
           priceCurrency: 'USD',
           billingIncrement: 'P1M'
-        }
-      }
     ],
     serviceArea: {
       '@type': 'GeoCircle',
@@ -93,7 +90,6 @@ export default function RootLayout({
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-          }
         },
         {
           '@type': 'Offer',
@@ -101,7 +97,6 @@ export default function RootLayout({
             '@type': 'Service',
             name: 'Digital Automation',
             description: 'Process automation and workflow optimization services'
-          }
         },
         {
           '@type': 'Offer',
@@ -109,10 +104,7 @@ export default function RootLayout({
             '@type': 'Service',
             name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'
-          }
-        }
       ]
-    }
   };
   return (
     <html lang='en'>
@@ -187,12 +179,3 @@ export default function RootLayout({
       </body>
     </html>
   );
-<<<<<<< HEAD
-
-export default RootLayout;
-}
-}
-=======
-}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03

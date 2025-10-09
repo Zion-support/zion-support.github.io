@@ -58,7 +58,6 @@ const TeamPage: React.FC = () => {
       linkedin: 'https://linkedin.com/in/lisa-thompson-success',
       email: 'lisa@ziontechgroup.com',
       expertise: ['Client Relations', 'Project Management', 'Customer Success']
-    }
   ];
 
   const stats = [

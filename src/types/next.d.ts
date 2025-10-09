@@ -53,16 +53,13 @@ export interface Metadata {
   verification?: {
     google?: string;
   };
-}
 export interface MetadataRoute {
   sitemap?: string;
   robots?: string;
   manifest?: string;
-}
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
 export interface MetadataRouteSitemap {
   url: string;
   lastModified?: Date | string;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}

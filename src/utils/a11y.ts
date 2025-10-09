@@ -8,7 +8,6 @@
  */
 export function generateId(prefix = 'a11y'): string {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-}
 /**
  * Announce message to screen readers
  */
@@ -35,7 +34,6 @@ export function announceToScreenReader(
   setTimeout(() => {
     document.body.removeChild(announcement);
   }, 3000);
-}
 /**
  * Trap focus within a container (useful for modals)
  */
@@ -52,14 +50,11 @@ export function trapFocus(element: HTMLElement): () => void {
       if (document.activeElement === firstFocusable) {
         e.preventDefault();
         lastFocusable?.focus();
-      }
     } else {
       // Tab
       if (document.activeElement === lastFocusable) {
         e.preventDefault();
         firstFocusable?.focus();
-      }
-    }
   };
   element.addEventListener('keydown', handleKeyDown);
   // Focus first element
@@ -68,7 +63,6 @@ export function trapFocus(element: HTMLElement): () => void {
   return () => {
     element.removeEventListener('keydown', handleKeyDown);
   };
-}
 /**
  * Check if element is keyboard accessible
  */
@@ -83,7 +77,6 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
     (tabindex !== null && tabindex !== '-1') ||
     (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
   );
-}
 /**
  * Add keyboard navigation support to custom interactive elements
  */
@@ -102,7 +95,6 @@ export function makeKeyboardAccessible(
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       onClick(e);
-    }
   };
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
@@ -110,7 +102,6 @@ export function makeKeyboardAccessible(
     element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown);
   };
-}
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
@@ -131,7 +122,6 @@ export function getContrastRatio(color1: string, color2: string): number {
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
   return (brightest + 0.05) / (darkest + 0.05);
-}
 /**
  * Check if contrast ratio meets WCAG standards
  */
@@ -144,9 +134,7 @@ export function meetsContrastRequirements(
   const ratio = getContrastRatio(color1, color2);
   if (level === 'AAA') {
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
-  }
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
-}
 /**
  * Skip to content link helper
  */
@@ -170,21 +158,18 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
     skipLink.style.top = '-40px';
   });
   return skipLink;
-}
 /**
  * Detect if user prefers reduced motion
  */
 export function prefersReducedMotion(): boolean {
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
 /**
  * Detect if user prefers dark mode
  */
 export function prefersDarkMode(): boolean {
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
 /**
  * Get ARIA label for form validation error
  */
@@ -196,7 +181,6 @@ export function getAriaInvalid(hasError: boolean): {
     'aria-invalid': hasError,
     ...(hasError && { 'aria-describedby': generateId('error') })
   };
-}
 /**
  * Create accessible tooltip
  */
@@ -240,7 +224,6 @@ export function createAccessibleTooltip(
         tooltip.style.left = `${triggerRect.right + 5}px`;
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
         break;
-    }
   };
   const hideTooltip = () => {
     tooltip.style.display = 'none';
@@ -256,7 +239,6 @@ export function createAccessibleTooltip(
     trigger.removeEventListener('blur', hideTooltip);
     document.body.removeChild(tooltip);
   };
-}
 /**
  * Manage focus restoration (useful for modals)
  */
@@ -264,17 +246,12 @@ export class FocusManager {
   private previousFocus: HTMLElement | null = null;
   saveFocus(): void {
     this.previousFocus = document.activeElement as HTMLElement;
-  }
   restoreFocus(): void {
     if (this.previousFocus) {
       this.previousFocus.focus();
       this.previousFocus = null;
-    }
-  }
   moveFocusInside(container: HTMLElement): void {
     const focusable = container.querySelector<HTMLElement>(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     focusable?.focus();
-  }
-}

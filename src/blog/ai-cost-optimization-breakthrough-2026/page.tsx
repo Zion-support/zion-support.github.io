@@ -23,7 +23,6 @@ export const metadata = {
     title: "AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%",
     description: "Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.",
     images: ['/og-ai-cost-optimization-2026.jpg']
-  }
 };
 export default function AICostOptimizationBreakthrough2026() {
   return (
@@ -163,7 +162,3 @@ export default function AICostOptimizationBreakthrough2026() {
 
 export default AICostOptimizationBreakthrough2026Page;
 export default AICostOptimizationBreakthrough2026Page;
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03

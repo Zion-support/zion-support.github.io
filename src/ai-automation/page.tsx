@@ -29,7 +29,6 @@ const AIAutomationPage: React.FC = () => {
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
-    }
   ];
 
   const pricingPlans = [
@@ -77,7 +76,6 @@ const AIAutomationPage: React.FC = () => {
         'Dedicated support'
       ],
       popular: false
-    }
   ];
 
   const stats = [
@@ -99,7 +97,4 @@ const AIAutomationPage: React.FC = () => {
     </div>
   );
 };
-
-}
-
 export default AiAutomationPage;

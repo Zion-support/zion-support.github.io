@@ -7,7 +7,6 @@ export interface ToastProps {
   duration?: number;
   onClose?: () => void;
   show: boolean;
-}
 const Toast: React.FC<ToastProps> = ({
   message,
   type = 'success',
@@ -23,10 +22,8 @@ const Toast: React.FC<ToastProps> = ({
         setIsVisible(false);
         if (onClose) {
           onClose();
-        }
       }, duration);
       return () => clearTimeout(timer);
-    }
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
@@ -42,7 +39,6 @@ const Toast: React.FC<ToastProps> = ({
         return 'bg-blue-600 text-white';
       default:
         return 'bg-gray-800 text-white';
-    }
   };
   const getIcon = () => {
     switch (type) {
@@ -56,7 +52,6 @@ const Toast: React.FC<ToastProps> = ({
         return 'ℹ';
       default:
         return '';
-    }
   };
   return (
     <div

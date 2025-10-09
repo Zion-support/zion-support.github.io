@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-=======
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -37,7 +31,6 @@ const AIServicesPage: React.FC = () => {
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price: 'Starting at $800/month'
-    }
   ];
 
   const benefits = [
@@ -59,7 +52,4 @@ const AIServicesPage: React.FC = () => {
     </div>
   );
 };
-
-}
-
 export default AiServicesPage;

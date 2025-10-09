@@ -10,7 +10,6 @@ export const _usePerformanceMonitoring = () => {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
         // Analytics reporting failed
       });
-    }
   }, []);
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -22,11 +21,9 @@ export const _usePerformanceMonitoring = () => {
             value: entry.startTime,
             timestamp: Date.now()
           });
-        }
       });
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect();
-    }
   }, [reportWebVitals]);
   return { reportWebVitals };
 };

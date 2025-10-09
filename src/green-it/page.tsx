@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
-=======
-'use client';
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -34,7 +28,6 @@ const GreenITPage: React.FC = () => {
       icon: Award,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10'
-    }
   ];
 
   const greenSolutions = [
@@ -121,7 +114,6 @@ const GreenITPage: React.FC = () => {
       ],
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
-    }
   ];
 
   const benefits = [
@@ -168,7 +160,6 @@ const GreenITPage: React.FC = () => {
         'Investor confidence boost',
         'Talent attraction and retention'
       ]
-    }
   ];
 
   const certifications = [
@@ -199,7 +190,6 @@ const GreenITPage: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       status: 'Certified'
-    }
   ];
 
   const stats = [
@@ -226,7 +216,6 @@ const GreenITPage: React.FC = () => {
       value: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
-    }
   ];
 
   const caseStudies = [
@@ -257,7 +246,6 @@ const GreenITPage: React.FC = () => {
       ],
       icon: Building,
       color: 'text-green-400'
-    }
   ];
 
   return (

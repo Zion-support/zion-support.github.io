@@ -5,8 +5,6 @@ interface HeroSectionProps {
   isLoaded: boolean;
   isVisible: boolean;
   onPhoneClick: () => void;
-}
-
 const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {
   return (
     <section

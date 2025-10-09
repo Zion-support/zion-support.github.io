@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const DevOpsCICDPage: React.FC = () => {
       title: 'Monitoring & Analytics',
       description: 'Comprehensive monitoring and performance analytics',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
-    }
   ];
 
   return (

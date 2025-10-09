@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
-=======
-'use client';
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -41,7 +35,6 @@ const FAQPage: React.FC = () => {
         {
           question: 'Do you offer custom solutions?',
           answer: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
-        }
       ]
     },
     {
@@ -62,7 +55,6 @@ const FAQPage: React.FC = () => {
         {
           question: 'Can you integrate AI with our existing systems?',
           answer: 'Absolutely! We specialize in integrating AI solutions with existing enterprise systems, ensuring seamless operation and minimal disruption to your current workflows.'
-        }
       ]
     },
     {
@@ -83,7 +75,6 @@ const FAQPage: React.FC = () => {
         {
           question: 'What cybersecurity services do you provide?',
           answer: 'We provide comprehensive cybersecurity services including threat detection, vulnerability assessment, security monitoring, compliance management, and incident response.'
-        }
       ]
     },
     {
@@ -104,7 +95,6 @@ const FAQPage: React.FC = () => {
         {
           question: 'Can Micro SAAS solutions be customized?',
           answer: 'Yes, while our Micro SAAS solutions are ready-to-use, they can be customized to better fit your specific business processes and requirements.'
-        }
       ]
     },
     {
@@ -125,7 +115,6 @@ const FAQPage: React.FC = () => {
         {
           question: 'Do you offer discounts for long-term contracts?',
           answer: 'Yes, we offer attractive discounts for annual contracts and long-term partnerships. Contact us to discuss the best pricing options for your needs.'
-        }
       ]
     },
     {
@@ -146,9 +135,7 @@ const FAQPage: React.FC = () => {
         {
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
-        }
       ]
-    }
   ];
 
   const filteredData = faqData.map(category => ({

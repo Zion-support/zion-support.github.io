@@ -9,18 +9,15 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   nonInteraction?: boolean;
-}
 interface PerformanceMetrics {
   metric: string;
   value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
-}
 interface ErrorReport {
   message: string;
   stack?: string;
   componentStack?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
-}
 class AnalyticsTracker {
   private isInitialized = false;
   private queue: Array<() => void> = [];
@@ -35,7 +32,6 @@ class AnalyticsTracker {
     this.queue = [];
     // Track initial page view
     this.trackPageView(window.location.pathname);
-  }
   /**
    * Track a custom event
    */
@@ -49,17 +45,13 @@ class AnalyticsTracker {
           value: event.value,
           non_interaction: event.nonInteraction
         });
-      }
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-        }
     };
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-    }
-  }
   /**
    * Track page views
    */
@@ -72,16 +64,12 @@ class AnalyticsTracker {
           page_title: document.title,
           page_location: window.location.href
         });
-      }
       if (process.env.NODE_ENV === 'development') {
-        }
     };
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-    }
-  }
   /**
    * Track performance metrics
    */
@@ -95,16 +83,12 @@ class AnalyticsTracker {
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
         });
-      }
       if (process.env.NODE_ENV === 'development') {
-        }
     };
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-    }
-  }
   /**
    * Track errors
    */
@@ -117,7 +101,6 @@ class AnalyticsTracker {
           fatal: error.severity === 'critical',
           error_severity: error.severity
         });
-      }
       // Always log errors to console
       // console.error('[Analytics Error]', error);
     };
@@ -125,8 +108,6 @@ class AnalyticsTracker {
       track();
     } else {
       this.queue.push(track);
-    }
-  }
   /**
    * Track user timing
    */
@@ -140,16 +121,12 @@ class AnalyticsTracker {
           event_category: category,
           event_label: label
         });
-      }
       if (process.env.NODE_ENV === 'development') {
-        }
     };
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-    }
-  }
   /**
    * Track conversions
    */
@@ -162,17 +139,12 @@ class AnalyticsTracker {
           value: value,
           currency: 'USD'
         });
-      }
       if (process.env.NODE_ENV === 'development') {
-        }
     };
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-    }
-  }
-}
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available
@@ -183,6 +155,4 @@ if (typeof window !== 'undefined') {
     window.addEventListener('load', () => {
       analyticsTracker.initialize();
     });
-  }
-}
 export default analyticsTracker;

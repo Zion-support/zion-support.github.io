@@ -11,8 +11,6 @@ interface ResponsiveContainerProps {
     '2xl'?: string;
   };
   fallback?: React.ReactNode;
-}
-
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   children,
   className = '',
@@ -42,13 +40,10 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
       setScreenSize('md');
     } else {
       setScreenSize('sm');
-    }
   }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
 
   if (!isClient) {
     return fallback || <div className={className}>{children}</div>;
-  }
-
   const getResponsiveClasses = () => {
     const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || '';
@@ -78,16 +73,12 @@ export const useResponsiveValue = <T,>(values: {
 
   if (isLargeDesktop && values['2xl'] !== undefined) {
     return values['2xl'];
-  }
   if (isDesktop && values.xl !== undefined) {
     return values.xl;
-  }
   if (isTablet && values.md !== undefined) {
     return values.md;
-  }
   if (isMobile && values.sm !== undefined) {
     return values.sm;
-  }
   return values.default || values.lg || values.md || values.sm || ({} as T);
 };
 

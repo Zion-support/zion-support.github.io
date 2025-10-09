@@ -45,4 +45,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: route === '' ? 'daily' : 'weekly',
     priority: route === '' ? 1 : 0.8,
   }))
-}

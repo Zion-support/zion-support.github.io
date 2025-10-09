@@ -1,9 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 
@@ -32,7 +28,6 @@ const AINLPPage: React.FC = () => {
       title: 'Multi-language Support',
       description: 'Support for 100+ languages and dialects',
       benefits: ['Translation', 'Cross-language analysis', 'Cultural adaptation']
-    }
   ];
 
   return (

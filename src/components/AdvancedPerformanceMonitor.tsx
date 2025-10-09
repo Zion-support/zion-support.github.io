@@ -7,11 +7,9 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
   memory: number | null;
-}
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
-}
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true
@@ -42,9 +40,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-         
-        }
-    }
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
@@ -61,15 +56,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 ...prev,
                 fid: _fidEntry.processingStart - _fidEntry.startTime
               }));
-            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-         
-        }
-    }
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
@@ -86,16 +77,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               if (!_clsEntry.hadRecentInput) {
                 _clsValue += _clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: _clsValue }));
-              }
-            }
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-         
-        }
-    }
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
@@ -114,16 +100,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory
       }));
     } catch (error) {
-       
-      }
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
-           
-          }
       });
     };
   }, []);
@@ -141,7 +123,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           size: r.transferSize
         }))
       );
-    }
   }, []);
   const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -154,29 +135,24 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
             );
-          }
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
             );
-          }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
             );
-          }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
             );
-          }
         })
         .catch(() => {
           // web-vitals not available, continue without it
         });
     } catch {
       // web-vitals not available, continue without it
-    }
   }, []);
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
@@ -200,7 +176,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
-    }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
@@ -209,27 +184,22 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
       );
-    }
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
       );
-    }
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
       );
-    }
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
       );
-    }
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
       );
-    }
     return recommendations;
   }, [metrics]);
   const recommendations = getPerformanceRecommendations();
@@ -266,7 +236,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         )}
       </div>
     );
-  }
   return null;
 };
 export default AdvancedPerformanceMonitor;

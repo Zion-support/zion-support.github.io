@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 'use client';
@@ -45,7 +39,6 @@ const TaskManagerProPage: React.FC = () => {
       title: 'Performance Analytics',
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
       benefit: 'Data-driven improvements'
-    }
   ];
 
   const pricingPlans = [
@@ -97,7 +90,6 @@ const TaskManagerProPage: React.FC = () => {
         'Custom compliance'
       ],
       popular: false
-    }
   ];
 
   const integrations = [
@@ -132,7 +124,6 @@ const TaskManagerProPage: React.FC = () => {
       role: 'Operations Director',
       content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
       rating: 5
-    }
   ];
 
   return (
