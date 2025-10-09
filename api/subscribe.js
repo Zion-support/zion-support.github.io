@@ -2,38 +2,56 @@ const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
-  if (!email) {/* TODO: Fix JSX expression */}
-  r: 'Email is required' });
+  if (!email) {
+    res.status(400).json({ error: 'Email is required' });
     return;
   }
 
-  try {/* TODO: Fix JSX expression */}
-  r: 'Invalid email' });
+  try {
+    if (!isValidEmail(email)) {
+      res.status(400).json({ error: 'Invalid email' });
       return;
     }
 
     const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
+    const dir = path.dirname(file);
+
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
 
     let existing = [];
 
-    try {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
-    }
+    try {
+      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch {
+    // File doesn't exist or is invalid, start with empty array
+  }
 
-    existing.push({/* TODO: Fix JSX expression */})
-    });
+    const subscription = {
+      id: Date.now().toString(),
+      email,
+      name,
+      source,
+      timestamp: new Date().toISOString(),
+      status: 'active'
+    };
+
+    existing.push(subscription);
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.json({/* TODO: Fix JSX expression */})
-  s: true });
-  } catch (err) {/* TODO: Fix JSX expression */}
-  r: err.message || 'Subscription failed' });
+    res.json({ success: true, subscriptionId: subscription.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Subscription failed' });
   }
 }
 

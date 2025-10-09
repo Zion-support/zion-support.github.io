@@ -26,7 +26,6 @@
     }
   };
 
-  return (
   const plans = [
     {
       name: 'Starter',

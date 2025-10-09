@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -31,11 +31,24 @@ const UserExperienceEnhancer = () => null;
 const SecurityEnhancer = () => null;
 
 const App: React.FC = () => {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/ai-services" element={<AiServicesPage />} />
             <Route path="/ai-marketing" element={<AiMarketingPage />} />
             <Route path="/ai-automation" element={<AiAutomationPage />} />
             <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
             <Route path="/ai-fintech" element={<AiFintechPage />} />
+            <Route path="/it-services" element={<ItServicesPage />} />
+            <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+            <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
+            <Route path="/robotics" element={<RoboticsPage />} />
+            <Route path="/ar-vr-solutions" element={<ArVrSolutionsPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
