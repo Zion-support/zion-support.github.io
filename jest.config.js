@@ -1,0 +1,50 @@
+export default {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
+    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^@/config/(.*)$': '<rootDir>/src/config/$1',
+    '^@/data/(.*)$': '<rootDir>/src/data/$1',
+    '^@/content/(.*)$': '<rootDir>/src/content/$1',
+  },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  testMatch: [
+    '<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)',
+    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)',
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx,js,jsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{ts,tsx,js,jsx}',
+  ],
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.json',
+    },
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/.next/',
+    '/out/',
+    '/api-disabled/',
+    '/api.disabled/',
+    '/admin-api-disabled/',
+    '/automation_backup/',
+    '/backup/',
+    '/components-disabled/',
+    '/components.disabled/',
+    '/app_disabled/',
+    '/_app_disabled/',
+  ],
+};

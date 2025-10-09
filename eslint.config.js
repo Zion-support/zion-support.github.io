@@ -10,7 +10,7 @@ export default [
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+      globals: { ...globals.browser, ...globals.node, ...globals.jest },
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -18,6 +18,16 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
+    },
+  },
+  // Test files configuration
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node, ...globals.jest },
+    },
+    rules: {
+      'no-unused-vars': 'off',
     },
   },
   // TypeScript configuration

@@ -193,22 +193,18 @@ console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
 extraPages.forEach(page => console.log(page));
 
 console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap,)`
-  URLs: ${sitemapUrls.length}`);`
-console.log(`Total existing,)`
-  pages: ${existingPages.length}`);`
-console.log(`Missing,)`
-  pages: ${missingPages.length}`);`
-console.log(`Extra,)`
-  pages: ${extraPages.length}`);
+console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
+console.log(`Total existing pages: ${existingPages.length}`);
+console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Extra pages: ${extraPages.length}`);
 
-// Categorize missing pages;
-const missingByCategory = {/* TODO: Fix JSX expression */}
+// Categorize missing pages
+const missingByCategory = {
+  // TODO: Fix JSX expression
 };
 
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
-    console.log(`\n${category}:`);`
-    pages.forEach(page => console.log(`  ${page}`));
-  }
-});`
+Object.entries(missingByCategory).forEach(([category, pages]) => {
+  console.log(`\n${category}:`);
+  pages.forEach(page => console.log(`  ${page}`));
+});
