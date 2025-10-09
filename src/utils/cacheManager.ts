@@ -18,6 +18,7 @@ export interface CacheOptions {
 export interface CacheConfig {
   storage?: CacheStorage;
   defaultTTL?: number;
+  maxSize?: number;
 }
 export interface CacheEntry<T> {
   value: T;

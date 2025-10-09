@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Shield, Cloud, Building, DollarSign, Award, ArrowRight } from 'lucide-react';
+
 
 const EnterpriseSolutionsShowcase2026: React.FC = () => {
   return (

@@ -30,7 +30,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-blue-400'
     },
     {
       title: 'Cloud Infrastructure & Migration',

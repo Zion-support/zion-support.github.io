@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Briefcase, Users, MapPin, Clock, DollarSign, Heart, Brain, Code, Shield, BarChart, Zap, CheckCircle, ArrowRight, Star, Globe, Award, GraduationCap, Coffee, Laptop } from 'lucide-react';
+import { Users, MapPin, Clock, DollarSign, Heart, Brain, Code, CheckCircle, Globe, GraduationCap, Coffee } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

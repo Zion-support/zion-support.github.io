@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';;
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
@@ -73,7 +73,6 @@ const CareersPage = lazy(() => import('./careers/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
-const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const BlockchainPage = lazy(() => import('./blockchain/page'));
@@ -240,7 +239,6 @@ const App: React.FC = () => {
             <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
             <Route path="/business-apps" element={<BusinessAppsPage />} />
             <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-            <Route path="/careers" element={<CareersPage />} />
             <Route path="/cloud-services" element={<CloudServicesPage />} />
             <Route path="/compliance" element={<CompliancePage />} />
             <Route path="/consultation" element={<ConsultationPage />} />
@@ -276,7 +274,6 @@ const App: React.FC = () => {
             <Route path="/support" element={<SupportPage />} />
             <Route path="/system-status" element={<SystemStatusPage />} />
             <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-            <Route path="/team" element={<TeamPage />} />
             <Route path="/terms" element={<TermsPage />} />
             
             {/* Blog Pages */}

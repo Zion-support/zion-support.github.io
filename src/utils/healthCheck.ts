@@ -137,14 +137,10 @@ class HealthCheckService {
       };
     }
     try {
-      const memory = (performance as any).memory;
-      if (!memory) {
-        return {
-          status: 'pass',
-          message: 'Memory API not available'
-        };
-      }
-      const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+=======
+      const memoryInfo = (performance as any).memory;
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -178,24 +174,39 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
-      const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
+      let message = `Performance metrics available: ${Object.keys(coreWebVitals).length} vitals`
+      
+      // Check if any critical metrics are missing or poor
+      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
+      const missingMetrics = criticalMetrics.filter(metric => !(metric in coreWebVitals))
+      
+      if (missingMetrics.length > 2) {
         status = 'warn'
+        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
       }
-      if (poor > 2) {
+      
+      if (missingMetrics.length > 3) {
         status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
+        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       }
+      
       return {
         name: 'performance',
         status,
         message,
         details: {
-          metrics: report.metrics,
-          summary: report.summary
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
+          vitals,
+          poor,
+          needsImprovement,
+          good
+=======
+          metrics: reportData,
+          summary: { good: 0, needsImprovement: 0, poor: 0 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
         }
       }
     } catch (error) {

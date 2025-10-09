@@ -11,12 +11,8 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-
-// Types
-interface PerformanceMetric {
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;
+import { onCimport { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;CLS, onFCP, oimport { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;formanceMetric {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';

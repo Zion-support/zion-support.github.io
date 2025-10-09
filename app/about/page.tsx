@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Users, Award, Target, CheckCircle, Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Cpu, BarChart, MessageSquare, Eye, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
+import { Brain, Users, Target, CheckCircle, Phone, Clock, Zap, Shield, Eye, Building, BookOpen, Navigation, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, CheckCircle as Check, Phone as PhoneIcon, DollarSign } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

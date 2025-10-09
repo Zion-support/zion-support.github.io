@@ -117,11 +117,11 @@ const AIServicesPage: React.FC = () => {
         keywords={['AI services', 'machine learning', 'NLP', 'computer vision', 'AI automation', 'predictive analytics', 'AI consulting']}
         canonicalUrl="https://ziontechgroup.com/ai-services"
       />
-        <PerformanceOptimizer 
+        <PerformanceOptimizer
           enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
-          enablePreloading={true}
+          enablePrefetching={true}
         />
         <AccessibilityEnhancer 
           enableKeyboardNavigation={true}
