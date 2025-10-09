@@ -257,7 +257,7 @@ export class CacheManager {
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
-    logger.info('Cache cleared', 'CacheManager', { storage: this.storage });
+    logger.info('Cache cleared', { component: 'CacheManager', storage: this.storage });
   }
   /**
    * Get or set with function (handles both sync and async)
