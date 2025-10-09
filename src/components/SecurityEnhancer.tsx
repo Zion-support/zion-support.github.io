@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 interface SecurityEnhancerProps {
   enableCSP?: boolean;
   enableHTTPSRedirect?: boolean;
@@ -179,7 +181,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
           }
       }
     });
-  };
+  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
   return null;
 };

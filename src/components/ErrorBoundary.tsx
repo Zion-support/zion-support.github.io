@@ -56,6 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
     // In a real application, you would send this to your error tracking service
     // For example: Sentry, LogRocket, Bugsnag, etc.
     
+    const errorReport = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,

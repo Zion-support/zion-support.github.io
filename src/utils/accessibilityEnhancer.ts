@@ -28,6 +28,14 @@ class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = [];
   private _currentFocusIndex: number = 0;
 
+  private get currentFocusIndex(): number {
+    return this._currentFocusIndex;
+  }
+
+  private set currentFocusIndex(value: number) {
+    this._currentFocusIndex = value;
+  }
+
   constructor(config: AccessibilityConfig) {
     this.config = config;
     this.metrics = {
@@ -69,6 +77,7 @@ class AccessibilityEnhancer {
     });
 
     // Update focusable elements on DOM changes
+    const observer = new MutationObserver(() => {
       this.updateFocusableElements();
     });
 
@@ -134,7 +143,7 @@ class AccessibilityEnhancer {
     if (parent) {
       const items = Array.from(parent.querySelectorAll('[role="menuitem"], [role="option"], [role="gridcell"]'));
       const currentIndex = items.indexOf(activeElement);
-      
+      let nextIndex = currentIndex;
       
       switch (e.key) {
         case 'ArrowUp':

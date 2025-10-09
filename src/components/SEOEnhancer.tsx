@@ -15,6 +15,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   url = "https://ziontechgroup.com",
   children
 }) => {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "TechCompany",
     "name": "Zion Tech Group",
