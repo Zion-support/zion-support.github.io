@@ -2,34 +2,23 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default defineConfig({/* TODO: Fix JSX expression */}
-
-    },
-  },
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-=======
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@app': resolve(__dirname, 'app'),
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+      '@app': resolve(__dirname, './app'),
     },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    outDir: 'dist',
+    assetsDir: 'assets',
     sourcemap: false,
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -63,26 +52,7 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-=======
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
->>>>>>> cursor/website-audit-and-update-with-deployment-307a
+          return null;
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
