@@ -1,808 +1,593 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap, Brain, Shield, BarChart, Code, Cloud, Users, Clock, DollarSign, TrendingUp, Target, Globe, Smartphone, Database, Lock, Settings, Mail, Phone, MapPin, Search } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const microSAASServices = [
-    // AI-Powered Developer Tools
     {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
-      price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
-      benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
-      marketPrice: '$150-300/month',
-      category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 1,
+      name: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation platform with 50+ templates, SEO optimization, and multi-language support.',
+      icon: Brain,
+      price: '$79/month',
+      features: [
+        '50+ Content Templates',
+        'SEO Optimization',
+        'Multi-language Support',
+        'Brand Voice Training',
+        'Plagiarism Checker',
+        'Social Media Integration'
+      ],
+      benefits: [
+        'Save 20+ hours/week on content creation',
+        'Increase content engagement by 300%',
+        'Generate 1000+ words in under 5 minutes',
+        'SEO-optimized content that ranks higher'
+      ],
+      category: 'Content & Marketing',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-generator',
+      demo: 'https://demo.ziontechgroup.com/content-generator'
     },
     {
-      title: 'AI Test Generation Suite',
-      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
-      icon: '🧪',
+      id: 2,
+      name: 'Smart Analytics Dashboard',
+      description: 'Real-time business intelligence platform with automated reporting, predictive analytics, and custom dashboards.',
+      icon: BarChart,
       price: '$149/month',
-      features: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
-      benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
-      marketPrice: '$250-500/month',
-      category: 'Developer Tools',
-      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      features: [
+        'Real-time Data Visualization',
+        'Automated Reports',
+        'Predictive Analytics',
+        'Custom Dashboards',
+        'API Integrations',
+        'Mobile App Access'
+      ],
+      benefits: [
+        'Make data-driven decisions 10x faster',
+        'Reduce reporting time by 90%',
+        'Identify trends before competitors',
+        'Increase revenue by 25% through insights'
+      ],
+      category: 'Analytics & BI',
+      popular: true,
+      link: 'https://ziontechgroup.com/smart-analytics',
+      demo: 'https://demo.ziontechgroup.com/analytics'
     },
     {
-      title: 'Smart API Documentation Generator',
-      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
-      icon: '📚',
-      price: '$79/month',
-      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
-      benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
-      marketPrice: '$120-250/month',
-      category: 'Developer Tools',
-      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Marketing & SEO Tools
-    {
-      title: 'AI SEO Optimizer Pro',
-      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
-      icon: '🎯',
-      price: '$199/month',
-      features: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
-      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],
-      marketPrice: '$300-600/month',
-      category: 'Marketing',
-      technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Social Media Manager',
-      description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
-      icon: '📱',
-      price: '$129/month',
-      features: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
-      benefits: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],
-      marketPrice: '$200-400/month',
-      category: 'Marketing',
-      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Email Marketing Platform',
-      description: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
-      icon: '📧',
-      price: '$149/month',
-      features: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],
-      benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],
-      marketPrice: '$200-400/month',
-      category: 'Marketing',
-      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Content Generator Pro',
-      description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
-      icon: '✍️',
-      price: '$119/month',
-      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
-      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
-      marketPrice: '$180-350/month',
-      category: 'Content Creation',
-      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Business Intelligence & Analytics
-    {
-      title: 'AI Analytics Dashboard Pro',
-      description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
-      icon: '📊',
-      price: '$199/month',
-      features: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
-      benefits: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
-      marketPrice: '$300-600/month',
-      category: 'Analytics',
-      technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Lead Scoring Engine',
-      description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
-      icon: '🎯',
-      price: '$139/month',
-      features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
-      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
-      marketPrice: '$200-400/month',
-      category: 'Sales',
-      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Customer Insights Platform',
-      description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
-      icon: '👥',
-      price: '$179/month',
-      features: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
-      benefits: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
-      marketPrice: '$250-500/month',
-      category: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Finance & Accounting Tools
-    {
-      title: 'AI Invoice Generator Pro',
-      description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
-      icon: '💰',
-      price: '$79/month',
-      features: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
-      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
-      marketPrice: '$120-250/month',
-      category: 'Finance',
-      technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Financial Planning Assistant',
-      description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
-      icon: '📈',
-      price: '$89/month',
-      features: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
-      benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
-      marketPrice: '$150-300/month',
-      category: 'Finance',
-      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Expense Management System',
-      description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
-      icon: '🧾',
+      id: 3,
+      name: 'AI Customer Support Bot',
+      description: 'Intelligent chatbot with natural language processing, 24/7 availability, and seamless human handoff.',
+      icon: Users,
       price: '$99/month',
-      features: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
-      benefits: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],
-      marketPrice: '$150-300/month',
-      category: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Healthcare & Wellness
-    {
-      title: 'AI Health Monitoring Platform',
-      description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
-      icon: '🏥',
-      price: '$99/month',
-      features: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
-      benefits: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],
-      marketPrice: '$150-300/month',
-      category: 'Healthcare',
-      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      features: [
+        'Natural Language Processing',
+        '24/7 Availability',
+        'Multi-channel Support',
+        'Human Handoff',
+        'Knowledge Base Integration',
+        'Sentiment Analysis'
+      ],
+      benefits: [
+        'Reduce support costs by 60%',
+        'Handle 80% of queries automatically',
+        'Improve customer satisfaction by 40%',
+        'Available 24/7 without breaks'
+      ],
+      category: 'Customer Service',
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-support-bot',
+      demo: 'https://demo.ziontechgroup.com/support-bot'
     },
     {
-      title: 'AI Fitness Coach Pro',
-      description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
-      icon: '💪',
-      price: '$49/month',
-      features: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
-      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],
-      marketPrice: '$80-150/month',
-      category: 'Health & Fitness',
-      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Mental Health Assistant',
-      description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
-      icon: '🧠',
-      price: '$79/month',
-      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
-      benefits: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],
-      marketPrice: '$120-250/month',
-      category: 'Mental Health',
-      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Education & Learning
-    {
-      title: 'AI Language Learning Platform',
-      description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
-      icon: '🌍',
-      price: '$79/month',
-      features: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
-      benefits: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],
-      marketPrice: '$120-250/month',
-      category: 'Education',
-      technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Study Assistant Pro',
-      description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
-      icon: '📚',
+      id: 4,
+      name: 'Email Marketing Automation',
+      description: 'Advanced email marketing platform with AI-powered personalization, A/B testing, and behavioral triggers.',
+      icon: Mail,
       price: '$59/month',
-      features: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
-      benefits: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],
-      marketPrice: '$100-200/month',
-      category: 'Education',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      features: [
+        'AI Personalization',
+        'A/B Testing',
+        'Behavioral Triggers',
+        'Email Templates',
+        'List Segmentation',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Increase open rates by 45%',
+        'Boost click-through rates by 60%',
+        'Automate entire email campaigns',
+        'Personalize at scale'
+      ],
+      category: 'Marketing',
+      popular: false,
+      link: 'https://ziontechgroup.com/email-automation',
+      demo: 'https://demo.ziontechgroup.com/email-marketing'
     },
     {
-      title: 'AI Skill Assessment Platform',
-      description: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
-      icon: '🎓',
-      price: '$149/month',
-      features: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
-      benefits: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],
-      marketPrice: '$200-400/month',
-      category: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI E-commerce & Retail
-    {
-      title: 'AI Inventory Optimizer Pro',
-      description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
-      icon: '📦',
-      price: '$299/month',
-      features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
-      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],
-      marketPrice: '$400-800/month',
-      category: 'Supply Chain',
-      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Product Recommendation Engine',
-      description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
-      icon: '🛍️',
-      price: '$199/month',
-      features: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],
-      benefits: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],
-      marketPrice: '$300-600/month',
-      category: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 5,
+      name: 'Project Management AI',
+      description: 'Intelligent project management tool with AI task prioritization, resource optimization, and risk prediction.',
+      icon: Target,
+      price: '$89/month',
+      features: [
+        'AI Task Prioritization',
+        'Resource Optimization',
+        'Risk Prediction',
+        'Team Collaboration',
+        'Time Tracking',
+        'Progress Analytics'
+      ],
+      benefits: [
+        'Complete projects 30% faster',
+        'Reduce project overruns by 50%',
+        'Optimize team productivity',
+        'Predict and prevent delays'
+      ],
+      category: 'Productivity',
+      popular: true,
+      link: 'https://ziontechgroup.com/project-management-ai',
+      demo: 'https://demo.ziontechgroup.com/project-ai'
     },
     {
-      title: 'AI Price Optimization Tool',
-      description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
-      icon: '💲',
-      price: '$249/month',
-      features: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],
-      benefits: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],
-      marketPrice: '$400-800/month',
-      category: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Legal & Compliance
-    {
-      title: 'AI Legal Document Analyzer',
-      description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
-      icon: '⚖️',
-      price: '$399/month',
-      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
-      benefits: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],
-      marketPrice: '$600-1200/month',
-      category: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Compliance Monitoring Suite',
-      description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
-      icon: '📜',
-      price: '$299/month',
-      features: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
-      benefits: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],
-      marketPrice: '$500-1000/month',
-      category: 'Compliance',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Real Estate & Property
-    {
-      title: 'AI Real Estate Analyzer Pro',
-      description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
-      icon: '🏠',
-      price: '$199/month',
-      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
-      benefits: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],
-      marketPrice: '$300-600/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 6,
+      name: 'Social Media Scheduler',
+      description: 'AI-powered social media management with content optimization, best time posting, and engagement analytics.',
+      icon: Globe,
+      price: '$69/month',
+      features: [
+        'Multi-platform Scheduling',
+        'Best Time Optimization',
+        'Content Optimization',
+        'Engagement Analytics',
+        'Hashtag Research',
+        'Competitor Analysis'
+      ],
+      benefits: [
+        'Increase social engagement by 200%',
+        'Save 15+ hours per week',
+        'Post at optimal times automatically',
+        'Grow followers organically'
+      ],
+      category: 'Social Media',
+      popular: false,
+      link: 'https://ziontechgroup.com/social-scheduler',
+      demo: 'https://demo.ziontechgroup.com/social-media'
     },
     {
-      title: 'AI Property Management System',
-      description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
-      icon: '🏢',
-      price: '$149/month',
-      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
-      benefits: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],
-      marketPrice: '$200-400/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 7,
+      name: 'AI Website Builder',
+      description: 'No-code website builder with AI design suggestions, mobile optimization, and SEO features.',
+      icon: Code,
+      price: '$79/month',
+      features: [
+        'AI Design Suggestions',
+        'Mobile Optimization',
+        'SEO Optimization',
+        'Drag & Drop Builder',
+        'E-commerce Integration',
+        'Performance Monitoring'
+      ],
+      benefits: [
+        'Build websites 5x faster',
+        'No coding knowledge required',
+        'Mobile-first responsive design',
+        'Built-in SEO optimization'
+      ],
+      category: 'Web Development',
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-website-builder',
+      demo: 'https://demo.ziontechgroup.com/website-builder'
     },
-
-    // AI HR & Recruitment
     {
-      title: 'AI HR Recruitment Suite',
-      description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
-      icon: '👥',
-      price: '$179/month',
-      features: ['Resume parsing', 'Candidate scoring', 'Interview scheduling', 'Onboarding automation', 'Performance tracking', 'Diversity analytics'],
-      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Streamline HR processes', 'Ensure diversity'],
-      marketPrice: '$250-500/month',
-      category: 'Human Resources',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Employee Performance Analytics',
-      description: 'Intelligent performance tracking with goal setting, feedback analysis, and career development recommendations.',
-      icon: '📊',
+      id: 8,
+      name: 'Inventory Management AI',
+      description: 'Smart inventory management with demand forecasting, automated reordering, and waste reduction.',
+      icon: Database,
       price: '$129/month',
-      features: ['Performance tracking', 'Goal setting', 'Feedback analysis', 'Career recommendations', 'Skill gap analysis', 'Team analytics'],
-      benefits: ['Improve performance', 'Identify skill gaps', 'Enhance career development', 'Optimize team dynamics'],
-      marketPrice: '$200-400/month',
-      category: 'Human Resources',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI IoT & Smart Home
-    {
-      title: 'AI Smart Home Controller',
-      description: 'Intelligent home automation with energy optimization, security monitoring, and predictive maintenance.',
-      icon: '🏡',
-      price: '$99/month',
-      features: ['Smart scheduling', 'Energy optimization', 'Security monitoring', 'Voice control', 'Mobile app', 'Predictive maintenance'],
-      benefits: ['Reduce energy costs by 30%', 'Improve home security', 'Enhance convenience', 'Prevent equipment failures'],
-      marketPrice: '$150-300/month',
-      category: 'IoT',
-      technologies: ['IoT Protocols', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      features: [
+        'Demand Forecasting',
+        'Automated Reordering',
+        'Waste Reduction',
+        'Multi-location Support',
+        'Barcode Scanning',
+        'Supplier Integration'
+      ],
+      benefits: [
+        'Reduce inventory costs by 25%',
+        'Eliminate stockouts and overstock',
+        'Automate reordering process',
+        'Minimize waste and spoilage'
+      ],
+      category: 'E-commerce',
+      popular: false,
+      link: 'https://ziontechgroup.com/inventory-ai',
+      demo: 'https://demo.ziontechgroup.com/inventory'
     },
     {
-      title: 'AI Industrial IoT Platform',
-      description: 'Smart manufacturing solutions with predictive maintenance, quality control, and process optimization.',
-      icon: '🏭',
-      price: '$399/month',
-      features: ['Predictive maintenance', 'Quality control', 'Process optimization', 'Energy management', 'Safety monitoring', 'Analytics dashboard'],
-      benefits: ['Reduce downtime by 70%', 'Improve quality', 'Optimize processes', 'Enhance safety'],
-      marketPrice: '$600-1200/month',
-      category: 'Manufacturing',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Security & Cybersecurity
-    {
-      title: 'AI Security Monitoring Suite',
-      description: 'Advanced threat detection, vulnerability scanning, and automated security incident response.',
-      icon: '🔒',
-      price: '$249/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security reporting', 'Risk assessment'],
-      benefits: ['Prevent 95% of security breaches', 'Reduce response time by 80%', 'Ensure compliance', 'Minimize risks'],
-      marketPrice: '$400-800/month',
-      category: 'Cybersecurity',
-      technologies: ['SIEM', 'EDR', 'Machine Learning', 'Python', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Identity Verification System',
-      description: 'Advanced identity verification with facial recognition, document analysis, and fraud detection.',
-      icon: '🆔',
+      id: 9,
+      name: 'AI Security Monitor',
+      description: 'Advanced security monitoring with threat detection, vulnerability scanning, and compliance reporting.',
+      icon: Shield,
       price: '$199/month',
-      features: ['Facial recognition', 'Document verification', 'Fraud detection', 'Liveness detection', 'Multi-factor auth', 'Compliance'],
-      benefits: ['Prevent identity fraud', 'Streamline verification', 'Ensure compliance', 'Improve user experience'],
-      marketPrice: '$300-600/month',
+      features: [
+        'Threat Detection',
+        'Vulnerability Scanning',
+        'Compliance Reporting',
+        'Real-time Alerts',
+        'Incident Response',
+        'Security Analytics'
+      ],
+      benefits: [
+        'Prevent 99% of security breaches',
+        'Reduce security costs by 40%',
+        'Automated compliance reporting',
+        '24/7 threat monitoring'
+      ],
       category: 'Security',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'AWS Rekognition'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Blockchain & Web3
-    {
-      title: 'AI Smart Contract Auditor',
-      description: 'Intelligent smart contract analysis and security auditing for blockchain projects with gas optimization.',
-      icon: '⛓️',
-      price: '$399/month',
-      features: ['Smart contract analysis', 'Vulnerability detection', 'Gas optimization', 'Compliance checking', 'Audit reports', 'DeFi protocols'],
-      benefits: ['Prevent costly exploits', 'Ensure contract security', 'Optimize gas usage', 'Build trust'],
-      marketPrice: '$600-1200/month',
-      category: 'Blockchain',
-      technologies: ['Ethereum', 'Solidity', 'Machine Learning', 'Python', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      popular: true,
+      link: 'https://ziontechgroup.com/security-monitor',
+      demo: 'https://demo.ziontechgroup.com/security'
     },
     {
-      title: 'AI DeFi Analytics Platform',
-      description: 'Advanced DeFi protocol analysis with yield farming optimization, risk assessment, and portfolio management.',
-      icon: '💎',
-      price: '$299/month',
-      features: ['Yield optimization', 'Risk assessment', 'Portfolio management', 'Protocol analysis', 'Arbitrage opportunities', 'Market analysis'],
-      benefits: ['Maximize DeFi returns', 'Minimize risks', 'Optimize strategies', 'Stay ahead of trends'],
-      marketPrice: '$500-1000/month',
-      category: 'DeFi',
-      technologies: ['Web3', 'Machine Learning', 'React', 'Python', 'Blockchain APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Video & Media
-    {
-      title: 'AI Video Content Creator Pro',
-      description: 'Automated video creation with AI-generated scripts, voiceovers, editing, and social media optimization.',
-      icon: '🎬',
-      price: '$299/month',
-      features: ['AI script generation', 'Automated voiceovers', 'Video editing', 'Social media optimization', 'Analytics dashboard', 'Multi-format export'],
-      benefits: ['Create videos 10x faster', 'Reduce production costs by 70%', 'Increase engagement', 'Scale content production'],
-      marketPrice: '$500-1000/month',
-      category: 'Content Creation',
-      technologies: ['OpenAI GPT', 'ElevenLabs', 'FFmpeg', 'React', 'AWS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Video Analytics Platform',
-      description: 'Intelligent video analysis with content recognition, engagement metrics, and performance optimization.',
-      icon: '📹',
-      price: '$199/month',
-      features: ['Content recognition', 'Engagement analysis', 'Performance metrics', 'A/B testing', 'Audience insights', 'Optimization recommendations'],
-      benefits: ['Improve video performance', 'Understand audience better', 'Optimize content strategy', 'Increase engagement'],
-      marketPrice: '$300-600/month',
-      category: 'Video Analytics',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'Video APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Project Management
-    {
-      title: 'AI Project Management Suite',
-      description: 'Intelligent project planning with resource optimization, risk prediction, and automated task management.',
-      icon: '📋',
-      price: '$159/month',
-      features: ['Task automation', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Budget management'],
-      benefits: ['Complete projects 30% faster', 'Reduce project costs', 'Improve team productivity', 'Minimize risks'],
-      marketPrice: '$250-450/month',
-      category: 'Project Management',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Machine Learning', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 10,
+      name: 'AI HR Assistant',
+      description: 'Intelligent HR management with resume screening, interview scheduling, and employee analytics.',
+      icon: Users,
+      price: '$109/month',
+      features: [
+        'Resume Screening',
+        'Interview Scheduling',
+        'Employee Analytics',
+        'Performance Tracking',
+        'Onboarding Automation',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Reduce hiring time by 50%',
+        'Improve candidate quality',
+        'Automate HR processes',
+        'Better employee retention'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      link: 'https://ziontechgroup.com/hr-assistant',
+      demo: 'https://demo.ziontechgroup.com/hr-ai'
     },
     {
-      title: 'AI Resource Planning Tool',
-      description: 'Smart resource allocation with capacity planning, skill matching, and workload optimization.',
-      icon: '⚙️',
-      price: '$179/month',
-      features: ['Capacity planning', 'Skill matching', 'Workload optimization', 'Resource forecasting', 'Team analytics', 'Conflict resolution'],
-      benefits: ['Optimize resource utilization', 'Improve team efficiency', 'Reduce conflicts', 'Better planning'],
-      marketPrice: '$250-500/month',
-      category: 'Resource Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Customer Service
-    {
-      title: 'AI Customer Support Bot Pro',
-      description: 'Advanced chatbot with natural language processing, context awareness, and seamless human handoff.',
-      icon: '🤖',
-      price: '$199/month',
-      features: ['Natural language processing', 'Context-aware responses', 'Multi-language support', 'CRM integration', 'Analytics dashboard', 'Human handoff'],
-      benefits: ['Reduce support costs by 60%', 'Provide 24/7 support', 'Improve response time', 'Enhance customer satisfaction'],
-      marketPrice: '$300-600/month',
-      category: 'Customer Service',
-      technologies: ['Dialogflow', 'Rasa', 'OpenAI GPT', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Voice Assistant Builder',
-      description: 'Create custom voice assistants and chatbots for customer service and internal operations.',
-      icon: '🎤',
-      price: '$159/month',
-      features: ['Voice recognition', 'Natural language processing', 'Multi-language support', 'Integration APIs', 'Analytics dashboard', 'Custom training'],
-      benefits: ['Improve customer service', 'Reduce support costs', '24/7 availability', 'Personalized interactions'],
-      marketPrice: '$250-500/month',
-      category: 'Customer Service',
-      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'Voice APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Document Processing
-    {
-      title: 'AI Document Intelligence Pro',
-      description: 'Advanced document processing with OCR, data extraction, classification, and workflow automation.',
-      icon: '📄',
-      price: '$149/month',
-      features: ['OCR text extraction', 'Document classification', 'Data validation', 'Workflow automation', 'Multi-format support', 'API integration'],
-      benefits: ['Process documents 10x faster', 'Eliminate manual data entry', '99.5% accuracy rate', 'Streamline workflows'],
-      marketPrice: '$200-500/month',
-      category: 'Document Processing',
-      technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Custom ML Models', 'React'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 11,
+      name: 'AI Financial Planner',
+      description: 'Personal finance management with budgeting, investment advice, and expense categorization.',
+      icon: DollarSign,
+      price: '$49/month',
+      features: [
+        'Smart Budgeting',
+        'Investment Advice',
+        'Expense Categorization',
+        'Bill Reminders',
+        'Financial Goals',
+        'Tax Optimization'
+      ],
+      benefits: [
+        'Save 20% more money',
+        'Optimize investments',
+        'Automate financial planning',
+        'Achieve financial goals faster'
+      ],
+      category: 'Finance',
+      popular: false,
+      link: 'https://ziontechgroup.com/financial-planner',
+      demo: 'https://demo.ziontechgroup.com/finance'
     },
     {
-      title: 'AI Contract Management System',
-      description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
-      icon: '📋',
-      price: '$229/month',
-      features: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Workflow automation', 'Analytics dashboard'],
-      benefits: ['Reduce contract risks', 'Improve compliance', 'Streamline processes', 'Better visibility'],
-      marketPrice: '$350-700/month',
-      category: 'Contract Management',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 12,
+      name: 'AI Learning Platform',
+      description: 'Personalized learning management system with adaptive content, progress tracking, and skill assessment.',
+      icon: Brain,
+      price: '$89/month',
+      features: [
+        'Adaptive Learning',
+        'Progress Tracking',
+        'Skill Assessment',
+        'Content Creation',
+        'Gamification',
+        'Certification Management'
+      ],
+      benefits: [
+        'Learn 3x faster',
+        'Personalized learning paths',
+        'Track skill development',
+        'Improve employee training'
+      ],
+      category: 'Education',
+      popular: false,
+      link: 'https://ziontechgroup.com/learning-platform',
+      demo: 'https://demo.ziontechgroup.com/learning'
     }
   ];
 
-  const categories = [...new Set(microSAASServices.map(service => service.category))];
+  const categories = [
+    'All',
+    'Content & Marketing',
+    'Analytics & BI',
+    'Customer Service',
+    'Marketing',
+    'Productivity',
+    'Social Media',
+    'Web Development',
+    'E-commerce',
+    'Security',
+    'Human Resources',
+    'Finance',
+    'Education'
+  ];
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredServices = microSAASServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <>
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Innovative micro SAAS solutions powered by AI and cutting-edge technology. Transform your business with our comprehensive suite of intelligent tools and services." />
-        <meta name="keywords" content="micro saas, saas solutions, AI tools, business automation, software as a service, productivity tools" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text transition-all duration-1000 ${
+              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
+              Micro SAAS Solutions
+            </h1>
+            <p className="text-xl sm:text-2xl text-cyan-400 mb-8 font-medium">
+              Powerful AI-driven tools for modern businesses
+            </p>
+            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Discover our collection of innovative micro SAAS applications designed to solve specific business challenges. 
+              Each tool is built with cutting-edge AI technology and offers immediate value to your organization.
+            </p>
+            
+            {/* Search and Filter */}
+            <div className="max-w-2xl mx-auto mb-12">
+              <div className="relative mb-6">
+                <input
+                  type="text"
+                  placeholder="Search micro SAAS tools..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 bg-gray-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm"
+                />
+                <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              </div>
+              
+              <div className="flex flex-wrap gap-2 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                      selectedCategory === category
+                        ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                        : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-600'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Micro SAAS Solutions
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Innovative AI-powered micro SAAS tools designed to transform your business operations and drive growth
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-                >
-                  📞 +1 302 464 0950
-                </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-                >
-                  ✉️ Get Free Consultation
-                </a>
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="cyber-card hologram-card p-4 text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
+                <div className="text-gray-300 text-sm">Micro SAAS Tools</div>
+              </div>
+              <div className="cyber-card hologram-card p-4 text-center">
+                <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Active Users</div>
+              </div>
+              <div className="cyber-card hologram-card p-4 text-center">
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Uptime</div>
+              </div>
+              <div className="cyber-card hologram-card p-4 text-center">
+                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">Support</div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Micro SAAS Solutions?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge AI-powered tools delivered by industry experts with proven track records
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered</h3>
-                <p className="text-gray-600">Advanced artificial intelligence for maximum efficiency and accuracy</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
-                <p className="text-gray-600">Get up and running in minutes, not months</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost-Effective</h3>
-                <p className="text-gray-600">Save up to 50% compared to market rates</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3>
-                <p className="text-gray-600">Average 300% ROI within 6 months</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services by Category */}
-        {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} tools powered by state-of-the-art AI technology
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {microSAASServices
-                  .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                        </div>
-                        <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
-                        </div>
-                      </div>
-
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                        <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
-                      </div>
-
-                      <div className="flex gap-2">
-                        <a 
-                          href="tel:+13024640950"
-                          className="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
-                        >
-                          Call Now
-                        </a>
-                        <a 
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="flex-1 border border-purple-600 text-purple-600 py-2 px-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-center"
-                        >
-                          Email Us
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </section>
-        ))}
-
-        {/* Pricing Comparison */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Competitive Pricing
-              </h2>
-              <p className="text-xl text-gray-600">
-                Save significantly compared to market rates while getting superior AI-powered solutions
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Market Average</h3>
-                <div className="text-4xl font-bold text-gray-600 mb-4">$400-800</div>
-                <p className="text-gray-600 mb-6">per month for similar solutions</p>
-                <ul className="text-left space-y-2 text-gray-600">
-                  <li>• Basic AI features</li>
-                  <li>• Limited customization</li>
-                  <li>• Standard support</li>
-                  <li>• Generic solutions</li>
-                </ul>
-              </div>
-              <div className="bg-purple-600 rounded-lg p-8 text-center text-white relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-yellow-400 text-purple-900 px-4 py-1 rounded-full text-sm font-bold">
-                    BEST VALUE
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div
+                key={service.id}
+                className={`cyber-card hologram-card p-6 transition-all duration-500 hover:scale-105 ${
+                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
+                    {service.category}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-                <div className="text-4xl font-bold mb-4">$199-299</div>
-                <p className="text-purple-100 mb-6">per month for premium solutions</p>
-                <ul className="text-left space-y-2 text-purple-100">
-                  <li>• Advanced AI features</li>
-                  <li>• Full customization</li>
-                  <li>• 24/7 expert support</li>
-                  <li>• Industry-specific solutions</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-gray-600 mb-4">$1000+</div>
-                <p className="text-gray-600 mb-6">per month for enterprise solutions</p>
-                <ul className="text-left space-y-2 text-gray-600">
-                  <li>• Complex implementations</li>
-                  <li>• High maintenance costs</li>
-                  <li>• Long deployment times</li>
-                  <li>• Vendor lock-in</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl mb-8 text-purple-100">
-              Contact our micro SAAS experts for a free consultation and custom solution design
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-400">per month</div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-xs text-gray-400 flex items-start">
+                        <TrendingUp className="w-3 h-3 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex flex-col space-y-3">
+                  <a
+                    href={service.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-center flex items-center justify-center"
+                  >
+                    <Zap className="w-4 h-4 mr-2" />
+                    Try Demo
+                  </a>
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-200 text-center flex items-center justify-center"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+              <p className="text-gray-300 mb-8">Try adjusting your search or filter criteria</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('All');
+                }}
+                className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
+                Clear Filters
+              </button>
             </div>
-            <div className="text-sm text-purple-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className="mt-2">🌐 https://ziontechgroup.com</p>
+          )}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-slate-800 to-purple-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
+            increase productivity, and drive growth.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button w-full sm:w-auto text-center flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call: (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="cyber-button w-full sm:w-auto text-center flex items-center justify-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Email: kleber@ziontechgroup.com
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="cyber-card p-6 text-center">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-3">Instant Setup</h3>
+              <p className="text-gray-300 text-sm">Get started in minutes with our intuitive setup process</p>
+            </div>
+            <div className="cyber-card p-6 text-center">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+              <p className="text-gray-300 text-sm">Bank-level security and compliance for all your data</p>
+            </div>
+            <div className="cyber-card p-6 text-center">
+              <div className="text-4xl mb-4">📞</div>
+              <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
+              <p className="text-gray-300 text-sm">Round-the-clock support from our expert team</p>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Contact Info */}
+      <section className="py-12 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-2 text-cyan-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
