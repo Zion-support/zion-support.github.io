@@ -12,10 +12,13 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       description: 'AI-powered e-commerce optimization and enhancement',
       benefits: ['Conversion optimization', 'User experience', 'Performance tuning']
     },
+    {
       icon: Target,
       title: 'Product Recommendations',
       description: 'Intelligent product recommendation engine',
       benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling']
+    },
+    {
       icon: Zap,
       title: 'Automated Marketing',
       description: 'Automated e-commerce marketing campaigns',

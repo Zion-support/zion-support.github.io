@@ -12,14 +12,19 @@ const SystemAdministrationPage: React.FC = () => {
       description: 'Comprehensive system administration and maintenance',
       benefits: ['Server management', 'User administration', 'System monitoring']
     },
+    {
       icon: Shield,
       title: 'Security Administration',
       description: 'System security hardening and compliance',
       benefits: ['Security patches', 'Access control', 'Compliance monitoring']
+    },
+    {
       icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Real-time system performance monitoring',
       benefits: ['Resource monitoring', 'Performance optimization', 'Alerting']
+    },
+    {
       icon: Zap,
       title: 'Automation',
       description: 'Automated system administration tasks',

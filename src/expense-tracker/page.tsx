@@ -12,22 +12,31 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit: 'Save 8+ hours per month'
     },
+    {
       icon: TrendingUp,
       title: 'Real-time Analytics',
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%'
+    },
+    {
       icon: Brain,
       title: 'AI Categorization',
       description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
       benefit: '99% accurate categorization'
+    },
+    {
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
       benefit: 'Process expenses 5x faster'
+    },
+    {
       icon: Target,
       title: 'Budget Management',
       description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
       benefit: 'Stay within budget 90% of the time'
+    },
+    {
       icon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',

@@ -15,10 +15,14 @@ const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     return { default: EmptyComponent } as { default: React.ComponentType };
   })
+);
+
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
     default: EmptyComponent
   }))
+);
+
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">

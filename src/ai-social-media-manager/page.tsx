@@ -9,18 +9,27 @@ const AISocialMediaManagerPage: React.FC = () => {
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
+    {
       icon: TrendingUp,
       title: 'Trend Analysis',
       description: 'Real-time trend monitoring and content suggestions based on viral topics'
+    },
+    {
       icon: Users,
       title: 'Audience Insights',
       description: 'Deep analytics on your audience behavior and engagement patterns'
+    },
+    {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum engagement across all platforms'
+    },
+    {
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive reporting with actionable insights and ROI tracking'
+    },
+    {
       icon: MessageSquare,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'

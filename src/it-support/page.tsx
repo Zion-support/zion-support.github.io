@@ -12,14 +12,19 @@ const ITSupportPage: React.FC = () => {
       description: 'Round-the-clock technical support and assistance',
       benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']
     },
+    {
       icon: Shield,
       title: 'Security Support',
       description: 'Comprehensive security monitoring and incident response',
       benefits: ['Threat monitoring', 'Incident response', 'Security updates']
+    },
+    {
       icon: Zap,
       title: 'Rapid Resolution',
       description: 'Quick problem identification and resolution',
       benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes']
+    },
+    {
       icon: Settings,
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',

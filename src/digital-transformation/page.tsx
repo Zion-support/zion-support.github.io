@@ -12,14 +12,19 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Digital transformation strategy and roadmap development',
       benefits: ['Strategic planning', 'Technology assessment', 'Change management']
     },
+    {
       icon: Zap,
       title: 'Process Automation',
       description: 'Automate and optimize business processes',
       benefits: ['Workflow automation', 'Process optimization', 'Efficiency gains']
+    },
+    {
       icon: Settings,
       title: 'Technology Integration',
       description: 'Integrate new technologies with existing systems',
       benefits: ['System integration', 'Data migration', 'API development']
+    },
+    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Data-driven insights and business intelligence',

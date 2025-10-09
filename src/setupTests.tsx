@@ -42,12 +42,23 @@ const localStorageMock = {
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
+};
+
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
+});
+
 // Mock sessionStorage
 const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()
+};
+
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock
+});
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output

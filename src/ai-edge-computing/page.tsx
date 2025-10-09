@@ -12,10 +12,13 @@ const AIEdgeComputingPage: React.FC = () => {
       description: 'AI processing at the edge for real-time decision making',
       benefits: ['Low latency', 'Real-time processing', 'Offline capability']
     },
+    {
       icon: Zap,
       title: 'Optimized Models',
       description: 'Lightweight AI models optimized for edge deployment',
       benefits: ['Small footprint', 'Fast inference', 'Resource efficient']
+    },
+    {
       icon: Globe,
       title: 'Distributed Intelligence',
       description: 'Distributed AI across multiple edge devices',

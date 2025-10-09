@@ -15,22 +15,27 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       price: 'Starting at $1,500/month',
       popular: true
     },
+    {
       icon: Zap,
       title: 'AI Automation',
       description: 'Intelligent process automation and workflow optimization',
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
       price: 'Starting at $2,000/month',
       popular: false
+    },
+    {
       icon: Shield,
       title: 'AI Cybersecurity',
       description: 'Advanced AI-powered security solutions',
       features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
-      price: 'Starting at $2,500/month',
+      price: 'Starting at $2,500/month'
+    },
+    {
       icon: BarChart,
       title: 'AI Data Analytics',
       description: 'Transform data into actionable insights with AI',
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
-      price: 'Starting at $1,800/month',
+      price: 'Starting at $1,800/month'
     }
   ];
 

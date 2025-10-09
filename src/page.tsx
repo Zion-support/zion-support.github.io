@@ -64,6 +64,7 @@ const HomePage: React.FC = () => {
       popular: true,
       category: 'Productivity'
     },
+    {
       title: 'AI Social Media Manager',
       description: 'Transform your social media presence with our cutting-edge AI platform that creates engaging content, optimizes posting schedules, and provides deep audience insights to maximize your brand impact across all platforms.',
       icon: '📱',

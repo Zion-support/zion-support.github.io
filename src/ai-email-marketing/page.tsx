@@ -11,12 +11,16 @@ const AIEmailMarketingPage: React.FC = () => {
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'
     },
+    {
       icon: Target,
       title: 'Smart Segmentation',
       description: 'AI-powered audience segmentation for highly targeted campaigns'
+    },
+    {
       icon: Send,
       title: 'Optimal Send Times',
       description: 'AI determines the best time to send emails for maximum engagement'
+    }
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Forecast campaign performance and optimize for better results'

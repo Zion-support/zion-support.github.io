@@ -17,16 +17,21 @@ const HelpPage: React.FC = () => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
     },
+    {
       id: 'troubleshooting',
       name: 'Troubleshooting',
       icon: HelpCircle,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10'
+    },
+    {
       id: 'billing',
       name: 'Billing & Account',
       icon: CheckCircle,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10'
+    },
+    {
       id: 'technical',
       name: 'Technical Support',
       icon: MessageSquare,

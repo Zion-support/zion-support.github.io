@@ -20,9 +20,12 @@ export interface ServiceOptions {
   cache?: boolean;
   cacheDuration?: number;
 }
+
 export interface CacheEntry<T> {
   data: T;
   timestamp: number;
+}
+
 export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
@@ -35,14 +38,21 @@ export class BaseService {
       cacheDuration: 300000, // 5 minutes
       ...options
     };
+  }
+
+  /**
    * Check if cached data is still valid
+   */
   protected isCacheValid(key: string): boolean {
     const entry = this.cache.get(key);
-    const __entry = this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
+  }
+
+  /**
    * Get data from cache
+   */
   protected getFromCache<T>(key: string): T | null {
     if (!this.options.cache) return null;
     if (this.isCacheValid(key)) {

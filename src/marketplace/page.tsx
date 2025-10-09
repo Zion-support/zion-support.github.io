@@ -18,12 +18,15 @@ const MarketplacePage: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       description: 'AI-powered software products and solutions'
     },
+    {
       id: 'talent',
       name: 'Talent',
       icon: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       description: 'Expert professionals and consultants'
+    },
+    {
       id: 'equipment',
       name: 'Equipment',
       icon: Wrench,

@@ -18,6 +18,7 @@ const BusinessAppsPage: React.FC = () => {
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >Get Custom App</a>
+            <a
               href="/micro-saas"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
             >View Micro SAAS</a>

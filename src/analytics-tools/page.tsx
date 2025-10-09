@@ -12,6 +12,7 @@ const AnalyticsToolsPage: React.FC = () => {
       icon: '📊',
       category: 'Business Intelligence'
     },
+    {
       title: 'AI Web Analytics',
       price: '$299/month',
       description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',

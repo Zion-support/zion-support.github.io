@@ -12,14 +12,19 @@ const ITDisasterRecoveryPage: React.FC = () => {
       description: 'Comprehensive backup and recovery solutions',
       benefits: ['Automated backups', 'Data protection', 'Recovery testing']
     },
+    {
       icon: Zap,
       title: 'Rapid Recovery',
       description: 'Fast disaster recovery and business continuity',
       benefits: ['RTO optimization', 'RPO minimization', 'Quick restoration']
+    },
+    {
       icon: Settings,
       title: 'Disaster Planning',
       description: 'Comprehensive disaster recovery planning and testing',
       benefits: ['Risk assessment', 'Recovery planning', 'Testing']
+    },
+    {
       icon: BarChart,
       title: 'Monitoring & Alerts',
       description: 'Real-time monitoring and alerting for disaster recovery',

@@ -12,14 +12,19 @@ const FutureTechnologiesPage: React.FC = () => {
       description: 'Cutting-edge technologies and future innovations',
       benefits: ['AI advancement', 'Quantum computing', 'Blockchain']
     },
+    {
       icon: Target,
       title: 'Technology Forecasting',
       description: 'Predict and prepare for future technology trends',
       benefits: ['Trend analysis', 'Market prediction', 'Strategic planning']
+    },
+    {
       icon: Zap,
       title: 'Innovation Labs',
       description: 'Research and development of next-gen technologies',
       benefits: ['R&D projects', 'Prototype development', 'Testing']
+    },
+    {
       icon: Settings,
       title: 'Technology Integration',
       description: 'Integrate emerging technologies with existing systems',

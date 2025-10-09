@@ -12,14 +12,19 @@ const GlobalITSupportPage: React.FC = () => {
       description: '24/7 IT support across multiple time zones',
       benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support']
     },
+    {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
       benefits: ['Always available', 'Fast response', 'Expert technicians']
+    },
+    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Enterprise-grade security and compliance support',
       benefits: ['Security monitoring', 'Compliance support', 'Risk management']
+    },
+    {
       icon: Zap,
       title: 'Rapid Response',
       description: 'Quick problem resolution and escalation',

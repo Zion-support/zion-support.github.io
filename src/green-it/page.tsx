@@ -16,11 +16,14 @@ const GreenITPage: React.FC = () => {
       color: 'text-green-400',
       bgColor: 'bg-green-500/10'
     },
+    {
       id: 'benefits',
       name: 'Benefits',
       icon: Target,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
+    },
+    {
       id: 'certifications',
       name: 'Certifications',
       icon: Award,

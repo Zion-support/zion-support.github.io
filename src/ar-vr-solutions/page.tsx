@@ -12,14 +12,19 @@ const ARVRSolutionsPage: React.FC = () => {
       description: 'Augmented reality applications and experiences',
       benefits: ['AR apps', '3D visualization', 'Interactive experiences']
     },
+    {
       icon: Target,
       title: 'VR Solutions',
       description: 'Virtual reality platforms and immersive experiences',
       benefits: ['VR environments', 'Training simulations', 'Virtual meetings']
+    },
+    {
       icon: Zap,
       title: 'Mixed Reality',
       description: 'Mixed reality solutions combining AR and VR',
       benefits: ['MR applications', 'Spatial computing', 'Holographic displays']
+    },
+    {
       icon: Settings,
       title: 'Hardware Integration',
       description: 'Integration with AR/VR hardware and devices',

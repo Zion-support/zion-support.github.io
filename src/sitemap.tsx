@@ -26,12 +26,16 @@ ${pages.map(page => `  <url>
 
 const Sitemap: React.FC = () => {
   const _sitemap = generateSitemap(getAllPages());
-  <url>
-    <loc>https://ziontechgroup.com/</loc>
-    <priority>1.0</priority>
-    <changefreq>daily</changefreq>
-  </url>
-    <loc>https://ziontechgroup.com/about</loc>
+  
+  return (
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://ziontechgroup.com/</loc>
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+      </url>
+      <url>
+        <loc>https://ziontechgroup.com/about</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
     <loc>https://ziontechgroup.com/services</loc>

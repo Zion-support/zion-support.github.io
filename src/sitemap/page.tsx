@@ -24,7 +24,11 @@ const SitemapPage: React.FC = () => {
               <li><a href="/it-services" className="text-cyan-400 hover:text-cyan-300">IT Solutions</a></li>
               <li><a href="/cloud-services" className="text-cyan-400 hover:text-cyan-300">Cloud Services</a></li>
               <li><a href="/cybersecurity" className="text-cyan-400 hover:text-cyan-300">Cybersecurity</a></li>
-  );
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
 };
 
 export default SitemapPage;

@@ -12,10 +12,13 @@ const AIABTestingPage: React.FC = () => {
       description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
+    {
       icon: Target,
       title: 'Multivariate Testing',
       description: 'Advanced multivariate testing capabilities',
       benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis']
+    },
+    {
       icon: Zap,
       title: 'Automated Optimization',
       description: 'Intelligent test optimization and recommendations',

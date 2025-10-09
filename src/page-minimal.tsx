@@ -23,12 +23,16 @@ export default function HomePage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
                 Home
+              </Link>
               <Link href="/services" className="text-gray-900 hover:text-blue-600">
                 Services
+              </Link>
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
+              </Link>
               <Link href="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
+              </Link>
             </nav>
       </header>
       <main>

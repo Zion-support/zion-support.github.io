@@ -12,14 +12,19 @@ const ITTrainingPage: React.FC = () => {
       description: 'Industry-recognized IT certification training programs',
       benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
     },
+    {
       icon: BookOpen,
       title: 'Custom Training',
       description: 'Tailored training programs for your specific needs',
       benefits: ['Custom curriculum', 'On-site training', 'Online learning']
+    },
+    {
       icon: Users,
       title: 'Team Training',
       description: 'Comprehensive team training and development programs',
       benefits: ['Group training', 'Team building', 'Skill development']
+    },
+    {
       icon: Award,
       title: 'Expert Instructors',
       description: 'Learn from industry experts and certified professionals',

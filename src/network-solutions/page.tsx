@@ -12,14 +12,19 @@ const NetworkSolutionsPage: React.FC = () => {
       description: 'Custom network architecture design and implementation',
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
+    {
       icon: Shield,
       title: 'Network Security',
       description: 'Comprehensive network security solutions',
       benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions']
+    },
+    {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Network performance monitoring and optimization',
       benefits: ['Bandwidth management', 'Traffic analysis', 'QoS implementation']
+    },
+    {
       icon: Settings,
       title: 'Network Management',
       description: '24/7 network monitoring and management',

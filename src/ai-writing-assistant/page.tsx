@@ -10,11 +10,10 @@ const AIWritingAssistantPage: React.FC = () => {
           Contact Us
         </a>
       </div>
-  );
-}
+    );
+  };
 
 export default AiWritingAssistantPage;
-};
 
 
 

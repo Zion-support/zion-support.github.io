@@ -12,14 +12,19 @@ const DevOpsCICDPage: React.FC = () => {
       description: 'Automated build, test, and deployment pipelines',
       benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
+    {
       icon: Zap,
       title: 'Infrastructure as Code',
       description: 'Manage infrastructure through code and automation',
       benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
+    },
+    {
       icon: Shield,
       title: 'Security Integration',
       description: 'Built-in security scanning and compliance checks',
       benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Security gates']
+    },
+    {
       icon: BarChart,
       title: 'Monitoring & Analytics',
       description: 'Comprehensive monitoring and performance analytics',

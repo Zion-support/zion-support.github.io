@@ -17,11 +17,15 @@ export interface MiddlewareContext {
     headers?: Record<string, string>;
   metadata: Record<string, unknown>;
 }
+
 export type Middleware = (
   context: MiddlewareContext,
   next: NextFunction
 ) => Promise<unknown> | unknown;
+
+/**
  * Middleware executor
+ */
 export class MiddlewareExecutor {
   private middlewares: Middleware[] = [];
    * Add middleware to the chain

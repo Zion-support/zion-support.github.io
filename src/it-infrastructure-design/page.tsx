@@ -12,14 +12,19 @@ const ITInfrastructureDesignPage: React.FC = () => {
       description: 'Custom IT infrastructure design and architecture',
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
+    {
       icon: Target,
       title: 'Capacity Planning',
       description: 'Strategic capacity planning and resource allocation',
       benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
+    },
+    {
       icon: BarChart,
       title: 'Performance Analysis',
       description: 'Comprehensive performance analysis and optimization',
       benefits: ['Performance monitoring', 'Bottleneck identification', 'Optimization']
+    },
+    {
       icon: Shield,
       title: 'Security Design',
       description: 'Security-first infrastructure design principles',

@@ -12,14 +12,19 @@ const SustainabilityTechPage: React.FC = () => {
       description: 'Sustainable technology solutions for environmental impact',
       benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction']
     },
+    {
       icon: Target,
       title: 'Sustainability Analytics',
       description: 'Data-driven sustainability insights and reporting',
       benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis']
+    },
+    {
       icon: Zap,
       title: 'Renewable Energy',
       description: 'Renewable energy solutions and integration',
       benefits: ['Solar integration', 'Wind energy', 'Energy storage']
+    },
+    {
       icon: Settings,
       title: 'Circular Economy',
       description: 'Circular economy solutions and waste management',

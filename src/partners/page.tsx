@@ -22,46 +22,63 @@ const PartnersPage: React.FC = () => {
         { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
       ]
     },
+    {
       title: 'Solution Partners',
       description: 'Specialized solution providers that complement our offerings',
       icon: Handshake,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
+      partners: [
         { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
         { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
         { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
+      ]
+    },
+    {
       title: 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
+      partners: [
         { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
         { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
         { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
         { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
+      ]
     }
   ];
 
   const benefits = [
+    {
       icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network'
+    },
+    {
       icon: Users,
       title: 'Expertise Sharing',
       description: 'Collaborative knowledge sharing and best practices across industries'
+    },
+    {
       icon: Star,
       title: 'Innovation',
       description: 'Joint innovation initiatives and cutting-edge technology development'
+    },
+    {
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
+    }
+  ];
 
   const partnershipTiers = [
+    {
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',

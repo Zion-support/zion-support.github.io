@@ -14,8 +14,12 @@ export interface RateLimitConfig {
 interface RequestRecord {
   count: number;
   resetTime: number;
+}
+
+/**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
+ */
 export class RateLimiter {
   private requests: Map<string, RequestRecord> = new Map();
   private config: RateLimitConfig;

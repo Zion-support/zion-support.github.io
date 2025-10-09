@@ -10,8 +10,7 @@ const AICustomerSupportPage: React.FC = () => {
           Contact Us
         </a>
       </div>
-  );
-};
+    );
+  };
 
 export default AiCustomerSupportPage;
-export default AICustomerSupportPage;

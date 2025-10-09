@@ -100,7 +100,6 @@ import ConsultationPage from './consultation/page';
 
 import AIProjectManagerPage from './ai-project-manager/page';
 
-
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
   const [, setEnhancers] = useState<{

@@ -12,14 +12,19 @@ const ITAutomationPage: React.FC = () => {
       description: 'Automate repetitive IT processes and workflows',
       benefits: ['Workflow automation', 'Task scheduling', 'Process optimization']
     },
+    {
       icon: Zap,
       title: 'Infrastructure Automation',
       description: 'Automate infrastructure provisioning and management',
       benefits: ['Auto-provisioning', 'Configuration management', 'Scaling']
+    },
+    {
       icon: Shield,
       title: 'Security Automation',
       description: 'Automated security monitoring and response',
       benefits: ['Threat detection', 'Automated response', 'Compliance']
+    },
+    {
       icon: BarChart,
       title: 'Monitoring Automation',
       description: 'Automated monitoring and alerting systems',

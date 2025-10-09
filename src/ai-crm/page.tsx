@@ -12,9 +12,7 @@ const AiCrmPage: React.FC = () => {
           Contact Us
         </a>
       </div>
-  );
-};
-
-}
+    );
+  };
 
 export default AiCrmPage;

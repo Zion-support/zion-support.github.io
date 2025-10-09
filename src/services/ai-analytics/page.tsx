@@ -18,27 +18,38 @@ const AIAnalyticsPage: React.FC = () => {
         'Custom prediction models'
       ]
     },
+    {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
+      features: [
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
         'Role-based access control'
+      ]
+    },
+    {
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-powered insights',
+      features: [
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
         'Custom report templates'
+      ]
+    },
+    {
       icon: Zap,
       title: 'Anomaly Detection',
       description: 'Identify unusual patterns and potential issues before they impact your business',
+      features: [
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
         'Automated responses'
+      ]
     }
   ];
 

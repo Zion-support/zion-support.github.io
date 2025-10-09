@@ -12,22 +12,31 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit: 'Increase productivity by 40%'
     },
+    {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%'
+    },
+    {
       icon: Brain,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
       benefit: 'Complete tasks 30% faster'
+    },
+    {
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
       benefit: 'Reduce manual work by 70%'
+    },
+    {
       icon: Target,
       title: 'Goal Tracking',
       description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
       benefit: 'Achieve 85% of your goals'
+    },
+    {
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',

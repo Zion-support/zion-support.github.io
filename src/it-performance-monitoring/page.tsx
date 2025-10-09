@@ -12,14 +12,19 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       description: 'Comprehensive real-time system performance monitoring',
       benefits: ['Live dashboards', 'Performance metrics', 'Alerting']
     },
+    {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Automated performance optimization and tuning',
       benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations']
+    },
+    {
       icon: Shield,
       title: 'Proactive Monitoring',
       description: 'Proactive monitoring to prevent issues before they occur',
       benefits: ['Predictive analytics', 'Early warning', 'Preventive maintenance']
+    },
+    {
       icon: Settings,
       title: 'Custom Dashboards',
       description: 'Customizable dashboards and reporting',

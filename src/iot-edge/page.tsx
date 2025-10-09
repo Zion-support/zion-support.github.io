@@ -15,6 +15,7 @@ const IoTEdgePage: React.FC = () => {
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
     },
+    {
       title: 'Edge Computing Solutions',
       description: 'Real-time data processing at the edge with low latency and high performance.',
       icon: '⚡',
