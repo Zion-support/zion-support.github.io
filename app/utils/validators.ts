@@ -518,4 +518,3 @@ export async function validateAsync(validato,
   r: error instanceof Error ? error.message : 'Validation failed' };
   }
 }"`
->>>>>>> origin/main

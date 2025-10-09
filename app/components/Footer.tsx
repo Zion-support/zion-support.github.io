@@ -151,14 +151,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-        </div>
-        
-        <div className="border-t border-white/10 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
-=======
 
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
@@ -219,7 +211,6 @@ const Footer: React.FC = memo(() => {
               </div>
             </div>
           </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
         </div>
       </div>
     </footer>
@@ -227,9 +218,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
 
 export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/website-audit-and-update-with-deployment-6747

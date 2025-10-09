@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -121,12 +120,6 @@ const AIAutomationPage: React.FC = () => {
     </div>
   );
 };
-
-=======
-import { Helmet } from 'react-helmet-async';
-import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
@@ -477,5 +470,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
 export default AIAutomationPage;

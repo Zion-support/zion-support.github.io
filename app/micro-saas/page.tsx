@@ -1,12 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
-=======
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
 
 const MicroSAASPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -15,7 +11,6 @@ const MicroSAASPage: React.FC = () => {
 
   const microSAASServices = [
     {
-<<<<<<< HEAD
       id: 'ai-project-manager',
       name: 'AI Project Manager',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -48,7 +43,9 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.7,
       reviews: 654,
       features: ['Smart meeting scheduling', 'Conflict resolution', 'Time optimization', 'Calendar integration'],
-=======
+      popular: true
+    },
+    {
       id: 'ai-content-generator',
       name: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
@@ -104,7 +101,6 @@ const MicroSAASPage: React.FC = () => {
       id: 'ai-project-manager',
       name: 'AI Project Manager',
       description: 'Intelligent project management with AI-powered task optimization and team coordination.',
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
       icon: Calendar,
       category: 'productivity',
       pricing: { starting: 79, period: 'month' },
