@@ -9,7 +9,7 @@ const AICustomerInsightsPage: React.FC = () => {
     {
       icon: Eye,
       title: 'Customer Analytics',
-      description: 'AI-powered customer behavior analysis',
+    description: 'AI-powered customer behavior analysis',
       benefits: ['Behavior tracking', 'Pattern recognition', 'Insight generation']
     },
       icon: Target,

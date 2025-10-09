@@ -9,7 +9,7 @@ const SmartCitiesPage: React.FC = () => {
     {
       icon: Building,
       title: 'Smart Infrastructure',
-      description: 'Intelligent city infrastructure and management systems',
+    description: 'Intelligent city infrastructure and management systems',
       benefits: ['Traffic management', 'Energy optimization', 'Waste management']
     },
       icon: Target,

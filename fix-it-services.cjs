@@ -1,13 +1,13 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
+#!/usr/bin/env node
 
-const ItServicesPage: React.FC = () => {
-    const _itServices = [
+const fs = require('fs');
+
+// Read the it-services page
+const filePath = '/workspace/src/it-services/page.tsx';
+let content = fs.readFileSync(filePath, 'utf8');
+
+// Fix the services array by properly structuring it
+const servicesArray = `  const _itServices = [
     {
       title: 'Cloud Migration & Infrastructure',
       description: 'Seamless migration to cloud platforms with optimized infrastructure setup and management.',
@@ -74,37 +74,16 @@ const ItServicesPage: React.FC = () => {
       technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ];`;
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced IT services solutions by Zion Tech Group." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">IT Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced IT services solutions that will transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <Footer />
-    </div>
-  );
-};
+// Replace the malformed services array
+const servicesStart = content.indexOf('const _itServices = [');
+const servicesEnd = content.indexOf('];', servicesStart) + 2;
 
-export default ITServicesPage;
+if (servicesStart !== -1 && servicesEnd !== -1) {
+  content = content.substring(0, servicesStart) + servicesArray + content.substring(servicesEnd);
+  fs.writeFileSync(filePath, content, 'utf8');
+  console.log('Fixed it-services page');
+} else {
+  console.log('Could not find services array to replace');
+}

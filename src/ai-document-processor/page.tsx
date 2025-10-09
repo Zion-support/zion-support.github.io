@@ -9,7 +9,7 @@ const AIDocumentProcessorPage: React.FC = () => {
     {
       icon: FileText,
       title: 'Document Processing',
-      description: 'AI-powered document processing and analysis',
+    description: 'AI-powered document processing and analysis',
       benefits: ['OCR processing', 'Text extraction', 'Data validation']
     },
       icon: Target,

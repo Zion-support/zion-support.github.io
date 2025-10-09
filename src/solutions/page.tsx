@@ -7,11 +7,11 @@ const SolutionsPage: React.FC = () => {
   const _solutionCategories = [
     {
       id: 'ai',
-      name: 'AI Solutions',
+    name: 'AI Solutions',
       icon: Brain,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Transform your business with cutting-edge artificial intelligence'
+    bgColor: 'bg-purple-500/10',
+    description: 'Transform your business with cutting-edge artificial intelligence'
     },
     {
       id: 'it',

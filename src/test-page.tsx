@@ -9,7 +9,7 @@ const testPagetsx: React.FC = () => {
     {
       icon: Users,
       title: 'Advanced Features',
-      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+    description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {

@@ -116,8 +116,8 @@ class AdvancedAnalytics {
   trackPageView(url?: string, title?: string): void {
       id: this.generateEventId(),
       type: 'page_view',
-      category: 'navigation',
-      action: 'page_view',
+    category: 'navigation',
+    action: 'page_view',
       label: title || document.title,
       timestamp: new Date().toISOString(),
       sessionId: this.currentSession.id,

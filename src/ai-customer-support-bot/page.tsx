@@ -10,7 +10,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     {
       icon: Bot,
       title: '24/7 AI Support',
-      description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+    description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
@@ -30,8 +30,8 @@ const AICustomerSupportBotPage: React.FC = () => {
 
   const pricingPlans = [
       name: 'Starter',
-      price: '$149',
-      period: '/month',
+    price: '$149',
+    period: '/month',
       description: 'Perfect for small businesses',
       features: [
         'Up to 1,000 conversations/month',

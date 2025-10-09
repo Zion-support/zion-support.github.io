@@ -6,8 +6,8 @@ const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
       title: 'AI Business Intelligence',
-      price: '$399/month',
-      description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
+    price: '$399/month',
+    description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
       icon: '📊',
       category: 'Business Intelligence'

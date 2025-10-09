@@ -9,7 +9,7 @@ const AINLPPage: React.FC = () => {
     {
       icon: MessageSquare,
       title: 'Text Analysis',
-      description: 'Advanced text processing and sentiment analysis',
+    description: 'Advanced text processing and sentiment analysis',
       benefits: ['Sentiment detection', 'Entity extraction', 'Language detection']
     },
       icon: Brain,

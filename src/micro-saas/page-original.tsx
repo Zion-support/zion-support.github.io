@@ -6,8 +6,8 @@ const MicroSAASPage: React.FC = () => {
     // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
+    description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
+    icon: '🔍',
       price: '$89/month',
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
       benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],

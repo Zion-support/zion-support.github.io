@@ -12,11 +12,11 @@ const MarketplacePage: React.FC = () => {
   const categories = [
     {
       id: 'products',
-      name: 'Products',
+    name: 'Products',
       icon: ShoppingCart,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description: 'AI-powered software products and solutions'
+    bgColor: 'bg-blue-500/10',
+    description: 'AI-powered software products and solutions'
     },
       id: 'talent',
       name: 'Talent',
@@ -39,7 +39,7 @@ const MarketplacePage: React.FC = () => {
       description: 'Intelligent project management with AI-powered insights and automation',
       category: 'AI Tools',
       price: '$49/month',
-      rating: 4.9,
+    rating: 4.9,
       reviews: 127,
       image: '📊',
       features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],

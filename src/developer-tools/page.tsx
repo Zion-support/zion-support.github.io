@@ -4,7 +4,7 @@ const DeveloperToolsPage: React.FC = () => {
   const _devTools = [
     {
       title: 'AI Code Generator',
-      description: 'Generate high-quality code using advanced AI models',
+    description: 'Generate high-quality code using advanced AI models',
       icon: Code,
       features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
       benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],

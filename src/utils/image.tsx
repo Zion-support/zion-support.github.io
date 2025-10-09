@@ -49,11 +49,11 @@ export const Image: React.FC<ImageProps> = ({
     ...style,
     ...(fill && {
       position: 'absolute',
-      top: 0,
+    top: 0,
       left: 0,
       width: '100%',
-      height: '100%',
-      objectFit: 'cover'
+    height: '100%',
+    objectFit: 'cover'
     })
   };
   if (hasError) {

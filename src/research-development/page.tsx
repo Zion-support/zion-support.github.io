@@ -7,11 +7,11 @@ const ResearchDevelopmentPage: React.FC = () => {
   const _researchAreas = [
     {
       id: 'ai',
-      name: 'Artificial Intelligence',
+    name: 'Artificial Intelligence',
       icon: Brain,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Advancing the frontiers of AI and machine learning'
+    bgColor: 'bg-purple-500/10',
+    description: 'Advancing the frontiers of AI and machine learning'
     },
     {
       id: 'quantum',

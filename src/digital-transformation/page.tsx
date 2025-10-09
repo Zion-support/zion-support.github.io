@@ -9,7 +9,7 @@ const DigitalTransformationPage: React.FC = () => {
     {
       icon: Target,
       title: 'Strategy Development',
-      description: 'Digital transformation strategy and roadmap development',
+    description: 'Digital transformation strategy and roadmap development',
       benefits: ['Strategic planning', 'Technology assessment', 'Change management']
     },
       icon: Zap,

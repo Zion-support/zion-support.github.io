@@ -9,7 +9,7 @@ const SustainabilityTechPage: React.FC = () => {
     {
       icon: Leaf,
       title: 'Green Technology',
-      description: 'Sustainable technology solutions for environmental impact',
+    description: 'Sustainable technology solutions for environmental impact',
       benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction']
     },
       icon: Target,

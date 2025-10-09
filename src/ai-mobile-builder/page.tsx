@@ -9,7 +9,7 @@ const AIMobileBuilderPage: React.FC = () => {
     {
       icon: Smartphone,
       title: 'AI-Assisted Development',
-      description: 'Intelligent mobile app development with AI assistance',
+    description: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
     },
       icon: Target,

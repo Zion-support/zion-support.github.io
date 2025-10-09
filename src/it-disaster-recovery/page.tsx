@@ -9,7 +9,7 @@ const ITDisasterRecoveryPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Backup Solutions',
-      description: 'Comprehensive backup and recovery solutions',
+    description: 'Comprehensive backup and recovery solutions',
       benefits: ['Automated backups', 'Data protection', 'Recovery testing']
     },
       icon: Zap,

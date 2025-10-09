@@ -9,7 +9,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
     {
       icon: ShoppingCart,
       title: 'E-commerce Optimization',
-      description: 'AI-powered e-commerce optimization and enhancement',
+    description: 'AI-powered e-commerce optimization and enhancement',
       benefits: ['Conversion optimization', 'User experience', 'Performance tuning']
     },
       icon: Target,

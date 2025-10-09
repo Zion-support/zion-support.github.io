@@ -9,7 +9,7 @@ const NetworkSolutionsPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Network Design',
-      description: 'Custom network architecture design and implementation',
+    description: 'Custom network architecture design and implementation',
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
       icon: Shield,

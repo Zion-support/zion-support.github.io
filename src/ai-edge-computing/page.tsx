@@ -9,7 +9,7 @@ const AIEdgeComputingPage: React.FC = () => {
     {
       icon: Cpu,
       title: 'Edge AI Processing',
-      description: 'AI processing at the edge for real-time decision making',
+    description: 'AI processing at the edge for real-time decision making',
       benefits: ['Low latency', 'Real-time processing', 'Offline capability']
     },
       icon: Zap,

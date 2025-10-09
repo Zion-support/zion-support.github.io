@@ -69,7 +69,7 @@ class AccessibilityService {
           type: 'missing-alt',
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'
+    wcag: '1.1.1 (Level A)'
         });
       } else if (img.alt === '') {
         warnings.push({
@@ -114,8 +114,8 @@ class AccessibilityService {
     if (!hasSkipLink) {
       warnings.push({
         type: 'missing-skip-link',
-        element: 'body',
-        message: 'No skip navigation link found',
+    element: 'body',
+    message: 'No skip navigation link found',
         suggestion: 'Add a skip link to main content for keyboard users'
       });
     }

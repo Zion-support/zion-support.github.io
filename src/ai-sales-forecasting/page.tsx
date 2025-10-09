@@ -9,7 +9,7 @@ const AISalesForecastingPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Predictive Forecasting',
-      description: 'AI-powered sales forecasting and prediction',
+    description: 'AI-powered sales forecasting and prediction',
       benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']
     },
       icon: Target,

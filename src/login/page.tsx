@@ -34,7 +34,7 @@ const LoginPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure Access',
-      description: 'Bank-level security with multi-factor authentication'
+    description: 'Bank-level security with multi-factor authentication'
     },
     {
       icon: CheckCircle,

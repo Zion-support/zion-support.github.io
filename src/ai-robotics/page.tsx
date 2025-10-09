@@ -9,7 +9,7 @@ const AIRoboticsPage: React.FC = () => {
     {
       icon: Bot,
       title: 'Intelligent Robotics',
-      description: 'AI-powered robots that learn and adapt to their environment',
+    description: 'AI-powered robots that learn and adapt to their environment',
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
     },
       icon: Cpu,

@@ -9,7 +9,7 @@ const ITSupportPage: React.FC = () => {
     {
       icon: Headphones,
       title: '24/7 Support',
-      description: 'Round-the-clock technical support and assistance',
+    description: 'Round-the-clock technical support and assistance',
       benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']
     },
       icon: Shield,

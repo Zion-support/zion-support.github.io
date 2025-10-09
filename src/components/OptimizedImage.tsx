@@ -49,7 +49,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       {
         rootMargin: '50px',
-        threshold: 0.1,
+    threshold: 0.1,
       }
     );
 
@@ -118,8 +118,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           }`}
           style={{
             width: '100%',
-            height: '100%',
-            objectFit: 'cover',
+    height: '100%',
+    objectFit: 'cover',
           }}
         />
       )}

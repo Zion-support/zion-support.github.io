@@ -1,44 +1,53 @@
 import React from 'react';
-
-const TeamPage: React.FC = () => {
 import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const TeamPage: React.FC = () => {
+
   const _teamMembers = [
     {
       name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
+    role: 'CEO & Founder',
+    bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/kleber-santos',
       email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
+    {
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai',
       email: 'sarah@ziontechgroup.com',
       expertise: ['Machine Learning', 'Deep Learning', 'Research']
+    },
+    {
       name: 'Michael Rodriguez',
       role: 'CTO',
       bio: 'Technology architect with expertise in scalable systems and cloud infrastructure',
       linkedin: 'https://linkedin.com/in/michael-rodriguez-cto',
       email: 'michael@ziontechgroup.com',
       expertise: ['Cloud Architecture', 'DevOps', 'Security']
+    },
+    {
       name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
       linkedin: 'https://linkedin.com/in/emily-watson-data',
       email: 'emily@ziontechgroup.com',
       expertise: ['Data Science', 'Analytics', 'Statistics']
+    },
+    {
       name: 'James Kim',
       role: 'Lead AI Engineer',
       bio: 'Full-stack AI engineer with expertise in natural language processing and computer vision',
       linkedin: 'https://linkedin.com/in/james-kim-ai',
       email: 'james@ziontechgroup.com',
       expertise: ['NLP', 'Computer Vision', 'AI Engineering']
+    },
+    {
       name: 'Lisa Thompson',
       role: 'Head of Client Success',
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
@@ -53,6 +62,7 @@ import Footer from '../components/Footer';
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '100+', label: 'AI Projects', icon: Brain },
     { number: '99.9%', label: 'Client Satisfaction', icon: Shield }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -63,6 +73,7 @@ import Footer from '../components/Footer';
           Contact Us
         </a>
       </div>
+    </div>
   );
 };
 

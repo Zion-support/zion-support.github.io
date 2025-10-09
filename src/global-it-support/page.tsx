@@ -9,7 +9,7 @@ const GlobalITSupportPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Coverage',
-      description: '24/7 IT support across multiple time zones',
+    description: '24/7 IT support across multiple time zones',
       benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support']
     },
       icon: Headphones,

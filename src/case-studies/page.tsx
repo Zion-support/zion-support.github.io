@@ -5,8 +5,8 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: 1,
       title: 'E-commerce Platform Transformation',
-      company: 'TechRetail Inc.',
-      industry: 'E-commerce',
+    company: 'TechRetail Inc.',
+    industry: 'E-commerce',
       challenge: 'Low conversion rates and high customer acquisition costs',
       solution: 'AI-powered personalization and dynamic pricing optimization',
       results: {

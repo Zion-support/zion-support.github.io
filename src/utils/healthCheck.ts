@@ -129,8 +129,8 @@ class HealthCheckService {
     if (typeof performance === 'undefined' || !('memory' in performance)) {
       return {
         name: 'memory',
-        status: 'pass',
-        message: 'Memory API not available'
+    status: 'pass',
+    message: 'Memory API not available'
       };
     }
     try {

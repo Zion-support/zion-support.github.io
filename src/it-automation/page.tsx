@@ -9,7 +9,7 @@ const ITAutomationPage: React.FC = () => {
     {
       icon: Settings,
       title: 'Process Automation',
-      description: 'Automate repetitive IT processes and workflows',
+    description: 'Automate repetitive IT processes and workflows',
       benefits: ['Workflow automation', 'Task scheduling', 'Process optimization']
     },
       icon: Zap,

@@ -8,8 +8,8 @@ const SmartAnalyticsPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
-      description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
-      benefit: 'Make decisions 10x faster'
+    description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
+    benefit: 'Make decisions 10x faster'
     },
       icon: Brain,
       title: 'AI-Powered Insights',

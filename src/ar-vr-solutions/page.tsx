@@ -9,7 +9,7 @@ const ARVRSolutionsPage: React.FC = () => {
     {
       icon: Eye,
       title: 'AR Development',
-      description: 'Augmented reality applications and experiences',
+    description: 'Augmented reality applications and experiences',
       benefits: ['AR apps', '3D visualization', 'Interactive experiences']
     },
       icon: Target,

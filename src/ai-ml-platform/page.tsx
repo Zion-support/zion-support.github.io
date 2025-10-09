@@ -11,7 +11,7 @@ const AIMLPlatformPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
+    description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
       icon: TrendingUp,
@@ -31,8 +31,8 @@ const AIMLPlatformPage: React.FC = () => {
 
   const pricingPlans = [
       name: 'Developer',
-      price: '$999',
-      period: '/month',
+    price: '$999',
+    period: '/month',
       description: 'Perfect for individual developers',
       features: [
         'Up to 5 models',

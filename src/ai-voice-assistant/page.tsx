@@ -9,7 +9,7 @@ const AIVoiceAssistantPage: React.FC = () => {
     {
       icon: Mic,
       title: 'Voice Recognition',
-      description: 'Advanced voice recognition and processing',
+    description: 'Advanced voice recognition and processing',
       benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support']
     },
       icon: Target,

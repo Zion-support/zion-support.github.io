@@ -9,8 +9,8 @@ const AISchedulerPage: React.FC = () => {
     {
       icon: Calendar,
       title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
-      benefit: 'Save 5+ hours per week'
+    description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
+    benefit: 'Save 5+ hours per week'
     },
       icon: Users,
       title: 'Team Coordination',
@@ -88,7 +88,7 @@ const AISchedulerPage: React.FC = () => {
       company: 'TechStart',
       role: 'Operations Manager',
       content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
-      rating: 5
+    rating: 5
       name: 'Robert Martinez',
       company: 'Consulting Group',
       role: 'Senior Partner',

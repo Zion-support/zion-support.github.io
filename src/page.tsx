@@ -49,14 +49,14 @@ const HomePage: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as { gtag: (command: string, action: string, parameters: Record<string, string>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
+    event_label: 'main_phone_number'
       });
 
   const microSAASServices = [
     {
       title: 'AI Project Manager',
-      description: 'Revolutionary project management platform powered by advanced AI algorithms that optimize resource allocation, predict project risks, and automate workflow management for maximum efficiency and success.',
-      icon: '📊',
+    description: 'Revolutionary project management platform powered by advanced AI algorithms that optimize resource allocation, predict project risks, and automate workflow management for maximum efficiency and success.',
+    icon: '📊',
       price: '$99/month',
       features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization'],
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '50% faster project completion'],

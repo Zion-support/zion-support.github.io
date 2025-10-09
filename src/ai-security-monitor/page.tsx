@@ -9,7 +9,7 @@ const AISecurityMonitorPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Threat Detection',
-      description: 'AI-powered threat detection and monitoring',
+    description: 'AI-powered threat detection and monitoring',
       benefits: ['Real-time monitoring', 'Threat analysis', 'Incident response']
     },
       icon: Target,

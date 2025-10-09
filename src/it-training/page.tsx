@@ -9,7 +9,7 @@ const ITTrainingPage: React.FC = () => {
     {
       icon: GraduationCap,
       title: 'Certification Programs',
-      description: 'Industry-recognized IT certification training programs',
+    description: 'Industry-recognized IT certification training programs',
       benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
     },
       icon: BookOpen,

@@ -456,8 +456,8 @@ export class ErrorBoundary extends React.Component<
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: 'white',
+    backgroundColor: '#007bff',
+    color: 'white',
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer'

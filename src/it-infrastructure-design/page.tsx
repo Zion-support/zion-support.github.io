@@ -9,7 +9,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
     {
       icon: Settings,
       title: 'Infrastructure Design',
-      description: 'Custom IT infrastructure design and architecture',
+    description: 'Custom IT infrastructure design and architecture',
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
       icon: Target,

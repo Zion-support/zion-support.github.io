@@ -6,8 +6,8 @@ const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
       title: 'IoT Device Management Platform',
-      description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
-      icon: '📱',
+    description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
+    icon: '📱',
       price: 'Starting at $3,500/month',
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
       benefits: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],

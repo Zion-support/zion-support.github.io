@@ -78,7 +78,7 @@ const RequestQuotePage: React.FC = () => {
     {
       icon: Calculator,
       title: 'Free Quote',
-      description: 'Get a detailed, no-obligation quote within 24 hours'
+    description: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {
       icon: Clock,

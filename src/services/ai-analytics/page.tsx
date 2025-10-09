@@ -10,7 +10,7 @@ const AIAnalyticsPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
+    description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
         '95% accuracy in predictions',
         'Real-time data processing',
@@ -52,8 +52,8 @@ const AIAnalyticsPage: React.FC = () => {
       icon: Users,
       color: 'text-blue-400'
       title: 'Financial Forecasting',
-      description: 'Predict revenue, expenses, and cash flow with high accuracy',
-      color: 'text-purple-400'
+    description: 'Predict revenue, expenses, and cash flow with high accuracy',
+    color: 'text-purple-400'
       title: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
       color: 'text-yellow-400'

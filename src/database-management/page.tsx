@@ -9,7 +9,7 @@ const DatabaseManagementPage: React.FC = () => {
     {
       icon: Database,
       title: 'Database Administration',
-      description: 'Comprehensive database management and optimization',
+    description: 'Comprehensive database management and optimization',
       benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
     },
       icon: Shield,

@@ -9,7 +9,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Custom AI Research',
-      description: 'Tailored AI research solutions for your specific needs',
+    description: 'Tailored AI research solutions for your specific needs',
       benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
     },
       icon: Code,

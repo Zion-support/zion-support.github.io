@@ -141,7 +141,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 25
+    value: 25
               });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {

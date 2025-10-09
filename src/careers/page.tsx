@@ -6,8 +6,8 @@ const CareersPage: React.FC = () => {
   const _openPositions = [
     {
       title: 'Senior AI Engineer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',
+    department: 'Engineering',
+    location: 'Remote / Middletown, DE',
       type: 'Full-time',
       description: 'Lead development of cutting-edge AI solutions and machine learning models',
       requirements: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],

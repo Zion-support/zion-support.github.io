@@ -9,7 +9,7 @@ const AIHRAssistantPage: React.FC = () => {
     {
       icon: Users,
       title: 'HR Automation',
-      description: 'AI-powered HR process automation',
+    description: 'AI-powered HR process automation',
       benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
     },
       icon: Target,

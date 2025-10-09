@@ -149,7 +149,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+    codeExample: '<img src="..." alt="Description of image" />'
         });
       }
       // Check for empty alt on decorative images without role
@@ -300,8 +300,8 @@ export class AccessibilityChecker {
           wcagCriterion: '4.1.2',
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
-          fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
+    fix: 'Add text content or aria-label to the button',
+    codeExample: '<button aria-label="Close dialog">×</button>'
         });
       }
     });

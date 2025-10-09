@@ -9,7 +9,7 @@ const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
       title: 'Technology Partners',
-      description: 'Leading technology companies that provide the foundation for our solutions',
+    description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
@@ -63,8 +63,8 @@ const PartnersPage: React.FC = () => {
 
   const partnershipTiers = [
       name: 'Strategic Partners',
-      level: 'Platinum',
-      description: 'Long-term strategic relationships with joint go-to-market initiatives',
+    level: 'Platinum',
+    description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
         'Joint marketing and sales initiatives',
         'Co-development of solutions',

@@ -9,7 +9,7 @@ const AIAnalyticsPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
+    description: 'Live data visualization and insights',
       benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
     },
       icon: Target,

@@ -53,7 +53,7 @@ const SignupPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance'
+    description: 'Bank-level security with advanced encryption and compliance'
     },
       icon: Award,
       title: 'Proven Results',

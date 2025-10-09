@@ -1,19 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-
-const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
       title: 'AI-Powered Planning',
-      description: 'Intelligent project planning with predictive analytics and resource optimization',
+    description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
     },
       icon: Target,
@@ -33,8 +29,8 @@ const AiProjectManagerPage: React.FC = () => {
 
   const pricingPlans = [
       name: 'Starter',
-      price: '$99',
-      period: '/month',
+    price: '$99',
+    period: '/month',
       description: 'Perfect for small teams',
       features: [
         'Up to 5 projects',

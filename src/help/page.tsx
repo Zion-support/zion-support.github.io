@@ -12,7 +12,7 @@ const HelpPage: React.FC = () => {
   const categories = [
     {
       id: 'getting-started',
-      name: 'Getting Started',
+    name: 'Getting Started',
       icon: BookOpen,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
@@ -38,8 +38,8 @@ const HelpPage: React.FC = () => {
   const helpArticles = {
     'getting-started': [
         title: 'How to Get Started with AI Services',
-        description: 'Complete guide to setting up your AI services and making the most of our platform',
-        category: 'Getting Started',
+    description: 'Complete guide to setting up your AI services and making the most of our platform',
+    category: 'Getting Started',
         readTime: '5 min read',
         difficulty: 'Beginner',
         color: 'text-blue-400'

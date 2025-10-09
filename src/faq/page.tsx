@@ -22,7 +22,7 @@ const FAQPage: React.FC = () => {
       category: 'General Questions',
       questions: [
           question: 'What is Zion Tech Group?',
-          answer: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
+    answer: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
         },
           question: 'What services do you offer?',
           answer: 'We offer comprehensive AI services, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.'
@@ -33,8 +33,8 @@ const FAQPage: React.FC = () => {
         }
       ]
       category: 'AI Services',
-          question: 'What AI services do you provide?',
-          answer: 'We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.'
+    question: 'What AI services do you provide?',
+    answer: 'We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.'
           question: 'How much do AI services cost?',
           answer: 'Our AI services start at $1,500/month for basic packages. Pricing varies based on complexity, scope, and specific requirements. Contact us for a detailed quote tailored to your needs.'
           question: 'Do you provide AI training for our team?',

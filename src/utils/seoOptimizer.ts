@@ -258,7 +258,7 @@ class SEOOptimizer {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'
+    priority: '1.0'
       }
     ];
   }
@@ -326,8 +326,8 @@ Disallow: /static/`;
 // Default configuration
 const defaultConfig: SEOConfig = {
   siteName: 'Zion Tech Group',
-  siteUrl: 'https://zion.app',
-  defaultTitle: 'Advanced AI and IT Solutions',
+    siteUrl: 'https://zion.app',
+    defaultTitle: 'Advanced AI and IT Solutions',
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
   defaultImage: 'https://zion.app/og-image.jpg',
   twitterHandle: 'ZionTechGroup',

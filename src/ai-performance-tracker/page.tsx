@@ -9,7 +9,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Monitoring',
-      description: 'Comprehensive performance tracking and analysis',
+    description: 'Comprehensive performance tracking and analysis',
       benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis']
     },
       icon: Target,

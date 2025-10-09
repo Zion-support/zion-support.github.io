@@ -79,8 +79,8 @@ const suppressNavigationWarnings = (...args: unknown[]) => {
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
+    origin: 'http://localhost:3000',
+    protocol: 'http:',
   host: 'localhost:3000',
   hostname: 'localhost',
   port: '3000',

@@ -9,7 +9,7 @@ const AIContentStudioPage: React.FC = () => {
     {
       icon: FileText,
       title: 'Content Creation',
-      description: 'AI-powered content generation and optimization',
+    description: 'AI-powered content generation and optimization',
       benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
     },
       icon: Target,

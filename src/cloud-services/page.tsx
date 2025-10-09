@@ -6,7 +6,7 @@ const CloudServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Migration',
-      description: 'Seamless migration of your infrastructure to leading cloud platforms',
+    description: 'Seamless migration of your infrastructure to leading cloud platforms',
       features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
     {

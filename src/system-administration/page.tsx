@@ -9,7 +9,7 @@ const SystemAdministrationPage: React.FC = () => {
     {
       icon: Settings,
       title: 'System Management',
-      description: 'Comprehensive system administration and maintenance',
+    description: 'Comprehensive system administration and maintenance',
       benefits: ['Server management', 'User administration', 'System monitoring']
     },
       icon: Shield,

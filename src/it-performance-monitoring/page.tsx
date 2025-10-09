@@ -9,7 +9,7 @@ const ITPerformanceMonitoringPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Monitoring',
-      description: 'Comprehensive real-time system performance monitoring',
+    description: 'Comprehensive real-time system performance monitoring',
       benefits: ['Live dashboards', 'Performance metrics', 'Alerting']
     },
       icon: Zap,

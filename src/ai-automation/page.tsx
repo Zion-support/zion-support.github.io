@@ -9,7 +9,7 @@ const AIAutomationPage: React.FC = () => {
     {
       icon: Settings,
       title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
+    description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
     {
@@ -35,8 +35,8 @@ const AIAutomationPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$1,400',
-      period: '/month',
+    price: '$1,400',
+    period: '/month',
       description: 'Perfect for small businesses',
       features: [
         'Up to 10 automated processes',

@@ -9,7 +9,7 @@ const FutureTechnologiesPage: React.FC = () => {
     {
       icon: Rocket,
       title: 'Emerging Technologies',
-      description: 'Cutting-edge technologies and future innovations',
+    description: 'Cutting-edge technologies and future innovations',
       benefits: ['AI advancement', 'Quantum computing', 'Blockchain']
     },
       icon: Target,

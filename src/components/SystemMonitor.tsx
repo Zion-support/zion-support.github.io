@@ -156,7 +156,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         rtt: connection?.rtt || 0,
         saveData: connection?.saveData || false
       effectiveType: 'unknown',
-      downlink: 0,
+    downlink: 0,
       rtt: 0,
       saveData: false
   // Export data

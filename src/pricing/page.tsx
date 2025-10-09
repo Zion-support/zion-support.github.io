@@ -6,8 +6,8 @@ const PricingPage: React.FC = () => {
   const _plans = [
     {
       name: 'Starter',
-      price: '$299',
-      period: '/month',
+    price: '$299',
+    period: '/month',
       description: 'Perfect for small businesses getting started with AI',
       icon: Zap,
       color: 'text-green-400',

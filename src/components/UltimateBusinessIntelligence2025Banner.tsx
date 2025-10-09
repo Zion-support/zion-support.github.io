@@ -8,8 +8,8 @@ const _UltimateBusinessIntelligence2025Banner = () => {
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+    title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+    description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
       metrics: {

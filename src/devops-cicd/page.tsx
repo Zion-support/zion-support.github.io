@@ -9,7 +9,7 @@ const DevOpsCICDPage: React.FC = () => {
     {
       icon: Settings,
       title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines',
+    description: 'Automated build, test, and deployment pipelines',
       benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
       icon: Zap,

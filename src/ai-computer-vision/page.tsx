@@ -9,7 +9,7 @@ const AIComputerVisionPage: React.FC = () => {
     {
       icon: Eye,
       title: 'Object Detection',
-      description: 'Advanced object detection and recognition with high accuracy',
+    description: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
       icon: Camera,
@@ -47,8 +47,8 @@ const AIComputerVisionPage: React.FC = () => {
 
   const pricing = [
       name: 'Starter',
-      price: '$499/month',
-      description: 'Perfect for small projects',
+    price: '$499/month',
+    description: 'Perfect for small projects',
       features: [
         'Up to 1,000 images/month',
         'Basic models',

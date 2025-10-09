@@ -9,7 +9,7 @@ const AIDesignAssistantPage: React.FC = () => {
     {
       icon: Palette,
       title: 'AI Design Generation',
-      description: 'AI-powered design creation and optimization',
+    description: 'AI-powered design creation and optimization',
       benefits: ['Auto design', 'Style optimization', 'Brand consistency']
     },
       icon: Target,

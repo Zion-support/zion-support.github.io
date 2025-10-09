@@ -60,7 +60,7 @@ class EnhancedAnalytics {
     // Track initialization
     this.trackEvent({
       category: 'System',
-      action: 'Analytics Initialized',
+    action: 'Analytics Initialized',
       metadata: {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent

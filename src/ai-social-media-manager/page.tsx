@@ -7,7 +7,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     {
       icon: Share2,
       title: 'AI Content Creation',
-      description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
+    description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
       icon: TrendingUp,
       title: 'Trend Analysis',
@@ -44,8 +44,8 @@ const AISocialMediaManagerPage: React.FC = () => {
 
   const pricing = [
       name: 'Starter',
-      price: '$29',
-      period: '/month',
+    price: '$29',
+    period: '/month',
       description: 'Perfect for small businesses',
       features: [
         '3 social media accounts',

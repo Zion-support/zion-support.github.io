@@ -20,7 +20,7 @@ const CompliancePage: React.FC = () => {
     {
       icon: Shield,
       title: 'Data Protection',
-      description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
+    description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
       icon: FileText,

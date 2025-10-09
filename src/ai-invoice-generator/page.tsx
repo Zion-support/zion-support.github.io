@@ -11,7 +11,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
-      description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
+    description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
     },
       icon: Zap,
@@ -39,8 +39,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 
   const pricingPlans = [
       name: 'Starter',
-      price: '$29',
-      period: '/month',
+    price: '$29',
+    period: '/month',
       description: 'Perfect for freelancers and small businesses',
       features: [
         'Up to 100 invoices/month',
@@ -83,7 +83,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       role: 'Freelance Designer',
       company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
-      rating: 5,
+    rating: 5,
       avatar: '👩‍🎨'
       name: 'Michael Chen',
       role: 'CEO',

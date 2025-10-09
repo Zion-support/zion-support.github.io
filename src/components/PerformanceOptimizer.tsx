@@ -83,7 +83,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       }, {
         rootMargin: '50px 0px',
-        threshold: 0.1
+    threshold: 0.1
       });
       
       const lazyImages = document.querySelectorAll('img[data-src]');
@@ -97,8 +97,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const criticalResources = [
       {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
-        type: 'text/css'
+    as: 'style',
+    type: 'text/css'
       },
       {
         href: '/styles/critical.css',

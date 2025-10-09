@@ -9,7 +9,7 @@ const AIInventoryManagerPage: React.FC = () => {
     {
       icon: Package,
       title: 'Inventory Tracking',
-      description: 'AI-powered inventory tracking and management',
+    description: 'AI-powered inventory tracking and management',
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']
     },
       icon: Target,

@@ -9,7 +9,7 @@ const AIABTestingPage: React.FC = () => {
     {
       icon: TestTube,
       title: 'A/B Testing',
-      description: 'AI-powered A/B testing and experimentation',
+    description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
       icon: Target,

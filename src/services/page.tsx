@@ -10,7 +10,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
     {
       icon: Brain,
       title: 'AI Services',
-      description: 'Comprehensive AI solutions for every business need',
+    description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
       popular: true

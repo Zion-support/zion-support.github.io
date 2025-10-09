@@ -9,7 +9,7 @@ const AILeadScoringPage: React.FC = () => {
     {
       icon: Target,
       title: 'Intelligent Scoring',
-      description: 'AI-powered lead scoring and qualification',
+    description: 'AI-powered lead scoring and qualification',
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']
     },
       icon: BarChart,

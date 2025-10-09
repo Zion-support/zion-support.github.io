@@ -10,7 +10,7 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
+    description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
       price: 'Starting at $2,500/month'

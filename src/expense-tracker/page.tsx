@@ -9,8 +9,8 @@ const ExpenseTrackerPage: React.FC = () => {
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
-      description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
-      benefit: 'Save 8+ hours per month'
+    description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
+    benefit: 'Save 8+ hours per month'
     },
       icon: TrendingUp,
       title: 'Real-time Analytics',
@@ -88,7 +88,7 @@ const ExpenseTrackerPage: React.FC = () => {
       company: 'Small Business Owner',
       role: 'CEO',
       content: 'Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
-      rating: 5
+    rating: 5
       name: 'Sarah Williams',
       company: 'Marketing Agency',
       role: 'Finance Manager',

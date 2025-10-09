@@ -29,8 +29,8 @@ export default function BlogPage() {
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
+    title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
+    description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
       category: 'Success Story',
       readTime: '50 min read',
       date: '2025-01-28',

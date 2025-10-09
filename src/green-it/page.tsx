@@ -11,7 +11,7 @@ const GreenITPage: React.FC = () => {
   const tabs = [
     {
       id: 'solutions',
-      name: 'Green Solutions',
+    name: 'Green Solutions',
       icon: Leaf,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10'
@@ -121,8 +121,8 @@ const GreenITPage: React.FC = () => {
 
   const certifications = [
       name: 'ISO 14001:2015',
-      description: 'Environmental Management Systems',
-      status: 'Certified'
+    description: 'Environmental Management Systems',
+    status: 'Certified'
       name: 'LEED Platinum',
       description: 'Leadership in Energy and Environmental Design',
       name: 'Carbon Trust Standard',

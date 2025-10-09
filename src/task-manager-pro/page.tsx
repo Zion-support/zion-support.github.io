@@ -9,8 +9,8 @@ const TaskManagerProPage: React.FC = () => {
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
-      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
-      benefit: 'Increase productivity by 40%'
+    description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
+    benefit: 'Increase productivity by 40%'
     },
       icon: Users,
       title: 'Team Collaboration',
@@ -88,7 +88,7 @@ const TaskManagerProPage: React.FC = () => {
       company: 'Marketing Agency',
       role: 'Project Manager',
       content: 'Task Manager Pro transformed our team productivity. We complete projects 40% faster with better quality.',
-      rating: 5
+    rating: 5
       name: 'Tom Anderson',
       company: 'Software Startup',
       role: 'CEO',

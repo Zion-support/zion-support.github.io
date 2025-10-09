@@ -9,7 +9,7 @@ const InnovationLabsPage: React.FC = () => {
     {
       icon: FlaskConical,
       title: 'Research & Development',
-      description: 'Cutting-edge research and development projects',
+    description: 'Cutting-edge research and development projects',
       benefits: ['Technology research', 'Prototype development', 'Innovation projects']
     },
       icon: Target,

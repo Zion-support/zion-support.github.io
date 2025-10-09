@@ -9,7 +9,7 @@ const AISEOOptimizerPage: React.FC = () => {
     {
       icon: Search,
       title: 'SEO Analysis',
-      description: 'Comprehensive SEO analysis and optimization',
+    description: 'Comprehensive SEO analysis and optimization',
       benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
     },
       icon: Target,
