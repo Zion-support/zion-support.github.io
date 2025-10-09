@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -264,8 +265,4 @@ const GdprPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default GDPRPage;
-=======
-export default GdprPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

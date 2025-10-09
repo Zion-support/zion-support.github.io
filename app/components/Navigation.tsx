@@ -1,20 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
-import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRight } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,7 +18,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -34,17 +25,14 @@ const Navigation: React.FC = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
-=======
+
   const closeAllMenus = () => {
     setServicesOpen(false);
     setIsOpen(false);
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
-    }
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
   };
 
   const serviceCategories = [
@@ -105,13 +93,11 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -281,7 +267,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -339,7 +324,6 @@ const Navigation: React.FC = () => {
               >
                 Contact
               </Link>
-<<<<<<< HEAD
               <div className="border-t border-gray-600 pt-2 mt-2">
                 <a 
                   href="tel:+13026009898" 
@@ -375,8 +359,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> cursor/analyze-improve-and-deploy-application-7970

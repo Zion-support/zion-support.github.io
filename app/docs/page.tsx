@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -327,8 +328,4 @@ const DocsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default DocsPage;
-=======
-export default DocsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
