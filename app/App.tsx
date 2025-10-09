@@ -81,6 +81,18 @@ const _BlogPage = lazy(() => import('./blog-index'));
 const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap/page'));
 
+// Missing AI Services Pages
+const _AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
+const _AICustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
+const _AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
+const _AIDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
+
+// Missing IT Services Pages
+const _ITInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
+
+// Missing Specialized Pages
+const _RoboticsPage = lazy(() => import('./robotics/page'));
+
 // Utils
 import { logger } from './utils/logger';
 
@@ -189,6 +201,10 @@ const App: React.FC = () => {
                         <Route path="/ai-cloud-infrastructure" element={<_AICloudInfrastructurePage />} />
                         <Route path="/ai-ecommerce-solutions" element={<_AIEcommerceSolutionsPage />} />
                         <Route path="/ai-mobile-app-development" element={<_AIMobileAppDevelopmentPage />} />
+                        <Route path="/ai-content-generation" element={<_AIContentGenerationPage />} />
+                        <Route path="/ai-customer-support" element={<_AICustomerSupportPage />} />
+                        <Route path="/ai-sales-automation" element={<_AISalesAutomationPage />} />
+                        <Route path="/ai-data-visualization" element={<_AIDataVisualizationPage />} />
                         
                         {/* IT Services Routes */}
                         <Route path="/it-services" element={<_ITServicesPage />} />
@@ -198,6 +214,7 @@ const App: React.FC = () => {
                         <Route path="/devops" element={<_DevOpsPage />} />
                         <Route path="/database" element={<_DatabasePage />} />
                         <Route path="/networking" element={<_NetworkingPage />} />
+                        <Route path="/it-infrastructure" element={<_ITInfrastructurePage />} />
                         
                         {/* Additional Routes */}
                         <Route path="/security" element={<_SecurityPage />} />
@@ -223,6 +240,7 @@ const App: React.FC = () => {
                         <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
                         <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
                         <Route path="/iot-edge-computing" element={<_IoTEdgeComputingPage />} />
+                        <Route path="/robotics" element={<_RoboticsPage />} />
                         
                         {/* Additional Routes */}
                         <Route path="/blog" element={<_BlogPage />} />
