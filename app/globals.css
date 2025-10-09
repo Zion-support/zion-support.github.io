@@ -285,6 +285,80 @@ a {
       0 0 6px #00ffff,
       0 0 9px #00ffff;
   }
+  
+  .cyber-card, .hologram-card, .quantum-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-size: 10px 10px;
+  }
+  
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-card, .hologram-card, .quantum-card {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 8px 8px;
+  }
+  
+  .neon-text {
+    font-size: 1.25rem;
+  }
+  
+  .cyber-card, .hologram-card, .quantum-card {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cyber-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.25rem;
+  }
 }
 
 /* Loading Animation */
@@ -352,6 +426,88 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Responsive Utilities */
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding: 0 2rem;
+  }
+}
+
+/* Grid Responsive */
+.grid-responsive {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Text Responsive */
+.text-responsive-xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-xl {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+/* Button Responsive */
+.btn-responsive {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .btn-responsive {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn-responsive {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+  }
 }
 
 /* Focus States */

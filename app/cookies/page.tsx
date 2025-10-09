@@ -243,4 +243,3 @@ const CookiesPage: React.FC = () => {
 };
 
 export default CookiesPage;
- cursor/analyze-improve-and-deploy-application-cde4

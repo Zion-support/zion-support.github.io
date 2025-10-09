@@ -30,4 +30,3 @@ const DevelopertoolsPage: React.FC = () => {
 };
 
 export default DevelopertoolsPage;
- cursor/analyze-improve-and-deploy-application-cde4
