@@ -40,13 +40,45 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-white hover:text-blue-400 transition-colors flex items-center">
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-96 bg-gray-900 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-6 grid grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="text-sm font-semibold text-blue-400 mb-3">AI Services</h3>
+                    <ul className="space-y-2">
+                      <li><Link href="/ai-services" className="text-sm text-gray-300 hover:text-white">AI Solutions</Link></li>
+                      <li><Link href="/ai-marketing" className="text-sm text-gray-300 hover:text-white">AI Marketing</Link></li>
+                      <li><Link href="/ai-automation" className="text-sm text-gray-300 hover:text-white">AI Automation</Link></li>
+                      <li><Link href="/ai-cybersecurity" className="text-sm text-gray-300 hover:text-white">AI Cybersecurity</Link></li>
+                      <li><Link href="/ai-data-analytics" className="text-sm text-gray-300 hover:text-white">AI Data Analytics</Link></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-blue-400 mb-3">Micro SAAS</h3>
+                    <ul className="space-y-2">
+                      <li><Link href="/micro-saas" className="text-sm text-gray-300 hover:text-white">All Micro SAAS</Link></li>
+                      <li><Link href="/ai-content-generation" className="text-sm text-gray-300 hover:text-white">Content Generation</Link></li>
+                      <li><Link href="/ai-customer-support" className="text-sm text-gray-300 hover:text-white">Customer Support</Link></li>
+                      <li><Link href="/ai-sales-automation" className="text-sm text-gray-300 hover:text-white">Sales Automation</Link></li>
+                      <li><Link href="/ai-data-visualization" className="text-sm text-gray-300 hover:text-white">Data Visualization</Link></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
@@ -58,11 +90,11 @@ const Navigation: React.FC = () => {
             </Link>
             <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
               <a 
-                href="tel:+13026009898" 
+                href="tel:+13024640950" 
                 className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(302) 600-9898</span>
+                <span className="text-sm">(302) 464-0950</span>
               </a>
             </div>
           </div>
@@ -95,7 +127,21 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeMenu}
               >
-                Services
+                All Services
+              </Link>
+              <Link 
+                href="/micro-saas" 
+                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Micro SAAS
+              </Link>
+              <Link 
+                href="/ai-services" 
+                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                AI Services
               </Link>
               <Link 
                 href="/about" 
@@ -120,18 +166,18 @@ const Navigation: React.FC = () => {
               </Link>
               <div className="border-t border-gray-600 pt-2 mt-2">
                 <a 
-                  href="tel:+13026009898" 
+                  href="tel:+13024640950" 
                   className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>(302) 600-9898</span>
+                  <span>(302) 464-0950</span>
                 </a>
                 <a 
-                  href="mailto:info@ziontechgroup.com" 
+                  href="mailto:kleber@ziontechgroup.com" 
                   className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>info@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
             </div>

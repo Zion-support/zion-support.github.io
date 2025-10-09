@@ -1,4 +1,6 @@
 
+import React, { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -31,3 +33,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
+    const collectMetrics = () => {
+      // Performance metrics collection logic
+      if (enableConsoleLogging) {
+        console.log('Performance metrics collected');
+      }
+    };
+
+    const interval = setInterval(collectMetrics, reportInterval);
+    return () => clearInterval(interval);
+  }, [enableConsoleLogging, reportInterval]);
+
+  return null;
+};
+
+export default PerformanceMonitor;

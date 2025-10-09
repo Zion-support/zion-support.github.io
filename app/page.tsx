@@ -86,36 +86,42 @@ export default function HomePage() {
               Advanced AI and IT Solutions
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              Transform your business with cutting-edge AI solutions, micro SAAS applications, and enterprise IT services. 
+              We deliver 80+ AI-powered tools, comprehensive digital transformation, and 24/7 expert support to accelerate your growth.
             </p>
             
             {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 max-w-6xl mx-auto">
+              <div className="cyber-card hologram-card p-4 sm:p-6">
+                <div className="text-2xl sm:text-3xl mb-3">🚀</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">80+ AI Tools</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Comprehensive suite of micro SAAS applications starting at $49/month</p>
+              </div>
               <div className="cyber-card hologram-card p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl mb-3">💰</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven ROI</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Average 300% ROI with $50M+ in client savings and 95% automation</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+              <div className="cyber-card hologram-card p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl mb-3">🔒</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security with 99.9% uptime and compliance guarantee</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+              <div className="cyber-card hologram-card p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Rapid Deployment</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Get your AI solutions up and running in weeks, not months</p>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Get solutions live in weeks with 24/7 expert support</p>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+13026009898"
+                href="tel:+13024640950"
                 onClick={handlePhoneClick}
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Call: (302) 600-9898
+                Call: (302) 464-0950
               </a>
               <a 
                 href="/contact"

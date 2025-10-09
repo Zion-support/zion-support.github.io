@@ -30,6 +30,7 @@ export default function RootLayout({
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
+      email: 'kleber@ziontechgroup.com',
     },
     sameAs: [
       'https://twitter.com/ziontechgroup',

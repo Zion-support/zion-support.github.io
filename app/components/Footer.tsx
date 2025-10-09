@@ -51,13 +51,27 @@ const Footer: React.FC = memo(() => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Services</h3>
+            <h3 className="text-lg font-semibold text-white">AI Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
-              <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</Link></li>
-              <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link></li>
-              <li><Link href="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</Link></li>
-              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/ai-marketing" className="text-gray-300 hover:text-white transition-colors">AI Marketing</Link></li>
+              <li><Link href="/ai-automation" className="text-gray-300 hover:text-white transition-colors">AI Automation</Link></li>
+              <li><Link href="/ai-cybersecurity" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</Link></li>
+              <li><Link href="/ai-data-analytics" className="text-gray-300 hover:text-white transition-colors">AI Data Analytics</Link></li>
+              <li><Link href="/ai-content-generation" className="text-gray-300 hover:text-white transition-colors">AI Content Generation</Link></li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Micro SAAS</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">All Micro SAAS</Link></li>
+              <li><Link href="/ai-customer-support" className="text-gray-300 hover:text-white transition-colors">Customer Support</Link></li>
+              <li><Link href="/ai-sales-automation" className="text-gray-300 hover:text-white transition-colors">Sales Automation</Link></li>
+              <li><Link href="/ai-data-visualization" className="text-gray-300 hover:text-white transition-colors">Data Visualization</Link></li>
+              <li><Link href="/ai-ecommerce-solutions" className="text-gray-300 hover:text-white transition-colors">E-commerce Solutions</Link></li>
+              <li><Link href="/ai-mobile-app-development" className="text-gray-300 hover:text-white transition-colors">Mobile App Development</Link></li>
             </ul>
           </div>
 
@@ -79,14 +93,14 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
-                <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
-                  (302) 600-9898
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-gray-400" />
-                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@ziontechgroup.com
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">

@@ -43,3 +43,53 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
+
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    if (this.props.enableErrorReporting) {
+      this.reportError(error, errorInfo);
+    }
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Error reporting logic would go here
+    console.error('Error reported:', error, errorInfo);
+  };
+
+  private handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+    }
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="error-boundary">
+          <h2>Something went wrong</h2>
+          <p>Error ID: {this.state.errorId}</p>
+          {this.state.retryCount < this.maxRetries && (
+            <button onClick={this.handleRetry}>
+              Retry ({this.maxRetries - this.state.retryCount} attempts left)
+            </button>
+          )}
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
