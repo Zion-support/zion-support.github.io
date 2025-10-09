@@ -1,10 +1,13 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Analytics from './components/Analytics';
+import SecurityEnhancer from './components/SecurityEnhancer';
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -103,6 +106,21 @@ const HomePage: React.FC = () => {
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+        enableSkipLinks={true}
+        enableARIALabels={true}
+      />
+      <Analytics
+        enableGoogleAnalytics={true}
+        enablePerformanceMonitoring={true}
+        enableErrorTracking={true}
+        enableUserBehaviorTracking={true}
+      />
+      <SecurityEnhancer
+        enableCSP={true}
+        enableHTTPSRedirect={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+        enableContentTypeSniffingProtection={true}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
