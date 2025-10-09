@@ -674,6 +674,20 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  
+  .neon-text,
+  .cyber-text-3d,
+  .glitch {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+  
+  .cyber-grid,
+  .neural-network-bg,
+  .matrix-rain,
+  .particle-field {
+    background: none !important;
+  }
 }
 
 /* High Contrast Mode */

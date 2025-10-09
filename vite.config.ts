@@ -22,13 +22,16 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more aggressive splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -36,19 +39,28 @@ export default defineConfig({
             if (id.includes('react-router-dom')) {
               return 'vendor-router';
             }
-            return 'vendor';
+            if (id.includes('react-helmet-async')) {
+              return 'vendor-helmet';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            return 'vendor-other';
           }
-          // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
+          // Page chunks - group similar pages more efficiently
+          if (id.includes('/app/ai-')) {
             return 'pages-ai';
           }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
+          if (id.includes('/app/') && (id.includes('cloud') || id.includes('it-') || id.includes('cybersecurity'))) {
             return 'pages-it';
           }
-          if (id.includes('/src/blog/')) {
+          if (id.includes('/app/blog/')) {
             return 'pages-blog';
           }
-          if (id.includes('/src/')) {
+          if (id.includes('/app/contact') || id.includes('/app/about')) {
+            return 'pages-company';
+          }
+          if (id.includes('/app/')) {
             return 'pages-other';
           }
         },

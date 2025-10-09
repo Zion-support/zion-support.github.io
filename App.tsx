@@ -1,5 +1,7 @@
 import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -38,10 +40,15 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
+// Enhanced loading component
+const AppLoadingSpinner = memo(() => (
+  <div className="min-h-screen flex items-center justify-center bg-slate-900">
+    <div className="text-center">
+      <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+        <div className="w-8 h-8 bg-white rounded"></div>
+      </div>
+      <p className="text-cyan-400 text-lg font-semibold">Loading Zion Tech Group...</p>
+    </div>
   </div>
 ));
 
@@ -164,16 +171,16 @@ export default function App() {
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<AppLoadingSpinner />}>
             <UnifiedContentPromotion />
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<AppLoadingSpinner />}>
             <InteractiveAIROICalculator />
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<AppLoadingSpinner />}>
             <ContentShowcase />
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<AppLoadingSpinner />}>
             <InteractiveContentShowcase2026 />
           </Suspense>
         </div>

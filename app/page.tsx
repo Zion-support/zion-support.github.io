@@ -20,22 +20,35 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
-    setTimeout(() => {
+    requestIdleCallback(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
-    }, 100);
+    }, { timeout: 2000 });
   }
 };
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  <div className="cyber-card p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-slate-700 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-slate-700 rounded mb-2"></div>
+    <div className="h-4 bg-slate-700 rounded w-5/6"></div>
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
+// Enhanced loading component
+const PageLoadingSpinner: React.FC = memo(() => (
+  <div className="min-h-screen flex items-center justify-center bg-slate-900">
+    <div className="text-center">
+      <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <p className="text-cyan-400 text-lg font-semibold">Loading Zion Tech Group...</p>
+    </div>
+  </div>
+));
+PageLoadingSpinner.displayName = 'PageLoadingSpinner';
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
