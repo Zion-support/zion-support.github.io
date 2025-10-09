@@ -1,267 +1,507 @@
 'use client';
-import React from 'react';
-import { PenTool, FileText, Zap, Target, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Brain, Users, BarChart } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  FileText, Brain, Zap, CheckCircle, Star, Users, Clock, 
+  Target, Palette, Globe, Shield, Download, Upload, 
+  Copy, RefreshCw, Settings, BarChart, TrendingUp,
+  ArrowRight, Phone, Mail, MapPin, DollarSign, Award
+} from 'lucide-react';
 
 const AIWritingAssistantPage: React.FC = () => {
+  const [activeTemplate, setActiveTemplate] = useState('blog-post');
+  const [inputText, setInputText] = useState('');
+  const [generatedContent, setGeneratedContent] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [selectedTone, setSelectedTone] = useState('professional');
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
+  const [wordCount, setWordCount] = useState(500);
+
+  const templates = [
+    {
+      id: 'blog-post',
+      name: 'Blog Post',
+      icon: FileText,
+      description: 'Create engaging blog posts with SEO optimization',
+      category: 'content'
+    },
+    {
+      id: 'email',
+      name: 'Email',
+      icon: Mail,
+      description: 'Professional emails and newsletters',
+      category: 'communication'
+    },
+    {
+      id: 'social-media',
+      name: 'Social Media',
+      icon: Globe,
+      description: 'Captivating social media posts',
+      category: 'marketing'
+    },
+    {
+      id: 'product-description',
+      name: 'Product Description',
+      icon: Target,
+      description: 'Compelling product descriptions',
+      category: 'ecommerce'
+    },
+    {
+      id: 'ad-copy',
+      name: 'Ad Copy',
+      icon: Zap,
+      description: 'High-converting advertisement copy',
+      category: 'advertising'
+    },
+    {
+      id: 'press-release',
+      name: 'Press Release',
+      icon: FileText,
+      description: 'Professional press releases',
+      category: 'pr'
+    },
+    {
+      id: 'proposal',
+      name: 'Proposal',
+      icon: FileText,
+      description: 'Business proposals and pitches',
+      category: 'business'
+    },
+    {
+      id: 'resume',
+      name: 'Resume',
+      icon: Users,
+      description: 'Professional resume and CV',
+      category: 'career'
+    }
+  ];
+
+  const tones = [
+    { id: 'professional', name: 'Professional', description: 'Formal and business-like' },
+    { id: 'casual', name: 'Casual', description: 'Friendly and conversational' },
+    { id: 'persuasive', name: 'Persuasive', description: 'Convincing and compelling' },
+    { id: 'informative', name: 'Informative', description: 'Educational and detailed' },
+    { id: 'creative', name: 'Creative', description: 'Imaginative and engaging' },
+    { id: 'technical', name: 'Technical', description: 'Precise and detailed' }
+  ];
+
+  const languages = [
+    { id: 'en', name: 'English', flag: '🇺🇸' },
+    { id: 'es', name: 'Spanish', flag: '🇪🇸' },
+    { id: 'fr', name: 'French', flag: '🇫🇷' },
+    { id: 'de', name: 'German', flag: '🇩🇪' },
+    { id: 'it', name: 'Italian', flag: '🇮🇹' },
+    { id: 'pt', name: 'Portuguese', flag: '🇵🇹' },
+    { id: 'zh', name: 'Chinese', flag: '🇨🇳' },
+    { id: 'ja', name: 'Japanese', flag: '🇯🇵' }
+  ];
+
   const features = [
     {
-      icon: PenTool,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality articles, blog posts, marketing copy, and social media content using advanced GPT-4 technology.',
-      benefit: '10x faster content creation'
+      icon: Brain,
+      title: 'AI-Powered Writing',
+      description: 'Advanced AI algorithms that understand context and generate high-quality content',
+      benefits: ['Natural language generation', 'Context awareness', 'Creative suggestions']
     },
     {
-      icon: FileText,
-      title: 'Multi-Format Support',
-      description: 'Create content in any format: blog posts, emails, ads, product descriptions, press releases, and more.',
-      benefit: '50+ content templates'
-    },
-    {
-      icon: Zap,
-      title: 'Smart Optimization',
-      description: 'Automatically optimize content for SEO, readability, and engagement with AI-powered suggestions and improvements.',
-      benefit: '40% better engagement rates'
+      icon: CheckCircle,
+      title: 'Grammar & Style Check',
+      description: 'Real-time grammar checking and style optimization for perfect content',
+      benefits: ['Grammar correction', 'Style suggestions', 'Readability improvement']
     },
     {
       icon: Target,
-      title: 'Brand Voice Training',
-      description: 'Train the AI to match your brand voice, tone, and style for consistent messaging across all content.',
-      benefit: '100% brand consistency'
+      title: 'SEO Optimization',
+      description: 'Built-in SEO tools to help your content rank higher in search results',
+      benefits: ['Keyword optimization', 'Meta descriptions', 'Content structure']
     },
     {
-      icon: Clock,
-      title: 'Real-time Collaboration',
-      description: 'Work with your team in real-time with live editing, comments, and version control for seamless collaboration.',
-      benefit: '50% faster team workflows'
+      icon: Palette,
+      title: 'Tone & Voice',
+      description: 'Customize the tone and voice to match your brand personality',
+      benefits: ['Multiple tone options', 'Brand voice consistency', 'Audience targeting']
     },
     {
-      icon: Brain,
-      title: 'Content Intelligence',
-      description: 'Get AI insights on content performance, audience engagement, and optimization opportunities.',
-      benefit: 'Data-driven content strategy'
+      icon: Globe,
+      title: 'Multi-Language',
+      description: 'Write in multiple languages with native-level quality',
+      benefits: ['50+ languages', 'Cultural adaptation', 'Local context']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics',
+      description: 'Track content performance and optimize based on data',
+      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Writer',
+      name: 'Starter',
       price: '$29',
       period: '/month',
-      description: 'Perfect for individual creators',
+      originalPrice: '$49',
+      description: 'Perfect for individuals and small teams',
       features: [
-        '10,000 words per month',
-        'Basic AI writing',
-        '5 content templates',
-        'Standard support',
-        'Basic SEO optimization',
-        'Single user account'
+        '10,000 words/month',
+        '20+ templates',
+        'Basic grammar check',
+        'Email support',
+        '1 user account'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$59',
       period: '/month',
-      description: 'Ideal for small teams',
+      originalPrice: '$99',
+      description: 'Ideal for growing businesses',
       features: [
-        '50,000 words per month',
-        'Advanced AI writing',
-        '50+ content templates',
+        '50,000 words/month',
+        '50+ templates',
+        'Advanced grammar & style',
+        'SEO optimization',
         'Priority support',
-        'Advanced SEO tools',
-        'Team collaboration',
-        'Brand voice training',
-        'Content analytics'
+        '5 user accounts',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$149',
       period: '/month',
+      originalPrice: '$249',
       description: 'For large organizations',
       features: [
         'Unlimited words',
-        'Premium AI models',
-        'Custom templates',
-        'Dedicated support',
-        'API access',
+        'All templates',
+        'Advanced AI features',
         'Custom integrations',
+        'Dedicated support',
+        'Unlimited users',
         'White-label options',
-        'Advanced analytics'
+        'Custom training'
       ],
       popular: false
     }
   ];
 
-  const useCases = [
-    {
-      title: 'Blog Content',
-      description: 'Create engaging blog posts that rank high in search engines and drive traffic to your website.',
-      icon: FileText,
-      results: '300% increase in organic traffic'
-    },
-    {
-      title: 'Marketing Copy',
-      description: 'Generate compelling ad copy, email campaigns, and social media posts that convert.',
-      icon: Target,
-      results: '45% higher conversion rates'
-    },
-    {
-      title: 'Product Descriptions',
-      description: 'Write persuasive product descriptions that highlight benefits and drive sales.',
-      icon: Zap,
-      results: '60% more product sales'
-    },
-    {
-      title: 'Email Marketing',
-      description: 'Create personalized email sequences that nurture leads and increase customer retention.',
-      icon: Mail,
-      results: '35% higher open rates'
-    }
-  ];
-
   const testimonials = [
     {
-      name: 'Jessica Martinez',
-      company: 'Content Marketing Pro',
+      name: 'Sarah Johnson',
       role: 'Content Manager',
-      content: 'AI Writing Assistant helped us scale our content production by 500% while maintaining quality. Our blog traffic tripled in 6 months.',
-      rating: 5
+      company: 'TechCorp',
+      content: 'AI Writing Assistant has revolutionized our content creation process. We save 15+ hours per week and our engagement rates have increased by 60%.',
+      rating: 5,
+      avatar: 'SJ'
     },
     {
-      name: 'David Kim',
-      company: 'E-commerce Solutions',
+      name: 'Michael Chen',
       role: 'Marketing Director',
-      content: 'The brand voice training feature is incredible. All our content now sounds consistent and professional across all channels.',
-      rating: 5
+      company: 'StartupXYZ',
+      content: 'The quality of content generated is outstanding. It sounds natural and professional, and the SEO optimization features are incredibly helpful.',
+      rating: 5,
+      avatar: 'MC'
     },
     {
-      name: 'Lisa Thompson',
-      company: 'Digital Agency',
-      role: 'Creative Director',
-      content: 'We can now deliver client content 3x faster. The AI suggestions help us improve our writing and stay ahead of deadlines.',
-      rating: 5
+      name: 'Emily Rodriguez',
+      role: 'Freelance Writer',
+      company: 'Self-Employed',
+      content: 'This tool has helped me scale my business significantly. I can now take on 3x more clients while maintaining high quality standards.',
+      rating: 5,
+      avatar: 'ER'
     }
   ];
 
+  const handleGenerate = async () => {
+    setIsGenerating(true);
+    // Simulate AI generation
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    const sampleContent = `# ${inputText || 'AI-Generated Content'}
+
+## Introduction
+This is a professionally crafted piece of content generated by our advanced AI writing assistant. The content is optimized for ${selectedTone} tone and written in ${languages.find(l => l.id === selectedLanguage)?.name || 'English'}.
+
+## Key Points
+- **Quality**: High-quality, engaging content that resonates with your audience
+- **SEO Optimized**: Built-in SEO optimization for better search rankings
+- **Customizable**: Adjustable tone, style, and length to match your needs
+- **Multi-language**: Support for 50+ languages with cultural adaptation
+
+## Benefits
+1. **Time Saving**: Generate content 10x faster than manual writing
+2. **Consistency**: Maintain consistent brand voice across all content
+3. **Scalability**: Scale your content production without compromising quality
+4. **Cost Effective**: Reduce content creation costs by up to 70%
+
+## Conclusion
+Our AI Writing Assistant is the perfect solution for businesses looking to scale their content marketing efforts while maintaining high quality standards. Try it today and experience the difference AI-powered content creation can make.
+
+---
+*Generated by Zion Tech Group AI Writing Assistant*`;
+
+    setGeneratedContent(sampleContent);
+    setIsGenerating(false);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent);
+    // You could add a toast notification here
+  };
+
+  const handleDownload = () => {
+    const element = document.createElement('a');
+    const file = new Blob([generatedContent], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = 'ai-generated-content.txt';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Helmet>
+        <title>AI Writing Assistant Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered writing tool with 50+ templates, grammar checking, and SEO optimization. Save 10+ hours per week and improve content quality by 85%." />
+        <meta name="keywords" content="ai writing assistant, content generation, grammar check, seo optimization, writing tools, content marketing" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
-            <PenTool className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Writing Assistant
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Create Amazing Content 10x Faster
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your content creation with our AI-powered writing assistant. Generate high-quality 
-            blog posts, marketing copy, emails, and more in minutes, not hours. Boost engagement and 
-            drive results with intelligent content optimization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Free Trial
-            </Link>
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+                AI Writing Assistant Pro
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Advanced AI-powered writing tool that helps you create high-quality content 10x faster. 
+                From blog posts to emails, generate engaging content that converts.
+              </p>
+              
+              {/* Key Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 cyber-card">
+                  <div className="text-2xl font-bold text-cyan-400 mb-1">15,000+</div>
+                  <div className="text-gray-300 text-sm">Active Users</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 cyber-card">
+                  <div className="text-2xl font-bold text-green-400 mb-1">4.9/5</div>
+                  <div className="text-gray-300 text-sm">User Rating</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 cyber-card">
+                  <div className="text-2xl font-bold text-purple-400 mb-1">85%</div>
+                  <div className="text-gray-300 text-sm">Quality Improvement</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 cyber-card">
+                  <div className="text-2xl font-bold text-orange-400 mb-1">10x</div>
+                  <div className="text-gray-300 text-sm">Faster Writing</div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                >
+                  Try Free Demo
+                </button>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-transparent border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-500/10 transition-all text-center"
+                >
+                  Call (302) 464-0950
+                </a>
+              </div>
+            </div>
+
+            {/* Demo Interface */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 cyber-card">
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    What would you like to write about?
+                  </label>
+                  <input
+                    type="text"
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                    placeholder="e.g., A blog post about AI in healthcare"
+                    className="w-full px-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                  />
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Tone</label>
+                    <select
+                      value={selectedTone}
+                      onChange={(e) => setSelectedTone(e.target.value)}
+                      className="w-full px-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                    >
+                      {tones.map(tone => (
+                        <option key={tone.id} value={tone.id} className="bg-slate-800">
+                          {tone.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Language</label>
+                    <select
+                      value={selectedLanguage}
+                      onChange={(e) => setSelectedLanguage(e.target.value)}
+                      className="w-full px-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                    >
+                      {languages.map(lang => (
+                        <option key={lang.id} value={lang.id} className="bg-slate-800">
+                          {lang.flag} {lang.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleGenerate}
+                  disabled={isGenerating}
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isGenerating ? (
+                    <div className="flex items-center justify-center space-x-2">
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                      <span>Generating...</span>
+                    </div>
+                  ) : (
+                    'Generate Content'
+                  )}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">10x</div>
-            <div className="text-white font-semibold mb-2">Faster Writing</div>
-            <div className="text-gray-300 text-sm">Create content in minutes, not hours</div>
+      {/* Generated Content Section */}
+      {generatedContent && (
+        <section id="demo-section" className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 cyber-card">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">Generated Content</h3>
+                <div className="flex space-x-2">
+                  <button
+                    onClick={handleCopy}
+                    className="flex items-center space-x-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-all"
+                  >
+                    <Copy className="w-4 h-4" />
+                    <span>Copy</span>
+                  </button>
+                  <button
+                    onClick={handleDownload}
+                    className="flex items-center space-x-2 px-4 py-2 bg-green-500/20 text-green-400 rounded-lg hover:bg-green-500/30 transition-all"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>Download</span>
+                  </button>
+                </div>
+              </div>
+              <div className="bg-slate-900/50 rounded-lg p-6 max-h-96 overflow-y-auto">
+                <pre className="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed">
+                  {generatedContent}
+                </pre>
+              </div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">40%</div>
-            <div className="text-white font-semibold mb-2">Better Engagement</div>
-            <div className="text-gray-300 text-sm">AI optimization increases reader engagement</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">50+</div>
-            <div className="text-white font-semibold mb-2">Templates</div>
-            <div className="text-gray-300 text-sm">Ready-to-use content templates</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
-            <div className="text-white font-semibold mb-2">Brand Consistent</div>
-            <div className="text-gray-300 text-sm">Maintain your unique brand voice</div>
+        </section>
+      )}
+
+      {/* Templates Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Choose Your Template
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {templates.map((template) => (
+              <button
+                key={template.id}
+                onClick={() => setActiveTemplate(template.id)}
+                className={`p-6 rounded-lg transition-all duration-300 ${
+                  activeTemplate === template.id
+                    ? 'bg-cyan-500/20 border-2 border-cyan-500'
+                    : 'bg-white/5 hover:bg-white/10 border-2 border-transparent'
+                }`}
+              >
+                <template.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                <h3 className="text-white font-medium mb-2">{template.name}</h3>
+                <p className="text-gray-400 text-sm">{template.description}</p>
+              </button>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful AI Writing Features
+      {/* Features Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Powerful Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 cyber-card">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Use Cases Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Perfect for Every Content Need
+      {/* Pricing Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Simple Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center">
-                <useCase.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{useCase.results}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
+              <div
+                key={index}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card ${
+                  plan.popular ? 'ring-2 ring-cyan-500' : ''
+                }`}
+              >
                 {plan.popular && (
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-300">{plan.period}</span>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-lg text-gray-500 line-through ml-2">{plan.originalPrice}</span>
+                  </div>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -271,67 +511,73 @@ const AIWritingAssistantPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                <a
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all text-center block"
+                >
                   Get Started
-                </button>
+                </a>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+      {/* Testimonials Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
             What Our Users Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 cyber-card">
                 <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+                <div className="flex items-center mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
+                <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Content Creation?
+            Ready to Transform Your Writing?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of content creators, marketers, and businesses using AI Writing Assistant 
-            to create better content faster.
+          <p className="text-xl text-purple-100 mb-8">
+            Join 15,000+ users who are already creating better content with AI. 
+            Start your free trial today and see the difference.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call (302) 464-0950
             </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Start Free Trial
-            </Link>
+              Email Us
+            </a>
           </div>
-        </section>
+        </div>
       </section>
     </div>
   );
