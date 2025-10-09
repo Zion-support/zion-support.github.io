@@ -112,6 +112,7 @@ class SecurityEnhancer {
       info: console.info.bind(console)
     };
     // Override console methods to detect debugging
+<<<<<<< HEAD
     const methods = ['log', 'warn', 'error', 'info'] as const;
     methods.forEach(method => {
       (console as any)[method] = (...args: unknown[]) => {
@@ -119,6 +120,8 @@ class SecurityEnhancer {
         (originalConsole as any)[method](...args);
       }
     });
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-869e
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {

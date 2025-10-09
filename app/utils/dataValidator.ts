@@ -6,7 +6,7 @@
 import { errorTracking, ErrorCategory, ErrorSeverity } from './errorTracking'
 export interface ValidationRule<T = unknown> {
   validate: (value: T) => boolean
-  message: string;}
+  message: string
 }
 export interface FieldRule {
   type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom'
@@ -15,12 +15,12 @@ export interface FieldRule {
   max?: number
   minLength?: number
   maxLength?: number
-  custom?: (value: unknown) => boolean;}
+  custom?: (value: unknown) => boolean
 }
 export type ValidationRules = Record<string, FieldRule[]>
 export interface ValidationResult {
   isValid: boolean
-  errors: Record<string, string[]>;}
+  errors: Record<string, string[]>
 }
 export class ValidationError extends Error {
   constructor(
