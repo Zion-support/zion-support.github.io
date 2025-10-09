@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Cloud, Shield, Database, Settings } from 'lucide-react';
+import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

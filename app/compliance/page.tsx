@@ -10,13 +10,14 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ];
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -43,13 +44,13 @@ const CompliancePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Request Compliance Report
               </Link>
               <Link 
-                to="/security"
+                href="/security"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Security Information
@@ -70,7 +71,7 @@ const CompliancePage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+            {certifications.map((framework, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <framework.icon className="w-8 h-8 text-blue-600 mr-4" />
@@ -219,6 +220,14 @@ const CompliancePage: React.FC = () => {
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Our compliance team is available to answer your questions and provide additional documentation.
+          </p>
+          <div className="mt-8 text-sm text-blue-200">
+            <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -276,13 +285,11 @@ const CompliancePage: React.FC = () => {
           >
             Contact Compliance Team
           </a>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
-          </div>
         </section>
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 export default CompliancePage;
