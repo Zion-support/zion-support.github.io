@@ -1,6 +1,5 @@
 'use client';
 import React, { memo } from 'react';
-<<<<<<< HEAD:src/components/Footer.tsx
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
@@ -62,40 +61,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
 
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
-    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
-    { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'AI-assisted app development' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
-    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
-    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
-    { name: 'AI Design Assistant', url: '/ai-design-assistant', description: 'AI-powered design tool' },
-    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
-    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' },
-    { name: 'AI Performance Tracker', url: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Custom voice assistants' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'Intelligent HR management' },
-    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory management' },
-    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-    { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-  ];
-
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-<<<<<<< HEAD:app/components/Footer.tsx
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
@@ -103,7 +74,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
->>>>>>> origin/main:app/components/Footer.tsx
   ];
 
   const companyLinks = [
@@ -191,7 +161,6 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
-<<<<<<< HEAD:app/components/Footer.tsx
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -238,88 +207,62 @@ const Footer: React.FC = memo(() => {
                 >
                   View All IT Services →
                 </Link>
-              ))}
-              <Link
-                href="/micro-saas"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
-              >
-                View All Solutions
-                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
+              </li>
+            </ul>
           </div>
 
-          {/* AI & IT Services */}
+          {/* Micro SAAS Solutions */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-purple-400" />
-              AI & IT Services
-            </h4>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS Solutions</h3>
+            <ul className="space-y-3">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  href="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
+                >
+                  View All Solutions
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Contact Info</h3>
             <div className="space-y-4">
-              <div>
-                <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services</h5>
-                <div className="space-y-2">
-                  {aiServices.slice(0, 4).map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.url}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                    >
-                      <service.icon className="w-3 h-3" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
-                <div className="space-y-2">
-                  {itServices.slice(0, 4).map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.url}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
-                    >
-                      <service.icon className="w-3 h-3" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="text-white font-medium">{contactInfo.phone}</div>
+                  <div className="text-gray-400 text-sm">Call us anytime</div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.phone}</div>
-                <div className="text-gray-400 text-sm">Call us anytime</div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="text-white font-medium">{contactInfo.email}</div>
+                  <div className="text-gray-400 text-sm">Email us</div>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.email}</div>
-                <div className="text-gray-400 text-sm">Email us</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">Middletown, DE</div>
-                <div className="text-gray-400 text-sm">{contactInfo.address}</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <div className="text-white font-medium">Middletown, DE</div>
+                  <div className="text-gray-400 text-sm">{contactInfo.address}</div>
+                </div>
               </div>
             </div>
           </div>
@@ -400,6 +343,7 @@ const Footer: React.FC = memo(() => {
               <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
+            </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -413,7 +357,6 @@ const Footer: React.FC = memo(() => {
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
             </div>
           </div>
         </div>
