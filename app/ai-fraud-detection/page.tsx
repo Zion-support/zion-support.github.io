@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown } from 'lucide-react';
+import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -108,21 +108,21 @@ const AIFraudDetectionPage: React.FC = () => {
         keywords={['AI fraud detection', 'fraud prevention', 'transaction monitoring', 'identity verification', 'AML compliance', 'fraud analytics']}
         canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePrefetching={true}
-      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-        enableScreenReader={true}
+        enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
       <SecurityEnhancer
         enableCSP={true}
-        enableHSTS={true}
+        enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />

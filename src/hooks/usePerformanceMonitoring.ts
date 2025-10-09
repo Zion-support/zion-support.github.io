@@ -6,7 +6,7 @@ export const usePerformanceMonitoring = () => {
   const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-      trackEvent('performance_metric', { metric: name, value });
+      trackEvent(name, { value });
     },
     [trackEvent]
   );
@@ -17,15 +17,15 @@ export const usePerformanceMonitoring = () => {
     try {
       // LCP - Largest Contentful Paint
       const lcpObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        const _lastEntry = _entries[_entries.length - 1];
-        reportMetric('LCP', _lastEntry.startTime);
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        _entries.forEach(
+        const entries = list.getEntries();
+        entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
@@ -35,10 +35,10 @@ export const usePerformanceMonitoring = () => {
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
-      let _clsValue = 0;
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        _entries.forEach(
+        const entries = list.getEntries();
+        entries.forEach(
           (
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
@@ -46,17 +46,17 @@ export const usePerformanceMonitoring = () => {
             }
           ) => {
             if (!entry.hadRecentInput && entry.value) {
-              _clsValue += entry.value;
+              clsValue += entry.value;
             }
           }
         );
-        reportMetric('CLS', _clsValue);
+        reportMetric('CLS', clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        _entries.forEach(entry => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
           if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
           }
@@ -65,26 +65,26 @@ export const usePerformanceMonitoring = () => {
       fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        _entries.forEach((entry) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            const _navEntry = entry as PerformanceNavigationTiming;
-            const _ttfb = _navEntry.responseStart - _navEntry.requestStart;
-            reportMetric('TTFB', _ttfb);
+            const navEntry = entry as PerformanceNavigationTiming;
+            const ttfb = navEntry.responseStart - navEntry.requestStart;
+            reportMetric('TTFB', ttfb);
           }
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        _entries.forEach((entry) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
-            const _resourceEntry = entry as PerformanceResourceTiming;
-            const _loadTime = _resourceEntry.responseEnd - _resourceEntry.requestStart;
-            if (_loadTime > 1000) {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+            if (loadTime > 1000) {
               // Only track slow resources
-              reportMetric('SLOW_RESOURCE', _loadTime);
+              reportMetric('SLOW_RESOURCE', loadTime);
             }
           }
         });

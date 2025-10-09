@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp } from 'lucide-react';
+import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -118,21 +118,21 @@ const AIContentWriterPage: React.FC = () => {
         keywords={['AI content writer', 'content writing', 'blog writing', 'social media content', 'email marketing', 'SEO content']}
         canonicalUrl="https://ziontechgroup.com/ai-content-writer"
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePrefetching={true}
-      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-        enableScreenReader={true}
+        enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
       <SecurityEnhancer
         enableCSP={true}
-        enableHSTS={true}
+        enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />

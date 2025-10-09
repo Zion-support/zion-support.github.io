@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, X, Menu, Users, Palette, Music, Heart, Globe, Building } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, X, Menu, Users, Palette, Music, Heart, Globe, Building, Car, Plane, ShoppingCart, BookOpen, Calendar, Clock, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,12 +67,12 @@ const Navigation: React.FC = () => {
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain },
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
     { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicles', icon: Car },
-    { name: 'AI Drug Discovery', href: '/ai-drug-discovery', icon: Stethoscope },
+    { name: 'AI Drug Discovery', href: '/ai-drug-discovery', icon: Heart },
     { name: 'AI Climate Modeling', href: '/ai-climate', icon: Globe },
     { name: 'AI Space Exploration', href: '/ai-space', icon: Plane },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Financial Trading', href: '/ai-trading', icon: DollarSign },
-    { name: 'AI Manufacturing', href: '/ai-manufacturing', icon: Factory },
+    { name: 'AI Manufacturing', href: '/ai-manufacturing', icon: Building },
     { name: 'AI Agriculture', href: '/ai-agriculture', icon: Heart },
     { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
     { name: 'AI Logistics', href: '/ai-logistics', icon: Truck },

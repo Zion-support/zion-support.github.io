@@ -4,7 +4,7 @@
  * Provides common functionality for all service classes
  */
 import { apiClient } from '../utils/apiClient';
-import logger from '../utils/logger';
+import { logger } from '../utils/logger';
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;
@@ -34,9 +34,9 @@ export class BaseService {
    * Check if cached data is still valid
    */
   protected isCacheValid(key: string): boolean {
-    const _entry = this.cache.get(key);
+    const entry = this.cache.get(key);
     if (!entry) return false;
-    const _age = Date.now() - entry.timestamp;
+    const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
   }
   /**
@@ -75,9 +75,17 @@ export class BaseService {
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const _cacheKey = `GET:${endpoint}`;
+    const cacheKey = `GET:${endpoint}`;
     if (useCache) {
-      const _cached = this.getFromCache<T>(cacheKey);
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const cached = this.getFromCache<T>(_cacheKey);
+=======
+      const cached = this.getFromCache<T>(cacheKey);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
+=======
+      const cached = this.getFromCache<T>(cacheKey);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6103
       if (cached) return cached;
     }
     try {
@@ -87,7 +95,7 @@ export class BaseService {
         retries: this.options.retries
       });
       if (useCache) {
-        this.setInCache(cacheKey, response.data);
+        this.setInCache(_cacheKey, response.data);
       }
       return response.data;
     } catch (error) {
