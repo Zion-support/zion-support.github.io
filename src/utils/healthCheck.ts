@@ -197,6 +197,7 @@ class HealthCheckService {
         status,
         message,
         details: {
+<<<<<<< HEAD
 >>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
           vitals,
           poor,
@@ -334,3 +335,5 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4b08

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, ExternalLink, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
+<<<<<<< HEAD
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -50,6 +51,58 @@ const Footer: React.FC = () => {
     { name: 'AI Job Search Assistant', href: '/ai-job-search-assistant' },
     { name: 'AI Dating Coach', href: '/ai-dating-coach' },
   ];
+=======
+  const microSaasServices = {
+    'Productivity': [
+      { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
+      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
+      { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
+      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+    ],
+    'Content & Marketing': [
+      { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
+      { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+      { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+      { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
+      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+    ],
+    'Business & Finance': [
+      { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
+      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
+      { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
+      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+    ],
+    'Customer Service': [
+      { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+      { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Custom chatbot creation' },
+      { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' }
+    ],
+    'Development': [
+      { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+      { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
+      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+    ],
+    'Analytics': [
+      { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
+      { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
+      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
+    ],
+    'Creative': [
+      { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
+      { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
+      { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
+      { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
+      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    ],
+    'Health & Wellness': [
+      { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
+      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
+    ],
+    'Sales': [
+      { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    ]
+  };
+>>>>>>> cursor/website-audit-and-update-with-deployment-4b08
 
   const aiServices = [
     { name: 'Machine Learning', href: '/machine-learning' },
@@ -114,7 +167,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+=======
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+>>>>>>> cursor/website-audit-and-update-with-deployment-4b08
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -157,6 +214,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 neon-text">Quick Links</h3>
@@ -195,11 +253,51 @@ const Footer: React.FC = () => {
           {/* AI & IT Services */}
           <div>
             <h3 className="text-lg font-semibold text-purple-400 mb-4">AI & IT Services</h3>
+=======
+          {/* Micro SAAS Services - Categorized */}
+          <div className="lg:col-span-3">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Zap className="w-4 h-4 mr-2" />
+              Micro SAAS Solutions
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {Object.entries(microSaasServices).map(([category, services]) => (
+                <div key={category}>
+                  <h4 className="text-white font-medium mb-2 text-sm">{category}</h4>
+                  <ul className="space-y-1">
+                    {services.slice(0, 3).map((service) => (
+                      <li key={service.name}>
+                        <a href={service.url}
+                          className="group flex items-center text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                        >
+                          <span>{service.name}</span>
+                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <a href="/services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            >
+              View All Micro SAAS →
+            </a>
+          </div>
+
+          {/* AI & IT Services */}
+          <div className="lg:col-span-2">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Brain className="w-4 h-4 mr-2" />
+              AI & IT Services
+            </h3>
+>>>>>>> cursor/website-audit-and-update-with-deployment-4b08
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
                 <ul className="space-y-1">
-                  {aiServices.slice(0, 4).map((service) => (
+                  {aiServices.slice(0, 6).map((service) => (
                     <li key={service.name}>
                       <a
                         href={service.href}
@@ -214,7 +312,7 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
                 <ul className="space-y-1">
-                  {itServices.slice(0, 4).map((service) => (
+                  {itServices.slice(0, 6).map((service) => (
                     <li key={service.name}>
                       <a
                         href={service.href}
@@ -227,6 +325,40 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+            <a href="/services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            >
+              View All Services →
+            </a>
+          </div>
+
+          {/* Specialized Services */}
+          <div className="lg:col-span-1">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Cpu className="w-4 h-4 mr-2" />
+              Specialized
+            </h3>
+            <ul className="space-y-2">
+              {specializedServices.slice(0, 8).map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.url}
+                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <span>{service.name}</span>
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href="/specialized-services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            >
+              View All →
+            </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-4b08
           </div>
         </div>
 

@@ -108,8 +108,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
             const fidEntry = entry as any;
             console.log('FID:', fidEntry.processingStart - entry.startTime);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4b08
           }
         });
       });
