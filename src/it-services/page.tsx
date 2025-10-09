@@ -179,7 +179,6 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
           {/* Contact Section */}
@@ -214,7 +213,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };
