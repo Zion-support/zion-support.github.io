@@ -107,11 +107,54 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        const gtag = (window as Window & { gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag;
+        
+        getCLS((metric) => {
+          // Log to analytics service instead of console
+          if (gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'CLS',
+              value: Math.round(metric.value * 1000)
+            });
+          }
+        });
+        getFID((metric) => {
+          if (gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'FID',
+              value: Math.round(metric.value)
+            });
+          }
+        });
+        getFCP((metric) => {
+          if (gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'FCP',
+              value: Math.round(metric.value)
+            });
+          }
+        });
+        getLCP((metric) => {
+          if (gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'LCP',
+              value: Math.round(metric.value)
+            });
+          }
+        });
+        getTTFB((metric) => {
+          if (gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'TTFB',
+              value: Math.round(metric.value)
+            });
+          }
+        });
       });
     }
   }, []);
@@ -120,11 +163,11 @@ const PerformanceOptimizer: React.FC = () => {
   const optimizeMemory = useCallback(() => {
     // Clear unused event listeners periodically
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if ('gc' in window) {
-          (window as any).gc();
+          (window as Window & { gc?: () => void }).gc?.();
         }
       }
     }
