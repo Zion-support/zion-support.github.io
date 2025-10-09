@@ -1,47 +1,58 @@
 'use client';
 
+import React, { memo, useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
+interface SEOOptimizerProps {
+  page?: string;
+  seoData?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    canonical?: string;
+    ogImage?: string;
+    ogType?: string;
+    twitterCard?: string;
+    structuredData?: any;
+  };
 }
 
-const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
+  page = 'home',
+  seoData = {}
+}) => {
+  const defaultSEOData = useMemo(() => ({
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI solutions, cybersecurity, and cloud infrastructure services.',
+    keywords: ['AI', 'artificial intelligence', 'cybersecurity', 'cloud infrastructure', 'IT solutions'],
+    canonical: 'https://ziontechgroup.com',
+    ogImage: 'https://ziontechgroup.com/og-image.jpg',
+    ogType: 'website',
+    twitterCard: 'summary_large_image',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Leading provider of AI solutions, cybersecurity, and cloud infrastructure services.',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
+      ]
     }
-    
-    // Add breadcrumb structured data;
-    addBreadcrumbStructuredData();
-    
-    // Add FAQ structured data;
-    addFAQStructuredData();
-    
-    // Add organization structured data;
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+  }), []);
 
-  const updateMetaTag = (nam,
-  e: string, conten,
-  t: string, attribut,)
-  e: string = 'name') => {/* TODO: Fix JSX expression */}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {/* TODO: Fix JSX expression */}
-    }
-    meta.setAttribute('content', content);
-  };
-
-  const updateCanonicalUrl = (ur,)
-  l: string) => {/* TODO: Fix JSX expression */}
-    }
-    canonical.setAttribute('href', url);
-  };
-
-  const addStructuredData = (dat,)
-  a: any) => {/* TODO: Fix JSX expression */}
-    }
-    document.head.appendChild(script);
-  };
-
-  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addBreadcrumbStructuredData = () => {
+    const breadcrumbData = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://ziontechgroup.com'
         }
       ]
     };
@@ -49,20 +60,32 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data;
     const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {
+      existing.remove();
     }
     document.head.appendChild(script);
   };
 
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addFAQStructuredData = () => {
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does Zion Tech Group offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer AI solutions, cybersecurity services, and cloud infrastructure solutions.'
           }
         },
-        {/* TODO: Fix JSX expression */}
-          }
-        },
-        {/* TODO: Fix JSX expression */}
+        {
+          '@type': 'Question',
+          name: 'How can I contact Zion Tech Group?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You can contact us through our website or email us directly.'
           }
         }
       ]
@@ -71,56 +94,48 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
     script.id = 'faq-structured-data';
-    // Remove existing FAQ data;
     const existing = document.getElementById('faq-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {
+      existing.remove();
     }
     document.head.appendChild(script);
   };
 
-  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addOrganizationStructuredData = () => {
+    const organizationData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Leading provider of AI solutions, cybersecurity, and cloud infrastructure services.',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US'
       },
-      'address': {/* TODO: Fix JSX expression */}
-      },
-      'sameAs': [
-        'http,
-  s://twitter.com/ziontechgroup',
-        'http,
-  s://linkedin.com/company/ziontechgroup'
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
       ]
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
-    // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
-
+    if (existing) {
+      existing.remove();
     }
+    document.head.appendChild(script);
   };
 
   const mergedSEOData = { ...defaultSEOData, ...seoData };
 
   useEffect(() => {
-    // Log SEO optimization
-    logger.info('SEO optimization applied', { 
-      page, 
-      title: mergedSEOData.title,
-      description: mergedSEOData.description 
-    });
-
-    // Track page view for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: mergedSEOData.title,
-        page_location: mergedSEOData.canonical,
-        custom_map: {
-          page_type: page
-        }
-      });
-    }
-  }, [mergedSEOData, page]);
+    addBreadcrumbStructuredData();
+    addFAQStructuredData();
+    addOrganizationStructuredData();
+  }, []);
 
   return (
     <Helmet>
@@ -233,10 +248,7 @@ const,
       </script>
     </Helmet>
   );
-};
-
+});
 
 SEOOptimizer.displayName = 'SEOOptimizer';
-export default SEOOptimizer;"`
-
-
+export default SEOOptimizer;

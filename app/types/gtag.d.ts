@@ -1,8 +1,24 @@
 /**
- * Google Analytics gtag types;
+ * Google Analytics gtag types
  */
-interface GtagEvent {/* TODO: Fix JSX expression */}
+
+interface GtagEvent {
+  event_category?: string;
+  event_label?: string;
+  value?: number;
+  custom_map?: Record<string, any>;
 }
+
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {/* TODO: Fix JSX expression */}
+
+interface Window {
+  gtag: (command: GtagCommand, targetId: string, config?: Record<string, any>) => void;
 }
+
+declare global {
+  interface Window {
+    gtag: (command: GtagCommand, targetId: string, config?: Record<string, any>) => void;
+  }
+}
+
+export {};

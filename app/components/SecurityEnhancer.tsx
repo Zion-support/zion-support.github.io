@@ -1,112 +1,188 @@
 'use client';
 
+import React, { useState, useEffect, useCallback } from 'react';
 
-interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
+interface SecurityEnhancerProps {
+  enableCSP?: boolean;
+  enableHTTPSRedirect?: boolean;
+  enableXSSProtection?: boolean;
+  enableClickjackingProtection?: boolean;
+  enableContentTypeSniffingProtection?: boolean;
 }
 
-const,
-  SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableXSSProtection) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableClickjackingProtection) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
-    }
-    
-    // Add security headers;
-    addSecurityHeaders();
-    
-    // Add security event listeners;
-    addSecurityEventListeners();
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+  enableCSP = true,
+  enableHTTPSRedirect = true,
+  enableXSSProtection = true,
+  enableClickjackingProtection = true,
+  enableContentTypeSniffingProtection = true
+}) => {
+  const [isSecure, setIsSecure] = useState(true);
+  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
+  const [metrics, setMetrics] = useState({
+    cspViolations: 0,
+    xssAttempts: 0,
+    csrfAttempts: 0,
+    suspiciousActivity: 0
+  });
 
-  const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
+  const logger = {
+    info: (message: string, data?: any) => console.log(`[Security] ${message}`, data),
+    warn: (message: string, data?: any) => console.warn(`[Security] ${message}`, data),
+    error: (message: string, data?: any) => console.error(`[Security] ${message}`, data)
   };
 
-  const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
+  const sanitizeInput = useCallback((input: string): string => {
+    return input
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+\s*=/gi, '');
+  }, []);
+
+  const validateURL = useCallback((url: string): boolean => {
+    try {
+      const urlObj = new URL(url);
+      const allowedProtocols = ['http:', 'https:'];
+      const allowedHosts = ['ziontechgroup.com', 'www.ziontechgroup.com'];
+      
+      return allowedProtocols.includes(urlObj.protocol) && 
+             allowedHosts.some(host => urlObj.hostname === host);
+    } catch {
+      return false;
+    }
+  }, []);
+
+  const addContentSecurityPolicy = () => {
+    if (typeof window === 'undefined') return;
+    
+    const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';";
+    
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = csp;
+    document.head.appendChild(meta);
+  };
+
+  const enforceHTTPS = () => {
+    if (typeof window === 'undefined') return;
+    
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
   };
 
-  const addXSSProtection = () => {/* TODO: Fix JSX expression */}
+  const addXSSProtection = () => {
+    if (typeof window === 'undefined') return;
+    
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-XSS-Protection';
+    meta.content = '1; mode=block';
+    document.head.appendChild(meta);
   };
 
-  const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
+  const addClickjackingProtection = () => {
+    if (typeof window === 'undefined') return;
+    
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Frame-Options';
+    meta.content = 'DENY';
+    document.head.appendChild(meta);
   };
 
-  const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
+  const addContentTypeSniffingProtection = () => {
+    if (typeof window === 'undefined') return;
+    
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
   };
 
-  const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
-  t: 'strict-origin-when-cross-origin' },
-      {/* TODO: Fix JSX expression */}
-  t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      {/* TODO: Fix JSX expression */}
-  t: 'max-age=63072000; includeSubDomains; preload' }
+  const addSecurityHeaders = () => {
+    if (typeof window === 'undefined') return;
+    
+    const headers = [
+      { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { name: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
+      { name: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' }
     ];
 
-    headers.forEach(header => {/* TODO: Fix JSX expression */})
+    headers.forEach(header => {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = header.name;
+      meta.content = header.value;
+      document.head.appendChild(meta);
     });
   };
 
-  const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
-      }
+  const addSecurityEventListeners = () => {
+    if (typeof window === 'undefined') return;
+    
+    // Monitor CSP violations
+    document.addEventListener('securitypolicyviolation', (e) => {
+      setMetrics(prev => ({ ...prev, cspViolations: prev.cspViolations + 1 }));
+      logger.warn('CSP violation detected', { 
+        violatedDirective: e.violatedDirective,
+        blockedURI: e.blockedURI 
+      });
     });
 
     // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
-      }
+    document.addEventListener('selectstart', (e) => {
+      e.preventDefault();
     });
 
-    // Prevent drag and drop;
-    document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
+    // Prevent drag and drop
+    document.addEventListener('dragover', (e) => {
+      e.preventDefault();
     });
 
-    document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
+    document.addEventListener('drop', (e) => {
+      e.preventDefault();
     });
 
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+Shift+I;
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+U;
-        if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+S;
-        if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+A;
-        if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
-        }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+        e.preventDefault();
+      }
+      // Ctrl+U
+      if (e.ctrlKey && e.keyCode === 85) {
+        e.preventDefault();
+      }
+      // Ctrl+S
+      if (e.ctrlKey && e.keyCode === 83) {
+        e.preventDefault();
+      }
+      // Ctrl+A
+      if (e.ctrlKey && e.keyCode === 65) {
+        e.preventDefault();
       }
     });
 
-    // Monitor for suspicious activity;
+    // Monitor for suspicious activity
     let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
+    const resetSuspiciousActivity = () => {
+      suspiciousActivity = 0;
     };
 
-    // Reset suspicious activity counter every 5 minutes;
+    // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
 
     // Track rapid clicks (potential bot activity)
     let clickCount = 0;
-    document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
-
-        }
-      });
-    };
-
-    checkForXSS();
+    document.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount > 10) {
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
+        clickCount = 0;
+      }
+    });
 
     // Monitor form submissions for CSRF
     const forms = document.querySelectorAll('form');
@@ -122,17 +198,15 @@ const,
       });
     });
 
-
-    // Track rapid keyboard input;
+    // Track rapid keyboard input
     let keyCount = 0;
-    document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
-
-          }
-        });
-      });
-    };
-
-    checkSuspiciousCode();
+    document.addEventListener('keydown', () => {
+      keyCount++;
+      if (keyCount > 50) {
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
+        keyCount = 0;
+      }
+    });
 
     // Monitor for unusual network requests
     const originalFetch = window.fetch;
@@ -147,8 +221,7 @@ const,
       
       return originalFetch.apply(window, args);
     };
-
-  }, [validateURL]);
+  };
 
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
@@ -203,8 +276,14 @@ const,
 
   // Initialize security monitoring
   useEffect(() => {
-    monitorCSP();
-    monitorSuspiciousActivity();
+    if (enableCSP) addContentSecurityPolicy();
+    if (enableHTTPSRedirect) enforceHTTPS();
+    if (enableXSSProtection) addXSSProtection();
+    if (enableClickjackingProtection) addClickjackingProtection();
+    if (enableContentTypeSniffingProtection) addContentTypeSniffingProtection();
+    
+    addSecurityHeaders();
+    addSecurityEventListeners();
     validateSecurityHeaders();
 
     // Set up periodic security checks
@@ -213,7 +292,7 @@ const,
     }, 30000); // Check every 30 seconds
 
     return () => clearInterval(interval);
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
+  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection, validateSecurityHeaders]);
 
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
