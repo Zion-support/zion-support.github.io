@@ -8,6 +8,9 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import { registerServiceWorker } from './utils/serviceWorker';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -47,6 +50,8 @@ const HomePage: React.FC = () => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
+    // Register service worker
+    registerServiceWorker();
     return () => clearTimeout(timer);
   }, []);
 
@@ -472,7 +477,7 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
+    <ErrorBoundary>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -532,6 +537,7 @@ const HomePage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
+      <PerformanceMonitor enableReporting={true} />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
@@ -877,7 +883,7 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

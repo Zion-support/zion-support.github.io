@@ -22,13 +22,19 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('@heroicons')) {
+              return 'vendor-heroicons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -36,25 +42,41 @@ export default defineConfig({
             if (id.includes('react-router-dom')) {
               return 'vendor-router';
             }
-            return 'vendor';
+            if (id.includes('web-vitals')) {
+              return 'vendor-vitals';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'vendor-helmet';
+            }
+            return 'vendor-other';
           }
           // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
+          if (id.includes('/app/ai-') || id.includes('/app/machine-learning') || id.includes('/app/nlp') || id.includes('/app/computer-vision')) {
             return 'pages-ai';
           }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
+          if (id.includes('/app/it-') || id.includes('/app/cloud-') || id.includes('/app/cybersecurity') || id.includes('/app/devops')) {
             return 'pages-it';
           }
-          if (id.includes('/src/blog/')) {
+          if (id.includes('/app/blog/')) {
             return 'pages-blog';
           }
-          if (id.includes('/src/')) {
+          if (id.includes('/app/')) {
             return 'pages-other';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || [];
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          if (/woff2?|eot|ttf|otf/i.test(ext)) {
+            return `assets/fonts/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
       },
     },
     terserOptions: {
@@ -119,6 +141,12 @@ export default defineConfig({
     reportCompressedSize: false,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
+    // Additional optimizations
+    treeshake: {
+      moduleSideEffects: false,
+      propertyReadSideEffects: false,
+      unknownGlobalSideEffects: false,
+    },
   },
   server: {
     port: 3000,
