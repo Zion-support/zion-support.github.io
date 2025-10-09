@@ -73,15 +73,224 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
-      title: 'AI Social Media Manager',
-      description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis',
-      icon: '📱',
-      price: '$79/month',
-      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Hashtag optimization', 'Competitor analysis'],
-      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI'],
-      link: '/ai-social-media-manager',
+      title: 'AI Content Marketing Suite',
+      description: 'Complete content marketing automation with AI-powered creation, distribution, and performance optimization',
+      icon: '📝',
+      price: '$149/month',
+      features: ['AI content generation', 'Multi-platform publishing', 'SEO optimization', 'Performance analytics', 'Content calendar', 'Brand voice training'],
+      benefits: ['300% content output', '50% engagement increase', '80% time savings', 'Better SEO rankings'],
+      link: '/ai-content-marketing',
       popular: true,
       category: 'Marketing'
+    },
+    {
+      title: 'AI Lead Generation Engine',
+      description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing campaigns',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['Smart prospecting', 'Lead scoring', 'Automated outreach', 'CRM integration', 'A/B testing', 'ROI tracking'],
+      benefits: ['200% more qualified leads', '60% conversion increase', '90% time savings', 'Higher lead quality'],
+      link: '/ai-lead-generation',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Customer Analytics Pro',
+      description: 'Advanced customer behavior analysis with predictive insights and personalized recommendations',
+      icon: '👥',
+      price: '$179/month',
+      features: ['Behavior tracking', 'Predictive analytics', 'Customer segmentation', 'Churn prediction', 'Lifetime value analysis', 'Personalization engine'],
+      benefits: ['25% retention increase', '40% revenue growth', 'Better customer insights', 'Reduced churn'],
+      link: '/ai-customer-analytics',
+      popular: true,
+      category: 'Analytics'
+    },
+    {
+      title: 'AI Inventory Optimization',
+      description: 'Smart inventory management with AI-powered demand forecasting and supply chain optimization',
+      icon: '📦',
+      price: '$129/month',
+      features: ['Demand forecasting', 'Stock optimization', 'Reorder automation', 'Supplier management', 'Cost analysis', 'Waste reduction'],
+      benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts', '20% cost savings'],
+      link: '/ai-inventory-optimization',
+      popular: false,
+      category: 'Operations'
+    },
+    {
+      title: 'AI HR Recruitment Suite',
+      description: 'Intelligent recruitment with AI-powered candidate screening, interview scheduling, and onboarding',
+      icon: '👔',
+      price: '$159/month',
+      features: ['Resume screening', 'Skill matching', 'Interview automation', 'Onboarding workflows', 'Performance tracking', 'Bias reduction'],
+      benefits: ['50% faster hiring', 'Better candidate fit', 'Reduced bias', 'Improved retention'],
+      link: '/ai-hr-recruitment',
+      popular: false,
+      category: 'Human Resources'
+    },
+    {
+      title: 'AI Financial Planning Assistant',
+      description: 'Personalized financial planning with AI-powered budgeting, investment advice, and tax optimization',
+      icon: '💰',
+      price: '$89/month',
+      features: ['Budget optimization', 'Investment analysis', 'Tax planning', 'Goal tracking', 'Risk assessment', 'Retirement planning'],
+      benefits: ['Better financial health', 'Tax savings', 'Investment growth', 'Financial security'],
+      link: '/ai-financial-planning',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Automated legal document analysis with AI-powered contract review and compliance checking',
+      icon: '⚖️',
+      price: '$299/month',
+      features: ['Contract analysis', 'Risk identification', 'Compliance checking', 'Document generation', 'Legal research', 'Case law analysis'],
+      benefits: ['90% time savings', 'Risk reduction', 'Cost savings', 'Better compliance'],
+      link: '/ai-legal-analyzer',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'AI-powered healthcare management with patient monitoring, diagnosis support, and treatment planning',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Patient monitoring', 'Diagnosis support', 'Treatment planning', 'Medical imaging', 'Drug interaction checking', 'Health analytics'],
+      benefits: ['Better patient care', 'Faster diagnosis', 'Reduced errors', 'Cost savings'],
+      link: '/ai-healthcare-assistant',
+      popular: false,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Real Estate Analyzer',
+      description: 'Smart real estate analysis with AI-powered property valuation, market trends, and investment insights',
+      icon: '🏠',
+      price: '$199/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield calculation', 'Trend prediction', 'Location insights'],
+      benefits: ['Better investment decisions', 'Market insights', 'Risk assessment', 'ROI optimization'],
+      link: '/ai-real-estate-analyzer',
+      popular: false,
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with AI-powered logistics optimization and risk management',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Route optimization', 'Demand forecasting', 'Supplier management', 'Risk assessment', 'Cost optimization', 'Sustainability tracking'],
+      benefits: ['20% cost reduction', 'Better efficiency', 'Risk mitigation', 'Sustainability improvement'],
+      link: '/ai-supply-chain-optimizer',
+      popular: false,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Energy Management System',
+      description: 'Smart energy optimization with AI-powered consumption analysis and renewable energy integration',
+      icon: '⚡',
+      price: '$179/month',
+      features: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Carbon tracking', 'Predictive maintenance'],
+      benefits: ['30% energy savings', 'Carbon reduction', 'Cost optimization', 'Sustainability goals'],
+      link: '/ai-energy-management',
+      popular: false,
+      category: 'Energy'
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning with AI-powered curriculum adaptation and student performance tracking',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning', 'Progress tracking', 'Adaptive curriculum', 'Assessment automation', 'Learning analytics', 'Parent dashboard'],
+      benefits: ['Better learning outcomes', 'Personalized education', 'Progress visibility', 'Engagement increase'],
+      link: '/ai-education-platform',
+      popular: false,
+      category: 'Education'
+    },
+    {
+      title: 'AI Restaurant Manager',
+      description: 'Smart restaurant management with AI-powered inventory, staff scheduling, and customer analytics',
+      icon: '🍽️',
+      price: '$199/month',
+      features: ['Inventory management', 'Staff scheduling', 'Customer analytics', 'Menu optimization', 'Waste reduction', 'Revenue forecasting'],
+      benefits: ['25% cost reduction', 'Better efficiency', 'Customer satisfaction', 'Profit optimization'],
+      link: '/ai-restaurant-manager',
+      popular: false,
+      category: 'Hospitality'
+    },
+    {
+      title: 'AI Insurance Analyzer',
+      description: 'Intelligent insurance analysis with AI-powered risk assessment and claims processing',
+      icon: '🛡️',
+      price: '$229/month',
+      features: ['Risk assessment', 'Claims processing', 'Fraud detection', 'Policy optimization', 'Customer segmentation', 'Pricing analysis'],
+      benefits: ['Faster claims processing', 'Fraud reduction', 'Better risk assessment', 'Cost optimization'],
+      link: '/ai-insurance-analyzer',
+      popular: false,
+      category: 'Insurance'
+    },
+    {
+      title: 'AI Manufacturing Optimizer',
+      description: 'Smart manufacturing with AI-powered production optimization and quality control',
+      icon: '🏭',
+      price: '$299/month',
+      features: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain integration', 'Waste reduction', 'Efficiency tracking'],
+      benefits: ['20% production increase', 'Quality improvement', 'Cost reduction', 'Waste elimination'],
+      link: '/ai-manufacturing-optimizer',
+      popular: false,
+      category: 'Manufacturing'
+    },
+    {
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with AI-powered itinerary optimization and booking automation',
+      icon: '✈️',
+      price: '$99/month',
+      features: ['Itinerary planning', 'Price optimization', 'Booking automation', 'Travel alerts', 'Expense tracking', 'Recommendation engine'],
+      benefits: ['Time savings', 'Cost optimization', 'Better experiences', 'Automated booking'],
+      link: '/ai-travel-planner',
+      popular: false,
+      category: 'Travel'
+    },
+    {
+      title: 'AI Event Management Suite',
+      description: 'Complete event management with AI-powered planning, attendee engagement, and analytics',
+      icon: '🎪',
+      price: '$179/month',
+      features: ['Event planning', 'Attendee management', 'Engagement tracking', 'Analytics dashboard', 'Marketing automation', 'Feedback analysis'],
+      benefits: ['Better event success', 'Higher engagement', 'Data-driven insights', 'Time savings'],
+      link: '/ai-event-management',
+      popular: false,
+      category: 'Events'
+    },
+    {
+      title: 'AI Personal Assistant Pro',
+      description: 'Advanced personal AI assistant with task automation, scheduling, and productivity optimization',
+      icon: '🤖',
+      price: '$79/month',
+      features: ['Task automation', 'Smart scheduling', 'Email management', 'Meeting optimization', 'Productivity tracking', 'Voice commands'],
+      benefits: ['50% productivity increase', 'Time savings', 'Better organization', 'Stress reduction'],
+      link: '/ai-personal-assistant',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Language Learning Platform',
+      description: 'Personalized language learning with AI-powered pronunciation, conversation practice, and progress tracking',
+      icon: '🗣️',
+      price: '$59/month',
+      features: ['Personalized curriculum', 'Pronunciation analysis', 'Conversation practice', 'Progress tracking', 'Cultural insights', 'Gamification'],
+      benefits: ['Faster learning', 'Better pronunciation', 'Cultural understanding', 'Engaging experience'],
+      link: '/ai-language-learning',
+      popular: false,
+      category: 'Education'
+    },
+    {
+      title: 'AI Fitness Coach Pro',
+      description: 'Personalized fitness coaching with AI-powered workout plans and nutrition guidance',
+      icon: '💪',
+      price: '$89/month',
+      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting', 'Wearable integration', 'Community features'],
+      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling', 'Health insights'],
+      link: '/ai-fitness-coach',
+      popular: false,
+      category: 'Health & Wellness'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -482,6 +691,87 @@ const HomePage: React.FC = () => {
       features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
       color: 'text-yellow-500',
       category: 'Energy AI'
+    },
+    {
+      title: 'AI Quantum Computing Solutions',
+      description: 'Advanced quantum computing applications for optimization, cryptography, and complex problem solving',
+      icon: Cpu,
+      price: '$5,000/month',
+      features: ['Quantum Algorithms', 'Cryptography', 'Optimization Problems', 'Quantum Machine Learning', 'Quantum Simulation', 'Quantum Networking'],
+      color: 'text-indigo-600',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI Autonomous Systems',
+      description: 'Self-governing systems with AI-powered decision making and autonomous operation capabilities',
+      icon: Settings,
+      price: '$3,500/month',
+      features: ['Autonomous Decision Making', 'Self-Learning Systems', 'Adaptive Behavior', 'Real-time Processing', 'Safety Protocols', 'Human-AI Collaboration'],
+      color: 'text-emerald-600',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'Intelligent edge computing solutions with AI-powered local processing and real-time analytics',
+      icon: HardDrive,
+      price: '$2,200/month',
+      features: ['Local AI Processing', 'Real-time Analytics', 'Edge Optimization', 'Low Latency', 'Offline Capability', 'Resource Management'],
+      color: 'text-orange-600',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      description: 'Blockchain integration with AI for smart contracts, decentralized AI, and secure transactions',
+      icon: Lock,
+      price: '$2,800/month',
+      features: ['Smart Contracts', 'Decentralized AI', 'Secure Transactions', 'Token Economics', 'Consensus Algorithms', 'Privacy Protection'],
+      color: 'text-yellow-600',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI Metaverse Solutions',
+      description: 'Virtual world creation and management with AI-powered avatars, environments, and interactions',
+      icon: Cube,
+      price: '$4,000/month',
+      features: ['Virtual Worlds', 'AI Avatars', 'Immersive Experiences', 'Social AI', 'Virtual Economy', 'Cross-Platform Integration'],
+      color: 'text-purple-600',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI Space Technology',
+      description: 'Space exploration and satellite management with AI-powered navigation and data analysis',
+      icon: Globe,
+      price: '$6,000/month',
+      features: ['Satellite Management', 'Space Navigation', 'Astronomical Data Analysis', 'Mission Planning', 'Space Weather Prediction', 'Orbital Mechanics'],
+      color: 'text-blue-600',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI Climate Solutions',
+      description: 'Environmental monitoring and climate change mitigation with AI-powered analysis and prediction',
+      icon: Activity,
+      price: '$2,500/month',
+      features: ['Climate Modeling', 'Environmental Monitoring', 'Carbon Footprint Analysis', 'Renewable Energy Optimization', 'Disaster Prediction', 'Sustainability Metrics'],
+      color: 'text-green-600',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI Robotics Integration',
+      description: 'Advanced robotics with AI-powered control, learning, and human-robot interaction',
+      icon: Settings,
+      price: '$3,200/month',
+      features: ['Robot Control', 'Machine Learning', 'Human-Robot Interaction', 'Sensory Processing', 'Autonomous Navigation', 'Task Planning'],
+      color: 'text-red-600',
+      category: 'Robotics AI'
+    },
+    {
+      title: 'AI Augmented Reality',
+      description: 'AR applications with AI-powered object recognition, spatial mapping, and interactive experiences',
+      icon: Eye,
+      price: '$2,600/month',
+      features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Control', 'Context Awareness', 'Multi-modal Interaction'],
+      color: 'text-pink-600',
+      category: 'AR AI'
     }
   ];
 
@@ -629,6 +919,87 @@ const HomePage: React.FC = () => {
       features: ['Compliance Management', 'Audit Preparation', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
       color: 'text-indigo-500',
       category: 'Compliance'
+    },
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with AI-driven monitoring, automation, and predictive maintenance',
+      icon: Brain,
+      price: '$2,500/month',
+      features: ['AI Monitoring', 'Predictive Maintenance', 'Automated Incident Response', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
+      color: 'text-purple-600',
+      category: 'AI Operations'
+    },
+    {
+      title: 'Quantum-Safe Security',
+      description: 'Future-proof security solutions designed to resist quantum computing attacks',
+      icon: Shield,
+      price: '$3,000/month',
+      features: ['Quantum-Resistant Encryption', 'Post-Quantum Cryptography', 'Quantum Key Distribution', 'Security Assessment', 'Migration Planning', 'Compliance Support'],
+      color: 'text-cyan-600',
+      category: 'Quantum Security'
+    },
+    {
+      title: '5G Network Solutions',
+      description: 'Next-generation 5G network design, implementation, and optimization services',
+      icon: Globe,
+      price: '$2,800/month',
+      features: ['5G Network Design', 'Small Cell Deployment', 'Network Slicing', 'Edge Computing Integration', 'Performance Optimization', 'IoT Connectivity'],
+      color: 'text-green-600',
+      category: '5G Networks'
+    },
+    {
+      title: 'Digital Twin Technology',
+      description: 'Digital twin creation and management for physical assets and processes',
+      icon: Cube,
+      price: '$2,200/month',
+      features: ['Digital Twin Creation', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation Modeling', 'Performance Optimization', 'Maintenance Planning'],
+      color: 'text-blue-600',
+      category: 'Digital Twins'
+    },
+    {
+      title: 'Zero Trust Architecture',
+      description: 'Comprehensive zero trust security model implementation and management',
+      icon: Lock,
+      price: '$2,600/month',
+      features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Access Control', 'Threat Detection', 'Policy Enforcement'],
+      color: 'text-red-600',
+      category: 'Zero Trust'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud environment management and optimization',
+      icon: Cloud,
+      price: '$2,400/month',
+      features: ['Multi-Cloud Management', 'Workload Migration', 'Cost Optimization', 'Security Integration', 'Performance Monitoring', 'Disaster Recovery'],
+      color: 'text-indigo-600',
+      category: 'Hybrid Cloud'
+    },
+    {
+      title: 'API Management Platform',
+      description: 'Comprehensive API lifecycle management, security, and analytics',
+      icon: Link,
+      price: '$1,800/month',
+      features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics Dashboard', 'Developer Portal', 'Version Management'],
+      color: 'text-orange-600',
+      category: 'API Management'
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Modern microservices design, implementation, and orchestration',
+      icon: Settings,
+      price: '$2,100/month',
+      features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'API Gateway', 'Monitoring', 'Scaling'],
+      color: 'text-teal-600',
+      category: 'Microservices'
+    },
+    {
+      title: 'Data Lake Solutions',
+      description: 'Enterprise data lake design, implementation, and management',
+      icon: Database,
+      price: '$1,900/month',
+      features: ['Data Lake Architecture', 'Data Ingestion', 'Data Processing', 'Data Governance', 'Analytics Platform', 'Cost Optimization'],
+      color: 'text-purple-600',
+      category: 'Data Lakes'
     }
   ];
 
@@ -694,7 +1065,7 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field matrix-code-rain">
         {/* Navigation */}
         <Navigation />
         
@@ -724,12 +1095,12 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch holographic-text floating"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect cyber-glitch" role="doc-subtitle" data-text="Advanced AI and IT Solutions">
                 Advanced AI and IT Solutions
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -764,7 +1135,7 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  className="cyberpunk-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Get Started Today
                 </a>
@@ -791,7 +1162,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article key={index} className={`quantum-card p-6 hover:scale-105 transition-all duration-300 energy-pulse ${service.popular ? 'ring-2 ring-cyan-400 neon-border' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
@@ -833,7 +1204,7 @@ const HomePage: React.FC = () => {
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                     <a 
                       href={service.link} 
-                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      className="cyberpunk-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >
                       Learn More
                     </a>
@@ -854,7 +1225,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {aiServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <article key={index} className="holographic-card p-6 energy-pulse hover:scale-105 transition-all duration-300 floating">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -900,7 +1271,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300 neural-network">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>

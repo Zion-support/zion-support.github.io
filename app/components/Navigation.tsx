@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Cube, Shield, Cloud, Database, Smartphone, Lock, X, Menu } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,17 +63,17 @@ const Navigation: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 neural-network' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center energy-pulse">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text holographic-text">Zion Tech Group</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -82,7 +82,8 @@ const Navigation: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group"
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group cyber-glitch"
+                data-text={item.name}
               >
                 <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 <span>{item.name}</span>
@@ -172,7 +173,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-              className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+              className="flex items-center space-x-2 cyberpunk-button px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>
@@ -182,8 +183,9 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300 cyber-glitch"
             aria-label="Toggle menu"
+            data-text={isOpen ? "Close" : "Menu"}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -191,14 +193,15 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
+          <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20 neural-network">
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 cyber-glitch"
                   onClick={() => setIsOpen(false)}
+                  data-text={item.name}
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
@@ -260,7 +263,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center space-x-2 cyberpunk-button px-4 py-3 rounded-lg transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="w-5 h-5" />

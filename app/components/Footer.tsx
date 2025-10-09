@@ -58,16 +58,16 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-cyan-400/20">
+    <footer className="bg-slate-900 border-t border-cyan-400/20 neural-network">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center energy-pulse">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white neon-text holographic-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4 neon-text">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white mb-4 neon-text cyber-glitch" data-text="Quick Links">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
 
           {/* Micro SAAS Services */}
           <div>
-            <h3 className="text-lg font-semibold text-cyan-400 mb-4">Micro SAAS Solutions</h3>
+            <h3 className="text-lg font-semibold text-cyan-400 mb-4 cyber-glitch" data-text="Micro SAAS Solutions">Micro SAAS Solutions</h3>
             <ul className="space-y-2">
               {microSAASServices.map((service) => (
                 <li key={service.name}>
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
 
           {/* AI & IT Services */}
           <div>
-            <h3 className="text-lg font-semibold text-purple-400 mb-4">AI & IT Services</h3>
+            <h3 className="text-lg font-semibold text-purple-400 mb-4 cyber-glitch" data-text="AI & IT Services">AI & IT Services</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
