@@ -1,67 +1,86 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Code, BarChart, Users, Globe, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const Footer: React.FC = memo(() => {  return (
-=======
-import { ArrowRight } from 'lucide-react';
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-const Footer: React.FC = memo(() => {
-  const aiServices = [
-    { name: 'AI Services', url: '/ai-services' },
-    { name: 'AI Marketing', url: '/ai-marketing' },
-    { name: 'AI Automation', url: '/ai-automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare' },
-    { name: 'AI Fintech', url: '/ai-fintech' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation' },
+const Footer: React.FC = () => {
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: Brain,
+      color: 'text-purple-400',
+      services: [
+        { name: 'AI Services', path: '/ai-services' },
+        { name: 'AI Marketing', path: '/ai-marketing' },
+        { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'AI Healthcare', path: '/ai-healthcare' },
+        { name: 'AI Fintech', path: '/ai-fintech' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      color: 'text-blue-400',
+      services: [
+        { name: 'IT Services', path: '/it-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' },
+        { name: 'Network Services', path: '/networking' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Code,
+      color: 'text-green-400',
+      services: [
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'Developer Tools', path: '/developer-tools' },
+        { name: 'Business Apps', path: '/business-apps' },
+        { name: 'Productivity Tools', path: '/productivity' },
+        { name: 'Marketing Tools', path: '/marketing-tools' }
+      ]
+    },
+    {
+      title: 'Specialized',
+      icon: Zap,
+      color: 'text-orange-400',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' }
+      ]
+    }
   ];
 
-  const itServices = [
-    { name: 'IT Services', url: '/it-services' },
-    { name: 'Micro SAAS', url: '/micro-saas' },
-    { name: 'Cybersecurity', url: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development' },
-  ];
-
-  const technologies = [
-    { name: 'Quantum Computing', url: '/quantum-computing' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems' },
-    { name: 'Business Intelligence', url: '/business-intelligence' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing' },
-  ];
-
-  const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Enterprise Solutions', url: '/enterprise' },
-    { name: 'Contact Us', url: '/contact' },
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'All Services', path: '/services' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Enterprise', path: '/enterprise' },
+    { name: 'Our Team', path: '/team' },
+    { name: 'Contact Us', path: '/contact' }
   ];
 
   const resources = [
-    { name: 'Blog & Insights', url: '/blog' },
-    { name: 'Technical Guides', url: '/guides' },
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Sitemap', url: '/sitemap' },
+    { name: 'Blog & Insights', path: '/blog' },
+    { name: 'Technical Guides', path: '/guides' },
+    { name: 'Documentation', path: '/docs' },
+    { name: 'API Reference', path: '/api' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
   ];
 
-=======
-const Footer: React.FC = memo(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
