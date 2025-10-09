@@ -1,48 +1,48 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { BarChart3, Eye, TrendingUp, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
+import { BarChart3, Brain, TrendingUp, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
 
-const AIDataVisualizationPage: React.FC = () => {
+const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart3,
-      title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that bring your data to life',
-      benefits: ['Real-time updates', 'Custom visualizations', 'Drill-down capabilities']
+      icon: Brain,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting that predicts future trends and outcomes with 95% accuracy',
+      benefits: ['Revenue forecasting', 'Demand prediction', 'Risk assessment']
     },
     {
-      icon: Eye,
-      title: 'AI-Powered Insights',
-      description: 'Automatically discover patterns and insights in your data with AI',
-      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive insights']
+      icon: BarChart3,
+      title: 'Real-time Insights',
+      description: 'Get instant insights from your data with advanced visualization and reporting',
+      benefits: ['Live dashboards', 'Custom reports', 'Automated alerts']
     },
     {
       icon: TrendingUp,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics tools for deep data exploration and analysis',
-      benefits: ['Statistical analysis', 'Trend forecasting', 'Correlation analysis']
+      title: 'Business Intelligence',
+      description: 'Transform raw data into actionable business intelligence and strategic insights',
+      benefits: ['Performance metrics', 'Competitive analysis', 'Market trends']
     }
   ];
 
-  const visualizationTypes = [
+  const analyticsTypes = [
     {
-      title: 'Business Intelligence',
-      description: 'Executive dashboards and KPI monitoring for strategic decision making',
+      title: 'Customer Analytics',
+      description: 'Understand customer behavior, preferences, and lifetime value',
+      icon: Users,
+      metrics: ['Customer segmentation', 'Churn prediction', 'Lifetime value analysis']
+    },
+    {
+      title: 'Financial Analytics',
+      description: 'Comprehensive financial analysis and forecasting capabilities',
       icon: TrendingUp,
-      features: ['KPI dashboards', 'Executive reports', 'Performance metrics']
+      metrics: ['Revenue analysis', 'Cost optimization', 'Profit forecasting']
     },
     {
       title: 'Operational Analytics',
-      description: 'Real-time operational data visualization and monitoring',
+      description: 'Optimize operations with data-driven insights and recommendations',
       icon: Zap,
-      features: ['Live monitoring', 'Alert systems', 'Process optimization']
-    },
-    {
-      title: 'Customer Analytics',
-      description: 'Customer behavior and engagement visualization and analysis',
-      icon: Users,
-      features: ['Customer journeys', 'Engagement metrics', 'Segmentation analysis']
+      metrics: ['Process optimization', 'Resource allocation', 'Efficiency metrics']
     }
   ];
 
@@ -58,20 +58,20 @@ const AIDataVisualizationPage: React.FC = () => {
                 <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-5xl font-bold text-white neon-text">
-                AI Data Visualization
+                AI Analytics Dashboard
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform complex data into compelling visual stories with our AI-powered 
-              data visualization platform. Create interactive dashboards, discover hidden 
-              insights, and make data-driven decisions with confidence.
+              Unlock the power of your data with our advanced AI analytics platform. 
+              Get real-time insights, predictive analytics, and actionable business intelligence 
+              that drives growth and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
               >
-                Start Visualizing
+                Start Analytics Journey
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
@@ -89,10 +89,10 @@ const AIDataVisualizationPage: React.FC = () => {
       <div className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Advanced Data Visualization</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Advanced AI Analytics Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI data visualization platform combines powerful analytics with 
-              intuitive design to make complex data accessible and actionable.
+              Our AI analytics platform combines machine learning, data visualization, 
+              and business intelligence to deliver insights that matter.
             </p>
           </div>
           
@@ -118,18 +118,18 @@ const AIDataVisualizationPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Visualization Types Section */}
+      {/* Analytics Types Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Visualization Solutions</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Create the perfect visualization for any data type or business need
+              From customer insights to financial forecasting, our AI analytics covers every aspect of your business
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {visualizationTypes.map((type, index) => (
+            {analyticsTypes.map((type, index) => (
               <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center mb-4">
                   <type.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -137,10 +137,10 @@ const AIDataVisualizationPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-6">{type.description}</p>
                 <ul className="space-y-2">
-                  {type.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  {type.metrics.map((metric, metricIndex) => (
+                    <li key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
+                      {metric}
                     </li>
                   ))}
                 </ul>
@@ -155,15 +155,15 @@ const AIDataVisualizationPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Data Visualization?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Analytics?</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Instant Insights</h3>
-                    <p className="text-gray-300">Discover patterns and insights in seconds, not hours</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Data-Driven Decisions</h3>
+                    <p className="text-gray-300">Make informed decisions based on real-time data and AI predictions</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -171,8 +171,8 @@ const AIDataVisualizationPage: React.FC = () => {
                     <Shield className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Easy to Use</h3>
-                    <p className="text-gray-300">No coding required - drag and drop interface</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+                    <p className="text-gray-300">Bank-level security with full compliance and data protection</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -180,31 +180,31 @@ const AIDataVisualizationPage: React.FC = () => {
                     <Clock className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Real-time Updates</h3>
-                    <p className="text-gray-300">Always see the latest data with live updates</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Real-Time Processing</h3>
+                    <p className="text-gray-300">Get instant insights with real-time data processing and analysis</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="cyber-card p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Ready to Visualize Your Data?</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Ready for Advanced Analytics?</h3>
               <p className="text-gray-300 mb-6">
-                Transform your data into actionable insights with our AI-powered 
-                visualization platform. Get started with a free trial.
+                Transform your data into competitive advantage with our AI-powered analytics platform. 
+                Get started with a free consultation.
               </p>
               <div className="space-y-4">
                 <Link
                   href="/contact"
                   className="cyber-button w-full inline-flex items-center justify-center py-3"
                 >
-                  Start Free Trial
+                  Start Your Analytics Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/demo"
                   className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
                 >
-                  Schedule Demo
+                  Schedule a Demo
                 </Link>
               </div>
             </div>
@@ -216,11 +216,11 @@ const AIDataVisualizationPage: React.FC = () => {
       <div className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Make Data-Driven Decisions
+            Unlock the Power of Your Data
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Don't let valuable insights hide in your data. Our AI visualization platform 
-            will help you see patterns, trends, and opportunities you never knew existed.
+            Don't let valuable insights hide in your data. Our AI analytics platform 
+            will help you discover patterns, predict trends, and make smarter decisions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -243,4 +243,4 @@ const AIDataVisualizationPage: React.FC = () => {
   );
 };
 
-export default AIDataVisualizationPage;
+export default AIAnalyticsPage;

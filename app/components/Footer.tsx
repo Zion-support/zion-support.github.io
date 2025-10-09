@@ -39,11 +39,21 @@ const Footer: React.FC = memo(() => {
 
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' },
-    { name: 'Analytics Tools', url: '/analytics-tools', description: 'Business intelligence' }
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
+    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
+    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
+    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
+    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
+    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
+    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
+    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
+    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
+    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
+    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
+    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
+    { name: 'API Builder', url: '/api-builder', description: 'API development' },
+    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
   ];
 
   const emergingTech = [
@@ -144,7 +154,7 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
-              {aiServices.slice(0, 6).map((service, index) => (
+              {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
