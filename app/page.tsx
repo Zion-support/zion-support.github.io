@@ -69,11 +69,11 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
           >
             Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">

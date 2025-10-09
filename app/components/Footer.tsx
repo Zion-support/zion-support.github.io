@@ -4,15 +4,15 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'luci
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white cyber-glow">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <span className="text-3xl mr-2">⚡</span>
-              <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
+              <span className="text-3xl mr-2 energy-pulse">⚡</span>
+              <h3 className="text-2xl font-bold text-cyan-400 cyber-text">Zion Tech Group</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
@@ -87,28 +87,28 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
+                <Link to="/ai-content-generation" className="text-gray-300 hover:text-white transition-colors">
+                  Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-customer-support" className="text-gray-300 hover:text-white transition-colors">
+                  Customer Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-sales-automation" className="text-gray-300 hover:text-white transition-colors">
+                  Sales Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-data-visualization" className="text-gray-300 hover:text-white transition-colors">
+                  Data Visualization
+                </Link>
+              </li>
+              <li>
                 <Link to="/ai-cloud-infrastructure" className="text-gray-300 hover:text-white transition-colors">
                   Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cybersecurity" className="text-gray-300 hover:text-white transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-data-analytics" className="text-gray-300 hover:text-white transition-colors">
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-mobile-app-development" className="text-gray-300 hover:text-white transition-colors">
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-workflow-automation" className="text-gray-300 hover:text-white transition-colors">
-                  Workflow Automation
                 </Link>
               </li>
             </ul>
@@ -157,17 +157,17 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-                <span className="text-gray-300">info@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
                 <span className="text-gray-300">
-                  123 Innovation Drive<br />
-                  Tech Valley, CA 94000
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
                 </span>
               </div>
               <div className="flex items-center">

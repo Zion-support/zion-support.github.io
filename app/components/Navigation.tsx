@@ -8,6 +8,10 @@ const Navigation: React.FC = () => {
 
   const services = [
     { name: 'AI Services', href: '/ai-services' },
+    { name: 'AI Content Generation', href: '/ai-content-generation' },
+    { name: 'AI Customer Support', href: '/ai-customer-support' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity' },
     { name: 'Data Analytics', href: '/ai-data-analytics' },
@@ -22,12 +26,12 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20 cyber-glow">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
-            <span className="text-3xl mr-2">⚡</span>
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center cyber-text">
+            <span className="text-3xl mr-2 energy-pulse">⚡</span>
             Zion Tech Group
           </Link>
 
@@ -93,7 +97,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center"
+              className="cyber-button inline-flex items-center"
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
