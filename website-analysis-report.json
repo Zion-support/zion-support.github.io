@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "totalPagesAnalyzed": 2,
+    "validPages": 2,
+    "brokenLinks": 0,
+    "analysisTime": 2067
+  },
+  "validPages": [
+    {
+      "url": "https://ziontechgroup.com",
+      "status": 200,
+      "depth": 0
+    },
+    {
+      "url": "http://localhost:3000",
+      "status": 200,
+      "depth": 0
+    }
+  ],
+  "brokenLinks": [],
+  "recommendations": [
+    {
+      "type": "high",
+      "title": "Create Missing Pages",
+      "description": "Common pages that should exist but weren't found: 14",
+      "actions": [
+        "Create page: /about",
+        "Create page: /contact",
+        "Create page: /services",
+        "Create page: /blog",
+        "Create page: /privacy",
+        "Create page: /terms",
+        "Create page: /ai-services",
+        "Create page: /ai-marketing",
+        "Create page: /ai-automation",
+        "Create page: /quantum-computing",
+        "Create page: /autonomous-systems",
+        "Create page: /blockchain-web3",
+        "Create page: /cybersecurity",
+        "Create page: /team"
+      ]
+    }
+  ]
+}

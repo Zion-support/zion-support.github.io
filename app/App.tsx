@@ -28,6 +28,8 @@ const _TermsPage = lazy(() => import('./terms/page'));
 const _EnterprisePage = lazy(() => import('./enterprise/page'));
 const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const _CareersPage = lazy(() => import('./careers/page'));
+const _SupportPage = lazy(() => import('./support/page'));
 
 // AI Services Pages
 const _AIServicesPage = lazy(() => import('./ai-services/page'));
@@ -41,6 +43,10 @@ const _AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pa
 const _AICloudInfrastructurePage = lazy(() => import('./ai-cloud-infrastructure/page'));
 const _AIEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
 const _AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
+const _AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
+const _AICustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
+const _AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
+const _AIDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
 
 // IT Services Pages
 const _ITServicesPage = lazy(() => import('./it-services/page'));
@@ -69,62 +75,8 @@ const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     logger.info('initialized', { component: 'App' });
-
-    // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    performanceMonitor.init();
     
-    // Initialize SEO optimization
-    seoOptimizer.init();
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.init();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
-      // Performance metrics logging removed for production
-    }
-    
-    // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-      }
-    }, 30000);
-    
-    logger.info('performance monitoring initialized', { component: 'App' });
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-
-    return () => {
-      // Cleanup
-      performanceOptimizer.cleanup();
-      performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
-    };
+    logger.info('🚀 Zion Tech Group App initialized', { component: 'App' });
   }, []);
 
   return (
@@ -158,6 +110,8 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<_EnterprisePage />} />
                         <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                        <Route path="/careers" element={<_CareersPage />} />
+                        <Route path="/support" element={<_SupportPage />} />
                         
                         {/* AI Services Routes */}
                         <Route path="/ai-services" element={<_AIServicesPage />} />
@@ -171,6 +125,10 @@ const App: React.FC = () => {
                         <Route path="/ai-cloud-infrastructure" element={<_AICloudInfrastructurePage />} />
                         <Route path="/ai-ecommerce-solutions" element={<_AIEcommerceSolutionsPage />} />
                         <Route path="/ai-mobile-app-development" element={<_AIMobileAppDevelopmentPage />} />
+                        <Route path="/ai-content-generation" element={<_AIContentGenerationPage />} />
+                        <Route path="/ai-customer-support" element={<_AICustomerSupportPage />} />
+                        <Route path="/ai-sales-automation" element={<_AISalesAutomationPage />} />
+                        <Route path="/ai-data-visualization" element={<_AIDataVisualizationPage />} />
                         
                         {/* IT Services Routes */}
                         <Route path="/it-services" element={<_ITServicesPage />} />

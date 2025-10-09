@@ -29,7 +29,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
-    { name: 'News', url: '/news' },
+    { name: 'Enterprise', url: '/enterprise' },
   ];
 
   const supportLinks = [
@@ -38,7 +38,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Status Page', url: '/status' },
-    { name: 'System Status', url: '/system-status' },
+    { name: 'Guides', url: '/guides' },
   ];
 
   const legalLinks = [
