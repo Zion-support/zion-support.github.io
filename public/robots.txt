@@ -12,6 +12,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 Disallow: /internal/
 
 # Allow important pages
@@ -33,3 +34,29 @@ Allow: /static/
 Allow: /assets/
 Allow: /*.css
 Allow: /*.js
+=======
+Disallow: /test/
+Disallow: /staging/
+
+# Allow important pages
+Allow: /ai-services
+Allow: /ai-marketing
+Allow: /ai-automation
+Allow: /quantum-computing
+Allow: /autonomous-systems
+Allow: /business-intelligence
+Allow: /blockchain-web3
+Allow: /iot-edge-computing
+Allow: /cybersecurity
+Allow: /it-infrastructure
+Allow: /micro-saas
+Allow: /about
+Allow: /contact
+Allow: /team
+Allow: /case-studies
+Allow: /blog
+Allow: /guides
+
+# Host
+Host: https://ziontechgroup.com
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5

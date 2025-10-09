@@ -60,8 +60,11 @@ const HomePage: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Navigation */}
       <Navigation />

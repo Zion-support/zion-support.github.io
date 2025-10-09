@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
@@ -22,6 +23,8 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-re
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,24 +33,16 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
-=======
-import { ChevronDown, Menu, X } from 'lucide-react';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,12 +99,15 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,6 +136,8 @@ const Navigation: React.FC = () => {
 =======
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -158,10 +158,13 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
@@ -172,6 +175,7 @@ const Navigation: React.FC = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -197,6 +201,9 @@ const Navigation: React.FC = () => {
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
     }
+=======
+    setIsOpen(false);
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
   };
 
 <<<<<<< HEAD
@@ -208,6 +215,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-50',
       hoverColor: 'hover:bg-purple-100',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI Services', path: '/ai-services' },
@@ -268,6 +276,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
       ]
     },
     {
@@ -277,6 +287,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
@@ -332,6 +343,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
       ]
     },
     {
@@ -392,6 +405,7 @@ const Navigation: React.FC = () => {
 =======
 =======
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
@@ -456,6 +470,8 @@ const Navigation: React.FC = () => {
     { name: 'AI Document Processing', href: '/micro-saas', icon: Code, description: 'Document intelligence' },
     { name: 'AI Customer Support', href: '/micro-saas', icon: Users, description: 'Support automation' },
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
   ];
 
   const emergingTech = [
@@ -466,6 +482,7 @@ const Navigation: React.FC = () => {
     { name: 'Robotics', href: '/robotics', icon: Code, description: 'Intelligent robots' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data insights' },
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -560,6 +577,16 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+=======
+
+  return (
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
+            <span className="text-3xl mr-2">⚡</span>
+            Zion Tech Group
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -567,6 +594,7 @@ const Navigation: React.FC = () => {
           >
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -591,6 +619,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -607,6 +637,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -650,6 +681,10 @@ const Navigation: React.FC = () => {
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+          </Link>
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
               Zion Tech Group
             </span>
           </Link>
@@ -1119,12 +1154,20 @@ const Navigation: React.FC = () => {
             >
               Contact
             </Link>
+<<<<<<< HEAD
           </div>
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+
+            {/* CTA Button */}
+            <Link
+              onClick={closeAllMenus}
+            >
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
               <Phone className="w-4 h-4" />
               <span>(302) 464-0950</span>
             </Link>

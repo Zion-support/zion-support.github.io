@@ -83,6 +83,11 @@ const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { logger } from './utils/logger';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceMonitor } from './utils/performanceMonitor';
+import { seoOptimizer } from './utils/seoOptimizer';
+import { errorHandler } from './utils/errorHandler';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 // Styles
 import './globals.css';
@@ -91,10 +96,9 @@ const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     logger.info('initialized', { component: 'App' });
+    errorHandler.init();
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
     performanceOptimizer.init();
     performanceMonitor.init();
     
@@ -106,28 +110,24 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      // const performanceMetrics = performanceMonitor.getMetrics();
       
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
       if (metrics) {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
-      // Performance metrics logging removed for production
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
+<<<<<<< HEAD
       // const performanceMetrics = performanceMonitor.getMetrics();
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
+        console.log('Performance Score:', performanceOptimizer.getScore());
         // eslint-disable-next-line no-console
         console.log('Accessibility Score:', accessibilityMetrics.overallScore);
       }
@@ -141,6 +141,7 @@ const App: React.FC = () => {
       performanceOptimizer.cleanup();
       performanceMonitor.cleanup();
       accessibilityEnhancer.cleanup();
+      errorHandler.cleanup();
       clearInterval(metricsInterval);
     };
   }, []);

@@ -14,6 +14,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
+<<<<<<< HEAD
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -45,24 +46,32 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     });
     document.body.insertBefore(skipLink, document.body.firstChild);
   }, [enableSkipLinks]);
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 
   useEffect(() => {
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+<<<<<<< HEAD
     const handleChange = (e: MediaQueryListEvent) => {
       setIsReducedMotion(e.matches);
     };
     
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
     mediaQuery.addEventListener('change', handleChange);
     setIsReducedMotion(mediaQuery.matches);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+<<<<<<< HEAD
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
     };
     
     highContrastQuery.addEventListener('change', handleContrastChange);
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
     setIsHighContrast(highContrastQuery.matches);
 
     // Check for font size preference
@@ -74,6 +83,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       mediaQuery.removeEventListener('change', handleChange);
       highContrastQuery.removeEventListener('change', handleContrastChange);
     };
+<<<<<<< HEAD
   }, []);
 
   useEffect(() => {
@@ -185,6 +195,17 @@ const AccessibilityEnhancer: React.FC = () => {
   //   fontSize,
   //   overallScore: (isReducedMotion ? 25 : 0) + (isHighContrast ? 25 : 0) + (fontSize >= 16 ? 25 : 0) + 25
   // });
+=======
+
+
+  // Expose utility functions to children via context if needed
+  const accessibilityUtils = {
+    announceToScreenReader,
+    isReducedMotion,
+    isHighContrast,
+    fontSize,
+  };
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 
   return (
     <div 
@@ -194,6 +215,7 @@ const AccessibilityEnhancer: React.FC = () => {
       data-font-size={fontSize}
     >
       {children}
+<<<<<<< HEAD
     </div>
   );
 =======
@@ -325,6 +347,50 @@ const AccessibilityEnhancer: React.FC = () => {
 
   return null;
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+      <style>{`
+        .accessibility-enhanced {
+          --animation-duration: var(--reduced-motion) === 'reduce' ? '0.01ms' : 'normal';
+          --animation-iteration-count: var(--reduced-motion) === 'reduce' ? '1' : 'infinite';
+        }
+        
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        
+        .skip-link:focus {
+          top: 6px !important;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+        
+        @media (prefers-contrast: high) {
+          .high-contrast {
+            filter: contrast(200%) brightness(150%);
+          }
+        }
+      `}</style>
+    </div>
+  );
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 };
 
 export default AccessibilityEnhancer;

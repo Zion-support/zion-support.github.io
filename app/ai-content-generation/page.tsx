@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 
@@ -149,10 +150,13 @@ const AIContentGenerationPage: React.FC = () => {
       title: 'Publish & Monitor',
       description: 'Publish your content and monitor performance with detailed analytics.',
       icon: <BarChart className="w-6 h-6" />
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
     }
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation Services - Zion Tech Group</title>
@@ -236,11 +240,14 @@ const AIContentGenerationPage: React.FC = () => {
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
                           <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
 
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
@@ -347,3 +354,5 @@ const AIContentGenerationPage: React.FC = () => {
 };
 
 export default AIContentGenerationPage;
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5

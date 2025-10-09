@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
 =======
 =======
@@ -29,6 +30,8 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
@@ -136,6 +139,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Compliance', url: '/compliance' }
   ];
 
+<<<<<<< HEAD
   const socialLinks = [
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -166,12 +170,15 @@ const Footer: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,6 +196,8 @@ const Footer: React.FC = memo(() => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
               </div>
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>
@@ -206,6 +215,7 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
 <<<<<<< HEAD
               <div className="flex items-center space-x-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <Phone className="w-5 h-5 text-blue-400" />
@@ -301,6 +311,8 @@ const Footer: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
               </div>
             </div>
           </div>
@@ -498,6 +510,7 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="max-w-2xl mx-auto text-center">
@@ -557,6 +570,8 @@ const Footer: React.FC = memo(() => {
                   </li>
                 ))}
               </ul>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
             </div>
 
             {/* Legal */}
@@ -575,8 +590,11 @@ const Footer: React.FC = memo(() => {
                 ))}
               </ul>
             </div>
+<<<<<<< HEAD
 
             {/* Newsletter */}
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
             <div>
               <h4 className="text-sm font-semibold text-white mb-4">Stay Updated</h4>
               <p className="text-gray-400 text-sm mb-4">
@@ -593,6 +611,7 @@ const Footer: React.FC = memo(() => {
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div>
@@ -615,10 +634,13 @@ const Footer: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -681,6 +703,8 @@ const Footer: React.FC = memo(() => {
                 Global Services
               </span>
             </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
           </div>
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
@@ -695,6 +719,7 @@ Footer.displayName = 'Footer';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Footer;
 =======
 export default Footer;
@@ -705,3 +730,5 @@ export default Footer;
 =======
 export default Footer;
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d0e5
