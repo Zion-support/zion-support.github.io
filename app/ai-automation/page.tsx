@@ -1,22 +1,23 @@
 'use client';
 import React, { lazy } from 'react';
-import { CheckCircle, TrendingUp } from 'lucide-react';
+import { CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
+const Navigation = lazy(() => import('../components/Navigation'));
+const Footer = lazy(() => import('../components/Footer'));
+
 const AIAutomationPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,
       title: 'Intelligent Process Discovery',
       description: 'AI automatically identifies and maps your business processes for optimization opportunities.',
-      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']}
+      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
       icon: Zap,
       title: 'Smart Workflow Automation',
       description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
-      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']}
+      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']
     },
     {
       icon: Target,

@@ -190,6 +190,7 @@ class HealthCheckService {
       const poor: string[] = []
       const needsImprovement: string[] = []
       const good: string[] = []
+      const vitals = Object.keys(coreWebVitals)
       
       criticalMetrics.forEach(metric => {
         const metrics = performanceMonitor.getMetrics()
@@ -223,13 +224,7 @@ class HealthCheckService {
         status,
         message,
         details: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
           vitals,
-=======
-          vitals: Object.keys(coreWebVitals),
->>>>>>> cursor/fix-errors-and-merge-to-main-4aae
           poor,
           needsImprovement,
           good
@@ -360,5 +355,3 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08

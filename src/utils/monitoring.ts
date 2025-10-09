@@ -67,7 +67,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -112,23 +112,15 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-<<<<<<< HEAD
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
+          entries.forEach((entry: PerformanceEntry) => {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration && resourceEntry.duration > 1000) {
               // console.warn('Slow resource detected:', {
-              //   name: entry.name,
-              //   duration: entry.duration,
-              //   type: entry.initiatorType
+              //   name: resourceEntry.name,
+              //   duration: resourceEntry.duration,
+              //   type: resourceEntry.initiatorType
               // })
             }
-=======
-          entries.forEach((entry: PerformanceEntry) => {
-            // console.warn('Slow resource detected:', {
-            //   name: resourceEntry.name,
-            //   duration: resourceEntry.duration,
-            //   type: resourceEntry.initiatorType
-            // })
->>>>>>> cursor/fix-errors-and-merge-to-main-4aae
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
@@ -167,14 +159,9 @@ class MonitoringService {
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     }
-<<<<<<< HEAD
     // Send to analytics (if configured)
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('event', name, {
-=======
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
->>>>>>> cursor/fix-errors-and-merge-to-main-4aae
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })

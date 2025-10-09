@@ -1,6 +1,6 @@
 'use client';
 import React, { lazy } from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const AI3DGenerationPage: React.FC = React.memo((props) => {
