@@ -50,6 +50,60 @@ body {
   overflow-x: hidden;
 }
 
+/* Accessibility Enhancements */
+.high-contrast {
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --bg-dark: #000000;
+  --bg-darker: #000000;
+  filter: contrast(150%) brightness(120%);
+}
+
+.high-contrast * {
+  border-color: #ffffff !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Management */
+.focus-visible {
+  outline: 2px solid var(--primary-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Color Blind Support */
+[data-color-blind="protanopia"] {
+  filter: hue-rotate(90deg) saturate(1.2);
+}
+
+[data-color-blind="deuteranopia"] {
+  filter: hue-rotate(180deg) saturate(1.2);
+}
+
+[data-color-blind="tritanopia"] {
+  filter: hue-rotate(270deg) saturate(1.2);
+}
+
 /* Cyber Grid Background */
 .cyber-grid {
   background-image: 
@@ -463,7 +517,6 @@ body {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
-<<<<<<< HEAD
 }
 
 /* Loading Animations */
@@ -836,8 +889,6 @@ body {
   .quantum-field {
     animation-duration: 3s;
   }
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
   
   .holographic-text {
     font-size: 2rem;
@@ -859,12 +910,9 @@ body {
 <<<<<<< HEAD:src/globals.css
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ee5c
+>>>>>>> 1941e5611c6b2e2d0a83eaebfc890bae83b627fa
     background-size: 10px 10px;
-=======
     background-size: 15px 15px;
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
   }
   
   .neon-text {
@@ -902,15 +950,15 @@ body {
   .quantum-field {
     animation: none;
   }
-<<<<<<< HEAD:src/globals.css
   
   .cyber-grid {
 <<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ee5c
+=======
+>>>>>>> 1941e5611c6b2e2d0a83eaebfc890bae83b627fa
     background-size: 15px 15px;
   }
   
@@ -922,8 +970,6 @@ body {
     font-size: 0.9rem;
     letter-spacing: 0.25px;
   }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
   
   .cyber-card {
     padding: 0.5rem;
@@ -1057,9 +1103,8 @@ body {
 <<<<<<< HEAD:src/globals.css
 <<<<<<< HEAD
 =======
->>>>>>> cursor/analyze-improve-and-deploy-application-ee5c
+>>>>>>> 1941e5611c6b2e2d0a83eaebfc890bae83b627fa
 
-<<<<<<< HEAD
 /* Performance optimizations */
 * {
   box-sizing: border-box;
@@ -1137,10 +1182,10 @@ img {
 }
 <<<<<<< HEAD
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ee5c
+=======
+>>>>>>> 1941e5611c6b2e2d0a83eaebfc890bae83b627fa

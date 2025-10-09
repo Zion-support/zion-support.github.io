@@ -1,40 +1,41 @@
 'use client';
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
-  const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
-  ];
-
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'AI-driven SEO' }
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'DevOps automation' },
-    { name: 'Database Management', url: '/database', description: 'Database management' },
-    { name: 'Network Solutions', url: '/networking', description: 'Network infrastructure' }
+    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'DevOps automation' },
+    { name: 'Database Management', url: '/database-management', description: 'Database management' },
+    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
+    { name: 'System Administration', url: '/system-administration', description: 'System management' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' }
   ];
 
   const emergingTech = [
@@ -43,7 +44,9 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
+    { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
   ];
 
   const companyLinks = [
@@ -94,7 +97,7 @@ const Footer: React.FC = memo(() => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <Link to="/" className="flex items-center space-x-2 group">
+              <a href="/" className="flex items-center space-x-2 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
@@ -102,7 +105,7 @@ const Footer: React.FC = memo(() => {
                   <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
                   <p className="text-sm text-cyan-400">AI & IT Solutions</p>
                 </div>
-              </Link>
+              </a>
             </div>
             
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -133,23 +136,50 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link 
-                    to={service.url}
+                  <a 
+                    href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                  </Link>
+                  </a>
                   <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
               ))}
               <li>
-                <Link 
-                  to="/ai-services"
+                <a 
+                  href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
-                </Link>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS</h3>
+            <ul className="space-y-3">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </a>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                </li>
+              ))}
+              <li>
+                <a 
+                  href="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All Solutions →
+                </a>
               </li>
             </ul>
           </div>
@@ -160,50 +190,23 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-                  <Link 
-                    to={service.url}
+                  <a 
+                    href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                  </Link>
+                  </a>
                   <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
               ))}
               <li>
-                <Link 
-                  to="/it-services"
+                <a 
+                  href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Emerging Technologies */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
-            <ul className="space-y-3">
-              {emergingTech.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-                  </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
-                </li>
-              ))}
-              <li>
-                <Link 
-                  to="/quantum-computing"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All Technologies →
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -251,12 +254,12 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.url}
+                  <a 
+                    href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -266,12 +269,12 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.url}
+                  <a 
+                    href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -279,10 +282,10 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><a href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</a></li>
+              <li><a href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</a></li>
+              <li><a href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</a></li>
+              <li><a href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</a></li>
             </ul>
           </div>
           <div>
@@ -310,15 +313,15 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </a>
+              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </a>
+              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
-              </Link>
+              </a>
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
