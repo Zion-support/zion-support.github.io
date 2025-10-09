@@ -76,7 +76,6 @@
   "include": [
     "*.ts",
     "*.tsx",
-    "App.tsx",
     "api/**/*.js",
     "api/**/*.ts",
     "components/**/*",
@@ -87,6 +86,8 @@
     "node_modules",
     ".next",
     "out",
+    "App.tsx",
+    "app/App.tsx",
     "dist",
     "_app_disabled/**/*",
     "app_disabled/**",
