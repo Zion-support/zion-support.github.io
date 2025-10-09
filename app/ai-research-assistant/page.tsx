@@ -1,0 +1,410 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Search, BookOpen, FileText, Brain, Zap, Shield, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Sparkles, Target, BarChart } from 'lucide-react';
+
+const AIResearchAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: Search,
+      title: 'Intelligent Search',
+      description: 'Advanced search capabilities across multiple data sources',
+      benefits: ['Semantic Search', 'Natural Language Queries', 'Multi-source Search', 'Relevance Ranking']
+    },
+    {
+      icon: BookOpen,
+      title: 'Knowledge Synthesis',
+      description: 'Automatically synthesize information from multiple sources',
+      benefits: ['Information Aggregation', 'Source Integration', 'Fact Checking', 'Citation Management']
+    },
+    {
+      icon: FileText,
+      title: 'Document Analysis',
+      description: 'Analyze and extract insights from research documents',
+      benefits: ['PDF Analysis', 'Text Extraction', 'Key Point Identification', 'Summary Generation']
+    },
+    {
+      icon: Brain,
+      title: 'AI Insights',
+      description: 'Generate insights and recommendations based on research data',
+      benefits: ['Pattern Recognition', 'Trend Analysis', 'Hypothesis Generation', 'Research Suggestions']
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Academic Research',
+      description: 'Accelerate academic research with AI-powered literature review and analysis',
+      price: '$1,999/month',
+      features: ['Literature Review', 'Citation Analysis', 'Research Gap Identification', 'Publication Tracking']
+    },
+    {
+      title: 'Market Research',
+      description: 'Conduct comprehensive market research with AI insights and analysis',
+      price: '$2,499/month',
+      features: ['Market Analysis', 'Competitor Research', 'Trend Identification', 'Report Generation']
+    },
+    {
+      title: 'Legal Research',
+      description: 'Streamline legal research with AI-powered case law and regulation analysis',
+      price: '$2,799/month',
+      features: ['Case Law Search', 'Regulation Analysis', 'Precedent Identification', 'Legal Brief Generation']
+    },
+    {
+      title: 'Scientific Research',
+      description: 'Enhance scientific research with AI-powered data analysis and insights',
+      price: '$2,199/month',
+      features: ['Data Analysis', 'Hypothesis Testing', 'Experiment Design', 'Result Interpretation']
+    }
+  ];
+
+  const industries = [
+    { name: 'Academia', applications: ['Literature Review', 'Research Analysis', 'Publication Tracking', 'Grant Writing'] },
+    { name: 'Legal', applications: ['Case Law Research', 'Regulation Analysis', 'Legal Briefs', 'Compliance Monitoring'] },
+    { name: 'Healthcare', applications: ['Medical Research', 'Clinical Studies', 'Drug Discovery', 'Treatment Analysis'] },
+    { name: 'Finance', applications: ['Market Research', 'Investment Analysis', 'Risk Assessment', 'Regulatory Compliance'] },
+    { name: 'Technology', applications: ['Patent Research', 'Competitive Analysis', 'Technology Trends', 'Innovation Tracking'] },
+    { name: 'Government', applications: ['Policy Research', 'Regulatory Analysis', 'Public Opinion', 'Impact Assessment'] }
+  ];
+
+  const pricingTiers = [
+    {
+      name: 'Researcher',
+      price: '$1,299',
+      period: '/month',
+      description: 'Perfect for individual researchers and small teams',
+      features: [
+        'Up to 1,000 searches/month',
+        'Basic document analysis',
+        'Standard accuracy (85-90%)',
+        'Email support',
+        'Basic insights',
+        'API access'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$2,999',
+      period: '/month',
+      description: 'Advanced research capabilities for growing organizations',
+      features: [
+        'Up to 10,000 searches/month',
+        'Advanced document analysis',
+        'High accuracy (90-95%)',
+        'Priority support',
+        'Advanced insights',
+        'Full API access',
+        'Custom models',
+        'Team collaboration'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$5,999',
+      period: '/month',
+      description: 'Comprehensive research platform for large organizations',
+      features: [
+        'Unlimited searches',
+        'Premium document analysis',
+        'Maximum accuracy (95-99%)',
+        '24/7 dedicated support',
+        'Custom insights',
+        'Full API access',
+        'Custom model training',
+        'White-label options',
+        'Dedicated infrastructure',
+        'Advanced analytics'
+      ],
+      popular: false
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Helmet>
+        <title>AI Research Assistant - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI research assistant with intelligent search, knowledge synthesis, and document analysis. Starting at $1,299/month." />
+        <meta name="keywords" content="ai research assistant, intelligent search, knowledge synthesis, document analysis, research automation" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-full px-6 py-2 mb-8">
+            <Sparkles className="w-5 h-5 mr-2" />
+            <span className="text-white font-medium">AI-Powered Research Assistant</span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            Research
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Reimagined
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Accelerate your research with our advanced AI research assistant. 
+            Find insights faster, analyze documents intelligently, and discover knowledge like never before.
+          </p>
+
+          {/* Key Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
+              <div className="text-gray-300">Faster Research</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+              <div className="text-gray-300">Accuracy Rate</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-purple-400 mb-2">1000+</div>
+              <div className="text-gray-300">Data Sources</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">AI Assistance</div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=AI Research Assistant Inquiry"
+              className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all"
+            >
+              <Mail className="w-5 h-5 inline mr-2" />
+              Get Free Demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Advanced Research Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card group">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Research Applications
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 cyber-card">
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-3xl font-bold text-cyan-400">{useCase.price}</span>
+                  <a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${useCase.title}`}
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                  >
+                    Get Started
+                  </a>
+                </div>
+                <ul className="space-y-2">
+                  {useCase.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Industries We Serve
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
+                <h3 className="text-xl font-bold text-white mb-4">{industry.name}</h3>
+                <ul className="space-y-2">
+                  {industry.applications.map((application, appIndex) => (
+                    <li key={appIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {application}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Choose Your Research Plan
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 cyber-card relative ${tier.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`}>
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-4">{tier.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{tier.price}</span>
+                    <span className="text-gray-300 ml-1">{tier.period}</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tier.name} Plan`}
+                  className={`w-full text-center py-3 rounded-lg font-medium transition-all ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                      : 'bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                  }`}
+                >
+                  Get Started
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Why Choose Our Research Assistant?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+              <p className="text-gray-300">Bank-level encryption and compliance with industry standards</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Real-time Processing</h3>
+              <p className="text-gray-300">Ultra-fast research processing with minimal latency</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>
+              <p className="text-gray-300">World-class AI engineers and research specialists</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Easy Integration</h3>
+              <p className="text-gray-300">Simple APIs and SDKs for seamless integration</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Revolutionize Research?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our AI research assistant today and accelerate your research like never before.
+          </p>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-6">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-5 h-5" />
+                <span className="text-white font-medium">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-5 h-5" />
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-5 h-5" />
+                <span className="text-white font-medium">Middletown, DE</span>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              >
+                Call Now
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Email Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AIResearchAssistantPage;
