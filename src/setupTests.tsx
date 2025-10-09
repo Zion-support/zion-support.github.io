@@ -7,10 +7,11 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
+console.error = (...args: unknown[]) => {
+  const message = args[0]?.toString?.() || (args[0] as { message?: string })?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -57,10 +58,12 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
+// eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
+// eslint-disable-next-line no-console
 const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
-console.warn = (...args) => {
+console.warn = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -68,7 +71,7 @@ console.warn = (...args) => {
   originalConsoleWarn(...args);
 };
 // eslint-disable-next-line no-console
-console.info = (...args) => {
+console.info = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
