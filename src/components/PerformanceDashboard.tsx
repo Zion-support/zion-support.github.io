@@ -30,19 +30,19 @@ const PerformanceDashboard: React.FC = () => {
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
       // Measure render time
-      const _renderStart = performance.now();
-      const _renderTime = performance.now() - renderStart;
+      const renderStart = performance.now();
+      const renderTime = performance.now() - renderStart;
       // Measure memory usage
-      let _memoryUsage = 0;
+      let memoryUsage = 0;
       if ('memory' in performance) {
-        const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
       // Measure FPS (simplified)
-      let _fps = 0;
+      let fps = 0;
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
+        let lastTime = performance.now();
+        let frameCount = 0;
         const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
@@ -63,7 +63,7 @@ const PerformanceDashboard: React.FC = () => {
     };
     updateMetrics();
     // Update metrics every 5 seconds
-    const _interval = setInterval(updateMetrics, 5000);
+    const interval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
   }, []);
   if (!isVisible) {
