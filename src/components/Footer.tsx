@@ -188,13 +188,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {additionalServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    to={service.url}
+                  <a
+                    href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
