@@ -20,6 +20,9 @@ interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   overallScore: number;
+  score?: number;
+  issues?: string;
+  recommendations?: string;
 }
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
@@ -578,3 +581,9 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+- Score: ${metrics.score || 'N/A'}
+- Issues: ${metrics.issues || 'N/A'}
+- Recommendations: ${metrics.recommendations || 'N/A'}
+`;
+  }
+}
