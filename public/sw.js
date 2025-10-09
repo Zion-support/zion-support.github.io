@@ -1,99 +1,166 @@
 const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
+
+// Assets to cache immediately
+const STATIC_ASSETS = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
+  '/index.html',
   '/manifest.json',
   '/favicon.ico',
+  '/favicon.svg',
+  '/apple-touch-icon.png',
   '/logo192.png',
-  '/logo512.png'
+  '/og-image.jpg'
 ];
 
-// Install event
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
+  
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
+      })
+      .then(() => {
+        console.log('Static assets cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Failed to cache static assets:', error);
       })
   );
 });
 
-// Fetch event
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
-
-// Activate event
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
+  
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker activated');
+        return self.clients.claim();
+      })
   );
 });
 
-// Background sync
+// Fetch event - serve from cache, fallback to network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip external requests
+  if (url.origin !== location.origin) {
+    return;
+  }
+
+  // Skip API requests
+  if (url.pathname.startsWith('/api/')) {
+    return;
+  }
+
+  event.respondWith(
+    caches.match(request)
+      .then((cachedResponse) => {
+        // Return cached version if available
+        if (cachedResponse) {
+          console.log('Serving from cache:', request.url);
+          return cachedResponse;
+        }
+
+        // Otherwise fetch from network
+        return fetch(request)
+          .then((response) => {
+            // Don't cache non-successful responses
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response
+            const responseToCache = response.clone();
+
+            // Cache the response
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+
+            return response;
+          })
+          .catch((error) => {
+            console.error('Fetch failed:', error);
+            
+            // Return offline page for navigation requests
+            if (request.mode === 'navigate') {
+              return caches.match('/offline.html');
+            }
+            
+            throw error;
+          });
+      })
+  );
+});
+
+// Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+    event.waitUntil(
+      // Handle background sync tasks
+      handleBackgroundSync()
+    );
   }
 });
 
-function doBackgroundSync() {
-  // Handle background sync tasks
-  return Promise.resolve();
-}
-
 // Push notifications
 self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New update available!',
-    icon: '/logo192.png',
-    badge: '/logo192.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Learn More',
-        icon: '/logo192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/logo192.png'
-      }
-    ]
-  };
+  if (event.data) {
+    const data = event.data.json();
+    
+    const options = {
+      body: data.body,
+      icon: '/logo192.png',
+      badge: '/logo192.png',
+      vibrate: [100, 50, 100],
+      data: data.data,
+      actions: [
+        {
+          action: 'explore',
+          title: 'Explore',
+          icon: '/logo192.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/logo192.png'
+        }
+      ]
+    };
 
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
 });
 
-// Notification click
+// Notification click handler
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
@@ -103,3 +170,57 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 });
+
+// Helper function for background sync
+async function handleBackgroundSync() {
+  try {
+    // Get pending requests from IndexedDB
+    const pendingRequests = await getPendingRequests();
+    
+    for (const request of pendingRequests) {
+      try {
+        const response = await fetch(request.url, request.options);
+        
+        if (response.ok) {
+          // Remove from pending requests
+          await removePendingRequest(request.id);
+        }
+      } catch (error) {
+        console.error('Background sync failed for request:', request.id, error);
+      }
+    }
+  } catch (error) {
+    console.error('Background sync error:', error);
+  }
+}
+
+// IndexedDB helper functions (simplified)
+async function getPendingRequests() {
+  // Implementation would depend on your IndexedDB setup
+  return [];
+}
+
+async function removePendingRequest(id) {
+  // Implementation would depend on your IndexedDB setup
+  return;
+}
+
+// Cache management
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  if (event.data && event.data.type === 'CACHE_URLS') {
+    const urlsToCache = event.data.urls;
+    
+    event.waitUntil(
+      caches.open(DYNAMIC_CACHE)
+        .then((cache) => {
+          return cache.addAll(urlsToCache);
+        })
+    );
+  }
+});
+
+console.log('Service Worker loaded successfully');
