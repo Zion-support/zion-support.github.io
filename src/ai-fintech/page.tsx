@@ -135,8 +135,7 @@ const AIFintechPage: React.FC = () => {
       benefits: ['Reduce onboarding time by 90%', 'Improve accuracy', 'Enhance customer experience'],
       marketPrice: '$2,500-7,000/month',
       category: 'KYC',
-      technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
-    }
+      technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']  }
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
@@ -165,7 +164,7 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Key Benefits */}
+        {/* Key Benefits */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -208,7 +207,7 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
+        {/* Services by Category */  }
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,9 +242,9 @@ const AIFintechPage: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              {feature  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -253,9 +252,9 @@ const AIFintechPage: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                              {tech  }
                             </span>
-                          ))}
+                          ))  }
                         </div>
                       </div>
                       <div className="mb-6">
@@ -264,21 +263,21 @@ const AIFintechPage: React.FC = () => {
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
+                              {benefit  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                         Get Fintech Consultation
                       </button>
                     </div>
-                  ))}
+                  ))  }
               </div>
             </div>
           </section>
-        ))}
-        {/* AI Fintech Capabilities */}
+        ))  }
+        {/* AI Fintech Capabilities */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -323,7 +322,7 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+        {/* Contact Section */  }
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

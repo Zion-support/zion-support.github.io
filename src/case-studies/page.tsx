@@ -66,17 +66,11 @@ const CaseStudiesPage: React.FC = () => {
         downtime: '-85%'
       },
       image: '🏭',
-      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
-    }
+      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'  }
   ];
   return (
-    <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Header */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Header */  }
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
@@ -85,7 +79,7 @@ const CaseStudiesPage: React.FC = () => {
             </Link>
           </div>
         </header>
-        {/* Hero Section */}
+        {/* Hero Section */  }
         <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -102,7 +96,7 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Case Studies Grid */}
+        {/* Case Studies Grid */  }
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -135,10 +129,10 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
                           <div className="text-2xl font-bold text-blue-600">
-                            {Object.values(study.results)[1]}
+                            {Object.values(study.results)[1]  }
                           </div>
                           <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())  }
                           </div>
                         </div>
                       </div>
@@ -157,11 +151,11 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ))  }
             </div>
           </div>
         </section>
-        {/* Stats Section */}
+        {/* Stats Section */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -192,7 +186,7 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        {/* CTA Section */  }
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -218,8 +212,7 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+    </div>
   );
 };
 export default CaseStudiesPage;

@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 const filesToFix = [
   'app/robotics/page.tsx',
@@ -21,28 +22,29 @@ const filesToFix = [
   'app/case-studies/page.tsx'
 ];
 
-function fixJSXSyntax(filePath) {
+function fixHelmetImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common JSX syntax issues
-    content = content.replace(/\s*\);\s*$/gm, '    );');
-    content = content.replace(/\s*}\s*$/gm, '  }');
+    // Remove react-helmet-async import
+    content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
     
-    // Ensure proper indentation for closing tags
-    content = content.replace(/(\s*)<\/div>\s*\);\s*$/gm, '$1  </div>\n  );');
-    content = content.replace(/(\s*)<\/div>\s*}\s*$/gm, '$1  </div>\n}');
+    // Remove Helmet wrapper and move title/meta to head
+    content = content.replace(/<>\s*<Helmet>\s*<title>([^<]*)<\/title>\s*<meta\s+name="description"\s+content="([^"]*)"\s*\/>\s*<meta\s+name="keywords"\s+content="([^"]*)"\s*\/>\s*<\/Helmet>\s*/g, '');
     
-    // Fix missing semicolons
-    content = content.replace(/export default \w+Page\s*$/gm, 'export default AIPage;');
+    // Remove closing fragment
+    content = content.replace(/\s*<\/>\s*$/gm, '');
+    
+    // Clean up any remaining empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed JSX syntax: ${filePath}`);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
 // Fix all files
-filesToFix.forEach(fixJSXSyntax);
-console.log('All JSX syntax issues fixed!');
+filesToFix.forEach(fixHelmetImports);
+console.log('All helmet imports fixed!');
