@@ -1,6 +1,14 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-// import { logger } from '../utils/logger';
+
+// Simple logger implementation
+const logger = {
+  error: (message: string, context?: any) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.error(`[${context?.context || 'ErrorBoundary'}] ${message}`, context);
+    }
+  }
+};
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
