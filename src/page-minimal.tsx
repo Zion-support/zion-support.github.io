@@ -161,8 +161,4 @@ function HomePage() {
       </footer>
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> df0aeaf329701878be261e2dcfe0105b303317a4
