@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Target, Globe, Brain, Shield, Code, BarChart } from 'lucide-react';
+import { Users, Target, Brain, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AboutPage: React.FC = () => {
+export const AboutPage: React.FC = () => {
   const team = [
     {
       name: 'Kleber Santos',
@@ -58,7 +58,12 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+      <Navigation />
+      <SEOOptimizer />
+      
+      {/* Hero Section */}
+      <section className='py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <div className='text-center mb-12'>
             <h1 className='text-4xl font-bold text-gray-900 mb-4'>
@@ -238,3 +243,5 @@ const AboutPage: React.FC = () => {
       </div>
   );
 };
+
+export default AboutPage;
