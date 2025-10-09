@@ -2,123 +2,96 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 
-interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
+interface FuturisticServiceCardProps {
+  title: string;
+  description: string;
+  features: string[];
+  price?: string;
+  popular?: boolean;
+  icon?: React.ComponentType<{ className?: string }>;
+  onClick?: () => void;
 }
 
-const,
-  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    },
-    cya,
-  n: {/* TODO: Fix JSX expression */}
-    },
-    pin,
-  k: {/* TODO: Fix JSX expression */}
-    },
-    blu,
-  e: {/* TODO: Fix JSX expression */}
-    },
-    gree,
-  n: {/* TODO: Fix JSX expression */}
-    },
-    orang,
-  e: {/* TODO: Fix JSX expression */}
-    }
-  };
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+  title,
+  description,
+  features,
+  price,
+  popular = false,
+  icon: Icon,
+  onClick
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  const currentColor = colorClasses[color];
-
-  return (<div></div>
-      className={/* TODO: Fix JSX expression */}
-      }`})
+  return (
+    <div
+      className={`relative group cursor-pointer transition-all duration-500 transform ${
+        isHovered ? 'scale-105' : 'scale-100'
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
-      {/* Popular Badge */}
-      {/* TODO: Fix JSX expression */}
-      )}
-
-      {/* Card */}
-      <div></div>
-        className={/* TODO: Fix JSX expression */}
-        } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
-          isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'`
-        }`}
-      >
-        {/* Icon */}
-        <div className="relative mb-6"></div>
-          <div></div>`
-            className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hove,
-  r:scale-110 transition-transform duration-300 ${/* TODO: Fix JSX expression */}`
-            }`}
-          >"
-            <Icon className="w-8 h-8 text-white" /></Icon>
+      {/* Background with gradient */}
+      <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-lg border border-white/10 ${
+        popular ? 'ring-2 ring-cyan-400/50' : ''
+      }`}>
+        {/* Animated background effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Content */}
+        <div className="relative p-8">
+          {/* Header */}
+          <div className="flex items-start justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              {Icon && (
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+              )}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
+                {popular && (
+                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-cyan-600 to-purple-600 text-white">
+                    <Star className="w-3 h-3 mr-1" />
+                    Popular
+                  </span>
+                )}
+              </div>
+            </div>
+            {price && (
+              <div className="text-right">
+                <div className="text-2xl font-bold text-cyan-400">{price}</div>
+                <div className="text-sm text-gray-400">/month</div>
+              </div>
+            )}
           </div>
-          
-          {/* Animated Background */}"
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hove,"
-  r:opacity-100 transition-opacity duration-500"></div>
+
+          {/* Description */}
+          <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
+
+          {/* Features */}
+          <div className="space-y-3 mb-8">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300 text-sm">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group">
+            <span>Get Started</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
 
-        {/* Title */}"
-        <h3 className="text-2xl font-bold text-white mb-3 group-hove,"
-  r:text-cyan-400 transition-colors duration-300"></h3>
-          {title}
-        </h3>
-
-        {/* Description */}"
-        <p className="text-gray-300 mb-6 leading-relaxed"></p>
-          {description}
-        </p>
-
-        {/* Price */}"
-        <div className="mb-6"></div>`
-          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}></div>
-            {price}
-          </div>"
-          <div className="text-sm text-gray-400">per month</div>
-        </div>
-
-        {/* Features */}"
-        <ul className="space-y-3 mb-8"></ul>
-          {/* TODO: Fix JSX expression */}"
-            <li key={index} className="flex items-center text-sm text-gray-300"></li>"
-              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
-              {feature}
-            </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{features.length - 4} more features;
-            </li>
-          )}
-        </ul>
-
-        {/* CTA Button */}
-        <button></button>
-          className={/* TODO: Fix JSX expression */}`
-              : `border border-${color}-500 text-${color}-300,`
-  hover:bg-${color}-500/20``
-          } flex items-center justify-center group`}
-        >
-          Get Started;"
-          <ArrowRight className="w-4 h-4 ml-2 group-hove,"
-  r:translate-x-1 transition-transform" /></ArrowRight>
-        </button>
-
-        {/* Hover Effect Overlay */}
-        <div></div>`
-          className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
-  r:opacity-5 rounded-2xl transition-opacity duration-500`}
-        ></div>
+        {/* Glow effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       </div>
-
-      {/* Glow Effect */}
-      <div></div>`
-        className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
-  r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
-      ></div>
     </div>
   );
 };
 
-export default FuturisticServiceCard;"`
+export default FuturisticServiceCard;

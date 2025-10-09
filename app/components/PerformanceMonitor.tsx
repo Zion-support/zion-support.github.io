@@ -1,4 +1,22 @@
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+}
+
 const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  });
+
   useEffect(() => {
     // Monitor performance metrics
     const monitorPerformance = () => {
@@ -7,11 +25,13 @@ const PerformanceMonitor: React.FC = () => {
         // This would typically use the web-vitals library
         console.log('Performance monitoring enabled');
       }
+      
       // Monitor page load time
       window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
         console.log(`Page load time: ${loadTime}ms`);
       });
+      
       // Monitor memory usage if available
       if ('memory' in performance) {
         const memory = (performance as any).memory;
@@ -22,7 +42,9 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
     };
+
     monitorPerformance();
+
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -33,11 +55,14 @@ const PerformanceMonitor: React.FC = () => {
         }
       });
       observer.observe({ entryTypes: ['longtask'] });
+      
       return () => {
         observer.disconnect();
       };
     }
   }, []);
-  return null;
+
+  return null; // This component doesn't render anything
 };
+
 export default PerformanceMonitor;
