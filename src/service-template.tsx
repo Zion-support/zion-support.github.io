@@ -7,11 +7,19 @@ import Footer from './components/Footer';
 interface ServicePageProps {
   title: string;
   description: string;
+<<<<<<< HEAD
   icon: React.ComponentType<Record<string, unknown>>;
   services: Array<{
     title: string;
     description: string;
     icon: React.ComponentType<Record<string, unknown>>;
+=======
+  icon: React.ComponentType<{ className?: string }>;
+  services: Array<{
+    title: string;
+    description: string;
+    icon: React.ComponentType<{ className?: string }>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb42
     features: string[];
     price: string;
   }>;

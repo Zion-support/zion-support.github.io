@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const SitemapPage: React.FC = () => {
@@ -38,3 +39,5 @@ const SitemapPage: React.FC = () => {
 };
 
 export default SitemapPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb42
