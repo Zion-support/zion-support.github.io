@@ -143,6 +143,107 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Node.js', 'Python', 'Java', 'Kong', 'Apigee', 'AWS API Gateway'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+    // Advanced IT Services
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with AI-driven monitoring, predictive maintenance, and automated incident resolution.',
+      icon: Brain,
+      features: ['AI monitoring', 'Predictive maintenance', 'Automated incident response', 'Intelligent alerting', 'Performance optimization', 'Capacity planning'],
+      price: 'Starting at $2,500/month',
+      category: 'AI Operations',
+      benefits: ['Reduce downtime by 70%', 'Prevent issues before they occur', 'Automated problem resolution', 'Optimized resource utilization'],
+      technologies: ['Machine Learning', 'AIOps', 'Monitoring Tools', 'Python', 'TensorFlow', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Quantum-Safe Security Implementation',
+      description: 'Future-proof security solutions with quantum-resistant cryptography and post-quantum security protocols.',
+      icon: Shield,
+      features: ['Quantum-resistant encryption', 'Post-quantum cryptography', 'Security assessment', 'Migration planning', 'Compliance support', 'Future-proofing'],
+      price: 'Starting at $4,000/month',
+      category: 'Advanced Security',
+      benefits: ['Future-proof security', 'Quantum attack protection', 'Compliance readiness', 'Long-term security'],
+      technologies: ['Post-Quantum Cryptography', 'NIST Standards', 'Quantum Key Distribution', 'Advanced Encryption'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications, IoT, and real-time processing.',
+      icon: Cpu,
+      features: ['Edge infrastructure design', 'IoT connectivity', 'Real-time processing', 'Data synchronization', 'Edge security', 'Performance optimization'],
+      price: 'Starting at $2,200/month',
+      category: 'Edge Computing',
+      benefits: ['Reduce latency by 90%', 'Enable real-time processing', 'Improve data privacy', 'Reduce bandwidth costs'],
+      technologies: ['Kubernetes', 'Docker', 'Edge Hardware', '5G', 'IoT Platforms', 'Edge AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain solutions with smart contracts, decentralized applications, and blockchain integration.',
+      icon: Globe,
+      features: ['Blockchain architecture', 'Smart contract development', 'DApp development', 'Integration services', 'Security auditing', 'Performance optimization'],
+      price: 'Starting at $3,000/month',
+      category: 'Blockchain',
+      benefits: ['Enhanced security', 'Transparency', 'Automation', 'Decentralization'],
+      technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS', 'Consensus Algorithms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: '5G Network Implementation',
+      description: '5G network design and implementation for ultra-fast connectivity, IoT, and next-generation applications.',
+      icon: Globe,
+      features: ['5G network design', 'Infrastructure deployment', 'Performance optimization', 'IoT integration', 'Security implementation', 'Monitoring'],
+      price: 'Starting at $5,000/month',
+      category: 'Networking',
+      benefits: ['Ultra-fast connectivity', 'Low latency', 'Massive IoT support', 'Enhanced mobile experience'],
+      technologies: ['5G NR', 'Network Slicing', 'MIMO', 'Beamforming', 'Edge Computing', 'IoT Protocols'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Sustainable IT solutions with energy optimization, carbon footprint reduction, and green technology implementation.',
+      icon: Globe,
+      features: ['Energy optimization', 'Carbon footprint analysis', 'Green technology implementation', 'Sustainability reporting', 'Waste reduction', 'Efficiency improvements'],
+      price: 'Starting at $1,500/month',
+      category: 'Sustainability',
+      benefits: ['Reduce energy costs by 40%', 'Lower carbon footprint', 'Compliance with regulations', 'Improved brand image'],
+      technologies: ['Energy Monitoring', 'Green Computing', 'Virtualization', 'Cloud Optimization', 'Renewable Energy'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation services with strategy development, technology roadmap, and change management.',
+      icon: Target,
+      features: ['Digital strategy', 'Technology assessment', 'Roadmap development', 'Change management', 'Process optimization', 'Training programs'],
+      price: 'Starting at $3,500/month',
+      category: 'Consulting',
+      benefits: ['Modernize operations', 'Improve efficiency', 'Enhance customer experience', 'Competitive advantage'],
+      technologies: ['Cloud Platforms', 'AI/ML', 'Automation', 'Analytics', 'Mobile Solutions', 'IoT'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Governance & Risk Management',
+      description: 'Comprehensive IT governance framework with risk assessment, compliance management, and strategic planning.',
+      icon: Shield,
+      features: ['IT governance framework', 'Risk assessment', 'Compliance management', 'Policy development', 'Audit support', 'Strategic planning'],
+      price: 'Starting at $2,800/month',
+      category: 'Governance',
+      benefits: ['Improved decision making', 'Risk mitigation', 'Compliance assurance', 'Strategic alignment'],
+      technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Governance Platforms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Training & Certification Programs',
+      description: 'Comprehensive IT training programs with certification paths, hands-on labs, and expert instruction.',
+      icon: Users,
+      features: ['Custom training programs', 'Certification paths', 'Hands-on labs', 'Expert instructors', 'Progress tracking', 'Certification support'],
+      price: 'Starting at $500/month',
+      category: 'Training',
+      benefits: ['Skill development', 'Certification achievement', 'Improved productivity', 'Career advancement'],
+      technologies: ['Virtual Labs', 'Learning Management Systems', 'Video Conferencing', 'Interactive Content'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    }
+  ];
     // IT Support & Management
     {
       title: 'Managed IT Services',
