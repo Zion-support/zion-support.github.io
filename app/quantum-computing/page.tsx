@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Shield as Protection, Lock as Secure, Target as Aim, BarChart as Analytics, TrendingUp as Growth, Globe as World, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Document, Search as Find, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats, AlertTriangle, Eye as Monitor, Lock as Security, Shield as Protection, Target as Aim, BarChart as Analytics, TrendingUp as Growth, Globe as World, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Document, Search as Find, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cpu as Processor, Brain as Mind, Target as Aim, BarChart as Analytics, TrendingUp as Growth, Shield as Security, Lock as Secure, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Document, Search as Find, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats, Atom, Zap as Flash, Brain as Mind, Cpu as Processor, Shield as Protection, Globe as World, Users as Team, Award as Trophy, Lock as Secure, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Document, Search as Find, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats } from 'lucide-react';
 
-const AICybersecurityPage: React.FC = () => {
+const QuantumComputingPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -14,118 +14,118 @@ const AICybersecurityPage: React.FC = () => {
 
   const features = [
     {
-      icon: Shield,
-      title: 'AI Threat Detection',
-      description: 'Real-time threat detection using advanced AI algorithms',
+      icon: Atom,
+      title: 'Quantum Algorithms',
+      description: 'Advanced quantum algorithms for complex problem solving',
       price: 'Included'
     },
     {
-      icon: Eye,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of your systems and networks',
+      icon: Cpu,
+      title: 'Quantum Hardware',
+      description: 'Access to cutting-edge quantum computing hardware',
       price: 'Included'
     },
     {
-      icon: Lock,
-      title: 'Automated Response',
-      description: 'Instant automated response to security threats',
-      price: 'Included'
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Vulnerability Scanning',
-      description: 'Automated vulnerability assessment and patching',
+      icon: Brain,
+      title: 'Quantum AI',
+      description: 'Quantum machine learning and AI optimization',
       price: 'Included'
     },
     {
       icon: Database,
-      title: 'Security Analytics',
-      description: 'Advanced security analytics and reporting',
+      title: 'Quantum Databases',
+      description: 'Quantum-enhanced database systems and queries',
       price: 'Included'
     },
     {
-      icon: Users,
-      title: 'Compliance Management',
-      description: 'Automated compliance monitoring and reporting',
+      icon: Shield,
+      title: 'Quantum Security',
+      description: 'Quantum cryptography and secure communications',
+      price: 'Included'
+    },
+    {
+      icon: BarChart,
+      title: 'Quantum Analytics',
+      description: 'Quantum-powered data analysis and insights',
       price: 'Included'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$299',
+      name: 'Research',
+      price: 'Custom',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for research institutions and universities',
       features: [
-        'Basic threat detection',
+        'Basic quantum access',
+        'Research support',
+        'Academic pricing',
         'Email support',
-        'Monthly reports',
-        'Up to 10 devices',
-        'Basic monitoring',
+        'Basic documentation',
         'Community forum'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$799',
+      name: 'Enterprise',
+      price: 'Custom',
       period: '/month',
-      description: 'Ideal for growing businesses and enterprises',
+      description: 'Ideal for large corporations and government agencies',
       features: [
-        'Advanced threat detection',
-        'Priority support',
-        'Weekly reports',
-        'Up to 100 devices',
-        'Advanced monitoring',
-        'Compliance tools',
-        'API access'
+        'Full quantum access',
+        'Dedicated support',
+        'Custom solutions',
+        'Priority access',
+        'Advanced documentation',
+        'Training & onboarding',
+        'SLA guarantee'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$2,999',
+      name: 'Government',
+      price: 'Custom',
       period: '/month',
-      description: 'For large organizations and government agencies',
+      description: 'For government agencies and defense contractors',
       features: [
-        'AI-powered threat detection',
-        'Dedicated support',
-        'Real-time reports',
-        'Unlimited devices',
-        '24/7 monitoring',
-        'Custom integrations',
+        'Unlimited quantum access',
+        'Classified support',
+        'Custom security',
+        'Dedicated infrastructure',
+        'Compliance tools',
         'White-label solution',
+        '24/7 support',
         'SLA guarantee'
       ],
       popular: false
     }
   ];
 
-  const securityTypes = [
+  const quantumTypes = [
     {
-      title: 'Network Security',
-      description: 'Protect your network infrastructure from threats',
-      icon: Globe,
-      examples: ['Firewall management', 'Intrusion detection', 'Network monitoring', 'Traffic analysis']
+      title: 'Optimization',
+      description: 'Solve complex optimization problems with quantum algorithms',
+      icon: Target,
+      examples: ['Supply chain optimization', 'Portfolio optimization', 'Route planning', 'Resource allocation']
     },
     {
-      title: 'Endpoint Security',
-      description: 'Secure all endpoints and devices',
-      icon: Smartphone,
-      examples: ['Antivirus protection', 'Device management', 'Data encryption', 'Access control']
+      title: 'Simulation',
+      description: 'Simulate complex systems and molecules',
+      icon: Atom,
+      examples: ['Molecular simulation', 'Material science', 'Drug discovery', 'Climate modeling']
     },
     {
-      title: 'Cloud Security',
-      description: 'Secure your cloud infrastructure and data',
-      icon: Cloud,
-      examples: ['Cloud monitoring', 'Data protection', 'Access management', 'Compliance']
+      title: 'Cryptography',
+      description: 'Quantum-safe encryption and secure communications',
+      icon: Shield,
+      examples: ['Quantum key distribution', 'Post-quantum cryptography', 'Secure communications', 'Blockchain security']
     },
     {
-      title: 'Data Protection',
-      description: 'Protect sensitive data and ensure privacy',
-      icon: Database,
-      examples: ['Data encryption', 'Backup security', 'Privacy compliance', 'Data loss prevention']
+      title: 'Machine Learning',
+      description: 'Quantum-enhanced machine learning algorithms',
+      icon: Brain,
+      examples: ['Quantum neural networks', 'Pattern recognition', 'Data classification', 'Predictive modeling']
     }
   ];
 
@@ -138,29 +138,29 @@ const AICybersecurityPage: React.FC = () => {
         }`}>
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch">
-              AI Cybersecurity
+              Quantum Computing
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse">
-              Advanced AI-Powered Security Solutions
+              Next-Generation Computing Power
             </p>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Protect your business with cutting-edge AI-powered cybersecurity solutions. 
-              Real-time threat detection, automated response, and comprehensive security monitoring.
+              Harness the power of quantum computing to solve complex problems that are impossible 
+              for classical computers. Access cutting-edge quantum hardware and algorithms.
             </p>
             
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
               <div className="futuristic-glow neural-pattern p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Threat Detection</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">1000x</div>
+                <div className="text-gray-300">Faster Processing</div>
               </div>
               <div className="futuristic-glow neural-pattern p-6 text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
-                <div className="text-gray-300">Monitoring</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
+                <div className="text-gray-300">Quantum Algorithms</div>
               </div>
               <div className="futuristic-glow neural-pattern p-6 text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
-                <div className="text-gray-300">Threats Blocked</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-gray-300">Quantum Access</div>
               </div>
             </div>
 
@@ -171,7 +171,7 @@ const AICybersecurityPage: React.FC = () => {
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
                 <Zap className="w-5 h-5 mr-2" />
-                Get Protected
+                Get Started
               </a>
               <a
                 href="tel:+13024640950"
@@ -192,7 +192,7 @@ const AICybersecurityPage: React.FC = () => {
             Powerful Features
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Everything you need to secure your business
+            Everything you need to harness quantum computing power
           </p>
         </div>
 
@@ -210,29 +210,29 @@ const AICybersecurityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Security Types Section */}
+      {/* Quantum Types Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
-            Security Solutions
+            Quantum Solutions
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Comprehensive cybersecurity solutions for all your needs
+            Comprehensive quantum computing solutions for all your needs
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {securityTypes.map((securityType, index) => (
+          {quantumTypes.map((quantumType, index) => (
             <div key={index} className="cyber-card hologram-card p-6">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl text-cyan-400">
-                  <securityType.icon className="w-8 h-8" />
+                  <quantumType.icon className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">{securityType.title}</h3>
-                  <p className="text-gray-300 mb-4">{securityType.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{quantumType.title}</h3>
+                  <p className="text-gray-300 mb-4">{quantumType.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {securityType.examples.map((example, exampleIndex) => (
+                    {quantumType.examples.map((example, exampleIndex) => (
                       <span
                         key={exampleIndex}
                         className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm"
@@ -252,10 +252,10 @@ const AICybersecurityPage: React.FC = () => {
       <section id="pricing" className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
-            Simple, Transparent Pricing
+            Custom Pricing
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Choose the plan that fits your security needs
+            Contact us for custom quantum computing solutions
           </p>
         </div>
 
@@ -295,7 +295,7 @@ const AICybersecurityPage: React.FC = () => {
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                 }`}
               >
-                Get Protected
+                Contact Us
               </a>
             </div>
           ))}
@@ -306,10 +306,10 @@ const AICybersecurityPage: React.FC = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Secure Your Business?
+            Ready to Harness Quantum Power?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Start protecting your business today with our AI-powered cybersecurity solutions.
+            Contact us to discuss your quantum computing needs and get a custom solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -317,7 +317,7 @@ const AICybersecurityPage: React.FC = () => {
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
             >
               <Zap className="w-5 h-5 mr-2" />
-              Get Protected
+              Contact Us
             </a>
             <a
               href="tel:+13024640950"
@@ -336,4 +336,4 @@ const AICybersecurityPage: React.FC = () => {
   );
 };
 
-export default AICybersecurityPage;
+export default QuantumComputingPage;

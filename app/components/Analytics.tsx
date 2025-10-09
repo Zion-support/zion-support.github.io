@@ -4,141 +4,147 @@ import React, { useEffect } from 'react';
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-    dataLayer: any[];
   }
 }
 
 const Analytics: React.FC = () => {
   useEffect(() => {
     // Google Analytics 4 setup
-    const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with actual GA4 ID
+    if (typeof window !== 'undefined') {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'; // Replace with actual GA4 ID
+      document.head.appendChild(script);
 
-    // Load Google Analytics script
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
-    }
-    window.gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', GA_MEASUREMENT_ID, {
-      page_title: document.title,
-      page_location: window.location.href,
-    });
-
-    // Track page views
-    const trackPageView = () => {
-      gtag('event', 'page_view', {
+      // Initialize gtag
+      window.gtag = window.gtag || function() {
+        (window.gtag.q = window.gtag.q || []).push(arguments);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-XXXXXXXXXX', {
         page_title: document.title,
         page_location: window.location.href,
-        page_path: window.location.pathname,
-      });
-    };
-
-    // Track initial page view
-    trackPageView();
-
-    // Track route changes (for SPA)
-    const handleRouteChange = () => {
-      trackPageView();
-    };
-
-    // Listen for popstate events (back/forward navigation)
-    window.addEventListener('popstate', handleRouteChange);
-
-    // Track user interactions
-    const trackInteractions = () => {
-      // Track button clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.tagName === 'BUTTON' || target.tagName === 'A') {
-          gtag('event', 'click', {
-            event_category: 'engagement',
-            event_label: target.textContent?.trim() || target.getAttribute('href') || 'unknown',
-            value: 1,
-          });
-        }
       });
 
-      // Track form submissions
-      document.addEventListener('submit', (e) => {
-        const form = e.target as HTMLFormElement;
-        gtag('event', 'form_submit', {
-          event_category: 'engagement',
-          event_label: form.id || form.className || 'unknown_form',
-        });
-      });
-
-      // Track scroll depth
-      let maxScroll = 0;
-      const trackScroll = () => {
-        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-        if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
-          maxScroll = scrollPercent;
-          gtag('event', 'scroll', {
-            event_category: 'engagement',
-            event_label: `${scrollPercent}%`,
-            value: scrollPercent,
+      // Track page views
+      const trackPageView = () => {
+        if (window.gtag) {
+          window.gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: window.location.pathname,
           });
         }
       };
 
-      window.addEventListener('scroll', trackScroll, { passive: true });
-    };
+      // Track page view on load
+      trackPageView();
 
-    trackInteractions();
+      // Track page view on route change
+      const handleRouteChange = () => {
+        trackPageView();
+      };
 
-    // Track performance metrics
-    const trackPerformance = () => {
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            
-            gtag('event', 'timing_complete', {
-              name: 'load',
-              value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
-            });
+      // Listen for popstate events (back/forward navigation)
+      window.addEventListener('popstate', handleRouteChange);
 
-            gtag('event', 'timing_complete', {
-              name: 'dom_content_loaded',
-              value: Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart),
-            });
-          }, 0);
-        });
-      }
-    };
+      // Track custom events
+      const trackCustomEvent = (eventName: string, parameters: any = {}) => {
+        if (window.gtag) {
+          window.gtag('event', eventName, parameters);
+        }
+      };
 
-    trackPerformance();
-
-    // Track errors
-    const trackErrors = () => {
-      window.addEventListener('error', (e) => {
-        gtag('event', 'exception', {
-          description: e.message,
-          fatal: false,
+      // Track phone clicks
+      const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+      phoneLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          trackCustomEvent('phone_click', {
+            event_category: 'engagement',
+            event_label: 'phone_number_click'
+          });
         });
       });
 
-      window.addEventListener('unhandledrejection', (e) => {
-        gtag('event', 'exception', {
-          description: e.reason?.toString() || 'Unhandled Promise Rejection',
-          fatal: false,
+      // Track email clicks
+      const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+      emailLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          trackCustomEvent('email_click', {
+            event_category: 'engagement',
+            event_label: 'email_click'
+          });
         });
       });
-    };
 
-    trackErrors();
+      // Track service link clicks
+      const serviceLinks = document.querySelectorAll('a[href*="/ai-"], a[href*="/it-"], a[href*="/micro-"]');
+      serviceLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const href = link.getAttribute('href');
+          trackCustomEvent('service_click', {
+            event_category: 'engagement',
+            event_label: href,
+            service_name: href?.split('/').pop()
+          });
+        });
+      });
 
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
+      // Track scroll depth
+      let maxScrollDepth = 0;
+      const trackScrollDepth = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+        
+        if (scrollPercent > maxScrollDepth) {
+          maxScrollDepth = scrollPercent;
+          
+          // Track at 25%, 50%, 75%, and 100%
+          if ([25, 50, 75, 100].includes(scrollPercent)) {
+            trackCustomEvent('scroll_depth', {
+              event_category: 'engagement',
+              event_label: `${scrollPercent}%`,
+              value: scrollPercent
+            });
+          }
+        }
+      };
+
+      window.addEventListener('scroll', trackScrollDepth);
+
+      // Track form submissions
+      const forms = document.querySelectorAll('form');
+      forms.forEach(form => {
+        form.addEventListener('submit', () => {
+          trackCustomEvent('form_submit', {
+            event_category: 'conversion',
+            event_label: 'contact_form'
+          });
+        });
+      });
+
+      // Track time on page
+      const startTime = Date.now();
+      const trackTimeOnPage = () => {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        trackCustomEvent('time_on_page', {
+          event_category: 'engagement',
+          event_label: 'page_duration',
+          value: timeOnPage
+        });
+      };
+
+      // Track time on page when user leaves
+      window.addEventListener('beforeunload', trackTimeOnPage);
+
+      return () => {
+        window.removeEventListener('popstate', handleRouteChange);
+        window.removeEventListener('scroll', trackScrollDepth);
+        window.removeEventListener('beforeunload', trackTimeOnPage);
+      };
+    }
   }, []);
 
   return null;

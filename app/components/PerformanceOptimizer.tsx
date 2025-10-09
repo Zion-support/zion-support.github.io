@@ -16,9 +16,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }) => {
   useEffect(() => {
     // Image optimization
-    if (enableImageOptimization) {
+    if (enableImageOptimization && typeof window !== 'undefined') {
       const images = document.querySelectorAll('img');
-      images.forEach(img => {
+      images.forEach((img) => {
         if (!img.loading) {
           img.loading = 'lazy';
         }
@@ -29,29 +29,32 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
 
     // Prefetch critical resources
-    if (enablePrefetching) {
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
+    if (enablePrefetching && typeof window !== 'undefined') {
+      const prefetchLinks = [
+        '/ai-services',
+        '/it-services',
+        '/contact',
+        '/about'
       ];
-      
-      criticalResources.forEach(resource => {
+
+      prefetchLinks.forEach((href) => {
         const link = document.createElement('link');
         link.rel = 'prefetch';
-        link.href = resource;
+        link.href = href;
         document.head.appendChild(link);
       });
     }
 
-    // Service Worker registration for caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('SW registered: ', registration);
-        })
-        .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
-        });
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
     }
   }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching]);
 

@@ -15,11 +15,25 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableClickjackingProtection = true
 }) => {
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     // Content Security Policy
     if (enableCSP) {
       const cspMeta = document.createElement('meta');
       cspMeta.httpEquiv = 'Content-Security-Policy';
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';";
+      cspMeta.content = [
+        "default-src 'self'",
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "font-src 'self' https://fonts.gstatic.com",
+        "img-src 'self' data: https: blob:",
+        "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+        "frame-src 'none'",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'self'",
+        "frame-ancestors 'none'"
+      ].join('; ');
       document.head.appendChild(cspMeta);
     }
 
@@ -39,19 +53,11 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       document.head.appendChild(frameOptionsMeta);
     }
 
-    // HSTS (HTTP Strict Transport Security)
-    if (enableHSTS && location.protocol === 'https:') {
-      const hstsMeta = document.createElement('meta');
-      hstsMeta.httpEquiv = 'Strict-Transport-Security';
-      hstsMeta.content = 'max-age=31536000; includeSubDomains; preload';
-      document.head.appendChild(hstsMeta);
-    }
-
     // Additional security headers
     const securityHeaders = [
       { name: 'X-Content-Type-Options', value: 'nosniff' },
       { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-      { name: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' }
+      { name: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
     ];
 
     securityHeaders.forEach(header => {
@@ -67,7 +73,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       cookies.forEach(cookie => {
         const [name, value] = cookie.trim().split('=');
         if (name && value) {
-          // Set secure flag for sensitive cookies
+          // Set secure and httpOnly flags for sensitive cookies
           if (name.includes('session') || name.includes('auth') || name.includes('token')) {
             document.cookie = `${name}=${value}; Secure; HttpOnly; SameSite=Strict`;
           }
@@ -77,38 +83,73 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
     secureCookies();
 
-    // Input sanitization for forms
-    const sanitizeInputs = () => {
-      const inputs = document.querySelectorAll('input, textarea, select');
-      inputs.forEach(input => {
-        input.addEventListener('input', (e) => {
-          const target = e.target as HTMLInputElement;
-          // Basic XSS prevention
-          target.value = target.value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-        });
+    // Input sanitization
+    const sanitizeInput = (input: string): string => {
+      return input
+        .replace(/[<>]/g, '') // Remove < and >
+        .replace(/javascript:/gi, '') // Remove javascript: protocol
+        .replace(/on\w+=/gi, '') // Remove event handlers
+        .trim();
+    };
+
+    // Apply sanitization to all input fields
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('input', (e) => {
+        const target = e.target as HTMLInputElement;
+        target.value = sanitizeInput(target.value);
       });
+    });
+
+    // Prevent right-click context menu on sensitive elements
+    const sensitiveElements = document.querySelectorAll('[data-sensitive]');
+    sensitiveElements.forEach(element => {
+      element.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+      });
+    });
+
+    // Disable text selection on sensitive elements
+    sensitiveElements.forEach(element => {
+      element.style.userSelect = 'none';
+      element.style.webkitUserSelect = 'none';
+    });
+
+    // Monitor for suspicious activity
+    let suspiciousActivity = 0;
+    const monitorActivity = () => {
+      // Monitor rapid clicks (potential bot activity)
+      let clickCount = 0;
+      const clickTimer = setInterval(() => {
+        if (clickCount > 10) {
+          suspiciousActivity++;
+          console.warn('Suspicious activity detected: Rapid clicking');
+        }
+        clickCount = 0;
+      }, 1000);
+
+      document.addEventListener('click', () => {
+        clickCount++;
+      });
+
+      // Monitor for console access attempts
+      const originalConsole = console.log;
+      console.log = (...args) => {
+        suspiciousActivity++;
+        console.warn('Console access detected');
+        return originalConsole.apply(console, args);
+      };
+
+      return () => {
+        clearInterval(clickTimer);
+        console.log = originalConsole;
+      };
     };
 
-    sanitizeInputs();
-
-    // CSP violation reporting
-    const reportViolation = (violation: any) => {
-      console.warn('CSP Violation:', violation);
-      // In production, send to monitoring service
-      if (process.env.NODE_ENV === 'production') {
-        // Send to monitoring service
-        fetch('/api/security-violation', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(violation)
-        }).catch(console.error);
-      }
-    };
-
-    document.addEventListener('securitypolicyviolation', reportViolation);
+    const cleanup = monitorActivity();
 
     return () => {
-      document.removeEventListener('securitypolicyviolation', reportViolation);
+      cleanup();
     };
   }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection]);
 
