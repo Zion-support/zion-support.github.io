@@ -138,11 +138,7 @@ class HealthCheckService {
     }
     try {
       const memoryInfo = (performance as any).memory;
-<<<<<<< HEAD
-      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
-=======
       const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100;
->>>>>>> cursor/fix-errors-and-merge-to-main-869e
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -179,8 +175,7 @@ class HealthCheckService {
       const report = performanceMonitor.getReport()
       const reportData = JSON.parse(report)
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-<<<<<<< HEAD
-      let message = `Performance metrics available`
+      let message = 'Performance metrics available'
       
       // Check if we have any performance data
       if (reportData && Object.keys(reportData).length > 0) {
@@ -197,25 +192,6 @@ class HealthCheckService {
         } else {
           message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
         }
-=======
-      let message = 'Performance metrics available'
-      
-      // Check if any critical metrics are missing or poor
-      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
-      const missingMetrics = criticalMetrics.filter(metric => {
-        // Check if metric is available in performance API
-        return typeof performance === 'undefined' || !performance.getEntriesByType
-      })
-      
-      if (missingMetrics.length > 2) {
-        status = 'warn'
-        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
-      }
-      
-      if (missingMetrics.length > 3) {
-        status = 'fail'
-        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
->>>>>>> cursor/fix-errors-and-merge-to-main-869e
       }
       
       return {
@@ -223,11 +199,7 @@ class HealthCheckService {
         status,
         message,
         details: {
-<<<<<<< HEAD
           metrics: reportData,
-=======
-          metrics: criticalMetrics,
->>>>>>> cursor/fix-errors-and-merge-to-main-869e
           summary: { good: 0, needsImprovement: 0, poor: 0 }
         }
       }
