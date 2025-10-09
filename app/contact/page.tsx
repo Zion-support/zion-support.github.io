@@ -1,8 +1,6 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 // Metadata removed for Vite compatibility
-
 const ContactPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
@@ -15,7 +13,6 @@ const ContactPage: React.FC = () => {
             Get in touch with our team of experts
           </p>
         </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
             <div className='bg-white rounded-lg shadow-lg p-8'>
               <h2 className='text-2xl font-bold text-gray-900 mb-6'>
@@ -35,7 +32,6 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Send us a Message
@@ -80,5 +76,4 @@ const ContactPage: React.FC = () => {
       </div>
   );
 };
-
 export default ContactPage;

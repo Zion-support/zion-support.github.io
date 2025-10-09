@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
-
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
     {
@@ -189,7 +188,6 @@ const ITInfrastructurePage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-
   const infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
     { metric: '500+', description: 'Servers Managed' },
@@ -198,7 +196,6 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '< 1hr', description: 'Response Time' },
     { metric: '100%', description: 'Security Compliance' }
   ];
-
   return (
     <>
       <Helmet>
@@ -206,7 +203,6 @@ const ITInfrastructurePage: React.FC = () => {
         <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
         <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
@@ -236,7 +232,6 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Infrastructure Statistics */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -258,7 +253,6 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -302,7 +296,6 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,7 +313,6 @@ const ITInfrastructurePage: React.FC = () => {
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-2xl font-bold text-blue-600">{service.price}</span>
@@ -330,7 +322,6 @@ const ITInfrastructurePage: React.FC = () => {
                       Save up to 50% vs market rates
                     </div>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -342,7 +333,6 @@ const ITInfrastructurePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -353,7 +343,6 @@ const ITInfrastructurePage: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                     <ul className="space-y-1">
@@ -365,11 +354,9 @@ const ITInfrastructurePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
                   </div>
-
                   <div className="flex gap-2">
                     <a 
                       href="tel:+13024640950"
@@ -389,7 +376,6 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Process Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -425,7 +411,6 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -459,5 +444,4 @@ const ITInfrastructurePage: React.FC = () => {
     </>
   );
 };
-
 export default ITInfrastructurePage;

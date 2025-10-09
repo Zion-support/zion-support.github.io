@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-=======
 import React, { useEffect, useCallback } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 }
-
 /**
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
@@ -39,7 +25,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
   }, [enableSkipLinks]);
-
   // Add keyboard navigation
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (enableKeyboardNav) {
@@ -50,14 +35,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     }
   }, [enableKeyboardNav]);
-
   useEffect(() => {
     if (enableKeyboardNav) {
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNav, handleKeyDown]);
-
   // Add focus indicators
   useEffect(() => {
     if (enableFocusIndicators) {
@@ -71,8 +54,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.head.appendChild(style);
     }
   }, [enableFocusIndicators]);
-
   return <>{children}</>;
 };
-
 export default AccessibilityEnhancer;

@@ -1,8 +1,6 @@
 import { MetadataRoute } from 'next'
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
-  
   const routes = [
     '',
     '/about',
@@ -53,7 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/security',
     '/compliance'
   ]
-
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

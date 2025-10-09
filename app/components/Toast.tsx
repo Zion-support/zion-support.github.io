@@ -1,9 +1,6 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
-
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-
 export interface ToastProps {
   message: string;
   type?: ToastType;
@@ -11,7 +8,6 @@ export interface ToastProps {
   onClose?: () => void;
   show: boolean;
 }
-
 const Toast: React.FC<ToastProps> = ({
   message,
   type = 'success',
@@ -20,10 +16,8 @@ const Toast: React.FC<ToastProps> = ({
   show,
 }) => {
   const [isVisible, setIsVisible] = useState(show);
-
   useEffect(() => {
     setIsVisible(show);
-
     if (show && duration > 0) {
       const timer = setTimeout(() => {
         setIsVisible(false);
@@ -31,15 +25,11 @@ const Toast: React.FC<ToastProps> = ({
           onClose();
         }
       }, duration);
-
       return () => clearTimeout(timer);
     }
-
     return undefined;
   }, [show, duration, onClose]);
-
   if (!isVisible) return null;
-
   const getToastStyles = () => {
     switch (type) {
       case 'success':
@@ -54,7 +44,6 @@ const Toast: React.FC<ToastProps> = ({
         return 'bg-gray-800 text-white';
     }
   };
-
   const getIcon = () => {
     switch (type) {
       case 'success':
@@ -69,7 +58,6 @@ const Toast: React.FC<ToastProps> = ({
         return '';
     }
   };
-
   return (
     <div
       className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
@@ -91,9 +79,7 @@ const Toast: React.FC<ToastProps> = ({
     </div>
   );
 };
-
 export default Toast;
-
 // Toast Hook for easy usage
 export const useToast = () => {
   const [toast, setToast] = useState<{
@@ -105,15 +91,12 @@ export const useToast = () => {
     message: '',
     type: 'success',
   });
-
   const showToast = (message: string, type: ToastType = 'success') => {
     setToast({ show: true, message, type });
   };
-
   const hideToast = () => {
     setToast(prev => ({ ...prev, show: false }));
   };
-
   return {
     toast,
     showToast,

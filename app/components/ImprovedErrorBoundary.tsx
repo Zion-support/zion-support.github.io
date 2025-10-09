@@ -1,27 +1,22 @@
 'use client';
-
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import monitoring from '../utils/monitoring';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   resetKeys?: Array<string | number>;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorCount: number;
 }
-
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -32,14 +27,12 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       errorCount: 0,
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error to monitoring service
     monitoring.logError({
@@ -50,23 +43,18 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
       url: window.location.href,
     });
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Update state with error details
     this.setState((prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1,
     }));
-
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-
     }
-
     // Send to external error tracking (if available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
@@ -78,20 +66,17 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       });
     }
   }
-
   componentDidUpdate(prevProps: Props): void {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
       );
-      
       if (resetKeysChanged && this.state.hasError) {
         this.resetErrorBoundary();
       }
     }
   }
-
   resetErrorBoundary = (): void => {
     this.setState({
       hasError: false,
@@ -99,22 +84,18 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
     });
   };
-
   handleReload = (): void => {
     window.location.reload();
   };
-
   handleGoHome = (): void => {
     window.location.href = '/';
   };
-
   render(): ReactNode {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
         <div className="error-boundary-container" style={styles.container}>
@@ -124,7 +105,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
-            
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
@@ -146,7 +126,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
-
             <div style={styles.actions}>
               <button
                 onClick={this.resetErrorBoundary}
@@ -170,7 +149,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times
@@ -180,11 +158,9 @@ class ImprovedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 const styles = {
   container: {
     minHeight: '100vh',
@@ -277,5 +253,4 @@ const styles = {
     color: '#999',
   },
 };
-
 export default ImprovedErrorBoundary;

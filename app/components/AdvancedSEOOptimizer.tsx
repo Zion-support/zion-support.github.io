@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOData {
   title: string;
   description: string;
@@ -23,7 +22,6 @@ interface SEOData {
   section?: string;
   tags?: string[];
 }
-
 interface AdvancedSEOOptimizerProps {
   seoData: SEOData;
   enableStructuredData?: boolean;
@@ -31,7 +29,6 @@ interface AdvancedSEOOptimizerProps {
   enableTwitterCards?: boolean;
   enableSchemaMarkup?: boolean;
 }
-
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
   enableStructuredData = true,
@@ -40,10 +37,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableSchemaMarkup = true,
 }) => {
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
-
     const baseStructuredData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -62,13 +57,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       ],
       ...seoData.structuredData,
     };
-
     return baseStructuredData;
   }, [enableStructuredData, seoData.structuredData]);
-
   const generateBreadcrumbStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null;
-
     const breadcrumbData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -87,13 +79,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         },
       ],
     };
-
     return breadcrumbData;
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
-
   const generateFAQStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null;
-
     const faqData = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -116,14 +105,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         },
       ],
     };
-
     return faqData;
   }, [enableSchemaMarkup]);
-
   const _structuredData = generateStructuredData();
   const _breadcrumbData = generateBreadcrumbStructuredData();
   const _faqData = generateFAQStructuredData();
-
   useEffect(() => {
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -135,7 +121,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       document.head.appendChild(newMetaDescription);
       newMetaDescription.setAttribute('content', seoData.description);
     }
-
     // Update canonical URL
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
@@ -147,7 +132,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       newCanonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-
   const _addStructuredData = (data: Record<string, unknown>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -156,7 +140,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     document.head.appendChild(script);
     _structuredDataRef.current = script;
   };
-
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -165,7 +148,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       });
     }
   };
-
   const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       window.addEventListener('load', () => {
@@ -180,7 +162,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       });
     }
   };
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -188,7 +169,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <link rel="canonical" href={seoData.canonicalUrl} />
-      
       {/* Open Graph Tags */}
       {enableOpenGraph && (
         <>
@@ -198,7 +178,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           <meta property="og:locale" content="en_US" />
         </>
       )}
-
       {/* Twitter Card Tags */}
       {enableTwitterCards && (
         <>
@@ -210,7 +189,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           <meta name="twitter:creator" content="@ziontechgroup" />
         </>
       )}
-
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
@@ -223,32 +201,27 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
       <meta name="theme-color" content="#4F46E5" />
-
       {/* Structured Data */}
       {enableSchemaMarkup && _structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(_structuredData)}
         </script>
       )}
-
       {enableSchemaMarkup && _breadcrumbData && (
         <script type="application/ld+json">
           {JSON.stringify(_breadcrumbData)}
         </script>
       )}
-
       {enableSchemaMarkup && _faqData && (
         <script type="application/ld+json">
           {JSON.stringify(_faqData)}
         </script>
       )}
-
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
-
       {/* DNS Prefetch for better performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
@@ -256,5 +229,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
 export default AdvancedSEOOptimizer;

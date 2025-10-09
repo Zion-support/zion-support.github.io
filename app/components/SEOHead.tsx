@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -17,7 +16,6 @@ interface SEOHeadProps {
   nofollow?: boolean;
   canonical?: string;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
@@ -37,7 +35,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -47,7 +44,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content={author} />
       <meta name="robots" content={robotsContent} />
       <link rel="canonical" href={canonicalUrl} />
-
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
@@ -56,7 +52,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
@@ -64,7 +59,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-
       {/* Article specific meta tags */}
       {type === 'article' && (
         <>
@@ -77,13 +71,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           ))}
         </>
       )}
-
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#4f46e5" />
       <meta name="msapplication-TileColor" content="#4f46e5" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       <meta name="application-name" content="Zion Tech Group" />
-
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -118,5 +110,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
-
 export default SEOHead;

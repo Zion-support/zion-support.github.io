@@ -1,14 +1,11 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
   description:
     'Privacy policy and data protection information for Zion Tech Group services and website.',
 };
-
 export { metadata };
-
 const PrivacyPage: React.FC = () => {
   return (
     <>
@@ -19,13 +16,11 @@ const PrivacyPage: React.FC = () => {
               <h1 className='text-4xl font-bold text-gray-900 mb-8'>
                 Privacy Policy
               </h1>
-
               <div className='prose prose-lg max-w-none'>
                 <p className='text-gray-600 mb-6'>
                   <strong>Last updated:</strong>{' '}
                   {new Date().toLocaleDateString()}
                 </p>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Information We Collect
@@ -43,7 +38,6 @@ const PrivacyPage: React.FC = () => {
                     <li>Communication preferences</li>
                   </ul>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     How We Use Your Information
@@ -60,7 +54,6 @@ const PrivacyPage: React.FC = () => {
                     <li>Improve our services and develop new features</li>
                   </ul>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Information Sharing
@@ -71,7 +64,6 @@ const PrivacyPage: React.FC = () => {
                     described in this policy.
                   </p>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Data Security
@@ -82,7 +74,6 @@ const PrivacyPage: React.FC = () => {
                     alteration, disclosure, or destruction.
                   </p>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Contact Us
@@ -109,5 +100,4 @@ const PrivacyPage: React.FC = () => {
     </>
   );
 };
-
 export default PrivacyPage;

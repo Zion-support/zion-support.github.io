@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -289,8 +288,6 @@ const AIServicesPage: React.FC = () => {
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
-<<<<<<< HEAD
-
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
@@ -624,13 +621,8 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
-=======
-      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     }
   ];
-
   // const categories = [
   //   { name: 'All', count: aiServices.length },
   //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
@@ -646,7 +638,6 @@ const AIServicesPage: React.FC = () => {
   //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
   //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
   // ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -654,7 +645,6 @@ const AIServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. Enterprise-grade AI solutions starting at $800/month." />
         <meta name="keywords" content="ai services, machine learning, nlp, computer vision, ai consulting, automation, artificial intelligence" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -664,7 +654,6 @@ const AIServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive artificial intelligence solutions designed to transform your business operations and drive innovation.
           </p>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -684,7 +673,6 @@ const AIServicesPage: React.FC = () => {
               <div className="text-gray-300">Support</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -704,14 +692,12 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Choose Your AI Solution
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -720,7 +706,6 @@ const AIServicesPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
-
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>
@@ -730,7 +715,6 @@ const AIServicesPage: React.FC = () => {
                     {service.category}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -747,7 +731,6 @@ const AIServicesPage: React.FC = () => {
                     )}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
@@ -759,7 +742,6 @@ const AIServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -770,7 +752,6 @@ const AIServicesPage: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="text-center">
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
@@ -787,7 +768,6 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -816,5 +796,4 @@ const AIServicesPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIServicesPage;

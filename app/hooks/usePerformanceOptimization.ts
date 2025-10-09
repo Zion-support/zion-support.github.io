@@ -1,7 +1,5 @@
 'use client';
-
 import { useEffect, useCallback } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -9,18 +7,15 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
-
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
     const _paintEntries = performance.getEntriesByType('paint');
-
     const metrics: PerformanceMetrics = {
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
@@ -32,7 +27,6 @@ export const usePerformanceOptimization = () => {
       cumulativeLayoutShift: 0,
       firstInputDelay: 0,
     };
-
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
       const _entries = list.getEntries();
@@ -42,7 +36,6 @@ export const usePerformanceOptimization = () => {
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
     // Measure CLS
     let _clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
@@ -58,7 +51,6 @@ export const usePerformanceOptimization = () => {
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
-
     // Measure FID
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
@@ -70,17 +62,14 @@ export const usePerformanceOptimization = () => {
       }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
-
     // Cleanup observers after a delay
     setTimeout(() => {
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
     }, 10000);
-
     return metrics;
   }, []);
-
   const optimizeImages = useCallback(() => {
     const _images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver(entries => {
@@ -93,13 +82,10 @@ export const usePerformanceOptimization = () => {
         }
       });
     });
-
     images.forEach(img => imageObserver.observe(img));
   }, []);
-
   const preloadCriticalResources = useCallback(() => {
     const _criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-
     criticalResources.forEach(resource => {
       const _link = document.createElement('link');
       link.rel = 'preload';
@@ -111,7 +97,6 @@ export const usePerformanceOptimization = () => {
       document.head.appendChild(link);
     });
   }, []);
-
   useEffect(() => {
     // Measure performance after page load
     const timer = setTimeout(() => {
@@ -121,24 +106,18 @@ export const usePerformanceOptimization = () => {
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
         }
-         
         if (process.env['NODE_ENV'] === 'development') { 
           if (import.meta.env.DEV) { 
-
           } 
         }
       }
     }, 1000);
-
     // Optimize images
     optimizeImages();
-
     // Preload critical resources
     preloadCriticalResources();
-
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
-
   return {
     measurePerformance,
     optimizeImages,

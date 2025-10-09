@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
-
 export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -29,7 +28,6 @@ export default function Page() {
           </div>
         </div>
       </header>
-
       <section className='py-16'>
         <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
           <h2>Release Safety Model</h2>
@@ -47,7 +45,6 @@ export default function Page() {
           </ol>
         </div>
       </section>
-
       <section className='py-12 bg-white'>
         <div className='max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6'>
           <div className='rounded-xl border p-6'>
@@ -72,7 +69,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section className='py-16'>
         <div className='max-w-4xl mx-auto px-6'>
           <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>

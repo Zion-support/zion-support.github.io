@@ -1,12 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
 };
-
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -36,7 +34,6 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -66,7 +63,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +74,6 @@ export default function HomePage() {
                 We deliver measurable results through innovative AI solutions
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -91,7 +86,6 @@ export default function HomePage() {
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 </p>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
@@ -103,7 +97,6 @@ export default function HomePage() {
                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 </p>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                   <Link className="w-6 h-6 text-purple-600" />
@@ -118,7 +111,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -147,7 +139,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,5 +164,4 @@ export default function HomePage() {
     </div>
   );
 };
-
 export default HomePage;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
-
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
     {
@@ -137,16 +136,13 @@ const CybersecurityPage: React.FC = () => {
       technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']
     }
   ];
-
   const categories = [...new Set(securityServices.map(service => service.category))];
-
   return (
     <>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
         <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
@@ -169,7 +165,6 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,7 +205,6 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
@@ -231,7 +225,6 @@ const CybersecurityPage: React.FC = () => {
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-red-600">{service.price}</span>
@@ -240,7 +233,6 @@ const CybersecurityPage: React.FC = () => {
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates                        </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -252,7 +244,6 @@ const CybersecurityPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
@@ -263,7 +254,6 @@ const CybersecurityPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>                        <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
@@ -274,7 +264,6 @@ const CybersecurityPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <button className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
                         Get Security Consultation
                       </button>
@@ -284,7 +273,6 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </section>
         ))}
-
         {/* Cybersecurity Capabilities Showcase */}        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -327,7 +315,6 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-red-600 to-orange-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -360,5 +347,4 @@ const CybersecurityPage: React.FC = () => {
     </>
   );
 };
-
 export default CybersecurityPage;

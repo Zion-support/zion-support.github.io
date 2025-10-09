@@ -1,15 +1,12 @@
 'use client';
-
 import React from 'react'
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
  */
-
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number[]>;
-
   private constructor() {
     this.metrics = new Map()
   }
@@ -27,10 +24,8 @@ export class PerformanceOptimizer {
     fn: () => T | Promise<T>
   ): T | Promise<T> {
     const start = performance.now()
-    
     try {
       const result = fn()
-      
       if (result instanceof Promise) {
         return result.finally(() => {
           this.recordMetric(name, performance.now() - start)
@@ -53,7 +48,6 @@ export class PerformanceOptimizer {
     }
     const metrics = this.metrics.get(name)!
     metrics.push(duration)
-    
     // Keep only last 100 measurements
     if (metrics.length > 100) {
       metrics.shift()
@@ -78,7 +72,6 @@ export class PerformanceOptimizer {
     wait: number,
   ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout | null = null
-    
     return (...args: Parameters<T>) => {
       if (timeout) {
         clearTimeout(timeout)
@@ -96,7 +89,6 @@ export class PerformanceOptimizer {
     limit: number,
   ): (...args: Parameters<T>) => void {
     let inThrottle: boolean = false
-    
     return (...args: Parameters<T>) => {
       if (!inThrottle) {
         func(...args)
@@ -114,16 +106,13 @@ export class PerformanceOptimizer {
     func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>()
-    
     return (...args: Parameters<T>): ReturnType<T> => {
       const key = JSON.stringify(args)
-      
       if (cache.has(key)) {
         return cache.get(key)!
       }
       const result = func(...args)
       cache.set(key, result)
-      
       return result
     }
   }
@@ -138,7 +127,6 @@ export class PerformanceOptimizer {
         count: values.length
       }
     })
-    
     return summary
   }
 }

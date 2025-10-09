@@ -1,10 +1,8 @@
 'use client';
-
 /**
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
-
 interface AnalyticsEvent {
   category: string;
   action: string;
@@ -12,46 +10,37 @@ interface AnalyticsEvent {
   value?: number;
   nonInteraction?: boolean;
 }
-
 interface PerformanceMetrics {
   metric: string;
   value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
-
 interface ErrorReport {
   message: string;
   stack?: string;
   componentStack?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
-
 class AnalyticsTracker {
   private isInitialized = false;
   private queue: Array<() => void> = [];
-
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
     if (typeof window === 'undefined') return;
-
     this.isInitialized = true;
-
     // Process queued events
     this.queue.forEach(fn => fn());
     this.queue = [];
-
     // Track initial page view
     this.trackPageView(window.location.pathname);
   }
-
   /**
    * Track a custom event
    */
   trackEvent(event: AnalyticsEvent): void {
     if (typeof window === 'undefined') return;
-
     const track = () => {
       if (window.gtag) {
         window.gtag('event', event.action, {
@@ -61,25 +50,21 @@ class AnalyticsTracker {
           non_interaction: event.nonInteraction,
         });
       }
-
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
         }
     };
-
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
     }
   }
-
   /**
    * Track page views
    */
   trackPageView(path: string): void {
     if (typeof window === 'undefined') return;
-
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'page_view', {
@@ -88,24 +73,20 @@ class AnalyticsTracker {
           page_location: window.location.href,
         });
       }
-
       if (process.env.NODE_ENV === 'development') {
         }
     };
-
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
     }
   }
-
   /**
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
     if (typeof window === 'undefined') return;
-
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'performance', {
@@ -115,24 +96,20 @@ class AnalyticsTracker {
           metric_rating: metrics.rating,
         });
       }
-
       if (process.env.NODE_ENV === 'development') {
         }
     };
-
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
     }
   }
-
   /**
    * Track errors
    */
   trackError(error: ErrorReport): void {
     if (typeof window === 'undefined') return;
-
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'exception', {
@@ -141,24 +118,20 @@ class AnalyticsTracker {
           error_severity: error.severity,
         });
       }
-
       // Always log errors to console
       console.error('[Analytics Error]', error);
     };
-
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
     }
   }
-
   /**
    * Track user timing
    */
   trackTiming(category: string, variable: string, value: number, label?: string): void {
     if (typeof window === 'undefined') return;
-
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'timing_complete', {
@@ -168,24 +141,20 @@ class AnalyticsTracker {
           event_label: label,
         });
       }
-
       if (process.env.NODE_ENV === 'development') {
         }
     };
-
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
     }
   }
-
   /**
    * Track conversions
    */
   trackConversion(conversionId: string, value?: number): void {
     if (typeof window === 'undefined') return;
-
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'conversion', {
@@ -194,11 +163,9 @@ class AnalyticsTracker {
           currency: 'USD',
         });
       }
-
       if (process.env.NODE_ENV === 'development') {
         }
     };
-
     if (this.isInitialized) {
       track();
     } else {
@@ -206,10 +173,8 @@ class AnalyticsTracker {
     }
   }
 }
-
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
-
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {
   if (document.readyState === 'complete') {
@@ -220,5 +185,4 @@ if (typeof window !== 'undefined') {
     });
   }
 }
-
 export default analyticsTracker;

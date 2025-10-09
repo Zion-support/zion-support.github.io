@@ -1,17 +1,14 @@
 'use client';
-
 /**
  * Comprehensive Error Logging System
  * Provides structured error logging with different severity levels
  */
-
 export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical',
 }
-
 export interface ErrorLogEntry {
   timestamp: string;
   severity: ErrorSeverity;
@@ -22,11 +19,9 @@ export interface ErrorLogEntry {
   url?: string;
   stackTrace?: string;
 }
-
 class ErrorLogger {
   private logs: ErrorLogEntry[] = [];
   private maxLogs = 1000;
-
   /**
    * Log an error with context
    */
@@ -46,24 +41,20 @@ class ErrorLogger {
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack,
     };
-
     // Add to internal log
     this.logs.push(entry);
     if (this.logs.length > this.maxLogs) {
       this.logs.shift();
     }
-
     // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {
       this.logToConsole(entry);
     }
-
     // Send to external logging service in production
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
       this.sendToExternalService(entry);
     }
   }
-
   /**
    * Log to console with appropriate styling
    */
@@ -74,7 +65,6 @@ class ErrorLogger {
       [ErrorSeverity.HIGH]: 'color: #fb923c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold',
     };
-
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {
       console.error('Error:', entry.error);
@@ -85,7 +75,6 @@ class ErrorLogger {
       }
     console.groupEnd();
   }
-
   /**
    * Send error to external logging service
    */
@@ -93,11 +82,9 @@ class ErrorLogger {
     try {
       // In production, you would send to a service like Sentry, LogRocket, etc.
       const endpoint = process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
-
       if (!endpoint) {
         return;
       }
-
       await fetch(endpoint, {
         method: 'POST',
         headers: {
@@ -119,28 +106,24 @@ class ErrorLogger {
       console.error('Failed to send error to external service:', error);
     }
   }
-
   /**
    * Get recent logs
    */
   getRecentLogs(count: number = 10): ErrorLogEntry[] {
     return this.logs.slice(-count);
   }
-
   /**
    * Get logs by severity
    */
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
     return this.logs.filter(log => log.severity === severity);
   }
-
   /**
    * Clear all logs
    */
   clearLogs(): void {
     this.logs = [];
   }
-
   /**
    * Export logs as JSON
    */
@@ -148,21 +131,15 @@ class ErrorLogger {
     return JSON.stringify(this.logs, null, 2);
   }
 }
-
 // Singleton instance
 const errorLogger = new ErrorLogger();
-
 // Convenience functions
 export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-
 export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-
 export const logWarning = (message: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-
 export const logInfo = (message: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-
 export default errorLogger;

@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube } from 'lucide-react';
-
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -14,7 +13,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
   ];
-
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
@@ -25,7 +23,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
     { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
   ];
-
   const specializedServices = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen computing' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
@@ -34,7 +31,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' }
   ];
-
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -43,7 +39,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' }
   ];
-
   const supportLinks = [
     { name: 'Contact Us', url: '/contact' },
     { name: 'Documentation', url: '/docs' },
@@ -52,7 +47,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Status Page', url: '/status' },
     { name: 'System Status', url: '/system-status' }
   ];
-
   const legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
@@ -61,7 +55,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Security Policy', url: '/security' },
     { name: 'SLA Agreement', url: '/sla' }
   ];
-
   const socialLinks = [
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -70,14 +63,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube }
   ];
-
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
-
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -95,7 +86,6 @@ const Footer: React.FC = memo(() => {
               Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
-            
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
@@ -109,27 +99,25 @@ const Footer: React.FC = memo(() => {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {contactInfo.email}
-                </a>
+                <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                <span className="text-gray-300 text-sm">
-                  {contactInfo.address}
-                </span>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Clock className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">
-                  {contactInfo.hours}
-                </span>
+                <span>24/7 Support Available</span>
               </div>
             </div>
-
+          </div>
+            {/* Awards & Certifications */}
+            <div className="mt-8">
+              <div className="flex items-center space-x-2 mb-4">
+                <Award className="w-5 h-5 text-yellow-400" />
+                <span className="font-semibold text-gray-200">Certifications</span>
+              </div>
+            </div>
             {/* Social Links */}
             <div className="mt-6">
               <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
@@ -149,7 +137,6 @@ const Footer: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
@@ -175,7 +162,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
@@ -200,7 +186,6 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
-
             {/* Emerging Technologies */}
             <div className="mt-8">
               <h4 className="text-md font-semibold mb-4 text-gray-200">Emerging Tech</h4>
@@ -219,7 +204,6 @@ const Footer: React.FC = memo(() => {
               </ul>
             </div>
           </div>
-
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-gray-200">Company</h3>
@@ -236,7 +220,6 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
-
             <h4 className="text-md font-semibold mb-4 text-gray-200">Support</h4>
             <ul className="space-y-2 mb-8">
               {supportLinks.map((link, index) => (
@@ -251,7 +234,6 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
-
             <h4 className="text-md font-semibold mb-4 text-gray-200">Legal</h4>
             <ul className="space-y-2">
               {legal.map((link, index) => (
@@ -268,7 +250,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="max-w-4xl mx-auto text-center">
@@ -286,13 +267,35 @@ const Footer: React.FC = memo(() => {
                 Subscribe
               </button>
             </div>
+          </div>
+        </div>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+        {/* Stats Section */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
+              <div className="text-gray-300">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">AI Solutions</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime Guarantee</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support Available</div>
+            </div>
             <p className="text-xs text-gray-500 mt-4">
               We respect your privacy. Unsubscribe at any time.
             </p>
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -301,7 +304,6 @@ const Footer: React.FC = memo(() => {
               © 2024 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Empowering businesses with AI innovation since 2020</span>
             </div>
-            
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -317,12 +319,15 @@ const Footer: React.FC = memo(() => {
               </div>
             </div>
           </div>
+          <div className="mt-4 pt-4 border-t border-gray-700 text-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
   );
 });
-
 Footer.displayName = 'Footer';
-
 export default Footer;

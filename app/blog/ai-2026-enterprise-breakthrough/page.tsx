@@ -1,9 +1,7 @@
 import React from 'react';
 import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 // Metadata removed for Vite compatibility
-
 export default function AI2026EnterpriseBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -21,7 +19,6 @@ export default function AI2026EnterpriseBreakthrough() {
             <span className="text-lg font-semibold">Breakthrough Technology</span>
           </div>
         </div>
-
         {/* Content Sections */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
@@ -45,7 +42,6 @@ export default function AI2026EnterpriseBreakthrough() {
               </li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
             <ul className="space-y-4 text-gray-300">
@@ -68,7 +64,6 @@ export default function AI2026EnterpriseBreakthrough() {
             </ul>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-8">

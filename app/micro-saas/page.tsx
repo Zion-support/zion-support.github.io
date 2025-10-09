@@ -14,7 +14,9 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Developer Tools',
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-code-review',
+      popular: true
     },
     {
       title: 'AI Test Generation Suite',
@@ -40,7 +42,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Marketing & SEO Tools
     {
       title: 'AI SEO Optimizer Pro',
@@ -90,7 +91,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Business Intelligence & Analytics
     {
       title: 'AI Analytics Dashboard Pro',
@@ -128,7 +128,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Finance & Accounting Tools
     {
       title: 'AI Invoice Generator Pro',
@@ -166,7 +165,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Healthcare & Wellness
     {
       title: 'AI Health Monitoring Platform',
@@ -204,7 +202,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Education & Learning
     {
       title: 'AI Language Learning Platform',
@@ -242,7 +239,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI E-commerce & Retail
     {
       title: 'AI Inventory Optimizer Pro',
@@ -280,7 +276,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Legal & Compliance
     {
       title: 'AI Legal Document Analyzer',
@@ -294,7 +289,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Real Estate & Property Management
     {
       title: 'AI Property Valuation Engine',
@@ -320,7 +314,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Agriculture & Food Tech
     {
       title: 'AI Crop Monitoring System',
@@ -346,7 +339,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Transportation & Logistics
     {
       title: 'AI Route Optimization Pro',
@@ -372,7 +364,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Energy & Sustainability
     {
       title: 'AI Energy Management System',
@@ -398,7 +389,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Entertainment & Media
     {
       title: 'AI Content Moderation Suite',
@@ -424,7 +414,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Security & Surveillance
     {
       title: 'AI Security Camera System',
@@ -450,7 +439,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Research & Development
     {
       title: 'AI Research Assistant Pro',
@@ -488,7 +476,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Real Estate & Property
     {
       title: 'AI Real Estate Analyzer Pro',
@@ -514,7 +501,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI HR & Recruitment
     {
       title: 'AI HR Recruitment Suite',
@@ -540,7 +526,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Project Management
     {
       title: 'AI Project Manager Pro',
@@ -566,7 +551,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Supply Chain & Logistics
     {
       title: 'AI Supply Chain Optimizer',
@@ -592,7 +576,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Agriculture & Food Tech
     {
       title: 'AI Precision Agriculture Platform',
@@ -618,7 +601,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Energy & Sustainability
     {
       title: 'AI Energy Management System',
@@ -644,7 +626,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Gaming & Entertainment
     {
       title: 'AI Game Development Suite',
@@ -670,7 +651,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Transportation & Mobility
     {
       title: 'AI Fleet Management System',
@@ -696,7 +676,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Research & Development
     {
       title: 'AI Research Assistant Pro',
@@ -722,7 +701,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-
     // AI Personal Productivity
     {
       title: 'AI Personal Assistant Pro',
@@ -1606,9 +1584,142 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+    },
+    // Additional Real Micro SAAS Services
+    {
+      title: 'AI Invoice Generator Pro',
+      description: 'Automatically generate professional invoices, track payments, and manage billing with AI-powered smart categorization.',
+      icon: '📄',
+      price: '$39/month',
+      features: ['Auto invoice generation', 'Payment tracking', 'Smart categorization', 'Multi-currency support', 'PDF export', 'Client portal'],
+      benefits: ['Save 10+ hours/month', 'Reduce billing errors', 'Faster payments', 'Professional appearance'],
+      marketPrice: '$79-150/month',
+      category: 'Finance & Billing',
+      technologies: ['React', 'Node.js', 'PDF Generation', 'Payment APIs', 'AI Classification'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-invoice-generator',
+      popular: true
+    },
+    {
+      title: 'Smart Meeting Scheduler AI',
+      description: 'Intelligent meeting scheduling that finds optimal times, handles timezone conflicts, and sends automated reminders.',
+      icon: '📅',
+      price: '$29/month',
+      features: ['Smart scheduling', 'Timezone handling', 'Calendar integration', 'Auto reminders', 'Meeting analytics', 'Team coordination'],
+      benefits: ['Reduce scheduling time by 80%', 'Eliminate double bookings', 'Improve attendance rates', 'Save 5+ hours/week'],
+      marketPrice: '$59-120/month',
+      category: 'Productivity',
+      technologies: ['Calendar APIs', 'AI Optimization', 'React', 'Node.js', 'Email Automation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/smart-scheduler'
+    },
+    {
+      title: 'AI Document Analyzer',
+      description: 'Extract key information from documents, contracts, and forms using advanced AI text analysis and data extraction.',
+      icon: '📋',
+      price: '$79/month',
+      features: ['Document parsing', 'Data extraction', 'Contract analysis', 'Form processing', 'OCR capabilities', 'Export to databases'],
+      benefits: ['Process documents 10x faster', 'Reduce manual data entry', 'Improve accuracy', 'Save 20+ hours/week'],
+      marketPrice: '$150-300/month',
+      category: 'Document Management',
+      technologies: ['OCR APIs', 'NLP Models', 'React', 'Node.js', 'Database Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/document-analyzer'
+    },
+    {
+      title: 'AI Customer Feedback Analyzer',
+      description: 'Analyze customer feedback, reviews, and surveys to extract actionable insights and sentiment analysis.',
+      icon: '💬',
+      price: '$49/month',
+      features: ['Sentiment analysis', 'Topic extraction', 'Trend identification', 'Report generation', 'Multi-language support', 'Real-time monitoring'],
+      benefits: ['Understand customer needs', 'Improve products/services', 'Increase satisfaction', 'Make data-driven decisions'],
+      marketPrice: '$99-200/month',
+      category: 'Customer Analytics',
+      technologies: ['NLP APIs', 'Sentiment Analysis', 'React', 'Node.js', 'Analytics Dashboard'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/feedback-analyzer'
+    },
+    {
+      title: 'Smart Inventory Manager',
+      description: 'AI-powered inventory management with demand forecasting, automated reordering, and stock optimization.',
+      icon: '📦',
+      price: '$99/month',
+      features: ['Demand forecasting', 'Auto reordering', 'Stock optimization', 'Barcode scanning', 'Multi-location support', 'Analytics dashboard'],
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs', 'Improve cash flow', 'Save 15+ hours/week'],
+      marketPrice: '$199-400/month',
+      category: 'Inventory Management',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'Barcode APIs', 'Database Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/inventory-manager',
+      popular: true
+    },
+    {
+      title: 'AI Lead Scoring Engine',
+      description: 'Automatically score and prioritize leads using AI to identify the most promising prospects for your sales team.',
+      icon: '🎯',
+      price: '$69/month',
+      features: ['Lead scoring', 'Behavioral analysis', 'Predictive modeling', 'CRM integration', 'Custom scoring rules', 'Performance tracking'],
+      benefits: ['Increase conversion by 40%', 'Focus on hot leads', 'Improve sales efficiency', 'Boost revenue'],
+      marketPrice: '$149-300/month',
+      category: 'Sales & Marketing',
+      technologies: ['Machine Learning', 'CRM APIs', 'React', 'Node.js', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/lead-scoring'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense tracking with receipt scanning, automatic categorization, and compliance reporting.',
+      icon: '💰',
+      price: '$19/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Compliance reporting', 'Multi-currency', 'Tax preparation', 'Team management'],
+      benefits: ['Save 8+ hours/month', 'Reduce errors', 'Improve compliance', 'Easier tax filing'],
+      marketPrice: '$39-80/month',
+      category: 'Finance & Billing',
+      technologies: ['OCR Technology', 'React', 'Node.js', 'Tax APIs', 'Mobile App'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/expense-tracker'
+    },
+    {
+      title: 'Smart Password Manager',
+      description: 'AI-powered password management with security analysis, breach monitoring, and automated password generation.',
+      icon: '🔐',
+      price: '$15/month',
+      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Multi-device sync', 'Team sharing', '2FA integration'],
+      benefits: ['Improve security', 'Reduce password fatigue', 'Prevent breaches', 'Easy team management'],
+      marketPrice: '$30-60/month',
+      category: 'Security',
+      technologies: ['Encryption', 'React', 'Node.js', 'Security APIs', 'Mobile Apps'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/password-manager'
+    },
+    {
+      title: 'AI Time Tracking Assistant',
+      description: 'Intelligent time tracking with automatic project detection, productivity insights, and team performance analytics.',
+      icon: '⏰',
+      price: '$25/month',
+      features: ['Auto time tracking', 'Project detection', 'Productivity insights', 'Team analytics', 'Integration support', 'Reporting'],
+      benefits: ['Accurate time tracking', 'Identify productivity patterns', 'Improve team efficiency', 'Better project management'],
+      marketPrice: '$49-100/month',
+      category: 'Productivity',
+      technologies: ['AI Detection', 'React', 'Node.js', 'Analytics', 'Integration APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/time-tracking'
+    },
+    {
+      title: 'AI Website Builder',
+      description: 'Create professional websites automatically using AI with custom designs, content generation, and SEO optimization.',
+      icon: '🌐',
+      price: '$79/month',
+      features: ['AI design generation', 'Content creation', 'SEO optimization', 'Mobile responsive', 'E-commerce integration', 'Analytics'],
+      benefits: ['Build websites 5x faster', 'Professional designs', 'SEO optimized', 'No coding required'],
+      marketPrice: '$149-300/month',
+      category: 'Web Development',
+      technologies: ['AI Design', 'React', 'Node.js', 'SEO Tools', 'E-commerce APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/website-builder',
+      popular: true
     }
   ];
-
   const categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
@@ -1623,7 +1734,6 @@ const MicroSAASPage: React.FC = () => {
     { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
     { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -1631,7 +1741,6 @@ const MicroSAASPage: React.FC = () => {
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -1641,7 +1750,6 @@ const MicroSAASPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
           </p>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -1661,7 +1769,6 @@ const MicroSAASPage: React.FC = () => {
               <div className="text-gray-300">Uptime</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -1681,14 +1788,12 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Choose Your Perfect AI Tools
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -1697,7 +1802,6 @@ const MicroSAASPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
-
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>
@@ -1707,7 +1811,6 @@ const MicroSAASPage: React.FC = () => {
                     {service.category}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -1724,7 +1827,6 @@ const MicroSAASPage: React.FC = () => {
                     )}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
@@ -1736,7 +1838,6 @@ const MicroSAASPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -1747,7 +1848,6 @@ const MicroSAASPage: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="text-center">
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
@@ -1764,7 +1864,6 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -1793,5 +1892,4 @@ const MicroSAASPage: React.FC = () => {
     </div>
   );
 };
-
 export default MicroSAASPage;

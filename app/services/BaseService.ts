@@ -1,13 +1,10 @@
 'use client';
-
 /**
  * Base Service Class
  * Provides common functionality for all service classes
  */
-
 import { apiClient } from '../utils/apiClient';
 import logger from '../utils/logger';
-
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;
@@ -15,17 +12,14 @@ export interface ServiceOptions {
   cache?: boolean;
   cacheDuration?: number;
 }
-
 export interface CacheEntry<T> {
   data: T;
   timestamp: number;
 }
-
 export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
   private cache: Map<string, CacheEntry<unknown>> = new Map();
-
   constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl;
     this.options = {
@@ -36,45 +30,37 @@ export class BaseService {
       ...options,
     };
   }
-
   /**
    * Check if cached data is still valid
    */
   protected isCacheValid(key: string): boolean {
     const _entry = this.cache.get(key);
     if (!entry) return false;
-
     const _age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
   }
-
   /**
    * Get data from cache
    */
   protected getFromCache<T>(key: string): T | null {
     if (!this.options.cache) return null;
-    
     if (this.isCacheValid(key)) {
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
       return this.cache.get(key)?.data as T;
     }
-
     this.cache.delete(key);
     return null;
   }
-
   /**
    * Set data in cache
    */
   protected setInCache<T>(key: string, data: T): void {
     if (!this.options.cache) return;
-
     this.cache.set(key, {
       data,
       timestamp: Date.now(),
     });
   }
-
   /**
    * Clear cache for a specific key or all cache
    */
@@ -85,29 +71,24 @@ export class BaseService {
       this.cache.clear();
     }
   }
-
   /**
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const _cacheKey = `GET:${endpoint}`;
-    
     if (useCache) {
       const _cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;
     }
-
     try {
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries,
       });
-
       if (useCache) {
         this.setInCache(cacheKey, response.data);
       }
-
       return response.data;
     } catch (error) {
       logger.error('GET request failed', error as Error, {
@@ -117,7 +98,6 @@ export class BaseService {
       throw error;
     }
   }
-
   /**
    * Make a POST request
    */
@@ -137,7 +117,6 @@ export class BaseService {
       throw error;
     }
   }
-
   /**
    * Make a PUT request
    */
@@ -157,7 +136,6 @@ export class BaseService {
       throw error;
     }
   }
-
   /**
    * Make a PATCH request
    */
@@ -177,7 +155,6 @@ export class BaseService {
       throw error;
     }
   }
-
   /**
    * Make a DELETE request
    */
@@ -197,7 +174,6 @@ export class BaseService {
       throw error;
     }
   }
-
   /**
    * Handle service error
    */
@@ -209,5 +185,4 @@ export class BaseService {
     throw error;
   }
 }
-
 export default BaseService;

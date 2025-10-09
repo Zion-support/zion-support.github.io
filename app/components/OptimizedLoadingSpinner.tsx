@@ -1,5 +1,4 @@
 import React, { memo, useMemo } from 'react';
-
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
@@ -8,7 +7,6 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
@@ -28,7 +26,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
-
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -39,7 +36,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
-
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
@@ -50,10 +46,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
-
     const renderSpinner = useMemo(() => {
       const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
-
       switch (variant) {
         case 'dots':
           return (
@@ -67,7 +61,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               ))}
             </div>
           );
-
         case 'pulse':
           return (
             <div
@@ -76,7 +69,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               aria-label='Loading'
             />
           );
-
         case 'skeleton':
           return (
             <div className='space-y-2' role='status' aria-label='Loading'>
@@ -93,7 +85,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               />
             </div>
           );
-
         case 'bars':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'>
@@ -109,7 +100,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               ))}
             </div>
           );
-
         case 'spinner':
         default:
           return (
@@ -121,13 +111,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
-
     const containerClasses = useMemo(() => {
       const _baseClasses = 'flex items-center justify-center';
       const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
       return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
-
     return (
       <div className={containerClasses}>
         <div className='text-center'>
@@ -142,7 +130,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     );
   }
 );
-
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-
 export default OptimizedLoadingSpinner;

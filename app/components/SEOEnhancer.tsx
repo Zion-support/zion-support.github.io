@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -9,7 +8,6 @@ interface SEOEnhancerProps {
   url?: string;
   children: React.ReactNode;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
@@ -81,7 +79,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "geoRadius": "1000000"
     }
   };
-
   return (
     <>
       <Helmet>
@@ -92,7 +89,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
@@ -102,7 +98,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Zion Tech Group" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={url} />
@@ -111,10 +106,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
-        
         {/* Canonical URL */}
         <link rel="canonical" href={url} />
-        
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -124,5 +117,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </>
   );
 };
-
 export default SEOEnhancer;

@@ -1,13 +1,10 @@
 'use client';
-
 /**
  * Performance Reporter
  * Comprehensive performance monitoring and reporting
  */
-
 import React from 'react'
 import { logger } from './logger'
-
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -26,7 +23,6 @@ class PerformanceReporter {
   private metrics: PerformanceMetric[] = []
   private reportingInterval?: NodeJS.Timeout
   private isEnabled: boolean = false
-
   /**
    * Initialize performance monitoring
    */
@@ -35,19 +31,15 @@ class PerformanceReporter {
       return
     }
     this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production'
-
     if (!this.isEnabled) {
       return
     }
     // Monitor Core Web Vitals
     this.monitorWebVitals()
-
     // Monitor navigation timing
     this.monitorNavigationTiming()
-
     // Monitor resource timing
     this.monitorResourceTiming()
-
     // Setup periodic reporting
     if (config?.reportInterval) {
       this.reportingInterval = setInterval(() => {
@@ -71,16 +63,13 @@ class PerformanceReporter {
       const lcpObserver = new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries()
         const lastEntry = entries[entries.length - 1]
-        
         if (lastEntry && 'renderTime' in lastEntry) {
           const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime || 
                        (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
           this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       })
-
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })
-
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries()
@@ -91,9 +80,7 @@ class PerformanceReporter {
           }
         })
       })
-
       fidObserver.observe({ type: 'first-input', buffered: true })
-
       // Cumulative Layout Shift (CLS)
       let clsValue = 0
       const clsObserver = new PerformanceObserver((entryList) => {
@@ -104,9 +91,7 @@ class PerformanceReporter {
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
       })
-
       clsObserver.observe({ type: 'layout-shift', buffered: true })
-
       // First Contentful Paint (FCP)
       const fcpObserver = new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries()
@@ -116,9 +101,7 @@ class PerformanceReporter {
           }
         })
       })
-
       fcpObserver.observe({ type: 'paint', buffered: true })
-
     } catch (error) {
       logger.warn('Failed to setup Web Vitals monitoring', { error })
     }
@@ -133,16 +116,13 @@ class PerformanceReporter {
     window.addEventListener('load', () => {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        
         if (navigation) {
           // Time to First Byte (TTFB)
           const ttfb = navigation.responseStart - navigation.requestStart
           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
-
           // DOM Content Loaded
           const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
           this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
-
           // Load Complete
           const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
@@ -160,13 +140,11 @@ class PerformanceReporter {
     window.addEventListener('load', () => {
       setTimeout(() => {
         const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
-        
         // Find slowest resources
         const slowResources = resources
           .filter((resource) => resource.duration > 1000)
           .sort((a, b) => b.duration - a.duration)
           .slice(0, 10)
-
         slowResources.forEach((resource) => {
           logger.warn('Slow resource detected', {
             name: resource.name,
@@ -188,7 +166,6 @@ class PerformanceReporter {
       timestamp: Date.now()
     };
     this.metrics.push(metric)
-
     // Log poor performing metrics
     if (rating === 'poor') {
       logger.warn(`Poor ${name} performance`, { value, rating })
@@ -247,7 +224,6 @@ class PerformanceReporter {
     }
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
-
     return {
       metrics: this.metrics
       navigation
@@ -277,7 +253,6 @@ class PerformanceReporter {
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null
       }
     })
-
     // Send to remote endpoint if configured
     // this.sendToEndpoint(report)
   }
@@ -293,7 +268,6 @@ class PerformanceReporter {
 }
 // Export singleton instance
 export const performanceReporter = new PerformanceReporter()
-
 // Auto-initialize in browser
 if (typeof window !== 'undefined') {
   performanceReporter.init({

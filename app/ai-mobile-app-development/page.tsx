@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
-
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
@@ -161,7 +160,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       platforms: ['iOS', 'Android', 'Cross-platform']
     }
   ];
-
   const mobileFeatures = [
     {
       title: 'AI Integration',
@@ -184,7 +182,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       icon: <Cloud className="w-8 h-8 text-orange-600" />
     }
   ];
-
   const developmentProcess = [
     {
       step: '1',
@@ -212,7 +209,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       description: 'Ongoing maintenance, updates, and support'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
       <Helmet>
@@ -220,7 +216,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered mobile app development services including iOS, Android, and cross-platform solutions. Build intelligent mobile apps with cutting-edge AI technology." />
         <meta name="keywords" content="mobile app development, AI mobile apps, iOS development, Android development, cross-platform apps, mobile AI integration" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -249,7 +244,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Development Process */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,7 +255,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               Proven 5-step process for building exceptional AI-powered mobile apps
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {developmentProcess.map((step, index) => (
               <div key={index} className="text-center">
@@ -275,7 +268,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,25 +279,21 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               Comprehensive AI-powered mobile app development and support services
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mobileServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-indigo-600">{service.price}</span>
                   <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
                 </div>
-                
                 <div className="mb-4">
                   <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded">
                     {service.category}
                   </span>
                 </div>
-                
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -314,14 +302,12 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                
                 <a 
                   href="/contact"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
@@ -333,7 +319,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,7 +330,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               Advanced AI technology with expert mobile development expertise
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {mobileFeatures.map((feature, index) => (
               <div key={index} className="text-center">
@@ -359,7 +343,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,7 +354,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               Real results from our mobile app development clients
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
@@ -379,14 +361,12 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               <div className="font-semibold text-gray-900">David Kim</div>
               <div className="text-sm text-gray-500">Founder, FitAI</div>
             </div>
-            
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!"</p>
               <div className="font-semibold text-gray-900">Lisa Wang</div>
               <div className="text-sm text-gray-500">CEO, ShopSmart</div>
             </div>
-            
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly."</p>
@@ -396,7 +376,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -428,5 +407,4 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIMobileAppDevelopmentPage;

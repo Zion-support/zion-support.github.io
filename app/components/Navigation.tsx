@@ -1,39 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Settings,
-  Globe,
-  Target,
-  Database,
-  Smartphone,
-  Lock
-} from 'lucide-react';
-
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRight } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -41,7 +13,6 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -49,14 +20,12 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
-
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -125,57 +94,40 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
-            onClick={closeAllMenus}
-          >
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex space-x-8">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            
-            <Link 
-              href="/about" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -183,14 +135,14 @@ const Navigation: React.FC = () => {
                           <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                           </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
                           {category.services.slice(0, 5).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors group"
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
                               <div className="font-medium">{service.name}</div>
@@ -212,11 +164,10 @@ const Navigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                     <Link
                       href="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
                       View All Services
@@ -225,34 +176,30 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             <Link 
               href="/case-studies" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
-            
-            <Link
-              href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            <Link 
+              href="/blog" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Blog
             </Link>
-            
-            <Link
-              href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            <Link 
+              href="/contact" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Contact
             </Link>
-            
             {/* CTA Button */}
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
@@ -260,7 +207,6 @@ const Navigation: React.FC = () => {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -270,91 +216,53 @@ const Navigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
+        {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
-            <div className="space-y-4">
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
                 href="/"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
-              
-              <Link 
-                href="/about" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+              <Link
+                href="/about"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
-
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex} className="space-y-1">
-                        <div className="text-cyan-400 font-semibold text-sm">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 4).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
               <Link
-                href="/case-studies"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                href="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Case Studies
+                Services
               </Link>
-              
               <Link
                 href="/blog"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Blog
               </Link>
-              
               <Link
                 href="/contact"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-              
-              {/* Mobile CTA */}
-              <Link
-                href="/contact"
-                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
+              <a
+                href="tel:+13024640950"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
-                Get Started
-              </Link>
+                <Phone className="w-4 h-4 inline mr-2" />
+                (302) 464-0950
+              </a>
             </div>
           </div>
         )}
@@ -362,5 +270,4 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-
 export default Navigation;

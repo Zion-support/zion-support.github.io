@@ -1,5 +1,4 @@
 'use client';
-
 /**
  * Accessibility Checker Utility
  *

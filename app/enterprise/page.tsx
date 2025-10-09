@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const EnterprisePage: React.FC = () => {
   return (
     <>
@@ -43,7 +42,6 @@ const EnterprisePage: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Solutions Section */}
       <section id="solutions" className="py-24 bg-gradient-to-br from-blue-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -55,7 +53,6 @@ const EnterprisePage: React.FC = () => {
               Comprehensive suite of enterprise-grade AI and IT solutions tailored for large organizations
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🚀</div>
@@ -64,7 +61,6 @@ const EnterprisePage: React.FC = () => {
                 Automate complex workflows with advanced AI. Reduce manual work by 70% and improve accuracy.
               </p>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
@@ -72,7 +68,6 @@ const EnterprisePage: React.FC = () => {
                 Bank-grade security with SOC 2 compliance, encryption, and advanced threat detection.
               </p>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Advanced Analytics</h3>
@@ -80,7 +75,6 @@ const EnterprisePage: React.FC = () => {
                 Real-time insights with predictive analytics. Make data-driven decisions faster.
               </p>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">☁️</div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
@@ -88,7 +82,6 @@ const EnterprisePage: React.FC = () => {
                 Scalable, resilient cloud architecture with 99.9% uptime guarantee.
               </p>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Integration</h3>
@@ -96,7 +89,6 @@ const EnterprisePage: React.FC = () => {
                 Seamlessly integrate AI into existing systems. No disruption to operations.
               </p>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
@@ -105,7 +97,6 @@ const EnterprisePage: React.FC = () => {
               </p>
             </div>
           </div>
-
           <div className="text-center mt-12">
             <Link
               href="/contact"
@@ -119,5 +110,4 @@ const EnterprisePage: React.FC = () => {
     </>
   );
 };
-
 export default EnterprisePage;

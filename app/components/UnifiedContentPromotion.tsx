@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
     {
@@ -22,14 +21,12 @@ const UnifiedContentPromotion: React.FC = () => {
       icon: "👨‍💼"
     }
   ];
-
   return (
     <div className="unified-content-promotion py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           Why Choose Zion Tech Group?
         </h2>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 
@@ -52,5 +49,4 @@ const UnifiedContentPromotion: React.FC = () => {
     </div>
   );
 };
-
 export default UnifiedContentPromotion;

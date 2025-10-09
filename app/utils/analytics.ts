@@ -1,11 +1,9 @@
 'use client';
-
 import React from 'react'
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
  */
-
 export interface AnalyticsEvent {
   action: string;
   category: string;
@@ -21,17 +19,14 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
-
   /**
    * Initialize analytics service
    */
   initialize(): void {
     if (this.isInitialized) return
-    
     try {
       // Check if we're in a browser environment
       if (typeof window === 'undefined') return
-
       // Process queued events
       this.processQueue()
       this.isInitialized = true
@@ -184,7 +179,6 @@ class AnalyticsService {
 }
 // Export singleton instance
 export const analytics = new AnalyticsService()
-
 // Export convenience functions
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
@@ -200,7 +194,6 @@ export const trackTiming = (
   label?: string
 ) => analytics.trackTiming(category, variable, value, label)
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
-
 // Initialize on import
 if (typeof window !== 'undefined') {
   analytics.initialize()

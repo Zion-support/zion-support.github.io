@@ -1,8 +1,6 @@
 'use client';
-
 import React from 'react';
 import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
-
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
     {
@@ -36,7 +34,6 @@ const AutonomousSystemsPage: React.FC = () => {
       technologies: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       {/* Hero Section */}
@@ -61,7 +58,6 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +69,6 @@ const AutonomousSystemsPage: React.FC = () => {
               Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -82,7 +77,6 @@ const AutonomousSystemsPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Operation</h3>
               <p className="text-gray-600">Systems that never sleep, continuously monitoring and optimizing your operations</p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Cpu className="w-8 h-8 text-green-600" />
@@ -90,7 +84,6 @@ const AutonomousSystemsPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Healing</h3>
               <p className="text-gray-600">Automatically detect and resolve issues before they impact your business</p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart className="w-8 h-8 text-green-600" />
@@ -101,7 +94,6 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,13 +105,11 @@ const AutonomousSystemsPage: React.FC = () => {
               Comprehensive autonomous systems designed to transform your business operations
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {autonomousServices.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -131,7 +121,6 @@ const AutonomousSystemsPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -143,7 +132,6 @@ const AutonomousSystemsPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-green-600">{service.marketPrice}</span>
@@ -155,7 +143,6 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -178,5 +165,4 @@ const AutonomousSystemsPage: React.FC = () => {
     </div>
   );
 };
-
 export default AutonomousSystemsPage;
