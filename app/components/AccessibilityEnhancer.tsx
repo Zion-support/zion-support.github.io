@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Add accessibility enhancements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach((button, index) => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', `Button ${index + 1}`);
-        }
-      });
-    };
-
-    const addFocusManagement = () => {
-      // Add focus management for better keyboard navigation
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', (e) => {
-          (e.target as HTMLElement).style.outline = '2px solid #06b6d4';
-        });
-        
-        element.addEventListener('blur', (e) => {
-          (e.target as HTMLElement).style.outline = 'none';
-        });
-      });
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -59,7 +28,6 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Apply accessibility settings
     const root = document.documentElement;
-    
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -83,6 +51,31 @@ const AccessibilityEnhancer: React.FC = () => {
       root.classList.remove('focus-visible');
     }
 
+    // Add accessibility enhancements
+    const addAriaLabels = () => {
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach((button, index) => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', `Button ${index + 1}`);
+        }
+      });
+    };
+
+    const addFocusManagement = () => {
+      // Add focus management for better keyboard navigation
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      focusableElements.forEach((element) => {
+        element.addEventListener('focus', (e) => {
+          (e.target as HTMLElement).style.outline = '2px solid #06b6d4';
+        });
+        element.addEventListener('blur', (e) => {
+          (e.target as HTMLElement).style.outline = 'none';
+        });
+      });
+    };
+
     // Add keyboard navigation support
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
@@ -93,7 +86,6 @@ const AccessibilityEnhancer: React.FC = () => {
           e.preventDefault();
         }
       }
-
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
@@ -101,11 +93,11 @@ const AccessibilityEnhancer: React.FC = () => {
           activeElement.blur();
         }
       }
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
     };
 
     addAriaLabels();
     addFocusManagement();
+    document.addEventListener('keydown', handleKeyDown);
 
     // Re-run on DOM changes
     const observer = new MutationObserver(() => {
@@ -120,14 +112,11 @@ const AccessibilityEnhancer: React.FC = () => {
 
     return () => {
       observer.disconnect();
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [settings]);
 
   return null;
 };
 
-<<<<<<< HEAD
 export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer;
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd

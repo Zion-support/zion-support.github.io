@@ -1,34 +1,25 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
-=======
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -42,13 +33,11 @@ const Navigation: React.FC = memo(() => {
             </div>
             <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors duration-300">
               Home
             </Link>
-            
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -59,7 +48,6 @@ const Navigation: React.FC = memo(() => {
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
               {isServicesOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-slate-700 p-6"
@@ -89,7 +77,6 @@ const Navigation: React.FC = memo(() => {
                 </div>
               )}
             </div>
-
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors duration-300">
               About
             </Link>
@@ -100,7 +87,6 @@ const Navigation: React.FC = memo(() => {
               Blog
             </Link>
           </div>
-
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -117,31 +103,25 @@ const Navigation: React.FC = memo(() => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
 import React, { useState, useEffect } from 'react';
-
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -161,7 +141,6 @@ export default function Navigation() {
               </span>
             </a>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -176,7 +155,6 @@ export default function Navigation() {
               ))}
             </div>
           </div>
-
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
@@ -186,7 +164,6 @@ export default function Navigation() {
               Get Started
             </a>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -220,7 +197,6 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="md:hidden">
@@ -253,7 +229,6 @@ export default function Navigation() {
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700">
@@ -286,7 +261,6 @@ export default function Navigation() {
               >
                 Blog
               </Link>
-              
               {/* Mobile Services */}
               <div className="pt-4 border-t border-slate-700">
                 <h3 className="text-cyan-400 font-semibold mb-3">Services</h3>
@@ -305,7 +279,6 @@ export default function Navigation() {
                   </Link>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-slate-700">
                 <a
@@ -333,29 +306,23 @@ export default function Navigation() {
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, MapPin, ChevronDown } from 'lucide-react';
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -363,7 +330,6 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -371,14 +337,12 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
-
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
@@ -507,7 +471,6 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -526,7 +489,6 @@ const Navigation: React.FC = () => {
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -535,7 +497,6 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -548,7 +509,6 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6">
@@ -600,7 +560,6 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             <Link 
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
@@ -608,7 +567,6 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
-
             <Link
               to="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -616,7 +574,6 @@ const Navigation: React.FC = () => {
             >
               Blog
             </Link>
-
             <Link
               to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -624,7 +581,6 @@ const Navigation: React.FC = () => {
             >
               Contact
             </Link>
-
             {/* CTA Button */}
             <Link
               to="/contact"
@@ -635,7 +591,6 @@ const Navigation: React.FC = () => {
               (302) 464-0950
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -647,7 +602,6 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -666,7 +620,6 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
-
               {/* Mobile Services */}
               <div>
                 <button
@@ -706,7 +659,6 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-
               <Link
                 to="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -714,7 +666,6 @@ const Navigation: React.FC = () => {
               >
                 Case Studies
               </Link>
-
               <Link
                 to="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -722,7 +673,6 @@ const Navigation: React.FC = () => {
               >
                 Blog
               </Link>
-
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -730,7 +680,6 @@ const Navigation: React.FC = () => {
               >
                 Contact
               </Link>
-
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -746,6 +695,5 @@ const Navigation: React.FC = () => {
     </nav>
   );
 });
-
 Navigation.displayName = 'Navigation';
 export default Navigation;

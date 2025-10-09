@@ -20,7 +20,7 @@ const DocsPage = React.lazy(() => import('./app/docs/page'));
 const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
 const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
+// const DemoPage = React.lazy(() => import('./app/demo/page')); // Page not found
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
 // Memoized components for better performance
@@ -90,7 +90,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error for debugging
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
@@ -190,7 +190,7 @@ const App: React.FC = () => {
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
-                <Route path="/demo" element={<DemoPage />} />
+                {/* <Route path="/demo" element={<DemoPage />} /> */}
                 <Route path="/consultation" element={<ConsultationPage />} />
               </Routes>
             </Suspense>

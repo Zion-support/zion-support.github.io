@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Github, ArrowUp } from 'lucide-react';
-
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
-
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
-
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -38,7 +31,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
   ];
-
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
@@ -57,7 +49,6 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
-
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Intelligent robotics' },
@@ -72,7 +63,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
   ];
-
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -80,21 +70,18 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
-
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Docs', url: '/api-docs' },
     { name: 'Support', url: '/support' },
     { name: 'Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
-<<<<<<< HEAD
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
   ];
-
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20 relative overflow-hidden">
       {/* Background Effects */}
@@ -118,7 +105,6 @@ const Footer: React.FC = memo(() => {
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
               </p>
-              
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -138,7 +124,6 @@ const Footer: React.FC = memo(() => {
                   <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
                 </div>
               </div>
-              
               {/* Social Links */}
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
@@ -161,7 +146,6 @@ const Footer: React.FC = memo(() => {
                 </a>
               </div>
             </div>
-
             {/* AI Services */}
             <div>
               <h3 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h3>
@@ -188,14 +172,11 @@ const Footer: React.FC = memo(() => {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Github, ArrowRight, Shield, Award, Users, Zap } from 'lucide-react';
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-=======
     { name: 'Terms of Service', url: '/terms' }
   ];
-
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -204,29 +185,23 @@ import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Github, ArrowR
     { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
   ];
-
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
   };
-
   const achievements = [
     { stat: '50+ Successful Projects' },
     { stat: '100+ Happy Clients' },
     { stat: '300% Average ROI' },
     { stat: '99.9% Uptime Guarantee' }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
-<<<<<<< HEAD
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -242,13 +217,10 @@ export default function Footer() {
                 </div>
               </Link>
             </div>
-            
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -260,17 +232,12 @@ export default function Footer() {
                   className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-slate-700 transition-all duration-300 group"
                   aria-label={social.name}
                 >
-<<<<<<< HEAD
                   {social.icon}
-=======
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
                 </a>
               ))}
             </div>
           </div>
-
-<<<<<<< HEAD
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
@@ -287,7 +254,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
@@ -304,7 +270,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -333,7 +298,6 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
           {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
@@ -370,7 +334,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           {/* IT Solutions */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">IT Solutions</h3>
@@ -407,7 +370,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Contact Info */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Contact Us</h3>
@@ -440,7 +402,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
             {/* IT Services */}
             <div>
               <h3 className="text-lg font-semibold mb-6 text-blue-400">IT Services</h3>
@@ -467,7 +428,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
             {/* Micro SAAS Solutions */}
             <div>
               <h3 className="text-lg font-semibold mb-6 text-green-400">Micro SAAS</h3>
@@ -495,7 +455,6 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-
           {/* Additional Services Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Emerging Technologies */}
@@ -515,7 +474,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-
             {/* Company Links */}
             <div>
               <h3 className="text-lg font-semibold mb-6 text-pink-400">Company</h3>
@@ -533,7 +491,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-
             {/* Support Links */}
             <div>
               <h3 className="text-lg font-semibold mb-6 text-orange-400">Support</h3>
@@ -552,7 +509,6 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-
           {/* Stats Section */}
           <div className="bg-slate-800/50 rounded-2xl p-8 mb-12 border border-cyan-400/20">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -575,7 +531,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-gray-700 bg-slate-800/30">
           <div className="container mx-auto px-4 py-6">
@@ -598,9 +553,7 @@ export default function Footer() {
           </div>
         </div>
           {/* Resources */}
-=======
           {/* AI Services */}
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
@@ -626,7 +579,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
@@ -653,7 +605,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Emerging Technologies */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
@@ -681,7 +632,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
           <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
@@ -716,7 +666,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         {/* Company Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -735,8 +684,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-<<<<<<< HEAD
         {/* Newsletter Signup */}
         <div className="cyber-card-advanced p-8 mb-12">
           <div className="max-w-2xl mx-auto text-center">
@@ -761,7 +708,6 @@ export default function Footer() {
             <p className="text-gray-300 text-sm mb-4">
               Get the latest AI and technology insights delivered to your inbox.
             </p>
-=======
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
             <ul className="space-y-2">
@@ -778,7 +724,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -791,25 +736,19 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
             <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
             <div className="flex space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
               />
-<<<<<<< HEAD
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-=======
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -828,15 +767,11 @@ export default function Footer() {
               </a>
             </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="bg-slate-800 border-t border-slate-700">
-=======
       </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-gray-700/50">
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
@@ -853,7 +788,6 @@ export default function Footer() {
                 Cookie Policy
               </Link>
             </div>
-<<<<<<< HEAD
             <button
               onClick={scrollToTop}
               className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
@@ -862,7 +796,6 @@ export default function Footer() {
               <ArrowUp className="h-4 w-4" />
               <span>Back to Top</span>
             </button>
-=======
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -877,18 +810,13 @@ export default function Footer() {
                 <span>Global Reach</span>
               </div>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
           </div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
       </div>
     </footer>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
   );
 });
-
 Footer.displayName = 'Footer';
 export default Footer;

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-
 export default function AboutPage() {
   const teamMembers = [
     {
@@ -33,7 +32,6 @@ export default function AboutPage() {
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
   ];
-
   const values = [
     {
       icon: Brain,
@@ -56,14 +54,12 @@ export default function AboutPage() {
       description: 'We believe technology should make the world better, more efficient, and more connected.'
     }
   ];
-
   const achievements = [
     { number: '500+', label: 'Successful Projects', icon: Target },
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '300%', label: 'Average ROI', icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
-
   const timeline = [
     {
       year: '2018',
@@ -101,11 +97,9 @@ export default function AboutPage() {
       description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -133,7 +127,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +139,6 @@ export default function AboutPage() {
                 <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
-=======
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -162,7 +154,6 @@ export default function AboutPage() {
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">ISO 27001 Certified</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-purple-400" />
@@ -176,7 +167,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -234,7 +224,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -259,7 +248,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Team */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -294,7 +282,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Achievements */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -323,7 +310,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Timeline */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -355,7 +341,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

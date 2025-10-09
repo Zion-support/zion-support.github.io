@@ -1,9 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIAutomationPage: React.FC = () => {
   const automationServices = [
     {
@@ -31,7 +29,6 @@ const AIAutomationPage: React.FC = () => {
       features: ['Data extraction', 'Pattern recognition', 'Predictive analytics', 'Automated reporting']
     }
   ];
-
   const benefits = [
     'Increased Efficiency',
     'Reduced Errors',
@@ -39,11 +36,9 @@ const AIAutomationPage: React.FC = () => {
     '24/7 Operation',
     'Scalable Solutions'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -64,7 +59,6 @@ const AIAutomationPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Services Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Automation Services</h2>
@@ -86,7 +80,6 @@ const AIAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Benefits</h2>
@@ -99,7 +92,6 @@ const AIAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Automate Your Business?</h2>
@@ -116,18 +108,14 @@ const AIAutomationPage: React.FC = () => {
           </section>
         </div>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
@@ -149,7 +137,6 @@ const AIAutomationPage: React.FC = () => {
       benefits: ["Smart escalation", "Context awareness", "Learning capabilities"]
     }
   ];
-
   const automationTypes = [
     {
       title: "Process Automation",
@@ -167,7 +154,6 @@ const AIAutomationPage: React.FC = () => {
       examples: ["Chatbots", "Ticket routing", "Response generation", "Sentiment analysis"]
     }
   ];
-
   const benefits = [
     "80% efficiency increase",
     "60% time savings",
@@ -176,7 +162,6 @@ const AIAutomationPage: React.FC = () => {
     "Scalable solutions",
     "Cost reduction"
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -224,14 +209,12 @@ const AIAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
     { value: '500+', label: 'Automated Processes' },
     { value: '80%', label: 'Efficiency Increase' },
     { value: '60%', label: 'Time Saved' },
     { value: '4.9/5', label: 'Client Rating' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -240,9 +223,7 @@ const AIAutomationPage: React.FC = () => {
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-automation" />
       </Helmet>
-      
       <Header />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -273,7 +254,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -291,7 +271,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -303,7 +282,6 @@ const AIAutomationPage: React.FC = () => {
               Our AI automation platform combines machine learning, natural language processing, and intelligent decision-making to deliver unprecedented efficiency.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
@@ -329,7 +307,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Automation Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -341,7 +318,6 @@ const AIAutomationPage: React.FC = () => {
               From simple task automation to complex decision-making processes, our AI solutions cover every aspect of business automation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {automationTypes.map((type, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
@@ -360,7 +336,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -372,7 +347,6 @@ const AIAutomationPage: React.FC = () => {
               Our AI automation solutions deliver measurable results that transform your business operations.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -385,7 +359,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -397,7 +370,6 @@ const AIAutomationPage: React.FC = () => {
               Flexible pricing plans designed to scale with your business needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -439,7 +411,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -471,11 +442,8 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
 export default AIAutomationPage;

@@ -3,35 +3,23 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
 // Preload critical components
 const preloadComponents = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   setTimeout(() => {
     // Preload components after initial render
   }, 100);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       // Preload components after initial render
     }, 100);
   }
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 };
-
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -41,21 +29,17 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
 const HomePage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
   useEffect(() => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
       preloadComponents();
     }, 1000);
-
     return () => clearTimeout(timer);
   }, []);
-
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -65,7 +49,6 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
   // Testimonials data
   const testimonials = [
     {
@@ -87,7 +70,6 @@ const HomePage: React.FC = () => {
       rating: 5
     }
   ];
-
   // Services data
   const services = [
     {
@@ -115,7 +97,6 @@ const HomePage: React.FC = () => {
       features: ["Web Applications", "Mobile Apps", "API Development", "Database Design"]
     }
   ];
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -126,7 +107,6 @@ const HomePage: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Header />
@@ -159,7 +139,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -171,7 +150,6 @@ const HomePage: React.FC = () => {
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
@@ -193,7 +171,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -202,7 +179,6 @@ const HomePage: React.FC = () => {
               What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Clients Say</span>
             </h2>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -221,7 +197,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -250,31 +225,24 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Lazy loaded components */}
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentPromotionBanner />
       </Suspense>
-      
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentCarousel />
       </Suspense>
-      
       <Suspense fallback={<ServiceCardSkeleton />}>
         <DynamicContentShowcase />
       </Suspense>
-      
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentStatistics />
       </Suspense>
-      
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentNewsletterSignup />
       </Suspense>
-      
       <Footer />
     </div>
   );
 };
-
 export default HomePage;

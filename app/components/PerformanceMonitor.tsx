@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -10,8 +7,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor performance metrics
@@ -21,13 +16,11 @@ const PerformanceMonitor: React.FC = () => {
         // This would typically use the web-vitals library
         console.log('Performance monitoring enabled');
       }
-
       // Monitor page load time
       window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
         console.log(`Page load time: ${loadTime}ms`);
       });
-
       // Monitor memory usage if available
       if ('memory' in performance) {
         const memory = (performance as any).memory;
@@ -38,9 +31,7 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
     };
-
     monitorPerformance();
-
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -50,16 +41,12 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
       });
-
       observer.observe({ entryTypes: ['longtask'] });
-
       return () => {
         observer.disconnect();
       };
     }
   }, []);
-
   return null;
 };
-
 export default PerformanceMonitor;
