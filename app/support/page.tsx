@@ -293,12 +293,8 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default SupportPage;
-
- cursor/analyze-improve-and-deploy-application-cde4
