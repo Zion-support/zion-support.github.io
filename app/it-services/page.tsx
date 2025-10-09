@@ -7,10 +7,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
-<<<<<<< HEAD
-    // Infrastructure & Cloud Services
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',

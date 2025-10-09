@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -263,6 +267,17 @@ const Navigation: React.FC = () => {
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
             </Link>
+          </div>
+
+          {/* Sidebar Toggle Button */}
+          <div className="hidden lg:block">
+            <button
+              onClick={onSidebarToggle}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              aria-label="Toggle sidebar"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
           </div>
 
           {/* Mobile Menu Button */}

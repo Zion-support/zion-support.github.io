@@ -3,6 +3,7 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -36,6 +37,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
@@ -55,6 +57,7 @@ const HomePage: React.FC = () => {
   }, []);
   return (
     <>
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -124,7 +127,7 @@ const HomePage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
-        <Navigation />
+        <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
