@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -79,7 +80,8 @@ const Footer: React.FC = () => {
     { name: 'Blog', url: '/blog' },
     { name: 'News', url: '/news' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'Demo', url: '/demo' }
+    { name: 'Demo', url: '/demo' },
+    { name: 'Specialized Solutions', url: '/specialized-services' }
   ];
 
   const supportLinks = [
@@ -212,13 +214,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {additionalServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    to={service.url}
+                  <a
+                    href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

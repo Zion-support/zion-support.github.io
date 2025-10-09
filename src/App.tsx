@@ -7,6 +7,7 @@ const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const ServicesPage = lazy(() => import('./services/page'));
+const SpecializedServicesPage = lazy(() => import('./specialized-services/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
@@ -83,6 +84,7 @@ const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const IoTEdgePage = lazy(() => import('./iot-edge/page'));
 const ITInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const ITServicesPage = lazy(() => import('./it-services/page'));
+const ITConsultingPage = lazy(() => import('./it-consulting/page'));
 const MarketingToolsPage = lazy(() => import('./marketing-tools/page'));
 const MicroSAASPage = lazy(() => import('./micro-saas/page'));
 const NetworkingPage = lazy(() => import('./networking/page'));
@@ -171,6 +173,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/specialized-services" element={<SpecializedServicesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             
@@ -246,6 +249,7 @@ const App: React.FC = () => {
             <Route path="/iot-edge" element={<IoTEdgePage />} />
             <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
             <Route path="/it-services" element={<ITServicesPage />} />
+            <Route path="/it-consulting" element={<ITConsultingPage />} />
             <Route path="/marketing-tools" element={<MarketingToolsPage />} />
             <Route path="/micro-saas" element={<MicroSAASPage />} />
             <Route path="/networking" element={<NetworkingPage />} />
