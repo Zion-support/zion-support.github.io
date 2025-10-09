@@ -679,3 +679,14 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Total Issues: ${metrics.totalIssues}
+- Errors: ${metrics.errors}
+- Warnings: ${metrics.warnings}
+- Info: ${metrics.info}
+- Score: ${metrics.score}
+- Last Checked: ${new Date().toISOString()}
+    `.trim();
+  }
+}
+
+export default AccessibilityEnhancer;
