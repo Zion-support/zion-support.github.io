@@ -26,8 +26,7 @@ class ErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+      }
     // Send error to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {

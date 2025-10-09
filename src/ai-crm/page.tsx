@@ -4,10 +4,6 @@ import React from 'react';
 import { Brain, Users, Target, TrendingUp, Shield, Clock, BarChart, CheckCircle, ArrowRight, Star, Award, Globe, Phone, Mail, Calendar, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
-import { Brain, Users, BarChart, Zap, Shield, Clock, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-d3ca:src/ai-crm/page.tsx
 
 const AICRMPage: React.FC = () => {
   const features = [

@@ -439,13 +439,22 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 480px) {
+=======
+/* Enhanced Responsive Design */
+@media (max-width: 640px) {
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   .cyber-grid {
     background-size: 20px 20px;
   }
   
   .neon-text {
+<<<<<<< HEAD
     font-size: 1.2rem;
+=======
+    font-size: 1.25rem;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
   
   .cyber-text {
@@ -455,12 +464,17 @@ body {
   
   .cyber-card {
     padding: 0.75rem;
+<<<<<<< HEAD
+=======
+    margin: 0.5rem;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
   
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
+<<<<<<< HEAD
 }
 
 /* Loading Animations */
@@ -832,11 +846,25 @@ body {
   
   .quantum-field {
     animation-duration: 3s;
+=======
+  
+  .holographic-text {
+    font-size: 2rem;
+  }
+  
+  .quantum-card {
+    padding: 0.75rem;
+  }
+  
+  .hologram-card {
+    padding: 0.75rem;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
 }
 
 @media (max-width: 480px) {
   .cyber-grid {
+<<<<<<< HEAD
     background-size: 10px 10px;
   }
   
@@ -870,3 +898,146 @@ body {
     animation: none;
   }
 }
+=======
+    background-size: 15px 15px;
+  }
+  
+  .neon-text {
+    font-size: 1rem;
+  }
+  
+  .cyber-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.25px;
+  }
+  
+  .cyber-card {
+    padding: 0.5rem;
+    margin: 0.25rem;
+  }
+  
+  .cyber-button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .holographic-text {
+    font-size: 1.5rem;
+  }
+  
+  .quantum-card {
+    padding: 0.5rem;
+  }
+  
+  .hologram-card {
+    padding: 0.5rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .cyber-grid {
+    background-size: 75px 75px;
+  }
+  
+  .neon-text {
+    font-size: 3rem;
+  }
+  
+  .cyber-text {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .cyber-card {
+    padding: 2rem;
+  }
+  
+  .cyber-button {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-grid {
+    background-size: 100px 100px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .cyber-grid,
+  .neural-network-bg,
+  .matrix-rain,
+  .particle-field {
+    display: none;
+  }
+  
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  .neon-text,
+  .cyber-text,
+  .holographic-text {
+    color: black;
+    text-shadow: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neon-text,
+  .cyber-text,
+  .holographic-text,
+  .energy-pulse,
+  .cyber-scan-line,
+  .quantum-card::before,
+  .glitch {
+    animation: none;
+  }
+  
+  .cyber-card:hover,
+  .hologram-card:hover,
+  .quantum-card:hover {
+    transform: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-dark: #0a0a0a;
+    --bg-darker: #050505;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+  }
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-dark: #f8fafc;
+    --bg-darker: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+  }
+  
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7

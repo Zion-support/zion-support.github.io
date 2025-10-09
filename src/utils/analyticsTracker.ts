@@ -119,7 +119,7 @@ class AnalyticsTracker {
         });
       }
       // Always log errors to console
-      console.error('[Analytics Error]', error);
+      // console.error('[Analytics Error]', error);
     };
     if (this.isInitialized) {
       track();

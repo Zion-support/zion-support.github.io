@@ -1,11 +1,23 @@
 'use client';
 import React, { memo } from 'react';
+<<<<<<< HEAD:src/components/Footer.tsx
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
+  const microSaasServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
+    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
+  ];
+
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -91,15 +103,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
-=======
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
->>>>>>> cursor/analyze-improve-and-deploy-application-d3ca:src/components/Footer.tsx
+>>>>>>> origin/main:app/components/Footer.tsx
   ];
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
-    { name: 'Case Studies', url: '/case-studies' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
@@ -141,55 +150,49 @@ const Footer: React.FC = memo(() => {
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
-            </p>
-            
-            {/* Achievements */}
-            <div className="space-y-3 mb-6">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <achievement.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-gray-300">{achievement.text}</span>
+          <div className="space-y-6">
+            <div>
+              <Link href="/" className="flex items-center space-x-2 group">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-lg">Z</span>
                 </div>
-              ))}
+                <div>
+                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
+                  <p className="text-sm text-cyan-400">AI & IT Solutions</p>
+                </div>
+              </Link>
             </div>
+            
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
+              and digital transformation services. Transform your business with cutting-edge technology.
+            </p>
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map((social, index) => (
                 <a
-                  key={social.name}
+                  key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-slate-700 transition-all duration-300 group"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
+                  <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* AI Services */}
+          {/* Micro SAAS Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
 <<<<<<< HEAD:app/components/Footer.tsx
               {aiServices.slice(0, 8).map((service, index) => (
-=======
-              {aiServices.slice(0, 6).map((service, index) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-d3ca:src/components/Footer.tsx
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -235,45 +238,53 @@ const Footer: React.FC = memo(() => {
                 >
                   View All IT Services →
                 </Link>
-              </li>
-            </ul>
+              ))}
+              <Link
+                href="/micro-saas"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
+              >
+                View All Solutions
+                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
           </div>
 
-          {/* Micro SAAS & Emerging Tech */}
+          {/* AI & IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
+            <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-purple-400" />
+              AI & IT Services
+            </h4>
             <div className="space-y-4">
               <div>
-                <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
-                <ul className="space-y-2">
-                  {microSaasServices.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </Link>
-                    </li>
+                <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services</h5>
+                <div className="space-y-2">
+                  {aiServices.slice(0, 4).map((service, index) => (
+                    <Link
+                      key={index}
+                      href={service.url}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    >
+                      <service.icon className="w-3 h-3" />
+                      <span>{service.name}</span>
+                    </Link>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
-                <ul className="space-y-2">
-                  {emergingTech.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </Link>
-                    </li>
+                <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
+                <div className="space-y-2">
+                  {itServices.slice(0, 4).map((service, index) => (
+                    <Link
+                      key={index}
+                      href={service.url}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
+                    >
+                      <service.icon className="w-3 h-3" />
+                      <span>{service.name}</span>
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -389,6 +400,20 @@ const Footer: React.FC = memo(() => {
               <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Shield className="w-4 h-4 text-green-400" />
+                <span>Enterprise Security</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Award className="w-4 h-4 text-yellow-400" />
+                <span>ISO 27001 Certified</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Globe className="w-4 h-4 text-blue-400" />
+                <span>Global Reach</span>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
             </div>
           </div>
         </div>

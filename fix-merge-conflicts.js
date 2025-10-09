@@ -19,9 +19,9 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
+    // console.log(`Fixed merge conflicts in: ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
@@ -55,10 +55,10 @@ function findFilesWithConflicts(dir) {
 const appDir = path.join(__dirname, 'app');
 const filesWithConflicts = findFilesWithConflicts(appDir);
 
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
-filesWithConflicts.forEach(file => console.log(`- ${file}`));
+// console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
+filesWithConflicts.forEach(file => // console.log(`- ${file}`));
 
 // Fix all files
 filesWithConflicts.forEach(fixMergeConflicts);
 
-console.log('Merge conflict fixing completed!');
+// console.log('Merge conflict fixing completed!');

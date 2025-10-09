@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD:src/compliance/page.tsx
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
 const CompliancePage: React.FC = () => {
@@ -10,13 +12,15 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <Navigation />
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -281,8 +285,9 @@ const CompliancePage: React.FC = () => {
           </div>
         </section>
       </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 export default CompliancePage;

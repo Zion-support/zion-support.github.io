@@ -7,40 +7,40 @@ const __dirname = path.dirname(__filename);
 
 // Performance optimization script
 function optimizePerformance() {
-  console.log('🚀 Starting performance optimization...');
+  // console.log('🚀 Starting performance optimization...');
   
   // 1. Optimize images
-  console.log('📸 Optimizing images...');
+  // console.log('📸 Optimizing images...');
   optimizeImages();
   
   // 2. Optimize CSS
-  console.log('🎨 Optimizing CSS...');
+  // console.log('🎨 Optimizing CSS...');
   optimizeCSS();
   
   // 3. Optimize JavaScript
-  console.log('⚡ Optimizing JavaScript...');
+  // console.log('⚡ Optimizing JavaScript...');
   optimizeJavaScript();
   
   // 4. Generate performance report
-  console.log('📊 Generating performance report...');
+  // console.log('📊 Generating performance report...');
   generatePerformanceReport();
   
-  console.log('✅ Performance optimization completed!');
+  // console.log('✅ Performance optimization completed!');
 }
 
 function optimizeImages() {
   // This would typically use sharp or imagemin
-  console.log('  - Image optimization would be implemented here');
+  // console.log('  - Image optimization would be implemented here');
 }
 
 function optimizeCSS() {
   // This would typically use postcss plugins
-  console.log('  - CSS optimization would be implemented here');
+  // console.log('  - CSS optimization would be implemented here');
 }
 
 function optimizeJavaScript() {
   // This would typically use terser or esbuild
-  console.log('  - JavaScript optimization would be implemented here');
+  // console.log('  - JavaScript optimization would be implemented here');
 }
 
 function generatePerformanceReport() {
@@ -67,7 +67,7 @@ function generatePerformanceReport() {
     JSON.stringify(report, null, 2)
   );
   
-  console.log('  - Performance report generated: performance-report.json');
+  // console.log('  - Performance report generated: performance-report.json');
 }
 
 // Run optimization
