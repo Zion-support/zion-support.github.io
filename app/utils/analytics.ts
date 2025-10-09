@@ -1,76 +1,73 @@
-'use client';
-import React from 'react'
+'use client',
+import React from 'react',
 /**
- * Enhanced Analytics Utility
- * Provides type-safe analytics tracking with error handling
+ * Enhanced Analytics Utility;
+ * Provides type-safe analytics tracking with error handling;
  */
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export interface AnalyticsEvent {
-  action: string;
-  category: string;
+  action: string,
+  category: string,
   label?: string;
   value?: number;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, unknown>
 }
 export interface AnalyticsUser {
   id?: string;
-  properties?: Record<string, unknown>;
+  properties?: Record<string; unknown>
 }
 class AnalyticsService {
-  private isInitialized = false
+  private isInitialized = false;
   private queue: AnalyticsEvent[] = []
-  private readonly maxQueueSize = 100
+  private readonly maxQueueSize = 100;
   /**
-   * Initialize analytics service
+   * Initialize analytics service;
    */
   initialize(): void {
-    if (this.isInitialized) return
+    if (this.isInitialized) return;
     try {
-      // Check if we're in a browser environment
-      if (typeof window === 'undefined') return
-      // Process queued events
+      // Check if we're in a browser environment;
+      if (typeof window === 'undefined') return;
+      // Process queued events;
       this.processQueue()
-      this.isInitialized = true
+      this.isInitialized = true;
     } catch (error) {
       console.error('Analytics initialization failed:', error)
     }
   }
   /**
-   * Track a custom event
+   * Track a custom event;
    */
   trackEvent(event: AnalyticsEvent): void {
     try {
       if (!this.isInitialized) {
         this.queueEvent(event)
-        return
+        return;
       }
-      // Send to Google Analytics if available
+      // Send to Google Analytics if available;
       if (this.hasGtag()) {
         gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          ...event.metadata
+          ...event.metadata;
         })
       }
-      // Log in development
+      // Log in development;
       if (process.env['NODE_ENV'] === 'development') {
         }
     } catch (error) {
@@ -78,14 +75,14 @@ class AnalyticsService {
     }
   }
   /**
-   * Track page view
+   * Track page view;
    */
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
         gtag('config', this.config.gaId, {
           page_path: path,
-          page_title: title
+          page_title: title;
         })
       }
     } catch (error) {
@@ -93,14 +90,14 @@ class AnalyticsService {
     }
   }
   /**
-   * Track user properties
+   * Track user properties;
    */
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
         gtag('config', this.config.gaId, {
           user_id: user.id,
-          ...user.properties
+          ...user.properties;
         })
       }
     } catch (error) {
@@ -108,7 +105,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Track error events
+   * Track error events;
    */
   trackError(error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
@@ -117,7 +114,7 @@ class AnalyticsService {
       label: error.message,
       metadata: {
         stack: error.stack,
-        ...metadata
+        ...metadata;
       }
     })
   }
@@ -128,7 +125,7 @@ class AnalyticsService {
     category: string,
     variable: string,
     value: number,
-    label?: string
+    label?: string;
   ): void {
     try {
       if (this.hasGtag()) {
@@ -136,15 +133,15 @@ class AnalyticsService {
           name: variable,
           value: Math.round(value),
           event_category: category,
-          event_label: label
-        });
+          event_label: label;
+        })
       }
     } catch (error) {
       console.error('Failed to track timing:', error)
     }
   }
   /**
-   * Track performance metrics
+   * Track performance metrics;
    */
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
     try {
@@ -153,30 +150,30 @@ class AnalyticsService {
         category: 'web_vitals',
         label: metric,
         value: Math.round(value),
-        metadata
+        metadata;
       })
     } catch (error) {
       console.error('Failed to track performance:', error)
     }
   }
   /**
-   * Check if gtag is available
+   * Check if gtag is available;
    */
   private hasGtag(): boolean {
     return (
       typeof window !== 'undefined' &&
-      typeof window.gtag === 'function'
+      typeof window.gtag === 'function',
     )
   }
   /**
-   * Get Google Analytics ID
+   * Get Google Analytics ID;
    */
   private getGtagId(): string {
-    // Return the tracking ID from environment or config
+    // Return the tracking ID from environment or config;
     return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
   }
   /**
-   * Queue event for later processing
+   * Queue event for later processing;
    */
   private queueEvent(event: AnalyticsEvent): void {
     if (this.queue.length < this.maxQueueSize) {
@@ -184,7 +181,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Process queued events
+   * Process queued events;
    */
   private processQueue(): void {
     while (this.queue.length > 0) {
@@ -195,9 +192,9 @@ class AnalyticsService {
     }
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const analytics = new AnalyticsService()
-// Export convenience functions
+// Export convenience functions;
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title)
@@ -209,11 +206,11 @@ export const trackTiming = (
   category: string,
   variable: string,
   value: number,
-  label?: string
+  label?: string;
 ) => analytics.trackTiming(category, variable, value, label)
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
-// Initialize on import
+// Initialize on import;
 if (typeof window !== 'undefined') {
   analytics.initialize()
 }
-export default analytics
+export default analytics;

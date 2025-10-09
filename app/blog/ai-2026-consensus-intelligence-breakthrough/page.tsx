@@ -1,46 +1,41 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility
-
-// Focus management utility
+import React from 'react',
+// import { Metadata } from 'next', // Removed for Vite;
+// Metadata removed for Vite compatibility;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function ConsensusIntelligencePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return (<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🧠 CONSENSUS INTELLIGENCE • 2026
+              🧠 CONSENSUS INTELLIGENCE • 2026;
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI 2026: Consensus Intelligence Breakthrough
+              AI 2026: Consensus Intelligence Breakthrough;
             </h1>
             <p className="text-gray-600 text-lg">
-              Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols
+              Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols;
             </p>
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Consensus Intelligence Overview</h2>
             <p className="text-gray-700 mb-6">
-              The AI 2026 Consensus Intelligence Breakthrough represents a revolutionary advancement in 
-              AI decision-making, enabling <strong>unanimous decisions</strong> through 
-              <strong>quantum-accelerated consensus protocols</strong> that transform how 
+              The AI 2026 Consensus Intelligence Breakthrough represents a revolutionary advancement in;
+              AI decision-making, enabling <strong>unanimous decisions</strong> through;
+              <strong>quantum-accelerated consensus protocols</strong> that transform how;
               enterprises make complex strategic decisions.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -88,24 +83,24 @@ export default function ConsensusIntelligencePage() {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Consensus Revolution</h2>
             <p className="text-gray-700 mb-6">
-              Ready to achieve unanimous decision-making? Our consensus intelligence system 
+              Ready to achieve unanimous decision-making? Our consensus intelligence system;
               can transform your decision-making processes and deliver unprecedented consensus.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Consensus Transformation</h3>
               <p className="text-gray-700 mb-4">
-                Join leading enterprises achieving unanimous decisions with consensus intelligence
+                Join leading enterprises achieving unanimous decisions with consensus intelligence;
               </p>
               <div className="space-x-4">
-                <a 
+                <a;
                   href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Consensus Assessment
+                  Get Consensus Assessment;
                 </a>
-                <a 
+                <a;
                   href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
-                  Explore AI Services
+                  Explore AI Services;
                 </a>
               </div>
             </div>
@@ -113,5 +108,5 @@ export default function ConsensusIntelligencePage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -11,7 +11,7 @@ function AIContentGenerationPage() {
       icon: '✍️',
       price: '$199/month',
       features: ['SEO-optimized content', 'Brand voice consistency', 'Research integration', 'Multi-format output'],
-      popular: true
+      popular: true;
     },
     {
       title: 'Social Media Content Suite',
@@ -19,7 +19,7 @@ function AIContentGenerationPage() {
       icon: '📱',
       price: '$149/month',
       features: ['Platform-specific content', 'Hashtag optimization', 'Visual content ideas', 'Engagement analytics'],
-      popular: false
+      popular: false;
     },
     {
       title: 'Email Marketing AI',
@@ -27,7 +27,7 @@ function AIContentGenerationPage() {
       icon: '📧',
       price: '$179/month',
       features: ['Subject line optimization', 'Personalization', 'A/B testing', 'Conversion tracking'],
-      popular: false
+      popular: false;
     },
     {
       title: 'E-commerce Product Descriptions',
@@ -35,9 +35,9 @@ function AIContentGenerationPage() {
       icon: '🛍️',
       price: '$129/month',
       features: ['Product descriptions', 'Review generation', 'Marketing copy', 'SEO optimization'],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   const processSteps = [
     {
       step: '1',
@@ -63,7 +63,7 @@ function AIContentGenerationPage() {
       description: 'Publish your content and monitor performance with detailed analytics.',
       icon: <BarChart className="w-6 h-6" />
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -71,31 +71,31 @@ function AIContentGenerationPage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Content Generation
+            AI Content Generation;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Transform your content strategy with our AI-powered content generation services. 
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="/contact"
               className="cyber-button"
             >
-              Get Started
+              Get Started;
             </a>
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
           </div>
         </section>
         {/* Services Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
-            Content Generation Services
+            Content Generation Services;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {contentServices.map((service, index) => (
@@ -112,11 +112,11 @@ function AIContentGenerationPage() {
                   ))}
                 </ul>
                 <div className="text-cyan-400 font-bold mb-4">{service.price}</div>
-                <a
+                <a;
                   href="/contact"
                   className="cyber-button w-full text-center block"
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </div>
             ))}
@@ -125,7 +125,7 @@ function AIContentGenerationPage() {
         {/* Process Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
-            How It Works
+            How It Works;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
@@ -146,28 +146,28 @@ function AIContentGenerationPage() {
             Ready to Transform Your Content?
           </h2>
           <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using our AI content generation services to create 
+            Join thousands of businesses using our AI content generation services to create;
             engaging, high-quality content at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="/contact"
               className="cyber-button"
             >
-              Start Free Trial
+              Start Free Trial;
             </a>
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  );
+  )
 }
 
 export default AIContentGenerationPage;

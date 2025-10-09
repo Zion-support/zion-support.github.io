@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, Phone, Mail, Dumbbell, Zap, Shield, Clock, Target, TrendingUp, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, Phone, Mail, Dumbbell, Zap, Shield, Clock, Target, TrendingUp, Users  } from 'lucide-react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
 const AIFitnessCoachPage: React.FC = React.memo(() => {
   const features = [
     'AI form analysis',
@@ -12,16 +12,16 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
     'Injury prevention',
     'Nutrition guidance',
     'Wearable integration',
-    'Social challenges'
-  ];
+    'Social challenges',
+  ]
   const benefits = [
     'Improve workout effectiveness by 40%',
     'Prevent injuries with AI monitoring',
     'Personalize fitness plans',
     'Track progress automatically',
     'Motivate with AI coaching',
-    'Integrate with fitness devices'
-  ];
+    'Integrate with fitness devices',
+  ]
   const useCases = [
     'Home workouts',
     'Gym training',
@@ -30,28 +30,28 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
     'Weight loss',
     'Muscle building',
     'Flexibility training',
-    'Group fitness'
-  ];
+    'Group fitness',
+  ]
   const pricing = [
     {
       plan: 'Basic',
       price: '$9.99/month',
       features: ['Basic workouts', 'Form analysis', 'Progress tracking', 'Email support'],
-      popular: false
+      popular: false;
     },
     {
       plan: 'Pro',
       price: '$19.99/month',
       features: ['Personalized plans', 'AI coaching', 'Wearable sync', 'Nutrition tips', 'Priority support'],
-      popular: true
+      popular: true;
     },
     {
       plan: 'Elite',
       price: '$39.99/month',
       features: ['Custom training', '1-on-1 AI coach', 'Advanced analytics', 'Group challenges', 'Phone support'],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -63,32 +63,32 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
             <span>AI Fitness Technology</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Fitness Coach
+            AI Fitness Coach;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Get personalized fitness coaching with AI-powered form analysis, workout optimization, 
             and real-time feedback. Achieve your fitness goals faster and safer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="/contact"
               className="border-2 border-green-400 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </a>
           </div>
         </section>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            AI-Powered Fitness Features
+            AI-Powered Fitness Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
@@ -123,7 +123,7 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Perfect For Every Fitness Goal
+            Perfect For Every Fitness Goal;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
@@ -142,7 +142,7 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Choose Your Plan
+            Choose Your Plan;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -150,7 +150,7 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -168,11 +168,11 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
                   ))}
                 </ul>
                 <button role="button" className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
+                  plan.popular;
+                    ? 'bg-green-600 text-white hover: bg-green-700',
                     : 'border-2 border-green-400 text-green-600 hover:bg-green-400 hover:text-slate-900'
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -181,7 +181,7 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
         {/* Technology Stack */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Technology Stack
+            Technology Stack;
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {['Computer Vision', 'Motion Analysis', 'Wearable APIs', 'Mobile Apps', 'Cloud AI', 'Health APIs'].map((tech, index) => (
@@ -201,14 +201,14 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
             Contact us today to learn more about our AI fitness coaching technology and start your personalized fitness journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-green-400 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
             >
@@ -220,25 +220,21 @@ const AIFitnessCoachPage: React.FC = React.memo(() => {
       </main>
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIFitnessCoachPage;

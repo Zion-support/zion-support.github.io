@@ -1,65 +1,65 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components
+'use client',
+import React; { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react',
+import { Phone, Mail, MapPin, Clock  } from 'lucide-react',
+import Navigation from './components/Navigation',
+import Footer from './components/Footer',
+import PerformanceOptimizer from './components/PerformanceOptimizer',
+import SEOOptimizer from './components/SEOOptimizer',
+import AccessibilityEnhancer from './components/AccessibilityEnhancer',
+import Analytics from './components/Analytics',
+import SecurityEnhancer from './components/SecurityEnhancer',
+// Dynamically import heavy components for better performance;
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
+    // Preload critical components after initial render;
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }; 100)
   }
-};
-// Loading skeleton component
+}
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-100 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-100 rounded mb-2"></div>
     <div className="h-4 bg-gray-100 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = React.memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded; setIsLoaded] = useState(false)
+  const [isVisible; setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components
-    preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
-  // Analytics tracking for phone clicks - optimized
+    setIsLoaded(true)
+    // Trigger visibility animation;
+    const timer = setTimeout(() => setIsVisible(true); 100)
+    // Preload components;
+    preloadComponents()
+    return () => clearTimeout(timer)
+  }, [])
+  // Analytics tracking for phone clicks - optimized;
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
-  }, []);
+  }, [])
   return (
     <>
-      <SEOOptimizer
+      <SEOOptimizer;
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
-        canonicalUrl="https://ziontechgroup.com"
+        canonicalUrl="https: //ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
@@ -76,7 +76,7 @@ const HomePage: React.FC = React.memo(() => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
           ],
           contactPoint: {
             '@type': 'ContactPoint',
@@ -95,13 +95,13 @@ const HomePage: React.FC = React.memo(() => {
           }
         }}
       />
-      <PerformanceOptimizer
+      <PerformanceOptimizer;
         enableImageOptimization={true}
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
       />
-      <AccessibilityEnhancer
+      <AccessibilityEnhancer;
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
@@ -109,13 +109,13 @@ const HomePage: React.FC = React.memo(() => {
         enableSkipLinks={true}
         enableARIALabels={true}
       />
-      <Analytics
+      <Analytics;
         enableGoogleAnalytics={true}
         enablePerformanceMonitoring={true}
         enableErrorTracking={true}
         enableUserBehaviorTracking={true}
       />
-      <SecurityEnhancer
+      <SecurityEnhancer;
         enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
@@ -126,11 +126,11 @@ const HomePage: React.FC = React.memo(() => {
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
-        <a
+        <a;
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >
-          Skip to main content
+          Skip to main content;
         </a>
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-50 animate-pulse"></div>}>
@@ -138,28 +138,25 @@ const HomePage: React.FC = React.memo(() => {
       </Suspense>
       <main role="main" role="main" id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
-        <section
+        <section;
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-            isLoaded && isVisible 
-              ? 'opacity-100 translate-y-0' 
+            isLoaded && isVisible;
+              ? 'opacity-100 translate-y-0',
               : 'opacity-0 translate-y-8'
           }`}
           aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto">
-            <h1 
-              id="hero-heading" 
-<<<<<<< HEAD
+            <h1;
+              id="hero-heading"
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
-=======
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text"
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             >
-              Zion Tech Group
+              Zion Tech Group;
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-              Advanced AI and IT Solutions
+              Advanced AI and IT Solutions;
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-500 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -192,19 +189,19 @@ const HomePage: React.FC = React.memo(() => {
             
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 onClick={handlePhoneClick} onKeyDown={(e) => e.key === 'Enter' && handlePhoneClick(e)}
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
             >
-              📞 Call: (302) 464-0950
+              📞 Call: (302) 464-0950;
             </a>
-            <a 
+            <a;
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Get Free Consultation
+              Get Free Consultation;
             </a>
           </div>
         </div>
@@ -212,10 +209,10 @@ const HomePage: React.FC = React.memo(() => {
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services
+            Our Services;
           </h2>
           <p className="text-base sm:text-lg text-gray-500 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations
+            Comprehensive AI and IT solutions designed to transform your business operations;
           </p>
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
@@ -316,7 +313,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions
+              Micro SAAS Solutions;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
@@ -579,7 +576,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure
+              IT Services & Infrastructure;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -782,7 +779,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* Advanced AI Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services
+              Advanced AI Services;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -946,7 +943,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* Emerging Technologies Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies
+              Emerging Technologies;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1006,7 +1003,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* IT Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure
+              IT Services & Infrastructure;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1054,7 +1051,7 @@ const HomePage: React.FC = React.memo(() => {
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions
+            Micro SAAS Solutions;
           </h2>
           <p className="text-base sm:text-lg text-gray-500 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
@@ -1062,7 +1059,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* Productivity Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools
+              Productivity & Business Tools;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1174,7 +1171,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* Marketing & Sales Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools
+              Marketing & Sales Tools;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1234,7 +1231,7 @@ const HomePage: React.FC = React.memo(() => {
           {/* Developer Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools
+              Developer Tools;
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1330,7 +1327,7 @@ const HomePage: React.FC = React.memo(() => {
                     <div>
                       <p className="text-gray-500 text-sm">Phone</p>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        +1 (302) 464-0950
+                        +1 (302) 464-0950;
                       </a>
                     </div>
                   </div>
@@ -1342,7 +1339,7 @@ const HomePage: React.FC = React.memo(() => {
                     <div>
                       <p className="text-gray-500 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        kleber@ziontechgroup.com
+                        kleber@ziontechgroup.com;
                       </a>
                     </div>
                   </div>
@@ -1355,7 +1352,7 @@ const HomePage: React.FC = React.memo(() => {
                       <p className="text-gray-500 text-sm">Address</p>
                       <p className="text-white font-semibold">
                         364 E Main St STE 1008<br />
-                        Middletown, DE 19709
+                        Middletown, DE 19709;
                       </p>
                     </div>
                   </div>
@@ -1368,7 +1365,7 @@ const HomePage: React.FC = React.memo(() => {
                       <p className="text-gray-500 text-sm">Business Hours</p>
                       <p className="text-white font-semibold">
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                        24/7 Emergency Support Available
+                        24/7 Emergency Support Available;
                       </p>
                     </div>
                   </div>
@@ -1381,37 +1378,37 @@ const HomePage: React.FC = React.memo(() => {
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-500 mb-2">
-                      Full Name
+                      Full Name;
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="name"
                       name="name"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Enter your full name"
-                      required
+                      required;
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-500 mb-2">
-                      Email Address
+                      Email Address;
                     </label>
-                    <input
+                    <input;
                       type="email"
                       id="email"
                       name="email"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Enter your email"
-                      required
+                      required;
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-500 mb-2">
-                      Phone Number
+                      Phone Number;
                     </label>
-                    <input
+                    <input;
                       type="tel"
                       id="phone"
                       name="phone"
@@ -1422,14 +1419,14 @@ const HomePage: React.FC = React.memo(() => {
                   
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-500 mb-2">
-                      Service Interest
+                      Service Interest;
                     </label>
-                    <select
+                    <select;
                       id="service"
                       name="service"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     >
-                      <option value="">Select a service</option>
+                      <option value=">Select a service</option>
                       <option value="ai-services">AI Services</option>
                       <option value="it-services">IT Services</option>
                       <option value="micro-saas">Micro SAAS Solutions</option>
@@ -1440,9 +1437,9 @@ const HomePage: React.FC = React.memo(() => {
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-500 mb-2">
-                      Message
+                      Message;
                     </label>
-                    <textarea
+                    <textarea;
                       id="message"
                       name="message"
                       rows={4}
@@ -1455,7 +1452,7 @@ const HomePage: React.FC = React.memo(() => {
                     type="submit"
                     className="w-full cyber-button text-center py-4"
                   >
-                    Send Message
+                    Send Message;
                   </button>
                 </form>
               </div>
@@ -1467,25 +1464,21 @@ const HomePage: React.FC = React.memo(() => {
       <Footer />
     </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default HomePage;

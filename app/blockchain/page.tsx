@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle } from 'lucide-react',
 const BlockchainPage: React.FC = React.memo(() => {
   const blockchainServices = [
     {
@@ -135,10 +135,9 @@ const BlockchainPage: React.FC = React.memo(() => {
       category: 'Web3 Apps',
       technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']
     }
-  ];
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
-  return (
-    <>
+  ]
+  const categories = [...new Set(blockchainServices.map(service => service.category))]
+  return (<>
       <Helmet>
         <title>Blockchain & Web3 Services - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 services including smart contracts, DeFi, NFTs, and enterprise blockchain solutions." />
@@ -151,17 +150,17 @@ const BlockchainPage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Blockchain & Web3 Services
+                Blockchain & Web3 Services;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-orange-100 max-w-3xl mx-auto">
-                Build the future of decentralized applications with cutting-edge blockchain technology
+                Build the future of decentralized applications with cutting-edge blockchain technology;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button role="button" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
-                  Explore Web3 Solutions
+                  Explore Web3 Solutions;
                 </button>
                 <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
-                  Schedule Consultation
+                  Schedule Consultation;
                 </button>
               </div>
             </div>
@@ -175,7 +174,7 @@ const BlockchainPage: React.FC = React.memo(() => {
                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert blockchain developers delivering secure, scalable, and innovative Web3 solutions
+                Expert blockchain developers delivering secure, scalable, and innovative Web3 solutions;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -216,14 +215,14 @@ const BlockchainPage: React.FC = React.memo(() => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
+                  {category} Solutions;
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} services for modern blockchain applications
+                  Specialized {category.toLowerCase()} services for modern blockchain applications;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blockchainServices
+                {blockchainServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -236,7 +235,7 @@ const BlockchainPage: React.FC = React.memo(() => {
                           <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
+                          Save up to 50% vs market rates;
                         </div>
                       </div>
                       <div className="mb-4">
@@ -272,7 +271,7 @@ const BlockchainPage: React.FC = React.memo(() => {
                         </ul>
                       </div>
                       <button role="button" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                        Get Blockchain Consultation
+                        Get Blockchain Consultation;
                       </button>
                     </div>
                   ))}
@@ -285,10 +284,10 @@ const BlockchainPage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Blockchain Capabilities
+                Our Blockchain Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive blockchain solutions covering all aspects of Web3 development
+                Comprehensive blockchain solutions covering all aspects of Web3 development;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -332,20 +331,20 @@ const BlockchainPage: React.FC = React.memo(() => {
               Ready to Build the Future of Web3?
             </h2>
             <p className="text-xl mb-8 text-orange-100">
-              Contact our blockchain experts for a free consultation and custom Web3 strategy
+              Contact our blockchain experts for a free consultation and custom Web3 strategy;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-orange-200">
@@ -355,25 +354,21 @@ const BlockchainPage: React.FC = React.memo(() => {
         </section>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default BlockchainPage;

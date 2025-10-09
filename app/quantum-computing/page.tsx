@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock  } from 'lucide-react',
 const QuantumComputingPage: React.FC = React.memo(() => {
   const quantumServices = [
     {
@@ -33,7 +33,7 @@ const QuantumComputingPage: React.FC = React.memo(() => {
       category: 'Optimization',
       technologies: ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       {/* Hero Section */}
@@ -42,14 +42,14 @@ const QuantumComputingPage: React.FC = React.memo(() => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Quantum Computing Services
+              Quantum Computing Services;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-              Harness the power of quantum mechanics to solve the world's most complex computational problems
+              Harness the power of quantum mechanics to solve the world's most complex computational problems;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button role="button" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                Explore Quantum Solutions
+                Explore Quantum Solutions;
               </button>
             </div>
           </div>
@@ -63,7 +63,7 @@ const QuantumComputingPage: React.FC = React.memo(() => {
               Why Choose Quantum Computing?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Quantum computing offers unprecedented computational power for solving complex problems
+              Quantum computing offers unprecedented computational power for solving complex problems;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -96,10 +96,10 @@ const QuantumComputingPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Quantum Solutions
+              Our Quantum Solutions;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Cutting-edge quantum computing services designed to solve your most challenging problems
+              Cutting-edge quantum computing services designed to solve your most challenging problems;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -147,38 +147,34 @@ const QuantumComputingPage: React.FC = React.memo(() => {
             Ready to Go Quantum?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our quantum experts help you harness the power of quantum computing
+            Let our quantum experts help you harness the power of quantum computing;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button role="button" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-              Get Started Today
+              Get Started Today;
             </button>
             <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default QuantumComputingPage;

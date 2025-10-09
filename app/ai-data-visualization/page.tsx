@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye  } from 'lucide-react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
 const AIDataVisualizationPage: React.FC = React.memo(() => {
   const features = [
     {
@@ -29,7 +29,7 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
       description: 'Transform complex data into compelling visual stories that drive decision-making.',
       benefits: ['Narrative Flow', 'Contextual Insights', 'Actionable Recommendations', 'Executive Summaries']
     }
-  ];
+  ]
   const pricing = [
     {
       name: 'Basic',
@@ -49,7 +49,7 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
       description: 'For large organizations',
       features: ['Unlimited dashboards', 'Custom development', 'White-label options', '24/7 support', 'Dedicated account manager']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -58,33 +58,33 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Data Visualization
+            <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Data Visualization;
             </h1>
             <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
-              Transform your data into stunning visualizations with AI-powered insights, 
+              Transform your data into stunning visualizations with AI-powered insights,
               interactive dashboards, and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
               >
                 <BarChart3 className="w-4 h-4" />
                 <span>Get Started</span>
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </a>
             </div>
           </section>
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Key Features
+              Key Features;
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -107,7 +107,7 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans
+              Pricing Plans;
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
@@ -115,7 +115,7 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
                   {index === 1 && (
                     <div className="text-center mb-4">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -130,11 +130,11 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className="cyber-button w-full text-center block"
                   >
-                    Get Started
+                    Get Started;
                   </a>
                 </div>
               ))}
@@ -149,17 +149,17 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
               Contact us today to learn how AI data visualization can transform your business insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
-                Call (302) 464-0950
+                Call (302) 464-0950;
               </a>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Email Us
+                Email Us;
               </a>
             </div>
           </section>
@@ -168,25 +168,20 @@ const AIDataVisualizationPage: React.FC = React.memo(() => {
       
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+})
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIDataVisualizationPage;

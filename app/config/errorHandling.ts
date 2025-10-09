@@ -1,26 +1,23 @@
-'use client';
+'use client',
 /**
- * Error Handling Configuration
- * Centralized error tracking and reporting settings
+ * Error Handling Configuration;
+ * Centralized error tracking and reporting settings;
  */
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
@@ -39,12 +36,12 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-  enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
+  enabled: boolean,
+  logToConsole: boolean,
+  sendToServer: boolean,
+  sampleRate: number,
+  maxStackTraceLength: number,
+  ignoreErrors: RegExp[]
   severityThreshold: ErrorSeverity;
 }
 export const errorHandlingConfig: ErrorConfig = {
@@ -58,8 +55,8 @@ export const errorHandlingConfig: ErrorConfig = {
     /Non-Error promise rejection captured/i,
     /Loading chunk \d+ failed/i,
   ],
-  severityThreshold: ErrorSeverity.LOW
-};
+  severityThreshold: ErrorSeverity.LOW;
+}
 export const errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
@@ -80,7 +77,7 @@ export const errorMessages = {
     unknown: 'An unexpected error occurred. Please try again.',
     retry: 'Please try again in a few moments.'
   }
-};
+}
 export class AppError extends Error {
   constructor(
     message: string,
@@ -88,9 +85,9 @@ export class AppError extends Error {
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record<string, unknown>
   ) {
-    super(message);
-    this.name = 'AppError';
-    Error.captureStackTrace(this, this.constructor);
+    super(message)
+    this.name = 'AppError',
+    Error.captureStackTrace(this, this.constructor)
   }
 }
 export default errorHandlingConfig;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database  } from 'lucide-react',
 const IoTEdgeComputingPage: React.FC = React.memo(() => {
   const iotServices = [
     {
@@ -135,10 +135,9 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
     }
-  ];
-  const _categories = [...new Set(iotServices.map(service => service.category))];
-  return (
-    <>
+  ]
+  const _categories = [...new Set(iotServices.map(service => service.category))]
+  return (<>
       <Helmet>
         <title>IoT & Edge Computing Services - Zion Tech Group</title>
         <meta name="description" content="Advanced IoT and edge computing solutions for smart cities, industrial automation, and connected devices." />
@@ -151,17 +150,17 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IoT & Edge Computing Services
+                IoT & Edge Computing Services;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
-                Connect the physical and digital worlds with intelligent IoT solutions and edge computing
+                Connect the physical and digital worlds with intelligent IoT solutions and edge computing;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button role="button" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
-                  Explore IoT Solutions
+                  Explore IoT Solutions;
                 </button>
                 <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </div>
@@ -175,7 +174,7 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
                 Why Choose Our IoT Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive IoT solutions that transform your business with connected intelligence
+                Comprehensive IoT solutions that transform your business with connected intelligence;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -216,14 +215,14 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
+                  {category} Services;
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} solutions for connected environments
+                  Specialized {category.toLowerCase()} solutions for connected environments;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {iotServices
+                {iotServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -236,7 +235,7 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
                           <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 45% vs market rates
+                          Save up to 45% vs market rates;
                         </div>
                       </div>
                       <div className="mb-4">
@@ -272,7 +271,7 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
                         </ul>
                       </div>
                       <button role="button" className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
-                        Get IoT Consultation
+                        Get IoT Consultation;
                       </button>
                     </div>
                   ))}
@@ -285,10 +284,10 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our IoT Capabilities
+                Our IoT Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive IoT technologies and edge computing expertise
+                Comprehensive IoT technologies and edge computing expertise;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -332,20 +331,20 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
               Ready to Connect Your World?
             </h2>
             <p className="text-xl mb-8 text-cyan-100">
-              Contact our IoT experts for a free consultation and custom connected solution strategy
+              Contact our IoT experts for a free consultation and custom connected solution strategy;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-cyan-200">
@@ -355,25 +354,21 @@ const IoTEdgeComputingPage: React.FC = React.memo(() => {
         </section>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default IoTEdgeComputingPage;

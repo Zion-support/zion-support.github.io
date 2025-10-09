@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { BarChart, TrendingUp, Target, Zap, Brain, Shield, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Users, Database } from 'lucide-react';
-import Link from 'next/link';
+'use client',
+import React from 'react',
+import { BarChart, TrendingUp, Target, Zap, Brain, Shield, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Users, Database  } from 'lucide-react',
+import Link from 'next/link',
 const SmartAnalyticsPage: React.FC = React.memo(() => {
   const features = [
     {
@@ -40,7 +40,7 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -53,9 +53,9 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         'Standard reports',
         'Email support',
         '1 user account',
-        '30-day data retention'
+        '30-day data retention',
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -70,9 +70,9 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         'Up to 10 users',
         '1-year data retention',
         'Custom metrics',
-        'API access'
+        'API access',
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -87,11 +87,11 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         'Unlimited users',
         'Unlimited data retention',
         'Custom integrations',
-        'White-label options'
+        'White-label options',
       ],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' },
     { name: 'Salesforce', icon: '💼', description: 'CRM and sales data' },
@@ -101,30 +101,30 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
     { name: 'Stripe', icon: '💳', description: 'Payment processing' },
     { name: 'Mailchimp', icon: '📧', description: 'Email marketing' },
     { name: 'Slack', icon: '💬', description: 'Team communication' }
-  ];
+  ]
   const testimonials = [
     {
       name: 'Alex Thompson',
       company: 'GrowthCo',
       role: 'CEO',
       content: 'Smart Analytics helped us identify a 30% revenue opportunity we never knew existed. The AI insights are game-changing.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Maria Garcia',
       company: 'Digital Marketing Pro',
       role: 'Marketing Director',
       content: 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 50% in just 2 months.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'James Wilson',
       company: 'E-commerce Solutions',
       role: 'Operations Manager',
       content: 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.',
-      rating: 5
+      rating: 5;
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -134,29 +134,29 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
             <BarChart className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Smart Analytics
+            Smart Analytics;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            AI-Powered Business Intelligence
+            AI-Powered Business Intelligence;
           </p>
           <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your data into actionable insights with our AI-powered analytics platform. 
-            Get real-time dashboards, predictive analytics, and intelligent recommendations that 
+            Get real-time dashboards, predictive analytics, and intelligent recommendations that;
             drive growth and optimize performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Get Free Demo
+              Get Free Demo;
             </Link>
           </div>
         </div>
@@ -186,7 +186,7 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Analytics Features
+            Powerful Analytics Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -202,7 +202,7 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Connect All Your Data Sources
+            Connect All Your Data Sources;
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
@@ -217,18 +217,18 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
+                plan.popular;
+                  ? 'border-cyan-400 scale-105',
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -246,11 +246,11 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
                   ))}
                 </ul>
                 <button role="button" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
+                  plan.popular;
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600',
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -259,7 +259,7 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Customers Say
+            What Our Customers Say;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -269,7 +269,7 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-500 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-500 mb-4 italic">{testimonial.content}</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
@@ -285,46 +285,42 @@ const SmartAnalyticsPage: React.FC = React.memo(() => {
             Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using Smart Analytics to make data-driven decisions 
+            Join thousands of businesses using Smart Analytics to make data-driven decisions;
             and accelerate growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </section>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default SmartAnalyticsPage;

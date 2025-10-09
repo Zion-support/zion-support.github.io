@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, BarChart, TrendingUp, Target  } from 'lucide-react',
 const BusinessIntelligencePage: React.FC = React.memo(() => {
   const biServices = [
     {
@@ -33,7 +33,7 @@ const BusinessIntelligencePage: React.FC = React.memo(() => {
       category: 'Data Infrastructure',
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -42,17 +42,17 @@ const BusinessIntelligencePage: React.FC = React.memo(() => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Business Intelligence Services
+              Business Intelligence Services;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Transform your data into strategic insights that drive business growth
+              Transform your data into strategic insights that drive business growth;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button role="button" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Explore BI Solutions
+                Explore BI Solutions;
               </button>
               <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -66,7 +66,7 @@ const BusinessIntelligencePage: React.FC = React.memo(() => {
               Why Choose Our BI Solutions?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our business intelligence solutions deliver actionable insights that drive real business value
+              Our business intelligence solutions deliver actionable insights that drive real business value;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,10 +99,10 @@ const BusinessIntelligencePage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our BI Solutions
+              Our BI Solutions;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive business intelligence services designed to unlock the value in your data
+              Comprehensive business intelligence services designed to unlock the value in your data;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -150,38 +150,34 @@ const BusinessIntelligencePage: React.FC = React.memo(() => {
             Ready to Transform Your Data?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our BI experts help you unlock the full potential of your business data
+            Let our BI experts help you unlock the full potential of your business data;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button role="button" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-              Get Started Today
+              Get Started Today;
             </button>
             <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default BusinessIntelligencePage;

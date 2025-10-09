@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers  } from 'lucide-react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
 const AI3DGenerationPage: React.FC = React.memo(() => {
   const features = [
     'AI-powered 3D model creation',
@@ -12,16 +12,16 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
     'VR/AR integration',
     'Real-time rendering',
     'Custom model training',
-    'Batch processing'
-  ];
+    'Batch processing',
+  ]
   const benefits = [
     'Accelerate 3D content creation by 80%',
     'Reduce production costs by 60%',
     'Improve visual quality and consistency',
     'Enable rapid prototyping',
     'Support multiple file formats',
-    'Integrate with popular 3D software'
-  ];
+    'Integrate with popular 3D software',
+  ]
   const useCases = [
     'Game development',
     'Architectural visualization',
@@ -30,28 +30,28 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
     'Augmented reality apps',
     '3D printing',
     'Marketing materials',
-    'Educational content'
-  ];
+    'Educational content',
+  ]
   const pricing = [
     {
       plan: 'Starter',
       price: '$199/month',
       features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-      popular: false
+      popular: false;
     },
     {
       plan: 'Professional',
       price: '$599/month',
       features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
-      popular: true
+      popular: true;
     },
     {
       plan: 'Enterprise',
       price: '$1,999/month',
       features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -63,32 +63,32 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
             <span>AI 3D Technology</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI 3D Model Generation
+            AI 3D Model Generation;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Create stunning 3D models, textures, and animations with our advanced AI technology. 
             Perfect for gaming, VR/AR, architecture, and product design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="/contact"
               className="border-2 border-blue-400 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Free Demo
+              Get Free Demo;
             </a>
           </div>
         </section>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Advanced 3D AI Technology
+            Advanced 3D AI Technology;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
@@ -123,7 +123,7 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Use Cases & Applications
+            Use Cases & Applications;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
@@ -142,7 +142,7 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Pricing Plans
+            Pricing Plans;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -150,7 +150,7 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -168,11 +168,11 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
                   ))}
                 </ul>
                 <button role="button" className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                  plan.popular;
+                    ? 'bg-blue-600 text-white hover: bg-blue-700',
                     : 'border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-slate-900'
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -181,7 +181,7 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
         {/* Technology Stack */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Technology Stack
+            Technology Stack;
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {['NeRF', '3D GANs', 'Blender API', 'Unity Integration', 'Custom 3D Models', 'OpenGL'].map((tech, index) => (
@@ -201,14 +201,14 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
             Contact us today to learn more about our AI 3D generation technology and how it can transform your creative workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-blue-400 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
             >
@@ -220,25 +220,21 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
       </main>
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AI3DGenerationPage;

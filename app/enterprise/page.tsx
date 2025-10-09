@@ -1,26 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 const EnterprisePage: React.FC = React.memo(() => {
-  return (
-    <>
+  return (<>
       <div className="min-h-screen bg-slate-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                Enterprise Solutions
+                Enterprise Solutions;
               </h1>
               <p className="text-xl text-gray-600">
-                Advanced AI and IT solutions designed for large organizations
+                Advanced AI and IT solutions designed for large organizations;
               </p>
             </div>
             <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-              Transform your enterprise with our proven AI solutions. Achieve
-              $100M+ cost savings, 500% productivity gains, and 99.9% system
+              Transform your enterprise with our proven AI solutions. Achieve;
+              $100M+ cost savings, 500% productivity gains, and 99.9% system;
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
@@ -29,7 +28,7 @@ const EnterprisePage: React.FC = React.memo(() => {
                   &rarr;
                 </span>
               </Link>
-              <a
+              <a;
                 href="#solutions"
                 className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
               >
@@ -47,10 +46,10 @@ const EnterprisePage: React.FC = React.memo(() => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Enterprise AI Solutions
+              Enterprise AI Solutions;
             </h2>
             <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-              Comprehensive suite of enterprise-grade AI and IT solutions tailored for large organizations
+              Comprehensive suite of enterprise-grade AI and IT solutions tailored for large organizations;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,35 +97,31 @@ const EnterprisePage: React.FC = React.memo(() => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Link
+            <Link;
               href="/contact"
               className="inline-block bg-white hover:bg-gray-50 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
-              Get Started Today
+              Get Started Today;
             </Link>
           </div>
         </div>
       </section>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default EnterprisePage;

@@ -1,27 +1,27 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-  children
+  image = "https: //ziontechgroup.com/og-image.jpg",
+  url = "https: //ziontechgroup.com",
+  children;
 }) => {
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "TechCompany",
     "name": "Zion Tech Group",
     "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
@@ -33,7 +33,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "Digital Transformation",
       "Cloud Services",
       "Automation",
-      "Business Intelligence"
+      "Business Intelligence",
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -43,8 +43,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "availableLanguage": "en"
     },
     "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https: //twitter.com/ziontechgroup",
+      "https: //linkedin.com/company/ziontechgroup",
     ],
     "address": {
       "@type": "PostalAddress",
@@ -78,7 +78,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       },
       "geoRadius": "1000000"
     }
-  };
+  }
   return (
     <>
       <Helmet>
@@ -115,24 +115,20 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
-
-// Focus management utility
+  )
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default SEOEnhancer;

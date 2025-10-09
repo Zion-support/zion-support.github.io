@@ -1,44 +1,41 @@
-'use client';
+'use client',
 /**
- * SEO Component
- * Provides comprehensive SEO meta tags and structured data
+ * SEO Component;
+ * Provides comprehensive SEO meta tags and structured data;
  */
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string[];
+  keywords?: string[]
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
+  type?: 'website' | 'article' | 'product' | 'profile',
   author?: string;
   publishDate?: string;
   modifiedDate?: string;
   canonical?: string;
   noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  structuredData?: Record<string; unknown>
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player',
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: { locale: string, url: string }[]
 }
 const defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
@@ -55,12 +52,10 @@ const defaultSEO = {
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const
-};
+  twitterCard: 'summary_large_image' as const }
 export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
+  title;
+  description, keywords,
   image,
   url,
   type = defaultSEO.type,
@@ -75,33 +70,33 @@ export const SEO: React.FC<SEOProps> = ({
   alternateLocales = []
 }) => {
   const seo = {
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+    title: title ? `${title} | Zion Tech Group` : defaultSEO.title;
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
     url: url || defaultSEO.url,
     type,
     twitterCard,
-    locale
-  };
-  // Generate structured data
+    locale;
+  }
+  // Generate structured data;
   const generateStructuredData = () => {
     if (structuredData) {
       return structuredData;
     }
-    const baseStructuredData: Record<string, unknown> = {
+    const baseStructuredData: Record<string; unknown> = {
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image
-    };
+      image: seo.image;
+    }
     if (author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: author
-      };
+        name: author;
+      }
     }
     if (publishDate) {
       baseStructuredData.datePublished = publishDate;
@@ -110,7 +105,7 @@ export const SEO: React.FC<SEOProps> = ({
       baseStructuredData.dateModified = modifiedDate;
     }
     return baseStructuredData;
-  };
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -159,12 +154,12 @@ export const SEO: React.FC<SEOProps> = ({
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       {/* Preload critical resources */}
-      <link
+      <link;
         rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        href="https: //fonts.googleapis.com/css2?family=Inter:wght@400500;600,700&display=swap"
         as="style"
       />
     </Helmet>
-  );
-};
+  )
+}
 export default SEO;

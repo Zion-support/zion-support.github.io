@@ -1,9 +1,9 @@
-'use client';
-import React, { useEffect } from 'react';
+'use client',
+import React; { useEffect } from 'react',
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-  keywords?: string[];
+  keywords?: string[]
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: unknown;
@@ -12,84 +12,77 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  canonicalUrl = 'https: //ziontechgroup.com',
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  structuredData;
 }) => {
   useEffect(() => {
-    // Update page title
+    // Update page title;
     document.title = title;
-    
-    // Update meta description
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords.join(', '));
-    
-    // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:url', canonicalUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-    
-    // Update Twitter tags
-    updateMetaTag('twitter:card', 'summary_large_image', 'name');
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', ogImage, 'name');
-    updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-    updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
-    
-    // Update canonical URL
-    updateCanonicalUrl(canonicalUrl);
-    
-    // Add structured data
+    // Update meta description;
+    updateMetaTag('description', description)
+    updateMetaTag('keywords', keywords.join(', '))
+    // Update Open Graph tags;
+    updateMetaTag('og:title', title, 'property')
+    updateMetaTag('og:description', description, 'property')
+    updateMetaTag('og:image', ogImage, 'property')
+    updateMetaTag('og:url', canonicalUrl, 'property')
+    updateMetaTag('og:type', 'website', 'property')
+    updateMetaTag('og:site_name', 'Zion Tech Group', 'property')
+    // Update Twitter tags;
+    updateMetaTag('twitter:card', 'summary_large_image', 'name')
+    updateMetaTag('twitter:title', title, 'name')
+    updateMetaTag('twitter:description', description, 'name')
+    updateMetaTag('twitter:image', ogImage, 'name')
+    updateMetaTag('twitter:site', '@ziontechgroup', 'name')
+    updateMetaTag('twitter:creator', '@ziontechgroup', 'name')
+    // Update canonical URL;
+    updateCanonicalUrl(canonicalUrl)
+    // Add structured data;
     if (structuredData) {
-      addStructuredData(structuredData);
+      addStructuredData(structuredData)
     }
     
-    // Add breadcrumb structured data
-    addBreadcrumbStructuredData();
-    
-    // Add FAQ structured data
-    addFAQStructuredData();
-    
-    // Add organization structured data
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    // Add breadcrumb structured data;
+    addBreadcrumbStructuredData()
+    // Add FAQ structured data;
+    addFAQStructuredData()
+    // Add organization structured data;
+    addOrganizationStructuredData()
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`)
     if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
+      meta = document.createElement('meta')
+      meta.setAttribute(attribute, name)
+      document.head.appendChild(meta)
     }
-    meta.setAttribute('content', content);
-  };
+    meta.setAttribute('content', content)
+  }
   const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
+    let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
     }
-    canonical.setAttribute('href', url);
-  };
+    canonical.setAttribute('href', url)
+  }
   const addStructuredData = (data: unknown) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
+    const script = document.createElement('script')
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(data)
+    script.id = 'structured-data',
+    // Remove existing structured data;
+    const existing = document.getElementById('structured-data')
     if (existing) {
-      existing.remove();
+      existing.remove()
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)
+  }
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
         {
@@ -99,21 +92,21 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'item': 'https://ziontechgroup.com'
         }
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
+    const script = document.createElement('script')
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(breadcrumbData)
+    script.id = 'breadcrumb-structured-data',
+    // Remove existing breadcrumb data;
+    const existing = document.getElementById('breadcrumb-structured-data')
+    if (existing) {
+      existing.remove()
+    }
+    document.head.appendChild(script)
+  }
   const addFAQStructuredData = () => {
     const faqData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'FAQPage',
       'mainEntity': [
         {
@@ -141,25 +134,25 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           }
         }
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
-    script.id = 'faq-structured-data';
-    // Remove existing FAQ data
-    const existing = document.getElementById('faq-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
+    const script = document.createElement('script')
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(faqData)
+    script.id = 'faq-structured-data',
+    // Remove existing FAQ data;
+    const existing = document.getElementById('faq-structured-data')
+    if (existing) {
+      existing.remove()
+    }
+    document.head.appendChild(script)
+  }
   const addOrganizationStructuredData = () => {
     const organizationData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'Organization',
       'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
+      'url': 'https: //ziontechgroup.com',
+      'logo': 'https: //ziontechgroup.com/logo.png',
       'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
       'foundingDate': '2020',
       'numberOfEmployees': '50-100',
@@ -180,39 +173,35 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'addressCountry': 'US'
       },
       'sameAs': [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
+        'https: //twitter.com/ziontechgroup',
+        'https: //linkedin.com/company/ziontechgroup',
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
+    const script = document.createElement('script')
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(organizationData)
+    script.id = 'organization-structured-data',
+    // Remove existing organization data;
+    const existing = document.getElementById('organization-structured-data')
+    if (existing) {
+      existing.remove()
+    }
+    document.head.appendChild(script)
+  }
   return null;
-};
-
-// Focus management utility
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default SEOOptimizer;

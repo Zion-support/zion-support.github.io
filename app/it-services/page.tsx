@@ -1,12 +1,11 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive, Lock, FileText, Activity, ArrowRight, Code, Cog, Globe, Users, Target, Award, Rocket, Mail, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive, Lock, FileText, Activity, ArrowRight, Code, Cog, Globe, Users, Target, Award, Rocket, Mail, Phone  } from 'lucide-react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
 const ITServicesPage: React.FC = React.memo(() => {
-<<<<<<< HEAD
   const itServices = [
-    // Infrastructure & Cloud Services
+    // Infrastructure & Cloud Services;
     {
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
@@ -29,7 +28,7 @@ const ITServicesPage: React.FC = React.memo(() => {
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // Cybersecurity Services
+    // Cybersecurity Services;
     {
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
@@ -74,7 +73,7 @@ const ITServicesPage: React.FC = React.memo(() => {
       technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Forensic Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // Database & Data Management
+    // Database & Data Management;
     {
       title: 'Database Administration & Optimization',
       description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
@@ -108,7 +107,7 @@ const ITServicesPage: React.FC = React.memo(() => {
       technologies: ['AWS DMS', 'Azure Data Factory', 'Google Cloud Data Transfer', 'Custom Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // DevOps & Development
+    // DevOps & Development;
     {
       title: 'DevOps & CI/CD Implementation',
       description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
@@ -142,7 +141,7 @@ const ITServicesPage: React.FC = React.memo(() => {
       technologies: ['Node.js', 'Python', 'Java', 'Kong', 'Apigee', 'AWS API Gateway'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // IT Support & Management
+    // IT Support & Management;
     {
       title: 'Managed IT Services',
       description: 'Comprehensive IT management including help desk, system administration, and proactive maintenance.',
@@ -176,7 +175,7 @@ const ITServicesPage: React.FC = React.memo(() => {
       technologies: ['Asset Management Tools', 'License Management', 'CMDB', 'Reporting Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // Specialized Services
+    // Specialized Services;
     {
       title: 'Microsoft 365 Migration & Management',
       description: 'Complete Microsoft 365 migration with security configuration, user training, and ongoing management.',
@@ -221,7 +220,7 @@ const ITServicesPage: React.FC = React.memo(() => {
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -235,8 +234,7 @@ const ITServicesPage: React.FC = React.memo(() => {
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
-=======
+  ]
   const services = [
     {
       icon: Cloud,
@@ -266,39 +264,37 @@ const ITServicesPage: React.FC = React.memo(() => {
       description: 'Streamlined development workflows with automated testing and deployment',
       features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
     }
-  ];
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-<<<<<<< HEAD
       <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            IT Services
+            IT Services;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions to keep your business running smoothly and securely
+            Comprehensive IT solutions to keep your business running smoothly and securely;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="/contact"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Free Consultation
+              Get Free Consultation;
             </a>
           </div>
         </section>
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Our IT Services
+            Our IT Services;
           </h2>
           
           {/* Category Filter */}
@@ -326,39 +322,38 @@ const ITServicesPage: React.FC = React.memo(() => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-600 mr-2 flex-shrink-0" />
-=======
       
       <main role="main" role="main" className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              IT Services
+              IT Services;
             </h1>
             <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
               Comprehensive IT solutions including infrastructure, cybersecurity, 
               database management, and DevOps services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
               >
                 <Cloud className="w-4 h-4" />
                 <span>Get Started</span>
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </a>
             </div>
           </section>
           {/* Services Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Our IT Services
+              Our IT Services;
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
@@ -371,7 +366,6 @@ const ITServicesPage: React.FC = React.memo(() => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-500">
                         <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                         {feature}
                       </li>
                     ))}
@@ -402,14 +396,13 @@ const ITServicesPage: React.FC = React.memo(() => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <a
+                  <a;
                     href="/contact"
                     className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-all duration-300 hover:neon-glow"
                   >
                     Get Started →
                   </a>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -421,14 +414,14 @@ const ITServicesPage: React.FC = React.memo(() => {
             Contact us today for a free consultation and discover how our IT services can help your business grow and succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
             >
@@ -437,7 +430,6 @@ const ITServicesPage: React.FC = React.memo(() => {
             </a>
           </div>
         </section>
-=======
               ))}
             </div>
           </section>
@@ -450,44 +442,39 @@ const ITServicesPage: React.FC = React.memo(() => {
               Contact us today to learn how our IT services can optimize your technology infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
-                Call (302) 464-0950
+                Call (302) 464-0950;
               </a>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Email Us
+                Email Us;
               </a>
             </div>
           </section>
         </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
       </main>
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ITServicesPage;

@@ -1,58 +1,58 @@
-'use client';
+'use client',
 /**
- * Improved Error Boundary
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
+ * Improved Error Boundary;
+ * Enhanced error handling with recovery mechanisms and user-friendly fallbacks;
  */
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import monitoring from '../utils/monitoring';
+import React; { Component, ErrorInfo, ReactNode } from 'react',
+import monitoring from '../utils/monitoring',
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetKeys?: Array<string | number>;
+  resetKeys?: Array<string | number>
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
+  hasError: boolean,
+  error: Error | null,
+    errorInfo: ErrorInfo | null,
+    errorCount: number;
 }
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0
-    };
+      errorCount: 0;
+    }
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error
-    };
+      error;
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to monitoring service
+    // Log error to monitoring service;
     monitoring.logError({
       message: error.message,
       stack: error.stack,
       component: errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      url: window.location.href
-    });
-    // Call custom error handler if provided
+      url: window.location.href;
+    })
+    // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
-    // Update state with error details
+    // Update state with error details;
     this.setState((prevState) => ({
       errorInfo,
-      errorCount: prevState.errorCount + 1
-    }));
-    // Log to console in development
+      errorCount: prevState.errorCount + 1;
+    }))
+    // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {
     }
     // Send to external error tracking (if available)
@@ -60,20 +60,19 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
-            componentStack: errorInfo.componentStack
+            componentStack: errorInfo.componentStack;
           }
         }
-      });
+      })
     }
   }
   componentDidUpdate(prevProps: Props): void {
-    // Reset error state if resetKeys changed
+    // Reset error state if resetKeys changed;
     if (this.props.resetKeys && prevProps.resetKeys) {
-      const resetKeysChanged = this.props.resetKeys.some(
-        (key, index) => key !== prevProps.resetKeys![index]
-      );
+      const resetKeysChanged = this.props.resetKeys.some((key, index) => key !== prevProps.resetKeys![index]
+      )
       if (resetKeysChanged && this.state.hasError) {
-        this.resetErrorBoundary();
+        this.resetErrorBoundary()
       }
     }
   }
@@ -81,22 +80,22 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null
-    });
-  };
+      errorInfo: null;
+    })
+  }
   handleReload = (): void => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
   handleGoHome = (): void => {
-    window.location.href = '/';
-  };
+    window.location.href = '/'
+  }
   render(): ReactNode {
     if (this.state.hasError) {
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      // Default error UI
+      // Default error UI;
       return (
         <div className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
@@ -127,36 +126,36 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               </details>
             )}
             <div style={styles.actions}>
-              <button
+              <button;
                 onClick={this.resetErrorBoundary} onKeyDown={(e) => e.key === 'Enter' && this.resetErrorBoundary(e)}
                 style={styles.button}
                 aria-label="Try Again"
               >
-                Try Again
+                Try Again;
               </button>
-              <button
+              <button;
                 onClick={this.handleReload} onKeyDown={(e) => e.key === 'Enter' && this.handleReload(e)}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
               >
-                Reload Page
+                Reload Page;
               </button>
-              <button
+              <button;
                 onClick={this.handleGoHome} onKeyDown={(e) => e.key === 'Enter' && this.handleGoHome(e)}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
               >
-                Go Home
+                Go Home;
               </button>
             </div>
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
+                This error has occurred {this.state.errorCount} times;
               </p>
             )}
           </div>
         </div>
-      );
+      )
     }
     return this.props.children;
   }
@@ -178,8 +177,7 @@ const styles = {
     borderRadius: '8px',
     padding: '40px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
-  },
+    textAlign: 'center' as const }
   icon: {
     fontSize: '48px',
     marginBottom: '20px'
@@ -208,8 +206,7 @@ const styles = {
     cursor: 'pointer',
     fontWeight: 'bold',
     marginBottom: '12px',
-    userSelect: 'none' as const
-  },
+    userSelect: 'none' as const }
   errorDetails: {
     fontSize: '14px'
   },
@@ -225,14 +222,12 @@ const styles = {
     overflowX: 'auto' as const,
     fontFamily: 'monospace',
     whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
-  },
+    wordBreak: 'break-all' as const }
   actions: {
     display: 'flex',
     gap: '12px',
     justifyContent: 'center',
-    flexWrap: 'wrap' as const
-  },
+    flexWrap: 'wrap' as const }
   button: {
     padding: '12px 24px',
     fontSize: '16px',
@@ -252,23 +247,19 @@ const styles = {
     fontSize: '14px',
     color: '#999'
   }
-};
-
-// Focus management utility
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ImprovedErrorBoundary;

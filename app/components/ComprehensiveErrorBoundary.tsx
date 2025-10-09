@@ -1,8 +1,8 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import ModernLoadingSpinner from './ModernLoadingSpinner';
+'use client',
+import React; { Component, ErrorInfo, ReactNode } from 'react',
+import ModernLoadingSpinner from './ModernLoadingSpinner',
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
@@ -10,91 +10,91 @@ interface Props {
   showRetryButton?: boolean;
 }
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
+  errorId?: string,
+    retryCount: number,
   isRetrying: boolean;
 }
 class ComprehensiveErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
+  private maxRetries: number,
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = { 
-      hasError: false, 
+      hasError: false,
       retryCount: 0,
       isRetrying: false,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
     this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
-      hasError: true, 
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
-      isRetrying: false
-    };
+      isRetrying: false;
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    });
+      errorInfo;
+    })
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Enhanced error reporting
+    // Enhanced error reporting;
     const errorReport = {
-      message: error.message,
+      message: error.message;
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      retryCount: this.state.retryCount
-    };
-    // Send to error reporting service
+      retryCount: this.state.retryCount;
+    }
+    // Send to error reporting service;
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          retry_count: this.state.retryCount
+          retry_count: this.state.retryCount;
         }
-      });
+      })
     }
-    // Log to console in development
+    // Log to console in development;
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary Caught Error:', errorReport);
+      console.error('Error Boundary Caught Error:', errorReport)
     }
-  };
+  }
   private handleRetry = async () => {
     if (this.state.retryCount < this.maxRetries) {
-      this.setState({ isRetrying: true });
-      // Simulate retry delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      this.setState({ isRetrying: true })
+      // Simulate retry delay;
+      await new Promise(resolve => setTimeout(resolve, 1000))
       this.setState(prevState => ({
         hasError: false,
         error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1,
-        isRetrying: false
-      }));
+        isRetrying: false;
+      }))
     }
-  };
+  }
   private handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -102,19 +102,19 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       }
       if (this.state.isRetrying) {
         return (
-          <ModernLoadingSpinner 
-            size="lg" 
-            text="Retrying..." 
+          <ModernLoadingSpinner;
+            size="lg"
+            text="Retrying..."
             fullScreen={true}
           />
-        );
+        )
       }
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
             <div className="text-6xl mb-6">⚠️</div>
             <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Oops! Something went wrong;
             </h1>
             <p className="text-gray-500 mb-6">
               We encountered an unexpected error. Our team has been notified and is working to fix it.
@@ -133,7 +133,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {this.state.retryCount < this.maxRetries && (
-                <button
+                <button;
                   onClick={this.handleRetry} onKeyDown={(e) => e.key === 'Enter' && this.handleRetry(e)}
                   className="cyber-button"
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
@@ -141,19 +141,19 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   🔄 Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
               )}
-              <button
+              <button;
                 onClick={this.handleReload} onKeyDown={(e) => e.key === 'Enter' && this.handleReload(e)}
                 className="cyber-button"
                 aria-label="Reload the entire page"
               >
-                🔄 Reload Page
+                🔄 Reload Page;
               </button>
-              <a
+              <a;
                 href="/contact"
                 className="cyber-button"
                 aria-label="Contact support for help with this error"
               >
-                📞 Contact Support
+                📞 Contact Support;
               </a>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
@@ -168,27 +168,24 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      )
     }
     return this.props.children;
   }
 }
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ComprehensiveErrorBoundary;

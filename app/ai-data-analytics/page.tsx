@@ -1,5 +1,5 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import React from 'react',
+import { CheckCircle } from 'lucide-react',
 const AIDataAnalyticsPage: React.FC = React.memo(() => {
   const analyticsServices = [
     {
@@ -15,13 +15,13 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         'Custom KPI tracking',
         'Data visualization tools',
         'API integrations',
-        'Mobile app access'
+        'Mobile app access',
       ],
       benefits: [
         'Increase decision speed by 60%',
         'Reduce manual reporting by 85%',
         'Identify trends 3x faster',
-        'Improve forecast accuracy by 40%'
+        'Improve forecast accuracy by 40%',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Business Intelligence',
@@ -41,13 +41,13 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         'Personalization engine',
         'A/B testing framework',
         'Cohort analysis',
-        'ROI tracking'
+        'ROI tracking',
       ],
       benefits: [
         'Increase customer retention by 35%',
         'Boost conversion rates by 45%',
         'Reduce churn by 50%',
-        'Improve customer satisfaction'
+        'Improve customer satisfaction',
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Customer Analytics',
@@ -67,13 +67,13 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         'Alert management system',
         'Performance benchmarking',
         'Historical trend analysis',
-        'Integration with IoT sensors'
+        'Integration with IoT sensors',
       ],
       benefits: [
         'Reduce unplanned downtime by 70%',
         'Lower maintenance costs by 40%',
         'Extend equipment lifespan by 25%',
-        'Improve operational efficiency'
+        'Improve operational efficiency',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Industrial Analytics',
@@ -93,13 +93,13 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         'Transaction pattern analysis',
         'Risk scoring algorithms',
         'Alert management',
-        'Comprehensive reporting'
+        'Comprehensive reporting',
       ],
       benefits: [
         'Detect fraud with 99.5% accuracy',
         'Reduce false positives by 60%',
         'Comply with regulations automatically',
-        'Save millions in prevented losses'
+        'Save millions in prevented losses',
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Financial Analytics',
@@ -119,13 +119,13 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         'Cross-channel analytics',
         'Budget allocation recommendations',
         'Competitive analysis',
-        'Real-time reporting'
+        'Real-time reporting',
       ],
       benefits: [
         'Improve marketing ROI by 50%',
         'Optimize budget allocation',
         'Identify high-value channels',
-        'Reduce customer acquisition costs'
+        'Reduce customer acquisition costs',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Marketing Analytics',
@@ -145,20 +145,20 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         'Cost optimization analysis',
         'Lead time prediction',
         'Quality metrics tracking',
-        'Sustainability reporting'
+        'Sustainability reporting',
       ],
       benefits: [
         'Reduce inventory costs by 30%',
         'Improve forecast accuracy by 45%',
         'Minimize stockouts by 80%',
-        'Optimize supplier relationships'
+        'Optimize supplier relationships',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Supply Chain Analytics',
       technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
       useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
     }
-  ];
+  ]
   const additionalFeatures = [
     {
       title: 'Advanced Data Processing',
@@ -180,7 +180,7 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
       description: 'AI-powered predictions and recommendations',
       icon: <Target className="w-8 h-8 text-orange-600" />
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -189,23 +189,23 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Data Analytics Services
+              AI Data Analytics Services;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Transform your data into actionable insights with our advanced AI-powered analytics solutions
+              Transform your data into actionable insights with our advanced AI-powered analytics solutions;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ Get Free Consultation
+                ✉️ Get Free Consultation;
               </a>
             </div>
           </div>
@@ -216,10 +216,10 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Analytics Solutions
+              Our Analytics Solutions;
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered analytics platforms for every business need
+              Comprehensive AI-powered analytics platforms for every business need;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -251,11 +251,11 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a 
+                <a;
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </div>
             ))}
@@ -270,7 +270,7 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
               Why Choose Our Analytics Solutions?
             </h2>
             <p className="text-xl text-gray-600">
-              Advanced technology and expert implementation for maximum ROI
+              Advanced technology and expert implementation for maximum ROI;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -293,20 +293,20 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
             Ready to Transform Your Data into Insights?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Contact us today for a free consultation and custom analytics solution
+            Contact us today for a free consultation and custom analytics solution;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a;
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
-              📞 +1 302 464 0950
+              📞 +1 302 464 0950;
             </a>
-            <a 
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
+              ✉️ kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-8 text-sm text-blue-200">
@@ -315,24 +315,7 @@ const AIDataAnalyticsPage: React.FC = React.memo(() => {
         </div>
       </section>
     </div>
-  );
-});
-
-// Focus management utility
-const focusElement = (element: HTMLElement | null) => {
-  if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-};
-
-// Skip to main content functionality
-const skipToMain = () => {
-  const main = document.querySelector('main');
-  if (main) {
-    focusElement(main);
-  }
-};
-
+  )
+}
 
 export default AIDataAnalyticsPage;

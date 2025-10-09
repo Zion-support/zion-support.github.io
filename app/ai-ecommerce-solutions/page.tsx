@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle } from 'lucide-react',
 const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
   const ecommerceServices = [
     {
@@ -16,13 +16,13 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         'Automated customer service',
         'Multi-channel selling',
         'Payment processing',
-        'Analytics dashboard'
+        'Analytics dashboard',
       ],
       benefits: [
         'Increase conversion by 45%',
         'Reduce cart abandonment by 60%',
         'Boost average order value by 35%',
-        'Save 30+ hours per week'
+        'Save 30+ hours per week',
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'E-commerce Platform',
@@ -42,13 +42,13 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         'Cost analysis',
         'Waste reduction',
         'Multi-location support',
-        'Real-time tracking'
+        'Real-time tracking',
       ],
       benefits: [
         'Reduce stockouts by 70%',
         'Lower inventory costs by 40%',
         'Eliminate waste by 50%',
-        'Improve cash flow'
+        'Improve cash flow',
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Inventory Management',
@@ -68,13 +68,13 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         'Multi-language support',
         'Knowledge base integration',
         'Sentiment analysis',
-        'Performance analytics'
+        'Performance analytics',
       ],
       benefits: [
         'Reduce support costs by 65%',
         'Improve response time by 90%',
         'Increase customer satisfaction',
-        'Provide 24/7 support'
+        'Provide 24/7 support',
       ],
       marketPrice: '$1,000-2,000/month',
       category: 'Customer Service',
@@ -94,13 +94,13 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         'A/B testing automation',
         'Content personalization',
         'ROI tracking',
-        'Cross-channel analytics'
+        'Cross-channel analytics',
       ],
       benefits: [
         'Increase email open rates by 50%',
         'Boost social engagement by 80%',
         'Improve ad performance by 60%',
-        'Reduce marketing costs by 40%'
+        'Reduce marketing costs by 40%',
       ],
       marketPrice: '$1,200-2,500/month',
       category: 'Marketing Automation',
@@ -120,13 +120,13 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         'Multi-currency support',
         'Compliance management',
         'Transaction analytics',
-        'API integration'
+        'API integration',
       ],
       benefits: [
         'Reduce fraud by 95%',
         'Lower chargeback rates by 80%',
         'Increase payment success rates',
-        'Ensure compliance'
+        'Ensure compliance',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Payment Processing',
@@ -146,20 +146,20 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         'Custom dashboards',
         'Real-time reporting',
         'Predictive analytics',
-        'ROI optimization'
+        'ROI optimization',
       ],
       benefits: [
         'Improve decision making',
         'Increase sales by 30%',
         'Optimize product mix',
-        'Identify growth opportunities'
+        'Identify growth opportunities',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Analytics',
       technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'D3.js', 'Machine Learning'],
       useCases: ['E-commerce', 'Retail', 'Marketplace', 'Subscription Business']
     }
-  ];
+  ]
   const ecommerceFeatures = [
     {
       title: 'AI Personalization',
@@ -181,13 +181,13 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
       description: 'Bank-level security for all transactions',
       icon: <Shield className="w-8 h-8 text-red-600" />
     }
-  ];
+  ]
   const industryStats = [
     { metric: '45%', description: 'Average Conversion Increase' },
     { metric: '60%', description: 'Cart Abandonment Reduction' },
     { metric: '35%', description: 'Average Order Value Boost' },
     { metric: '95%', description: 'Fraud Detection Accuracy' }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Helmet>
@@ -201,23 +201,23 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI E-commerce Solutions
+              AI E-commerce Solutions;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-              Transform your online business with AI-powered e-commerce solutions that boost sales, reduce costs, and enhance customer experience
+              Transform your online business with AI-powered e-commerce solutions that boost sales, reduce costs, and enhance customer experience;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                ✉️ Get E-commerce Audit
+                ✉️ Get E-commerce Audit;
               </a>
             </div>
           </div>
@@ -228,10 +228,10 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Results
+              Proven Results;
             </h2>
             <p className="text-xl text-gray-600">
-              Our AI e-commerce solutions deliver measurable improvements
+              Our AI e-commerce solutions deliver measurable improvements;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -249,10 +249,10 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our E-commerce Solutions
+              Our E-commerce Solutions;
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered tools for every aspect of e-commerce
+              Comprehensive AI-powered tools for every aspect of e-commerce;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -284,11 +284,11 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a 
+                <a;
                   href="/contact"
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Boost Sales Now
+                  Boost Sales Now;
                 </a>
               </div>
             ))}
@@ -303,7 +303,7 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
               Why Choose Our E-commerce Solutions?
             </h2>
             <p className="text-xl text-gray-600">
-              Advanced AI technology designed specifically for e-commerce success
+              Advanced AI technology designed specifically for e-commerce success;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -324,28 +324,28 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-gray-600">
-              Real results from our e-commerce clients
+              Real results from our e-commerce clients;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Zion Tech Group's AI e-commerce platform increased our online sales by 150% in just 6 months. The personalized recommendations are incredible!"</p>
+              <p className="text-gray-600 mb-4 italic">Zion Tech Group's AI e-commerce platform increased our online sales by 150% in just 6 months. The personalized recommendations are incredible!</p>
               <div className="font-semibold text-gray-900">Sarah Johnson</div>
               <div className="text-sm text-gray-700">CEO, Fashion Forward</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"The AI inventory management system reduced our stockouts by 80% and saved us $500K annually. Highly recommended!"</p>
+              <p className="text-gray-600 mb-4 italic">The AI inventory management system reduced our stockouts by 80% and saved us $500K annually. Highly recommended!</p>
               <div className="font-semibold text-gray-900">Michael Chen</div>
               <div className="text-sm text-gray-700">Operations Director, TechGear</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Their AI customer service automation reduced our support costs by 70% while improving customer satisfaction. Amazing results!"</p>
+              <p className="text-gray-600 mb-4 italic">Their AI customer service automation reduced our support costs by 70% while improving customer satisfaction. Amazing results!</p>
               <div className="font-semibold text-gray-900">Emily Rodriguez</div>
               <div className="text-sm text-gray-700">Customer Success Manager, HomeDecor Plus</div>
             </div>
@@ -359,20 +359,20 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
             Ready to Transform Your E-commerce?
           </h2>
           <p className="text-xl mb-8 text-purple-100">
-            Get a free e-commerce audit and discover how AI can boost your online sales
+            Get a free e-commerce audit and discover how AI can boost your online sales;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
             >
-              📞 +1 302 464 0950
+              📞 +1 302 464 0950;
             </a>
-            <a 
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
+              ✉️ kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-8 text-sm text-purple-200">
@@ -381,25 +381,20 @@ const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+})
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIEcommerceSolutionsPage;

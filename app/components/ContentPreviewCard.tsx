@@ -1,24 +1,23 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 interface ContentPreviewCardProps {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  readTime: string,
+  date: string,
+  path: string,
+  image: string,
   featured?: boolean;
   stats?: {
-    views: number;
+    views: number,
     engagement: number;
-  };
+  }
   excerpt?: string;
 }
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  // id,
-  title,
+  // id, title,
   description,
   category,
   readTime,
@@ -27,14 +26,14 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   image,
   featured = false,
   stats,
-  excerpt
+  excerpt;
 }) => {
   const formatNumber = (num: number): string => {
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+      return (num / 1000).toFixed(1) + 'k'
     }
-    return num.toString();
-  };
+    return num.toString()
+  }
   const getCategoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
       'Success Story': 'from-green-500 to-emerald-600',
@@ -45,9 +44,9 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
       'Intelligence': 'from-indigo-500 to-purple-600',
       'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600'
-    };
+    }
     return colors[category] || colors.default;
-  };
+  }
   return (
     <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
       featured ? 'ring-2 ring-indigo-200' : ''
@@ -62,7 +61,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {featured && (
           <div className="absolute top-4 left-4">
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-              ⭐ Featured
+              ⭐ Featured;
             </span>
           </div>
         )}
@@ -120,11 +119,11 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {/* Date and CTA */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-700">{date}</span>
-          <Link
+          <Link;
             href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
           >
-            Read Article
+            Read Article;
             <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -132,24 +131,20 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </div>
       </div>
     </article>
-  );
-};
-
-// Focus management utility
+  )
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ContentPreviewCard;

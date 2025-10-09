@@ -1,38 +1,38 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+'use client',
+import React; { useState, useEffect } from 'react',
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
   fps: number;
 }
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
   [key: string]: number;
 }
 const PerformanceDashboard: React.FC = React.memo(() => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics; setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
-  });
-  const [isVisible, setIsVisible] = useState(false);
+    fps: 0;
+  })
+  const [isVisible; setIsVisible] = useState(false)
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
-        'navigation'
+        'navigation',
       )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
+      const loadTime = navigation;
+        ? navigation.loadEventEnd - navigation.fetchStart;
         : 0;
-      // Measure render time
-      const _renderStart = performance.now();
+      // Measure render time;
+      const _renderStart = performance.now()
       const _renderTime = performance.now() - renderStart;
-      // Measure memory usage
+      // Measure memory usage;
       let _memoryUsage = 0;
       if ('memory' in performance) {
         const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
@@ -41,46 +41,45 @@ const PerformanceDashboard: React.FC = React.memo(() => {
       // Measure FPS (simplified)
       let _fps = 0;
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
+        let _lastTime = performance.now()
         let _frameCount = 0;
         const measureFPS = (currentTime: number) => {
-          frameCount++;
+          frameCount++
           if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
             frameCount = 0;
             lastTime = currentTime;
           }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
+          requestAnimationFrame(measureFPS)
+        }
+        requestAnimationFrame(measureFPS)
       }
       setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps
-      });
-    };
-    updateMetrics();
-    // Update metrics every 5 seconds
-    const _interval = setInterval(updateMetrics, 5000);
-    return () => clearInterval(interval);
-  }, []);
+        loadTime;
+        renderTime, memoryUsage,
+        fps;
+      })
+    }
+    updateMetrics()
+    // Update metrics every 5 seconds;
+    const _interval = setInterval(updateMetrics, 5000)
+    return () => clearInterval(interval)
+  }, [])
   if (!isVisible) {
     return (
-      <button
+      <button;
         onClick={() => setIsVisible(true)} onKeyDown={(e) => e.key === 'Enter' && () => setIsVisible(true)(e)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
-        Show Performance
+        Show Performance;
       </button>
-    );
+    )
   }
   return (
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        <button
+        <button;
           onClick={() => setIsVisible(false)} onKeyDown={(e) => e.key === 'Enter' && () => setIsVisible(false)(e)}
           className="text-gray-700 hover:text-gray-700"
         >
@@ -91,19 +90,19 @@ const PerformanceDashboard: React.FC = React.memo(() => {
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Load Time:</span>
           <span className="text-sm font-mono">
-            {metrics.loadTime.toFixed(2)}ms
+            {metrics.loadTime.toFixed(2)}ms;
           </span>
         </div>
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Render Time:</span>
           <span className="text-sm font-mono">
-            {metrics.renderTime.toFixed(2)}ms
+            {metrics.renderTime.toFixed(2)}ms;
           </span>
         </div>
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Memory Usage:</span>
           <span className="text-sm font-mono">
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
           </span>
         </div>
         <div className="flex justify-between">
@@ -117,25 +116,21 @@ const PerformanceDashboard: React.FC = React.memo(() => {
         </div>
       </div>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default PerformanceDashboard;

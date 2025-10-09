@@ -1,8 +1,8 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Link from 'next/link';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
+import React from 'react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
+import Link from 'next/link',
+import { ArrowRight, MapPin, Clock, Users, Award, Zap  } from 'lucide-react',
 const CareersPage: React.FC = React.memo(() => {
   const positions = [
     {
@@ -29,15 +29,15 @@ const CareersPage: React.FC = React.memo(() => {
       type: 'Full-time',
       description: 'Protect and secure our clients digital assets'
     }
-  ];
+  ]
   const benefits = [
     'Competitive Salary',
     'Health Insurance',
     'Remote Work Options',
     'Professional Development',
     'Flexible Hours',
-    'Stock Options'
-  ];
+    'Stock Options',
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -45,7 +45,7 @@ const CareersPage: React.FC = React.memo(() => {
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Join Our Team</h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
-            Be part of the future of technology. Join Zion Tech Group and help us build 
+            Be part of the future of technology. Join Zion Tech Group and help us build;
             innovative AI and IT solutions that transform businesses worldwide.
           </p>
         </section>
@@ -65,7 +65,7 @@ const CareersPage: React.FC = React.memo(() => {
                 </div>
                 <p className="text-gray-500 mb-4">{position.description}</p>
                 <button role="button" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
-                  Apply Now
+                  Apply Now;
                 </button>
               </div>
             ))}
@@ -87,25 +87,21 @@ const CareersPage: React.FC = React.memo(() => {
       </main>
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default CareersPage;

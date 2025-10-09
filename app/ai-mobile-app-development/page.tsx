@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle } from 'lucide-react',
 const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
   const mobileServices = [
     {
@@ -16,13 +16,13 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         'Push notifications',
         'Offline functionality',
         'App store optimization',
-        'Maintenance & updates'
+        'Maintenance & updates',
       ],
       benefits: [
         'Faster development time',
         'Lower development costs',
         'Advanced AI features',
-        'Scalable architecture'
+        'Scalable architecture',
       ],
       marketPrice: '$8,000-15,000/project',
       category: 'Mobile Development',
@@ -42,13 +42,13 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         'Image recognition',
         'Integration APIs',
         'Analytics dashboard',
-        'Custom training'
+        'Custom training',
       ],
       benefits: [
         'Improve user engagement',
         'Reduce support costs',
         '24/7 customer service',
-        'Personalized experiences'
+        'Personalized experiences',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'AI Integration',
@@ -68,13 +68,13 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         'Conversion tracking',
         'Real-time dashboards',
         'Predictive analytics',
-        'Custom reports'
+        'Custom reports',
       ],
       benefits: [
         'Improve app performance',
         'Increase user retention',
         'Optimize user experience',
-        'Data-driven decisions'
+        'Data-driven decisions',
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Analytics',
@@ -94,13 +94,13 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         'Runtime protection',
         'Compliance monitoring',
         'Security analytics',
-        'Incident response'
+        'Incident response',
       ],
       benefits: [
         'Protect user data',
         'Prevent security breaches',
         'Ensure compliance',
-        'Build user trust'
+        'Build user trust',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Security',
@@ -120,13 +120,13 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         'A/B testing',
         'Engagement tracking',
         'Retention optimization',
-        'ROI analytics'
+        'ROI analytics',
       ],
       benefits: [
         'Increase user engagement',
         'Boost retention rates',
         'Improve conversion',
-        'Optimize marketing spend'
+        'Optimize marketing spend',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Marketing',
@@ -146,20 +146,20 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         'Load testing',
         'Security testing',
         'Regression testing',
-        'Test reporting'
+        'Test reporting',
       ],
       benefits: [
         'Reduce testing time by 80%',
         'Improve app quality',
         'Catch bugs early',
-        'Lower testing costs'
+        'Lower testing costs',
       ],
       marketPrice: '$1,200-2,500/month',
       category: 'Testing',
       technologies: ['Appium', 'Detox', 'Jest', 'Python', 'Machine Learning', 'APIs'],
       platforms: ['iOS', 'Android', 'Cross-platform']
     }
-  ];
+  ]
   const mobileFeatures = [
     {
       title: 'AI Integration',
@@ -181,7 +181,7 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
       description: 'Scalable cloud infrastructure for your mobile apps',
       icon: <Cloud className="w-8 h-8 text-orange-600" />
     }
-  ];
+  ]
   const developmentProcess = [
     {
       step: '1',
@@ -208,7 +208,7 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance, updates, and support'
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
       <Helmet>
@@ -222,23 +222,23 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Mobile App Development
+              AI Mobile App Development;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-              Build intelligent mobile apps with AI-powered features that engage users and drive business growth
+              Build intelligent mobile apps with AI-powered features that engage users and drive business growth;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                ✉️ Get Free Consultation
+                ✉️ Get Free Consultation;
               </a>
             </div>
           </div>
@@ -249,10 +249,10 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Development Process
+              Our Development Process;
             </h2>
             <p className="text-xl text-gray-600">
-              Proven 5-step process for building exceptional AI-powered mobile apps
+              Proven 5-step process for building exceptional AI-powered mobile apps;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -273,10 +273,10 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Mobile Development Services
+              Our Mobile Development Services;
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered mobile app development and support services
+              Comprehensive AI-powered mobile app development and support services;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -308,11 +308,11 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a 
+                <a;
                   href="/contact"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Start Building
+                  Start Building;
                 </a>
               </div>
             ))}
@@ -327,7 +327,7 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
               Why Choose Our Mobile Development?
             </h2>
             <p className="text-xl text-gray-600">
-              Advanced AI technology with expert mobile development expertise
+              Advanced AI technology with expert mobile development expertise;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -348,28 +348,28 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-gray-600">
-              Real results from our mobile app development clients
+              Real results from our mobile app development clients;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!"</p>
+              <p className="text-gray-600 mb-4 italic">Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!</p>
               <div className="font-semibold text-gray-900">David Kim</div>
               <div className="text-sm text-gray-700">Founder, FitAI</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!"</p>
+              <p className="text-gray-600 mb-4 italic">Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!</p>
               <div className="font-semibold text-gray-900">Lisa Wang</div>
               <div className="text-sm text-gray-700">CEO, ShopSmart</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly."</p>
+              <p className="text-gray-600 mb-4 italic">The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly.</p>
               <div className="font-semibold text-gray-900">Robert Johnson</div>
               <div className="text-sm text-gray-700">CTO, ServicePro</div>
             </div>
@@ -383,20 +383,20 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
             Ready to Build Your AI Mobile App?
           </h2>
           <p className="text-xl mb-8 text-indigo-100">
-            Get a free consultation and discover how AI can transform your mobile app
+            Get a free consultation and discover how AI can transform your mobile app;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a;
               href="tel:+13024640950"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
             >
-              📞 +1 302 464 0950
+              📞 +1 302 464 0950;
             </a>
-            <a 
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
+              ✉️ kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-8 text-sm text-indigo-200">
@@ -405,25 +405,21 @@ const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIMobileAppDevelopmentPage;

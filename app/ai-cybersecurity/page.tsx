@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, CheckCircle, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings } from 'lucide-react';
+'use client',
+import React from 'react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
+import SEOOptimizer from '../components/SEOOptimizer',
+import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, CheckCircle, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings  } from 'lucide-react',
 const AICybersecurityPage: React.FC = React.memo(() => {
   const features = [
     {
@@ -42,7 +42,7 @@ const AICybersecurityPage: React.FC = React.memo(() => {
       description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.',
       benefits: ['Identity verification', 'Device trust', 'Least privilege']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Essential',
@@ -56,9 +56,9 @@ const AICybersecurityPage: React.FC = React.memo(() => {
         '24/7 monitoring',
         'Email support',
         'Basic reporting',
-        'Standard compliance'
+        'Standard compliance',
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -73,9 +73,9 @@ const AICybersecurityPage: React.FC = React.memo(() => {
         'Priority support',
         'Advanced analytics',
         'Custom compliance',
-        'Incident response'
+        'Incident response',
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -91,42 +91,42 @@ const AICybersecurityPage: React.FC = React.memo(() => {
         'Custom development',
         'Advanced compliance',
         'Penetration testing',
-        'SLA guarantee'
+        'SLA guarantee',
       ],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   const stats = [
     { number: '99.9%', label: 'Threat Detection' },
     { number: '24/7', label: 'Monitoring' },
     { number: '60%', label: 'Faster Response' },
     { number: '100%', label: 'Compliance' }
-  ];
+  ]
   const threats = [
     {
       title: 'Ransomware Protection',
       description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.',
-      icon: Shield
+      icon: Shield;
     },
     {
       title: 'Phishing Detection',
       description: 'AI-powered email security that detects and blocks sophisticated phishing attempts and social engineering attacks.',
-      icon: Eye
+      icon: Eye;
     },
     {
       title: 'Insider Threat Detection',
       description: 'Behavioral analysis to identify and prevent insider threats, data exfiltration, and unauthorized access.',
-      icon: Users
+      icon: Users;
     },
     {
       title: 'Network Security',
       description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
-      icon: Globe
+      icon: Globe;
     }
-  ];
+  ]
   return (
     <>
-      <SEOOptimizer
+      <SEOOptimizer;
         title="AI Cybersecurity Solutions - Zion Tech Group"
         description="Advanced AI-powered cybersecurity with 99.9% threat detection, 24/7 monitoring, and automated response. Protect your business from evolving cyber threats."
         keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AI security']}
@@ -138,25 +138,25 @@ const AICybersecurityPage: React.FC = React.memo(() => {
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Cybersecurity Solutions
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+                AI Cybersecurity Solutions;
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Protect your business with AI-powered security
+                Protect your business with AI-powered security;
               </p>
               <p className="text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
-                Our AI-powered cybersecurity platform provides advanced threat detection, 
+                Our AI-powered cybersecurity platform provides advanced threat detection,
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
@@ -181,7 +181,7 @@ const AICybersecurityPage: React.FC = React.memo(() => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Advanced Security Features
+              Advanced Security Features;
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -204,7 +204,7 @@ const AICybersecurityPage: React.FC = React.memo(() => {
           {/* Threats Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Protect Against All Threats
+              Protect Against All Threats;
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {threats.map((threat, index) => (
@@ -219,11 +219,11 @@ const AICybersecurityPage: React.FC = React.memo(() => {
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div
+                <div;
                   key={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
@@ -232,7 +232,7 @@ const AICybersecurityPage: React.FC = React.memo(() => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -252,15 +252,15 @@ const AICybersecurityPage: React.FC = React.memo(() => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="tel:+13024640950"
+                  <a;
+                    href="tel: +13024640950"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                      plan.popular;
+                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300',
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
-                    Get Protected
+                    Get Protected;
                   </a>
                 </div>
               ))}
@@ -273,17 +273,17 @@ const AICybersecurityPage: React.FC = React.memo(() => {
                 Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-500 mb-8">
-                Join 3,000+ companies already protected by our AI cybersecurity platform
+                Join 3,000+ companies already protected by our AI cybersecurity platform;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
@@ -298,24 +298,8 @@ const AICybersecurityPage: React.FC = React.memo(() => {
         <Footer />
       </div>
     </>
-  );
-});
-
-// Focus management utility
-const focusElement = (element: HTMLElement | null) => {
-  if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-};
-
-// Skip to main content functionality
-const skipToMain = () => {
-  const main = document.querySelector('main');
-  if (main) {
-    focusElement(main);
-  }
-};
+  )
+}
 
 
 export default AICybersecurityPage;

@@ -1,18 +1,17 @@
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
+  src, alt,
   width,
   height,
   className = '',
-  priority = false
+  priority = false;
 }) => {
   return (
     <img aria-label="Image"
@@ -28,24 +27,20 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         height: height ? `${height}px` : 'auto'
       }}
     />
-  );
-};
-
-// Focus management utility
+  )
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default OptimizedImage;

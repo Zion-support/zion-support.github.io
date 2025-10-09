@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react',
 const ContentShowcase: React.FC = React.memo(() => {
-  return (
-    <div className="bg-white py-16 px-4">
+  return (<div className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Content Showcase
+            Content Showcase;
           </h2>
           <p className="text-xl text-gray-600">
-            Explore our latest content and insights
+            Explore our latest content and insights;
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Placeholder content cards */}
           {[1, 2, 3].map((item) => (
-            <div
+            <div;
               key={item}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
             >
@@ -30,25 +29,21 @@ const ContentShowcase: React.FC = React.memo(() => {
         </div>
       </div>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ContentShowcase;

@@ -1,24 +1,20 @@
-import { MetadataRoute } from 'next'
-
-// Focus management utility
+import { MetadataRoute } from 'next',
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
+  const baseUrl = 'https: //ziontechgroup.com',
   const routes = [
     '',
     '/about',
@@ -67,12 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/cookies',
     '/gdpr',
     '/security',
-    '/compliance'
+    '/compliance',
   ]
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8
+    priority: route === '' ? 1.0 : 0.8;
   }))
 }

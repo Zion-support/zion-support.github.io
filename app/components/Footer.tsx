@@ -1,10 +1,9 @@
-'use client';
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+'use client',
+import React; { memo } from 'react',
+import Link from 'next/link',
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle  } from 'lucide-react',
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
-  
+  const currentYear = new Date().getFullYear()
   const aiServices = [
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Advanced Analytics' },
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Custom Chatbots' },
@@ -28,7 +27,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'Voice AI' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow AI' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Writing AI' }
-  ];
+  ]
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud Solutions' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security Services' },
@@ -40,14 +39,14 @@ const Footer: React.FC = memo(() => {
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Robotic Solutions' },
     { name: 'Security', url: '/security', description: 'Security Solutions' }
-  ];
+  ]
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
     { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
     { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
     { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
-  ];
+  ]
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
@@ -58,15 +57,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
     { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
-  ];
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
-  ];
+  ]
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -74,7 +65,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
-  ];
+  ]
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -82,7 +73,7 @@ const Footer: React.FC = memo(() => {
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
-  ];
+  ]
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -90,22 +81,20 @@ const Footer: React.FC = memo(() => {
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
-  ];
+  ]
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+  }
   const achievements = [
     { icon: Award, text: '50+ Successful Projects' },
     { icon: Users, text: '100+ Happy Clients' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
-  ];
+  ]
   return (
-<<<<<<< HEAD
-=======
     <footer role="contentinfo" className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -134,7 +123,7 @@ const Footer: React.FC = memo(() => {
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <a
+                <a;
                   key={social.name}
                   href={social.url}
                   target="_blank"
@@ -152,9 +141,8 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
-                  <Link 
+                  <Link;
                     href={service.url}
                     className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -165,7 +153,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link;
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -176,14 +164,11 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-=======
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
-                  <Link 
+                  <Link;
                     href={service.url}
                     className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -194,7 +179,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link;
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -203,8 +188,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
           {/* Micro SAAS & Emerging Tech */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
@@ -214,7 +197,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {microSaasServices.slice(0, 3).map((service, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link;
                         href={service.url}
                         className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                       >
@@ -224,14 +207,13 @@ const Footer: React.FC = memo(() => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               </div>
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
                 <ul className="space-y-2">
                   {emergingTech.slice(0, 3).map((service, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link;
                         href={service.url}
                         className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                       >
@@ -286,7 +268,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link;
                     href={link.url}
                     className="text-gray-600 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
@@ -301,7 +283,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link;
                     href={link.url}
                     className="text-gray-600 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
@@ -324,13 +306,13 @@ const Footer: React.FC = memo(() => {
             <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
             <p className="text-gray-600 text-sm mb-4">Stay updated with our latest news and offers.</p>
             <div className="flex space-x-2">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:border-cyan-400"
               />
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </div>
@@ -345,38 +327,35 @@ const Footer: React.FC = memo(() => {
             </div>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-sm text-gray-600 hover:text-cyan-400 transition-colors">
-                Privacy Policy
+                Privacy Policy;
               </Link>
               <Link href="/terms" className="text-sm text-gray-600 hover:text-cyan-400 transition-colors">
-                Terms of Service
+                Terms of Service;
               </Link>
               <Link href="/cookies" className="text-sm text-gray-600 hover:text-cyan-400 transition-colors">
-                Cookie Policy
+                Cookie Policy;
               </Link>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-});
-Footer.displayName = 'Footer';
+  )
+})
+Footer.displayName = 'Footer',
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default Footer;

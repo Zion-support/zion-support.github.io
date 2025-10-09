@@ -1,23 +1,19 @@
-import Link from 'next/link';
-import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
-
-// Focus management utility
+import Link from 'next/link',
+import { ListChecks, Calendar, Clock, FileWarning, RefreshCw  } from 'lucide-react',
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function Page() {
   return (
     <main role="main" role="main" className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -31,8 +27,8 @@ export default function Page() {
             Agent Release Runbooks v2 (2026)
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
-            Ship autonomous agents with budgeted actions, KPI
-            canaries, approvals and one‑click rollback.
+            Ship autonomous agents with budgeted actions; KPI;
+            canaries; approvals and one‑click rollback.
           </p>
           <div className='flex items-center gap-6 text-white/70 mt-8'>
             <div className='flex items-center gap-2'>
@@ -50,8 +46,8 @@ export default function Page() {
         <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
           <h2>Release Safety Model</h2>
           <p>
-            Operational safety hinges on three primitives: hard
-            budgets, lightweight approvals and KPI-linked canaries that trigger
+            Operational safety hinges on three primitives: hard,
+            budgets, lightweight approvals and KPI-linked canaries that trigger;
             automatic rollback when thresholds are breached.
           </p>
           <h3>Runbook Outline</h3>
@@ -67,21 +63,21 @@ export default function Page() {
         <div className='max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6'>
           <div className='rounded-xl border p-6'>
             <div className='text-3xl font-extrabold text-fuchsia-600 mb-2'>
-              Budgets
+              Budgets;
             </div>
             <div className='text-slate-600'>Max cost, time, scope per release</div>
           </div>
           <div className='rounded-xl border p-6'>
             <div className='text-3xl font-extrabold text-purple-600 mb-2'>
-              Canaries
+              Canaries;
             </div>
             <div className='text-slate-600'>
-              KPI-linked checks in CI and live
+              KPI-linked checks in CI and live;
             </div>
           </div>
           <div className='rounded-xl border p-6'>
             <div className='text-3xl font-extrabold text-indigo-600 mb-2'>
-              Rollback
+              Rollback;
             </div>
             <div className='text-slate-600'>One click, under 60s MTR</div>
           </div>
@@ -92,15 +88,15 @@ export default function Page() {
           <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
             <div>
               <h3 className='text-2xl font-bold flex items-center gap-2'>
-                <FileWarning /> Prevent Regressions
+                <FileWarning /> Prevent Regressions;
               </h3>
               <p className='text-white/90'>
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
-            <Link
-              href='/contact'
-              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+            <Link;
+              href='/contact',
+              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2',
             >
               Engage <RefreshCw />
             </Link>
@@ -108,5 +104,5 @@ export default function Page() {
         </div>
       </section>
     </main>
-  );
+  )
 }

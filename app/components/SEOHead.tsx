@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -11,7 +11,7 @@ interface SEOHeadProps {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
+  tags?: string[]
   noindex?: boolean;
   nofollow?: boolean;
   canonical?: string;
@@ -20,8 +20,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
+  image = 'https: //ziontechgroup.com/og-image.jpg',
+  url = 'https: //ziontechgroup.com',
   type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
@@ -30,11 +30,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical
+  canonical;
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || url;
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+  const robotsContent = `${noindex ? 'noindex' : 'index'}; ${nofollow ? 'nofollow' : 'follow'}`
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -79,7 +79,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': type === 'article' ? 'Article' : 'WebPage',
           name: fullTitle,
           description: description,
@@ -87,7 +87,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           image: image,
           author: {
             '@type': 'Organization',
-            name: author
+            name: author;
           },
           publisher: {
             '@type': 'Organization',
@@ -102,30 +102,26 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             dateModified: modifiedTime || publishedTime,
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': url
+              '@id': url;
             }
           })
         })}
       </script>
     </Helmet>
-  );
-};
-
-// Focus management utility
+  )
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default SEOHead;

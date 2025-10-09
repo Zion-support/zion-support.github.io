@@ -1,7 +1,7 @@
-'use client';
-import React, { useState } from 'react';
+'use client',
+import React; { useState } from 'react',
 const InteractiveContentShowcase2026: React.FC = React.memo(() => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab; setActiveTab] = useState(0)
   const tabs = [
     {
       title: "AI Innovation",
@@ -23,28 +23,28 @@ const InteractiveContentShowcase2026: React.FC = React.memo(() => {
       content: "Live insights and predictive analytics for better decisions.",
       icon: "📊"
     }
-  ];
+  ]
   return (
     <section className='bg-gray-50 py-16 rounded-2xl'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-            Future-Ready Solutions
+            Future-Ready Solutions;
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Prepare your enterprise for the next generation of AI technology
+            Prepare your enterprise for the next generation of AI technology;
             with our advanced solutions.
           </p>
         </div>
         <div className='max-w-4xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-2 mb-8'>
             {tabs.map((tab, index) => (
-              <button
+              <button;
                 key={index}
                 onClick={() => setActiveTab(index)} onKeyDown={(e) => e.key === 'Enter' && () => setActiveTab(index)(e)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  activeTab === index
-                    ? 'bg-blue-600 text-white shadow-lg'
+                  activeTab === index;
+                    ? 'bg-blue-600 text-white shadow-lg',
                     : 'bg-white text-gray-600 hover:bg-gray-50'
                 }`}
               >
@@ -67,25 +67,21 @@ const InteractiveContentShowcase2026: React.FC = React.memo(() => {
         </div>
       </div>
     </section>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default InteractiveContentShowcase2026;

@@ -1,9 +1,9 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+'use client',
+import React; { useState, useEffect } from 'react',
+import Link from 'next/link',
 const UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide; setCurrentSlide] = useState(0)
+  const [isVisible; setIsVisible] = useState(true)
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -47,28 +47,28 @@ const UltimateBusinessIntelligence2025Banner = () => {
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
-  ];
+  ]
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+      setCurrentSlide((prev) => (prev + 1) % content.length)
+    }; 5000)
+    return () => clearInterval(timer)
+  }, [content.length])
   const handleClose = () => {
-    setIsVisible(false);
-  };
+    setIsVisible(false)
+  }
   if (!isVisible) return null;
-  const _currentContent = content[currentSlide];
+  const _currentContent = content[currentSlide]
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
+        <div;
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
         ></div>
-        <div
+        <div;
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
         ></div>
@@ -79,7 +79,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-2xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
             </span>
             <span className='text-2xl'>⚡</span>
           </div>
@@ -91,13 +91,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </p>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link
+            <Link;
               to="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
-              Get Started Today
+              Get Started Today;
               <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
+                <path;
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
@@ -105,24 +105,24 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 />
               </svg>
             </Link>
-            <Link
+            <Link;
               to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
             >
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
           </div>
           {/* Key Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg
+                <svg;
                   className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
+                  <path;
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
@@ -145,7 +145,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
-                <span
+                <span;
                   key={tag}
                   className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
                 >
@@ -155,7 +155,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
+              <Link;
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
@@ -163,7 +163,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span>Read {currentContent.type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </Link>
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
               >
@@ -175,7 +175,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
-              <button
+              <button;
                 key={index}
                 onClick={() => setCurrentSlide(index)} onKeyDown={(e) => e.key === 'Enter' && () => setCurrentSlide(index)(e)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -201,24 +201,20 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
     </section>
-  );
-};
-
-// Focus management utility
+  )
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default UltimateBusinessIntelligence2025Banner;

@@ -1,29 +1,24 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
+import React from 'react',
+// import { Metadata } from 'next', // Removed for Vite;
 const metadata = {
   title: 'Our Team - Zion Tech Group',
-  description:
-    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.'
-};
-
-// Focus management utility
+  description: 'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.'
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
-export { metadata };
+}
+export { metadata }
 const TeamPage: React.FC = React.memo(() => {
   const teamMembers = [
     {
@@ -50,7 +45,7 @@ const TeamPage: React.FC = React.memo(() => {
       bio: 'Full-stack engineer specializing in cloud infrastructure and distributed systems.',
       image: '👨‍🔧'
     },
-  ];
+  ]
   return (
     <>
       <div className='min-h-screen bg-slate-50 py-16'>
@@ -58,17 +53,17 @@ const TeamPage: React.FC = React.memo(() => {
           <div className='max-w-6xl mx-auto'>
             <div className='text-center mb-16'>
               <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-                Our Team
+                Our Team;
               </h1>
               <p className='text-xl text-gray-600'>
-                Meet the experts behind our innovative AI and IT solutions
+                Meet the experts behind our innovative AI and IT solutions;
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {teamMembers.map((member, index) => (
-                <div
+                <div;
                   key={index}
-                  className='bg-white rounded-lg shadow-lg p-6 text-center'
+                  className='bg-white rounded-lg shadow-lg p-6 text-center',
                 >
                   <div className='text-6xl mb-4'>{member.image}</div>
                   <h3 className='text-xl font-bold text-gray-900 mb-2'>
@@ -83,15 +78,15 @@ const TeamPage: React.FC = React.memo(() => {
             </div>
             <div className='mt-16 bg-white rounded-lg shadow-lg p-8'>
               <h2 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                Join Our Team
+                Join Our Team;
               </h2>
               <p className='text-gray-600 text-center mb-6'>
-                We&apos;re always looking for talented individuals to join our
+                We&aposre always looking for talented individuals to join our;
                 mission of advancing AI and IT solutions.
               </p>
               <div className='text-center'>
                 <button role="button" className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
-                  View Open Positions
+                  View Open Positions;
                 </button>
               </div>
             </div>
@@ -99,7 +94,7 @@ const TeamPage: React.FC = React.memo(() => {
         </div>
       </div>
     </>
-  );
-};
-);
+  )
+}
+)
 export default TeamPage;

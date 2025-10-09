@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin  } from 'lucide-react',
 const MicroSAASPage: React.FC = React.memo(() => {
   const microSAASServices = [
-    // AI-Powered Developer Tools
+    // AI-Powered Developer Tools;
     {
       title: 'AI Code Review Assistant Pro',
       description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
@@ -16,7 +16,7 @@ const MicroSAASPage: React.FC = React.memo(() => {
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Test Generation Suite',
@@ -35,24 +35,21 @@ const MicroSAASPage: React.FC = React.memo(() => {
       description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
       icon: '📚',
       price: '$79/month',
-      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format 
-// Focus management utility
+      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export', 'Team collaboration'],
       benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
       marketPrice: '$120-250/month',
@@ -60,7 +57,7 @@ export', 'Team collaboration'],
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Marketing & SEO Tools
+    // AI Marketing & SEO Tools;
     {
       title: 'AI SEO Optimizer Pro',
       description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
@@ -109,7 +106,7 @@ export', 'Team collaboration'],
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Business Intelligence & Analytics
+    // AI Business Intelligence & Analytics;
     {
       title: 'AI Analytics Dashboard Pro',
       description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
@@ -146,7 +143,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Finance & Accounting Tools
+    // AI Finance & Accounting Tools;
     {
       title: 'AI Invoice Generator Pro',
       description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
@@ -183,7 +180,7 @@ export', 'Team collaboration'],
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Healthcare & Wellness
+    // AI Healthcare & Wellness;
     {
       title: 'AI Health Monitoring Platform',
       description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
@@ -220,7 +217,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Education & Learning
+    // AI Education & Learning;
     {
       title: 'AI Language Learning Platform',
       description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
@@ -257,7 +254,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI E-commerce & Retail
+    // AI E-commerce & Retail;
     {
       title: 'AI Inventory Optimizer Pro',
       description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
@@ -294,7 +291,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Legal & Compliance
+    // AI Legal & Compliance;
     {
       title: 'AI Legal Document Analyzer',
       description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
@@ -307,7 +304,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Real Estate & Property Management
+    // AI Real Estate & Property Management;
     {
       title: 'AI Property Valuation Engine',
       description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
@@ -320,7 +317,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {
       title: 'AI Resume Parser & Matcher',
       description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
@@ -357,7 +354,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Finance & Accounting
+    // AI Finance & Accounting;
     {
       title: 'AI Expense Tracker & Categorizer',
       description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
@@ -394,7 +391,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Project Management
+    // AI Project Management;
     {
       title: 'AI Project Manager Assistant',
       description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
@@ -419,7 +416,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Customer Service
+    // AI Customer Service;
     {
       title: 'AI Live Chat Assistant',
       description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
@@ -444,7 +441,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Sales & CRM
+    // AI Sales & CRM;
     {
       title: 'AI Lead Scoring Engine',
       description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
@@ -469,7 +466,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Healthcare & Wellness
+    // AI Healthcare & Wellness;
     {
       title: 'AI Symptom Checker Pro',
       description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
@@ -494,7 +491,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Security & Compliance
+    // AI Security & Compliance;
     {
       title: 'AI Security Monitoring System',
       description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
@@ -519,7 +516,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Productivity & Automation
+    // AI Productivity & Automation;
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
@@ -556,7 +553,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Analytics & Reporting
+    // AI Analytics & Reporting;
     {
       title: 'AI Business Intelligence Suite',
       description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
@@ -581,7 +578,7 @@ export', 'Team collaboration'],
       technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Development & DevOps
+    // AI Development & DevOps;
     {
       title: 'AI Code Quality Monitor',
       description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
@@ -606,7 +603,7 @@ export', 'Team collaboration'],
       technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Communication & Collaboration
+    // AI Communication & Collaboration;
     {
       title: 'AI Team Collaboration Hub',
       description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
@@ -631,7 +628,7 @@ export', 'Team collaboration'],
       technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Marketing & Advertising
+    // AI Marketing & Advertising;
     {
       title: 'AI Ad Campaign Optimizer',
       description: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
@@ -656,7 +653,7 @@ export', 'Team collaboration'],
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI E-commerce & Retail
+    // AI E-commerce & Retail;
     {
       title: 'AI Customer Behavior Analyzer',
       description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
@@ -681,7 +678,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Education & Training
+    // AI Education & Training;
     {
       title: 'AI Corporate Training Platform',
       description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
@@ -706,7 +703,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Legal & Compliance
+    // AI Legal & Compliance;
     {
       title: 'AI Contract Management System',
       description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
@@ -731,7 +728,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Real Estate & Property
+    // AI Real Estate & Property;
     {
       title: 'AI Property Management Suite',
       description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
@@ -756,7 +753,7 @@ export', 'Team collaboration'],
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Agriculture & Environment
+    // AI Agriculture & Environment;
     {
       title: 'AI Crop Monitoring System',
       description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
@@ -781,7 +778,7 @@ export', 'Team collaboration'],
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transportation & Logistics
+    // AI Transportation & Logistics;
     {
       title: 'AI Fleet Management System',
       description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
@@ -806,7 +803,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Entertainment & Media
+    // AI Entertainment & Media;
     {
       title: 'AI Content Moderation Platform',
       description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
@@ -831,7 +828,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {
       title: 'AI Game Development Platform',
       description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
@@ -856,7 +853,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
@@ -881,7 +878,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Energy & Utilities
+    // AI Energy & Utilities;
     {
       title: 'AI Energy Management System',
       description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
@@ -906,7 +903,7 @@ export', 'Team collaboration'],
       technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Manufacturing & Industrial
+    // AI Manufacturing & Industrial;
     {
       title: 'AI Quality Control System',
       description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
@@ -931,7 +928,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Insurance & Risk Management
+    // AI Insurance & Risk Management;
     {
       title: 'AI Risk Assessment Platform',
       description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
@@ -956,7 +953,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Government & Public Sector
+    // AI Government & Public Sector;
     {
       title: 'AI Citizen Services Platform',
       description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
@@ -981,7 +978,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Non-Profit & Social Impact
+    // AI Non-Profit & Social Impact;
     {
       title: 'AI Donor Management System',
       description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
@@ -1006,7 +1003,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Travel & Hospitality
+    // AI Travel & Hospitality;
     {
       title: 'AI Travel Planning Assistant',
       description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
@@ -1031,7 +1028,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Sports & Fitness
+    // AI Sports & Fitness;
     {
       title: 'AI Sports Performance Analyzer',
       description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
@@ -1056,7 +1053,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Beauty & Fashion
+    // AI Beauty & Fashion;
     {
       title: 'AI Virtual Try-On Platform',
       description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
@@ -1081,7 +1078,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Home & Lifestyle
+    // AI Home & Lifestyle;
     {
       title: 'AI Smart Home Controller',
       description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
@@ -1106,7 +1103,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Pets & Animals
+    // AI Pets & Animals;
     {
       title: 'AI Pet Health Monitor',
       description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
@@ -1131,7 +1128,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Education & Learning
+    // AI Education & Learning;
     {
       title: 'AI Tutoring Platform',
       description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
@@ -1156,7 +1153,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Music & Audio
+    // AI Music & Audio;
     {
       title: 'AI Music Composition Tool',
       description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
@@ -1181,7 +1178,7 @@ export', 'Team collaboration'],
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Art & Design
+    // AI Art & Design;
     {
       title: 'AI Design Assistant Pro',
       description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
@@ -1206,7 +1203,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Dating & Relationships
+    // AI Dating & Relationships;
     {
       title: 'AI Dating Assistant',
       description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
@@ -1231,7 +1228,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Parenting & Family
+    // AI Parenting & Family;
     {
       title: 'AI Parenting Assistant',
       description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
@@ -1256,7 +1253,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Senior Care & Aging
+    // AI Senior Care & Aging;
     {
       title: 'AI Senior Care Monitor',
       description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
@@ -1281,7 +1278,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Accessibility & Inclusion
+    // AI Accessibility & Inclusion;
     {
       title: 'AI Accessibility Assistant',
       description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
@@ -1306,7 +1303,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Emergency & Crisis Management
+    // AI Emergency & Crisis Management;
     {
       title: 'AI Emergency Response System',
       description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
@@ -1331,7 +1328,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Space & Astronomy
+    // AI Space & Astronomy;
     {
       title: 'AI Space Mission Planner',
       description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
@@ -1356,7 +1353,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Ocean & Marine
+    // AI Ocean & Marine;
     {
       title: 'AI Marine Life Tracker',
       description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
@@ -1381,7 +1378,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Archaeology & History
+    // AI Archaeology & History;
     {
       title: 'AI Archaeological Site Analyzer',
       description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
@@ -1406,7 +1403,7 @@ export', 'Team collaboration'],
       technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Psychology & Mental Health
+    // AI Psychology & Mental Health;
     {
       title: 'AI Mental Health Tracker',
       description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
@@ -1431,7 +1428,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Philosophy & Ethics
+    // AI Philosophy & Ethics;
     {
       title: 'AI Ethical Decision Maker',
       description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
@@ -1456,7 +1453,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Spirituality & Religion
+    // AI Spirituality & Religion;
     {
       title: 'AI Spiritual Guidance Platform',
       description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
@@ -1481,7 +1478,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Future & Innovation
+    // AI Future & Innovation;
     {
       title: 'AI Innovation Predictor',
       description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
@@ -1506,7 +1503,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Consciousness & AI Ethics
+    // AI Consciousness & AI Ethics;
     {
       title: 'AI Consciousness Monitor',
       description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
@@ -1531,7 +1528,7 @@ export', 'Team collaboration'],
       technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Time & Space
+    // AI Time & Space;
     {
       title: 'AI Time Management Master',
       description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
@@ -1556,7 +1553,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Quantum & Advanced Physics
+    // AI Quantum & Advanced Physics;
     {
       title: 'AI Quantum Simulator Pro',
       description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
@@ -1581,7 +1578,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Multiverse & Parallel Realities
+    // AI Multiverse & Parallel Realities;
     {
       title: 'AI Multiverse Explorer',
       description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
@@ -1606,7 +1603,7 @@ export', 'Team collaboration'],
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transcendence & Enlightenment
+    // AI Transcendence & Enlightenment;
     {
       title: 'AI Enlightenment Assistant',
       description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
@@ -1631,7 +1628,7 @@ export', 'Team collaboration'],
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Universal Consciousness
+    // AI Universal Consciousness;
     {
       title: 'AI Universal Consciousness Connector',
       description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
@@ -1656,7 +1653,7 @@ export', 'Team collaboration'],
       technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Infinite Possibilities
+    // AI Infinite Possibilities;
     {
       title: 'AI Infinite Possibility Generator',
       description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
@@ -1681,7 +1678,7 @@ export', 'Team collaboration'],
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
@@ -1699,7 +1696,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Agriculture & Food Tech
+    // AI Agriculture & Food Tech;
     {
       title: 'AI Crop Monitoring System',
       description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
@@ -1724,7 +1721,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transportation & Logistics
+    // AI Transportation & Logistics;
     {
       title: 'AI Route Optimization Pro',
       description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
@@ -1749,7 +1746,7 @@ export', 'Team collaboration'],
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Energy & Sustainability
+    // AI Energy & Sustainability;
     {
       title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
@@ -1774,7 +1771,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Entertainment & Media
+    // AI Entertainment & Media;
     {
       title: 'AI Content Moderation Suite',
       description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
@@ -1799,7 +1796,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Security & Surveillance
+    // AI Security & Surveillance;
     {
       title: 'AI Security Camera System',
       description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
@@ -1824,7 +1821,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
@@ -1861,7 +1858,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Real Estate & Property
+    // AI Real Estate & Property;
     {
       title: 'AI Real Estate Analyzer Pro',
       description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
@@ -1886,7 +1883,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {
       title: 'AI HR Recruitment Suite',
       description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
@@ -1911,7 +1908,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Project Management
+    // AI Project Management;
     {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
@@ -1936,7 +1933,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Supply Chain & Logistics
+    // AI Supply Chain & Logistics;
     {
       title: 'AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
@@ -1961,7 +1958,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Agriculture & Food Tech
+    // AI Agriculture & Food Tech;
     {
       title: 'AI Precision Agriculture Platform',
       description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
@@ -1986,7 +1983,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Energy & Sustainability
+    // AI Energy & Sustainability;
     {
       title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
@@ -2011,7 +2008,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {
       title: 'AI Game Development Suite',
       description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
@@ -2036,7 +2033,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transportation & Mobility
+    // AI Transportation & Mobility;
     {
       title: 'AI Fleet Management System',
       description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
@@ -2061,7 +2058,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
@@ -2086,7 +2083,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Personal Productivity
+    // AI Personal Productivity;
     {
       title: 'AI Personal Assistant Pro',
       description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
@@ -2298,7 +2295,7 @@ export', 'Team collaboration'],
       category: 'Customer Intelligence',
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    // NEW INNOVATIVE MICRO SAAS SERVICES
+    // NEW INNOVATIVE MICRO SAAS SERVICES;
     {
       title: 'AI-Powered Meeting Transcriber',
       description: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
@@ -2970,8 +2967,8 @@ export', 'Team collaboration'],
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-    // NEW COMPREHENSIVE MICRO SAAS SERVICES
-    // AI Productivity & Time Management
+    // NEW COMPREHENSIVE MICRO SAAS SERVICES;
+    // AI Productivity & Time Management;
     {
       title: 'AI Time Tracking & Productivity Analyzer',
       description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
@@ -3008,7 +3005,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {
       title: 'AI Resume Parser & Candidate Matcher',
       description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
@@ -3045,7 +3042,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Customer Service & Support
+    // AI Customer Service & Support;
     {
       title: 'AI Customer Support Ticket Router',
       description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
@@ -3082,7 +3079,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Sales & CRM
+    // AI Sales & CRM;
     {
       title: 'AI Sales Pipeline Optimizer',
       description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
@@ -3119,7 +3116,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Project Management
+    // AI Project Management;
     {
       title: 'AI Project Risk Predictor',
       description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
@@ -3156,7 +3153,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Security & Compliance
+    // AI Security & Compliance;
     {
       title: 'AI Security Threat Detector',
       description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
@@ -3193,7 +3190,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Quality Assurance & Testing
+    // AI Quality Assurance & Testing;
     {
       title: 'AI Automated Testing Suite',
       description: 'Comprehensive automated testing with test generation, execution, and maintenance.',
@@ -3230,7 +3227,7 @@ export', 'Team collaboration'],
       technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Content & Media
+    // AI Content & Media;
     {
       title: 'AI Video Content Generator',
       description: 'Intelligent video creation with script generation, editing, and optimization for social media.',
@@ -3267,7 +3264,7 @@ export', 'Team collaboration'],
       technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
@@ -3304,7 +3301,7 @@ export', 'Team collaboration'],
       technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Personal & Lifestyle
+    // AI Personal & Lifestyle;
     {
       title: 'AI Personal Finance Manager',
       description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
@@ -3341,7 +3338,7 @@ export', 'Team collaboration'],
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {
       title: 'AI Game Development Assistant',
       description: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
@@ -3378,7 +3375,7 @@ export', 'Team collaboration'],
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
@@ -3402,7 +3399,7 @@ export', 'Team collaboration'],
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -3414,7 +3411,7 @@ export', 'Team collaboration'],
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions
+            Micro SAAS Solutions;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
@@ -3461,7 +3458,7 @@ export', 'Team collaboration'],
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Perfect AI Tools
+            Choose Your Perfect AI Tools;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
@@ -3491,7 +3488,7 @@ export', 'Team collaboration'],
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-700">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features;
                       </li>
                     )}
                   </ul>
@@ -3518,11 +3515,11 @@ export', 'Team collaboration'],
                   </div>
                 </div>
                 <div className="text-center">
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now;
                   </a>
                   <p className="text-xs text-gray-700 mt-2">
                     {service.contactInfo}
@@ -3543,23 +3540,23 @@ export', 'Team collaboration'],
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us;
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-);
+  )
+}
+)
 export default MicroSAASPage;

@@ -1,45 +1,40 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility
-
-// Focus management utility
+import React from 'react',
+// import { Metadata } from 'next', // Removed for Vite;
+// Metadata removed for Vite compatibility;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function AIEnterpriseTransformationUltimateGuide2025() {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return (<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🚀 Ultimate Guide
+              🚀 Ultimate Guide;
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies
+              AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies;
             </h1>
             <p className="text-gray-600 text-lg">
-              January 28, 2025 · 60 min read · Enterprise AI
+              January 28; 2025 · 60 min read · Enterprise AI;
             </p>
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Overview</h2>
             <p className="text-gray-700 mb-6">
-              This comprehensive guide reveals how Fortune 500 companies achieve <strong>$2B+ ROI</strong> through 
-              strategic AI enterprise transformation. Learn the proven methodologies, frameworks, and implementation 
+              This comprehensive guide reveals how Fortune 500 companies achieve <strong>$2B+ ROI</strong> through;
+              strategic AI enterprise transformation. Learn the proven methodologies, frameworks, and implementation;
               strategies that deliver breakthrough results.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -110,18 +105,18 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
             <div className="bg-indigo-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your $2B+ Transformation</h3>
               <p className="text-gray-700 mb-4">
-                Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
+                Join Fortune 500 companies achieving breakthrough results through strategic AI transformation;
               </p>
               <div className="space-x-4">
-                <a 
+                <a;
                   href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                  Get Transformation Assessment
+                  Get Transformation Assessment;
                 </a>
-                <a 
+                <a;
                   href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
-                  Explore AI Services
+                  Explore AI Services;
                 </a>
               </div>
             </div>
@@ -129,5 +124,5 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
         </div>
       </div>
     </div>
-  );
+  )
 }

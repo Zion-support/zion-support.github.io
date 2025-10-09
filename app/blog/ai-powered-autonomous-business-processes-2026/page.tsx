@@ -1,53 +1,48 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
-// import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility
-
-// Focus management utility
+'use client',
+import React from 'react',
+import Link from 'next/link',
+import { ArrowLeft } from 'lucide-react',
+// import { Metadata } from 'next', // Removed for Vite;
+// Metadata removed for Vite compatibility;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function AutonomousBusinessProcessesBlog() {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return (<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
             <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
+              Back to Blog;
             </Link>
           </div>
           <div className="text-center mb-8">
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🤖 AUTONOMOUS PROCESSES • January 15, 2026
+              🤖 AUTONOMOUS PROCESSES • January 15; 2026;
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI-Powered Autonomous Business Processes: The 2026 Revolution
+              AI-Powered Autonomous Business Processes: The 2026 Revolution;
             </h1>
             <p className="text-gray-600 text-lg">
-              Revolutionary autonomous processes delivering unprecedented efficiency and strategic insights
+              Revolutionary autonomous processes delivering unprecedented efficiency and strategic insights;
             </p>
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Autonomous Revolution</h2>
             <p className="text-gray-700 mb-6">
-              Discover how AI-powered autonomous business processes are revolutionizing enterprise operations 
+              Discover how AI-powered autonomous business processes are revolutionizing enterprise operations;
               in 2026, delivering <strong>unprecedented efficiency</strong> and <strong>strategic insights</strong> 
               that transform how businesses operate.
             </p>
@@ -67,7 +62,7 @@ export default function AutonomousBusinessProcessesBlog() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🤖 Autonomous Process Architecture</h2>
             <p className="text-gray-700 mb-6">
-              Our autonomous business processes leverage cutting-edge AI technologies to create 
+              Our autonomous business processes leverage cutting-edge AI technologies to create;
               self-managing systems that operate with minimal human intervention.
             </p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Core Components</h3>
@@ -101,24 +96,24 @@ export default function AutonomousBusinessProcessesBlog() {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Autonomous Journey</h2>
             <p className="text-gray-700 mb-6">
-              Ready to achieve autonomous operations? Our autonomous business process solutions 
+              Ready to achieve autonomous operations? Our autonomous business process solutions;
               can transform your operations and deliver breakthrough efficiency gains.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Autonomous Transformation</h3>
               <p className="text-gray-700 mb-4">
-                Join leading enterprises achieving autonomous operations with AI-powered business processes
+                Join leading enterprises achieving autonomous operations with AI-powered business processes;
               </p>
               <div className="space-x-4">
-                <a 
+                <a;
                   href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Autonomous Assessment
+                  Get Autonomous Assessment;
                 </a>
-                <a 
+                <a;
                   href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
-                  Explore AI Services
+                  Explore AI Services;
                 </a>
               </div>
             </div>
@@ -126,5 +121,5 @@ export default function AutonomousBusinessProcessesBlog() {
         </div>
       </div>
     </div>
-  );
+  )
 }

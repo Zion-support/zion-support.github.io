@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { PenTool, FileText, Zap, Target, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Brain, Users, BarChart } from 'lucide-react';
-import Link from 'next/link';
+'use client',
+import React from 'react',
+import { PenTool, FileText, Zap, Target, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Brain, Users, BarChart  } from 'lucide-react',
+import Link from 'next/link',
 const AIWritingAssistantPage: React.FC = React.memo(() => {
   const features = [
     {
@@ -40,7 +40,7 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
       description: 'Get AI insights on content performance, audience engagement, and optimization opportunities.',
       benefit: 'Data-driven content strategy'
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Writer',
@@ -53,9 +53,9 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         '5 content templates',
         'Standard support',
         'Basic SEO optimization',
-        'Single user account'
+        'Single user account',
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -70,9 +70,9 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         'Advanced SEO tools',
         'Team collaboration',
         'Brand voice training',
-        'Content analytics'
+        'Content analytics',
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -87,11 +87,11 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         'API access',
         'Custom integrations',
         'White-label options',
-        'Advanced analytics'
+        'Advanced analytics',
       ],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   const useCases = [
     {
       title: 'Blog Content',
@@ -117,30 +117,30 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
       icon: Mail,
       results: '35% higher open rates'
     }
-  ];
+  ]
   const testimonials = [
     {
       name: 'Jessica Martinez',
       company: 'Content Marketing Pro',
       role: 'Content Manager',
       content: 'AI Writing Assistant helped us scale our content production by 500% while maintaining quality. Our blog traffic tripled in 6 months.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'David Kim',
       company: 'E-commerce Solutions',
       role: 'Marketing Director',
       content: 'The brand voice training feature is incredible. All our content now sounds consistent and professional across all channels.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Lisa Thompson',
       company: 'Digital Agency',
       role: 'Creative Director',
       content: 'We can now deliver client content 3x faster. The AI suggestions help us improve our writing and stay ahead of deadlines.',
-      rating: 5
+      rating: 5;
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -150,29 +150,29 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
             <PenTool className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Writing Assistant
+            AI Writing Assistant;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Create Amazing Content 10x Faster
+            Create Amazing Content 10x Faster;
           </p>
           <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your content creation with our AI-powered writing assistant. Generate high-quality 
-            blog posts, marketing copy, emails, and more in minutes, not hours. Boost engagement and 
+            Transform your content creation with our AI-powered writing assistant. Generate high-quality;
+            blog posts, marketing copy, emails, and more in minutes, not hours. Boost engagement and;
             drive results with intelligent content optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </div>
@@ -202,7 +202,7 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful AI Writing Features
+            Powerful AI Writing Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -218,7 +218,7 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Perfect for Every Content Need
+            Perfect for Every Content Need;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
@@ -234,18 +234,18 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
+                plan.popular;
+                  ? 'border-cyan-400 scale-105',
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -263,11 +263,11 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
                   ))}
                 </ul>
                 <button role="button" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
+                  plan.popular;
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600',
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -276,7 +276,7 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Users Say
+            What Our Users Say;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -286,7 +286,7 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-500 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-500 mb-4 italic">{testimonial.content}</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
@@ -302,46 +302,42 @@ const AIWritingAssistantPage: React.FC = React.memo(() => {
             Ready to Transform Your Content Creation?
           </h2>
           <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-            Join thousands of content creators, marketers, and businesses using AI Writing Assistant 
+            Join thousands of content creators, marketers, and businesses using AI Writing Assistant;
             to create better content faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </section>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIWritingAssistantPage;

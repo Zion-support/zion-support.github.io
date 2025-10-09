@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface LinkProps {
-  href: string;
+  href: string,
   children: React.ReactNode;
   className?: string;
   target?: string;
@@ -9,45 +9,39 @@ interface LinkProps {
   'aria-label'?: string;
 }
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export const Link: React.FC<LinkProps> = ({
-  href,
-  children,
-  className,
-  target,
+  href, children, className, target,
   rel,
   onClick,
   'aria-label': ariaLabel,
-  ...props
+  ...props;
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
-      onClick();
+      onClick()
     }
-    // Handle internal navigation
+    // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
-      e.preventDefault();
+      e.preventDefault()
       window.location.href = href;
     }
-  };
+  }
   return (
-    <a
+    <a;
       href={href}
       className={className}
       target={target}
@@ -58,6 +52,6 @@ export const Link: React.FC<LinkProps> = ({
     >
       {children}
     </a>
-  );
-};
+  )
+}
 export default Link;

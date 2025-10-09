@@ -1,1 +1,136 @@
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') { cwd: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {' const filePath = path.join('/workspace') file); try {' let content = fs.readFileSync(filePath) 'utf8'); let originalContent = content; let fileFixed = 0; // Fix merge conflict markers const conflictPattern = /^<<.*?\\n(.*?)\\n\\n(.*?)\\n>>>>>>>.*?$/gms} content = content.replace(conflictPattern, (match) ours} theirs) => {fileFixed++; // Keep the first version (ours) by default return ours.trim()} }); // Fix unterminated string literals (extra quotes)' content = content.replace(/")\s*$/gm) '"');' content = content.replace(/")\s*$/gm) '"'); // Fix extra commas in interfaces' content = content.replace(/(\w+):\s*([^]+);,/g, '$1: $2;'), // Fix function declarations with extra commas' content = content.replace(/\(\s*\)\s*=>\s*{,\s*$/gm, '() => {')}' content = content.replace(/React\.FC\s*=\s*\(\s*\)\s*=>\s*{,\s*$/gm} 'React.FC = () => {')} // Fix enum declarations content = content.replace(/enum\\s+(\\w+)\\s*{\\s*([^}]+)\\s*}/g, (match, name) body) => {' const fixedBody = body.replace(/(\w+)\s*=\s*'([^']+)'\s*(\w+)/g, '$1 = \'$2\'}\n $3'); return `enum ${name} {\\n ${fixedBody}\\n}`; }); // Fix missing commas in object literals' content = content.replace(/(\w+):\s*([^)}]+)\s*(\w+):/g, '$1: $2,\n $3: '), // Fix unterminated template literals' content = content.replace(/`([^`]*?)\s*$/gm, '`$1`'); // Fix import statements with extra quotes' content = content.replace(/from\s+["']([^"']+)["'];/g, 'from "$1"'); // Fix missing commas in arrays' content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n $2'); // Fix malformed JSX' content = content.replace(/<(\w+)\s*([^>]*?)\s*\/>\s*$/gm, '<$1 $2 />'); // Fix missing semicolons' content = content.replace(/(\w+)\s*$/gm, '$1;'); // Clean up extra whitespace' content = content.replace(/\n\s*\n\s*\n/g) '\n\n');' content = content.replace(/^\s*\n/gm) ''); if (content !== originalContent) {fs.writeFileSync(filePath} content); totalFixed += fileFixed; } } catch (error) { console.error(`❌ Error processing ${file}:`) error.message); totalErrors++; } } , '
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+/**
+ * Fix common syntax errors in the codebase
+ */
+
+class SyntaxFixer {
+  constructor() {
+    this.fixes = {
+      jsxQuotes: 0,
+      objectSemicolons: 0,
+      filesProcessed: 0
+    };
+  }
+
+  async fix() {
+    console.log('🔧 Starting syntax error fixes...\n');
+    
+    try {
+      // Find all TypeScript/JavaScript files
+      const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: '/workspace' });
+      
+      for (const file of files) {
+        await this.processFile(file);
+      }
+      
+      console.log('\n📊 Syntax Fix Report:');
+      console.log('─'.repeat(50));
+      console.log(`Files processed: ${this.fixes.filesProcessed}`);
+      console.log(`JSX quotes fixed: ${this.fixes.jsxQuotes}`);
+      console.log(`Object semicolons fixed: ${this.fixes.objectSemicolons}`);
+      
+      console.log('\n✅ Syntax fixes completed successfully!');
+    } catch (error) {
+      console.error('❌ Error during syntax fixes:', error);
+    }
+  }
+
+  async processFile(filePath) {
+    const fullPath = path.join('/workspace', filePath);
+    
+    try {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      const originalContent = content;
+      
+      // Fix JSX attribute quotes
+      content = this.fixJSXQuotes(content);
+      
+      // Fix object property semicolons
+      content = this.fixObjectSemicolons(content);
+      
+      // Fix other common syntax errors
+      content = this.fixOtherSyntaxErrors(content);
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(fullPath, content);
+        this.fixes.filesProcessed++;
+      }
+      
+    } catch (error) {
+      console.error(`❌ Error processing ${filePath}:`, error.message);
+    }
+  }
+
+  fixJSXQuotes(content) {
+    // Fix JSX attributes with extra quotes
+    const patterns = [
+      // Fix attributes like href="value""
+      { pattern: /(\w+)="([^"]+)""/g, replacement: '$1="$2"' },
+      // Fix attributes like className="value""
+      { pattern: /className="([^"]+)""/g, replacement: 'className="$1"' },
+      // Fix closing tags with extra quotes
+      { pattern: /<(\w+)"/g, replacement: '<$1' },
+      // Fix text content with extra quotes
+      { pattern: />([^<]+)"</g, replacement: '>$1<' }
+    ];
+
+    patterns.forEach(({ pattern, replacement }) => {
+      const matches = content.match(pattern);
+      if (matches) {
+        this.fixes.jsxQuotes += matches.length;
+        content = content.replace(pattern, replacement);
+      }
+    });
+
+    return content;
+  }
+
+  fixObjectSemicolons(content) {
+    // Fix object properties with semicolons instead of commas
+    const patterns = [
+      // Fix properties like key: value;
+      { pattern: /(\w+):\s*([^,}]+);\s*(\w+):/g, replacement: '$1: $2,\n    $3:' },
+      // Fix last property with semicolon
+      { pattern: /(\w+):\s*([^,}]+);\s*}/g, replacement: '$1: $2\n  }' },
+      // Fix array elements with semicolons
+      { pattern: /'([^']+)';\s*'([^']+)'/g, replacement: "'$1',\n    '$2'" }
+    ];
+
+    patterns.forEach(({ pattern, replacement }) => {
+      const matches = content.match(pattern);
+      if (matches) {
+        this.fixes.objectSemicolons += matches.length;
+        content = content.replace(pattern, replacement);
+      }
+    });
+
+    return content;
+  }
+
+  fixOtherSyntaxErrors(content) {
+    // Fix other common syntax errors
+    const patterns = [
+      // Fix extra semicolons in comments
+      { pattern: /\/\/\s*([^;]+);/g, replacement: '// $1' },
+      // Fix missing commas in arrays
+      { pattern: /(\w+)\s*\n\s*(\w+):/g, replacement: '$1,\n    $2:' },
+      // Fix extra quotes in strings
+      { pattern: /"([^"]+)""/g, replacement: '"$1"' }
+    ];
+
+    patterns.forEach(({ pattern, replacement }) => {
+      content = content.replace(pattern, replacement);
+    });
+
+    return content;
+  }
+}
+
+// Run the syntax fixer
+const syntaxFixer = new SyntaxFixer();
+syntaxFixer.fix().catch(console.error);

@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
+'use client',
+import React from 'react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
+import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain  } from 'lucide-react',
 const AIFintechPage: React.FC = React.memo(() => {
   const aiFintechServices = [
     {
@@ -137,10 +137,9 @@ const AIFintechPage: React.FC = React.memo(() => {
       category: 'KYC',
       technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
     }
-  ];
-  const categories = [...new Set(aiFintechServices.map(service => service.category))];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  ]
+  const categories = [...new Set(aiFintechServices.map(service => service.category))]
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
@@ -148,17 +147,17 @@ const AIFintechPage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Fintech Solutions
+                AI Fintech Solutions;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-                Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions
+                Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button role="button" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                  Start Fintech AI
+                  Start Fintech AI;
                 </button>
                 <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                  View Trading Demo
+                  View Trading Demo;
                 </button>
               </div>
             </div>
@@ -172,7 +171,7 @@ const AIFintechPage: React.FC = React.memo(() => {
                 Why Choose AI Fintech?
               </h2>
               <p className="text-xl text-gray-600">
-                Revolutionary AI technology that transforms financial services and maximizes returns
+                Revolutionary AI technology that transforms financial services and maximizes returns;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -213,14 +212,14 @@ const AIFintechPage: React.FC = React.memo(() => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
+                  {category} Solutions;
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
+                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {aiFintechServices
+                {aiFintechServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -233,7 +232,7 @@ const AIFintechPage: React.FC = React.memo(() => {
                           <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 60% vs market rates
+                          Save up to 60% vs market rates;
                         </div>
                       </div>
                       <div className="mb-4">
@@ -269,7 +268,7 @@ const AIFintechPage: React.FC = React.memo(() => {
                         </ul>
                       </div>
                       <button role="button" className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-                        Get Fintech Consultation
+                        Get Fintech Consultation;
                       </button>
                     </div>
                   ))}
@@ -282,10 +281,10 @@ const AIFintechPage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Fintech Capabilities
+                AI Fintech Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies that power the future of financial services
+                Cutting-edge AI technologies that power the future of financial services;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -329,20 +328,20 @@ const AIFintechPage: React.FC = React.memo(() => {
               Ready to Transform Financial Services?
             </h2>
             <p className="text-xl mb-8 text-indigo-100">
-              Contact our AI fintech experts for a free consultation and custom financial AI strategy
+              Contact our AI fintech experts for a free consultation and custom financial AI strategy;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-indigo-200">
@@ -354,25 +353,21 @@ const AIFintechPage: React.FC = React.memo(() => {
       <>
       <Footer />
       </></div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIFintechPage;

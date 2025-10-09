@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 const API: React.FC = React.memo(() => {
   const apiEndpoints = [
     {
@@ -30,7 +30,7 @@ const API: React.FC = React.memo(() => {
       parameters: ['title', 'content', 'type'],
       response: 'Created content object'
     },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
@@ -38,26 +38,26 @@ const API: React.FC = React.memo(() => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             API{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Documentation
+              Documentation;
             </span>
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Comprehensive API documentation for integrating with Zion Tech Group's powerful services
+            Comprehensive API documentation for integrating with Zion Tech Group's powerful services;
             and data endpoints.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
-              Get API Key
+              Get API Key;
               <span className="ml-2">→</span>
             </Link>
-            <Link
+            <Link;
               href="#endpoints"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
             >
-              View Endpoints
+              View Endpoints;
               <span className="ml-2">⚛️</span>
             </Link>
           </div>
@@ -72,7 +72,7 @@ const API: React.FC = React.memo(() => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">RESTful APIs</h3>
               <p className="text-gray-600">
-                Clean, intuitive REST endpoints following industry best practices for easy
+                Clean, intuitive REST endpoints following industry best practices for easy;
                 integration.
               </p>
             </div>
@@ -82,7 +82,7 @@ const API: React.FC = React.memo(() => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
               <p className="text-gray-600">
-                Enterprise-grade security with 99.9% uptime guarantee and comprehensive error
+                Enterprise-grade security with 99.9% uptime guarantee and comprehensive error;
                 handling.
               </p>
             </div>
@@ -103,16 +103,16 @@ const API: React.FC = React.memo(() => {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
           <div className="space-y-6">
             {apiEndpoints.map((endpoint, index) => (
-              <div
+              <div;
                 key={index}
                 className="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="flex flex-col md: flex-row md:items-center md:justify-between mb-4">
                   <div className="flex items-center space-x-4 mb-2 md:mb-0">
-                    <span
+                    <span;
                       className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        endpoint.method === 'GET'
-                          ? 'bg-green-100 text-green-800'
+                        endpoint.method === 'GET',
+                          ? 'bg-green-100 text-green-800',
                           : 'bg-blue-100 text-blue-800'
                       }`}
                     >
@@ -149,22 +149,22 @@ const API: React.FC = React.memo(() => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Ready to integrate with our APIs? Get your API key and start building amazing
+              Ready to integrate with our APIs? Get your API key and start building amazing;
               applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
-                Get API Key
+                Get API Key;
                 <span className="ml-2">→</span>
               </Link>
-              <Link
+              <Link;
                 href="https://docs.ziontechgroup.com"
                 className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
               >
-                View Full Docs
+                View Full Docs;
                 <span className="ml-2">⚛️</span>
               </Link>
             </div>
@@ -172,25 +172,21 @@ const API: React.FC = React.memo(() => {
         </div>
       </div>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default API;

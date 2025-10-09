@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin  } from 'lucide-react',
 const AnalyticsToolsPage: React.FC = React.memo(() => {
   const analyticsTools = [
     {
@@ -51,7 +51,7 @@ const AnalyticsToolsPage: React.FC = React.memo(() => {
       icon: '💳',
       category: 'Financial Analytics'
     }
-  ];
+  ]
   const benefits = [
     {
       icon: TrendingUp,
@@ -73,7 +73,7 @@ const AnalyticsToolsPage: React.FC = React.memo(() => {
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -85,7 +85,7 @@ const AnalyticsToolsPage: React.FC = React.memo(() => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools
+            AI Analytics Tools;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
@@ -132,7 +132,7 @@ const AnalyticsToolsPage: React.FC = React.memo(() => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools
+            Our Analytics Tools;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => (
@@ -158,11 +158,11 @@ const AnalyticsToolsPage: React.FC = React.memo(() => {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started
+                    Get Started;
                   </a>
                 </div>
               </div>
@@ -197,41 +197,37 @@ const AnalyticsToolsPage: React.FC = React.memo(() => {
             Get started with our AI analytics tools today and transform your data into actionable insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us;
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AnalyticsToolsPage;

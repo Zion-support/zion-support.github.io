@@ -1,7 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle } from 'lucide-react';
+import React from 'react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
+import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle  } from 'lucide-react',
 const DevOpsPage: React.FC = React.memo(() => {
   const services = [
     {
@@ -28,7 +28,7 @@ const DevOpsPage: React.FC = React.memo(() => {
       description: 'Security-first DevOps practices and tools',
       features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -63,25 +63,21 @@ const DevOpsPage: React.FC = React.memo(() => {
       </main>
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default DevOpsPage;

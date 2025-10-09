@@ -1,10 +1,10 @@
-import React, { memo, useMemo } from 'react';
+import React; { memo, useMemo } from 'react',
 interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars',
   text?: string;
   className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple',
   fullScreen?: boolean;
 }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
@@ -14,7 +14,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     text = 'Loading...',
     className = '',
     color = 'blue',
-    fullScreen = false
+    fullScreen = false;
   }) => {
     const sizeClasses = useMemo(
       () => ({
@@ -25,7 +25,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         xl: 'h-16 w-16'
       }),
       []
-    );
+    )
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -35,7 +35,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         xl: 'text-xl'
       }),
       []
-    );
+    )
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
@@ -45,51 +45,50 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         purple: 'border-purple-600 bg-purple-600'
       }),
       []
-    );
+    )
     const renderSpinner = useMemo(() => {
-      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
+      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`
       switch (variant) {
         case 'dots':
-          return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
+          return (<div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (
-                <div
+                <div;
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 />
               ))}
             </div>
-          );
+          )
         case 'pulse':
           return (
-            <div
+            <div;
               className={`${baseClasses} rounded-full animate-pulse`}
-              role='status'
-              aria-label='Loading'
+              role='status',
+              aria-label='Loading',
             />
-          );
+          )
         case 'skeleton':
           return (
             <div className='space-y-2' role='status' aria-label='Loading'>
-              <div
+              <div;
                 className={`h-4 bg-gray-100 rounded animate-pulse ${sizeClasses[size]}`}
               />
-              <div
+              <div;
                 className={`h-4 bg-gray-100 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' }}
               />
-              <div
+              <div;
                 className={`h-4 bg-gray-100 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               />
             </div>
-          );
+          )
         case 'bars':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => (
-                <div
+                <div;
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{
@@ -99,23 +98,23 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 />
               ))}
             </div>
-          );
+          )
         case 'spinner':
         default:
           return (
-            <div
+            <div;
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status'
-              aria-label='Loading'
+              role='status',
+              aria-label='Loading',
             />
-          );
+          )
       }
-    }, [size, variant, color, sizeClasses, colorClasses]);
+    }, [size, variant, color, sizeClasses, colorClasses])
     const containerClasses = useMemo(() => {
-      const _baseClasses = 'flex items-center justify-center';
-      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
-      return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+      const _baseClasses = 'flex items-center justify-center',
+      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '',
+      return `${baseClasses} ${fullScreenClasses} ${className}`
+    }, [fullScreen, className])
     return (
       <div className={containerClasses}>
         <div className='text-center'>
@@ -127,26 +126,23 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           )}
         </div>
       </div>
-    );
+    )
   }
-);
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+)
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner',
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default OptimizedLoadingSpinner;

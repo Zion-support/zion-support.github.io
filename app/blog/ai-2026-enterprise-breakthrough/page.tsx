@@ -1,25 +1,21 @@
-import React from 'react';
-import { Star } from 'lucide-react';
-// import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility
-
-// Focus management utility
+import React from 'react',
+import { Star } from 'lucide-react',
+// import { Metadata } from 'next', // Removed for Vite;
+// Metadata removed for Vite compatibility;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function AI2026EnterpriseBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -27,10 +23,10 @@ export default function AI2026EnterpriseBreakthrough() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            AI 2026 Enterprise Breakthrough
+            AI 2026 Enterprise Breakthrough;
           </h1>
           <p className="text-xl text-gray-500 max-w-4xl mx-auto mb-8">
-            Revolutionary Business Transformation with Autonomous Operations
+            Revolutionary Business Transformation with Autonomous Operations;
           </p>
           <div className="flex items-center justify-center gap-2 text-yellow-400">
             <Star className="w-6 h-6 fill-current" />
@@ -44,19 +40,19 @@ export default function AI2026EnterpriseBreakthrough() {
             <ul className="space-y-4 text-gray-500">
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-cyan-400" />
-                Autonomous Operations
+                Autonomous Operations;
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-cyan-400" />
-                Intelligent Automation
+                Intelligent Automation;
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-cyan-400" />
-                Business Value Creation
+                Business Value Creation;
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-cyan-400" />
-                Revolutionary Technology
+                Revolutionary Technology;
               </li>
             </ul>
           </div>
@@ -65,19 +61,19 @@ export default function AI2026EnterpriseBreakthrough() {
             <ul className="space-y-4 text-gray-500">
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-green-600" />
-                Increased Efficiency
+                Increased Efficiency;
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-green-600" />
-                Cost Reduction
+                Cost Reduction;
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-green-600" />
-                Enhanced Productivity
+                Enhanced Productivity;
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-green-600" />
-                Future-Ready Solutions
+                Future-Ready Solutions;
               </li>
             </ul>
           </div>
@@ -92,11 +88,11 @@ export default function AI2026EnterpriseBreakthrough() {
               Join the AI 2026 revolution and transform your enterprise operations.
             </p>
             <button role="button" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
-              Get Started Today
+              Get Started Today;
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

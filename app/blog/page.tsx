@@ -1,44 +1,41 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import ContentPreviewCard from '../components/ContentPreviewCard';
+'use client',
+import React; { useState, useEffect } from 'react',
+import Link from 'next/link',
+import ContentPreviewCard from '../components/ContentPreviewCard',
 interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  readTime: string,
+  date: string,
+  path: string,
+  image: string,
+  featured: boolean,
   stats?: {
-    views: number;
+    views: number,
     engagement: number;
-  };
+  }
 }
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [posts; setPosts] = useState<BlogPost[]>([])
+  const [loading; setLoading] = useState(true)
+  const [selectedCategory; setSelectedCategory] = useState<string>('all')
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
@@ -136,22 +133,21 @@ export default function BlogPage() {
       featured: false,
       stats: { views: 11200, engagement: 93 }
     }
-  ], []);
+  ], [])
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-  const featuredPosts = posts.filter(post => post.featured);
+      setPosts(blogPosts)
+      setLoading(false)
+    }; 500)
+    return () => clearTimeout(timer)
+  }, [blogPosts])
+  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))]
+  const filteredPosts = selectedCategory === 'all',
+    ? posts;
+    : posts.filter(post => post.category === selectedCategory)
+  const featuredPosts = posts.filter(post => post.featured)
   if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50">
+    return (<div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-12">
             <div className="h-12 bg-gray-100 rounded w-96 mx-auto mb-4 animate-pulse"></div>
@@ -169,7 +165,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-    );
+    )
   }
   return (
     <div className="min-h-screen bg-gray-50">
@@ -178,7 +174,7 @@ export default function BlogPage() {
         <header role="banner" className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team
+            Latest insights on AI, enterprise automation, and digital transformation from our expert team;
           </p>
         </header>
         {/* Category Filter */}
@@ -188,8 +184,8 @@ export default function BlogPage() {
               key={category}
               onClick={() => setSelectedCategory(category)} onKeyDown={(e) => e.key === 'Enter' && () => setSelectedCategory(category)(e)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-indigo-600 text-white'
+                selectedCategory === category;
+                  ? 'bg-indigo-600 text-white',
                   : 'bg-white text-gray-600 hover:bg-gray-50'
               }`}
             >
@@ -201,11 +197,11 @@ export default function BlogPage() {
         {selectedCategory === 'all' && (
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles
+              🌟 Featured Articles;
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
-                <ContentPreviewCard
+                <ContentPreviewCard;
                   key={post.id}
                   {...post}
                 />
@@ -220,7 +216,7 @@ export default function BlogPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <ContentPreviewCard
+              <ContentPreviewCard;
                 key={post.id}
                 {...post}
               />
@@ -231,21 +227,21 @@ export default function BlogPage() {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update
+              Never Miss an Update;
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             </p>
-            <Link
+            <Link;
               href="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
-              Subscribe to Newsletter
+              Subscribe to Newsletter;
             </Link>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

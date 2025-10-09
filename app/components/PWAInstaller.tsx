@@ -1,61 +1,61 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Download, X } from 'lucide-react';
+'use client',
+import React; { useState, useEffect } from 'react',
+import { Download, X  } from 'lucide-react',
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  prompt(): Promise<void>
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 const PWAInstaller: React.FC = React.memo(() => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
+  const [deferredPrompt; setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
+  const [showInstallPrompt; setShowInstallPrompt] = useState(false)
+  const [isInstalled; setIsInstalled] = useState(false)
   useEffect(() => {
-    // Check if app is already installed
+    // Check if app is already installed;
     const checkInstalled = () => {
       if (window.matchMedia('(display-mode: standalone)').matches) {
-        setIsInstalled(true);
+        setIsInstalled(true)
       }
-    };
-    checkInstalled();
-    // Listen for beforeinstallprompt event
+    }
+    checkInstalled()
+    // Listen for beforeinstallprompt event;
     const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallPrompt(true);
-    };
-    // Listen for appinstalled event
+      e.preventDefault()
+      setDeferredPrompt(e as BeforeInstallPromptEvent)
+      setShowInstallPrompt(true)
+    }
+    // Listen for appinstalled event;
     const handleAppInstalled = () => {
-      setIsInstalled(true);
-      setShowInstallPrompt(false);
-      setDeferredPrompt(null);
-    };
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
+      setIsInstalled(true)
+      setShowInstallPrompt(false)
+      setDeferredPrompt(null)
+    }
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+    window.addEventListener('appinstalled', handleAppInstalled)
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+      window.removeEventListener('appinstalled', handleAppInstalled)
+    }
+  }, [])
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
     try {
-      await deferredPrompt.prompt();
+      await deferredPrompt.prompt()
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
         } else {
         }
-      setDeferredPrompt(null);
-      setShowInstallPrompt(false);
+      setDeferredPrompt(null)
+      setShowInstallPrompt(false)
     } catch (error) {
-      console.error('Error installing PWA:', error);
+      console.error('Error installing PWA:', error)
     }
-  };
+  }
   const handleDismiss = () => {
-    setShowInstallPrompt(false);
-    // Don't show again for this session
-    sessionStorage.setItem('pwa-install-dismissed', 'true');
-  };
-  // Don't show if already installed or dismissed this session
+    setShowInstallPrompt(false)
+    // Don't show again for this session;
+    sessionStorage.setItem('pwa-install-dismissed', 'true')
+  }
+  // Don't show if already installed or dismissed this session;
   if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
     return null;
   }
@@ -72,7 +72,7 @@ const PWAInstaller: React.FC = React.memo(() => {
               <p className="text-gray-500 text-xs">Get quick access to Zion Tech Group</p>
             </div>
           </div>
-          <button
+          <button;
             onClick={handleDismiss} onKeyDown={(e) => e.key === 'Enter' && handleDismiss(e)}
             className="text-gray-600 hover:text-white transition-colors"
             aria-label="Dismiss install prompt"
@@ -81,17 +81,17 @@ const PWAInstaller: React.FC = React.memo(() => {
           </button>
         </div>
         <div className="space-y-2">
-          <button
+          <button;
             onClick={handleInstallClick} onKeyDown={(e) => e.key === 'Enter' && handleInstallClick(e)}
             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
           >
-            Install Now
+            Install Now;
           </button>
-          <button
+          <button;
             onClick={handleDismiss} onKeyDown={(e) => e.key === 'Enter' && handleDismiss(e)}
             className="w-full bg-transparent border border-gray-600 text-gray-500 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
           >
-            Not Now
+            Not Now;
           </button>
         </div>
         <div className="mt-3 text-xs text-gray-600">
@@ -101,25 +101,21 @@ const PWAInstaller: React.FC = React.memo(() => {
         </div>
       </div>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default PWAInstaller;

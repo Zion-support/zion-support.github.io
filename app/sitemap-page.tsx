@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import Link from 'next/link',
+import { Helmet } from 'react-helmet-async',
 const SitemapPage: React.FC = React.memo(() => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -33,12 +33,12 @@ const SitemapPage: React.FC = React.memo(() => {
     { url: '/guides', title: 'Technical Guides', priority: '0.6' },
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
-  ];
+  ]
   return (
     <>
       <Helmet>
         <title>Sitemap | Zion Tech Group</title>
-        <meta
+        <meta;
           name="description"
           content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
         />
@@ -49,7 +49,7 @@ const SitemapPage: React.FC = React.memo(() => {
           <header role="banner" className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
             <p className="text-xl text-gray-500">
-              Complete directory of all pages on our website
+              Complete directory of all pages on our website;
             </p>
           </header>
           <div className="max-w-4xl mx-auto">
@@ -58,7 +58,7 @@ const SitemapPage: React.FC = React.memo(() => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
-                    <Link
+                    <Link;
                       href={page.url}
                       className="text-blue-600 hover:text-blue-300 font-medium block mb-2"
                     >
@@ -74,11 +74,11 @@ const SitemapPage: React.FC = React.memo(() => {
                 ))}
               </div>
               <div className="mt-8 text-center">
-                <Link
+                <Link;
                   href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
-                  Back to Home
+                  Back to Home;
                 </Link>
               </div>
             </div>
@@ -86,25 +86,21 @@ const SitemapPage: React.FC = React.memo(() => {
         </div>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default SitemapPage;

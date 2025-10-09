@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Brain, Users, BarChart, Zap, Shield, Clock, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-import Link from 'next/link';
+'use client',
+import React from 'react',
+import { Brain, Users, BarChart, Zap, Shield, Clock, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react',
+import Link from 'next/link',
 function AICRMPage() {
   const features = [
     {
@@ -40,7 +40,7 @@ function AICRMPage() {
       description: 'Enterprise-grade security with GDPR compliance, data encryption, and automated backup systems to protect your customer data.',
       benefit: '100% compliance guarantee'
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -53,9 +53,9 @@ function AICRMPage() {
         'Basic automation',
         'Email integration',
         'Mobile app access',
-        'Standard support'
+        'Standard support',
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -69,9 +69,9 @@ function AICRMPage() {
         'Advanced integrations',
         'Priority support',
         'Custom reporting',
-        'Team collaboration tools'
+        'Team collaboration tools',
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -86,34 +86,34 @@ function AICRMPage() {
         'Dedicated support',
         'Custom integrations',
         'Advanced security',
-        'White-label options'
+        'White-label options',
       ],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       role: 'Sales Director',
       content: 'AI CRM increased our lead conversion by 45% in just 3 months. The predictive analytics are incredibly accurate.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'GrowthCorp',
       role: 'CEO',
       content: 'The automation features saved us 15 hours per week. Our team can now focus on high-value activities.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'Digital Solutions',
       role: 'Marketing Manager',
       content: 'The AI insights helped us understand our customers better than ever. Revenue increased by 30%.',
-      rating: 5
+      rating: 5;
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -122,30 +122,30 @@ function AICRMPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Brain className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI-Powered CRM
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+            AI-Powered CRM;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Customer Relationship Management
+            Intelligent Customer Relationship Management;
           </p>
           <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your sales process with our AI-powered CRM that automatically scores leads, 
-            predicts customer behavior, and automates follow-ups. Increase conversions by 40% while 
+            Transform your sales process with our AI-powered CRM that automatically scores leads,
+            predicts customer behavior, and automates follow-ups. Increase conversions by 40% while;
             reducing manual work by 70%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Get Free Demo
+              Get Free Demo;
             </Link>
           </div>
         </div>
@@ -170,7 +170,7 @@ function AICRMPage() {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful AI Features
+            Powerful AI Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -186,18 +186,18 @@ function AICRMPage() {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
+                plan.popular;
+                  ? 'border-cyan-400 scale-105',
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -215,11 +215,11 @@ function AICRMPage() {
                   ))}
                 </ul>
                 <button role="button" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
+                  plan.popular;
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600',
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -228,7 +228,7 @@ function AICRMPage() {
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Customers Say
+            What Our Customers Say;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -238,7 +238,7 @@ function AICRMPage() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-500 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-500 mb-4 italic">{testimonial.content}</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
@@ -250,32 +250,32 @@ function AICRMPage() {
         </section>
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Sales Process?
           </h2>
           <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using AI CRM to increase conversions, 
+            Join thousands of businesses already using AI CRM to increase conversions,
             automate workflows, and grow revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </section>
       </section>
     </div>
-  );
+  )
 }
 
 export default AICRMPage;

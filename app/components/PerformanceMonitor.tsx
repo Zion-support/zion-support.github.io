@@ -1,56 +1,56 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+'use client',
+import React; { useEffect, useState } from 'react',
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  fcp: number | null,
+    lcp: number | null,
+    fid: number | null,
+    cls: number | null,
+    ttfb: number | null;
 }
 const PerformanceMonitor: React.FC = React.memo(() => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics; setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null
-  });
+    ttfb: null;
+  })
   useEffect(() => {
-    // Only run in production
+    // Only run in production;
     if (process.env.NODE_ENV !== 'production') return;
     const measurePerformance = () => {
-      // Measure First Contentful Paint
+      // Measure First Contentful Paint;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
             }
           }
-        });
-        observer.observe({ entryTypes: ['paint'] });
+        })
+        observer.observe({ entryTypes: ['paint'] })
       }
-      // Measure Largest Contentful Paint
+      // Measure Largest Contentful Paint;
       if ('PerformanceObserver' in window) {
         const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
+        })
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
       }
-      // Measure First Input Delay
+      // Measure First Input Delay;
       if ('PerformanceObserver' in window) {
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
             }
           }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
       }
-      // Measure Cumulative Layout Shift
+      // Measure Cumulative Layout Shift;
       if ('PerformanceObserver' in window) {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
@@ -59,26 +59,25 @@ const PerformanceMonitor: React.FC = React.memo(() => {
               clsValue += (entry as any).value;
             }
           }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+          setMetrics(prev => ({ ...prev, cls: clsValue }))
+        })
+        clsObserver.observe({ entryTypes: ['layout-shift'] })
       }
-      // Measure Time to First Byte
+      // Measure Time to First Byte;
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        }));
+          ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
+        }))
       }
-    };
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
     }
-  }, []);
+    // Measure after page load;
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
+  }, [])
   return (
     <div className="performance-monitor">
       <h3>Performance Metrics</h3>
@@ -91,25 +90,21 @@ const PerformanceMonitor: React.FC = React.memo(() => {
         <div>Memory: N/A</div>
       </div>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default PerformanceMonitor;

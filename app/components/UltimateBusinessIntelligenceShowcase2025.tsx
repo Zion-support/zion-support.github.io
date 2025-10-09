@@ -1,8 +1,8 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
+'use client',
+import React; { useState } from 'react',
+import Link from 'next/link',
 const UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory; setSelectedCategory] = useState('all')
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -55,26 +55,26 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
       featured: true,
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
-  ];
+  ]
   const categories = [
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
-  ];
-  const filteredContent = selectedCategory === 'all' 
-    ? content 
-    : content.filter(item => item.category === selectedCategory);
+  ]
+  const filteredContent = selectedCategory === 'all',
+    ? content;
+    : content.filter(item => item.category === selectedCategory)
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
+        <div;
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
         ></div>
-        <div
+        <div;
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
         ></div>
@@ -85,30 +85,30 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           <div className="flex items-center justify-center gap-2 mb-6">
             <span className="text-2xl">🚀</span>
             <span className="text-yellow-400 font-bold text-lg">
-              ULTIMATE BUSINESS INTELLIGENCE 2025
+              ULTIMATE BUSINESS INTELLIGENCE 2025;
             </span>
             <span className="text-2xl">⚡</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            Revolutionary Content
+          <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">
+            Revolutionary Content;
             <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Showcase 2025
+              Showcase 2025;
             </span>
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-4xl mx-auto">
-            Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos;s transforming enterprises worldwide
+            Explore our comprehensive collection of AI-powered business intelligence;
+            content that&apos,s transforming enterprises worldwide;
           </p>
         </div>
         {/* Category Filter */}
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {categories.map((category) => (
-            <button
+            <button;
               key={category.id}
               onClick={() => setSelectedCategory(category.id)} onKeyDown={(e) => e.key === 'Enter' && () => setSelectedCategory(category.id)(e)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                selectedCategory === category.id;
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg',
                   : 'bg-white/10 text-gray-500 hover:bg-white/20'
               }`}
             >
@@ -119,7 +119,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredContent.map((item) => (
-            <div
+            <div;
               key={item.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
@@ -157,7 +157,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {item.tags.slice(0, 3).map((tag, index) => (
-                  <span
+                  <span;
                     key={index}
                     className="px-3 py-1 bg-white/10 text-gray-500 text-xs rounded-full"
                   >
@@ -166,7 +166,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 ))}
               </div>
               {/* CTA */}
-              <Link
+              <Link;
                 href={item.url}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
               >
@@ -183,16 +183,16 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-cyan-100 mb-6">
-              Join thousands of enterprises already using our AI-powered solutions
+              Join thousands of enterprises already using our AI-powered solutions;
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
-                Start Your Transformation
+                Start Your Transformation;
                 <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
+                  <path;
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
@@ -200,35 +200,31 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   />
                 </svg>
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
-
-// Focus management utility
+  )
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default UltimateBusinessIntelligenceShowcase2025;

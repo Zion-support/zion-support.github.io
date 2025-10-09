@@ -1,7 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Cloud, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
+import React from 'react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
+import { Cloud, Shield, Zap, BarChart, CheckCircle  } from 'lucide-react',
 const CloudServicesPage: React.FC = React.memo(() => {
   const services = [
     {
@@ -28,15 +28,15 @@ const CloudServicesPage: React.FC = React.memo(() => {
       description: 'Advanced analytics and monitoring for cloud resources',
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
-  ];
+  ]
   const benefits = [
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
     'Cost Optimization',
     'Scalable Infrastructure',
     'Enhanced Security',
-    'Global CDN'
-  ];
+    'Global CDN',
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -44,24 +44,24 @@ const CloudServicesPage: React.FC = React.memo(() => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Services
+            Cloud Services;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Transform your business with our comprehensive cloud solutions. 
             From migration to optimization, we provide end-to-end cloud services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Get Started Today
+              Get Started Today;
             </a>
-            <a
+            <a;
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
-              Learn More
+              Learn More;
             </a>
           </div>
         </section>
@@ -109,42 +109,38 @@ const CloudServicesPage: React.FC = React.memo(() => {
             Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
-            <a
+            <a;
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
-              Get Free Consultation
+              Get Free Consultation;
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default CloudServicesPage;

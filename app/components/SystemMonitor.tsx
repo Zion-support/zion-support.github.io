@@ -1,36 +1,36 @@
-'use client';
+'use client',
 /**
- * System Monitor Component
- * Real-time monitoring dashboard for performance, errors, and system health
+ * System Monitor Component;
+ * Real-time monitoring dashboard for performance, errors, and system health;
  */
-import React, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
-import { errorHandler } from '../utils/enhancedErrorHandler';
-// Collect basic performance metrics
+import React; { useState, useEffect, useCallback } from 'react',
+import { performanceOptimizer } from '../utils/performanceOptimizer',
+import { errorHandler } from '../utils/enhancedErrorHandler',
+import { errorHandler } from '../utils/enhancedErrorHandler',
+// Collect basic performance metrics;
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   const _navigation = window.performance.timing;
-  const _paint = window.performance.getEntriesByType('paint');
+  const _paint = window.performance.getEntriesByType('paint')
   return {
-    loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-  };
-};
-// Helper functions
+    loadTime: navigation.loadEventEnd - navigation.navigationStart;
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+  }
+}
+// Helper functions;
 const calculatePerformanceScore = () => {
-  const _metrics = performanceOptimizer.getMetrics();
+  const _metrics = performanceOptimizer.getMetrics()
   if (!metrics) return 0;
   let _score = 100;
-  // Deduct points for slow load times
+  // Deduct points for slow load times;
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
-  // Deduct points for slow paint times
+  // Deduct points for slow paint times;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
-};
-// Network connection interface
+  return Math.max(0, score)
+}
+// Network connection interface;
 interface NetworkConnection {
   effectiveType?: string;
   downlink?: number;
@@ -44,38 +44,38 @@ interface NavigatorWithConnection extends Navigator {
 }
 interface SystemMetrics {
   performance: {
-    score: number;
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
+    score: number,
+    loadTime: number,
+    firstContentfulPaint: number,
+    largestContentfulPaint: number,
+    firstInputDelay: number,
     cumulativeLayoutShift: number;
-  };
+  }
   errors: {
-    total: number;
-    byType: Record<string, number>;
-    byCategory: Record<string, number>;
-    bySeverity: Record<string, number>;
+    total: number,
+    byType: Record<string, number>
+    byCategory: Record<string, number>
+    bySeverity: Record<string, number>
     recent: Array<{
-      id: string;
-      message: string;
-      type: string;
-      severity: string;
+      id: string,
+      message: string,
+      type: string,
+      severity: string,
       timestamp: string;
-    }>;
-  };
+    }>
+  }
   memory: {
-    used: number;
-    total: number;
-    limit: number;
+    used: number,
+    total: number,
+    limit: number,
     percentage: number;
-  };
+  }
   network: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
+    effectiveType: string,
+    downlink: number,
+    rtt: number,
     saveData: boolean;
-  };
+  }
 }
 interface SystemMonitorProps {
   refreshInterval?: number;
@@ -84,32 +84,31 @@ interface SystemMonitorProps {
   className?: string;
 }
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  refreshInterval = 5000,
-  showDetails = true,
+  refreshInterval = 5000, showDetails = true,
   enableExport = true,
   className = ''
 }) => {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-  // Update metrics
+  const [metrics; setMetrics] = useState<SystemMetrics | null>(null)
+  const [isMonitoring; setIsMonitoring] = useState(false)
+  const [lastUpdate; setLastUpdate] = useState<Date | null>(null)
+  // Update metrics;
   const updateMetrics = useCallback(() => {
     try {
-      const _performanceMetrics = performanceOptimizer.getMetrics();
-      const _performanceScore = calculatePerformanceScore();
-      const _errorStats = errorHandler.getErrorStatistics();
-      // Get memory info
-      const _memoryInfo = getMemoryInfo();
-      // Get network info
-      const _networkInfo = getNetworkInfo();
+      const _performanceMetrics = performanceOptimizer.getMetrics()
+      const _performanceScore = calculatePerformanceScore()
+      const _errorStats = errorHandler.getErrorStatistics()
+      // Get memory info;
+      const _memoryInfo = getMemoryInfo()
+      // Get network info;
+      const _networkInfo = getNetworkInfo()
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
+          largestContentfulPaint: 0, // Not available in current metrics,
+    firstInputDelay: 0, // Not available in current metrics,
+    cumulativeLayoutShift: 0, // Not available in current metrics;
         },
         errors: {
           total: errorStats.totalErrors,
@@ -121,49 +120,49 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             message: error.message,
             type: error.type,
             severity: error.severity,
-            timestamp: error.context.timestamp
+            timestamp: error.context.timestamp;
           }))
         },
         memory: memoryInfo,
-        network: networkInfo
-      };
-      setMetrics(newMetrics);
-      setLastUpdate(new Date());
+        network: networkInfo;
+      }
+      setMetrics(newMetrics)
+      setLastUpdate(new Date())
     } catch (error) {
     }
-  }, []);
-  // Initialize monitoring
+  }, [])
+  // Initialize monitoring;
   useEffect(() => {
     const initializeMonitoring = () => {
       // Start monitoring (placeholder - implement as needed)
-      setIsMonitoring(true);
-      updateMetrics();
-    };
-    initializeMonitoring();
+      setIsMonitoring(true)
+      updateMetrics()
+    }
+    initializeMonitoring()
     return () => {
       // Stop monitoring (placeholder - implement as needed)
-      setIsMonitoring(false);
-    };
-  }, [updateMetrics]);
-  // Update metrics periodically
+      setIsMonitoring(false)
+    }
+  }; [updateMetrics])
+  // Update metrics periodically;
   useEffect(() => {
     if (!isMonitoring) return;
-    const _interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
-  // Get memory information
+    const _interval = setInterval(updateMetrics, refreshInterval)
+    return () => clearInterval(interval)
+  }, [isMonitoring, refreshInterval, updateMetrics])
+  // Get memory information;
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
+      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
+      const used = memory.usedJSHeapSize / 1024 / 1024 // MB;
+      const total = memory.totalJSHeapSize / 1024 / 1024 // MB;
+      const limit = memory.jsHeapSizeLimit / 1024 / 1024 // MB;
       const _percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
+      return { used; total, limit, percentage }
     }
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
-  };
-  // Get network information
+    return { used: 0, total: 0, limit: 0, percentage: 0 }
+  }
+  // Get network information;
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
       const _nav = navigator as NavigatorWithConnection;
@@ -172,71 +171,68 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false
-      };
+        saveData: connection?.saveData || false;
+      }
     }
     return {
       effectiveType: 'unknown',
       downlink: 0,
       rtt: 0,
-      saveData: false
-    };
-  };
-  // Export data
+      saveData: false;
+    }
+  }
+  // Export data;
   const handleExport = () => {
     if (!metrics) return;
-    const 
-// Focus management utility
+    const;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 exportData = {
-      metrics,
+      metrics;
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString()
-    };
+    }
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json'
-    });
-    const _url = URL.createObjectURL(blob);
-    const _a = document.createElement('a');
+    })
+    const _url = URL.createObjectURL(blob)
+    const _a = document.createElement('a')
     a.href = url;
-    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-  // Get performance score color
+    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
+  }
+  // Get performance score color;
   const getPerformanceScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-  // Get severity color
+    if (score >= 90) return 'text-green-600',
+    if (score >= 70) return 'text-yellow-600',
+    return 'text-red-600'
+  }
+  // Get severity color;
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-red-500 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-50';
+      case 'critical': return 'text-red-600 bg-red-100',
+      case 'high': return 'text-red-500 bg-red-50',
+      case 'medium': return 'text-yellow-600 bg-yellow-100',
+      case 'low': return 'text-green-600 bg-green-100',
+      default: return 'text-gray-600 bg-gray-50'
     }
-  };
+  }
   if (!metrics) {
     return (
       <div className={`p-4 bg-gray-50 rounded-lg ${className}`}>
@@ -245,7 +241,7 @@ exportData = {
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
       </div>
-    );
+    )
   }
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
@@ -259,11 +255,11 @@ exportData = {
             </span>
           </div>
           {enableExport && (
-            <button
+            <button;
               onClick={handleExport} onKeyDown={(e) => e.key === 'Enter' && handleExport(e)}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-blue-500"
             >
-              Export Data
+              Export Data;
             </button>
           )}
         </div>
@@ -289,7 +285,7 @@ exportData = {
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Load Time</span>
               <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.loadTime.toFixed(0)}ms
+                {metrics.performance.loadTime.toFixed(0)}ms;
               </span>
             </div>
           </div>
@@ -297,7 +293,7 @@ exportData = {
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FCP</span>
               <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms
+                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
               </span>
             </div>
           </div>
@@ -305,7 +301,7 @@ exportData = {
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">LCP</span>
               <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms
+                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
               </span>
             </div>
           </div>
@@ -313,7 +309,7 @@ exportData = {
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FID</span>
               <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.firstInputDelay.toFixed(0)}ms
+                {metrics.performance.firstInputDelay.toFixed(0)}ms;
               </span>
             </div>
           </div>
@@ -385,7 +381,7 @@ exportData = {
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2">
-                <div
+                <div;
                   className={`h-2 rounded-full ${
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
@@ -471,6 +467,6 @@ exportData = {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 export default SystemMonitor;

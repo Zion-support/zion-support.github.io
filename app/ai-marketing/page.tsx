@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain  } from 'lucide-react',
 const AIMarketingPage: React.FC = React.memo(() => {
   const aiMarketingServices = [
     {
@@ -135,10 +135,9 @@ const AIMarketingPage: React.FC = React.memo(() => {
       category: 'Personalization',
       technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools']
     }
-  ];
-  const categories = [...new Set(aiMarketingServices.map(service => service.category))];
-  return (
-    <>
+  ]
+  const categories = [...new Set(aiMarketingServices.map(service => service.category))]
+  return (<>
       <Helmet>
         <title>AI Marketing Services - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered marketing solutions including ad optimization, content generation, social media management, and customer journey mapping." />
@@ -151,17 +150,17 @@ const AIMarketingPage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI-Powered Marketing Solutions
+                AI-Powered Marketing Solutions;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-pink-100 max-w-3xl mx-auto">
-                Transform your marketing with cutting-edge AI technology that automates, optimizes, and scales your campaigns
+                Transform your marketing with cutting-edge AI technology that automates, optimizes, and scales your campaigns;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button role="button" className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
-                  Start AI Marketing
+                  Start AI Marketing;
                 </button>
                 <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors">
-                  View Case Studies
+                  View Case Studies;
                 </button>
               </div>
             </div>
@@ -175,7 +174,7 @@ const AIMarketingPage: React.FC = React.memo(() => {
                 Why Choose AI Marketing?
               </h2>
               <p className="text-xl text-gray-600">
-                Revolutionary AI technology that transforms traditional marketing into intelligent, data-driven campaigns
+                Revolutionary AI technology that transforms traditional marketing into intelligent, data-driven campaigns;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -216,14 +215,14 @@ const AIMarketingPage: React.FC = React.memo(() => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
+                  {category} Solutions;
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
+                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {aiMarketingServices
+                {aiMarketingServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -236,7 +235,7 @@ const AIMarketingPage: React.FC = React.memo(() => {
                           <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 60% vs market rates
+                          Save up to 60% vs market rates;
                         </div>
                       </div>
                       <div className="mb-4">
@@ -272,7 +271,7 @@ const AIMarketingPage: React.FC = React.memo(() => {
                         </ul>
                       </div>
                       <button role="button" className="w-full bg-pink-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
-                        Get Marketing Consultation
+                        Get Marketing Consultation;
                       </button>
                     </div>
                   ))}
@@ -285,10 +284,10 @@ const AIMarketingPage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Marketing Capabilities
+                AI Marketing Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies that revolutionize how you approach marketing
+                Cutting-edge AI technologies that revolutionize how you approach marketing;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -332,20 +331,20 @@ const AIMarketingPage: React.FC = React.memo(() => {
               Ready to Revolutionize Your Marketing?
             </h2>
             <p className="text-xl mb-8 text-pink-100">
-              Contact our AI marketing experts for a free consultation and custom strategy development
+              Contact our AI marketing experts for a free consultation and custom strategy development;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-pink-200">
@@ -355,25 +354,21 @@ const AIMarketingPage: React.FC = React.memo(() => {
         </section>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIMarketingPage;

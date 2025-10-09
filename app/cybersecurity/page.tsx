@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database  } from 'lucide-react',
 const CybersecurityPage: React.FC = React.memo(() => {
   const securityServices = [
     {
@@ -135,10 +135,9 @@ const CybersecurityPage: React.FC = React.memo(() => {
       category: 'Incident Response',
       technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']
     }
-  ];
-  const categories = [...new Set(securityServices.map(service => service.category))];
-  return (
-    <>
+  ]
+  const categories = [...new Set(securityServices.map(service => service.category))]
+  return (<>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
@@ -150,16 +149,16 @@ const CybersecurityPage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cybersecurity Services
+                Cybersecurity Services;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
                 Protect your business with advanced cybersecurity solutions and expert threat protection              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button role="button" className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
-                  Get Security Assessment
+                  Get Security Assessment;
                 </button>
                 <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
-                  Schedule Consultation
+                  Schedule Consultation;
                 </button>
               </div>
             </div>
@@ -211,14 +210,14 @@ const CybersecurityPage: React.FC = React.memo(() => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
+                  {category} Solutions;
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} services for comprehensive security protection
+                  Specialized {category.toLowerCase()} services for comprehensive security protection;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cyberServices
+                {cyberServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -265,7 +264,7 @@ const CybersecurityPage: React.FC = React.memo(() => {
                         </ul>
                       </div>
                       <button role="button" className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
-                        Get Security Consultation
+                        Get Security Consultation;
                       </button>
                     </div>
                   ))}
@@ -277,10 +276,10 @@ const CybersecurityPage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Cybersecurity Capabilities
+                Our Cybersecurity Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive security solutions covering all aspects of cyber protection
+                Comprehensive security solutions covering all aspects of cyber protection;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -322,20 +321,20 @@ const CybersecurityPage: React.FC = React.memo(() => {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl mb-8 text-red-100">
-              Contact our cybersecurity experts for a free security assessment and custom protection strategy
+              Contact our cybersecurity experts for a free security assessment and custom protection strategy;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-red-200">
@@ -345,25 +344,21 @@ const CybersecurityPage: React.FC = React.memo(() => {
         </section>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default CybersecurityPage;

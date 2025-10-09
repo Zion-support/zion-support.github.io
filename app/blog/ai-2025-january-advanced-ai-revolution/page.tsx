@@ -1,45 +1,40 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility
-
-// Focus management utility
+import React from 'react',
+// import { Metadata } from 'next', // Removed for Vite;
+// Metadata removed for Vite compatibility;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function January2025AdvancedAIRevolution() {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return (<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🚀 January 2025 Advanced AI Revolution
+              🚀 January 2025 Advanced AI Revolution;
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation
+              January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation;
             </h1>
             <p className="text-gray-600 text-lg">
-              Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime
+              Revolutionary AI breakthroughs with $2.8B proven ROI; 99.9% operational autonomy, and zero downtime;
             </p>
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Revolution Results</h2>
             <p className="text-gray-700 mb-6">
-              January 2025 marks a pivotal moment in AI evolution, with breakthrough technologies 
-              delivering <strong>$2.8B proven ROI</strong>, <strong>99.9% operational autonomy</strong>, 
+              January 2025 marks a pivotal moment in AI evolution, with breakthrough technologies;
+              delivering <strong>$2.8B proven ROI</strong>, <strong>99.9% operational autonomy</strong> 
               and <strong>zero downtime</strong> across enterprise operations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -58,7 +53,7 @@ export default function January2025AdvancedAIRevolution() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Revolutionary Breakthroughs</h2>
             <p className="text-gray-700 mb-6">
-              The January 2025 AI revolution introduces groundbreaking technologies that transform 
+              The January 2025 AI revolution introduces groundbreaking technologies that transform;
               enterprise operations:
             </p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Advanced Autonomous Systems</h3>
@@ -90,44 +85,44 @@ export default function January2025AdvancedAIRevolution() {
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <pre className="text-sm text-gray-800 overflow-x-auto">
 {`January 2025 AI Revolution Stack:
-├── Advanced AI
-│   ├── GPT-5 & Claude-4
-│   ├── Quantum ML Models
-│   └── Autonomous Agents
-├── Infrastructure
-│   ├── Edge Computing
-│   ├── Quantum Processors
-│   └── Neuromorphic Chips
-├── Automation
-│   ├── Self-Managing Systems
-│   ├── Predictive Analytics
-│   └── Real-time Optimization
-└── Intelligence
-    ├── Conscious AI
-    ├── Emotional Intelligence
+├── Advanced AI;
+│   ├── GPT-5 & Claude-4;
+│   ├── Quantum ML Models;
+│   └── Autonomous Agents;
+├── Infrastructure;
+│   ├── Edge Computing;
+│   ├── Quantum Processors;
+│   └── Neuromorphic Chips;
+├── Automation;
+│   ├── Self-Managing Systems;
+│   ├── Predictive Analytics;
+│   └── Real-time Optimization;
+└── Intelligence;
+    ├── Conscious AI;
+    ├── Emotional Intelligence;
     └── Ethical Reasoning`}
               </pre>
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Join the Revolution</h2>
             <p className="text-gray-700 mb-6">
-              Ready to be part of the January 2025 AI revolution? Our advanced AI solutions 
+              Ready to be part of the January 2025 AI revolution? Our advanced AI solutions;
               can transform your enterprise and deliver breakthrough results.
             </p>
             <div className="bg-indigo-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Revolution</h3>
               <p className="text-gray-700 mb-4">
-                Join leading enterprises achieving breakthrough results with advanced AI technologies
+                Join leading enterprises achieving breakthrough results with advanced AI technologies;
               </p>
               <div className="space-x-4">
-                <a 
+                <a;
                   href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                  Get AI Assessment
+                  Get AI Assessment;
                 </a>
-                <a 
+                <a;
                   href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
-                  Explore AI Services
+                  Explore AI Services;
                 </a>
               </div>
             </div>
@@ -135,5 +130,5 @@ export default function January2025AdvancedAIRevolution() {
         </div>
       </div>
     </div>
-  );
+  )
 }

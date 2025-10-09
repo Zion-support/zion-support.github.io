@@ -1,28 +1,28 @@
-'use client';
-import React from 'react'
+'use client',
+import React from 'react',
 /**
- * Security Enhancer
- * Provides comprehensive security utilities and monitoring
+ * Security Enhancer;
+ * Provides comprehensive security utilities and monitoring;
  */
 interface SecurityConfig {
-  enableCSP: boolean;
-  enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
-  allowedOrigins: string[];
-  trustedDomains: string[];
+  enableCSP: boolean,
+  enableHSTS: boolean,
+  enableXSSProtection: boolean,
+  enableCSRFProtection: boolean,
+  enableContentSecurityPolicy: boolean,
+  allowedOrigins: string[]
+  trustedDomains: string[]
 }
 interface SecurityMetrics {
-  blockedRequests: number;
-  suspiciousActivity: number;
-  securityViolations: number;
+  blockedRequests: number,
+  suspiciousActivity: number,
+  securityViolations: number,
   lastScanTime: number;
 }
 class SecurityEnhancer {
-  private config: SecurityConfig;
-  private metrics: SecurityMetrics;
-  private eventListeners: Array<() => void> = [];
+  private config: SecurityConfig,
+  private metrics: SecurityMetrics,
+  private eventListeners: Array<() => void> = []
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
       enableCSP: true,
@@ -30,10 +30,10 @@ class SecurityEnhancer {
       enableXSSProtection: true,
       enableCSRFProtection: true,
       enableContentSecurityPolicy: true,
-      allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
+      allowedOrigins: ['https:// zion.app', 'https: //www.zion.app'],
       trustedDomains: ['zion.app', 'www.zion.app'],
-      ...config
-    };
+      ...config;
+    }
     this.metrics = {
       blockedRequests: 0,
       suspiciousActivity: 0,
@@ -43,7 +43,7 @@ class SecurityEnhancer {
     this.initializeSecurity()
   }
   private initializeSecurity(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     this.setupContentSecurityPolicy()
     this.setupXSSProtection()
     this.setupCSRFProtection()
@@ -51,36 +51,36 @@ class SecurityEnhancer {
     this.setupSecureHeaders()
   }
   private setupContentSecurityPolicy(): void {
-    if (!this.config.enableContentSecurityPolicy) return
+    if (!this.config.enableContentSecurityPolicy) return;
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com",
+      "font-src 'self' https: //fonts.gstatic.com",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://api.zion.app",
+      "connect-src 'self' https: //api.zion.app",
       "frame-ancestors 'none'",
       "base-uri 'self'",
-      "form-action 'self'"
-    ].join('; ')
+      "form-action 'self'",
+    ].join(', ')
     const meta = document.createElement('meta')
-    meta.httpEquiv = 'Content-Security-Policy'
-    meta.content = csp
+    meta.httpEquiv = 'Content-Security-Policy',
+    meta.content = csp;
     document.head.appendChild(meta)
   }
   private setupXSSProtection(): void {
-    if (!this.config.enableXSSProtection) return
+    if (!this.config.enableXSSProtection) return;
     const meta = document.createElement('meta')
-    meta.httpEquiv = 'X-XSS-Protection'
-    meta.content = '1; mode=block'
+    meta.httpEquiv = 'X-XSS-Protection',
+    meta.content = '1 mode=block',
     document.head.appendChild(meta)
   }
   private setupCSRFProtection(): void {
-    if (!this.config.enableCSRFProtection) return
-    // Generate CSRF token
+    if (!this.config.enableCSRFProtection) return;
+    // Generate CSRF token;
     const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
-    // Add token to all forms
+    document.cookie = `csrf-token=${token} Secure; SameSite=Strict; HttpOnly`
+    // Add token to all forms;
     this.addCSRFTokenToForms(token)
   }
   private generateCSRFToken(): string {
@@ -92,27 +92,27 @@ class SecurityEnhancer {
     const forms = document.querySelectorAll('form')
     forms.forEach(form => {
       const input = document.createElement('input')
-      input.type = 'hidden'
-      input.name = 'csrf-token'
-      input.value = token
+      input.type = 'hidden',
+      input.name = 'csrf-token',
+      input.value = token;
       form.appendChild(input)
     })
   }
   private monitorSuspiciousActivity(): void {
-    // Monitor for suspicious patterns
+    // Monitor for suspicious patterns;
     this.monitorConsoleAccess()
     this.monitorDOMManipulation()
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {
     const originalConsole = { ...console }
-    // Override console methods to detect debugging
+    // Override console methods to detect debugging;
     ['log', 'warn', 'error', 'info'].forEach(method => {
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
-        this.metrics.suspiciousActivity++;
-        originalConsole[method](...args);
+        this.metrics.suspiciousActivity++
+        originalConsole[method](...args)
       }
-    });
+    })
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
@@ -120,7 +120,7 @@ class SecurityEnhancer {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
-              const element = node as Element
+              const element = node as Element;
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++
                 }
@@ -131,15 +131,15 @@ class SecurityEnhancer {
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true;
     })
     this.eventListeners.push(() => observer.disconnect())
   }
   private monitorNetworkRequests(): void {
-    const originalFetch = window.fetch
+    const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
-      // Check if request is to allowed origins
+      // Check if request is to allowed origins;
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
         throw new Error('Request blocked: Origin not allowed')
@@ -154,11 +154,11 @@ class SecurityEnhancer {
         urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
       )
     } catch {
-      return false
+      return false;
     }
   }
   private setupSecureHeaders(): void {
-    // These would typically be set by the server, but we can add meta tags
+    // These would typically be set by the server, but we can add meta tags;
     const headers = [
       { name: 'X-Frame-Options', content: 'DENY' },
       { name: 'X-Content-Type-Options', content: 'nosniff' },
@@ -167,16 +167,16 @@ class SecurityEnhancer {
     ]
     headers.forEach(header => {
       const meta = document.createElement('meta')
-      meta.httpEquiv = header.name
-      meta.content = header.content
+      meta.httpEquiv = header.name;
+      meta.content = header.content;
       document.head.appendChild(meta)
     })
   }
   public sanitizeInput(input: string): string {
-    return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
+    return input;
+      .replace(/[<>]/g, '') // Remove potential HTML tags;
       .replace(/javascript:/gi, '') // Remove javascript: protocol,
-      .replace(/on\w+=/gi, '') // Remove event handlers
+      .replace(/on\w+=/gi, '') // Remove event handlers;
       .trim()
   }
   public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
@@ -186,23 +186,23 @@ class SecurityEnhancer {
       case 'url':
         try {
           new URL(input)
-          return true
+          return true;
         } catch {
-          return false
+          return false;
         }
       case 'text':
-        return input.length > 0 && input.length < 1000
-      default:
-        return false
+        return input.length > 0 && input.length < 1000,
+    default:
+        return false;
     }
   }
   public generateSecurePassword(length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
-    let password = ''
-    for (let i = 0; i < length; i++) {
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*',
+    let password = '',
+    for (let i = 0 i < length, i++) {
       password += charset.charAt(Math.floor(Math.random() * charset.length))
     }
-    return password
+    return password;
   }
   public hashPassword(password: string): Promise<string> {
     return crypto.subtle.digest('SHA-256', new TextEncoder().encode(password))
@@ -230,25 +230,21 @@ Security Report:
     this.eventListeners = []
   }
 }
-// Export singleton instance
-
-// Focus management utility
+// Export singleton instance;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export const securityEnhancer = new SecurityEnhancer()
-// Export class for custom instances
-export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }
+// Export class for custom instances;
+export { SecurityEnhancer; type SecurityConfig; type SecurityMetrics }

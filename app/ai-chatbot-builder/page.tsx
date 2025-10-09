@@ -1,63 +1,62 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client',
+import React from 'react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
 
-// Focus management utility
+// Focus management utility"
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
+}
 
-// Skip to main content functionality
+// Skip to main content functionality"
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
+}
 
 
 export default function AIChatbotBuilderPage() {
-  return (
-    <article >
+  return (<article >
       <Navigation />
       
       <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
-            AI Chatbot Builder
+            AI Chatbot Builder"
           </h1>
           <p className="text-xl md:text-2xl text-purple-400 mb-8 font-medium neon-glow">
-            Create Intelligent Chatbots for Customer Support & Sales
+            Create Intelligent Chatbots for Customer Support & Sales"
           </p>
           <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8">
-            Build powerful AI chatbots without coding. Our platform enables you to create intelligent 
-            conversational agents for customer support, lead generation, and sales automation in minutes.
+            Build powerful AI chatbots without coding. Our platform enables you to create intelligent"
+            conversational agents for customer support; lead generation, and sales automation in minutes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
             >
-              📞 Call: (302) 464-0950
+              📞 Call: (302) 464-0950"
             </a>
-            <a 
+            <a;
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Try Free Demo
+              Try Free Demo"
             </a>
           </div>
         </section>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Powerful Features
+            Powerful Features"
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="cyber-card hologram-card p-6">
@@ -73,7 +72,7 @@ export default function AIChatbotBuilderPage() {
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-bold text-white mb-4">Natural Language Processing</h3>
               <p className="text-gray-500">
-                Advanced NLP capabilities that understand context, intent, and sentiment 
+                Advanced NLP capabilities that understand context, intent, and sentiment"
                 to provide human-like conversations and accurate responses.
               </p>
             </div>
@@ -100,7 +99,7 @@ export default function AIChatbotBuilderPage() {
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-white mb-4">Lead Generation</h3>
               <p className="text-gray-500">
-                Automatically capture leads, qualify prospects, and route them to 
+                Automatically capture leads, qualify prospects, and route them to"
                 your sales team with intelligent lead scoring and CRM integration.
               </p>
             </div>
@@ -109,7 +108,7 @@ export default function AIChatbotBuilderPage() {
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Custom Integrations</h3>
               <p className="text-gray-500">
-                Connect with your existing tools including CRM, helpdesk, payment 
+                Connect with your existing tools including CRM, helpdesk, payment"
                 systems, and databases through our extensive integration library.
               </p>
             </div>
@@ -118,13 +117,13 @@ export default function AIChatbotBuilderPage() {
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Perfect For Every Business
+            Perfect For Every Business"
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Customer Support</h3>
               <p className="text-gray-500 mb-4">
-                Provide 24/7 customer support with instant responses to common questions, 
+                Provide 24/7 customer support with instant responses to common questions,
                 ticket creation, and seamless handoff to human agents when needed.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
@@ -138,7 +137,7 @@ export default function AIChatbotBuilderPage() {
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Sales & Marketing</h3>
               <p className="text-gray-500 mb-4">
-                Generate leads, qualify prospects, and guide customers through your 
+                Generate leads, qualify prospects, and guide customers through your"
                 sales funnel with intelligent conversation flows and personalized recommendations.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
@@ -181,7 +180,7 @@ export default function AIChatbotBuilderPage() {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Pricing Plans
+            Pricing Plans"
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="cyber-card hologram-card p-8 text-center">
@@ -195,7 +194,7 @@ export default function AIChatbotBuilderPage() {
                 <li>✓ Basic analytics</li>
               </ul>
               <a href="/contact" className="cyber-button w-full text-center">
-                Get Started
+                Get Started"
               </a>
             </div>
             
@@ -212,7 +211,7 @@ export default function AIChatbotBuilderPage() {
                 <li>✓ Custom integrations</li>
               </ul>
               <a href="/contact" className="cyber-button w-full text-center">
-                Get Started
+                Get Started"
               </a>
             </div>
             
@@ -228,7 +227,7 @@ export default function AIChatbotBuilderPage() {
                 <li>✓ API access</li>
               </ul>
               <a href="/contact" className="cyber-button w-full text-center">
-                Contact Sales
+                Contact Sales"
               </a>
             </div>
           </div>
@@ -243,17 +242,17 @@ export default function AIChatbotBuilderPage() {
             No credit card required - just powerful AI at your fingertips.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
             >
-              📞 Call: (302) 464-0950
+              📞 Call: (302) 464-0950"
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-black transition-all duration-300"
             >
-              📧 Email Us
+              📧 Email Us"
             </a>
           </div>
         </section>
@@ -261,5 +260,5 @@ export default function AIChatbotBuilderPage() {
       
       <Footer />
     </article>
-  );
+  )
 }

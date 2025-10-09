@@ -1,29 +1,24 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
+import React from 'react',
+// import { Metadata } from 'next', // Removed for Vite;
 const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
-  description:
-    'Privacy policy and data protection information for Zion Tech Group services and website.'
-};
-
-// Focus management utility
+  description: 'Privacy policy and data protection information for Zion Tech Group services and website.'
+}
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
-export { metadata };
+}
+export { metadata }
 const PrivacyPage: React.FC = React.memo(() => {
   return (
     <>
@@ -32,7 +27,7 @@ const PrivacyPage: React.FC = React.memo(() => {
           <div className='max-w-4xl mx-auto'>
             <div className='bg-white rounded-lg shadow-lg p-8'>
               <h1 className='text-4xl font-bold text-gray-900 mb-8'>
-                Privacy Policy
+                Privacy Policy;
               </h1>
               <div className='prose prose-lg max-w-none'>
                 <p className='text-gray-600 mb-6'>
@@ -41,11 +36,11 @@ const PrivacyPage: React.FC = React.memo(() => {
                 </p>
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Information We Collect
+                    Information We Collect;
                   </h2>
                   <p className='text-gray-600 mb-4'>
-                    We collect information you provide directly to us, such as
-                    when you create an account, contact us, or use our services.
+                    We collect information you provide directly to us; such as;
+                    when you create an account; contact us, or use our services.
                   </p>
                   <ul className='list-disc list-inside text-gray-600 space-y-2'>
                     <li>
@@ -58,10 +53,10 @@ const PrivacyPage: React.FC = React.memo(() => {
                 </section>
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    How We Use Your Information
+                    How We Use Your Information;
                   </h2>
                   <p className='text-gray-600 mb-4'>
-                    We use the information we collect to provide, maintain, and
+                    We use the information we collect to provide, maintain, and;
                     improve our services.
                   </p>
                   <ul className='list-disc list-inside text-gray-600 space-y-2'>
@@ -74,39 +69,39 @@ const PrivacyPage: React.FC = React.memo(() => {
                 </section>
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Information Sharing
+                    Information Sharing;
                   </h2>
                   <p className='text-gray-600 mb-4'>
-                    We do not sell, trade, or otherwise transfer your personal
-                    information to third parties without your consent, except as
+                    We do not sell, trade, or otherwise transfer your personal;
+                    information to third parties without your consent, except as;
                     described in this policy.
                   </p>
                 </section>
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Data Security
+                    Data Security;
                   </h2>
                   <p className='text-gray-600 mb-4'>
-                    We implement appropriate security measures to protect your
+                    We implement appropriate security measures to protect your;
                     personal information against unauthorized access,
                     alteration, disclosure, or destruction.
                   </p>
                 </section>
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Contact Us
+                    Contact Us;
                   </h2>
                   <p className='text-gray-600'>
-                    If you have any questions about this Privacy Policy, please
+                    If you have any questions about this Privacy Policy, please;
                     contact us at:
                   </p>
                   <div className='mt-4 p-4 bg-gray-50 rounded-lg'>
                     <p className='text-gray-600'>
-                      <strong>Email:</strong> privacy@ziontechgroup.com
+                      <strong>Email:</strong> privacy@ziontechgroup.com;
                       <br />
-                      <strong>Phone:</strong> +1 (302) 600-9898
+                      <strong>Phone:</strong> +1 (302) 600-9898;
                       <br />
-                      <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
+                      <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709;
                     </p>
                   </div>
                 </section>
@@ -116,7 +111,7 @@ const PrivacyPage: React.FC = React.memo(() => {
         </div>
       </div>
     </>
-  );
-};
-);
+  )
+}
+)
 export default PrivacyPage;

@@ -1,28 +1,25 @@
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import './globals.css',
+import PerformanceMonitor from './components/PerformanceMonitor',
+import ErrorBoundary from './components/ErrorBoundary',
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary',
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor',
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function RootLayout({
-  children
+  children;
 }: {
   children: React.ReactNode;
 }) {
@@ -43,7 +40,7 @@ export default function RootLayout({
       'Digital Transformation',
       'Cloud Services',
       'Automation',
-      'Business Intelligence'
+      'Business Intelligence',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -54,7 +51,7 @@ export default function RootLayout({
     },
     sameAs: [
       'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
+      'https: //linkedin.com/company/ziontechgroup',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -131,7 +128,7 @@ export default function RootLayout({
         }
       ]
     }
-  };
+  }
   return (
     <html lang='en'>
       <head>
@@ -188,21 +185,21 @@ export default function RootLayout({
         <meta name="twitter:url" content="https://ziontechgroup.com" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter: image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
-        <script
-          type='application/ld+json'
+        <script;
+          type='application/ld+json',
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       
-        <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-          onClick={(e) => { e.preventDefault(); skipToMain(); }}
+        <a;
+          href="#main-content"
+          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+          onClick={(e) => { e.preventDefault(), skipToMain()}}
         >
-          Skip to main content
+          Skip to main content;
         </a>
       
       <body className='antialiased'>
@@ -213,5 +210,5 @@ export default function RootLayout({
         </EnhancedErrorBoundary>
       </body>
     </html>
-  );
+  )
 }

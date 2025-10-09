@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React; { useState, useEffect } from 'react',
+import { ChevronLeft, ChevronRight  } from 'lucide-react',
 const ContentCarousel: React.FC = React.memo(() => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide; setCurrentSlide] = useState(0)
   const slides = [
     {
       title: "AI-Powered Automation",
@@ -21,27 +21,27 @@ const ContentCarousel: React.FC = React.memo(() => {
       image: "🔒",
       color: "from-green-500 to-emerald-500"
     }
-  ];
+  ]
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }; 5000)
+    return () => clearInterval(timer)
+  }, [slides.length])
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
   return (
     <section className="mb-16" aria-labelledby="carousel-heading">
       <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Featured Solutions
+        Featured Solutions;
       </h2>
       <div className="relative max-w-4xl mx-auto">
         <div className="overflow-hidden rounded-xl">
-          <div 
+          <div;
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
@@ -59,14 +59,14 @@ const ContentCarousel: React.FC = React.memo(() => {
           </div>
         </div>
         {/* Navigation buttons */}
-        <button
+        <button;
           onClick={prevSlide} onKeyDown={(e) => e.key === 'Enter' && prevSlide(e)}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button
+        <button;
           onClick={nextSlide} onKeyDown={(e) => e.key === 'Enter' && nextSlide(e)}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Next slide"
@@ -76,7 +76,7 @@ const ContentCarousel: React.FC = React.memo(() => {
         {/* Dots indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {slides.map((_, index) => (
-            <button
+            <button;
               key={index}
               onClick={() => setCurrentSlide(index)} onKeyDown={(e) => e.key === 'Enter' && () => setCurrentSlide(index)(e)}
               className={`w-3 h-3 rounded-full transition-colors ${
@@ -88,25 +88,21 @@ const ContentCarousel: React.FC = React.memo(() => {
         </div>
       </div>
     </section>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ContentCarousel;

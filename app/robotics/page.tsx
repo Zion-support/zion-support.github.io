@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog  } from 'lucide-react',
 const RoboticsPage: React.FC = React.memo(() => {
   const roboticsServices = [
     {
@@ -135,10 +135,9 @@ const RoboticsPage: React.FC = React.memo(() => {
       category: 'Training',
       technologies: ['Simulation Software', 'Virtual Reality', 'Hands-on Labs', 'Certification Programs', 'Online Learning']
     }
-  ];
-  const categories = [...new Set(roboticsServices.map(service => service.category))];
-  return (
-    <>
+  ]
+  const categories = [...new Set(roboticsServices.map(service => service.category))]
+  return (<>
       <Helmet>
         <title>Robotics & Automation Services - Zion Tech Group</title>
         <meta name="description" content="Advanced robotics and automation services including RPA, industrial robots, service robots, and AI-powered automation solutions." />
@@ -151,17 +150,17 @@ const RoboticsPage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Robotics & Automation Services
+                Robotics & Automation Services;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-teal-100 max-w-3xl mx-auto">
-                Transform your operations with intelligent robots and advanced automation solutions
+                Transform your operations with intelligent robots and advanced automation solutions;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button role="button" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors">
-                  Explore Robotics Solutions
+                  Explore Robotics Solutions;
                 </button>
                 <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </div>
@@ -175,7 +174,7 @@ const RoboticsPage: React.FC = React.memo(() => {
                 Why Choose Our Robotics Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert robotics engineers delivering intelligent automation solutions that drive real business value
+                Expert robotics engineers delivering intelligent automation solutions that drive real business value;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -216,14 +215,14 @@ const RoboticsPage: React.FC = React.memo(() => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
+                  {category} Solutions;
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} services for intelligent automation
+                  Specialized {category.toLowerCase()} services for intelligent automation;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {roboticsServices
+                {roboticsServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -236,7 +235,7 @@ const RoboticsPage: React.FC = React.memo(() => {
                           <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 40% vs market rates
+                          Save up to 40% vs market rates;
                         </div>
                       </div>
                       <div className="mb-4">
@@ -272,7 +271,7 @@ const RoboticsPage: React.FC = React.memo(() => {
                         </ul>
                       </div>
                       <button role="button" className="w-full bg-teal-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-                        Get Robotics Consultation
+                        Get Robotics Consultation;
                       </button>
                     </div>
                   ))}
@@ -285,10 +284,10 @@ const RoboticsPage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Robotics Capabilities
+                Our Robotics Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive robotics solutions covering all aspects of intelligent automation
+                Comprehensive robotics solutions covering all aspects of intelligent automation;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -332,20 +331,20 @@ const RoboticsPage: React.FC = React.memo(() => {
               Ready to Automate Your Future?
             </h2>
             <p className="text-xl mb-8 text-teal-100">
-              Contact our robotics experts for a free consultation and custom automation strategy
+              Contact our robotics experts for a free consultation and custom automation strategy;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-teal-200">
@@ -355,25 +354,21 @@ const RoboticsPage: React.FC = React.memo(() => {
         </section>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default RoboticsPage;

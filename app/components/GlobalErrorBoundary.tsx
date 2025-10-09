@@ -1,37 +1,37 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client',
+import React; { Component, ErrorInfo, ReactNode } from 'react',
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
 }
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    });
-    // Log error to console in development
+      errorInfo;
+    })
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)
     }
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    // In production, you might want to send this to an error reporting service;
+    // Example: errorReportingService.captureException(error, { extra: errorInfo })
   }
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -48,7 +48,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
             {/* Error Message */}
             <h1 className="text-2xl font-bold text-white mb-4">
-              Something went wrong
+              Something went wrong;
             </h1>
             <p className="text-gray-500 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -76,23 +76,23 @@ class GlobalErrorBoundary extends Component<Props, State> {
             )}
             {/* Action Buttons */}
             <div className="space-y-3">
-              <button
+              <button;
                 onClick={this.handleRetry} onKeyDown={(e) => e.key === 'Enter' && this.handleRetry(e)}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
               >
-                Try Again
+                Try Again;
               </button>
-              <button
+              <button;
                 onClick={() => window.location.reload()} onKeyDown={(e) => e.key === 'Enter' && () => window.location.reload()(e)}
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
               >
-                Refresh Page
+                Refresh Page;
               </button>
-              <a
+              <a;
                 href="/"
                 className="block w-full bg-transparent border border-gray-600 text-gray-500 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
               >
-                Go Home
+                Go Home;
               </a>
             </div>
             {/* Contact Information */}
@@ -100,36 +100,33 @@ class GlobalErrorBoundary extends Component<Props, State> {
               <p className="text-sm text-gray-600 mb-2">
                 Need help? Contact our support team:
               </p>
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 font-medium"
               >
-                (302) 464-0950
+                (302) 464-0950;
               </a>
             </div>
           </div>
         </div>
-      );
+      )
     }
     return this.props.children;
   }
 }
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
-export { GlobalErrorBoundary };
+}
+export { GlobalErrorBoundary }

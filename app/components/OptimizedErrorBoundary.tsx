@@ -1,84 +1,83 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
+'use client',
+import React; { Component, ErrorInfo, ReactNode, memo } from 'react',
 interface OptimizedErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
+  resetKeys?: Array<string | number>
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: boolean,
+  error: Error | null,
+    errorInfo: ErrorInfo | null,
+    errorId: string;
 }
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
-  State
+  State;
 > {
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
-    };
+    }
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    });
-    // Log error to console in development
+      errorInfo;
+    })
+    // Log error to console in development;
     if (process.env['NODE_ENV'] === 'development') {
     }
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
-    // Send error to monitoring service in production
+    // Send error to monitoring service in production;
     if (process.env['NODE_ENV'] === 'production') {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)
     }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
+    const { resetKeys; resetOnPropsChange } = this.props;
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
-        const hasResetKeyChanged = resetKeys.some(
-          (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+        const hasResetKeyChanged = resetKeys.some((key, index) => key !== prevProps.resetKeys?.[index]
+        )
         if (hasResetKeyChanged) {
-          this.resetErrorBoundary();
+          this.resetErrorBoundary()
         }
       }
     }
     if (
       hasError &&
       resetOnPropsChange &&
-      prevProps.children !== this.props.children
+      prevProps.children !== this.props.children;
     ) {
-      this.resetErrorBoundary();
+      this.resetErrorBoundary()
     }
   }
   componentWillUnmount() {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to error monitoring service
+    // Report to error monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (
         window as unknown as {
@@ -94,14 +93,14 @@ class OptimizedErrorBoundary extends Component<
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
+          component_stack: errorInfo.componentStack;
         }
-      });
+      })
     }
-  };
+  }
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId)
     }
     this.resetTimeoutId = window.setTimeout(() => {
       this.setState({
@@ -109,61 +108,60 @@ class OptimizedErrorBoundary extends Component<
         error: null,
         errorInfo: null,
         errorId: ''
-      });
-    }, 100);
-  };
+      })
+    }, 100)
+  }
   private handleRetry = () => {
-    this.resetErrorBoundary();
-  };
+    this.resetErrorBoundary()
+  }
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
       return (
-        <ErrorFallback
+        <ErrorFallback;
           error={this.state.error}
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-      );
+      )
     }
     return this.props.children;
   }
 }
 interface ErrorFallbackProps {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  error: Error | null,
+    errorInfo: ErrorInfo | null,
+    errorId: string,
   onRetry: () => void;
 }
-const ErrorFallback = memo<ErrorFallbackProps>(
-  ({ error, errorInfo, errorId, onRetry }) => (
+const ErrorFallback = memo<ErrorFallbackProps>(({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
         <div className='mb-4'>
           <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
-            <svg
-              className='w-6 h-6 text-red-600'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
+            <svg;
+              className='w-6 h-6 text-red-600',
+              fill='none',
+              stroke='currentColor',
+              viewBox='0 0 24 24',
             >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
+              <path;
+                strokeLinecap='round',
+                strokeLinejoin='round',
                 strokeWidth={2}
-                d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
+                d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z',
               />
             </svg>
           </div>
         </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-          Something went wrong
+          Something went wrong;
         </h1>
         <p className='text-gray-600 mb-4'>
-          We&apos;re sorry, but something unexpected happened. Please try again.
+          We&aposre sorry, but something unexpected happened. Please try again.
         </p>
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
@@ -190,17 +188,17 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           </details>
         )}
         <div className='flex flex-col sm:flex-row gap-2 justify-center'>
-          <button
+          <button;
             onClick={onRetry} onKeyDown={(e) => e.key === 'Enter' && onRetry(e)}
-            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
+            className='px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors',
           >
-            Try Again
+            Try Again;
           </button>
-          <button
+          <button;
             onClick={() => window.location.reload()} onKeyDown={(e) => e.key === 'Enter' && () => window.location.reload()(e)}
-            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
+            className='px-4 py-2 bg-gray-600 text-white rounded-md hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors',
           >
-            Reload Page
+            Reload Page;
           </button>
         </div>
         {errorId && (
@@ -209,24 +207,21 @@ const ErrorFallback = memo<ErrorFallbackProps>(
       </div>
     </div>
   )
-);
-ErrorFallback.displayName = 'ErrorFallback';
+)
+ErrorFallback.displayName = 'ErrorFallback',
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default OptimizedErrorBoundary;

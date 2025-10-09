@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
-import Link from 'next/link';
+'use client',
+import React from 'react',
+import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart  } from 'lucide-react',
+import Link from 'next/link',
 const AISchedulerPage: React.FC = React.memo(() => {
   const features = [
     {
@@ -40,7 +40,7 @@ const AISchedulerPage: React.FC = React.memo(() => {
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       benefit: '100% secure scheduling'
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Personal',
@@ -53,9 +53,9 @@ const AISchedulerPage: React.FC = React.memo(() => {
         'Calendar integration',
         'Email reminders',
         'Mobile app access',
-        'Standard support'
+        'Standard support',
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Team',
@@ -70,9 +70,9 @@ const AISchedulerPage: React.FC = React.memo(() => {
         'Analytics dashboard',
         'Priority support',
         'API access',
-        'Custom branding'
+        'Custom branding',
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -87,11 +87,11 @@ const AISchedulerPage: React.FC = React.memo(() => {
         'Dedicated support',
         'White-label options',
         'SSO integration',
-        'Custom workflows'
+        'Custom workflows',
       ],
-      popular: false
+      popular: false;
     }
-  ];
+  ]
   const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
@@ -101,30 +101,30 @@ const AISchedulerPage: React.FC = React.memo(() => {
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-  ];
+  ]
   const testimonials = [
     {
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
       content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Robert Martinez',
       company: 'Consulting Group',
       role: 'Senior Partner',
       content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Amanda Chen',
       company: 'Digital Agency',
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
-      rating: 5
+      rating: 5;
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -134,29 +134,29 @@ const AISchedulerPage: React.FC = React.memo(() => {
             <Calendar className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Scheduler
+            AI Scheduler;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling
+            Intelligent Meeting & Event Scheduling;
           </p>
           <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
-            the best meeting times, coordinate complex team schedules, and optimize your calendar 
+            Never miss another meeting with our AI-powered scheduling assistant. Automatically find;
+            the best meeting times, coordinate complex team schedules, and optimize your calendar;
             for maximum productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </div>
@@ -186,7 +186,7 @@ const AISchedulerPage: React.FC = React.memo(() => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features
+            Smart Scheduling Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -202,7 +202,7 @@ const AISchedulerPage: React.FC = React.memo(() => {
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Works with Your Favorite Tools
+            Works with Your Favorite Tools;
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
@@ -217,18 +217,18 @@ const AISchedulerPage: React.FC = React.memo(() => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
+                plan.popular;
+                  ? 'border-cyan-400 scale-105',
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -246,11 +246,11 @@ const AISchedulerPage: React.FC = React.memo(() => {
                   ))}
                 </ul>
                 <button role="button" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
+                  plan.popular;
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600',
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -259,7 +259,7 @@ const AISchedulerPage: React.FC = React.memo(() => {
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Users Say
+            What Our Users Say;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -269,7 +269,7 @@ const AISchedulerPage: React.FC = React.memo(() => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-500 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-500 mb-4 italic">{testimonial.content}</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
@@ -285,46 +285,42 @@ const AISchedulerPage: React.FC = React.memo(() => {
             Ready to Master Your Schedule?
           </h2>
           <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
+            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches;
             and maximize productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Call: (302) 464-0950;
             </a>
-            <Link 
+            <Link;
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </section>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AISchedulerPage;

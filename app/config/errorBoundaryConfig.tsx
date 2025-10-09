@@ -1,67 +1,64 @@
-'use client';
+'use client',
 /**
- * Error Boundary Configuration
- * Centralized configuration for error handling across the application
+ * Error Boundary Configuration;
+ * Centralized configuration for error handling across the application;
  */
-import React from 'react';
+import React from 'react',
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export interface ErrorBoundaryConfig {
   /**
-   * Whether to log errors to console
+   * Whether to log errors to console;
    */
-  logErrors: boolean;
+  logErrors: boolean,
   /**
-   * Whether to show detailed error messages
+   * Whether to show detailed error messages;
    */
-  showDetails: boolean;
+  showDetails: boolean,
   /**
-   * Whether to send errors to external service
+   * Whether to send errors to external service;
    */
-  reportErrors: boolean;
+  reportErrors: boolean,
   /**
-   * Error reporting endpoint
+   * Error reporting endpoint;
    */
   reportingEndpoint?: string;
   /**
-   * Whether to show error overlay in development
+   * Whether to show error overlay in development;
    */
-  showErrorOverlay: boolean;
+  showErrorOverlay: boolean,
   /**
-   * Maximum number of errors to store
+   * Maximum number of errors to store;
    */
-  maxStoredErrors: number;
+  maxStoredErrors: number,
   /**
-   * Custom error messages by error type
+   * Custom error messages by error type;
    */
-  customMessages: Record<string, string>;
+  customMessages: Record<string, string>
   /**
-   * Fallback UI components
+   * Fallback UI components;
    */
   fallbackComponents: {
-    default: React.ComponentType<{ error: Error; resetError: () => void }>;
-    network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
-  };
+    default: React.ComponentType<{ error: Error, resetError: () => void }>
+    network: React.ComponentType<{ error: Error, resetError: () => void }>
+    notFound: React.ComponentType<{ error: Error, resetError: () => void }>
+  }
 }
 /**
- * Default error messages
+ * Default error messages;
  */
 const DEFAULT_ERROR_MESSAGES = {
   default: 'Something went wrong. Please try again.',
@@ -70,12 +67,12 @@ const DEFAULT_ERROR_MESSAGES = {
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
   validation: 'Validation error. Please check your input.'
-};
+}
 /**
- * Get error boundary configuration based on environment
+ * Get error boundary configuration based on environment;
  */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-  const _isDevelopment = process.env['NODE_ENV'] === 'development';
+  const _isDevelopment = process.env['NODE_ENV'] === 'development',
   return {
     logErrors: true,
     showDetails: isDevelopment,
@@ -87,25 +84,25 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     fallbackComponents: {
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback
+      notFound: NotFoundFallback;
     }
-  };
+  }
 }
 /**
- * Default error fallback component
+ * Default error fallback component;
  */
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+function DefaultErrorFallback({ error, resetError }: { error: Error, resetError: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-          <svg
+          <svg;
             className="w-6 h-6 text-red-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
+            <path;
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -114,7 +111,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
+          Oops! Something went wrong;
         </h2>
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
@@ -123,38 +120,38 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           <pre className="mt-4 p-4 bg-gray-50 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
         <div className="mt-6 flex gap-4">
-          <button
+          <button;
             onClick={resetError} onKeyDown={(e) => e.key === 'Enter' && resetError(e)}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Try Again
+            Try Again;
           </button>
-          <button
+          <button;
             onClick={() => (window.location.href = '/')} onKeyDown={(e) => e.key === 'Enter' && () => (window.location.href = '/')(e)}
             className="flex-1 bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
-            Go Home
+            Go Home;
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }
 /**
- * Network error fallback component
+ * Network error fallback component;
  */
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
-          <svg
+          <svg;
             className="w-6 h-6 text-yellow-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
+            <path;
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -167,19 +164,19 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           Unable to connect to the server. Please check your internet connection and try again.
         </p>
         <div className="mt-6">
-          <button
+          <button;
             onClick={resetError} onKeyDown={(e) => e.key === 'Enter' && resetError(e)}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Retry Connection
+            Retry Connection;
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }
 /**
- * Not found error fallback component
+ * Not found error fallback component;
  */
 function NotFoundFallback(): JSX.Element {
   return (
@@ -191,48 +188,48 @@ function NotFoundFallback(): JSX.Element {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6 flex gap-4 justify-center">
-          <button
+          <button;
             onClick={() => (window.location.href = '/')} onKeyDown={(e) => e.key === 'Enter' && () => (window.location.href = '/')(e)}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Go Home
+            Go Home;
           </button>
-          <button
+          <button;
             onClick={() => window.history.back()} onKeyDown={(e) => e.key === 'Enter' && () => window.history.back()(e)}
             className="bg-gray-100 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
-            Go Back
+            Go Back;
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }
 /**
- * Get error type from error object
+ * Get error type from error object;
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-    return 'network';
+    return 'network'
   }
   if (error.message.includes('404') || error.message.includes('not found')) {
-    return 'notFound';
+    return 'notFound'
   }
   if (error.message.includes('timeout')) {
-    return 'timeout';
+    return 'timeout'
   }
   if (error.message.includes('500') || error.message.includes('server')) {
-    return 'serverError';
+    return 'serverError'
   }
   if (error.message.includes('validation')) {
-    return 'validation';
+    return 'validation'
   }
-  return 'default';
+  return 'default'
 }
 /**
- * Format error for logging
+ * Format error for logging;
  */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
+export function formatErrorForLogging(error: Error): Record<string; unknown> {
   return {
     message: error.message,
     stack: error.stack,
@@ -241,6 +238,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
-  };
+  }
 }
 export default getErrorBoundaryConfig;

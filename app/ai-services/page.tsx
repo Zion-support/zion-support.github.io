@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin  } from 'lucide-react',
 const AIServicesPage: React.FC = React.memo(() => {
   const aiServices = [
     {
@@ -14,13 +14,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Implementation Roadmap',
         'Change Management',
         'ROI Analysis',
-        'Executive Training'
+        'Executive Training',
       ],
       benefits: [
         'Accelerate AI adoption by 300%',
         'Reduce implementation risks by 60%',
         'Achieve 400% ROI within 12 months',
-        'Future-proof your technology stack'
+        'Future-proof your technology stack',
       ],
       marketPrice: '$5,000-10,000/month',
       category: 'Consulting',
@@ -38,13 +38,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Model Training & Optimization',
         'Real-time Inference',
         'Model Monitoring & Maintenance',
-        'A/B Testing Framework'
+        'A/B Testing Framework',
       ],
       benefits: [
         'Improve accuracy by 40-80%',
         'Reduce manual work by 70%',
         'Enable real-time predictions',
-        'Scale with your business growth'
+        'Scale with your business growth',
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Machine Learning',
@@ -62,13 +62,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Language Translation',
         'Named Entity Recognition',
         'Text Summarization',
-        'Chatbot Development'
+        'Chatbot Development',
       ],
       benefits: [
         'Process 10,000+ documents/hour',
         'Improve customer satisfaction by 50%',
         'Reduce response time by 80%',
-        'Enable multilingual operations'
+        'Enable multilingual operations',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'NLP',
@@ -86,13 +86,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Image Classification',
         'Video Analysis',
         'Quality Control Automation',
-        'Real-time Processing'
+        'Real-time Processing',
       ],
       benefits: [
         'Reduce inspection time by 90%',
         'Improve accuracy to 99.5%',
         'Enable 24/7 monitoring',
-        'Reduce human error by 95%'
+        'Reduce human error by 95%',
       ],
       marketPrice: '$3,500-7,000/month',
       category: 'Computer Vision',
@@ -110,13 +110,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Customer Lifetime Value',
         'Churn Prediction',
         'Sales Forecasting',
-        'Anomaly Detection'
+        'Anomaly Detection',
       ],
       benefits: [
         'Improve forecast accuracy by 60%',
         'Reduce inventory costs by 25%',
         'Increase revenue by 30%',
-        'Minimize business risks'
+        'Minimize business risks',
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Analytics',
@@ -134,13 +134,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Workflow Optimization',
         'Decision Automation',
         'Exception Handling',
-        'Performance Monitoring'
+        'Performance Monitoring',
       ],
       benefits: [
         'Automate 80% of repetitive tasks',
         'Reduce processing time by 70%',
         'Improve accuracy to 99.9%',
-        'Free up staff for strategic work'
+        'Free up staff for strategic work',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Automation',
@@ -158,13 +158,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Context Management',
         'Human Handoff',
         'Analytics & Reporting',
-        'Custom Integrations'
+        'Custom Integrations',
       ],
       benefits: [
         'Handle 80% of customer queries',
         'Reduce response time to seconds',
         'Available 24/7/365',
-        'Improve customer satisfaction'
+        'Improve customer satisfaction',
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Conversational AI',
@@ -182,13 +182,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Real-time Streaming',
         'Data Transformation',
         'Schema Evolution',
-        'Data Lineage Tracking'
+        'Data Lineage Tracking',
       ],
       benefits: [
         'Process 1M+ records/hour',
         'Improve data quality by 95%',
         'Reduce processing time by 80%',
-        'Enable real-time analytics'
+        'Enable real-time analytics',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Data Engineering',
@@ -206,13 +206,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Anomaly Detection',
         'Risk Scoring',
         'Real-time Monitoring',
-        'Incident Response'
+        'Incident Response',
       ],
       benefits: [
         'Detect 99.9% of threats',
         'Reduce false positives by 80%',
         'Prevent fraud losses by 90%',
-        'Enable proactive security'
+        'Enable proactive security',
       ],
       marketPrice: '$4,000-8,000/month',
       category: 'Security',
@@ -230,13 +230,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Hybrid Approaches',
         'Real-time Recommendations',
         'A/B Testing',
-        'Performance Analytics'
+        'Performance Analytics',
       ],
       benefits: [
         'Increase sales by 25%',
         'Improve user engagement by 40%',
         'Reduce bounce rate by 30%',
-        'Personalize user experience'
+        'Personalize user experience',
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Recommendation Systems',
@@ -254,13 +254,13 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Voice Analytics',
         'Speaker Identification',
         'Emotion Detection',
-        'Multi-language Support'
+        'Multi-language Support',
       ],
       benefits: [
         'Improve accessibility by 100%',
         'Reduce call handling time by 50%',
         'Enable voice automation',
-        'Enhance customer experience'
+        'Enhance customer experience',
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Speech AI',
@@ -278,20 +278,20 @@ const AIServicesPage: React.FC = React.memo(() => {
         'Offline Capabilities',
         'Model Optimization',
         'Edge Analytics',
-        'Device Management'
+        'Device Management',
       ],
       benefits: [
         'Reduce latency by 90%',
         'Enable offline operations',
         'Reduce bandwidth costs by 70%',
-        'Improve data privacy'
+        'Improve data privacy',
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // NEW ADVANCED AI SERVICES
+    // NEW ADVANCED AI SERVICES;
     {
       title: 'AI-Powered Voice Cloning & Synthesis',
       description: 'Advanced voice synthesis technology for creating realistic voice clones and personalized speech systems.',
@@ -623,7 +623,7 @@ const AIServicesPage: React.FC = React.memo(() => {
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   // const categories = [
   //   { name: 'All', count: aiServices.length },
   //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
@@ -638,7 +638,7 @@ const AIServicesPage: React.FC = React.memo(() => {
   //   { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
   //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
   //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
-  // ];
+  // ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -650,7 +650,7 @@ const AIServicesPage: React.FC = React.memo(() => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Services
+            AI Services;
           </h1>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Comprehensive artificial intelligence solutions designed to transform your business operations and drive innovation.
@@ -697,7 +697,7 @@ const AIServicesPage: React.FC = React.memo(() => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your AI Solution
+            Choose Your AI Solution;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
@@ -727,7 +727,7 @@ const AIServicesPage: React.FC = React.memo(() => {
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-700">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features;
                       </li>
                     )}
                   </ul>
@@ -754,11 +754,11 @@ const AIServicesPage: React.FC = React.memo(() => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now;
                   </a>
                   <p className="text-xs text-gray-700 mt-2">
                     {service.contactInfo}
@@ -779,41 +779,37 @@ const AIServicesPage: React.FC = React.memo(() => {
             Get started with our AI services today and transform your business operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us;
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AIServicesPage;

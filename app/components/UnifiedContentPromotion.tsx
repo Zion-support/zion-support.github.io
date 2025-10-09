@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 const UnifiedContentPromotion: React.FC = React.memo(() => {
   const features = [
     {
@@ -20,7 +20,7 @@ const UnifiedContentPromotion: React.FC = React.memo(() => {
       link: "/contact",
       icon: "👨‍💼"
     }
-  ];
+  ]
   return (
     <div className="unified-content-promotion py-12">
       <div className="container mx-auto px-4">
@@ -29,14 +29,14 @@ const UnifiedContentPromotion: React.FC = React.memo(() => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <div;
               key={index}
               className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="text-5xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 mb-4">{feature.description}</p>
-              <Link
+              <Link;
                 href={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
               >
@@ -47,25 +47,21 @@ const UnifiedContentPromotion: React.FC = React.memo(() => {
         </div>
       </div>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default UnifiedContentPromotion;

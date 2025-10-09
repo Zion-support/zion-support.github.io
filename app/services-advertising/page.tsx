@@ -1,33 +1,28 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
-
-// Focus management utility
+import React from 'react',
+import Link from 'next/link',
+import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star  } from 'lucide-react',
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default function ServicesAdvertisingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header role="banner" className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            Back to Home;
           </Link>
         </div>
       </header>
@@ -38,32 +33,32 @@ export default function ServicesAdvertisingPage() {
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
               <Target className="w-4 h-4 mr-2" />
-              AI-Powered Advertising Solutions
+              AI-Powered Advertising Solutions;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Advertising Services
+              AI Advertising Services;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Revolutionize Your Marketing with 300% ROI Guaranteed
+              Revolutionize Your Marketing with 300% ROI Guaranteed;
             </p>
             <p className="text-lg mb-8 text-gray-500 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
+              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy;
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link;
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
-                Start Free Consultation
+                Start Free Consultation;
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
-              <Link 
+              <Link;
                 href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
-                View Our Services
+                View Our Services;
               </Link>
             </div>
           </div>
@@ -74,10 +69,10 @@ export default function ServicesAdvertisingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Advertising Results
+              Proven Advertising Results;
             </h2>
             <p className="text-xl text-gray-600">
-              Our AI-powered advertising delivers measurable business impact
+              Our AI-powered advertising delivers measurable business impact;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,10 +100,10 @@ export default function ServicesAdvertisingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI Advertising Solutions
+              AI Advertising Solutions;
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered advertising services for maximum impact
+              Comprehensive AI-powered advertising services for maximum impact;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,7 +121,7 @@ export default function ServicesAdvertisingPage() {
                 <li>• Cross-platform targeting</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
+                Market Price: $2,000-5,000/month | Our Price: $1,200/month;
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
@@ -143,7 +138,7 @@ export default function ServicesAdvertisingPage() {
                 <li>• Landing page optimization</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $3,000-7,000/month | Our Price: $1,800/month
+                Market Price: $3,000-7,000/month | Our Price: $1,800/month;
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
@@ -160,7 +155,7 @@ export default function ServicesAdvertisingPage() {
                 <li>• Brand consistency maintenance</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,500-6,000/month | Our Price: $1,500/month
+                Market Price: $2,500-6,000/month | Our Price: $1,500/month;
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
@@ -177,7 +172,7 @@ export default function ServicesAdvertisingPage() {
                 <li>• Cross-platform analytics</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
+                Market Price: $2,000-5,000/month | Our Price: $1,200/month;
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
@@ -194,7 +189,7 @@ export default function ServicesAdvertisingPage() {
                 <li>• Performance tracking</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,500-4,000/month | Our Price: $900/month
+                Market Price: $1,500-4,000/month | Our Price: $900/month;
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
@@ -211,7 +206,7 @@ export default function ServicesAdvertisingPage() {
                 <li>• Competitive analysis</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,000-3,000/month | Our Price: $600/month
+                Market Price: $1,000-3,000/month | Our Price: $600/month;
               </div>
             </div>
           </div>
@@ -222,10 +217,10 @@ export default function ServicesAdvertisingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-600">
-              Choose the plan that fits your advertising needs
+              Choose the plan that fits your advertising needs;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -256,7 +251,7 @@ export default function ServicesAdvertisingPage() {
                 </li>
               </ul>
               <button role="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
+                Get Started;
               </button>
             </div>
             <div className="bg-blue-600 text-white rounded-lg p-8 relative">
@@ -293,7 +288,7 @@ export default function ServicesAdvertisingPage() {
                 </li>
               </ul>
               <button role="button" className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
+                Get Started;
               </button>
             </div>
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
@@ -327,7 +322,7 @@ export default function ServicesAdvertisingPage() {
                 </li>
               </ul>
               <button role="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </div>
@@ -343,22 +338,22 @@ export default function ServicesAdvertisingPage() {
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
             >
-              Get Free Assessment
+              Get Free Assessment;
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-            <Link 
+            <Link;
               href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
-              View Success Stories
+              View Success Stories;
             </Link>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

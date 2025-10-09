@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
+'use client',
+import React from 'react',
+import { CheckCircle, Star, Bot, Cpu, BarChart  } from 'lucide-react',
 const AutonomousSystemsPage: React.FC = React.memo(() => {
   const autonomousServices = [
     {
@@ -33,7 +33,7 @@ const AutonomousSystemsPage: React.FC = React.memo(() => {
       category: 'Monitoring & Alerting',
       technologies: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       {/* Hero Section */}
@@ -42,17 +42,17 @@ const AutonomousSystemsPage: React.FC = React.memo(() => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Autonomous Systems Services
+              Autonomous Systems Services;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-              Transform your operations with intelligent autonomous systems that work 24/7
+              Transform your operations with intelligent autonomous systems that work 24/7;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button role="button" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                Explore Autonomous Solutions
+                Explore Autonomous Solutions;
               </button>
               <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -66,7 +66,7 @@ const AutonomousSystemsPage: React.FC = React.memo(() => {
               Why Choose Autonomous Systems?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings
+              Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,10 +99,10 @@ const AutonomousSystemsPage: React.FC = React.memo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Autonomous Solutions
+              Our Autonomous Solutions;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive autonomous systems designed to transform your business operations
+              Comprehensive autonomous systems designed to transform your business operations;
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -150,38 +150,34 @@ const AutonomousSystemsPage: React.FC = React.memo(() => {
             Ready to Automate Your Operations?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our autonomous systems transform your business with intelligent automation
+            Let our autonomous systems transform your business with intelligent automation;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button role="button" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-              Get Started Today
+              Get Started Today;
             </button>
             <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default AutonomousSystemsPage;

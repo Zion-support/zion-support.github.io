@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 interface SkeletonProps {
   className?: string;
   width?: string | number;
@@ -8,16 +8,15 @@ interface SkeletonProps {
 }
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
-  width,
-  height,
-  rounded = false,
-  animated = true
+  width;
+  height, rounded = false,
+  animated = true;
 }) => {
-  const baseClasses = 'bg-gray-100';
-  const roundedClasses = rounded ? 'rounded' : '';
-  const animatedClasses = animated ? 'animate-pulse' : '';
+  const baseClasses = 'bg-gray-100',
+  const roundedClasses = rounded ? 'rounded' : '',
+  const animatedClasses = animated ? 'animate-pulse' : '',
   return (
-    <div
+    <div;
       className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
       style={{ width, height }}
       role="status"
@@ -25,27 +24,23 @@ const Skeleton: React.FC<SkeletonProps> = ({
     >
       <span className="sr-only">Loading...</span>
     </div>
-  );
-};
-// Predefined skeleton components for common use cases
-
-// Focus management utility
+  )
+}
+// Predefined skeleton components for common use cases;
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-lg p-6">
     <Skeleton height="24px" width="75%" className="mb-4" />
@@ -53,22 +48,22 @@ export const CardSkeleton: React.FC = () => (
     <Skeleton height="16px" width="90%" className="mb-4" />
     <Skeleton height="40px" width="120px" rounded />
   </div>
-);
+)
 export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
   <div className="space-y-2">
     {Array.from({ length: lines }).map((_, index) => (
-      <Skeleton
+      <Skeleton;
         key={index}
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
       />
     ))}
   </div>
-);
+)
 export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
-  aspectRatio = '16/9' 
+  aspectRatio = '16/9'
 }) => (
-  <div 
+  <div;
     className="bg-gray-100 rounded-lg animate-pulse"
     style={{ aspectRatio }}
     role="status"
@@ -76,7 +71,7 @@ export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
   >
     <span className="sr-only">Loading image...</span>
   </div>
-);
+)
 export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
   <div className="space-y-3">
     {Array.from({ length: items }).map((_, index) => (
@@ -89,10 +84,9 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
       </div>
     ))}
   </div>
-);
+)
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
-  rows = 5, 
-  columns = 4 
+  rows = 5, columns = 4;
 }) => (
   <div className="overflow-hidden">
     <div className="grid gap-4 mb-4" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
@@ -101,9 +95,9 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
       ))}
     </div>
     {Array.from({ length: rows }).map((_, rowIndex) => (
-      <div 
+      <div;
         key={rowIndex} 
-        className="grid gap-4 mb-2" 
+        className="grid gap-4 mb-2"
         style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
       >
         {Array.from({ length: columns }).map((_, colIndex) => (
@@ -112,5 +106,5 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
       </div>
     ))}
   </div>
-);
+)
 export default Skeleton;

@@ -1,44 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react',
 const Navigation: React.FC = React.memo(() => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [aiServicesOpen, setAiServicesOpen] = useState(false)
+  const [itServicesOpen, setItServicesOpen] = useState(false)
+  const [microSaasOpen, setMicroSaasOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-  const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
     }
-  };
-
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  const closeAllMenus = () => {
+    setServicesOpen(false)
+    setAiServicesOpen(false)
+    setItServicesOpen(false)
+    setMicroSaasOpen(false)
+    setIsOpen(false)
+  }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+    if (isOpen) {
+      closeAllMenus()
+    }
+  }
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -138,12 +136,11 @@ const Navigation: React.FC = React.memo(() => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-  ];
-
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
+  ]
+  const toggleServices = () => setServicesOpen(!servicesOpen)
+  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
+  const toggleItServices = () => setItServicesOpen(!itServicesOpen)
+  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
   const aiServices = [
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -161,7 +158,7 @@ const Navigation: React.FC = React.memo(() => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
     { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
-  ];
+  ]
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -171,7 +168,7 @@ const Navigation: React.FC = React.memo(() => {
     { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
     { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
-  ];
+  ]
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
@@ -190,7 +187,7 @@ const Navigation: React.FC = React.memo(() => {
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
     { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
-  ];
+  ]
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
@@ -198,7 +195,7 @@ const Navigation: React.FC = React.memo(() => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
-  ];
+  ]
   return (
     <nav role="navigation" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -212,135 +209,12 @@ const Navigation: React.FC = React.memo(() => {
             </div>
             <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
           </Link>
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-            {/* Services Dropdown */}
-            <div className="relative">
-=======
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home
-            </Link>
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => setAiServicesOpen(!aiServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setAiServicesOpen(!aiServicesOpen)(e)}
-                className="flex items-center space-x-1 text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
-              >
-                <Brain className="w-4 h-4" />
-                <span>AI Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-600">{service.description}</div>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => setItServicesOpen(!itServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setItServicesOpen(!itServicesOpen)(e)}
-                className="flex items-center space-x-1 text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
-              >
-                <Cloud className="w-4 h-4" />
-                <span>IT Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {itServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-600">{service.description}</div>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-            {/* Micro SAAS Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => setMicroSaasOpen(!microSaasOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setMicroSaasOpen(!microSaasOpen)(e)}
-                className="flex items-center space-x-1 text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
-              >
-                <Zap className="w-4 h-4" />
-                <span>Micro SAAS</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {microSaasServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-600">{service.description}</div>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-            {/* Emerging Technologies Dropdown */}
-            <div className="relative group">
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setServicesOpen(!servicesOpen)(e)}
+              <button;
+                onClick={() => setServicesOpen(!servicesOpen)} onKeyDown={(e) => e.key === 'Enter' && setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
-<<<<<<< HEAD
-                <Brain className="w-4 h-4" />
-                <span>Services</span>
-=======
-                <Sparkles className="w-4 h-4" />
-                <span>Emerging Tech</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
@@ -356,7 +230,7 @@ const Navigation: React.FC = React.memo(() => {
                         </div>
                         <div className="space-y-2">
                           {category.services.slice(0, 5).map((service, serviceIndex) => (
-                            <Link
+                            <Link;
                               key={serviceIndex}
                               href={service.path}
                               className="block px-3 py-2 text-sm text-gray-500 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
@@ -369,7 +243,7 @@ const Navigation: React.FC = React.memo(() => {
                             </Link>
                           ))}
                           {category.services.length > 5 && (
-                            <Link
+                            <Link;
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                               onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
@@ -382,69 +256,47 @@ const Navigation: React.FC = React.memo(() => {
                     ))}
                   </div>
                   <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-                    <Link
+                    <Link;
                       href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                     >
-                      View All Services
+                      View All Services;
                     </Link>
                   </div>
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-            <Link 
-              href="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-=======
-            <Link href="/about" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
-            </Link>
-            <Link href="/blog" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
-          </div>
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center space-x-2"
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             >
-              Case Studies
+              Case Studies;
             </Link>
-            <Link
+            <Link;
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
             >
-              Blog
+              Blog;
             </Link>
-            <Link
+            <Link;
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
             >
-              Contact
+              Contact;
             </Link>
             {/* CTA Button */}
-            <Link
+            <Link;
               href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
+              (302) 464-0950;
             </Link>
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <button
+            <button;
               onClick={toggleMenu} onKeyDown={(e) => e.key === 'Enter' && toggleMenu(e)}
               className="text-gray-500 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu"
@@ -453,248 +305,26 @@ const Navigation: React.FC = React.memo(() => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link
-                href="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-              >
-=======
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
-            <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-                Home
+                Home;
               </Link>
-              <Link
+              <Link;
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
-                About
+                About;
               </Link>
               {/* Mobile Services */}
               <div>
-                <button
-<<<<<<< HEAD
-                  onClick={() => setServicesOpen(!servicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setServicesOpen(!servicesOpen)(e)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block text-sm text-gray-500 hover:text-cyan-400 transition-colors"
-                              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-=======
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setAiServicesOpen(!aiServicesOpen)(e)}
-                  className="flex items-center justify-between w-full text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>AI Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {aiServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {aiServices.slice(0, 8).map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                    <Link
-                      href="/ai-services"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                    >
-                      View All AI Services →
-                    </Link>
-                  </div>
-                )}
-              </div>
-              {/* Mobile IT Services */}
-              <div>
-                <button
-                  onClick={() => setItServicesOpen(!itServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setItServicesOpen(!itServicesOpen)(e)}
-                  className="flex items-center justify-between w-full text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Cloud className="w-4 h-4" />
-                    <span>IT Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {itServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    {itServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                      >
-                        {service.name}
-                      </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+                <button;
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-              <Link
-                href="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-              >
-                Case Studies
-              </Link>
-              <Link
-                href="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-              >
-                Blog
-              </Link>
-              <Link
-                href="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-              >
-                Contact
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-              >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
-=======
-              {/* Mobile Micro SAAS */}
-              <div>
-                <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setMicroSaasOpen(!microSaasOpen)(e)}
-                  className="flex items-center justify-between w-full text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Zap className="w-4 h-4" />
-                    <span>Micro SAAS</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {microSaasServices.slice(0, 8).map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-600 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                    <Link
-                      href="/micro-saas"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
-                    >
-                      View All Micro SAAS →
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <Link href="/about" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
-                About
-              </Link>
-              <Link href="/contact" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
-                Contact
-              </Link>
-              <Link href="/blog" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
-                Blog
-              </Link>
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>(302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <div className="flex items-center space-x-2 text-gray-600">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             </div>
           </div>
         )}
       </div>
     </nav>
-  );
-};
-<<<<<<< HEAD
-);
-
-// Focus management utility
-const focusElement = (element: HTMLElement | null) => {
-  if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-};
-
-// Skip to main content functionality
-const skipToMain = () => {
-  const main = document.querySelector('main');
-  if (main) {
-    focusElement(main);
-  }
-};
-
-
-export default Navigation;
-=======
-);
-export default Navigation;
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+  )
+}

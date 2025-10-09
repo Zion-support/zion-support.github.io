@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor  } from 'lucide-react',
 const ITInfrastructurePage: React.FC = React.memo(() => {
   const itServices = [
     {
@@ -14,13 +14,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Auto-scaling and load balancing',
         'Cost optimization',
         'Security hardening',
-        '24/7 monitoring and support'
+        '24/7 monitoring and support',
       ],
       benefits: [
         'Reduce infrastructure costs by 40%',
         'Improve system reliability by 99.9%',
         'Scale automatically with demand',
-        'Ensure enterprise-grade security'
+        'Ensure enterprise-grade security',
       ],
       marketPrice: '$5000-10000/month',
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
@@ -37,13 +37,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Container orchestration',
         'Infrastructure monitoring',
         'Security scanning',
-        'Deployment automation'
+        'Deployment automation',
       ],
       benefits: [
         'Deploy 10x faster',
         'Reduce deployment errors by 90%',
         'Improve team productivity',
-        'Ensure consistent deployments'
+        'Ensure consistent deployments',
       ],
       marketPrice: '$3000-6000/month',
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Ansible'],
@@ -60,13 +60,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Backup and recovery',
         'Security hardening',
         'Migration services',
-        'Monitoring and alerting'
+        'Monitoring and alerting',
       ],
       benefits: [
         'Improve query performance by 300%',
         'Ensure data security and compliance',
         'Reduce downtime to near zero',
-        'Optimize storage costs'
+        'Optimize storage costs',
       ],
       marketPrice: '$2500-5000/month',
       technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],
@@ -83,13 +83,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'VPN setup and management',
         'Network monitoring',
         'Security policy implementation',
-        'Threat response and mitigation'
+        'Threat response and mitigation',
       ],
       benefits: [
         'Prevent 99% of security breaches',
         'Ensure compliance with regulations',
         'Reduce security incidents by 95%',
-        'Protect sensitive data'
+        'Protect sensitive data',
       ],
       marketPrice: '$4000-8000/month',
       technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'pfSense', 'Snort', 'Wireshark'],
@@ -106,13 +106,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Performance monitoring',
         'Backup and disaster recovery',
         'User management',
-        'Security hardening'
+        'Security hardening',
       ],
       benefits: [
         'Ensure 99.9% uptime',
         'Reduce maintenance costs by 50%',
         'Improve system performance',
-        'Prevent security vulnerabilities'
+        'Prevent security vulnerabilities',
       ],
       marketPrice: '$3000-6000/month',
       technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],
@@ -129,13 +129,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Ticketing and issue tracking',
         'Proactive system monitoring',
         'User training and documentation',
-        'Hardware and software support'
+        'Hardware and software support',
       ],
       benefits: [
         'Reduce IT downtime by 80%',
         'Improve user satisfaction',
         'Resolve issues faster',
-        'Prevent problems proactively'
+        'Prevent problems proactively',
       ],
       marketPrice: '$2000-4000/month',
       technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 365'],
@@ -152,13 +152,13 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Data encryption',
         'Offsite storage',
         'Recovery testing',
-        'Compliance monitoring'
+        'Compliance monitoring',
       ],
       benefits: [
         'Protect against data loss',
         'Ensure business continuity',
         'Meet compliance requirements',
-        'Reduce recovery time to minutes'
+        'Reduce recovery time to minutes',
       ],
       marketPrice: '$1500-3000/month',
       technologies: ['Veeam', 'Acronis', 'AWS Backup', 'Azure Backup', 'Commvault', 'Rubrik'],
@@ -175,19 +175,19 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         'Google Workspace management',
         'Email security and filtering',
         'Mobile device management',
-        'User provisioning and deprovisioning'
+        'User provisioning and deprovisioning',
       ],
       benefits: [
         'Improve email security',
         'Reduce spam and phishing',
         'Ensure email compliance',
-        'Enhance productivity'
+        'Enhance productivity',
       ],
       marketPrice: '$1200-2500/month',
       technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
     { metric: '500+', description: 'Servers Managed' },
@@ -195,7 +195,7 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
     { metric: '24/7', description: 'Support Available' },
     { metric: '< 1hr', description: 'Response Time' },
     { metric: '100%', description: 'Security Compliance' }
-  ];
+  ]
   return (
     <>
       <Helmet>
@@ -210,23 +210,23 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT Infrastructure Services
+                IT Infrastructure Services;
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support
+                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <a;
                   href="tel:+13024640950"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
                 >
-                  📞 +1 302 464 0950
+                  📞 +1 302 464 0950;
                 </a>
-                <a 
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  ✉️ Get Free Infrastructure Audit
+                  ✉️ Get Free Infrastructure Audit;
                 </a>
               </div>
             </div>
@@ -237,10 +237,10 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Track Record
+                Our Infrastructure Track Record;
               </h2>
               <p className="text-xl text-gray-600">
-                Proven results from our IT infrastructure services
+                Proven results from our IT infrastructure services;
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -261,7 +261,7 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
                 Why Choose Our IT Infrastructure Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Enterprise-grade solutions with unmatched reliability and support
+                Enterprise-grade solutions with unmatched reliability and support;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -301,10 +301,10 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                IT Infrastructure Services
+                IT Infrastructure Services;
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive infrastructure solutions for modern businesses
+                Comprehensive infrastructure solutions for modern businesses;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -319,7 +319,7 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
                       <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                     </div>
                     <div className="text-sm text-green-600 font-semibold">
-                      Save up to 50% vs market rates
+                      Save up to 50% vs market rates;
                     </div>
                   </div>
                   <div className="mb-4">
@@ -358,17 +358,17 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
                     <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
                   </div>
                   <div className="flex gap-2">
-                    <a 
+                    <a;
                       href="tel:+13024640950"
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                     >
-                      Call Now
+                      Call Now;
                     </a>
-                    <a 
+                    <a;
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
                     >
-                      Email Us
+                      Email Us;
                     </a>
                   </div>
                 </div>
@@ -381,10 +381,10 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Implementation Process
+                Our Infrastructure Implementation Process;
               </h2>
               <p className="text-xl text-gray-600">
-                How we design, implement, and manage your IT infrastructure
+                How we design, implement, and manage your IT infrastructure;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -418,20 +418,20 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Contact our IT infrastructure experts for a free assessment and custom solution design
+              Contact our IT infrastructure experts for a free assessment and custom solution design;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="text-sm text-blue-200">
@@ -442,25 +442,21 @@ const ITInfrastructurePage: React.FC = React.memo(() => {
         </section>
       </div>
     </>
-  );
-};
-);
-
-// Focus management utility
+  )
+}
+)
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export default ITInfrastructurePage;

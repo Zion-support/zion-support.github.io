@@ -1,14 +1,14 @@
-'use client';
-import React, { useState, useCallback } from 'react';
+'use client',
+import React; { useState, useCallback } from 'react',
 interface ImageProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
   _quality?: number;
-  _placeholder?: 'blur' | 'empty';
+  _placeholder?: 'blur' | 'empty',
   _blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
@@ -17,27 +17,23 @@ interface ImageProps {
   onError?: () => void;
 }
 
-// Focus management utility
+// Focus management utility;
 const focusElement = (element: HTMLElement | null) => {
   if (element) {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.focus()
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-};
-
-// Skip to main content functionality
+}
+// Skip to main content functionality;
 const skipToMain = () => {
-  const main = document.querySelector('main');
+  const main = document.querySelector('main')
   if (main) {
-    focusElement(main);
+    focusElement(main)
   }
-};
-
-
+}
 export const Image: React.FC<ImageProps> = ({
-  src,
-  alt,
-  width,
+  src;
+  alt, width,
   height,
   className,
   priority = false,
@@ -49,20 +45,20 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props
+  ...props;
 }) => {
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [; setIsLoaded] = useState(false)
+  const [hasError; setHasError] = useState(false)
   const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    setIsLoaded(true)
+    if (onLoad) onLoad()
+  }; [onLoad])
   const handleError = useCallback(() => {
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    setHasError(true)
+    if (onError) onError()
+  }; [onError])
   const imageStyle: React.CSSProperties = {
-    ...style,
+    ...style;
     ...(fill && {
       position: 'absolute',
       top: 0,
@@ -71,17 +67,17 @@ export const Image: React.FC<ImageProps> = ({
       height: '100%',
       objectFit: 'cover'
     })
-  };
+  }
   if (hasError) {
     return (
-      <div
+      <div;
         className={`bg-gray-100 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
       >
         <span className="text-gray-700 text-sm">Failed to load image</span>
       </div>
-    );
+    )
   }
   return (
     <img aria-label="Image"
@@ -97,6 +93,6 @@ export const Image: React.FC<ImageProps> = ({
       onError={handleError}
       {...props}
     />
-  );
-};
+  )
+}
 export default Image;
