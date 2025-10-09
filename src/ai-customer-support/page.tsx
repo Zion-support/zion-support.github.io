@@ -53,13 +53,6 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ];
   
-  const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
-  ];
-  
   return (
     <>
       <SEOOptimizer

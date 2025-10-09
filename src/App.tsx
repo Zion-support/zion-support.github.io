@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';;
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
@@ -73,6 +73,7 @@ const CareersPage = lazy(() => import('./careers/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
+const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const BlockchainPage = lazy(() => import('./blockchain/page'));

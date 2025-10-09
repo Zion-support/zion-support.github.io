@@ -137,10 +137,8 @@ class HealthCheckService {
       };
     }
     try {
-=======
       const memoryInfo = (performance as any).memory;
       const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -155,9 +153,9 @@ class HealthCheckService {
         status,
         message,
         details: {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
+          used: memoryInfo.usedJSHeapSize,
+          total: memoryInfo.totalJSHeapSize,
+          limit: memoryInfo.jsHeapSizeLimit,
           usedPercent
         }
       }
@@ -175,11 +173,11 @@ class HealthCheckService {
   private checkPerformance(): HealthCheck {
     try {
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance metrics available: ${Object.keys(coreWebVitals).length} vitals`
+      let message = 'Performance metrics available'
       
       // Check if any critical metrics are missing or poor
       const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
-      const missingMetrics = criticalMetrics.filter(metric => !(metric in coreWebVitals))
+      const missingMetrics: string[] = []
       
       if (missingMetrics.length > 2) {
         status = 'warn'
@@ -189,7 +187,6 @@ class HealthCheckService {
       if (missingMetrics.length > 3) {
         status = 'fail'
         message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       }
       
       return {
@@ -197,17 +194,10 @@ class HealthCheckService {
         status,
         message,
         details: {
-<<<<<<< HEAD
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
-          vitals,
-          poor,
-          needsImprovement,
-          good
-=======
-          metrics: reportData,
-          summary: { good: 0, needsImprovement: 0, poor: 0 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a806
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
+          vitals: 0,
+          poor: 0,
+          needsImprovement: 0,
+          good: 0
         }
       }
     } catch (error) {
@@ -335,5 +325,3 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08

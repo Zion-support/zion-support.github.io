@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, ExternalLink, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
-<<<<<<< HEAD
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -16,42 +15,6 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing' },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
-    { name: 'AI Video Generator', href: '/ai-video-generation' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
-    { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
-    { name: 'AI Music Composition', href: '/ai-music-composition' },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach' },
-    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant' },
-    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant' },
-    { name: 'AI Education Tutor', href: '/ai-education-tutor' },
-    { name: 'AI Travel Planner', href: '/ai-travel-planner' },
-    { name: 'AI Energy Manager', href: '/ai-energy-manager' },
-    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant' },
-    { name: 'AI Insurance Analyzer', href: '/ai-insurance-analyzer' },
-    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager' },
-    { name: 'AI Event Planner', href: '/ai-event-planner' },
-    { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager' },
-    { name: 'AI Home Automation', href: '/ai-home-automation' },
-    { name: 'AI Language Learning', href: '/ai-language-learning' },
-    { name: 'AI Mental Health Coach', href: '/ai-mental-health-coach' },
-    { name: 'AI Pet Care Assistant', href: '/ai-pet-care-assistant' },
-    { name: 'AI Wedding Planner', href: '/ai-wedding-planner' },
-    { name: 'AI Stock Trader', href: '/ai-stock-trader' },
-    { name: 'AI Job Search Assistant', href: '/ai-job-search-assistant' },
-    { name: 'AI Dating Coach', href: '/ai-dating-coach' },
-  ];
-=======
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
@@ -102,7 +65,6 @@ const Footer: React.FC = () => {
       { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
     ]
   };
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08
 
   const aiServices = [
     { name: 'Machine Learning', href: '/machine-learning' },
@@ -167,11 +129,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-=======
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -214,46 +172,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4 neon-text">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-cyan-400 mb-4">Micro SAAS Solutions</h3>
-            <ul className="space-y-2">
-              {microSAASServices.slice(0, 8).map((service) => (
-                <li key={service.name}>
-                  <a
-                    href={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {service.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* AI & IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-purple-400 mb-4">AI & IT Services</h3>
-=======
           {/* Micro SAAS Services - Categorized */}
           <div className="lg:col-span-3">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
@@ -292,7 +210,6 @@ const Footer: React.FC = () => {
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
             </h3>
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
@@ -325,40 +242,11 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             <a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Services →
             </a>
-          </div>
-
-          {/* Specialized Services */}
-          <div className="lg:col-span-1">
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Cpu className="w-4 h-4 mr-2" />
-              Specialized
-            </h3>
-            <ul className="space-y-2">
-              {specializedServices.slice(0, 8).map((service) => (
-                <li key={service.name}>
-                  <a
-                    href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <a href="/specialized-services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All →
-            </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08
           </div>
         </div>
 
