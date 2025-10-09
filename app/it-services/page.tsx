@@ -5,12 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
-=======
-  const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       icon: Cloud,
       title: 'IT Infrastructure',
@@ -33,10 +29,9 @@ const ITServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
     },
     {
-<<<<<<< HEAD
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
-      icon: <HardDrive className="w-8 h-8" />,
+      icon: Database,
       features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Backup solutions', 'Monitoring', '24/7 support'],
       price: 'Starting at $800/month',
       category: 'Infrastructure',
@@ -251,20 +246,9 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-=======
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      price: '$1,199/month',
-      description: 'Streamlined development workflows with automated testing and deployment',
-      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
-    }
-  ];
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -303,165 +287,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-=======
-      
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions including infrastructure, cybersecurity, 
-              database management, and DevOps services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <Cloud className="w-4 h-4" />
-                <span>Get Started</span>
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </a>
-            </div>
-          </section>
-
-          {/* Services Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Our IT Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className="cyber-button w-full text-center block"
-                  >
-                    Get Started
-                  </a>
-                </div>
-<<<<<<< HEAD
-                {service.benefits && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>
-                    <ul className="text-sm text-gray-400 space-y-1">
-                      {service.benefits.slice(0, 3).map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {service.technologies && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-purple-400 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.technologies.slice(0, 4).map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-purple-900/30 text-purple-300 px-2 py-1 rounded">
-                          {tech}
-                        </span>
-                      ))}
-                      {service.technologies.length > 4 && (
-                        <span className="text-xs text-gray-500">
-                          +{service.technologies.length - 4} more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
-                <div className="text-cyan-400 font-bold mb-4 text-lg">{service.price}</div>
-                {service.contactInfo && (
-                  <div className="text-xs text-gray-500 mb-4">
-                    {service.contactInfo}
-                  </div>
-                )}
-                <Link
-                  href="/contact"
-                  className="cyber-button w-full text-center block"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2 inline" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
-            Ready to Transform Your IT?
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our expert team help you build a robust, secure, and scalable IT infrastructure
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="cyber-button"
-            >
-              Get Free Consultation
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="cyber-button"
-            >
-              Call (302) 464-0950
-            </a>
-          </div>
-        </section>
-=======
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact us today to learn how our IT services can optimize your technology infrastructure.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Email Us
-              </a>
-            </div>
-          </section>
-        </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
-      </main>
       <Footer />
     </div>
   );

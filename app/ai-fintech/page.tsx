@@ -142,7 +142,9 @@ const AIFintechPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-        {/* Hero Section */}
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,10 +352,10 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-      <>
+        </div>
+      </main>
       <Footer />
-      </></div>
+    </div>
   );
 };
 export default AIFintechPage;
