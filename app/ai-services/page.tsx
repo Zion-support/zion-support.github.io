@@ -623,11 +623,269 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
-=======
-      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
+      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
+    },
+    // Advanced AI & Machine Learning Services
+    {
+      title: 'AI Model Optimization & MLOps',
+      description: 'Comprehensive MLOps platform for model deployment, monitoring, and continuous optimization in production environments.',
+      icon: '⚙️',
+      price: '$2,999/month',
+      features: [
+        'Model Versioning & Registry',
+        'Automated Model Deployment',
+        'Real-time Model Monitoring',
+        'A/B Testing Framework',
+        'Model Performance Analytics',
+        'Automated Retraining Pipeline',
+        'Model Drift Detection',
+        'CI/CD for ML Models'
+      ],
+      benefits: [
+        'Reduce model deployment time by 80%',
+        'Improve model reliability by 95%',
+        'Automate model lifecycle management',
+        'Scale ML operations efficiently'
+      ],
+      marketPrice: '$5,000-15,000/month',
+      category: 'MLOps',
+      technologies: ['Kubernetes', 'Docker', 'TensorFlow Serving', 'MLflow', 'Kubeflow', 'Prometheus', 'Grafana'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical drug discovery, molecular design, and clinical trial optimization.',
+      icon: '💊',
+      price: '$15,000/month',
+      features: [
+        'Molecular Property Prediction',
+        'Drug-Target Interaction Modeling',
+        'ADMET Property Prediction',
+        'Lead Compound Optimization',
+        'Clinical Trial Design',
+        'Biomarker Discovery',
+        'Drug Repurposing Analysis',
+        'Regulatory Compliance Tools'
+      ],
+      benefits: [
+        'Accelerate drug discovery by 5x',
+        'Reduce R&D costs by 60%',
+        'Improve success rates by 40%',
+        'Enable personalized medicine'
+      ],
+      marketPrice: '$25,000-100,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['Deep Learning', 'Graph Neural Networks', 'Molecular Dynamics', 'Quantum Computing', 'Bioinformatics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Climate Change Solutions',
+      description: 'Comprehensive AI solutions for climate modeling, carbon footprint optimization, and environmental impact assessment.',
+      icon: '🌍',
+      price: '$4,999/month',
+      features: [
+        'Climate Change Modeling',
+        'Carbon Footprint Analysis',
+        'Renewable Energy Optimization',
+        'Environmental Impact Assessment',
+        'Sustainability Reporting',
+        'Green Supply Chain Optimization',
+        'Climate Risk Assessment',
+        'ESG Compliance Monitoring'
+      ],
+      benefits: [
+        'Reduce carbon footprint by 30%',
+        'Optimize renewable energy usage',
+        'Improve sustainability metrics',
+        'Ensure ESG compliance'
+      ],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Climate AI',
+      technologies: ['Climate Models', 'Satellite Data', 'IoT Sensors', 'Machine Learning', 'Big Data Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Space Technology Solutions',
+      description: 'Advanced AI solutions for space exploration, satellite operations, and space mission optimization.',
+      icon: '🚀',
+      price: '$12,000/month',
+      features: [
+        'Satellite Constellation Management',
+        'Space Mission Planning',
+        'Orbital Debris Tracking',
+        'Space Weather Prediction',
+        'Autonomous Spacecraft Control',
+        'Earth Observation Analytics',
+        'Space Resource Optimization',
+        'Mission Risk Assessment'
+      ],
+      benefits: [
+        'Optimize space operations',
+        'Reduce mission risks',
+        'Improve satellite efficiency',
+        'Enable autonomous space missions'
+      ],
+      marketPrice: '$20,000-50,000/month',
+      category: 'Space AI',
+      technologies: ['Space Data Analytics', 'Orbital Mechanics', 'Computer Vision', 'Reinforcement Learning', 'Satellite APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Quantum Machine Learning',
+      description: 'Cutting-edge quantum machine learning solutions for complex optimization problems and quantum advantage.',
+      icon: '⚛️',
+      price: '$25,000/month',
+      features: [
+        'Quantum Algorithm Development',
+        'Quantum Neural Networks',
+        'Quantum Optimization',
+        'Quantum Error Correction',
+        'Hybrid Classical-Quantum Models',
+        'Quantum Data Processing',
+        'Quantum Simulation',
+        'Quantum Advantage Analysis'
+      ],
+      benefits: [
+        'Solve intractable optimization problems',
+        'Achieve quantum advantage',
+        'Accelerate complex computations',
+        'Enable breakthrough discoveries'
+      ],
+      marketPrice: '$40,000-100,000/month',
+      category: 'Quantum AI',
+      technologies: ['Quantum Computing', 'Qiskit', 'Cirq', 'PennyLane', 'Quantum Algorithms', 'Quantum Hardware'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Complete autonomous vehicle AI solutions including perception, planning, and control systems.',
+      icon: '🚗',
+      price: '$8,999/month',
+      features: [
+        'Computer Vision for Perception',
+        'Sensor Fusion & Processing',
+        'Path Planning & Navigation',
+        'Obstacle Detection & Avoidance',
+        'Traffic Sign Recognition',
+        'Lane Detection & Tracking',
+        'Autonomous Parking',
+        'Fleet Management Systems'
+      ],
+      benefits: [
+        'Enable fully autonomous driving',
+        'Improve safety by 90%',
+        'Reduce transportation costs',
+        'Optimize fleet operations'
+      ],
+      marketPrice: '$15,000-40,000/month',
+      category: 'Autonomous Vehicles',
+      technologies: ['Computer Vision', 'LiDAR', 'Radar', 'IMU', 'GPS', 'ROS', 'TensorFlow', 'PyTorch'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Financial Risk Management',
+      description: 'Advanced AI solutions for financial risk assessment, fraud detection, and regulatory compliance.',
+      icon: '💰',
+      price: '$6,999/month',
+      features: [
+        'Real-time Risk Assessment',
+        'Fraud Detection & Prevention',
+        'Credit Risk Modeling',
+        'Market Risk Analysis',
+        'Operational Risk Management',
+        'Regulatory Compliance Monitoring',
+        'Stress Testing & Scenarios',
+        'Risk Reporting & Analytics'
+      ],
+      benefits: [
+        'Reduce financial risks by 70%',
+        'Detect fraud with 99% accuracy',
+        'Ensure regulatory compliance',
+        'Optimize risk-return profiles'
+      ],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Financial AI',
+      technologies: ['Machine Learning', 'Time Series Analysis', 'Graph Analytics', 'Blockchain', 'RegTech'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Manufacturing Intelligence',
+      description: 'Comprehensive AI solutions for smart manufacturing, predictive maintenance, and quality control.',
+      icon: '🏭',
+      price: '$7,999/month',
+      features: [
+        'Predictive Maintenance',
+        'Quality Control & Inspection',
+        'Production Optimization',
+        'Supply Chain Intelligence',
+        'Energy Management',
+        'Safety Monitoring',
+        'Process Optimization',
+        'Digital Twin Creation'
+      ],
+      benefits: [
+        'Reduce downtime by 50%',
+        'Improve quality by 40%',
+        'Optimize production efficiency',
+        'Reduce energy consumption'
+      ],
+      marketPrice: '$15,000-35,000/month',
+      category: 'Manufacturing AI',
+      technologies: ['IoT', 'Computer Vision', 'Time Series', 'Digital Twins', 'Edge Computing', 'Industrial AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Agricultural Intelligence',
+      description: 'Smart agriculture solutions using AI for crop monitoring, yield prediction, and precision farming.',
+      icon: '🌾',
+      price: '$3,999/month',
+      features: [
+        'Crop Health Monitoring',
+        'Yield Prediction & Optimization',
+        'Precision Irrigation',
+        'Pest & Disease Detection',
+        'Soil Analysis & Management',
+        'Weather Prediction',
+        'Farm Equipment Optimization',
+        'Supply Chain Management'
+      ],
+      benefits: [
+        'Increase crop yields by 25%',
+        'Reduce water usage by 30%',
+        'Minimize pesticide use',
+        'Optimize farming operations'
+      ],
+      marketPrice: '$7,000-20,000/month',
+      category: 'Agricultural AI',
+      technologies: ['Satellite Imagery', 'IoT Sensors', 'Computer Vision', 'Weather Data', 'Precision Agriculture'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Legal Technology Solutions',
+      description: 'Advanced AI solutions for legal research, document analysis, and case prediction.',
+      icon: '⚖️',
+      price: '$4,999/month',
+      features: [
+        'Legal Document Analysis',
+        'Case Law Research',
+        'Contract Review & Analysis',
+        'Legal Prediction Models',
+        'Compliance Monitoring',
+        'Due Diligence Automation',
+        'Legal Research Assistant',
+        'Document Generation'
+      ],
+      benefits: [
+        'Reduce legal research time by 80%',
+        'Improve case outcomes',
+        'Automate routine legal tasks',
+        'Enhance legal accuracy'
+      ],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Legal AI',
+      technologies: ['NLP', 'Document Processing', 'Knowledge Graphs', 'Legal Databases', 'Machine Learning'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
