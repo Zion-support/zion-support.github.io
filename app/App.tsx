@@ -61,6 +61,11 @@ const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { logger } from './utils/logger';
+import { lazyLoadImages, preloadCriticalResources } from './utils/performanceUtils';
+import { performanceOptimizer, performanceMonitor } from './utils/performanceUtils';
+import { seoOptimizer } from './utils/seoUtils';
+import { accessibilityEnhancer } from './utils/accessibilityUtils';
+import { collectPerformanceMetrics } from './utils/performanceUtils';
 
 // Styles
 import './globals.css';
@@ -101,12 +106,8 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       // const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
