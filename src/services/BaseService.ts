@@ -78,10 +78,14 @@ export class BaseService {
     const cacheKey = `GET:${endpoint}`;
     if (useCache) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const cached = this.getFromCache<T>(_cacheKey);
 =======
       const cached = this.getFromCache<T>(cacheKey);
 >>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
+=======
+      const cached = this.getFromCache<T>(cacheKey);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6103
       if (cached) return cached;
     }
     try {

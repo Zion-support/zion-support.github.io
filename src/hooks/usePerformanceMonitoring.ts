@@ -6,11 +6,7 @@ export const usePerformanceMonitoring = () => {
   const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-      trackEvent('performance_metric', {
-        metric_name: name,
-        metric_value: value,
-        timestamp: Date.now()
-      });
+      trackEvent(name, { value });
     },
     [trackEvent]
   );
