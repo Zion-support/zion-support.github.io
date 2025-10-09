@@ -11,26 +11,14 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
-const preloadComponents = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  setTimeout(() => {
-    // Preload components after initial render
-  }, 100);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-  if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      // Preload components after initial render
-    }, 100);
-  }
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-};
+  // Preload critical components
+  const preloadComponents = () => {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        // Preload components after initial render
+      }, 100);
+    }
+  };
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
