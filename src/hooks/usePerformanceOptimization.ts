@@ -100,7 +100,7 @@ export const usePerformanceOptimization = () => {
   useEffect(() => {
     // Measure performance after page load
     const timer = setTimeout(() => {
-      const _metrics = measurePerformance();
+      const metrics = measurePerformance();
       if (metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
