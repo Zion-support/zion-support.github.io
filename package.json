@@ -98,6 +98,7 @@
     "@next/bundle-analyzer": "^15.5.4",
     "@tailwindcss/postcss": "^4.1.14",
     "clsx": "^2.1.1",
+    "critters": "^0.0.23",
     "esbuild": "^0.25.10",
     "framer-motion": "^12.23.22",
     "gray-matter": "^4.0.3",

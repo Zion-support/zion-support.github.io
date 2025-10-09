@@ -1,6 +1,13 @@
+import Link from 'next/link';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
+import { CheckCircle, Zap, Shield, Globe, Star, Brain, Database } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Blockchain & Web3 Services - Zion Tech Group',
+  description: 'Advanced blockchain and Web3 development services including DeFi, NFTs, smart contracts, and metaverse solutions.',
+  keywords: 'blockchain development, Web3, DeFi, NFTs, smart contracts, DAOs, cryptocurrency, metaverse',
+};
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
@@ -141,14 +148,7 @@ const BlockchainWeb3Page: React.FC = () => {
   // const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
-        <title>Blockchain & Web3 Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 development services including DeFi, NFTs, smart contracts, and metaverse solutions." />
-        <meta name="keywords" content="blockchain development, Web3, DeFi, NFTs, smart contracts, DAOs, cryptocurrency, metaverse" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -367,7 +367,7 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

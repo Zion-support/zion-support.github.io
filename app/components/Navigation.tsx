@@ -40,18 +40,48 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
+            <div className="relative group">
+              <button className="text-white hover:text-blue-400 transition-colors flex items-center">
+                Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link href="/services" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    All Services
+                  </Link>
+                  <Link href="/ai-services" className="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                    AI Solutions
+                  </Link>
+                  <Link href="/quantum-computing" className="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link href="/autonomous-systems" className="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link href="/business-intelligence" className="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                    Business Intelligence
+                  </Link>
+                  <Link href="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
             <Link href="/blog" className="text-white hover:text-blue-400 transition-colors">
               Blog
+            </Link>
+            <Link href="/careers" className="text-white hover:text-blue-400 transition-colors">
+              Careers
             </Link>
             <Link href="/contact" className="text-white hover:text-blue-400 transition-colors">
               Contact
@@ -110,6 +140,13 @@ const Navigation: React.FC = () => {
                 onClick={closeMenu}
               >
                 Blog
+              </Link>
+              <Link 
+                href="/careers" 
+                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Careers
               </Link>
               <Link 
                 href="/contact" 

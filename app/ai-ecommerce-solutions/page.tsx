@@ -1,6 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
+import { CheckCircle, Zap, Shield, Users } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI E-commerce Solutions | Zion Tech Group',
+  description: 'Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology.',
+  keywords: 'AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service',
+};
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
@@ -194,11 +200,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-      <Helmet>
-        <title>AI E-commerce Solutions | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology." />
-        <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">

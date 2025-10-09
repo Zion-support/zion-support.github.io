@@ -1,23 +1,14 @@
+import Link from 'next/link';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
+  description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
+};
 const AIMegaTrends20252026: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>
-          AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation
-        </title>
-
-        <meta
-          name="description"
-          content="Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026."
-        />
-
-        <meta property="og:type" content="article" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="text-center mb-8">
@@ -126,7 +117,7 @@ const AIMegaTrends20252026: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

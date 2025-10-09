@@ -1,24 +1,16 @@
+import Link from 'next/link';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
 
-
+export const metadata: Metadata = {
+  title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
+  description: 'Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.',
+};
 const InnovationLabsPage: React.FC = () => {
 
   return (
 
-    <>
-
-      <Helmet>
-
-        <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
-
-        <meta name="description" content="Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration." />
-
-        <meta property="og:url" content="/og/ai-innovation-labs-2025.jpg" />
-
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
@@ -148,7 +140,7 @@ const InnovationLabsPage: React.FC = () => {
         </div>
       </div>
     </div>
-    </>
+    
   );
 }
 
