@@ -3,11 +3,11 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
+import EnhancedPerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
+import EnhancedSecurity from './components/EnhancedSecurity';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -473,11 +473,12 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'cybersecurity', 'business intelligence', 'micro SAAS']}
         canonicalUrl="https://ziontechgroup.com"
+        ogImage="/og-image.jpg"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
@@ -512,26 +513,46 @@ const HomePage: React.FC = () => {
             addressCountry: 'US'
           }
         }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' }
+        ]}
       />
-      <PerformanceOptimizer
+      <EnhancedPerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
         enablePrefetching={true}
+        enableServiceWorker={true}
+        enableCriticalCSS={true}
+        enableResourceHints={true}
+        enableWebVitals={true}
       />
-      <AccessibilityEnhancer
+      <EnhancedAccessibility
         enableKeyboardNavigation={true}
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+        enableSkipLinks={true}
+        enableAriaLive={true}
+        enableReducedMotion={true}
       />
-      <SecurityEnhancer
+      <EnhancedSecurity
         enableCSP={true}
         enableHSTS={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
+        enableReferrerPolicy={true}
+        enablePermissionsPolicy={true}
+        enableFeaturePolicy={true}
       />
-      <Analytics />
+      <EnhancedAnalytics
+        enablePageViews={true}
+        enableUserInteractions={true}
+        enablePerformance={true}
+        enableErrors={true}
+        enableCustomEvents={true}
+        debug={process.env.NODE_ENV === 'development'}
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
