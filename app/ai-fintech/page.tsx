@@ -142,31 +142,31 @@ const AIFintechPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Fintech Solutions
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-                Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                  Start Fintech AI
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                  View Trading Demo
-                </button>
-              </div>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI Fintech Solutions
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+              Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+                Start Fintech AI
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                View Trading Demo
+              </button>
             </div>
           </div>
-        </section>
-        {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        </div>
+      </section>
+      {/* Key Benefits */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose AI Fintech?
@@ -350,10 +350,8 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-      <>
       <Footer />
-      </></div>
+    </div>
   );
 };
 export default AIFintechPage;

@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
 const AIMarketingPage: React.FC = () => {
   const aiMarketingServices = [

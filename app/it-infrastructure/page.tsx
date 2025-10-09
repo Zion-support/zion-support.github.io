@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [

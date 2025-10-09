@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {

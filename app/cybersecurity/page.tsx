@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
