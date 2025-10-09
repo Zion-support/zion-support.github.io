@@ -33,23 +33,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
     const updateMetrics = () => {
       const currentMetrics: PerformanceMetrics = {
         lcp: null,
@@ -97,11 +80,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
 
-<<<<<<< HEAD
     const getPerformanceScore = (currentMetrics: PerformanceMetrics): number => {
       let score = 100;
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (metrics.renderTime > 1500) score -= 15;
       if (metrics.loadTime > 3000) score -= 20;
       if (metrics.memoryUsage > 50) score -= 10;
