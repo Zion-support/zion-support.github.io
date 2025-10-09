@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import HomePage from './page';
 import AboutPage from './about/page';
 import ContactPage from './contact/page';
