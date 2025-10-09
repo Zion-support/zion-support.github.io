@@ -1,31 +1,30 @@
+'use client';
 import React from 'react';
+import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
+  text?: string;
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
+  text, 
   className = '' 
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8'
   };
 
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-
-      <div 
-        className={`${sizeClasses[size]} border-2 border-cyan-500 border-t-transparent rounded-full animate-spin`}
-        role="status"
-        aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
-
-      </div>
+    <div className={`flex flex-col items-center justify-center gap-3 ${className}`}>
+      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
+      {text && (
+        <p className="text-gray-300 text-sm animate-pulse">{text}</p>
+      )}
     </div>
   );
 };
