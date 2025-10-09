@@ -138,7 +138,7 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(biServices.map(service => service.category))];
+  const categories = [...new Set(biServices.map(service => service.category))];
 
   return (
     <>

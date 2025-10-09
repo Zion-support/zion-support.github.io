@@ -116,7 +116,7 @@ const QuantumComputingPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(quantumServices.map(service => service.category))];
+  const categories = [...new Set(quantumServices.map(service => service.category))];
 
   return (
     <>
