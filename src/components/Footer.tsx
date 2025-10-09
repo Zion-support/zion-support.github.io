@@ -4,18 +4,18 @@ import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, 
 
 const Footer: React.FC = () => {
   const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
-    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
-    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', category: 'Productivity' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', category: 'Marketing' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics', category: 'Analytics' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns', category: 'Marketing' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', category: 'Support' },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', category: 'Development' },
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation', category: 'Media' },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis', category: 'Media' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music', category: 'Media' },
+    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design', category: 'Design' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans', category: 'Health' },
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation', category: 'Design' }
   ];
 
   const aiServices = [
@@ -104,9 +104,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -142,8 +142,40 @@ const Footer: React.FC = () => {
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS
             </h3>
+            <div className="space-y-3">
+              {['Productivity', 'Marketing', 'Analytics'].map((category) => (
+                <div key={category}>
+                  <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
+                  <ul className="space-y-1">
+                    {microSaasServices.filter(service => service.category === category).slice(0, 2).map((service) => (
+                      <li key={service.name}>
+                        <a href={service.url}
+                          className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        >
+                          <span>{service.name}</span>
+                          <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <a href="/services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4 text-sm"
+            >
+              View All Micro SAAS →
+            </a>
+          </div>
+
+          {/* AI Services */}
+          <div>
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Brain className="w-4 h-4 mr-2" />
+              AI Services
+            </h3>
             <ul className="space-y-2">
-              {microSaasServices.map((service) => (
+              {aiServices.slice(0, 6).map((service) => (
                 <li key={service.name}>
                   <a href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -155,66 +187,22 @@ const Footer: React.FC = () => {
               ))}
             </ul>
             <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4 text-sm"
             >
-              View All Micro SAAS →
+              View All AI Services →
             </a>
           </div>
 
-          {/* AI & IT Services */}
+          {/* IT Services */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Services →
-            </a>
-          </div>
-
-          {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              AI Tools
+              <Settings className="w-4 h-4 mr-2" />
+              IT Services
             </h3>
             <ul className="space-y-2">
-              {additionalServices.map((service) => (
+              {itServices.slice(0, 6).map((service) => (
                 <li key={service.name}>
-                  <a
-                    href={service.url}
+                  <a href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
@@ -223,12 +211,17 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+            <a href="/services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4 text-sm"
+            >
+              View All IT Services →
+            </a>
           </div>
 
           {/* Company & Support */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
               <div>
                 <h4 className="text-white font-medium mb-2">Company</h4>
                 <ul className="space-y-1">

@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "totalPages": 1,
+    "validLinks": 0,
+    "brokenLinks": 0,
+    "missingPages": 0,
+    "externalLinks": 0
+  },
+  "brokenLinks": [],
+  "missingPages": [],
+  "analyzedPages": [
+    {
+      "url": "https://ziontechgroup.com",
+      "status": 200,
+      "title": "Zion Tech Group - Technology Solutions",
+      "links": []
+    }
+  ],
+  "externalLinks": [],
+  "timestamp": "2025-10-09T23:39:35.200Z"
+}
