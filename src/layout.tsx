@@ -33,6 +33,7 @@ export default function RootLayout({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
@@ -51,29 +52,50 @@ export default function RootLayout({
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         }
+      },
+      {
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
+        priceCurrency: 'USD'
+      }
+    ],
     serviceArea: {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude: '-75.5795'
+      },
       geoRadius: '1000000'
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [
+        {
           itemOffered: {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
+          }
+        },
+        {
+          itemOffered: {
+            '@type': 'Service',
             name: 'Digital Automation',
             description: 'Process automation and workflow optimization services'
+          }
+        },
+        {
+          itemOffered: {
+            '@type': 'Service',
             name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'
+          }
+        }
       ]
+    }
   };
   return (
     <html lang='en'>

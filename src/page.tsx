@@ -64,6 +64,7 @@ const HomePage: React.FC = () => {
       popular: true,
       category: 'Productivity'
     },
+    {
       title: 'AI Social Media Manager',
       description: 'Transform your social media presence with our cutting-edge AI platform that creates engaging content, optimizes posting schedules, and provides deep audience insights to maximize your brand impact across all platforms.',
       icon: '📱',
@@ -72,6 +73,8 @@ const HomePage: React.FC = () => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '60% better content performance'],
       link: '/ai-social-media-manager',
       category: 'Marketing'
+    },
+    {
       title: 'AI Analytics Dashboard',
       description: 'Unlock the power of your data with our intelligent analytics platform that uses machine learning to identify patterns, predict trends, and provide actionable insights that drive business growth and competitive advantage.',
       icon: '📈',
@@ -80,19 +83,28 @@ const HomePage: React.FC = () => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', '90% faster decision making'],
       link: '/ai-analytics-dashboard',
       category: 'Analytics'
+    },
+    {
       title: 'AI Email Marketing',
       description: 'Revolutionize your email marketing strategy with our AI-powered platform that creates personalized, high-converting email campaigns, optimizes send times, and delivers exceptional ROI through intelligent automation and segmentation.',
       icon: '📧',
+      price: '$79/month',
       features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns', 'A/B testing', 'Personalization engine'],
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', '300% better engagement'],
       link: '/ai-email-marketing',
+      category: 'Marketing'
+    },
+    {
       title: 'AI Customer Support Bot',
       description: 'Provide 24/7 intelligent customer support with AI-powered chatbot and human handoff',
       icon: '🤖',
+      price: '$99/month',
       features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights', 'Multi-language support', 'Integration APIs'],
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', '60% cost savings'],
       link: '/ai-customer-support-bot',
       category: 'Support'
+    },
+    {
       title: 'AI Code Review Assistant',
       description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization',
       icon: '🔍',
@@ -101,6 +113,8 @@ const HomePage: React.FC = () => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', '50% faster reviews'],
       link: '/ai-code-generation',
       popular: false
+    },
+    {
       title: 'AI Invoice Generator',
       description: 'Automated invoice creation with AI-powered pricing optimization and payment tracking',
       icon: '💰',
@@ -109,18 +123,28 @@ const HomePage: React.FC = () => {
       benefits: ['90% time saved', '30% faster payments', 'Zero errors'],
       link: '/ai-invoice-generator',
       popular: true
+    },
+    {
       title: 'AI Lead Scoring',
       description: 'Intelligent lead qualification and scoring with predictive analytics',
       icon: '🎯',
+      price: '$79/month',
       features: ['Predictive scoring', 'Behavioral analysis', 'CRM integration', 'Real-time updates'],
       benefits: ['50% higher conversion', '35% more qualified leads', '60% time saved'],
       link: '/ai-lead-scoring',
+      category: 'Sales'
+    },
+    {
       title: 'AI Sales Forecasting',
       description: 'Advanced sales predictions with machine learning and trend analysis',
+      icon: '📊',
       price: '$129/month',
       features: ['ML predictions', 'Trend analysis', 'Scenario planning', 'ROI forecasting'],
       benefits: ['85% accuracy', '40% better planning', '25% revenue increase'],
       link: '/ai-sales-forecasting',
+      category: 'Sales'
+    },
+    {
       title: 'AI E-commerce Optimizer',
       description: 'Complete e-commerce optimization with AI-powered recommendations and pricing',
       icon: '🛒',
@@ -128,6 +152,9 @@ const HomePage: React.FC = () => {
       features: ['Product recommendations', 'Dynamic pricing', 'Inventory optimization', 'Customer insights'],
       benefits: ['35% sales increase', '20% higher AOV', '50% inventory efficiency'],
       link: '/ai-ecommerce-optimizer',
+      category: 'E-commerce'
+    },
+    {
       title: 'AI Design Assistant',
       description: 'AI-powered design tool for logos, graphics, and marketing materials',
       icon: '🎨',
@@ -135,24 +162,39 @@ const HomePage: React.FC = () => {
       features: ['Logo generation', 'Graphic design', 'Brand consistency', 'Template library'],
       benefits: ['80% design time saved', 'Professional quality', 'Unlimited revisions'],
       link: '/ai-design-assistant',
+      category: 'Design'
+    },
+    {
       title: 'AI Document Processor',
       description: 'Intelligent document processing with OCR and data extraction',
       icon: '📄',
+      price: '$89/month',
       features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation'],
       benefits: ['95% accuracy', '90% time saved', 'Zero manual entry'],
       link: '/ai-document-processor',
+      category: 'Productivity'
+    },
+    {
       title: 'AI Security Monitor',
       description: 'Real-time security monitoring with AI-powered threat detection',
       icon: '🔒',
+      price: '$149/month',
       features: ['Threat detection', 'Real-time alerts', 'Vulnerability scanning', 'Compliance monitoring'],
       benefits: ['99.9% uptime', 'Zero breaches', '24/7 monitoring'],
       link: '/ai-security-monitor',
+      category: 'Security'
+    },
+    {
       title: 'AI Performance Tracker',
       description: 'Comprehensive performance tracking with AI insights and recommendations',
       icon: '⚡',
+      price: '$99/month',
       features: ['Performance metrics', 'AI insights', 'Optimization tips', 'Real-time monitoring'],
       benefits: ['40% performance boost', 'Proactive optimization', 'Detailed analytics'],
       link: '/ai-performance-tracker',
+      category: 'Analytics'
+    },
+    {
       title: 'AI Voice Assistant',
       description: 'Custom voice assistants for business operations and customer service',
       icon: '🎤',
@@ -160,6 +202,9 @@ const HomePage: React.FC = () => {
       features: ['Voice commands', 'Natural language', 'Multi-language', 'Custom training'],
       benefits: ['Hands-free operation', '24/7 availability', 'Multilingual support'],
       link: '/ai-voice-assistant',
+      category: 'Automation'
+    },
+    {
       title: 'AI HR Assistant',
       description: 'Intelligent HR management with recruitment and employee analytics',
       icon: '👥',
@@ -167,24 +212,39 @@ const HomePage: React.FC = () => {
       features: ['Resume screening', 'Employee analytics', 'Performance tracking', 'Compliance monitoring'],
       benefits: ['60% faster hiring', 'Better candidate matching', 'Reduced bias'],
       link: '/ai-hr-assistant',
+      category: 'HR'
+    },
+    {
       title: 'AI Inventory Manager',
       description: 'Smart inventory management with predictive analytics and optimization',
       icon: '📦',
+      price: '$129/month',
       features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Cost analysis'],
       benefits: ['30% inventory reduction', 'Zero stockouts', '20% cost savings'],
       link: '/ai-inventory-manager',
+      category: 'Operations'
+    },
+    {
       title: 'AI Customer Insights',
       description: 'Deep customer insights with AI-powered analytics and segmentation',
       icon: '👤',
+      price: '$139/month',
       features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Personalization'],
       benefits: ['25% higher retention', '40% better targeting', 'Personalized experiences'],
       link: '/ai-customer-insights',
+      category: 'Analytics'
+    },
+    {
       title: 'AI A/B Testing Platform',
       description: 'Advanced A/B testing with AI-powered optimization and insights',
       icon: '🧪',
+      price: '$89/month',
       features: ['Automated testing', 'Statistical analysis', 'AI optimization', 'Real-time results'],
       benefits: ['50% faster testing', 'Higher conversion rates', 'Data-driven decisions'],
       link: '/ai-ab-testing',
+      category: 'Marketing'
+    },
+    {
       title: 'AI Predictive Analytics',
       description: 'Future outcome predictions with machine learning and trend analysis',
       icon: '🔮',
@@ -192,9 +252,12 @@ const HomePage: React.FC = () => {
       features: ['Future predictions', 'Trend analysis', 'Risk assessment', 'Scenario modeling'],
       benefits: ['90% prediction accuracy', 'Proactive planning', 'Risk mitigation'],
       link: '/ai-predictive-analytics',
+      category: 'Analytics'
+    }
   ];
 
   const aiServices = [
+    {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation',
       icon: Brain,
