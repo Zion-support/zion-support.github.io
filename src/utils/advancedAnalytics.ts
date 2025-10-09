@@ -114,7 +114,6 @@ class AdvancedAnalytics {
    * Track page views
    */
   trackPageView(url?: string, title?: string): void {
-    const _event: UserEvent = {
       id: this.generateEventId(),
       type: 'page_view',
       category: 'navigation',
@@ -311,7 +310,6 @@ class AdvancedAnalytics {
    */
   private trackUserJourney(): void {
     // Track page transitions
-    let _lastUrl = window.location.href;
     const observer = new MutationObserver(() => {
       if (window.location.href !== lastUrl) {
         this.trackPageView();

@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -36,7 +35,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   // Web Vitals measurement
-  const _measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     // First Contentful Paint (FCP)
@@ -66,7 +64,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Cumulative Layout Shift (CLS)
-    let _clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (!(entry as any).hadRecentInput) {
@@ -254,7 +251,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Report metrics on page unload
     const handleBeforeUnload = () => {
-      reportMetrics();
     };
 
     window.addEventListener('beforeunload', handleBeforeUnload);

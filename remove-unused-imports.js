@@ -127,3 +127,4 @@ files.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} files`);
+}

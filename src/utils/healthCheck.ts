@@ -3,7 +3,6 @@
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-import React from 'react'
 export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;

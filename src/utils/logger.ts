@@ -107,7 +107,6 @@ class Logger {
     if (level < this.logLevel) {
       return;
     }
-    const _logEntry: LogMetadata = {
       timestamp: new Date().toISOString(),
       level,
       message,

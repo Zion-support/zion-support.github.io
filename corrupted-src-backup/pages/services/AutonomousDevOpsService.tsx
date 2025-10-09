@@ -221,3 +221,4 @@ const AutonomousDevOpsServic, e = () => {
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
                 <Link, className='w-5 h-5' />
+}

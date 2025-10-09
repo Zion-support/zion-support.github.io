@@ -6,8 +6,6 @@ import { glob } from 'glob';
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Fix double brace imports
     content = content.replace(
@@ -76,10 +74,7 @@ function fixSyntaxErrors(filePath) {
 // Main execution
 async function main() {
 
-  const _patterns = ['app/**/*.tsx', 'app/**/*.ts'];
 
-  let _totalFiles = 0;
-  let _fixedFiles = 0;
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -115,7 +110,6 @@ async function main() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
 }
 
 export { fixSyntaxErrors };

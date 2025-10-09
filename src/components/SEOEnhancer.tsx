@@ -1,4 +1,3 @@
-import React from 'react';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -16,7 +15,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   url = "https://ziontechgroup.com",
   children
 }) => {
-  const _structuredData = {
     "@context": "https://schema.org",
     "@type": "TechCompany",
     "name": "Zion Tech Group",

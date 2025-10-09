@@ -63,33 +63,14 @@ for (const file of files) {
     // Count removed statements
     const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g) || []).length;
     
-<<<<<<< HEAD
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent);
       console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`);
       totalRemoved += removedCount;
-=======
-    patterns.forEach(pattern => {
-      const newContent = content.replace(pattern, '');
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      // console.log(`✅ Cleaned console logs from: ${filePath}`);
-      return true;
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
     }
     
     filesProcessed++;
   } catch (error) {
-<<<<<<< HEAD
     console.error(`❌ Error processing ${file}:`, error.message);
   }
 }
@@ -98,60 +79,3 @@ console.log(`\n🎉 Console log cleanup complete!`);
 console.log(`📊 Files processed: ${filesProcessed}`);
 console.log(`🗑️  Total console statements removed: ${totalRemoved}`);
 console.log(`\n💡 Note: console.error statements in development mode checks were preserved.`);
-=======
-    // console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to process all TypeScript and JavaScript files
-async function processFiles() {
-  const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}',
-  ];
-  
-  let totalFiles = 0;
-  let modifiedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.d.ts',
-        '**/__tests__/**',
-        '**/test/**',
-        '**/*.test.*',
-        '**/*.spec.*',
-      ]
-    });
-    
-    for (const file of files) {
-      totalFiles++;
-      if (removeConsoleLogs(file)) {
-        modifiedFiles++;
-      }
-    }
-  }
-  
-  // console.log(`\n📊 Summary:`);
-  // console.log(`   Total files processed: ${totalFiles}`);
-  // console.log(`   Files modified: ${modifiedFiles}`);
-  // console.log(`   Files unchanged: ${totalFiles - modifiedFiles}`);
-  
-  if (modifiedFiles > 0) {
-    // console.log(`\n✨ Console logs removed successfully!`);
-  } else {
-    // console.log(`\n✨ No console logs found to remove.`);
-  }
-}
-
-// Run the script
-// console.log('🧹 Removing console logs for production...\n');
-processFiles().catch(console.error);
-
-export { removeConsoleLogs, processFiles };
->>>>>>> cursor/website-audit-and-update-with-deployment-572b

@@ -5,7 +5,6 @@ import { glob } from 'glob';
 
 //Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
-  let _fixed = content;
 
   //Fix function declarations with malformed comments
   fixed = fixed.replace(
@@ -39,7 +38,6 @@ function fixJSXSyntax(content) {
 function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
-    const _fixed = fixJSXSyntax(content);
 
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -53,9 +51,7 @@ function processFile(filePath) {
 
 //Main function
 async function main() {
-  const _patterns = ['src/**/*.tsx', 'src/**/*.ts', 'app/**/*.tsx', 'app/**/*.ts'];
 
-  let _totalFixed = 0;
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -96,3 +92,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { fixJSXSyntax, processFile };
+
+}

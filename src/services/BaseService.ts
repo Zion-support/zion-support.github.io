@@ -28,7 +28,7 @@ export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
   private cache: Map<string, CacheEntry<unknown>> = new Map();
-  constructor(baseUrl: string, _options: ServiceOptions = {}) {
+  constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl;
     this.options = {
       timeout: 30000,

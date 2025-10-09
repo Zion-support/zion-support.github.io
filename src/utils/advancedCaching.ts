@@ -175,7 +175,6 @@ class AdvancedCache<T = unknown> {
     }>;
   } {
     const entries: Array<{ key: string; hits: number; age: number }> = [];
-    let _totalHits = 0;
     const now = Date.now();
     this.cache.forEach((entry, key) => {
       totalHits += entry.hits;

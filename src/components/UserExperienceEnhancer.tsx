@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface UserExperienceEnhancerProps {
   enableSmoothScrolling?: boolean;
@@ -129,7 +128,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       };
 
       // Track scroll depth
-      let _maxScrollDepth = 0;
       const handleScroll = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100

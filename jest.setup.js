@@ -1,6 +1,5 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
-const _React = require('react');
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -106,7 +105,6 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
-const _originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if (

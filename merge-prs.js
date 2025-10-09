@@ -69,7 +69,6 @@ for (const pr of prs) {
       try {
         execSync('git status --porcelain', { stdio: 'pipe' });
 //         //If there are conflicts, try to resolve them
-        const _status = execSync('git status --porcelain', { encoding: 'utf8' });
         if (status.includes('UU') || status.includes('AA')) {
 //           //Reset the merge
           execSync('git merge --abort', { stdio: 'inherit' });

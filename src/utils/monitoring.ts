@@ -3,7 +3,6 @@
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-import React from 'react'
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;

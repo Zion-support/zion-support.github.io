@@ -3,7 +3,6 @@
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications
  */
-import React, { ErrorInfo, useCallback } from 'react';
 // Error types
 export enum ErrorType {
   RUNTIME = 'RUNTIME',

@@ -15,8 +15,5 @@ const addInputValidation = () => {
 };
 
 // Run security improvements
-addSecurityHeaders();
-implementCSP();
-addInputValidation();
 
 // 

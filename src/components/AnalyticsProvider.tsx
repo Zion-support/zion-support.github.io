@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
@@ -58,7 +57,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
     };
 
-    initAnalytics();
   }, [trackingId, enableDebug]);
 
   const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
@@ -125,7 +123,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   };
 
-  const _contextValue: AnalyticsContextType = {
     trackEvent,
     trackPageView,
     setUserId,

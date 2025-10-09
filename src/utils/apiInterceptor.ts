@@ -114,12 +114,10 @@ export class APIInterceptor {
     const startTime = performance.now();
     try {
       // Apply request interceptor
-      let _finalConfig = config;
       if (this.config.interceptors?.request) {
         finalConfig = await this.config.interceptors.request(config);
       }
       const url = this.buildURL(finalConfig);
-      const _fetchOptions: RequestInit = {
         method: finalConfig.method,
         headers: this.buildHeaders(finalConfig),
         body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,

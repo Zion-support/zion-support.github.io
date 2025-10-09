@@ -5,12 +5,8 @@ import path from 'path';
 
 // Get all TypeScript and JavaScript files
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let _files = [];
-  const _items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const _fullPath = path.join(dir, item);
-    const _stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories
@@ -58,12 +54,9 @@ function fixUnusedVariables(content) {
 // Fix unused imports
 function fixUnusedImports(content) {
   // Remove unused imports (basic approach)
-  const _lines = content.split('\n');
-  const _usedIdentifiers = new Set();
   
   // Find all used identifiers
   lines.forEach(line => {
-    const _matches = line.match(/\b[A-Za-z_][A-Za-z0-9_]*\b/g);
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match));
     }
@@ -71,13 +64,8 @@ function fixUnusedImports(content) {
   
   // Remove unused import lines
   const filteredLines = lines.filter(line => {
-    const _importMatch = line.match(/import\s+.*?\s+from\s+['"][^'"]+['"]/);
     if (importMatch) {
-      const _importContent = importMatch[0];
-      const _importedItems = importContent.match(/\{([^}]+)\}/);
       if (importedItems) {
-        const _items = importedItems[1].split(',').map(item => item.trim());
-        const _hasUsedItems = items.some(item => usedIdentifiers.has(item));
         return hasUsedItems;
       }
     }
@@ -90,13 +78,9 @@ function fixUnusedImports(content) {
 // Main function
 function main() {
 
-  const _files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx']);
-  let _fixedFiles = 0;
   
   files.forEach(file => {
     try {
-      let _content = fs.readFileSync(file, 'utf8');
-      const _originalContent = content;
       
       // Apply fixes
       content = fixConsoleStatements(content);
@@ -118,7 +102,6 @@ function main() {
 
 // Run if this is the main module
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
 }
 
 export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports };

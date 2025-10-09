@@ -15,8 +15,6 @@ const files = execSync(
 // // Function to process a single file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Fix incomplete metadata objects
     const metadataRegex =
@@ -29,12 +27,8 @@ function processFile(filePath) {
     }
 
     // Fix any remaining broken metadata lines
-    const _lines = content.split('\n');
-    const _filteredLines = [];
-    let _skipUntilExport = false;
 
     for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
 
       if (line.includes('export const metadata')) {
         skipUntilExport = true;
@@ -82,7 +76,6 @@ function processFile(filePath) {
 }
 
 // Process all files
-let _fixedCount = 0;
 files.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
@@ -90,3 +83,4 @@ files.forEach(file => {
 });
 
 // 
+}

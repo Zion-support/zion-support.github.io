@@ -1,9 +1,7 @@
-const _fs = require('fs');
 // const path = require('path');
 // Fix setupTests.tsx - remove extra closing brace
 try {
 //   const setupTestsPath = './app/setupTests.tsx';
-  let _content = fs.readFileSync(setupTestsPath, 'utf8');
   // Remove the extra }); at line 34
   content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
   fs.writeFileSync(setupTestsPath, content);
@@ -12,7 +10,6 @@ try {
 // Fix enhancedErrorHandler.ts - fix optional chaining
 try {
 //   const errorHandlerPath = './app/utils/enhancedErrorHandler.ts';
-  let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Fix the optional chaining syntax
   content = content.replace(/target\?\['src'\]/g, 'target?.src');
   fs.writeFileSync(errorHandlerPath, content);
@@ -22,8 +19,6 @@ try {
 try {
 //   const errorBoundaryPath = './app/components/ErrorBoundary.tsx';
 //   const errorBoundaryContent = `'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Link from 'next/link';
 import { FileWarning } from 'lucide-react';
 interface Props {
   children: ReactNode;
@@ -124,7 +119,6 @@ export default ErrorBoundary;
 // Fix src/components/PerformanceMonitor.tsx
 try {
 //   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
-  let _content = fs.readFileSync(perfMonitorPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
   content = content.replace(/^
@@ -134,7 +128,6 @@ try {
 // Fix src/utils/analytics.ts
 try {
 //   const analyticsPath = './src/utils/analytics.ts';
-  let _content = fs.readFileSync(analyticsPath, 'utf8');
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
@@ -147,7 +140,6 @@ try {
 // Fix src/utils/errorHandler.ts
 try {
 //   const errorHandlerPath = './src/utils/errorHandler.ts';
-  let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
   content = content.replace(/^
@@ -163,7 +155,6 @@ try {
 // Fix App.tsx
 try {
 //   const appPath = './App.tsx';
-  let _content = fs.readFileSync(appPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
   content = content.replace(/^

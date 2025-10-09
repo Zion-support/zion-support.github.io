@@ -117,7 +117,6 @@ class SEOOptimizer {
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {
-    let _meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);

@@ -10,7 +10,6 @@ const fixedContent = `/**
  * Performance Monitoring Hook
  * Provides React hooks for performance monitoring and optimization
  */
-import { useEffect, useCallback, useRef } from 'react';
 import { analytics } from '../utils/analytics';
 
 /**
@@ -20,7 +19,6 @@ export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
       if (typeof window !== 'undefined' && window.performance) {
-        const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const metrics = {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
@@ -30,7 +28,6 @@ export const usePageLoadPerformance = () => {
           };
 
           // Track paint metrics if available
-          const _paintEntries = performance.getEntriesByType('paint');
           paintEntries.forEach(entry => {
             if (entry.name === 'first-paint') {
               metrics.firstPaint = entry.startTime;
@@ -49,7 +46,6 @@ export const usePageLoadPerformance = () => {
     };
 
     // Track page load when component mounts
-    trackPageLoad();
 
     // Track page load on navigation
     const handleNavigation = () => {
@@ -68,8 +64,6 @@ export const usePageLoadPerformance = () => {
  * Hook for monitoring component performance
  */
 export const useComponentPerformance = (componentName: string) => {
-  const _startTime = useRef<number>(0);
-  const _renderCount = useRef<number>(0);
 
   useEffect(() => {
     startTime.current = performance.now();
@@ -98,7 +92,6 @@ export const useInteractionPerformance = () => {
   }, []);
 
   const trackClick = useCallback((element: string) => {
-    const _startTime = performance.now();
     return () => {
 //       const duration = performance.now() - startTime;
       trackInteraction('click', element, duration);
@@ -106,7 +99,6 @@ export const useInteractionPerformance = () => {
   }, [trackInteraction]);
 
   const trackHover = useCallback((element: string) => {
-    const _startTime = performance.now();
     return () => {
 //       const duration = performance.now() - startTime;
       trackInteraction('hover', element, duration);
@@ -127,7 +119,6 @@ export const useMemoryMonitoring = () => {
   useEffect(() => {
     const checkMemory = () => {
       if ('memory' in performance) {
-        const _memory = (performance as any).memory;
         const metrics = {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
@@ -144,7 +135,6 @@ export const useMemoryMonitoring = () => {
 //     const interval = setInterval(checkMemory, 30000);
     
     // Initial check
-    checkMemory();
 
     return () => clearInterval(interval);
   }, []);
@@ -157,7 +147,6 @@ export const useNetworkPerformance = () => {
   useEffect(() => {
     const trackNetworkTiming = () => {
       if (typeof window !== 'undefined' && window.performance) {
-        const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const networkMetrics = {
             dns: navigation.domainLookupEnd - navigation.domainLookupStart,
@@ -176,7 +165,6 @@ export const useNetworkPerformance = () => {
 
     // Track network timing after page load
     if (document.readyState === 'complete') {
-      trackNetworkTiming();
     } else {
       window.addEventListener('load', trackNetworkTiming);
     }
@@ -191,8 +179,6 @@ export const useNetworkPerformance = () => {
  * Hook for monitoring scroll performance
  */
 export const useScrollPerformance = () => {
-  const _scrollStartTime = useRef<number>(0);
-  const _isScrolling = useRef<boolean>(false);
 
   useEffect(() => {
     const handleScrollStart = () => {
@@ -213,7 +199,6 @@ export const useScrollPerformance = () => {
 
     let scrollTimeout: NodeJS.Timeout;
     const handleScroll = () => {
-      handleScrollStart();
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(handleScrollEnd, 150);
     };
@@ -231,10 +216,6 @@ export const useScrollPerformance = () => {
  * Comprehensive performance monitoring hook
  */
 export const usePerformanceMonitoring = () => {
-  usePageLoadPerformance();
-  useMemoryMonitoring();
-  useNetworkPerformance();
-  useScrollPerformance();
 
   return {
     trackCustomMetric: (name: string, value: number, unit: string = 'ms') => {

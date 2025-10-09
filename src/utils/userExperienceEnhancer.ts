@@ -299,7 +299,6 @@ class UserExperienceEnhancer {
     });
 
     // Track scroll depth
-    let _maxScrollDepth = 0;
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       

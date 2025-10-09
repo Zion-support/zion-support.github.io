@@ -15,8 +15,5 @@ const optimizeSitemap = () => {
 };
 
 // Run SEO improvements
-optimizeMetaTags();
-addStructuredData();
-optimizeSitemap();
 
 // 

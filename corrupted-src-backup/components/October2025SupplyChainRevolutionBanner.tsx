@@ -472,3 +472,4 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
 };
 export default October2025SupplyChainRevolutionBanner;
 ;
+}

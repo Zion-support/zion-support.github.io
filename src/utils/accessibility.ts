@@ -97,7 +97,6 @@ class AccessibilityService {
     });
     // Check for proper heading hierarchy
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    let _prevLevel = 0;
     headings.forEach(heading => {
       const level = parseInt(heading.tagName[1]);
       if (level > prevLevel + 1) {

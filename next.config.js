@@ -61,7 +61,6 @@ const nextConfig = {
               );
             },
             name(module) {
-              const _hash = crypto.createHash('sha1');
               _hash.update(module.identifier());
               return _hash.digest('hex').substring(0, 8);
             },

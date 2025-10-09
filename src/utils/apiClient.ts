@@ -156,7 +156,6 @@ class ApiClient {
       controller.abort();
     }, timeout);
     let lastError: Error | null = null;
-    let _attempt = 0;
     while (attempt < retries) {
       try {
         const response = await fetch(fullUrl, {

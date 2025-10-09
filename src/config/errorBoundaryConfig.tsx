@@ -3,7 +3,6 @@
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
  */
-import React from 'react';
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -45,7 +44,6 @@ export interface ErrorBoundaryConfig {
 /**
  * Default error messages
  */
-const _DEFAULT_ERROR_MESSAGES = {
   default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
   notFound: 'The requested resource was not found.',

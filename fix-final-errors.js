@@ -21,19 +21,14 @@ const moreFiles = execSync(
   .split('\n')
   .filter(file => file.length > 0);
 
-const _allFiles = [...new Set([...files, ...moreFiles])];
 
 // // Function to process a single file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Fix JSX fragment issues
     if (content.includes('<>') && !content.includes('</>')) {
       // Find the last closing tag and add </> before it
-      const _lines = content.split('\n');
-      let _lastClosingTagIndex = -1;
 
       for (let i = lines.length - 1; i >= 0; i--) {
         if (lines[i].trim().startsWith('</') && !lines[i].includes('</>')) {
@@ -59,12 +54,8 @@ function processFile(filePath) {
     );
 
     // Fix any remaining broken lines
-    const _lines = content.split('\n');
-    const _filteredLines = [];
-    let _skipUntilSemicolon = false;
 
     for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
 
       // Skip broken metadata lines
       if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
@@ -102,7 +93,6 @@ function processFile(filePath) {
 }
 
 // Process all files
-let _fixedCount = 0;
 allFiles.forEach(file => {
   if (processFile(file)) {
     fixedCount++;

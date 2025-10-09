@@ -272,7 +272,6 @@ async function main() {
 }
 // Run the analysis if this is the main module
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
 }
 
 export default WebsiteAnalyzer;

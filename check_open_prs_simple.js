@@ -15,7 +15,6 @@ const makeGitHubRequest = (path) => {
     };
 
     const req = https.request(options, res => {
-      let _data = '';
       res.on('data', chunk => { data += chunk; });
       res.on('end', () => {
         try {
@@ -33,7 +32,6 @@ const makeGitHubRequest = (path) => {
 
 async function main() {
 
-  const _prs = await makeGitHubRequest('/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
 
   if (prs.length === 0) {
 

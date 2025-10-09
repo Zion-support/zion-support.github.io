@@ -67,5 +67,3 @@ function main() {
     return false;
   }
 }
-
-main();

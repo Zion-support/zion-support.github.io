@@ -32,7 +32,6 @@ class EnvValidator {
    * Get validated environment configuration
    */
   getConfig(): EnvConfig {
-    const _validation = this.validate()
     if (!validation.isValid) {
       throw new Error(
         `Environment validation failed:\n${validation.errors.join('\n')}`

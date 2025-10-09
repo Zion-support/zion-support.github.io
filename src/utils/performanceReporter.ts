@@ -3,7 +3,6 @@
  * Performance Reporter
  * Comprehensive performance monitoring and reporting
  */
-import React from 'react'
 export interface PerformanceMetric {
   name: string;
   value: number;

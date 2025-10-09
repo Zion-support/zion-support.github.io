@@ -26,7 +26,6 @@ const recentBranches = execSync(
   .filter(line => !line.includes('aggressive'))
   .filter(line => !line.includes('automation'))
   .map(line => {
-    const _parts = line.split(' ');
     return {
       date: parts[0],
       branch: parts[1].replace('origin/', ''),
@@ -34,7 +33,6 @@ const recentBranches = execSync(
   })
   .filter(item => {
 //     const branchDate = new Date(item.date);
-    const _sevenDaysAgo = new Date();
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
     return branchDate >= sevenDaysAgo;
   })
@@ -126,14 +124,12 @@ const results = {
 for (let batch = 0; batch < totalBatches; batch++) {
 //   const start = batch * batchSize;
 //   const end = Math.min(start + batchSize, recentBranches.length);
-  const _batchBranches = recentBranches.slice(start, end);
 
 //   // console.log(
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   );
 
   for (const branch of batchBranches) {
-    const _result = mergeBranch(branch);
     results.summary.total++;
 
     if (result.success) {

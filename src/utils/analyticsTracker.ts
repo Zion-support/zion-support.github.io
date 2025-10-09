@@ -41,7 +41,6 @@ class AnalyticsTracker {
    */
   trackEvent(event: AnalyticsEvent): void {
     if (typeof window === 'undefined') return;
-    const _track = () => {
       if (window.gtag) {
         window.gtag('event', event.action, {
           event_category: event.category,
@@ -55,7 +54,6 @@ class AnalyticsTracker {
         }
     };
     if (this.isInitialized) {
-      track();
     } else {
       this.queue.push(track);
     }
@@ -77,7 +75,6 @@ class AnalyticsTracker {
         }
     };
     if (this.isInitialized) {
-      track();
     } else {
       this.queue.push(track);
     }
@@ -100,7 +97,6 @@ class AnalyticsTracker {
         }
     };
     if (this.isInitialized) {
-      track();
     } else {
       this.queue.push(track);
     }
@@ -122,7 +118,6 @@ class AnalyticsTracker {
       // console.error('[Analytics Error]', error);
     };
     if (this.isInitialized) {
-      track();
     } else {
       this.queue.push(track);
     }
@@ -145,7 +140,6 @@ class AnalyticsTracker {
         }
     };
     if (this.isInitialized) {
-      track();
     } else {
       this.queue.push(track);
     }
@@ -167,7 +161,6 @@ class AnalyticsTracker {
         }
     };
     if (this.isInitialized) {
-      track();
     } else {
       this.queue.push(track);
     }

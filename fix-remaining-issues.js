@@ -2,8 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Function to fix specific files with known issues
 function fixFile(filePath) {
@@ -100,3 +98,4 @@ for (const file of filesToFix) {
 }
 
 console.log('\n✅ Fixes complete!');
+}}}}}}}}

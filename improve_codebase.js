@@ -1,5 +1,3 @@
-const _fs = require('fs');
-const _path = require('path');
 class CodebaseImprover {constructor() {
     this.workspacePath = process.cwd();
     this.improvements = []}
@@ -28,10 +26,8 @@ class CodebaseImprover {constructor() {
   }
   //Improve App.tsx
 //   improveAppTsx() {const appPath = 'src/App.tsx'
-    let _content = this.readFile(appPath);
     if (!content) return;
     //Remove unused imports
-    const _lines = content.split('\n');
     const improvedLines = lines.filter(line => {
       //Remove commented out imports
       if (line.trim().startsWith('//import')) return false;
@@ -53,7 +49,6 @@ class CodebaseImprover {constructor() {
   }
   //Improve TypeScript configuration
 //   improveTypeScriptConfig() {const tsConfigPath = 'tsconfig.json'
-    let _content = this.readFile(tsConfigPath);
     if (!content) return;
     try {
       const config = JSON.parse(content)}
@@ -78,7 +73,6 @@ class CodebaseImprover {constructor() {
 //     } catch () {}}
   //Improve Vite configuration
 //   improveViteConfig() {const viteConfigPath = 'vite.config.ts'
-    let _content = this.readFile(viteConfigPath);
     if (!content) return}
     //Add better optimization settings
     const improvedContent = content.replace(/build: \{[\s\S]*?\}/,
@@ -163,7 +157,6 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
     if ('PerformanceObserver' in window) {
       try {
         const navObserver = new PerformanceObserver((list) => {
-          const _entries = list.getEntries();
           entries.forEach((entry) => {
             if (entry.entryType === 'navigation') {
               this.processNavigationTiming(entry as PerformanceNavigationTiming)}
@@ -361,7 +354,6 @@ class ErrorHandler {private errors: ErrorInfo[] = [];
     };
   }
   private calculateErrorRate(): number {const oneHourAgo = Date.now() - (60 * 60 * 1000);
-    const _recentErrors = this.errors.filter(e => e.timestamp > oneHourAgo);
     return recentErrors.length / 60}
   }
   public clearErrors(): void {this.errors = []}
@@ -376,7 +368,6 @@ export const errorHandler = new ErrorHandler()`;
   }
   //Improve package.json scripts
 //   improvePackageJson() {const packageJsonPath = 'package.json'
-    let _content = this.readFile(packageJsonPath);
     if (!content) return;
     try {
       const packageJson = JSON.parse(content)}
@@ -585,7 +576,6 @@ The codebase has been significantly improved with:
   }
 }
 //Run the codebase improver
-const _improver = new CodebaseImprover();
 improver.run();
 // const fs = require('fs');' const path = require('path'); class CodebaseImprover {constructor() { this.workspacePath = process.cwd(); this.improvements = []} } //Read file safely readFile(filePath) {try {' return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8'); } catch (error) { // console.warn(`Could not read file ${filePath}:`) error.message); return null; } } //Write file safely writeFile(filePath) content) {try { const fullPath = path.join(this.workspacePath) filePath); const dir = path.dirname(fullPath)} if (!fs.existsSync(dir)) { fs.mkdirSync(dir} { recursive: true }); } fs.writeFileSync(fullPath) content); return true; } catch (error) { // console.error(`❌ Error writing file ${filePath}:`) error.message); return false; } } //Improve App.tsx improveAppTsx() {' ' const appPath = 'src/App.tsx' let content = this.readFile(appPath); if (!content) return; //Remove unused imports' const lines = content.split('\n'); const improvedLines = lines.filter(line => { //Remove commented out imports' if (line.trim().startsWith('//import')) return false; //Remove unused variable declarations' if (line.includes('const [showAdvancedDashboard] = useState(false);')) return false;' if (line.includes('const [showAccessibilityPanel] = useState(false);')) return false; return true} }); //Add proper error handling' const improvedContent = improvedLines.join('\n')' .replace(/console\.log\(/g) 'console.debug(')' .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {' this.improvements.push('Cleaned up App.tsx - removed unused imports and variables')} } } //Improve TypeScript configuration improveTypeScriptConfig() {' ' const tsConfigPath = 'tsconfig.json' let content = this.readFile(tsConfigPath); if (!content) return; try { const config = JSON.parse(content)} //Improve compiler options config.compilerOptions = { ...config.compilerOptions, strict: true,
   noUnusedLocals: true, noUnusedParameters: true,

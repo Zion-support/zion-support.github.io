@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect } from 'react';
 
 interface SecurityEnhancerProps {
   enableCSP?: boolean;
@@ -18,33 +17,25 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 }) => {
   useEffect(() => {
     if (enableCSP) {
-      addContentSecurityPolicy();
     }
     
     if (enableHTTPSRedirect) {
-      enforceHTTPS();
     }
     
     if (enableXSSProtection) {
-      addXSSProtection();
     }
     
     if (enableClickjackingProtection) {
-      addClickjackingProtection();
     }
     
     if (enableContentTypeSniffingProtection) {
-      addContentTypeSniffingProtection();
     }
     
     // Add security headers
-    addSecurityHeaders();
     
     // Add security event listeners
-    addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-  const _addContentSecurityPolicy = () => {
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = [
@@ -159,7 +150,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     });
 
     // Monitor for suspicious activity
-    let _suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {
       suspiciousActivity = 0;
     };

@@ -19,18 +19,13 @@ const filesToFix = [
 // // Function to process a single file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Remove any remaining metadata exports
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
 
     // Remove any broken metadata lines
-    const _lines = content.split('\n');
-    const _filteredLines = [];
 
     for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
 
       // Skip lines that look like broken metadata
       if (
@@ -85,7 +80,6 @@ function processFile(filePath) {
 }
 
 // Process all files
-let _fixedCount = 0;
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;

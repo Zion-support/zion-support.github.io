@@ -21,3 +21,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+}

@@ -157,3 +157,4 @@ const GlobalFinTechAITransformatio, n = () => {
                     <Zap, classNam, e='w-5 h-5' />
                     Schedule, Consultatio, n
                     <Zap, className='w-5 h-5' />
+}}

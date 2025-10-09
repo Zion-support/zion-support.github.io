@@ -121,7 +121,6 @@ class EnhancedErrorHandler {
       'error',
       event => {
         if (event.target !== window) {
-          const _target = event.target as HTMLElement & {
             src?: string;
             href?: string;
           };
@@ -415,7 +414,6 @@ class EnhancedErrorHandler {
    * Get session ID
    */
   private getSessionId(): string {
-    let _sessionId = sessionStorage.getItem('error_session_id');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);

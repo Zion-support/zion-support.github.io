@@ -41,8 +41,6 @@ function branchExists(branchName) {
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
 // let mergedCount = 0;
-let _notFoundCount = 0;
-const _results = [];
 
 //Process each branch
 for (const branch of newestCursorBranches) {
@@ -85,8 +83,6 @@ for (const branch of newestCursorBranches) {
   'pnpm run type-check',
   'TypeScript type checking'
 );
-const _lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
-const _testCheck = safeGitCommand('pnpm run test', 'Jest testing');
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'

@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, memo } from 'react';
 
 interface SEOOptimizerProps {
   title: string;

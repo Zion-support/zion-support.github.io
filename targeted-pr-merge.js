@@ -123,7 +123,6 @@ const results = {
 };
 
 // for (const branch of targetBranches) {
-  const _result = mergeBranch(branch);
   results.summary.total++;
 
   if (result.success) {

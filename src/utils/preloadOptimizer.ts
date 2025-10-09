@@ -84,10 +84,8 @@ export const optimizeThirdPartyScripts = () => {
   // Load analytics after page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      loadAnalytics()
     })
   } else {
-    loadAnalytics()
   }
 }
 const loadAnalytics = () => {

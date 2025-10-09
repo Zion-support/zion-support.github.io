@@ -3,7 +3,6 @@
  * Performance Optimization Utilities
  * Provides utilities for optimizing performance in React applications
  */
-import React from 'react';
 /**
  * Debounce function to limit execution rate
  */
@@ -13,7 +12,6 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {
-    const _later = () => {
       timeout = null;
       func(...args);
     };

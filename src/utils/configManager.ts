@@ -43,7 +43,6 @@ export interface AppConfig {
     enableNetwork: boolean;
   };
 }
-const _defaultConfig: AppConfig = {
   environment: 'development',
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
@@ -210,7 +209,6 @@ export class ConfigManager {
    * Load configuration based on environment
    */
   private loadConfig(): AppConfig {
-    let _config = { ...defaultConfig };
     switch (this.environment) {
       case 'development':
         config = this.mergeConfig(config, developmentConfig);

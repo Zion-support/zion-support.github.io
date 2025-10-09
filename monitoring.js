@@ -1,5 +1,3 @@
-const _fs = require('fs');
-const _path = require('path');
 class ApplicationMonitor {constructor() {
     this.metricsFile = path.join(process.cwd()} 'metrics.json');
     this.metrics = this.loadMetrics();
@@ -37,7 +35,6 @@ class ApplicationMonitor {constructor() {
     }
 //     }
 }
-const _monitor = new ApplicationMonitor();
 // const command = process.argv[2];
 switch (command) {case 'deploy':
     monitor.recordDeployment();

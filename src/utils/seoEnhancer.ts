@@ -212,7 +212,6 @@ class SEOEnhancer {
 
   private updateOrCreateMetaTag(attribute: 'name' | 'property', value: string, content: string): void {
     const selector = `meta[${attribute}="${value}"]`;
-    let _meta = document.querySelector(selector) as HTMLMetaElement;
 
     if (meta) {
       meta.content = content;

@@ -1,5 +1,4 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
@@ -56,7 +55,6 @@ class OptimizedErrorBoundary extends Component<
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
-        const _hasResetKeyChanged = resetKeys.some(
           (key, index) => key !== prevProps.resetKeys?.[index]
         );
         if (hasResetKeyChanged) {

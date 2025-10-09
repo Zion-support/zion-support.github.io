@@ -1,4 +1,3 @@
-import React from 'react';
 interface LinkProps {
   href: string;
   children: React.ReactNode;
@@ -18,9 +17,7 @@ export const Link: React.FC<LinkProps> = ({
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const _handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
-      onClick();
     }
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {

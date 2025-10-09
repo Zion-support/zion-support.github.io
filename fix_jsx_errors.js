@@ -4,8 +4,6 @@ import fs from 'fs';
 
 function fixJSXErrors(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
     const patterns = [

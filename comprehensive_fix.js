@@ -3,7 +3,6 @@ import fs from 'fs';
 // // 1. Fix test imports
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
 if (fs.existsSync(appMinimalTestPath)) {
-  let _content = fs.readFileSync(appMinimalTestPath, 'utf8');
 
   // Fix jest imports
   content = content.replace(
@@ -23,7 +22,6 @@ if (fs.existsSync(appMinimalTestPath)) {
 
 blogPages.forEach(pagePath => {
   if (fs.existsSync(pagePath)) {
-    let _content = fs.readFileSync(pagePath, 'utf8');
 
     // Remove publishedTime from metadata
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
@@ -40,7 +38,6 @@ blogPages.forEach(pagePath => {
 
 openGraphPages.forEach(pagePath => {
   if (fs.existsSync(pagePath)) {
-    let _content = fs.readFileSync(pagePath, 'utf8');
 
     // Fix authors format to match Author type
     content = content.replace(
@@ -55,7 +52,6 @@ openGraphPages.forEach(pagePath => {
 // 4. Fix Calculator import
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
-  let _content = fs.readFileSync(calculatorPagePath, 'utf8');
 
   // Replace Calculator with CalculatorIcon
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
@@ -67,7 +63,6 @@ if (fs.existsSync(calculatorPagePath)) {
 // 5. Fix AdvancedSEOOptimizer component
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {
-  let _content = fs.readFileSync(seoOptimizerPath, 'utf8');
 
   // Update the interface to include all missing props
   content = content.replace(
@@ -97,7 +92,6 @@ if (fs.existsSync(seoOptimizerPath)) {
 // 6. Fix AnalyticsTracker
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {
-  let _content = fs.readFileSync(analyticsTrackerPath, 'utf8');
 
   // Remove conflicting declarations
   content = content.replace(/declare global \{[^}]*\}/g, '');
@@ -119,7 +113,6 @@ ${content}`;
 // 7. Fix SystemMonitor
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
-  let _content = fs.readFileSync(systemMonitorPath, 'utf8');
 
   // Add proper React imports
   content = content.replace(
@@ -142,7 +135,6 @@ if (fs.existsSync(systemMonitorPath)) {
 // 8. Fix lib/performance.ts
 // // const performancePath = '/workspace/lib/performance.ts';
 if (fs.existsSync(performancePath)) {
-  let _content = fs.readFileSync(performancePath, 'utf8');
 
   // Remove conflicting declarations
   content = content.replace(/declare global \{[^}]*\}/g, '');

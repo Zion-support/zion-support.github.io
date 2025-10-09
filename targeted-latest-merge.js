@@ -51,7 +51,6 @@ function resolveConflictsAndMerge(branchName) {
 
     try {
       //Check for merge conflicts
-      const _status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
 
@@ -131,7 +130,6 @@ const results = {
 
 //Process each target branch
 for (const branch of targetBranches) {
-  const _result = resolveConflictsAndMerge(branch);
   results.summary.total++;
 
   if (result.success) {

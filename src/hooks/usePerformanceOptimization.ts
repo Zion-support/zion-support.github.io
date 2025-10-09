@@ -36,7 +36,6 @@ export const _usePerformanceOptimization = () => {
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let __clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
@@ -112,9 +111,7 @@ export const _usePerformanceOptimization = () => {
       }
     }, 1000);
     // Optimize images
-    optimizeImages();
     // Preload critical resources
-    preloadCriticalResources();
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
   return {

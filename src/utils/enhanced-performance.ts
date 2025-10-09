@@ -23,7 +23,6 @@ export class PerformanceMonitor {
   private initializeObservers(): void {
     // Monitor navigation timing
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {
-      const _navObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric('navigation', entry.duration);
         }
@@ -82,7 +81,6 @@ export class PerformanceMonitor {
     
     // Monitor layout shift
     if (PerformanceObserver.supportedEntryTypes.includes('layout-shift')) {
-      let _clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const layoutShiftEntry = entry as LayoutShift;
@@ -322,7 +320,6 @@ export function throttle<T extends (...args: unknown[]) => any>(
  */
 export function runWhenIdle(callback: () => void, timeout = 1000): void {
   if (typeof window === 'undefined') {
-    callback();
     return;
   }
   

@@ -43,7 +43,6 @@ function resolveConflictsAndMerge(branchName) {
 
     try {
       //Check for merge conflicts
-      const _status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
 
@@ -123,19 +122,16 @@ const results = {
 
 //Process branches in batches to avoid overwhelming the system
 // const batchSize = 5;
-const _batches = [];
 for (let i = 0; i < branches.length; i += batchSize) {
   batches.push(branches.slice(i, i + batchSize));
 }
 
 for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
-  const _batch = batches[batchIndex];
   // console.log(
     `\n🔄 Processing batch ${batchIndex + 1}/${batches.length} (${batch.length} branches)...`
   );
 
   for (const branch of batch) {
-    const _result = resolveConflictsAndMerge(branch);
     results.summary.total++;
 
     if (result.success) {

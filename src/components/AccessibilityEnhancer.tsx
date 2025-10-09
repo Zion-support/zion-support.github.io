@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -106,7 +105,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       });
     };
 
-    manageFocus();
 
     // Re-run when DOM changes
     const observer = new MutationObserver(manageFocus);

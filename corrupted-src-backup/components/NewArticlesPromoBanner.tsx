@@ -50,3 +50,4 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
             <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-200, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{artic, l, e.title}</h4>
             <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
+}}}}}}

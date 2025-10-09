@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -24,7 +23,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null,
     memory: null
   });
-  const _measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [];
@@ -73,7 +71,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let __clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           _entries.forEach(entry => {
@@ -181,11 +178,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
     const cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
     // Monitor performance every 5 seconds
     const interval = setInterval(() => {
-      measureResourceTiming();
     }, 5000);
     return () => {
       if (_cleanup) _cleanup();
