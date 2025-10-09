@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -66,11 +66,7 @@ const Navigation: React.FC = memo(() => {
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'AI-powered business intelligence', icon: '📈', popular: true },
         { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
-        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-        { name: 'AI Video Generator', path: '/ai-video-generation', description: 'AI-powered video creation', icon: '🎬', popular: true },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-driven SEO optimization', icon: '🎯', popular: false },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing', icon: '📄', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation', icon: '⚡', popular: true }
+        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false }
       ]
     },
     {
@@ -80,22 +76,12 @@ const Navigation: React.FC = memo(() => {
       bgColor: 'bg-purple-500/10',
       hoverColor: 'hover:bg-purple-500/20',
       services: [
-        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
+        { name: 'Machine Learning', path: '/ai-services', description: 'Custom ML models' },
+        { name: 'Natural Language Processing', path: '/ai-services', description: 'Advanced NLP solutions' },
+        { name: 'Computer Vision', path: '/ai-services', description: 'Image and video analysis' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
+        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' }
       ]
     },
     {
@@ -105,18 +91,16 @@ const Navigation: React.FC = memo(() => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
-        { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-administration', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' }
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+        { name: 'Cybersecurity Suite', path: '/cybersecurity', description: 'Advanced security solutions' },
+        { name: 'DevOps & CI/CD', path: '/devops', description: 'Development operations' },
+        { name: 'Database Management', path: '/database', description: 'Database optimization' },
+        { name: 'Network Solutions', path: '/networking', description: 'Enterprise networking' },
+        { name: 'IT Support', path: '/it-support', description: '24/7 technical support' }
       ]
     },
     {
-      title: 'Specialized Solutions',
+      title: 'Specialized',
       icon: Sparkles,
       color: 'text-pink-400',
       bgColor: 'bg-pink-500/10',
@@ -127,10 +111,7 @@ const Navigation: React.FC = memo(() => {
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' }
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
       ]
     }
   ];
@@ -139,6 +120,7 @@ const Navigation: React.FC = memo(() => {
     { name: 'Home', path: '/', icon: '🏠' },
     { name: 'About', path: '/about', icon: '👥' },
     { name: 'Services', path: '/services', icon: '⚙️' },
+    { name: 'Pricing', path: '/pricing', icon: '💰' },
     { name: 'Case Studies', path: '/case-studies', icon: '📊' },
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
@@ -175,7 +157,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             {/* Services Dropdown */}
-            <div className="relative group">
+            <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
@@ -188,52 +170,49 @@ const Navigation: React.FC = memo(() => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-100 visible transition-all duration-300 transform translate-y-0">
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-2">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                            <span className="text-sm font-semibold text-white">{category.title}</span>
-                          </div>
-                          <div className="space-y-2">
-                            {category.services.slice(0, 6).map((service, serviceIndex) => (
-                              <Link
-                                key={serviceIndex}
-                                to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                                onClick={closeAllMenus}
-                              >
-                                <div className="font-medium">{service.name}</div>
-                                <div className="text-xs text-gray-500">
-                                  {service.description}
-                                </div>
-                              </Link>
-                            ))}
-                            {category.services.length > 6 && (
-                              <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                                onClick={closeAllMenus}
-                              >
-                                View All →
-                              </Link>
-                            )}
-                          </div>
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                  <div className="grid grid-cols-2 gap-6 px-6">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index} className="space-y-2">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <category.icon className={`w-4 h-4 ${category.color}`} />
+                          <span className="text-sm font-semibold text-white">{category.title}</span>
                         </div>
-                      ))}
-                    </div>
-                    <div className="border-t border-gray-700 mt-6 pt-4">
-                      <Link
-                        to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                        onClick={closeAllMenus}
-                      >
-                        View All Services
-                      </Link>
-                    </div>
+                        <div className="space-y-1">
+                          {category.services.slice(0, 6).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              to={service.path}
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                              onClick={closeAllMenus}
+                            >
+                              <div className="font-medium">{service.name}</div>
+                              <div className="text-xs text-gray-500">
+                                {service.description}
+                              </div>
+                            </Link>
+                          ))}
+                          {category.services.length > 6 && (
+                            <Link
+                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                              className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                              onClick={closeAllMenus}
+                            >
+                              View All →
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
+                    <Link
+                      to="/services"
+                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                      onClick={closeAllMenus}
+                    >
+                      View All Services
+                    </Link>
                   </div>
                 </div>
             </div>
@@ -358,4 +337,5 @@ const Navigation: React.FC = memo(() => {
 });
 
 Navigation.displayName = 'Navigation';
+
 export default Navigation;
