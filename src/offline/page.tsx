@@ -1,20 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/offline/page.tsx
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-import Link from 'next/link';
-
-=======
 import { Link } from 'react-router-dom';
-/**
- * Offline Page
- * Displayed when the user is offline and tries to access a page
- */
-export const metadata = {
-  title: 'Offline - Zion Tech Group',
-  description: 'You are currently offline. Please check your internet connection.'
-};
->>>>>>> cursor/website-audit-and-update-with-deployment-572b:src/offline/page.tsx
 const OfflinePage: React.FC = () => {
   const handleRetry = () => {
     window.location.reload();

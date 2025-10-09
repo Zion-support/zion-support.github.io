@@ -1,4 +1,7 @@
 import React from 'react';
+import { Cloud, Shield, Server, Settings, Database, Smartphone, Lock, BarChart, Users, ArrowRight, Phone, Mail } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
+import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -179,7 +182,6 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
           {/* Contact Section */}
@@ -214,7 +216,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };
