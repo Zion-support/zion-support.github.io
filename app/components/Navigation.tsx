@@ -1,6 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { 
+  Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, 
+  MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, 
+  FileText, DollarSign, Eye, Cube, Shield, Cloud, Database, 
+  Smartphone, Lock, X, Menu, Globe, Activity, Car, Building, 
+  Wrench, Briefcase, FileText as FileTextIcon 
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +42,16 @@ const Navigation: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: BarChart },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Settings },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: Zap },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: TrendingUp },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Settings },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
+    { name: 'AI Translation Service', href: '/ai-translation-service', icon: Globe },
+    { name: 'AI Learning Management', href: '/ai-learning-management', icon: FileText },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: TrendingUp },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Settings },
   ];
 
   const aiServices = [
@@ -47,6 +63,17 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Smartphone },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI IoT Platform', href: '/ai-iot-platform', icon: Cpu },
+    { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', icon: Shield },
+    { name: 'AI Cloud Platform', href: '/ai-cloud-platform', icon: Cloud },
+    { name: 'AI API Gateway', href: '/ai-api-gateway', icon: Globe },
+    { name: 'AI Data Pipeline', href: '/ai-data-pipeline', icon: Database },
+    { name: 'AI Monitoring Suite', href: '/ai-monitoring-suite', icon: Activity },
+    { name: 'AI Integration Platform', href: '/ai-integration-platform', icon: Settings },
   ];
 
   const itServices = [
@@ -58,6 +85,24 @@ const Navigation: React.FC = () => {
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'Enterprise Architecture', href: '/enterprise-architecture', icon: Building },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap },
+    { name: 'API Development', href: '/api-development', icon: Code },
+    { name: 'Microservices Architecture', href: '/microservices-architecture', icon: Settings },
+    { name: 'Data Engineering', href: '/data-engineering', icon: Database },
+    { name: 'Machine Learning Operations', href: '/mlops', icon: Brain },
+    { name: 'Serverless Computing', href: '/serverless-computing', icon: Cloud },
+    { name: 'Container Orchestration', href: '/container-orchestration', icon: Settings },
+    { name: 'API Gateway Services', href: '/api-gateway-services', icon: Globe },
+    { name: 'Event Streaming', href: '/event-streaming', icon: Activity },
+    { name: 'Infrastructure as Code', href: '/infrastructure-as-code', icon: Wrench },
+    { name: 'Performance Engineering', href: '/performance-engineering', icon: TrendingUp },
+    { name: 'Security Architecture', href: '/security-architecture', icon: Shield },
+    { name: 'Disaster Recovery', href: '/disaster-recovery', icon: Shield },
+    { name: 'IT Governance', href: '/it-governance', icon: FileTextIcon },
+    { name: 'Technology Consulting', href: '/technology-consulting', icon: Briefcase },
+    { name: 'Legacy System Modernization', href: '/legacy-system-modernization', icon: Settings },
+    { name: 'Integration Services', href: '/integration-services', icon: Settings },
   ];
 
   return (

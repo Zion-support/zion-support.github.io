@@ -24,6 +24,16 @@ const Footer: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },
     { name: 'AI Content Writer', href: '/ai-content-writer' },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager' },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant' },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance' },
+    { name: 'AI Translation Service', href: '/ai-translation-service' },
+    { name: 'AI Learning Management', href: '/ai-learning-management' },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner' },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer' },
   ];
 
   const aiServices = [
@@ -35,6 +45,17 @@ const Footer: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+    { name: 'AI IoT Platform', href: '/ai-iot-platform' },
+    { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+    { name: 'AI Cloud Platform', href: '/ai-cloud-platform' },
+    { name: 'AI API Gateway', href: '/ai-api-gateway' },
+    { name: 'AI Data Pipeline', href: '/ai-data-pipeline' },
+    { name: 'AI Monitoring Suite', href: '/ai-monitoring-suite' },
+    { name: 'AI Integration Platform', href: '/ai-integration-platform' },
   ];
 
   const itServices = [
@@ -46,6 +67,24 @@ const Footer: React.FC = () => {
     { name: 'Mobile App Development', href: '/mobile-development' },
     { name: 'Web Development', href: '/web-development' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Enterprise Architecture', href: '/enterprise-architecture' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'API Development', href: '/api-development' },
+    { name: 'Microservices Architecture', href: '/microservices-architecture' },
+    { name: 'Data Engineering', href: '/data-engineering' },
+    { name: 'Machine Learning Operations', href: '/mlops' },
+    { name: 'Serverless Computing', href: '/serverless-computing' },
+    { name: 'Container Orchestration', href: '/container-orchestration' },
+    { name: 'API Gateway Services', href: '/api-gateway-services' },
+    { name: 'Event Streaming', href: '/event-streaming' },
+    { name: 'Infrastructure as Code', href: '/infrastructure-as-code' },
+    { name: 'Performance Engineering', href: '/performance-engineering' },
+    { name: 'Security Architecture', href: '/security-architecture' },
+    { name: 'Disaster Recovery', href: '/disaster-recovery' },
+    { name: 'IT Governance', href: '/it-governance' },
+    { name: 'Technology Consulting', href: '/technology-consulting' },
+    { name: 'Legacy System Modernization', href: '/legacy-system-modernization' },
+    { name: 'Integration Services', href: '/integration-services' },
   ];
 
   const socialLinks = [
