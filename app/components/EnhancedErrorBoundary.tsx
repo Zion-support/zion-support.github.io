@@ -44,33 +44,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-<<<<<<< HEAD
-    // Error reporting
-=======
- cursor/analyze-improve-and-deploy-application-cde4
-    
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
->>>>>>> origin/main
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-<<<<<<< HEAD
-    // Console logging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by EnhancedErrorBoundary:', error);
       console.error('Error Info:', errorInfo);
     }
-  }
 
-  handleRetry = () => {
-=======
- cursor/analyze-improve-and-deploy-application-cde4
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
@@ -78,13 +62,39 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Enhanced error reporting logic
+    const errorReport = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
 
-    // Error reporting logic would go here
-    console.error('Error reported:', error, errorInfo);
+    // Send to error monitoring service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          error_id: this.state.errorId,
+        },
+      });
+    }
+
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚨 Error Boundary Caught Error');
+      console.error('Error:', error);
+      console.error('Error Info:', errorInfo);
+      console.error('Error Report:', errorReport);
+      console.groupEnd();
+    }
   };
 
-  private handleRetry = () => {
->>>>>>> origin/main
+  handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,

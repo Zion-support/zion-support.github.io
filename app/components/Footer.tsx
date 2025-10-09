@@ -1,15 +1,10 @@
 import React, { memo } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   Phone, 
   Mail, 
   MapPin
 } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Code, BarChart, Users, Globe, ArrowRight } from 'lucide-react';
->>>>>>> origin/main
 
 const Footer: React.FC = memo(() => {
   const serviceCategories = [

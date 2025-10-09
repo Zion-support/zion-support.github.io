@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
->>>>>>> origin/main
 
 interface AccessibilityContextType {
   announce: (message: string) => void;
@@ -11,19 +7,31 @@ interface AccessibilityContextType {
   toggleReducedMotion: () => void;
 }
 
-<<<<<<< HEAD
-/**
- * Accessibility Enhancer Component
- * Provides comprehensive accessibility improvements
- */
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+
+interface AccessibilityEnhancerProps {
+  children: ReactNode;
+  enableSkipLinks?: boolean;
+  enableKeyboardNav?: boolean;
+  enableFocusIndicators?: boolean;
+}
+
+export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
   enableSkipLinks = true,
   enableKeyboardNav = true,
-  enableFocusIndicators = true,
+  enableFocusIndicators = true
 }) => {
-  // Skip links functionality
   useEffect(() => {
+    // Create announcement area for screen readers
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.id = 'accessibility-announcements';
+    document.body.appendChild(announcement);
+
+    // Skip links functionality
     if (enableSkipLinks) {
       const skipLinks = document.querySelectorAll('.skip-link');
       skipLinks.forEach(link => {
@@ -37,13 +45,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         });
       });
     }
-  }, [enableSkipLinks]);
 
-  // Keyboard navigation
-  useEffect(() => {
+    // Add keyboard navigation support
     if (enableKeyboardNav) {
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       };
@@ -55,15 +61,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('mousedown', handleMouseDown);
 
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
+      // Add focus management
+      const handleFocusIn = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       };
-    }
-  }, [enableKeyboardNav]);
 
-  // Focus indicators
-  useEffect(() => {
+      document.addEventListener('focusin', handleFocusIn);
+    }
+
+    // Focus indicators
     if (enableFocusIndicators) {
       const style = document.createElement('style');
       style.textContent = `
@@ -73,71 +82,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       `;
       document.head.appendChild(style);
-
-      return () => {
-        document.head.removeChild(style);
-      };
     }
-  }, [enableFocusIndicators]);
-
-  return (
-    <div className="accessibility-enhancer">
-      {enableSkipLinks && (
-        <div className="skip-links">
-          <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
-            Skip to main content
-          </a>
-          <a href="#navigation" className="skip-link sr-only focus:not-sr-only">
-            Skip to navigation
-          </a>
-        </div>
-      )}
-      {children}
-    </div>
-  );
-};
-
-export default AccessibilityEnhancer;
-=======
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
-}
-
-export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-    // Create announcement area for screen readers
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.id = 'accessibility-announcements';
-    document.body.appendChild(announcement);
-
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Add focus management
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
 
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
@@ -172,7 +117,9 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('focusin', handleFocusIn);
+      if (enableKeyboardNav) {
+        document.removeEventListener('focusin', handleFocusIn);
+      }
       mediaQuery.removeEventListener('change', handleContrastChange);
       motionQuery.removeEventListener('change', handleMotionChange);
       
@@ -181,7 +128,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
         announcement.remove();
       }
     };
-  }, []);
+  }, [enableSkipLinks, enableKeyboardNav, enableFocusIndicators]);
 
   const announce = (message: string) => {
     const announcement = document.getElementById('accessibility-announcements');
@@ -216,7 +163,19 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
 
   return (
     <AccessibilityContext.Provider value={value}>
-      {children}
+      <div className="accessibility-enhancer">
+        {enableSkipLinks && (
+          <div className="skip-links">
+            <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
+              Skip to main content
+            </a>
+            <a href="#navigation" className="skip-link sr-only focus:not-sr-only">
+              Skip to navigation
+            </a>
+          </div>
+        )}
+        {children}
+      </div>
     </AccessibilityContext.Provider>
   );
 };
@@ -228,4 +187,5 @@ export const useAccessibility = (): AccessibilityContextType => {
   }
   return context;
 };
->>>>>>> origin/main
+
+export default AccessibilityEnhancer;
