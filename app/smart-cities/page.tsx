@@ -1,85 +1,87 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, MessageSquare, Headphones, Bot, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Star, Zap, Building, Globe, Shield, Users, TrendingUp, ArrowRight, Phone, Mail, MapPin, Wifi, Car, Lightbulb, Leaf } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {
+const SmartCitiesPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'Intelligent Chatbots',
-      description: 'Advanced AI chatbots that understand context, handle complex queries, and provide instant responses 24/7.'
+      icon: Wifi,
+      title: 'IoT Infrastructure',
+      description: 'Comprehensive IoT sensor networks for real-time monitoring of city systems and services.'
     },
     {
-      icon: MessageSquare,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across email, chat, phone, social media, and messaging platforms.'
+      icon: Car,
+      title: 'Smart Transportation',
+      description: 'Intelligent traffic management, smart parking, and autonomous vehicle integration systems.'
     },
     {
-      icon: Brain,
-      title: 'Sentiment Analysis',
-      description: 'AI-powered emotion detection to understand customer mood and provide appropriate responses.'
+      icon: Lightbulb,
+      title: 'Smart Energy Grid',
+      description: 'AI-powered energy management with renewable integration and demand optimization.'
     },
     {
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Real-time insights into customer satisfaction, response times, and support team performance.'
+      icon: Building,
+      title: 'Smart Buildings',
+      description: 'Connected building management systems for efficiency, security, and sustainability.'
     },
     {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Enterprise-grade security with data encryption and compliance with GDPR, CCPA, and SOC 2.'
+      icon: Globe,
+      title: 'Environmental Monitoring',
+      description: 'Real-time air quality, noise, and environmental data collection and analysis.'
     },
     {
-      icon: Zap,
-      title: 'Quick Setup',
-      description: 'Deploy in minutes with pre-built templates and easy integration with your existing systems.'
+      icon: Users,
+      title: 'Citizen Services',
+      description: 'Digital platforms for citizen engagement, service delivery, and government transparency.'
     }
   ];
 
   const pricingTiers = [
     {
-      name: 'Starter',
-      price: '$199',
+      name: 'Pilot Program',
+      price: '$1,999',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Small city implementation',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Basic IoT infrastructure',
+        'Traffic management system',
+        'Environmental monitoring',
+        'Citizen portal',
+        '6-month implementation',
+        'Basic support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$399',
+      name: 'Smart City',
+      price: '$4,999',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Full smart city solution',
       features: [
-        'Up to 5,000 conversations/month',
-        'Advanced AI with sentiment analysis',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Complete IoT network',
+        'All transportation systems',
+        'Smart energy grid',
+        'Advanced analytics',
+        '12-month implementation',
         'Priority support',
-        'Custom integrations'
+        'Custom development'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$799',
+      name: 'Mega City',
+      price: '$9,999',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Large metropolitan solution',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice support',
-        'Real-time analytics dashboard',
-        '24/7 dedicated support',
-        'White-label solution',
-        'Custom development'
+        'Enterprise IoT platform',
+        'Full automation suite',
+        'AI-powered analytics',
+        '24/7 monitoring',
+        '18-month implementation',
+        'Dedicated support team',
+        'White-label solution'
       ],
       popular: false
     }
@@ -87,62 +89,62 @@ const AICustomerSupportPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: Clock,
-      title: '24/7 Availability',
-      description: 'Never miss a customer inquiry with round-the-clock AI support'
+      icon: TrendingUp,
+      title: '30% Efficiency Gain',
+      description: 'Average 30% improvement in city operations and resource utilization'
+    },
+    {
+      icon: Leaf,
+      title: 'Sustainability',
+      description: 'Reduce carbon footprint and promote green initiatives'
     },
     {
       icon: Users,
-      title: 'Scalable Solutions',
-      description: 'Handle thousands of conversations simultaneously without additional staff'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Improved Satisfaction',
-      description: 'Average 40% increase in customer satisfaction scores'
+      title: 'Citizen Satisfaction',
+      description: 'Enhanced quality of life and better public services'
     },
     {
       icon: Shield,
-      title: 'Cost Effective',
-      description: 'Reduce support costs by up to 60% while improving service quality'
+      title: 'Security & Safety',
+      description: 'Advanced monitoring and emergency response systems'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support with chatbots, omnichannel communication, and intelligent automation. Starting at $199/month." />
-        <meta name="keywords" content="ai customer support, chatbots, omnichannel support, customer service automation, ai helpdesk" />
+        <title>Smart Cities Solutions - Zion Tech Group</title>
+        <meta name="description" content="Urban technology solutions for sustainable and intelligent city management. Starting at $1,999/month." />
+        <meta name="keywords" content="smart cities, iot solutions, urban technology, city management, sustainable cities" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Customer Support
+            Smart Cities Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize your customer service with AI-powered chatbots, omnichannel communication, and intelligent automation that delivers exceptional experiences 24/7.
+            Transform your city into a sustainable, efficient, and intelligent urban environment with our comprehensive smart city technology solutions.
           </p>
           
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
-              <div className="text-gray-300">Higher Satisfaction</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">30%</div>
+              <div className="text-gray-300">Efficiency Gain</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
-              <div className="text-gray-300">Cost Reduction</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+              <div className="text-gray-300">Cities Served</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-gray-300">Availability</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">$2M</div>
+              <div className="text-gray-300">Average Savings</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">5min</div>
-              <div className="text-gray-300">Setup Time</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Monitoring</div>
             </div>
           </div>
 
@@ -170,7 +172,7 @@ const AICustomerSupportPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Powerful AI Features
+            Comprehensive Smart City Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -188,7 +190,7 @@ const AICustomerSupportPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our AI Support?
+            Transform Your City
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -206,7 +208,7 @@ const AICustomerSupportPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Simple, Transparent Pricing
+            Smart City Implementation Plans
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
@@ -236,7 +238,7 @@ const AICustomerSupportPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tier.name} AI Customer Support Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tier.name} Smart Cities Plan`}
                   className={`w-full text-center py-3 px-6 rounded-lg font-medium transition-all ${
                     tier.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
@@ -255,10 +257,10 @@ const AICustomerSupportPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Customer Support?
+            Ready to Build the Future?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join hundreds of companies already using our AI customer support to deliver exceptional experiences.
+            Join the smart city revolution and create a sustainable, efficient urban environment for your citizens.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -280,4 +282,4 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AICustomerSupportPage;
+export default SmartCitiesPage;

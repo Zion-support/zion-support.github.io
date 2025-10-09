@@ -109,7 +109,15 @@ const Navigation: React.FC = () => {
         { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
         { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
         { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project management' },
+        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Real-time performance monitoring' },
+        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Advanced security monitoring' },
+        { name: 'AI Market Analyzer', path: '/ai-market-analyzer', description: 'Comprehensive market analysis' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'Complete design suite' },
+        { name: 'AI Learning Platform', path: '/ai-learning-platform', description: 'Personalized learning experiences' },
+        { name: 'AI Health Monitor', path: '/ai-health-monitor', description: 'Personal health tracking' },
+        { name: 'AI Climate Tracker', path: '/ai-climate-tracker', description: 'Environmental monitoring' }
       ]
     },
     {
@@ -171,7 +179,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -182,23 +190,23 @@ const Navigation: React.FC = () => {
                           <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
-                          {category.services.slice(0, 5).map((service, serviceIndex) => (
+                          {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors group"
                               onClick={closeAllMenus}
                             >
                               <div className="font-medium">{service.name}</div>
-                              <div className="text-xs text-gray-500 group-hover:text-purple-500">
+                              <div className="text-xs text-gray-500 group-hover:text-cyan-500">
                                 {service.description}
                               </div>
                             </Link>
                           ))}
-                          {category.services.length > 5 && (
+                          {category.services.length > 6 && (
                             <Link
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                              className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                              className="block px-3 py-2 text-sm text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-colors font-medium"
                               onClick={closeAllMenus}
                             >
                               View All →
@@ -305,7 +313,7 @@ const Navigation: React.FC = () => {
                       <div key={categoryIndex}>
                         <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
                         <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                          {category.services.slice(0, 5).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
@@ -315,6 +323,15 @@ const Navigation: React.FC = () => {
                               {service.name}
                             </Link>
                           ))}
+                          {category.services.length > 5 && (
+                            <Link
+                              href={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                              className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                              onClick={closeAllMenus}
+                            >
+                              View All →
+                            </Link>
+                          )}
                         </div>
                       </div>
                     ))}
