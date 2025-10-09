@@ -11,25 +11,31 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption',
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
+    {
       icon: Database,
       title: 'Data Migration',
       description: 'Secure and efficient migration of databases and data warehouses',
       benefits: ['Data validation', 'Incremental sync', 'Backup & recovery']
+    },
+    {
       icon: Server,
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
-      title: 'Seamless Cloud Migration',
-      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
-      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
+    },
+    {
       icon: Shield,
       title: 'Security First',
       description: 'Enterprise-grade security throughout the migration process',
       benefits: ['Data encryption', 'Access controls', 'Compliance']
+    },
+    {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
+    },
+    {
       icon: Target,
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
@@ -38,24 +44,35 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   const migrationSteps = [
+    {
+      step: '1',
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of current infrastructure and migration strategy',
       icon: CheckCircle,
       features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
+    },
+    {
       step: '2',
       title: 'Planning',
-      description: 'Create detailed migration plan with timelines and rollback strategies'
+      description: 'Create detailed migration plan with timelines and rollback strategies',
+      icon: Target,
+      features: ['Risk assessment', 'Timeline creation', 'Rollback planning']
+    },
+    {
+      step: '3',
+      title: 'Migration',
+      description: 'Execute the migration with minimal downtime and data integrity',
+      icon: Zap,
+      features: ['Zero-downtime migration', 'Data validation', 'Real-time monitoring']
+    },
+    {
+      step: '4',
       title: 'Optimization & Support',
       description: 'Post-migration optimization and ongoing support',
+      icon: Shield,
       features: ['Performance tuning', 'Cost optimization', '24/7 support']
-      step: '01',
-      description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
-      duration: '1-2 weeks'
-      step: '02',
-      title: 'Architecture Design',
-      description: 'Design optimal cloud architecture tailored to your business needs.',
-      step: '03',
-      title: 'Migration Execution',
+    }
+  ];
       description: 'Execute the migration with minimal downtime and maximum data integrity.',
       duration: '2-4 weeks'
       step: '04',

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
 import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isOnline: boolean;
-}
-
-=======
-import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -22,6 +11,9 @@ interface PerformanceMetrics {
   totalBlockingTime: number;
   speedIndex: number;
   timeToInteractive: number;
+  renderTime: number;
+  memoryUsage: number;
+  isOnline: boolean;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -50,106 +42,91 @@ const PerformanceMonitor: React.FC = () => {
         (entry) => entry.name === 'largest-contentful-paint'
       )?.startTime || 0;
 
-      const performanceMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      const renderTime = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+      
+      // Memory usage (if available)
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      
+      // Network status
+      const isOnline = navigator.onLine;
+
+      setMetrics({
+        loadTime,
         firstContentfulPaint,
         largestContentfulPaint,
-        firstInputDelay: 0, // Would need to be measured separately
-        cumulativeLayoutShift: 0, // Would need to be measured separately
-        totalBlockingTime: 0, // Would need to be measured separately
-        speedIndex: 0, // Would need to be measured separately
-        timeToInteractive: navigation.domInteractive - navigation.navigationStart,
-      };
-
-      setMetrics(performanceMetrics);
+        firstInputDelay: 0, // Would need more complex measurement
+        cumulativeLayoutShift: 0, // Would need more complex measurement
+        totalBlockingTime: 0, // Would need more complex measurement
+        speedIndex: 0, // Would need more complex measurement
+        timeToInteractive: 0, // Would need more complex measurement
+        renderTime,
+        memoryUsage,
+        isOnline
+      });
     };
 
     // Collect metrics after page load
     const timer = setTimeout(collectMetrics, 1000);
-
-    // Show/hide with keyboard shortcut
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
+    
+    // Show monitor after a delay
+    const visibilityTimer = setTimeout(() => setIsVisible(true), 2000);
 
     return () => {
       clearTimeout(timer);
-      document.removeEventListener('keydown', handleKeyDown);
+      clearTimeout(visibilityTimer);
     };
   }, []);
 
-  if (process.env.NODE_ENV !== 'development' || !isVisible || !metrics) {
+  if (!metrics || !isVisible) {
     return null;
   }
 
-  const getScore = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.needsImprovement) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getScoreColor = (score: string) => {
-    switch (score) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
-
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-lg rounded-lg p-4 text-white text-xs font-mono max-w-sm z-50 border border-white/20">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold flex items-center">
+          <Activity className="w-4 h-4 mr-2" />
+          Performance Monitor
+        </h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          className="text-gray-400 hover:text-white text-xs"
         >
           ×
         </button>
       </div>
       
-      <div className="space-y-2">
+      <div className="space-y-2 text-xs">
         <div className="flex justify-between">
           <span>Load Time:</span>
-          <span className={getScoreColor(getScore(metrics.loadTime, { good: 2000, needsImprovement: 4000 }))}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
+          <span className="text-green-400">{metrics.loadTime.toFixed(2)}ms</span>
         </div>
-        
         <div className="flex justify-between">
           <span>FCP:</span>
-          <span className={getScoreColor(getScore(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 }))}>
-            {metrics.firstContentfulPaint.toFixed(0)}ms
-          </span>
+          <span className="text-blue-400">{metrics.firstContentfulPaint.toFixed(2)}ms</span>
         </div>
-        
         <div className="flex justify-between">
           <span>LCP:</span>
-          <span className={getScoreColor(getScore(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 }))}>
-            {metrics.largestContentfulPaint.toFixed(0)}ms
-          </span>
+          <span className="text-purple-400">{metrics.largestContentfulPaint.toFixed(2)}ms</span>
         </div>
-        
         <div className="flex justify-between">
-          <span>TTI:</span>
-          <span className={getScoreColor(getScore(metrics.timeToInteractive, { good: 3800, needsImprovement: 7300 }))}>
-            {metrics.timeToInteractive.toFixed(0)}ms
+          <span>Render Time:</span>
+          <span className="text-yellow-400">{metrics.renderTime.toFixed(2)}ms</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Memory:</span>
+          <span className="text-red-400">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Status:</span>
+          <span className={metrics.isOnline ? 'text-green-400' : 'text-red-400'}>
+            {metrics.isOnline ? 'Online' : 'Offline'}
           </span>
         </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-white/20 text-gray-400">
-        Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );
 };
 
->>>>>>> origin/comprehensive-improvements-final
 export default PerformanceMonitor;

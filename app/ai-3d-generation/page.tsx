@@ -27,6 +27,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
+  ];
 
   const applications = [
     {
@@ -35,22 +36,31 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🎮',
       examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
     },
+    {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
       examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+    },
+    {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
       examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+    },
+    {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
       examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+    },
+    {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
       examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+    },
+    {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
