@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
@@ -83,6 +82,160 @@ const ServicesPage: React.FC = () => {
       icon: Calendar,
       features: ['Resource Planning', 'Timeline Optimization', 'Risk Assessment', 'Progress Tracking'],
       path: '/ai-project-management'
+    },
+    {
+      title: 'AI Voice Processing',
+      description: 'Advanced voice AI with speech recognition, natural language understanding, and voice synthesis.',
+      icon: Mic,
+      features: ['Speech-to-Text', 'Voice Synthesis', 'Natural Language Understanding', 'Multi-language Support'],
+      path: '/ai-voice-processing'
+    },
+    {
+      title: 'AI Image Recognition',
+      description: 'Computer vision solutions for image analysis, object detection, and visual content understanding.',
+      icon: Eye,
+      features: ['Object Detection', 'Facial Recognition', 'Image Classification', 'Visual Search'],
+      path: '/ai-image-recognition'
+    },
+    {
+      title: 'AI Recommendation Engine',
+      description: 'Intelligent recommendation systems to personalize user experiences and increase engagement.',
+      icon: Target,
+      features: ['Personalized Recommendations', 'Content Filtering', 'Behavioral Analysis', 'A/B Testing'],
+      path: '/ai-recommendation-engine'
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'AI-powered financial planning and investment advisory services for individuals and businesses.',
+      icon: DollarSign,
+      features: ['Portfolio Optimization', 'Risk Assessment', 'Market Analysis', 'Investment Recommendations'],
+      path: '/ai-financial-advisor'
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness and health coaching powered by AI and machine learning.',
+      icon: Heart,
+      features: ['Personalized Workouts', 'Nutrition Planning', 'Progress Tracking', 'Health Monitoring'],
+      path: '/ai-fitness-coach'
+    },
+    {
+      title: 'AI Music Composition',
+      description: 'AI-powered music creation and composition tools for artists and content creators.',
+      icon: Music,
+      features: ['Music Generation', 'Style Adaptation', 'Instrument Selection', 'Melody Creation'],
+      path: '/ai-music-composition'
+    },
+    {
+      title: 'AI Video Generation',
+      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated content generation.',
+      icon: Video,
+      features: ['Video Generation', 'Auto-editing', 'Voice Synthesis', 'Template Library'],
+      path: '/ai-video-generation'
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and animations with AI-powered generation for games, AR/VR, and marketing content.',
+      icon: Box,
+      features: ['3D Model Generation', 'Animation Creation', 'AR/VR Support', 'Texture Generation'],
+      path: '/ai-3d-generation'
+    },
+    {
+      title: 'AI Fashion Design',
+      description: 'AI-powered fashion design tools for creating innovative clothing and accessories.',
+      icon: Palette,
+      features: ['Design Generation', 'Trend Analysis', 'Color Matching', 'Pattern Creation'],
+      path: '/ai-fashion-design'
+    },
+    {
+      title: 'AI Inventory Management',
+      description: 'Smart inventory management with AI demand forecasting, automated reordering, and supply chain optimization.',
+      icon: Database,
+      features: ['Demand Forecasting', 'Automated Reordering', 'Supply Chain Optimization', 'Real-time Tracking'],
+      path: '/ai-inventory-management'
+    },
+    {
+      title: 'AI Scheduler',
+      description: 'Intelligent scheduling assistant that optimizes your calendar and automates meeting coordination.',
+      icon: Calendar,
+      features: ['Smart Meeting Scheduling', 'Conflict Resolution', 'Time Optimization', 'Calendar Integration'],
+      path: '/ai-scheduler'
+    },
+    {
+      title: 'AI Time Tracker',
+      description: 'Intelligent time tracking with AI productivity insights, automatic task detection, and performance analytics.',
+      icon: Clock,
+      features: ['Automatic Tracking', 'Productivity Insights', 'Task Detection', 'Performance Analytics'],
+      path: '/ai-time-tracker'
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Comprehensive HR management with AI-powered recruitment, employee analytics, and performance tracking.',
+      icon: Users,
+      features: ['Resume Screening', 'Interview Scheduling', 'Performance Analytics', 'Employee Onboarding'],
+      path: '/ai-hr-assistant'
+    },
+    {
+      title: 'AI Design Studio',
+      description: 'AI-powered design tool for creating logos, marketing materials, and visual content with professional quality.',
+      icon: Palette,
+      features: ['Logo Generation', 'Marketing Materials', 'Social Media Graphics', 'Brand Kit'],
+      path: '/ai-design-studio'
+    },
+    {
+      title: 'AI Content Studio',
+      description: 'Comprehensive content creation studio with AI-powered tools for all types of media content.',
+      icon: FileText,
+      features: ['Multi-format Content', 'Brand Consistency', 'SEO Optimization', 'Content Planning'],
+      path: '/ai-content-studio'
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with AI-powered data extraction, classification, and analysis.',
+      icon: FileText,
+      features: ['Document Classification', 'Data Extraction', 'OCR Processing', 'Automated Workflows'],
+      path: '/ai-document-processor'
+    },
+    {
+      title: 'AI Mobile App Builder',
+      description: 'Build native mobile apps with AI assistance, drag-and-drop interface, and automated deployment.',
+      icon: Smartphone,
+      features: ['Drag-and-drop Builder', 'AI Code Generation', 'Native Performance', 'Cross-platform'],
+      path: '/ai-mobile-app-builder'
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Advanced voice cloning technology for creating realistic synthetic voices for various applications.',
+      icon: Mic,
+      features: ['Voice Synthesis', 'Emotion Control', 'Language Support', 'Real-time Processing'],
+      path: '/ai-voice-cloning'
+    },
+    {
+      title: 'AI Predictive Analytics',
+      description: 'Advanced predictive analytics with machine learning models for forecasting and decision making.',
+      icon: BarChart,
+      features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning'],
+      path: '/ai-predictive-analytics'
+    },
+    {
+      title: 'AI Business Intelligence',
+      description: 'Transform data into actionable business insights with AI-powered recommendations and analytics.',
+      icon: BarChart,
+      features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning'],
+      path: '/ai-business-intelligence'
+    },
+    {
+      title: 'AI Cloud Infrastructure',
+      description: 'AI-optimized cloud infrastructure solutions for scalable and intelligent computing resources.',
+      icon: Cloud,
+      features: ['Auto-scaling', 'Resource Optimization', 'Cost Management', 'Performance Monitoring'],
+      path: '/ai-cloud-infrastructure'
+    },
+    {
+      title: 'AI AR/VR Solutions',
+      description: 'Immersive augmented and virtual reality solutions powered by artificial intelligence.',
+      icon: Eye,
+      features: ['3D Visualization', 'Interactive Experiences', 'Spatial Computing', 'Gesture Recognition'],
+      path: '/ar-vr-solutions'
     }
   ];
 
@@ -128,6 +281,146 @@ const ServicesPage: React.FC = () => {
       icon: Settings,
       features: ['Proactive Monitoring', 'Patch Management', 'Security Updates', 'Performance Optimization'],
       path: '/managed-it'
+    },
+    {
+      title: 'Cloud Migration Services',
+      description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
+      icon: Cloud,
+      features: ['Zero-downtime Migration', 'Performance Optimization', 'Cost Analysis', 'Security Hardening', 'Training & Support'],
+      path: '/cloud-migration'
+    },
+    {
+      title: 'DevOps Implementation',
+      description: 'Implement DevOps practices and CI/CD pipelines for faster, more reliable software delivery.',
+      icon: Code,
+      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Automated Testing', 'Monitoring & Alerting', 'Container Orchestration'],
+      path: '/devops-implementation'
+    },
+    {
+      title: 'Network Security',
+      description: 'Comprehensive network security solutions to protect your infrastructure from threats.',
+      icon: Shield,
+      features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Network Monitoring', 'Security Audits'],
+      path: '/network-security'
+    },
+    {
+      title: 'Data Backup & Recovery',
+      description: 'Reliable data backup and disaster recovery solutions to protect your critical business data.',
+      icon: Database,
+      features: ['Automated Backups', 'Disaster Recovery', 'Data Encryption', 'Testing & Validation', '24/7 Support'],
+      path: '/data-backup-recovery'
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to align technology with business objectives and drive growth.',
+      icon: Users,
+      features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Vendor Management', 'ROI Analysis'],
+      path: '/it-consulting'
+    },
+    {
+      title: 'Software Development',
+      description: 'Custom software development services tailored to your specific business requirements.',
+      icon: Code,
+      features: ['Custom Applications', 'Web Development', 'Mobile Apps', 'API Development', 'Integration Services'],
+      path: '/software-development'
+    },
+    {
+      title: 'IT Training & Support',
+      description: 'Comprehensive IT training programs and ongoing support for your team.',
+      icon: GraduationCap,
+      features: ['Technical Training', 'Certification Programs', 'User Support', 'Documentation', 'Knowledge Transfer'],
+      path: '/it-training-support'
+    },
+    {
+      title: 'IT Compliance & Governance',
+      description: 'Ensure compliance with industry regulations and implement IT governance frameworks.',
+      icon: Lock,
+      features: ['Compliance Audits', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
+      path: '/it-compliance-governance'
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset lifecycle management to optimize costs and performance.',
+      icon: Settings,
+      features: ['Asset Inventory', 'Lifecycle Management', 'Cost Optimization', 'License Management', 'Disposal Services'],
+      path: '/it-asset-management'
+    },
+    {
+      title: 'Remote IT Support',
+      description: '24/7 remote IT support services to keep your systems running smoothly.',
+      icon: Smartphone,
+      features: ['24/7 Support', 'Remote Troubleshooting', 'System Maintenance', 'Quick Response', 'Proactive Monitoring'],
+      path: '/remote-it-support'
+    },
+    {
+      title: 'IT Project Management',
+      description: 'Professional IT project management to ensure successful delivery of technology initiatives.',
+      icon: Calendar,
+      features: ['Project Planning', 'Resource Management', 'Timeline Control', 'Risk Management', 'Quality Assurance'],
+      path: '/it-project-management'
+    },
+    {
+      title: 'IT Vendor Management',
+      description: 'Manage IT vendors and contracts to optimize costs and service quality.',
+      icon: Building,
+      features: ['Vendor Selection', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization', 'Relationship Management'],
+      path: '/it-vendor-management'
+    },
+    {
+      title: 'IT Disaster Recovery',
+      description: 'Comprehensive disaster recovery planning and implementation to ensure business continuity.',
+      icon: Shield,
+      features: ['Disaster Recovery Planning', 'Backup Systems', 'Recovery Testing', 'Business Continuity', 'Emergency Response'],
+      path: '/it-disaster-recovery'
+    },
+    {
+      title: 'IT Performance Optimization',
+      description: 'Optimize IT systems and infrastructure for maximum performance and efficiency.',
+      icon: TrendingUp,
+      features: ['Performance Analysis', 'System Tuning', 'Capacity Planning', 'Load Balancing', 'Monitoring Setup'],
+      path: '/it-performance-optimization'
+    },
+    {
+      title: 'IT Security Auditing',
+      description: 'Comprehensive security audits to identify vulnerabilities and improve security posture.',
+      icon: Search,
+      features: ['Security Assessment', 'Vulnerability Scanning', 'Penetration Testing', 'Compliance Review', 'Remediation Planning'],
+      path: '/it-security-auditing'
+    },
+    {
+      title: 'IT Integration Services',
+      description: 'Seamlessly integrate different IT systems and applications for improved efficiency.',
+      icon: Settings,
+      features: ['System Integration', 'API Development', 'Data Synchronization', 'Workflow Automation', 'Testing & Validation'],
+      path: '/it-integration-services'
+    },
+    {
+      title: 'IT Monitoring & Alerting',
+      description: '24/7 monitoring and alerting services to ensure optimal system performance.',
+      icon: Activity,
+      features: ['Real-time Monitoring', 'Proactive Alerting', 'Performance Metrics', 'Incident Response', 'Custom Dashboards'],
+      path: '/it-monitoring-alerting'
+    },
+    {
+      title: 'IT Documentation Services',
+      description: 'Comprehensive IT documentation to improve knowledge management and support efficiency.',
+      icon: FileText,
+      features: ['System Documentation', 'Process Documentation', 'User Manuals', 'Technical Specifications', 'Knowledge Base'],
+      path: '/it-documentation-services'
+    },
+    {
+      title: 'IT Change Management',
+      description: 'Structured approach to managing IT changes to minimize risks and ensure smooth transitions.',
+      icon: Settings,
+      features: ['Change Planning', 'Risk Assessment', 'Testing & Validation', 'Rollback Procedures', 'Communication'],
+      path: '/it-change-management'
+    },
+    {
+      title: 'IT Capacity Planning',
+      description: 'Strategic capacity planning to ensure your IT infrastructure can handle future growth.',
+      icon: BarChart,
+      features: ['Capacity Analysis', 'Growth Projections', 'Resource Planning', 'Cost Optimization', 'Scaling Strategies'],
+      path: '/it-capacity-planning'
     }
   ];
 
@@ -375,76 +668,9 @@ const ServicesPage: React.FC = () => {
         </main>
 
         <Footer />
-=======
-
-const ServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services to transform your business operations." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT services to transform your business operations and drive growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-4">
-                Cutting-edge artificial intelligence services to automate and optimize your business processes.
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-300 mb-4">
-                Scalable and secure cloud solutions to support your growing business needs.
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• AWS/Azure/GCP Migration</li>
-                <li>• DevOps Implementation</li>
-                <li>• Container Orchestration</li>
-                <li>• Auto-scaling Solutions</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive security solutions to protect your digital assets and data.
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Security Audits</li>
-                <li>• Threat Detection</li>
-                <li>• Compliance Management</li>
-                <li>• Incident Response</li>
-              </ul>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default ServicesPage;
-=======
-export default ServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
