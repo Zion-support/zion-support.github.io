@@ -139,10 +139,7 @@ const ServicesPage: React.FC = () => {
     { number: '50+', label: 'Expert Engineers', icon: Award }
   ];
 
-  const benefits = [
-=======
   const additionalServices = [
->>>>>>> main
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

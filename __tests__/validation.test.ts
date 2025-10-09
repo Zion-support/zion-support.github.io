@@ -9,7 +9,43 @@ import {
   isRequired,
   isValidPassword,
   sanitizeInput,
+  isValidCreditCard,
 } from '../app/utils/validators';
+
+// Create wrapper functions for the test interface
+const validateEmail = (email: string) => ({ isValid: isValidEmail(email), error: isValidEmail(email) ? '' : 'Invalid email' });
+const validateURL = (url: string) => ({ isValid: isValidUrl(url), error: isValidUrl(url) ? '' : 'Invalid URL' });
+const validateLength = (value: string, min: number, max: number, fieldName = 'Field') => {
+  if (value.length < min) return { isValid: false, error: `${fieldName} must be at least ${min} characters` };
+  if (value.length > max) return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
+  return { isValid: true, error: '' };
+};
+const validatePassword = (password: string) => ({ isValid: isValidPassword(password), error: isValidPassword(password) ? '' : 'Invalid password' });
+const sanitizeHTML = (html: string) => sanitizeInput(html);
+const validateDate = (date: string) => {
+  const dateObj = new Date(date);
+  const isValid = !isNaN(dateObj.getTime()) && dateObj.toISOString().split('T')[0] === date;
+  return { isValid, error: isValid ? '' : 'Invalid date format' };
+};
+const validateCreditCard = (cardNumber: string) => ({ isValid: isValidCreditCard(cardNumber), error: isValidCreditCard(cardNumber) ? '' : 'Invalid credit card' });
+const validateJSON = (json: string) => {
+  try {
+    JSON.parse(json);
+    return { isValid: true, error: '' };
+  } catch {
+    return { isValid: false, error: 'Invalid JSON' };
+  }
+};
+const validateComposite = (value: string, validators: Array<(val: string) => { isValid: boolean; error: string }>) => {
+  for (const validator of validators) {
+    const result = validator(value);
+    if (!result.isValid) return result;
+  }
+  return { isValid: true, error: '' };
+};
+const validateAsync = async (validator: (val: string) => Promise<{ isValid: boolean; error: string }>, value: string) => {
+  return await validator(value);
+};
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {

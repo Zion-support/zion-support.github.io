@@ -1,13 +1,8 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Cloud, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap, Database, Server } from 'lucide-react';
-=======
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
 
 const CloudMigrationPage: React.FC = () => {
   const features = [
