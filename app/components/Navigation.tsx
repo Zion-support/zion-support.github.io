@@ -53,7 +53,14 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine', icon: Target, description: 'Personalization AI' },
+    { name: 'AI Decision Engine', href: '/ai-decision-engine', icon: Brain, description: 'Decision AI' },
+    { name: 'AI Creative Studio', href: '/ai-creative-studio', icon: Code, description: 'Creative AI' },
+    { name: 'AI Forecasting Suite', href: '/ai-forecasting-suite', icon: BarChart, description: 'Predictive AI' },
+    { name: 'AI Process Mining', href: '/ai-process-mining', icon: Settings, description: 'Process AI' },
+    { name: 'AI Personalization Engine', href: '/ai-personalization-engine', icon: Users, description: 'Personalization' },
+    { name: 'AI Research Assistant', href: '/ai-research-assistant', icon: Brain, description: 'Research AI' }
   ];
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
@@ -63,10 +70,17 @@ const Navigation: React.FC = () => {
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
+    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
+    { name: 'System Integration', href: '/system-integration', icon: Settings, description: 'System Integration' },
+    { name: 'Mobile Device Management', href: '/mobile-device-management', icon: Smartphone, description: 'MDM Solutions' },
+    { name: 'Data Backup & Recovery', href: '/data-backup-recovery', icon: Database, description: 'Backup Solutions' },
+    { name: 'Web Development', href: '/web-development', icon: Code, description: 'Web Applications' },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: Zap, description: 'System Optimization' },
+    { name: 'IT Audit & Assessment', href: '/it-audit-assessment', icon: Shield, description: 'IT Audits' },
+    { name: 'IT Strategy Consulting', href: '/it-strategy-consulting', icon: Users, description: 'Strategic Planning' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '75+ AI Tools' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
     { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling' },
@@ -82,7 +96,31 @@ const Navigation: React.FC = () => {
     { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Target, description: 'Project AI' },
+    { name: 'AI Predictor', href: '/ai-predictor', icon: BarChart, description: 'Predictive AI' },
+    { name: 'AI Video Creator', href: '/ai-video-creator', icon: Code, description: 'Video AI' },
+    { name: 'AI Voice Studio', href: '/ai-voice-studio', icon: Users, description: 'Voice AI' },
+    { name: 'AI Data Miner', href: '/ai-data-miner', icon: BarChart, description: 'Data Mining' },
+    { name: 'AI Code Reviewer', href: '/ai-code-reviewer', icon: Code, description: 'Code Review' },
+    { name: 'AI App Tester', href: '/ai-app-tester', icon: Smartphone, description: 'App Testing' },
+    { name: 'AI Market Research', href: '/ai-market-research', icon: Target, description: 'Market Research' },
+    { name: 'AI Store Optimizer', href: '/ai-store-optimizer', icon: Globe, description: 'E-commerce AI' },
+    { name: 'AI Payment Processor', href: '/ai-payment-processor', icon: TrendingUp, description: 'Payment AI' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Database, description: 'Inventory AI' },
+    { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Target, description: 'Pricing AI' },
+    { name: 'AI Shipping Optimizer', href: '/ai-shipping-optimizer', icon: Globe, description: 'Shipping AI' },
+    { name: 'AI Review Manager', href: '/ai-review-manager', icon: Star, description: 'Review AI' },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users, description: 'HR AI' },
+    { name: 'AI Compliance Manager', href: '/ai-compliance-manager', icon: Shield, description: 'Compliance AI' },
+    { name: 'AI Office Manager', href: '/ai-office-manager', icon: Settings, description: 'Office AI' },
+    { name: 'AI KPI Tracker', href: '/ai-kpi-tracker', icon: BarChart, description: 'KPI Tracking' },
+    { name: 'AI Budget Planner', href: '/ai-budget-planner', icon: TrendingUp, description: 'Budget AI' },
+    { name: 'AI Growth Tracker', href: '/ai-growth-tracker', icon: BarChart, description: 'Growth AI' },
+    { name: 'AI Security Scanner', href: '/ai-security-scanner', icon: Shield, description: 'Security AI' },
+    { name: 'AI Backup Manager', href: '/ai-backup-manager', icon: Database, description: 'Backup AI' },
+    { name: 'AI Password Manager', href: '/ai-password-manager', icon: Lock, description: 'Password AI' },
+    { name: 'AI Audit Tracker', href: '/ai-audit-tracker', icon: Shield, description: 'Audit AI' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },

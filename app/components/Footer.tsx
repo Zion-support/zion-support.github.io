@@ -20,7 +20,14 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Personalization AI' },
+    { name: 'AI Decision Engine', url: '/ai-decision-engine', description: 'Decision AI' },
+    { name: 'AI Creative Studio', url: '/ai-creative-studio', description: 'Creative AI' },
+    { name: 'AI Forecasting Suite', url: '/ai-forecasting-suite', description: 'Predictive AI' },
+    { name: 'AI Process Mining', url: '/ai-process-mining', description: 'Process AI' },
+    { name: 'AI Personalization Engine', url: '/ai-personalization-engine', description: 'Personalization' },
+    { name: 'AI Research Assistant', url: '/ai-research-assistant', description: 'Research AI' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -31,10 +38,17 @@ const Footer: React.FC = memo(() => {
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
+    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' },
+    { name: 'System Integration', url: '/system-integration', description: 'System integration' },
+    { name: 'Mobile Device Management', url: '/mobile-device-management', description: 'MDM solutions' },
+    { name: 'Data Backup & Recovery', url: '/data-backup-recovery', description: 'Backup solutions' },
+    { name: 'Web Development', url: '/web-development', description: 'Web applications' },
+    { name: 'Performance Optimization', url: '/performance-optimization', description: 'System optimization' },
+    { name: 'IT Audit & Assessment', url: '/it-audit-assessment', description: 'IT audits' },
+    { name: 'IT Strategy Consulting', url: '/it-strategy-consulting', description: 'Strategic planning' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '75+ AI-powered tools' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
@@ -49,7 +63,31 @@ const Footer: React.FC = memo(() => {
     { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
     { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
     { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project AI' },
+    { name: 'AI Predictor', url: '/ai-predictor', description: 'Predictive AI' },
+    { name: 'AI Video Creator', url: '/ai-video-creator', description: 'Video AI' },
+    { name: 'AI Voice Studio', url: '/ai-voice-studio', description: 'Voice AI' },
+    { name: 'AI Data Miner', url: '/ai-data-miner', description: 'Data mining' },
+    { name: 'AI Code Reviewer', url: '/ai-code-reviewer', description: 'Code review' },
+    { name: 'AI App Tester', url: '/ai-app-tester', description: 'App testing' },
+    { name: 'AI Market Research', url: '/ai-market-research', description: 'Market research' },
+    { name: 'AI Store Optimizer', url: '/ai-store-optimizer', description: 'E-commerce AI' },
+    { name: 'AI Payment Processor', url: '/ai-payment-processor', description: 'Payment AI' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Inventory AI' },
+    { name: 'AI Price Optimizer', url: '/ai-price-optimizer', description: 'Pricing AI' },
+    { name: 'AI Shipping Optimizer', url: '/ai-shipping-optimizer', description: 'Shipping AI' },
+    { name: 'AI Review Manager', url: '/ai-review-manager', description: 'Review AI' },
+    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'HR AI' },
+    { name: 'AI Compliance Manager', url: '/ai-compliance-manager', description: 'Compliance AI' },
+    { name: 'AI Office Manager', url: '/ai-office-manager', description: 'Office AI' },
+    { name: 'AI KPI Tracker', url: '/ai-kpi-tracker', description: 'KPI tracking' },
+    { name: 'AI Budget Planner', url: '/ai-budget-planner', description: 'Budget AI' },
+    { name: 'AI Growth Tracker', url: '/ai-growth-tracker', description: 'Growth AI' },
+    { name: 'AI Security Scanner', url: '/ai-security-scanner', description: 'Security AI' },
+    { name: 'AI Backup Manager', url: '/ai-backup-manager', description: 'Backup AI' },
+    { name: 'AI Password Manager', url: '/ai-password-manager', description: 'Password AI' },
+    { name: 'AI Audit Tracker', url: '/ai-audit-tracker', description: 'Audit AI' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },

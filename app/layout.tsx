@@ -23,7 +23,37 @@ export default function RootLayout({
       'Digital Transformation',
       'Cloud Services',
       'Automation',
-      'Business Intelligence'
+      'Business Intelligence',
+      'Micro SAAS Solutions',
+      'AI Marketing',
+      'AI Automation',
+      'AI Healthcare',
+      'AI Fintech',
+      'AI Content Generation',
+      'AI Data Analytics',
+      'AI E-commerce',
+      'AI Cybersecurity',
+      'AI Mobile Apps',
+      'AI Customer Support',
+      'AI Sales Automation',
+      'AI Workflow Automation',
+      'AI Data Visualization',
+      'AI Lead Generation',
+      'AI Document Processing',
+      'AI Recommendation Engine',
+      'AI Decision Engine',
+      'AI Creative Studio',
+      'AI Forecasting Suite',
+      'AI Process Mining',
+      'AI Personalization Engine',
+      'AI Research Assistant',
+      'System Integration',
+      'Mobile Device Management',
+      'Data Backup Recovery',
+      'Web Development',
+      'Performance Optimization',
+      'IT Audit Assessment',
+      'IT Strategy Consulting'
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -118,8 +148,8 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 75+ micro SAAS tools, 500+ companies transformed, $50M+ annual savings. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, micro SAAS, AI tools, IT services, cybersecurity, DevOps, cloud migration, AI marketing, AI automation, AI healthcare, AI fintech, AI content generation, AI data analytics, AI e-commerce, AI mobile apps, AI customer support, AI sales automation, AI workflow automation, AI data visualization, AI lead generation, AI document processing, AI recommendation engine, AI decision engine, AI creative studio, AI forecasting suite, AI process mining, AI personalization engine, AI research assistant, system integration, mobile device management, data backup recovery, web development, performance optimization, IT audit assessment, IT strategy consulting" />
         <meta name="theme-color" content="#4f46e5" />
         <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
@@ -158,7 +188,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 75+ micro SAAS tools, 500+ companies transformed, $50M+ annual savings." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -167,7 +197,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 75+ micro SAAS tools, 500+ companies transformed, $50M+ annual savings." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
