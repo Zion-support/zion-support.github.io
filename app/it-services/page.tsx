@@ -1,15 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import { ArrowRight, Star, CheckCircle, Cloud, Shield, Server, Database, Network, Monitor, Zap } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Cloud, Server, Database, Network, Monitor } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {
-<<<<<<< HEAD
       title: 'IT Infrastructure Management',
       description: 'Comprehensive IT infrastructure design, implementation, and management for enterprise organizations.',
       icon: '🏗️',

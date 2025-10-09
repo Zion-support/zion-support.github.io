@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 
 const AIContentGenerationPage: React.FC = () => {
@@ -349,4 +346,3 @@ const AIContentGenerationPage: React.FC = () => {
 };
 
 export default AIContentGenerationPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
