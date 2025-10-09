@@ -32,18 +32,18 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <a href="tel:+13026009898" className="text-indigo-600 hover:text-indigo-800">
-                      (302) 600-9898
+                    <a href="tel:+13024640950" className="text-indigo-600 hover:text-indigo-800">
+                      (302) 464-0950
                     </a>
                   </div>
 
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
                     <a
-                      href="mailto:info@ziontechgroup.com"
+                      href="mailto:kleber@ziontechgroup.com"
                       className="text-indigo-600 hover:text-indigo-800"
                     >
-                      info@ziontechgroup.com
+                      kleber@ziontechgroup.com
                     </a>
                   </div>
                 </div>

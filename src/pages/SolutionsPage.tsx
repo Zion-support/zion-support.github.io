@@ -1,90 +1,129 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Zap, Shield, Globe, Database, Cloud } from 'lucide-react';
 
 const SolutionsPage: React.FC = () => {
-  const solutions = [
+  const services = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'AI-Powered Automation',
-      description: 'Streamline your workflows with intelligent automation solutions.',
-      features: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Routing',
-        'Performance Monitoring',
-      ],
+      title: 'AI-Powered Enterprise Solutions',
+      description: 'Transform your business with cutting-edge AI technology that delivers 300% ROI and 70% cost reduction.',
+      features: ['Machine Learning Models', 'Predictive Analytics', 'Natural Language Processing', 'Computer Vision'],
+      icon: '🤖'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'AI Security Solutions',
-      description: 'Protect your business with advanced AI-powered security systems.',
-      features: [
-        'Threat Detection',
-        'Anomaly Detection',
-        'Risk Assessment',
-        'Compliance Monitoring',
-      ],
+      title: 'Quantum Computing Services',
+      description: 'Leverage quantum computing power for complex problem-solving and optimization challenges.',
+      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],
+      icon: '⚛️'
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: 'Global AI Platform',
-      description: 'Deploy AI solutions across multiple regions with our global platform.',
-      features: ['Multi-Region Deployment', 'Edge Computing', 'Global CDN', 'Localized Processing'],
+      title: 'Digital Transformation',
+      description: 'Modernize your business processes with our comprehensive digital transformation strategies.',
+      features: ['Process Automation', 'Cloud Migration', 'Data Analytics', 'System Integration'],
+      icon: '🔄'
     },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your business with advanced cybersecurity measures and threat detection systems.',
+      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
+      icon: '🔒'
+    },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scale your infrastructure with secure, reliable, and efficient cloud solutions.',
+      features: ['Cloud Architecture', 'Migration Services', 'Monitoring', 'Optimization'],
+      icon: '☁️'
+    },
+    {
+      title: 'Business Intelligence',
+      description: 'Make data-driven decisions with our advanced business intelligence and analytics solutions.',
+      features: ['Data Visualization', 'Real-time Dashboards', 'Predictive Analytics', 'Reporting'],
+      icon: '📊'
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <>
       <Helmet>
-        <title>Solutions - Zion Tech Group</title>
+        <title>AI & IT Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Tailored solutions for enterprise, SMB, and startup businesses. AI-powered solutions that drive growth and efficiency."
+          content="Comprehensive AI and IT solutions including enterprise AI, quantum computing, digital transformation, and cybersecurity services."
         />
         <meta
           name="keywords"
-          content="enterprise solutions, SMB solutions, startup solutions, AI business solutions"
+          content="AI solutions, quantum computing, digital transformation, cybersecurity, cloud services, business intelligence"
         />
+        <meta property="og:title" content="AI & IT Solutions | Zion Tech Group" />
+        <meta
+          property="og:description"
+          content="Comprehensive AI and IT solutions including enterprise AI, quantum computing, digital transformation, and cybersecurity services."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/services" />
       </Helmet>
 
-      <main className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Solutions</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive AI solutions designed to transform your business operations
-              and drive innovation.
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl font-bold mb-6">Our Solutions</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed to transform your business and drive unprecedented growth.
             </p>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="text-blue-600 mr-3">{solution.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
+        {/* Services Grid */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-700">
+                        <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <p className="text-gray-600 mb-4">{solution.description}</p>
-
-                <ul className="space-y-2">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-gray-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact our experts to discuss how our solutions can drive your business forward.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Call: (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Email Us
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
