@@ -68,13 +68,19 @@ export default function HomePage() {
   }
 
   return (
-
-      <main className="relative z-10">
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="relative z-10">
         {/* Hero Section */}
         <section 
           className="relative py-20 px-4 text-center overflow-hidden"
           aria-labelledby="hero-heading"
         >
+          <div className="max-w-7xl mx-auto">
+            <h1 
+              id="hero-heading"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-glow"
             >
               Zion Tech Group
             </h1>
@@ -82,25 +88,48 @@ export default function HomePage() {
               Advanced AI and IT Solutions
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. 
+              Transform your business with cutting-edge technology and 100+ ready-to-use micro SAAS applications.
             </p>
             
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a 
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center text-lg"
+                onClick={handlePhoneClick}
+              >
+                📞 Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-200 flex items-center justify-center text-lg"
+              >
+                ✉️ Get Free Consultation
+              </a>
+            </div>
+            
             {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 max-w-6xl mx-auto">
               <div className="cyber-card hologram-card p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl mb-3">💰</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+              <div className="cyber-card hologram-card p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl mb-3">🔒</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+              <div className="cyber-card hologram-card p-4 sm:p-6">
                 <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Rapid Deployment</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Get your AI solutions up and running in weeks, not months</p>
+              </div>
+              <div className="cyber-card hologram-card p-4 sm:p-6">
+                <div className="text-2xl sm:text-3xl mb-3">🚀</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">100+ Micro SAAS</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Ready-to-use applications for every business need, starting from $29/month</p>
               </div>
             </div>
 

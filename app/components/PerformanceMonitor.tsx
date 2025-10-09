@@ -1,4 +1,6 @@
 
+import React, { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -17,3 +19,24 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
+    // Performance monitoring logic would go here
+    return () => {
+      // Cleanup
+    };
+  }, []);
+
+  return (
+    <div className="performance-monitor">
+      <h3>Performance Metrics</h3>
+      <div className="metrics">
+        <div>FCP: {metrics.fcp || 'N/A'}</div>
+        <div>LCP: {metrics.lcp || 'N/A'}</div>
+        <div>FID: {metrics.fid || 'N/A'}</div>
+        <div>CLS: {metrics.cls || 'N/A'}</div>
+        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
