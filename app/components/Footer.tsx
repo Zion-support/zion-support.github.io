@@ -33,38 +33,6 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' }
-=======
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Code, Star, Globe, Users, TrendingUp } from 'lucide-react';
-
-const Footer: React.FC = memo(() => {
-  const aiServices = [
-    { name: 'AI Solutions', url: '/ai-services', icon: Brain },
-    { name: 'AI Marketing', url: '/ai-marketing', icon: TrendingUp },
-    { name: 'AI Automation', url: '/ai-automation', icon: Zap },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Users },
-    { name: 'AI Fintech', url: '/ai-fintech', icon: TrendingUp },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: TrendingUp },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Globe },
-  ];
-
-  const itServices = [
-    { name: 'IT Solutions', url: '/it-services', icon: Code },
-    { name: 'Micro SAAS', url: '/micro-saas', icon: Star },
-    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Globe },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', icon: Globe },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', icon: Code },
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', icon: Zap },
-    { name: 'Blockchain & Web3', url: '/blockchain', icon: Shield },
-    { name: 'IoT & Edge Computing', url: '/iot-edge', icon: Globe },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', icon: Zap },
-    { name: 'Robotics', url: '/robotics', icon: Code },
-    { name: 'Business Intelligence', url: '/business-intelligence', icon: TrendingUp },
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
   ];
 
   const companyLinks = [
