@@ -4,7 +4,6 @@
  */
 
 import type { PerformanceMetrics } from '../types/app.types';
-
 /**
  * Performance Observer Wrapper
  */

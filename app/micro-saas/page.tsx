@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     // AI-Powered Developer Tools
@@ -1425,7 +1424,6 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-ab91
     }
   ];
 

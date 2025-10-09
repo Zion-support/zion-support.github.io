@@ -39,44 +39,42 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(img => imageObserver.observe(img));
     };
 
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
-      });
+    // Optimize fonts
+    const optimizeFonts = () => {
+      if ('fonts' in document) {
+        document.fonts.ready.then(() => {
+          document.body.classList.add('fonts-loaded');
+        });
+      }
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalJS();
+    optimizeFonts();
 
     // Performance monitoring
-    if ('performance' in window) {
+    if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
+        for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
-        });
+        }
       });
 
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
     }
 
     return () => {
-      // Cleanup if needed
+      // Cleanup
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const observer = new PerformanceObserver(() => {});
+        observer.disconnect();
+      }
     };
   }, []);
 
