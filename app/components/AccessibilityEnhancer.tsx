@@ -48,7 +48,8 @@ const AccessibilityEnhancer: React.FC = () => {
       }
     };
 
-<<<<<<< HEAD
+    document.addEventListener('keydown', handleKeyDown);
+
     const addFocusManagement = () => {
       // Add focus management for modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"]');
@@ -70,18 +71,14 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Run enhancements
-    addAriaLabels();
     addFocusManagement();
     enhanceKeyboardNavigation();
 
     // Set up observer for dynamic content
     const observer = new MutationObserver(() => {
-      addAriaLabels();
       addFocusManagement();
       enhanceKeyboardNavigation();
     });
-=======
-    document.addEventListener('keydown', handleKeyDown);
 
     // Add high contrast mode support
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
@@ -105,7 +102,6 @@ const AccessibilityEnhancer: React.FC = () => {
         document.documentElement.classList.remove('reduce-motion');
       }
     };
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
     prefersReducedMotion.addEventListener('change', updateReducedMotion);
     updateReducedMotion({ matches: prefersReducedMotion.matches } as MediaQueryListEvent);

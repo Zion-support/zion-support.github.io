@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -8,10 +8,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-=======
-import React, { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -24,113 +20,20 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Monitor Core Web Vitals
-<<<<<<< HEAD
-    const measureLCP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-=======
     getCLS((metric) => {
-      console.log('CLS:', metric);
+      setMetrics(prev => ({ ...prev, cls: metric.value }));
       // Send to analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
           event_category: 'Performance',
           event_label: 'CLS',
           value: Math.round(metric.value * 1000),
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
         });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-        return observer;
       }
-<<<<<<< HEAD
-      return null;
-    };
-
-    const measureFID = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-          });
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-        return observer;
-      }
-      return null;
-    };
-
-    const measureCLS = () => {
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-        return observer;
-      }
-      return null;
-    };
-
-    const measureFCP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['paint'] });
-        return observer;
-      }
-      return null;
-    };
-
-    const measureTTFB = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (entry.entryType === 'navigation') {
-              setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['navigation'] });
-        return observer;
-      }
-      return null;
-    };
-
-    // Start monitoring
-    const observers = [
-      measureLCP(),
-      measureFID(),
-      measureCLS(),
-      measureFCP(),
-      measureTTFB()
-    ].filter(Boolean);
-
-    // Log metrics in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance metrics:', metrics);
-    }
-=======
     });
 
     getFID((metric) => {
-      console.log('FID:', metric);
+      setMetrics(prev => ({ ...prev, fid: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
           event_category: 'Performance',
@@ -141,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
     });
 
     getFCP((metric) => {
-      console.log('FCP:', metric);
+      setMetrics(prev => ({ ...prev, fcp: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
           event_category: 'Performance',
@@ -152,7 +55,7 @@ const PerformanceMonitor: React.FC = () => {
     });
 
     getLCP((metric) => {
-      console.log('LCP:', metric);
+      setMetrics(prev => ({ ...prev, lcp: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
           event_category: 'Performance',
@@ -163,7 +66,7 @@ const PerformanceMonitor: React.FC = () => {
     });
 
     getTTFB((metric) => {
-      console.log('TTFB:', metric);
+      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
           event_category: 'Performance',
@@ -173,16 +76,22 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
   }, []);
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
-    // Cleanup
-    return () => {
-      observers.forEach(observer => observer?.disconnect());
-    };
-  }, [metrics]);
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
-  // This component doesn't render anything visible
-  return null;
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="mb-2 font-bold">Performance Metrics</div>
+      <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Loading...'}</div>
+      <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Loading...'}</div>
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Loading...'}</div>
+      <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Loading...'}</div>
+      <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Loading...'}</div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
