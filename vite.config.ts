@@ -5,11 +5,14 @@ import { resolve } from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-f409
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6669
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -25,6 +28,7 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   buil,
@@ -45,6 +49,8 @@ export default defineConfig({
   },
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-f409
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6669
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -85,6 +91,7 @@ export default defineConfig({
           }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -116,6 +123,10 @@ export default defineConfig({
 =======
           return 'app';
 >>>>>>> cursor/website-audit-and-update-with-deployment-f409
+=======
+          
+          return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6669
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -138,6 +149,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
         drop_debugger: true,
       },
       mangle: {
@@ -147,11 +159,12 @@ export default defineConfig({
         comments: false,
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6669
         drop_debugger: true
       },
       mangle: {
         safari10: true
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
       },
       format: {
         comments: false
@@ -162,24 +175,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-<<<<<<< HEAD
-    assetsInlineLimit: 4096,
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  preview: {
-    port: 4173,
-    open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-  css: {
-    devSourcemap: true,
-  },
-=======
     assetsInlineLimit: 4096
   },
   server: {
@@ -196,5 +191,4 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 });
