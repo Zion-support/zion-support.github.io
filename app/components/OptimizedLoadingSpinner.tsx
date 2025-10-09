@@ -1,134 +1,62 @@
-import React, { memo, useMemo } from 'react';
+'use client';
+
+import React from 'react';
+
 interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'gray';
+  fullScreen?: boolean;
   text?: string;
   className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({
-    size = 'md',
-    variant = 'spinner',
-    text = 'Loading...',
-    className = '',
-    color = 'blue',
-    fullScreen = false,
-  }) => {
-    const sizeClasses = useMemo(
-      () => ({
-        xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16',
-      }),
-      []
-    );
-    const textSizeClasses = useMemo(
-      () => ({
-        xs: 'text-xs',
-        sm: 'text-sm',
-        md: 'text-base',
-        lg: 'text-lg',
-        xl: 'text-xl',
-      }),
-      []
-    );
-    const colorClasses = useMemo(
-      () => ({
-        blue: 'border-blue-600 bg-blue-600',
-        gray: 'border-gray-600 bg-gray-600',
-        green: 'border-green-600 bg-green-600',
-        red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',
-      }),
-      []
-    );
-    const renderSpinner = useMemo(() => {
-      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
-      switch (variant) {
-        case 'dots':
-          return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2].map(i => (
-                <div
-                  key={i}
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                />
-              ))}
-            </div>
-          );
-        case 'pulse':
-          return (
-            <div
-              className={`${baseClasses} rounded-full animate-pulse`}
-              role='status'
-              aria-label='Loading'
-            />
-          );
-        case 'skeleton':
-          return (
-            <div className='space-y-2' role='status' aria-label='Loading'>
-              <div
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-              />
-              <div
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' }}
-              />
-              <div
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' }}
-              />
-            </div>
-          );
-        case 'bars':
-          return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2, 3].map(i => (
-                <div
-                  key={i}
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{
-                    height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
-                />
-              ))}
-            </div>
-          );
-        case 'spinner':
-        default:
-          return (
-            <div
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status'
-              aria-label='Loading'
-            />
-          );
-      }
-    }, [size, variant, color, sizeClasses, colorClasses]);
-    const containerClasses = useMemo(() => {
-      const _baseClasses = 'flex items-center justify-center';
-      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
-      return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'primary',
+  fullScreen = false,
+  text,
+  className = '',
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
+  };
+
+  const colorClasses = {
+    primary: 'text-cyan-500',
+    secondary: 'text-purple-500',
+    white: 'text-white',
+    gray: 'text-gray-500',
+  };
+
+  const baseClasses = 'animate-spin rounded-full border-2 border-gray-300 border-t-transparent';
+  const fullScreenClasses = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+
+  const spinner = (
+    <div className={`${baseClasses} ${sizeClasses[size]} ${colorClasses[color]} ${className}`}>
+      <span className="sr-only">Loading...</span>
+    </div>
+  );
+
+  if (fullScreen) {
     return (
-      <div className={containerClasses}>
-        <div className='text-center'>
-          {renderSpinner}
-          {text && (
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-              {text}
-            </p>
-          )}
+      <div className={fullScreenClasses}>
+        <div className="bg-white rounded-lg p-6 flex flex-col items-center space-y-4">
+          {spinner}
+          {text && <p className="text-gray-600 text-sm">{text}</p>}
         </div>
       </div>
     );
   }
-);
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+  return (
+    <div className="flex flex-col items-center space-y-2">
+      {spinner}
+      {text && <p className="text-gray-600 text-sm">{text}</p>}
+    </div>
+  );
+};
+
 export default OptimizedLoadingSpinner;
