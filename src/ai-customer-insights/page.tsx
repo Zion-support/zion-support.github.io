@@ -9,28 +9,20 @@ const AICustomerInsightsPage: React.FC = () => {
     {
       icon: Eye,
       title: 'Customer Analytics',
-      {
-
-        description: 'AI-powered customer behavior analysis',
+      description: 'AI-powered customer behavior analysis',
       benefits: ['Behavior tracking', 'Pattern recognition', 'Insight generation']
     },
       icon: Target,
       title: 'Segmentation',
-      {
-
-        description: 'Intelligent customer segmentation and targeting',
+      description: 'Intelligent customer segmentation and targeting',
       benefits: ['Smart segmentation', 'Persona creation', 'Targeted marketing']
       icon: Zap,
       title: 'Predictive Insights',
-      {
-
-        description: 'Predictive customer insights and recommendations',
+      description: 'Predictive customer insights and recommendations',
       benefits: ['Churn prediction', 'Lifetime value', 'Next best action']
       icon: Settings,
       title: 'Personalization',
-      {
-
-        description: 'AI-driven personalization and recommendations',
+      description: 'AI-driven personalization and recommendations',
       benefits: ['Personalized experiences', 'Product recommendations', 'Content customization']
     }
   ];
@@ -51,7 +43,8 @@ const AICustomerInsightsPage: React.FC = () => {
             Understand your customers like never before with AI-powered insights. 
             Analyze behavior, predict needs, and deliver personalized experiences.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AICustomerInsightsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

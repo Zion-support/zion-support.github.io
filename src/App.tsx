@@ -173,8 +173,7 @@ const App: React.FC = () => {
         robots: 'index, follow',
         language: 'en',
         author: 'Zion Tech Group',
-        {
-          publisher: 'Zion Tech Group',
+        publisher: 'Zion Tech Group',
 
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
@@ -313,7 +312,8 @@ const App: React.FC = () => {
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center">
+  </p>
+<div className="min-h-screen flex items-center justify-center">
       <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>

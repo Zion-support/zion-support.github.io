@@ -260,7 +260,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
 
           {/* Research Areas Tabs */}
-          <div className="mb-12">
+          </p>
+<div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => (
                 <button
@@ -286,7 +287,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
 
           {/* Research Projects */}
-          <div className="mb-16">
+          </p>
+<div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Current Research Projects
             </h2>
@@ -297,13 +299,15 @@ const ResearchDevelopmentPage: React.FC = () => {
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>
-                    <div className="flex-1">
+                    </p>
+<div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-4">
+                  </p>
+<div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
                       <div className={`text-sm font-medium ${
@@ -397,7 +401,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Collaborate With Our Research Team
             </h2>
@@ -405,7 +410,8 @@ const ResearchDevelopmentPage: React.FC = () => {
               Interested in collaborating on cutting-edge research? We welcome partnerships with 
               universities, research institutions, and industry leaders.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

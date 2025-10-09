@@ -9,7 +9,8 @@ const TermsPage: React.FC = () => {
             Terms of Service
           </h1><p className="text-xl text-gray-300 mb-8">
             Last updated: January 2025
-          </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><FileText className="w-6 h-6 mr-3 text-cyan-400" />
+          </p></p>
+<div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><FileText className="w-6 h-6 mr-3 text-cyan-400" />
                 Acceptance of Terms
               </h2><p className="text-gray-300">
                 By accessing and using our services, you accept and agree to be bound by the terms and 
@@ -33,7 +34,8 @@ const TermsPage: React.FC = () => {
                 to use our services, even if we have been notified orally or in writing of the possibility of such damage.
                 Contact Information
                 If you have any questions about these Terms of Service, please contact us:
-              </p><div className="flex flex-col sm:flex-row gap-4"><a
+              </p></p>
+<div className="flex flex-col sm:flex-row gap-4"><a
                   href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 ><Phone className="w-5 h-5 mr-2" />
                   (302) 464-0950
@@ -41,7 +43,8 @@ const TermsPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 ><Mail className="w-5 h-5 mr-2" />
                   kleber@ziontechgroup.com
-                </a></div></section></div></div></main><Footer /></div>
+                </a></div></section></div></div></div>
+</main><Footer /></div>
   );
 };
 

@@ -13,41 +13,32 @@ const AiProjectManagerPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'AI-Powered Planning',
-      {
-
-        description: 'Intelligent project planning with predictive analytics and resource optimization',
+      description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
     },
       icon: Target,
       title: 'Smart Task Management',
-      {
-
-        description: 'Automated task assignment and priority management based on AI insights',
+      description: 'Automated task assignment and priority management based on AI insights',
       benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      {
-
-        description: 'Advanced analytics to predict project outcomes and identify potential risks',
+      description: 'Advanced analytics to predict project outcomes and identify potential risks',
       benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
       icon: Users,
       title: 'Team Collaboration',
-      {
-
-        description: 'Enhanced team collaboration with AI-powered communication and coordination',
+      description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
     }
   ];
 
   const pricingPlans = [
       name: 'Starter',
+      price: '$99',
       {
 
-        price: '$99',
-      period: '/month',
-      {
 
-        description: 'Perfect for small teams',
+          period: '/month',
+      description: 'Perfect for small teams',
       features: [
         'Up to 5 projects',
         'Basic AI planning',
@@ -57,10 +48,11 @@ const AiProjectManagerPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
+      price: '$199',
       {
 
-        price: '$199',
-      description: 'Ideal for growing businesses',
+
+          description: 'Ideal for growing businesses',
         'Up to 25 projects',
         'Advanced AI planning',
         'Full team collaboration',
@@ -69,10 +61,11 @@ const AiProjectManagerPage: React.FC = () => {
         'Custom integrations'
       popular: true
       name: 'Enterprise',
+      price: '$399',
       {
 
-        price: '$399',
-      description: 'For large organizations',
+
+          description: 'For large organizations',
         'Unlimited projects',
         'Premium AI features',
         'Enterprise collaboration',
@@ -102,7 +95,8 @@ const AiProjectManagerPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI project management solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             </button>

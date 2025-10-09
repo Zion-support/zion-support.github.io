@@ -43,7 +43,8 @@ const DatabaseManagementPage: React.FC = () => {
             Optimize your database performance and security with our comprehensive database management services. 
             From design to deployment, we ensure your data infrastructure is robust and efficient.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -80,7 +81,8 @@ const DatabaseManagementPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

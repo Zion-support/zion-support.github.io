@@ -57,7 +57,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">
+                </p>
+<div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
@@ -73,7 +74,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
               </details>
             )}
             {/* Action Buttons */}
-            <div className="space-y-3">
+            </p>
+<div className="space-y-3">
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"

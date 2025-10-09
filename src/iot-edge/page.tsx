@@ -129,7 +129,8 @@ const IoTEdgePage: React.FC = () => {
               <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
                 Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
                   Explore IoT Solutions
                 </button>
@@ -147,20 +148,24 @@ const IoTEdgePage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-600">
                 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-cyan-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>
                 <p className="text-gray-600">Certified engineers with deep expertise in IoT and edge computing</p>
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                </p>
+<div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8 h-8 text-blue-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Processing</h3>
                 <p className="text-gray-600">Ultra-low latency edge computing for critical applications</p>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                </p>
+<div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
                 <p className="text-gray-600">Bank-level security with end-to-end encryption and monitoring</p>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                </p>
+<div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-orange-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
@@ -170,7 +175,8 @@ const IoTEdgePage: React.FC = () => {
           <section key={category} className="py-16 bg-gray-50">
                   {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {iotServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
@@ -179,7 +185,8 @@ const IoTEdgePage: React.FC = () => {
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
                       
-                      <div className="mb-4">
+                      </p>
+<div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-cyan-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
@@ -220,30 +227,36 @@ const IoTEdgePage: React.FC = () => {
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
                 <p className="text-gray-600">Comprehensive platform for managing IoT devices at scale</p>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+              </p>
+<div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
                 <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
                 <p className="text-gray-600">Real-time processing at the edge with ultra-low latency</p>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+              </p>
+<div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
                 <Brain className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>
                 <p className="text-gray-600">Machine learning and AI for intelligent IoT insights</p>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
+              </p>
+<div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
                 <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Analytics</h3>
                 <p className="text-gray-600">Streaming analytics and real-time data processing</p>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
+              </p>
+<div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
                 <Settings className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Industrial IoT</h3>
                 <p className="text-gray-600">Smart manufacturing and industrial automation solutions</p>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
+              </p>
+<div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
                 <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>
                 <p className="text-gray-600">Comprehensive smart city infrastructure and services</p>
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          </p>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Connect Your World?
             <p className="text-xl mb-8 text-cyan-100">
@@ -257,7 +270,8 @@ const IoTEdgePage: React.FC = () => {
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com
-            <div className="mt-8 text-sm text-cyan-200">
+            </p>
+<div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
 };

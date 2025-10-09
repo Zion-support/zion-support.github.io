@@ -136,7 +136,8 @@ class ErrorBoundary extends Component<Props, State> {
                   <summary className="text-cyan-400 cursor-pointer mb-2">
                     Error Details (Development Only)
                   </summary>
-                  <div className="bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto">
+                  </p>
+<div className="bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto">
                     <div className="mb-2">
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
@@ -145,7 +146,8 @@ class ErrorBoundary extends Component<Props, State> {
                       <pre className="mt-1 whitespace-pre-wrap">{this.state.error.stack}</pre>
                     </div>
                     {this.state.errorInfo && (
-                      <div>
+                      </p>
+<div>
                         <strong>Component Stack:</strong>
                         <pre className="mt-1 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
                       </div>
@@ -154,7 +156,8 @@ class ErrorBoundary extends Component<Props, State> {
                 </details>
               )}
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={this.handleRetry}
                   className="cyber-button px-6 py-3 text-lg font-semibold"

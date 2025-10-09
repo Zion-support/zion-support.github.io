@@ -29,16 +29,20 @@ const ProductivityPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
             Why Choose Our Productivity Tools?
           </h2>
-              <div className="text-4xl mb-4">⚡</div>
+              </p>
+<div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
               <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>
-              <div className="text-4xl mb-4">🎯</div>
+              </p>
+<div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-white mb-3">Focused Efficiency</h3>
               <p className="text-gray-300 text-sm">Tools designed to eliminate distractions and boost focus</p>
-              <div className="text-4xl mb-4">📈</div>
+              </p>
+<div className="text-4xl mb-4">📈</div>
               <h3 className="text-xl font-bold text-white mb-3">Measurable Results</h3>
               <p className="text-gray-300 text-sm">Track and measure your productivity improvements</p>
-              <div className="text-4xl mb-4">🔗</div>
+              </p>
+<div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>
               <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>
 
@@ -46,7 +50,8 @@ const ProductivityPage: React.FC = () => {
         {categories.map(category => (
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{productivityTools
+            </p>
+<div>{productivityTools
                 .filter(tool => tool.category === category)
                 .map((tool, index) => (
                     <div className="text-4xl mb-4 text-center">{tool.icon}</div>
@@ -55,7 +60,8 @@ const ProductivityPage: React.FC = () => {
                     
                         <span className="text-2xl font-bold text-cyan-400">{tool.price}</span>
                         <span className="text-sm text-gray-400">Market: {tool.marketPrice}</span>
-                      <div>Save up to 50% vs market rates</div>
+                      </p>
+<div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
                         {tool.features.slice(0, 3).map((feature, featureIndex) => (
@@ -84,7 +90,8 @@ const ProductivityPage: React.FC = () => {
             >Get Started Today</a>
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
-      </main>
+      </div>
+</main>
       
       <Footer />
     </div>);

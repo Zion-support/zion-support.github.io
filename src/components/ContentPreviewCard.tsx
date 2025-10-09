@@ -96,7 +96,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </p>
         {/* Stats Row */}
         {stats && (
-          <div className="flex items-center justify-between mb-4 text-sm">
+          </p>
+<div className="flex items-center justify-between mb-4 text-sm">
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
                 <svg className="w-4 h-4 text-gray-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +106,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
                 </svg>
                 <span className="text-gray-600">{formatNumber(stats.views)} views</span>
               </div>
-              <div className="flex items-center">
+              </p>
+<div className="flex items-center">
                 <svg className="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -115,7 +117,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           </div>
         )}
         {/* Date and CTA */}
-        <div className="flex items-center justify-between">
+        </p>
+<div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
           <Link
             href={path}

@@ -9,28 +9,20 @@ const AIInventoryManagerPage: React.FC = () => {
     {
       icon: Package,
       title: 'Inventory Tracking',
-      {
-
-        description: 'AI-powered inventory tracking and management',
+      description: 'AI-powered inventory tracking and management',
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']
     },
       icon: Target,
       title: 'Demand Forecasting',
-      {
-
-        description: 'Intelligent demand prediction and planning',
+      description: 'Intelligent demand prediction and planning',
       benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
       icon: Zap,
       title: 'Automated Reordering',
-      {
-
-        description: 'Smart reorder points and automated purchasing',
+      description: 'Smart reorder points and automated purchasing',
       benefits: ['Auto reordering', 'Supplier management', 'Cost optimization']
       icon: Settings,
       title: 'Inventory Analytics',
-      {
-
-        description: 'Comprehensive inventory analytics and insights',
+      description: 'Comprehensive inventory analytics and insights',
       benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
     }
   ];
@@ -51,7 +43,8 @@ const AIInventoryManagerPage: React.FC = () => {
             Optimize your inventory with AI-powered management solutions. 
             Track stock, predict demand, and automate reordering for maximum efficiency.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIInventoryManagerPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

@@ -15,7 +15,8 @@ export default function AIAutonomousBusinessSystems2026() {
               transforming how enterprises operate. Discover the breakthrough technologies and strategies that
               enable self-managing business processes.
             </p>
-                <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
+                </p>
+<div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
                 <div className="text-gray-700">Process Automation</div>
                 <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
                 <div className="text-gray-700">Autonomous Operations</div>

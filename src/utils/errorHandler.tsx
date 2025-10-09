@@ -452,7 +452,8 @@ export class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
+          </p>
+<div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',

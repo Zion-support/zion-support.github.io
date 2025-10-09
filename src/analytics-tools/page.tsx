@@ -74,7 +74,8 @@ const AnalyticsToolsPage: React.FC = () => {
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
           </p>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          </p>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
               <div className="text-gray-300">Analytics Tools</div>
@@ -109,7 +110,8 @@ const AnalyticsToolsPage: React.FC = () => {
                   <div className="text-5xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
+                  </p>
+<div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
                     {tool.category}
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
@@ -139,12 +141,14 @@ const AnalyticsToolsPage: React.FC = () => {
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+        </p>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
               Call (302) 464-0950

@@ -9,28 +9,20 @@ const AIHRAssistantPage: React.FC = () => {
     {
       icon: Users,
       title: 'HR Automation',
-      {
-
-        description: 'AI-powered HR process automation',
+      description: 'AI-powered HR process automation',
       benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
     },
       icon: Target,
       title: 'Talent Management',
-      {
-
-        description: 'Intelligent talent acquisition and management',
+      description: 'Intelligent talent acquisition and management',
       benefits: ['Candidate screening', 'Skill matching', 'Career development']
       icon: Zap,
       title: 'Employee Engagement',
-      {
-
-        description: 'Automated employee engagement and satisfaction',
+      description: 'Automated employee engagement and satisfaction',
       benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
       icon: Settings,
       title: 'HR Analytics',
-      {
-
-        description: 'Comprehensive HR analytics and insights',
+      description: 'Comprehensive HR analytics and insights',
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
     }
   ];
@@ -51,7 +43,8 @@ const AIHRAssistantPage: React.FC = () => {
             Transform your HR operations with AI-powered automation and insights. 
             Streamline recruitment, improve employee experience, and optimize workforce management.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIHRAssistantPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

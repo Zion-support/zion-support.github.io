@@ -9,64 +9,49 @@ const AIComputerVisionPage: React.FC = () => {
     {
       icon: Eye,
       title: 'Object Detection',
-      {
-
-        description: 'Advanced object detection and recognition with high accuracy',
+      description: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
       icon: Camera,
       title: 'Image Classification',
-      {
-
-        description: 'Automated image categorization and content analysis',
+      description: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
       icon: Video,
       title: 'Video Analysis',
-      {
-
-        description: 'Real-time video processing and analysis capabilities',
+      description: 'Real-time video processing and analysis capabilities',
       benefits: ['Live streaming', 'Motion detection', 'Activity recognition']
       icon: Target,
       title: 'Facial Recognition',
-      {
-
-        description: 'Secure and accurate facial recognition technology',
+      description: 'Secure and accurate facial recognition technology',
       benefits: ['Identity verification', 'Access control', 'Privacy protection']
     }
   ];
 
   const applications = [
       title: 'Retail & E-commerce',
-      {
-
-        description: 'Automated inventory management, customer behavior analysis, and checkout optimization',
+      description: 'Automated inventory management, customer behavior analysis, and checkout optimization',
       icon: ShoppingCart,
       useCases: ['Smart checkout', 'Inventory tracking', 'Customer analytics']
       title: 'Security & Surveillance',
-      {
-
-        description: 'Intelligent security monitoring and threat detection systems',
+      description: 'Intelligent security monitoring and threat detection systems',
       icon: Shield,
       useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection']
       title: 'Healthcare',
-      {
-
-        description: 'Medical image analysis and diagnostic assistance',
+      description: 'Medical image analysis and diagnostic assistance',
       icon: Stethoscope,
       useCases: ['X-ray analysis', 'MRI interpretation', 'Symptom detection']
       title: 'Manufacturing',
-      {
-
-        description: 'Quality control and automated inspection systems',
+      description: 'Quality control and automated inspection systems',
       icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
 
   const pricing = [
       name: 'Starter',
+      price: '$499/month',
       {
 
-        price: '$499/month',
-      description: 'Perfect for small projects',
+
+          description: 'Perfect for small projects',
       features: [
         'Up to 1,000 images/month',
         'Basic models',
@@ -75,10 +60,11 @@ const AIComputerVisionPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
+      price: '$1,999/month',
       {
 
-        price: '$1,999/month',
-      description: 'Ideal for growing businesses',
+
+          description: 'Ideal for growing businesses',
         'Up to 10,000 images/month',
         'Advanced models',
         'Priority support',
@@ -86,10 +72,11 @@ const AIComputerVisionPage: React.FC = () => {
         'API access'
       popular: true
       name: 'Enterprise',
+      price: 'Custom',
       {
 
-        price: 'Custom',
-      description: 'For large organizations',
+
+          description: 'For large organizations',
         'Unlimited images',
         'Custom models',
         'Dedicated support',
@@ -113,7 +100,8 @@ const AIComputerVisionPage: React.FC = () => {
             Transform your business with cutting-edge computer vision technology. From object detection to facial recognition, 
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -155,7 +143,8 @@ const AIComputerVisionPage: React.FC = () => {
         {/* Applications Section */}
             Industry Applications
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </p>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {applications.map((application, index) => (
               <div key={index} className="quantum-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-6">
@@ -165,7 +154,8 @@ const AIComputerVisionPage: React.FC = () => {
                     {application.title}
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {application.description}
-                <div className="space-y-2">
+                </p>
+<div className="space-y-2">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use Cases:</h4>
                   {application.useCases.map((useCase, useCaseIndex) => (
                     <div key={useCaseIndex} className="flex items-center text-sm text-gray-300">
@@ -200,7 +190,8 @@ const AIComputerVisionPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center">
-          <div className="cyber-card p-12 max-w-4xl mx-auto">
+          </p>
+<div className="cyber-card p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
               Ready to See the Future?
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -210,7 +201,8 @@ const AIComputerVisionPage: React.FC = () => {
                 className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
                 Request Demo
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

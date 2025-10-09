@@ -41,7 +41,8 @@ const Sitemap: React.FC = () => {
     <priority>0.7</priority>
   
   return (
-    <div>
+    </p>
+<div>
       <pre>{sitemap}</pre>
     </div>
   );

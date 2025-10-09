@@ -97,8 +97,7 @@ const AIAnalyticsPage: React.FC = () => {
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-      {
-        bgColor: 'bg-cyan-500/10',
+      bgColor: 'bg-cyan-500/10',
 
   const benefits = [
       icon: Star,
@@ -110,8 +109,7 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Clear, actionable recommendations for business improvement',
       icon: Award,
       title: 'Proven Results',
-      {
-        description: '300% average ROI for our analytics clients',
+      description: '300% average ROI for our analytics clients',
 
   return (
     <>
@@ -127,7 +125,8 @@ const AIAnalyticsPage: React.FC = () => {
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
               Make data-driven decisions that drive growth and optimize performance.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </p>
+<div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
                 <span className="font-medium">AI-Powered Insights</span>
@@ -164,7 +163,8 @@ const AIAnalyticsPage: React.FC = () => {
 
           {/* Use Cases */}
               Use Cases
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${useCase.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -174,7 +174,8 @@ const AIAnalyticsPage: React.FC = () => {
 
           {/* Pricing */}
               Pricing Plans
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </p>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {tier.popular && (
@@ -207,20 +208,23 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Benefits */}
               Why Choose Our AI Analytics?
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+                </p>
+<div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Data?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey with AI analytics today. Get a free consultation and discover 
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Consultation
                 href="tel:+13024640950"

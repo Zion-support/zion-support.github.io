@@ -89,7 +89,8 @@ const SignupPage: React.FC = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                </p>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       First Name
@@ -202,7 +203,8 @@ const SignupPage: React.FC = () => {
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
 
-              <div className="space-y-6">
+              </p>
+<div className="space-y-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -211,7 +213,8 @@ const SignupPage: React.FC = () => {
                       <p className="text-gray-300">{feature.description}</p>
                 ))}
 
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
+              </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">
                   What You Get:
                 </h3>
@@ -224,7 +227,8 @@ const SignupPage: React.FC = () => {
               <div className="text-center">
                 <p className="text-gray-400 text-sm mb-4">
                   Trusted by 1000+ companies worldwide
-                <div className="flex justify-center items-center space-x-6 opacity-60">
+                </p>
+<div className="flex justify-center items-center space-x-6 opacity-60">
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>

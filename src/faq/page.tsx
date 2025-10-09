@@ -102,7 +102,8 @@ const FAQPage: React.FC = () => {
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
+            </p>
+<div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -144,12 +145,14 @@ const FAQPage: React.FC = () => {
             ))}
 
           {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

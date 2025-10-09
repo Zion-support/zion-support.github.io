@@ -33,7 +33,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
         <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
         <p className="text-gray-300 text-sm mb-4">{service.description}</p>
         
-        <div className="flex items-center justify-center space-x-2 mb-4">
+        </p>
+<div className="flex items-center justify-center space-x-2 mb-4">
           <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
           {service.marketPrice && (
             <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>

@@ -9,28 +9,20 @@ const AIRoboticsPage: React.FC = () => {
     {
       icon: Bot,
       title: 'Intelligent Robotics',
-      {
-
-        description: 'AI-powered robots that learn and adapt to their environment',
+      description: 'AI-powered robots that learn and adapt to their environment',
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
     },
       icon: Cpu,
       title: 'Advanced Control Systems',
-      {
-
-        description: 'Sophisticated control algorithms for precise robot movement',
+      description: 'Sophisticated control algorithms for precise robot movement',
       benefits: ['Precision control', 'Real-time processing', 'Safety systems']
       icon: Settings,
       title: 'Automated Workflows',
-      {
-
-        description: 'Streamlined robotic processes for maximum efficiency',
+      description: 'Streamlined robotic processes for maximum efficiency',
       benefits: ['Process optimization', 'Error reduction', '24/7 operation']
       icon: Shield,
       title: 'Safety & Security',
-      {
-
-        description: 'Built-in safety protocols and security measures',
+      description: 'Built-in safety protocols and security measures',
       benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
     }
   ];
@@ -51,7 +43,8 @@ const AIRoboticsPage: React.FC = () => {
             Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots, 
             we provide the technology to create robots that think, learn, and adapt.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIRoboticsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

@@ -66,7 +66,8 @@ const LoginPage: React.FC = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
+                </p>
+<div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address
                   </label>
@@ -156,11 +157,13 @@ const LoginPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-gray-700">
+              </p>
+<div className="mt-8 pt-6 border-t border-gray-700">
                 <p className="text-center text-sm text-gray-400 mb-4">
                   Or continue with
                 </p>
-                <div className="grid grid-cols-2 gap-3">
+                </p>
+<div className="grid grid-cols-2 gap-3">
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -181,7 +184,8 @@ const LoginPage: React.FC = () => {
             </div>
 
             {/* Right Side - Features */}
-            <div className="space-y-8">
+            </p>
+<div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
                   Access Your AI & IT Services
@@ -192,7 +196,8 @@ const LoginPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
+              </p>
+<div className="space-y-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -206,7 +211,8 @@ const LoginPage: React.FC = () => {
                 ))}
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
+              </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">
                   New to Zion Tech Group?
                 </h3>

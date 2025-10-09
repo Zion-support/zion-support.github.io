@@ -9,28 +9,20 @@ const AIContentStudioPage: React.FC = () => {
     {
       icon: FileText,
       title: 'Content Creation',
-      {
-
-        description: 'AI-powered content generation and optimization',
+      description: 'AI-powered content generation and optimization',
       benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
     },
       icon: Target,
       title: 'Content Strategy',
-      {
-
-        description: 'Intelligent content planning and strategy',
+      description: 'Intelligent content planning and strategy',
       benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
       icon: Zap,
       title: 'Automated Publishing',
-      {
-
-        description: 'Automated content publishing and distribution',
+      description: 'Automated content publishing and distribution',
       benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
       icon: Settings,
       title: 'Content Analytics',
-      {
-
-        description: 'Comprehensive content performance analytics',
+      description: 'Comprehensive content performance analytics',
       benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
     }
   ];
@@ -51,7 +43,8 @@ const AIContentStudioPage: React.FC = () => {
             Create, manage, and optimize content with our comprehensive AI-powered content studio. 
             From ideation to publication, streamline your entire content workflow.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIContentStudioPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

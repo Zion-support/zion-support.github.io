@@ -29,16 +29,20 @@ const BusinessAppsPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
             Why Choose Our Business Apps?
           </h2>
-              <div className="text-4xl mb-4">🚀</div>
+              </p>
+<div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
               <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>
-              <div className="text-4xl mb-4">⚡</div>
+              </p>
+<div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">Fast Implementation</h3>
               <p className="text-gray-300 text-sm">Quick deployment with minimal disruption to your workflow</p>
-              <div className="text-4xl mb-4">🔒</div>
+              </p>
+<div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
               <p className="text-gray-300 text-sm">Bank-level security and compliance for your sensitive data</p>
-              <div className="text-4xl mb-4">📊</div>
+              </p>
+<div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>
               <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>
 
@@ -46,7 +50,8 @@ const BusinessAppsPage: React.FC = () => {
         {categories.map(category => (
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
-            <div>{businessApps
+            </p>
+<div>{businessApps
                 .filter(app => app.category === category)
                 .map((app, index) => (
                     <div className="text-4xl mb-4 text-center">{app.icon}</div>
@@ -55,7 +60,8 @@ const BusinessAppsPage: React.FC = () => {
                     
                         <span className="text-2xl font-bold text-cyan-400">{app.price}</span>
                         <span className="text-sm text-gray-400">Market: {app.marketPrice}</span>
-                      <div>Save up to 50% vs market rates</div>
+                      </p>
+<div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
                         {app.features.slice(0, 3).map((feature, featureIndex) => (
@@ -84,7 +90,8 @@ const BusinessAppsPage: React.FC = () => {
             >Get Custom Quote</a>
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
-      </main>
+      </div>
+</main>
       
       <Footer />
     </div>);

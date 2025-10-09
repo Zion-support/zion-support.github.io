@@ -70,7 +70,8 @@ const CompliancePage: React.FC = () => {
               </p>
 
             {/* Certifications Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {certifications.map((cert, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
                   <div className="flex items-center justify-between">
@@ -111,9 +112,11 @@ const CompliancePage: React.FC = () => {
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               Contact Compliance Team
             </a>
-            <div className="mt-8 text-sm text-blue-200">
+            </p>
+<div className="mt-8 text-sm text-blue-200">
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
-        </main>
+        </div>
+</main>
         
         <Footer />
   );

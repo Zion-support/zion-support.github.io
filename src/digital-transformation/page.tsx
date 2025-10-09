@@ -43,7 +43,8 @@ const DigitalTransformationPage: React.FC = () => {
             Accelerate your digital transformation journey with our comprehensive solutions. From strategy development to implementation, 
             we help you modernize your business and stay competitive in the digital economy.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -80,7 +81,8 @@ const DigitalTransformationPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

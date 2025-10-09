@@ -9,53 +9,55 @@ const AISchedulerPage: React.FC = () => {
     {
       icon: Calendar,
       title: 'Smart Scheduling',
+      description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       {
 
-        description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
-      benefit: 'Save 5+ hours per week',
+
+          benefit: 'Save 5+ hours per week',
     },
       icon: Users,
       title: 'Team Coordination',
+      description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
       {
 
-        description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
-      benefit: 'Eliminate scheduling conflicts',
+
+          benefit: 'Eliminate scheduling conflicts',
       icon: Brain,
       title: 'Predictive Planning',
+      description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
       {
 
-        description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
-      benefit: '95% accuracy in predictions',
+
+          benefit: '95% accuracy in predictions',
       icon: Zap,
       title: 'Automated Reminders',
-      {
-
-        description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
+      description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
       benefit: 'Reduce no-shows by 60%',
       icon: Target,
       title: 'Meeting Optimization',
+      description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
       {
 
-        description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
-      benefit: 'Improve meeting ROI by 40%',
+
+          benefit: 'Improve meeting ROI by 40%',
       icon: Shield,
       title: 'Privacy & Security',
+      description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       {
 
-        description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit: '100% secure scheduling',
+
+          benefit: '100% secure scheduling',
     }
   ];
 
   const pricingPlans = [
       name: 'Personal',
+      price: '$19',
       {
 
-        price: '$19',
-      period: '/month',
-      {
 
-        description: 'Perfect for individuals',
+          period: '/month',
+      description: 'Perfect for individuals',
       features: [
         'Unlimited personal meetings',
         'Basic AI scheduling',
@@ -66,10 +68,11 @@ const AISchedulerPage: React.FC = () => {
       ],
       popular: false
       name: 'Team',
+      price: '$49',
       {
 
-        price: '$49',
-      description: 'Ideal for small teams',
+
+          description: 'Ideal for small teams',
         'Up to 10 team members',
         'Advanced AI scheduling',
         'Team coordination',
@@ -80,10 +83,11 @@ const AISchedulerPage: React.FC = () => {
         'Custom branding'
       popular: true
       name: 'Enterprise',
+      price: '$149',
       {
 
-        price: '$149',
-      description: 'For large organizations',
+
+          description: 'For large organizations',
         'Unlimited team members',
         'Premium AI features',
         'Advanced analytics',
@@ -105,30 +109,27 @@ const AISchedulerPage: React.FC = () => {
 
   const testimonials = [
       name: 'Jennifer Lee',
+      company: 'TechStart',
       {
 
-        company: 'TechStart',
-      role: 'Operations Manager',
-      {
 
-        content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
+          role: 'Operations Manager',
+      content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
       rating: 5
       name: 'Robert Martinez',
+      company: 'Consulting Group',
       {
 
-        company: 'Consulting Group',
-      role: 'Senior Partner',
-      {
 
-        content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
+          role: 'Senior Partner',
+      content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
       name: 'Amanda Chen',
+      company: 'Digital Agency',
       {
 
-        company: 'Digital Agency',
-      role: 'Project Manager',
-      {
 
-        content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
+          role: 'Project Manager',
+      content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -148,7 +149,8 @@ const AISchedulerPage: React.FC = () => {
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
             for maximum productivity.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
@@ -189,7 +191,8 @@ const AISchedulerPage: React.FC = () => {
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
+                </p>
+<div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
             ))}
         </section>
 
@@ -204,7 +207,8 @@ const AISchedulerPage: React.FC = () => {
 
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          </p>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
@@ -217,7 +221,8 @@ const AISchedulerPage: React.FC = () => {
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
+                </p>
+<div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
@@ -242,7 +247,8 @@ const AISchedulerPage: React.FC = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
+                </p>
+<div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>

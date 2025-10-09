@@ -16,7 +16,8 @@ export default function NotFound() {
           </p>
         </div>
         {/* Popular Pages */}
-        <div>
+        </p>
+<div>
           {popularPages.map((page, index) => (
             <Link
               key={index}
@@ -34,7 +35,8 @@ export default function NotFound() {
           ))}
         </div>
         {/* Action Buttons */}
-        <div>
+        </p>
+<div>
           <Link
             href="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"

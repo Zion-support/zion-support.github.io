@@ -10,41 +10,32 @@ const AICustomerSupportBotPage: React.FC = () => {
     {
       icon: Bot,
       title: '24/7 AI Support',
-      {
-
-        description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+      description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
-      {
-
-        description: 'Advanced NLP for understanding and responding to customer queries naturally',
+      description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
       icon: Users,
       title: 'Human Handoff',
-      {
-
-        description: 'Seamless escalation to human agents when complex issues arise',
+      description: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
       icon: BarChart,
       title: 'Analytics & Insights',
-      {
-
-        description: 'Comprehensive analytics to track performance and improve customer experience',
+      description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
 
   const pricingPlans = [
       name: 'Starter',
+      price: '$149',
       {
 
-        price: '$149',
-      period: '/month',
-      {
 
-        description: 'Perfect for small businesses',
+          period: '/month',
+      description: 'Perfect for small businesses',
       features: [
         'Up to 1,000 conversations/month',
         'Basic AI responses',
@@ -54,10 +45,11 @@ const AICustomerSupportBotPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
+      price: '$299',
       {
 
-        price: '$299',
-      description: 'Ideal for growing companies',
+
+          description: 'Ideal for growing companies',
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
         'Priority support',
@@ -66,10 +58,11 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Multi-language support'
       popular: true
       name: 'Enterprise',
+      price: '$599',
       {
 
-        price: '$599',
-      description: 'For large organizations',
+
+          description: 'For large organizations',
         'Unlimited conversations',
         'Premium AI features',
         '24/7 support',
@@ -102,7 +95,8 @@ const AICustomerSupportBotPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        </p>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
@@ -125,7 +119,8 @@ const AICustomerSupportBotPage: React.FC = () => {
               </ul>
 
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          </p>
+<div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
@@ -144,11 +139,13 @@ const AICustomerSupportBotPage: React.FC = () => {
                   Get Started
                 </button>
 
-        <div className="text-center">
+        </p>
+<div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your support needs and get a custom AI solution.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Schedule Demo
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">

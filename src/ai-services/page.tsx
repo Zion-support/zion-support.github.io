@@ -10,31 +10,29 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       title: 'AI Strategy & Consulting',
-      {
-
-        description: 'Comprehensive AI strategy development and implementation consulting',
+      description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
       price: 'Starting at $2,500/month',
     },
       title: 'Machine Learning Solutions',
-      {
-
-        description: 'Custom machine learning models and algorithms for your business needs',
+      description: 'Custom machine learning models and algorithms for your business needs',
       icon: Zap,
       features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
       price: 'Starting at $1,500/month',
+      title: 'AI Security & Compliance',
       {
 
-        title: 'AI Security & Compliance',
-      description: 'Enterprise-grade AI security and compliance solutions',
+
+          description: 'Enterprise-grade AI security and compliance solutions',
       icon: Shield,
       features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
       price: 'Starting at $1,200/month',
+      title: 'AI Analytics & Insights',
       {
 
-        title: 'AI Analytics & Insights',
-      description: 'Advanced analytics and business intelligence powered by AI',
+
+          description: 'Advanced analytics and business intelligence powered by AI',
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price: 'Starting at $800/month',
@@ -62,7 +60,8 @@ const AIServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             </button>

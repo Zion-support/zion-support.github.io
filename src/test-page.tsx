@@ -45,7 +45,8 @@ const testPagetsx: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced testtsx solutions powered by AI and cutting-edge technology
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
                 Get Started
               </a>
@@ -82,7 +83,8 @@ const testPagetsx: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gray-800">
-          <div className="max-w-4xl mx-auto text-center">
+          </p>
+<div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -90,7 +92,8 @@ const testPagetsx: React.FC = () => {
             </a>
           </div>
         </section>
-      </main>
+      </div>
+</main>
 
       <Footer />
     </div>

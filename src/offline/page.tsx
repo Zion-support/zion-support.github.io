@@ -31,7 +31,8 @@ const OfflinePage: React.FC = () => {
           It looks like you're not connected to the internet. Please check your connection and try again.
         </p>
 
-        <div className="space-y-3">
+        </p>
+<div className="space-y-3">
           <button
             onClick={handleRetry}
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
@@ -50,7 +51,8 @@ const OfflinePage: React.FC = () => {
             <Wifi className="w-4 h-4" />
             Check your internet connection
 
-        <div className="mt-8 p-4 bg-black/20 rounded-lg">
+        </p>
+<div className="mt-8 p-4 bg-black/20 rounded-lg">
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>
           <p className="text-xs text-gray-400">
             Some content may be available offline thanks to our service worker. 

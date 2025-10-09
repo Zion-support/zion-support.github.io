@@ -9,28 +9,20 @@ const AISEOOptimizerPage: React.FC = () => {
     {
       icon: Search,
       title: 'SEO Analysis',
-      {
-
-        description: 'Comprehensive SEO analysis and optimization',
+      description: 'Comprehensive SEO analysis and optimization',
       benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
     },
       icon: Target,
       title: 'Content Optimization',
-      {
-
-        description: 'AI-powered content optimization for search engines',
+      description: 'AI-powered content optimization for search engines',
       benefits: ['Content scoring', 'Keyword density', 'Readability']
       icon: Zap,
       title: 'Automated Optimization',
-      {
-
-        description: 'Automated SEO improvements and monitoring',
+      description: 'Automated SEO improvements and monitoring',
       benefits: ['Auto-optimization', 'Performance monitoring', 'Alert system']
       icon: Settings,
       title: 'Ranking Tracking',
-      {
-
-        description: 'Track and monitor search engine rankings',
+      description: 'Track and monitor search engine rankings',
       benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
     }
   ];
@@ -51,7 +43,8 @@ const AISEOOptimizerPage: React.FC = () => {
             Boost your search engine rankings with AI-powered SEO optimization. 
             Analyze, optimize, and monitor your website's SEO performance automatically.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AISEOOptimizerPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

@@ -83,7 +83,8 @@ const Footer: React.FC = memo(() => {
               </p>
               
               {/* Contact Info */}
-              <div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+              </p>
+<div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                     +1 302 464-0950
                   </a></div><div className="flex items-center space-x-3 text-gray-300"><Mail className="w-4 h-4 text-cyan-400" /><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com
@@ -108,7 +109,8 @@ const Footer: React.FC = memo(() => {
                   </Link></li></ul></div>
 
             {/* IT Services */}
-            <div><h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3><ul className="space-y-3">
+            </p>
+<div><h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3><ul className="space-y-3">
                 {itServices.slice(0, 8).map((service, index) => (
                       to={service.url} className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
                     to="/it-services" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"

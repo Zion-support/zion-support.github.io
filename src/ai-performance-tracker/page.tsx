@@ -9,28 +9,20 @@ const AIPerformanceTrackerPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Monitoring',
-      {
-
-        description: 'Comprehensive performance tracking and analysis',
+      description: 'Comprehensive performance tracking and analysis',
       benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis']
     },
       icon: Target,
       title: 'Goal Tracking',
-      {
-
-        description: 'Intelligent goal setting and progress monitoring',
+      description: 'Intelligent goal setting and progress monitoring',
       benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics']
       icon: Zap,
       title: 'Automated Insights',
-      {
-
-        description: 'AI-powered performance insights and recommendations',
+      description: 'AI-powered performance insights and recommendations',
       benefits: ['Performance insights', 'Optimization tips', 'Action recommendations']
       icon: Settings,
       title: 'Custom Dashboards',
-      {
-
-        description: 'Customizable performance dashboards and reports',
+      description: 'Customizable performance dashboards and reports',
       benefits: ['Custom metrics', 'Visualization', 'Reporting']
     }
   ];
@@ -51,7 +43,8 @@ const AIPerformanceTrackerPage: React.FC = () => {
             Track and optimize performance with AI-powered analytics. 
             Monitor KPIs, set goals, and achieve better results with intelligent performance tracking.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIPerformanceTrackerPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

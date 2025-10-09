@@ -43,7 +43,8 @@ const SustainabilityTechPage: React.FC = () => {
             Build a sustainable future with our green technology solutions. From renewable energy to circular economy, 
             we help you reduce environmental impact while driving business growth.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -80,7 +81,8 @@ const SustainabilityTechPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

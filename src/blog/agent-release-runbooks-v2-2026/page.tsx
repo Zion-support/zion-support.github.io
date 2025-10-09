@@ -13,7 +13,8 @@ export default function Page() {
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
             canaries, approvals and one‑click rollback.
           </p>
-          <div>
+          </p>
+<div>
             <div>
               <Calendar />
               <span>Jan 30, 2026</span>
@@ -42,7 +43,8 @@ export default function Page() {
         </div>
       </section>
       <section className='py-12 bg-white'>
-        <div>
+        </p>
+<div>
           <div>
             <div>Budgets</div>
             <div className='text-slate-600'>Max cost, time, scope per release</div>
@@ -76,5 +78,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </main>)
+    </div>
+</main>)
 }

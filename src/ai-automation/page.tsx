@@ -9,33 +9,25 @@ const AIAutomationPage: React.FC = () => {
     {
       icon: Settings,
       title: 'Process Automation',
-      {
-
-        description: 'Intelligent automation of complex business processes with decision-making capabilities',
+      description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
     {
       icon: Zap,
       title: 'Workflow Optimization',
-      {
-
-        description: 'AI-powered workflow analysis and optimization for maximum productivity',
+      description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
     {
       icon: Shield,
       title: 'Decision Trees',
-      {
-
-        description: 'Advanced decision-making algorithms for complex business scenarios',
+      description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
       icon: Clock,
       title: 'Exception Handling',
-      {
-
-        description: 'Intelligent handling of exceptions and edge cases in automated processes',
+      description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
@@ -43,13 +35,12 @@ const AIAutomationPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
+      price: '$1,400',
       {
 
-        price: '$1,400',
-      period: '/month',
-      {
 
-        description: 'Perfect for small businesses',
+          period: '/month',
+      description: 'Perfect for small businesses',
       features: [
         'Up to 10 automated processes',
         'Basic AI decision making',
@@ -61,13 +52,12 @@ const AIAutomationPage: React.FC = () => {
     },
     {
       name: 'Professional',
+      price: '$2,800',
       {
 
-        price: '$2,800',
-      period: '/month',
-      {
 
-        description: 'Ideal for growing companies',
+          period: '/month',
+      description: 'Ideal for growing companies',
       features: [
         'Up to 50 automated processes',
         'Advanced AI decision making',
@@ -80,13 +70,12 @@ const AIAutomationPage: React.FC = () => {
     },
     {
       name: 'Enterprise',
+      price: '$5,600',
       {
 
-        price: '$5,600',
-      period: '/month',
-      {
 
-        description: 'For large organizations',
+          period: '/month',
+      description: 'For large organizations',
       features: [
         'Unlimited processes',
         'Premium AI features',
@@ -125,7 +114,8 @@ const AIAutomationPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        </p>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
@@ -153,7 +143,8 @@ const AIAutomationPage: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mb-16">
+        </p>
+<div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -184,12 +175,14 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center">
+        </p>
+<div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Automate Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your automation needs and get a custom solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Schedule Consultation
             </button>

@@ -9,28 +9,20 @@ const AIEdgeComputingPage: React.FC = () => {
     {
       icon: Cpu,
       title: 'Edge AI Processing',
-      {
-
-        description: 'AI processing at the edge for real-time decision making',
+      description: 'AI processing at the edge for real-time decision making',
       benefits: ['Low latency', 'Real-time processing', 'Offline capability']
     },
       icon: Zap,
       title: 'Optimized Models',
-      {
-
-        description: 'Lightweight AI models optimized for edge deployment',
+      description: 'Lightweight AI models optimized for edge deployment',
       benefits: ['Small footprint', 'Fast inference', 'Resource efficient']
       icon: Globe,
       title: 'Distributed Intelligence',
-      {
-
-        description: 'Distributed AI across multiple edge devices',
+      description: 'Distributed AI across multiple edge devices',
       benefits: ['Scalable deployment', 'Federated learning', 'Edge coordination']
       icon: Shield,
       title: 'Secure Edge Computing',
-      {
-
-        description: 'Enterprise-grade security for edge AI deployments',
+      description: 'Enterprise-grade security for edge AI deployments',
       benefits: ['Data privacy', 'Secure communication', 'Access control']
     }
   ];
@@ -51,7 +43,8 @@ const AIEdgeComputingPage: React.FC = () => {
             Bring AI to the edge with our powerful edge computing platform. Process data locally, make decisions in real-time, 
             and reduce latency with intelligent edge AI solutions.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIEdgeComputingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

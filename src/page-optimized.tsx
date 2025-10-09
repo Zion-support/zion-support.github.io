@@ -45,7 +45,8 @@ export default function OptimizedHomePage() {
                 70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
                 autonomous systems, and digital transformation services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
@@ -57,5 +58,6 @@ export default function OptimizedHomePage() {
                   View Success Stories
               </div>
         </section>
-      </main>
+      </div>
+</main>
 };

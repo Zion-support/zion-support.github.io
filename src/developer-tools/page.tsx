@@ -73,7 +73,8 @@ const DeveloperToolsPage: React.FC = () => {
             </p>
             
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            </p>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
                 <div className="text-gray-300">Productivity Boost</div>
@@ -129,7 +130,8 @@ const DeveloperToolsPage: React.FC = () => {
                     <p className="text-gray-600 text-sm">{tool.description}</p>
                   </div>
                   
-                  <div className="mb-6">
+                  </p>
+<div className="mb-6">
                     <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
                   </div>
 
@@ -180,7 +182,8 @@ const DeveloperToolsPage: React.FC = () => {
             <p className="text-xl text-purple-100 mb-8">
               Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"

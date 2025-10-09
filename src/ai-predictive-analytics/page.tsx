@@ -9,28 +9,20 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Predictive Modeling',
-      {
-
-        description: 'AI-powered predictive modeling and forecasting',
+      description: 'AI-powered predictive modeling and forecasting',
       benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
     },
       icon: Target,
       title: 'Data Analysis',
-      {
-
-        description: 'Advanced data analysis and pattern recognition',
+      description: 'Advanced data analysis and pattern recognition',
       benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
       icon: Zap,
       title: 'Automated Insights',
-      {
-
-        description: 'Intelligent insight generation and recommendations',
+      description: 'Intelligent insight generation and recommendations',
       benefits: ['Auto insights', 'Recommendations', 'Action suggestions']
       icon: Settings,
       title: 'Custom Models',
-      {
-
-        description: 'Custom predictive models and algorithms',
+      description: 'Custom predictive models and algorithms',
       benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
     }
   ];
@@ -51,7 +43,8 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
             Predict future outcomes with AI-powered analytics. 
             Make data-driven decisions and stay ahead of trends with intelligent forecasting.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

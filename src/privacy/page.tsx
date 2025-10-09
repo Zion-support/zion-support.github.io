@@ -9,7 +9,8 @@ const PrivacyPage: React.FC = () => {
             Privacy Policy
           </h1><p className="text-xl text-gray-300 mb-8">
             Last updated: January 2025
-          </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Shield className="w-6 h-6 mr-3 text-cyan-400" />
+          </p></p>
+<div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Shield className="w-6 h-6 mr-3 text-cyan-400" />
                 Information We Collect
               </h2><p className="text-gray-300 mb-4">
                 We collect information you provide directly to us, such as when you create an account, 
@@ -31,7 +32,8 @@ const PrivacyPage: React.FC = () => {
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Access your personal information</li><li>Correct inaccurate or incomplete data</li><li>Request deletion of your data</li><li>Object to processing of your data</li><li>Data portability</li><li>Withdraw consent at any time</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4">
                 Contact Us
                 If you have any questions about this Privacy Policy, please contact us:
-              </p><div className="flex flex-col sm:flex-row gap-4"><a
+              </p></p>
+<div className="flex flex-col sm:flex-row gap-4"><a
                   href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 ><Phone className="w-5 h-5 mr-2" />
                   (302) 464-0950
@@ -39,7 +41,8 @@ const PrivacyPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 ><Mail className="w-5 h-5 mr-2" />
                   kleber@ziontechgroup.com
-                </a></div></section></div></div></main><Footer /></div>
+                </a></div></section></div></div></div>
+</main><Footer /></div>
   );
 };
 

@@ -18,7 +18,8 @@ const Status: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             System status and service availability
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
@@ -42,7 +43,8 @@ const Status: React.FC = () => {
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today for a free consultation and discover how our solutions can help your business.
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

@@ -433,22 +433,27 @@ const HomePage: React.FC = () => {
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
+              </p>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
+                  </p>
+<div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
+                  </p>
+<div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
+                  </p>
+<div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -469,7 +474,8 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Powerful, affordable AI-powered tools designed for modern businesses
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            </p>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'cyber-glow-advanced ring-2 ring-cyan-400' : 'holographic-card-advanced'}`}>
                   {service.popular && (
@@ -486,7 +492,8 @@ const HomePage: React.FC = () => {
                     <p className="text-gray-300 text-sm leading-relaxed mb-4">
                       {service.description}
                   
-                  <div className="mb-4">
+                  </p>
+<div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -579,7 +586,8 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Cutting-edge technologies for next-generation business solutions
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            </p>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                   <Sparkles className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Quantum Computing</h3>
@@ -590,7 +598,8 @@ const HomePage: React.FC = () => {
                       Quantum Security
                       Optimization Problems
                       Research & Development
-                  <div className="text-lg font-bold mb-2 neon-text text-purple-400">Custom Pricing</div>
+                  </p>
+<div className="text-lg font-bold mb-2 neon-text text-purple-400">Custom Pricing</div>
                     href="/quantum-computing" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-purple-400 border border-purple-400 hover:bg-purple-400 hover:text-slate-900"
 
@@ -672,7 +681,8 @@ const HomePage: React.FC = () => {
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                   Call Now
               
-              <div className="holographic-card-advanced p-6 text-center hover:scale-105 transition-all duration-300">
+              </p>
+<div className="holographic-card-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
@@ -680,7 +690,8 @@ const HomePage: React.FC = () => {
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
                   Send Email
               
-              <div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
+              </p>
+<div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
@@ -691,7 +702,8 @@ const HomePage: React.FC = () => {
                   View on Map
             
             {/* CTA Section */}
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+            </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 Get a free consultation and discover how our AI and IT solutions can revolutionize your operations and drive unprecedented growth.
@@ -701,7 +713,8 @@ const HomePage: React.FC = () => {
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                   <Phone className="w-5 h-5" />
                   +1 302 464 0950
-        </main>
+        </div>
+</main>
 
         <Footer />
   );

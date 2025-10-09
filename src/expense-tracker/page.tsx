@@ -116,7 +116,8 @@ const ExpenseTrackerPage: React.FC = () => {
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
             over your business finances.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
@@ -157,7 +158,8 @@ const ExpenseTrackerPage: React.FC = () => {
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
+                </p>
+<div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
             ))}
         </section>
 
@@ -172,7 +174,8 @@ const ExpenseTrackerPage: React.FC = () => {
 
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          </p>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
@@ -185,7 +188,8 @@ const ExpenseTrackerPage: React.FC = () => {
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
+                </p>
+<div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
@@ -210,7 +214,8 @@ const ExpenseTrackerPage: React.FC = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
+                </p>
+<div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>

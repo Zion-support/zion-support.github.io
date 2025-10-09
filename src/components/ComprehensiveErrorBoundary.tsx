@@ -116,7 +116,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We encountered an unexpected error. Our team has been notified and is working to fix it.
             </p>
-            <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
+            </p>
+<div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
               <h3 className="text-white font-semibold mb-2">Error Details:</h3>
               <p className="text-sm text-gray-300 mb-2">
                 <strong>Error ID:</strong> {this.state.errorId}
@@ -128,7 +129,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 <strong>Retry Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               {this.state.retryCount < this.maxRetries && (
                 <button
                   onClick={this.handleRetry}

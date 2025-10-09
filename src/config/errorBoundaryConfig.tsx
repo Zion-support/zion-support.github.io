@@ -102,7 +102,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         {process.env['NODE_ENV'] === 'development' && (
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
-        <div className="mt-6 flex gap-4">
+        </p>
+<div className="mt-6 flex gap-4">
           <button
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -146,7 +147,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <p className="mt-2 text-center text-gray-600">
           Unable to connect to the server. Please check your internet connection and try again.
         </p>
-        <div className="mt-6">
+        </p>
+<div className="mt-6">
           <button
             onClick={resetError}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -170,7 +172,8 @@ function NotFoundFallback(): JSX.Element {
         <p className="mt-2 text-gray-600">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-6 flex gap-4 justify-center">
+        </p>
+<div className="mt-6 flex gap-4 justify-center">
           <button
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"

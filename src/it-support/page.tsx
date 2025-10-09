@@ -43,7 +43,8 @@ const ITSupportPage: React.FC = () => {
             Keep your IT infrastructure running smoothly with our comprehensive support and maintenance services. 
             From troubleshooting to proactive maintenance, we ensure your systems are always optimized.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -80,7 +81,8 @@ const ITSupportPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

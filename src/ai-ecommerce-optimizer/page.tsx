@@ -9,28 +9,20 @@ const AIEcommerceOptimizerPage: React.FC = () => {
     {
       icon: ShoppingCart,
       title: 'E-commerce Optimization',
-      {
-
-        description: 'AI-powered e-commerce optimization and enhancement',
+      description: 'AI-powered e-commerce optimization and enhancement',
       benefits: ['Conversion optimization', 'User experience', 'Performance tuning']
     },
       icon: Target,
       title: 'Product Recommendations',
-      {
-
-        description: 'Intelligent product recommendation engine',
+      description: 'Intelligent product recommendation engine',
       benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling']
       icon: Zap,
       title: 'Automated Marketing',
-      {
-
-        description: 'Automated e-commerce marketing campaigns',
+      description: 'Automated e-commerce marketing campaigns',
       benefits: ['Email marketing', 'Retargeting', 'Promotional campaigns']
       icon: Settings,
       title: 'Analytics & Insights',
-      {
-
-        description: 'Comprehensive e-commerce analytics and insights',
+      description: 'Comprehensive e-commerce analytics and insights',
       benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics']
     }
   ];
@@ -51,7 +43,8 @@ const AIEcommerceOptimizerPage: React.FC = () => {
             Optimize your e-commerce store with AI-powered solutions. 
             Increase conversions, improve user experience, and boost sales with intelligent automation.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIEcommerceOptimizerPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

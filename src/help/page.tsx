@@ -143,8 +143,7 @@ const HelpPage: React.FC = () => {
       question: 'Can I integrate your services with my existing systems?',
       answer: 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.',
       question: 'Is there a free trial available?',
-      {
-        answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.',
+      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.',
 
   const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
@@ -171,7 +170,8 @@ const HelpPage: React.FC = () => {
           </div>
 
           {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">
+          </p>
+<div className="max-w-2xl mx-auto mb-12">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -215,7 +215,8 @@ const HelpPage: React.FC = () => {
                       <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
                       <p className="text-gray-300 text-sm mb-3">{article.description}</p>
                   
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  </p>
+<div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span>{article.readTime}</span>
                     <span className={`px-2 py-1 rounded text-xs ${
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
@@ -239,7 +240,8 @@ const HelpPage: React.FC = () => {
                     <resource.icon className={`w-8 h-8 ${resource.color}`} />
                   <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
-                  <div className="text-cyan-400 text-sm font-medium">{resource.count}</div>
+                  </p>
+<div className="text-cyan-400 text-sm font-medium">{resource.count}</div>
 
           {/* Support Channels */}
               Get Support
@@ -248,7 +250,8 @@ const HelpPage: React.FC = () => {
                     <channel.icon className={`w-8 h-8 ${channel.color}`} />
                   <h3 className="text-lg font-semibold text-white mb-2">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{channel.description}</p>
-                  <div className="text-sm text-gray-400 mb-2">
+                  </p>
+<div className="text-sm text-gray-400 mb-2">
                     <div className="font-medium">Availability: {channel.availability}</div>
                     <div>Response: {channel.responseTime}</div>
                   <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium">
@@ -264,13 +267,15 @@ const HelpPage: React.FC = () => {
                     <p className="text-gray-300">{faq.answer}</p>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Need Help?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find what you're looking for? Our support team is here to help you 
               with any questions or issues you might have.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

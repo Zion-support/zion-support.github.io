@@ -98,7 +98,8 @@ const AboutPage: React.FC = () => {
           <p className='text-xl text-gray-600'>
             Leading the future of AI and IT solutions
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    </p>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
@@ -107,7 +108,8 @@ const AboutPage: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        </p>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <Users className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
@@ -124,7 +126,8 @@ const AboutPage: React.FC = () => {
 
       {/* Stats Section */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </p>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -159,7 +162,8 @@ const AboutPage: React.FC = () => {
                 >
                   Get in Touch
                 </Link>
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              </p>
+<div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-600">
                   To be the world's leading provider of AI-powered business solutions, 
@@ -173,7 +177,8 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-600">
                 The principles that guide everything we do
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
@@ -201,14 +206,16 @@ const AboutPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          </p>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let's discuss how we can help transform your business with our AI-powered solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >

@@ -49,7 +49,8 @@ const CloudServicesPage: React.FC = () => {
             Transform your business with our comprehensive cloud solutions. 
             From migration to optimization, we provide end-to-end cloud services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -88,7 +89,8 @@ const CloudServicesPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          </p>
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -107,7 +109,8 @@ const CloudServicesPage: React.FC = () => {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -122,7 +125,8 @@ const CloudServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-      </main>
+      </div>
+</main>
       <Footer />
     </div>
   );

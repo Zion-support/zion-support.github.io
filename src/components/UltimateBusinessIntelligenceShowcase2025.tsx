@@ -89,7 +89,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
         {/* Content Grid */}
           {filteredContent.map((item) => (
               {/* Badge */}
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                </p>
+<div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 </span>
@@ -104,7 +105,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
               </p>
               {/* Metrics */}
                     {item.metrics.roi}
-                  <div className="text-gray-400 text-xs">ROI</div>
+                  </p>
+<div className="text-gray-400 text-xs">ROI</div>
                     {item.metrics.timeline}
                   <div className="text-gray-400 text-xs">Timeline</div>
               {/* Tags */}

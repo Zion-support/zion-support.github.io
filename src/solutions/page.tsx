@@ -218,7 +218,8 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           {/* Solution Categories Tabs */}
-          <div className="mb-12">
+          </p>
+<div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => (
                 <button
@@ -244,7 +245,8 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           {/* Solutions Grid */}
-          <div className="mb-16">
+          </p>
+<div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -258,7 +260,8 @@ const SolutionsPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="mb-4">
+                  </p>
+<div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
                       {solution.features.map((feature, featureIndex) => (
@@ -306,7 +309,8 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -314,7 +318,8 @@ const SolutionsPage: React.FC = () => {
               Get a free consultation and discover how our solutions can revolutionize your operations 
               and drive unprecedented growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

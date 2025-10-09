@@ -105,7 +105,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
-                <div style={styles.errorDetails}>
+                </p>
+<div style={styles.errorDetails}>
                   <p style={styles.errorMessage}>
                     <strong>Error:</strong> {this.state.error.message}
                   </p>
@@ -123,7 +124,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
-            <div style={styles.actions}>
+            </p>
+<div style={styles.actions}>
               <button
                 onClick={this.resetErrorBoundary}
                 style={styles.button}

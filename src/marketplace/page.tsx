@@ -165,8 +165,7 @@ const MarketplacePage: React.FC = () => {
       description: 'Round-the-clock support for all marketplace activities',
       icon: Award,
       title: 'Quality Guarantee',
-      {
-        description: '100% satisfaction guarantee on all purchases',
+      description: '100% satisfaction guarantee on all purchases',
 
   return (
     <>
@@ -185,7 +184,8 @@ const MarketplacePage: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          </p>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -244,7 +244,8 @@ const MarketplacePage: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-white" />
                         )}
                       <p className="text-gray-300 text-sm mb-2">{item.description}</p>
-                      <div className="flex items-center text-sm text-gray-400 mb-2">
+                      </p>
+<div className="flex items-center text-sm text-gray-400 mb-2">
                         <span className="mr-2">{item.category}</span>
                         {item.vendor && <span>• {item.vendor}</span>}
 
@@ -303,13 +304,15 @@ const MarketplacePage: React.FC = () => {
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Find Your Perfect Solution?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

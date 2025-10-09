@@ -43,7 +43,8 @@ export default function HomePage() {
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
@@ -64,7 +65,8 @@ export default function HomePage() {
               </h2>
               <p className="text-xl text-gray-600">
                 We deliver measurable results through innovative AI solutions
-            <div className="grid md:grid-cols-3 gap-8">
+            </p>
+<div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
@@ -73,7 +75,8 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-600">
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                </p>
+<div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
                   Expert Team
                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
@@ -92,14 +95,17 @@ export default function HomePage() {
                 href="/blog"
                 View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
-      </main>
+      </div>
+</main>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-          <div className="text-center">
+          </p>
+<div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-6">
               Advanced AI and IT Solutions for Enterprise Transformation
-            <div className="flex justify-center space-x-6">
+            </p>
+<div className="flex justify-center space-x-6">
               <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
               <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
               <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>

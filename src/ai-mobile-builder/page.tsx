@@ -9,28 +9,20 @@ const AIMobileBuilderPage: React.FC = () => {
     {
       icon: Smartphone,
       title: 'AI-Assisted Development',
-      {
-
-        description: 'Intelligent mobile app development with AI assistance',
+      description: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
     },
       icon: Target,
       title: 'Cross-Platform Support',
-      {
-
-        description: 'Build for iOS and Android with a single codebase',
+      description: 'Build for iOS and Android with a single codebase',
       benefits: ['iOS development', 'Android development', 'Unified codebase']
       icon: Zap,
       title: 'Rapid Prototyping',
-      {
-
-        description: 'Fast prototyping and MVP development',
+      description: 'Fast prototyping and MVP development',
       benefits: ['Quick iteration', 'MVP development', 'Testing']
       icon: Settings,
       title: 'App Analytics',
-      {
-
-        description: 'Comprehensive app performance and user analytics',
+      description: 'Comprehensive app performance and user analytics',
       benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
     }
   ];
@@ -51,7 +43,8 @@ const AIMobileBuilderPage: React.FC = () => {
             Build powerful mobile apps faster with AI-assisted development. 
             From concept to deployment, accelerate your mobile app development process.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIMobileBuilderPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

@@ -9,28 +9,20 @@ const AIResearchDevelopmentPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Custom AI Research',
-      {
-
-        description: 'Tailored AI research solutions for your specific needs',
+      description: 'Tailored AI research solutions for your specific needs',
       benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
     },
       icon: Code,
       title: 'Prototype Development',
-      {
-
-        description: 'Rapid prototyping and development of AI solutions',
+      description: 'Rapid prototyping and development of AI solutions',
       benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
       icon: FlaskConical,
       title: 'Experimental Platforms',
-      {
-
-        description: 'Advanced experimental environments for AI testing',
+      description: 'Advanced experimental environments for AI testing',
       benefits: ['Sandbox environments', 'A/B testing', 'Performance analysis']
       icon: Target,
       title: 'Innovation Consulting',
-      {
-
-        description: 'Strategic consulting for AI adoption and implementation',
+      description: 'Strategic consulting for AI adoption and implementation',
       benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
     }
   ];
@@ -51,7 +43,8 @@ const AIResearchDevelopmentPage: React.FC = () => {
             Partner with our world-class AI research team to develop custom solutions that push the boundaries of artificial intelligence. 
             From concept to deployment, we bring your AI vision to life.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIResearchDevelopmentPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

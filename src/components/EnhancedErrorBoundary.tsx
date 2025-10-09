@@ -162,7 +162,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </p>
             </div>
 
-            <div className="space-y-4">
+            </p>
+<div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleRetry}
@@ -206,7 +207,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     <Bug className="w-4 h-4 mr-2" />
                     Technical Details
                   </summary>
-                  <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
+                  </p>
+<div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
                     <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
                       {this.state.error.message}
                       {'\n\n'}
@@ -223,7 +225,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               )}
             </div>
 
-            <div className="mt-8 text-sm text-gray-500">
+            </p>
+<div className="mt-8 text-sm text-gray-500">
               <p>
                 If this problem persists, please contact our support team at{' '}
                 <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">

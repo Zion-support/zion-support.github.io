@@ -9,28 +9,20 @@ const AIDesignAssistantPage: React.FC = () => {
     {
       icon: Palette,
       title: 'AI Design Generation',
-      {
-
-        description: 'AI-powered design creation and optimization',
+      description: 'AI-powered design creation and optimization',
       benefits: ['Auto design', 'Style optimization', 'Brand consistency']
     },
       icon: Target,
       title: 'Design Recommendations',
-      {
-
-        description: 'Intelligent design suggestions and improvements',
+      description: 'Intelligent design suggestions and improvements',
       benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
       icon: Zap,
       title: 'Automated Workflows',
-      {
-
-        description: 'Streamlined design workflows and automation',
+      description: 'Streamlined design workflows and automation',
       benefits: ['Template generation', 'Batch processing', 'Asset management']
       icon: Settings,
       title: 'Design Analytics',
-      {
-
-        description: 'Comprehensive design performance analytics',
+      description: 'Comprehensive design performance analytics',
       benefits: ['Performance metrics', 'User feedback', 'A/B testing']
     }
   ];
@@ -51,7 +43,8 @@ const AIDesignAssistantPage: React.FC = () => {
             Create stunning designs with AI-powered assistance. 
             From concept to completion, streamline your design process and achieve professional results.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIDesignAssistantPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

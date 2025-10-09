@@ -7,35 +7,23 @@ const AISocialMediaManagerPage: React.FC = () => {
     {
       icon: Share2,
       title: 'AI Content Creation',
-      {
-
-        description: 'Automatically generate engaging posts, captions, and hashtags for all platforms',
+      description: 'Automatically generate engaging posts, captions, and hashtags for all platforms',
     },
       icon: TrendingUp,
       title: 'Trend Analysis',
-      {
-
-        description: 'Real-time trend monitoring and content suggestions based on viral topics',
+      description: 'Real-time trend monitoring and content suggestions based on viral topics',
       icon: Users,
       title: 'Audience Insights',
-      {
-
-        description: 'Deep analytics on your audience behavior and engagement patterns',
+      description: 'Deep analytics on your audience behavior and engagement patterns',
       icon: Calendar,
       title: 'Smart Scheduling',
-      {
-
-        description: 'AI-optimized posting times for maximum engagement across all platforms',
+      description: 'AI-optimized posting times for maximum engagement across all platforms',
       icon: BarChart,
       title: 'Performance Analytics',
-      {
-
-        description: 'Comprehensive reporting with actionable insights and ROI tracking',
+      description: 'Comprehensive reporting with actionable insights and ROI tracking',
       icon: MessageSquare,
       title: 'Auto-Responses',
-      {
-
-        description: 'Intelligent chatbot responses and comment management',
+      description: 'Intelligent chatbot responses and comment management',
     }
   ];
 
@@ -56,13 +44,12 @@ const AISocialMediaManagerPage: React.FC = () => {
 
   const pricing = [
       name: 'Starter',
+      price: '$29',
       {
 
-        price: '$29',
-      period: '/month',
-      {
 
-        description: 'Perfect for small businesses',
+          period: '/month',
+      description: 'Perfect for small businesses',
       features: [
         '3 social media accounts',
         '50 posts per month',
@@ -72,10 +59,11 @@ const AISocialMediaManagerPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
+      price: '$79',
       {
 
-        price: '$79',
-      description: 'Ideal for growing brands',
+
+          description: 'Ideal for growing brands',
         '10 social media accounts',
         'Unlimited posts',
         'Advanced AI features',
@@ -84,10 +72,11 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Team collaboration'
       popular: true
       name: 'Enterprise',
+      price: '$199',
       {
 
-        price: '$199',
-      description: 'For large organizations',
+
+          description: 'For large organizations',
         'Unlimited accounts',
         'Full AI suite',
         'Custom analytics',
@@ -111,7 +100,8 @@ const AISocialMediaManagerPage: React.FC = () => {
               Automate your social media presence with AI that creates, schedules, and optimizes 
               content across all platforms to maximize engagement and grow your audience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -128,7 +118,8 @@ const AISocialMediaManagerPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Manage all your social media accounts from a single, intelligent dashboard
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          </p>
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -157,13 +148,15 @@ const AISocialMediaManagerPage: React.FC = () => {
               Proven Results
               Join thousands of brands who have transformed their social media presence
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+          </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {benefits.map((benefit, index) => (
                 <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 <p className="text-white font-semibold">{benefit}</p>
 
-          <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Social Media?
             <p className="text-gray-300 mb-6">
@@ -175,7 +168,8 @@ const AISocialMediaManagerPage: React.FC = () => {
               Simple, Transparent Pricing
               Choose the plan that fits your social media needs
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          </p>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
                 plan.popular 
@@ -188,7 +182,8 @@ const AISocialMediaManagerPage: React.FC = () => {
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
+                </p>
+<div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">

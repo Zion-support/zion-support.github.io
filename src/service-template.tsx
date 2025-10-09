@@ -30,7 +30,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
@@ -64,7 +65,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                     </li>
                   ))}
                 </ul>
-                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                </p>
+<div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block"
                   Get Started
 
@@ -85,7 +87,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
               Ready to Transform Your Business?
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations.
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

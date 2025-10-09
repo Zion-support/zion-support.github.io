@@ -88,8 +88,7 @@ const GreenITPage: React.FC = () => {
         'Sustainability reporting',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
-      {
-        pricing: 'Starting at $600/month',
+      pricing: 'Starting at $600/month',
 
   const benefits = [
       icon: TrendingUp,
@@ -143,8 +142,7 @@ const GreenITPage: React.FC = () => {
       color: 'text-blue-400',
       value: '100%',
       label: 'Renewable Energy Options',
-      {
-        color: 'text-purple-400',
+      color: 'text-purple-400',
 
   const caseStudies = [
       company: 'TechCorp Manufacturing',
@@ -181,7 +179,8 @@ const GreenITPage: React.FC = () => {
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
               that reduces costs while protecting our planet.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </p>
+<div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-green-400">
                 <Leaf className="w-5 h-5 mr-2" />
                 <span className="font-medium">Carbon Neutral Operations</span>
@@ -236,7 +235,8 @@ const GreenITPage: React.FC = () => {
                         <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                     
-                    <div className="mb-4">
+                    </p>
+<div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
                         {solution.features.map((feature, featureIndex) => (
@@ -277,14 +277,16 @@ const GreenITPage: React.FC = () => {
 
           {activeTab === 'certifications' && (
                 Our Certifications
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {certifications.map((cert, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
-                    <div className="text-green-400 text-sm font-medium">{cert.status}</div>
+                    </p>
+<div className="text-green-400 text-sm font-medium">{cert.status}</div>
 
           {/* Case Studies */}
               Success Stories
@@ -306,13 +308,15 @@ const GreenITPage: React.FC = () => {
                           {result}
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
+          </p>
+<div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey towards sustainable IT operations. Get a free environmental 
               assessment and discover how much you can save while protecting the planet.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Assessment
                 href="tel:+13024640950"

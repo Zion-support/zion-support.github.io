@@ -9,28 +9,20 @@ const AIDocumentProcessorPage: React.FC = () => {
     {
       icon: FileText,
       title: 'Document Processing',
-      {
-
-        description: 'AI-powered document processing and analysis',
+      description: 'AI-powered document processing and analysis',
       benefits: ['OCR processing', 'Text extraction', 'Data validation']
     },
       icon: Target,
       title: 'Intelligent Classification',
-      {
-
-        description: 'Automated document classification and sorting',
+      description: 'Automated document classification and sorting',
       benefits: ['Auto categorization', 'Smart routing', 'Metadata extraction']
       icon: Zap,
       title: 'Automated Workflows',
-      {
-
-        description: 'Streamlined document processing workflows',
+      description: 'Streamlined document processing workflows',
       benefits: ['Batch processing', 'Workflow automation', 'Error handling']
       icon: Settings,
       title: 'Document Analytics',
-      {
-
-        description: 'Comprehensive document analytics and insights',
+      description: 'Comprehensive document analytics and insights',
       benefits: ['Processing metrics', 'Quality analysis', 'Performance tracking']
     }
   ];
@@ -51,7 +43,8 @@ const AIDocumentProcessorPage: React.FC = () => {
             Automate your document processing with AI-powered intelligence. 
             Extract, classify, and analyze documents with unprecedented accuracy and speed.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIDocumentProcessorPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

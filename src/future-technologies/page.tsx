@@ -43,7 +43,8 @@ const FutureTechnologiesPage: React.FC = () => {
             Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing, 
             we help you prepare for and adopt the technologies of tomorrow.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -80,7 +81,8 @@ const FutureTechnologiesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

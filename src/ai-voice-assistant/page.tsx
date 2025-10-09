@@ -9,28 +9,20 @@ const AIVoiceAssistantPage: React.FC = () => {
     {
       icon: Mic,
       title: 'Voice Recognition',
-      {
-
-        description: 'Advanced voice recognition and processing',
+      description: 'Advanced voice recognition and processing',
       benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support']
     },
       icon: Target,
       title: 'Natural Language Processing',
-      {
-
-        description: 'Intelligent conversation and understanding',
+      description: 'Intelligent conversation and understanding',
       benefits: ['Context understanding', 'Intent recognition', 'Response generation']
       icon: Zap,
       title: 'Automated Tasks',
-      {
-
-        description: 'Voice-controlled task automation',
+      description: 'Voice-controlled task automation',
       benefits: ['Task automation', 'Workflow control', 'Smart scheduling']
       icon: Settings,
       title: 'Custom Integration',
-      {
-
-        description: 'Custom voice assistant integration',
+      description: 'Custom voice assistant integration',
       benefits: ['API integration', 'Custom commands', 'Third-party apps']
     }
   ];
@@ -51,7 +43,8 @@ const AIVoiceAssistantPage: React.FC = () => {
             Build custom voice assistants with AI-powered intelligence. 
             Create natural, conversational experiences that understand and respond to user needs.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -88,7 +81,8 @@ const AIVoiceAssistantPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      </main>
+      </div>
+</main>
 
       <Footer />
   );

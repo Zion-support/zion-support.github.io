@@ -137,7 +137,8 @@ const RequestQuotePage: React.FC = () => {
                 Thank you for your interest in our services. We've received your quote request 
                 and will get back to you within 24 hours with a detailed proposal.
               </p>
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
+              </p>
+<div className="bg-slate-800/50 rounded-lg p-6 mb-8">
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
                 <div className="space-y-3 text-left">
                   <div className="flex items-center">
@@ -194,7 +195,8 @@ const RequestQuotePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          </p>
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
             <div className="lg:col-span-2">
               <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
@@ -400,7 +402,8 @@ const RequestQuotePage: React.FC = () => {
               </div>
 
               {/* Why Choose Us */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+              </p>
+<div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <div className="space-y-4">
                   {whyChooseUs.map((item, index) => (
@@ -418,12 +421,14 @@ const RequestQuotePage: React.FC = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
+              </p>
+<div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   For urgent inquiries or immediate assistance, contact us directly.
                 </p>
-                <div className="space-y-3">
+                </p>
+<div className="space-y-3">
                   <a
                     href="tel:+13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"

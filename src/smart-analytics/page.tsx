@@ -81,7 +81,8 @@ const SmartAnalyticsPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics that drive real business results
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
@@ -108,7 +109,8 @@ const SmartAnalyticsPage: React.FC = () => {
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <div className="text-cyan-400 font-medium">{feature.benefit}</div>
+                </p>
+<div className="text-cyan-400 font-medium">{feature.benefit}</div>
             ))}
 
         {/* Pricing Section */}
@@ -128,7 +130,8 @@ const SmartAnalyticsPage: React.FC = () => {
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
-                <div className="mb-6">
+                </p>
+<div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
@@ -157,7 +160,8 @@ const SmartAnalyticsPage: React.FC = () => {
 
         {/* Contact Info */}
         <section className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
+          </p>
+<div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
             <div className="grid md:grid-cols-3 gap-6 text-gray-300">
               <div className="flex items-center justify-center">

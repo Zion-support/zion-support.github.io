@@ -169,7 +169,8 @@ class AdvancedErrorBoundary extends Component<
                   has been notified.
                 </p></div>
               {process.env.NODE_ENV === 'development' && (
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'><h3 className='text-sm font-medium text-red-800'>
+                </p>
+<div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'><h3 className='text-sm font-medium text-red-800'>
                     Error Details:
                   </h3><div className='mt-2 text-sm text-red-700'><p><strong>Error ID:</strong> {this.state.errorId}
                     </p><p><strong>Message:</strong> {this.state.error?.message}
@@ -183,7 +184,8 @@ class AdvancedErrorBoundary extends Component<
                         {this.state.errorInfo?.componentStack}
                       </pre></details></div></div>
               )}
-              <div className='mt-6 space-y-3'>
+              </p>
+<div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
                     <button

@@ -32,7 +32,8 @@ export default function ServicesAdvertisingPage() {
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
@@ -52,7 +53,8 @@ export default function ServicesAdvertisingPage() {
             </h2>
             <p className="text-xl text-gray-600">
               Our AI-powered advertising delivers measurable business impact
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </p>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
               <div className="text-gray-600">Average ROI</div>
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
@@ -78,7 +80,8 @@ export default function ServicesAdvertisingPage() {
                 <li>• Lookalike audience creation</li>
                 <li>• Cross-platform targeting</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
+              </p>
+<div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $2,000-5,000/month | Our Price: $1,200/month
               <div className="text-green-600 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>

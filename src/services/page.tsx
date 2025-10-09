@@ -87,8 +87,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       description: 'Round-the-clock support with guaranteed response times',
       icon: Clock,
       title: 'Fast Delivery',
-      {
-        description: 'Quick implementation with minimal downtime',
+      description: 'Quick implementation with minimal downtime',
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
