@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
@@ -156,6 +157,18 @@ const App: React.FC = () => {
 
   return (
     <ErrorBoundary>
+      <PerformanceMonitor
+        enableRealTimeMonitoring={true}
+        enableCoreWebVitals={true}
+        enableResourceTiming={true}
+        enableUserTiming={true}
+        enableMemoryMonitoring={true}
+        enableNetworkMonitoring={true}
+        reportInterval={10000}
+        onMetricsUpdate={(metrics) => {
+          console.log('Performance metrics updated:', metrics);
+        }}
+      />
       <Router>
         <Suspense fallback={<MainLoadingSpinner />}>
           <Routes>

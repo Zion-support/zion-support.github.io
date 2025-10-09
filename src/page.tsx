@@ -8,6 +8,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
@@ -554,6 +555,20 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor
+        enableRealTimeMonitoring={true}
+        enableCoreWebVitals={true}
+        enableResourceTiming={true}
+        enableUserTiming={true}
+        enableMemoryMonitoring={true}
+        enableNetworkMonitoring={true}
+        reportInterval={15000}
+        onMetricsUpdate={(metrics) => {
+          console.log('Performance metrics updated:', metrics);
+        }}
+      />
       
       {/* SEO Optimizer */}
       <SEOOptimizer />
