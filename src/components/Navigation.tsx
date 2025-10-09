@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Menu, X, Phone, Mail, MapPin, ChevronDown, Zap, Brain, Cpu, Shield, Cloud, Database, Settings, Users, BarChart, MessageSquare, Eye, Target, TrendingUp, Star, CheckCircle, ArrowRight, Globe, Lock, Code, Smartphone, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isAIOpen, setIsAIOpen] = useState(false);
-  const [isITOpen, setIsITOpen] = useState(false);
-  const [isSpecializedOpen, setIsSpecializedOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -19,361 +17,403 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeAllMenus = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsAIOpen(false);
-    setIsITOpen(false);
-    setIsSpecializedOpen(false);
-  };
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
+        setIsOpen(false);
+      }
+    };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) {
-      closeAllMenus();
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
+
+  // Handle phone click analytics
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'navigation',
+        event_label: 'header_phone'
+      });
     }
+  }, []);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-    if (isServicesOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
+  const navigationItems = [
+    {
+      label: 'Home',
+      href: '/',
+      icon: Home
+    },
+    {
+      label: 'Services',
+      href: '#services',
+      icon: Settings,
+      dropdown: [
+        {
+          label: 'Micro SAAS',
+          href: '/micro-saas',
+          icon: Zap,
+          description: 'AI-powered business tools'
+        },
+        {
+          label: 'IT Services',
+          href: '/it-services',
+          icon: Cpu,
+          description: 'Complete IT solutions'
+        },
+        {
+          label: 'AI Solutions',
+          href: '/ai-services',
+          icon: Brain,
+          description: 'Advanced AI technology'
+        }
+      ]
+    },
+    {
+      label: 'AI Tools',
+      href: '/ai-tools',
+      icon: Brain,
+      dropdown: [
+        {
+          label: 'AI Project Manager',
+          href: '/ai-project-manager',
+          icon: BarChart,
+          description: 'Intelligent project planning'
+        },
+        {
+          label: 'AI Analytics',
+          href: '/ai-analytics',
+          icon: TrendingUp,
+          description: 'Data insights & analytics'
+        },
+        {
+          label: 'AI Automation',
+          href: '/ai-automation',
+          icon: Zap,
+          description: 'Process automation'
+        },
+        {
+          label: 'AI Customer Support',
+          href: '/ai-customer-support',
+          icon: MessageSquare,
+          description: '24/7 AI support'
+        },
+        {
+          label: 'AI Code Generator',
+          href: '/ai-code-generation',
+          icon: Code,
+          description: 'AI-powered development'
+        },
+        {
+          label: 'AI Video Generator',
+          href: '/ai-video-generation',
+          icon: Video,
+          description: 'Create videos with AI'
+        },
+        {
+          label: 'AI Voice Cloning',
+          href: '/ai-voice-cloning',
+          icon: Microphone,
+          description: 'Realistic voice synthesis'
+        },
+        {
+          label: 'AI Fashion Design',
+          href: '/ai-fashion-design',
+          icon: Palette,
+          description: 'AI fashion creation'
+        },
+        {
+          label: 'AI Music Composer',
+          href: '/ai-music-composition',
+          icon: Music,
+          description: 'AI music generation'
+        },
+        {
+          label: 'AI Fitness Coach',
+          href: '/ai-fitness-coach',
+          icon: Heart,
+          description: 'Personalized fitness'
+        }
+      ]
+    },
+    {
+      label: 'IT Solutions',
+      href: '/it-solutions',
+      icon: Cpu,
+      dropdown: [
+        {
+          label: 'Cloud Services',
+          href: '/cloud-services',
+          icon: Cloud,
+          description: 'Cloud migration & management'
+        },
+        {
+          label: 'Cybersecurity',
+          href: '/cybersecurity',
+          icon: Shield,
+          description: 'Advanced security solutions'
+        },
+        {
+          label: 'DevOps & CI/CD',
+          href: '/devops',
+          icon: Settings,
+          description: 'Development automation'
+        },
+        {
+          label: 'Database Services',
+          href: '/database-services',
+          icon: Database,
+          description: 'Database optimization'
+        },
+        {
+          label: 'Network Infrastructure',
+          href: '/network-infrastructure',
+          icon: Wifi,
+          description: 'Network design & management'
+        },
+        {
+          label: 'IT Support',
+          href: '/it-support',
+          icon: Headphones,
+          description: '24/7 technical support'
+        },
+        {
+          label: 'Data Analytics',
+          href: '/data-analytics',
+          icon: BarChart3,
+          description: 'Business intelligence'
+        },
+        {
+          label: 'Mobile Development',
+          href: '/mobile-development',
+          icon: Smartphone,
+          description: 'App development'
+        }
+      ]
+    },
+    {
+      label: 'About',
+      href: '/about',
+      icon: Users
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
+      icon: Phone
     }
-  };
-
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
-  };
-
-  const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
-  ];
-
-  const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database-services', icon: Database },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Briefcase },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
-  ];
-
-  const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
-    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <div className="relative group">
-              <button
-                onClick={toggleServices}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
+    <>
+      {/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-b border-cyan-500/20">
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex flex-wrap justify-between items-center text-sm">
+            <div className="flex flex-wrap items-center gap-6">
+              <a 
+                href="tel:+13024640950" 
+                onClick={handlePhoneClick}
+                className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-3 gap-6">
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Zap className="w-4 h-4 mr-2" />
-                        Micro SAAS
-                      </h3>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Brain className="w-4 h-4 mr-2" />
-                        AI Services
-                      </h3>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Settings className="w-4 h-4 mr-2" />
-                        IT Services
-                      </h3>
-                      <div className="space-y-2">
-                        {itServices.slice(0, 6).map((service) => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
+                <PhoneIcon className="w-4 h-4" />
+                +1 (302) 464-0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-300"
+              >
+                <MailIcon className="w-4 h-4" />
+                kleber@ziontechgroup.com
+              </a>
+              <div className="flex items-center gap-2 text-pink-400">
+                <Location className="w-4 h-4" />
+                364 E Main St STE 1008, Middletown DE 19709
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-green-400 flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                Online Now
+              </span>
+              <a 
+                href="https://ziontechgroup.com" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/30' 
+          : 'bg-transparent'
+      }`}>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center">
+              <a 
+                href="/" 
+                className="flex items-center space-x-3 group"
+              >
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="hidden sm:block">
+                  <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                    ZION TECH GROUP
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="/services"
-                        className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>View All Services</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                      <a
-                        href="/specialized-services"
-                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>Specialized Solutions</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                    </div>
+                  <div className="text-xs text-gray-400">
+                    AI & IT Solutions
                   </div>
                 </div>
-              )}
+              </a>
             </div>
 
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </Link>
-            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </Link>
-            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </Link>
-            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-            
-            <div className="flex items-center space-x-4">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigationItems.map((item, index) => (
+                <div key={index} className="relative group">
+                  <button
+                    className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-300 py-2"
+                    onClick={() => item.dropdown ? toggleDropdown(item.label) : null}
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.label}</span>
+                    {item.dropdown && (
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                        activeDropdown === item.label ? 'rotate-180' : ''
+                      }`} />
+                    )}
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {item.dropdown && (
+                    <div className={`absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-md border border-cyan-500/30 rounded-lg shadow-xl transition-all duration-300 ${
+                      activeDropdown === item.label 
+                        ? 'opacity-100 visible translate-y-0' 
+                        : 'opacity-0 invisible translate-y-2'
+                    }`}>
+                      <div className="p-4">
+                        <div className="grid grid-cols-1 gap-2">
+                          {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                            <a
+                              key={dropdownIndex}
+                              href={dropdownItem.href}
+                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-300 group"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <dropdownItem.icon className="w-5 h-5 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors duration-300" />
+                              <div>
+                                <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-300">
+                                  {dropdownItem.label}
+                                </div>
+                                <div className="text-sm text-gray-400">
+                                  {dropdownItem.description}
+                                </div>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:flex items-center space-x-4">
               <a
                 href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">+1 302 464 0950</span>
-              </a>
-              <a href="/contact"
-                className="cyber-button px-4 py-2 text-sm"
+                onClick={handlePhoneClick}
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
               </a>
             </div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <a href="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
+        <div className={`lg:hidden mobile-menu transition-all duration-300 ${
+          isOpen 
+            ? 'max-h-screen opacity-100 visible' 
+            : 'max-h-0 opacity-0 invisible'
+        }`}>
+          <div className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/30">
+            <div className="container mx-auto px-4 py-4">
+              <div className="space-y-4">
+                {navigationItems.map((item, index) => (
+                  <div key={index}>
+                    <a
+                      href={item.href}
+                      className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-slate-800/50"
+                      onClick={() => setIsOpen(false)}
                     >
-                      View All Services →
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-medium">{item.label}</span>
                     </a>
+                    
+                    {/* Mobile Dropdown */}
+                    {item.dropdown && (
+                      <div className="ml-8 space-y-2">
+                        {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                          <a
+                            key={dropdownIndex}
+                            href={dropdownItem.href}
+                            className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-slate-800/30"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <dropdownItem.icon className="w-4 h-4" />
+                            <span className="text-sm">{dropdownItem.label}</span>
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </Link>
-              
-              <div className="pt-4 border-t border-gray-700">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-                </a>
+                ))}
+                
+                {/* Mobile CTA */}
+                <div className="pt-4 border-t border-cyan-500/20">
+                  <a
+                    href="tel:+13024640950"
+                    onClick={handlePhoneClick}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Get Started Now
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+
+      {/* Spacer for fixed navigation */}
+      <div className="h-16"></div>
+    </>
   );
 };
 
