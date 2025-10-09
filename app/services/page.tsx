@@ -63,6 +63,62 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,200/month'
     },
     {
+      title: 'AI-Powered IT Infrastructure',
+      description: 'Intelligent infrastructure management with predictive maintenance and automated optimization.',
+      icon: '🤖',
+      link: '/ai-cloud-infrastructure',
+      features: ['AI Monitoring', 'Predictive Maintenance', 'Auto-scaling', 'Cost Optimization'],
+      price: 'Starting at $2,999/month'
+    },
+    {
+      title: 'Enterprise Security Solutions',
+      description: 'Advanced security services including threat detection, incident response, and compliance.',
+      icon: '🛡️',
+      link: '/cybersecurity',
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
+      price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'Cloud Migration Services',
+      description: 'Seamless cloud transformation with zero downtime and cost optimization.',
+      icon: '☁️',
+      link: '/cloud-migration',
+      features: ['Zero Downtime', 'Cost Optimization', 'Security Enhancement', 'Scalability'],
+      price: 'Starting at $5,000/project'
+    },
+    {
+      title: 'DevOps & Automation',
+      description: 'Automated deployment pipelines and infrastructure as code solutions.',
+      icon: '🔄',
+      link: '/devops',
+      features: ['CI/CD Pipelines', 'Infrastructure Automation', 'Monitoring & Alerting', 'Testing Automation'],
+      price: 'Starting at $1,800/month'
+    },
+    {
+      title: 'Database Management',
+      description: 'Advanced database services including optimization, backup, and performance tuning.',
+      icon: '🗄️',
+      link: '/database-services',
+      features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', '24/7 Monitoring'],
+      price: 'Starting at $1,500/month'
+    },
+    {
+      title: 'Network Infrastructure',
+      description: 'Enterprise-grade network design, implementation, and management services.',
+      icon: '🌐',
+      link: '/network-services',
+      features: ['Network Design', 'Security Implementation', 'Performance Optimization', 'Disaster Recovery'],
+      price: 'Starting at $2,200/month'
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Expert guidance and strategic planning for digital transformation.',
+      icon: '💡',
+      link: '/it-consulting',
+      features: ['Strategic Planning', 'Technology Assessment', 'Implementation Support', 'Training'],
+      price: 'Starting at $200/hour'
+    },
+    {
       title: 'Quantum Computing',
       description: 'Next-generation quantum computing capabilities for complex problem solving.',
       icon: '⚛️',
@@ -200,6 +256,62 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Voice Assistant Development',
+      description: 'Create custom voice assistants and chatbots for customer service and internal operations.',
+      icon: '🎤',
+      link: '/ai-voice-assistant',
+      features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Training'],
+      price: 'Starting at $2,999/project'
+    },
+    {
+      title: 'AI Document Processing',
+      description: 'Advanced document processing with OCR, data extraction, and workflow automation.',
+      icon: '📄',
+      link: '/ai-document-processing',
+      features: ['OCR Text Extraction', 'Document Classification', 'Data Validation', 'Workflow Automation'],
+      price: 'Starting at $299/month'
+    },
+    {
+      title: 'AI Predictive Maintenance',
+      description: 'Intelligent maintenance scheduling with failure prediction and cost optimization.',
+      icon: '🔧',
+      link: '/ai-predictive-maintenance',
+      features: ['Failure Prediction', 'Cost Optimization', 'Scheduling Automation', 'Performance Monitoring'],
+      price: 'Starting at $1,800/month'
+    },
+    {
+      title: 'AI Supply Chain Optimization',
+      description: 'Optimize your supply chain with AI-powered demand forecasting and inventory management.',
+      icon: '📦',
+      link: '/ai-supply-chain',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Risk Assessment'],
+      price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'AI Quality Control',
+      description: 'Automated quality inspection and defect detection using computer vision and AI.',
+      icon: '🔍',
+      link: '/ai-quality-control',
+      features: ['Defect Detection', 'Quality Scoring', 'Real-time Monitoring', 'Process Optimization'],
+      price: 'Starting at $3,500/month'
+    },
+    {
+      title: 'AI Energy Management',
+      description: 'Intelligent energy optimization for buildings and industrial facilities.',
+      icon: '⚡',
+      link: '/ai-energy-management',
+      features: ['Energy Optimization', 'Cost Reduction', 'Carbon Footprint Tracking', 'Smart Scheduling'],
+      price: 'Starting at $1,200/month'
+    },
+    {
+      title: 'AI Talent Acquisition',
+      description: 'AI-powered recruitment and talent management solutions.',
+      icon: '👥',
+      link: '/ai-talent-acquisition',
+      features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Bias Detection'],
+      price: 'Starting at $1,500/month'
     }
   ];
 
