@@ -689,6 +689,87 @@ body {
   }
 }
 
+/* Additional Responsive Utilities */
+.quantum-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 
+    0 0 30px rgba(139, 92, 246, 0.2),
+    inset 0 0 30px rgba(139, 92, 246, 0.05);
+  transform: translateY(-5px);
+}
+
+.energy-pulse {
+  animation: energy-pulse 3s ease-in-out infinite;
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  }
+}
+
+/* Service Card Responsive Improvements */
+@media (max-width: 640px) {
+  .cyber-card,
+  .quantum-card {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cyber-card h3,
+  .quantum-card h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .cyber-card p,
+  .quantum-card p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .cyber-card ul,
+  .quantum-card ul {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-card,
+  .quantum-card {
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .cyber-card h3,
+  .quantum-card h3 {
+    font-size: 0.875rem;
+  }
+  
+  .cyber-card p,
+  .quantum-card p {
+    font-size: 0.8125rem;
+  }
+  
+  .cyber-card ul,
+  .quantum-card ul {
+    font-size: 0.6875rem;
+  }
+}
+
 /* Print Styles */
 @media print {
   .cyber-grid,

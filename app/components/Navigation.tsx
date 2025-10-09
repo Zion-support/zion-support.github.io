@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Stethoscope, GraduationCap, Truck, Scale, Wheat, Plane, Calendar, Utensils, Hammer, Factory, ShoppingCart, Building, Package, Megaphone, Users, Eye, Cube, Shield, Lock, Globe, Car, Briefcase, Database, Smartphone, Gamepad2 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +36,25 @@ const Navigation: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Home },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Platform', href: '/ai-education-platform', icon: GraduationCap },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Energy Management', href: '/ai-energy-management', icon: Zap },
+    { name: 'AI Legal Document Analyzer', href: '/ai-legal-analyzer', icon: Scale },
+    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant', icon: Wheat },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: Plane },
+    { name: 'AI Event Management', href: '/ai-event-management', icon: Calendar },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Utensils },
+    { name: 'AI Fleet Management', href: '/ai-fleet-management', icon: Truck },
+    { name: 'AI Insurance Assistant', href: '/ai-insurance-assistant', icon: Shield },
+    { name: 'AI Construction Manager', href: '/ai-construction-manager', icon: Hammer },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Factory },
+    { name: 'AI Retail Analytics', href: '/ai-retail-analytics', icon: ShoppingCart },
+    { name: 'AI Banking Assistant', href: '/ai-banking-assistant', icon: Building },
+    { name: 'AI Logistics Optimizer', href: '/ai-logistics-optimizer', icon: Package },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: Megaphone },
+    { name: 'AI Customer Analytics', href: '/ai-customer-analytics', icon: Users },
   ];
 
   const aiServices = [
@@ -47,6 +66,18 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Metaverse Development', href: '/ai-metaverse-development', icon: Cube },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Plane },
+    { name: 'AI Neuroscience', href: '/ai-neuroscience', icon: Brain },
+    { name: 'AI Biotechnology', href: '/ai-biotechnology', icon: Stethoscope },
+    { name: 'AI Cybersecurity Advanced', href: '/ai-cybersecurity-advanced', icon: Shield },
+    { name: 'AI Digital Twin', href: '/ai-digital-twin', icon: Settings },
+    { name: 'AI Conversational AI', href: '/ai-conversational-ai', icon: MessageSquare },
   ];
 
   const itServices = [
@@ -58,6 +89,23 @@ const Navigation: React.FC = () => {
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu },
+    { name: '5G & Edge Computing', href: '/5g-edge-computing', icon: Globe },
+    { name: 'Autonomous Systems Integration', href: '/autonomous-systems-integration', icon: Car },
+    { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', icon: Cube },
+    { name: 'AI Infrastructure & MLOps', href: '/ai-infrastructure-mlops', icon: Brain },
+    { name: 'Digital Transformation Consulting', href: '/digital-transformation-consulting', icon: Briefcase },
+    { name: 'Cloud-Native Development', href: '/cloud-native-development', icon: Cloud },
+    { name: 'Data Engineering & Analytics', href: '/data-engineering-analytics', icon: Database },
+    { name: 'IoT & Smart City Solutions', href: '/iot-smart-city-solutions', icon: Cpu },
+    { name: 'Augmented & Virtual Reality', href: '/augmented-virtual-reality', icon: Eye },
+    { name: 'High-Performance Computing', href: '/high-performance-computing', icon: Cpu },
+    { name: 'Green IT & Sustainability', href: '/green-it-sustainability', icon: Globe },
+    { name: 'Space Technology Solutions', href: '/space-technology-solutions', icon: Plane },
+    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions', icon: Stethoscope },
+    { name: 'Financial Technology Solutions', href: '/financial-technology-solutions', icon: DollarSign },
+    { name: 'Gaming & Entertainment Technology', href: '/gaming-entertainment-technology', icon: Gamepad2 },
+    { name: 'Educational Technology Solutions', href: '/educational-technology-solutions', icon: GraduationCap },
   ];
 
   return (
