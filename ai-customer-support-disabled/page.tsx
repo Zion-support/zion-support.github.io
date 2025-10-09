@@ -110,8 +110,6 @@ const AICustomerSupportPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
             </div>
           </section>
         </main>
