@@ -122,17 +122,17 @@ const AIContentWriterPage: React.FC = () => {
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
-        enablePrefetching={true}
+        enablePreloading={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-        enableScreenReader={true}
+        enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
       <SecurityEnhancer
         enableCSP={true}
-        enableHSTS={true}
+        enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />

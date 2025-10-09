@@ -679,7 +679,7 @@ const HomePage: React.FC = () => {
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
-        enablePrefetching={true}
+        enablePreloading={true}
         enableCriticalCSS={true}
         enableResourceHints={true}
         enableServiceWorker={true}
@@ -688,7 +688,7 @@ const HomePage: React.FC = () => {
       />
       <EnhancedAccessibilityEnhancer
         enableKeyboardNavigation={true}
-        enableScreenReader={true}
+        enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
         enableAriaLabels={true}
@@ -699,7 +699,7 @@ const HomePage: React.FC = () => {
       />
       <SecurityEnhancer
         enableCSP={true}
-        enableHSTS={true}
+        enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />

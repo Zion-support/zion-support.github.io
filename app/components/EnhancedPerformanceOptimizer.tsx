@@ -5,7 +5,7 @@ interface EnhancedPerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enableCodeSplitting?: boolean;
-  enablePrefetching?: boolean;
+  enablePreloading?: boolean;
   enableCriticalCSS?: boolean;
   enableResourceHints?: boolean;
   enableServiceWorker?: boolean;
@@ -17,7 +17,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
   enableImageOptimization = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,
-  enablePrefetching = true,
+  enablePreloading = true,
   enableCriticalCSS = true,
   enableResourceHints = true,
   enableServiceWorker = true,
@@ -126,7 +126,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
 
   // Resource prefetching
   const prefetchResources = useCallback(() => {
-    if (typeof window === 'undefined' || !enablePrefetching) return;
+    if (typeof window === 'undefined' || !enablePreloading) return;
 
     const prefetchLinks = [
       '/services',
@@ -149,7 +149,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
         document.head.appendChild(link);
       }
     });
-  }, [enablePrefetching]);
+  }, [enablePreloading]);
 
   // DNS prefetching
   const addResourceHints = useCallback(() => {
