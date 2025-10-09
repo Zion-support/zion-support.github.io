@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import AnimatedCounter from './AnimatedCounter';
 
 interface ContentStats {
   totalArticles: number;
@@ -136,7 +137,7 @@ const ContentStatistics: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 text-center">
             <div className="text-3xl font-bold text-indigo-600 mb-2">
-              {stats.totalArticles}
+              <AnimatedCounter end={stats.totalArticles} duration={2000} />
             </div>
             <div className="text-gray-700 font-medium">Total Articles</div>
             <div className="text-sm text-gray-500 mt-1">+12% this month</div>
@@ -144,7 +145,7 @@ const ContentStatistics: React.FC = () => {
 
           <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
             <div className="text-3xl font-bold text-green-600 mb-2">
-              {formatNumber(stats.totalViews)}
+              <AnimatedCounter end={stats.totalViews} duration={2000} />
             </div>
             <div className="text-gray-700 font-medium">Total Views</div>
             <div className="text-sm text-gray-500 mt-1">+28% this month</div>

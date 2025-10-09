@@ -1,5 +1,6 @@
 import './globals.css';
 import ComprehensiveErrorBoundary from './components/ComprehensiveErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 export default function RootLayout({
   children,
@@ -187,6 +188,7 @@ export default function RootLayout({
           maxRetries={3}
           showRetryButton={true}
         >
+          <PerformanceMonitor />
           {children}
         </ComprehensiveErrorBoundary>
       </body>

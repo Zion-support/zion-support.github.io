@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 import { 
   ChevronDown, 
   Phone, 
@@ -359,6 +360,9 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={isOpen} onClose={closeAllMenus} />
     </nav>
   );
 };
