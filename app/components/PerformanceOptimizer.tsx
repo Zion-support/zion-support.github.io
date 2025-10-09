@@ -1,86 +1,78 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  // Preload critical resources
   useEffect(() => {
-    // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
+
+      // Preload critical images
+      const criticalImages = [
+        '/og-image.svg',
+        '/logo192.png',
+        '/favicon.svg'
       ];
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
-        document.head.appendChild(link);
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
       });
     };
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
-    };
-
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
-      });
-    };
-
-    // Initialize optimizations
     preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalJS();
-
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
-    }
-
-    return () => {
-      // Cleanup if needed
-    };
   }, []);
 
-  return null;
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Add any scroll-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Optimize resize performance
+  const handleResize = useCallback(() => {
+    let ticking = false;
+    
+    const updateLayout = () => {
+      // Add any resize-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateLayout);
+      ticking = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
+
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
