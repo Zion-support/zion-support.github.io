@@ -1,49 +1,48 @@
 #!/usr/bin/env python3
-"""
-Script to automatically fix merge conflicts in the codebase
-"""
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a file by keeping the second version (after =======)"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and keep the newer version (after =======)
-        # Pattern to match merge conflicts
-        conflict_pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        # Replace with the content after =======
-        fixed_content = re.sub(conflict_pattern, r'\1', content, flags=re.DOTALL)
+        # Pattern 1: Keep everything after ======= and before >>>>>>>
+        pattern1 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
+        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
         
-        # Clean up any remaining conflict markers
-        fixed_content = re.sub(r'<<<<<<< HEAD.*?=======', '', fixed_content, flags=re.DOTALL)
-        fixed_content = re.sub(r'>>>>>>>.*?', '', fixed_content, flags=re.DOTALL)
+        # Pattern 2: Remove any remaining <<<<<<< HEAD lines
+        content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
         
-        # Clean up extra whitespace
-        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
+        # Pattern 3: Remove any remaining ======= lines
+        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
         
-        if content != fixed_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(fixed_content)
-            print(f"Fixed merge conflicts in: {file_path}")
-            return True
-        return False
+        # Pattern 4: Remove any remaining >>>>>>> lines
+        content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
+        
+        # Clean up any double newlines
+        content = re.sub(r'\n\n\n+', '\n\n', content)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        return True
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all merge conflicts"""
-    # Find all TypeScript/JavaScript files in the app directory
+    # Find all TypeScript and JavaScript files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx'
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
     files_processed = 0
@@ -55,6 +54,7 @@ def main():
                 files_processed += 1
                 if fix_merge_conflicts(file_path):
                     files_fixed += 1
+                    print(f"Fixed merge conflicts in: {file_path}")
     
     print(f"\nProcessed {files_processed} files")
     print(f"Fixed merge conflicts in {files_fixed} files")

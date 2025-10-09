@@ -43,7 +43,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
     'accelerometer=()',
     'gyroscope=()',
     'magnetometer=()',
-  ].join(', '),
+  ].join(', ')
 };
 /**
  * Get security headers as key-value pairs
@@ -54,7 +54,7 @@ export function getSecurityHeaders(
   const config = { ...defaultSecurityHeaders, ...customConfig };
   const headers: Record<string, string> = {
     'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on',
+    'X-DNS-Prefetch-Control': 'on'
   };
   if (config.contentSecurityPolicy) {
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;
@@ -85,7 +85,7 @@ export function getNextSecurityHeaders(
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
     key,
-    value,
+    value
   }));
 }
 export default defaultSecurityHeaders;

@@ -8,7 +8,7 @@ export enum ErrorSeverity {
   Low = 'low',
   Medium = 'medium',
   High = 'high',
-  Critical = 'critical',
+  Critical = 'critical'
 }
 export enum ErrorCategory {
   Network = 'network',
@@ -16,7 +16,7 @@ export enum ErrorCategory {
   Authorization = 'authorization',
   Runtime = 'runtime',
   Configuration = 'configuration',
-  ExternalService = 'external_service',
+  ExternalService = 'external_service'
 }
 export interface ErrorMetadata {
   category: ErrorCategory;
@@ -65,8 +65,8 @@ class ErrorTrackingService {
         context: {
           filename: event.filename,
           lineno: event.lineno,
-          colno: event.colno,
-        },
+          colno: event.colno
+        }
       });
     });
     // Handle unhandled promise rejections
@@ -74,7 +74,7 @@ class ErrorTrackingService {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         category: ErrorCategory.Runtime,
         severity: ErrorSeverity.Critical,
-        context: { reason: event.reason },
+        context: { reason: event.reason }
       });
     });
   }
@@ -92,7 +92,7 @@ class ErrorTrackingService {
       timestamp,
       stackTrace: error.stack,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined
     };
     const existingError = this.errors.get(errorId);
     if (existingError) {
@@ -108,7 +108,7 @@ class ErrorTrackingService {
         metadata: fullMetadata,
         occurrences: 1,
         firstSeen: timestamp,
-        lastSeen: timestamp,
+        lastSeen: timestamp
       };
       this.errors.set(errorId, trackedError);
       // Notify listeners
@@ -123,7 +123,7 @@ class ErrorTrackingService {
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
       error_id: errorId,
       category: metadata.category,
-      ...metadata.context,
+      ...metadata.context
     });
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
@@ -179,7 +179,7 @@ class ErrorTrackingService {
         await fetch('/api/error-report', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(error),
+          body: JSON.stringify(error)
         });
       }
     } catch (reportError) {
@@ -227,7 +227,7 @@ class ErrorTrackingService {
       total: errors.length,
       byCategory,
       bySeverity,
-      topErrors,
+      topErrors
     };
   }
   /**
@@ -257,20 +257,20 @@ export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, '
   return errorTracking.trackError(error, {
     ...options,
     category,
-    severity,
+    severity
   });
 };
 export const getErrorStatistics = () => {
   const stats = errorTracking.getStatistics();
   const errors = errorTracking.getErrors().map(error => ({
     ...error,
-    context: error.metadata.context,
+    context: error.metadata.context
   }));
   return {
     total: stats.total,
     byCategory: stats.byCategory,
     bySeverity: stats.bySeverity,
-    errors,
+    errors
   };
 };
 export const clearErrorHistory = () => errorTracking.clearErrors();

@@ -21,7 +21,7 @@ export const useRouter = () => {
     replace,
     back,
     forward,
-    refresh,
+    refresh
   };
 };
 export const usePathname = () => {

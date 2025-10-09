@@ -37,7 +37,7 @@ const defaultSEO = {
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+  twitterCard: 'summary_large_image' as const
 };
 export const SEO: React.FC<SEOProps> = ({
   title,
@@ -54,7 +54,7 @@ export const SEO: React.FC<SEOProps> = ({
   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
+  alternateLocales = []
 }) => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
@@ -64,7 +64,7 @@ export const SEO: React.FC<SEOProps> = ({
     url: url || defaultSEO.url,
     type,
     twitterCard,
-    locale,
+    locale
   };
   // Generate structured data
   const generateStructuredData = () => {
@@ -77,12 +77,12 @@ export const SEO: React.FC<SEOProps> = ({
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image,
+      image: seo.image
     };
     if (author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: author,
+        name: author
       };
     }
     if (publishDate) {

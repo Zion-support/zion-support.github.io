@@ -7,7 +7,7 @@ export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
-  CRITICAL = 'critical',
+  CRITICAL = 'critical'
 }
 export enum ErrorCategory {
   NETWORK = 'network',
@@ -18,7 +18,7 @@ export enum ErrorCategory {
   BUSINESS_LOGIC = 'business_logic',
   SYSTEM = 'system',
   THIRD_PARTY = 'third_party',
-  UNKNOWN = 'unknown',
+  UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
   enabled: boolean;
@@ -40,28 +40,28 @@ export const errorHandlingConfig: ErrorConfig = {
     /Non-Error promise rejection captured/i,
     /Loading chunk \d+ failed/i,
   ],
-  severityThreshold: ErrorSeverity.LOW,
+  severityThreshold: ErrorSeverity.LOW
 };
 export const errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
-    serverError: 'Server error occurred. Our team has been notified.',
+    serverError: 'Server error occurred. Our team has been notified.'
   },
   validation: {
     required: 'This field is required.',
     invalid: 'Please enter a valid value.',
-    format: 'Invalid format. Please check your input.',
+    format: 'Invalid format. Please check your input.'
   },
   authentication: {
     failed: 'Authentication failed. Please try logging in again.',
     expired: 'Your session has expired. Please log in again.',
-    unauthorized: 'You are not authorized to access this resource.',
+    unauthorized: 'You are not authorized to access this resource.'
   },
   generic: {
     unknown: 'An unexpected error occurred. Please try again.',
-    retry: 'Please try again in a few moments.',
-  },
+    retry: 'Please try again in a few moments.'
+  }
 };
 export class AppError extends Error {
   constructor(

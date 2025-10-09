@@ -7,7 +7,7 @@ import {
   measureAsyncFunction,
   getPerformanceScore,
   getRecommendations,
-  MetricUnit,
+  MetricUnit
 } from '../performanceMonitoring';
 describe('performanceMonitoring', () => {
   beforeEach(() => {

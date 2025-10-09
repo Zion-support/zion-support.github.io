@@ -25,13 +25,13 @@ export class ApiCache {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage: 'memory',
+      storage: 'memory'
     });
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true,
+      deduplicate: config.deduplicate ?? true
     };
     // Auto-cleanup every 5 minutes
     setInterval(() => {
@@ -72,7 +72,7 @@ export class ApiCache {
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
-        timestamp: Date.now(),
+        timestamp: Date.now()
       });
     }
     try {
@@ -150,7 +150,7 @@ export class ApiCache {
   getStats() {
     return {
       ...this.cache.stats(),
-      pendingRequests: this.pendingRequests.size,
+      pendingRequests: this.pendingRequests.size
     };
   }
   /**
@@ -201,7 +201,7 @@ export const defaultApiCache = new ApiCache({
   ttl: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
   retryDelay: 1000,
-  deduplicate: true,
+  deduplicate: true
 });
 /**
  * Cached fetch helper
@@ -229,9 +229,9 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
         headers: {
           'Content-Type': 'application/json',
           ...(defaultOptions.headers || {}),
-          ...(options?.headers || {}),
+          ...(options?.headers || {})
         },
-        body: JSON.stringify(body),
+        body: JSON.stringify(body)
       }),
     put: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
@@ -241,9 +241,9 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
         headers: {
           'Content-Type': 'application/json',
           ...(defaultOptions.headers || {}),
-          ...(options?.headers || {}),
+          ...(options?.headers || {})
         },
-        body: JSON.stringify(body),
+        body: JSON.stringify(body)
       }),
     delete: <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
@@ -251,7 +251,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
     clear: () => cache.clear(),
     stats: () => cache.getStats(),
     prefetch: <T>(path: string, options?: RequestInit) =>
-      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options }),
+      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   };
 }
 export default ApiCache;

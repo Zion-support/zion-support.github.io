@@ -1,32 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-const ContentCarousel: React.FC = () => {
-  return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          Featured Content
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-white mb-4">AI Revolution</h3>
-            <p className="text-gray-300">Discover how AI is transforming businesses worldwide.</p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
-            <p className="text-gray-300">The future of computing is here with quantum technology.</p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-white mb-4">Digital Transformation</h3>
-            <p className="text-gray-300">Transform your business with our digital solutions.</p>
-          </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       title: "AI-Powered Automation",
@@ -47,29 +22,23 @@ const ContentCarousel: React.FC = () => {
       color: "from-green-500 to-emerald-500"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   return (
     <section className="mb-16" aria-labelledby="carousel-heading">
       <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
         Featured Solutions
       </h2>
-      
       <div className="relative max-w-4xl mx-auto">
         <div className="overflow-hidden rounded-xl">
           <div 
@@ -89,7 +58,6 @@ const ContentCarousel: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Navigation buttons */}
         <button
           onClick={prevSlide}
@@ -98,7 +66,6 @@ const ContentCarousel: React.FC = () => {
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        
         <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
@@ -106,7 +73,6 @@ const ContentCarousel: React.FC = () => {
         >
           <ChevronRight className="w-6 h-6" />
         </button>
-
         {/* Dots indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {slides.map((_, index) => (
@@ -119,15 +85,9 @@ const ContentCarousel: React.FC = () => {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
         </div>
       </div>
     </section>
   );
 };
-<<<<<<< HEAD
 export default ContentCarousel;
-=======
-
-export default ContentCarousel;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

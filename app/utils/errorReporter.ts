@@ -25,7 +25,7 @@ const defaultConfig: ErrorReporterConfig = {
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
-  captureContext: true,
+  captureContext: true
 };
 /**
  * ErrorReporter class for comprehensive error handling
@@ -62,7 +62,7 @@ export class ErrorReporter {
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       severity,
-      context: this.config.captureContext ? context : undefined,
+      context: this.config.captureContext ? context : undefined
     };
     // Track error frequency
     const errorKey = `${error.name}:${error.message}`;
@@ -111,7 +111,7 @@ export class ErrorReporter {
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',
+      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
     };
     return styles[severity];
   }
@@ -124,9 +124,9 @@ export class ErrorReporter {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(report),
+        body: JSON.stringify(report)
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
@@ -152,7 +152,7 @@ export class ErrorReporter {
     return {
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount),
+      errorsByType: Object.fromEntries(this.errorCount)
     };
   }
   /**
@@ -170,7 +170,7 @@ export class ErrorReporter {
       {
         timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
-        errors: this.errorQueue,
+        errors: this.errorQueue
       },
       null,
       2
@@ -198,7 +198,7 @@ export const captureComponentError = (
   const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {
     componentName,
-    componentStack: errorInfo.componentStack,
+    componentStack: errorInfo.componentStack
   });
 };
 export default ErrorReporter;

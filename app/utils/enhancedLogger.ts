@@ -17,7 +17,7 @@ export enum LogLevel {
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-  FATAL = 4,
+  FATAL = 4
 }
 /**
  * Log entry interface
@@ -75,7 +75,7 @@ const defaultConfig: LoggerConfig = {
   enableStructured: true,
   maxLogs: 1000,
   enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development',
+  environment: process.env['NODE_ENV'] || 'development'
 };
 /**
  * Enhanced Logger class
@@ -190,7 +190,7 @@ export class EnhancedLogger {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack,
+        stack: error.stack
       };
     }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack);
@@ -214,7 +214,7 @@ export class EnhancedLogger {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack,
+        stack: error.stack
       };
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack);
@@ -254,7 +254,7 @@ export class EnhancedLogger {
       `Performance: ${markName}`,
       {
         duration: `${duration.toFixed(2)}ms`,
-        ...data,
+        ...data
       },
       'PerformanceMonitor'
     );
@@ -289,7 +289,7 @@ export class EnhancedLogger {
       stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      environment: this.config.environment,
+      environment: this.config.environment
     };
     // Store log entry
     this.logs.push(logEntry);
@@ -332,7 +332,7 @@ export class EnhancedLogger {
         level: levelName,
         message: entry.message,
         source: entry.source,
-        data: entry.data,
+        data: entry.data
       };
       switch (entry.level) {
         case LogLevel.DEBUG:
@@ -389,17 +389,17 @@ export class EnhancedLogger {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           ...entry,
-          timestamp: entry.timestamp.toISOString(),
-        }),
+          timestamp: entry.timestamp.toISOString()
+        })
       });
     } catch (error) {
       // Fallback to console if remote logging fails
       logger.error('Failed to send log to remote endpoint:', {
-        error: error instanceof Error ? error.message : String(error),
+        error: error instanceof Error ? error.message : String(error)
       });
     }
   }
@@ -488,7 +488,7 @@ export class EnhancedLogger {
     return {
       total: this.logs.length,
       byLevel,
-      bySource,
+      bySource
     };
   }
   /**
@@ -514,7 +514,7 @@ export class EnhancedLogger {
     return JSON.stringify(
       this.logs.map(log => ({
         ...log,
-        timestamp: log.timestamp.toISOString(),
+        timestamp: log.timestamp.toISOString()
       })),
       null,
       2

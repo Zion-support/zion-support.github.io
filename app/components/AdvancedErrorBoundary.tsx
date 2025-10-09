@@ -40,20 +40,20 @@ class AdvancedErrorBoundary extends Component<
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
+      errorId: null
     };
   }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -84,7 +84,7 @@ class AdvancedErrorBoundary extends Component<
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      sessionId: this.getSessionId()
     };
     // Send to error reporting service
     this.sendErrorReport(errorReport);
@@ -119,9 +119,9 @@ class AdvancedErrorBoundary extends Component<
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(errorReport),
+        body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
       logger.error('Failed to send error report', { 
@@ -137,7 +137,7 @@ class AdvancedErrorBoundary extends Component<
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: null,
+        errorId: null
       });
     }
   };

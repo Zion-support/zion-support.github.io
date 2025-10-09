@@ -23,7 +23,7 @@ class AdvancedCache<T = unknown> {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100,
+      maxSize: options.maxSize || 100
     };
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {
@@ -59,7 +59,7 @@ class AdvancedCache<T = unknown> {
       const storage = this.getStorage();
       const data = {
         cache: Object.fromEntries(this.cache.entries()),
-        accessOrder: this.accessOrder,
+        accessOrder: this.accessOrder
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
@@ -84,7 +84,7 @@ class AdvancedCache<T = unknown> {
       value,
       expiry,
       hits: 0,
-      lastAccessed: Date.now(),
+      lastAccessed: Date.now()
     });
     // Update access order
     this.updateAccessOrder(key);
@@ -183,14 +183,14 @@ class AdvancedCache<T = unknown> {
       entries.push({
         key,
         hits: entry.hits,
-        age: now - entry.lastAccessed,
+        age: now - entry.lastAccessed
       });
     });
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits),
+      entries: entries.sort((a, b) => b.hits - a.hits)
     };
   }
   // Utility method for async operations with caching

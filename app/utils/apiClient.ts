@@ -48,9 +48,9 @@ class ApiClient {
       retries: config.retries || 3,
       retryDelay: config.retryDelay || 1000,
       headers: config.headers || {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      cacheOptions: config.cacheOptions,
+      cacheOptions: config.cacheOptions
     };
   }
   /**
@@ -63,7 +63,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'GET',
+      method: 'GET'
     });
   }
   /**
@@ -78,7 +78,7 @@ class ApiClient {
       ...config,
       url,
       method: 'POST',
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     });
   }
   /**
@@ -93,7 +93,7 @@ class ApiClient {
       ...config,
       url,
       method: 'PUT',
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     });
   }
   /**
@@ -106,7 +106,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'DELETE',
+      method: 'DELETE'
     });
   }
   /**
@@ -121,7 +121,7 @@ class ApiClient {
       ...config,
       url,
       method: 'PATCH',
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     });
   }
   /**
@@ -148,7 +148,7 @@ class ApiClient {
           data: cached,
           status: 200,
           statusText: 'OK (cached)',
-          headers: new Headers(),
+          headers: new Headers()
         };
       }
     }
@@ -167,9 +167,9 @@ class ApiClient {
           method,
           headers: {
             ...this.config.headers,
-            ...headers,
+            ...headers
           },
-          signal: controller.signal,
+          signal: controller.signal
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
@@ -195,7 +195,7 @@ class ApiClient {
           data,
           status: response.status,
           statusText: response.statusText,
-          headers: response.headers,
+          headers: response.headers
         };
       } catch (error) {
         lastError = error as Error;
@@ -206,13 +206,13 @@ class ApiClient {
             logCritical(`API request failed after ${retries} attempts`, error as Error, {
               url: fullUrl,
               method,
-              attempt,
+              attempt
             });
           } else {
             logError(`API request failed`, error as Error, {
               url: fullUrl,
               method,
-              attempt,
+              attempt
             });
           }
         }
@@ -259,8 +259,8 @@ class ApiClient {
       ...config,
       headers: {
         ...this.config.headers,
-        ...(config.headers || {}),
-      },
+        ...(config.headers || {})
+      }
     };
   }
   /**
@@ -301,7 +301,7 @@ const apiClient = new ApiClient({
   retryDelay: 1000,
   cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
-  },
+  }
 });
 // Export both the class and default instance
 export { apiClient };

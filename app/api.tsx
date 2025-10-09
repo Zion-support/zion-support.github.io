@@ -7,28 +7,28 @@ const API: React.FC = () => {
       endpoint: '/api/content',
       description: 'Get all content',
       parameters: ['limit', 'offset'],
-      response: 'JSON array of content objects',
+      response: 'JSON array of content objects'
     },
     {
       method: 'POST',
       endpoint: '/api/auth/login',
       description: 'Authenticate user credentials',
       parameters: ['email', 'password'],
-      response: 'Authentication token',
+      response: 'Authentication token'
     },
     {
       method: 'GET',
       endpoint: '/api/analytics',
       description: 'Get analytics and metrics',
       parameters: ['date_range', 'metrics'],
-      response: 'Analytics data object',
+      response: 'Analytics data object'
     },
     {
       method: 'POST',
       endpoint: '/api/content',
       description: 'Create new content',
       parameters: ['title', 'content', 'type'],
-      response: 'Created content object',
+      response: 'Created content object'
     },
   ];
   return (

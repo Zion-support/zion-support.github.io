@@ -13,7 +13,7 @@ const Toast: React.FC<ToastProps> = ({
   type = 'success',
   duration = 3000,
   onClose,
-  show,
+  show
 }) => {
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {
@@ -89,7 +89,7 @@ export const useToast = () => {
   }>({
     show: false,
     message: '',
-    type: 'success',
+    type: 'success'
   });
   const showToast = (message: string, type: ToastType = 'success') => {
     setToast({ show: true, message, type });
@@ -100,6 +100,6 @@ export const useToast = () => {
   return {
     toast,
     showToast,
-    hideToast,
+    hideToast
   };
 };

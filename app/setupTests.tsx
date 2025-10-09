@@ -29,8 +29,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
 // Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
@@ -40,20 +40,20 @@ const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn(),
+  clear: jest.fn()
 };
 Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock,
+  value: localStorageMock
 });
 // Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn(),
+  clear: jest.fn()
 };
 Object.defineProperty(window, 'sessionStorage', {
-  value: sessionStorageMock,
+  value: sessionStorageMock
 });
 // Mock fetch
 global.fetch = jest.fn();
@@ -105,5 +105,5 @@ delete (window as unknown as Record<string, unknown>).location;
   hash: '',
   reload: jest.fn(),
   assign: jest.fn(),
-  replace: jest.fn(),
+  replace: jest.fn()
 };

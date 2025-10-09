@@ -211,7 +211,7 @@ class PerformanceReporter {
         event_category: 'Web Vitals',
         value: Math.round(metric.value),
         event_label: metric.rating,
-        non_interaction: true,
+        non_interaction: true
       })
     }
   }

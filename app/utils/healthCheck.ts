@@ -263,7 +263,7 @@ class HealthCheckService {
       return {
         name: 'storage',
         status: 'pass',
-        message: 'Storage working correctly',
+        message: 'Storage working correctly'
       };
     } catch {
       return {

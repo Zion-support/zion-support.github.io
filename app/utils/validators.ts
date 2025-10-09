@@ -153,7 +153,7 @@ export function validateObject<T extends Record<string, unknown>>(
   }
   return {
     isValid: errors.length === 0,
-    errors,
+    errors
   };
 }
 /**
@@ -190,26 +190,26 @@ export function validateForm(
 export const validators = {
   required: (message = 'This field is required') => ({
     validate: isRequired,
-    message,
+    message
   }),
   email: (message = 'Please enter a valid email address') => ({
     validate: isValidEmail,
-    message,
+    message
   }),
   phone: (message = 'Please enter a valid phone number') => ({
     validate: isValidPhone,
-    message,
+    message
   }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
     validate: (value: string) => minLength(value, min),
-    message,
+    message
   }),
   maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
     validate: (value: string) => maxLength(value, max),
-    message,
+    message
   }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
     validate: isStrongPassword,
-    message,
-  }),
+    message
+  })
 };
