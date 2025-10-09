@@ -2,15 +2,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Eye, Camera, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
 
 const AIComputerVisionPage: React.FC = () => {
   const features = [

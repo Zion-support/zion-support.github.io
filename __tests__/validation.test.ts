@@ -7,9 +7,23 @@ import {
   isValidPhone,
   isValidUrl,
   isRequired,
-  isValidPassword,
-  sanitizeInput,
-} from '../app/utils/validators';
+  isStrongPassword,
+  sanitizeHtml,
+  minLength,
+  maxLength,
+  isValidCreditCard,
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  sanitizeInput
+} from '../src/utils/validators';
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
@@ -100,8 +114,8 @@ describe('Required Field Validation', () => {
 
 describe('Password Validation', () => {
   test('validates strong passwords', () => {
-    expect(isValidPassword('Test123!@#')).toBe(true);
-    expect(isValidPassword('SecureP@ssw0rd')).toBe(true);
+    expect(isStrongPassword('Test123!@#')).toBe(true);
+    expect(isStrongPassword('SecureP@ssw0rd')).toBe(true);
   });
 
   test('rejects weak passwords', () => {
@@ -206,8 +220,8 @@ describe('JSON Validation', () => {
 describe('Composite Validation', () => {
   test('combines multiple validators successfully', () => {
     const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 5, 20, 'Test'),
+      { validate: (val: string) => val.length >= 5, message: 'at least 5 characters' },
+      { validate: (val: string) => val.length <= 20, message: 'no more than 20 characters' },
     ];
 
     expect(validateComposite('hello world', validators).isValid).toBe(true);
@@ -215,8 +229,8 @@ describe('Composite Validation', () => {
 
   test('fails on first invalid validator', () => {
     const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
+      { validate: (val: string) => val.length >= 10, message: 'at least 10 characters' },
+      { validate: (val: string) => val.length <= 20, message: 'no more than 20 characters' },
     ];
 
     const result = validateComposite('short', validators);
@@ -227,9 +241,9 @@ describe('Composite Validation', () => {
 
 describe('Async Validation', () => {
   test('handles successful async validation', async () => {
-    const asyncValidator = async (val: unknown) => {
-      return new Promise<any>(resolve => {
-        setTimeout(() => resolve({ isValid: true }), 10);
+    const asyncValidator = async (val: string) => {
+      return new Promise<boolean>(resolve => {
+        setTimeout(() => resolve(true), 10);
       });
     };
 
