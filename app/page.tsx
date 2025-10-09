@@ -531,8 +531,6 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
           {/* New AI Services Grid */}
           <div className="mb-12">
@@ -739,7 +737,6 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
         </section>
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>

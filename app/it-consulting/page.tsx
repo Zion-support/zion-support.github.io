@@ -3,106 +3,115 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { Users, Brain, Zap, CheckCircle, Phone, Mail, Target, BarChart, Shield, Clock, TrendingUp } from 'lucide-react';
+
+const ITConsultingPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: Brain,
+      title: 'Strategic IT Planning',
+      description: 'Comprehensive IT strategy development aligned with your business goals and objectives.',
+      benefits: ['IT roadmap', 'Technology assessment', 'Digital transformation']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
-    },
-    {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      icon: Target,
+      title: 'Technology Assessment',
+      description: 'Thorough evaluation of your current technology stack and recommendations for improvement.',
+      benefits: ['Current state analysis', 'Gap identification', 'Optimization recommendations']
     },
     {
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      title: 'Digital Transformation',
+      description: 'Guide your organization through digital transformation with proven methodologies.',
+      benefits: ['Change management', 'Process optimization', 'Technology adoption']
+    },
+    {
+      icon: Shield,
+      title: 'Security Consulting',
+      description: 'Comprehensive security assessment and implementation of enterprise-grade security measures.',
+      benefits: ['Security audit', 'Compliance review', 'Security implementation']
+    },
+    {
+      icon: BarChart,
+      title: 'Performance Optimization',
+      description: 'Analyze and optimize your IT infrastructure for maximum performance and efficiency.',
+      benefits: ['Performance analysis', 'Infrastructure optimization', 'Cost reduction']
+    },
+    {
+      icon: Clock,
+      title: '24/7 Support',
+      description: 'Round-the-clock IT support and consulting services for your critical business needs.',
+      benefits: ['24/7 availability', 'Emergency support', 'Proactive monitoring']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      price: '$299',
+      period: '/hour',
+      description: 'Perfect for small projects',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Basic consultation',
+        'Email support',
+        'Standard reports',
+        '1 consultant',
+        'Basic assessment',
+        'Phone support'
       ],
       popular: false
     },
     {
       name: 'Professional',
       price: '$499',
-      period: '/month',
-      description: 'Ideal for growing companies',
+      period: '/hour',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Advanced consultation',
         'Priority support',
-        'Custom integrations'
+        'Detailed reports',
+        'Senior consultant',
+        'Comprehensive assessment',
+        'Video calls',
+        'Project management',
+        'Follow-up support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
+      price: '$799',
+      period: '/hour',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
-        'Custom development',
-        'SLA guarantee'
+        'Executive consultation',
+        'Dedicated support',
+        'Custom reports',
+        'Expert team',
+        'Full assessment',
+        'On-site visits',
+        'Custom solutions',
+        'SLA guarantee',
+        'Retainer options'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '500+', label: 'Projects Completed' },
+    { number: '95%', label: 'Client Satisfaction' },
+    { number: '50+', label: 'Expert Consultants' },
+    { number: '24/7', label: 'Support Available' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="IT Consulting Services - Zion Tech Group"
+        description="Expert IT consulting with 95% client satisfaction and 500+ projects completed. Strategic planning, digital transformation, and 24/7 support."
+        keywords={['IT consulting', 'technology consulting', 'digital transformation', 'IT strategy', 'technology assessment', 'IT planning']}
+        canonicalUrl="https://ziontechgroup.com/it-consulting"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                IT Consulting Services
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Expert IT consulting with 95% client satisfaction
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our expert IT consultants help you navigate complex technology decisions, 
+                optimize your IT infrastructure, and drive digital transformation success.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -136,7 +145,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
+                  <span>Get Free Consultation</span>
                 </a>
               </div>
 
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Comprehensive IT Consulting
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -181,7 +190,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Transparent Consulting Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Transform Your IT?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 300+ businesses already using our consulting services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -252,7 +261,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
+                  <span>Schedule Consultation</span>
                 </a>
               </div>
             </div>
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default ITConsultingPage;

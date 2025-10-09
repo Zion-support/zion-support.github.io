@@ -3,106 +3,115 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { Cloud, Zap, Shield, CheckCircle, Phone, Mail, Brain, Users, Target, BarChart, Database } from 'lucide-react';
+
+const CloudMigrationPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: Cloud,
+      title: 'Seamless Migration',
+      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
+      benefits: ['Zero downtime', 'Automated migration', 'Data integrity']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
-    },
-    {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
+      icon: Brain,
+      title: 'AI-Powered Optimization',
+      description: 'AI analyzes your infrastructure and optimizes cloud resources for maximum performance and cost efficiency.',
+      benefits: ['Cost optimization', 'Performance tuning', 'Resource scaling']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      description: 'Bank-level security with encryption, compliance, and advanced threat protection.',
+      benefits: ['Data encryption', 'Compliance ready', 'Threat protection']
     },
     {
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      title: 'Multi-Cloud Support',
+      description: 'Support for AWS, Azure, Google Cloud, and hybrid cloud environments.',
+      benefits: ['Multi-cloud', 'Hybrid solutions', 'Vendor flexibility']
+    },
+    {
+      icon: Database,
+      title: 'Database Migration',
+      description: 'Seamless migration of databases with data transformation and optimization.',
+      benefits: ['Data transformation', 'Schema optimization', 'Performance tuning']
+    },
+    {
+      icon: BarChart,
+      title: 'Migration Analytics',
+      description: 'Comprehensive monitoring and analytics throughout the migration process.',
+      benefits: ['Real-time monitoring', 'Progress tracking', 'Performance metrics']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$1,299',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Up to 10 servers',
+        'Basic migration',
+        'Email support',
+        'Standard security',
+        '1 cloud provider',
+        'Basic monitoring'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$2,999',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 50 servers',
+        'Advanced migration',
         'Priority support',
-        'Custom integrations'
+        'Enhanced security',
+        'Multi-cloud support',
+        'Advanced monitoring',
+        'AI optimization',
+        '24/7 support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$7,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
-        'Custom development',
-        'SLA guarantee'
+        'Unlimited servers',
+        'Custom migration',
+        'Dedicated support',
+        'Enterprise security',
+        'All cloud providers',
+        'Custom monitoring',
+        'Custom AI models',
+        'SLA guarantee',
+        'On-site support'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50%', label: 'Cost Reduction' },
+    { number: '3x', label: 'Performance Boost' },
+    { number: '24/7', label: 'Expert Support' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="Cloud Migration Services - Zion Tech Group"
+        description="Seamless cloud migration with zero downtime and 50% cost reduction. AI-powered optimization for AWS, Azure, and Google Cloud."
+        keywords={['cloud migration', 'AWS migration', 'Azure migration', 'Google Cloud migration', 'cloud optimization', 'hybrid cloud']}
+        canonicalUrl="https://ziontechgroup.com/cloud-migration"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                Cloud Migration Services
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Seamless cloud migration with zero downtime
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our expert cloud migration services help you move to the cloud with zero downtime, 
+                50% cost reduction, and 3x performance improvement using AI-powered optimization.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -136,7 +145,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
+                  <span>Get Free Assessment</span>
                 </a>
               </div>
 
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Comprehensive Migration Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -181,7 +190,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Transparent Migration Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Move to the Cloud?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 500+ businesses already using our migration services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -252,7 +261,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
+                  <span>Schedule Assessment</span>
                 </a>
               </div>
             </div>
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default CloudMigrationPage;

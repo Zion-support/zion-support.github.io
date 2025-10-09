@@ -3,106 +3,115 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { Network, Shield, Zap, CheckCircle, Phone, Mail, Brain, Users, Target, BarChart, Wifi } from 'lucide-react';
+
+const NetworkSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
-    },
-    {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
-    },
-    {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
+      icon: Network,
+      title: 'Network Design',
+      description: 'Expert network architecture and design for optimal performance and scalability.',
+      benefits: ['Scalable design', 'Performance optimization', 'Future-proofing']
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      title: 'Network Security',
+      description: 'Comprehensive network security with firewalls, intrusion detection, and threat prevention.',
+      benefits: ['Firewall protection', 'Intrusion detection', 'Threat prevention']
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Monitoring',
+      description: 'AI-powered network monitoring and optimization for maximum performance and reliability.',
+      benefits: ['Real-time monitoring', 'Predictive analytics', 'Automated optimization']
     },
     {
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      title: 'Load Balancing',
+      description: 'Advanced load balancing and traffic management for high availability and performance.',
+      benefits: ['Traffic distribution', 'High availability', 'Performance optimization']
+    },
+    {
+      icon: Wifi,
+      title: 'Wireless Solutions',
+      description: 'Enterprise-grade wireless networking with seamless connectivity and security.',
+      benefits: ['Wi-Fi 6 support', 'Seamless roaming', 'Security encryption']
+    },
+    {
+      icon: BarChart,
+      title: 'Network Analytics',
+      description: 'Comprehensive network analytics and reporting for performance insights and optimization.',
+      benefits: ['Performance metrics', 'Traffic analysis', 'Capacity planning']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$699',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small networks',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Up to 50 devices',
+        'Basic monitoring',
+        'Email support',
+        'Standard security',
+        '1 network admin',
+        'Basic reporting'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$1,499',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 200 devices',
+        'Advanced monitoring',
         'Priority support',
-        'Custom integrations'
+        'Advanced security',
+        'Dedicated admin',
+        'Advanced reporting',
+        'AI optimization',
+        '24/7 monitoring'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$3,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
-        'Custom development',
-        'SLA guarantee'
+        'Unlimited devices',
+        'Custom monitoring',
+        'Dedicated support',
+        'Enterprise security',
+        'Network team',
+        'Custom reporting',
+        'Custom AI models',
+        'SLA guarantee',
+        'On-site support'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50%', label: 'Performance Boost' },
+    { number: '24/7', label: 'Monitoring' },
+    { number: '100%', label: 'Security Coverage' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="Network Solutions - Zion Tech Group"
+        description="Enterprise network solutions with 99.9% uptime guarantee and 50% performance boost. AI-powered monitoring and comprehensive security."
+        keywords={['network solutions', 'network design', 'network security', 'network monitoring', 'load balancing', 'wireless networking']}
+        canonicalUrl="https://ziontechgroup.com/network-solutions"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                Network Solutions
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Enterprise networks with 99.9% uptime guarantee
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our comprehensive network solutions combine expert design, advanced security, 
+                and AI-powered monitoring to ensure your network performs at peak efficiency.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -136,7 +145,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
+                  <span>Get Free Assessment</span>
                 </a>
               </div>
 
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Comprehensive Network Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -181,7 +190,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Transparent Network Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Optimize Your Network?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 400+ businesses already using our network solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -252,7 +261,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
+                  <span>Schedule Assessment</span>
                 </a>
               </div>
             </div>
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default NetworkSolutionsPage;

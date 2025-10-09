@@ -3,106 +3,115 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { FileText, DollarSign, Zap, CheckCircle, Phone, Mail, Brain, Shield, Users, Target, BarChart } from 'lucide-react';
+
+const AIInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: FileText,
+      title: 'AI Invoice Generation',
+      description: 'Automatically generate professional invoices with AI-powered templates and smart data extraction.',
+      benefits: ['Auto-generation', 'Smart templates', 'Brand customization']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
+      icon: DollarSign,
+      title: 'Payment Tracking',
+      description: 'Track payments, send reminders, and manage outstanding invoices with automated workflows.',
+      benefits: ['Payment tracking', 'Auto-reminders', 'Payment analytics']
     },
     {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      icon: Brain,
+      title: 'Smart Data Entry',
+      description: 'AI automatically extracts client information and product details to speed up invoice creation.',
+      benefits: ['Auto-fill data', 'Smart suggestions', 'Error detection']
     },
     {
       icon: Zap,
       title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      description: 'Set up automated invoice generation, sending, and follow-up sequences to streamline billing.',
+      benefits: ['Auto-scheduling', 'Follow-up sequences', 'Workflow automation']
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Compliant',
+      description: 'Bank-level security with encryption, audit trails, and compliance with financial regulations.',
+      benefits: ['Data encryption', 'Audit logs', 'Compliance ready']
+    },
+    {
+      icon: BarChart,
+      title: 'Financial Analytics',
+      description: 'Comprehensive financial reporting and analytics to track revenue, expenses, and cash flow.',
+      benefits: ['Revenue tracking', 'Expense analysis', 'Cash flow reports']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$79',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Up to 100 invoices/month',
+        'Basic AI features',
+        'Standard templates',
+        'Email support',
+        'Basic analytics',
+        '1 user account'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 1,000 invoices/month',
+        'Advanced AI features',
+        'Custom templates',
         'Priority support',
-        'Custom integrations'
+        'Advanced analytics',
+        'Payment tracking',
+        '5 user accounts',
+        'API integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$499',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
+        'Unlimited invoices',
+        'Custom AI models',
+        'White-label options',
+        'Dedicated support',
         'Custom development',
+        'Advanced security',
+        'Unlimited users',
+        'Custom integrations',
         'SLA guarantee'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '90%', label: 'Time Savings' },
+    { number: '50%', label: 'Faster Payments' },
+    { number: '100%', label: 'Accuracy Rate' },
+    { number: '24/7', label: 'AI Processing' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="AI Invoice Generator - Zion Tech Group"
+        description="Automated invoice generation that saves 90% of billing time and increases payment speed by 50%. AI-powered templates and payment tracking."
+        keywords={['AI invoice generator', 'automated invoicing', 'payment tracking', 'financial automation', 'billing software']}
+        canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                AI Invoice Generator
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Save 90% of billing time with AI-powered invoicing
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our AI-powered invoice generator automates the entire billing process, from creation to payment tracking, 
+                helping you get paid faster and reduce administrative overhead.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Powerful Invoicing Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Automate Your Invoicing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 1,200+ businesses already using our AI invoice platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default AIInvoiceGeneratorPage;

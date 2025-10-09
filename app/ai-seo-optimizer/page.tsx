@@ -3,106 +3,115 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { Search, Target, BarChart, Zap, CheckCircle, Phone, Mail, Brain, Shield, Users, TrendingUp } from 'lucide-react';
+
+const AISEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: Search,
+      title: 'AI Keyword Research',
+      description: 'Discover high-value keywords and search trends using advanced AI algorithms and competitor analysis.',
+      benefits: ['Long-tail keywords', 'Search volume data', 'Competitor insights']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
-    },
-    {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
+      icon: Target,
+      title: 'Content Optimization',
+      description: 'AI-powered content analysis and optimization to improve search rankings and user engagement.',
+      benefits: ['Content scoring', 'Readability analysis', 'Keyword density']
     },
     {
       icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      title: 'Ranking Tracking',
+      description: 'Monitor your search rankings across multiple keywords and search engines with detailed analytics.',
+      benefits: ['Real-time tracking', 'Historical data', 'Competitor analysis']
     },
     {
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      title: 'Technical SEO',
+      description: 'Automated technical SEO audits and fixes to improve site speed, mobile-friendliness, and crawlability.',
+      benefits: ['Site speed optimization', 'Mobile optimization', 'Crawl error fixes']
+    },
+    {
+      icon: Brain,
+      title: 'AI Content Suggestions',
+      description: 'Get AI-powered content suggestions and topic ideas to improve your SEO performance.',
+      benefits: ['Topic suggestions', 'Content gaps', 'Trending topics']
+    },
+    {
+      icon: Shield,
+      title: 'Link Building',
+      description: 'Automated link building strategies and outreach to improve your domain authority and rankings.',
+      benefits: ['Link opportunities', 'Outreach automation', 'Authority building']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$129',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small websites',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Up to 1,000 keywords',
+        'Basic AI features',
+        'Monthly reports',
+        'Email support',
+        '1 website',
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 10,000 keywords',
+        'Advanced AI features',
+        'Weekly reports',
         'Priority support',
-        'Custom integrations'
+        '5 websites',
+        'Advanced analytics',
+        'Competitor tracking',
+        'Content optimization'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
+        'Unlimited keywords',
+        'Custom AI models',
+        'Real-time reports',
+        'Dedicated support',
+        'Unlimited websites',
+        'White-label options',
+        'API access',
         'Custom development',
         'SLA guarantee'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '300%', label: 'Traffic Increase' },
+    { number: '85%', label: 'Time Savings' },
+    { number: '50+', label: 'Ranking Improvements' },
+    { number: '24/7', label: 'AI Monitoring' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="AI SEO Optimizer - Zion Tech Group"
+        description="Revolutionary AI SEO tool that increases organic traffic by 300% and saves 85% of SEO time. Automated optimization and ranking tracking."
+        keywords={['AI SEO', 'SEO optimization', 'keyword research', 'ranking tracking', 'content optimization', 'technical SEO']}
+        canonicalUrl="https://ziontechgroup.com/ai-seo-optimizer"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                AI SEO Optimizer
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Increase organic traffic by 300% with AI-powered SEO
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our AI-powered SEO platform combines intelligent keyword research, content optimization, 
+                and automated technical SEO to boost your search rankings and organic traffic.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Powerful SEO Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Dominate Search Rankings?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 2,500+ businesses already using our AI SEO platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default AISEOOptimizerPage;

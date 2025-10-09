@@ -3,106 +3,115 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { Code, Zap, Shield, CheckCircle, Phone, Mail, Brain, Users, Target, BarChart, GitBranch } from 'lucide-react';
+
+const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: Code,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment pipelines that accelerate your development process.',
+      benefits: ['Automated builds', 'Testing automation', 'Deployment automation']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
+      icon: GitBranch,
+      title: 'Git Integration',
+      description: 'Seamless integration with Git repositories and version control systems.',
+      benefits: ['Git workflows', 'Branch management', 'Merge automation']
     },
     {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
+      icon: Brain,
+      title: 'AI-Powered Optimization',
+      description: 'AI analyzes your code and optimizes build processes for maximum efficiency.',
+      benefits: ['Build optimization', 'Performance tuning', 'Resource management']
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      title: 'Security Scanning',
+      description: 'Automated security scanning and vulnerability detection in your code and dependencies.',
+      benefits: ['Vulnerability scanning', 'Dependency checking', 'Security reports']
     },
     {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      icon: BarChart,
+      title: 'Monitoring & Analytics',
+      description: 'Comprehensive monitoring and analytics for your development and deployment processes.',
+      benefits: ['Build metrics', 'Deployment tracking', 'Performance analytics']
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced team collaboration with shared pipelines, notifications, and approvals.',
+      benefits: ['Team workflows', 'Approval processes', 'Notification system']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$599',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Up to 5 pipelines',
+        'Basic CI/CD',
+        'Email support',
+        'Standard monitoring',
+        '1 repository',
+        'Basic security'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$1,299',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing teams',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 25 pipelines',
+        'Advanced CI/CD',
         'Priority support',
-        'Custom integrations'
+        'Advanced monitoring',
+        '5 repositories',
+        'Advanced security',
+        'AI optimization',
+        'Team collaboration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$2,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
-        'Custom development',
-        'SLA guarantee'
+        'Unlimited pipelines',
+        'Custom CI/CD',
+        'Dedicated support',
+        'Custom monitoring',
+        'Unlimited repositories',
+        'Enterprise security',
+        'Custom AI models',
+        'SLA guarantee',
+        'On-site support'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '90%', label: 'Faster Deployments' },
+    { number: '75%', label: 'Fewer Errors' },
+    { number: '50+', label: 'Integrations' },
+    { number: '24/7', label: 'Monitoring' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="DevOps & CI/CD Services - Zion Tech Group"
+        description="Automated DevOps and CI/CD pipelines that accelerate deployments by 90% and reduce errors by 75%. AI-powered optimization and monitoring."
+        keywords={['DevOps', 'CI/CD', 'continuous integration', 'continuous deployment', 'automation', 'pipeline optimization']}
+        canonicalUrl="https://ziontechgroup.com/devops-cicd"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                DevOps & CI/CD Services
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Accelerate deployments by 90% with AI-powered automation
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our comprehensive DevOps and CI/CD services automate your development workflow, 
+                reduce deployment errors by 75%, and accelerate your time to market.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -136,7 +145,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
+                  <span>Get Free Assessment</span>
                 </a>
               </div>
 
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Comprehensive DevOps Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -181,7 +190,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Transparent DevOps Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Accelerate Your Development?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 800+ development teams already using our DevOps services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -252,7 +261,7 @@ const AICustomerSupportPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
+                  <span>Schedule Assessment</span>
                 </a>
               </div>
             </div>
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default DevOpsCICDPage;

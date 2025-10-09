@@ -4,31 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="relative z-10">
-          <section className="py-20 px-4 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT Services
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Comprehensive IT solutions for your business
-              </p>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
-=======
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -424,7 +399,7 @@ const ITServicesPage: React.FC = () => {
       
       <Footer />
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+
   );
 };
 export default ITServicesPage;

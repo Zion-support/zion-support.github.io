@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const MarketingToolsPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Marketing-tools</h1>
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -102,24 +91,10 @@ const MarketingToolsPage: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Marketing Tools
           </h1>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
-<<<<<<< HEAD
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-=======
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -254,5 +229,5 @@ const MarketingToolsPage: React.FC = () => {
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
+
 export default MarketingToolsPage;

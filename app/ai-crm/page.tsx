@@ -3,86 +3,91 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { Users, BarChart, Target, Zap, CheckCircle, Phone, Mail, ArrowRight, Brain, Shield, Clock, DollarSign } from 'lucide-react';
+
+const AICRMPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: Brain,
+      title: 'AI-Powered Lead Scoring',
+      description: 'Intelligent lead scoring using machine learning to identify high-value prospects and prioritize sales efforts.',
+      benefits: ['95% accuracy', 'Real-time scoring', 'Behavioral analysis']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
-    },
-    {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
+      icon: Target,
+      title: 'Automated Follow-ups',
+      description: 'AI-powered email sequences, follow-ups, and personalized messaging that converts prospects into customers.',
+      benefits: ['3x higher open rates', 'Personalized content', 'Perfect timing']
     },
     {
       icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and reporting to track performance, identify trends, and optimize sales strategies.',
+      benefits: ['Real-time insights', 'Predictive analytics', 'ROI tracking']
+    },
+    {
+      icon: Zap,
+      title: 'Workflow Automation',
+      description: 'Automate repetitive sales tasks, follow-ups, and administrative work to focus on closing deals.',
+      benefits: ['80% time savings', 'Consistent processes', 'Error reduction']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      description: 'Bank-level security with encryption, audit logs, and compliance with SOC 2, GDPR, and other standards.',
+      benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
     },
     {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Seamless team collaboration with shared pipelines, notes, and real-time updates across all team members.',
+      benefits: ['Unified pipeline', 'Team insights', 'Real-time sync']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$149',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
+        'Up to 1,000 contacts',
+        'Basic AI lead scoring',
+        'Email automation',
         'Standard analytics',
-        'Email support'
+        'Email support',
+        'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing teams',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 10,000 contacts',
+        'Advanced AI algorithms',
+        'Multi-channel automation',
+        'Advanced analytics',
         'Priority support',
-        'Custom integrations'
+        'Custom integrations',
+        'A/B testing'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
+        'Unlimited contacts',
+        'Custom AI models',
         'All channels + voice',
-        'Real-time analytics dashboard',
+        'Custom integrations',
+        'Real-time dashboard',
         'Dedicated account manager',
         'Custom development',
         'SLA guarantee'
@@ -90,19 +95,21 @@ const AICustomerSupportPage: React.FC = () => {
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '300%', label: 'Increase in Sales' },
+    { number: '80%', label: 'Time Savings' },
+    { number: '95%', label: 'Lead Accuracy' },
+    { number: '50+', label: 'Integrations' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="AI-Powered CRM Platform - Zion Tech Group"
+        description="Revolutionary AI-powered CRM that increases sales by 300% and saves 80% of sales time. Lead scoring, automated outreach, and advanced analytics."
+        keywords={['AI CRM', 'customer relationship management', 'lead scoring', 'sales automation', 'CRM software']}
+        canonicalUrl="https://ziontechgroup.com/ai-crm"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +119,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                AI-Powered CRM Platform
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Boost sales by 300% with intelligent CRM automation
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our AI-powered CRM platform combines intelligent lead scoring, automated outreach, 
+                and advanced analytics to help sales teams close more deals in less time.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -157,7 +164,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Powerful CRM Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -233,10 +240,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to 3x Your Sales Performance?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 1,000+ sales teams already using our AI CRM platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -264,4 +271,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default AICRMPage;

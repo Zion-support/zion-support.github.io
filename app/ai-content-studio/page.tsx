@@ -3,73 +3,78 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+import { PenTool, Image, Video, Share2, CheckCircle, Phone, Mail, Brain, Zap, Shield, Users, Target } from 'lucide-react';
+
+const AIContentStudioPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
+      icon: PenTool,
+      title: 'AI Writing Assistant',
+      description: 'Generate high-quality content for blogs, social media, emails, and marketing materials with advanced AI.',
+      benefits: ['50+ content types', 'Brand voice matching', 'SEO optimization']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Seamless customer support across all channels - email, chat, phone, social media, and messaging apps.',
-      benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
+      icon: Image,
+      title: 'AI Image Generation',
+      description: 'Create stunning visuals, graphics, and images using AI-powered image generation technology.',
+      benefits: ['Unlimited images', 'Custom styles', 'High resolution']
     },
     {
-      icon: Headphones,
-      title: 'Human-AI Hybrid',
-      description: 'Smart escalation to human agents when AI cannot resolve issues, maintaining the personal touch.',
-      benefits: ['Smart routing', 'Seamless handoff', 'Agent assistance']
+      icon: Video,
+      title: 'Video Creation',
+      description: 'Produce professional videos with AI-powered editing, voiceovers, and automated video generation.',
+      benefits: ['Auto-editing', 'Voice synthesis', 'Multiple formats']
     },
     {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on customer interactions, satisfaction scores, and support performance.',
-      benefits: ['Real-time metrics', 'Trend analysis', 'Performance optimization']
+      icon: Share2,
+      title: 'Social Media Automation',
+      description: 'Automatically schedule and publish content across all social media platforms with optimal timing.',
+      benefits: ['Multi-platform', 'Auto-scheduling', 'Performance tracking']
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and data protection.',
-      benefits: ['SOC 2 compliance', 'Data encryption', 'Privacy protection']
+      icon: Brain,
+      title: 'Content Strategy',
+      description: 'AI-powered content planning and strategy recommendations based on your audience and goals.',
+      benefits: ['Audience analysis', 'Trend prediction', 'Content calendar']
     },
     {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Intelligent automation of routine tasks, ticket routing, and follow-up processes.',
-      benefits: ['Reduced workload', 'Faster resolution', 'Consistent quality']
+      icon: Target,
+      title: 'Performance Analytics',
+      description: 'Track content performance across all channels with detailed analytics and optimization suggestions.',
+      benefits: ['Real-time metrics', 'ROI tracking', 'Optimization tips']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$299',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support'
+        'Up to 100 content pieces/month',
+        'Basic AI writing',
+        'Standard image generation',
+        'Email support',
+        'Basic templates',
+        '1 social media account'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$599',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Omnichannel support',
-        'Advanced analytics & reporting',
+        'Up to 500 content pieces/month',
+        'Advanced AI writing',
+        'Premium image generation',
+        'Video creation',
         'Priority support',
-        'Custom integrations'
+        'Custom templates',
+        '5 social media accounts',
+        'Analytics dashboard'
       ],
       popular: true
     },
@@ -79,30 +84,34 @@ const AICustomerSupportPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels + voice',
-        'Real-time analytics dashboard',
-        'Dedicated account manager',
+        'Unlimited content',
+        'Custom AI models',
+        'All features included',
+        'Dedicated support',
         'Custom development',
+        'White-label options',
+        'Unlimited accounts',
+        'Advanced analytics',
         'SLA guarantee'
       ],
       popular: false
     }
   ];
+
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '10x', label: 'Content Production' },
+    { number: '85%', label: 'Time Savings' },
+    { number: '300%', label: 'Engagement Increase' },
+    { number: '50+', label: 'Content Types' }
   ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+        title="AI Content Studio - Zion Tech Group"
+        description="Complete content creation suite with AI writing, image generation, video editing, and social media automation. 10x content production speed."
+        keywords={['AI content creation', 'content studio', 'AI writing', 'image generation', 'video creation', 'social media automation']}
+        canonicalUrl="https://ziontechgroup.com/ai-content-studio"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -112,14 +121,14 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+                AI Content Studio
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform your customer service with intelligent AI that never sleeps
+                Create 10x more content with AI-powered automation
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
-                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+                Our complete content creation suite combines AI writing, image generation, video editing, 
+                and social media automation to help you produce professional content at scale.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -157,7 +166,7 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Features
+              Complete Content Creation Suite
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -233,10 +242,10 @@ const AICustomerSupportPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
+                Ready to Scale Your Content Production?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
+                Join 2,000+ businesses already using our content studio
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -264,4 +273,5 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-export default AICustomerSupportPage;
+
+export default AIContentStudioPage;
