@@ -1043,7 +1043,6 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
 
