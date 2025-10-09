@@ -44,8 +44,8 @@ export class MiddlewareExecutor {
       if (index >= this.middlewares.length) {
         return context.response?.data;
       }
-      const _middleware = this.middlewares[index++];
-      return await _middleware(context, next);
+      const middleware = this.middlewares[index++];
+      return await middleware(context, next);
     };
     return await next();
   }

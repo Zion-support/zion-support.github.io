@@ -1,5 +1,11 @@
 'use client';
 import React from 'react'
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -19,7 +25,11 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
+<<<<<<< HEAD
   public config: { gaId: string } = { gaId: '' }
+=======
+  public config: Record<string, any> = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
   /**
    * Initialize analytics service
    */

@@ -9,11 +9,17 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
+const originalConsoleError = console.error;
 console.error = (...args) => {
+<<<<<<< HEAD
   const _message = args[0]?.toString?.() || args[0]?.message || '';
   if (_message.includes('Not implemented: navigation') || 
       _message.includes('navigation (except hash changes)')) {
+=======
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
   _originalConsoleError(...args);
@@ -58,18 +64,28 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-const _originalConsoleWarn = console.warn;
-const _originalConsoleInfo = console.info;
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
 console.warn = (...args) => {
+<<<<<<< HEAD
   const _message = args[0]?.toString?.() || '';
   if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
+=======
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
   _originalConsoleWarn(...args);
 };
 console.info = (...args) => {
+<<<<<<< HEAD
   const _message = args[0]?.toString?.() || '';
   if (_message.includes('ReactDOM.render is no longer supported')) {
+=======
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('ReactDOM.render is no longer supported')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
   _originalConsoleInfo(...args);
