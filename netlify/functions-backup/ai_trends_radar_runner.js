@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'ai_trends_radar_runner function executed successfully',
         timestamp: timestamp,
         function: 'ai_trends_radar_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ ai_trends_radar_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'ai_trends_radar_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

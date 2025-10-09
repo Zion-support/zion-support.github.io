@@ -149,5 +149,5 @@ export default function October2025ProductionAIBann, e, r() {
         </div>
       </div>
     </secti, o, n>
-  );
+  )
 }

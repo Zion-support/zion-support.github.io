@@ -1,42 +1,7 @@
-import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
+import React from 'react'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
 const SitemapPage: React.FC = () => {
-=======
-const getAllPages = () => {return [}
-    { url: '/', priority: 1.0, changefreq: 'daily' },
-    { url: '/services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/contact', priority: 0.8, changefreq: 'monthly' },
-    { url: '/about', priority: 0.7, changefreq: 'monthly' },
-    { url: '/blog', priority: 0.8, changefreq: 'weekly' },
-  ];
-};
-const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {const baseUrl = 'https:// ziontechgroup.com';}
-  const sitemap = `
-          
-          
-          
-          
-          
-          
-          
-          
-          <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `}
-          <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <priority>${page.priority}</priority>
-    <changefreq>${page.changefreq}</changefreq>
-  </url>`).join('\n')}
-</urlset>`;
-  return sitemap;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -56,7 +21,6 @@ ${pages.map(page => `}
       <Footer />
 
     </div>
-  );
-};
-
-export default SitemapPage;
+  )
+}
+export default SitemapPage

@@ -1,19 +1,17 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
-
+import { withErrorLogging } from './withErrorLogging.cjs'
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    res.statusCode = 405
+    res.setHeader('Allow', 'POST')
+    res.end('Method Not Allowed')
+    return
   }
 
-  const { amount, currency = 'usd' } = req.body || {};
-
+  const { amount, currency = 'usd' } = req.body || {}
   if (!amount) {
-    res.statusCode = 400;
-    res.json({ error: 'Amount is required' });
-    return;
+    res.statusCode = 400
+    res.json({ error: 'Amount is required' })
+    return
   }
 
   try {
@@ -22,14 +20,13 @@ async function handler(req, res) {
       amount: Math.round(amount * 100), // Convert to cents
       currency,
       status: 'requires_payment_method',
-    };
-
-    res.statusCode = 200;
-    res.json({ paymentIntent });
+    }
+    res.statusCode = 200
+    res.json({ paymentIntent })
   } catch {
-    //     res.statusCode = 500;
-    res.json({ error: 'Failed to create payment intent' });
+    //     res.statusCode = 500
+    res.json({ error: 'Failed to create payment intent' })
   }
 }
 
-export default withErrorLogging(handler);
+export default withErrorLogging(handler)

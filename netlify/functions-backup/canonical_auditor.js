@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'canonical_auditor function executed successfully',
         timestamp: timestamp,
         function: 'canonical_auditor'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ canonical_auditor function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'canonical_auditor function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

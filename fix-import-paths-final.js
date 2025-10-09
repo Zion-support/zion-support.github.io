@@ -1,28 +1,24 @@
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
-
+import fs from 'fs'
+import { fileURLToPath } from 'url'
 function processFile(filePath) {
   try {
 
     // Determine correct relative paths based on file location
     const isInApp =
-      filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
-
-    let utilsPath, typesPath;
-
+      filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages
+    let utilsPath, typesPath
     if (isInBlog || isInGuides || isInPages) {
-      utilsPath = '../../utils/';
-      typesPath = '../../types/';
+      utilsPath = '../../utils/'
+      typesPath = '../../types/'
     } else if (isInComponents) {
-      utilsPath = '../utils/';
-      typesPath = '../types/';
+      utilsPath = '../utils/'
+      typesPath = '../types/'
     } else if (isInApp) {
-      utilsPath = './utils/';
-      typesPath = './types/';
+      utilsPath = './utils/'
+      typesPath = './types/'
     } else {
-      utilsPath = './utils/';
-      typesPath = './types/';
+      utilsPath = './utils/'
+      typesPath = './types/'
     }
 
     // Fix import paths
@@ -63,30 +59,27 @@ function processFile(filePath) {
         pattern: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: `import type { Metadata } from '${typesPath}next';`,
       },
-    ];
-
+    ]
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
+        content = content.replace(pattern, replacement)
+        modified = true
       }
-    });
-
+    })
     // Fix MetadataRoute namespace issue
     if (content.includes('MetadataRoute.')) {
-      content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
-      modified = true;
+      content = content.replace(/MetadataRoute\./g, 'MetadataRoute.')
+      modified = true
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      return true
     }
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -95,15 +88,14 @@ function processDirectory(dirPath) {
   items.forEach(item => {
 
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
+      totalFixed += processDirectory(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++
       }
     }
-  });
-
-  return totalFixed;
+  })
+  return totalFixed
 }
 
 // Process the app directory

@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'topics_map_runner function executed successfully',
         timestamp: timestamp,
         function: 'topics_map_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ topics_map_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'topics_map_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

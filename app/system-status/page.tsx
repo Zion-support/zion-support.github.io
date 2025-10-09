@@ -1,7 +1,5 @@
 
       </div>    </div>
-  );
-};
-
-export default SystemStatusPage;
-
+  )
+}
+export default SystemStatusPage

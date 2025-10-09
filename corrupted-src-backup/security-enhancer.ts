@@ -1,7 +1,6 @@
 class SecurityEnhancer {
-  private static instance: SecurityEnhancer;
-  private isInitialized: boolean = false;
-
+  private static instance: SecurityEnhancer
+  private isInitialized: boolean = false
   private constructor() {}
   private setupHTTPSRedirect(): void {
     if (
@@ -9,7 +8,7 @@ class SecurityEnhancer {
       location.protocol !== 'https:' &&
       location.hostname !== 'localhost'
     ) {
-      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length))
     }
   }
 
@@ -23,19 +22,18 @@ class SecurityEnhancer {
 
   public static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
-      SecurityEnhancer.instance = new SecurityEnhancer();
+      SecurityEnhancer.instance = new SecurityEnhancer()
     }
-    return SecurityEnhancer.instance;
+    return SecurityEnhancer.instance
   }
 
   public initialize(): void {
-    if (this.isInitialized) return;
-
-    this.setupHTTPSRedirect();
-    this.setupXSSProtection();
-    this.setupSecurityHeaders();
-    this.isInitialized = true;
+    if (this.isInitialized) return
+    this.setupHTTPSRedirect()
+    this.setupXSSProtection()
+    this.setupSecurityHeaders()
+    this.isInitialized = true
   }
 }
 
-export default SecurityEnhancer;
+export default SecurityEnhancer

@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import, React, from 'rea, c, t'
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
       id:  , 4,
       title: 'Autonomous, Enterprise, Systems: 95% Automat, i, o, n',
       slug: 'ai-autonomo, u, s-enterpri, s, e-2, 0, 2, 6',

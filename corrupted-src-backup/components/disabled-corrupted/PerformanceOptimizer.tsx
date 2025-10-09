@@ -1,8 +1,7 @@
-import Reac, t, { useEffect, useState, useCallba, c, k } fr, o, m 'rea, c, t';
-
+import Reac, t, { useEffect, useState, useCallba, c, k } fr, o, m 'rea, c, t'
 interface PerformanceOptimizerProp, s { 
-  isVisib, l, e: boolean;
-  onClo, s, e: () = > v, o, i, d;
+  isVisib, l, e: boolean
+  onClo, s, e: () = > v, o, i, d
  }
 
 const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
@@ -15,45 +14,40 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
     cachi, n, g: t, r, u, e,
     compressi, o, n: t, r, u, e,
     c, d, n: fa, l, s, e,
-  });
-
+  })
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>(
     [],
-  );
-
+  )
   const runOptimization, s = useCallba, c, k(as, y, n, c () => { 
-    const optimizationsLis, t: string[] = []; if() { optimizationsLi, s, t.pu, s, h('Optimizing, image, s...');
-      await, new, Promise(resol, v, e = > setTimeo, u, t(res, o, l, v, e, 10, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Images, optimize, d');
+    const optimizationsLis, t: string[] = []; if() { optimizationsLi, s, t.pu, s, h('Optimizing, image, s...')
+      await, new, Promise(resol, v, e = > setTimeo, u, t(res, o, l, v, e, 10, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Images, optimize, d')
       }, if (optimizatio, n, s.codeSplitti, n, g) { 
-      optimizationsLi, s, t.pu, s, h('Enabling, code, splitting...');
-      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 8, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Code, splitting, enabled');
+      optimizationsLi, s, t.pu, s, h('Enabling, code, splitting...')
+      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 8, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Code, splitting, enabled')
      }
 
-    if() { optimizationsLi, s, t.pu, s, h('Implementing, loading...');
-      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 6, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Lazy, loading, implemented');
+    if() { optimizationsLi, s, t.pu, s, h('Implementing, loading...')
+      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 6, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Lazy, loading, implemented')
       }, if (optimizatio, n, s.cachi, n, g) { 
-      optimizationsLi, s, t.pu, s, h('Configuring, cachin, g...');
-      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 7, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Caching, configure, d');
+      optimizationsLi, s, t.pu, s, h('Configuring, cachin, g...')
+      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 7, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Caching, configure, d')
      }
 
-    if() { optimizationsLi, s, t.pu, s, h('Enabling, compressio, n...');
-      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 5, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Compression, enable, d');
-      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t);
-  }, [optimizatio, n, s]);
-
+    if() { optimizationsLi, s, t.pu, s, h('Enabling, compressio, n...')
+      await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 5, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Compression, enable, d')
+      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t)
+  }, [optimizatio, n, s])
   useEffect(() => {
     if (isVisib, l, e) {
-      runOptimizatio, n, s();
+      runOptimizatio, n, s()
     }
-  }, [isVisib, l, e, runOptimizatio, n, s]);
-
+  }, [isVisib, l, e, runOptimizatio, n, s])
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => { 
     setOptimizatio, n, s(pr, e, v = > ({
       ...pr, e, v,
       [k, e, y]: !pr, e, v[k, e, y],
-     }));
-  };
-
+     }))
+  }
   const optimizationOption, s = [
     {
       k, e, y: 'imageOptimizati, o, n' as, co, n, s, t,
@@ -169,7 +163,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
           Clo, s, e
         </button>
         <button, onCli, c, k={ () = > {
-            setCurrentOptimizatio, n, s([]);
+            setCurrentOptimizatio, n, s([])
             // Trigger r e-optimizat i o n
            }}
           classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-white, b, g-bl, u, e-600, border, border-transparent, rounde, d-md, hove, r: bg-bl, u, e-700, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
@@ -178,7 +172,6 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
         </button>
       </div>
     </div>
-  );
-};
-
-export default PerformanceOptimizer;
+  )
+}
+export default PerformanceOptimizer

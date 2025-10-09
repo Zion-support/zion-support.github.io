@@ -1,13 +1,7 @@
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-<<<<<<< HEAD
+import { clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 export function cn(...inputs: ClassValue[]) {
     // TODO: Add content
   }
   return twMerge(clsx(inputs))
-=======
-export function cn(...inputs: ClassValue[]) {// TODO: Add content;}
-}
-  return twMerge(clsx(inputs));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }

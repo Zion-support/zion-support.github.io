@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const NewBlogContentShowcase202, 6: React.FC = () => { 
   const blogPost, s = [
     {
@@ -296,6 +296,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default NewBlogContentShowcase2026;
+  )
+}
+export default NewBlogContentShowcase2026

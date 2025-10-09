@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastOptimization: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in metadata-optimizer-runner: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'metadata-optimizer-runner'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'metadata-optimizer-runner',' source: event.source || 'unknown', optimization: {' status: 'active', metadataOptimized: 0,
         lastOptimization: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in metadata-optimizer-runner: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'metadata-optimizer-runner' }) }; } };'

@@ -9,6 +9,5 @@
  */
 
 export interface BannerMetadata {
-  id: string;
-
+  id: string
 }

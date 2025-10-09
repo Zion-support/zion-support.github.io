@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'topic_cluster_builder_runner function executed successfully',
         timestamp: timestamp,
         function: 'topic_cluster_builder_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ topic_cluster_builder_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'topic_cluster_builder_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

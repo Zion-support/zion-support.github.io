@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     description: 'Professional Quantum Blockchain Security Services services from Zion Tech Group.',
     type: 'website',
   },
-};
-
+}
 export default function quantumblockchainsecurityservices() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -30,5 +29,5 @@ export default function quantumblockchainsecurityservices() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,9 +1,8 @@
-import React from 'react';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     'Generate high-quality 3D models from text descriptions',
@@ -16,8 +15,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Custom style transfer and adaptation',
     'Physics simulation integration',
     'Export to all major 3D formats'
-  ];
-
+  ]
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -224,7 +222,6 @@ const AI3DGenerationPage: React.FC = () => {
       </main>
       
       <Footer />
-  );
-};
-
-export default AI3DGenerationPage;
+  )
+}
+export default AI3DGenerationPage

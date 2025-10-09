@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'hyper_front_index_accelerator function executed successfully',
         timestamp: timestamp,
         function: 'hyper_front_index_accelerator'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ hyper_front_index_accelerator function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'hyper_front_index_accelerator function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

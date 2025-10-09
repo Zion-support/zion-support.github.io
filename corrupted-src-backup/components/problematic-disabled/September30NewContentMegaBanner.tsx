@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 const September30NewContentMegaBanner = () => {
   const newArticle, s = [
     {",
@@ -155,6 +155,6 @@ const September30NewContentMegaBanner = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-export default September30NewContentMegaBanner;
+  )
+}
+export default September30NewContentMegaBanner

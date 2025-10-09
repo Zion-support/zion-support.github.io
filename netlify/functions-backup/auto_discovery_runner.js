@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'auto_discovery_runner function executed successfully',
         timestamp: timestamp,
         function: 'auto_discovery_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ auto_discovery_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'auto_discovery_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

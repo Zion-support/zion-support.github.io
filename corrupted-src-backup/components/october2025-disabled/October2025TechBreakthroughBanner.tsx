@@ -1,12 +1,11 @@
-impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Lo, c, k } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
-
+impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Lo, c, k } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Shie, l, d } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t'
 const October2025TechBreakthroughBanne, r = () => { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }
@@ -351,7 +350,6 @@ const October2025TechBreakthroughBanne, r = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-
-export default October2025TechBreakthroughBanner;
+  )
+}
+export default October2025TechBreakthroughBanner

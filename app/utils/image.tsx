@@ -1,20 +1,20 @@
-'use client';
-import React, { useState, useCallback } from 'react';
+'use client'
+import React, { useState, useCallback } from 'react'
 interface ImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
+  _placeholder?: 'blur' | 'empty'
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
+  style?: React.CSSProperties
+  onLoad?: () => void
+  onError?: () => void
 }
 export const Image: React.FC<ImageProps> = ({
   src,
@@ -33,16 +33,16 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   ...props
 }) => {
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    setIsLoaded(true)
+    if (onLoad) onLoad()
+  }, [onLoad])
   const handleError = useCallback(() => {
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    setHasError(true)
+    if (onError) onError()
+  }, [onError])
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
@@ -53,7 +53,7 @@ export const Image: React.FC<ImageProps> = ({
       height: '100%',
       objectFit: 'cover'
     })
-  };
+  }
   if (hasError) {
     return (
       <div
@@ -63,7 +63,7 @@ export const Image: React.FC<ImageProps> = ({
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    );
+    )
   }
   return (
     <img
@@ -79,6 +79,6 @@ export const Image: React.FC<ImageProps> = ({
       onError={handleError}
       {...props}
     />
-  );
-};
-export default Image;
+  )
+}
+export default Image

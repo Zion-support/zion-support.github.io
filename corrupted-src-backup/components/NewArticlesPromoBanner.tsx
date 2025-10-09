@@ -1,11 +1,11 @@
-import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
-import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t"
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";'
 interface, NewArticlesPromoBannerProp, s {
-varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featur, e, d' | 'compa, c, t';
-showCou, n, t?: numb, e, r;
-autoRota, t, e?: boole, a, n;
-rotationInterv, a, l?: numb, e, r;
-classNa, m, e?: stri, n, g;
+varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featur, e, d' | 'compa, c, t'
+showCou, n, t?: numb, e, r
+autoRota, t, e?: boole, a, n
+rotationInterv, a, l?: numb, e, r
+classNa, m, e?: stri, n, g
 }
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',

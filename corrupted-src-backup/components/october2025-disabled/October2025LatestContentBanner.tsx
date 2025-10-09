@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 const October2025LatestContentBanne, r = () => {
   const article, s = [
     {
@@ -63,7 +63,7 @@ const October2025LatestContentBanne, r = () => {
                   <Link, className="w-4 h-4" />
                 </div>
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* Stats, Ba, r */}
@@ -104,6 +104,6 @@ const October2025LatestContentBanne, r = () => {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default October2025LatestContentBanner;
+  )
+}
+export default October2025LatestContentBanner

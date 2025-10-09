@@ -1,6 +1,5 @@
 const cacheSystem = {
   loadFromStorage: () => {
     //     },
-};
-
-export default cacheSystem;
+}
+export default cacheSystem

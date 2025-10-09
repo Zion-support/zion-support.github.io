@@ -6,7 +6,7 @@
  */
 
 interface BannerModule {
-  default: ComponentType<Record<string, unknown>>;
+  default: ComponentType<Record<string, unknown>>
 }
 
 /**
@@ -20,13 +20,12 @@ export const lazyLoadBanner = (
           importFn()
             .then(resolve)
             .catch(retryError => {
-            });
-        }, 1000);
-      });
+            })
+        }, 1000)
+      })
     })
-  );
-};
-
+  )
+}
 /**
  * Preload banner components for better performance
  */
@@ -37,32 +36,30 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
       requestIdleCallback(() => {
         importFn().catch(() => {
           // Silently fail for preload
-        });
-      });
+        })
+      })
   }
-};
-
+}
 /**
  * Banner loader with intersection observer
  */
 export const createBannerLoader = () => {
   const observer = new IntersectionObserver(
         if (entry.isIntersecting) {
-          const _element = entry.target as HTMLElement;
-          const _importFn = element.dataset.bannerImport;
+          const _element = entry.target as HTMLElement
+          const _importFn = element.dataset.bannerImport
           if (importFn) {
             // Load the banner when it comes into view
-            eval(importFn)();
+            eval(importFn)()
           }
         }
-      });
+      })
     },
     { rootMargin: '50px' }
-  );
-
+  )
   return {
     observe: (element: HTMLElement) => observer.observe(element),
     unobserve: (element: HTMLElement) => observer.unobserve(element),
     disconnect: () => observer.disconnect(),
-  };
-};
+  }
+}

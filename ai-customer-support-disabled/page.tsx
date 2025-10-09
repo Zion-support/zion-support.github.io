@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -30,8 +30,7 @@ const AICustomerSupportPage: React.FC = () => {
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -51,13 +50,13 @@ const AICustomerSupportPage: React.FC = () => {
       description: 'For large organizations',
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
-  ];
+  ]
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
-  ];
+  ]
   return (
     <>
       <SEOOptimizer
@@ -115,9 +114,8 @@ const AICustomerSupportPage: React.FC = () => {
         </main>
       </div>
     </>
-  );
-};
-
+  )
+}
 const AICustomerSupportPage2: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -247,8 +245,6 @@ const AICustomerSupportPage2: React.FC = () => {
       </div>
     </div>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-  );
-};
-
-export default AICustomerSupportPage2;
+  )
+}
+export default AICustomerSupportPage2

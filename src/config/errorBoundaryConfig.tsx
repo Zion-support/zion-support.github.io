@@ -1,9 +1,8 @@
 'use client'
 /**
- * Error Boundary Configuration;
- * Centralized configuration for error handling across the application;
+ * Error Boundary Configuration
+ * Centralized configuration for error handling across the application
  */
-<<<<<<< HEAD
 export interface ErrorBoundaryConfig {
     // TODO: Add content
   }
@@ -11,40 +10,31 @@ export interface ErrorBoundaryConfig {
    * Whether to log errors to console
    */
   logErrors: boolean
-=======
-export interface ErrorBoundaryConfig {// TODO: Add content;}
-}
   /**
-   * Whether to log errors to console;
-   */;
-  logErrors: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  /**
-   * Whether to show detailed error messages;
+   * Whether to show detailed error messages
    */,
     showDetails: boolean
   /**
-   * Whether to send errors to external service;
+   * Whether to send errors to external service
    */,
     reportErrors: boolean
   /**
-   * Error reporting endpoint;
+   * Error reporting endpoint
    */
   reportingEndpoint?: string
   /**
-   * Whether to show error overlay in development;
+   * Whether to show error overlay in development
    */,
     showErrorOverlay: boolean
   /**
-   * Maximum number of errors to store;
+   * Maximum number of errors to store
    */,
 
   maxStoredErrors: number
   /**
-   * Custom error messages by error type;
+   * Custom error messages by error type
    */,
 
-<<<<<<< HEAD
   customMessages: Record
           
           
@@ -55,14 +45,9 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
           
           
           <string, string>
-=======
-  customMessages: Record;
-          <string, string>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   /**
-   * Fallback UI components;
+   * Fallback UI components
    */
-<<<<<<< HEAD
   fallbackComponents: {
     // TODO: Add content
   }
@@ -79,18 +64,9 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
     network: React.ComponentType<{ error: Error; resetError: () => void }>
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>
   }
-=======
-  fallbackComponents: {// TODO: Add content;}
-};
-  default: React.ComponentType;
-          <{ error: Error; resetError: () => void }>;
-    network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
- * Default error messages;
+ * Default error messages
  */
   default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
@@ -100,9 +76,8 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
   validation: 'Validation error. Please check your input.'
 }
 /**
- * Get error boundary configuration based on environment;
+ * Get error boundary configuration based on environment
  */
-<<<<<<< HEAD
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     // TODO: Add content
   }
@@ -110,13 +85,6 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   return {
     // TODO: Add content
   }
-=======
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add content;}
-}
-  const isDevelopment = process.env['NODE_ENV'] === 'development';
-  return {// TODO: Add content;}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -124,31 +92,21 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-<<<<<<< HEAD
     fallbackComponents: {
     // TODO: Add content
   }
-=======
-    fallbackComponents: {// TODO: Add content;}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback;
+      notFound: NotFoundFallback
     }
   }
 }
 /**
- * Default error fallback component;
+ * Default error fallback component
  */
-<<<<<<< HEAD
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
     // TODO: Add content
   }
-=======
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     
           
@@ -186,7 +144,7 @@ className="w-6 h-6 text-red-600"
 // /></svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-// Oops! Something went wrong;
+// Oops! Something went wrong
           </h2>
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
@@ -199,13 +157,13 @@ className="w-6 h-6 text-red-600"
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
 // >
-//             Try Again;
+//             Try Again
           </button>
           <button
             onClick={() => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
 // >
-//             Go Home;
+//             Go Home
           </button>
         </div>
       </div>
@@ -213,16 +171,11 @@ className="w-6 h-6 text-red-600"
   )
 }
 /**
- * Network error fallback component;
+ * Network error fallback component
  */
-<<<<<<< HEAD
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
     // TODO: Add content
   }
-=======
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     
           
@@ -268,7 +221,7 @@ className="w-6 h-6 text-yellow-600"
             onClick={resetError}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
 // >
-            Retry Connection;
+            Retry Connection
           </button>
         </div>
       </div>
@@ -276,16 +229,11 @@ className="w-6 h-6 text-yellow-600"
   )
 }
 /**
- * Not found error fallback component;
+ * Not found error fallback component
  */
-<<<<<<< HEAD
 function NotFoundFallback(): JSX.Element {
     // TODO: Add content
   }
-=======
-function NotFoundFallback(): JSX.Element {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     
           
@@ -310,13 +258,13 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
 // >
-//             Go Home;
+//             Go Home
           </button>
           <button
             onClick={() => window.history.back()}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
 // >
-//             Go Back;
+//             Go Back
           </button>
         </div>
       </div>
@@ -324,9 +272,8 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
   )
 }
 /**
- * Get error type from error object;
+ * Get error type from error object
  */
-<<<<<<< HEAD
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
     // TODO: Add content
   }
@@ -352,38 +299,14 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   if (error.message.includes('validation')) {
     // TODO: Add content
-=======
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {// TODO: Add content;}
-}
-  if (error.message.includes('Network') || error.message.includes('fetch')) {// TODO: Add content;}
-}
-    return 'network';
-  }
-  if (error.message.includes('404') || error.message.includes('not found')) {// TODO: Add content;}
-}
-    return 'notFound';
-  }
-  if (error.message.includes('timeout')) {// TODO: Add content;}
-}
-    return 'timeout';
-  }
-  if (error.message.includes('500') || error.message.includes('server')) {// TODO: Add content;}
-}
-    return 'serverError';
-  }
-  if (error.message.includes('validation')) {// TODO: Add content;}
-}
-    return 'validation';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return 'validation'
   }
   return 'default'
 }
 /**
- * Format error for logging;
+ * Format error for logging
  */
-<<<<<<< HEAD
 export function formatErrorForLogging(error: Error): Record
           
           
@@ -399,13 +322,6 @@ export function formatErrorForLogging(error: Error): Record
   return {
     // TODO: Add content
   }
-=======
-export function formatErrorForLogging(error: Error): Record;
-          <string, unknown> {// TODO: Add content;}
-}
-  return {// TODO: Add content;}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   message: error.message,
     stack: error.stack,
     name: error.name,

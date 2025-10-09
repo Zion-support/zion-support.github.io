@@ -5,9 +5,8 @@ impo, r, t {
   Packa, g, e,
   Trending, U, p,
   Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
   return (
 :src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx
@@ -359,8 +358,8 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 Schedule Your Supply Chain AI Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
-  );
-};
+  )
+}
   </div>
   </div>
   </div>

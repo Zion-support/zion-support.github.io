@@ -20,11 +20,11 @@ impo, r, t {
   Z, a, p,
   BarChar, t, 3,
   BookOp, e, n,
-} fr, o, m 'luci, d, e-rea, c, t';
+} fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t {
   octoberNewBreakthroughConte, n, t,
   octoberContentSta, t, s,
-} fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t';
+} fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t'
 const October2025NewBreakthroughBanne, r = () => { 
   const stat, s = octoberContentSta, t, s; const iconMa, p: Reco, r, d<
     st, r, i, n, g,
@@ -33,7 +33,7 @@ const October2025NewBreakthroughBanne, r = () => {
     '🧠': Bra, i, n,
     '💰': DollarSi, g, n,
     '🎨': E, y, e,
-   };
+   }
   return (
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
@@ -121,7 +121,7 @@ const October2025NewBreakthroughBanne, r = () => {
                   <Link, className='w-5 h-5' />
                 </div>
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* CTA, Sectio, n */}
@@ -225,6 +225,6 @@ const October2025NewBreakthroughBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default October2025NewBreakthroughBanner;
+  )
+}
+export default October2025NewBreakthroughBanner

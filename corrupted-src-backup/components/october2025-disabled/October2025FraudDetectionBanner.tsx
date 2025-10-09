@@ -299,6 +299,6 @@ const October2025FraudDetectionBanne, r = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025FraudDetectionBanner;
+  )
+}
+export default October2025FraudDetectionBanner

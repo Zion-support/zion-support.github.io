@@ -1,8 +1,7 @@
-import React from 'react';
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CloudMigrationPage: React.FC = () => {
   const features = [
     {
@@ -35,8 +34,7 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
-  ];
-
+  ]
   const migrationSteps = [
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of current infrastructure and migration strategy',
@@ -337,7 +335,6 @@ const CloudMigrationPage: React.FC = () => {
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
-  );
-};
-
-export default CloudMigrationPage;
+  )
+}
+export default CloudMigrationPage

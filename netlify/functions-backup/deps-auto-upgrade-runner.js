@@ -18,8 +18,8 @@ exports.handler = async function (event, context) {try {
           lastCheck: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in deps-auto-upgrade-runner: ') error
       }
     return {
@@ -31,10 +31,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'deps-auto-upgrade-runner'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'deps-auto-upgrade-runner',' source: event.source || 'unknown', upgrade: {' status: 'checking', dependencies: 0, updatesAvailable: 0,
         lastCheck: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in deps-auto-upgrade-runner: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'deps-auto-upgrade-runner' }) }; } };'

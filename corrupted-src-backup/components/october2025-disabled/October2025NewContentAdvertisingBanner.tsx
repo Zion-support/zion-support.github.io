@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 export default function October2025NewContentAdvertisingBann, e, r() { 
   return (
     <section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Background, Elements */ }
@@ -90,5 +90,5 @@ export default function October2025NewContentAdvertisingBann, e, r() {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }

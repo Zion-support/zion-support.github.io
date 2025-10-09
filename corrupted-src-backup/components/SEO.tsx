@@ -1,11 +1,11 @@
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
     <>
       <title>{title}</title>
       <meta name="description" content={description} />

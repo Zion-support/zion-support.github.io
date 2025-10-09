@@ -1,34 +1,33 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
-
+import fs from 'fs'
+import { glob } from 'glob'
 // Function to process a file
 function processFile(filePath) {
   try {
 
     // Fix malformed closing tags
     if (content.includes('</div>}')) {
-      content = content.replace(/<\/div>\}/g, '}');
-      modified = true;
+      content = content.replace(/<\/div>\}/g, '}')
+      modified = true
     }
 
     // Fix malformed closing tags with semicolons
     if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
-      modified = true;
+      content = content.replace(/<\/div>;/g, ';')
+      modified = true
     }
 
     // Fix malformed closing tags with commas
     if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
-      modified = true;
+      content = content.replace(/<\/div>,/g, ',')
+      modified = true
     }
 
     // Fix unterminated regular expressions
     if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
-      modified = true;
+      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;')
+      modified = true
     }
 
     // Fix malformed object properties
@@ -40,26 +39,25 @@ function processFile(filePath) {
           line = line.replace(
             /^(\s*[a-zA-Z_][a-zA-Z0-9_]*)\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*$/,
             '$1: $2,'
-          );
-          modified = true;
+          )
+          modified = true
         }
-        newLines.push(line);
+        newLines.push(line)
       }
       if (modified) {
-        content = newLines.join('\n');
+        content = newLines.join('\n')
       }
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      return true
     }
 
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -69,10 +67,9 @@ async function main() {
 
   files.forEach(file => {
     if (processFile(file)) {
-      fixedCount++;
+      fixedCount++
     }
-  });
-
+  })
 }
 
-main().catch(console.error);
+main().catch(console.error)

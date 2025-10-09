@@ -1,11 +1,9 @@
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const _state = readState();
-
+  const _state = readState()
   if (req.method === 'GET') {
-    //     const scope = state.config.scope;
-    const _scopedEvents = filterEventsByScope(state.events, scope);
-
+    //     const scope = state.config.scope
+    const _scopedEvents = filterEventsByScope(state.events, scope)
     return res.status(200).json({
       status: 'ok',
       instanceId: state.config.instanceId,
@@ -19,8 +17,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         daoEndorsements: scopedEvents.filter(e => e.type === 'dao_endorsement').length,
         leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry').length,
       },
-    });
+    })
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
+  return res.status(405).json({ error: 'Method not allowed' })
 }

@@ -1,17 +1,14 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
-// // const fixedContent = `import Link from 'next/link';
-
+import fs from 'fs'
+// // const fixedContent = `import Link from 'next/link'
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description:
     'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
   keywords:
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
-};
-
+}
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -179,11 +176,9 @@ export default function EnterprisePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
-`;
-
+`
 // Write the fixed content
-fs.writeFileSync('app/enterprise/page.tsx', fixedContent);
-
+fs.writeFileSync('app/enterprise/page.tsx', fixedContent)
 // 

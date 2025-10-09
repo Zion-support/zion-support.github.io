@@ -1,35 +1,34 @@
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React, { useEffect, useCallback, useRef } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: Record<string, unknown>
+  robots?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
 
 interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
+  seoData: SEOData
+  enableStructuredData?: boolean
+  enableOpenGraph?: boolean
+  enableTwitterCards?: boolean
+  enableSchemaMarkup?: boolean
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
@@ -39,11 +38,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null)
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
-      return null;
+      return null
     }
 
     const baseStructuredData = {
@@ -73,38 +71,35 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         addressCountry: 'US',
       },
       ...seoData.structuredData,
-    };
-
+    }
     if (seoData.author) {
       baseStructuredData.author = {
         '@type': 'Person',
         name: seoData.author,
-      };
+      }
     }
 
     if (seoData.publishedTime) {
-      baseStructuredData.datePublished = seoData.publishedTime;
+      baseStructuredData.datePublished = seoData.publishedTime
     }
 
     if (seoData.modifiedTime) {
-      baseStructuredData.dateModified = seoData.modifiedTime;
+      baseStructuredData.dateModified = seoData.modifiedTime
     }
 
     if (seoData.section) {
-      baseStructuredData.articleSection = seoData.section;
+      baseStructuredData.articleSection = seoData.section
     }
 
     if (seoData.tags && seoData.tags.length > 0) {
-      baseStructuredData.keywords = seoData.tags.join(', ');
+      baseStructuredData.keywords = seoData.tags.join(', ')
     }
 
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-
+    return baseStructuredData
+  }, [seoData, enableStructuredData])
   // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {
-    if (!enableOpenGraph) return {};
-
+    if (!enableOpenGraph) return {}
     return {
       'og:title': seoData.ogTitle || seoData.title,
       'og:description': seoData.ogDescription || seoData.description,
@@ -113,13 +108,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og:image': seoData.ogImage || '/og-image.jpg',
       'og:site_name': 'Zion Tech Group',
       'og:locale': 'en_US',
-    };
-  }, [seoData, enableOpenGraph]);
-
+    }
+  }, [seoData, enableOpenGraph])
   // Generate Twitter Card data
   const generateTwitterCardData = useCallback(() => {
-    if (!enableTwitterCards) return {};
-
+    if (!enableTwitterCards) return {}
     const faqData = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -149,9 +142,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           },
         },
       ],
-    };
-  }, [seoData, enableTwitterCards]);
-
+    }
+  }, [seoData, enableTwitterCards])
   // Generate meta tags
   const generateMetaTags = useCallback(() => {
     const metaTags = [
@@ -163,62 +155,54 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'theme-color', content: '#3B82F6' },
       { name: 'msapplication-TileColor', content: '#3B82F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
-    ];
-    return metaTags;
-  }, [seoData]);
-
-  const structuredData = generateStructuredData();
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
-
+    ]
+    return metaTags
+  }, [seoData])
+  const structuredData = generateStructuredData()
+  const openGraphData = generateOpenGraphData()
+  const twitterCardData = generateTwitterCardData()
+  const metaTags = generateMetaTags()
   useEffect(() => {
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
+      document.title = seoData.title
+      let metaDescription = document.querySelector('meta[name="description"]')
       if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
+        metaDescription = document.createElement('meta')
+        metaDescription.setAttribute('name', 'description')
+        document.head.appendChild(metaDescription)
       }
-      metaDescription.setAttribute('content', seoData.description);
-
+      metaDescription.setAttribute('content', seoData.description)
       // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('link[rel="canonical"]')
       if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
+        canonicalLink = document.createElement('link')
+        canonicalLink.setAttribute('rel', 'canonical')
+        document.head.appendChild(canonicalLink)
       }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
+      canonicalLink.setAttribute('href', seoData.canonicalUrl)
     }
-  }, [seoData]);
-
+  }, [seoData])
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
+      structuredDataRef.current.remove()
     }
     
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(structuredData)
+    document.head.appendChild(script)
+    structuredDataRef.current = script
   useEffect(() => {
     if (structuredData) {
-      addStructuredData(structuredData);
+      addStructuredData(structuredData)
     }
-  }, [structuredData]);
-
-
+  }, [structuredData])
   useEffect(() => {
     // Track page performance
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (perfData) {
         // Track performance metrics
         if (typeof (window as any).gtag === 'function') {
@@ -226,12 +210,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
+          })
         }
       }
     }
-  }, []);
-
+  }, [])
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -280,7 +263,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
-  );
-};
-
-export default AdvancedSEOOptimizer;
+  )
+}
+export default AdvancedSEOOptimizer

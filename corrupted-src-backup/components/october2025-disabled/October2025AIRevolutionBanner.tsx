@@ -20,9 +20,9 @@ impo, r, t {
   Z, a, p,
   BarChar, t, 3,
   BookOp, e, n,
-} fr, o, m 'luci, d, e-rea, c, t';
+} fr, o, m 'luci, d, e-rea, c, t'
 interface October2025AIRevolutionBannerProp, s { 
-  classNa, m, e ?  : string;
+  classNa, m, e ?  : string
  }
 export default function October2025AIRevolutionBann, e, r({
   classNa, m, e = '',
@@ -168,5 +168,5 @@ export default function October2025AIRevolutionBann, e, r({
         </div>
       </div>
     </div>
-  );
+  )
 }

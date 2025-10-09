@@ -34,210 +34,203 @@ class SecurityEnhancer {
         'api.ziontechgroup.com',
         'cdn.ziontechgroup.com',
       ],
-    };
-    this.init();
+    }
+    this.init()
   }
 
   init() {
-    this.setupContentSecurityPolicy();
-    this.setupXSSProtection();
-    this.setupCSRFProtection();
-    this.setupInputValidation();
-    this.setupOutputEncoding();
-    this.setupSecureHeaders();
-    this.setupSecurityMonitoring();
+    this.setupContentSecurityPolicy()
+    this.setupXSSProtection()
+    this.setupCSRFProtection()
+    this.setupInputValidation()
+    this.setupOutputEncoding()
+    this.setupSecureHeaders()
+    this.setupSecurityMonitoring()
   }
 
   setupContentSecurityPolicy() {
     if (this.securityConfig.cspEnabled) {
-//       const cspHeader = this.buildCSPHeader();
-      this.setMetaCSP(cspHeader);
+//       const cspHeader = this.buildCSPHeader()
+      this.setMetaCSP(cspHeader)
     }
   }
 
   buildCSPHeader() {
-//     const directives = this.securityConfig.contentSecurityPolicy;
+//     const directives = this.securityConfig.contentSecurityPolicy
     return Object.entries(directives)
       .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
-      .join('; ');
+      .join('; ')
   }
 
   setMetaCSP(cspHeader) {
     // Set CSP via meta tag
-    const _meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = cspHeader;
-    document.head.appendChild(meta);
+    const _meta = document.createElement('meta')
+    meta.httpEquiv = 'Content-Security-Policy'
+    meta.content = cspHeader
+    document.head.appendChild(meta)
   }
 
   setupXSSProtection() {
     if (this.securityConfig.xssProtection) {
       // Add XSS protection header
-      const _meta = document.createElement('meta');
-      meta.httpEquiv = 'X-XSS-Protection';
-      meta.content = '1; mode=block';
-      document.head.appendChild(meta);
+      const _meta = document.createElement('meta')
+      meta.httpEquiv = 'X-XSS-Protection'
+      meta.content = '1; mode=block'
+      document.head.appendChild(meta)
     }
   }
 
   setupCSRFProtection() {
     if (this.securityConfig.csrfProtection) {
       // Generate CSRF token
-//       const token = this.generateCSRFToken();
-      this.setCSRFToken(token);
-
+//       const token = this.generateCSRFToken()
+      this.setCSRFToken(token)
       // Add token to all forms
-      this.addCSRFTokenToForms();
-
+      this.addCSRFTokenToForms()
       // Add token to AJAX requests
-      this.addCSRFTokenToAJAX();
+      this.addCSRFTokenToAJAX()
     }
   }
 
   generateCSRFToken() {
-//     const array = new Uint8Array(32);
-    crypto.getRandomValues(array);
+//     const array = new Uint8Array(32)
+    crypto.getRandomValues(array)
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(
       ''
-    );
+    )
   }
 
   setCSRFToken(token) {
     // Store token in sessionStorage
-    sessionStorage.setItem('csrf_token', token);
-
+    sessionStorage.setItem('csrf_token', token)
     // Add token to meta tag
-    const _meta = document.createElement('meta');
-    meta.name = 'csrf-token';
-    meta.content = token;
-    document.head.appendChild(meta);
+    const _meta = document.createElement('meta')
+    meta.name = 'csrf-token'
+    meta.content = token
+    document.head.appendChild(meta)
   }
 
   addCSRFTokenToForms() {
-    const _forms = document.querySelectorAll('form');
+    const _forms = document.querySelectorAll('form')
     forms.forEach(form => {
-//       const token = sessionStorage.getItem('csrf_token');
+//       const token = sessionStorage.getItem('csrf_token')
       if (token && !form.querySelector('input[name="csrf_token"]')) {
-        const _input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'csrf_token';
-        input.value = token;
-        form.appendChild(input);
+        const _input = document.createElement('input')
+        input.type = 'hidden'
+        input.name = 'csrf_token'
+        input.value = token
+        form.appendChild(input)
       }
-    });
+    })
   }
 
   addCSRFTokenToAJAX() {
     // Override fetch to include CSRF token
-    const _originalFetch = window.fetch;
+    const _originalFetch = window.fetch
     window.fetch = (url, options = {}) => {
-//       const token = sessionStorage.getItem('csrf_token');
+//       const token = sessionStorage.getItem('csrf_token')
       if (token) {
         options.headers = {
           ...options.headers,
           'X-CSRF-Token': token,
-        };
+        }
       }
-      return originalFetch(url, options);
-    };
-
+      return originalFetch(url, options)
+    }
     // Override XMLHttpRequest to include CSRF token
-    const _originalXHROpen = XMLHttpRequest.prototype.open;
+    const _originalXHROpen = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function (method, url, ...args) {
       this.addEventListener('loadstart', () => {
-//         const token = sessionStorage.getItem('csrf_token');
+//         const token = sessionStorage.getItem('csrf_token')
         if (token) {
-          this.setRequestHeader('X-CSRF-Token', token);
+          this.setRequestHeader('X-CSRF-Token', token)
         }
-      });
-      return originalXHROpen.call(this, method, url, ...args);
-    };
+      })
+      return originalXHROpen.call(this, method, url, ...args)
+    }
   }
 
   setupInputValidation() {
     // Validate all user inputs
-    this.setupFormValidation();
-    this.setupURLValidation();
-    this.setupFileUploadValidation();
+    this.setupFormValidation()
+    this.setupURLValidation()
+    this.setupFileUploadValidation()
   }
 
   setupFormValidation() {
-    const _forms = document.querySelectorAll('form');
+    const _forms = document.querySelectorAll('form')
     forms.forEach(form => {
       form.addEventListener('submit', event => {
         if (!this.validateForm(form)) {
-          event.preventDefault();
+          event.preventDefault()
         }
-      });
-    });
+      })
+    })
   }
 
   validateForm(form) {
-    const _inputs = form.querySelectorAll('input, textarea, select');
-    let _isValid = true;
-
+    const _inputs = form.querySelectorAll('input, textarea, select')
+    let _isValid = true
     inputs.forEach(input => {
       if (!this.validateInput(input)) {
-        isValid = false;
-        this.showInputError(input, 'Invalid input');
+        isValid = false
+        this.showInputError(input, 'Invalid input')
       } else {
-        this.clearInputError(input);
+        this.clearInputError(input)
       }
-    });
-
-    return isValid;
+    })
+    return isValid
   }
 
   validateInput(input) {
-    const _value = input.value;
-    const _type = input.type;
-//     const required = input.hasAttribute('required');
-
+    const _value = input.value
+    const _type = input.type
+//     const required = input.hasAttribute('required')
     if (required && !value.trim()) {
-      return false;
+      return false
     }
 
     switch (type) {
       case 'email':
-        return this.validateEmail(value);
+        return this.validateEmail(value)
       case 'url':
-        return this.validateURL(value);
+        return this.validateURL(value)
       case 'tel':
-        return this.validatePhone(value);
+        return this.validatePhone(value)
       case 'password':
-        return this.validatePassword(value);
+        return this.validatePassword(value)
       default:
-        return this.validateText(value);
+        return this.validateText(value)
     }
   }
 
   validateEmail(email) {
-    const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
   }
 
   validateURL(url) {
     try {
-      const _urlObj = new URL(url);
+      const _urlObj = new URL(url)
       return this.securityConfig.trustedDomains.some(
         domain =>
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
-      );
+      )
     } catch {
-      return false;
+      return false
     }
   }
 
   validatePhone(phone) {
-    const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ''));
+    const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/
+    return phoneRegex.test(phone.replace(/\s/g, ''))
   }
 
   validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    return passwordRegex.test(password);
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+    return passwordRegex.test(password)
   }
 
   validateText(text) {
@@ -249,38 +242,37 @@ class SecurityEnhancer {
       /<iframe/i,
       /<object/i,
       /<embed/i,
-    ];
-
-    return !xssPatterns.some(pattern => pattern.test(text));
+    ]
+    return !xssPatterns.some(pattern => pattern.test(text))
   }
 
   setupURLValidation() {
     // Validate URLs before navigation
     document.addEventListener('click', event => {
-      const _link = event.target.closest('a');
+      const _link = event.target.closest('a')
       if (link && link.href) {
         if (!this.validateURL(link.href)) {
-          event.preventDefault();
-          this.showSecurityWarning('Untrusted link blocked');
+          event.preventDefault()
+          this.showSecurityWarning('Untrusted link blocked')
         }
       }
-    });
+    })
   }
 
   setupFileUploadValidation() {
-    const _fileInputs = document.querySelectorAll('input[type="file"]');
+    const _fileInputs = document.querySelectorAll('input[type="file"]')
     fileInputs.forEach(input => {
       input.addEventListener('change', event => {
-//         const files = event.target.files;
+//         const files = event.target.files
         for (const file of files) {
           if (!this.validateFile(file)) {
-            event.preventDefault();
-            this.showSecurityWarning(`File ${file.name} is not allowed`);
-            return;
+            event.preventDefault()
+            this.showSecurityWarning(`File ${file.name} is not allowed`)
+            return
           }
         }
-      });
-    });
+      })
+    })
   }
 
   validateFile(file) {
@@ -291,17 +283,16 @@ class SecurityEnhancer {
       'image/webp',
       'application/pdf',
       'text/plain',
-    ];
-
+    ]
     const maxSize = 10 * 1024 * 1024; // 10MB
 
-    return allowedTypes.includes(file.type) && file.size <= maxSize;
+    return allowedTypes.includes(file.type) && file.size <= maxSize
   }
 
   setupOutputEncoding() {
     // Encode output to prevent XSS
-    this.setupTextEncoding();
-    this.setupHTMLEncoding();
+    this.setupTextEncoding()
+    this.setupHTMLEncoding()
   }
 
   setupTextEncoding() {
@@ -309,14 +300,14 @@ class SecurityEnhancer {
     const originalInnerHTML = Object.getOwnPropertyDescriptor(
       Element.prototype,
       'innerHTML'
-    );
+    )
     Object.defineProperty(Element.prototype, 'innerHTML', {
       set: function (value) {
-//         const encoded = this.encodeHTML(value);
-        originalInnerHTML.set.call(this, encoded);
+//         const encoded = this.encodeHTML(value)
+        originalInnerHTML.set.call(this, encoded)
       },
       get: originalInnerHTML.get,
-    });
+    })
   }
 
   setupHTMLEncoding() {
@@ -326,8 +317,8 @@ class SecurityEnhancer {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    };
+        .replace(/'/g, '&#39;')
+    }
   }
 
   setupSecureHeaders() {
@@ -337,44 +328,43 @@ class SecurityEnhancer {
       'X-Frame-Options': 'DENY',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    };
-
+    }
     Object.entries(headers).forEach(([name, value]) => {
-      const _meta = document.createElement('meta');
-      meta.httpEquiv = name;
-      meta.content = value;
-      document.head.appendChild(meta);
-    });
+      const _meta = document.createElement('meta')
+      meta.httpEquiv = name
+      meta.content = value
+      document.head.appendChild(meta)
+    })
   }
 
   setupSecurityMonitoring() {
     // Monitor for security events
-    this.monitorConsoleErrors();
-    this.monitorNetworkRequests();
-    this.monitorDOMChanges();
+    this.monitorConsoleErrors()
+    this.monitorNetworkRequests()
+    this.monitorDOMChanges()
   }
 
   monitorConsoleErrors() {
-//     const originalConsoleError = console.error;
+//     const originalConsoleError = console.error
 //     console.error = (...args) => {
       // Check for security-related errors
-//       const message = args.join(' ');
+//       const message = args.join(' ')
       if (this.isSecurityError(message)) {
-        this.reportSecurityEvent('console_error', { message });
+        this.reportSecurityEvent('console_error', { message })
       }
-      originalConsoleError.apply(console, args);
-    };
+      originalConsoleError.apply(console, args)
+    }
   }
 
   monitorNetworkRequests() {
-    const _originalFetch = window.fetch;
+    const _originalFetch = window.fetch
     window.fetch = (url, options = {}) => {
       // Log suspicious requests
       if (this.isSuspiciousRequest(url)) {
-        this.reportSecurityEvent('suspicious_request', { url, options });
+        this.reportSecurityEvent('suspicious_request', { url, options })
       }
-      return originalFetch(url, options);
-    };
+      return originalFetch(url, options)
+    }
   }
 
   monitorDOMChanges() {
@@ -383,17 +373,16 @@ class SecurityEnhancer {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach(node => {
             if (node.nodeType === Node.ELEMENT_NODE) {
-              this.checkForMaliciousContent(node);
+              this.checkForMaliciousContent(node)
             }
-          });
+          })
         }
-      });
-    });
-
+      })
+    })
     observer.observe(document.body, {
       childList: true,
       subtree: true,
-    });
+    })
   }
 
   isSecurityError(message) {
@@ -403,9 +392,8 @@ class SecurityEnhancer {
       /injection/i,
       /malicious/i,
       /attack/i,
-    ];
-
-    return securityPatterns.some(pattern => pattern.test(message));
+    ]
+    return securityPatterns.some(pattern => pattern.test(message))
   }
 
   isSuspiciousRequest(url) {
@@ -414,21 +402,19 @@ class SecurityEnhancer {
       /script/i,
       /javascript:/i,
       /data:text\/html/i,
-    ];
-
-    return suspiciousPatterns.some(pattern => pattern.test(url));
+    ]
+    return suspiciousPatterns.some(pattern => pattern.test(url))
   }
 
   checkForMaliciousContent(node) {
-    const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
-
-//     const content = node.innerHTML || node.textContent || '';
+    const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i]
+//     const content = node.innerHTML || node.textContent || ''
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
       this.reportSecurityEvent('malicious_content', {
         content,
         node: node.tagName,
-      });
-      node.remove();
+      })
+      node.remove()
     }
   }
 
@@ -439,8 +425,7 @@ class SecurityEnhancer {
       timestamp: new Date().toISOString(),
       url: window.location.href,
       userAgent: navigator.userAgent,
-    };
-
+    }
     // Send to security monitoring service
     fetch('/api/security-events', {
       method: 'POST',
@@ -450,123 +435,118 @@ class SecurityEnhancer {
       },
       body: JSON.stringify(event),
     }).catch(error => {
-//       });
+//       })
   }
 
   showInputError(input, message) {
-    this.clearInputError(input);
-
-    const _errorDiv = document.createElement('div');
-    errorDiv.className = 'input-error';
-    errorDiv.textContent = message;
-    errorDiv.style.color = 'red';
-    errorDiv.style.fontSize = '12px';
-    errorDiv.style.marginTop = '4px';
-
-    input.parentNode.appendChild(errorDiv);
-    input.style.borderColor = 'red';
+    this.clearInputError(input)
+    const _errorDiv = document.createElement('div')
+    errorDiv.className = 'input-error'
+    errorDiv.textContent = message
+    errorDiv.style.color = 'red'
+    errorDiv.style.fontSize = '12px'
+    errorDiv.style.marginTop = '4px'
+    input.parentNode.appendChild(errorDiv)
+    input.style.borderColor = 'red'
   }
 
   clearInputError(input) {
-    const _errorDiv = input.parentNode.querySelector('.input-error');
+    const _errorDiv = input.parentNode.querySelector('.input-error')
     if (errorDiv) {
-      errorDiv.remove();
+      errorDiv.remove()
     }
-    input.style.borderColor = '';
+    input.style.borderColor = ''
   }
 
   showSecurityWarning(message) {
-    const _warning = document.createElement('div');
-    warning.className = 'security-warning';
+    const _warning = document.createElement('div')
+    warning.className = 'security-warning'
     warning.innerHTML = `
       <div style="
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #ff6b6b;
-        color: white;
-        padding: 15px;
-        border-radius: 4px;
-        z-index: 9999;
-        max-width: 300px;
+        position: fixed
+        top: 20px
+        right: 20px
+        background: #ff6b6b
+        color: white
+        padding: 15px
+        border-radius: 4px
+        z-index: 9999
+        max-width: 300px
       ">
         <strong>Security Warning:</strong> ${message}
         <button onclick="this.parentElement.parentElement.remove()" style="
-          background: none;
-          border: none;
-          color: white;
-          float: right;
-          cursor: pointer;
+          background: none
+          border: none
+          color: white
+          float: right
+          cursor: pointer
         ">×</button>
       </div>
-    `;
-    document.body.appendChild(warning);
-
+    `
+    document.body.appendChild(warning)
     setTimeout(() => {
       if (warning.parentElement) {
-        warning.remove();
+        warning.remove()
       }
-    }, 5000);
+    }, 5000)
   }
 
   // Public methods
   getSecurityConfig() {
-    return this.securityConfig;
+    return this.securityConfig
   }
 
   updateSecurityConfig(newConfig) {
-    this.securityConfig = { ...this.securityConfig, ...newConfig };
+    this.securityConfig = { ...this.securityConfig, ...newConfig }
   }
 
   validateAndSanitizeInput(input, type = 'text') {
-    const _value = input.value;
-//     const sanitized = this.sanitizeInput(value, type);
-    input.value = sanitized;
-    return sanitized;
+    const _value = input.value
+//     const sanitized = this.sanitizeInput(value, type)
+    input.value = sanitized
+    return sanitized
   }
 
   sanitizeInput(input, type) {
     switch (type) {
       case 'html':
-        return this.sanitizeHTML(input);
+        return this.sanitizeHTML(input)
       case 'url':
-        return this.sanitizeURL(input);
+        return this.sanitizeURL(input)
       case 'email':
-        return this.sanitizeEmail(input);
+        return this.sanitizeEmail(input)
       default:
-        return this.sanitizeText(input);
+        return this.sanitizeText(input)
     }
   }
 
   sanitizeHTML(html) {
-    const _div = document.createElement('div');
-    div.textContent = html;
-    return div.innerHTML;
+    const _div = document.createElement('div')
+    div.textContent = html
+    return div.innerHTML
   }
 
   sanitizeURL(url) {
     try {
-      const _urlObj = new URL(url);
-      return urlObj.toString();
+      const _urlObj = new URL(url)
+      return urlObj.toString()
     } catch {
-      return '';
+      return ''
     }
   }
 
   sanitizeEmail(email) {
-    return email.replace(/[^a-zA-Z0-9@._-]/g, '');
+    return email.replace(/[^a-zA-Z0-9@._-]/g, '')
   }
 
   sanitizeText(text) {
-    return text.replace(/[<>]/g, '');
+    return text.replace(/[<>]/g, '')
   }
 }
 
 // Initialize security enhancer
-// const securityEnhancer = new SecurityEnhancer();
-
+// const securityEnhancer = new SecurityEnhancer()
 // Export for use in other modules
-export default securityEnhancer;
-
+export default securityEnhancer
 // Global security instance
-window.securityEnhancer = securityEnhancer;
+window.securityEnhancer = securityEnhancer

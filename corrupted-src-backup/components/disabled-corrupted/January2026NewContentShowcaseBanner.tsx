@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const January2026NewContentShowcaseBanne, r: React.FC = () => {
   const features = [
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
@@ -95,6 +95,6 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {
       <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" />
       <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0" />
     </moti, o, n.di, v>
-  );
-};
-export default January2026NewContentShowcaseBanner;
+  )
+}
+export default January2026NewContentShowcaseBanner

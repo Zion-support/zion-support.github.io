@@ -1,5 +1,4 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
-
+import React, { lazy, Suspense, useState, useEffect } from 'react'
 // Define available banners with their import paths
 const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
@@ -18,15 +17,13 @@ const bannerComponents = {
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
-};
-
-type BannerKey = keyof typeof bannerComponents;
-
+}
+type BannerKey = keyof typeof bannerComponents
 interface BannerRotationManagerProps {
-  banners?: BannerKey[];
-  maxBanners?: number;
-  rotationInterval?: number;
-  className?: string;
+  banners?: BannerKey[]
+  maxBanners?: number
+  rotationInterval?: number
+  className?: string
 }
 
 /**
@@ -44,33 +41,27 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   rotationInterval = 10000,
   className = '',
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
-
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([])
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
-//     const selected = banners.slice(0, maxBanners);
-    setVisibleBanners(selected);
-  }, [banners, maxBanners]);
-
+//     const selected = banners.slice(0, maxBanners)
+    setVisibleBanners(selected)
+  }, [banners, maxBanners])
   // Rotate banners at specified interval
   useEffect(() => {
-    if (visibleBanners.length <= 1) return;
-
+    if (visibleBanners.length <= 1) return
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-    }, rotationInterval);
-
-    return () => clearInterval(interval);
-  }, [visibleBanners.length, rotationInterval]);
-
+      setCurrentIndex(prev => (prev + 1) % visibleBanners.length)
+    }, rotationInterval)
+    return () => clearInterval(interval)
+  }, [visibleBanners.length, rotationInterval])
   if (visibleBanners.length === 0) {
-    return null;
+    return null
   }
 
-//   const currentBanner = visibleBanners[currentIndex];
-//   const BannerComponent = bannerComponents[currentBanner];
-
+//   const currentBanner = visibleBanners[currentIndex]
+//   const BannerComponent = bannerComponents[currentBanner]
   return (
     <div className={`banner-rotation-manager ${className}`}></div>
       <Suspense
@@ -101,7 +92,6 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
         </button></div>
       )}
     </div>
-  );
-};
-
-export default BannerRotationManager;
+  )
+}
+export default BannerRotationManager

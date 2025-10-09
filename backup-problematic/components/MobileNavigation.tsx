@@ -1,7 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 interface MobileNavigationProps {
-  className?: string;
+  className?: string
 }
 
 const MobileNavigation = React.memo(function MobileNavigation({
@@ -12,7 +11,6 @@ const MobileNavigation = React.memo(function MobileNavigation({
       <h3 className="text-lg font-semibold text-blue-800">MobileNavigation</h3>
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-
-export default MobileNavigation;
+  )
+})
+export default MobileNavigation

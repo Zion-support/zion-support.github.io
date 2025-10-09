@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-
+import { execSync } from 'child_process'
+import fs from 'fs'
 //PR information from the JSON files
 const prs = [
   {
@@ -29,20 +28,19 @@ const prs = [
     branch: 'cursor/fix-errors-and-merge-to-main-e6e1',
     sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
   },
-];
-
+]
 // //Ensure we're on main branch
 try {
-  execSync('git checkout main', { stdio: 'inherit' });
+  execSync('git checkout main', { stdio: 'inherit' })
 //   } catch (error) {
-//   process.exit(1);
+//   process.exit(1)
 }
 
 //Pull latest changes
 try {
-  execSync('git pull origin main', { stdio: 'inherit' });
+  execSync('git pull origin main', { stdio: 'inherit' })
 //   } catch (error) {
-//   process.exit(1);
+//   process.exit(1)
 }
 
 //Process each PR
@@ -53,9 +51,9 @@ for (const pr of prs) {
       execSync(
         `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
         { stdio: 'pipe' }
-      );
+      )
 //       } catch (error) {
-//       continue;
+//       continue
     }
 
     //Try to merge the branch
@@ -63,15 +61,15 @@ for (const pr of prs) {
       execSync(
         `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
         { stdio: 'inherit' }
-      );
+      )
 //       } catch (error) {
 //       //Try to resolve conflicts automatically
       try {
-        execSync('git status --porcelain', { stdio: 'pipe' });
+        execSync('git status --porcelain', { stdio: 'pipe' })
 //         //If there are conflicts, try to resolve them
         if (status.includes('UU') || status.includes('AA')) {
 //           //Reset the merge
-          execSync('git merge --abort', { stdio: 'inherit' });
+          execSync('git merge --abort', { stdio: 'inherit' })
 //           }
       } catch (resolveError) {
 //         }
@@ -82,7 +80,7 @@ for (const pr of prs) {
 
 // Push changes
 try {
-  execSync('git push origin main', { stdio: 'inherit' });
+  execSync('git push origin main', { stdio: 'inherit' })
 //   } catch (error) {
 //   }
 

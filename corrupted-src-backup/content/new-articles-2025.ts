@@ -1,13 +1,13 @@
 export interface NewArticle {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  link: string;
-  readTime: string;
-  tags: string[];
+  id: string
+  title: string
+  excerpt: string
+  author: string
+  publishedAt: string
+  category: string
+  link: string
+  readTime: string
+  tags: string[]
 }
 
 export const newArticles2025: NewArticle[] = [
@@ -34,4 +34,4 @@ export const newArticles2025: NewArticle[] = [
     readTime: '12 min read',
     tags: ['Quantum Computing', 'AI', 'Breakthrough', 'Technology'],
   },
-];
+]

@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs'
+import path from 'path'
 //Correct icon mappings - using actual lucide-react exports
 const iconMappings = {
   rrowleft: 'ArrowLeft',
@@ -33,8 +32,7 @@ const iconMappings = {
   tom: 'Atom',
   atellite: 'Satellite',
   ward: 'Award',
-};
-
+}
 //Icons that don't exist in lucide-react - replace with similar ones
 const iconReplacements = {
   Tag: 'Hash',
@@ -49,21 +47,20 @@ const iconReplacements = {
   Atom: 'Atom',
   Satellite: 'Satellite',
   Award: 'Award',
-};
-
+}
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
 
     //Remove duplicate Link imports
     const linkImportRegex =
-      /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g;
+      /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g
     if (linkImportRegex.test(content)) {
       content = content.replace(
         linkImportRegex,
         "import Link from 'next/link';"
-      );
-      modified = true;
+      )
+      modified = true
     }
 
     //Fix lucide-react imports - replace individual imports with single import
@@ -74,23 +71,23 @@ function fixImportsInFile(filePath) {
       if (line.includes('lucide-react/dist/esm/icons/')) {
         const match = line.match(
           /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/
-        );
+        )
         if (match) {
-//           const iconName = match[1];
-//           const brokenName = match[2];
-//           const correctName = iconMappings[brokenName] || iconName;
-//           const finalName = iconReplacements[correctName] || correctName;
-          lucideImports.push(finalName);
+//           const iconName = match[1]
+//           const brokenName = match[2]
+//           const correctName = iconMappings[brokenName] || iconName
+//           const finalName = iconReplacements[correctName] || correctName
+          lucideImports.push(finalName)
         }
-        modified = true;
+        modified = true
       } else if (
         line.includes('import {') &&
         line.includes("} from 'lucide-react'")
       ) {
         //Skip existing lucide-react imports
-        continue;
+        continue
       } else {
-        newImportLines.push(line);
+        newImportLines.push(line)
       }
     }
 
@@ -100,22 +97,21 @@ function fixImportsInFile(filePath) {
       //Find the best place to insert the import
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
-          insertIndex = i + 1;
+          insertIndex = i + 1
         } else if (newImportLines[i].trim() === '') {
-          break;
+          break
         }
       }
 
-      newImportLines.splice(insertIndex, 0, lucideImportLine);
-      content = newImportLines.join('\n');
+      newImportLines.splice(insertIndex, 0, lucideImportLine)
+      content = newImportLines.join('\n')
     }
 
     //Fix Link component usage - replace 'to' prop with 'href'
-    content = content.replace(/<Link\s+to=/g, '<Link href=');
-    modified = true;
-
+    content = content.replace(/<Link\s+to=/g, '<Link href=')
+    modified = true
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)
 //       }
   } catch (error) {
 //     }
@@ -128,12 +124,10 @@ directories.forEach(dir => {
     const dirFiles = fs
       .readdirSync(dir, { recursive: true })
       .filter(file => file.endsWith('.tsx'))
-      .map(file => path.join(dir, file));
-    files.push(...dirFiles);
+      .map(file => path.join(dir, file))
+    files.push(...dirFiles)
   }
-});
-
+})
 // Process each file
-files.forEach(fixImportsInFile);
-
+files.forEach(fixImportsInFile)
 // 

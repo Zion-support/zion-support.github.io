@@ -6,9 +6,8 @@ impo, r, t {
   Shie, l, d,
   Use, r, s,
   Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const QuantumAIHybrid202, 5 = () => { 
   return (
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
@@ -319,10 +318,9 @@ const QuantumAIHybrid202, 5 = () => {
                     </Link>
                     <Link to="/services/quantum-computing-consulting">
   className= " />
-  );
-};
-
-export default QuantumAIHybrid2025;
+  )
+}
+export default QuantumAIHybrid2025
   </div>  </div>
 </article>
 </article>

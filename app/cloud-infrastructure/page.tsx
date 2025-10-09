@@ -1,6 +1,5 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import { Helmet } from 'react-helmet-async'
 export default function CloudInfrastructurePage() {
   return (
     <div><Helmet>
@@ -220,5 +219,5 @@ export default function CloudInfrastructurePage() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }

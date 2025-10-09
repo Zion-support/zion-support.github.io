@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'headers_enforcer function executed successfully',
         timestamp: timestamp,
         function: 'headers_enforcer'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ headers_enforcer function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'headers_enforcer function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

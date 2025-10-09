@@ -1,24 +1,21 @@
-import React, { Suspense, lazy, useEffect } from 'react';
-import './index.css';
-
+import React, { Suspense, lazy, useEffect } from 'react'
+import './index.css'
 // Lazy load pages for better performance
-// const Home = lazy(() => import('./pages/Home'));
-// const About = lazy(() => import('./pages/About'));
-// const Services = lazy(() => import('./pages/Services'));
-// const Blog = lazy(() => import('./pages/Blog'));
-// const Contact = lazy(() => import('./pages/Contact'));
-// const Team = lazy(() => import('./pages/Team'));
-// const Privacy = lazy(() => import('./pages/Privacy'));
-// const Terms = lazy(() => import('./pages/Terms'));
-
+// const Home = lazy(() => import('./pages/Home'))
+// const About = lazy(() => import('./pages/About'))
+// const Services = lazy(() => import('./pages/Services'))
+// const Blog = lazy(() => import('./pages/Blog'))
+// const Contact = lazy(() => import('./pages/Contact'))
+// const Team = lazy(() => import('./pages/Team'))
+// const Privacy = lazy(() => import('./pages/Privacy'))
+// const Terms = lazy(() => import('./pages/Terms'))
 function App() {
   useEffect(() => {
     // Initialize basic optimizations
     //     // Cleanup on unmount
     return () => {
-      //       };
-  }, []);
-
+      //       }
+  }, [])
   return (
     <ErrorBoundary>
       <div>
@@ -38,7 +35,7 @@ function App() {
         </Router>
       </div>
     </ErrorBoundary>
-  );
+  )
 }
 
 // Simple Error Boundary
@@ -47,12 +44,12 @@ class ErrorBoundary extends React.Component<
   { hasError: boolean }
 > {
   constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError() {
-    return { hasError: true };
+    return { hasError: true }
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
@@ -74,11 +71,11 @@ class ErrorBoundary extends React.Component<
             </div>
           </div>
         )
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default App;
+export default App

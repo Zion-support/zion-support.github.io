@@ -8,8 +8,8 @@ exports.handler = async function (event, context) {try {
           'content_freshness_score_runner function executed successfully',
         timestamp: timestamp,
         function: 'content_freshness_score_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ content_freshness_score_runner function failed: ') error
       }
     return {
@@ -18,8 +18,8 @@ exports.handler = async function (event, context) {try {
         error: 'content_freshness_score_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

@@ -9,8 +9,7 @@ export const metadata: Metadata = {
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
     type: 'article',
   },
-};
-
+}
 export default function index() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -40,5 +39,5 @@ export default function index() {
         </div>
       </div>
     </div>
-  );
+  )
 }

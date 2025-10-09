@@ -1,10 +1,9 @@
 :src/components/PerformanceMonitor.tsx
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  enableReporting?: boolean;
-  enableLongTaskMonitoring?: boolean;
+  children: React.ReactNode
+  enableReporting?: boolean
+  enableLongTaskMonitoring?: boolean
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
@@ -12,9 +11,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enableReporting = true,
   enableLongTaskMonitoring = true 
 }) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
-  const [, setLongTasks] = useState<PerformanceEntry[]>([]);
-
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
+  const [, setLongTasks] = useState<PerformanceEntry[]>([])
   useEffect(() => {
     // Initialize performance monitoring
     // Add critical resource hints manually
@@ -24,99 +22,91 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-      
+      ]
       hints.forEach(hint => {
-        const _link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
+        const _link = document.createElement('link')
+        link.rel = hint.rel
+        link.href = hint.href
         if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
+          link.crossOrigin = hint.crossOrigin
         }
-        document.head.appendChild(link);
-      });
+        document.head.appendChild(link)
+      })
     }
     
     // Measure page load performance
-//     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+//     const pageLoadMetrics = performanceOptimizer.measurePageLoad()
     if (pageLoadMetrics) {
-      setMetrics(pageLoadMetrics);
+      setMetrics(pageLoadMetrics)
       if (enableReporting) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+        performanceOptimizer.reportWebVitals(pageLoadMetrics)
       }
     }
 
     // Monitor long tasks if enabled
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
-        setLongTasks(prev => [...prev, ...entries]);
-//         });
-      
+        setLongTasks(prev => [...prev, ...entries])
+//         })
       return () => {
         if (observer) {
-          observer.disconnect();
+          observer.disconnect()
         }
-      };
+      }
     }
-  }, [enableReporting, enableLongTaskMonitoring]);
-
+  }, [enableReporting, enableLongTaskMonitoring])
   // Monitor Web Vitals using Performance Observer
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
     const observer = new PerformanceObserver((list) => {
-      const _entries = list.getEntries();
+      const _entries = list.getEntries()
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
-//           const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp }));
+//           const lcp = entry.startTime
+          setMetrics(prev => ({ ...prev, LCP: lcp }))
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp });
+            performanceOptimizer.reportWebVitals({ LCP: lcp })
           }
         }
         
         if (entry.entryType === 'first-input') {
-//           const fid = (entry as any).processingStart - entry.startTime;
-          setMetrics(prev => ({ ...prev, FID: fid }));
+//           const fid = (entry as any).processingStart - entry.startTime
+          setMetrics(prev => ({ ...prev, FID: fid }))
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ FID: fid });
+            performanceOptimizer.reportWebVitals({ FID: fid })
           }
         }
         
         if (entry.entryType === 'layout-shift') {
-//           const cls = (entry as any).value;
-          setMetrics(prev => ({ ...prev, CLS: cls }));
+//           const cls = (entry as any).value
+          setMetrics(prev => ({ ...prev, CLS: cls }))
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ CLS: cls });
+            performanceOptimizer.reportWebVitals({ CLS: cls })
           }
         }
-      });
-    });
-
+      })
+    })
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
     } catch (e) {
 //       }
 
     return () => {
-      observer.disconnect();
-    };
-  }, [enableReporting]);
-
+      observer.disconnect()
+    }
+  }, [enableReporting])
   // Development mode: Log performance metrics
   useEffect(() => {
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
 //       }
-  }, [metrics]);
-
-  return <>{children}</>;
-import React, { useEffect, useState, useCallback } from 'react';
-
+  }, [metrics])
+  return <>{children}</>
+import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceMonitorProps {
-  enabled?: boolean;
-  budget?: PerformanceBudget;
-  onMetricsUpdate?: (metrics: WebVitalsMetrics) => void;
-  onBudgetViolation?: (violations: string[]) => void;
+  enabled?: boolean
+  budget?: PerformanceBudget
+  onMetricsUpdate?: (metrics: WebVitalsMetrics) => void
+  onBudgetViolation?: (violations: string[]) => void
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
@@ -130,74 +120,62 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   onBudgetViolation
 }) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-  const [budgetStatus, setBudgetStatus] = useState<{ passed: boolean; violations: string[] }>({ passed: true, violations: [] });
-
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
+  const [isVisible, setIsVisible] = useState(false)
+  const [budgetStatus, setBudgetStatus] = useState<{ passed: boolean; violations: string[] }>({ passed: true, violations: [] })
   const updateMetrics = useCallback(() => {
-//     const newMetrics = performanceOptimizer.measurePageLoad();
+//     const newMetrics = performanceOptimizer.measurePageLoad()
     if (newMetrics) {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-      onMetricsUpdate?.(newMetrics);
-      
+      setMetrics(prev => ({ ...prev, ...newMetrics }))
+      onMetricsUpdate?.(newMetrics)
       // Check performance budget
-      const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
-      setBudgetStatus(budgetCheck);
-      
+      const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget)
+      setBudgetStatus(budgetCheck)
       if (!budgetCheck.passed) {
-        onBudgetViolation?.(budgetCheck.violations);
+        onBudgetViolation?.(budgetCheck.violations)
       }
     }
-  }, [budget, onMetricsUpdate, onBudgetViolation]);
-
+  }, [budget, onMetricsUpdate, onBudgetViolation])
   useEffect(() => {
-    if (!enabled) return;
-
+    if (!enabled) return
     // Initial metrics
-    updateMetrics();
-
+    updateMetrics()
     // Monitor long tasks
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
-//       });
-
+//       })
     // Monitor Web Vitals
     const reportVitals = (newMetrics: WebVitalsMetrics) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-      performanceOptimizer.reportWebVitals(newMetrics);
-    };
-
+      setMetrics(prev => ({ ...prev, ...newMetrics }))
+      performanceOptimizer.reportWebVitals(newMetrics)
+    }
     // Set up performance monitoring
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'paint') {
-            const _paintEntry = entry as PerformancePaintTiming;
+            const _paintEntry = entry as PerformancePaintTiming
             if (paintEntry.name === 'first-contentful-paint') {
-              reportVitals({ FCP: paintEntry.startTime });
+              reportVitals({ FCP: paintEntry.startTime })
             }
           }
           if (entry.entryType === 'largest-contentful-paint') {
-            const _lcpEntry = entry as PerformanceEntry;
-            reportVitals({ LCP: lcpEntry.startTime });
+            const _lcpEntry = entry as PerformanceEntry
+            reportVitals({ LCP: lcpEntry.startTime })
           }
-        });
-      });
-
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
-
+        })
+      })
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] })
       return () => {
-        observer.disconnect();
-        longTaskObserver?.disconnect();
-      };
+        observer.disconnect()
+        longTaskObserver?.disconnect()
+      }
     }
 
     return () => {
-      longTaskObserver?.disconnect();
-    };
-  }, [enabled, updateMetrics]);
-
-  if (!enabled) return null;
-
+      longTaskObserver?.disconnect()
+    }
+  }, [enabled, updateMetrics])
+  if (!enabled) return null
   return (
     <div className="performance-monitor">
       {/* Toggle button */}
@@ -280,8 +258,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
       )}
     </div>
-  );
-};
-
-export default PerformanceMonitor;
+  )
+}
+export default PerformanceMonitor
 }

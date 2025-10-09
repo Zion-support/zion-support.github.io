@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'front_index_orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'front_index_orchestrator'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ front_index_orchestrator function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'front_index_orchestrator function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

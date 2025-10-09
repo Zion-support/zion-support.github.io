@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
+import fs from 'fs'
+import path from 'path'
+import { glob } from 'glob'
 // Define the replacements
 const replacements = [
   // Next.js imports to React Router
@@ -66,8 +65,7 @@ const replacements = [
   { from: 'priority', to: '' },
   { from: 'placeholder', to: '' },
   { from: 'blurDataURL', to: '' },
-];
-
+]
 // Function to process a single file
 function processFile(filePath) {
   try {
@@ -79,10 +77,10 @@ function processFile(filePath) {
         const regex = new RegExp(
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
           'g'
-        );
+        )
         if (regex.test(content)) {
-          content = content.replace(regex, `$1${to}`);
-          modified = true;
+          content = content.replace(regex, `$1${to}`)
+          modified = true
         }
       } else {
         // Simple replacement
@@ -90,12 +88,11 @@ function processFile(filePath) {
           content = content.replace(
             new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
             to
-          );
-          modified = true;
+          )
+          modified = true
         }
       }
-    });
-
+    })
     // Additional cleanup
     content = content
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
@@ -104,28 +101,25 @@ function processFile(filePath) {
         // Merge consecutive imports from same module
         lines.forEach(line => {
           if (match) {
-            const [, importsStr, module] = match;
-            if (!imports[module]) imports[module] = [];
-            imports[module].push(importsStr);
+            const [, importsStr, module] = match
+            if (!imports[module]) imports[module] = []
+            imports[module].push(importsStr)
           }
-        });
-
+        })
         return (
           Object.entries(imports)
             .join('\n') + '\n'
-        );
-      });
-
+        )
+      })
     if (modified) {
-      fs.writeFileSync(filePath, content);
-
-      return true;
+      fs.writeFileSync(filePath, content)
+      return true
     }
 
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -148,14 +142,13 @@ async function main() {
         '**/*temp*/**',
         '**/*.broken/**',
       ],
-    });
-
+    })
     files.forEach(file => {
-      totalFiles++;
+      totalFiles++
       if (processFile(file)) {
-        fixedFiles++;
+        fixedFiles++
       }
-    });
+    })
   }
 
 
@@ -171,6 +164,5 @@ async function main() {
 if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
-export { processFile, replacements };
-
+export { processFile, replacements }
 }}}}}}}}}}}

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 interface ContentPromotionBannerProps {
   // Add props here
 }
@@ -9,7 +8,6 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = () => {
     <div className="contentpromotionbanner">
       {/* Component content */}
     </div>
-  );
-};
-
-export default ContentPromotionBanner;
+  )
+}
+export default ContentPromotionBanner

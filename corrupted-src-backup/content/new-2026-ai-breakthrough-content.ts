@@ -1,16 +1,16 @@
 export interface AIBreakthroughContent {
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  valueProposition: string;
+  id: string
+  title: string
+  description: string
+  content: string
+  author: string
+  publishedAt: string
+  category: string
+  tags: string[]
+  featured: boolean
+  readTime: string
+  image?: string
+  valueProposition: string
 }
 
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [
@@ -64,4 +64,4 @@ The convergence of quantum computing and artificial intelligence opens new front
     image: '/images/quantum-ai-synthesis-2026.jpg',
     valueProposition: 'Exponential computational capabilities',
   },
-];
+]

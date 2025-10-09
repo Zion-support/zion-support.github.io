@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'dead_code_report function executed successfully',
         timestamp: timestamp,
         function: 'dead_code_report'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ dead_code_report function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'dead_code_report function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

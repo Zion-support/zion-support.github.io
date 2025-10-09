@@ -1,15 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: unknown;
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: unknown
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -22,11 +21,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
 }) => {
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl
-    : `https://zion.app${canonicalUrl}`;
-
+    : `https://zion.app${canonicalUrl}`
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -35,8 +33,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     logo: 'https://zion.app/logo.png',
     description: description,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-  };
-
+  }
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -74,7 +71,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default SEOHead;
+  )
+}
+export default SEOHead

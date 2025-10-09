@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 impo, r, t {
   Bra, i, n,
   Sparkl, e, s,
@@ -6,8 +6,7 @@ impo, r, t {
   Trending, U, p,
   Z, a, p,
   ArrowRig, h, t,
-} fr, o, m 'luci, d, e-rea, c, t';
-
+} fr, o, m 'luci, d, e-rea, c, t'
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }
@@ -138,7 +137,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-
-export default October2025CognitiveRevolutionBanner;
+  )
+}
+export default October2025CognitiveRevolutionBanner

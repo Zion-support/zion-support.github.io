@@ -1,25 +1,25 @@
-import React from 'react';
-impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
+import React from 'react'
+impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t'
 export interface FeaturedItem { 
-  title: string;
-  category: string;
-  li, n, k: string;
-  metri, c, s ?  : str, i, n, g;
+  title: string
+  category: string
+  li, n, k: string
+  metri, c, s ?  : str, i, n, g
  }
 export interface UnifiedPromotionalBannerProps { 
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  title: string;
-  description: string;
-  ctaTe, x, t: string;
-  ctaLi, n, k: string;
-  the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
-  featuredIte, m, s?: FeaturedIt, e, m[];
-  showCou, n, t?: number;
-  classNa, m, e?: string;
-  ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
-  animat, e, d?: boolean;
-  bad, g, e?: string;
-  date ?  : str, i, n, g;
+  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a'
+  title: string
+  description: string
+  ctaTe, x, t: string
+  ctaLi, n, k: string
+  the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n'
+  featuredIte, m, s?: FeaturedIt, e, m[]
+  showCou, n, t?: number
+  classNa, m, e?: string
+  ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e'
+  animat, e, d?: boolean
+  bad, g, e?: string
+  date ?  : str, i, n, g
  }
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
@@ -52,14 +52,14 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
     r, e, d: 'fr, o, m-r, e, d-500, t, o-r, e, d-600, hove, r:fr, o, m-r, e, d-600, hove, r:to-r, e, d-70, 0',
     cy, a, n: 'fr, o, m-cy, a, n-500, t, o-cy, a, n-600, hove, r:fr, o, m-cy, a, n-600, hove, r:to-cy, a, n-70, 0',
     gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hove, r:to-bl, u, e-60, 0',
-  };
+  }
   // Icon selection const IconCompone n t = {
     sparkl, e, s: Spar, k, l, e, s,
     z, a, p: Za, p,
     rock, e, t: Roc, k, e, t,
     st, a, r: S, t, a, r,
     no, n, e: n, u, l, l,
-  }[ic, o, n];
+  }[ic, o, n]
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
@@ -177,6 +177,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         </div>
       </div>
     </div>
-  );
-};
-export default UnifiedPromotionalBanner;
+  )
+}
+export default UnifiedPromotionalBanner

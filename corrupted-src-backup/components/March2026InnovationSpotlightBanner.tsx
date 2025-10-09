@@ -18,29 +18,29 @@ const, March2026InnovationSpotlightBanne, r = () => {
       impa, c, t: '$5.2B, market, creation','
       ic, o, n: '🌌','
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI',';
-      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y',';
-      impa, c, t: '5, 0, 0% cognitive, enhancemen, t',';
-      ic, o, n: '🧠',';
+      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI','
+      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y','
+      impa, c, t: '5, 0, 0% cognitive, enhancemen, t','
+      ic, o, n: '🧠','
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
     }
     {
-      tit, l, e: 'Quantum, Temporal, Computing',';
-      descripti, o, n: 'Processing, information, across multiple, time, dimensions simultaneous, l, y',';
-      impa, c, t: '1000x, temporal, efficiency',';
-      ic, o, n: '⏰',';
+      tit, l, e: 'Quantum, Temporal, Computing','
+      descripti, o, n: 'Processing, information, across multiple, time, dimensions simultaneous, l, y','
+      impa, c, t: '1000x, temporal, efficiency','
+      ic, o, n: '⏰','
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0'
     }
     {
-      tit, l, e: 'Autonomous, Reality, Synthesis',';
-      descripti, o, n: 'AI, systems, that create, and, manage parallel, digital, realities',';
-      impa, c, t: '$5.2B, market, creation',';
-      ic, o, n: '🌌',';
+      tit, l, e: 'Autonomous, Reality, Synthesis','
+      descripti, o, n: 'AI, systems, that create, and, manage parallel, digital, realities','
+      impa, c, t: '$5.2B, market, creation','
+      ic, o, n: '🌌','
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0'
     }
-  ];
+  ]
   return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />

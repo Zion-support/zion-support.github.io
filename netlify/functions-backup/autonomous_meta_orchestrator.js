@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'autonomous_meta_orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'autonomous_meta_orchestrator'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ autonomous_meta_orchestrator function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'autonomous_meta_orchestrator function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

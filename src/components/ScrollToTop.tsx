@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 interface ScrollToTopProps {
   // Add props here
 }
@@ -9,7 +8,6 @@ const ScrollToTop: React.FC<ScrollToTopProps> = () => {
     <div className="scrolltotop">
       {/* Component content */}
     </div>
-  );
-};
-
-export default ScrollToTop;
+  )
+}
+export default ScrollToTop

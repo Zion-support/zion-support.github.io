@@ -3,8 +3,6 @@
 
 
       </section>    </div>
-  );
-};
-
-export default SecurityPage;
-
+  )
+}
+export default SecurityPage

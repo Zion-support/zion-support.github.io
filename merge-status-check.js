@@ -1,34 +1,34 @@
 #!/usr/bin/env node
 //Zion Tech Group - Merge Status Checker
 //Checks git status and provides merge conflict resolution guidance
-const { execSync } = require('child_process');
-// const path = require('path');
+const { execSync } = require('child_process')
+// const path = require('path')
 // function runCommand(command) timeout = 30000) {try {
     const result = execSync(command, {
       encoding: 'utf8',
       timeout)
       cwd: process.cwd()}
-    });
-    return result.trim();
+    })
+    return result.trim()
   } catch (error) {
-//     //     return null;
+//     //     return null
   }
 }
 // function checkGitStatus() {const status = runCommand('git status --porcelain')}
   if (status) {
 //     }
-//   const branch = runCommand('git branch --show-current');
-//   // console.log('Current Branch: ') branch || 'Unknown');
-//   // console.log('Remotes: ') remotes ? remotes.split('\n')[0] : 'None');
+//   const branch = runCommand('git branch --show-current')
+//   // console.log('Current Branch: ') branch || 'Unknown')
+//   // console.log('Remotes: ') remotes ? remotes.split('\n')[0] : 'None')
 }
-// function checkForConflicts() {const conflicts = runCommand('git diff --name-only --diff-filter=U');
+// function checkForConflicts() {const conflicts = runCommand('git diff --name-only --diff-filter=U')
   if (conflicts) {
 //     //     return conflicts.split('\n').filter(f => f.trim())}
 //   } else {return []}
   }
 }
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {
-//     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));
+//     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'))
 //     // console.log('Project: ') packageJson.name)}
 //     //Check if node_modules exists
 //     if (fs.existsSync('node_modules')) {// console.log('✅ Dependencies installed')}
@@ -41,25 +41,25 @@ const { execSync } = require('child_process');
 //   } else {// console.log('❌ package.json not found')}
   }
 }
-// function checkRecentCommits() {//   const commits = runCommand('git log --oneline -5');
+// function checkRecentCommits() {//   const commits = runCommand('git log --oneline -5')
   if (commits) {
 //     // console.log(commits)}
   }
 }
-// function checkBranchStatus() {const branches = runCommand('git branch -a');
+// function checkBranchStatus() {const branches = runCommand('git branch -a')
   if (branches) {
-//     // console.log('Available branches: ') branchList.length);
+//     // console.log('Available branches: ') branchList.length)
     //Check for cursor branches
 //     // console.log('Cursor branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {
 //       // console.log('Recent cursor branches: '),
-//       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`));
+//       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`))
     }
   }
 }
 // function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands:'),
 //   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"')
-  );
+  )
 //   // console.log('git push origin HEAD: main')}
 //   // console.log('npm run build:production')}
 }

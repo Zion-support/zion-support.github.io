@@ -1,8 +1,7 @@
-import React from 'react';
-
+import React from 'react'
 interface EnhancedPromotionalBannerProps {
-  banner: BannerType;
-  className?: string;
+  banner: BannerType
+  className?: string
 }
 
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({

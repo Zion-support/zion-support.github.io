@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastAd: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in readme-advertiser: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'readme-advertiser'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'readme-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', readmesAdvertised: 0,
         lastAd: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in readme-advertiser: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'readme-advertiser' }) }; } };'

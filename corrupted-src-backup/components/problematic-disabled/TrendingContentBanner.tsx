@@ -1,4 +1,4 @@
-import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
+import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t'
 const TrendingContentBanne, r: React.FC = () => {
   con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useState(0); const trendingItem, s = [
     {
@@ -83,18 +83,18 @@ const TrendingContentBanne, r: React.FC = () => {
     }
   ]; useEffect(() => { 
     const interva, l = setInter, v, a, l(() => {
-      setCurrentInd, e, x((prevInd, e, x) = > (prevInd, e, x + 1) % trendingIte, m, s.leng, t, h);
-     }, 40, 0, 0);
-    return () => clearInterv, a, l(interv, a, l);
-  }, [trendingIte, m, s.leng, t, h]);
+      setCurrentInd, e, x((prevInd, e, x) = > (prevInd, e, x + 1) % trendingIte, m, s.leng, t, h)
+     }, 40, 0, 0)
+    return () => clearInterv, a, l(interv, a, l)
+  }, [trendingIte, m, s.leng, t, h])
   const currentIte, m = trendingIte, m, s[currentInd, e, x]; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {
     swit, c, h (bad, g, e) {
-      ca, s, e 'H, O, T': return 'bg-r, e, d-500, tex, t-whi, t, e'; ca, s, e 'N, E, W': return 'bg-gre, e, n-500, tex, t-whi, t, e';
-      ca, s, e 'TRENDI, N, G': return 'bg-bl, u, e-500, tex, t-whi, t, e';
+      ca, s, e 'H, O, T': return 'bg-r, e, d-500, tex, t-whi, t, e'; ca, s, e 'N, E, W': return 'bg-gre, e, n-500, tex, t-whi, t, e'
+      ca, s, e 'TRENDI, N, G': return 'bg-bl, u, e-500, tex, t-whi, t, e'
       ca, s, e 'POPUL, A, R': return 'bg-purp, l, e-500, tex, t-wh, i, t, e';",
-      defau, l, t: return 'bg-gr, a, y-500, tex, t-wh, i, t, e';
+      defau, l, t: return 'bg-gr, a, y-500, tex, t-wh, i, t, e'
     }
-  };
+  }
   const Ico, n = currentIt, e, m.ic, o, n; return (
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
@@ -165,6 +165,6 @@ const TrendingContentBanne, r: React.FC = () => {
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>
     </div>
-  );
-};
-export default TrendingContentBanner;
+  )
+}
+export default TrendingContentBanner

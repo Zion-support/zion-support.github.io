@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'unused_media_scanner function executed successfully',
         timestamp: timestamp,
         function: 'unused_media_scanner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ unused_media_scanner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'unused_media_scanner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

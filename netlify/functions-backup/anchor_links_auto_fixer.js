@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'anchor_links_auto_fixer function executed successfully',
         timestamp: timestamp,
         function: 'anchor_links_auto_fixer'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ anchor_links_auto_fixer function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'anchor_links_auto_fixer function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

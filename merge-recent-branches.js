@@ -2,15 +2,14 @@
 
 /**
  * Merge Recent Branches - Merges recent cursor and other important branches
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date
 // try {
-  execSync('git checkout main', { stdio: 'inherit' });
-  execSync('git pull origin main', { stdio: 'inherit' });
+  execSync('git checkout main', { stdio: 'inherit' })
+  execSync('git pull origin main', { stdio: 'inherit' })
 //   } catch (error) {
-//   process.exit(1);
+//   process.exit(1)
 }
 
 //Step 2: Get recent branches
@@ -34,21 +33,19 @@ import fs from 'fs';
   'chore/a11y-reduced-motion',
   'chore/a11y-single-main',
   'chore/add-2027-content-and-homepage-promo',
-];
-
+]
 // //Step 3: Merge function with conflict resolution
 function mergeBranch(branchName) {
 //   try {
     //Check if branch exists
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })
     //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
-    ).trim();
+    ).trim()
     if (isMerged !== 'not_merged') {
-//       return { success: true, method: 'already_merged' };
+//       return { success: true, method: 'already_merged' }
     }
 
     //Try to merge
@@ -56,8 +53,8 @@ function mergeBranch(branchName) {
       execSync(
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
         { stdio: 'inherit' }
-      );
-//       return { success: true, method: 'direct' };
+      )
+//       return { success: true, method: 'direct' }
     } catch (mergeError) {
 //       //Try different conflict resolution strategies
       try {
@@ -65,23 +62,23 @@ function mergeBranch(branchName) {
         execSync(
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           { stdio: 'inherit' }
-        );
-//         return { success: true, method: 'theirs' };
+        )
+//         return { success: true, method: 'theirs' }
       } catch (theirsError) {
         try {
           //Strategy 2: Use ours
           execSync(
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             { stdio: 'inherit' }
-          );
-//           return { success: true, method: 'ours' };
+          )
+//           return { success: true, method: 'ours' }
         } catch (oursError) {
-//           return { success: false, method: 'failed' };
+//           return { success: false, method: 'failed' }
         }
       }
     }
   } catch (error) {
-//     return { success: false, method: 'not_found' };
+//     return { success: false, method: 'not_found' }
   }
 }
 
@@ -102,27 +99,25 @@ const results = {
       failed: 0,
     },
   },
-};
-
+}
 // for (const branch of recentBranches) {
-  results.summary.total++;
-
+  results.summary.total++
   if (result.success) {
     results.successful.push({
       branch: branch,
       success: true,
       method: result.method,
-    });
-    results.summary.successful++;
-    results.summary.methods[result.method]++;
+    })
+    results.summary.successful++
+    results.summary.methods[result.method]++
   } else {
     results.failed.push({
       branch: branch,
       success: false,
       method: result.method,
-    });
-    results.summary.failed++;
-    results.summary.methods[result.method]++;
+    })
+    results.summary.failed++
+    results.summary.methods[result.method]++
   }
 }
 
@@ -130,16 +125,14 @@ const results = {
 // const report = {
   ...results,
   timestamp: new Date().toISOString(),
-};
-
+}
 fs.writeFileSync(
   'recent-branches-merge-report.json',
   JSON.stringify(report, null, 2)
-);
-
+)
 //Step 6: Push changes
 // try {
-  execSync('git push origin main', { stdio: 'inherit' });
+  execSync('git push origin main', { stdio: 'inherit' })
 //   } catch (error) {
 //   }
 

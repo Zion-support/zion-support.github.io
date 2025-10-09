@@ -1,5 +1,5 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t"
 const October2025LatestBreakthroughBanne, r = () => { 
   return (
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }
@@ -66,7 +66,7 @@ const October2025LatestBreakthroughBanne, r = () => {
                   <Link, className="w-4 h-4" />
                 </div>
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* CTA, Sectio, n */}
@@ -113,6 +113,6 @@ const October2025LatestBreakthroughBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default October2025LatestBreakthroughBanner;
+  )
+}
+export default October2025LatestBreakthroughBanner

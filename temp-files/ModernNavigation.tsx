@@ -1,20 +1,17 @@
-import { Menu, X } from 'lucide-react';
-import React, { useState } from 'react';
-
+import { Menu, X } from 'lucide-react'
+import React, { useState } from 'react'
 interface ModernNavigationProps {
-  className?: string;
+  className?: string
 }
 
 const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false)
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-  ];
-
+  ]
   return (
     <nav className={`bg-white shadow-md ${className}`}>
       <div className="container mx-auto px-4">
@@ -59,7 +56,6 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
         )}
       </div>
     </nav>
-  );
-};
-
-export default ModernNavigation;
+  )
+}
+export default ModernNavigation

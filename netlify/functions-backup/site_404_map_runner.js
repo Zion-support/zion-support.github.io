@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'site_404_map_runner function executed successfully',
         timestamp: timestamp,
         function: 'site_404_map_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ site_404_map_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'site_404_map_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

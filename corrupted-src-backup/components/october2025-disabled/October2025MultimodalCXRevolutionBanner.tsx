@@ -340,6 +340,6 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025MultimodalCXRevolutionBanner;
+  )
+}
+export default October2025MultimodalCXRevolutionBanner

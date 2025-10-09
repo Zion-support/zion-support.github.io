@@ -4,7 +4,6 @@ const TestComponent = () => {
     <div>
       <h1>Test</h1>
     </div>
-  );
-};
-
-export default TestComponent;
+  )
+}
+export default TestComponent

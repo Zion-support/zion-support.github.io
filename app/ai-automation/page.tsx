@@ -1,11 +1,8 @@
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
@@ -27,8 +24,7 @@ const AIAutomationPage: React.FC = () => {
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
-  ];
-
+  ]
   const pricingPlans = [
       name: 'Starter',
       price: '$1,400',
@@ -92,11 +88,9 @@ const AIAutomationPage: React.FC = () => {
         </main>
         <Footer />
     </>
-  );
-};
-
-export default AIAutomationPage;
-        
+  )
+}
+export default AIAutomationPage
         <main className="pt-20">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">

@@ -1,7 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 interface SearchProps {
-  className?: string;
+  className?: string
 }
 
 const Search = React.memo(function Search({ className = '' }: SearchProps) {
@@ -10,7 +9,6 @@ const Search = React.memo(function Search({ className = '' }: SearchProps) {
       <h3 className="text-lg font-semibold text-blue-800">Search</h3>
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-
-export default Search;
+  )
+})
+export default Search

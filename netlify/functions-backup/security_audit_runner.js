@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'security_audit_runner function executed successfully',
         timestamp: timestamp,
         function: 'security_audit_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ security_audit_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'security_audit_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

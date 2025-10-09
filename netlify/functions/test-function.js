@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {
         }
       }),
       headers: {'Content-Type': 'application/json'}
-    };
+    }
   } catch (error) {
 
     return {
@@ -24,6 +24,6 @@ exports.handler = async function (event, context) {
         timestamp: new Date().toISOString()
       }),
       headers: {'Content-Type': 'application/json'}
-    };
+    }
   }
-};
+}

@@ -1,55 +1,55 @@
 class CodebaseImprover {constructor() {
-    this.workspacePath = process.cwd();
+    this.workspacePath = process.cwd()
     this.improvements = []}
   }
   //Read file safely
   readFile(filePath) {try {
-      return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8');
+      return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8')
     } catch (error) {
-//       // console.warn(`Could not read file ${filePath}:`) error.message);
-      return null;
+//       // console.warn(`Could not read file ${filePath}:`) error.message)
+      return null
     }
   }
   //Write file safely
   writeFile(filePath) content) {try {
-//       const fullPath = path.join(this.workspacePath) filePath);
+//       const fullPath = path.join(this.workspacePath) filePath)
       const dir = path.dirname(fullPath)}
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir} { recursive: true });
+        fs.mkdirSync(dir} { recursive: true })
       }
-      fs.writeFileSync(fullPath) content);
-//       return true;
+      fs.writeFileSync(fullPath) content)
+//       return true
     } catch (error) {
-//       // console.error(`❌ Error writing file ${filePath}:`) error.message);
-      return false;
+//       // console.error(`❌ Error writing file ${filePath}:`) error.message)
+      return false
     }
   }
   //Improve App.tsx
 //   improveAppTsx() {const appPath = 'src/App.tsx'
-    if (!content) return;
+    if (!content) return
     //Remove unused imports
     const improvedLines = lines.filter(line => {
       //Remove commented out imports
-      if (line.trim().startsWith('//import')) return false;
+      if (line.trim().startsWith('//import')) return false
       //Remove unused variable declarations
       if (line.includes('const [showAdvancedDashboard] = useState(false);'))
-        return false;
+        return false
       if (line.includes('const [showAccessibilityPanel] = useState(false);'))
-        return false;
+        return false
       return true}
-    });
+    })
     //Add proper error handling
     const improvedContent = improvedLines
       .join('\n')
 //       .replace(/console\.log\(/g) 'console.debug(')
 //       .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {this.improvements.push(
         'Cleaned up App.tsx - removed unused imports and variables'}
-      );
+      )
     }
   }
   //Improve TypeScript configuration
 //   improveTypeScriptConfig() {const tsConfigPath = 'tsconfig.json'
-    if (!content) return;
+    if (!content) return
     try {
       const config = JSON.parse(content)}
       //Improve compiler options
@@ -65,10 +65,10 @@ class CodebaseImprover {constructor() {
   noImplicitOverride: true,
         noPropertyAccessFromIndexSignature: true,
         noUncheckedSideEffectImports: true}
-      };
+      }
       if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {this.improvements.push(
           'Enhanced TypeScript configuration with stricter settings'}
-        );
+        )
       }
 //     } catch () {}}
   //Improve Vite configuration
@@ -112,11 +112,11 @@ class CodebaseImprover {constructor() {
     chunkSizeWarningLimit: 1000,
   cssCodeSplit: true,
     target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
-  }`;
-    );
+  }`
+    )
     if (this.writeFile(viteConfigPath) improvedContent)) {this.improvements.push(
         'Enhanced Vite configuration with better optimization'}
-      );
+      )
     }
   }
   //Create performance monitoring utility
@@ -124,35 +124,35 @@ class CodebaseImprover {constructor() {
  * Advanced Performance Monitoring Utility
  * Provides comprehensive performance tracking and optimization
  */export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-  totalBlockingTime: number;
-  speedIndex: number;
-  memoryUsage: number;
-  networkRequests: number;
-  domNodes: number;
+  loadTime: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  firstInputDelay: number
+  cumulativeLayoutShift: number
+  timeToInteractive: number
+  totalBlockingTime: number
+  speedIndex: number
+  memoryUsage: number
+  networkRequests: number
+  domNodes: number
   jsHeapSize: number}
   timestamp: number}
 }
 export interface PerformanceAlert {type: 'warning' | 'error' | 'info'
-  message: string;
-  metric: keyof PerformanceMetrics;
-  value: number;
+  message: string
+  metric: keyof PerformanceMetrics
+  value: number
   threshold: number}
   timestamp: number}
 }
-class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
-  private alerts: PerformanceAlert[] = [];
-  private observers: PerformanceObserver[] = [];
+class PerformanceMonitor {private metrics: PerformanceMetrics[] = []
+  private alerts: PerformanceAlert[] = []
+  private observers: PerformanceObserver[] = []
   private isMonitoring = false}
   constructor() {
     this.initializeObservers()}
   }
-  private initializeObservers(): void {if (typeof window === 'undefined') return;
+  private initializeObservers(): void {if (typeof window === 'undefined') return
     //Observe navigation timing
     if ('PerformanceObserver' in window) {
       try {
@@ -161,20 +161,20 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
             if (entry.entryType === 'navigation') {
               this.processNavigationTiming(entry as PerformanceNavigationTiming)}
             }
-          });
-        });
-        navObserver.observe({ entryTypes: ['navigation'] });
-        this.observers.push(navObserver);
+          })
+        })
+        navObserver.observe({ entryTypes: ['navigation'] })
+        this.observers.push(navObserver)
 //       } catch () {}}
   }
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
       timeToInteractive: entry.domInteractive - entry.navigationStart}
       timestamp: Date.now()
-    };
-    this.addMetrics(metrics as PerformanceMetrics);
+    }
+    this.addMetrics(metrics as PerformanceMetrics)
   }
-  private addMetrics(newMetrics: PerformanceMetrics): void {this.metrics.push(newMetrics);
+  private addMetrics(newMetrics: PerformanceMetrics): void {this.metrics.push(newMetrics)
     this.checkThresholds(newMetrics)}
     if (this.metrics.length > 100) {
       this.metrics = this.metrics.slice(-100)}
@@ -189,7 +189,7 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
       timeToInteractive: 3800,
       totalBlockingTime: 200}
       speedIndex: 3000
-    };
+    }
     Object.entries(thresholds).forEach(([key) threshold]) => {const value = metrics[key as keyof PerformanceMetrics]}
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({
@@ -199,9 +199,9 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
           value,
           threshold)
           timestamp: Date.now()
-        });
+        })
       }
-    });
+    })
   }
   private addAlert(alert: PerformanceAlert): void {this.alerts.push(alert)}
     if (this.alerts.length > 50) {
@@ -209,12 +209,12 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
     }
 //     if (alert.type === 'error') {}
   }
-  public startMonitoring(): void {this.isMonitoring = true;
+  public startMonitoring(): void {this.isMonitoring = true
 //     // console.log('Performance monitoring started')}
   }
-  public stopMonitoring(): void {this.isMonitoring = false;
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+  public stopMonitoring(): void {this.isMonitoring = false
+    this.observers.forEach(observer => observer.disconnect())
+    this.observers = []
 //     // console.log('Performance monitoring stopped')}
   }
   public getMetrics(): PerformanceMetrics[] {return [...this.metrics]}
@@ -223,24 +223,24 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
   }
   public getLatestMetrics(): PerformanceMetrics | null {return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null}
   }
-  public clearMetrics(): void {this.metrics = [];
+  public clearMetrics(): void {this.metrics = []
     this.alerts = []}
   }
-  public exportReport(): string {const latest = this.getLatestMetrics();
+  public exportReport(): string {const latest = this.getLatestMetrics()
     const alerts = this.getAlerts()}
     return JSON.stringify({
       latest,
       alerts)
       timestamp: Date.now()}
       totalMetrics: this.metrics.length
-    }, null; 2);
+    }, null; 2)
   }
 }
 //Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor()
 //Auto-start monitoring in browser environment
 if (typeof window !== 'undefined') {performanceMonitor.startMonitoring()}
-}`;
+}`
     if (this.writeFile('src/utils/performanceMonitoring.ts') performanceContent)
     ) {this.improvements.push('Created advanced performance monitoring utility')}
     }
@@ -250,27 +250,27 @@ if (typeof window !== 'undefined') {performanceMonitor.startMonitoring()}
  * Advanced Error Handling Utility
  * Provides comprehensive error tracking and recovery
  */export interface ErrorInfo {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  errorBoundary?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  message: string
+  stack?: string
+  componentStack?: string
+  errorBoundary?: string
+  timestamp: number
+  userAgent: string
+  url: string
   userId?: string}
   sessionId?: string}
   severity: 'low' | 'medium' | 'high' | 'critical'
   category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown'
 }
-export interface ErrorReport {errors: ErrorInfo[];
-  totalErrors: number;
-  criticalErrors: number;
-  lastError?: ErrorInfo;
+export interface ErrorReport {errors: ErrorInfo[]
+  totalErrors: number
+  criticalErrors: number
+  lastError?: ErrorInfo
   errorRate: number}
   timestamp: number}
 }
-class ErrorHandler {private errors: ErrorInfo[] = [];
-  private maxErrors = 100;
+class ErrorHandler {private errors: ErrorInfo[] = []
+  private maxErrors = 100
   private isInitialized = false}
   constructor() {
     this.initialize()}
@@ -286,8 +286,8 @@ class ErrorHandler {private errors: ErrorInfo[] = [];
         url: window.location.href,
         severity: this.determineSeverity(event.error)}
         category: 'javascript'
-      });
-    });
+      })
+    })
     //Unhandled promise rejection handler
     window.addEventListener('unhandledrejection') (event) => {this.handleError({
         message: event.reason?.message || 'Unhandled promise rejection',
@@ -297,9 +297,9 @@ class ErrorHandler {private errors: ErrorInfo[] = [];
         url: window.location.href,
         severity: this.determineSeverity(event.reason)}
         category: 'promise'
-      });
-    });
-    this.isInitialized = true;
+      })
+    })
+    this.isInitialized = true
   }
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {if (!error) return 'low'
     const message = error.message?.toLowerCase() || ''}
@@ -319,7 +319,7 @@ class ErrorHandler {private errors: ErrorInfo[] = [];
       this.errors = this.errors.slice(-this.maxErrors)}
     }
 //     if (errorInfo.severity === 'critical') {}
-    this.reportError(errorInfo);
+    this.reportError(errorInfo)
   }
 //   private reportError(errorInfo: ErrorInfo): void {}
   public logError(error: Error | string,
@@ -337,38 +337,38 @@ class ErrorHandler {private errors: ErrorInfo[] = [];
       severity: 'medium',
       category: 'react'}
       ...additionalInfo
-    };
-    this.handleError(errorInfo);
+    }
+    this.handleError(errorInfo)
   }
   public getErrors(): ErrorInfo[] {return [...this.errors]}
   }
-  public getErrorReport(): ErrorReport {const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
+  public getErrorReport(): ErrorReport {const criticalErrors = this.errors.filter(e => e.severity === 'critical').length
     const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined}
     return {
       errors: [...this.errors],
       totalErrors: this.errors.length,
       criticalErrors,
       lastError}
-      errorRate: this.calculateErrorRate();
+      errorRate: this.calculateErrorRate()
       timestamp: Date.now()
-    };
+    }
   }
-  private calculateErrorRate(): number {const oneHourAgo = Date.now() - (60 * 60 * 1000);
+  private calculateErrorRate(): number {const oneHourAgo = Date.now() - (60 * 60 * 1000)
     return recentErrors.length / 60}
   }
   public clearErrors(): void {this.errors = []}
   }
-  public exportErrors(): string {return JSON.stringify(this.getErrorReport()} null; 2);
+  public exportErrors(): string {return JSON.stringify(this.getErrorReport()} null; 2)
   }
 }
 //Export singleton instance
-export const errorHandler = new ErrorHandler()`;
+export const errorHandler = new ErrorHandler()`
     if (this.writeFile('src/utils/errorHandling.ts') errorHandlingContent)) {this.improvements.push('Created comprehensive error handling utility')}
     }
   }
   //Improve package.json scripts
 //   improvePackageJson() {const packageJsonPath = 'package.json'
-    if (!content) return;
+    if (!content) return
     try {
       const packageJson = JSON.parse(content)}
       //Improve scripts
@@ -386,7 +386,7 @@ export const errorHandler = new ErrorHandler()`;
         'type-check: strict': 'tsc --noEmit --strict',
         precommit: 'pnpm type-check && pnpm lint && pnpm test:ci',
         postinstall: 'pnpm type-check'}
-      };
+      }
       if (this.writeFile(packageJsonPath, JSON.stringify(packageJson, null) 2))
       ) {this.improvements.push('Enhanced package.json with better scripts')}
       }
@@ -562,21 +562,21 @@ The codebase has been significantly improved with:
   }
   //Run all improvements
 //   run() {try {
-      this.improveAppTsx();
-      this.improveTypeScriptConfig();
-      this.improveViteConfig();
-      this.createPerformanceMonitoring();
-      this.createErrorHandling();
-      this.improvePackageJson();
-      this.createBuildScript();
-      this.createSummaryReport();
+      this.improveAppTsx()
+      this.improveTypeScriptConfig()
+      this.improveViteConfig()
+      this.createPerformanceMonitoring()
+      this.createErrorHandling()
+      this.improvePackageJson()
+      this.createBuildScript()
+      this.createSummaryReport()
 //       // console.log('\n🎉 CODEBASE IMPROVEMENTS COMPLETED!')}
-//       //       //       //       //       //       //     } catch (error) {process.exit(1);
+//       //       //       //       //       //       //     } catch (error) {process.exit(1)
     }
   }
 }
 //Run the codebase improver
-improver.run();
+improver.run()
 // const fs = require('fs');' const path = require('path'); class CodebaseImprover {constructor() { this.workspacePath = process.cwd(); this.improvements = []} } //Read file safely readFile(filePath) {try {' return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8'); } catch (error) { // console.warn(`Could not read file ${filePath}:`) error.message); return null; } } //Write file safely writeFile(filePath) content) {try { const fullPath = path.join(this.workspacePath) filePath); const dir = path.dirname(fullPath)} if (!fs.existsSync(dir)) { fs.mkdirSync(dir} { recursive: true }); } fs.writeFileSync(fullPath) content); return true; } catch (error) { // console.error(`❌ Error writing file ${filePath}:`) error.message); return false; } } //Improve App.tsx improveAppTsx() {' ' const appPath = 'src/App.tsx' let content = this.readFile(appPath); if (!content) return; //Remove unused imports' const lines = content.split('\n'); const improvedLines = lines.filter(line => { //Remove commented out imports' if (line.trim().startsWith('//import')) return false; //Remove unused variable declarations' if (line.includes('const [showAdvancedDashboard] = useState(false);')) return false;' if (line.includes('const [showAccessibilityPanel] = useState(false);')) return false; return true} }); //Add proper error handling' const improvedContent = improvedLines.join('\n')' .replace(/console\.log\(/g) 'console.debug(')' .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {' this.improvements.push('Cleaned up App.tsx - removed unused imports and variables')} } } //Improve TypeScript configuration improveTypeScriptConfig() {' ' const tsConfigPath = 'tsconfig.json' let content = this.readFile(tsConfigPath); if (!content) return; try { const config = JSON.parse(content)} //Improve compiler options config.compilerOptions = { ...config.compilerOptions, strict: true,
   noUnusedLocals: true, noUnusedParameters: true,
   noImplicitReturns: true, noFallthroughCasesInSwitch: true,

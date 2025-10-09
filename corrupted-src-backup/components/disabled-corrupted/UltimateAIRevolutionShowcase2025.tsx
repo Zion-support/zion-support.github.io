@@ -119,6 +119,6 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         </p>
       </div>
     </div>
-  );
-};
-export default UltimateAIRevolutionShowcase2025;
+  )
+}
+export default UltimateAIRevolutionShowcase2025

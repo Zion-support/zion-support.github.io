@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 interface LoadingComponentsProps {
   // Add props here
 }
@@ -9,7 +8,6 @@ const LoadingComponents: React.FC<LoadingComponentsProps> = () => {
     <div className="loadingcomponents">
       {/* Component content */}
     </div>
-  );
-};
-
-export default LoadingComponents;
+  )
+}
+export default LoadingComponents

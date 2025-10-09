@@ -1,6 +1,5 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import { Helmet } from 'react-helmet-async'
 export default function AICustomerServicePage() {
   return (
     <div><Helmet>
@@ -182,5 +181,5 @@ export default function AICustomerServicePage() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }

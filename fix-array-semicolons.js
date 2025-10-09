@@ -1,23 +1,20 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
+import fs from 'fs'
 // Function to fix semicolons in arrays
 function fixArraySemicolons(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, 'utf8')
     // Fix semicolons after arrays in object properties
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
-      return match.replace(';', '');
-    });
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed array semicolons in: ${filePath}`);
-    return true;
+      return match.replace(';', '')
+    })
+    fs.writeFileSync(filePath, content)
+    console.log(`Fixed array semicolons in: ${filePath}`)
+    return true
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
 
@@ -35,20 +32,17 @@ function main() {
     'src/security/page.tsx',
     'src/system-status/page.tsx',
     'src/test-page.tsx'
-  ];
-  
-  console.log('Fixing array semicolons...');
-  
-  let fixedCount = 0;
+  ]
+  console.log('Fixing array semicolons...')
+  let fixedCount = 0
   files.forEach(file => {
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
-        fixedCount++;
+        fixedCount++
       }
     }
-  });
-  
-  console.log(`Fixed ${fixedCount} files`);
+  })
+  console.log(`Fixed ${fixedCount} files`)
 }
 
-main();
+main()

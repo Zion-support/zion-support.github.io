@@ -1,4 +1,4 @@
-impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t'
 const GlobalAITransformationHu, b = () => { 
   const transformationArea, s = [
     {
@@ -130,6 +130,6 @@ const GlobalAITransformationHu, b = () => {
         </p>
       </div>
     </div>
-  );
-};
-export default GlobalAITransformationHub;
+  )
+}
+export default GlobalAITransformationHub

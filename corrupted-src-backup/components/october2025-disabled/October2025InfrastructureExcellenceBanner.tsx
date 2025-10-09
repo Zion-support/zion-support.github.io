@@ -89,7 +89,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {
                   </div>
                 </div>
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* CTA, Sectio, n */}
@@ -129,6 +129,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default October2025InfrastructureExcellenceBanner;
+  )
+}
+export default October2025InfrastructureExcellenceBanner

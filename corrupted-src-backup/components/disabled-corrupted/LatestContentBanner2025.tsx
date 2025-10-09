@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const LatestContentBanner202, 5: React.FC = () => {
   const latestArticle, s = [
     {
@@ -281,6 +281,6 @@ const LatestContentBanner202, 5: React.FC = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-export default LatestContentBanner2025;
+  )
+}
+export default LatestContentBanner2025

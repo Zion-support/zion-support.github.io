@@ -1,25 +1,24 @@
-import https from 'https';
-import { URL } from 'url';
-import fs from 'fs';
-
+import https from 'https'
+import { URL } from 'url'
+import fs from 'fs'
 class WebsiteAnalyzer {
   constructor(baseUrl) {
-    this.baseUrl = baseUrl;
-    this.visitedUrls = new Set();
-    this.brokenLinks = [];
-    this.missingPages = [];
-    this.workingLinks = [];
-    this.analyzedPages = [];
-    this.maxDepth = 3;
+    this.baseUrl = baseUrl
+    this.visitedUrls = new Set()
+    this.brokenLinks = []
+    this.missingPages = []
+    this.workingLinks = []
+    this.analyzedPages = []
+    this.maxDepth = 3
     this.delay = 1000; // 1 second delay between requests
   }
 async delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms))
   }
 
   async makeRequest(url) {
     return new Promise((resolve, reject) => {
-      const urlObj = new URL(url);
+      const urlObj = new URL(url)
       const options = {
         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
@@ -34,55 +33,48 @@ async delay(ms) {
           'Upgrade-Insecure-Requests': '1',
         },
         timeout: 10000
-      };
-
-      const protocol = urlObj.protocol === 'https:' ? https : http;
-      
+      }
+      const protocol = urlObj.protocol === 'https:' ? https : http
       const req = protocol.request(options, (res) => {
-        let data = '';
-        res.on('data', chunk => data += chunk);
+        let data = ''
+        res.on('data', chunk => data += chunk)
         res.on('end', () => {
           resolve({
             statusCode: res.statusCode,
             headers: res.headers,
             body: data,
             url: url
-          });
-        });
-      });
-
+          })
+        })
+      })
       req.on('error', (error) => {
-        reject(error);
-      });
-
+        reject(error)
+      })
       req.on('timeout', () => {
-        req.destroy();
-        reject(new Error('Request timeout'));
-      });
-
-      req.setTimeout(10000);
-      req.end();
-    });
+        req.destroy()
+        reject(new Error('Request timeout'))
+      })
+      req.setTimeout(10000)
+      req.end()
+    })
   }
 
   extractLinks(html, baseUrl) {
-    const links = [];
-    const linkRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>/gi;
-    const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi;
-    
-    let match;
-    
+    const links = []
+    const linkRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>/gi
+    const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi
+    let match
     // Extract regular links
     while ((match = linkRegex.exec(html)) !== null) {
-      const href = match[1];
+      const href = match[1]
       if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('mailto:')) {
         try {
-          const absoluteUrl = new URL(href, baseUrl).href;
+          const absoluteUrl = new URL(href, baseUrl).href
           links.push({
             url: absoluteUrl,
             text: this.extractLinkText(html, match.index),
             type: 'link'
-          });
+          })
         } catch (e) {
           // Invalid URL, skip
         }
@@ -91,73 +83,68 @@ async delay(ms) {
     
     // Extract image sources
     while ((match = imgRegex.exec(html)) !== null) {
-      const src = match[1];
+      const src = match[1]
       if (src) {
         try {
-          const absoluteUrl = new URL(src, baseUrl).href;
+          const absoluteUrl = new URL(src, baseUrl).href
           links.push({
             url: absoluteUrl,
             text: 'Image',
             type: 'image'
-          });
+          })
         } catch (e) {
           // Invalid URL, skip
         }
       }
     }
     
-    return links;
+    return links
   }
 
   extractLinkText(html, linkIndex) {
-    const textMatch = html.substring(linkIndex).match(/<a[^>]*>([^<]+)<\/a>/i);
-    return textMatch ? textMatch[1].trim() : '';
+    const textMatch = html.substring(linkIndex).match(/<a[^>]*>([^<]+)<\/a>/i)
+    return textMatch ? textMatch[1].trim() : ''
   }
 
   isInternalLink(url) {
     try {
-      const urlObj = new URL(url);
-      const baseUrlObj = new URL(this.baseUrl);
-      return urlObj.hostname === baseUrlObj.hostname;
+      const urlObj = new URL(url)
+      const baseUrlObj = new URL(this.baseUrl)
+      return urlObj.hostname === baseUrlObj.hostname
     } catch (e) {
-      return false;
+      return false
     }
   }
 
   async analyzePage(url, depth = 0) {
     if (this.visitedUrls.has(url) || depth > this.maxDepth) {
-      return;
+      return
     }
 
-    this.visitedUrls.add(url);
-    console.log(`Analyzing: ${url} (depth: ${depth})`);
-
+    this.visitedUrls.add(url)
+    console.log(`Analyzing: ${url} (depth: ${depth})`)
     try {
-      const response = await this.makeRequest(url);
-      
+      const response = await this.makeRequest(url)
       if (response.statusCode >= 200 && response.statusCode < 300) {
         this.workingLinks.push({
           url: url,
           statusCode: response.statusCode,
           depth: depth
-        });
-
+        })
         this.analyzedPages.push({
           url: url,
           statusCode: response.statusCode,
           title: this.extractTitle(response.body),
           links: this.extractLinks(response.body, url),
           depth: depth
-        });
-
+        })
         // Analyze internal links
         if (depth < this.maxDepth) {
-          const links = this.extractLinks(response.body, url);
-          const internalLinks = links.filter(link => this.isInternalLink(link.url));
-          
+          const links = this.extractLinks(response.body, url)
+          const internalLinks = links.filter(link => this.isInternalLink(link.url))
           for (const link of internalLinks) {
-            await this.delay(this.delay);
-            await this.analyzePage(link.url, depth + 1);
+            await this.delay(this.delay)
+            await this.analyzePage(link.url, depth + 1)
           }
         }
       } else {
@@ -165,28 +152,26 @@ async delay(ms) {
           url: url,
           statusCode: response.statusCode,
           depth: depth
-        });
+        })
       }
     } catch (error) {
       this.brokenLinks.push({
         url: url,
         error: error.message,
         depth: depth
-      });
+      })
     }
   }
 
   extractTitle(html) {
-    const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-    return titleMatch ? titleMatch[1].trim() : 'No title';
+    const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i)
+    return titleMatch ? titleMatch[1].trim() : 'No title'
   }
 
   async analyze() {
-    console.log(`Starting comprehensive analysis of ${this.baseUrl}`);
-    console.log(`Max depth: ${this.maxDepth}, Delay: ${this.delay}ms`);
-    
-    await this.analyzePage(this.baseUrl);
-    
+    console.log(`Starting comprehensive analysis of ${this.baseUrl}`)
+    console.log(`Max depth: ${this.maxDepth}, Delay: ${this.delay}ms`)
+    await this.analyzePage(this.baseUrl)
     // Generate report
     const report = {
       baseUrl: this.baseUrl,
@@ -201,77 +186,73 @@ async delay(ms) {
       workingLinks: this.workingLinks,
       brokenLinks: this.brokenLinks,
       recommendations: this.generateRecommendations()
-    };
+    }
 // Save report
-    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
-    
-    console.log('\n=== ANALYSIS COMPLETE ===');
-    console.log(`Total pages analyzed: ${this.analyzedPages.length}`);
-    console.log(`Working links: ${this.workingLinks.length}`);
-    console.log(`Broken links: ${this.brokenLinks.length}`);
-    console.log(`Unique URLs visited: ${this.visitedUrls.size}`);
-    
+    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2))
+    console.log('\n=== ANALYSIS COMPLETE ===')
+    console.log(`Total pages analyzed: ${this.analyzedPages.length}`)
+    console.log(`Working links: ${this.workingLinks.length}`)
+    console.log(`Broken links: ${this.brokenLinks.length}`)
+    console.log(`Unique URLs visited: ${this.visitedUrls.size}`)
     if (this.brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
+      console.log('\n=== BROKEN LINKS ===')
       this.brokenLinks.forEach(link => {
-        console.log(`❌ ${link.url} - Status: ${link.statusCode || 'Error: ' + link.error}`);
-      });
+        console.log(`❌ ${link.url} - Status: ${link.statusCode || 'Error: ' + link.error}`)
+      })
     }
 
-    return report;
+    return report
   }
 
   generateRecommendations() {
-    const recommendations = [];
+    const recommendations = []
     if (this.brokenLinks.length > 0) {
       recommendations.push({
         type: 'critical',
         message: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
         action: 'Fix broken links or remove them from navigation'
-      });
+      })
     }
 
     // Check for missing common pages
-    const commonPages = ['/about', '/contact', '/services', '/privacy', '/terms', '/team', '/case-studies'];
-    const existingPages = this.analyzedPages.map(page => new URL(page.url).pathname);
-    const missingPages = commonPages.filter(page => !existingPages.includes(page));
-    
+    const commonPages = ['/about', '/contact', '/services', '/privacy', '/terms', '/team', '/case-studies']
+    const existingPages = this.analyzedPages.map(page => new URL(page.url).pathname)
+    const missingPages = commonPages.filter(page => !existingPages.includes(page))
     if (missingPages.length > 0) {
       recommendations.push({
         type: 'important',
         message: `Missing common pages: ${missingPages.join(', ')}`,
         action: 'Create these essential pages for better user experience'
-      });
+      })
     }
 // Check for SEO issues
     const pagesWithoutTitles = this.analyzedPages.filter(page => 
       page.title === 'No title' || page.title.trim() === ''
-    );
-    
+    )
     if (pagesWithoutTitles.length > 0) {
       recommendations.push({
         type: 'seo',
         message: `${pagesWithoutTitles.length} pages are missing proper titles`,
         action: 'Add descriptive titles to all pages for better SEO'
-      });
+      })
     }
 
-    return recommendations;
+    return recommendations
   }
 }
 
 // Run the analysis
 async function main() {
-  const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
+  const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com')
   try {
-    const report = await analyzer.analyze();
-    console.log('\nReport saved to website-analysis-report.json');
+    const report = await analyzer.analyze()
+    console.log('\nReport saved to website-analysis-report.json')
   } catch (error) {
-    console.error('Analysis failed:', error);
+    console.error('Analysis failed:', error)
   }
 }
 // Run the analysis if this is the main module
 if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
-export default WebsiteAnalyzer;
+export default WebsiteAnalyzer

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
+import fs from 'fs'
 function fixJSXErrors(filePath) {
   try {
 
@@ -32,29 +31,27 @@ function fixJSXErrors(filePath) {
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
         replacement: '$1 />\n          </div>',
       },
-    ];
-
+    ]
     patterns.forEach(fix => {
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
+      //       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
       }
-    });
-
+    })
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      //       return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      //       return true
     }
-    return false;
+    return false
   } catch (error) {
-    //     return false;
+    //     return false
   }
 }
 
 // Fix the specific file
-// const filePath = process.argv[2];
+// const filePath = process.argv[2]
 if (filePath) {
-  fixJSXErrors(filePath);
+  fixJSXErrors(filePath)
 } else {
   //   }

@@ -1,12 +1,11 @@
-import React from 'react';
-
+import React from 'react'
 interface ContentItem {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  image: string;
+  id: number
+  title: string
+  description: string
+  category: string
+  readTime: string
+  image: string
 }
 
-export default ContentShowcase;
+export default ContentShowcase

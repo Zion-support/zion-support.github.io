@@ -1,8 +1,8 @@
 interface, NewServicesPromoBannerProp, s {
-varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
-showCou, n, t?: numb, e, r;
-featuredOn, l, y?: boole, a, n;
-classNa, m, e?: stri, n, g;
+varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d'
+showCou, n, t?: numb, e, r
+featuredOn, l, y?: boole, a, n
+classNa, m, e?: stri, n, g
 }
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',

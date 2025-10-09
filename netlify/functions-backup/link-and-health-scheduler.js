@@ -18,8 +18,8 @@ exports.handler = async function (event, context) {try {
           lastSchedule: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in link-and-health-scheduler: ') error
       }
     return {
@@ -31,10 +31,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'link-and-health-scheduler'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'link-and-health-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active', linksScheduled: 0, healthChecks: 0,
         lastSchedule: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in link-and-health-scheduler: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'link-and-health-scheduler' }) }; } };'

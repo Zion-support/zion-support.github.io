@@ -211,6 +211,6 @@ const February2026ContentShowcaseBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default February2026ContentShowcaseBanner;
+  )
+}
+export default February2026ContentShowcaseBanner

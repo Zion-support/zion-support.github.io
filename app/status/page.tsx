@@ -3,8 +3,6 @@
 
 
       </section>    </div>
-  );
-};
-
-export default StatusPage;
-
+  )
+}
+export default StatusPage

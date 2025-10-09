@@ -10,8 +10,7 @@ export const metadata: Metadata = {
       'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
     type: 'website',
   },
-};
-
+}
 export default function QuantumNeuralConsensusImplementation() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -32,5 +31,5 @@ export default function QuantumNeuralConsensusImplementation() {
         </div>
       </div>
     </div>
-  );
+  )
 }

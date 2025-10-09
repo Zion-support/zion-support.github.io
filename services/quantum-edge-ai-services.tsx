@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',
     type: 'website',
   },
-};
-
+}
 export default function quantumedgeaiservices() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,5 +27,5 @@ export default function quantumedgeaiservices() {
         </div>
       </div>
     </div>
-  );
+  )
 }

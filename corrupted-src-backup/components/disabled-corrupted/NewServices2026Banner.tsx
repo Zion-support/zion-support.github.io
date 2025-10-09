@@ -1,9 +1,8 @@
 
 type NewServices2026BannerProp, s = { 
-  varia, n, t?: 'showca, s, e' | 'he, r, o' | 'in, f, o'; showCou, n, t?: number;
-  classNa, m, e ?  : string;
- };
-
+  varia, n, t?: 'showca, s, e' | 'he, r, o' | 'in, f, o'; showCou, n, t?: number
+  classNa, m, e ?  : string
+ }
 export default function NewServices2026Bann, e, r({
   varia, n, t = 'showc, a, s, e',
   showCou, n, t =  , 6,
@@ -84,5 +83,5 @@ export default function NewServices2026Bann, e, r({
         </div>
       </div>
     </secti, o, n>
-  );
+  )
 }

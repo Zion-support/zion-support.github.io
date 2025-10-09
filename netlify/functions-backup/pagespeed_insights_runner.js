@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'pagespeed_insights_runner function executed successfully',
         timestamp: timestamp,
         function: 'pagespeed_insights_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ pagespeed_insights_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'pagespeed_insights_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

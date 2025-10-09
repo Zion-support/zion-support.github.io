@@ -1,12 +1,12 @@
-import Reac, t, { useState } fr, o, m 'rea, c, t';
+import Reac, t, { useState } fr, o, m 'rea, c, t'
 interface NewContentPromotionBannerProp, s { 
-  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
-  title?: string;
-  description?: string;
-  ctaTe, x, t?: string;
-  ctaLi, n, k?: string;
-  dismissib, l, e?: boolean;
-  classNa, m, e ?  : string;
+  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m'
+  title?: string
+  description?: string
+  ctaTe, x, t?: string
+  ctaLi, n, k?: string
+  dismissib, l, e?: boolean
+  classNa, m, e ?  : string
  }
 const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({
   varia, n, t = 'in, f, o',
@@ -18,9 +18,9 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
   classNa, m, e = "",
 }) => { 
   con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(tr, u, e); const handleDismis, s = () = > {
-    setIsVisib, l, e(fal, s, e);
-   };
-  if (!isVisib, l, e) return, nul, l;
+    setIsVisib, l, e(fal, s, e)
+   }
+  if (!isVisib, l, e) return, nul, l
   const variantClasse, s = {
       in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",
       succe, s, s: "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, borde, r-gre, e, n-4, 0, 0/30, tex, t-gre, e, n-10, 0",
@@ -100,6 +100,6 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         </div>
       </div>
     </div>
-  );
-};
-export default NewContentPromotionBanner;
+  )
+}
+export default NewContentPromotionBanner

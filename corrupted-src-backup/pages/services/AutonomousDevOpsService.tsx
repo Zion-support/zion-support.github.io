@@ -8,9 +8,8 @@ impo, r, t {
   Targ, e, t,
   Trending, U, p,
   Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const AutonomousDevOpsServic, e = () => { 
   return (
     <>

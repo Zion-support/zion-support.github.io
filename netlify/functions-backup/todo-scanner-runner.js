@@ -18,8 +18,8 @@ exports.handler = async function (event, context) {
           lastScan: new Date().toISOString(),
         },
       }),
-    };
-    return result;
+    }
+    return result
   } catch (error) {
     //     return {
       statusCode: 500,
@@ -32,6 +32,6 @@ exports.handler = async function (event, context) {
         message: error.message,
         function: 'todo-scanner-runner',
       }),
-    };
+    }
   }
-};
+}

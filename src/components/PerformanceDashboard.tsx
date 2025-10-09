@@ -1,35 +1,15 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
 
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
 }
 
 interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-
-=======
-'use client';
-interface PerformanceMetrics {// TODO: Add content;}
-};
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-}
-interface PerformanceMetrics {// TODO: Add content;}
-};
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
 }
 
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
@@ -39,34 +19,29 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     fid: null,
     cls: null,
     ttfb: null,
-  });
-
+  })
   useEffect(() => {
     // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const entries = list.getEntries()
       entries.forEach((entry) => {
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
         }
-      });
-    });
-
+      })
+    })
     try {
-      observer.observe({ entryTypes: ['paint'] });
-      return () => observer.disconnect();
+      observer.observe({ entryTypes: ['paint'] })
+      return () => observer.disconnect()
     } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
+      console.warn('Performance monitoring not supported:', error)
     }
-  }, []);
-
+  }, [])
   useEffect(() => {
     if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+      onMetricsUpdate(metrics)
     }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
-};
-
-export default PerformanceDashboard;
+  }, [metrics, onMetricsUpdate])
+  return null
+}
+export default PerformanceDashboard

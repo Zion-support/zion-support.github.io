@@ -202,6 +202,6 @@ const March2026InnovationSpotlightBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default March2026InnovationSpotlightBanner;
+  )
+}
+export default March2026InnovationSpotlightBanner

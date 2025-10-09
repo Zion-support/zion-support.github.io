@@ -1,11 +1,10 @@
-import React from 'react';
-<<<<<<< HEAD
-=======
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Shield from 'lucide-react';}
+import React from 'react'
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {const features = [}
-    {// TODO: Add content;}
-};
+
+const SmartAnalyticsPage: React.FC = () => {
+  const features = [
+    {
   icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
@@ -15,11 +14,9 @@ const SmartAnalyticsPage: React.FC = () => {const features = [}
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -40,22 +37,23 @@ const PagePage: React.FC = () => {
       <Footer />
     </div>
 
-<<<<<<< HEAD
-=======
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
   ];
+
   const pricingPlans = [
       name: 'Professional',
       price: '$799',
       description: 'Advanced analytics for growing businesses',
-                {plan.popular && ()}
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && ()};
+
+  return (
+    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-// Most Popular;
+// Most Popular
           </span>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -71,13 +69,13 @@ const PagePage: React.FC = () => {
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
-  // TODO: Add content;
+  // TODO: Add content
 }
-//                     plan.popular;
+//                     plan.popular
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'
                   }`}
-                  Get Started;
+                  Get Started
         {/* CTA Section */}
         
           
@@ -94,7 +92,7 @@ const PagePage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              Get Free Demo;
+              Get Free Demo
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -103,14 +101,13 @@ const PagePage: React.FC = () => {
               <div className="flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-white transition-colors">
-+1 (302) 464-0950;
++1 (302) 464-0950
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com;
+                  kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  );
+  )
 };
 
-export default PagePage;
+export default PagePage

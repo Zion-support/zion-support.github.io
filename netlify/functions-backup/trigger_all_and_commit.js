@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'trigger_all_and_commit function executed successfully',
         timestamp: timestamp,
         function: 'trigger_all_and_commit'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ trigger_all_and_commit function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'trigger_all_and_commit function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

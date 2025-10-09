@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'front_visionary_expander function executed successfully',
         timestamp: timestamp,
         function: 'front_visionary_expander'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ front_visionary_expander function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'front_visionary_expander function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

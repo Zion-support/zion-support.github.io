@@ -2,15 +2,14 @@
 
 /**
  * Focused PR Merger - Merges specific recent branches that are likely open PRs
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date
 // try {
-  execSync('git checkout main', { stdio: 'inherit' });
-  execSync('git pull origin main', { stdio: 'inherit' });
+  execSync('git checkout main', { stdio: 'inherit' })
+  execSync('git pull origin main', { stdio: 'inherit' })
 //   } catch (error) {
-//   process.exit(1);
+//   process.exit(1)
 }
 
 //Step 2: Define specific branches to merge (most recent and relevant)
@@ -36,29 +35,27 @@ const branchesToMerge = [
   'cursor/build-ai-powered-smart-contract-generator-b22e',
   'cursor/build-ai-pricing-suggestion-engine-ea4e',
   'cursor/build-ai-resume-and-portfolio-builder-workflow-2029',
-];
-
+]
 // //Step 3: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
 //   try {
     //Check if branch exists
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })
     //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
-    ).trim();
+    ).trim()
     if (isMerged !== 'not_merged') {
-//       return { success: true, method: 'already_merged' };
+//       return { success: true, method: 'already_merged' }
     }
 
     //Try direct merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'inherit' }
-    );
-//     return { success: true, method: 'direct' };
+    )
+//     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
       //Check for merge conflicts
@@ -70,38 +67,36 @@ function resolveConflictsAndMerge(branchName) {
       ) {
 //         //Strategy 1: Auto-resolve with theirs
         try {
-          execSync('git reset --hard HEAD', { stdio: 'inherit' });
+          execSync('git reset --hard HEAD', { stdio: 'inherit' })
           execSync(
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
             { stdio: 'inherit' }
-          );
-//           return { success: true, method: 'theirs' };
+          )
+//           return { success: true, method: 'theirs' }
         } catch (theirsError) {
 //           }
 
         //Strategy 2: Auto-resolve with ours
         try {
-          execSync('git reset --hard HEAD', { stdio: 'inherit' });
+          execSync('git reset --hard HEAD', { stdio: 'inherit' })
           execSync(
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
             { stdio: 'inherit' }
-          );
-//           return { success: true, method: 'ours' };
+          )
+//           return { success: true, method: 'ours' }
         } catch (oursError) {
 //           }
 
         //Strategy 3: Manual conflict resolution
         try {
-          execSync('git reset --hard HEAD', { stdio: 'inherit' });
-
+          execSync('git reset --hard HEAD', { stdio: 'inherit' })
           //Get conflicted files
           const conflictedFiles = execSync(
             'git diff --name-only --diff-filter=U',
             { encoding: 'utf8' }
           )
             .split('\n')
-            .filter(file => file.trim());
-
+            .filter(file => file.trim())
 //           //For each conflicted file, try to resolve
           for (const file of conflictedFiles) {
             if (file.trim()) {
@@ -109,8 +104,8 @@ function resolveConflictsAndMerge(branchName) {
                 //Try to resolve by taking the incoming version
                 execSync(`git checkout --theirs "${file}"`, {
                   stdio: 'inherit',
-                });
-                execSync(`git add "${file}"`, { stdio: 'inherit' });
+                })
+                execSync(`git add "${file}"`, { stdio: 'inherit' })
 //                 } catch (fileError) {
 //                 }
             }
@@ -120,8 +115,8 @@ function resolveConflictsAndMerge(branchName) {
           execSync(
             `git commit -m "Manual conflict resolution for ${branchName}"`,
             { stdio: 'inherit' }
-          );
-//           return { success: true, method: 'manual' };
+          )
+//           return { success: true, method: 'manual' }
         } catch (manualError) {
 //           }
       }
@@ -130,12 +125,12 @@ function resolveConflictsAndMerge(branchName) {
 
     //If all strategies fail, abort and skip
     try {
-      execSync('git merge --abort', { stdio: 'inherit' });
+      execSync('git merge --abort', { stdio: 'inherit' })
 //       } catch (abortError) {
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
     }
 
-    return { success: false, method: 'failed' };
+    return { success: false, method: 'failed' }
   }
 }
 
@@ -156,38 +151,35 @@ function resolveConflictsAndMerge(branchName) {
       failed: 0,
     },
   },
-};
-
+}
 //Process each branch
 for (const branch of branchesToMerge) {
-  results.summary.total++;
-
+  results.summary.total++
   if (result.success) {
-    results.successful.push({ branch, ...result });
-    results.summary.successful++;
-    results.summary.methods[result.method]++;
+    results.successful.push({ branch, ...result })
+    results.summary.successful++
+    results.summary.methods[result.method]++
   } else {
-    results.failed.push({ branch, ...result });
-    results.summary.failed++;
-    results.summary.methods.failed++;
+    results.failed.push({ branch, ...result })
+    results.summary.failed++
+    results.summary.methods.failed++
   }
 }
 
 //Step 5: Generate report
 // // // // // // // // // // // if (results.failed.length > 0) {
-//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
+//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`))
 }
 
 //Save report
-results.timestamp = new Date().toISOString();
+results.timestamp = new Date().toISOString()
 fs.writeFileSync(
   'focused-pr-merge-report.json',
   JSON.stringify(results, null, 2)
-);
-
+)
 // Push changes
 // try {
-  execSync('git push origin main', { stdio: 'inherit' });
+  execSync('git push origin main', { stdio: 'inherit' })
 //   } catch (error) {
 //   //   }
 

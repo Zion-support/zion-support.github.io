@@ -4,14 +4,14 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
       tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Laten, c, y"
       catego, r, y: "AI, Infrastructur, e"
       readTi, m, e: "7, min, read"
-      isN, e, w: tr, u, e;
+      isN, e, w: tr, u, e
     }
     {
       tit, l, e: "Nor, t, h‑Engineering, Metric
   s: Fewer, KPI, s, Better, Outcome, s"
       catego, r, y: "Leadersh, i, p"
       readTi, m, e: "5, min, read"
-      isN, e, w: tr, u, e;
+      isN, e, w: tr, u, e
     }
     {
       title: "OpenTelemetry, in, Production: Traces, That, Engineers Us, e",

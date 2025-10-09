@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 export default defineConfig({
   plugins: [
     react(),
@@ -89,34 +88,34 @@ export default defineConfig({
       external: id => {
         // Externalize Next.js modules to prevent build errors
         if (id.includes('next/') || id.includes('next')) {
-          return true;
+          return true
         }
-        return false;
+        return false
       },
       output: {
         manualChunks: id => {
           // Core React libraries
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'vendor';
+            return 'vendor'
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
-            return 'router';
+            return 'router'
           }
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
             id.includes('node_modules/lucide-react')
           ) {
-            return 'ui';
+            return 'ui'
           }
           // Utilities and web vitals
           if (id.includes('node_modules/web-vitals')) {
-            return 'page';
+            return 'page'
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
-            return 'libs';
+            return 'libs'
           }
         },
         assetFileNames: 'assets/[name]-[hash][extname]',
@@ -142,4 +141,4 @@ export default defineConfig({
   esbuild: {
     drop: ['console', 'debugger'],
   },
-});
+})

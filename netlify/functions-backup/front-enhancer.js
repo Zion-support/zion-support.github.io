@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastEnhancement: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in front-enhancer: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'front-enhancer'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'front-enhancer',' source: event.source || 'unknown', enhancement: {' status: 'active', enhancements: 0,
         lastEnhancement: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-enhancer: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'front-enhancer' }) }; } }; '

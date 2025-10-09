@@ -6,16 +6,13 @@ async function closeDuplicatePRs() {
 //     //Get all open PRs
     const response = await fetch(
       'https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100'
-    );
-
+    )
 //     const duplicatePRs = prs.filter(
       pr =>
         pr.title === 'Fix errors and merge to main' &&
         (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
-    );
-
-//     let closedCount = 0;
-
+    )
+//     let closedCount = 0
     for (const pr of duplicatePRs) {
       try {
 //         const closeResponse = await fetch(
@@ -31,18 +28,17 @@ async function closeDuplicatePRs() {
               body: `This PR has been automatically closed as it was a duplicate. The main fixes have already been merged into the main branch.\n\n**Reason for closure:** Duplicate PR with merge conflicts or draft status.\n\n**Status:** ✅ All critical fixes have been successfully merged.`,
             }),
           }
-        );
-
+        )
         if (closeResponse.ok) {
-//           closedCount++;
+//           closedCount++
         } else {
-//           errorCount++;
+//           errorCount++
         }
 
         // Add a small delay to avoid rate limiting
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 100))
       } catch (error) {
-//         errorCount++;
+//         errorCount++
       }
     }
 
@@ -50,4 +46,4 @@ async function closeDuplicatePRs() {
 //     }
 }
 
-// closeDuplicatePRs().catch(console.error);
+// closeDuplicatePRs().catch(console.error)

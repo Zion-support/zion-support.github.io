@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function BlogPost(): React.JSX.Element {
   return (
     <>
@@ -84,5 +83,5 @@ export default function BlogPost(): React.JSX.Element {
         </div>
       </div>
     </>
-  );
+  )
 }

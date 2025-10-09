@@ -1,13 +1,12 @@
-'use client';
-import React, { useEffect, memo } from 'react';
-
+'use client'
+import React, { useEffect, memo } from 'react'
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: unknown;
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  structuredData?: unknown
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
@@ -20,79 +19,68 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title;
-    
+    document.title = title
     // Update meta description
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords.join(', '));
-    
+    updateMetaTag('description', description)
+    updateMetaTag('keywords', keywords.join(', '))
     // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:url', canonicalUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-    
+    updateMetaTag('og:title', title, 'property')
+    updateMetaTag('og:description', description, 'property')
+    updateMetaTag('og:image', ogImage, 'property')
+    updateMetaTag('og:url', canonicalUrl, 'property')
+    updateMetaTag('og:type', 'website', 'property')
+    updateMetaTag('og:site_name', 'Zion Tech Group', 'property')
     // Update Twitter tags
-    updateMetaTag('twitter:card', 'summary_large_image', 'name');
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', ogImage, 'name');
-    updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-    updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
-    
+    updateMetaTag('twitter:card', 'summary_large_image', 'name')
+    updateMetaTag('twitter:title', title, 'name')
+    updateMetaTag('twitter:description', description, 'name')
+    updateMetaTag('twitter:image', ogImage, 'name')
+    updateMetaTag('twitter:site', '@ziontechgroup', 'name')
+    updateMetaTag('twitter:creator', '@ziontechgroup', 'name')
     // Update canonical URL
-    updateCanonicalUrl(canonicalUrl);
-    
+    updateCanonicalUrl(canonicalUrl)
     // Add structured data
     if (structuredData) {
-      addStructuredData(structuredData);
+      addStructuredData(structuredData)
     }
     
     // Add breadcrumb structured data
-    addBreadcrumbStructuredData();
-    
+    addBreadcrumbStructuredData()
     // Add FAQ structured data
-    addFAQStructuredData();
-    
+    addFAQStructuredData()
     // Add organization structured data
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
+    addOrganizationStructuredData()
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`)
     if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
+      meta = document.createElement('meta')
+      meta.setAttribute(attribute, name)
+      document.head.appendChild(meta)
     }
-    meta.setAttribute('content', content);
-  };
-
+    meta.setAttribute('content', content)
+  }
   const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
+    let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
     }
-    canonical.setAttribute('href', url);
-  };
-
+    canonical.setAttribute('href', url)
+  }
   const addStructuredData = (data: any) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(data)
+    script.id = 'structured-data'
     // Remove existing structured data
-    const existing = document.getElementById('structured-data');
+    const existing = document.getElementById('structured-data')
     if (existing) {
-      existing.remove();
+      existing.remove()
     }
-    document.head.appendChild(script);
-  };
-
+    document.head.appendChild(script)
+  }
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
       '@context': 'https://schema.org',
@@ -105,19 +93,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
           'item': 'https://ziontechgroup.com'
         }
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
-
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(breadcrumbData)
+    script.id = 'breadcrumb-structured-data'
+    // Remove existing breadcrumb data
+    const existing = document.getElementById('breadcrumb-structured-data')
+    if (existing) {
+      existing.remove()
+    }
+    document.head.appendChild(script)
+  }
   const addFAQStructuredData = () => {
     const faqData = {
       '@context': 'https://schema.org',
@@ -148,19 +135,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
           }
         }
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
-    script.id = 'faq-structured-data';
-    // Remove existing FAQ data
-    const existing = document.getElementById('faq-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
-
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(faqData)
+    script.id = 'faq-structured-data'
+    // Remove existing FAQ data
+    const existing = document.getElementById('faq-structured-data')
+    if (existing) {
+      existing.remove()
+    }
+    document.head.appendChild(script)
+  }
   const addOrganizationStructuredData = () => {
     const organizationData = {
       '@context': 'https://schema.org',
@@ -191,21 +177,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup'
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
-
-  return null;
-});
-
-SEOOptimizer.displayName = 'SEOOptimizer';
-export default SEOOptimizer;
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(organizationData)
+    script.id = 'organization-structured-data'
+    // Remove existing organization data
+    const existing = document.getElementById('organization-structured-data')
+    if (existing) {
+      existing.remove()
+    }
+    document.head.appendChild(script)
+  }
+  return null
+})
+SEOOptimizer.displayName = 'SEOOptimizer'
+export default SEOOptimizer

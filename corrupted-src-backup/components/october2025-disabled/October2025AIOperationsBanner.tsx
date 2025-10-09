@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 const October2025AIOperationsBanne, r = () => {
   const newArticle, s = [
     {
@@ -81,7 +81,7 @@ const October2025AIOperationsBanne, r = () => {
                   </div>
                 </div>
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* Bottom, CT, A */}
@@ -121,6 +121,6 @@ const October2025AIOperationsBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default October2025AIOperationsBanner;
+  )
+}
+export default October2025AIOperationsBanner

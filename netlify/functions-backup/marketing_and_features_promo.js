@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'marketing_and_features_promo function executed successfully',
         timestamp: timestamp,
         function: 'marketing_and_features_promo'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ marketing_and_features_promo function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'marketing_and_features_promo function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

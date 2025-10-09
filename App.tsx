@@ -1,12 +1,11 @@
 
 // Lazy load pages for better performance
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-
+const AboutPage = React.lazy(() => import('./app/about/page'))
+const ContactPage = React.lazy(() => import('./app/contact/page'))
+const PricingPage = React.lazy(() => import('./app/pricing/page'))
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
@@ -15,8 +14,7 @@ const UnifiedContentPromotion = memo(() => (
       <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
     </div>
   </div>
-));
-
+))
 const InteractiveAIROICalculator = memo(() => (
   <div className="bg-gray-50 py-16">
     <div className="container mx-auto px-4 text-center">
@@ -24,8 +22,7 @@ const InteractiveAIROICalculator = memo(() => (
       <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
     </div>
   </div>
-));
-
+))
 const ContentShowcase = memo(() => (
   <div className="py-16">
     <div className="container mx-auto px-4 text-center">
@@ -33,8 +30,7 @@ const ContentShowcase = memo(() => (
       <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
     </div>
   </div>
-));
-
+))
 const InteractiveContentShowcase2026 = memo(() => (
   <div className="bg-blue-50 py-16">
     <div className="container mx-auto px-4 text-center">
@@ -42,40 +38,38 @@ const InteractiveContentShowcase2026 = memo(() => (
       <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
     </div>
   </div>
-));
-
+))
 // Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
-));
-
+))
 // Error Boundary Component
 interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
+  hasError: boolean
+  error: Error | null
 }
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
+    super(props)
+    this.state = { hasError: false, error: null }
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   override componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
-      // // console.error('App Error Boundary caught an error:', _error, _errorInfo);
+      // // console.error('App Error Boundary caught an error:', _error, _errorInfo)
     }
   }
 
@@ -96,10 +90,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
             </button>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
@@ -139,8 +133,7 @@ export default function App() {
       },
     }),
     []
-  );
-
+  )
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -193,5 +186,5 @@ export default function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-  );
+  )
 }

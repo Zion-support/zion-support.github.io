@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const UltimateContentAdvertisingBanne, r: React.FC = () => {
   const advertisingFeature, s = [
     {
@@ -202,6 +202,6 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default UltimateContentAdvertisingBanner;
+  )
+}
+export default UltimateContentAdvertisingBanner

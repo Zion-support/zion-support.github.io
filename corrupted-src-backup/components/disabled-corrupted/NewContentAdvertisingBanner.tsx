@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 interface FeaturedConten, t {
-  id: number;
-  title: string;
-  category: string;
-  readTime: string;
-  rati, n, g: number;
-  reade, r, s: string;
-  bad, g, e: string;
-  gradie, n, t: string;
-  ic, o, n: Rea, c, t.ReactNo, d, e;
-  li, n, k: str, i, n, g;
+  id: number
+  title: string
+  category: string
+  readTime: string
+  rati, n, g: number
+  reade, r, s: string
+  bad, g, e: string
+  gradie, n, t: string
+  ic, o, n: Rea, c, t.ReactNo, d, e
+  li, n, k: str, i, n, g
 }
 const NewContentAdvertisingBanne, r: React.FC = () => { 
   const featuredConten, t: FeaturedConte, n, t[] = [
@@ -240,6 +240,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default NewContentAdvertisingBanner;
+  )
+}
+export default NewContentAdvertisingBanner

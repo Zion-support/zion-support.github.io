@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {
   const breakthroughConten, t = [
     {
@@ -221,6 +221,6 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default RevolutionaryBreakthrough2026Banner;
+  )
+}
+export default RevolutionaryBreakthrough2026Banner

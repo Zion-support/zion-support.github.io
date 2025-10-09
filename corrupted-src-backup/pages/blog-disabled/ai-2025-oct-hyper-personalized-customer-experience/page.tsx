@@ -5,9 +5,8 @@ impo, r, t {
   Sparkl, e, s,
   Trending, U, p,
   Use, r, s,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
   return (
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
@@ -267,8 +266,8 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 Schedule Your CX Transformation Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
-  );
-};
+  )
+}
   </div>
   </div>
   </div>

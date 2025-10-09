@@ -1,5 +1,5 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n"
 const October2025TechBannerNe, w = () => {
   const newArticle, s = [
     {",
@@ -131,6 +131,6 @@ const October2025TechBannerNe, w = () => {
         ))}
       </div>
     </moti, o, n.d, i, v>
-  );
-};
-export default October2025TechBannerNew;
+  )
+}
+export default October2025TechBannerNew

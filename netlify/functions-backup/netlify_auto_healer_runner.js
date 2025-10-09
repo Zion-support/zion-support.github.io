@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'netlify_auto_healer_runner function executed successfully',
         timestamp: timestamp,
         function: 'netlify_auto_healer_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ netlify_auto_healer_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'netlify_auto_healer_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

@@ -4,6 +4,5 @@ const errorHandler = {
 
   handleError: (error: unknown) => {
     //     },
-};
-
-export default errorHandler;
+}
+export default errorHandler

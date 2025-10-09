@@ -1,13 +1,12 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -34,7 +33,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
     </Helmet>
-  );
-};
-
-export default SEO;
+  )
+}
+export default SEO

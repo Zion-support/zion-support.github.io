@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react'
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -30,7 +30,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
     }
-  ];
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -50,13 +50,13 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'For large organizations',
       features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
-  ];
+  ]
   const stats = [
     { number: '90%', label: 'Time Savings' },
     { number: '75%', label: 'Error Reduction' },
     { number: '500+', label: 'Integrations' },
     { number: '24/7', label: 'Processing' }
-  ];
+  ]
   const useCases = [
     {
       title: 'Customer Onboarding',
@@ -78,7 +78,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
       icon: Settings
     }
-  ];
+  ]
   return (
     <>
       <SEOOptimizer
@@ -137,9 +137,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
         </main>
       </div>
     </>
-  );
-};
-
+  )
+}
 const AIWorkflowAutomationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -274,7 +273,6 @@ const AIWorkflowAutomationPage = () => {
         <Footer />
       </div>
     </div>
-  );
-};
-
-export default AIWorkflowAutomationPage2;
+  )
+}
+export default AIWorkflowAutomationPage2

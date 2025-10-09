@@ -1,2 +1,2 @@
 
-export default EnhancedHeader;
+export default EnhancedHeader

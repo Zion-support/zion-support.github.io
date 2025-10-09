@@ -1,23 +1,23 @@
 // Enterprise case studies showcasing real-world AI implementations and results
 
 export interface EnterpriseCaseStudy {
-  id: string;
-  slug?: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string;
+  id: string
+  slug?: string
+  title: string
+  company: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string
   metrics: {
-    costSavings: string;
-    efficiencyGain: string;
-    roi: string;
-    timeline: string;
-  };
-  featured: boolean;
-  publishedAt: string;
-  tags: string[];
+    costSavings: string
+    efficiencyGain: string
+    roi: string
+    timeline: string
+  }
+  featured: boolean
+  publishedAt: string
+  tags: string[]
 }
 
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
@@ -59,4 +59,4 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
   },
-];
+]

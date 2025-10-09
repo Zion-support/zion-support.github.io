@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastOrchestration: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in front-index-orchestrator: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'front-index-orchestrator'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'front-index-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active', indexes: 0,
         lastOrchestration: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-index-orchestrator: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'front-index-orchestrator' }) }; } };'

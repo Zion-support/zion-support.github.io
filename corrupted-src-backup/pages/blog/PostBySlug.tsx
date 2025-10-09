@@ -1,8 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 export default function PostBySlug(): React.JSX.Element {
-  const { slug } = useParams();
-
+  const { slug } = useParams()
   // Mock data - in a real app, this would come from an API or CMS
   const latestArticles = [
     {
@@ -17,8 +15,7 @@ export default function PostBySlug(): React.JSX.Element {
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
     },
-  ];
-
+  ]
   const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -50,8 +47,7 @@ export default function PostBySlug(): React.JSX.Element {
       readTime: '9 min read',
       author: 'Zion Tech Group Team',
     },
-  ];
-
+  ]
   const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
@@ -82,13 +78,11 @@ export default function PostBySlug(): React.JSX.Element {
       readTime: '13 min read',
       author: 'Zion Tech Group Team',
     },
-  ];
-
+  ]
   // Find the current post
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(
     post => post.slug === slug
-  );
-
+  )
   if (!currentPost) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -106,7 +100,7 @@ export default function PostBySlug(): React.JSX.Element {
           </a>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -210,5 +204,5 @@ export default function PostBySlug(): React.JSX.Element {
         </div>
       </div>
     </div>
-  );
+  )
 }

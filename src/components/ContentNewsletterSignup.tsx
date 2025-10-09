@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 interface ContentNewsletterSignupProps {
   // Add props here
 }
@@ -9,7 +8,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
     <div className="contentnewslettersignup">
       {/* Component content */}
     </div>
-  );
-};
-
-export default ContentNewsletterSignup;
+  )
+}
+export default ContentNewsletterSignup

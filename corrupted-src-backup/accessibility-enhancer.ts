@@ -1,21 +1,19 @@
 class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
-  private isInitialized: boolean = false;
-
+  private static instance: AccessibilityEnhancer
+  private isInitialized: boolean = false
   private constructor() {}
 
   public static getInstance(): AccessibilityEnhancer {
     if (!AccessibilityEnhancer.instance) {
-      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
+      AccessibilityEnhancer.instance = new AccessibilityEnhancer()
     }
-    return AccessibilityEnhancer.instance;
+    return AccessibilityEnhancer.instance
   }
 
   public initialize(): void {
-    if (this.isInitialized) return;
-
-    this.setupAccessibilityFeatures();
-    this.isInitialized = true;
+    if (this.isInitialized) return
+    this.setupAccessibilityFeatures()
+    this.isInitialized = true
   }
 
   private setupAccessibilityFeatures(): void {
@@ -23,4 +21,4 @@ class AccessibilityEnhancer {
     //     }
 }
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

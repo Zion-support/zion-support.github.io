@@ -78,8 +78,7 @@ const sitemapUrls = [
   // Auth Pages
   '/login',
   '/signup'
-];
-
+]
 // Existing pages from the codebase
 const existingPages = [
   // Main pages
@@ -179,26 +178,20 @@ const existingPages = [
   '/api',
   '/offline',
   '/system-status'
-];
-
+]
 // Find missing pages
-const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
-
+const missingPages = sitemapUrls.filter(url => !existingPages.includes(url))
 // Find extra pages (in codebase but not in sitemap)
-const extraPages = existingPages.filter(url => !sitemapUrls.includes(url));
-
-console.log('=== MISSING PAGES (in sitemap but not in codebase) ===');
-missingPages.forEach(page => console.log(page));
-
-console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
-extraPages.forEach(page => console.log(page));
-
-console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log(`Extra pages: ${extraPages.length}`);
-
+const extraPages = existingPages.filter(url => !sitemapUrls.includes(url))
+console.log('=== MISSING PAGES (in sitemap but not in codebase) ===')
+missingPages.forEach(page => console.log(page))
+console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===')
+extraPages.forEach(page => console.log(page))
+console.log('\n=== SUMMARY ===')
+console.log(`Total sitemap URLs: ${sitemapUrls.length}`)
+console.log(`Total existing pages: ${existingPages.length}`)
+console.log(`Missing pages: ${missingPages.length}`)
+console.log(`Extra pages: ${extraPages.length}`)
 // Categorize missing pages
 const missingByCategory = {
   'Main Pages': missingPages.filter(p => ['/faq', '/partners', '/solutions', '/research-development', '/request-quote', '/green-it'].includes(p)),
@@ -208,12 +201,11 @@ const missingByCategory = {
   'Marketplace Pages': missingPages.filter(p => p.startsWith('/marketplace') || ['/talent', '/equipment', '/it-onsite-services'].includes(p)),
   'Company Pages': missingPages.filter(p => ['/help', '/security'].includes(p)),
   'Auth Pages': missingPages.filter(p => ['/login', '/signup'].includes(p))
-};
-
-console.log('\n=== MISSING PAGES BY CATEGORY ===');
+}
+console.log('\n=== MISSING PAGES BY CATEGORY ===')
 Object.entries(missingByCategory).forEach(([category, pages]) => {
   if (pages.length > 0) {
-    console.log(`\n${category}:`);
-    pages.forEach(page => console.log(`  ${page}`));
+    console.log(`\n${category}:`)
+    pages.forEach(page => console.log(`  ${page}`))
   }
-});
+})

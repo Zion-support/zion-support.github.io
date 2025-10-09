@@ -2,15 +2,14 @@
 
 /**
  * Ultimate PR Merge - Comprehensive merge of all remaining branches
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date
 // try {
-  execSync('git checkout main', { stdio: 'inherit' });
-  execSync('git pull origin main', { stdio: 'inherit' });
+  execSync('git checkout main', { stdio: 'inherit' })
+  execSync('git pull origin main', { stdio: 'inherit' })
 //   } catch (error) {
-//   process.exit(1);
+//   process.exit(1)
 }
 
 //Step 2: Get all branches that need merging
@@ -22,8 +21,7 @@ const allBranches = execSync('git branch -r', { encoding: 'utf8' })
   .filter(branch => !branch.includes('backup'))
   .filter(branch => !branch.includes('aggressive'))
   .filter(branch => !branch.includes('automation'))
-  .map(branch => branch.replace('origin/', ''));
-
+  .map(branch => branch.replace('origin/', ''))
 //Filter for relevant branches
 const relevantBranches = allBranches.filter(
   branch =>
@@ -37,21 +35,19 @@ const relevantBranches = allBranches.filter(
     branch.includes('codex') ||
     branch.includes('pr-') ||
     branch.includes('resolve-')
-);
-
+)
 // //Step 3: Enhanced merge function with conflict resolution
 function mergeBranch(branchName) {
 //   try {
     //Check if branch exists
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })
     //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
-    ).trim();
+    ).trim()
     if (isMerged !== 'not_merged') {
-//       return { success: true, method: 'already_merged' };
+//       return { success: true, method: 'already_merged' }
     }
 
     //Try to merge
@@ -59,8 +55,8 @@ function mergeBranch(branchName) {
       execSync(
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
         { stdio: 'inherit' }
-      );
-//       return { success: true, method: 'direct' };
+      )
+//       return { success: true, method: 'direct' }
     } catch (mergeError) {
 //       //Try different conflict resolution strategies
       try {
@@ -68,23 +64,23 @@ function mergeBranch(branchName) {
         execSync(
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           { stdio: 'inherit' }
-        );
-//         return { success: true, method: 'theirs' };
+        )
+//         return { success: true, method: 'theirs' }
       } catch (theirsError) {
         try {
           //Strategy 2: Use ours
           execSync(
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             { stdio: 'inherit' }
-          );
-//           return { success: true, method: 'ours' };
+          )
+//           return { success: true, method: 'ours' }
         } catch (oursError) {
-//           return { success: false, method: 'failed' };
+//           return { success: false, method: 'failed' }
         }
       }
     }
   } catch (error) {
-//     return { success: false, method: 'not_found' };
+//     return { success: false, method: 'not_found' }
   }
 }
 
@@ -105,46 +101,41 @@ const results = {
       failed: 0,
     },
   },
-};
-
+}
 // //Process in batches of 10 to avoid overwhelming the system
-// const batchSize = 10;
-// const totalBatches = Math.ceil(relevantBranches.length / batchSize);
-
+// const batchSize = 10
+// const totalBatches = Math.ceil(relevantBranches.length / batchSize)
 for (let batch = 0; batch < totalBatches; batch++) {
-//   const start = batch * batchSize;
-//   const end = Math.min(start + batchSize, relevantBranches.length);
-
+//   const start = batch * batchSize
+//   const end = Math.min(start + batchSize, relevantBranches.length)
 //   // console.log(
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
-  );
-
+  )
   for (const branch of batchBranches) {
-    results.summary.total++;
-
+    results.summary.total++
     if (result.success) {
       results.successful.push({
         branch: branch,
         success: true,
         method: result.method,
-      });
-      results.summary.successful++;
-      results.summary.methods[result.method]++;
+      })
+      results.summary.successful++
+      results.summary.methods[result.method]++
     } else {
       results.failed.push({
         branch: branch,
         success: false,
         method: result.method,
-      });
-      results.summary.failed++;
-      results.summary.methods[result.method]++;
+      })
+      results.summary.failed++
+      results.summary.methods[result.method]++
     }
   }
 
   //Push changes after each batch
   if (batch % 5 === 0 || batch === totalBatches - 1) {
     try {
-      execSync('git push origin main', { stdio: 'inherit' });
+      execSync('git push origin main', { stdio: 'inherit' })
 //       } catch (error) {
 //       }
   }
@@ -154,16 +145,14 @@ for (let batch = 0; batch < totalBatches; batch++) {
 // const report = {
   ...results,
   timestamp: new Date().toISOString(),
-};
-
+}
 fs.writeFileSync(
   'ultimate-pr-merge-report.json',
   JSON.stringify(report, null, 2)
-);
-
+)
 //Step 6: Final push
 // try {
-  execSync('git push origin main', { stdio: 'inherit' });
+  execSync('git push origin main', { stdio: 'inherit' })
 //   } catch (error) {
 //   }
 

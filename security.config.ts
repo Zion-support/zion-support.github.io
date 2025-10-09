@@ -77,6 +77,5 @@ export const securityConfig = {
     trimWhitespace: true,
     removeNullBytes: true,
   },
-};
-
-export default securityConfig;
+}
+export default securityConfig

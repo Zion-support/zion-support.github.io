@@ -73,5 +73,5 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
           </div>
         </div>
       </div>
-    </d, i, v > );
+    </d, i, v > )
  }

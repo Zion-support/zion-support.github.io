@@ -1,22 +1,21 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
+import { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorId?: string;
+  hasError: boolean
+  error?: Error
+  errorId?: string
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -24,16 +23,15 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 //     // Report error to analytics/monitoring service
-    this.reportError(error, errorInfo);
-    
+    this.reportError(error, errorInfo)
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
   }
 
@@ -47,18 +45,15 @@ class ErrorBoundary extends Component<Props, State> {
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
+      })
     }
-  };
-
+  }
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorId: undefined });
-  };
-
+    this.setState({ hasError: false, error: undefined, errorId: undefined })
+  }
   private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -102,11 +97,11 @@ class ErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

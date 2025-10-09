@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 interface UnifiedContentPromotionProps {
   // Add props here
 }
@@ -9,7 +8,6 @@ const UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {
     <div className="unifiedcontentpromotion">
       {/* Component content */}
     </div>
-  );
-};
-
+  )
+}
 export default UnifiedContentPromotion

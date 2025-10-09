@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 const October2025LatestPremiumContentBanne, r = () => { 
   return (
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }
@@ -134,6 +134,6 @@ const October2025LatestPremiumContentBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default October2025LatestPremiumContentBanner;
+  )
+}
+export default October2025LatestPremiumContentBanner

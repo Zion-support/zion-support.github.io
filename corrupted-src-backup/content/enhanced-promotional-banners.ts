@@ -1,15 +1,15 @@
 export interface EnhancedPromotionalBanner {
-  id: string;
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaUrl: string;
-  featured: boolean;
-  priority: number;
-  startDate: string;
-  endDate: string;
-  category: string;
-  tags: string[];
+  id: string
+  title: string
+  description: string
+  ctaText: string
+  ctaUrl: string
+  featured: boolean
+  priority: number
+  startDate: string
+  endDate: string
+  category: string
+  tags: string[]
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
@@ -42,4 +42,4 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     category: 'AI Governance',
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
   },
-];
+]

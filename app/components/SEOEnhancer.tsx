@@ -1,17 +1,15 @@
-import React, { ReactNode } from 'react';
-
-import { Helmet } from 'react-helmet-async';
-
+import React, { ReactNode } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {
-  children?: ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  structuredData?: Record<string, unknown>;
-  noIndex?: boolean;
+  children?: ReactNode
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  structuredData?: Record<string, unknown>
+  noIndex?: boolean
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -58,10 +56,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       postalCode: '94105',
       addressCountry: 'US',
     },
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
+  }
+  const finalStructuredData = structuredData || defaultStructuredData
   return (
     <>
       <Helmet>
@@ -121,7 +117,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
-
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer

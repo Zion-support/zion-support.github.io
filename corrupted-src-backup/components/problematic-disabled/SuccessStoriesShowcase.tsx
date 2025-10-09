@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const SuccessStoriesShowcas, e: React.FC = () => { 
   const storie, s = [
     {
@@ -98,6 +98,6 @@ const SuccessStoriesShowcas, e: React.FC = () => {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default SuccessStoriesShowcase;
+  )
+}
+export default SuccessStoriesShowcase

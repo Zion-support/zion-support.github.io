@@ -1,2 +1,2 @@
 
-export default SidebarNavigation;
+export default SidebarNavigation

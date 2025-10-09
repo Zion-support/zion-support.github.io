@@ -1,6 +1,6 @@
-import React from 'react';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
-impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
+import React from 'react'
+impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
+impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6'
 const NewContentShowcas, e: React.FC = () => { 
   const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
@@ -84,6 +84,6 @@ const NewContentShowcas, e: React.FC = () => {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default NewContentShowcase;
+  )
+}
+export default NewContentShowcase

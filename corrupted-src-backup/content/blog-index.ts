@@ -4,15 +4,15 @@
  */
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  featured?: boolean;
-  valueProposition: string;
+  slug: string
+  title: string
+  description: string
+  category: string
+  date: string
+  readTime: string
+  tags: string[]
+  featured?: boolean
+  valueProposition: string
 }
 
 /**
@@ -124,36 +124,34 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: 'Instant reversibility, resilient releases',
   },
-];
-
+]
 /**
  * All blog posts combined
  */
-export const allBlogPosts: BlogPost[] = [...october2025Breakthroughs];
-
+export const allBlogPosts: BlogPost[] = [...october2025Breakthroughs]
 /**
  * Helper functions
  */
 export function getFeaturedPosts(): BlogPost[] {
-  return allBlogPosts.filter(post => post.featured);
+  return allBlogPosts.filter(post => post.featured)
 }
 
 export function getAllCategories(): string[] {
-//   const categories = new Set(allBlogPosts.map(post => post.category));
-  return Array.from(categories);
+//   const categories = new Set(allBlogPosts.map(post => post.category))
+  return Array.from(categories)
 }
 
 export function getAllTags(): string[] {
-//   const tags = new Set(allBlogPosts.flatMap(post => post.tags));
-  return Array.from(tags);
+//   const tags = new Set(allBlogPosts.flatMap(post => post.tags))
+  return Array.from(tags)
 }
 
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
-    const _value = post.valueProposition.match(/\$(\d+)M/);
+    const _value = post.valueProposition.match(/\$(\d+)M/)
 :corrupted-src-backup/content/blog-index.ts
-  }, 0);
-  return `$${totalValue}M+ total value proposition`;
+  }, 0)
+  return `$${totalValue}M+ total value proposition`
 }
 
 export const blogStats = {
@@ -162,4 +160,4 @@ export const blogStats = {
   categories: getAllCategories().length,
   tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
-};
+}

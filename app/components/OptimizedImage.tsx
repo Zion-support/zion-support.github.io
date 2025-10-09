@@ -1,12 +1,11 @@
-import React from 'react';
-
+import React from 'react'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -31,7 +30,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         height: height ? `${height}px` : 'auto'
       }}
     />
-  );
-};
-
-export default OptimizedImage;
+  )
+}
+export default OptimizedImage

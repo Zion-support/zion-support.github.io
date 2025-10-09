@@ -152,5 +152,5 @@ export default function FeaturedContentBanner20, 2, 5() {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }

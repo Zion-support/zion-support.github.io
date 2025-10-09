@@ -20,8 +20,8 @@ exports.handler = async function (event, context) {
           lastScan: new Date().toISOString()
         }
       })
-    };
-    return result;
+    }
+    return result
   } catch (error) {
 
     return {
@@ -35,6 +35,6 @@ exports.handler = async function (event, context) {
         message: error.message,
         function: 'unused-media-scanner'
       })
-    };
+    }
   }
-};
+}

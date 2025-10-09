@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import, React, from 'rea, c, t'
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
 const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => { 
   retu, r, n (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }

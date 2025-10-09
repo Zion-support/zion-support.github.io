@@ -234,8 +234,7 @@ const October2025AutonomousInfrastructureBanner = () => {
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>
       </div>
-  );
-};
-export default October2025AutonomousInfrastructureBanner;
-
+  )
+}
+export default October2025AutonomousInfrastructureBanner
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

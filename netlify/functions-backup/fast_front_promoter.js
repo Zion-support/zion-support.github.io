@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'fast_front_promoter function executed successfully',
         timestamp: timestamp,
         function: 'fast_front_promoter'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ fast_front_promoter function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'fast_front_promoter function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

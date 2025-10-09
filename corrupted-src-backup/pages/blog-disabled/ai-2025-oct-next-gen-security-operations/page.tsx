@@ -6,9 +6,8 @@ impo, r, t {
   Lo, c, k,
   Shie, l, d,
   Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function NextGenSecurityOperations20, 2, 5() {  
   return (
     <>
@@ -91,7 +90,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg">
                 Schedule Your Security Assessment
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
-  );
+  )
 }
   </div>  </div>
 </article>

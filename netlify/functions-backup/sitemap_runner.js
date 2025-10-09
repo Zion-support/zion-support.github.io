@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastGenerated: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in sitemap_runner: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'sitemap_runner'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'sitemap_runner',' source: event.source || 'unknown', sitemap: {' status: 'active', pages: 0,
         lastGenerated: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in sitemap_runner: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'sitemap_runner' }) }; } };'

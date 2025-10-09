@@ -1,18 +1,17 @@
-'use client';
-import React, { memo } from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
-
+'use client'
+import React, { memo } from 'react'
+import { LucideIcon, ArrowRight } from 'lucide-react'
 interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon: LucideIcon | string;
-  price: string;
-  features: string[];
-  technologies: string[];
-  category: string;
-  href: string;
-  color?: string;
-  popular?: boolean;
+  title: string
+  description: string
+  icon: LucideIcon | string
+  price: string
+  features: string[]
+  technologies: string[]
+  category: string
+  href: string
+  color?: string
+  popular?: boolean
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = memo(({
@@ -38,8 +37,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
     teal: 'text-teal-400 hover:text-teal-300',
     orange: 'text-orange-400 hover:text-orange-300',
     yellow: 'text-yellow-400 hover:text-yellow-300'
-  };
-
+  }
   const bgColorClasses = {
     cyan: 'bg-cyan-400/20',
     pink: 'bg-pink-400/20',
@@ -51,8 +49,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
     teal: 'bg-teal-400/20',
     orange: 'bg-orange-400/20',
     yellow: 'bg-yellow-400/20'
-  };
-
+  }
   return (
     <article 
       className="quantum-card p-4 sm:p-6 energy-pulse group relative"
@@ -132,9 +129,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
         <ArrowRight className="w-4 h-4 ml-1" />
       </a>
     </article>
-  );
-});
-
-ServiceCard.displayName = 'ServiceCard';
-
-export default ServiceCard;
+  )
+})
+ServiceCard.displayName = 'ServiceCard'
+export default ServiceCard

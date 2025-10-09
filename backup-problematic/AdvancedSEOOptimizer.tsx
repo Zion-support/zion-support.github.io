@@ -1,36 +1,34 @@
-'use client';
-
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React, { useEffect, useCallback, useRef } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOData {
- title: string;
- description: string;
- keywords: string[];
- canonicalUrl: string;
- ogTitle?: string;
- ogDescription?: string;
- ogImage?: string;
- ogType?: string;
- twitterCard?: string;
- twitterTitle?: string;
- twitterDescription?: string;
- twitterImage?: string;
- structuredData?: Record<string, unknown>;
- robots?: string;
- author?: string;
- publishedTime?: string;
- modifiedTime?: string;
- section?: string;
- tags?: string[];
+ title: string
+ description: string
+ keywords: string[]
+ canonicalUrl: string
+ ogTitle?: string
+ ogDescription?: string
+ ogImage?: string
+ ogType?: string
+ twitterCard?: string
+ twitterTitle?: string
+ twitterDescription?: string
+ twitterImage?: string
+ structuredData?: Record<string, unknown>
+ robots?: string
+ author?: string
+ publishedTime?: string
+ modifiedTime?: string
+ section?: string
+ tags?: string[]
 }
 
 interface AdvancedSEOOptimizerProps {
- seoData: SEOData;
- enableStructuredData?: boolean;
- enableOpenGraph?: boolean;
- enableTwitterCards?: boolean;
- enableSchemaMarkup?: boolean;
+ seoData: SEOData
+ enableStructuredData?: boolean
+ enableOpenGraph?: boolean
+ enableTwitterCards?: boolean
+ enableSchemaMarkup?: boolean
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
@@ -40,10 +38,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  enableTwitterCards = true,
  enableSchemaMarkup = true,
 }) => {
- const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+ const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
  const generateStructuredData = useCallback(() => {
- if (!enableStructuredData || !seoData.structuredData) return null;
-
+ if (!enableStructuredData || !seoData.structuredData) return null
  const baseStructuredData = {
  '@context': 'https://schema.org',
  '@type': 'Organization',
@@ -71,14 +68,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  'https://github.com/Zion-Holdings',
  ],
  ...seoData.structuredData,
- };
-
- return baseStructuredData;
- }, [seoData, enableStructuredData]);
-
+ }
+ return baseStructuredData
+ }, [seoData, enableStructuredData])
  const generateBreadcrumbStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null;
-
+ if (!enableSchemaMarkup) return null
  return {
  '@context': 'https://schema.org',
  '@type': 'BreadcrumbList',
@@ -96,12 +90,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  item: seoData.canonicalUrl,
  },
  ],
- };
- }, [seoData, enableSchemaMarkup]);
-
+ }
+ }, [seoData, enableSchemaMarkup])
  const generateFAQStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null;
-
+ if (!enableSchemaMarkup) return null
  const faqData = {
  '@context': 'https://schema.org',
  '@type': 'FAQPage',
@@ -131,101 +123,91 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  },
  },
  ],
- };
-
- return faqData;
- }, [enableSchemaMarkup]);
-
- const _structuredData = generateStructuredData();
- const _breadcrumbData = generateBreadcrumbStructuredData();
- const _faqData = generateFAQStructuredData();
-
+ }
+ return faqData
+ }, [enableSchemaMarkup])
+ const _structuredData = generateStructuredData()
+ const _breadcrumbData = generateBreadcrumbStructuredData()
+ const _faqData = generateFAQStructuredData()
  useEffect(() => {
  // Update page title and meta description for better SEO
  if (typeof document !== 'undefined') {
- document.title = seoData.title;
- 
- let _metaDescription = document.querySelector('meta[name="description"]');
+ document.title = seoData.title
+ let _metaDescription = document.querySelector('meta[name="description"]')
  if (!metaDescription) {
- metaDescription = document.createElement('meta');
- metaDescription.setAttribute('name', 'description');
- document.head.appendChild(metaDescription);
+ metaDescription = document.createElement('meta')
+ metaDescription.setAttribute('name', 'description')
+ document.head.appendChild(metaDescription)
  }
- metaDescription.setAttribute('content', seoData.description);
-
+ metaDescription.setAttribute('content', seoData.description)
  // Update canonical URL
- let _canonicalLink = document.querySelector('link[rel="canonical"]');
+ let _canonicalLink = document.querySelector('link[rel="canonical"]')
  if (!canonicalLink) {
- canonicalLink = document.createElement('link');
- canonicalLink.setAttribute('rel', 'canonical');
- document.head.appendChild(canonicalLink);
+ canonicalLink = document.createElement('link')
+ canonicalLink.setAttribute('rel', 'canonical')
+ document.head.appendChild(canonicalLink)
  }
- canonicalLink.setAttribute('href', seoData.canonicalUrl);
+ canonicalLink.setAttribute('href', seoData.canonicalUrl)
  }
- }, [seoData]);
-
+ }, [seoData])
  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
- // const metaTag = document.createElement('meta');
- // metaTag.setAttribute(attribute, name);
- // metaTag.content = content;
- // document.head.appendChild(metaTag);
- // };
-
+ // const metaTag = document.createElement('meta')
+ // metaTag.setAttribute(attribute, name)
+ // metaTag.content = content
+ // document.head.appendChild(metaTag)
+ // }
  // const _updateCanonicalUrl = (url: string) => {
- // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+ // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
  // 
  // if (canonicalLink) {
- // canonicalLink.href = url;
+ // canonicalLink.href = url
  // } else {
- // canonicalLink = document.createElement('link');
- // canonicalLink.rel = 'canonical';
- // canonicalLink.href = url;
- // document.head.appendChild(canonicalLink);
+ // canonicalLink = document.createElement('link')
+ // canonicalLink.rel = 'canonical'
+ // canonicalLink.href = url
+ // document.head.appendChild(canonicalLink)
  // }
  // };origin/
 
  // const _addStructuredData = (data: Record<string, unknown>) => {
  // // Remove existing structured data
  // // if (structuredDataRef.current) {
- // // structuredDataRef.current.remove();
+ // // structuredDataRef.current.remove()
  // // }
  // 
- // const script = document.createElement('script');
- // script.type = 'application/ld+json';
- // script.textContent = JSON.stringify(data);
- // document.head.appendChild(script);
- // };
-
+ // const script = document.createElement('script')
+ // script.type = 'application/ld+json'
+ // script.textContent = JSON.stringify(data)
+ // document.head.appendChild(script)
+ // }
  // Add new structured data
- const _script = document.createElement('script');
- script.type = 'application/ld+json';
- script.textContent = JSON.stringify(data);
- script.id = 'structured-data';
- document.head.appendChild(script);
- structuredDataRef.current = script;
- };
-
+ const _script = document.createElement('script')
+ script.type = 'application/ld+json'
+ script.textContent = JSON.stringify(data)
+ script.id = 'structured-data'
+ document.head.appendChild(script)
+ structuredDataRef.current = script
+ }
  const _trackPageView = (config: SEOData) => {
  if (typeof window !== 'undefined' && 'gtag' in window) {
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
  page_title: config.title,
  page_location: config.canonicalUrl,
- });
+ })
  }
- };
-
+ }
  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
  window.addEventListener('load', () => {
- const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
  if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
  (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
  event_category: 'Performance',
  event_label: 'Page Load',
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
- });
+ })
  }
- });
+ })
  }
  };origin/
 
@@ -302,7 +284,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  <link rel="dns-prefetch" href="//www.google-analytics.com" />
  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
  </Helmet>
- );
-};
-
-export default AdvancedSEOOptimizer;
+ )
+}
+export default AdvancedSEOOptimizer

@@ -20,7 +20,7 @@ impo, r, t {
   Z, a, p,
   BarChar, t, 3,
   BookOp, e, n,
-} fr, o, m 'luci, d, e-rea, c, t';
+} fr, o, m 'luci, d, e-rea, c, t'
 const October2025OperationalExcellenceBanne, r = () => { 
   return (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
@@ -318,6 +318,6 @@ const October2025OperationalExcellenceBanne, r = () => {
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025OperationalExcellenceBanner;
+  )
+}
+export default October2025OperationalExcellenceBanner

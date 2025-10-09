@@ -1,5 +1,5 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n"
 const September30MegaBanner202, 5 = () => {
   const breakthroughArticle, s = [
     {",
@@ -248,6 +248,6 @@ const September30MegaBanner202, 5 = () => {
         </div>
       </div>
     </moti, o, n.d, i, v>
-  );
-};
-export default September30MegaBanner2025;
+  )
+}
+export default September30MegaBanner2025

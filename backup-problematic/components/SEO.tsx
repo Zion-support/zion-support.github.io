@@ -1,10 +1,9 @@
-import React from 'react';
-
+import React from 'react'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  children?: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string[]
+  children?: React.ReactNode
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -20,7 +19,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords.join(', ')} />
       {children}
     </>
-  );
-};
-
-export default SEO;
+  )
+}
+export default SEO

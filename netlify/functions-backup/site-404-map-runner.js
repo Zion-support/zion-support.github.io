@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastMap: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in site-404-map-runner: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'site-404-map-runner'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'site-404-map-runner',' source: event.source || 'unknown', mapping: {' status: 'active', pagesMapped: 0,
         lastMap: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in site-404-map-runner: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'site-404-map-runner' }) }; } };'

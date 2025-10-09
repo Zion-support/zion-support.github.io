@@ -1,36 +1,34 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 export class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-
+    this.setState({ error, errorInfo })
     // Log error to monitoring service
     //     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false,
-      });
+      })
     }
   }
 
@@ -47,11 +45,11 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
             </details>
           </div>
         )
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary

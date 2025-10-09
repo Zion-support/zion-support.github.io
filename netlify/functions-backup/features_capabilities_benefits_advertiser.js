@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {try {
 //     // console.log('🤖 features_capabilities_benefits_advertiser function triggered')
-    );
+    )
     // Basic implementation - replace with actual logic
     const timestamp = new Date().toISOString()}
     return {
@@ -10,8 +10,8 @@ exports.handler = async function (event, context) {try {
           'features_capabilities_benefits_advertiser function executed successfully',
         timestamp: timestamp,
         function: 'features_capabilities_benefits_advertiser'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ features_capabilities_benefits_advertiser function failed: ',
       error)
     )}
@@ -21,8 +21,8 @@ exports.handler = async function (event, context) {try {
         error: 'features_capabilities_benefits_advertiser function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

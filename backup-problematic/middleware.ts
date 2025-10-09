@@ -5,8 +5,7 @@
  */
 
 export function middleware(request: NextRequest) {
-  const _response = NextResponse.next();
-
+  const _response = NextResponse.next()
   // Security Headers
   const securityHeaders = {
     // Prevent XSS attacks
@@ -51,27 +50,25 @@ export function middleware(request: NextRequest) {
     'X-DNS-Prefetch-Control': 'on',
     'X-Download-Options': 'noopen',
     'X-Permitted-Cross-Domain-Policies': 'none',
-  };
-
+  }
   // Apply all security headers
   Object.entries(securityHeaders).forEach(([key, value]) => {
-    response.headers.set(key, value);
-  });
-
+    response.headers.set(key, value)
+  })
   // CORS headers for API routes
   if (request.nextUrl.pathname.startsWith('/api/')) {
-    response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    response.headers.set('Access-Control-Max-Age', '86400');
+    response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*')
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    response.headers.set('Access-Control-Max-Age', '86400')
   }
 
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
-    return new NextResponse(null, { status: 204, headers: response.headers });
+    return new NextResponse(null, { status: 204, headers: response.headers })
   }
 
-  return response;
+  return response
 }
 
 export const config = {
@@ -85,4 +82,4 @@ export const config = {
      */
     '/((?!_next/static|_next/image|favicon.ico|public/).*)',
   ],
-};
+}

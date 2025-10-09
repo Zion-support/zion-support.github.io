@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import https from 'https';
-import { execSync } from 'child_process';
-
+import https from 'https'
+import { execSync } from 'child_process'
 // GitHub API configuration
 
 function makeGitHubRequest(endpoint) {
@@ -16,44 +15,41 @@ function makeGitHubRequest(endpoint) {
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json'
       }
-    };
-
+    }
     const req = https.request(options, (res) => {
       res.on('data', (chunk) => {
-        data += chunk;
-      });
+        data += chunk
+      })
       res.on('end', () => {
         try {
-          resolve(jsonData);
+          resolve(jsonData)
         } catch (error) {
-          reject(new Error(`Failed to parse JSON: ${error.message}`));
+          reject(new Error(`Failed to parse JSON: ${error.message}`))
         }
-      });
-    });
-
+      })
+    })
     req.on('error', (error) => {
-      reject(error);
-    });
-
-    req.end();
-  });
+      reject(error)
+    })
+    req.end()
+  })
 }
 
 async function getOpenPRs() {
   try {
-    return prs;
+    return prs
   } catch (error) {
 
-    return [];
+    return []
   }
 }
 
 async function getPRDetails(prNumber) {
   try {
-    return prDetails;
+    return prDetails
   } catch (error) {
 
-    return null;
+    return null
   }
 }
 
@@ -63,15 +59,15 @@ function runGitCommand(command) {
       cwd: '/workspace', 
       encoding: 'utf8',
       stdio: 'pipe'
-    });
-    return { success: true, output: result };
+    })
+    return { success: true, output: result }
   } catch (error) {
     return { 
       success: false, 
       error: error.message,
       output: error.stdout ? error.stdout.toString() : '',
       stderr: error.stderr ? error.stderr.toString() : ''
-    };
+    }
   }
 }
 
@@ -82,7 +78,7 @@ async function mergePRWithGit(pr) {
     // Get detailed PR info
     if (!prDetails) {
 
-      return false;
+      return false
     }
 
     // Check if PR is mergeable
@@ -94,7 +90,7 @@ async function mergePRWithGit(pr) {
 
     if (!fetchResult.success) {
 
-      return false;
+      return false
     }
 
     // Try to merge the branch
@@ -102,7 +98,7 @@ async function mergePRWithGit(pr) {
     
     if (mergeResult.success) {
 
-      return true;
+      return true
     } else {
       // If merge failed due to conflicts, try to resolve them
 
@@ -112,29 +108,28 @@ async function mergePRWithGit(pr) {
         // Use our conflict resolution script
         if (conflictResult.success) {
           // Add resolved files
-          runGitCommand(`git add .`);
-          
+          runGitCommand(`git add .`)
           // Commit the merge
           if (commitResult.success) {
 
-            return true;
+            return true
           } else {
 
-            return false;
+            return false
           }
         } else {
 
-          return false;
+          return false
         }
       } else {
 
-        return false;
+        return false
       }
     }
 
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -144,7 +139,7 @@ async function mergeAllPRsWithGit() {
     
     if (prs.length === 0) {
 
-      return;
+      return
     }
 
 
@@ -152,20 +147,20 @@ async function mergeAllPRsWithGit() {
 
     if (mainPRs.length === 0) {
 
-      return;
+      return
     }
 
 
     // Process PRs one by one
     for (const pr of mainPRs) {
       if (success) {
-        successCount++;
+        successCount++
       } else {
-        failCount++;
+        failCount++
       }
       
       // Add a small delay between merges
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000))
     }
 
 
@@ -180,8 +175,8 @@ async function mergeAllPRsWithGit() {
 // Run the merge process
 mergeAllPRsWithGit().then(() => {
 
-  process.exit(0);
+  process.exit(0)
 }).catch(error => {
 
-  process.exit(1);
-});
+  process.exit(1)
+})

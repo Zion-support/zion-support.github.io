@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react'
 interface DashboardStats {
-  totalUsers: number;
-  activeSessions: number;
-  cacheHitRate: number;
-  responseTime: number;
+  totalUsers: number
+  activeSessions: number
+  cacheHitRate: number
+  responseTime: number
 }
 
-export default AdvancedDashboard;
+export default AdvancedDashboard

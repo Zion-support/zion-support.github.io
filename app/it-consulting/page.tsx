@@ -1,12 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
-import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react'
+import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
   return (
     <>
       <Helmet>
@@ -76,10 +74,9 @@ import Footer from '../components/Footer';
         
         <Footer />
     </>
-  );
-};
-
-export default ITConsultingPage;
+  )
+}
+export default ITConsultingPage
   const services = [
     {
       icon: Brain,
@@ -108,8 +105,7 @@ export default ITConsultingPage;
       description: 'Guide organizations through complete digital transformation',
       features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training Programs']
     }
-  ];
-
+  ]
   const processSteps = [
       step: '01',
       title: 'Discovery & Assessment',

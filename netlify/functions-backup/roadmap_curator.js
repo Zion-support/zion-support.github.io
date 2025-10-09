@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'roadmap_curator function executed successfully',
         timestamp: timestamp,
         function: 'roadmap_curator'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ roadmap_curator function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'roadmap_curator function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

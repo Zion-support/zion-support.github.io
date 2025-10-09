@@ -22,6 +22,5 @@ export const metaTags = {
       'Professional web development services with cutting-edge technology and innovative solutions.',
     image: 'https://bolt.new.zion.app/og-image.jpg',
   },
-};
-
-export default metaTags;
+}
+export default metaTags

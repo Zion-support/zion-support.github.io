@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 interface AdvancedAnalyticsProps {
-  enableConversionTracking?: boolean;
-  enablePerformanceTracking?: boolean;
-  enableErrorTracking?: boolean;
+  enableConversionTracking?: boolean
+  enablePerformanceTracking?: boolean
+  enableErrorTracking?: boolean
 }
 
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
@@ -29,8 +28,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     conversions: 0,
     performance: 0,
     errors: 0,
-  });
-
+  })
   useEffect(() => {
     // Initialize analytics tracking
     if (enableConversionTracking) {
@@ -44,8 +42,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     if (enableErrorTracking) {
       // Track errors
       //       }
-  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
-
+  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking])
   return (
     <div className="advanced-analytics">
       <h2>Advanced Analytics Dashboard</h2>
@@ -68,7 +65,6 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default AdvancedAnalytics;
+  )
+}
+export default AdvancedAnalytics

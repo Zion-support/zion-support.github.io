@@ -1,6 +1,5 @@
-impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function RealtimePersonalizationEngine20, 2, 5() { 
   return (
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
@@ -353,8 +352,8 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 Start Your Personalization Journey"
                 <Target className="ml-2 h-5 w-5 ">
                 <Target className="ml-2 h-5 w-5" />
-  );
-};
+  )
+}
   </div>
   </div>
   </div>

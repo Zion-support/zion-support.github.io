@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastExperiment: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in innovation-lab: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'innovation-lab'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'innovation-lab',' source: event.source || 'unknown', innovation: {' status: 'active', experiments: 0,
         lastExperiment: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in innovation-lab: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'innovation-lab' }) }; } };'

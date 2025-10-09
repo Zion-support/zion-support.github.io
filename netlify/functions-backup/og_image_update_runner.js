@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'og_image_update_runner function executed successfully',
         timestamp: timestamp,
         function: 'og_image_update_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ og_image_update_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'og_image_update_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

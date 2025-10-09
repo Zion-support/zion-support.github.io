@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'component_size_report function executed successfully',
         timestamp: timestamp,
         function: 'component_size_report'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ component_size_report function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'component_size_report function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

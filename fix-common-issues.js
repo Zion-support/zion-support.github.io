@@ -1,37 +1,31 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 // Function to fix console statements
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production
   content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
-    return `if (process.env.NODE_ENV === 'development') console.${method}(`;
-  });
-
+    return `if (process.env.NODE_ENV === 'development') console.${method}(`
+  })
   // Add closing parenthesis for the if statement
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
     match => {
-      return match.replace(/\);$/, '); }');
+      return match.replace(/\);$/, '); }')
     }
-  );
-
-  return content;
+  )
+  return content
 }
 
 // Function to fix unused variables by prefixing with underscore
 function fixUnusedVariables(content) {
   // Fix unused function parameters
-  content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any');
-
+  content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any')
   // Fix unused variables in function parameters
-  content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any)');
-
-  return content;
+  content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any)')
+  return content
 }
 
 // Function to fix specific files
@@ -39,16 +33,14 @@ function fixFile(filePath) {
   try {
     if (!fs.existsSync(fullPath)) {
 
-      return;
+      return
     }
 
 
     // Apply fixes
-    content = fixConsoleStatements(content);
-    content = fixUnusedVariables(content);
-
-    fs.writeFileSync(fullPath, content);
-
+    content = fixConsoleStatements(content)
+    content = fixUnusedVariables(content)
+    fs.writeFileSync(fullPath, content)
   } catch (error) {
 
   }
@@ -82,7 +74,6 @@ const filesToFix = [
   'app/utils/errorReporter.ts',
   'app/utils/logger.ts',
   'app/utils/monitoring.ts',
-];
-
+]
 // Fix all files
-filesToFix.forEach(fixFile);
+filesToFix.forEach(fixFile)

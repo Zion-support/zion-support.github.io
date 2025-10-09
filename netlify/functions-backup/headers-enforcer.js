@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastEnforcement: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in headers-enforcer: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'headers-enforcer'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'headers-enforcer',' source: event.source || 'unknown', enforcement: {' status: 'active', headersEnforced: 0,
         lastEnforcement: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in headers-enforcer: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'headers-enforcer' }) }; } };'

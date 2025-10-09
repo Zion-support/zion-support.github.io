@@ -1,5 +1,4 @@
-'use client';
-import React from 'react';
-import { ArrowRight, CheckCircle, Shield, Clock, Users, Settings, BarChart, Zap, Globe, Phone, Mail, Monitor } from 'lucide-react';
-
-export default ManagedITPage;
+'use client'
+import React from 'react'
+import { ArrowRight, CheckCircle, Shield, Clock, Users, Settings, BarChart, Zap, Globe, Phone, Mail, Monitor } from 'lucide-react'
+export default ManagedITPage

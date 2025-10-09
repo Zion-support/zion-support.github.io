@@ -1,10 +1,10 @@
-import React from 'react';
-impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
+import React from 'react'
+impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6'
 interface NewServicesPromoBannerProp, s { 
-  varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
-  showCou, n, t?: number;
-  featuredOn, l, y?: boolean;
-  classNa, m, e ?  : string;
+  varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d'
+  showCou, n, t?: number
+  featuredOn, l, y?: boolean
+  classNa, m, e ?  : string
  }
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
@@ -69,7 +69,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
             </Li, n, k>
           </div>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
   }
   if (varia, n, t = == 'prem, i, u, m') {
     return (
@@ -97,7 +97,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
             </div>
           ))}
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
   }
   if (varia, n, t = == 'g, r, i, d') {
     return (
@@ -124,7 +124,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
             </L, i, n, k>
           ))}
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
   }
   // Default variant return (
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
@@ -145,6 +145,6 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
         ))}
       </div>
     </div>
-  );
-};
-export default NewServicesPromoBanner;
+  )
+}
+export default NewServicesPromoBanner

@@ -1,15 +1,15 @@
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
+  slug: string
+  title: string
+  description: string
+  content: string
+  author: string
+  date: string
+  category: string
+  tags: string[]
+  featured: boolean
+  readTime: string
+  image?: string
 }
 
 export const blogPosts: BlogPost[] = [
@@ -132,4 +132,4 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     readTime: '10 min read',
     image: '/images/enterprise-ai-governance-2025.jpg',
   },
-];
+]

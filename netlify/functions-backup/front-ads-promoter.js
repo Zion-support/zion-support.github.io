@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastPromotion: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in front-ads-promoter: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'front-ads-promoter'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'front-ads-promoter',' source: event.source || 'unknown', promotion: {' status: 'active', adsPromoted: 0,
         lastPromotion: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-ads-promoter: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'front-ads-promoter' }) }; } };'

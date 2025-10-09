@@ -1,13 +1,12 @@
-import React from 'react';
-
+import React from 'react'
 interface AdvertisingBannerProps {
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaUrl: string;
-  imageUrl?: string;
-  backgroundColor?: string;
-  textColor?: string;
+  title: string
+  description: string
+  ctaText: string
+  ctaUrl: string
+  imageUrl?: string
+  backgroundColor?: string
+  textColor?: string
 }
 
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
@@ -63,17 +62,16 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
             transition: 'background-color 0.2s',
           }}
           onMouseOver={e => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
           }}
           onMouseOut={e => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'
           }}
         >
           {ctaText}
         </a>
       </div>
     </div>
-  );
-};
-
-export default AdvertisingBanner;
+  )
+}
+export default AdvertisingBanner

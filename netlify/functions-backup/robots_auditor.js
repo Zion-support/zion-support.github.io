@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'robots_auditor function executed successfully',
         timestamp: timestamp,
         function: 'robots_auditor'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ robots_auditor function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'robots_auditor function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-
+import { execSync } from 'child_process'
+import fs from 'fs'
 // // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-//     return { success: true, result };
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
+//     return { success: true, result }
   } catch (error) {
-//     return { success: false, error: error.message };
+//     return { success: false, error: error.message }
   }
 }
 
@@ -19,10 +18,10 @@ function branchExists(branchName) {
     execSync(
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       { stdio: 'pipe' }
-    );
-    return true;
+    )
+    return true
   } catch {
-    return false;
+    return false
   }
 }
 
@@ -60,53 +59,48 @@ const allPRs = [
     priority: 'high',
     description: 'Remove unused PerformanceOptimizer import',
   },
-];
-
+]
 //Ensure we're on main branch
-// safeGitCommand('git checkout main', 'Switch to main branch');
-safeGitCommand('git pull origin main', 'Pull latest changes from main');
-
-// let mergedCount = 0;
-// const skippedCount = 0;
-
+// safeGitCommand('git checkout main', 'Switch to main branch')
+safeGitCommand('git pull origin main', 'Pull latest changes from main')
+// let mergedCount = 0
+// const skippedCount = 0
 //Process each PR
 for (const pr of allPRs) {
 //   // console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
-  );
+  )
 //   //Check if branch exists
   if (!branchExists(pr.branch)) {
-//     notFoundCount++;
+//     notFoundCount++
     results.push({
       pr: pr.number,
       title: pr.title,
       status: 'not_found',
       branch: pr.branch,
       priority: pr.priority,
-    });
-    continue;
+    })
+    continue
   }
 
 //   //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
     `Merge ${pr.branch}`
-  );
-
+  )
   if (mergeResult.success) {
-    mergedCount++;
+    mergedCount++
 //     results.push({
       pr: pr.number,
       title: pr.title,
       status: 'merged',
       branch: pr.branch,
       priority: pr.priority,
-    });
+    })
   } else {
-    conflictCount++;
+    conflictCount++
 //     //Try to abort the merge if there was a conflict
-    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
-
+    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`)
     results.push({
       pr: pr.number,
       title: pr.title,
@@ -114,7 +108,7 @@ for (const pr of allPRs) {
       branch: pr.branch,
       priority: pr.priority,
       error: mergeResult.error,
-    });
+    })
   }
 }
 
@@ -122,18 +116,17 @@ for (const pr of allPRs) {
 // const typeCheck = safeGitCommand(
   'pnpm run type-check',
   'TypeScript type checking'
-);
+)
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'
-);
-
+)
 //Push changes if any were merged
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand(
     'git push origin main',
     'Push changes to main'
-  );
+  )
   if (pushResult.success) {
 //     } else {
 //     }
@@ -168,14 +161,12 @@ const finalReport = {
     status: 'clean',
     lastCommit: execSync('git log --oneline -1', { encoding: 'utf8' }).trim(),
   },
-};
-
+}
 //Save detailed final report
 fs.writeFileSync(
   'final-pr-merge-report.json',
   JSON.stringify(finalReport, null, 2)
-);
-
+)
 // // // // // // // // // // // if (finalReport.systemChecks.allPassed) {
 //   } else {
 //   }

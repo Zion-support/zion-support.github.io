@@ -1,18 +1,16 @@
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
-    const { markdown, targetLanguage = 'en' } = req.body || {};
-
+    const { markdown, targetLanguage = 'en' } = req.body || {}
     if (!markdown) {
-      return res.status(400).json({ error: 'Markdown content required' });
+      return res.status(400).json({ error: 'Markdown content required' })
     }
 
-    const _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
+    const _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
@@ -26,12 +24,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       ],
       temperature: 0.2,
-    });
-
-    //     const translated = completion.choices?.[0]?.message?.content?.trim() || '';
-
-    return res.status(200).json({ translated });
+    })
+    //     const translated = completion.choices?.[0]?.message?.content?.trim() || ''
+    return res.status(200).json({ translated })
   } catch (error: unknown) {
-    //     return res.status(500).json({ error: 'Translation failed' });
+    //     return res.status(500).json({ error: 'Translation failed' })
   }
 }

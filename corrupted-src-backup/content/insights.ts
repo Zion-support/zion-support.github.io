@@ -1,10 +1,10 @@
 export interface Insight {
-  id: string;
-  title: string;
-  summary: string;
-  category: string;
+  id: string
+  title: string
+  summary: string
+  category: string
   date: string; // ISO date string
-  readMinutes: number;
+  readMinutes: number
 }
 
 export const insights: Insight[] = [
@@ -35,4 +35,4 @@ export const insights: Insight[] = [
     date: '2025-10-03',
     readMinutes: 10,
   },
-];
+]

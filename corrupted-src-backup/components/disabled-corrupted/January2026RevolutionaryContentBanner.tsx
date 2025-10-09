@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const January2026RevolutionaryContentBanne, r: React.FC = () => {
   const revolutionaryConten, t = [
     {
@@ -175,6 +175,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default January2026RevolutionaryContentBanner;
+  )
+}
+export default January2026RevolutionaryContentBanner

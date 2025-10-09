@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'readme_advertiser function executed successfully',
         timestamp: timestamp,
         function: 'readme_advertiser'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ readme_advertiser function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'readme_advertiser function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

@@ -1,16 +1,15 @@
-'use client';
-import React, { useState } from 'react';
-import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react'
 interface FuturisticServiceCardProps {
-  title: string;
-  description: string;
-  price: string;
-  features: string[];
-  icon: React.ComponentType<any>;
-  color: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
-  href: string;
-  popular?: boolean;
+  title: string
+  description: string
+  price: string
+  features: string[]
+  icon: React.ComponentType<any>
+  color: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange'
+  href: string
+  popular?: boolean
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
@@ -23,8 +22,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   href,
   popular = false
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
+  const [isHovered, setIsHovered] = useState(false)
   const colorClasses = {
     purple: {
       gradient: 'from-purple-500 to-cyan-500',
@@ -68,10 +66,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
       hover: 'hover:border-orange-500/50',
       shadow: 'shadow-orange-500/20'
     }
-  };
-
-  const currentColor = colorClasses[color];
-
+  }
+  const currentColor = colorClasses[color]
   return (
     <div
       className={`relative group cursor-pointer transition-all duration-500 transform ${
@@ -167,7 +163,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       ></div>
     </div>
-  );
-};
-
-export default FuturisticServiceCard;
+  )
+}
+export default FuturisticServiceCard

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         metrics: ['page-load-time', 'core-web-vitals', 'resource-optimization'])
         performanceScore: 92}
       }),
-    };
-//     return result;
+    }
+//     return result
 //   } catch (error) {// console.error('❌ performance-monitoring-runner failed: ') error
       }
     return {
@@ -21,8 +21,8 @@ exports.handler = async function (event, context) {try {
         error: 'Performance monitoring runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

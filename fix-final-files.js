@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 //Files that need to be fixed
 const filesToFix = [
   'src/components/SiteHeader.tsx',
@@ -23,15 +23,15 @@ const filesToFix = [
   'src/router.tsx',
   'src/types/index.ts',
   'src/types/next-stubs.d.ts',
-];
+]
 function createBasicComponent(filePath) {
-  //   const isTsx = fileName.endsWith('.tsx');
-  //   const isTs = fileName.endsWith('.ts');
+  //   const isTsx = fileName.endsWith('.tsx')
+  //   const isTs = fileName.endsWith('.ts')
   if (isTsx) {
-    return `import React from 'react';
+    return `import React from 'react'
 interface ${componentName}Props {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
 const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
@@ -46,10 +46,10 @@ const ${componentName}: React.FC<${componentName}Props> = ({
         </div>
       )}
     </div>
-  );
-};
-export default ${componentName};
-`;
+  )
+}
+export default ${componentName}
+`
   } else if (isTs) {
     return `//${componentName} - TypeScript definitions and utilities
 export interface ${componentName}Config {
@@ -57,25 +57,25 @@ export interface ${componentName}Config {
 }
 export const default${componentName}Config: ${componentName}Config = {
   //Default configuration
-};
+}
 export default {
   default${componentName}Config
-};
-`;
+}
+`
   } else {
     return `//${componentName} - JavaScript module
 export const ${componentName} = {
   //Module implementation
-};
-export default ${componentName};
-`;
+}
+export default ${componentName}
+`
   }
 }
 function fixFile(filePath) {
   try {
-    //     const fullPath = path.join(__dirname, filePath);
+    //     const fullPath = path.join(__dirname, filePath)
     if (!fs.existsSync(fullPath)) {
-      //       return;
+      //       return
     }
     // Check if file has severe corruption
     if (
@@ -89,14 +89,14 @@ function fixFile(filePath) {
       content.includes('const,') ||
       (content.includes('{') && content.includes('expected'))
     ) {
-      //       //       const newContent = createBasicComponent(filePath);
-      fs.writeFileSync(fullPath, newContent);
+      //       //       const newContent = createBasicComponent(filePath)
+      fs.writeFileSync(fullPath, newContent)
       //       } else {
       //       }
   } catch (error) {
     //     }
 }
-// filesToFix.forEach(fixFile);
+// filesToFix.forEach(fixFile)
 // 
 
 }

@@ -11,5 +11,5 @@ export default function EnterpriseSolutionsBanner() {
         </div>
       </div>
     </div>
-  );
+  )
 }

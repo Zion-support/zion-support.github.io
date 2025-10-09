@@ -1,5 +1,4 @@
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => { 
   retu, r, n (
         <meta, nam, e = 'description'

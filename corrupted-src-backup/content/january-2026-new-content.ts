@@ -104,6 +104,5 @@ export const january2026NewContent = {
       duration: '6 months',
     },
   ],
-};
-
-export default january2026NewContent;
+}
+export default january2026NewContent

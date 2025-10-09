@@ -140,7 +140,7 @@ const October2025FeaturedContentBanne, r = () => {
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`}
                  />
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* Bottom, CT, A */}
@@ -191,6 +191,6 @@ const October2025FeaturedContentBanne, r = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default October2025FeaturedContentBanner;
+  )
+}
+export default October2025FeaturedContentBanner

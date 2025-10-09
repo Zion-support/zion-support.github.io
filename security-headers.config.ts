@@ -44,6 +44,5 @@ export const securityHeaders = [
       "frame-ancestors 'self'",
     ].join('; '),
   },
-];
-
-export default securityHeaders;
+]
+export default securityHeaders

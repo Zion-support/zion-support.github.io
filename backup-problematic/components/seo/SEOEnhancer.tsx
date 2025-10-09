@@ -1,7 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 interface SEOEnhancerProps {
-  className?: string;
+  className?: string
 }
 
 const SEOEnhancer = React.memo(function SEOEnhancer({ className = '' }: SEOEnhancerProps) {
@@ -10,7 +9,6 @@ const SEOEnhancer = React.memo(function SEOEnhancer({ className = '' }: SEOEnhan
       <h3 className="text-lg font-semibold text-blue-800">SEOEnhancer</h3>
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-
-export default SEOEnhancer;
+  )
+})
+export default SEOEnhancer

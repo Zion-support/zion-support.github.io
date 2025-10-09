@@ -1,10 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 function getRelativePath(fromPath, toPath) {
-  return relative.startsWith('.') ? relative : './' + relative;
+  return relative.startsWith('.') ? relative : './' + relative
 }
 
 function processFile(filePath) {
@@ -14,11 +12,11 @@ function processFile(filePath) {
 
 
     if (isInBlog || isInGuides || isInPages) {
-      utilsPath = '../../utils/';
-      typesPath = '../../types/';
+      utilsPath = '../../utils/'
+      typesPath = '../../types/'
     } else if (isInComponents) {
-      utilsPath = '../utils/';
-      typesPath = '../types/';
+      utilsPath = '../utils/'
+      typesPath = '../types/'
     }
 
     // Define replacements with dynamic paths
@@ -63,24 +61,21 @@ function processFile(filePath) {
         pattern: /'use client';/g,
         replacement: "// 'use client'; // Removed for Vite compatibility",
       },
-    ];
-
+    ]
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
+        content = content.replace(pattern, replacement)
+        modified = true
       }
-    });
-
+    })
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      return true
     }
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -89,15 +84,14 @@ function processDirectory(dirPath) {
   items.forEach(item => {
 
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
+      totalFixed += processDirectory(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++
       }
     }
-  });
-
-  return totalFixed;
+  })
+  return totalFixed
 }
 
 // Process the app directory

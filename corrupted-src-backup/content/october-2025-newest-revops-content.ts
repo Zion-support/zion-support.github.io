@@ -1,26 +1,26 @@
 export interface RevOpsContent {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  featured: boolean;
-  content?: string;
-  author?: string;
-  valueProposition?: string;
-  highlights: string[];
+  id: string
+  title: string
+  description: string
+  category: string
+  date: string
+  readTime: string
+  tags: string[]
+  featured: boolean
+  content?: string
+  author?: string
+  valueProposition?: string
+  highlights: string[]
   metrics: {
-    [key: string]: string;
-  };
-  icon?: string;
-  gradient?: string;
-  breaking?: boolean;
+    [key: string]: string
+  }
+  icon?: string
+  gradient?: string
+  breaking?: boolean
   cta?: {
-    text: string;
-    link: string;
-  };
+    text: string
+    link: string
+  }
 }
 
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
@@ -92,16 +92,13 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       roi: '704%',
     },
   },
-];
-
+]
 export const getFeaturedRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.featured);
-};
-
+  return octoberNewestRevOpsContent.filter(content => content.featured)
+}
 export const getBreakingRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'));
-};
-
+  return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'))
+}
 export const getAllRevOpsContent = () => {
-  return octoberNewestRevOpsContent;
-};
+  return octoberNewestRevOpsContent
+}

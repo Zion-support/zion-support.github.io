@@ -1,44 +1,44 @@
-// const path = require('path');
+// const path = require('path')
 // Fix setupTests.tsx - remove extra closing brace
 try {
-//   const setupTestsPath = './app/setupTests.tsx';
+//   const setupTestsPath = './app/setupTests.tsx'
   // Remove the extra }); at line 34
-  content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
-  fs.writeFileSync(setupTestsPath, content);
+  content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame')
+  fs.writeFileSync(setupTestsPath, content)
 //   } catch (err) {
 //   }
 // Fix enhancedErrorHandler.ts - fix optional chaining
 try {
-//   const errorHandlerPath = './app/utils/enhancedErrorHandler.ts';
+//   const errorHandlerPath = './app/utils/enhancedErrorHandler.ts'
   // Fix the optional chaining syntax
-  content = content.replace(/target\?\['src'\]/g, 'target?.src');
-  fs.writeFileSync(errorHandlerPath, content);
+  content = content.replace(/target\?\['src'\]/g, 'target?.src')
+  fs.writeFileSync(errorHandlerPath, content)
 //   } catch (err) {
 //   }
 // Fix ErrorBoundary.tsx - recreate with complete content
 try {
-//   const errorBoundaryPath = './app/components/ErrorBoundary.tsx';
-//   const errorBoundaryContent = `'use client';
-import { FileWarning } from 'lucide-react';
+//   const errorBoundaryPath = './app/components/ErrorBoundary.tsx'
+//   const errorBoundaryContent = `'use client'
+import { FileWarning } from 'lucide-react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  enableErrorReporting?: boolean
+  enableRetry?: boolean
 }
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
@@ -47,11 +47,11 @@ class ErrorBoundary extends Component<Props, State> {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
-    this.setState({ errorInfo });
+    this.setState({ errorInfo })
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
     if (this.props.enableErrorReporting) {
 //       }
@@ -59,7 +59,7 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -106,56 +106,56 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default ErrorBoundary;
-`;
-  fs.writeFileSync(errorBoundaryPath, errorBoundaryContent);
+export default ErrorBoundary
+`
+  fs.writeFileSync(errorBoundaryPath, errorBoundaryContent)
 //   } catch (err) {
 //   }
 // Fix src/components/PerformanceMonitor.tsx
 try {
-//   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
+//   const perfMonitorPath = './src/components/PerformanceMonitor.tsx'
   // Remove merge conflict markers
   content = content.replace(/^  content = content.replace(/^
-  fs.writeFileSync(perfMonitorPath, content);
+  fs.writeFileSync(perfMonitorPath, content)
 //   } catch (err) {
 //   }
 // Fix src/utils/analytics.ts
 try {
-//   const analyticsPath = './src/utils/analytics.ts';
+//   const analyticsPath = './src/utils/analytics.ts'
   // Ensure all comment blocks are closed
-//   const openComments = (content.match(/\/\*/g) || []).length;
-//   const closeComments = (content.match(/\*\//g) || []).length;
+//   const openComments = (content.match(/\/\*/g) || []).length
+//   const closeComments = (content.match(/\*\//g) || []).length
   if (openComments > closeComments) {
-    content += '\n*/\n';
+    content += '\n*/\n'
   }
-  fs.writeFileSync(analyticsPath, content);
+  fs.writeFileSync(analyticsPath, content)
 //   } catch (err) {
 //   }
 // Fix src/utils/errorHandler.ts
 try {
-//   const errorHandlerPath = './src/utils/errorHandler.ts';
+//   const errorHandlerPath = './src/utils/errorHandler.ts'
   // Remove merge conflict markers
   content = content.replace(/^  content = content.replace(/^
   // Ensure all comment blocks are closed
-//   const openComments = (content.match(/\/\*/g) || []).length;
-//   const closeComments = (content.match(/\*\//g) || []).length;
+//   const openComments = (content.match(/\/\*/g) || []).length
+//   const closeComments = (content.match(/\*\//g) || []).length
   if (openComments > closeComments) {
-    content += '\n*/\n';
+    content += '\n*/\n'
   }
-  fs.writeFileSync(errorHandlerPath, content);
+  fs.writeFileSync(errorHandlerPath, content)
 //   } catch (err) {
 //   }
 // Fix App.tsx
 try {
-//   const appPath = './App.tsx';
+//   const appPath = './App.tsx'
   // Remove merge conflict markers
   content = content.replace(/^  content = content.replace(/^
-  fs.writeFileSync(appPath, content);
+  fs.writeFileSync(appPath, content)
 //   } catch (err) {
 //   }
 // 

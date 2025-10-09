@@ -1,19 +1,18 @@
 // SEO utilities for optimizing search engine visibility and performance
 
 export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: unknown;
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: unknown
 }
 
 export const generateMetaTags = (data: SEOData): string => {
-  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
-
+  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data
   return `
     <title>${title}</title>
     <meta name="description" content="${description}" />
@@ -37,19 +36,16 @@ export const generateMetaTags = (data: SEOData): string => {
     <meta name="twitter:image" content="${ogImage}" />
     <meta name="twitter:site" content="@ziontechgroup" />
     <meta name="twitter:creator" content="@ziontechgroup" />
-  `;
-};
-
+  `
+}
 export const generateStructuredData = (type: string, data: unknown): string => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type,
     ...data
-  };
-
-  return JSON.stringify(structuredData);
-};
-
+  }
+  return JSON.stringify(structuredData)
+}
 export const generateOrganizationSchema = () => {
   return generateStructuredData('Organization', {
     name: 'Zion Tech Group',
@@ -78,9 +74,8 @@ export const generateOrganizationSchema = () => {
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup'
     ]
-  });
-};
-
+  })
+}
 export const generateServiceSchema = (serviceName: string, description: string) => {
   return generateStructuredData('Service', {
     name: serviceName,
@@ -100,9 +95,8 @@ export const generateServiceSchema = (serviceName: string, description: string) 
         billingIncrement: 'P1M'
       }
     }
-  });
-};
-
+  })
+}
 export const generateBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => {
   return generateStructuredData('BreadcrumbList', {
     itemListElement: items.map((item, index) => ({
@@ -111,9 +105,8 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url: strin
       name: item.name,
       item: item.url
     }))
-  });
-};
-
+  })
+}
 export const generateFAQSchema = (faqs: Array<{ question: string; answer: string }>) => {
   return generateStructuredData('FAQPage', {
     mainEntity: faqs.map(faq => ({
@@ -124,16 +117,15 @@ export const generateFAQSchema = (faqs: Array<{ question: string; answer: string
         text: faq.answer
       }
     }))
-  });
-};
-
+  })
+}
 export const generateArticleSchema = (article: {
-  title: string;
-  description: string;
-  author: string;
-  datePublished: string;
-  dateModified: string;
-  image?: string;
+  title: string
+  description: string
+  author: string
+  datePublished: string
+  dateModified: string
+  image?: string
 }) => {
   return generateStructuredData('Article', {
     headline: article.title,
@@ -153,9 +145,8 @@ export const generateArticleSchema = (article: {
     datePublished: article.datePublished,
     dateModified: article.dateModified,
     image: article.image || 'https://ziontechgroup.com/og-image.jpg'
-  });
-};
-
+  })
+}
 export const generateLocalBusinessSchema = () => {
   return generateStructuredData('LocalBusiness', {
     name: 'Zion Tech Group',
@@ -177,9 +168,8 @@ export const generateLocalBusinessSchema = () => {
     },
     openingHours: 'Mo-Fr 09:00-18:00',
     priceRange: '$$$'
-  });
-};
-
+  })
+}
 export const generateWebSiteSchema = () => {
   return generateStructuredData('WebSite', {
     name: 'Zion Tech Group',
@@ -190,9 +180,8 @@ export const generateWebSiteSchema = () => {
       target: 'https://ziontechgroup.com/search?q={search_term_string}',
       'query-input': 'required name=search_term_string'
     }
-  });
-};
-
+  })
+}
 export const generateSitemap = (pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -204,11 +193,9 @@ export const generateSitemap = (pages: Array<{ url: string; lastmod: string; cha
       <priority>${page.priority}</priority>
     </url>
   `).join('')}
-</urlset>`;
-
-  return sitemap;
-};
-
+</urlset>`
+  return sitemap
+}
 export const generateRobotsTxt = (): string => {
   return `User-agent: *
 Allow: /
@@ -220,141 +207,123 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/`;
-};
-
+Disallow: /static/`
+}
 export const optimizeTitle = (title: string, maxLength: number = 60): string => {
-  if (title.length <= maxLength) return title;
-  
-  const words = title.split(' ');
-  let optimizedTitle = '';
-  
+  if (title.length <= maxLength) return title
+  const words = title.split(' ')
+  let optimizedTitle = ''
   for (const word of words) {
     if ((optimizedTitle + ' ' + word).length <= maxLength - 3) {
-      optimizedTitle += (optimizedTitle ? ' ' : '') + word;
+      optimizedTitle += (optimizedTitle ? ' ' : '') + word
     } else {
-      break;
+      break
     }
   }
   
-  return optimizedTitle + '...';
-};
-
+  return optimizedTitle + '...'
+}
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {
-  if (description.length <= maxLength) return description;
-  
-  return description.substring(0, maxLength - 3) + '...';
-};
-
+  if (description.length <= maxLength) return description
+  return description.substring(0, maxLength - 3) + '...'
+}
 export const generateKeywords = (content: string, maxKeywords: number = 10): string[] => {
   const words = content.toLowerCase()
     .replace(/[^\w\s]/g, '')
     .split(/\s+/)
-    .filter(word => word.length > 3);
-  
-  const wordCount: Record<string, number> = {};
+    .filter(word => word.length > 3)
+  const wordCount: Record<string, number> = {}
   words.forEach(word => {
-    wordCount[word] = (wordCount[word] || 0) + 1;
-  });
-  
+    wordCount[word] = (wordCount[word] || 0) + 1
+  })
   return Object.entries(wordCount)
     .sort(([, a], [, b]) => b - a)
     .slice(0, maxKeywords)
-    .map(([word]) => word);
-};
-
+    .map(([word]) => word)
+}
 export const validateSEO = (data: SEOData): { isValid: boolean; errors: string[] } => {
-  const errors: string[] = [];
-  
+  const errors: string[] = []
   if (!data.title || data.title.length === 0) {
-    errors.push('Title is required');
+    errors.push('Title is required')
   } else if (data.title.length > 60) {
-    errors.push('Title should be 60 characters or less');
+    errors.push('Title should be 60 characters or less')
   }
   
   if (!data.description || data.description.length === 0) {
-    errors.push('Description is required');
+    errors.push('Description is required')
   } else if (data.description.length > 160) {
-    errors.push('Description should be 160 characters or less');
+    errors.push('Description should be 160 characters or less')
   }
   
   if (!data.keywords || data.keywords.length === 0) {
-    errors.push('Keywords are required');
+    errors.push('Keywords are required')
   }
   
   if (!data.canonicalUrl || data.canonicalUrl.length === 0) {
-    errors.push('Canonical URL is required');
+    errors.push('Canonical URL is required')
   }
   
   return {
     isValid: errors.length === 0,
     errors
-  };
-};
-
+  }
+}
 export const createSEOMeta = (data: SEOData): void => {
   // Update title
-  document.title = data.title;
-  
+  document.title = data.title
   // Update meta description
-  updateMetaTag('description', data.description);
-  updateMetaTag('keywords', data.keywords.join(', '));
-  
+  updateMetaTag('description', data.description)
+  updateMetaTag('keywords', data.keywords.join(', '))
   // Update Open Graph tags
-  updateMetaTag('og:title', data.title, 'property');
-  updateMetaTag('og:description', data.description, 'property');
-  updateMetaTag('og:url', data.canonicalUrl, 'property');
+  updateMetaTag('og:title', data.title, 'property')
+  updateMetaTag('og:description', data.description, 'property')
+  updateMetaTag('og:url', data.canonicalUrl, 'property')
   if (data.ogImage) {
-    updateMetaTag('og:image', data.ogImage, 'property');
+    updateMetaTag('og:image', data.ogImage, 'property')
   }
   
   // Update Twitter tags
-  updateMetaTag('twitter:title', data.title, 'name');
-  updateMetaTag('twitter:description', data.description, 'name');
+  updateMetaTag('twitter:title', data.title, 'name')
+  updateMetaTag('twitter:description', data.description, 'name')
   if (data.ogImage) {
-    updateMetaTag('twitter:image', data.ogImage, 'name');
+    updateMetaTag('twitter:image', data.ogImage, 'name')
   }
   
   // Update canonical URL
-  updateCanonicalUrl(data.canonicalUrl);
-  
+  updateCanonicalUrl(data.canonicalUrl)
   // Add structured data
   if (data.structuredData) {
-    addStructuredData(data.structuredData);
+    addStructuredData(data.structuredData)
   }
-};
-
+}
 const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {
-  let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+  let meta = document.querySelector(`meta[${attribute}="${name}"]`)
   if (!meta) {
-    meta = document.createElement('meta');
-    meta.setAttribute(attribute, name);
-    document.head.appendChild(meta);
+    meta = document.createElement('meta')
+    meta.setAttribute(attribute, name)
+    document.head.appendChild(meta)
   }
-  meta.setAttribute('content', content);
-};
-
+  meta.setAttribute('content', content)
+}
 const updateCanonicalUrl = (url: string): void => {
-  let canonical = document.querySelector('link[rel="canonical"]');
+  let canonical = document.querySelector('link[rel="canonical"]')
   if (!canonical) {
-    canonical = document.createElement('link');
-    canonical.setAttribute('rel', 'canonical');
-    document.head.appendChild(canonical);
+    canonical = document.createElement('link')
+    canonical.setAttribute('rel', 'canonical')
+    document.head.appendChild(canonical)
   }
-  canonical.setAttribute('href', url);
-};
-
+  canonical.setAttribute('href', url)
+}
 const addStructuredData = (data: unknown): void => {
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(data);
-  script.id = 'structured-data';
-  
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.textContent = JSON.stringify(data)
+  script.id = 'structured-data'
   // Remove existing structured data
-  const existing = document.getElementById('structured-data');
+  const existing = document.getElementById('structured-data')
   if (existing) {
-    existing.remove();
+    existing.remove()
   }
   
-  document.head.appendChild(script);
-};
+  document.head.appendChild(script)
+}

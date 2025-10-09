@@ -1,20 +1,20 @@
 export interface January2026Content {
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  valueProposition: string;
+  id: string
+  title: string
+  description: string
+  content: string
+  author: string
+  publishedAt: string
+  category: string
+  tags: string[]
+  featured: boolean
+  readTime: string
+  image?: string
+  valueProposition: string
   pricing: {
-    starting: string;
-    enterprise: string;
-  };
+    starting: string
+    enterprise: string
+  }
 }
 
 export const newJanuary2026Content: January2026Content[] = [
@@ -76,4 +76,4 @@ The convergence of quantum computing and artificial intelligence opens new front
       enterprise: 'Custom solutions available',
     },
   },
-];
+]

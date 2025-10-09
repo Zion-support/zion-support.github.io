@@ -1,45 +1,45 @@
 
-  id: string;
-  name: string;
-  tagline: string;
+  id: string
+  name: string
+  tagline: string
   price: string,
   period: string,
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: ServiceVariant
+  contact_info: unknown
+    mobile: string
+    email: string
+    address: string
     website: string,
   }
         'AI-powered churn prediction with 94% accuracy',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =;
+  real_implementation: boolean
+  implementation_details: string
+  launch_date: string
+  customers: number
+  rating: number
+  reviews: number
+
+export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =
   [
     // AI - Powered Customer Success Automation,
       id: 'ai - customer - success - automation',
@@ -121,7 +121,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 156,
     },
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
-      features: [;
+      features: [
     // Intelligent Document Processing Hub,
       id: 'intelligent - document - processing - hub',
       name: 'Intelligent Document Processing Hub',
@@ -189,7 +189,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       rating: 4 && 4.7,
       reviews: 134,
     },
-    // Smart Inventory Management System;
+    // Smart Inventory Management System
       id: 'smart - inventory - management - system',
       name: 'Smart Inventory Management System',
       tagline: 'AI - powered inventory optimization and forecasting',
@@ -265,7 +265,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 223,
     },
         'AI-powered candidate screening and matching',
-    // AI - Powered HR Recruitment Suite;
+    // AI - Powered HR Recruitment Suite
       id: 'ai - hr - recruitment - suite',
       name: 'AI HR Recruitment Suite',
       tagline: 'Intelligent recruitment and talent acquisition',
@@ -333,7 +333,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 187,
     },
         'AI-powered project risk prediction',
-    // Intelligent Project Management Hub;
+    // Intelligent Project Management Hub
       id: 'intelligent - project - management - hub',
       name: 'Intelligent Project Management Hub',
       tagline: 'AI - powered project planning and execution',

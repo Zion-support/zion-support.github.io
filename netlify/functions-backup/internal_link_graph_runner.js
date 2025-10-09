@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'internal_link_graph_runner function executed successfully',
         timestamp: timestamp,
         function: 'internal_link_graph_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ internal_link_graph_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'internal_link_graph_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

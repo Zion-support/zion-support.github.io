@@ -1,10 +1,8 @@
-import React from 'react';
-<<<<<<< HEAD
-=======
+import React from 'react'
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';}
 const AISocialMediaManagerPage: React.FC = () => {const features = [}
     {// TODO: Add content;}
-};
+}
   icon: Share2,
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
@@ -12,11 +10,9 @@ const AISocialMediaManagerPage: React.FC = () => {const features = [}
 icon: TrendingUp,
       title: 'Trend Analysis',
       description: 'Real-time trend monitoring and content suggestions based on viral topics',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -37,8 +33,6 @@ const PagePage: React.FC = () => {
       <Footer />
     </div>
 
-<<<<<<< HEAD
-=======
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive reporting with actionable insights and ROI tracking',
@@ -48,6 +42,7 @@ const PagePage: React.FC = () => {
       description: 'Intelligent chatbot responses and comment management'
     }
   ];
+
   const benefits = [
 'Increase engagement by 300%',
     'Save 20+ hours per week',
@@ -60,15 +55,16 @@ const PagePage: React.FC = () => {
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
-    { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-  const pricing = [;
+    { name: 'YouTube', icon: '📺', color: 'text-red-500' };
+
+const pricing = [
   name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
   // TODO: Add items,
-];
+]
 //         '3 social media accounts',
 //         '50 posts per month',
 //         'Basic AI content generation',
@@ -98,10 +94,9 @@ const PagePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence;
-              Contact Sales;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  );
+            Join thousands of brands already using AI Social Media Manager to grow their presence
+              Contact Sales
+  )
 };
 
-export default PagePage;
+export default PagePage

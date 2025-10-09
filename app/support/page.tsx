@@ -1,7 +1,5 @@
 
       </section>    </div>
-  );
-};
-
-export default SupportPage;
-
+  )
+}
+export default SupportPage

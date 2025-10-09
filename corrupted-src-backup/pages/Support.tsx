@@ -1,9 +1,9 @@
-import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
+import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t"
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t"
 const, Suppor, t: Rea, c, t.FC = () => {
-  con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
-  con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');
+  con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('')
+  con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l')
   const, supportChannel, s = [
     {
       ic, o, n: Pho, n, e
@@ -37,29 +37,29 @@ const, Suppor, t: Rea, c, t.FC = () => {
       responseTi, m, e: '< 4, hour, s'
       conta, c, t: 'Schedule, Cal, l'
     }
-  ];
+  ]
   const, faqCategorie, s = [
     {
       id: 'gener, a, l'
       tit, l, e: 'Gener, a, l'
-      ic, o, n: BookOp, e, n;
+      ic, o, n: BookOp, e, n
     }
     {
       id: 'technic, a, l'
       tit, l, e: 'Technic, a, l'
-      ic, o, n: Z, a, p;
+      ic, o, n: Z, a, p
     }
     {
       id: 'billi, n, g'
       tit, l, e: 'Billi, n, g'
-      ic, o, n: Use, r, s;
+      ic, o, n: Use, r, s
     }
     {
       id: 'accou, n, t'
       tit, l, e: 'Accou, n, t'
-      ic, o, n: Clo, c, k;
+      ic, o, n: Clo, c, k
     }
-  ];
+  ]
   const, faq, s = [
     {
       catego, r, y: 'gener, a, l'
@@ -92,13 +92,13 @@ const, Suppor, t: Rea, c, t.FC = () => {
       answ, e, r: 'We, guarantee, response times, based, on your, support, pla
   n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
     }
-  ];
+  ]
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => 
-    selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;
+    selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y
   ).filt, e, r(f, a, q =>
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
-  );
+  )
   return (
     <>
       <Helmet>
@@ -114,7 +114,7 @@ const, Suppor, t: Rea, c, t.FC = () => {
             <div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
-                Support, Cente, r;
+                Support, Cente, r
               </h1>
               <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o">
                 Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, assist you, with, any questions, or, issues.
@@ -141,10 +141,10 @@ const, Suppor, t: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-7xl, m, x-au, t, o">
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-                Get, Suppor, t;
+                Get, Suppor, t
               </h2>
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">
-                Choose, the, support channel, that, works best, for, you;
+                Choose, the, support channel, that, works best, for, you
               </p>
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l
@@ -185,23 +185,23 @@ const, Suppor, t: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-7xl, m, x-au, t, o">
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-                Frequently, Asked, Questions;
+                Frequently, Asked, Questions
               </h2>
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">
-                Find, quick, answers to, common, questions;
+                Find, quick, answers to, common, questions
               </p>
             </d, i, v>
       quest, i, o
   n: 'Is, there, a community, where, I can, get, help from, other, users?'
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
     }
-  ];
+  ]
   const, quickAction, s = [
     { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛' }
     { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
     { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
     { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
-  ];
+  ]
   return (
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}
@@ -210,7 +210,7 @@ const, Suppor, t: Rea, c, t.FC = () => {
           <div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m
   d:te, x, t-6xl, fon, t-bold, m, b-6">
-              We're, Here, to He, l, p;
+              We're, Here, to He, l, p
             </h1>
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o">
               Get, the, support you, need, to succeed, with, our AI, solution, s. 
@@ -243,14 +243,14 @@ const, Suppor, t: Rea, c, t.FC = () => {
                     : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'
                 }`}`
               >
-                All, Categorie, s;
+                All, Categorie, s
               </butt, o, n>
               {faqCategori, e, s.m, a, p((catego, r, y) => (
                 <butt, o, n
   k, e, y={catego, r, y.id}
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}
                   classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`
-                    selectedCatego, r, y === catego, r, y.id;
+                    selectedCatego, r, y === catego, r, y.id
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'
                   }`}`
@@ -296,7 +296,7 @@ const, Suppor, t: Rea, c, t.FC = () => {
   to="/conta, c, t"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-bl, u, e-600, b, g-white, hove, r:bg-gr, a, y-50, transitio, n-colo, r, s"
               >
-                Contact, Suppor, t;
+                Contact, Suppor, t
                 <MessageCircle, className="ml-2 h-5 w-5"  />
               </Li, n, k>
               <Li, n, k
@@ -304,7 +304,7 @@ const, Suppor, t: Rea, c, t.FC = () => {
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e
   r:bg-whi, t, e/10, transitio, n-colo, r, s"
               >
-                View, Documentatio, n;
+                View, Documentatio, n
                 <BookOpen, className="ml-2 h-5 w-5"  />
               </Li, n, k>
             </d, i, v>
@@ -315,6 +315,6 @@ const, Suppor, t: Rea, c, t.FC = () => {
         </d, i, v>
       </secti, o, n>
     </d, i, v>
-  );
-};
-export default Support;
+  )
+}
+export default Support

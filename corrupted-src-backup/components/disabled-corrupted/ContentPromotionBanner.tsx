@@ -101,5 +101,5 @@ export default function ContentPromotionBanner() {
         </div>
       </div>
     </div>
-  );
+  )
 }

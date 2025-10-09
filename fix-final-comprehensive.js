@@ -1,7 +1,5 @@
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
-
+import fs from 'fs'
+import { fileURLToPath } from 'url'
 // Files that need specific fixes
 const specificFixes = {
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
@@ -28,8 +26,7 @@ const specificFixes = {
     keywords:
       'hyperconscious computing, AI 2026, artificial consciousness, enterprise AI, business intelligence, AI revolution',
   },
-};
-
+}
 function processFile(filePath) {
   try {
 
@@ -39,10 +36,10 @@ function processFile(filePath) {
         const keywordArray = fix.keywords
           .split(', ')
           .map(k => `'${k}'`)
-          .join(', ');
+          .join(', ')
         if (pattern.test(content)) {
-          content = content.replace(pattern, `keywords: [${keywordArray}],`);
-          modified = true;
+          content = content.replace(pattern, `keywords: [${keywordArray}],`)
+          modified = true
         }
       }
     }
@@ -63,24 +60,21 @@ function processFile(filePath) {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
         replacement: "import Link from './utils/link';",
       },
-    ];
-
+    ]
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
+        content = content.replace(pattern, replacement)
+        modified = true
       }
-    });
-
+    })
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      return true
     }
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -89,15 +83,14 @@ function processDirectory(dirPath) {
   items.forEach(item => {
 
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
+      totalFixed += processDirectory(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++
       }
     }
-  });
-
-  return totalFixed;
+  })
+  return totalFixed
 }
 
 // Process the app directory

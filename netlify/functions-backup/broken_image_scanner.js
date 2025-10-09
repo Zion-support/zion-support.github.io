@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'broken_image_scanner function executed successfully',
         timestamp: timestamp,
         function: 'broken_image_scanner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ broken_image_scanner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'broken_image_scanner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

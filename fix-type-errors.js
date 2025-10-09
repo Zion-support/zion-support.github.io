@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
+import fs from 'fs'
 // List of files that need type error fixes
 const filesToFix = [
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
@@ -10,8 +9,7 @@ const filesToFix = [
   '/workspace/app/components/UnifiedContentPromotion.tsx',
   '/workspace/app/not-found.tsx',
   '/workspace/app/page-optimized.tsx',
-];
-
+]
 // // Function to process a single file
 function processFile(filePath) {
   try {
@@ -23,20 +21,20 @@ function processFile(filePath) {
         content = content.replace(
           /import React from 'react';/,
           "import React from 'react';\nimport { Link } from 'react-router-dom';"
-        );
-        modified = true;
+        )
+        modified = true
       }
 
       // Replace <a> tags with to prop to <Link> components
-      content = content.replace(/<a\s+to=/g, '<Link to=');
-      content = content.replace(/<\/a>/g, '</Link>');
-      modified = true;
+      content = content.replace(/<a\s+to=/g, '<Link to=')
+      content = content.replace(/<\/a>/g, '</Link>')
+      modified = true
     }
 
     // Fix href to to for Link components
     if (content.includes('<Link') && content.includes('href=')) {
-      content = content.replace(/href=/g, 'to=');
-      modified = true;
+      content = content.replace(/href=/g, 'to=')
+      modified = true
     }
 
     // Fix dynamic imports from Next.js to React lazy
@@ -46,46 +44,45 @@ function processFile(filePath) {
         content = content.replace(
           /import React from 'react';/,
           "import React, { lazy } from 'react';"
-        );
-        modified = true;
+        )
+        modified = true
       }
 
       // Replace dynamic() with lazy()
-      content = content.replace(/dynamic\(/g, 'lazy(');
-      modified = true;
+      content = content.replace(/dynamic\(/g, 'lazy(')
+      modified = true
     }
 
     // Fix Image component issues
     if (content.includes('next/image')) {
       // Replace Next.js Image with regular img tag
-      content = content.replace(/import Image from 'next\/image';/g, '');
-      content = content.replace(/<Image/g, '<img');
-      content = content.replace(/<\/Image>/g, '</img>');
-      content = content.replace(/src={/g, 'src={');
-      content = content.replace(/alt={/g, 'alt={');
-      content = content.replace(/width={/g, 'width={');
-      content = content.replace(/height={/g, 'height={');
-      content = content.replace(/className={/g, 'className={');
-      modified = true;
+      content = content.replace(/import Image from 'next\/image';/g, '')
+      content = content.replace(/<Image/g, '<img')
+      content = content.replace(/<\/Image>/g, '</img>')
+      content = content.replace(/src={/g, 'src={')
+      content = content.replace(/alt={/g, 'alt={')
+      content = content.replace(/width={/g, 'width={')
+      content = content.replace(/height={/g, 'height={')
+      content = content.replace(/className={/g, 'className={')
+      modified = true
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      //       return true;
+      fs.writeFileSync(filePath, content)
+      //       return true
     }
 
-    return false;
+    return false
   } catch (error) {
-    //     return false;
+    //     return false
   }
 }
 
 // Process all files
 filesToFix.forEach(file => {
   if (processFile(file)) {
-    fixedCount++;
+    fixedCount++
   }
-});
-
+})
 // 
 }}}}}}}}}}

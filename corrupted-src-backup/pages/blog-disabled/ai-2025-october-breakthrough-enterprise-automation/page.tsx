@@ -1,4 +1,4 @@
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const EnterpriseAutomation202, 5 = () => { 
   return (
 :src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx
@@ -216,7 +216,7 @@ const EnterpriseAutomation202, 5 = () => {
                 <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>"
                 <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6">
                   <p className="text-white text-lg leading-relaxed">,"
-  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';';
+  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';'
                     comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">"
   Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains
@@ -357,10 +357,9 @@ const EnterpriseAutomation202, 5 = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default EnterpriseAutomation2025;
+  )
+}
+export default EnterpriseAutomation2025
   </div>
 </article>
 </article>

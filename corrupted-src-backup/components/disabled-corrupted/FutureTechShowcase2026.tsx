@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const FutureTechShowcase202, 6: React.FC = () => { 
   const futureTechArticle, s = [
     {
@@ -236,6 +236,6 @@ const FutureTechShowcase202, 6: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default FutureTechShowcase2026;
+  )
+}
+export default FutureTechShowcase2026

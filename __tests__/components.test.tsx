@@ -1,16 +1,13 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
-
+import { describe, it, expect, beforeEach } from '@jest/globals'
 describe('componentsx', () => {
   beforeEach(() => {
     // Setup before each test
-  });
-
+  })
   it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
-
+    expect(true).toBe(true)
+  })
   it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
-  });
-});
+    const result = 1 + 1
+    expect(result).toBe(2)
+  })
+})

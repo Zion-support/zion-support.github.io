@@ -8,4 +8,4 @@ export default {
     ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
     '@babel/plugin-transform-class-properties',
   ],
-};
+}

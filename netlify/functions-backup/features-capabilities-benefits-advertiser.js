@@ -19,8 +19,8 @@ exports.handler = async function (event, context) {try {
           lastAdvert: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in features-capabilities-benefits-advertiser: ') error
       }
     return {
@@ -32,10 +32,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'features-capabilities-benefits-advertiser'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'features-capabilities-benefits-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', features: 0, capabilities: 0, benefits: 0,
         lastAdvert: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in features-capabilities-benefits-advertiser: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'features-capabilities-benefits-advertiser' }) }; } };'

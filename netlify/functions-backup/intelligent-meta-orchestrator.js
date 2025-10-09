@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastOrchestration: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in intelligent-meta-orchestrator: ') error
       }
     return {
@@ -30,9 +30,9 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'intelligent-meta-orchestrator'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'intelligent-meta-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'intelligent',' mode: 'meta'} lastOrchestration: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in intelligent-meta-orchestrator: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'intelligent-meta-orchestrator' }) }; } };'

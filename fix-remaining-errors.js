@@ -1,87 +1,43 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
 
-// Function to fix specific remaining issues
-function fixRemainingIssues(content) {
-  // Fix duplicate imports with trailing comma
-  content = content.replace(
-    /import\s*{\s*([^}]+),\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports1, imports2, source) => {
-      // Split and clean up both parts
-      const list1 = imports1.split(',').map(imp => imp.trim()).filter(imp => imp);
-      const list2 = imports2.split(',').map(imp => imp.trim()).filter(imp => imp);
-      
-      // Combine and remove duplicates
-      const allImports = [...list1, ...list2];
-      const uniqueImports = [...new Set(allImports)];
-      
-      return `import { ${uniqueImports.join(', ')} } from '${source}';`;
-    }
-  );
-  
-  // Fix duplicate imports in the same import statement
-  content = content.replace(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, source) => {
-      // Split by comma and clean up
-      const importList = imports.split(',').map(imp => imp.trim()).filter(imp => imp);
-      
-      // Remove duplicates while preserving order
-      const uniqueImports = [...new Set(importList)];
-      
-      return `import { ${uniqueImports.join(', ')} } from '${source}';`;
-    }
-  );
-  
-  // Fix duplicate return statements
-  content = content.replace(
-    /const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*return\s*\([^)]+\);\s*\};\s*return\s*\(/g,
-    (match) => {
-      return match.replace(/return\s*\([^)]+\);\s*\};\s*return\s*\(/, 'return (');
-    }
-  );
-  
-  // Fix duplicate return statements more broadly
-  content = content.replace(
-    /return\s*\([^)]+\);\s*\};\s*return\s*\(/g,
-    'return ('
-  );
-  
-  // Fix malformed JSX with missing closing tags
-  content = content.replace(
-    /return\s*\(<div[^>]*>([^<]+)<\/div>\s*\);\s*return\s*\(/g,
-    'return ('
-  );
-  
-  // Fix objects that start with comma
-  content = content.replace(/\{\s*,/g, '{');
-  
-  // Fix missing semicolons in JSX
-  content = content.replace(/(\w+)\s*$/gm, (match, word) => {
-    if (word && !word.endsWith(';') && !word.endsWith('}') && !word.endsWith(')') && !word.endsWith(']') && !word.endsWith('>')) {
-      return word + ';';
-    }
-    return match;
-  });
-  
-  return content;
-}
-
-// Main function to fix a file
-function fixFile(filePath) {
+// Function to fix specific syntax errors
+function fixSpecificErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
     
-    // Apply fixes
-    content = fixRemainingIssues(content);
+    // Fix specific patterns
+    const fixes = [
+      // Fix malformed import statements
+      { pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)';\s*}/g, replacement: "import { $1 } from '$2';" },
+      // Fix missing semicolons after imports
+      { pattern: /from\s*'([^']+)'\s*}\s*const/g, replacement: "from '$1';\n\nconst" },
+      // Fix malformed object syntax
+      { pattern: /{\s*icon:\s*(\w+),\s*}\s*title:/g, replacement: '{\n      icon: $1,\n      title:' },
+      // Fix missing closing brackets
+      { pattern: /}\s*const\s+(\w+)\s*=\s*\[/g, replacement: '};\n\nconst $1 = [' },
+      // Fix malformed function declarations
+      { pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*{\s*}/g, replacement: 'const $1: React.FC = () => {\n  const $2 = [\n    {' },
+      // Fix missing semicolons
+      { pattern: /}\s*return\s*\(/g, replacement: '};\n\n  return (' },
+      // Fix malformed array syntax
+      { pattern: /\[\s*{\s*}\s*icon:/g, replacement: '[\n    {\n      icon:' },
+    ];
     
-    // Only write if content changed
-    if (content !== originalContent) {
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed specific errors in: ${filePath}`);
       return true;
     }
     
@@ -92,21 +48,27 @@ function fixFile(filePath) {
   }
 }
 
-// Main execution
-async function main() {
-  // Find all TypeScript/JavaScript files in src directory
-  const files = await glob('src/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+// List of files with known errors
+const problemFiles = [
+  '/workspace/src/ai-computer-vision/page.tsx',
+  '/workspace/src/ai-email-marketing/page.tsx',
+  '/workspace/src/ai-scheduler/page.tsx',
+  '/workspace/src/ai-social-media-manager/page.tsx',
+  '/workspace/src/analytics-tools/page.tsx',
+  '/workspace/src/expense-tracker/page.tsx',
+  '/workspace/src/smart-analytics/page.tsx',
+  '/workspace/src/task-manager-pro/page.tsx'
+];
 
-  console.log(`Found ${files.length} files to check...`);
+console.log('🔧 Fixing specific syntax errors...');
 
-  let fixedCount = 0;
-  files.forEach(file => {
-    if (fixFile(file)) {
+let fixedCount = 0;
+for (const file of problemFiles) {
+  if (fs.existsSync(file)) {
+    if (fixSpecificErrors(file)) {
       fixedCount++;
     }
-  });
-
-  console.log(`Fixed ${fixedCount} files`);
+  }
 }
 
-main().catch(console.error);
+console.log(`✅ Fixed specific errors in ${fixedCount} files`);

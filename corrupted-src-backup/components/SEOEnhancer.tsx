@@ -1,16 +1,15 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  children: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  children: React.ReactNode
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -36,17 +35,15 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const _script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-
+      const _script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.text = JSON.stringify(structuredData)
+      document.head.appendChild(script)
       return () => {
-        document.head.removeChild(script);
-      };
+        document.head.removeChild(script)
+      }
     }
-  }, [structuredData]);
-
+  }, [structuredData])
   // Default structured data for organization
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -62,10 +59,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       contactType: 'customer service',
       availableLanguage: 'English',
     },
-  };
-
-  //   const finalStructuredData = structuredData || defaultStructuredData;
-
+  }
+  //   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <>
       <Helmet>
@@ -127,7 +122,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
-
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer

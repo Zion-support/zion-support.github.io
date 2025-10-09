@@ -1,22 +1,22 @@
 export interface BreakthroughContent {
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  valueProposition: string;
+  id: string
+  title: string
+  description: string
+  content: string
+  author: string
+  publishedAt: string
+  category: string
+  tags: string[]
+  featured: boolean
+  readTime: string
+  image?: string
+  valueProposition: string
   metrics: {
-    performance: string;
-    savings: string;
-    accuracy: string;
-    roi: string;
-  };
+    performance: string
+    savings: string
+    accuracy: string
+    roi: string
+  }
 }
 
 export const newBreakthroughContent2025: BreakthroughContent[] = [
@@ -82,4 +82,4 @@ Protect your AI systems with next-generation quantum security frameworks.
       roi: '500%',
     },
   },
-];
+]

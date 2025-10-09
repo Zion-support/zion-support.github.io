@@ -1,30 +1,30 @@
 // December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs
 
 export interface RevolutionaryBreakthroughContent {
-  id: string;
-  slug?: string;
-  title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
-  valueProposition: string;
+  id: string
+  slug?: string
+  title: string
+  description: string
+  excerpt: string
+  author: string
+  date: string
+  category: string
+  tags: string[]
+  featured: boolean
+  readTime: string
+  image?: string
+  newBadge?: boolean
+  trending?: boolean
+  valueProposition: string
   metrics: {
-    performance: string;
-    savings: string;
-    accuracy: string;
-    roi: string;
-  };
-  consciousnessLevel?: string;
-  transcendenceLevel?: string;
-  superintelligenceLevel?: string;
+    performance: string
+    savings: string
+    accuracy: string
+    roi: string
+  }
+  consciousnessLevel?: string
+  transcendenceLevel?: string
+  superintelligenceLevel?: string
 }
 
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
@@ -84,4 +84,4 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     transcendenceLevel: 'Ultimate',
     superintelligenceLevel: 'Infinite',
   },
-];
+]

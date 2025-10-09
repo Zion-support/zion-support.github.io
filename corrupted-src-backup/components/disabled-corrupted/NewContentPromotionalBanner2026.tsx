@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const NewContentPromotionalBanner202, 6 = () => {
   const newConten, t = [
     {
@@ -154,6 +154,6 @@ const NewContentPromotionalBanner202, 6 = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default React.me, m, o(NewContentPromotionalBanner20, 2, 6);
+  )
+}
+export default React.me, m, o(NewContentPromotionalBanner20, 2, 6)

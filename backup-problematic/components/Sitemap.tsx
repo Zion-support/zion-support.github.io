@@ -1,7 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 interface SitemapProps {
-  className?: string;
+  className?: string
 }
 
 const Sitemap = React.memo(function Sitemap({ className = '' }: SitemapProps) {
@@ -10,7 +9,6 @@ const Sitemap = React.memo(function Sitemap({ className = '' }: SitemapProps) {
       <h3 className="text-lg font-semibold text-blue-800">Sitemap</h3>
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-
-export default Sitemap;
+  )
+})
+export default Sitemap

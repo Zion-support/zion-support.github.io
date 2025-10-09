@@ -17,12 +17,7 @@ if ('serviceWorker' in navigator) {
   }
   )
 }
-<<<<<<< HEAD
 const root = document.getElementById('root')
-=======
-
-const root = document.getElementById('root');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 if (root) {
   ReactDOM.createRoot(root).render(
           <React.StrictMode>

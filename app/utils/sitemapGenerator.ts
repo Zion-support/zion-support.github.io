@@ -1,12 +1,12 @@
 export interface SitemapEntry {
-  url: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  url: string
+  lastmod?: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
+  const baseUrl = 'https://ziontechgroup.com'
+  const currentDate = new Date().toISOString().split('T')[0]
   return [
     {
       url: `${baseUrl}/`,
@@ -98,8 +98,8 @@ export const generateSitemap = (): SitemapEntry[] => {
       changefreq: 'yearly',
       priority: 0.3
     }
-  ];
-};
+  ]
+}
 export const generateRobotsTxt = (): string => {
   return `User-agent: *
 Allow: /
@@ -108,5 +108,5 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/`;
-};
+Disallow: /private/`
+}

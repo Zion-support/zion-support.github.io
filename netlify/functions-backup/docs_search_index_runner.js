@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'docs_search_index_runner function executed successfully',
         timestamp: timestamp,
         function: 'docs_search_index_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ docs_search_index_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'docs_search_index_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

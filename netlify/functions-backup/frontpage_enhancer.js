@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'frontpage_enhancer function executed successfully',
         timestamp: timestamp,
         function: 'frontpage_enhancer'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ frontpage_enhancer function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'frontpage_enhancer function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

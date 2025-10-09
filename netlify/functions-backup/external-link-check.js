@@ -13,8 +13,8 @@ exports.handler = async function (event, context) {try {
         brokenLinks: 3,
         fixedLinks: 3}
       }),
-    };
-//     return result;
+    }
+//     return result
 //   } catch (error) {// console.error('❌ external-link-check failed: ') error
       }
     return {
@@ -23,10 +23,10 @@ exports.handler = async function (event, context) {try {
         error: 'External link check function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         brokenLinks: 3,
         fixedLinks: 3
       }) }; ' return result; } catch (error) {' // console.error('❌ external-link-check failed: ') error

@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastIdea: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in revenue-ideas-lab: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'revenue-ideas-lab'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'revenue-ideas-lab',' source: event.source || 'unknown', lab: {' status: 'active', ideas: 0,
         lastIdea: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in revenue-ideas-lab: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'revenue-ideas-lab' }) }; } };'

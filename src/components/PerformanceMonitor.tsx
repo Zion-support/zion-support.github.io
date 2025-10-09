@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from 'react';
-
-<<<<<<< HEAD
+import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
 
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-
-=======
-interface PerformanceMetrics {// TODO: Add content;}
-};
-  cls: number | null;,
-    fcp: number | null;,
-    lcp: number | null;,
-    ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
 }
 
 interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
 }
 
 const PerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
@@ -30,34 +19,29 @@ const PerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => 
     fid: null,
     cls: null,
     ttfb: null,
-  });
-
+  })
   useEffect(() => {
     // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const entries = list.getEntries()
       entries.forEach((entry) => {
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
         }
-      });
-    });
-
+      })
+    })
     try {
-      observer.observe({ entryTypes: ['paint'] });
-      return () => observer.disconnect();
+      observer.observe({ entryTypes: ['paint'] })
+      return () => observer.disconnect()
     } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
+      console.warn('Performance monitoring not supported:', error)
     }
-  }, []);
-
+  }, [])
   useEffect(() => {
     if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+      onMetricsUpdate(metrics)
     }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
-};
-
-export default PerformanceMonitor;
+  }, [metrics, onMetricsUpdate])
+  return null
+}
+export default PerformanceMonitor

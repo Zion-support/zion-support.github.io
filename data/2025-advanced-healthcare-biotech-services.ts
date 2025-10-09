@@ -1,45 +1,45 @@
 
-  id: string;
-  name: string;
-  tagline: string;
+  id: string
+  name: string
+  tagline: string
   price: string,
   period: string,
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: string
+  contact_info: unknown
+    mobile: string
+    email: string
+    address: string
     website: string,
   }
         'AI-powered molecular modeling and simulation',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
+  real_implementation: boolean
+  implementation_details: string
+  launch_date: string
+  customers: number
+  rating: number
+  reviews: number
+
+export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =
   [
     // AI - Powered Drug Discovery Platform,
       id: 'ai - drug - discovery - platform',
@@ -120,7 +120,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       rating: 4 && 4.9,
       reviews: 12,
     },
-    // Precision Medicine & Genomics Platform;
+    // Precision Medicine & Genomics Platform
       id: 'precision - medicine - genomics',
       name: 'Precision Medicine & Genomics Platform',
       tagline: 'Personalized healthcare through genomic analysis and AI',
@@ -201,7 +201,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT) Ultrasound)',
-    // AI - Powered Medical Imaging Analysis;
+    // AI - Powered Medical Imaging Analysis
       id: 'ai - medical - imaging - analysis',
       name: 'AI - Powered Medical Imaging Analysis Platform',
       tagline: 'Advanced medical imaging analysis with AI and deep learning',
@@ -269,7 +269,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 34,
     },
         'High-quality video consultations',
-    // Digital Health & Telemedicine Platform;
+    // Digital Health & Telemedicine Platform
       id: 'digital - health - telemedicine',
       name: 'Digital Health & Telemedicine Platform',
       tagline: 'Comprehensive digital health and telemedicine solutions',
@@ -345,7 +345,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 78,
     },
         'AI-powered trial design optimization',
-    // Clinical Trial Management & Optimization;
+    // Clinical Trial Management & Optimization
       id: 'clinical - trial - management - optimization',
       name: 'Clinical Trial Management & Optimization Platform',
       tagline: 'Streamline clinical trials with AI - powered optimization',

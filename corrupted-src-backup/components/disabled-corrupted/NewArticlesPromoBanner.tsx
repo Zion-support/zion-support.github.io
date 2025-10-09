@@ -1,11 +1,11 @@
-import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t'
+impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
 interface NewArticlesPromoBannerProp, s { 
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | 'compa, c, t';
-  showCou, n, t?: number;
-  autoRota, t, e?: boolean;
-  rotationInterv, a, l?: number;
-  classNa, m, e ?  : string;
+  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | 'compa, c, t'
+  showCou, n, t?: number
+  autoRota, t, e?: boolean
+  rotationInterv, a, l?: number
+  classNa, m, e ?  : string
  }
 const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
@@ -17,11 +17,11 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
   con, s, t [, setCurrentInd, e, x] = useState(0); const featuredArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(0, showCou, n, t); useEffect(() => {
     if (autoRota, t, e  && featuredArticl, e, s.leng, t, h > 1) {
       const interva, l = setInter, v, a, l(() => {
-        setCurrentInd, e, x((pr, e, v) = > (pr, e, v + 1) % featuredArticl, e, s.leng, t, h);
-        }, rotationInterv, a, l);
-      return () => clearInterv, a, l(interv, a, l);
+        setCurrentInd, e, x((pr, e, v) = > (pr, e, v + 1) % featuredArticl, e, s.leng, t, h)
+        }, rotationInterv, a, l)
+      return () => clearInterv, a, l(interv, a, l)
     }
-  }, [autoRota, t, e, featuredArticl, e, s.leng, t, h, rotationInterv, a, l]);
+  }, [autoRota, t, e, featuredArticl, e, s.leng, t, h, rotationInterv, a, l])
   if (varia, n, t = == 'comp, a, c, t') {
     return (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
@@ -41,7 +41,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
             Read, No, w
           </Li, n, k>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
   }
   if (varia, n, t = == 'prem, i, u, m') {
     return (
@@ -80,7 +80,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
             </Li, n, k>
           </div>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
   }
   if (varia, n, t = == 'featu, r, e, d') {
     return (
@@ -121,7 +121,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
             ))}
           </div>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
   }
   // Default variant return (
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}>
@@ -141,6 +141,6 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
         ))}
       </div>
     </div>
-  );
-};
-export default NewArticlesPromoBanner;
+  )
+}
+export default NewArticlesPromoBanner

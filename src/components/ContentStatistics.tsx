@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 interface ContentStatisticsProps {
   // Add props here
 }
@@ -9,7 +8,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
     <div className="contentstatistics">
       {/* Component content */}
     </div>
-  );
-};
-
-export default ContentStatistics;
+  )
+}
+export default ContentStatistics

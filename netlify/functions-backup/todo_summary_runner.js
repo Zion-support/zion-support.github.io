@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'todo_summary_runner function executed successfully',
         timestamp: timestamp,
         function: 'todo_summary_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ todo_summary_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'todo_summary_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

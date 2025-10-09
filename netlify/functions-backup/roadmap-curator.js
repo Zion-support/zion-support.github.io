@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastCurated: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in roadmap-curator: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'roadmap-curator'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'roadmap-curator',' source: event.source || 'unknown', curation: {' status: 'active', roadmaps: 0,
         lastCurated: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in roadmap-curator: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'roadmap-curator' }) }; } };'

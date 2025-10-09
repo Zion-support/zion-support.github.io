@@ -5,9 +5,8 @@ impo, r, t {
   Targ, e, t,
   Rock, e, t,
   CheckCirc, l, e,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
+} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const EnterpriseAITransformationSuccessStrategie, s = () => { 
   return (
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx
@@ -215,7 +214,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                 <div>Chief AI Strategy Officer, Zion Tech Group</div>
   </div>
   </div>
-            {/* Key Metrics */};
+            {/* Key Metrics */}
             <div>
               {[
               {[
@@ -476,10 +475,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                   </Link>
                   <Link to="/services">
   className= " />
-  );
-};
-
-export default EnterpriseAITransformationSuccessStrategies;;
+  )
+}
+export default EnterpriseAITransformationSuccessStrategies;
   </div>
   </div>
   </div>

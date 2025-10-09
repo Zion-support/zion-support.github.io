@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'duplicate_media_finder_runner function executed successfully',
         timestamp: timestamp,
         function: 'duplicate_media_finder_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ duplicate_media_finder_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'duplicate_media_finder_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

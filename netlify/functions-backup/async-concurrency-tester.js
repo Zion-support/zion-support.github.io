@@ -8,78 +8,78 @@ exports.handler = async function (event, context) {try {
       timeout: 'timeout-handling',
       retry: 'retry-logic',
       waterfall: 'waterfall-operations'}
-    };
-    const _results = {};
-//     const startTime = Date.now();
+    }
+    const _results = {}
+//     const startTime = Date.now()
     // Test 1: Sequential operations
-//     const sequentialStart = Date.now();
-    const _sequentialResults = [];
+//     const sequentialStart = Date.now()
+    const _sequentialResults = []
     for (let i = 0; i < 5,
         i++) {await new Promise(resolve => setTimeout(resolve,
         200)); // Simulate async work
-      sequentialResults.push(`operation-${i + 1}-completed`);
+      sequentialResults.push(`operation-${i + 1}-completed`)
     }
     results.sequential = {type: 'sequential',
       operations: sequentialResults,
       duration: Date.now() - sequentialStart,
       status: 'completed'}
-    };
+    }
     // Test 2: Parallel operations
-//     const parallelStart = Date.now();
+//     const parallelStart = Date.now()
     const parallelPromises = Array.from({ length: 5 },
       (_,
         i) =>
         new Promise(resolve =>
           setTimeout(() => resolve(`parallel-${i + 1}-completed`), 300),
         ),
-    );
-//     const parallelResults = await Promise.all(parallelPromises);
+    )
+//     const parallelResults = await Promise.all(parallelPromises)
     results.parallel = {type: 'parallel',
       operations: parallelResults,
       duration: Date.now() - parallelStart,
       status: 'completed'}
-    };
+    }
     // Test 3: Race conditions
-//     const raceStart = Date.now();
+//     const raceStart = Date.now()
     const racePromises = [
       new Promise(resolve => setTimeout(() => resolve('fast-operation'), 100)),
       new Promise(resolve =>
         setTimeout(() => resolve('medium-operation'), 250),
       ),
       new Promise(resolve => setTimeout(() => resolve('slow-operation'), 400)),
-    ];
-//     const raceWinner = await Promise.race(racePromises);
+    ]
+//     const raceWinner = await Promise.race(racePromises)
     results.race = {type: 'race',
       winner: raceWinner,
       duration: Date.now() - raceStart,
       status: 'completed'}
-    };
+    }
     // Test 4: Timeout handling
-//     const timeoutStart = Date.now();
+//     const timeoutStart = Date.now()
     try {const timeoutPromise = new Promise((resolve,
         reject) => {
-        setTimeout(() => reject(new Error('Operation timed out'))} 100);
-      });
+        setTimeout(() => reject(new Error('Operation timed out'))} 100)
+      })
       await Promise.race([
         timeoutPromise,
         new Promise(resolve => setTimeout(resolve,
         200)),
-      ]);
+      ])
       results.timeout = {type: 'timeout',
         status: 'timeout-prevented',
         duration: Date.now() - timeoutStart}
-      };
+      }
     } catch (error) {results.timeout = {
         type: 'timeout',
         status: 'timeout-occurred',
         error: error.message,
         duration: Date.now() - timeoutStart}
-      };
+      }
     }
     // Test 5: Retry logic
-//     const retryStart = Date.now();
-    let _retryAttempts = 0;
-    let _retrySuccess = false;
+//     const retryStart = Date.now()
+    let _retryAttempts = 0
+    let _retrySuccess = false
     while (retryAttempts < 3 && !retrySuccess) {retryAttempts++}
       try {
         await new Promise((resolve,
@@ -88,10 +88,10 @@ exports.handler = async function (event, context) {try {
             resolve('retry-success')}
           } else {
             reject(new Error(`Attempt ${retryAttempts,
-        failed`));
+        failed`))
           }
-        });
-        retrySuccess = true;
+        })
+        retrySuccess = true
       } catch (error) {
         if (retryAttempts === 3) {
           // Final attempt failed
@@ -103,23 +103,23 @@ exports.handler = async function (event, context) {try {
       success: retrySuccess,
       duration: Date.now() - retryStart,
       status: retrySuccess ? 'succeeded' : 'failed-after-retries'}
-    };
+    }
     // Test 6: Waterfall operations
-//     const waterfallStart = Date.now();
-    const _waterfallResults = [];
+//     const waterfallStart = Date.now()
+    const _waterfallResults = []
     let previousResult = 'initial'
     for (let i = 0; i < 4,
         i++) {await new Promise(resolve => setTimeout(resolve,
-        150));
-      previousResult = `waterfall-step-${i + 1}-using-${previousResult}`;
-      waterfallResults.push(previousResult);
+        150))
+      previousResult = `waterfall-step-${i + 1}-using-${previousResult}`
+      waterfallResults.push(previousResult)
     }
     results.waterfall = {type: 'waterfall',
       operations: waterfallResults,
       duration: Date.now() - waterfallStart,
       status: 'completed'}
-    };
-//     const totalDuration = Date.now() - startTime;
+    }
+//     const totalDuration = Date.now() - startTime
     // Calculate concurrency metrics
     const concurrencyMetrics = {totalDuration: totalDuration,
       sequentialDuration: results.sequential.duration,
@@ -134,7 +134,7 @@ exports.handler = async function (event, context) {try {
         (totalDuration / 1000)
       ).toFixed(2
       }
-    };
+    }
     const result = {statusCode: 200,
       body: JSON.stringify({
         message: 'Async concurrency tester completed successfully',
@@ -158,9 +158,8 @@ exports.handler = async function (event, context) {try {
         },
         nextRun: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString(), // 4 hours from now
       }),
-    };
-
-    return result;
+    }
+    return result
   } catch (error) {// console.error('❌ async-concurrency-tester failed: ') error
       }
     return {
@@ -170,10 +169,10 @@ exports.handler = async function (event, context) {try {
         error: error.message,
         function: async-concurrency-tester,
         status: 'error'}
-      });
-    };
+      })
+    }
   }
-};
+}
 exports.handler = async function(event, context) {try { const timestamp = new Date().toISOString()} // Test different async operation patterns const asyncTests = {' sequential: 'sequential-operations',' parallel: 'parallel-operations',' race: 'race-conditions',' timeout: 'timeout-handling',' retry: 'retry-logic'}' waterfall: 'waterfall-operations' }; const results = {}; const startTime = Date.now(); // Test 1: Sequential operations const sequentialStart = Date.now(); const sequentialResults = []; for (let i = 0; i < 5,
         i++) {await new Promise(resolve => setTimeout(resolve,
         200)); // Simulate async work sequentialResults.push(`operation-${i + 1}-completed`); } results.sequential = {' type: 'sequential', operations: sequentialResults, duration: Date.now() - sequentialStart}' status: 'completed' }; // Test 2: Parallel operations const parallelStart = Date.now(); const parallelPromises = Array.from({ length: 5 }, (_,

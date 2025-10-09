@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
     {
@@ -30,8 +29,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         'Performance Monitoring',
       ],
     },
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -77,5 +75,5 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         </div>
       </div>
     </div>
-  );
+  )
 }

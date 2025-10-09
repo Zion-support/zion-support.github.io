@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'orphan_pages_detector function executed successfully',
         timestamp: timestamp,
         function: 'orphan_pages_detector'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ orphan_pages_detector function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'orphan_pages_detector function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

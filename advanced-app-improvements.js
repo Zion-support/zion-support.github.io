@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-// const fs = require('fs');
-// const path = require('path');
-
+// const fs = require('fs')
+// const path = require('path')
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
   //   const monitoringFiles = {
@@ -9,8 +8,8 @@ function createAdvancedMonitoring() {
 module.exports = {
   healthCheck: () => ({ status: 'ok' })
 };`,
-  };
-  return monitoringFiles;
+  }
+  return monitoringFiles
 }
 
 function createAdvancedCaching() {
@@ -19,8 +18,8 @@ function createAdvancedCaching() {
 module.exports = {
   cacheManager: () => ({ status: 'ready' })
 };`,
-  };
-  return cachingFiles;
+  }
+  return cachingFiles
 }
 
 function createAPIOptimization() {
@@ -29,8 +28,8 @@ function createAPIOptimization() {
 module.exports = {
   optimize: () => ({ optimized: true })
 };`,
-  };
-  return apiFiles;
+  }
+  return apiFiles
 }
 
 function main() {
@@ -43,4 +42,4 @@ module.exports = {
   createAdvancedMonitoring,
   createAdvancedCaching,
   createAPIOptimization,
-};
+}

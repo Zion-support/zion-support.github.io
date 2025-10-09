@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 export default function October2025NewestContentMegaShowca, s, e() { 
   const newConten, t = [
     {",
@@ -124,7 +124,7 @@ export default function October2025NewestContentMegaShowca, s, e() {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }
 
 }

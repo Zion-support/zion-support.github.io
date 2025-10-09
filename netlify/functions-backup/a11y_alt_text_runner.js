@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'a11y_alt_text_runner function executed successfully',
         timestamp: timestamp,
         function: 'a11y_alt_text_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ a11y_alt_text_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'a11y_alt_text_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

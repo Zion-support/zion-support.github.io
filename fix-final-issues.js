@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
-
+import fs from 'fs'
+import { glob } from 'glob'
 // Function to process a file
 function processFile(filePath) {
   try {
@@ -12,8 +11,8 @@ function processFile(filePath) {
       content = content.replace(
         /import React from 'react';\nimport React from 'react';/g,
         "import React from 'react';"
-      );
-      modified = true;
+      )
+      modified = true
     }
 
     // Fix duplicate React imports with different spacing
@@ -21,38 +20,37 @@ function processFile(filePath) {
       content = content.replace(
         /import React from 'react';\n\nimport React from 'react';/g,
         "import React from 'react';"
-      );
-      modified = true;
+      )
+      modified = true
     }
 
     // Fix Image component priority prop
     if (content.includes('priority={')) {
-      content = content.replace(/priority=\{[^}]*\}/g, '');
-      modified = true;
+      content = content.replace(/priority=\{[^}]*\}/g, '')
+      modified = true
     }
 
     // Fix Link component href prop
     if (content.includes('<Link href=')) {
-      content = content.replace(/<Link href=/g, '<Link to=');
-      modified = true;
+      content = content.replace(/<Link href=/g, '<Link to=')
+      modified = true
     }
 
     // Fix Next.js imports in sitemap
     if (content.includes("import { Metadata } from 'next';")) {
-      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';");
-      modified = true;
+      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';")
+      modified = true
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      return true
     }
 
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -62,10 +60,9 @@ async function main() {
 
   files.forEach(file => {
     if (processFile(file)) {
-      fixedCount++;
+      fixedCount++
     }
-  });
-
+  })
 }
 
-main().catch(console.error);
+main().catch(console.error)

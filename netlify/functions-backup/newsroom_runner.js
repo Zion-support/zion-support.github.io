@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'newsroom_runner function executed successfully',
         timestamp: timestamp,
         function: 'newsroom_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ newsroom_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'newsroom_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

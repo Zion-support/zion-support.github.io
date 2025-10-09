@@ -5,19 +5,19 @@
 
 class AdvancedErrorHandler {
   constructor() {
-    this.errorLog = [];
-    this.maxLogSize = 100;
-    this.reportingEnabled = true;
-    this.recoveryStrategies = new Map();
-    this.init();
+    this.errorLog = []
+    this.maxLogSize = 100
+    this.reportingEnabled = true
+    this.recoveryStrategies = new Map()
+    this.init()
   }
 
   init() {
-    this.setupGlobalErrorHandlers();
-    this.setupUnhandledRejectionHandler();
-    this.setupResourceErrorHandler();
-    this.setupNetworkErrorHandler();
-    this.setupRecoveryStrategies();
+    this.setupGlobalErrorHandlers()
+    this.setupUnhandledRejectionHandler()
+    this.setupResourceErrorHandler()
+    this.setupNetworkErrorHandler()
+    this.setupRecoveryStrategies()
   }
 
   setupGlobalErrorHandlers() {
@@ -33,9 +33,8 @@ class AdvancedErrorHandler {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-      });
-    });
-
+      })
+    })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', event => {
       this.handleError({
@@ -45,14 +44,14 @@ class AdvancedErrorHandler {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-      });
-    });
+      })
+    })
   }
 
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
     window.addEventListener('rejectionhandled', event => {
-      //       });
+      //       })
   }
 
   setupResourceErrorHandler() {
@@ -68,66 +67,61 @@ class AdvancedErrorHandler {
             src: event.target.src || event.target.href,
             timestamp: new Date().toISOString(),
             url: window.location.href,
-          });
+          })
         }
       },
       true
-    );
+    )
   }
 
   setupNetworkErrorHandler() {
     // Handle network-related errors
     window.addEventListener('online', () => {
-      this.handleNetworkStatusChange('online');
-    });
-
+      this.handleNetworkStatusChange('online')
+    })
     window.addEventListener('offline', () => {
-      this.handleNetworkStatusChange('offline');
-    });
+      this.handleNetworkStatusChange('offline')
+    })
   }
 
   setupRecoveryStrategies() {
     // Define recovery strategies for different error types
-    this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
-    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
-    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
-    this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this));
+    this.recoveryStrategies.set('network', this.handleNetworkError.bind(this))
+    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this))
+    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this))
+    this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this))
   }
 
   handleError(errorInfo) {
     // Log error
-    this.logError(errorInfo);
-
+    this.logError(errorInfo)
     // Attempt recovery
-    this.attemptRecovery(errorInfo);
-
+    this.attemptRecovery(errorInfo)
     // Report to external service
     if (this.reportingEnabled) {
-      this.reportError(errorInfo);
+      this.reportError(errorInfo)
     }
 
     // Show user-friendly message
-    this.showUserError(errorInfo);
+    this.showUserError(errorInfo)
   }
 
   logError(errorInfo) {
-    this.errorLog.push(errorInfo);
-
+    this.errorLog.push(errorInfo)
     // Maintain log size
     if (this.errorLog.length > this.maxLogSize) {
-      this.errorLog.shift();
+      this.errorLog.shift()
     }
 
     // Console logging
     //     }
 
   attemptRecovery(errorInfo) {
-    //     const errorType = this.categorizeError(errorInfo);
-    const _recoveryStrategy = this.recoveryStrategies.get(errorType);
-
+    //     const errorType = this.categorizeError(errorInfo)
+    const _recoveryStrategy = this.recoveryStrategies.get(errorType)
     if (recoveryStrategy) {
       try {
-        recoveryStrategy(errorInfo);
+        recoveryStrategy(errorInfo)
       } catch (recoveryError) {
         //         }
     }
@@ -135,18 +129,18 @@ class AdvancedErrorHandler {
 
   categorizeError(errorInfo) {
     if (errorInfo.message?.includes('network') || errorInfo.message?.includes('fetch')) {
-      return 'network';
+      return 'network'
     }
     if (errorInfo.type === 'Resource Error') {
-      return 'resource';
+      return 'resource'
     }
     if (errorInfo.type === 'JavaScript Error' || errorInfo.type === 'Unhandled Promise Rejection') {
-      return 'javascript';
+      return 'javascript'
     }
     if (errorInfo.message?.includes('memory') || errorInfo.message?.includes('allocation')) {
-      return 'memory';
+      return 'memory'
     }
-    return 'unknown';
+    return 'unknown'
   }
 
   handleNetworkError(errorInfo) {
@@ -154,48 +148,47 @@ class AdvancedErrorHandler {
     if (errorInfo.retryCount < 3) {
       setTimeout(
         () => {
-          this.retryFailedRequest(errorInfo);
+          this.retryFailedRequest(errorInfo)
         },
         Math.pow(2, errorInfo.retryCount || 0) * 1000
-      );
+      )
     } else {
-      this.showOfflineMessage();
+      this.showOfflineMessage()
     }
   }
 
   handleResourceError(errorInfo) {
     // Try to load fallback resources
     if (errorInfo.element === 'IMG') {
-      this.loadFallbackImage(errorInfo.src);
+      this.loadFallbackImage(errorInfo.src)
     } else if (errorInfo.element === 'SCRIPT') {
-      this.loadFallbackScript(errorInfo.src);
+      this.loadFallbackScript(errorInfo.src)
     } else if (errorInfo.element === 'LINK') {
-      this.loadFallbackStylesheet(errorInfo.src);
+      this.loadFallbackStylesheet(errorInfo.src)
     }
   }
 
   handleJavaScriptError(errorInfo) {
     // Try to recover from JavaScript errors
     if (errorInfo.message?.includes('Cannot read property')) {
-      this.handlePropertyAccessError(errorInfo);
+      this.handlePropertyAccessError(errorInfo)
     } else if (errorInfo.message?.includes('is not a function')) {
-      this.handleFunctionCallError(errorInfo);
+      this.handleFunctionCallError(errorInfo)
     } else {
-      this.reloadPage();
+      this.reloadPage()
     }
   }
 
   handleMemoryError(errorInfo) {
     // Clear caches and free memory
-    this.clearCaches();
-    this.garbageCollect();
+    this.clearCaches()
+    this.garbageCollect()
   }
 
   retryFailedRequest(errorInfo) {
     // Implement retry logic for failed requests
-    //     const retryCount = (errorInfo.retryCount || 0) + 1;
-    errorInfo.retryCount = retryCount;
-
+    //     const retryCount = (errorInfo.retryCount || 0) + 1
+    errorInfo.retryCount = retryCount
     // Retry the original request
     if (errorInfo.originalRequest) {
       fetch(errorInfo.originalRequest)
@@ -208,40 +201,40 @@ class AdvancedErrorHandler {
             ...errorInfo,
             message: `Retry ${retryCount} failed: ${error.message}`,
             retryCount,
-          });
-        });
+          })
+        })
     }
   }
 
   loadFallbackImage(src) {
-    const _img = document.querySelector(`img[src="${src}"]`);
+    const _img = document.querySelector(`img[src="${src}"]`)
     if (img) {
-      img.src = '/images/placeholder.png';
-      img.alt = 'Image failed to load';
+      img.src = '/images/placeholder.png'
+      img.alt = 'Image failed to load'
     }
   }
 
   loadFallbackScript(src) {
     // Load from CDN or local fallback
-    const _script = document.createElement('script');
-    script.src = src.replace('cdn.example.com', 'fallback.example.com');
+    const _script = document.createElement('script')
+    script.src = src.replace('cdn.example.com', 'fallback.example.com')
     script.onerror = () => {
       // Load local fallback
-      script.src = '/js/fallback.js';
-    };
-    document.head.appendChild(script);
+      script.src = '/js/fallback.js'
+    }
+    document.head.appendChild(script)
   }
 
   loadFallbackStylesheet(src) {
     // Load fallback stylesheet
-    const _link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = src.replace('cdn.example.com', 'fallback.example.com');
+    const _link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = src.replace('cdn.example.com', 'fallback.example.com')
     link.onerror = () => {
       // Load local fallback
-      link.href = '/css/fallback.css';
-    };
-    document.head.appendChild(link);
+      link.href = '/css/fallback.css'
+    }
+    document.head.appendChild(link)
   }
 
   handlePropertyAccessError(errorInfo) {
@@ -259,138 +252,137 @@ class AdvancedErrorHandler {
     if ('caches' in window) {
       caches.keys().then(cacheNames => {
         cacheNames.forEach(cacheName => {
-          caches.delete(cacheName);
-        });
-      });
+          caches.delete(cacheName)
+        })
+      })
     }
   }
 
   garbageCollect() {
     // Force garbage collection if available
     if (window.gc) {
-      window.gc();
+      window.gc()
     }
   }
 
   reloadPage() {
     // Reload page as last resort
     setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+      window.location.reload()
+    }, 1000)
   }
 
   showOfflineMessage() {
     // Show offline message to user
-    const _offlineMessage = document.createElement('div');
-    offlineMessage.className = 'offline-message';
+    const _offlineMessage = document.createElement('div')
+    offlineMessage.className = 'offline-message'
     offlineMessage.innerHTML = `
       <div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #ff6b6b;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        z-index: 9999;
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        background: #ff6b6b
+        color: white
+        padding: 10px
+        text-align: center
+        z-index: 9999
       ">
         You're offline. Some features may not be available.
       </div>
-    `;
-    document.body.appendChild(offlineMessage);
+    `
+    document.body.appendChild(offlineMessage)
   }
 
   showUserError(errorInfo) {
     // Show user-friendly error message
     if (errorInfo.severity === 'critical') {
-      this.showCriticalErrorModal(errorInfo);
+      this.showCriticalErrorModal(errorInfo)
     } else {
-      this.showErrorToast(errorInfo);
+      this.showErrorToast(errorInfo)
     }
   }
 
   showCriticalErrorModal(errorInfo) {
-    const _modal = document.createElement('div');
-    modal.className = 'error-modal';
+    const _modal = document.createElement('div')
+    modal.className = 'error-modal'
     modal.innerHTML = `
       <div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0,0,0,0.8)
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 10000
       ">
         <div style="
-          background: white;
-          padding: 20px;
-          border-radius: 8px;
-          max-width: 500px;
-          text-align: center;
+          background: white
+          padding: 20px
+          border-radius: 8px
+          max-width: 500px
+          text-align: center
         ">
           <h2>Something went wrong</h2>
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
           <button onclick="window.location.reload()" style="
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
+            background: #007bff
+            color: white
+            border: none
+            padding: 10px 20px
+            border-radius: 4px
+            cursor: pointer
           ">Refresh Page</button>
         </div>
       </div>
-    `;
-    document.body.appendChild(modal);
+    `
+    document.body.appendChild(modal)
   }
 
   showErrorToast(errorInfo) {
-    const _toast = document.createElement('div');
-    toast.className = 'error-toast';
+    const _toast = document.createElement('div')
+    toast.className = 'error-toast'
     toast.innerHTML = `
       <div style="
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #ff6b6b;
-        color: white;
-        padding: 15px;
-        border-radius: 4px;
-        z-index: 9999;
-        max-width: 300px;
+        position: fixed
+        top: 20px
+        right: 20px
+        background: #ff6b6b
+        color: white
+        padding: 15px
+        border-radius: 4px
+        z-index: 9999
+        max-width: 300px
       ">
         <strong>Error:</strong> ${errorInfo.message}
         <button onclick="this.parentElement.parentElement.remove()" style="
-          background: none;
-          border: none;
-          color: white;
-          float: right;
-          cursor: pointer;
+          background: none
+          border: none
+          color: white
+          float: right
+          cursor: pointer
         ">×</button>
       </div>
-    `;
-    document.body.appendChild(toast);
-
+    `
+    document.body.appendChild(toast)
     // Auto-remove after 5 seconds
     setTimeout(() => {
       if (toast.parentElement) {
-        toast.remove();
+        toast.remove()
       }
-    }, 5000);
+    }, 5000)
   }
 
   handleNetworkStatusChange(status) {
-    const _message = status === 'online' ? 'Connection restored' : 'Connection lost';
+    const _message = status === 'online' ? 'Connection restored' : 'Connection lost'
     this.showErrorToast({
       message,
       type: 'Network Status',
       severity: 'info',
-    });
+    })
   }
 
   reportError(errorInfo) {
@@ -399,7 +391,7 @@ class AdvancedErrorHandler {
       window.gtag('event', 'exception', {
         description: errorInfo.message,
         fatal: errorInfo.severity === 'critical',
-      });
+      })
     }
 
     // Send to custom error reporting service
@@ -410,32 +402,30 @@ class AdvancedErrorHandler {
       },
       body: JSON.stringify(errorInfo),
     }).catch(error => {
-      //       });
+      //       })
   }
 
   // Public methods
   getErrorLog() {
-    return this.errorLog;
+    return this.errorLog
   }
 
   clearErrorLog() {
-    this.errorLog = [];
+    this.errorLog = []
   }
 
   setReportingEnabled(enabled) {
-    this.reportingEnabled = enabled;
+    this.reportingEnabled = enabled
   }
 
   addRecoveryStrategy(errorType, strategy) {
-    this.recoveryStrategies.set(errorType, strategy);
+    this.recoveryStrategies.set(errorType, strategy)
   }
 }
 
 // Initialize error handler
-// const errorHandler = new AdvancedErrorHandler();
-
+// const errorHandler = new AdvancedErrorHandler()
 // Export for use in other modules
-export default errorHandler;
-
+export default errorHandler
 // Global error handler instance
-window.errorHandler = errorHandler;
+window.errorHandler = errorHandler

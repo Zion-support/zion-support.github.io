@@ -1,2 +1,2 @@
 
-export default EnhancedFooter;
+export default EnhancedFooter

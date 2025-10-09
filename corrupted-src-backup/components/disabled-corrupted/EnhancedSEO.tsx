@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+  noindex?: boolean
+  nofollow?: boolean
+  canonical?: string
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
@@ -34,11 +33,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   nofollow = false,
   canonical,
 }) => {
-  const _location = useLocation();
-  //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
-  //   const canonicalUrl = canonical || currentUrl;
-  //   const currentTime = new Date().toISOString();
-
+  const _location = useLocation()
+  //   const currentUrl = url || `${window.location.origin}${location.pathname}`
+  //   const canonicalUrl = canonical || currentUrl
+  //   const currentTime = new Date().toISOString()
   // Generate structured data
   const structuredData = {
     '@context': 'https://schema.org',
@@ -67,8 +65,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       postalCode: '94105',
       addressCountry: 'US',
     },
-  };
-
+  }
   // Add article structured data if type is article
   if (type === 'article') {
     const articleData = {
@@ -95,17 +92,16 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         '@type': 'WebPage',
         '@id': currentUrl,
       },
-    };
-
+    }
     if (section) {
-      (articleData as any).articleSection = section;
+      (articleData as any).articleSection = section
     }
 
     if (tags.length > 0) {
-      (articleData as any).keywords = tags.join(', ');
+      (articleData as any).keywords = tags.join(', ')
     }
 
-    (structuredData as any)['@graph'] = [structuredData, articleData];
+    (structuredData as any)['@graph'] = [structuredData, articleData]
   }
 
   // Track page view
@@ -115,7 +111,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: currentUrl,
-      });
+      })
     }
 
     // Custom analytics tracking
@@ -124,10 +120,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         title,
         url: currentUrl,
         type,
-      });
+      })
     }
-  }, [title, currentUrl, type]);
-
+  }, [title, currentUrl, type])
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -223,7 +218,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         </script>
       )}
     </Helmet>
-  );
-};
-
-export default EnhancedSEO;
+  )
+}
+export default EnhancedSEO

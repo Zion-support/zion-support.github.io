@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
       <Helm, e, t>
         <title>
           Cognitive, Automatio, n: The, Enterprise, Revolution of, 202, 5 | Zion, Tech, Group
@@ -31,7 +31,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
 
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
-          {/* Back Link */};
+          {/* Back Link */}
           <Link to="/blog">
   className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
@@ -137,9 +137,9 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
               <p className="text-lg leading-relaxed mb-4">,"
-  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';';
+  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';'
                 robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> "
-                —intelligent systems that don't just execute tasks, but understand context, make decisions';';
+                —intelligent systems that don't just execute tasks, but understand context, make decisions';'
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
               <p className="text-lg leading-relaxed mb-4">"
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '

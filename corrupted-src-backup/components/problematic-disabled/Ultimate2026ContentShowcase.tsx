@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const Ultimate2026ContentShowcas, e: React.FC = () => {
   const showcaseConten, t = [
     {
@@ -295,6 +295,6 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default Ultimate2026ContentShowcase;
+  )
+}
+export default Ultimate2026ContentShowcase

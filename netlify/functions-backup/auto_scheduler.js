@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'auto_scheduler function executed successfully',
         timestamp: timestamp,
         function: 'auto_scheduler'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ auto_scheduler function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'auto_scheduler function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

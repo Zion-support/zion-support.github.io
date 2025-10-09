@@ -76,6 +76,5 @@ export const performanceConfig = {
     enableLongTaskDetection: true,
     enableMemoryMonitoring: true,
   },
-};
-
-export default performanceConfig;
+}
+export default performanceConfig

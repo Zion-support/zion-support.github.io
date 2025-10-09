@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import https from 'https';
-
+import https from 'https'
 // GitHub API configuration
 
 function makeGitHubRequest(endpoint) {
@@ -15,27 +14,24 @@ function makeGitHubRequest(endpoint) {
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json'
       }
-    };
-
+    }
     const req = https.request(options, (res) => {
       res.on('data', (chunk) => {
-        data += chunk;
-      });
+        data += chunk
+      })
       res.on('end', () => {
         try {
-          resolve(jsonData);
+          resolve(jsonData)
         } catch (error) {
-          reject(new Error(`Failed to parse JSON: ${error.message}`));
+          reject(new Error(`Failed to parse JSON: ${error.message}`))
         }
-      });
-    });
-
+      })
+    })
     req.on('error', (error) => {
-      reject(error);
-    });
-
-    req.end();
-  });
+      reject(error)
+    })
+    req.end()
+  })
 }
 
 async function checkOpenPRs() {
@@ -46,7 +42,7 @@ async function checkOpenPRs() {
 
     if (prs.length === 0) {
 
-      return [];
+      return []
     }
     
     
@@ -69,22 +65,21 @@ async function checkOpenPRs() {
         hasConflicts,
         mergeable: prDetail.mergeable,
         mergeable_state: prDetail.mergeable_state
-      });
+      })
     }
     
-    return prDetails;
-    
+    return prDetails
   } catch (error) {
 
-    return [];
+    return []
   }
 }
 
 // Run the check
 checkOpenPRs().then(prs => {
 
-  process.exit(0);
+  process.exit(0)
 }).catch(error => {
 
-  process.exit(1);
-});
+  process.exit(1)
+})

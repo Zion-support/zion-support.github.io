@@ -1,21 +1,18 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
-
-const PROD_DOMAIN = 'https://ziontechgroup.com';
-
+import { withErrorLogging } from './withErrorLogging.cjs'
+const PROD_DOMAIN = 'https://ziontechgroup.com'
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    res.statusCode = 405
+    res.setHeader('Allow', 'POST')
+    res.end('Method Not Allowed')
+    return
   }
 
-  const { productId, userId } = req.body || {};
-
+  const { productId, userId } = req.body || {}
   if (!productId) {
-    res.statusCode = 400;
-    res.json({ error: 'Product ID is required' });
-    return;
+    res.statusCode = 400
+    res.json({ error: 'Product ID is required' })
+    return
   }
 
   try {
@@ -25,15 +22,14 @@ async function handler(req, res) {
       userId,
       domain: PROD_DOMAIN,
       timestamp: new Date().toISOString(),
-    };
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, session: sessionData }));
+    }
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ success: true, session: sessionData }))
   } catch {
-    //     res.statusCode = 500;
-    res.end('Internal Server Error');
+    //     res.statusCode = 500
+    res.end('Internal Server Error')
   }
 }
 
-export default withErrorLogging(handler);
+export default withErrorLogging(handler)

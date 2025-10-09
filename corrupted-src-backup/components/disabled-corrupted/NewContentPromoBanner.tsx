@@ -1,7 +1,7 @@
-import Reac, t, { useState } fr, o, m 'rea, c, t';
+import Reac, t, { useState } fr, o, m 'rea, c, t'
 interface NewContentPromoBannerProp, s { 
-  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
-  classNa, m, e ?  : string;
+  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g'
+  classNa, m, e ?  : string
  }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({ 
   varia, n, t = 'pre, m, i, u, m', 
@@ -97,7 +97,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
       li, n, k: "/bl, o, g/ai-operation, a, l-scorecar, d, s-2, 0, 2, 6",
       category: "AI, Strate, g, y"
     }
-  ]; if (isDismiss, e, d) return, nul, l;
+  ]; if (isDismiss, e, d) return, nul, l
   return (
     <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
@@ -138,7 +138,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
                       {it, e, m.description}
                     </p>
                   </L, i, n, k>
-                );
+                )
               })}
             </div>
             {/* Action, button, s */}
@@ -185,6 +185,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
         </div>
       </div>
     </div>
-  );
-};
-export default React.me, m, o(NewContentPromoBann, e, r);
+  )
+}
+export default React.me, m, o(NewContentPromoBann, e, r)

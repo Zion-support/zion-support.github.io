@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 // Function to fix remaining lint issues in a file
 function fixRemainingLintIssues(filePath) {
   try {
@@ -16,7 +14,7 @@ function fixRemainingLintIssues(filePath) {
       !filePath.endsWith('.js') &&
       !filePath.endsWith('.jsx')
     ) {
-      return false;
+      return false
     }
 
     // Fix 1: Add underscore prefix to unused parameters
@@ -74,11 +72,10 @@ function fixRemainingLintIssues(filePath) {
         param1 === 'apiKey' ||
         param1 === 'PROD_DOMAIN'
       ) {
-        return match.replace(param1, `_${param1}`);
+        return match.replace(param1, `_${param1}`)
       }
-      return match;
-    });
-
+      return match
+    })
     // Fix 2: Comment out unused variable declarations
 
     for (let i = 0; i < lines.length; i++) {
@@ -257,9 +254,9 @@ function fixRemainingLintIssues(filePath) {
             !content.includes(varName + '[') &&
             !content.includes('<' + varName)
           ) {
-            fixedLines.push('// ' + line);
-            modified = true;
-            continue;
+            fixedLines.push('// ' + line)
+            modified = true
+            continue
           }
         }
       }
@@ -324,63 +321,62 @@ function fixRemainingLintIssues(filePath) {
                 'PROD_DOMAIN',
               ].includes(p)
             ) {
-              return `_${p}`;
+              return `_${p}`
             }
-            return p;
-          });
+            return p
+          })
           if (fixedParams.join(', ') !== params.join(', ')) {
             fixedLines.push(
               line.replace(
                 paramMatch[0],
                 `function ${line.match(/function\s+(\w+)/)?.[1]}(${fixedParams.join(', ')})`
               )
-            );
-            modified = true;
-            continue;
+            )
+            modified = true
+            continue
           }
         }
       }
 
-      fixedLines.push(line);
+      fixedLines.push(line)
     }
 
-    content = fixedLines.join('\n');
-
+    content = fixedLines.join('\n')
     // Fix 4: Remove unused imports
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
-      content = content.replace(/,\s*useContext/g, '');
-      content = content.replace(/useContext,\s*/g, '');
+      content = content.replace(/,\s*useContext/g, '')
+      content = content.replace(/useContext,\s*/g, '')
       if (content.includes('import { useContext }')) {
-        content = content.replace(/import { useContext } from 'react';\n?/g, '');
+        content = content.replace(/import { useContext } from 'react';\n?/g, '')
       }
-      modified = true;
+      modified = true
     }
 
     // Fix 5: Remove unused lazy imports
     if (content.includes('lazy') && !content.includes('lazy(')) {
-      content = content.replace(/,\s*lazy/g, '');
-      content = content.replace(/lazy,\s*/g, '');
+      content = content.replace(/,\s*lazy/g, '')
+      content = content.replace(/lazy,\s*/g, '')
       if (content.includes('import { lazy }')) {
-        content = content.replace(/import { lazy } from 'react';\n?/g, '');
+        content = content.replace(/import { lazy } from 'react';\n?/g, '')
       }
-      modified = true;
+      modified = true
     }
 
     // Fix 6: Add proper TypeScript types instead of any
-    content = content.replace(/:\s*any\b/g, ': unknown');
+    content = content.replace(/:\s*any\b/g, ': unknown')
     if (content.includes(': unknown')) {
-      modified = true;
+      modified = true
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      return true
     }
 
-    return false;
+    return false
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -395,9 +391,9 @@ function fixAllRemainingLintIssues(_dir) {
         if (stat.isDirectory()) {
           // Skip certain directories
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
-            continue;
+            continue
           }
-          fixedCount += fixAllRemainingLintIssues(filePath);
+          fixedCount += fixAllRemainingLintIssues(filePath)
         } else if (
           file.endsWith('.tsx') ||
           file.endsWith('.ts') ||
@@ -405,19 +401,19 @@ function fixAllRemainingLintIssues(_dir) {
           file.endsWith('.jsx')
         ) {
           if (fixRemainingLintIssues(filePath)) {
-            fixedCount++;
+            fixedCount++
           }
         }
       } catch (error) {
 
-        continue;
+        continue
       }
     }
 
-    return fixedCount;
+    return fixedCount
   } catch (error) {
 
-    return 0;
+    return 0
   }
 }
 

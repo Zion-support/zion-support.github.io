@@ -201,5 +201,5 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
         </moti, o, n.d, i, v>
       </div>
     </div>
-  );
+  )
 }

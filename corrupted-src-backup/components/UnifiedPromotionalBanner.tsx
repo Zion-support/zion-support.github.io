@@ -1,25 +1,25 @@
 export, interface, FeaturedItem {
-tit, l, e: stri, n, g;
-catego, r, y: stri, n, g;
+tit, l, e: stri, n, g
+catego, r, y: stri, n, g
 l, i, n
-  k: stri, n, g;
-metri, c, s?: stri, n, g;
+  k: stri, n, g
+metri, c, s?: stri, n, g
 }
 export, interface, UnifiedPromotionalBannerProps {
-varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-tit, l, e: stri, n, g;
-descripti, o, n: stri, n, g;
-ctaTe, x, t: stri, n, g;
+varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a'
+tit, l, e: stri, n, g
+descripti, o, n: stri, n, g
+ctaTe, x, t: stri, n, g
 ctaL, i, n
-  k: stri, n, g;
-the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
-featuredIte, m, s?: FeaturedIt, e, m[];
-showCou, n, t?: numb, e, r;
-classNa, m, e?: stri, n, g;
-ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
-animat, e, d?: boole, a, n;
-bad, g, e?: stri, n, g;
-da, t, e?: stri, n, g;
+  k: stri, n, g
+the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n'
+featuredIte, m, s?: FeaturedIt, e, m[]
+showCou, n, t?: numb, e, r
+classNa, m, e?: stri, n, g
+ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e'
+animat, e, d?: boole, a, n
+bad, g, e?: stri, n, g
+da, t, e?: stri, n, g
 }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t'
@@ -32,21 +32,21 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   showCou, n, t = 3
   classNa, m, e = ''
   ic, o, n = 'sparkl, e, s'
-  animat, e, d = tr, u, e;
+  animat, e, d = tr, u, e
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
-  varia, n, t = 'defau, l, t',';
+  varia, n, t = 'defau, l, t','
   tit, l, e
   descripti, o, n
   ctaTe, x, t
   ctaLi, n, k
-  the, m, e = 'gradie, n, t',';
+  the, m, e = 'gradie, n, t','
   featuredIte, m, s = []
   showCou, n, t = 3
-  classNa, m, e = '',';
-  ic, o, n = 'sparkl, e, s',';
+  classNa, m, e = '','
+  ic, o, n = 'sparkl, e, s','
   animat, e, d = tr, u, e
   bad, g, e
-  da, t, e;
+  da, t, e
 }) => {
   // Theme configurations const themeClass e s = {
     bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/, 3, 0',

@@ -1,13 +1,13 @@
 export interface Insight {
-  id: string;
-  title: string;
-  summary: string;
-  category: string;
-  date: string;
-  readMinutes: number;
-  featured: boolean;
-  tags: string[];
-  content: string;
+  id: string
+  title: string
+  summary: string
+  category: string
+  date: string
+  readMinutes: number
+  featured: boolean
+  tags: string[]
+  content: string
 }
 
 export const newInsights: Insight[] = [
@@ -55,4 +55,4 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Real-time monitoring provides instant threat response
     `,
   },
-];
+]

@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'link_and_health_scheduler function executed successfully',
         timestamp: timestamp,
         function: 'link_and_health_scheduler'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ link_and_health_scheduler function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'link_and_health_scheduler function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

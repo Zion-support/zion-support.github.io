@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import https from 'https';
-
+import https from 'https'
 // GitHub API configuration
 
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
@@ -16,52 +15,49 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
       }
-    };
-
+    }
     if (data) {
-      options.headers['Content-Length'] = Buffer.byteLength(data);
+      options.headers['Content-Length'] = Buffer.byteLength(data)
     }
 
     const req = https.request(options, (res) => {
       res.on('data', (chunk) => {
-        responseData += chunk;
-      });
+        responseData += chunk
+      })
       res.on('end', () => {
         try {
-          resolve({ status: res.statusCode, data: jsonData });
+          resolve({ status: res.statusCode, data: jsonData })
         } catch (error) {
-          reject(new Error(`Failed to parse JSON: ${error.message}`));
+          reject(new Error(`Failed to parse JSON: ${error.message}`))
         }
-      });
-    });
-
+      })
+    })
     req.on('error', (error) => {
-      reject(error);
-    });
-
+      reject(error)
+    })
     if (data) {
-      req.write(data);
+      req.write(data)
     }
 
-    req.end();
-  });
+    req.end()
+  })
 }
 
 async function getOpenPRs() {
   try {
-    return response.data;
+    return response.data
   } catch (error) {
 
-    return [];
+    return []
   }
 }
 
 async function getPRDetails(prNumber) {
   try {
-    return response.data;
+    return response.data
   } catch (error) {
 
-    return null;
+    return null
   }
 }
 
@@ -71,43 +67,41 @@ async function mergePR(prNumber, title) {
     // Get PR details first
     if (!prDetails) {
 
-      return false;
+      return false
     }
 
     // Check if PR is mergeable
     if (prDetails.mergeable === false) {
 
-      return false;
+      return false
     }
 
     if (prDetails.mergeable_state === 'dirty') {
 
-      return false;
+      return false
     }
 
     // Merge the PR
     const mergeData = JSON.stringify({
       commit_title: `Merge PR #${prNumber}: ${title}`,
       merge_method: 'merge'
-    });
-
+    })
     const response = await makeGitHubRequest(
       `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       'PUT',
       mergeData
-    );
-
+    )
     if (response.status === 200) {
 
-      return true;
+      return true
     } else {
 
-      return false;
+      return false
     }
 
   } catch (error) {
 
-    return false;
+    return false
   }
 }
 
@@ -117,7 +111,7 @@ async function mergeAllPRs() {
     
     if (prs.length === 0) {
 
-      return;
+      return
     }
 
 
@@ -126,24 +120,23 @@ async function mergeAllPRs() {
       pr.base.ref === 'main' && 
       pr.mergeable !== false && 
       pr.mergeable_state !== 'dirty'
-    );
-
+    )
     if (mainPRs.length === 0) {
 
-      return;
+      return
     }
 
 
     // Merge PRs one by one
     for (const pr of mainPRs) {
       if (success) {
-        successCount++;
+        successCount++
       } else {
-        failCount++;
+        failCount++
       }
       
       // Add a small delay between merges
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))
     }
 
 
@@ -158,8 +151,8 @@ async function mergeAllPRs() {
 // Run the merge process
 mergeAllPRs().then(() => {
 
-  process.exit(0);
+  process.exit(0)
 }).catch(error => {
 
-  process.exit(1);
-});
+  process.exit(1)
+})

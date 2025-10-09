@@ -1,5 +1,5 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t"
 const October2025NewContentBanner, 2 = () => {
   const newArticle, s = [
     {
@@ -85,7 +85,7 @@ const October2025NewContentBanner, 2 = () => {
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* CTA, Sectio, n */}
@@ -99,6 +99,6 @@ const October2025NewContentBanner, 2 = () => {
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default October2025NewContentBanner2;
+  )
+}
+export default October2025NewContentBanner2

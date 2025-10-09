@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'ai_changelog_runner function executed successfully',
         timestamp: timestamp,
         function: 'ai_changelog_runner'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ ai_changelog_runner function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'ai_changelog_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

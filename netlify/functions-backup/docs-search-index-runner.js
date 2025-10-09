@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
           lastUpdate: new Date().toISOString()}
         },
       }),
-    };
-    return result;
+    }
+    return result
 //   } catch (error) {// console.error('Error in docs-search-index-runner: ') error
       }
     return {
@@ -30,10 +30,10 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({error: 'Internal server error',
         message: error.message,
         function: 'docs-search-index-runner'}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString(),' function: 'docs-search-index-runner',' source: event.source || 'unknown', searchIndex: {' status: 'active', searchableItems: 0,
         lastUpdate: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in docs-search-index-runner: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'docs-search-index-runner' }) }; } };'

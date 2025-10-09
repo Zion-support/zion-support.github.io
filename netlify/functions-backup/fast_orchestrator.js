@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'fast_orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'fast_orchestrator'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ fast_orchestrator function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'fast_orchestrator function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'

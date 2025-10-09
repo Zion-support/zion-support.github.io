@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'innovation_lab function executed successfully',
         timestamp: timestamp,
         function: 'innovation_lab'}
-      });
-    };
+      })
+    }
 //   } catch (error) {// console.error('❌ innovation_lab function failed: ') error
       }
     return {
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'innovation_lab function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
-      });
-    };
+      })
+    }
   }
-};
+}
         timestamp: new Date().toISOString() }) }; } };'
