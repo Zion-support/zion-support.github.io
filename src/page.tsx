@@ -189,6 +189,105 @@ const HomePage: React.FC = () => {
       link: '/ai-financial-analyzer',
       popular: false,
       category: 'Finance'
+    },
+    {
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing and content generation',
+      icon: '🎬',
+      price: '$249/month',
+      features: ['AI video editing', 'Auto-subtitles', 'Voice synthesis', 'Scene generation', 'Brand templates', 'Multi-format export'],
+      benefits: ['80% time savings', 'Professional quality', 'No editing skills needed', '10x faster production'],
+      link: '/ai-video-generation',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Create realistic voice clones for marketing, training, and accessibility',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice synthesis', 'Emotion control', 'Multi-language support', 'Real-time conversion', 'Custom voice training', 'API integration'],
+      benefits: ['95% voice accuracy', 'Unlimited usage', 'Professional quality', 'Cost-effective solution'],
+      link: '/ai-voice-cloning',
+      popular: true,
+      category: 'Audio'
+    },
+    {
+      title: 'AI Music Composer',
+      description: 'Generate original music and soundtracks with AI composition',
+      icon: '🎵',
+      price: '$179/month',
+      features: ['Original compositions', 'Genre selection', 'Mood-based generation', 'Instrument control', 'Royalty-free music', 'Custom length'],
+      benefits: ['Unlimited music', 'No copyright issues', 'Professional quality', 'Instant generation'],
+      link: '/ai-music-composition',
+      popular: false,
+      category: 'Audio'
+    },
+    {
+      title: 'AI 3D Model Generator',
+      description: 'Create 3D models and assets with AI-powered generation',
+      icon: '🎨',
+      price: '$299/month',
+      features: ['3D model generation', 'Texture creation', 'Animation support', 'VR/AR ready', 'Multiple formats', 'Custom specifications'],
+      benefits: ['90% time savings', 'Professional quality', 'No 3D skills needed', 'Unlimited models'],
+      link: '/ai-3d-generation',
+      popular: true,
+      category: 'Design'
+    },
+    {
+      title: 'AI Fashion Designer',
+      description: 'Design clothing and accessories with AI-powered fashion creation',
+      icon: '👗',
+      price: '$229/month',
+      features: ['Fashion design', 'Trend analysis', 'Color matching', 'Size optimization', 'Pattern generation', 'Market insights'],
+      benefits: ['Trend prediction', 'Design optimization', 'Market analysis', 'Cost reduction'],
+      link: '/ai-fashion-design',
+      popular: false,
+      category: 'Design'
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness training and nutrition plans with AI coaching',
+      icon: '💪',
+      price: '$149/month',
+      features: ['Personalized workouts', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Motivation coaching'],
+      benefits: ['Personalized approach', '24/7 availability', 'Better results', 'Cost-effective training'],
+      link: '/ai-fitness-coach',
+      popular: true,
+      category: 'Health'
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business workflows with intelligent process automation',
+      icon: '⚙️',
+      price: '$399/month',
+      features: ['Process automation', 'Workflow design', 'Integration APIs', 'Conditional logic', 'Error handling', 'Performance monitoring'],
+      benefits: ['90% process reduction', 'Error elimination', 'Cost savings', 'Scalable automation'],
+      link: '/ai-workflow-automation',
+      popular: true,
+      category: 'Automation'
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Automate sales processes with AI-powered lead nurturing and closing',
+      icon: '💼',
+      price: '$349/month',
+      features: ['Lead scoring', 'Email sequences', 'Follow-up automation', 'CRM integration', 'Sales forecasting', 'Performance analytics'],
+      benefits: ['40% more sales', '60% time savings', 'Better lead quality', 'ROI tracking'],
+      link: '/ai-sales-automation',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Create stunning data visualizations and interactive dashboards with AI',
+      icon: '📊',
+      price: '$199/month',
+      features: ['Auto-chart generation', 'Interactive dashboards', 'Real-time updates', 'Custom styling', 'Export options', 'Collaboration tools'],
+      benefits: ['Instant insights', 'Professional charts', 'Time savings', 'Better decisions'],
+      link: '/ai-data-visualization',
+      popular: true,
+      category: 'Analytics'
     }
   ];
 
@@ -246,6 +345,42 @@ const HomePage: React.FC = () => {
       features: ['Threat Detection', 'Anomaly Detection', 'Behavioral Analysis', 'Incident Response', 'Risk Assessment', 'Compliance Monitoring'],
       color: 'text-red-400',
       benefits: ['99.9% threat detection', 'Real-time monitoring', 'Automated response', 'Reduced false positives']
+    },
+    {
+      title: 'AI Healthcare Solutions',
+      description: 'Medical AI for diagnosis, treatment planning, and patient care',
+      icon: Stethoscope,
+      price: '$3,500/month',
+      features: ['Medical Imaging Analysis', 'Diagnostic Assistance', 'Treatment Planning', 'Drug Discovery', 'Patient Monitoring', 'Clinical Decision Support'],
+      color: 'text-pink-400',
+      benefits: ['95% diagnostic accuracy', 'Faster treatment', 'Cost reduction', 'Better outcomes']
+    },
+    {
+      title: 'AI Financial Services',
+      description: 'Advanced AI for banking, trading, and financial analysis',
+      icon: CreditCard,
+      price: '$2,999/month',
+      features: ['Algorithmic Trading', 'Risk Assessment', 'Fraud Detection', 'Credit Scoring', 'Portfolio Management', 'Regulatory Compliance'],
+      color: 'text-green-400',
+      benefits: ['Real-time analysis', 'Risk mitigation', 'Compliance automation', 'Better returns']
+    },
+    {
+      title: 'AI Mobile Development',
+      description: 'AI-powered mobile app development and optimization',
+      icon: Smartphone,
+      price: '$2,200/month',
+      features: ['App Intelligence', 'User Behavior Analysis', 'Performance Optimization', 'Personalization', 'Push Notifications', 'Analytics Integration'],
+      color: 'text-blue-400',
+      benefits: ['Better user experience', 'Higher engagement', 'Faster development', 'Cost efficiency']
+    },
+    {
+      title: 'AI Writing Assistant',
+      description: 'Advanced AI writing tools for content creation and editing',
+      icon: FileText,
+      price: '$1,500/month',
+      features: ['Content Generation', 'Grammar Checking', 'Style Optimization', 'Plagiarism Detection', 'SEO Writing', 'Multi-language Support'],
+      color: 'text-purple-400',
+      benefits: ['Professional quality', 'Time savings', 'Consistency', 'SEO optimization']
     }
   ];
 
@@ -303,6 +438,42 @@ const HomePage: React.FC = () => {
       features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base', 'User Training', 'System Maintenance'],
       color: 'text-orange-400',
       benefits: ['Instant response', '95% satisfaction', 'Proactive monitoring', 'User empowerment']
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and digital transformation services',
+      icon: Briefcase,
+      price: '$1,500/month',
+      features: ['Technology Strategy', 'Digital Transformation', 'IT Roadmap', 'Vendor Management', 'Cost Analysis', 'Best Practices'],
+      color: 'text-yellow-400',
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with zero downtime',
+      icon: Cloud,
+      price: '$2,200/month',
+      features: ['Migration Planning', 'Data Transfer', 'Application Modernization', 'Security Setup', 'Performance Optimization', 'Training'],
+      color: 'text-blue-400',
+      benefits: ['Zero downtime', 'Cost savings', 'Scalability', 'Modern infrastructure']
+    },
+    {
+      title: 'IT Infrastructure',
+      description: 'Complete IT infrastructure design and implementation',
+      icon: Building,
+      price: '$1,800/month',
+      features: ['Server Setup', 'Network Design', 'Storage Solutions', 'Security Implementation', 'Monitoring Systems', 'Backup Solutions'],
+      color: 'text-green-400',
+      benefits: ['Reliable infrastructure', 'Scalable design', 'Security first', 'Future-proof']
+    },
+    {
+      title: 'System Administration',
+      description: 'Comprehensive system administration and maintenance services',
+      icon: Wrench,
+      price: '$1,200/month',
+      features: ['System Monitoring', 'Performance Tuning', 'Security Updates', 'User Management', 'Backup Management', 'Troubleshooting'],
+      color: 'text-purple-400',
+      benefits: ['Proactive maintenance', 'System stability', 'Security updates', 'User support']
     }
   ];
 
@@ -526,51 +697,51 @@ const HomePage: React.FC = () => {
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article key={index} className={`cyber-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 relative ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 z-10">
+                      <div className="bg-cyan-400 text-slate-900 px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                         Popular
                       </div>
                     </div>
                   )}
-                  <div className="text-4xl mb-4 text-center">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center">{service.icon}</div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-center text-xs sm:text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-cyan-400 mb-1 sm:mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 mr-1 sm:mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-pink-400 mb-1 sm:mb-2">Benefits:</h4>
                     <ul className="space-y-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          <TrendingUp className="w-2 h-2 sm:w-3 sm:h-3 text-pink-400 mr-1 sm:mr-2 flex-shrink-0" />
+                          <span className="truncate">{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="text-base sm:text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                     <a 
                       href={service.link} 
-                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      className="cyber-button px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 block"
                     >
                       Learn More
                     </a>
@@ -589,34 +760,34 @@ const HomePage: React.FC = () => {
               Advanced artificial intelligence solutions for enterprise applications
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 mb-12">
               {aiServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
+                <article key={index} className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                    <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-center text-xs sm:text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-purple-400 mb-1 sm:mb-2">Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 mr-1 sm:mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
+                    <div className={`text-base sm:text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
                       href="/ai-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
+                      className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900 block`}
                     >
                       Learn More
                     </a>
@@ -635,34 +806,34 @@ const HomePage: React.FC = () => {
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 mb-12">
               {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
+                <article key={index} className="cyber-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                    <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-center text-xs sm:text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-blue-400 mb-1 sm:mb-2">Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 mr-1 sm:mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
+                    <div className={`text-base sm:text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
                       href="/it-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
+                      className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900 block`}
                     >
                       Learn More
                     </a>
@@ -681,46 +852,46 @@ const HomePage: React.FC = () => {
               Cutting-edge technologies for next-generation business solutions
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
               {specializedServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
+                <article key={index} className="quantum-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                    <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-center text-xs sm:text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-cyan-400 mb-1 sm:mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 mr-1 sm:mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="text-xs sm:text-sm font-semibold text-pink-400 mb-1 sm:mb-2">Benefits:</h4>
                     <ul className="space-y-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          <TrendingUp className="w-2 h-2 sm:w-3 sm:h-3 text-pink-400 mr-1 sm:mr-2 flex-shrink-0" />
+                          <span className="truncate">{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
+                    <div className={`text-base sm:text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
                       href="/specialized-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
+                      className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900 block`}
                     >
                       Learn More
                     </a>
