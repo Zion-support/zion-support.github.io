@@ -9,7 +9,13 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI Video Editor Pro', url: '/ai-video-editor', description: 'Automated video editing' },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
+    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI-powered fashion design' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI music creation' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness training' },
+    { name: 'AI 3D Model Generator', url: '/ai-3d-generation', description: '3D model creation' }
   ];
 
   const aiServices = [
@@ -18,7 +24,13 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
+    { name: 'Deep Learning Solutions', url: '/deep-learning', description: 'Advanced neural networks' },
+    { name: 'AI Data Engineering', url: '/ai-data-engineering', description: 'Intelligent data pipelines' },
+    { name: 'AI Model Operations', url: '/ai-mlops', description: 'ML lifecycle management' },
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Edge AI deployment' },
+    { name: 'AI Explainability', url: '/ai-ethics', description: 'Transparent AI decisions' },
+    { name: 'AI Research & Development', url: '/ai-research', description: 'Cutting-edge AI research' }
   ];
 
   const itServices = [
@@ -27,7 +39,13 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'IT Infrastructure Management', url: '/it-infrastructure-management', description: 'Complete infrastructure management' },
+    { name: 'Data Center Services', url: '/data-center-services', description: 'Enterprise data centers' },
+    { name: 'IT Consulting & Strategy', url: '/it-consulting', description: 'Strategic IT planning' },
+    { name: 'Managed IT Services', url: '/managed-it-services', description: 'Comprehensive IT management' },
+    { name: 'IT Security Services', url: '/it-security-services', description: 'Managed security services' },
+    { name: 'Cloud Migration Services', url: '/cloud-migration', description: 'Seamless cloud migration' }
   ];
 
   const specializedServices = [
@@ -36,7 +54,13 @@ const Footer: React.FC = () => {
     { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
+    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
+    { name: 'Augmented Reality (AR)', url: '/ar-solutions', description: 'Immersive AR experiences' },
+    { name: 'Virtual Reality (VR)', url: '/vr-platforms', description: 'Complete VR solutions' },
+    { name: 'Digital Twin Technology', url: '/digital-twin', description: 'Digital asset replicas' },
+    { name: '5G Network Solutions', url: '/5g-solutions', description: 'Ultra-fast 5G networks' },
+    { name: 'Space Technology', url: '/space-technology', description: 'Satellite communication' },
+    { name: 'Biotechnology AI', url: '/biotech-ai', description: 'AI for life sciences' }
   ];
 
   const additionalServices = [
