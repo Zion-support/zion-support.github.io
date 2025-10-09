@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Users, Target, TrendingUp, Shield, Clock, BarChart, CheckCircle, ArrowRight, Star, Award, Globe, Phone, Mail, Calendar, Zap } from 'lucide-react';
+import {Brain, Users, Target, TrendingUp, BarChart, CheckCircle, Star, Phone, Mail} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -59,59 +59,7 @@ const AICRMPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$49',
-      period: '/user/month',
-      description: 'Perfect for small teams getting started',
-      features: [
-        'Up to 1,000 contacts',
-        'Basic AI lead scoring',
-        'Email automation',
-        'Mobile app access',
-        'Standard support',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$99',
-      period: '/user/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 contacts',
-        'Advanced AI features',
-        'Custom workflows',
-        'Advanced analytics',
-        'Priority support',
-        'API access',
-        'Custom fields',
-        'Team collaboration tools'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/user/month',
-      description: 'Comprehensive solution for large organizations',
-      features: [
-        'Unlimited contacts',
-        'Full AI suite',
-        'Custom integrations',
-        'Advanced reporting',
-        '24/7 dedicated support',
-        'White-label options',
-        'Custom development',
-        'Dedicated account manager'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
+    const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechStart Inc.',

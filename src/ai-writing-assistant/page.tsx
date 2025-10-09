@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import { PenTool, FileText, Zap, Target, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Brain, Users, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import {PenTool, FileText, Zap, Target, Clock, CheckCircle, Star, Phone, Mail, Brain, Users} from 'lucide-react';
 const AIWritingAssistantPage: React.FC = () => {
   const features = [
     {
@@ -43,59 +41,7 @@ const AIWritingAssistantPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Writer',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individual creators',
-      features: [
-        '10,000 words per month',
-        'Basic AI writing',
-        '5 content templates',
-        'Standard support',
-        'Basic SEO optimization',
-        'Single user account'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for small teams',
-      features: [
-        '50,000 words per month',
-        'Advanced AI writing',
-        '50+ content templates',
-        'Priority support',
-        'Advanced SEO tools',
-        'Team collaboration',
-        'Brand voice training',
-        'Content analytics'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited words',
-        'Premium AI models',
-        'Custom templates',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'White-label options',
-        'Advanced analytics'
-      ],
-      popular: false
-    }
-  ];
-
-  const useCases = [
+    const useCases = [
     {
       title: 'Blog Content',
       description: 'Create engaging blog posts that rank high in search engines and drive traffic to your website.',

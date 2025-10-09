@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+import {Workflow, Brain, BarChart, CheckCircle, Phone, Mail, Settings, Database} from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -31,27 +31,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ];
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$299/month',
-      description: 'Perfect for small teams',
-      features: ['Up to 5 workflows', 'Basic automation', 'Email notifications', 'Standard integrations']
-    },
-    {
-      name: 'Professional',
-      price: '$599/month',
-      description: 'Ideal for growing businesses',
-      features: ['Up to 25 workflows', 'Advanced AI features', 'Custom integrations', 'Analytics dashboard', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299/month',
-      description: 'For large organizations',
-      features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
-    }
-  ];
-  const stats = [
+    const stats = [
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },
     { number: '50%', label: 'Time Savings' },

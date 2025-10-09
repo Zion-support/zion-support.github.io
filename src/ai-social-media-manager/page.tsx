@@ -1,15 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Share2, TrendingUp, Users, BarChart, Calendar, Zap, Brain, ArrowRight, Phone, Mail, MapPin, Star, Shield, Globe, Target, MessageSquare, Image, Video, Hash } from 'lucide-react';
+import React, { useEffect } from 'react';
+import {Share2, Users, BarChart, Calendar, Brain, Phone, Star, Target, Image, Video, Hash} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AISocialMediaManagerPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
+    useEffect(() => {
     setIsLoaded(true);
   }, []);
 
@@ -49,52 +46,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'YouTube', icon: '📺', features: ['Video optimization', 'Thumbnail creation', 'SEO optimization'] }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$79/month',
-      description: 'Perfect for small businesses and influencers',
-      features: [
-        '3 social media accounts',
-        '30 posts per month',
-        'Basic AI content creation',
-        'Standard analytics',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced AI content creation',
-        'Detailed analytics',
-        'Team collaboration',
-        'Priority support'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$299/month',
-      description: 'For large organizations and agencies',
-      features: [
-        'Unlimited accounts',
-        'Unlimited posts',
-        'Full AI suite',
-        'White-label options',
-        'Custom integrations',
-        'Dedicated support',
-        'API access'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
+    const testimonials = [
     {
       name: 'Jessica Martinez',
       role: 'Marketing Director, FashionBrand',

@@ -1,15 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Send, Users, BarChart, Target, Zap, Brain, ArrowRight, Phone, MapPin, Star, Shield, Globe, CheckCircle, TrendingUp, Eye, MessageSquare } from 'lucide-react';
+import React, { useEffect } from 'react';
+import {Mail, Send, BarChart, Target, Brain, Phone, Star, CheckCircle} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AIEmailMarketingPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
+    useEffect(() => {
     setIsLoaded(true);
   }, []);
 
@@ -49,52 +46,7 @@ const AIEmailMarketingPage: React.FC = () => {
     { name: 'Promotional', icon: '🎯', description: 'Drive sales with special offers and discounts' }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Up to 5,000 contacts',
-        'Unlimited emails',
-        'Basic templates',
-        'Email support',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$199/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        'Up to 25,000 contacts',
-        'Unlimited emails',
-        'AI content generation',
-        'Advanced segmentation',
-        'A/B testing',
-        'Priority support'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$499/month',
-      description: 'For large organizations with complex needs',
-      features: [
-        'Unlimited contacts',
-        'Unlimited emails',
-        'Full AI suite',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated support',
-        'API access'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
+    const testimonials = [
     {
       name: 'Jennifer Lee',
       role: 'Marketing Manager, E-commerceCo',

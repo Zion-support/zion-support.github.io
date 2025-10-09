@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings } from 'lucide-react';
+import { Shield, Lock, Eye, Zap, Brain, BarChart, Phone, Mail } from 'lucide-react';
 
 const AICybersecurityPage: React.FC = () => {
   const features = [

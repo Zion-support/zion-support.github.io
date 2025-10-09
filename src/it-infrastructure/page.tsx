@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, RefreshCw, Database, Smartphone, Calendar, FileText, PieChart, Settings, Bell, Search, Filter, Download, Upload, Share2, Link2, Plus, Minus, Edit, Trash2, Save, Send, Archive, Tag, User, Building, CreditCard, ShoppingCart, Package, Truck, Headphones, HelpCircle, BookOpen, Lightbulb, Rocket, Crown, Gem, Heart, ThumbsUp, MessageCircle, Video, Camera, Mic, HeadphonesIcon, Wifi, Bluetooth, Battery, Wrench, Hammer, Screwdriver, Paintbrush, Palette, Scissors, Ruler, Calculator, Calendar as CalendarIcon, Clock as ClockIcon, Map, Navigation, Compass, Flag, Home, Building2, Factory, Store, Bank, Hospital, School, University, Church, Mosque, Temple, Library, Museum, Theater, Stadium, Airport, Train, Bus, Car, Bike, Plane, Ship, Rocket as RocketIcon, Satellite, Telescope, Microscope, Flask, Beaker, TestTube, Atom, DNA, Virus, Bacteria, Cell, Organ, Heart as HeartIcon, Brain as BrainIcon, Eye as EyeIcon, Ear, Nose, Mouth, Hand, Finger, Foot, Leg, Arm, Chest, Back, Stomach, Liver, Kidney, Lung, Stomach as StomachIcon, Intestine, Bone, Muscle, Skin, Hair, Nail, Tooth, Tongue, Lip, Cheek, Chin, Forehead, Temple, Jaw, Neck, Shoulder, Elbow, Wrist, Hip, Knee, Ankle, Heel, Toe, Thumb, Index, Middle, Ring, Pinky, Palm, Knuckle, Joint, Tendon, Ligament, Nerve, Vein, Artery, Capillary, Blood, Plasma, Platelet, WhiteBloodCell, RedBloodCell, Hemoglobin, Oxygen, CarbonDioxide, Nitrogen, Hydrogen, Helium, Lithium, Beryllium, Boron, Carbon, Nitrogen as NitrogenIcon, Oxygen as OxygenIcon, Fluorine, Neon, Sodium, Magnesium, Aluminum, Silicon, Phosphorus, Sulfur, Chlorine, Argon, Potassium, Calcium, Scandium, Titanium, Vanadium, Chromium, Manganese, Iron, Cobalt, Nickel, Copper, Zinc, Gallium, Germanium, Arsenic, Selenium, Bromine, Krypton, Rubidium, Strontium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Palladium, Silver, Cadmium, Indium, Tin, Antimony, Tellurium, Iodine, Xenon, Cesium, Barium, Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium, Hafnium, Tantalum, Tungsten, Rhenium, Osmium, Iridium, Platinum, Gold, Mercury, Thallium, Lead, Bismuth, Polonium, Astatine, Radon, Francium, Radium, Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson, Server } from 'lucide-react';
+import {CheckCircle, Star, Shield, Phone, Mail, RefreshCw, Database, Server} from 'lucide-react';
 
 const ITInfrastructurePage: React.FC = () => {
   const services = [
@@ -48,59 +47,7 @@ const ITInfrastructurePage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Basic Support',
-      price: '$2,500',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 10 servers',
-        'Basic monitoring',
-        'Email support',
-        'Monthly reports',
-        'Backup services',
-        'Security updates'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$5,000',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 50 servers',
-        'Advanced monitoring',
-        '24/7 phone support',
-        'Weekly reports',
-        'Disaster recovery',
-        'Performance optimization',
-        'Security hardening',
-        'Cloud migration'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$10,000',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited servers',
-        'Full monitoring suite',
-        'Dedicated support team',
-        'Daily reports',
-        'Custom solutions',
-        'Advanced security',
-        'White-label options',
-        'On-site support'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
+    const testimonials = [
     {
       name: 'Robert Johnson',
       company: 'TechCorp Industries',

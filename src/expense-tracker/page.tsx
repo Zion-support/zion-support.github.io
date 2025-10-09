@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
@@ -43,59 +41,7 @@ const ExpenseTrackerPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for individuals',
-      features: [
-        'Unlimited receipts',
-        'Basic AI categorization',
-        'Expense reports',
-        'Mobile app access',
-        'Email support',
-        '1 year data retention'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$29',
-      period: '/month',
-      description: 'Ideal for small businesses',
-      features: [
-        'Up to 10 users',
-        'Advanced AI features',
-        'Team collaboration',
-        'Custom categories',
-        'Priority support',
-        'API access',
-        'Advanced reporting',
-        '2 years data retention'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$99',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited users',
-        'Premium AI features',
-        'Custom workflows',
-        'Advanced integrations',
-        'Dedicated support',
-        'White-label options',
-        'Unlimited data retention',
-        'Custom compliance rules'
-      ],
-      popular: false
-    }
-  ];
-
-  const integrations = [
+    const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },

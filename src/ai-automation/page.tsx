@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Zap, Target, TrendingUp, Shield, Clock, Users, CheckCircle, ArrowRight, Star, Award, Globe } from 'lucide-react';
+import {Brain, Zap, Target, TrendingUp, Shield, CheckCircle, Globe} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -59,57 +59,7 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI automation',
-      features: [
-        'Up to 5 automated workflows',
-        'Basic AI process discovery',
-        'Standard analytics dashboard',
-        'Email support',
-        '10,000 process executions/month'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing businesses with complex automation needs',
-      features: [
-        'Up to 25 automated workflows',
-        'Advanced AI process discovery',
-        'Custom analytics and reporting',
-        'Priority support',
-        '100,000 process executions/month',
-        'API integrations',
-        'Custom workflow templates'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Comprehensive solution for large organizations',
-      features: [
-        'Unlimited automated workflows',
-        'AI-powered process optimization',
-        'Advanced analytics and BI',
-        '24/7 dedicated support',
-        'Unlimited process executions',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated account manager'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       

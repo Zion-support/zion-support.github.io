@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 const AISchedulerPage: React.FC = () => {
   const features = [
     {
@@ -43,59 +41,7 @@ const AISchedulerPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for individuals',
-      features: [
-        'Unlimited personal meetings',
-        'Basic AI scheduling',
-        'Calendar integration',
-        'Email reminders',
-        'Mobile app access',
-        'Standard support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Team',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for small teams',
-      features: [
-        'Up to 10 team members',
-        'Advanced AI scheduling',
-        'Team coordination',
-        'Custom meeting types',
-        'Analytics dashboard',
-        'Priority support',
-        'API access',
-        'Custom branding'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$149',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited team members',
-        'Premium AI features',
-        'Advanced analytics',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options',
-        'SSO integration',
-        'Custom workflows'
-      ],
-      popular: false
-    }
-  ];
-
-  const integrations = [
+    const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },

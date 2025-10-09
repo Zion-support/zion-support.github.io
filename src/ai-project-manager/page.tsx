@@ -1,15 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calendar, Users, Target, BarChart, Clock, CheckCircle, AlertCircle, TrendingUp, Zap, Brain, ArrowRight, Phone, Mail, MapPin, Star, Shield, Globe } from 'lucide-react';
+import React, { useEffect } from 'react';
+import {Users, Target, BarChart, CheckCircle, Brain, Phone, Star} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AIProjectManagerPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
+    useEffect(() => {
     setIsLoaded(true);
   }, []);
 
@@ -40,52 +37,7 @@ const AIProjectManagerPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small teams and simple projects',
-      features: [
-        'Up to 5 team members',
-        '10 active projects',
-        'Basic AI planning',
-        'Standard reporting',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$199/month',
-      description: 'Ideal for growing teams and complex projects',
-      features: [
-        'Up to 25 team members',
-        'Unlimited projects',
-        'Advanced AI planning',
-        'Predictive analytics',
-        'Custom integrations',
-        'Priority support'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$499/month',
-      description: 'For large organizations with advanced needs',
-      features: [
-        'Unlimited team members',
-        'Unlimited projects',
-        'Full AI suite',
-        'Custom AI training',
-        'White-label options',
-        'Dedicated support',
-        'On-premise deployment'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
+    const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'Project Manager, TechCorp',

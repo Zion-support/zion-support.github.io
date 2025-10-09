@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
+import {Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, Server} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -63,60 +63,7 @@ const CloudMigrationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Small Business',
-      price: '$2,500',
-      period: 'one-time',
-      description: 'Perfect for small businesses with basic cloud needs',
-      features: [
-        'Up to 10 servers',
-        'Basic migration planning',
-        'Standard security setup',
-        'Email support',
-        '30-day post-migration support',
-        'Basic monitoring'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$7,500',
-      period: 'one-time',
-      description: 'Ideal for growing businesses with complex requirements',
-      features: [
-        'Up to 50 servers',
-        'Comprehensive migration planning',
-        'Advanced security configuration',
-        'Priority support',
-        '90-day post-migration support',
-        'Advanced monitoring',
-        'Performance optimization',
-        'Cost optimization'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Comprehensive solution for large organizations',
-      features: [
-        'Unlimited servers',
-        'Custom migration strategy',
-        'Enterprise security',
-        '24/7 dedicated support',
-        '1-year post-migration support',
-        'Full monitoring suite',
-        'Multi-cloud architecture',
-        'Dedicated account manager',
-        'Custom integrations'
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
+    const benefits = [
     {
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',

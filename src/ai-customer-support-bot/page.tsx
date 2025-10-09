@@ -1,15 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageSquare, Bot, Users, Clock, Zap, Brain, ArrowRight, Phone, MapPin, Star, Shield, Globe, CheckCircle, TrendingUp, Eye, Target, Headphones } from 'lucide-react';
+import React, { useEffect } from 'react';
+import {MessageSquare, Bot, Users, Brain, Phone, Star, CheckCircle} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AICustomerSupportBotPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
+    useEffect(() => {
     setIsLoaded(true);
   }, []);
 
@@ -49,52 +46,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     { name: 'Complaint Resolution', icon: '😊', description: 'Resolve customer complaints effectively' }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$149/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Up to 1,000 conversations/month',
-        'Basic chatbot',
-        'Email support',
-        'Standard integrations',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI chatbot',
-        'Priority support',
-        'Advanced integrations',
-        'Detailed analytics',
-        'Custom training'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$599/month',
-      description: 'For large organizations with complex needs',
-      features: [
-        'Unlimited conversations',
-        'Full AI suite',
-        'White-label options',
-        'Custom integrations',
-        'Dedicated support',
-        'API access',
-        'On-premise deployment'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
+    const testimonials = [
     {
       name: 'Amanda Rodriguez',
       role: 'Customer Service Manager, TechCorp',
