@@ -1,28 +1,38 @@
+
+
 'use client';
-import React, { useEffect, useState } from 'react';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-export interface ToastProps {
-  message: string;
+export interface ToastProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  messag,
+  e: string;
   type?: ToastType;
   duration?: number;
-  onClose?: () => void;
-  show: boolean;
+  onClose?: () => void;,
+    sho,
+  w: boolean;
 }
-const Toast: React.FC<ToastProps> = ({
-  message,
+const,
+  Toast: React.FC;
+          <ToastProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+//   message,
   type = 'success',
   duration = 3000,
-  onClose,
-  show
-}) => {
+//   onClose,
+//   show;)
+}) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
   const [isVisible, setIsVisible] = useState(show);
-  useEffect(() => {
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
     setIsVisible(show);
-    if (show && duration > 0) {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-        if (onClose) {
-          onClose();
+    if (show && duration > 0) {setIsVisible(false);}
+        if (onClose) {/* TODO: Fix JSX expression */}
         }
       }, duration);
       return () => clearTimeout(timer);
@@ -30,8 +40,12 @@ const Toast: React.FC<ToastProps> = ({
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
-  const getToastStyles = () => {
-    switch (type) {
+  const getToastStyles = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    switch (type) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       case 'success':
         return 'bg-green-600 text-white';
       case 'error':
@@ -40,66 +54,77 @@ const Toast: React.FC<ToastProps> = ({
         return 'bg-yellow-500 text-white';
       case 'info':
         return 'bg-blue-600 text-white';
-      default:
+      defaul,
+  t:
         return 'bg-gray-800 text-white';
     }
   };
-  const getIcon = () => {
-    switch (type) {
+  const getIcon = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    switch (type) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       case 'success':
-        return '✓';
+        return '';
       case 'error':
-        return '✕';
+        return '';
       case 'warning':
-        return '⚠';
+        return '';
       case 'info':
-        return 'ℹ';
-      default:
+        return '';
+      defaul,
+  t:
         return '';
     }
   };
-  return (
-    <div
-      className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert"
+  return (<div>Coming Soon</div>)
+  )
+    
+          <div></div>
+className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
+      role="alert""
       aria-live="polite"
-    >
-      <span className="text-xl font-bold">{getIcon()}</span>
+// >
+      
+          
+          
+          
+          
+          
+          
+          
+          "
+          <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
-      <button
-        onClick={() => {
+      <button></button>
+        onClick={() => {}
+  // TOD,
+  O: Add content;
+}
           setIsVisible(false);
           if (onClose) onClose();
-        }}
-        className="ml-4 hover:opacity-80 transition-opacity"
+        }}"
+        className="ml-4,"
+  hover:opacity-80 transition-opacity""
         aria-label="Close notification"
-      >
-        ✕
-      </button>
+//       >
+//
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
     </div>
   );
 };
-export default Toast;
-// Toast Hook for easy usage
-export const useToast = () => {
-  const [toast, setToast] = useState<{
-    show: boolean;
-    message: string;
-    type: ToastType;
-  }>({
-    show: false,
-    message: '',
-    type: 'success'
-  });
-  const showToast = (message: string, type: ToastType = 'success') => {
-    setToast({ show: true, message, type });
-  };
-  const hideToast = () => {
-    setToast(prev => ({ ...prev, show: false }));
-  };
-  return {
-    toast,
-    showToast,
-    hideToast
-  };
-};
+
+export default Toast;"`
+
+
+

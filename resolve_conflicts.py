@@ -10,8 +10,8 @@ def resolve_conflicts(file_path):
             content = f.read()
         
         # Remove all conflict markers and keep only the HEAD version
-        # Pattern to match conflict blocks: <<<<<<< HEAD ... ======= ... >>>>>>> branch
-        pattern = r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [^\n]*'
+        # Pattern to match conflict blocks:  ... 
+        pattern = r'(.*?)
         
         def replace_conflict(match):
             head_content = match.group(1)
@@ -22,9 +22,8 @@ def resolve_conflicts(file_path):
         
         # Also handle cases where there might be multiple ======= markers
         # Remove any remaining conflict markers
-        resolved_content = re.sub(r'<<<<<<< HEAD\n?', '', resolved_content)
-        resolved_content = re.sub(r'=======\n?', '', resolved_content)
-        resolved_content = re.sub(r'>>>>>>> [^\n]*\n?', '', resolved_content)
+        resolved_content = re.sub(r'\n?', '', resolved_content)
+        resolved_content = re.sub(r'
         
         # Clean up any extra newlines
         resolved_content = re.sub(r'\n\s*\n\s*\n', '\n\n', resolved_content)
@@ -59,7 +58,7 @@ def main():
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
                     
-                    if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
+                    if '' in content or '
                         files_with_conflicts += 1
                         if resolve_conflicts(file_path):
                             print(f"✓ Resolved: {file_path}")

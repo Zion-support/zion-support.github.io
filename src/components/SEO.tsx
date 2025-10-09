@@ -1,13 +1,13 @@
+
+
 'use client';
-
 /**
- * SEO Component
- * Provides comprehensive SEO meta tags and structured data
+ * SEO Component;
+ * Provides comprehensive SEO meta tags and structured data;
  */
-
-import React from 'react';
-
-export interface SEOProps {
+export interface SEOProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
   title?: string;
   description?: string;
   keywords?: string[];
@@ -19,92 +19,135 @@ export interface SEOProps {
   modifiedDate?: string;
   canonical?: string;
   noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record;
+          <string, unknown>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: {/* TODO: Fix JSX expression */}
+  l: string }[];
 }
-
-const defaultSEO = {
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keywords: [
-    'AI',
-    'artificial intelligence',
-    'enterprise solutions',
-    'digital transformation',
-    'IT services',
-  ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
-  type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+  titl,
+  e: 'Zion Tech Group - AI & IT Solutions',
+  descriptio,
+  n:
+// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  keyword,
+  s: [
+  // TOD,
+  O: Add items,
+]
+//     'AI',
+//     'artificial intelligence',
+//     'enterprise solutions',
+//     'digital transformation',
+//     'IT services',
+//   ],
+  imag,
+  e: 'http,
+  s://ziontechgroup.com/og-image.jpg',
+  ur,
+  l: 'http,
+  s://ziontechgroup.com',
+  typ,
+  e: 'website' as const,
+  local,
+  e: 'en_US',
+  twitterCar,
+  d: 'summary_large_image' as const,
 };
-
-export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
+export const,
+  SEO: React.FC;
+          <SEOProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+//   title,
+//   description,
+//   keywords,
+//   image,
+//   url,
   type = defaultSEO.type,
-  author,
-  publishDate,
-  modifiedDate,
-  canonical,
+//   author,
+//   publishDate,
+//   modifiedDate,
+//   canonical,
   noIndex = false,
-  structuredData,
+//   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
-}) => {
-  const seo = {
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
-    description: description || defaultSEO.description,
-    keywords: keywords || defaultSEO.keywords,
-    image: image || defaultSEO.image,
-    url: url || defaultSEO.url,
-    type,
-    twitterCard,
-    locale,
+  alternateLocales = [],)
+}) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  const seo = {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  titl,
+  e: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+    descriptio,
+  n: description || defaultSEO.description,
+    keyword,
+  s: keywords || defaultSEO.keywords,
+    imag,
+  e: image || defaultSEO.image,
+    ur,
+  l: url || defaultSEO.url,
+//     type,
+//     twitterCard,
+//     locale,
   };
-
-  // Generate structured data
-  const generateStructuredData = () => {
-    if (structuredData) {
+  // Generate structured data;
+const generateStructuredData = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    if (structuredData) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       return structuredData;
     }
-
-    const baseStructuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
+    const,
+  baseStructuredData: Record;
+          <string, unknown> = {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      '@context': 'http,
+  s://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
-      headline: seo.title,
-      description: seo.description,
-      url: seo.url,
-      image: seo.image,
+      headlin,
+  e: seo.title,
+      descriptio,
+  n: seo.description,
+      ur,
+  l: seo.url,
+      imag,
+  e: seo.image,
     };
-
-    if (author) {
-      baseStructuredData.author = {
+    if (author) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      baseStructuredData.author = {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
         '@type': 'Person',
-        name: author,
+        nam,
+  e: author,
       };
     }
-
-    if (publishDate) {
+    if (publishDate) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       baseStructuredData.datePublished = publishDate;
     }
-
-    if (modifiedDate) {
+    if (modifiedDate) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       baseStructuredData.dateModified = modifiedDate;
     }
-
     return baseStructuredData;
   };
-
   return null;
 };
 
-export default SEO;
+export default SEO;`
+
+
+

@@ -15,10 +15,8 @@ resolve_conflicts() {
     git checkout --ours "$file" 2>/dev/null || true
     
     # If that doesn't work, use sed to remove conflict markers and keep HEAD content
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        # Remove conflict markers and keep HEAD content
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> origin/d' "$file"
+    if grep -q "/d' "$file"
+        sed -i '/
         sed -i '/>>>>>>> cursor/d' "$file"
     fi
 }

@@ -10,7 +10,7 @@
     "build:no-check": "vite build",
     "build:analyze": "vite build --mode analyze",
     "preview": "vite preview",
-    "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --ignore-pattern 'src/components/**' --ignore-pattern 'src/pages/**' --ignore-pattern 'src/content/**' --ignore-pattern 'src/data/**' --ignore-pattern 'src/hooks/**' --ignore-pattern 'src/types/**' --ignore-pattern 'src/utils/**' --ignore-pattern 'src/config/**' --max-warnings 0",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check": "tsc --noEmit --skipLibCheck",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
@@ -24,7 +24,7 @@
     "clean": "rm -rf .next out dist node_modules/.cache",
     "format": "prettier --write .",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "build:production": "NODE_OPTIONS=\"--max-old-space-size=4096\" next build",
+    "build:production": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
     "prebuild": "npm run clean",
@@ -93,7 +93,7 @@
     "predeploy": "pnpm run deploy:check",
     "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
     "check:performance": "pnpm run build && du -sh dist",
-    "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096\" next build",
+    "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild"
   },
   "dependencies": {

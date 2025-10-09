@@ -1,122 +1,203 @@
-import React, { Suspense, lazy, ComponentType, ReactNode } from 'react';
-import LoadingSpinner from './LoadingSpinner';
 
-interface LazyComponentProps {
-  children: ReactNode;
+
+import LoadingSpinner from './LoadingSpinner';
+interface LazyComponentProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  childre,
+  n: ReactNode;
   fallback?: ReactNode;
   delay?: number;
   threshold?: number;
   rootMargin?: string;
 }
-
-// Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(
-  Component: ComponentType<P>,
-  fallback?: ReactNode
-) => {
-  return (props: P) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <Component {...props} />
+// Higher-order component for lazy loading;
+export const _withLazyLoading = {};
+          <P extends object>()
+  Componen,
+  t: ComponentType;
+          <P>,
+  fallback?: ReactNode,
+) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  return (prop,)
+  s: P) => ()
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          <Suspense fallback={fallback || <LoadingSpinner />}>
+      <Component {...props} /></Component>
     </Suspense>
   );
 };
-
-// Lazy component wrapper with intersection observer
-const LazyComponent: React.FC<LazyComponentProps> = ({
-  children,
-  fallback = <LoadingSpinner />,
+// Lazy component wrapper with intersection observer;
+const,
+  LazyComponent: React.FC;
+          <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+//   children,
+  fallback = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
-  rootMargin = '50px',
-}) => {
+  rootMargin = '50px',)
+}) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
-  const elementRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
+  const elementRef = React.useRef;
+          <HTMLDivElement>(null);
+  React.useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    const observer = new IntersectionObserver()
+      ([entry]) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+          setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
             setIsVisible(true);
             setIsLoaded(true);
           }, delay);
           observer.disconnect();
         }
       },
-      {
-        threshold,
-        rootMargin,
+      {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+//         threshold,
+//         rootMargin,
       }
     );
-
-    if (elementRef.current) {
+    if (elementRef.current) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       observer.observe(elementRef.current);
     }
-
     return () => observer.disconnect();
   }, [delay, threshold, rootMargin]);
-
-  return (
-    <div ref={elementRef}>
-      {isVisible ? (
-        <Suspense fallback={fallback}>
+  return (<div>Coming Soon</div>)
+  )
+    
+          <div ref={elementRef}></div>
+      {isVisible ? ()}
+          <Suspense fallback={fallback}></Suspense>
           {children}
         </Suspense>
-      ) : (
-        fallback
-      )}
-    </div>
+      ) : ()
+// fallback,
+)}
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          </div>
   );
 };
-
-// Preload function for critical components
-export const preloadComponent = (importFunction: () => Promise<any>) => {
-  return () => {
+// Preload function for critical components;
+export const preloadComponent = (importFunctio,)
+  n: () => Promise;
+          <any>) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  return () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
     const component = lazy(importFunction);
     return component;
   };
 };
-
-// Lazy load with preloading
-export const createLazyComponent = <P extends object>(
-  importFunction: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: ReactNode
-) => {
+// Lazy load with preloading;
+export const createLazyComponent = {};
+          <P extends object>()
+  importFunctio,
+  n: () => Promise;
+          <{/* TODO: Fix JSX expression */}
+  t: ComponentType<P> }>,
+  fallback?: ReactNode,
+) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
   const LazyComponent = lazy(importFunction);
-  
-  return (props: P) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
+  return (prop,)
+  s: P) => ()
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          <Suspense fallback={fallback || <LoadingSpinner />}>
+      <LazyComponent {...props} /></LazyComponent>
     </Suspense>
   );
 };
-
-// Critical resource preloader
-export const preloadCriticalResources = () => {
+// Critical resource preloader;
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
   if (typeof window === 'undefined') return;
-
-  // Preload critical fonts
-  const fontPreloads = [
-    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
-    'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
+  // Preload critical fonts;
+const fontPreloads = [
+  // TOD,
+  O: Add items;
+];;
+    'http,
+  s://fonts.googleapis.com/css2?family=Orbitro,
+  n:wght@400;700;900&display=swap',
+    'http,
+  s://fonts.googleapis.com/css2?family=Rajdhan,
+  i:wght@300;400;500;600;700&display=swap',
   ];
-
-  fontPreloads.forEach((href) => {
+  fontPreloads.forEach((href) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style';
     link.href = href;
     document.head.appendChild(link);
   });
-
-  // Preload critical images
-  const imagePreloads = [
-    '/og-image.jpg',
-    '/favicon.ico',
+  // Preload critical images;
+const imagePreloads = [
+  // TOD,
+  O: Add items;
+];;
+//     '/og-image.jpg',
+//     '/favicon.ico',
   ];
-
-  imagePreloads.forEach((src) => {
+  imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
@@ -126,3 +207,5 @@ export const preloadCriticalResources = () => {
 };
 
 export default LazyComponent;
+
+

@@ -1,103 +1,91 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+
+// Common unused imports that appear frequently;
+const commonUnusedImports = [
+  'ArrowRight', 'Star', 'TrendingUp', 'Cpu', 'Database', 'BarChart', 
+  'Code', 'Cloud', 'Users', 'Globe', 'Lock', 'Award', 'Mail', 'MapPin',
+  'Image', 'Zap', 'Shield', 'CheckCircle', 'Phone', 'Calendar', 'Target',
+  'Brain', 'Navigation', 'Footer', 'SEOOptimizer'
+];
+
+// Files to process;
+const filesToProcess = [
+  'src/ai-ab-testing/page.tsx',
+  'src/ai-analytics-dashboard/page.tsx',
+  'src/ai-analytics/page.tsx',
+  'src/ai-automation/page.tsx',
+  'src/ai-computer-vision/page.tsx',
+  'src/ai-content-generation/page.tsx',
+  'src/ai-content-studio/page.tsx',
+  'src/ai-crm/page.tsx',
+  'src/ai-customer-insights/page.tsx',
+  'src/ai-customer-support-bot/page.tsx',
+  'src/ai-customer-support/page.tsx',
+  'src/ai-cybersecurity/page.tsx',
+  'src/ai-data-analytics/page.tsx',
+  'src/ai-data-visualization/page.tsx',
+  'src/ai-design-assistant/page.tsx',
+  'src/ai-document-processing/page.tsx',
+  'src/ai-document-processor/page.tsx',
+  'src/ai-ecommerce-optimizer/page.tsx',
+  'src/ai-ecommerce-solutions/page.tsx'
+
+function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
+    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+    if (lucideImportMatch) {/* TODO: Fix JSX expression */}
+        }
+      });
+
+      if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}
+          ? `import { ${usedImports.join(', ')} } from 'lucide-react';`
+          : '';
+        
+        content = content.replace(lucideImportMatch[0], newImport);
+        modified = true;
+
+    // Remove unused component imports;
+    const componentImports = ['Navigation', 'Footer', 'SEOOptimizer'];
+    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`
+      const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
+      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}
+      /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g;
+    unusedVarPatterns.forEach(pattern => {/* TODO: Fix JSX expression */})`
+  d: ${filePath}`);
+  } catch (error) {/* TODO: Fix JSX expression */}`
+    console.error(`Error processing ${filePath}:`, error.message);
+
+// Process all files;
+filesToProcess.forEach(file => {/* TODO: Fix JSX expression */}
 import { execSync } from 'child_process';
 
-// Get all TypeScript/JavaScript files
-const files = execSync('find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js"', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file && !file.includes('node_modules'));
+// Function to remove unused imports from a single file;)
+function removeUnusedImportsFromFile(filePath) {/* TODO: Fix JSX expression */}
+        } else {/* TODO: Fix JSX expression */}
+      } else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from'))) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`);
+      return true;
+    
+  
+  return false;
 
-console.log(`Found ${files.length} files to process...`);
-
-let fixedFiles = 0;
-
-files.forEach(filePath => {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    let modified = false;
-    
-    // Track which imports are actually used
-    const usedImports = new Set();
-    
-    // Find all import statements
-    const importLines = [];
-    lines.forEach((line, index) => {
-      if (line.trim().startsWith('import ')) {
-        importLines.push({ line, index });
-      }
-    });
-    
-    // Find usage of imported items in the rest of the file
-    const fileContent = content;
-    importLines.forEach(({ line, index }) => {
-      // Extract imported items from the line
-      const importMatch = line.match(/import\s+.*?\s+from\s+['"](.*?)['"]/);
-      if (importMatch) {
-        const modulePath = importMatch[1];
-        const importContent = line.match(/import\s+{([^}]+)}/);
-        
-        if (importContent) {
-          // Named imports
-          const imports = importContent[1].split(',').map(imp => imp.trim());
-          imports.forEach(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            if (cleanImp && fileContent.includes(cleanImp)) {
-              usedImports.add(cleanImp);
-            }
-          });
-        } else {
-          // Default import
-          const defaultMatch = line.match(/import\s+(\w+)/);
-          if (defaultMatch) {
-            const defaultImport = defaultMatch[1];
-            if (fileContent.includes(defaultImport)) {
-              usedImports.add(defaultImport);
-            }
-          }
-        }
-      }
-    });
-    
-    // Remove unused imports
-    const newLines = lines.map(line => {
-      if (line.trim().startsWith('import ')) {
-        const importMatch = line.match(/import\s+{([^}]+)}/);
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim());
-          const usedImportsList = imports.filter(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            return usedImports.has(cleanImp);
-          });
-          
-          if (usedImportsList.length === 0) {
-            // Remove the entire import line if no imports are used
-            modified = true;
-            return '';
-          } else if (usedImportsList.length < imports.length) {
-            // Rebuild the import line with only used imports
-            const moduleMatch = line.match(/from\s+['"](.*?)['"]/);
-            if (moduleMatch) {
-              modified = true;
-              return `import { ${usedImportsList.join(', ')} } from '${moduleMatch[1]}';`;
-            }
-          }
-        }
-      }
-      return line;
-    }).filter(line => line !== '');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
-      console.log(`Fixed unused imports in: ${filePath}`);
-      fixedFiles++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-});
-
-console.log(`\nFixed unused imports in ${fixedFiles} files.`);
+// Function to check if an import is used in the content;
+function isImportUsed(content, importLine) {/* TODO: Fix JSX expression */}
+  const importMatch = importLine.match(/import\s*{([^}]+)}\s*from/);
+  if (importMatch) {/* TODO: Fix JSX expression */}`
+             !contentWithoutImport.includes(`import ${name}`) &&`
+             !contentWithoutImport.includes(`{ ${name}`) &&`
+             !contentWithoutImport.includes(`{${name}`);
+  
+  // For default imports;
+  const defaultImportMatch = importLine.match(/import\s+(\w+)\s+from/);
+  if (defaultImportMatch) {/* TODO: Fix JSX expression */}`
+           !contentWithoutImport.includes(`import ${name}`);
+  
+  return true; // If we can't determine, keep the import;
+// Get all TypeScript/JavaScript files;
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}`
+console.log(`Fixed ${fixedCount} files`);
+"`

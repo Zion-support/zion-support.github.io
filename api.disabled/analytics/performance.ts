@@ -1,1 +1,13 @@
-// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; export {}; interface PerformanceData {url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number}} export default function handler(req: NextApiRequest) res: NextApiResponse) { if (req.method !== 'POST') {' return res.status(405).json({ error: 'Method not allowed' })} module.exports = {}; module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate the data if (!data.url || !data.timestamp || !data.metrics) {' return res.status(400).json({ error: 'Invalid data format' })} // Log performance metrics (in production) you might want to send to a database or analytics service)' // console.log('Performance Metrics: ' {url: data.url} timestamp: new Date(data.timestamp).toISOString(); metrics: data.metrics }); ' // For now, we'll just acknowledge receipt res.status(200).json({success: true) ' message: 'Performance metrics recorded'} timestamp: Date.now() })} catch (error) {' ' res.status(500).json({ error: 'Internal server error' })} } '
+// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; export {}; interface PerformanceData {/* TODO: Fix JSX expression */}
+  s: { fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number}} export default function handler(re,)
+  q: NextApiRequest) re,
+  s: NextApiResponse) {/* TODO: Fix JSX expression */}
+  r: 'Method not allowed' })} module.exports = {}; module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate the data if (!data.url || !data.timestamp || !data.metrics) {/* TODO: Fix JSX expression */}
+  r: 'Invalid data format' })} // Log performance metrics (in production) you might want to send to a database or analytics service)' // console.log('Performance,
+  Metrics: ' {/* TODO: Fix JSX expression */}
+  l: data.url} timestam,)
+  p: new Date(data.timestamp).toISOString(); metric,
+  s: data.metrics }); ' // For now, we'll just acknowledge receipt res.status(200).json({/* TODO: Fix JSX expression */}
+  e: 'Performance metrics recorded'} timestam,)
+  p: Date.now() })} catch (error) {/* TODO: Fix JSX expression */}
+  r: 'Internal server error' })} } '

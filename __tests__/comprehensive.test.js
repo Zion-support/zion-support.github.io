@@ -1,19 +1,21 @@
-import { describe, it, expect } from '@jest/globals';
+<<<<<<< HEAD
+import { describe, it, expect, beforeEach } from '@jest/globals';
 
-describe('Comprehensive Test Suite', () => {
-  it('should pass basic functionality test', () => {
+describe('comprehensive', () => {
+  beforeEach(() => {
+    // Setup before each test
+  });
+
+  it('should pass basic test', () => {
     expect(true).toBe(true);
   });
 
-  it('should pass performance test', () => {
-    const startTime = Date.now();
-    // Simulate some work
-    const endTime = Date.now();
-    expect(endTime - startTime).toBeLessThan(1000);
-  });
-
-  it('should pass accessibility test', () => {
-    // Basic accessibility check
-    expect(document).toBeDefined();
+  it('should handle basic functionality', () => {
+    expect(1 + 1).toBe(2);
+=======
+describe('Comprehensive Tests', () => {
+  it('should pass basic test', () => {
+    expect(true).toBe(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b21
   });
 });

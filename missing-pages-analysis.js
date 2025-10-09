@@ -1,26 +1,15 @@
-#!/usr/bin/env node
-
-// Analysis of missing pages based on navigation and footer links
+#!/usr/bin/env node;
+// Analysis of missing pages based on navigation and footer links;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-// Get all existing pages
+// Get all existing pages;
 const appDir = '/workspace/app';
 const existingPages = [];
 
-function findPages(dir) {
-  const files = fs.readdirSync(dir);
-  for (const file of files) {
-    const fullPath = path.join(dir, file);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      if (fs.existsSync(path.join(fullPath, 'page.tsx'))) {
-        const pagePath = fullPath.replace(appDir, '');
-        existingPages.push(pagePath || '/');
+function findPages(dir) {/* TODO: Fix JSX expression */}
       }
       findPages(fullPath);
     }
@@ -29,15 +18,15 @@ function findPages(dir) {
 
 findPages(appDir);
 
-// Links from navigation and footer
+// Links from navigation and footer;
 const referencedLinks = [
-  // Main navigation
+  // Main navigation;
   '/',
   '/about',
   '/contact',
   '/blog',
   
-  // AI Services
+  // AI Services;
   '/ai-services',
   '/ai-marketing',
   '/ai-automation',
@@ -55,7 +44,7 @@ const referencedLinks = [
   '/ai-lead-generation',
   '/ai-document-processing',
   
-  // IT Services
+  // IT Services;
   '/it-infrastructure',
   '/devops',
   '/database',
@@ -65,7 +54,7 @@ const referencedLinks = [
   '/it-consulting',
   '/managed-it',
   
-  // Micro SAAS
+  // Micro SAAS;
   '/micro-saas',
   '/ai-writing-assistant',
   '/smart-analytics',
@@ -84,7 +73,7 @@ const referencedLinks = [
   '/bug-tracker-pro',
   '/doc-generator',
   
-  // Emerging Technologies
+  // Emerging Technologies;
   '/quantum-computing',
   '/robotics',
   '/iot-edge-computing',
@@ -92,7 +81,7 @@ const referencedLinks = [
   '/business-intelligence',
   '/autonomous-systems',
   
-  // Company & Support
+  // Company & Support;
   '/team',
   '/case-studies',
   '/careers',
@@ -105,7 +94,7 @@ const referencedLinks = [
   '/terms',
   '/cookies',
   
-  // Additional pages from main page
+  // Additional pages from main page;
   '/ai-crm',
   '/ai-analytics',
   '/ai-content-studio',
@@ -152,61 +141,44 @@ const referencedLinks = [
   '/doc-generator'
 ];
 
-// Find missing pages
+// Find missing pages;
 const missingPages = referencedLinks.filter(link => !existingPages.includes(link));
 
 console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total referenced links: ${referencedLinks.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Total referenced,)`
+  links: ${referencedLinks.length}`);`
+console.log(`Total existing,)`
+  pages: ${existingPages.length}`);`
+console.log(`Missing,)`
+  pages: ${missingPages.length}`);
 console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(page));
 
-// Group missing pages by category
-const missingByCategory = {
-  'AI Services': [],
-  'IT Services': [],
-  'Micro SAAS': [],
-  'Emerging Tech': [],
-  'Company': [],
-  'Support': [],
-  'Other': []
+// Group missing pages by category;
+const missingByCategory = {/* TODO: Fix JSX expression */}
 };
 
-missingPages.forEach(page => {
-  if (page.includes('/ai-') || page === '/ai-services') {
-    missingByCategory['AI Services'].push(page);
-  } else if (page.includes('/it-') || page === '/devops' || page === '/database' || page === '/cybersecurity' || page === '/cloud-services' || page === '/networking') {
-    missingByCategory['IT Services'].push(page);
-  } else if (page.includes('/ai-') && (page.includes('assistant') || page.includes('tracker') || page.includes('manager') || page.includes('builder') || page.includes('optimizer') || page.includes('generator') || page.includes('studio'))) {
-    missingByCategory['Micro SAAS'].push(page);
-  } else if (page === '/quantum-computing' || page === '/robotics' || page === '/iot-edge-computing' || page === '/blockchain-web3' || page === '/business-intelligence' || page === '/autonomous-systems') {
-    missingByCategory['Emerging Tech'].push(page);
-  } else if (page === '/team' || page === '/case-studies' || page === '/careers' || page === '/news') {
-    missingByCategory['Company'].push(page);
-  } else if (page === '/docs' || page === '/api-docs' || page === '/support' || page === '/status' || page === '/privacy' || page === '/terms' || page === '/cookies') {
-    missingByCategory['Support'].push(page);
-  } else {
-    missingByCategory['Other'].push(page);
+missingPages.forEach(page => {/* TODO: Fix JSX expression */})
+  } else if (page.includes('/it-') || page === '/devops' || page === '/database' || page === '/cybersecurity' || page === '/cloud-services' || page === '/networking') {/* TODO: Fix JSX expression */}
+  } else if (page.includes('/ai-') && (page.includes('assistant') || page.includes('tracker') || page.includes('manager') || page.includes('builder') || page.includes('optimizer') || page.includes('generator') || page.includes('studio'))) {/* TODO: Fix JSX expression */}
+  } else if (page === '/quantum-computing' || page === '/robotics' || page === '/iot-edge-computing' || page === '/blockchain-web3' || page === '/business-intelligence' || page === '/autonomous-systems') {/* TODO: Fix JSX expression */}
+  } else if (page === '/team' || page === '/case-studies' || page === '/careers' || page === '/news') {/* TODO: Fix JSX expression */}
+  } else if (page === '/docs' || page === '/api-docs' || page === '/support' || page === '/status' || page === '/privacy' || page === '/terms' || page === '/cookies') {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */}
   }
 });
 
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {
-  if (pages.length > 0) {
-    console.log(`\n${category}:`);
+Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
+    console.log(`\n${category}:`);`
     pages.forEach(page => console.log(`  - ${page}`));
   }
 });
 
-// Write missing pages to file
-fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
-  totalReferenced: referencedLinks.length,
-  totalExisting: existingPages.length,
-  totalMissing: missingPages.length,
-  missingPages: missingPages,
-  missingByCategory: missingByCategory
+// Write missing pages to file;
+fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({/* TODO: Fix JSX expression */})
 }, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
-console.log('Missing pages list saved to: /workspace/missing-pages.json');
+console.log('Missing pages list saved,)
+  to: /workspace/missing-pages.json');`

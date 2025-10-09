@@ -1,63 +1,31 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
-import path from 'path';
 
-function fixJSXErrors(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
-      {
-        //Fix CheckCircleIcon and similar patterns
-        pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g,
-        replacement: '$1 />\n                  <span',
+function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
       },
-      {
-        //Fix other icon patterns
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
-        replacement: '$1 />\n                <',
+      {/* TODO: Fix JSX expression */}
       },
-      {
-        //Fix closing tag issues
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g,
-        replacement: '$1 />\n              </',
+      {/* TODO: Fix JSX expression */}
       },
-      {
-        //Fix ArrowRightIcon patterns
-        pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g,
-        replacement: '$1 />\n            </Link>',
+      {/* TODO: Fix JSX expression */}
       },
-      {
-        //Fix TruckIcon patterns
-        pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
-        replacement: '$1 />\n          </div>',
+      {/* TODO: Fix JSX expression */}
       },
     ];
 
-    patterns.forEach(fix => {
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+    patterns.forEach(fix => {/* TODO: Fix JSX expression */}
+      })
     });
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      //       return true;
+    if (modified) {/* TODO: Fix JSX expression */}
     }
     return false;
-  } catch (error) {
-    //     return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Fix the specific file
+// Fix the specific file;
 // const filePath = process.argv[2];
-if (filePath) {
-  fixJSXErrors(filePath);
-} else {
+if (filePath) {/* TODO: Fix JSX expression */}
+} else {/* TODO: Fix JSX expression */}
   //   }

@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
-// Sitemap URLs from the website
+#!/usr/bin/env node;
+// Sitemap URLs from the website;
 const sitemapUrls = [
-  // Main Pages
+  // Main Pages;
   '/',
   '/about',
   '/contact',
@@ -16,7 +15,7 @@ const sitemapUrls = [
   '/request-quote',
   '/green-it',
   
-  // Services Pages
+  // Services Pages;
   '/services',
   '/services/ai-analytics',
   '/services/cybersecurity',
@@ -33,7 +32,7 @@ const sitemapUrls = [
   '/services/onsite-support',
   '/services/5g-solutions',
   
-  // Micro SAAS Pages
+  // Micro SAAS Pages;
   '/micro-saas',
   '/micro-saas/ai-business-intelligence',
   '/micro-saas/customer-experience',
@@ -44,7 +43,7 @@ const sitemapUrls = [
   '/micro-saas/content-creation',
   '/micro-saas/hr-platform',
   
-  // IT Services Pages
+  // IT Services Pages;
   '/it-services',
   '/it-services/infrastructure',
   '/it-services/digital-transformation',
@@ -53,7 +52,7 @@ const sitemapUrls = [
   '/it-services/green-it',
   '/it-services/5g-solutions',
   
-  // Marketplace Pages
+  // Marketplace Pages;
   '/marketplace',
   '/marketplace/products',
   '/marketplace/talent',
@@ -63,26 +62,26 @@ const sitemapUrls = [
   '/equipment',
   '/it-onsite-services',
   
-  // Company Pages
+  // Company Pages;
   '/team',
   '/help',
   '/security',
   '/status',
   
-  // Legal Pages
+  // Legal Pages;
   '/privacy',
   '/terms',
   '/cookies',
   '/sitemap',
   
-  // Auth Pages
+  // Auth Pages;
   '/login',
   '/signup'
 ];
 
-// Existing pages from the codebase
+// Existing pages from the codebase;
 const existingPages = [
-  // Main pages
+  // Main pages;
   '/',
   '/about',
   '/contact',
@@ -103,7 +102,7 @@ const existingPages = [
   '/pricing',
   '/enterprise',
   
-  // Services
+  // Services;
   '/services',
   '/ai-services',
   '/ai-marketing',
@@ -139,7 +138,7 @@ const existingPages = [
   '/ai-customer-support-bot',
   '/ai-analytics-dashboard',
   
-  // IT Services
+  // IT Services;
   '/it-services',
   '/it-infrastructure',
   '/it-consulting',
@@ -153,7 +152,7 @@ const existingPages = [
   '/compliance',
   '/gdpr',
   
-  // Emerging Technologies
+  // Emerging Technologies;
   '/quantum-computing',
   '/autonomous-systems',
   '/blockchain',
@@ -171,17 +170,17 @@ const existingPages = [
   '/expense-tracker',
   '/task-manager-pro',
   
-  // Micro SAAS
+  // Micro SAAS;
   '/micro-saas',
   
-  // Other
+  // Other;
   '/case-studies',
   '/api',
   '/offline',
   '/system-status'
 ];
 
-// Find missing pages
+// Find missing pages;
 const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
 
 // Find extra pages (in codebase but not in sitemap)
@@ -194,26 +193,22 @@ console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
 extraPages.forEach(page => console.log(page));
 
 console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log(`Extra pages: ${extraPages.length}`);
+console.log(`Total sitemap,)`
+  URLs: ${sitemapUrls.length}`);`
+console.log(`Total existing,)`
+  pages: ${existingPages.length}`);`
+console.log(`Missing,)`
+  pages: ${missingPages.length}`);`
+console.log(`Extra,)`
+  pages: ${extraPages.length}`);
 
-// Categorize missing pages
-const missingByCategory = {
-  'Main Pages': missingPages.filter(p => ['/faq', '/partners', '/solutions', '/research-development', '/request-quote', '/green-it'].includes(p)),
-  'Services Subpages': missingPages.filter(p => p.startsWith('/services/')),
-  'Micro SAAS Subpages': missingPages.filter(p => p.startsWith('/micro-saas/')),
-  'IT Services Subpages': missingPages.filter(p => p.startsWith('/it-services/')),
-  'Marketplace Pages': missingPages.filter(p => p.startsWith('/marketplace') || ['/talent', '/equipment', '/it-onsite-services'].includes(p)),
-  'Company Pages': missingPages.filter(p => ['/help', '/security'].includes(p)),
-  'Auth Pages': missingPages.filter(p => ['/login', '/signup'].includes(p))
+// Categorize missing pages;
+const missingByCategory = {/* TODO: Fix JSX expression */}
 };
 
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {
-  if (pages.length > 0) {
-    console.log(`\n${category}:`);
+Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
+    console.log(`\n${category}:`);`
     pages.forEach(page => console.log(`  ${page}`));
   }
-});
+});`

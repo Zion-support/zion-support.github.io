@@ -1,62 +1,81 @@
 import React from 'react';
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+
 const DynamicContentShowcase: React.FC = () => {
-  const features = [
+  const technologies = [
     {
-      icon: "🚀",
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence that transforms your business operations",
-      benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+      title: 'AI & Machine Learning',
+      description: 'Advanced artificial intelligence solutions for business automation and insights',
+      icon: Brain,
+      color: 'text-purple-400',
+      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning']
     },
     {
-      icon: "⚡",
-      title: "Lightning Fast Performance",
-      description: "Optimized for speed with 99.9% uptime and sub-second response times",
-      benefits: ["Edge Computing", "CDN Optimization", "Real-time Processing"]
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern businesses',
+      icon: Cloud,
+      color: 'text-blue-400',
+      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Serverless Computing', 'Auto-scaling']
     },
     {
-      icon: "🔒",
-      title: "Enterprise Security",
-      description: "Bank-level security with comprehensive compliance and data protection",
-      benefits: ["End-to-End Encryption", "SOC 2 Compliance", "GDPR Ready"]
+      title: 'Cybersecurity',
+      description: 'Enterprise-grade security solutions to protect your digital assets',
+      icon: Shield,
+      color: 'text-green-400',
+      features: ['Threat Detection', 'Zero Trust Architecture', 'Compliance Management', 'Incident Response']
     },
     {
-      icon: "📊",
-      title: "Advanced Analytics",
-      description: "Real-time insights and predictive analytics for data-driven decisions",
-      benefits: ["Business Intelligence", "Predictive Modeling", "Custom Dashboards"]
+      title: 'Process Automation',
+      description: 'Intelligent automation to streamline business operations',
+      icon: Zap,
+      color: 'text-yellow-400',
+      features: ['Workflow Automation', 'RPA Solutions', 'Smart Scheduling', 'Task Optimization']
     }
   ];
+
   return (
-    <section className="mb-16" aria-labelledby="showcase-heading">
-      <h2 id="showcase-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Why Choose Zion Tech Group?
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {features.map((feature, index) => (
-          <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-            <div className="flex items-start space-x-4">
-              <div className="text-4xl flex-shrink-0">{feature.icon}</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-cyan-400">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></span>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+    <section className="py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6 cyber-text neon-pulse">
+            Cutting-Edge Technologies
+          </h2>
+          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
+            We leverage the latest technologies to deliver innovative solutions that drive business growth and efficiency
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {technologies.map((tech, index) => (
+            <div key={index} className="cyber-card hologram-card p-8 group hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <tech.icon className={`w-12 h-12 ${tech.color} mr-4`} />
+                <h3 className="text-2xl font-bold text-white">{tech.title}</h3>
               </div>
+              
+              <p className="text-gray-300 mb-6 text-lg">{tech.description}</p>
+              
+              <ul className="space-y-3 mb-8">
+                {tech.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-400">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              
+              <a
+                href="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
+              >
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
 };
+
 export default DynamicContentShowcase;

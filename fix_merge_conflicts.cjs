@@ -9,20 +9,13 @@ console.log('🔧 Starting merge conflict resolution...');
 // Find all files with merge conflicts
 const findConflictedFiles = () => {
   try {
-    const result = execSync('grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file && !file.includes('node_modules') && !file.includes('.git'));
-  } catch (error) {
-    return [];
-  }
-};
-
-// Resolve merge conflicts by choosing the newer version (after =======)
+    const result = execSync('grep -r ")
 const resolveConflicts = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Pattern to match merge conflicts
-    const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g;
+    const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
     
     let resolvedContent = content.replace(conflictPattern, (match, newerContent) => {
       console.log(`  ✅ Resolving conflict in ${filePath}`);
@@ -30,7 +23,7 @@ const resolveConflicts = (filePath) => {
     });
     
     // Also handle simple conflicts without the full pattern
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    resolvedContent = resolvedContent.replace(/([\s\S]*?)
     
     if (resolvedContent !== content) {
       fs.writeFileSync(filePath, resolvedContent);

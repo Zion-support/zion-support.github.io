@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, BarChart, TrendingUp, Eye, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AIDataVisualizationPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." />
@@ -14,173 +15,88 @@ export default function AIDataVisualizationPage() {
         <link rel="canonical" href="https://ziontechgroup.com/ai-data-visualization" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
+      <Navigation />
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              AI Data Visualization
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Data Visualization Solutions
             </h1>
-            <p className="text-xl text-cyan-400 mb-8 font-medium">
-              Transform data into actionable insights with AI
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into actionable insights with intelligent visualization tools that reveal patterns and trends automatically.
             </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
-            </p>
-          </section>
-
-          {/* Features Grid */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎨</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Auto-Generated Charts</h3>
-                <p className="text-gray-300 text-center">
-                  AI automatically selects the best chart types and creates stunning visualizations from your data.
-                </p>
-              </div>
-              
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔍</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Insights</h3>
-                <p className="text-gray-300 text-center">
-                  AI analyzes your data and provides intelligent insights, trends, and recommendations.
-                </p>
-              </div>
-              
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📱</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Interactive Dashboards</h3>
-                <p className="text-gray-300 text-center">
-                  Create responsive, interactive dashboards that work perfectly on all devices.
-                </p>
-              </div>
-              
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🤖</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Natural Language Queries</h3>
-                <p className="text-gray-300 text-center">
-                  Ask questions in plain English and get instant visual answers from your data.
-                </p>
-              </div>
-              
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Updates</h3>
-                <p className="text-gray-300 text-center">
-                  Visualizations update automatically as new data comes in, keeping insights current.
-                </p>
-              </div>
-              
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔮</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>
-                <p className="text-gray-300 text-center">
-                  AI predicts future trends and outcomes based on historical data patterns.
-                </p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
+              <a
+                href="mailto:info@ziontechgroup.com"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Get Quote
+              </a>
             </div>
           </section>
 
-          {/* Pricing Section */}
+          {/* Features Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="cyber-card p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>
-                <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 5 data sources</li>
-                  <li>10 dashboards</li>
-                  <li>Basic AI insights</li>
-                  <li>Standard chart types</li>
-                  <li>Email support</li>
-                </ul>
-                <a href="/contact" className="cyber-button w-full">Get Started</a>
-              </div>
-              
-              <div className="cyber-card p-8 text-center border-2 border-cyan-400">
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>
-                <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 25 data sources</li>
-                  <li>Unlimited dashboards</li>
-                  <li>Advanced AI insights</li>
-                  <li>All chart types</li>
-                  <li>Priority support</li>
-                  <li>Custom visualizations</li>
-                </ul>
-                <a href="/contact" className="cyber-button w-full">Get Started</a>
-              </div>
-              
-              <div className="cyber-card p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
-                <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Unlimited data sources</li>
-                  <li>Unlimited dashboards</li>
-                  <li>Full AI suite</li>
-                  <li>White-label solution</li>
-                  <li>24/7 dedicated support</li>
-                  <li>Custom AI training</li>
-                </ul>
-                <a href="/contact" className="cyber-button w-full">Contact Sales</a>
-              </div>
-            </div>
-          </section>
-
-          {/* Use Cases Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>
-                <p className="text-gray-300">Transform business data into actionable insights and strategic decisions.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <BarChart className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Interactive Dashboards</h3>
+                <p className="text-gray-300">Create dynamic, interactive dashboards that update in real-time</p>
               </div>
-              
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-xl font-bold text-white mb-4">Sales Analytics</h3>
-                <p className="text-gray-300">Track sales performance, identify trends, and optimize revenue strategies.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
+                <p className="text-gray-300">AI-powered forecasting and trend analysis for better decisions</p>
               </div>
-              
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">👥</div>
-                <h3 className="text-xl font-bold text-white mb-4">Customer Analytics</h3>
-                <p className="text-gray-300">Understand customer behavior and preferences through visual data analysis.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <Eye className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Automated Insights</h3>
+                <p className="text-gray-300">AI automatically identifies patterns and generates insights</p>
               </div>
-              
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">⚙️</div>
-                <h3 className="text-xl font-bold text-white mb-4">Operations</h3>
-                <p className="text-gray-300">Monitor operational metrics and optimize business processes with data insights.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <Database className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Data Integration</h3>
+                <p className="text-gray-300">Connect multiple data sources for comprehensive analysis</p>
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today</h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join 2,000+ companies using our AI data visualization platform to make better decisions with their data.
-            </p>
+          <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Visualize Your Data?</h2>
+            <p className="text-xl text-blue-100 mb-8">Let our AI tools transform your data into actionable insights</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+13024640950" className="cyber-button">
-                📞 Call: (302) 464-0950
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call (302) 464-0950
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Demo
+              <a
+                href="mailto:info@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Email Us
               </a>
             </div>
           </section>
-        </main>
-        
-        <Footer />
-      </div>
-    </>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
   );
 }

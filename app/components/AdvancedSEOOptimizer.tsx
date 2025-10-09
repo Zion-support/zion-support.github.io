@@ -7,6 +7,8 @@ interface SEOData {
   description: string;
   keywords: string[];
   canonicalUrl: string;
+  author?: string;
+  robots?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -16,12 +18,7 @@ interface SEOData {
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 interface AdvancedSEOOptimizerProps {

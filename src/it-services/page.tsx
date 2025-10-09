@@ -1,189 +1,290 @@
 import React from 'react';
-import { Cloud, Shield, Server, Database, BarChart, Users, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Cloud, Shield, Server, Database, BarChart, Users, CheckCircle, ArrowRight, Star, Clock, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const ITServicesPage: React.FC = () => {
-  const itServices = [
+const ItServicesPage: React.FC = () => {
+  const services = [
     {
-      title: 'Cloud Services',
-      description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
-      icon: Cloud,
-      features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
-      price: 'Starting at $1,500/month',
-      category: 'Infrastructure',
-      benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Advanced Threat Protection',
-      description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
+      title: 'Cybersecurity',
+      description: 'Advanced threat protection with comprehensive security solutions and real-time monitoring.',
       icon: Shield,
-      features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Security Monitoring', 'Compliance Reporting', 'Penetration Testing'],
       price: 'Starting at $2,000/month',
       category: 'Security',
-      benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
-      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      benefits: ['Enhanced Security Posture', 'Reduced Risk', 'Compliance Assurance', 'Peace of Mind'],
+      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection']
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless cloud migration services with 99.9% uptime guarantee and comprehensive support.',
+      icon: Cloud,
+      features: ['Cloud Strategy', 'Migration Planning', 'Data Transfer', 'Application Modernization', 'Security Implementation', 'Ongoing Support'],
+      price: 'Starting at $1,500/month',
+      category: 'Cloud',
+      benefits: ['Scalability', 'Cost Reduction', 'Improved Performance', 'Enhanced Security'],
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform']
     },
     {
       title: 'IT Infrastructure',
-      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
+      description: 'Enterprise-grade IT infrastructure with comprehensive management and 24/7 support.',
       icon: Server,
-      features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
+      features: ['Network Setup', 'Server Management', 'Backup Solutions', 'Disaster Recovery', 'Performance Monitoring', '24/7 Support'],
       price: 'Starting at $1,200/month',
       category: 'Infrastructure',
-      benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      benefits: ['Reliable Infrastructure', 'Reduced Downtime', 'Improved Efficiency', 'Cost Savings'],
+      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange']
     },
     {
       title: 'Database Management',
-      description: 'Expert database administration, optimization, and migration services for all major database platforms.',
+      description: 'Comprehensive database solutions with optimization, security, and performance monitoring.',
       icon: Database,
-      features: ['Database design', 'Performance tuning', 'Migration services', 'Backup & recovery', 'Security hardening', 'Monitoring'],
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Monitoring', 'Maintenance'],
       price: 'Starting at $800/month',
-      category: 'Data Management',
-      benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
-      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      category: 'Database',
+      benefits: ['Optimized Performance', 'Data Security', 'Reduced Downtime', 'Cost Efficiency'],
+      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
     {
       title: 'Business Intelligence',
-      description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
+      description: 'Transform your data into actionable insights with comprehensive BI and analytics solutions.',
       icon: BarChart,
-      features: ['Data visualization', 'Report generation', 'Dashboard creation', 'Data warehousing', 'ETL processes', 'Predictive analytics'],
+      features: ['Data Visualization', 'Report Generation', 'Dashboard Creation', 'Data Warehousing', 'ETL Processes', 'Predictive Analytics'],
       price: 'Starting at $1,000/month',
       category: 'Analytics',
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Cost Optimization'],
+      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS']
     },
     {
       title: 'IT Consulting',
-      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize investments.',
       icon: Users,
-      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost analysis', 'Implementation guidance', 'Training'],
+      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Evaluation', 'Cost Analysis', 'Implementation Guidance', 'Training'],
       price: 'Starting at $150/hour',
       category: 'Consulting',
-      benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
-      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      benefits: ['Strategic Guidance', 'Cost Optimization', 'Risk Mitigation', 'Technology Alignment'],
+      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management']
+    }
+  ];
+
+  const benefits = [
+    '99.9% Uptime Guarantee',
+    '24/7 Expert Support',
+    '50% Cost Reduction',
+    '300% Performance Improvement'
+  ];
+
+  const testimonials = [
+    {
+      name: 'David Wilson',
+      company: 'Enterprise Solutions Inc.',
+      role: 'IT Director',
+      content: 'Zion Tech Group transformed our IT infrastructure. We achieved 99.9% uptime and reduced costs by 40%.',
+      rating: 5
+    },
+    {
+      name: 'Lisa Martinez',
+      company: 'DataCorp Systems',
+      role: 'CTO',
+      content: 'Their cybersecurity solutions protected us from multiple threats. The peace of mind is invaluable.',
+      rating: 5
+    },
+    {
+      name: 'Robert Kim',
+      company: 'CloudFirst Technologies',
+      role: 'VP of Engineering',
+      content: 'The cloud migration was seamless. Our applications run faster and more reliably than ever.',
+      rating: 5
     }
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="IT Services - Zion Tech Group"
-        description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, database management, and business intelligence solutions."
-        keywords={['IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'database management', 'business intelligence', 'IT consulting']}
-        canonicalUrl="https://ziontechgroup.com/it-services"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              IT Services & Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive IT services to support and optimize your business infrastructure. 
-              From cloud migration to cybersecurity, we provide end-to-end solutions.
-            </p>
-          </section>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            IT <span className="text-cyan-400">Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT solutions designed to optimize your technology infrastructure and drive business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
+      </section>
 
-          {/* Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-300 space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-400">Category: {service.category}</div>
-                  </div>
-                  
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Contact Section */}
-          <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your IT Infrastructure?
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our IT Services?
             </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free consultation and discover how our IT services can optimize your business operations.
+            <p className="text-xl text-gray-600">
+              Proven expertise and reliable solutions that deliver results
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
-                className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-gray-400">
-              <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </section>
-        </main>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our IT Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive IT solutions tailored to your business needs
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    <span className="text-sm text-blue-600 font-medium">{service.category}</span>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-blue-600">{service.price}</span>
+                  <Link
+                    to="/contact"
+                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Technologies We Work With
+            </h2>
+            <p className="text-xl text-gray-600">
+              Cutting-edge technologies and industry-standard tools
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            {['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform', 'Windows Server', 'Linux', 'VMware', 'SQL Server', 'MySQL', 'MongoDB'].map((tech, index) => (
+              <div key={index} className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <div className="text-2xl font-bold text-gray-700">{tech}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real results from real businesses
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mr-4">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Optimize Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our IT services can help you achieve better performance, security, and efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Get IT Consultation
+            </Link>
+            <Link
+              to="/case-studies"
+              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
-export default ITServicesPage;
+export default ItServicesPage;

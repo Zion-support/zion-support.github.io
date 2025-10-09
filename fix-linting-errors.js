@@ -1,10 +1,8 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
 
-// Get all TypeScript/JavaScript files that need fixing
+// Get all TypeScript/JavaScript files that need fixing;
 const filesToFix = [
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
@@ -22,32 +20,20 @@ const filesToFix = [
   '/workspace/app/utils/__tests__/performanceMonitoring.test.ts',
 ];
 
-function fixUnusedVariables(filePath) {
-  if (!fs.existsSync(filePath)) {
-
-    return;
+function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   }
 
-  let _content = fs.readFileSync(filePath, 'utf8');
-  let _modified = false;
 
-  // Fix unused variables by prefixing with underscore
+  // Fix unused variables by prefixing with underscore;
   const unusedVarPatterns = [
-    // Unused imports
-    {
-      pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
-      fix: (match, imports) => {
-        const _importList = imports.split(',').map(imp => imp.trim());
-        const unusedImports = importList.filter(imp => {
-          const _varName = imp.split(' as ')[0].trim();
-          return !content.includes(varName) || content.split(varName).length <= 2;
+    // Unused imports;
+    {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
+      fi,
+  x: (match, imports) => {/* TODO: Fix JSX expression */}
         });
 
-        if (unusedImports.length > 0) {
-          const fixedImports = importList
-            .map(imp => {
-              const _varName = imp.split(' as ')[0].trim();
-              if (unusedImports.includes(imp)) {
+        if (unusedImports.length > 0) {/* TODO: Fix JSX expression */}
                 return imp.replace(varName, `_${varName}`);
               }
               return imp;
@@ -58,28 +44,15 @@ function fixUnusedVariables(filePath) {
         return match;
       },
     },
-    // Unused variable declarations
-    {
-      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
-      fix: (match, varName) => {
-        if (varName.startsWith('_')) return match;
-        const _regex = new RegExp(`\\b${varName}\\b`, 'g');
-        const _matches = content.match(regex);
-        if (matches && matches.length <= 1) {
+    // Unused variable declarations;
+    {/* TODO: Fix JSX expression */}`
           return match.replace(varName, `_${varName}`);
         }
         return match;
       },
     },
-    // Unused function parameters
-    {
-      pattern: /function\s+[^(]*\(([^)]+)\)/g,
-      fix: (match, params) => {
-        const _paramList = params.split(',').map(p => p.trim());
-        const fixedParams = paramList
-          .map(param => {
-            const _paramName = param.split(':')[0].trim();
-            if (!paramName.startsWith('_') && !paramName.includes('=')) {
+    // Unused function parameters;
+    {/* TODO: Fix JSX expression */}`
               return param.replace(paramName, `_${paramName}`);
             }
             return param;
@@ -90,27 +63,21 @@ function fixUnusedVariables(filePath) {
     },
   ];
 
-  // Apply fixes
-  for (const { pattern, fix } of unusedVarPatterns) {
-    const _newContent = content.replace(pattern, fix);
-    if (newContent !== content) {
-      content = newContent;
-      modified = true;
+  // Apply fixes;
+  for (const { pattern, fix } of unusedVarPatterns) {/* TODO: Fix JSX expression */}
     }
   }
 
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-
+  if (modified) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Fix all files
+// Fix all files;
 filesToFix.forEach(fixUnusedVariables);
 
-// Run linter to check results
-try {
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
-} catch (error) {
-
+// Run linter to check results;
+try {/* TODO: Fix JSX expression */}
+  o: 'inherit' });
+} catch (error) {/* TODO: Fix JSX expression */}
 }
+"`

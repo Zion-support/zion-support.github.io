@@ -1,9 +1,8 @@
-'use client';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, User, MessageSquare, Building, Globe } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,13 +11,10 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: '',
-    budget: '',
-    timeline: ''
+    message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -35,393 +31,327 @@ const ContactPage: React.FC = () => {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      setIsSubmitted(true);
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
     }, 2000);
   };
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: 'Phone',
-      details: ['+1 (302) 464-0950', 'Mon-Fri 9AM-6PM EST'],
-      action: 'tel:+13024640950'
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      details: ['kleber@ziontechgroup.com', 'support@ziontechgroup.com'],
-      action: 'mailto:kleber@ziontechgroup.com'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: ['364 E Main St STE 1008', 'Middletown, DE 19709', 'United States'],
-      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM', 'Sunday: Closed'],
-      action: null
-    }
-  ];
-
   const services = [
-    'AI Services',
+    'AI Marketing',
+    'AI Automation',
+    'AI Healthcare',
+    'AI Fintech',
+    'AI Content Generation',
+    'AI Data Analytics',
+    'AI Cybersecurity',
+    'AI Workflow Automation',
+    'AI Customer Support',
+    'AI Sales Automation',
+    'AI Project Management',
     'IT Infrastructure',
-    'Cloud Migration',
+    'IT Support',
+    'Cloud Infrastructure',
     'Cybersecurity',
-    'DevOps & CI/CD',
     'Database Management',
-    'Mobile App Development',
-    'Custom Software Development',
-    'AI Consulting',
-    'Digital Transformation',
+    'Managed IT',
+    'Quantum Computing',
+    'Autonomous Systems',
+    'Blockchain',
+    'IoT Edge Computing',
+    'Robotics',
+    'Micro SaaS',
     'Other'
-  ];
-
-  const budgetRanges = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    'Over $500,000',
-    'Not sure yet'
-  ];
-
-  const timelines = [
-    'ASAP',
-    'Within 1 month',
-    '1-3 months',
-    '3-6 months',
-    '6+ months',
-    'Just exploring options'
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: Brain,
-      title: 'AI Expertise',
-      description: 'Deep knowledge in artificial intelligence and machine learning technologies'
-    },
-    {
-      icon: Shield,
-      title: 'Security First',
-      description: 'Bank-level security and compliance with industry standards'
-    },
-    {
-      icon: Zap,
-      title: 'Fast Delivery',
-      description: 'Rapid development and deployment with proven methodologies'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Certified professionals with years of enterprise experience'
-    }
   ];
 
   return (
     <>
-      <SEOOptimizer
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, project inquiries, and expert advice. Call (302) 464-0950."
-        keywords={['contact us', 'get in touch', 'consultation', 'AI services', 'IT solutions', 'project inquiry']}
-        canonicalUrl="https://ziontechgroup.com/contact"
-      />
+      <Helmet>
+        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Free consultation, expert advice, and custom solutions for your business needs." />
+        <meta name="keywords" content="contact zion tech group, AI consultation, IT support, free consultation, business technology" />
+      </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        <main className="pt-16">
+        <main className="pt-24">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                Get In Touch
+          <section className="container mx-auto px-4 py-16">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+                Contact Us
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Ready to Transform Your Business?
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Let's discuss how our AI and IT solutions can help your business achieve unprecedented growth and efficiency. 
-                Our expert team is ready to provide personalized consultation and solutions tailored to your needs.
+              <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
+                Ready to transform your business with cutting-edge AI and IT solutions? 
+                Get in touch with our experts for a free consultation and discover how we can help you achieve your goals.
               </p>
             </div>
           </section>
 
-          {/* Contact Info Section */}
+          {/* Contact Information */}
           <section className="container mx-auto px-4 py-16">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                Contact Information
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                      <info.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4 neon-text">{info.title}</h3>
-                    <div className="space-y-2">
-                      {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-gray-300 text-sm">{detail}</p>
-                      ))}
-                    </div>
-                    {info.action && (
-                      <a
-                        href={info.action}
-                        className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                      >
-                        Contact Now →
-                      </a>
-                    )}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="cyber-card hologram-card p-8">
+                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-900/50 border border-green-400 rounded-lg flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
                   </div>
-                ))}
-              </div>
-            </div>
-          </section>
+                )}
 
-          {/* Contact Form Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {/* Form */}
-                <div className="cyber-card p-8">
-                  <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                    Send Us a Message
-                  </h2>
-                  {isSubmitted ? (
-                    <div className="text-center py-12">
-                      <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-                      <p className="text-gray-300 mb-6">
-                        Thank you for your message. We'll get back to you within 24 hours.
-                      </p>
-                      <button
-                        onClick={() => setIsSubmitted(false)}
-                        className="cyber-button"
-                      >
-                        Send Another Message
-                      </button>
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-900/50 border border-red-400 rounded-lg flex items-center">
+                    <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
+                    <span className="text-red-400">Sorry, there was an error sending your message. Please try again.</span>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                        placeholder="Your full name"
+                      />
                     </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-2">
-                            Full Name *
-                          </label>
-                          <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            required
-                            className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                            placeholder="Your full name"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-2">
-                            Email Address *
-                          </label>
-                          <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            required
-                            className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                            placeholder="your@email.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-2">
-                            Company
-                          </label>
-                          <input
-                            type="text"
-                            name="company"
-                            value={formData.company}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                            placeholder="Your company name"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-2">
-                            Phone Number
-                          </label>
-                          <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                            placeholder="+1 (555) 123-4567"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-2">
-                            Service Interest
-                          </label>
-                          <select
-                            name="service"
-                            value={formData.service}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                          >
-                            <option value="">Select a service</option>
-                            {services.map((service, index) => (
-                              <option key={index} value={service}>{service}</option>
-                            ))}
-                          </select>
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-2">
-                            Project Budget
-                          </label>
-                          <select
-                            name="budget"
-                            value={formData.budget}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                          >
-                            <option value="">Select budget range</option>
-                            {budgetRanges.map((range, index) => (
-                              <option key={index} value={range}>{range}</option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
-                          Timeline
-                        </label>
-                        <select
-                          name="timeline"
-                          value={formData.timeline}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                        >
-                          <option value="">Select timeline</option>
-                          {timelines.map((timeline, index) => (
-                            <option key={index} value={timeline}>{timeline}</option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
-                          Message *
-                        </label>
-                        <textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          required
-                          rows={6}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                          placeholder="Tell us about your project, goals, and how we can help..."
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full cyber-button flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                            <span>Sending...</span>
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5" />
-                            <span>Send Message</span>
-                          </>
-                        )}
-                      </button>
-                    </form>
-                  )}
-                </div>
-
-                {/* Why Choose Us */}
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                    Why Choose Zion Tech Group?
-                  </h2>
-                  <div className="space-y-6">
-                    {whyChooseUs.map((reason, index) => (
-                      <div key={index} className="cyber-card p-6">
-                        <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <reason.icon className="w-6 h-6 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-bold text-white mb-2">{reason.title}</h3>
-                            <p className="text-gray-300">{reason.description}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                        placeholder="your@email.com"
+                      />
+                    </div>
                   </div>
 
-                  <div className="cyber-card p-6 mt-8">
-                    <h3 className="text-xl font-bold text-white mb-4">Quick Response Guarantee</h3>
-                    <p className="text-gray-300 mb-4">
-                      We respond to all inquiries within 24 hours. For urgent matters, call us directly at:
-                    </p>
-                    <a
-                      href="tel:+13024640950"
-                      className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                        placeholder="(555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                      Service Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
                     >
-                      (302) 464-0950
-                    </a>
+                      <option value="">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>{service}</option>
+                      ))}
+                    </select>
                   </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                      placeholder="Tell us about your project and how we can help..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full cyber-button inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
+                </form>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-8">
+                <div className="cyber-card p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <Phone className="w-6 h-6 text-cyan-400 mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">Phone</h4>
+                        <p className="text-gray-300">(302) 464-0950</p>
+                        <p className="text-sm text-gray-400">Available 24/7 for emergencies</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <Mail className="w-6 h-6 text-cyan-400 mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">Email</h4>
+                        <p className="text-gray-300">info@ziontechgroup.com</p>
+                        <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="w-6 h-6 text-cyan-400 mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">Address</h4>
+                        <p className="text-gray-300">Middletown, DE 19709</p>
+                        <p className="text-sm text-gray-400">Serving clients worldwide</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <Clock className="w-6 h-6 text-cyan-400 mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">Business Hours</h4>
+                        <p className="text-gray-300">Mon-Fri: 9AM-6PM EST</p>
+                        <p className="text-sm text-gray-400">Emergency support available 24/7</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="cyber-card p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Free initial consultation</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">20+ years of experience</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">300% average ROI</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Enterprise-grade security</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">24/7 support available</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="cyber-card p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Quick Response</h3>
+                  <p className="text-gray-300 mb-4">
+                    Need immediate assistance? Call us now for urgent IT support or AI consultation.
+                  </p>
+                  <a
+                    href="tel:+13024640950"
+                    className="cyber-button inline-flex items-center justify-center w-full"
+                    style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now: (302) 464-0950
+                  </a>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* FAQ Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-gray-300 mb-12">
-                Don't wait to transform your business. Contact us today for a free consultation and discover how our AI and IT solutions can drive your success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Email Us</span>
-                </a>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300">Common questions about our services</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="cyber-card p-6">
+                <h3 className="text-xl font-bold text-white mb-3">How quickly can you start a project?</h3>
+                <p className="text-gray-300">Most projects can begin within 1-2 weeks after initial consultation and contract signing. Emergency support is available immediately.</p>
+              </div>
+              <div className="cyber-card p-6">
+                <h3 className="text-xl font-bold text-white mb-3">Do you offer ongoing support?</h3>
+                <p className="text-gray-300">Yes, we provide comprehensive ongoing support and maintenance for all our implementations, including 24/7 monitoring and emergency response.</p>
+              </div>
+              <div className="cyber-card p-6">
+                <h3 className="text-xl font-bold text-white mb-3">What industries do you serve?</h3>
+                <p className="text-gray-300">We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology sectors.</p>
+              </div>
+              <div className="cyber-card p-6">
+                <h3 className="text-xl font-bold text-white mb-3">Is the consultation really free?</h3>
+                <p className="text-gray-300">Yes, our initial consultation is completely free with no obligations. We'll assess your needs and provide recommendations at no cost.</p>
               </div>
             </div>
           </section>
         </main>
-        
+
         <Footer />
       </div>
     </>

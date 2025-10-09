@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-10-09T14:03:16.312Z",
-=======
-  "timestamp": "2025-10-09T03:43:14.281Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
   "optimizations": [
     "React.memo applied to components",
     "Lazy loading implemented",

@@ -1,24 +1,12 @@
-'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
+<<<<<<< HEAD
   const currentYear = new Date().getFullYear();
-  
-  const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
-  ];
 
   const aiServices = [
-    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
@@ -27,93 +15,66 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
-    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
     { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
-    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' },
-    { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
-    { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
-    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
-    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'AI-powered project management' }
   ];
 
   const itServices = [
-    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
+    { name: 'IT Support', url: '/it-support', description: 'Comprehensive IT support' },
+    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'Cloud migration & setup' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'DevOps automation' },
     { name: 'Database Management', url: '/database-management', description: 'Database management' },
-    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
-    { name: 'System Administration', url: '/system-administration', description: 'System management' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
-    { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
-    { name: 'IT Infrastructure Design', url: '/it-infrastructure-design', description: 'Custom infrastructure' },
-    { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'Real-time monitoring' },
-    { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
-    { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
-    { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
+    { name: 'Managed IT', url: '/managed-it', description: '24/7 IT management' }
   ];
 
   const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen computing' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
-    { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
-    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
-    { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
-    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
-    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
+    { name: 'Blockchain', url: '/blockchain', description: 'Decentralized solutions' },
+    { name: 'IoT Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
+    { name: 'Robotics', url: '/robotics', description: 'Intelligent robots' }
   ];
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
+    { name: 'News', url: '/blog' },
     { name: 'Contact', url: '/contact' }
   ];
 
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Support Center', url: '/support' },
-    { name: 'System Status', url: '/status' },
+    { name: 'API Docs', url: '/api-docs' },
+    { name: 'Support', url: '/contact' },
+    { name: 'Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/ziontechgroup' },
+    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/ziontechgroup' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/company/ziontechgroup' },
+    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/ziontechgroup' },
+    { name: 'YouTube', icon: Youtube, url: 'https://youtube.com/ziontechgroup' },
+    { name: 'GitHub', icon: Github, url: 'https://github.com/ziontechgroup' }
   ];
 
   const contactInfo = {
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
+    phone: '(302) 464-0950',
+    email: 'info@ziontechgroup.com',
+    address: 'Middletown, DE 19709',
+    hours: 'Mon-Fri 9AM-6PM EST'
   };
 
   const achievements = [
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
+    { text: '50+ Successful Projects' },
+    { text: '100+ Happy Clients' },
+    { text: '300% Average ROI' },
+    { text: '99.9% Uptime Guarantee' }
   ];
 
   return (
@@ -161,9 +122,9 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
-              {aiServices.slice(0, 8).map((service, index) => (
+              {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -174,7 +135,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -188,9 +149,9 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
-              {itServices.slice(0, 6).map((service, index) => (
+              {itServices.map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -201,7 +162,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -215,9 +176,9 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
             <ul className="space-y-3">
-              {emergingTech.slice(0, 6).map((service, index) => (
+              {emergingTech.map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -228,7 +189,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   to="/quantum-computing"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -281,38 +242,42 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm group"
                   >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm group"
                   >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
               <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Case Studies</Link></li>
             </ul>
           </div>
           <div>
@@ -365,6 +330,52 @@ const Footer: React.FC = memo(() => {
               </div>
             </div>
           </div>
+=======
+  return (
+    <footer className="bg-slate-900/50 backdrop-blur-lg border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.
+            </p>
+            <div className="flex space-x-4">
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <Phone className="w-5 h-5" />
+              </a>
+              <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
+              <li><Link to="/it-consulting" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Consulting</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
+              <li><Link to="/security" className="text-gray-300 hover:text-cyan-400 transition-colors">Security</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">Pricing</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors">Blog</Link></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-white/10 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b21
         </div>
       </div>
     </footer>
@@ -372,4 +383,9 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+<<<<<<< HEAD
 export default Footer;
+=======
+
+export default Footer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b21

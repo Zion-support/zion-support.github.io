@@ -1,80 +1,52 @@
 /**
- * Performance Configuration
- * Comprehensive performance monitoring and optimization settings
+ * Performance Configuration;
+ * Comprehensive performance monitoring and optimization settings;
  */
 
-export const performanceConfig = {
-  // Core Web Vitals thresholds
-  webVitals: {
-    lcp: {
-      good: 2500,
-      needsImprovement: 4000,
+export const performanceConfig = {/* TODO: Fix JSX expression */}
     },
-    fid: {
-      good: 100,
-      needsImprovement: 300,
+    fi,
+  d: {/* TODO: Fix JSX expression */}
     },
-    cls: {
-      good: 0.1,
-      needsImprovement: 0.25,
+    cl,
+  s: {/* TODO: Fix JSX expression */}
     },
-    fcp: {
-      good: 1800,
-      needsImprovement: 3000,
+    fc,
+  p: {/* TODO: Fix JSX expression */}
     },
-    ttfb: {
-      good: 800,
-      needsImprovement: 1800,
+    ttf,
+  b: {/* TODO: Fix JSX expression */}
     },
-    inp: {
-      good: 200,
-      needsImprovement: 500,
+    in,
+  p: {/* TODO: Fix JSX expression */}
     },
   },
 
-  // Resource loading priorities
-  resourceHints: {
-    preconnect: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-    dnsPrefetch: ['https://www.google-analytics.com', 'https://www.googletagmanager.com'],
+  // Resource loading priorities,
+  resourceHints: {/* TODO: Fix JSX expression */}
   },
 
-  // Lazy loading configuration
-  lazyLoading: {
-    imagePlaceholder: 'blur',
-    rootMargin: '50px',
-    threshold: 0.01,
-    enableNativeLazyLoading: true,
+  // Lazy loading configuration,
+  lazyLoading: {/* TODO: Fix JSX expression */}
   },
 
-  // Caching strategies
-  caching: {
-    staticAssets: {
-      maxAge: 31536000, // 1 year
-      immutable: true,
+  // Caching strategies,
+  caching: {/* TODO: Fix JSX expression */}
     },
-    api: {
-      maxAge: 300, // 5 minutes
-      staleWhileRevalidate: 600, // 10 minutes
+    ap,
+  i: {/* TODO: Fix JSX expression */}
     },
-    images: {
-      maxAge: 604800, // 1 week
+    image,
+  s: {/* TODO: Fix JSX expression */}
     },
   },
 
-  // Bundle optimization
-  bundling: {
-    maxChunkSize: 244000, // ~240KB
-    minChunkSize: 20000, // ~20KB
-    splitChunks: true,
-    treeshaking: true,
+  // Bundle optimization,
+  bundling: {/* TODO: Fix JSX expression */}
   },
 
-  // Monitoring
-  monitoring: {
-    sampleRate: 0.1, // 10% of requests
-    reportInterval: 30000, // 30 seconds
-    enableLongTaskDetection: true,
-    enableMemoryMonitoring: true,
+  // Monitoring,
+  monitoring: {/* TODO: Fix JSX expression */}
   },
 };
 

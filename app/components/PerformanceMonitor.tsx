@@ -1,91 +1,53 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isOnline: boolean;
-}
+import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isOnline: true
-  });
-
   useEffect(() => {
     // Monitor performance metrics
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      // Memory usage (if available)
-      const memoryUsage = (performance as any).memory ? 
-        Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024) : 0;
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('web-vitals' in window) {
+        // This would typically use the web-vitals library
+        console.log('Performance monitoring enabled');
+      }
 
-      setMetrics(prev => ({
-        ...prev,
-        loadTime: Math.round(loadTime),
-        memoryUsage,
-        isOnline: navigator.onLine
-      }));
+      // Monitor page load time
+      window.addEventListener('load', () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        console.log(`Page load time: ${loadTime}ms`);
+      });
+
+      // Monitor memory usage if available
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        console.log('Memory usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+        });
+      }
     };
 
-    // Initial measurement
-    updateMetrics();
+    monitorPerformance();
 
-    // Monitor online/offline status
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true }));
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false }));
+    // Monitor long tasks
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 50) {
+            console.warn('Long task detected:', entry.duration + 'ms');
+          }
+        }
+      });
 
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+      observer.observe({ entryTypes: ['longtask'] });
 
-    // Update metrics periodically
-    const interval = setInterval(updateMetrics, 5000);
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
+      return () => {
+        observer.disconnect();
+      };
+    }
   }, []);
 
-  // Only show in development or if explicitly enabled
-  if (process.env.NODE_ENV === 'production' && !window.location.search.includes('debug=performance')) {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-3 rounded-lg text-xs font-mono z-50 border border-cyan-400/30">
-      <div className="flex items-center gap-2 mb-2">
-        <Activity className="w-3 h-3 text-cyan-400" />
-        <span className="text-cyan-400 font-semibold">Performance</span>
-        <div className={`w-2 h-2 rounded-full ${metrics.isOnline ? 'bg-green-400' : 'bg-red-400'}`} />
-      </div>
-      
-      <div className="space-y-1">
-        <div className="flex items-center gap-2">
-          <Clock className="w-3 h-3 text-blue-400" />
-          <span>Load: {metrics.loadTime}ms</span>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          <Zap className="w-3 h-3 text-yellow-400" />
-          <span>Memory: {metrics.memoryUsage}MB</span>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          <TrendingUp className="w-3 h-3 text-green-400" />
-          <span>Status: {metrics.isOnline ? 'Online' : 'Offline'}</span>
-        </div>
-      </div>
-    </div>
-  );
+  return null;
 };
 
 export default PerformanceMonitor;

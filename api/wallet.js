@@ -1,64 +1,48 @@
 const { withSentry } = require('./withSentry.cjs');
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+async function handler(req, res) {/* TODO: Fix JSX expression */}
   }
 
   const { action, amount, currency = 'USD' } = req.body || {};
 
-  if (!action) {
-    res.statusCode = 400;
-    res.json({ error: 'Action is required' });
+  if (!action) {/* TODO: Fix JSX expression */}
+  r: 'Action is required' });
     return;
   }
 
-  try {
-    switch (action) {
-      case 'create_payment_intent': {
-        if (!amount) {
-          res.statusCode = 400;
-          res.json({ error: 'Amount is required for payment intent' });
+  try {/* TODO: Fix JSX expression */}
+  r: 'Amount is required for payment intent' });
           return;
         }
 
         const timestamp = Date.now();
         const random = Math.random().toString(36).substr(2, 9);
-        const paymentIntent = {
-          id: 'pi_' + timestamp,
-          amount: Math.round(amount * 100),
-          currency: currency.toLowerCase(),
-          status: 'requires_payment_method',
-          client_secret: 'pi_' + timestamp + '_secret_' + random,
+        const paymentIntent = {/* TODO: Fix JSX expression */}
         };
 
         res.statusCode = 200;
-        res.json({ success: true, paymentIntent });
+        res.json({/* TODO: Fix JSX expression */})
+  s: true, paymentIntent });
         break;
       }
 
-      case 'get_balance': {
-        const balance = {
-          available: 1000.0,
-          pending: 0.0,
-          currency: currency.toUpperCase(),
+      case 'get_balance': {/* TODO: Fix JSX expression */}
         };
 
         res.statusCode = 200;
-        res.json({ success: true, balance });
+        res.json({/* TODO: Fix JSX expression */})
+  s: true, balance });
         break;
       }
 
-      default:
+      defaul,
+  t:
         res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
+        res.json({/* TODO: Fix JSX expression */})
+  r: 'Invalid action' });
     }
-  } catch {
-    //     res.statusCode = 500;
-    res.json({ error: 'Wallet operation failed' });
+  } catch {/* TODO: Fix JSX expression */}
+  r: 'Wallet operation failed' });
   }
 }
 

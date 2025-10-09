@@ -1,7 +1,11 @@
-import React from 'react';
+
+
+
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+
+import { Target, BarChart, Settings } from 'lucide-react';
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [
@@ -18,23 +22,15 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
     },
     {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
-    },
-    {
       icon: Settings,
       title: 'Custom Metrics',
       description: 'Customizable metrics and KPIs',
       benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -44,10 +40,9 @@ const AIAnalyticsPage: React.FC = () => {
             Intelligent Business Intelligence
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics platform. 
+            Transform your data into actionable insights with our AI-powered analytics platform.
             Get real-time visibility into your business performance and make data-driven decisions.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -64,12 +59,10 @@ const AIAnalyticsPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Analytics Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -86,19 +79,24 @@ const AIAnalyticsPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+
                       {benefit}
                     </li>
                   ))}
                 </ul>
+
               </div>
             ))}
           </div>
         </section>
+        <Footer />
       </main>
 
-      <Footer />
     </div>
   );
 };
 
-export default AIAnalyticsPage;
+
+export default PagePage;
+
+
