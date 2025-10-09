@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-// SEO utilities for optimizing search engine visibility and performance
-
-export interface SEOData {
-=======
 /**
  * SEO Utilities
  * Provides SEO optimization and meta tag management
  */
 
-export interface SEOConfig {
->>>>>>> origin/comprehensive-improvements-final
+export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
-<<<<<<< HEAD
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;

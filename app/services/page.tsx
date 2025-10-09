@@ -11,19 +11,25 @@ const ServicesPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description: 'Cutting-edge artificial intelligence solutions',
       services: [
+        {
           name: 'Machine Learning Solutions',
           description: 'Custom ML models for predictive analytics and decision-making',
           price: 'Starting at $1,500/month',
           features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring']
         },
+        {
           name: 'Natural Language Processing',
           description: 'Advanced NLP solutions for text analysis and language understanding',
           price: 'Starting at $1,200/month',
           features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development']
+        },
+        {
           name: 'Computer Vision',
           description: 'Image and video analysis solutions for object detection and recognition',
           price: 'Starting at $1,800/month',
           features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition']
+        },
+        {
           name: 'AI Automation',
           description: 'Intelligent process automation with decision-making capabilities',
           price: 'Starting at $1,400/month',
