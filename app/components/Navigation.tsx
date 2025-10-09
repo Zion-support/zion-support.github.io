@@ -142,7 +142,8 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-=======
+  ];
+
   const toggleServices = () => setServicesOpen(!servicesOpen);
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
@@ -205,7 +206,6 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   return (
@@ -222,19 +222,6 @@ const Navigation: React.FC = () => {
             <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
           </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -339,20 +326,14 @@ const Navigation: React.FC = () => {
 
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
-<<<<<<< HEAD
-                <Brain className="w-4 h-4" />
-                <span>Services</span>
-=======
                 <Sparkles className="w-4 h-4" />
                 <span>Emerging Tech</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
@@ -405,13 +386,6 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-
-            <Link 
-              href="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
-=======
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -427,10 +401,9 @@ const Navigation: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             >
-              Case Studies
-            </Link>
+              📞 Call Now
+            </a>
 
             <Link
               href="/blog"
@@ -471,23 +444,11 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link
-                href="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-=======
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 Home
               </Link>
               <Link
@@ -501,35 +462,6 @@ const Navigation: React.FC = () => {
               {/* Mobile Services */}
               <div>
                 <button
-<<<<<<< HEAD
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-=======
                   onClick={() => setAiServicesOpen(!aiServicesOpen)}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
@@ -584,46 +516,10 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-
-              <Link
-                href="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-
-              <Link
-                href="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-
-              <Link
-                href="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
-
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
-              >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
-=======
               {/* Mobile Micro SAAS */}
               <div>
                 <button
@@ -688,7 +584,6 @@ const Navigation: React.FC = () => {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             </div>
           </div>
         )}
@@ -697,8 +592,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2

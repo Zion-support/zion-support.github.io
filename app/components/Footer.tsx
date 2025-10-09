@@ -17,17 +17,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Analytics', url: '/ai-data-analytics', description: 'AI Data Analysis' }
   ];
 
-  const itServices = [
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud Infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security Solutions' },
-    { name: 'DevOps', url: '/devops', description: 'Development Operations' },
-    { name: 'Database Services', url: '/database', description: 'Database Management' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Infrastructure Solutions' },
-    { name: 'Networking', url: '/networking', description: 'Network Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'BI Solutions' },
-    { name: 'Digital Transformation', url: '/enterprise', description: 'Enterprise Solutions' }
-  ];
-
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
     { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
@@ -72,34 +61,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
   ];
 
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
-    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
-    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
-    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-  ];
+  // Removed duplicate emergingTech declaration
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
@@ -143,8 +105,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -193,7 +153,6 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -218,12 +177,9 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-=======
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -245,9 +201,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
-
           {/* Micro SAAS & Emerging Tech */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
@@ -267,7 +220,6 @@ const Footer: React.FC = memo(() => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               </div>
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
