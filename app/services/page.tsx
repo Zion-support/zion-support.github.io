@@ -22,7 +22,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] },
+        { name: 'AI Predictive Analytics', price: '$1,600/month', description: 'Advanced predictive modeling for business forecasting', features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Trend Prediction'] },
+        { name: 'AI Voice Processing', price: '$1,300/month', description: 'Speech recognition and synthesis solutions', features: ['Voice Commands', 'Speech-to-Text', 'Text-to-Speech', 'Voice Analytics'] },
+        { name: 'AI Recommendation Engine', price: '$1,100/month', description: 'Personalized recommendation systems', features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'] },
+        { name: 'AI Sentiment Analysis', price: '$900/month', description: 'Real-time sentiment analysis and emotion detection', features: ['Social Media Monitoring', 'Customer Feedback Analysis', 'Brand Sentiment Tracking', 'Crisis Detection'] },
+        { name: 'AI Research Assistant', price: '$1,700/month', description: 'AI-powered research and data analysis tools', features: ['Literature Review', 'Data Mining', 'Pattern Recognition', 'Automated Reporting'] },
+        { name: 'AI Image Recognition', price: '$1,400/month', description: 'Advanced computer vision and image analysis', features: ['Object Detection', 'Facial Recognition', 'Quality Control', 'Medical Imaging'] }
       ]
     },
     {
@@ -36,7 +42,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Cybersecurity', price: '$1,599/month', description: 'Advanced security solutions with threat detection and prevention', features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'] },
         { name: 'DevOps & CI/CD', price: '$1,199/month', description: 'Streamlined development workflows with automated testing and deployment', features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'] },
         { name: 'Database Services', price: '$899/month', description: 'Database design, optimization, and management with AI-powered tuning', features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'] },
-        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] }
+        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] },
+        { name: 'System Administration', price: '$1,399/month', description: 'Comprehensive system administration and management', features: ['User Management', 'System Monitoring', 'Performance Optimization', 'Security Updates'] },
+        { name: 'IT Consulting', price: '$1,499/month', description: 'Strategic IT planning and technology consulting', features: ['Technology Assessment', 'Digital Transformation', 'IT Strategy', 'Vendor Management'] },
+        { name: 'Managed IT Services', price: '$1,799/month', description: '24/7 IT management and support services', features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'Incident Management'] },
+        { name: 'IT Training', price: '$599/month', description: 'Staff development and IT skills training', features: ['Technical Training', 'Certification Programs', 'Workshops', 'Online Learning'] },
+        { name: 'Performance Optimization', price: '$1,299/month', description: 'System performance tuning and optimization', features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Strategies', 'Monitoring Setup'] },
+        { name: 'Backup & Recovery', price: '$799/month', description: 'Comprehensive data protection and disaster recovery', features: ['Automated Backups', 'Disaster Recovery', 'Data Encryption', 'Recovery Testing'] }
       ]
     },
     {
@@ -56,7 +68,26 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
         { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
         { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Social Media Manager', price: '$199/month', description: 'Automated social media management and content scheduling', features: ['Content Scheduling', 'Engagement Analysis', 'Hashtag Optimization', 'Performance Tracking'] },
+        { name: 'AI Project Manager', price: '$299/month', description: 'Intelligent project management and task automation', features: ['Task Automation', 'Resource Allocation', 'Progress Tracking', 'Risk Assessment'] },
+        { name: 'AI Financial Analyzer', price: '$399/month', description: 'AI-powered financial analysis and investment insights', features: ['Portfolio Analysis', 'Risk Assessment', 'Market Trends', 'Investment Recommendations'] },
+        { name: 'AI HR Assistant', price: '$249/month', description: 'Human resources automation and employee management', features: ['Resume Screening', 'Employee Onboarding', 'Performance Tracking', 'Benefits Management'] },
+        { name: 'AI Inventory Manager', price: '$179/month', description: 'Intelligent inventory management and demand forecasting', features: ['Demand Forecasting', 'Stock Optimization', 'Reorder Alerts', 'Supplier Management'] },
+        { name: 'AI Meeting Scheduler', price: '$99/month', description: 'Automated meeting scheduling and calendar management', features: ['Smart Scheduling', 'Calendar Integration', 'Time Zone Management', 'Meeting Analytics'] },
+        { name: 'AI Expense Tracker', price: '$149/month', description: 'Intelligent expense tracking and financial management', features: ['Receipt Scanning', 'Expense Categorization', 'Budget Tracking', 'Tax Preparation'] },
+        { name: 'AI Task Manager Pro', price: '$199/month', description: 'Advanced task management with AI-powered prioritization', features: ['Smart Prioritization', 'Deadline Management', 'Team Collaboration', 'Progress Analytics'] },
+        { name: 'AI Website Optimizer', price: '$299/month', description: 'AI-powered website optimization and performance enhancement', features: ['Performance Analysis', 'SEO Optimization', 'User Experience', 'Conversion Tracking'] },
+        { name: 'AI Customer Insights', price: '$349/month', description: 'Advanced customer behavior analysis and insights', features: ['Behavior Analysis', 'Segmentation', 'Churn Prediction', 'Personalization'] },
+        { name: 'AI Compliance Monitor', price: '$399/month', description: 'Automated compliance monitoring and reporting', features: ['Regulatory Compliance', 'Risk Assessment', 'Audit Trails', 'Automated Reporting'] },
+        { name: 'AI Translation Service', price: '$199/month', description: 'Real-time translation and localization services', features: ['Multi-language Support', 'Real-time Translation', 'Document Translation', 'Voice Translation'] },
+        { name: 'AI Video Editor', price: '$299/month', description: 'AI-powered video editing and content creation', features: ['Auto-editing', 'Scene Detection', 'Audio Enhancement', 'Thumbnail Generation'] },
+        { name: 'AI Logo Designer', price: '$149/month', description: 'AI-generated logos and brand identity solutions', features: ['Logo Generation', 'Brand Guidelines', 'Color Palette', 'Typography'] },
+        { name: 'AI Survey Creator', price: '$99/month', description: 'Intelligent survey creation and analysis', features: ['Survey Design', 'Response Analysis', 'Insight Generation', 'Report Creation'] },
+        { name: 'AI Password Manager', price: '$79/month', description: 'Secure password management with AI-powered security', features: ['Password Generation', 'Security Monitoring', 'Breach Detection', 'Multi-device Sync'] },
+        { name: 'AI Weather Predictor', price: '$199/month', description: 'Advanced weather forecasting and climate analysis', features: ['Weather Forecasting', 'Climate Analysis', 'Alert System', 'Historical Data'] },
+        { name: 'AI Fitness Coach', price: '$149/month', description: 'Personalized fitness and health recommendations', features: ['Workout Plans', 'Nutrition Tracking', 'Progress Monitoring', 'Health Insights'] },
+        { name: 'AI Learning Platform', price: '$299/month', description: 'Personalized learning and skill development', features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'Certification'] }
       ]
     },
     {
@@ -70,7 +101,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Blockchain & Web3', price: '$1,999/month', description: 'Decentralized solutions, smart contracts, and Web3 applications', features: ['Smart Contract Development', 'DApp Creation', 'Token Economics', 'DeFi Solutions'] },
         { name: 'IoT & Edge Computing', price: '$1,499/month', description: 'Connected devices and edge computing solutions', features: ['Device Management', 'Edge Analytics', 'Real-time Processing', 'Security Implementation'] },
         { name: 'Business Intelligence', price: '$1,799/month', description: 'Data-driven insights and predictive analytics for decision-making', features: ['Data Warehousing', 'ETL Processes', 'Advanced Analytics', 'Executive Dashboards'] },
-        { name: 'Robotics Solutions', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries', features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'] }
+        { name: 'Robotics Solutions', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries', features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'] },
+        { name: 'AR/VR Solutions', price: '$2,499/month', description: 'Augmented and virtual reality applications for business', features: ['AR/VR Development', '3D Modeling', 'Interactive Experiences', 'Training Simulations'] },
+        { name: 'Edge AI Computing', price: '$1,899/month', description: 'AI processing at the edge for real-time applications', features: ['Edge AI Models', 'Real-time Processing', 'Low Latency', 'Offline Capability'] },
+        { name: 'Digital Twin Solutions', price: '$2,199/month', description: 'Digital replicas of physical systems for simulation and optimization', features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Optimization'] },
+        { name: 'Smart City Solutions', price: '$3,999/month', description: 'Comprehensive smart city infrastructure and management', features: ['Traffic Management', 'Energy Optimization', 'Waste Management', 'Public Safety'] },
+        { name: 'Healthcare AI', price: '$2,799/month', description: 'AI-powered healthcare solutions and medical diagnostics', features: ['Medical Imaging', 'Diagnostic Assistance', 'Treatment Planning', 'Patient Monitoring'] },
+        { name: 'Fintech Solutions', price: '$2,299/month', description: 'Advanced financial technology and payment solutions', features: ['Payment Processing', 'Risk Management', 'Fraud Detection', 'Regulatory Compliance'] }
       ]
     }
   ];
@@ -102,7 +139,8 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen neural-network-bg">
+      <div className="matrix-rain"></div>
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services including machine learning, automation, cloud infrastructure, and specialized solutions. Starting at $99/month." />
@@ -137,20 +175,27 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card cyber-glow">
+            <div className="text-center mb-4">
+              <h3 className="text-2xl font-bold text-white mb-2">Ready to Transform Your Business?</h3>
+              <p className="text-purple-100">Get started with our services today and see the difference AI and IT solutions can make.</p>
+            </div>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="text-white font-medium hover:text-cyan-300 transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white font-medium hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</span>
+                <span className="text-white font-medium">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
+            </div>
+            <div className="mt-4 text-center">
+              <p className="text-purple-100 text-sm">Business Hours: Monday - Friday 9:00 AM - 6:00 PM EST | 24/7 Emergency Support Available</p>
             </div>
           </div>
         </div>
@@ -241,25 +286,31 @@ const ServicesPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 holographic-text">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our services today and see the difference AI and IT solutions can make.
+            Get started with our services today and see the difference AI and IT solutions can make. 
+            Join 500+ satisfied clients who have achieved 300% average ROI with our solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="cyber-button inline-flex items-center justify-center px-8 py-3"
             >
-              Call (302) 464-0950
+              📞 Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              className="cyber-border bg-transparent text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors glow-on-hover"
             >
-              Email Us
+              ✉️ Email Us
             </a>
+          </div>
+          <div className="mt-8 text-center">
+            <p className="text-purple-200 text-sm">
+              Free consultation • No setup fees • 30-day money-back guarantee • 24/7 support
+            </p>
           </div>
         </div>
       </section>

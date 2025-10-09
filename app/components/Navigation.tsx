@@ -146,24 +146,24 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2 glow-on-hover" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center cyber-glow">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl holographic-text">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium glow-on-hover">
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium glow-on-hover">              
               About
             </Link>
 
@@ -171,7 +171,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
+                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white glow-on-hover"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
@@ -180,7 +180,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-500/30 py-6 z-50 cyber-glow">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -220,7 +220,7 @@ const Navigation: React.FC = () => {
                   <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                     <Link
                       href="/services"
-                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                      className="block w-full text-center cyber-button"
                       onClick={closeAllMenus}
                     >
                       View All Services
@@ -232,7 +232,7 @@ const Navigation: React.FC = () => {
 
             <Link 
               href="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              className="font-medium transition-colors hover:text-cyan-400 text-white glow-on-hover"
               onClick={closeAllMenus}
             >
               Case Studies
@@ -240,7 +240,7 @@ const Navigation: React.FC = () => {
 
             <Link
               href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium glow-on-hover"
               onClick={closeAllMenus}
             >
               Blog
@@ -248,7 +248,7 @@ const Navigation: React.FC = () => {
 
             <Link
               href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium glow-on-hover"
               onClick={closeAllMenus}
             >
               Contact
@@ -269,7 +269,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 glow-on-hover"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -280,17 +280,17 @@ const Navigation: React.FC = () => {
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 cyber-glow">
               <Link
                 href="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md glow-on-hover"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md glow-on-hover"
                 onClick={closeAllMenus}
               >
                 About
