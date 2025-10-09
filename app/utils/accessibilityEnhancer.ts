@@ -578,3 +578,17 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+- Color Contrast Score: ${metrics.colorContrastScore}/100
+- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
+- Screen Reader Score: ${metrics.screenReaderScore}/100
+- ARIA Implementation Score: ${metrics.ariaImplementationScore}/100
+- Overall Score: ${metrics.overallScore}/100
+
+Recommendations:
+- Focus on improving color contrast for better accessibility
+- Ensure all interactive elements are keyboard accessible
+- Implement proper ARIA labels and roles
+- Test with screen readers regularly
+`;
+  }
+}
