@@ -12,43 +12,87 @@ const MicroSAASPage: React.FC = () => {
   const microSAASServices = useMemo(() => [
     // Featured Services
     {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
-      price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
-      benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
-      marketPrice: '$150-300/month',
-      category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
+      title: 'AI Design Studio',
+      description: 'Create stunning logos, social media posts, and marketing materials with AI-powered design tools that understand your brand.',
+      icon: '🎨',
+      price: '$79/month',
+      features: ['AI logo generator', 'Smart brand kit', 'One-click design', 'Design optimization', 'Performance analytics', 'Style learning'],
+      benefits: ['Create designs 10x faster', 'Generate 50+ logo variations', 'Save 20+ hours on branding', 'Increase engagement by 40%'],
+      marketPrice: '$200-500/month',
+      category: 'Design Tools',
+      technologies: ['Custom AI Models', 'React', 'Node.js', 'Canvas API', 'Adobe Creative Suite'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      link: 'https://ziontechgroup.com/ai-code-review',
+      link: 'https://ziontechgroup.com/ai-design-studio',
       popular: true
     },
     {
-      title: 'AI SEO Optimizer Pro',
-      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
+      title: 'Landing Page Builder',
+      description: 'Create high-converting landing pages in minutes with AI that understands your business and target audience.',
+      icon: '🌐',
+      price: '$49/month',
+      features: ['AI page generator', 'Conversion optimization', 'One-click publishing', 'Real-time analytics', 'A/B testing', 'Custom templates'],
+      benefits: ['Build pages 5x faster', 'Increase conversions by 60%', 'Go live in 60 seconds', '100+ professional templates'],
+      marketPrice: '$150-400/month',
+      category: 'Marketing Tools',
+      technologies: ['React', 'Next.js', 'Custom AI Models', 'CDN', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/landing-page-builder',
+      popular: true
+    },
+    {
+      title: 'SEO Optimizer Pro',
+      description: 'Dominate search results with AI-powered keyword research, content optimization, and technical SEO analysis.',
       icon: '🎯',
-      price: '$199/month',
-      features: ['Keyword research', 'Content optimization', 'Competitor analysis', 'Rank tracking', 'Technical SEO audit', 'Local SEO tools'],
-      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 20+ hours/week', 'Boost conversion rates'],
-      marketPrice: '$300-600/month',
+      price: '$99/month',
+      features: ['AI keyword research', 'Content optimization', 'Rank tracking', 'Technical SEO audit', 'Competitor analysis', 'Performance monitoring'],
+      benefits: ['Increase traffic by 150%', 'Track 500+ keywords', 'Fix 95% of technical issues', 'Outrank competitors in 30 days'],
+      marketPrice: '$200-600/month',
       category: 'Marketing Tools',
       technologies: ['Google Analytics', 'Search Console', 'Custom AI Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/seo-optimizer',
       popular: true
     },
     {
-      title: 'Smart Analytics Dashboard',
-      description: 'AI-powered business intelligence with real-time analytics, predictive insights, and automated reporting.',
-      icon: '📊',
-      price: '$149/month',
-      features: ['Real-time analytics', 'Predictive insights', 'Automated reports', 'Custom dashboards', 'Data visualization', 'API integration'],
-      benefits: ['Make data-driven decisions', 'Save 25+ hours on reporting', 'Identify trends early', 'Improve ROI by 40%'],
-      marketPrice: '$250-500/month',
-      category: 'Analytics Tools',
-      technologies: ['Tableau', 'Power BI', 'Custom AI Models', 'Python', 'React'],
+      title: 'AI Code Assistant',
+      description: 'Accelerate development with AI-powered code generation, review, and optimization for any programming language.',
+      icon: '💻',
+      price: '$79/month',
+      features: ['AI code generation', 'Smart code review', 'Auto-complete', 'Code optimization', 'Performance analysis', 'Debug assistant'],
+      benefits: ['Write code 10x faster', 'Catch 90% of bugs early', 'Reduce typing by 70%', 'Improve code quality by 60%'],
+      marketPrice: '$150-400/month',
+      category: 'Developer Tools',
+      technologies: ['OpenAI Codex', 'Custom AI Models', 'VS Code Extension', 'GitHub Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/code-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Expense Tracker',
+      description: 'Transform expense management with AI-powered receipt scanning, automated categorization, and financial insights.',
+      icon: '📊',
+      price: '$29/month',
+      features: ['Smart receipt scanning', 'Real-time analytics', 'AI categorization', 'Automated workflows', 'Budget management', 'Compliance & security'],
+      benefits: ['Save 8+ hours per month', '99% accurate categorization', 'Reduce expenses by 25%', 'Process expenses 5x faster'],
+      marketPrice: '$50-150/month',
+      category: 'Business Tools',
+      technologies: ['OCR Technology', 'Custom AI Models', 'React', 'Node.js', 'Cloud Storage'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/expense-tracker',
+      popular: true
+    },
+    {
+      title: 'Task Manager Pro',
+      description: 'Supercharge productivity with AI-powered task management, intelligent prioritization, and team collaboration tools.',
+      icon: '✅',
+      price: '$49/month',
+      features: ['AI task prioritization', 'Team collaboration', 'Smart scheduling', 'Automated workflows', 'Goal tracking', 'Performance analytics'],
+      benefits: ['Increase productivity by 40%', 'Improve team efficiency by 60%', 'Complete tasks 30% faster', 'Achieve 85% of goals'],
+      marketPrice: '$100-300/month',
+      category: 'Productivity Tools',
+      technologies: ['Custom AI Models', 'React', 'Node.js', 'Real-time Sync', 'Mobile Apps'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/task-manager-pro',
       popular: true
     },
     {
@@ -61,7 +105,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Content Tools',
       technologies: ['OpenAI GPT', 'Custom AI Models', 'React', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-content-generation'
     },
     {
       title: 'Smart Email Marketing Suite',
@@ -73,7 +118,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Marketing Tools',
       technologies: ['Mailchimp', 'SendGrid', 'Custom AI Models', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-email-assistant'
     },
     {
       title: 'AI Customer Support Bot',
@@ -85,11 +131,25 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Support Tools',
       technologies: ['OpenAI GPT', 'Custom AI Models', 'React', 'Node.js', 'WebSocket'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-chatbot-builder'
+    },
+    {
+      title: 'Smart Analytics Dashboard',
+      description: 'AI-powered business intelligence with real-time analytics, predictive insights, and automated reporting.',
+      icon: '📊',
+      price: '$149/month',
+      features: ['Real-time analytics', 'Predictive insights', 'Automated reports', 'Custom dashboards', 'Data visualization', 'API integration'],
+      benefits: ['Make data-driven decisions', 'Save 25+ hours on reporting', 'Identify trends early', 'Improve ROI by 40%'],
+      marketPrice: '$250-500/month',
+      category: 'Analytics Tools',
+      technologies: ['Tableau', 'Power BI', 'Custom AI Models', 'Python', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/smart-analytics'
     }
   ], []);
 
-  const categories = ['All', 'Developer Tools', 'Marketing Tools', 'Analytics Tools', 'Content Tools', 'Support Tools'];
+  const categories = ['All', 'Design Tools', 'Developer Tools', 'Marketing Tools', 'Analytics Tools', 'Content Tools', 'Productivity Tools', 'Business Tools', 'Support Tools'];
 
   const filteredServices = useMemo(() => {
     return microSAASServices.filter(service => {
