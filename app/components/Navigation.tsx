@@ -1,10 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Cube, Shield, Cloud, Database, Briefcase, Globe, Smartphone, Lock, Search, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,14 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+    }
+  };
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
@@ -36,6 +46,17 @@ const Navigation: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Home },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Settings },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: TrendingUp },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: Globe },
+    { name: 'AI Learning Platform', href: '/ai-learning-platform', icon: FileText },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Settings },
+    { name: 'AI Logistics Manager', href: '/ai-logistics-manager', icon: Settings },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield },
+    { name: 'AI Translation Service', href: '/ai-translation-service', icon: Globe },
+    { name: 'AI Personal Assistant', href: '/ai-personal-assistant', icon: Bot },
+    { name: 'AI Stock Trader', href: '/ai-stock-trader', icon: TrendingUp },
   ];
 
   const aiServices = [
@@ -47,6 +68,16 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Smartphone },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions', icon: Cube },
+    { name: 'AI Blockchain Integration', href: '/ai-blockchain-integration', icon: Lock },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Globe },
+    { name: 'AI Biotech Solutions', href: '/ai-biotech-solutions', icon: Brain },
+    { name: 'AI Financial Trading', href: '/ai-financial-trading', icon: TrendingUp },
+    { name: 'AI Smart Cities', href: '/ai-smart-cities', icon: Building },
   ];
 
   const itServices = [
@@ -58,6 +89,17 @@ const Navigation: React.FC = () => {
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'Quantum Computing Services', href: '/quantum-computing-services', icon: Cpu },
+    { name: '5G Network Solutions', href: '/5g-network-solutions', icon: Globe },
+    { name: 'Edge Computing Services', href: '/edge-computing-services', icon: Smartphone },
+    { name: 'AR/VR Development', href: '/ar-vr-development', icon: Cube },
+    { name: 'Digital Twin Solutions', href: '/digital-twin-solutions', icon: Building },
+    { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: Settings },
+    { name: 'Microservices Architecture', href: '/microservices-architecture', icon: Code },
+    { name: 'Serverless Computing', href: '/serverless-computing', icon: Cloud },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain },
+    { name: 'Zero Trust Security', href: '/zero-trust-security', icon: Shield },
+    { name: 'Green IT Solutions', href: '/green-it-solutions', icon: Globe },
   ];
 
   return (
@@ -89,6 +131,15 @@ const Navigation: React.FC = () => {
               </a>
             ))}
             
+            {/* Search Button */}
+            <button
+              onClick={() => setShowSearch(!showSearch)}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 p-2"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            
             {/* Services Dropdown */}
             <div className="relative group">
               <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1">
@@ -100,14 +151,14 @@ const Navigation: React.FC = () => {
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-4">
-                  <div className="grid grid-cols-1 gap-4">
+              <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-6">
                     {/* Micro SAAS Services */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                      <h3 className="text-cyan-400 font-semibold mb-3 text-sm">Micro SAAS Solutions</h3>
+                      <div className="space-y-2">
+                        {microSAASServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -122,9 +173,9 @@ const Navigation: React.FC = () => {
                     
                     {/* AI Services */}
                     <div>
-                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {aiServices.slice(0, 4).map((service) => (
+                      <h3 className="text-purple-400 font-semibold mb-3 text-sm">AI Services</h3>
+                      <div className="space-y-2">
+                        {aiServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -139,9 +190,9 @@ const Navigation: React.FC = () => {
                     
                     {/* IT Services */}
                     <div>
-                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {itServices.map((service) => (
+                      <h3 className="text-green-400 font-semibold mb-3 text-sm">IT Services</h3>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -155,7 +206,7 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-4 pt-4 border-t border-gray-600">
+                  <div className="mt-6 pt-4 border-t border-gray-600">
                     <a
                       href="/services"
                       className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
@@ -189,10 +240,55 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
+        {/* Search Overlay */}
+        {showSearch && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-20">
+            <div className="bg-slate-800 rounded-lg shadow-xl border border-cyan-400/20 w-full max-w-2xl mx-4">
+              <form onSubmit={handleSearch} className="p-6">
+                <div className="flex items-center space-x-4">
+                  <Search className="w-6 h-6 text-cyan-400" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search services, solutions, or topics..."
+                    className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+                    autoFocus
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowSearch(false)}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+                <div className="mt-4 text-sm text-gray-400">
+                  Try searching for "AI automation", "cloud migration", or "micro SAAS"
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
+              {/* Mobile Search */}
+              <div className="mb-4">
+                <form onSubmit={handleSearch} className="flex items-center space-x-2">
+                  <Search className="w-5 h-5 text-cyan-400" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search services..."
+                    className="flex-1 bg-slate-700 text-white placeholder-gray-400 px-3 py-2 rounded-lg outline-none"
+                  />
+                </form>
+              </div>
+
               {navigationItems.map((item) => (
                 <a
                   key={item.name}
@@ -209,7 +305,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
                 <div className="grid grid-cols-1 gap-2">
-                  {microSAASServices.slice(0, 6).map((service) => (
+                  {microSAASServices.slice(0, 8).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
@@ -226,7 +322,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
                 <div className="grid grid-cols-1 gap-2">
-                  {aiServices.slice(0, 4).map((service) => (
+                  {aiServices.slice(0, 8).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
@@ -243,7 +339,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
                 <div className="grid grid-cols-1 gap-2">
-                  {itServices.map((service) => (
+                  {itServices.slice(0, 8).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
