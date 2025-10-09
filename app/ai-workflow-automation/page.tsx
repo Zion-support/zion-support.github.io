@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Workflow, Zap, Brain, BarChart, Clock, Shield, Users, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
@@ -44,8 +44,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
     }
   ];
-
-  const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
@@ -93,126 +91,44 @@ const AIWorkflowAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-
-  const useCases = [
-    {
-      title: 'Lead Management',
-      description: 'Automatically capture, qualify, and route leads to the right sales rep based on criteria and availability.',
-      icon: Users
-    },
-    {
-      title: 'Invoice Processing',
-      description: 'Extract data from invoices, validate against purchase orders, and route for approval automatically.',
-      icon: Database
-    },
-    {
-      title: 'Customer Onboarding',
-      description: 'Streamline new customer setup with automated account creation, welcome emails, and training assignments.',
-      icon: Settings
-    },
-    {
-      title: 'HR Workflows',
-      description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings
-    }
-  ];
-
-  return (
-    <>
-      <SEOOptimizer
-        title="AI Workflow Automation Platform - Zion Tech Group"
-        description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
-        keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
-        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-        <Navigation />
-        
-        <main className="pt-16">
-          {/* Hero Section */}
-          <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
-            <div className="absolute inset-0 bg-black opacity-20"></div>
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                  AI Workflow Automation
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-                  Transform your business with intelligent automation that works 24/7 to streamline processes and boost productivity
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="/contact"
-                    className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
-                  >
-                    Start Free Trial
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
-                  <a 
-                    href="#demo"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-                  >
-                    Watch Demo
-                  </a>
-                </div>
-              </div>
             </div>
           </section>
-
           {/* Features Section */}
-          <section className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Powerful Features for Every Business
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Build, deploy, and manage intelligent workflows that adapt to your business needs
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                      <feature.icon className="w-6 h-6 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Key Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </section>
-
-          {/* Use Cases Section */}
-          <section className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Real-World Use Cases
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  See how businesses are using AI workflow automation to transform their operations
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {useCases.map((useCase, index) => (
-                  <div key={index} className="bg-white rounded-lg p-8 shadow-lg">
-                    <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                        <useCase.icon className="w-5 h-5 text-green-600" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900">{useCase.title}</h3>
+          {/* Pricing Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Pricing Plans
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {index === 1 && (
+                    <div className="text-center mb-4">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
                     </div>
                     <p className="text-gray-600">{useCase.description}</p>
                   </div>
@@ -300,11 +216,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
   );
 };
 

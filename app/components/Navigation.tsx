@@ -1,9 +1,8 @@
 'use client';
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, BarChart3, Projector, Headphones } from 'lucide-react';
-
-const Navigation: React.FC = memo(() => {
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -30,80 +29,115 @@ const Navigation: React.FC = memo(() => {
     };
   }, []);
 
+  const closeAllMenus = () => {
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+    setIsOpen(false);
+  };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      closeAllMenus();
+    }
+  };
+
   const serviceCategories = [
     {
       title: 'AI Services',
       icon: Brain,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100',
-      services: [
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'Intelligent customer service' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Smart data insights' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Automated sales processes' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'End-to-end workflow automation' },
-        { name: 'AI Voice Cloning', path: '/ai-voice-cloning', description: 'Advanced voice synthesis' },
-        { name: 'AI Video Generation', path: '/ai-video-generation', description: 'AI video creation' },
-        { name: 'AI 3D Generation', path: '/ai-3d-generation', description: 'AI 3D modeling' },
-        { name: 'AI Fashion Design', path: '/ai-fashion-design', description: 'AI fashion solutions' },
-        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI music creation' },
-        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
-        { name: 'AI Fitness Coach', path: '/ai-fitness-coach', description: 'AI fitness training' },
-        { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'AI email management' },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
-        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
-        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' },
-        { name: 'Machine Learning Models', path: '/machine-learning-models', description: 'Custom ML development' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Intelligent analytics' },
-        { name: 'AI Code Generation', path: '/ai-code-generation', description: 'AI-powered coding' },
-        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: 'Intelligent chatbots' },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Smart document handling' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns' },
-        { name: 'AI Enterprise Solutions', path: '/ai-enterprise-solutions', description: 'Enterprise AI platform' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future insights' },
-        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project management' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      icon: Code,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       hoverColor: 'hover:bg-purple-100',
       services: [
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT guidance' },
-        { name: 'IT Infrastructure Solutions', path: '/it-infrastructure-solutions', description: 'Complete infrastructure' },
-        { name: 'IT Support', path: '/it-support', description: '24/7 technical support' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' },
-        { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
-        { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
-        { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud infrastructure' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud transition' }
+        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
+        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
+        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
+        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
+        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
+        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Machine Learning', path: '/ai-machine-learning', description: 'Custom ML models & analytics' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Image recognition & analysis' },
+        { name: 'AI Voice & Speech', path: '/ai-voice-speech', description: 'Voice recognition & synthesis' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Forecasting & trend analysis' }
       ]
     },
     {
-      title: 'Emerging Technologies',
-      icon: Sparkles,
+      title: 'IT Services',
+      icon: Cloud,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      hoverColor: 'hover:bg-blue-100',
+      services: [
+        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
+        { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
+        { name: 'Database Services', path: '/database', description: 'Database management' },
+        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
+        { name: 'System Administration', path: '/system-admin', description: 'System management' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
+        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
+        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
+        { name: 'Web Development', path: '/web-development', description: 'Modern web applications' },
+        { name: 'System Integration', path: '/system-integration', description: 'Seamless system integration' },
+        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Data protection solutions' },
+        { name: 'Performance Monitoring', path: '/performance-monitoring', description: 'Real-time system monitoring' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Code,
       color: 'text-green-600',
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app creation' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoice creation' },
+        { name: 'AI Scheduling Assistant', path: '/ai-scheduling-assistant', description: 'Smart scheduling & coordination' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management' },
+        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'Complete e-commerce optimization' },
+        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered graphic design' },
+        { name: 'AI Financial Tracker', path: '/ai-financial-tracker', description: 'Comprehensive financial tracking' },
+        { name: 'AI HR Management', path: '/ai-hr-management', description: 'Complete HR solution' }
+      ]
+    },
+    {
+      title: 'Specialized',
+      icon: Zap,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      hoverColor: 'hover:bg-orange-100',
+      services: [
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
@@ -114,19 +148,9 @@ const Navigation: React.FC = memo(() => {
     }
   ];
 
-  const mainNavItems = [
-    { name: 'Home', path: '/', icon: '🏠' },
-    { name: 'About', path: '/about', icon: '👥' },
-    { name: 'Services', path: '/services', icon: '⚙️' },
-    { name: 'Pricing', path: '/pricing', icon: '💰' },
-    { name: 'Case Studies', path: '/case-studies', icon: '📊' },
-    { name: 'Blog', path: '/blog', icon: '📝' },
-    { name: 'Contact', path: '/contact', icon: '📞' }
-  ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
