@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const AiSalesAutomationPage: React.FC = () => {
   return (
