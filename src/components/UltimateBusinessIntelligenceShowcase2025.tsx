@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -167,7 +168,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
               {/* CTA */}
               <Link
-                href={item.url}
+                to={item.url}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
               >
                 Read {item.readingTime}

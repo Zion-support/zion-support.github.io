@@ -1,7 +1,7 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, FileWarning, Home, RefreshCw } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -80,8 +80,7 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              <Link
-                href="/"
+              <Link to="/"
                 className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />

@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Database, Eye, Globe, Mail, Phone, PieChart, Settings, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
@@ -29,6 +29,29 @@ const AIDataVisualizationPage: React.FC = () => {
       title: 'Customizable Reports',
       description: 'Generate automated reports with customizable templates and scheduling options.',
       benefits: ['Auto-generation', 'Custom Templates', 'Scheduled Reports', 'Export Options']
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: BarChart,
+      title: 'Sales Analytics',
+      description: 'Track sales performance, identify trends, and optimize revenue with real-time dashboards.'
+    },
+    {
+      icon: Users,
+      title: 'Customer Insights',
+      description: 'Understand customer behavior and preferences through interactive data visualizations.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Monitoring',
+      description: 'Monitor KPIs and business metrics with automated alerts and custom reports.'
+    },
+    {
+      icon: Database,
+      title: 'Data Exploration',
+      description: 'Explore complex datasets and discover hidden patterns with AI-powered analysis.'
     }
   ];
 

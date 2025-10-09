@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { PenTool, FileText, Zap, Target, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Brain, Users, BarChart } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Clock, FileText, Mail, MapPin, PenTool, Phone, Star, Target, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AIWritingAssistantPage: React.FC = () => {
@@ -173,8 +173,7 @@ const AIWritingAssistantPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
@@ -324,8 +323,7 @@ const AIWritingAssistantPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial

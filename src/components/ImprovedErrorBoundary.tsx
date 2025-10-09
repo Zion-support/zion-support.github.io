@@ -1,3 +1,4 @@
+import { Home } from 'lucide-react';
 'use client';
 /**
  * Improved Error Boundary

@@ -1,3 +1,4 @@
+import { Monitor } from 'lucide-react';
 'use client';
 /**
  * Performance optimization utilities for the Zion Tech Group website

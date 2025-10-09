@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Eye, Globe, MessageSquare, Monitor, Star, Target, Zap } from 'lucide-react';
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
     {

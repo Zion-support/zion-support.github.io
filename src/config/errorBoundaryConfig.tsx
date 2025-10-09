@@ -1,3 +1,4 @@
+import { Home, Server } from 'lucide-react';
 'use client';
 /**
  * Error Boundary Configuration
@@ -60,10 +61,10 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   const _isDevelopment = process.env['NODE_ENV'] === 'development';
   return {
     logErrors: true,
-    showDetails: isDevelopment,
-    reportErrors: !isDevelopment,
+    showDetails: _isDevelopment,
+    reportErrors: !_isDevelopment,
     reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-    showErrorOverlay: isDevelopment,
+    showErrorOverlay: _isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
     fallbackComponents: {

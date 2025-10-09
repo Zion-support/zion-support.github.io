@@ -1,3 +1,4 @@
+import { Users, Phone } from 'lucide-react';
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 const metadata = {

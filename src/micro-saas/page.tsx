@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Brain, BarChart, MessageSquare, Palette, Search, Mail, CreditCard, Headphones, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Microphone, Speaker, Battery, Power, Wrench, Hammer, Screwdriver, Tool, Cog, Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap } from 'lucide-react';
+import { ArrowRight, BarChart, Battery, BookOpen, Brain, Camera, CheckCircle, Code, Cog, CreditCard, Gamepad2, Gear, Hammer, HardDrive, Headphones, Headset, Keyboard, Laptop, Mail, MessageSquare, Microphone, Monitor, Mouse, Music, Palette, Phone, Power, Printer, Router, Screwdriver, Search, Server, Settings2, ShieldCheck, Speaker, Star, Tablet, Tool, Watch, Webcam, Wifi, Wrench, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

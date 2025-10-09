@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
+import { Calendar, Clock, FileWarning, ListChecks, RefreshCw } from 'lucide-react';
 export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -81,7 +81,7 @@ export default function Page() {
               </p>
             </div>
             <Link
-              href='/contact'
+              to='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />

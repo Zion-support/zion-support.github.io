@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity } from 'lucide-react';
+import { Activity, ArrowRight, Award, BarChart, BarChart3, BookOpen, Bot, Brain, Briefcase, Building, Calculator, Calendar, Camera, Car, CheckCircle, Clock, Clock3, Cloud, Code, Compass, Cpu, CreditCard, Database, DollarSign, Eye, Factory, FileText, Gamepad2, Globe, Globe2, GraduationCap, Hammer, Heart, Home, Lock, Mail, Map, MapPin, MessageSquare, Music, Navigation, Paintbrush, Palette, Phone, PieChart, Plane, Scissors, Search, Settings, Shield, Ship, ShoppingCart, Smartphone, Sparkles, Star, Stethoscope, Target, Train, TrendingDown, TrendingUp, Users, Video, Wrench, Zap } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const aiServices = [

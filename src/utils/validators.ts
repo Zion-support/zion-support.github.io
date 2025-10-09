@@ -1,3 +1,4 @@
+import { Phone } from 'lucide-react';
 'use client';
 /**
  * Validation Utilities

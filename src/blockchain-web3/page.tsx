@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { Brain, CheckCircle, Code, Coins, Database, Globe, Link, Shield, Star, Zap } from 'lucide-react';
+import { Navigate } from 'react-router-dom';
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
     {
@@ -136,7 +137,7 @@ const BlockchainWeb3Page: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
     }
   ];
-  // const categories = [...new Set(blockchainServices.map(service => service.category))];
+  const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
     <>
       <Helmet>

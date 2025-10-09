@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Calendar, Clock, Users, CheckCircle, Phone, Mail, ArrowRight, Star, Zap, Brain, Shield, Target, TrendingUp, Award } from 'lucide-react';
+import { ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, Mail, Phone, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({

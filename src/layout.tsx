@@ -1,3 +1,4 @@
+import { Cloud } from 'lucide-react';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';

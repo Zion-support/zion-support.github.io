@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, Building, CheckCircle, Clock, Cloud, DollarSign, Home, Mail, Phone, Shield, ShoppingCart, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -29,6 +29,29 @@ const AISalesAutomationPage: React.FC = () => {
       title: 'Automated Follow-ups',
       description: 'Never miss an opportunity with intelligent follow-up sequences that adapt to customer behavior.',
       benefits: ['Smart Sequences', 'Behavioral Triggers', 'Multi-channel', 'Timing Optimization']
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: Building,
+      title: 'B2B Sales',
+      description: 'Automate lead generation, qualification, and follow-up for B2B sales teams.'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce',
+      description: 'Boost online sales with personalized product recommendations and automated marketing.'
+    },
+    {
+      icon: Cloud,
+      title: 'SaaS Sales',
+      description: 'Optimize SaaS sales funnels with intelligent lead scoring and automated nurturing.'
+    },
+    {
+      icon: Home,
+      title: 'Real Estate',
+      description: 'Streamline property sales with automated lead management and client communication.'
     }
   ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
+import { ArrowRight, BarChart, BarChart3, Bot, Brain, Calculator, CheckCircle, Cloud, Code, Cpu, Database, Eye, FileText, Globe, Lock, Mail, MapPin, MessageSquare, Phone, Search, Settings, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const microSaasServices = [

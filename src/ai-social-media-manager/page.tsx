@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, CheckCircle, Star, Zap, MessageSquare, Users, Clock, Target, TrendingUp, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, Mail, MapPin, MessageSquare, Phone, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

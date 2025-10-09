@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Clock, Cloud, Code, Cpu, Database, Eye, Globe, Lock, MessageSquare, Monitor, Server, Settings, Shield, Sparkles, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
     {

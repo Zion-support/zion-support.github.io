@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { Activity, ArrowRight, BarChart, Brain, Building, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, Eye, Globe, Home, Link, Mail, MapPin, MessageSquare, Monitor, Phone, Shield, Sparkles, Speaker, Star, Target, Tool, TrendingUp, Users, Zap } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     // AI-Powered Developer Tools

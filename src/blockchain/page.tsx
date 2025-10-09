@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { BarChart, Brain, CheckCircle, Cloud, Code, Coins, Cpu, Link, Monitor, Shield, Star, Target, Zap } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
+import { BarChart, CheckCircle, Power, Star, Target, TrendingUp } from 'lucide-react';
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
     {

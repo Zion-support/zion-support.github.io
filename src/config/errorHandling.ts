@@ -1,3 +1,4 @@
+import { Server } from 'lucide-react';
 'use client';
 /**
  * Error Handling Configuration

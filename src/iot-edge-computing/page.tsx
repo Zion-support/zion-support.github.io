@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { BarChart, Brain, CheckCircle, Cloud, Cpu, Database, Globe, Navigate, Settings, Shield, Star, Target, Wifi, Zap } from 'lucide-react';
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
     {

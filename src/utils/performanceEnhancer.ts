@@ -1,3 +1,4 @@
+import { Monitor } from 'lucide-react';
 'use client';
 /**
  * Performance Enhancement Utilities

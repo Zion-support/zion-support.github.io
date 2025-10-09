@@ -1,3 +1,4 @@
+import { Monitor } from 'lucide-react';
 'use client';
 /**
  * System Monitor Component
@@ -6,29 +7,28 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   const _navigation = window.performance.timing;
   const _paint = window.performance.getEntriesByType('paint');
   return {
-    loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+    loadTime: _navigation.loadEventEnd - _navigation.navigationStart,
+    firstContentfulPaint: _paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 };
 // Helper functions
 const calculatePerformanceScore = () => {
   const _metrics = performanceOptimizer.getMetrics();
-  if (!metrics) return 0;
+  if (!_metrics) return 0;
   let _score = 100;
   // Deduct points for slow load times
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
+  if (_metrics.loadTime > 3000) _score -= 20;
+  if (_metrics.loadTime > 5000) _score -= 30;
   // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
+  if (_metrics.firstContentfulPaint && _metrics.firstContentfulPaint > 2000) _score -= 15;
+  if (_metrics.firstContentfulPaint && _metrics.firstContentfulPaint > 3000) _score -= 25;
+  return Math.max(0, _score);
 };
 // Network connection interface
 interface NetworkConnection {
@@ -104,19 +104,19 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const _networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
         performance: {
-          score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          score: _performanceScore,
+          loadTime: _performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: _performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
         },
         errors: {
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
+          total: _errorStats.totalErrors,
+          byType: _errorStats.errorsByType,
+          byCategory: _errorStats.errorsByCategory,
+          bySeverity: _errorStats.errorsBySeverity,
+          recent: _errorStats.recentErrors.map(error => ({
             id: error.id,
             message: error.message,
             type: error.type,
@@ -124,8 +124,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             timestamp: error.context.timestamp
           }))
         },
-        memory: memoryInfo,
-        network: networkInfo
+        memory: _memoryInfo,
+        network: _networkInfo
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
@@ -149,17 +149,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   useEffect(() => {
     if (!isMonitoring) return;
     const _interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
+    return () => clearInterval(_interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
       const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
+      const used = _memory.usedJSHeapSize / 1024 / 1024; // MB
+      const total = _memory.totalJSHeapSize / 1024 / 1024; // MB
+      const limit = _memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const _percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
+      return { used, total, limit, percentage: _percentage };
     }
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
@@ -167,12 +167,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
       const _nav = navigator as NavigatorWithConnection;
-      const _connection = nav.connection;
+      const _connection = _nav.connection;
       return {
-        effectiveType: connection?.effectiveType || 'unknown',
-        downlink: connection?.downlink || 0,
-        rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false
+        effectiveType: _connection?.effectiveType || 'unknown',
+        downlink: _connection?.downlink || 0,
+        rtt: _connection?.rtt || 0,
+        saveData: _connection?.saveData || false
       };
     }
     return {
@@ -196,12 +196,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     });
     const _url = URL.createObjectURL(blob);
     const _a = document.createElement('a');
-    a.href = url;
-    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    _a.href = _url;
+    _a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(_a);
+    _a.click();
+    document.body.removeChild(_a);
+    URL.revokeObjectURL(_url);
   };
   // Get performance score color
   const getPerformanceScoreColor = (score: number) => {

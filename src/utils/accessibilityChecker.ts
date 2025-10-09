@@ -1,3 +1,4 @@
+import { Link, Code } from 'lucide-react';
 'use client';
 /**
  * Accessibility Checker Utility

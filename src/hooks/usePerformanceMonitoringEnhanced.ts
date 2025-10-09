@@ -1,3 +1,4 @@
+import { Monitor } from 'lucide-react';
 'use client';
 import { useEffect, useCallback } from 'react';
 export const usePerformanceMonitoring = () => {

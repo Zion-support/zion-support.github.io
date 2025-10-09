@@ -1,3 +1,4 @@
+import { Monitor } from 'lucide-react';
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities

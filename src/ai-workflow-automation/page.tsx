@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Clock, Cloud, Database, Globe, Mail, Monitor, Phone, Settings, Shield, Users, Workflow, Zap } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -31,6 +31,30 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ];
+
+  const useCases = [
+    {
+      icon: Workflow,
+      title: 'HR Onboarding',
+      description: 'Automate employee onboarding with document collection, approval workflows, and task assignments.'
+    },
+    {
+      icon: BarChart,
+      title: 'Financial Processing',
+      description: 'Streamline invoice processing, expense approvals, and financial reporting workflows.'
+    },
+    {
+      icon: Database,
+      title: 'Data Management',
+      description: 'Automate data entry, validation, and synchronization across multiple systems.'
+    },
+    {
+      icon: Cloud,
+      title: 'Customer Support',
+      description: 'Route tickets, escalate issues, and automate responses based on customer data and history.'
+    }
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -157,7 +181,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${

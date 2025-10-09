@@ -1,3 +1,4 @@
+import { Activity, Monitor } from 'lucide-react';
 'use client';
 import React from 'react'
 /**

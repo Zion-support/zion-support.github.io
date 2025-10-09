@@ -1,3 +1,4 @@
+import { Home } from 'lucide-react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -131,8 +132,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
-      const canRetry = retryCount < this.maxRetries;
       const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">

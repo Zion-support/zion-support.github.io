@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Users, Award, TrendingUp, Shield } from 'lucide-react';
+import { Award, CheckCircle, Clock, Cloud, Database, Mail, MapPin, Phone, Send, Shield, Star, TrendingUp, Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
