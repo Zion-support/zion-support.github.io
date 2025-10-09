@@ -54,6 +54,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport = {
       errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,

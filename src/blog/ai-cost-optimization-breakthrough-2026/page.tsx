@@ -138,7 +138,3 @@ export default function AICostOptimizationBreakthrough2026() {
 };
 
 export default AICostOptimizationBreakthrough2026Page;
-<<<<<<< HEAD
-=======
-export default AICostOptimizationBreakthrough2026Page;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
