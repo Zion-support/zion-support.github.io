@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Rocket, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+import {Rocket, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const FutureTechnologiesPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Rocket,
-      title: 'Emerging Technologies',
-      description: 'Cutting-edge technologies and future innovations',
-      benefits: ['AI advancement', 'Quantum computing', 'Blockchain']
-    },
-    {
-      icon: Target,
-      title: 'Technology Forecasting',
-      description: 'Predict and prepare for future technology trends',
-      benefits: ['Trend analysis', 'Market prediction', 'Strategic planning']
-    },
-    {
-      icon: Zap,
-      title: 'Innovation Labs',
-      description: 'Research and development of next-gen technologies',
-      benefits: ['R&D projects', 'Prototype development', 'Testing']
-    },
-    {
-      icon: Settings,
-      title: 'Technology Integration',
-      description: 'Integrate emerging technologies with existing systems',
-      benefits: ['System integration', 'Migration support', 'Compatibility']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const FutureTechnologiesPage: React.FC = () => {
             Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing, 
             we help you prepare for and adopt the technologies of tomorrow.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const FutureTechnologiesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Future Tech Solutions
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const FutureTechnologiesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default FutureTechnologiesPage;

@@ -1,37 +1,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
-
-
+import {Eye, Camera, Shield, CheckCircle, ArrowRight, Settings} from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Eye,
-      title: 'Object Detection',
-      description: 'Advanced object detection and recognition with high accuracy',
-      benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
-    },
-    {
-      icon: Camera,
-      title: 'Image Classification',
-      description: 'Automated image categorization and content analysis',
-      benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
-    },
-    {
-      icon: Video,
-      title: 'Video Analysis',
-      description: 'Real-time video processing and analysis capabilities',
-      benefits: ['Live streaming', 'Motion detection', 'Activity recognition']
-    },
-    {
-      icon: Target,
-      title: 'Facial Recognition',
-      description: 'Secure and accurate facial recognition technology',
-      benefits: ['Identity verification', 'Access control', 'Privacy protection']
-    }
-  ];
-
+  
   const applications = [
     {
       title: 'Retail & E-commerce',
@@ -58,52 +30,9 @@ const AIComputerVisionPage: React.FC = () => {
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
     }
   ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$499/month',
-      description: 'Perfect for small projects',
-      features: [
-        'Up to 1,000 images/month',
-        'Basic models',
-        'Email support',
-        'Standard API'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$1,999/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 images/month',
-        'Advanced models',
-        'Priority support',
-        'Custom training',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'For large organizations',
-      features: [
-        'Unlimited images',
-        'Custom models',
-        'Dedicated support',
-        'On-premise deployment',
-        'White-label solutions'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -117,7 +46,6 @@ const AIComputerVisionPage: React.FC = () => {
             Transform your business with cutting-edge computer vision technology. From object detection to facial recognition, 
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -134,13 +62,11 @@ const AIComputerVisionPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Core Capabilities
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -165,13 +91,11 @@ const AIComputerVisionPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Applications Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Industry Applications
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {applications.map((application, index) => (
               <div key={index} className="quantum-card p-8 hover:scale-105 transition-all duration-300">
@@ -199,13 +123,11 @@ const AIComputerVisionPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Choose Your Plan
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -243,7 +165,6 @@ const AIComputerVisionPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -271,10 +192,8 @@ const AIComputerVisionPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIComputerVisionPage;

@@ -3,19 +3,8 @@ import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-reac
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-
-'use client';
-
 const CompliancePage: React.FC = () => {
-  const _certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR Compliant', status: 'Certified' },
-    { name: 'HIPAA Compliant', status: 'Certified' },
-    { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
-  ];
-
+  
   const complianceAreas = [
     {
       icon: Shield,
@@ -42,11 +31,9 @@ const CompliancePage: React.FC = () => {
       features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-        
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -62,7 +49,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Overview */}
           <section className="mb-16">
@@ -76,7 +62,6 @@ const CompliancePage: React.FC = () => {
                 and our services meet the most stringent requirements.
               </p>
             </div>
-
             {/* Certifications Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {certifications.map((cert, index) => (
@@ -92,7 +77,6 @@ const CompliancePage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Compliance Areas */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
@@ -120,7 +104,6 @@ const CompliancePage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
           <section className="bg-blue-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -141,10 +124,8 @@ const CompliancePage: React.FC = () => {
             </div>
           </section>
         </main>
-        
         <Footer />
       </div>
   );
 };
-
 export default CompliancePage;

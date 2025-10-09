@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Target, BarChart, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+import {Target, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AILeadScoringPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Target,
-      title: 'Intelligent Scoring',
-      description: 'AI-powered lead scoring and qualification',
-      benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']
-    },
-    {
-      icon: BarChart,
-      title: 'Predictive Analytics',
-      description: 'Predict lead conversion probability',
-      benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Automated lead nurturing and follow-up',
-      benefits: ['Auto-nurturing', 'Follow-up sequences', 'Lead routing']
-    },
-    {
-      icon: Settings,
-      title: 'Performance Analytics',
-      description: 'Comprehensive lead performance analytics',
-      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AILeadScoringPage: React.FC = () => {
             Qualify and score leads automatically with AI-powered intelligence. 
             Focus on the most promising prospects and improve your conversion rates.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AILeadScoringPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Lead Scoring Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AILeadScoringPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AILeadScoringPage;

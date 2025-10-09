@@ -1,102 +1,9 @@
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
+import {Receipt, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import React from 'react';
-
-'use client';
-
 const ExpenseTrackerPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
-      benefit: 'Save 8+ hours per month'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
-      benefit: 'Reduce expenses by 25%'
-    },
-    {
-      icon: Brain,
-      title: 'AI Categorization',
-      description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
-      benefit: '99% accurate categorization'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
-      benefit: 'Process expenses 5x faster'
-    },
-    {
-      icon: Target,
-      title: 'Budget Management',
-      description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
-      benefit: 'Stay within budget 90% of the time'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
-      benefit: '100% compliance guarantee'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for individuals',
-      features: [
-        'Unlimited receipts',
-        'Basic AI categorization',
-        'Expense reports',
-        'Mobile app access',
-        'Email support',
-        '1 year data retention'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$29',
-      period: '/month',
-      description: 'Ideal for small businesses',
-      features: [
-        'Up to 10 users',
-        'Advanced AI features',
-        'Team collaboration',
-        'Custom categories',
-        'Priority support',
-        'API access',
-        'Advanced reporting',
-        '2 years data retention'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$99',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited users',
-        'Premium AI features',
-        'Custom workflows',
-        'Advanced integrations',
-        'Dedicated support',
-        'White-label options',
-        'Unlimited data retention',
-        'Custom compliance rules'
-      ],
-      popular: false
-    }
-  ];
-
-  const integrations = [
+  
+    const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },
@@ -106,7 +13,6 @@ const ExpenseTrackerPage: React.FC = () => {
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
   ];
-
   const testimonials = [
     {
       name: 'Michael Johnson',
@@ -130,7 +36,6 @@ const ExpenseTrackerPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -166,7 +71,6 @@ const ExpenseTrackerPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -190,7 +94,6 @@ const ExpenseTrackerPage: React.FC = () => {
             <div className="text-gray-300 text-sm">With automated workflows</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -207,7 +110,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -223,7 +125,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -266,7 +167,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -290,7 +190,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -320,5 +219,4 @@ const ExpenseTrackerPage: React.FC = () => {
     </div>
   );
 };
-
 export default ExpenseTrackerPage;

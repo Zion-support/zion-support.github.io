@@ -1,7 +1,5 @@
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React from 'react';
+import {Users, Award, TrendingUp, Shield} from 'lucide-react';
+import React, { useState } from 'react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,17 +10,16 @@ const ContactPage: React.FC = () => {
     service: '',
     message: ''
   });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -41,7 +38,7 @@ const ContactPage: React.FC = () => {
       });
     }, 3000);
   };
-
+  
   const services = [
     'AI Services',
     'IT Services',
@@ -54,14 +51,13 @@ const ContactPage: React.FC = () => {
     'Custom Development',
     'Other'
   ];
-
+  
   const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

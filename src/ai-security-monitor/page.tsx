@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Shield, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+import {Shield, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AISecurityMonitorPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Shield,
-      title: 'Threat Detection',
-      description: 'AI-powered threat detection and monitoring',
-      benefits: ['Real-time monitoring', 'Threat analysis', 'Incident response']
-    },
-    {
-      icon: Target,
-      title: 'Vulnerability Assessment',
-      description: 'Automated vulnerability scanning and assessment',
-      benefits: ['Security scanning', 'Risk assessment', 'Compliance checking']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Response',
-      description: 'Intelligent security incident response',
-      benefits: ['Auto-response', 'Threat mitigation', 'Recovery procedures']
-    },
-    {
-      icon: Settings,
-      title: 'Security Analytics',
-      description: 'Comprehensive security analytics and reporting',
-      benefits: ['Security metrics', 'Threat intelligence', 'Performance reports']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AISecurityMonitorPage: React.FC = () => {
             Protect your business with AI-powered security monitoring. 
             Detect threats, prevent attacks, and ensure compliance with intelligent security solutions.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AISecurityMonitorPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Security Monitoring Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AISecurityMonitorPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AISecurityMonitorPage;

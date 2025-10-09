@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {TrendingUp, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+import {TrendingUp, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AIPredictiveAnalyticsPage: React.FC = () => {
-  const _features = [
-    {
-      icon: TrendingUp,
-      title: 'Predictive Modeling',
-      description: 'AI-powered predictive modeling and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
-    },
-    {
-      icon: Target,
-      title: 'Data Analysis',
-      description: 'Advanced data analysis and pattern recognition',
-      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Insights',
-      description: 'Intelligent insight generation and recommendations',
-      benefits: ['Auto insights', 'Recommendations', 'Action suggestions']
-    },
-    {
-      icon: Settings,
-      title: 'Custom Models',
-      description: 'Custom predictive models and algorithms',
-      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
             Predict future outcomes with AI-powered analytics. 
             Make data-driven decisions and stay ahead of trends with intelligent forecasting.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Predictive Analytics Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIPredictiveAnalyticsPage;

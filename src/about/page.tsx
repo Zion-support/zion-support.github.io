@@ -1,30 +1,9 @@
 import React from 'react';
-import { Brain, Shield, Target, Users } from 'lucide-react';
+import {Brain, Shield, Target, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-
 const AboutPage: React.FC = () => {
-  const _team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-    },
-  ];
-
+  
   const values = [
     {
       icon: Brain,
@@ -47,14 +26,12 @@ const AboutPage: React.FC = () => {
       description: 'We work closely with our clients as strategic technology partners.',
     },
   ];
-
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' },
   ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
@@ -83,7 +60,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-
       {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,7 +77,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,7 +111,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,7 +122,6 @@ const AboutPage: React.FC = () => {
                 The principles that guide everything we do
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
@@ -166,7 +139,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,7 +150,6 @@ const AboutPage: React.FC = () => {
                 The experts behind our innovative solutions
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -203,7 +174,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -229,7 +199,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
       <Footer />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -244,5 +213,4 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
-
 export default AboutPage;

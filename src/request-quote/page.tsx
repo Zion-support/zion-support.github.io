@@ -20,17 +20,7 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _serviceTypes = [
-    'AI Services',
-    'IT Infrastructure',
-    'Cybersecurity',
-    'Cloud Migration',
-    'Micro SAAS Solutions',
-    'Digital Transformation',
-    'Custom Development',
-    'Consulting Services',
-    'Other'
-  ];
+  
 
   const projectSizes = [
     'Small (1-10 employees)',

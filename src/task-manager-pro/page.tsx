@@ -1,102 +1,9 @@
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
+import {CheckSquare, Users, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import React from 'react';
-
-'use client';
-
 const TaskManagerProPage: React.FC = () => {
-  const _features = [
-    {
-      icon: CheckSquare,
-      title: 'AI Task Prioritization',
-      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
-      benefit: 'Increase productivity by 40%'
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
-      benefit: 'Improve team efficiency by 60%'
-    },
-    {
-      icon: Brain,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
-      benefit: 'Complete tasks 30% faster'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
-      benefit: 'Reduce manual work by 70%'
-    },
-    {
-      icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
-      benefit: 'Achieve 85% of your goals'
-    },
-    {
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
-      benefit: 'Data-driven improvements'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Individual',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for personal use',
-      features: [
-        'Unlimited personal tasks',
-        'Basic AI prioritization',
-        'Mobile app access',
-        'Basic reporting',
-        'Email support',
-        '1 year data retention'
-      ],
-      popular: false
-    },
-    {
-      name: 'Team',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for small teams',
-      features: [
-        'Up to 10 team members',
-        'Advanced AI features',
-        'Team collaboration',
-        'Custom workflows',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        '2 years data retention'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$149',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited team members',
-        'Premium AI features',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options',
-        'Advanced security',
-        'Unlimited data retention',
-        'Custom compliance'
-      ],
-      popular: false
-    }
-  ];
-
-  const integrations = [
+  
+    const integrations = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
@@ -106,7 +13,6 @@ const TaskManagerProPage: React.FC = () => {
     { name: 'Notion', icon: '📝', description: 'Documentation' },
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
   ];
-
   const testimonials = [
     {
       name: 'Rachel Green',
@@ -130,7 +36,6 @@ const TaskManagerProPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -166,7 +71,6 @@ const TaskManagerProPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -190,7 +94,6 @@ const TaskManagerProPage: React.FC = () => {
             <div className="text-gray-300 text-sm">With smart tracking</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -207,7 +110,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -223,7 +125,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -266,7 +167,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -290,7 +190,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -320,5 +219,4 @@ const TaskManagerProPage: React.FC = () => {
     </div>
   );
 };
-
 export default TaskManagerProPage;

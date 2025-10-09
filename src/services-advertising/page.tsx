@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react';
+import {ArrowLeft, ArrowRight, Target, CheckCircle} from 'lucide-react';
 import React from 'react';
-
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

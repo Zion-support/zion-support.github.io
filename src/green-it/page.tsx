@@ -1,37 +1,10 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
+import {Leaf, Recycle, Zap, Globe, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
-'use client';
-
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
-
-  const _tabs = [
-    {
-      id: 'solutions',
-      name: 'Green Solutions',
-      icon: Leaf,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
-    },
-    {
-      id: 'benefits',
-      name: 'Benefits',
-      icon: Target,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
-    },
-    {
-      id: 'certifications',
-      name: 'Certifications',
-      icon: Award,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
-    }
-  ];
-
+  
   const greenSolutions = [
     {
       title: 'Energy-Efficient Data Centers',
@@ -118,55 +91,7 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $600/month'
     }
   ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Cost Savings',
-      description: 'Reduce operational costs through energy efficiency and resource optimization',
-      details: [
-        'Up to 40% reduction in energy costs',
-        'Lower maintenance and replacement costs',
-        'Improved resource utilization',
-        'Reduced waste management costs'
-      ]
-    },
-    {
-      icon: Leaf,
-      title: 'Environmental Impact',
-      description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
-      details: [
-        '60% reduction in carbon emissions',
-        '50% less electronic waste',
-        '100% renewable energy options',
-        'Carbon neutral operations'
-      ]
-    },
-    {
-      icon: Award,
-      title: 'Compliance & Certification',
-      description: 'Meet environmental regulations and achieve sustainability certifications',
-      details: [
-        'ISO 14001 environmental management',
-        'LEED certification support',
-        'Carbon Trust certification',
-        'ESG reporting compliance'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Brand Reputation',
-      description: 'Enhance your brand image and attract environmentally conscious customers',
-      details: [
-        'Improved brand perception',
-        'Customer loyalty increase',
-        'Investor confidence boost',
-        'Talent attraction and retention'
-      ]
-    }
-  ];
-
-  const certifications = [
+    const certifications = [
     {
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
@@ -196,35 +121,7 @@ const GreenITPage: React.FC = () => {
       status: 'Certified'
     }
   ];
-
-  const stats = [
-    {
-      icon: Leaf,
-      value: '60%',
-      label: 'Carbon Footprint Reduction',
-      color: 'text-green-400'
-    },
-    {
-      icon: Zap,
-      value: '40%',
-      label: 'Energy Cost Savings',
-      color: 'text-yellow-400'
-    },
-    {
-      icon: Recycle,
-      value: '50%',
-      label: 'Waste Reduction',
-      color: 'text-blue-400'
-    },
-    {
-      icon: Globe,
-      value: '100%',
-      label: 'Renewable Energy Options',
-      color: 'text-purple-400'
-    }
-  ];
-
-  const caseStudies = [
+    const caseStudies = [
     {
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
@@ -254,7 +151,6 @@ const GreenITPage: React.FC = () => {
       color: 'text-green-400'
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -284,7 +180,6 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
@@ -297,7 +192,6 @@ const GreenITPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -317,7 +211,6 @@ const GreenITPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Tab Content */}
           {activeTab === 'solutions' && (
             <div className="mb-16">
@@ -336,7 +229,6 @@ const GreenITPage: React.FC = () => {
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                       </div>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
@@ -348,12 +240,10 @@ const GreenITPage: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="mb-4">
                       <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
                       <div className="text-sm text-gray-300">{solution.impact}</div>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
@@ -371,7 +261,6 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'benefits' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -402,7 +291,6 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'certifications' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -422,7 +310,6 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           )}
-
           {/* Case Studies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -440,14 +327,11 @@ const GreenITPage: React.FC = () => {
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>
-                    
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
-                    
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
                     <ul className="space-y-1">
                       {study.results.map((result, resultIndex) => (
@@ -462,7 +346,6 @@ const GreenITPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -502,5 +385,4 @@ const GreenITPage: React.FC = () => {
     </>
   );
 };
-
 export default GreenITPage;

@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Globe, Headphones, Shield, Zap, CheckCircle, Star} from 'lucide-react';
+import {Globe, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const GlobalITSupportPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Globe,
-      title: 'Global Coverage',
-      description: '24/7 IT support across multiple time zones',
-      benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support']
-    },
-    {
-      icon: Headphones,
-      title: '24/7 Support',
-      description: 'Round-the-clock technical support and assistance',
-      benefits: ['Always available', 'Fast response', 'Expert technicians']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Enterprise-grade security and compliance support',
-      benefits: ['Security monitoring', 'Compliance support', 'Risk management']
-    },
-    {
-      icon: Zap,
-      title: 'Rapid Response',
-      description: 'Quick problem resolution and escalation',
-      benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const GlobalITSupportPage: React.FC = () => {
             Get comprehensive IT support wherever you are in the world. Our global team of experts provides 
             24/7 support across all time zones with local expertise and multi-language capabilities.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const GlobalITSupportPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Global Support Services
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const GlobalITSupportPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default GlobalITSupportPage;

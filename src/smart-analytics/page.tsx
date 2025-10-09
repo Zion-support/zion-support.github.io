@@ -1,98 +1,9 @@
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
+import {CheckCircle, Phone, Mail, MapPin} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import React from 'react';
-
-
 const SmartAnalyticsPage: React.FC = () => {
-  const _features = [
-    {
-      icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
-      benefit: 'Make decisions 10x faster'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit: 'Discover hidden opportunities'
-    },
-    {
-      icon: Target,
-      title: 'Custom Metrics',
-      description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
-      benefit: 'Focus on what drives growth'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit: 'Never miss critical changes'
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Share insights and reports with your team with role-based access and collaborative features.',
-      benefit: 'Align your entire organization'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with analytics',
-      features: [
-        'Up to 5 data sources',
-        'Basic dashboards',
-        'Email support',
-        'Standard reports',
-        '1 user account'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Advanced analytics for growing businesses',
-      features: [
-        'Unlimited data sources',
-        'Advanced AI insights',
-        'Custom dashboards',
-        'Priority support',
-        'Up to 10 user accounts',
-        'API access',
-        'Advanced reporting'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Full-scale analytics solution for large organizations',
-      features: [
-        'Everything in Professional',
-        'Dedicated account manager',
-        'Custom integrations',
-        '24/7 phone support',
-        'Unlimited users',
-        'White-label options',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
+  
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -118,7 +29,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </Link>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -137,7 +47,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -186,7 +95,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -210,7 +118,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </Link>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -239,5 +146,4 @@ const SmartAnalyticsPage: React.FC = () => {
     </div>
   );
 };
-
 export default SmartAnalyticsPage;

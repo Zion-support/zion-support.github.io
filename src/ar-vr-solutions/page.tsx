@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+import {Eye, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const ARVRSolutionsPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Eye,
-      title: 'AR Development',
-      description: 'Augmented reality applications and experiences',
-      benefits: ['AR apps', '3D visualization', 'Interactive experiences']
-    },
-    {
-      icon: Target,
-      title: 'VR Solutions',
-      description: 'Virtual reality platforms and immersive experiences',
-      benefits: ['VR environments', 'Training simulations', 'Virtual meetings']
-    },
-    {
-      icon: Zap,
-      title: 'Mixed Reality',
-      description: 'Mixed reality solutions combining AR and VR',
-      benefits: ['MR applications', 'Spatial computing', 'Holographic displays']
-    },
-    {
-      icon: Settings,
-      title: 'Hardware Integration',
-      description: 'Integration with AR/VR hardware and devices',
-      benefits: ['Device compatibility', 'Performance optimization', 'Hardware support']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const ARVRSolutionsPage: React.FC = () => {
             Create immersive experiences with our AR/VR solutions. From augmented reality applications to virtual reality platforms, 
             we help you build the future of interactive technology.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const ARVRSolutionsPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             AR/VR Capabilities
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const ARVRSolutionsPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default ARVRSolutionsPage;

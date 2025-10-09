@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {FileText, Target, Zap, Settings, CheckCircle} from 'lucide-react';
+import {FileText, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AIContentStudioPage: React.FC = () => {
-  const _features = [
-    {
-      icon: FileText,
-      title: 'Content Creation',
-      description: 'AI-powered content generation and optimization',
-      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
-    },
-    {
-      icon: Target,
-      title: 'Content Strategy',
-      description: 'Intelligent content planning and strategy',
-      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Publishing',
-      description: 'Automated content publishing and distribution',
-      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
-    },
-    {
-      icon: Settings,
-      title: 'Content Analytics',
-      description: 'Comprehensive content performance analytics',
-      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AIContentStudioPage: React.FC = () => {
             Create, manage, and optimize content with our comprehensive AI-powered content studio. 
             From ideation to publication, streamline your entire content workflow.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AIContentStudioPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Content Studio Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AIContentStudioPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIContentStudioPage;

@@ -2,128 +2,12 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import {CheckCircle, Star} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const BusinessAppsPage: React.FC = () => {
-  const _businessApps = [
-    {
-      title: 'AI-Powered CRM System',
-      description: 'Intelligent customer relationship management with AI-driven insights, automated follow-ups, and predictive analytics.',
-      icon: '👥',
-      price: '$299/month',
-      features: ['AI lead scoring', 'Automated follow-ups', 'Predictive analytics', 'Sales forecasting', 'Customer segmentation', 'Integration APIs'],
-      benefits: ['Increase sales by 40%', 'Improve customer retention', 'Automate routine tasks', 'Better decision making'],
-      marketPrice: '$500-1,200/month',
-      category: 'CRM & Sales',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'REST APIs']
-    },
-    {
-      title: 'Smart Inventory Management',
-      description: 'AI-powered inventory optimization with demand forecasting, automated reordering, and real-time tracking.',
-      icon: '📦',
-      price: '$199/month',
-      features: ['Demand forecasting', 'Automated reordering', 'Real-time tracking', 'Barcode scanning', 'Multi-location support', 'Analytics dashboard'],
-      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs', 'Improve accuracy', 'Save time on management'],
-      marketPrice: '$350-800/month',
-      category: 'Inventory Management',
-      technologies: ['React Native', 'Python', 'MongoDB', 'AI/ML', 'IoT Integration']
-    },
-    {
-      title: 'AI Project Management Suite',
-      description: 'Intelligent project management with AI-powered resource allocation, timeline optimization, and risk prediction.',
-      icon: '📊',
-      price: '$249/month',
-      features: ['AI resource allocation', 'Timeline optimization', 'Risk prediction', 'Team collaboration', 'Progress tracking', 'Reporting automation'],
-      benefits: ['Complete projects 25% faster', 'Reduce project risks', 'Improve team efficiency', 'Better resource utilization'],
-      marketPrice: '$400-1,000/month',
-      category: 'Project Management',
-      technologies: ['Vue.js', 'Express.js', 'MySQL', 'AI/ML', 'WebSocket']
-    },
-    {
-      title: 'Smart HR Management System',
-      description: 'Comprehensive HR solution with AI-powered recruitment, employee analytics, and automated payroll processing.',
-      icon: '🏢',
-      price: '$179/month',
-      features: ['AI recruitment', 'Employee analytics', 'Automated payroll', 'Performance tracking', 'Time management', 'Benefits administration'],
-      benefits: ['Reduce hiring time by 50%', 'Improve employee satisfaction', 'Automate HR processes', 'Better workforce insights'],
-      marketPrice: '$300-700/month',
-      category: 'HR Management',
-      technologies: ['Angular', 'Laravel', 'PostgreSQL', 'AI/ML', 'Payment APIs']
-    },
-    {
-      title: 'AI Financial Analytics Platform',
-      description: 'Advanced financial analysis with AI-powered insights, automated reporting, and predictive financial modeling.',
-      icon: '💰',
-      price: '$399/month',
-      features: ['AI financial insights', 'Automated reporting', 'Predictive modeling', 'Budget optimization', 'Risk analysis', 'Compliance monitoring'],
-      benefits: ['Improve financial accuracy', 'Reduce reporting time', 'Better financial planning', 'Identify cost savings'],
-      marketPrice: '$600-1,500/month',
-      category: 'Financial Management',
-      technologies: ['React', 'Python', 'PostgreSQL', 'AI/ML', 'Financial APIs']
-    },
-    {
-      title: 'Smart Marketing Automation',
-      description: 'AI-powered marketing platform with automated campaigns, customer segmentation, and performance optimization.',
-      icon: '📢',
-      price: '$229/month',
-      features: ['AI campaign optimization', 'Customer segmentation', 'Email automation', 'Social media management', 'Analytics dashboard', 'A/B testing'],
-      benefits: ['Increase conversions by 35%', 'Reduce marketing costs', 'Improve customer engagement', 'Automate marketing tasks'],
-      marketPrice: '$400-900/month',
-      category: 'Marketing Automation',
-      technologies: ['React', 'Node.js', 'MongoDB', 'AI/ML', 'Social Media APIs']
-    },
-    {
-      title: 'AI Customer Support System',
-      description: 'Intelligent customer support with AI chatbots, ticket routing, sentiment analysis, and automated responses.',
-      icon: '🎧',
-      price: '$159/month',
-      features: ['AI chatbots', 'Ticket routing', 'Sentiment analysis', 'Knowledge base', 'Live chat', 'Performance analytics'],
-      benefits: ['Reduce support costs by 60%', 'Improve response time', 'Increase customer satisfaction', '24/7 support availability'],
-      marketPrice: '$250-600/month',
-      category: 'Customer Support',
-      technologies: ['React', 'Python', 'PostgreSQL', 'AI/ML', 'WebSocket']
-    },
-    {
-      title: 'Smart Document Management',
-      description: 'AI-powered document processing with OCR, automated categorization, and intelligent search capabilities.',
-      icon: '📄',
-      price: '$129/month',
-      features: ['OCR processing', 'Auto categorization', 'Intelligent search', 'Version control', 'Collaboration tools', 'Security features'],
-      benefits: ['Reduce document processing time', 'Improve search accuracy', 'Better organization', 'Enhanced security'],
-      marketPrice: '$200-500/month',
-      category: 'Document Management',
-      technologies: ['React', 'Python', 'MongoDB', 'AI/ML', 'OCR APIs']
-    },
-    {
-      title: 'AI Analytics Dashboard',
-      description: 'Comprehensive business intelligence with AI-powered insights, real-time dashboards, and predictive analytics.',
-      icon: '📈',
-      price: '$279/month',
-      features: ['AI insights', 'Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'Alert system'],
-      benefits: ['Make data-driven decisions', 'Identify trends early', 'Improve business performance', 'Save time on analysis'],
-      marketPrice: '$450-1,200/month',
-      category: 'Business Intelligence',
-      technologies: ['React', 'Python', 'PostgreSQL', 'AI/ML', 'Chart.js']
-    },
-    {
-      title: 'Smart E-commerce Platform',
-      description: 'AI-powered e-commerce solution with personalized recommendations, inventory management, and automated marketing.',
-      icon: '🛒',
-      price: '$349/month',
-      features: ['AI recommendations', 'Inventory management', 'Payment processing', 'Order tracking', 'Customer analytics', 'Marketing automation'],
-      benefits: ['Increase sales by 45%', 'Improve customer experience', 'Reduce cart abandonment', 'Automate operations'],
-      marketPrice: '$600-1,800/month',
-      category: 'E-commerce',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'Payment APIs']
-    }
-  ];
-
+  
   const categories = [...new Set(businessApps.map(app => app.category))];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -148,7 +32,6 @@ const BusinessAppsPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -177,7 +60,6 @@ const BusinessAppsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Apps by Category */}
         {categories.map(category => (
           <section key={category} className="mb-16">
@@ -192,7 +74,6 @@ const BusinessAppsPage: React.FC = () => {
                     <div className="text-4xl mb-4 text-center">{app.icon}</div>
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>
                     <p className="text-gray-300 mb-4 text-sm text-center">{app.description}</p>
-                    
                     <div className="mb-4">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-2xl font-bold text-cyan-400">{app.price}</span>
@@ -202,7 +83,6 @@ const BusinessAppsPage: React.FC = () => {
                         Save up to 50% vs market rates
                       </div>
                     </div>
-
                     <div className="mb-4">
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
@@ -219,7 +99,6 @@ const BusinessAppsPage: React.FC = () => {
                         )}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
                       <ul className="space-y-1">
@@ -231,7 +110,6 @@ const BusinessAppsPage: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     <div className="text-center">
                       <a
                         href="/contact"
@@ -245,7 +123,6 @@ const BusinessAppsPage: React.FC = () => {
             </div>
           </section>
         ))}
-
         {/* CTA Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
@@ -270,10 +147,8 @@ const BusinessAppsPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default BusinessAppsPage;

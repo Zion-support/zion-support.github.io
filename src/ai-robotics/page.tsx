@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Bot, Cpu, Settings, Shield, CheckCircle, Star} from 'lucide-react';
+import {Bot, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AIRoboticsPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Bot,
-      title: 'Intelligent Robotics',
-      description: 'AI-powered robots that learn and adapt to their environment',
-      benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
-    },
-    {
-      icon: Cpu,
-      title: 'Advanced Control Systems',
-      description: 'Sophisticated control algorithms for precise robot movement',
-      benefits: ['Precision control', 'Real-time processing', 'Safety systems']
-    },
-    {
-      icon: Settings,
-      title: 'Automated Workflows',
-      description: 'Streamlined robotic processes for maximum efficiency',
-      benefits: ['Process optimization', 'Error reduction', '24/7 operation']
-    },
-    {
-      icon: Shield,
-      title: 'Safety & Security',
-      description: 'Built-in safety protocols and security measures',
-      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AIRoboticsPage: React.FC = () => {
             Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots, 
             we provide the technology to create robots that think, learn, and adapt.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AIRoboticsPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Platform Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIRoboticsPage;

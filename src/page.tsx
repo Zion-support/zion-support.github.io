@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
+import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -8,9 +8,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-
-'use client';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -21,7 +18,6 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -31,7 +27,6 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -41,18 +36,15 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
-
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -62,7 +54,6 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -270,7 +261,6 @@ const HomePage: React.FC = () => {
       popular: true
     }
   ];
-
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -375,7 +365,6 @@ const HomePage: React.FC = () => {
       color: 'text-emerald-400'
     }
   ];
-
   const itServices = [
     {
       title: 'Cloud Migration & Services',
@@ -480,7 +469,6 @@ const HomePage: React.FC = () => {
       color: 'text-emerald-400'
     }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -542,11 +530,9 @@ const HomePage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-advanced cyber-matrix-bg particle-field">
         {/* Navigation */}
         <Navigation />
-        
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
@@ -554,12 +540,10 @@ const HomePage: React.FC = () => {
         >
           Skip to main content
         </a>
-
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
-
         <main id="main-content" className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 pt-20 sm:pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -585,7 +569,6 @@ const HomePage: React.FC = () => {
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
-              
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -609,7 +592,6 @@ const HomePage: React.FC = () => {
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/contact"
@@ -628,7 +610,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Micro SAAS Services Section */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="micro-saas-heading">
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -637,7 +618,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'cyber-glow-advanced ring-2 ring-cyan-400' : 'holographic-card-advanced'}`}>
@@ -648,7 +628,6 @@ const HomePage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
                   <div className="text-center mb-4">
                     <div className="text-4xl mb-3">{service.icon}</div>
                     <div className="inline-block bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-3 py-1 rounded-full text-xs font-medium text-cyan-400 mb-2">
@@ -659,7 +638,6 @@ const HomePage: React.FC = () => {
                       {service.description}
                     </p>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -676,7 +654,6 @@ const HomePage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -688,7 +665,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                     <Link 
@@ -701,7 +677,6 @@ const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
-            
             <div className="text-center">
               <a 
                 href="/micro-saas" 
@@ -711,7 +686,6 @@ const HomePage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* AI Services Section */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="ai-services-heading">
             <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -720,14 +694,12 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Advanced artificial intelligence solutions for enterprise applications
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-entanglement p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
@@ -744,7 +716,6 @@ const HomePage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -756,7 +727,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <Link 
@@ -769,7 +739,6 @@ const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
-            
             <div className="text-center">
               <a 
                 href="/ai-services" 
@@ -779,7 +748,6 @@ const HomePage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* IT Services Section */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="it-services-heading">
             <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -788,14 +756,12 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="holographic-card-advanced p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
@@ -812,7 +778,6 @@ const HomePage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -824,7 +789,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <Link 
@@ -837,7 +801,6 @@ const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
-            
             <div className="text-center">
               <a 
                 href="/it-services" 
@@ -847,13 +810,11 @@ const HomePage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Statistics Section */}
           <section className="mb-16" aria-labelledby="stats-heading">
             <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Our Impact
             </h2>
-            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="text-3xl font-bold text-cyan-400 mb-2 neon-text">500+</div>
@@ -873,7 +834,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Specialized Solutions Section */}
           <section className="mb-16" aria-labelledby="specialized-heading">
             <h2 id="specialized-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -882,7 +842,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Cutting-edge technologies for next-generation business solutions
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -923,7 +882,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Settings className="w-8 h-8 text-white" />
@@ -963,7 +921,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Globe className="w-8 h-8 text-white" />
@@ -1003,7 +960,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Smartphone className="w-8 h-8 text-white" />
@@ -1043,7 +999,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <BarChart className="w-8 h-8 text-white" />
@@ -1083,7 +1038,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-slate-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Settings className="w-8 h-8 text-white" />
@@ -1125,7 +1079,6 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </section>
-
           {/* Contact Information */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="contact-heading">
             <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -1134,7 +1087,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Ready to transform your business? Contact us for a free consultation and discover how our solutions can drive your success.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-glow-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -1148,7 +1100,6 @@ const HomePage: React.FC = () => {
                   Call Now
                 </a>
               </div>
-              
               <div className="holographic-card-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
@@ -1160,7 +1111,6 @@ const HomePage: React.FC = () => {
                   Send Email
                 </a>
               </div>
-              
               <div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
@@ -1175,7 +1125,6 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
             </div>
-            
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
@@ -1201,11 +1150,9 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
   );
 };
-
 export default HomePage;

@@ -1,50 +1,8 @@
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
+import {Share2, CheckCircle, ArrowRight} from 'lucide-react';
 import React from 'react';
-
-
 const AISocialMediaManagerPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Share2,
-      title: 'AI Content Creation',
-      description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Trend Analysis',
-      description: 'Real-time trend monitoring and content suggestions based on viral topics'
-    },
-    {
-      icon: Users,
-      title: 'Audience Insights',
-      description: 'Deep analytics on your audience behavior and engagement patterns'
-    },
-    {
-      icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-optimized posting times for maximum engagement across all platforms'
-    },
-    {
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive reporting with actionable insights and ROI tracking'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Auto-Responses',
-      description: 'Intelligent chatbot responses and comment management'
-    }
-  ];
-
-  const benefits = [
-    'Increase engagement by 300%',
-    'Save 20+ hours per week',
-    'Grow followers by 150%',
-    'Boost brand awareness by 200%',
-    'Improve content performance by 250%'
-  ];
-
-  const platforms = [
+  
+    const platforms = [
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
@@ -52,55 +10,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
   ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        '3 social media accounts',
-        '50 posts per month',
-        'Basic AI content generation',
-        'Standard analytics',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing brands',
-      features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced AI features',
-        'Detailed analytics',
-        'Priority support',
-        'Team collaboration'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited accounts',
-        'Unlimited posts',
-        'Full AI suite',
-        'Custom analytics',
-        '24/7 support',
-        'White-label options'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -129,7 +39,6 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-6xl">
@@ -141,7 +50,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               Manage all your social media accounts from a single, intelligent dashboard
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
@@ -156,7 +64,6 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -168,7 +75,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               Leverage cutting-edge AI technology to streamline your social media management
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
@@ -186,7 +92,6 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-6xl">
@@ -198,7 +103,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               Join thousands of brands who have transformed their social media presence
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -209,7 +113,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Social Media?
@@ -223,7 +126,6 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -235,7 +137,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               Choose the plan that fits your social media needs
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
@@ -274,7 +175,6 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
         <div className="container mx-auto max-w-4xl text-center">
@@ -297,5 +197,4 @@ const AISocialMediaManagerPage: React.FC = () => {
     </div>
   );
 };
-
 export default AISocialMediaManagerPage;

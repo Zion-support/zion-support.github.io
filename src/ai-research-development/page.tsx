@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Brain, Code, FlaskConical, Target, CheckCircle, Star} from 'lucide-react';
+import {Brain, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AIResearchDevelopmentPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Brain,
-      title: 'Custom AI Research',
-      description: 'Tailored AI research solutions for your specific needs',
-      benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
-    },
-    {
-      icon: Code,
-      title: 'Prototype Development',
-      description: 'Rapid prototyping and development of AI solutions',
-      benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
-    },
-    {
-      icon: FlaskConical,
-      title: 'Experimental Platforms',
-      description: 'Advanced experimental environments for AI testing',
-      benefits: ['Sandbox environments', 'A/B testing', 'Performance analysis']
-    },
-    {
-      icon: Target,
-      title: 'Innovation Consulting',
-      description: 'Strategic consulting for AI adoption and implementation',
-      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AIResearchDevelopmentPage: React.FC = () => {
             Partner with our world-class AI research team to develop custom solutions that push the boundaries of artificial intelligence. 
             From concept to deployment, we bring your AI vision to life.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AIResearchDevelopmentPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Research Capabilities
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AIResearchDevelopmentPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIResearchDevelopmentPage;

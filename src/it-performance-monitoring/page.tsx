@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {BarChart, Zap, Shield, Settings, CheckCircle, Star} from 'lucide-react';
+import {BarChart, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const ITPerformanceMonitoringPage: React.FC = () => {
-  const _features = [
-    {
-      icon: BarChart,
-      title: 'Real-time Monitoring',
-      description: 'Comprehensive real-time system performance monitoring',
-      benefits: ['Live dashboards', 'Performance metrics', 'Alerting']
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Automated performance optimization and tuning',
-      benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations']
-    },
-    {
-      icon: Shield,
-      title: 'Proactive Monitoring',
-      description: 'Proactive monitoring to prevent issues before they occur',
-      benefits: ['Predictive analytics', 'Early warning', 'Preventive maintenance']
-    },
-    {
-      icon: Settings,
-      title: 'Custom Dashboards',
-      description: 'Customizable dashboards and reporting',
-      benefits: ['Custom metrics', 'Visualization', 'Reporting']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const ITPerformanceMonitoringPage: React.FC = () => {
             Monitor and optimize your IT infrastructure performance with our comprehensive monitoring solutions. 
             Get real-time insights and proactive alerts to ensure optimal performance.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const ITPerformanceMonitoringPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Monitoring Services
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const ITPerformanceMonitoringPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default ITPerformanceMonitoringPage;

@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {Palette, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+import {Palette, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const AIDesignAssistantPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Palette,
-      title: 'AI Design Generation',
-      description: 'AI-powered design creation and optimization',
-      benefits: ['Auto design', 'Style optimization', 'Brand consistency']
-    },
-    {
-      icon: Target,
-      title: 'Design Recommendations',
-      description: 'Intelligent design suggestions and improvements',
-      benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Streamlined design workflows and automation',
-      benefits: ['Template generation', 'Batch processing', 'Asset management']
-    },
-    {
-      icon: Settings,
-      title: 'Design Analytics',
-      description: 'Comprehensive design performance analytics',
-      benefits: ['Performance metrics', 'User feedback', 'A/B testing']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const AIDesignAssistantPage: React.FC = () => {
             Create stunning designs with AI-powered assistance. 
             From concept to completion, streamline your design process and achieve professional results.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const AIDesignAssistantPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Design Assistant Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const AIDesignAssistantPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIDesignAssistantPage;

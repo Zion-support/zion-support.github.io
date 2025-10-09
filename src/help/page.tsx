@@ -2,44 +2,10 @@ import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Downloa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
-'use client';
-
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-
-  const _categories = [
-    {
-      id: 'getting-started',
-      name: 'Getting Started',
-      icon: BookOpen,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
-    },
-    {
-      id: 'troubleshooting',
-      name: 'Troubleshooting',
-      icon: HelpCircle,
-      color: 'text-red-400',
-      bgColor: 'bg-red-500/10'
-    },
-    {
-      id: 'billing',
-      name: 'Billing & Account',
-      icon: CheckCircle,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
-    },
-    {
-      id: 'technical',
-      name: 'Technical Support',
-      icon: MessageSquare,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10'
-    }
-  ];
-
+  
   const helpArticles = {
     'getting-started': [
       {
@@ -194,7 +160,6 @@ const HelpPage: React.FC = () => {
       }
     ]
   };
-
   const resources = [
     {
       title: 'Video Tutorials',
@@ -225,7 +190,6 @@ const HelpPage: React.FC = () => {
       count: '25+ downloads'
     }
   ];
-
   const supportChannels = [
     {
       title: 'Live Chat',
@@ -260,7 +224,6 @@ const HelpPage: React.FC = () => {
       responseTime: 'Community driven'
     }
   ];
-
   const faqs = [
     {
       question: 'How quickly can I get started with your AI services?',
@@ -283,16 +246,13 @@ const HelpPage: React.FC = () => {
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
     }
   ];
-
   const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
   };
-
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   return (
     <>
       <Navigation />
@@ -308,7 +268,6 @@ const HelpPage: React.FC = () => {
               We're here to help you succeed.
             </p>
           </div>
-
           {/* Search */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="relative">
@@ -322,7 +281,6 @@ const HelpPage: React.FC = () => {
               />
             </div>
           </div>
-
           {/* Categories */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -342,7 +300,6 @@ const HelpPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
@@ -360,7 +317,6 @@ const HelpPage: React.FC = () => {
                       <p className="text-gray-300 text-sm mb-3">{article.description}</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span>{article.readTime}</span>
                     <span className={`px-2 py-1 rounded text-xs ${
@@ -371,7 +327,6 @@ const HelpPage: React.FC = () => {
                       {article.difficulty}
                     </span>
                   </div>
-                  
                   <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-1" />
@@ -380,7 +335,6 @@ const HelpPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Resources */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -399,7 +353,6 @@ const HelpPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Support Channels */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -424,7 +377,6 @@ const HelpPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* FAQ */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -441,7 +393,6 @@ const HelpPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -481,5 +432,4 @@ const HelpPage: React.FC = () => {
     </>
   );
 };
-
 export default HelpPage;

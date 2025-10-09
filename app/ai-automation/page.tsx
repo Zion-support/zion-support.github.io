@@ -115,8 +115,6 @@ const AIAutomationPage: React.FC = () => {
 };
 
 export default AIAutomationPage;
-        
-        <main className="pt-20">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">

@@ -2,21 +2,11 @@ import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
-'use client';
-
 const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const _toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
+  
   };
-
   const faqData = [
     {
       category: 'General Questions',
@@ -145,7 +135,6 @@ const FAQPage: React.FC = () => {
       ]
     }
   ];
-
   const filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
@@ -153,7 +142,6 @@ const FAQPage: React.FC = () => {
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
-
   return (
     <>
       <Navigation />
@@ -167,7 +155,6 @@ const FAQPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our AI and IT services, pricing, and support.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -180,7 +167,6 @@ const FAQPage: React.FC = () => {
               />
             </div>
           </div>
-
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => (
@@ -192,7 +178,6 @@ const FAQPage: React.FC = () => {
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                    
                     return (
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
@@ -218,7 +203,6 @@ const FAQPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">

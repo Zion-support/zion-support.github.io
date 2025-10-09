@@ -1,102 +1,8 @@
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {Calendar, Users, CheckCircle} from 'lucide-react';
 import React from 'react';
-
-'use client';
-
 const AISchedulerPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
-      benefit: 'Save 5+ hours per week'
-    },
-    {
-      icon: Users,
-      title: 'Team Coordination',
-      description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
-      benefit: 'Eliminate scheduling conflicts'
-    },
-    {
-      icon: Brain,
-      title: 'Predictive Planning',
-      description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
-      benefit: '95% accuracy in predictions'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reminders',
-      description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
-      benefit: 'Reduce no-shows by 60%'
-    },
-    {
-      icon: Target,
-      title: 'Meeting Optimization',
-      description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
-      benefit: 'Improve meeting ROI by 40%'
-    },
-    {
-      icon: Shield,
-      title: 'Privacy & Security',
-      description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit: '100% secure scheduling'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for individuals',
-      features: [
-        'Unlimited personal meetings',
-        'Basic AI scheduling',
-        'Calendar integration',
-        'Email reminders',
-        'Mobile app access',
-        'Standard support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Team',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for small teams',
-      features: [
-        'Up to 10 team members',
-        'Advanced AI scheduling',
-        'Team coordination',
-        'Custom meeting types',
-        'Analytics dashboard',
-        'Priority support',
-        'API access',
-        'Custom branding'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$149',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited team members',
-        'Premium AI features',
-        'Advanced analytics',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options',
-        'SSO integration',
-        'Custom workflows'
-      ],
-      popular: false
-    }
-  ];
-
-  const integrations = [
+  
+    const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
@@ -106,7 +12,6 @@ const AISchedulerPage: React.FC = () => {
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
   ];
-
   const testimonials = [
     {
       name: 'Jennifer Lee',
@@ -130,7 +35,6 @@ const AISchedulerPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -166,7 +70,6 @@ const AISchedulerPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -190,7 +93,6 @@ const AISchedulerPage: React.FC = () => {
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -207,7 +109,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -223,7 +124,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -266,7 +166,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -290,7 +189,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -320,5 +218,4 @@ const AISchedulerPage: React.FC = () => {
     </div>
   );
 };
-
 export default AISchedulerPage;

@@ -1,41 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star} from 'lucide-react';
+import {GraduationCap, CheckCircle} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const ITTrainingPage: React.FC = () => {
-  const _features = [
-    {
-      icon: GraduationCap,
-      title: 'Certification Programs',
-      description: 'Industry-recognized IT certification training programs',
-      benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
-    },
-    {
-      icon: BookOpen,
-      title: 'Custom Training',
-      description: 'Tailored training programs for your specific needs',
-      benefits: ['Custom curriculum', 'On-site training', 'Online learning']
-    },
-    {
-      icon: Users,
-      title: 'Team Training',
-      description: 'Comprehensive team training and development programs',
-      benefits: ['Group training', 'Team building', 'Skill development']
-    },
-    {
-      icon: Award,
-      title: 'Expert Instructors',
-      description: 'Learn from industry experts and certified professionals',
-      benefits: ['Real-world experience', 'Industry insights', 'Mentorship']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +19,6 @@ const ITTrainingPage: React.FC = () => {
             Advance your IT career with our comprehensive training and certification programs. 
             Learn from industry experts and gain the skills you need to succeed in today's technology landscape.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +35,10 @@ const ITTrainingPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Training Programs
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +64,8 @@ const ITTrainingPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default ITTrainingPage;

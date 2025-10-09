@@ -1,49 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
 const AIServicesPage: React.FC = () => {
-  const _services = [
-    {
-      title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
-      icon: Brain,
-      features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Machine Learning Solutions',
-      description: 'Custom machine learning models and algorithms for your business needs',
-      icon: Zap,
-      features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
-      price: 'Starting at $1,500/month'
-    },
-    {
-      title: 'AI Security & Compliance',
-      description: 'Enterprise-grade AI security and compliance solutions',
-      icon: Shield,
-      features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
-      price: 'Starting at $1,200/month'
-    },
-    {
-      title: 'AI Analytics & Insights',
-      description: 'Advanced analytics and business intelligence powered by AI',
-      icon: BarChart,
-      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
-      price: 'Starting at $800/month'
-    }
-  ];
-
-  const benefits = [
-    '300% Average ROI Increase',
-    '95% Process Automation',
-    '50% Cost Reduction',
-    '99.9% Uptime Guarantee'
-  ];
-
-const AiServicesPage: React.FC = () => {
+  
+  const AiServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -56,7 +14,5 @@ const AiServicesPage: React.FC = () => {
     </div>
   );
 };
-
 }
-
 export default AiServicesPage;

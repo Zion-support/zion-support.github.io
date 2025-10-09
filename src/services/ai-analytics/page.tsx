@@ -2,57 +2,8 @@ import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-
-'use client';
-
 const AIAnalyticsPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
-      benefits: [
-        '95% accuracy in predictions',
-        'Real-time data processing',
-        'Automated trend detection',
-        'Custom prediction models'
-      ]
-    },
-    {
-      icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Interactive dashboards that provide instant insights into your business performance',
-      benefits: [
-        'Live data visualization',
-        'Customizable metrics',
-        'Mobile-responsive design',
-        'Role-based access control'
-      ]
-    },
-    {
-      icon: Target,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights',
-      benefits: [
-        'Scheduled report generation',
-        'Natural language summaries',
-        'Executive briefings',
-        'Custom report templates'
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'Anomaly Detection',
-      description: 'Identify unusual patterns and potential issues before they impact your business',
-      benefits: [
-        'Real-time anomaly alerts',
-        'Pattern recognition',
-        'Risk assessment',
-        'Automated responses'
-      ]
-    }
-  ];
-
+  
   const useCases = [
     {
       title: 'Sales Performance Analysis',
@@ -79,7 +30,6 @@ const AIAnalyticsPage: React.FC = () => {
       color: 'text-yellow-400'
     }
   ];
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -131,7 +81,6 @@ const AIAnalyticsPage: React.FC = () => {
       bgColor: 'bg-cyan-500/10'
     }
   ];
-
   const benefits = [
     {
       icon: Star,
@@ -154,7 +103,6 @@ const AIAnalyticsPage: React.FC = () => {
       description: '300% average ROI for our analytics clients'
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -184,7 +132,6 @@ const AIAnalyticsPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -214,7 +161,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -232,7 +178,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Pricing */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -278,7 +223,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -296,7 +240,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -336,5 +279,4 @@ const AIAnalyticsPage: React.FC = () => {
     </>
   );
 };
-
 export default AIAnalyticsPage;

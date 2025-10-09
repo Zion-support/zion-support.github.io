@@ -6,40 +6,7 @@ import Footer from '../components/Footer';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const _researchAreas = [
-    {
-      id: 'ai',
-      name: 'Artificial Intelligence',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Advancing the frontiers of AI and machine learning'
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum Computing',
-      icon: Atom,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description: 'Exploring quantum algorithms and quantum advantage'
-    },
-    {
-      id: 'autonomous',
-      name: 'Autonomous Systems',
-      icon: Rocket,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      description: 'Developing self-managing and intelligent systems'
-    },
-    {
-      id: 'emerging',
-      name: 'Emerging Technologies',
-      icon: Lightbulb,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
-      description: 'Researching next-generation technologies'
-    }
-  ];
+  
 
   const researchProjects = {
     ai: [
