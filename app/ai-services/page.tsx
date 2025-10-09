@@ -291,6 +291,342 @@ const AIServicesPage: React.FC = () => {
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Document Intelligence Platform',
+      description: 'Advanced document processing with OCR, data extraction, classification, and intelligent routing.',
+      icon: '📄',
+      price: '$1,100/month',
+      features: [
+        'OCR & Text Extraction',
+        'Document Classification',
+        'Data Extraction',
+        'Intelligent Routing',
+        'Version Control',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Process 10,000+ documents/hour',
+        'Reduce manual data entry by 95%',
+        'Improve accuracy to 99.5%',
+        'Enable automated workflows'
+      ],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Document AI',
+      technologies: ['OCR', 'NLP', 'Computer Vision', 'Python', 'React', 'Document APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Customer Experience Platform',
+      description: 'Comprehensive customer experience management with sentiment analysis, journey mapping, and personalization.',
+      icon: '😊',
+      price: '$1,800/month',
+      features: [
+        'Sentiment Analysis',
+        'Journey Mapping',
+        'Personalization Engine',
+        'Predictive Analytics',
+        'Real-time Insights',
+        'Multi-channel Integration'
+      ],
+      benefits: [
+        'Increase customer satisfaction by 40%',
+        'Reduce churn by 30%',
+        'Improve NPS scores by 50%',
+        'Enable personalized experiences'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Customer Experience',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Analytics APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Supply Chain Intelligence',
+      description: 'Intelligent supply chain optimization with demand forecasting, risk management, and logistics automation.',
+      icon: '🚚',
+      price: '$2,200/month',
+      features: [
+        'Demand Forecasting',
+        'Risk Assessment',
+        'Logistics Optimization',
+        'Supplier Management',
+        'Inventory Optimization',
+        'Real-time Monitoring'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 25%',
+        'Improve delivery times by 40%',
+        'Minimize supply disruptions',
+        'Optimize inventory levels'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Supply Chain AI',
+      technologies: ['Machine Learning', 'Time Series Analysis', 'Python', 'React', 'Supply Chain APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Financial Risk Management',
+      description: 'Advanced financial risk assessment with fraud detection, credit scoring, and market analysis.',
+      icon: '💳',
+      price: '$2,500/month',
+      features: [
+        'Fraud Detection',
+        'Credit Risk Assessment',
+        'Market Risk Analysis',
+        'Regulatory Compliance',
+        'Real-time Monitoring',
+        'Alert Systems'
+      ],
+      benefits: [
+        'Prevent 99.9% of fraud attempts',
+        'Reduce credit losses by 60%',
+        'Ensure regulatory compliance',
+        'Improve risk decision making'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Financial AI',
+      technologies: ['Machine Learning', 'Deep Learning', 'Python', 'React', 'Financial APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Content Moderation Suite',
+      description: 'Comprehensive content moderation with text, image, and video analysis for platform safety.',
+      icon: '🛡️',
+      price: '$1,400/month',
+      features: [
+        'Text Moderation',
+        'Image Analysis',
+        'Video Content Review',
+        'Real-time Processing',
+        'Custom Rule Engine',
+        'Human Review Integration'
+      ],
+      benefits: [
+        'Reduce moderation costs by 70%',
+        'Improve content safety by 95%',
+        'Scale moderation efforts',
+        'Maintain platform quality'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Content Moderation',
+      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Content APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Process Mining Platform',
+      description: 'Intelligent process analysis with workflow discovery, optimization, and compliance monitoring.',
+      icon: '🔄',
+      price: '$1,600/month',
+      features: [
+        'Process Discovery',
+        'Workflow Analysis',
+        'Bottleneck Identification',
+        'Compliance Monitoring',
+        'Optimization Recommendations',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Identify process inefficiencies',
+        'Reduce process time by 40%',
+        'Improve compliance by 90%',
+        'Optimize resource allocation'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Process Intelligence',
+      technologies: ['Process Mining', 'Machine Learning', 'Python', 'React', 'Process APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Knowledge Management System',
+      description: 'Intelligent knowledge base with semantic search, content recommendations, and expert systems.',
+      icon: '🧠',
+      price: '$1,200/month',
+      features: [
+        'Semantic Search',
+        'Content Recommendations',
+        'Expert System Integration',
+        'Knowledge Graph',
+        'Collaborative Filtering',
+        'Natural Language Queries'
+      ],
+      benefits: [
+        'Improve knowledge discovery by 80%',
+        'Reduce search time by 70%',
+        'Enable intelligent recommendations',
+        'Facilitate knowledge sharing'
+      ],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Knowledge AI',
+      technologies: ['NLP', 'Knowledge Graphs', 'Machine Learning', 'React', 'Search APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Quality Assurance Platform',
+      description: 'Automated quality testing with intelligent test generation, execution, and defect prediction.',
+      icon: '🔍',
+      price: '$1,300/month',
+      features: [
+        'Intelligent Test Generation',
+        'Automated Test Execution',
+        'Defect Prediction',
+        'Performance Testing',
+        'Regression Analysis',
+        'Quality Metrics'
+      ],
+      benefits: [
+        'Reduce testing time by 60%',
+        'Improve test coverage by 80%',
+        'Detect defects earlier',
+        'Ensure software quality'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Quality Assurance',
+      technologies: ['Machine Learning', 'Test Automation', 'Python', 'React', 'Testing APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Energy Optimization Suite',
+      description: 'Intelligent energy management with consumption optimization, renewable integration, and cost reduction.',
+      icon: '⚡',
+      price: '$1,500/month',
+      features: [
+        'Energy Consumption Analysis',
+        'Renewable Energy Integration',
+        'Cost Optimization',
+        'Predictive Maintenance',
+        'Carbon Footprint Tracking',
+        'Smart Grid Integration'
+      ],
+      benefits: [
+        'Reduce energy costs by 30%',
+        'Increase efficiency by 25%',
+        'Lower carbon footprint',
+        'Optimize renewable usage'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Energy AI',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Time Series Analysis', 'React', 'Energy APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Talent Acquisition Platform',
+      description: 'Intelligent recruitment with candidate matching, skill assessment, and interview optimization.',
+      icon: '👥',
+      price: '$1,400/month',
+      features: [
+        'Candidate Matching',
+        'Skill Assessment',
+        'Interview Optimization',
+        'Bias Detection',
+        'Talent Pipeline Management',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Improve hiring quality by 50%',
+        'Reduce time-to-hire by 40%',
+        'Eliminate bias in recruitment',
+        'Optimize talent acquisition'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Talent AI',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'HR APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Market Intelligence Platform',
+      description: 'Comprehensive market analysis with trend prediction, competitor monitoring, and opportunity identification.',
+      icon: '📈',
+      price: '$1,800/month',
+      features: [
+        'Market Trend Analysis',
+        'Competitor Monitoring',
+        'Opportunity Identification',
+        'Sentiment Analysis',
+        'Price Intelligence',
+        'Strategic Insights'
+      ],
+      benefits: [
+        'Identify market opportunities',
+        'Stay ahead of competitors',
+        'Optimize pricing strategies',
+        'Make data-driven decisions'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Market Intelligence',
+      technologies: ['Web Scraping', 'NLP', 'Machine Learning', 'React', 'Market APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI IoT Analytics Platform',
+      description: 'Intelligent IoT data processing with device management, predictive maintenance, and real-time insights.',
+      icon: '🌐',
+      price: '$1,600/month',
+      features: [
+        'IoT Device Management',
+        'Real-time Data Processing',
+        'Predictive Maintenance',
+        'Anomaly Detection',
+        'Edge Analytics',
+        'Dashboard Visualization'
+      ],
+      benefits: [
+        'Optimize IoT operations',
+        'Prevent device failures',
+        'Reduce maintenance costs',
+        'Enable real-time insights'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'IoT AI',
+      technologies: ['IoT Sensors', 'Edge Computing', 'Machine Learning', 'React', 'IoT APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Compliance Monitoring Suite',
+      description: 'Automated compliance management with regulatory monitoring, risk assessment, and audit preparation.',
+      icon: '📋',
+      price: '$1,700/month',
+      features: [
+        'Regulatory Monitoring',
+        'Risk Assessment',
+        'Audit Preparation',
+        'Policy Management',
+        'Training Automation',
+        'Reporting Dashboard'
+      ],
+      benefits: [
+        'Ensure 100% compliance',
+        'Reduce audit time by 60%',
+        'Minimize regulatory risks',
+        'Streamline compliance processes'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Compliance AI',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Compliance APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Innovation Management Platform',
+      description: 'Intelligent innovation tracking with idea evaluation, patent analysis, and R&D optimization.',
+      icon: '💡',
+      price: '$1,900/month',
+      features: [
+        'Idea Evaluation',
+        'Patent Analysis',
+        'R&D Optimization',
+        'Innovation Tracking',
+        'Market Validation',
+        'Portfolio Management'
+      ],
+      benefits: [
+        'Accelerate innovation cycles',
+        'Optimize R&D investments',
+        'Identify breakthrough opportunities',
+        'Manage innovation portfolio'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Innovation AI',
+      technologies: ['NLP', 'Patent Analysis', 'Machine Learning', 'React', 'Innovation APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -307,14 +643,28 @@ const AIServicesPage: React.FC = () => {
     { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
     { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
     { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
+    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length },
+    { name: 'Document AI', count: aiServices.filter(s => s.category === 'Document AI').length },
+    { name: 'Customer Experience', count: aiServices.filter(s => s.category === 'Customer Experience').length },
+    { name: 'Supply Chain AI', count: aiServices.filter(s => s.category === 'Supply Chain AI').length },
+    { name: 'Financial AI', count: aiServices.filter(s => s.category === 'Financial AI').length },
+    { name: 'Content Moderation', count: aiServices.filter(s => s.category === 'Content Moderation').length },
+    { name: 'Process Intelligence', count: aiServices.filter(s => s.category === 'Process Intelligence').length },
+    { name: 'Knowledge AI', count: aiServices.filter(s => s.category === 'Knowledge AI').length },
+    { name: 'Quality Assurance', count: aiServices.filter(s => s.category === 'Quality Assurance').length },
+    { name: 'Energy AI', count: aiServices.filter(s => s.category === 'Energy AI').length },
+    { name: 'Talent AI', count: aiServices.filter(s => s.category === 'Talent AI').length },
+    { name: 'Market Intelligence', count: aiServices.filter(s => s.category === 'Market Intelligence').length },
+    { name: 'IoT AI', count: aiServices.filter(s => s.category === 'IoT AI').length },
+    { name: 'Compliance AI', count: aiServices.filter(s => s.category === 'Compliance AI').length },
+    { name: 'Innovation AI', count: aiServices.filter(s => s.category === 'Innovation AI').length }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. Enterprise-grade AI solutions starting at $800/month." />
+        <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. 25+ enterprise-grade AI solutions starting at $800/month." />
         <meta name="keywords" content="ai services, machine learning, nlp, computer vision, ai consulting, automation, artificial intelligence" />
       </Helmet>
 
@@ -331,7 +681,7 @@ const AIServicesPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">25+</div>
               <div className="text-gray-300">AI Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
