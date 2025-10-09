@@ -25,7 +25,7 @@ const System-statusPage: React.FC = () => {
       
       <Footer />
 =======
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 const SystemStatusPage: React.FC = () => {

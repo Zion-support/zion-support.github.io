@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -31,7 +30,7 @@ const SupportPage: React.FC = () => {
       action: 'Send Email'
 =======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, MessageCircle, Phone, Mail, Clock, CheckCircle, ArrowRight, HelpCircle, FileText, Video, BookOpen } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
