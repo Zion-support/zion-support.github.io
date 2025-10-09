@@ -254,7 +254,7 @@ const ContactPage: React.FC = () => {
                       <Mail className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
                         <h4 className="text-lg font-semibold text-white">Email</h4>
-                        <p className="text-gray-300">info@ziontechgroup.com</p>
+                        <p className="text-gray-300">kleber@ziontechgroup.com</p>
                         <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
                       </div>
                     </div>
@@ -263,7 +263,7 @@ const ContactPage: React.FC = () => {
                       <MapPin className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
                         <h4 className="text-lg font-semibold text-white">Address</h4>
-                        <p className="text-gray-300">Middletown, DE 19709</p>
+                        <p className="text-gray-300">364 E Main St STE 1008 Middletown, DE 19709</p>
                         <p className="text-sm text-gray-400">Serving clients worldwide</p>
                       </div>
                     </div>
