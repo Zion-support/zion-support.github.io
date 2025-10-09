@@ -1,11 +1,5 @@
-<<<<<<< HEAD:src/components/Navigation.tsx
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src/components/Navigation.tsx
-import { Link } from 'react-router-dom';
-=======
 import React, { useState, useEffect, memo } from 'react';
-import Link from 'next/link';
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50:app/components/Navigation.tsx
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -267,7 +261,7 @@ const Navigation: React.FC = memo(() => {
                     </Link>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             <Link 
@@ -319,8 +313,8 @@ const Navigation: React.FC = memo(() => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+            <div className="px-4 py-6 space-y-6">
               <Link
                 href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -373,61 +367,7 @@ const Navigation: React.FC = memo(() => {
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+1 302 464 0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="text-sm font-medium">Email</span>
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium"
-            >
-              Get Started
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
-              {/* Main Navigation */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                {mainNavItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.path}
-                    onClick={closeAllMenus}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="font-medium">{item.name}</span>
-                  </Link>
-                ))}
+                )}
               </div>
 
               <a
@@ -441,6 +381,7 @@ const Navigation: React.FC = memo(() => {
             </div>
           </div>
         )}
+
       </div>
     </nav>
   );
