@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid particle-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid particle-bg matrix-bg data-flow-bg">
       {/* Navigation */}
       <Navigation />
       
@@ -84,11 +84,11 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text quantum-text cyber-pulse"
           >
             Zion Tech Group
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
+          <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium quantum-text" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -251,52 +251,120 @@ const HomePage: React.FC = () => {
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center group-hover:animate-pulse">💻</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $79/month</div>
-                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
-                    Learn More →
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $29/month</div>
+                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base group-hover:text-orange-200 transition-colors">
+                    Explore 50+ Tools →
                   </a>
                 </div>
               </article>
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center group-hover:animate-pulse">✍️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Generation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Revolutionary AI-powered content creation for blogs, social media, emails, and marketing materials.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
-                    Learn More →
+                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $29/month</div>
+                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base group-hover:text-pink-200 transition-colors">
+                    Create Content →
                   </a>
                 </div>
               </article>
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center group-hover:animate-pulse">☁️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">IT Infrastructure</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
-                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
-                    Learn More →
+                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base group-hover:text-blue-200 transition-colors">
+                    Scale Infrastructure →
                   </a>
                 </div>
               </article>
             </Suspense>
+          </div>
+
+          {/* Additional Micro SAAS Services */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center group-hover:animate-pulse">🤖</div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center">AI Chatbots</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-center leading-relaxed text-xs sm:text-sm">
+                  No-code AI chatbot builder with advanced NLP and multi-channel deployment.
+                </p>
+                <div className="text-center">
+                  <div className="text-sm sm:text-lg font-bold text-green-400 mb-1">$49/month</div>
+                  <a href="/micro-saas" className="text-green-400 hover:text-green-300 font-medium text-xs sm:text-sm group-hover:text-green-200 transition-colors">
+                    Build Chatbot →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center group-hover:animate-pulse">📊</div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center">AI Analytics</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-center leading-relaxed text-xs sm:text-sm">
+                  Intelligent data analysis with automated insights and predictive analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-sm sm:text-lg font-bold text-purple-400 mb-1">$39/month</div>
+                  <a href="/micro-saas" className="text-purple-400 hover:text-purple-300 font-medium text-xs sm:text-sm group-hover:text-purple-200 transition-colors">
+                    Analyze Data →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center group-hover:animate-pulse">🎨</div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center">AI Design Studio</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-center leading-relaxed text-xs sm:text-sm">
+                  Professional AI image generation with advanced editing and style transfer.
+                </p>
+                <div className="text-center">
+                  <div className="text-sm sm:text-lg font-bold text-indigo-400 mb-1">$19/month</div>
+                  <a href="/micro-saas" className="text-indigo-400 hover:text-indigo-300 font-medium text-xs sm:text-sm group-hover:text-indigo-200 transition-colors">
+                    Create Images →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center group-hover:animate-pulse">📱</div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 text-center">AI Mobile Apps</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-center leading-relaxed text-xs sm:text-sm">
+                  No-code mobile app development with AI-powered design suggestions.
+                </p>
+                <div className="text-center">
+                  <div className="text-sm sm:text-lg font-bold text-cyan-400 mb-1">$59/month</div>
+                  <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium text-xs sm:text-sm group-hover:text-cyan-200 transition-colors">
+                    Build Apps →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
 <<<<<<< HEAD
 
             <Suspense fallback={<ServiceCardSkeleton />}>
