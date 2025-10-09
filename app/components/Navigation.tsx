@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -122,10 +123,44 @@ const Navigation: React.FC = () => {
               <button
                 onClick={() => setAiServicesOpen(!aiServicesOpen)}
                 className="flex items-center text-white hover:text-cyan-400 transition-colors"
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  return (
+    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text">
+            Zion Tech Group
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              About
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+>>>>>>> origin/main
               >
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
+<<<<<<< HEAD
               {aiServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
                   <div className="grid grid-cols-1 gap-2">
@@ -140,11 +175,74 @@ const Navigation: React.FC = () => {
                         {service.name}
                       </Link>
                     ))}
+=======
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Core Services</h3>
+                      <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        All Services
+                      </Link>
+                      <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Services
+                      </Link>
+                      <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        IT Services
+                      </Link>
+                      <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Micro SAAS
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">AI Solutions</h3>
+                      <Link to="/ai-marketing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Marketing
+                      </Link>
+                      <Link to="/ai-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Automation
+                      </Link>
+                      <Link to="/ai-healthcare" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Healthcare
+                      </Link>
+                      <Link to="/ai-fintech" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Fintech
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Advanced Tech</h3>
+                      <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Quantum Computing
+                      </Link>
+                      <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Autonomous Systems
+                      </Link>
+                      <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Blockchain & Web3
+                      </Link>
+                      <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Cybersecurity
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Business</h3>
+                      <Link to="/business-intelligence" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Business Intelligence
+                      </Link>
+                      <Link to="/iot-edge-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        IoT & Edge Computing
+                      </Link>
+                      <Link to="/services-advertising" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Advertising Services
+                      </Link>
+                    </div>
+>>>>>>> origin/main
                   </div>
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
             {/* IT Services Dropdown */}
             <div className="relative dropdown-container">
               <button
@@ -210,6 +308,18 @@ const Navigation: React.FC = () => {
             </Link>
             
             <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+=======
+            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Case Studies
+            </Link>
+            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Enterprise
+            </Link>
+            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Team
+            </Link>
+            <Link to="/contact" className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
+>>>>>>> origin/main
               Contact
             </Link>
 
@@ -225,13 +335,19 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
+<<<<<<< HEAD
             onClick={toggleMenu}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+=======
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-300 hover:text-cyan-400"
+>>>>>>> origin/main
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
@@ -278,6 +394,82 @@ const Navigation: React.FC = () => {
               >
                 <Phone className="w-4 h-4 mr-2 inline" />
                 (302) 464-0950
+=======
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t border-cyan-500/20">
+            <div className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                About
+              </Link>
+              
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-gray-300 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/ai-services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/ai-marketing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Marketing
+                  </Link>
+                  <Link to="/ai-automation" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Automation
+                  </Link>
+                  <Link to="/ai-healthcare" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Healthcare
+                  </Link>
+                  <Link to="/ai-fintech" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Fintech
+                  </Link>
+                  <Link to="/it-services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Micro SAAS
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/business-intelligence" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Business Intelligence
+                  </Link>
+                  <Link to="/iot-edge-computing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    IoT & Edge Computing
+                  </Link>
+                  <Link to="/services-advertising" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Advertising Services
+                  </Link>
+                </div>
+              </div>
+              
+              <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Case Studies
+              </Link>
+              <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Enterprise
+              </Link>
+              <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Team
+              </Link>
+              <Link to="/contact" className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors text-center">
+                Contact Us
+>>>>>>> origin/main
               </Link>
             </div>
           </div>

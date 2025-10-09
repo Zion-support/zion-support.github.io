@@ -6,7 +6,7 @@
   "preinstall": "pnpm approve-builds --unsafe-perm || true",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' vite build --mode production --minify terser",
     "build:no-check": "next build",
     "build:analyze": "ANALYZE=true next build",
     "preview": "next start",

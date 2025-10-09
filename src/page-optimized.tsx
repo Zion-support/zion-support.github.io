@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import dynamic from 'next/dynamic';
+import { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
