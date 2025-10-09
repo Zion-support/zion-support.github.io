@@ -14,13 +14,20 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Preload critical components with better error handling
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
+      Promise.allSettled([
+        import('./components/ContentPromotionBanner'),
+        import('./components/ContentCarousel'),
+        import('./components/DynamicContentShowcase'),
+        import('./components/ContentStatistics'),
+        import('./components/ContentNewsletterSignup')
+      ]).catch(error => {
+        console.warn('Failed to preload some components:', error);
+      });
     }, 100);
   }
 };
@@ -76,12 +83,12 @@ export default function HomePage() {
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
         >
           Skip to main content
         </a>
 
-      <main className="relative z-10">
+      <main id="main-content" className="relative z-10" role="main">
         {/* Hero Section */}
         <section 
           className="relative py-20 px-4 text-center overflow-hidden"
@@ -153,15 +160,15 @@ export default function HomePage() {
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse" role="article" aria-labelledby="ai-services-title">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line" aria-hidden="true">🤖</div>
+                <h3 id="ai-services-title" className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price: $1,500 per month">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded">
                     Learn More →
                   </a>
                 </div>
@@ -353,22 +360,30 @@ export default function HomePage() {
 
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentStatistics />
+          <ErrorBoundary fallback={<div className="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">Statistics temporarily unavailable</div>}>
+            <ContentStatistics />
+          </ErrorBoundary>
         </Suspense>
 
         {/* Content Carousel */}
         <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentCarousel />
+          <ErrorBoundary fallback={<div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">Content carousel temporarily unavailable</div>}>
+            <ContentCarousel />
+          </ErrorBoundary>
         </Suspense>
 
         {/* Dynamic Content Showcase */}
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <DynamicContentShowcase />
+          <ErrorBoundary fallback={<div className="h-96 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">Content showcase temporarily unavailable</div>}>
+            <DynamicContentShowcase />
+          </ErrorBoundary>
         </Suspense>
 
         {/* Newsletter Signup */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentNewsletterSignup />
+          <ErrorBoundary fallback={<div className="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">Newsletter signup temporarily unavailable</div>}>
+            <ContentNewsletterSignup />
+          </ErrorBoundary>
         </Suspense>
       </main>
 
@@ -380,72 +395,4 @@ export default function HomePage() {
     </div>
   </ErrorBoundary>
 );
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </article>
-
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Workflow Optimization</li>
-                <li>• Change Management</li>
-              </ul>
-            </article>
-
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• Auto-scaling</li>
-                <li>• Disaster Recovery</li>
-              </ul>
-            </article>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-          </div>
-        </section>
-
-        {/* Statistics Section */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentStatistics />
-        </Suspense>
-
-        {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentCarousel />
-        </Suspense>
-
-        {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-
-        {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentNewsletterSignup />
-        </Suspense>
-      </main>
-
-        {/* Footer */}
-        <Footer />
-        
-        {/* Scroll to Top Button */}
-        <ScrollToTop />
-      </div>
-    </ErrorBoundary>
-  );
 }

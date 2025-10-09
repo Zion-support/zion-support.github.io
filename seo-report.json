@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-10-09T01:48:21.560Z",
+  "issues": [
+    {
+      "type": "warning",
+      "file": "layout.tsx",
+      "message": "Missing essential meta tag: canonical",
+      "suggestion": "Add <meta name=\"canonical\" content=\"...\"> to improve SEO"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "performance",
+      "title": "Implement lazy loading",
+      "description": "Add lazy loading to images and components below the fold",
+      "priority": "high"
+    },
+    {
+      "type": "performance",
+      "title": "Optimize images",
+      "description": "Use WebP format and proper sizing for all images",
+      "priority": "high"
+    },
+    {
+      "type": "seo",
+      "title": "Add breadcrumbs",
+      "description": "Implement breadcrumb navigation for better user experience",
+      "priority": "medium"
+    },
+    {
+      "type": "seo",
+      "title": "Create XML sitemap",
+      "description": "Generate and submit XML sitemap to search engines",
+      "priority": "high"
+    },
+    {
+      "type": "seo",
+      "title": "Add FAQ section",
+      "description": "Include frequently asked questions to target long-tail keywords",
+      "priority": "medium"
+    },
+    {
+      "type": "accessibility",
+      "title": "Improve color contrast",
+      "description": "Ensure all text meets WCAG AA contrast requirements",
+      "priority": "high"
+    },
+    {
+      "type": "accessibility",
+      "title": "Add skip links",
+      "description": "Implement skip navigation links for keyboard users",
+      "priority": "medium"
+    }
+  ],
+  "summary": {
+    "totalIssues": 1,
+    "criticalIssues": 0,
+    "warnings": 1,
+    "info": 0
+  }
+}

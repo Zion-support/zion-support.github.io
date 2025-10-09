@@ -1,19 +1,43 @@
 {
-  "timestamp": "2025-10-08T21:53:52.472Z",
-  "buildSize": "820K\tdist",
-  "functionsCount": "81",
-  "optimizationStatus": "Completed",
-  "improvements": [
-    "✅ Functions directory cleaned up (reduced from 348 to 81 functions)",
-    "✅ Build memory optimized with NODE_OPTIONS",
-    "✅ Vite configuration optimized for performance",
-    "✅ Netlify configuration optimized",
-    "✅ Memory leak warnings eliminated",
-    "✅ Build time improved (4.90s vs 5.11s)"
-  ],
-  "recommendations": [
-    "Consider code splitting for large vendor bundle",
-    "Monitor bundle size in future builds",
-    "Regular cleanup of unused functions"
-  ]
+  "timestamp": "2025-10-09T01:48:21.462Z",
+  "metrics": {
+    "buildTime": 0,
+    "bundleSizes": {
+      "index-BuduFUB4.js": {
+        "size": 1,
+        "type": "JavaScript"
+      },
+      "index-ClaU8KBX.css": {
+        "size": 8.05,
+        "type": "CSS"
+      },
+      "libs-N5pEQNiv.js": {
+        "size": 3.78,
+        "type": "JavaScript"
+      },
+      "vendor-avszxO8f.js": {
+        "size": 131,
+        "type": "JavaScript"
+      }
+    },
+    "totalSize": 143.83,
+    "gzipSize": 43.15,
+    "recommendations": [
+      {
+        "type": "warning",
+        "message": "Large bundle detected: vendor-avszxO8f.js (131KB)",
+        "suggestion": "Consider code splitting or lazy loading for this bundle"
+      },
+      {
+        "type": "success",
+        "message": "Bundle size is optimized: 143.83KB",
+        "suggestion": "Great job! Bundle size is within recommended limits"
+      }
+    ]
+  },
+  "buildInfo": {
+    "nodeVersion": "v22.20.0",
+    "platform": "linux",
+    "arch": "x64"
+  }
 }

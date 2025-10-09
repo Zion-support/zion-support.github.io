@@ -151,12 +151,15 @@ export default function RootLayout({
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        <meta name='canonical' content='https://ziontechgroup.com' />
         
         {/* Resource hints for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/images/hero-bg.webp" as="image" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
