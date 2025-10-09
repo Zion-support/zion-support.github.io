@@ -1,12 +1,8 @@
 'use client';
-<<<<<<< HEAD
 
-import React, { useState } from 'react';
-=======
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
@@ -151,21 +147,12 @@ const ApiDocsPage: React.FC = () => {
               Contact Us
             </a>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-=======
-        </section>
-      </main>
       
       <Footer />
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ApiDocsPage;
-=======
-export default ApiDocsPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
