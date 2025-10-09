@@ -491,9 +491,23 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .cyber-text-3d {
-    font-size: 2.5rem;
+    font-size: 4rem;
+  }
+  
+  .neon-text {
+    font-size: 1.75rem;
+  }
+  
+  .cyber-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .cyber-text-3d {
+    font-size: 3.5rem;
   }
   
   .neon-text {
@@ -501,7 +515,7 @@ body {
   }
   
   .cyber-card {
-    margin-bottom: 1rem;
+    padding: 1rem;
   }
   
   .futuristic-glow {
@@ -509,17 +523,145 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .cyber-text-3d {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .neon-text {
     font-size: 1.25rem;
   }
   
+  .cyber-card {
+    margin-bottom: 1rem;
+    padding: 0.875rem;
+  }
+  
+  .futuristic-glow {
+    padding: 0.875rem;
+  }
+  
+  .cyber-grid {
+    background-size: 30px 30px;
+  }
+  
+  .neural-network-bg::before {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-text-3d {
+    font-size: 2rem;
+  }
+  
+  .neon-text {
+    font-size: 1.125rem;
+  }
+  
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .futuristic-glow {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-text-3d {
+    font-size: 1.75rem;
+  }
+  
+  .neon-text {
+    font-size: 1rem;
+  }
+  
   .cyber-grid {
     background-size: 25px 25px;
+  }
+  
+  .cyber-card {
+    padding: 0.625rem;
+  }
+  
+  .futuristic-glow {
+    padding: 0.625rem;
+  }
+  
+  .cyber-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .cyber-text-3d {
+    font-size: 1.5rem;
+  }
+  
+  .neon-text {
+    font-size: 0.875rem;
+  }
+  
+  .cyber-card {
+    padding: 0.5rem;
+  }
+  
+  .futuristic-glow {
+    padding: 0.5rem;
+  }
+  
+  .cyber-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .cyber-text-3d {
+    font-size: 2rem;
+  }
+  
+  .neon-text {
+    font-size: 1rem;
+  }
+  
+  .cyber-card {
+    padding: 0.5rem;
+  }
+  
+  .futuristic-glow {
+    padding: 0.5rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .cyber-text-3d {
+    font-size: 6rem;
+  }
+  
+  .neon-text {
+    font-size: 2.5rem;
+  }
+  
+  .cyber-card {
+    padding: 2rem;
+  }
+  
+  .futuristic-glow {
+    padding: 2rem;
+  }
+  
+  .cyber-grid {
+    background-size: 60px 60px;
   }
 }
 

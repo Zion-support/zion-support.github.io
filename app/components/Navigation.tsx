@@ -33,6 +33,9 @@ const Navigation: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
+    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
   ];
 
   const aiServices = [
@@ -41,9 +44,9 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
+    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
   ];
 
   const itServices = [
@@ -52,6 +55,9 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
+    { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
   ];
 
   return (
