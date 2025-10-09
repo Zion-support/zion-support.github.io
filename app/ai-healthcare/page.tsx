@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
 
 const AIHealthcarePage: React.FC = () => {
@@ -142,11 +142,6 @@ const AIHealthcarePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Healthcare Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered healthcare solutions including medical imaging, drug discovery, personalized medicine, and clinical decision support systems." />
-        <meta name="keywords" content="AI healthcare, medical AI, healthcare automation, medical imaging AI, drug discovery AI, telemedicine" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}

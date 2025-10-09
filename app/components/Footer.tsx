@@ -20,7 +20,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+    { name: 'Cloud Infrastructure', url: '/cloud-services', description: 'Cloud migration & setup' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
     { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }

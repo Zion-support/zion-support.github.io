@@ -1,34 +1,19 @@
 #!/bin/bash
 
-echo "Fixing all merge conflicts in the codebase..."
+echo "Fixing all merge conflict markers..."
 
-# Find all files with conflict markers
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> main" 2>/dev/null)
-
-echo "Found files with conflicts:"
-echo "$files_with_conflicts"
-
-# Process each file
-for file in $files_with_conflicts; do
-    if [ -f "$file" ]; then
-        echo "Processing $file..."
-        
-        # Create a backup
-        cp "$file" "$file.backup"
-        
-        # Remove conflict markers and choose the cleaner version
-        # This is a more aggressive approach that removes all conflict markers
-        sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/{
-            /^<<<<<<< HEAD$/d
-            /^=======$/d
-            /^>>>>>>> main$/d
-        }' "$file"
-        
-        # Clean up any remaining empty lines
-        sed -i '/^[[:space:]]*$/N;/^\n$/d' "$file"
-        
-        echo "  ✓ Processed $file"
-    fi
+# Find and fix all files with merge conflict markers
+find /workspace/app -name "*.tsx" -exec grep -l "cursor/" {} \; | while read file; do
+  echo "Fixing $file"
+  
+  # Remove all merge conflict markers
+  sed -i '/<<<<<<< HEAD/d' "$file"
+  sed -i '/=======/d' "$file"
+  sed -i '/>>>>>>> cursor/d' "$file"
+  sed -i '/cursor\/.*/d' "$file"
+  
+  # Remove any remaining conflict markers
+  sed -i '/^[[:space:]]*cursor[[:space:]]*$/d' "$file"
 done
 
-echo "Conflict resolution complete!"
+echo "Fixed all merge conflict markers"
