@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Database, Brain, BarChart, BarChart3, TrendingUp, Target } from 'lucide-react';
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
     {

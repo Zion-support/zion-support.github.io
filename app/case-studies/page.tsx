@@ -1,7 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Case Studies - Zion Tech Group',
+  description: 'Explore our successful AI implementation case studies. See how we have helped companies achieve 300%+ ROI with our AI solutions.',
+  keywords: 'AI solutions, enterprise technology',
+};
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -70,12 +77,7 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -219,7 +221,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 export default CaseStudiesPage;
