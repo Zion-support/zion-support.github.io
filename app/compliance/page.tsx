@@ -285,4 +285,5 @@ const CompliancePage: React.FC = () => {
     </div>
   );
 };
+
 export default CompliancePage;

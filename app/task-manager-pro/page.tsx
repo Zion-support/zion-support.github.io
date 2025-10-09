@@ -1,145 +1,156 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, MessageCircle, Bot, Zap, Users, BarChart } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, CheckSquare, Clock, Zap, Users, BarChart } from 'lucide-react';
 
-const AIChatbotBuilderPage: React.FC = () => {
-  const chatbotFeatures = [
+const TaskManagerProPage: React.FC = () => {
+  const taskFeatures = [
     {
-      title: 'No-Code Builder',
-      description: 'Create intelligent chatbots with our drag-and-drop interface - no programming required.',
-      icon: '🛠️',
+      title: 'AI Task Prioritization',
+      description: 'Intelligent task prioritization based on deadlines, importance, and dependencies.',
+      icon: '🎯',
       benefits: [
-        'Visual conversation designer',
-        'Pre-built templates',
-        'Easy customization',
-        'Instant deployment'
+        'Smart prioritization',
+        'Deadline management',
+        'Dependency tracking',
+        'Urgency detection'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP that understands context, intent, and sentiment for natural conversations.',
-      icon: '🧠',
-      benefits: [
-        'Understands 50+ languages',
-        'Context-aware responses',
-        'Sentiment analysis',
-        'Intent recognition'
-      ]
-    },
-    {
-      title: 'Multi-Channel Deployment',
-      description: 'Deploy your chatbot across websites, social media, messaging apps, and more.',
-      icon: '🌐',
-      benefits: [
-        'Website integration',
-        'Social media bots',
-        'WhatsApp integration',
-        'Slack/Teams support'
-      ]
-    },
-    {
-      title: 'AI Training & Learning',
-      description: 'Chatbots that learn from every conversation to improve responses over time.',
-      icon: '📚',
-      benefits: [
-        'Continuous learning',
-        'Performance analytics',
-        'Response optimization',
-        'User feedback integration'
-      ]
-    },
-    {
-      title: 'Human Handoff',
-      description: 'Seamlessly transfer complex queries to human agents when needed.',
+      title: 'Team Collaboration',
+      description: 'Advanced team collaboration tools with real-time updates and communication.',
       icon: '👥',
       benefits: [
-        'Smart escalation',
-        'Context preservation',
-        'Agent notifications',
-        'Seamless transitions'
+        'Real-time collaboration',
+        'Team communication',
+        'Task assignment',
+        'Progress tracking'
       ]
     },
     {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and optimize your chatbot.',
+      title: 'Time Tracking',
+      description: 'Comprehensive time tracking with AI-powered insights and productivity analysis.',
+      icon: '⏱️',
+      benefits: [
+        'Automatic time tracking',
+        'Productivity insights',
+        'Time estimation',
+        'Performance analytics'
+      ]
+    },
+    {
+      title: 'Project Management',
+      description: 'Full project management capabilities with Gantt charts and milestone tracking.',
       icon: '📊',
       benefits: [
-        'Conversation analytics',
-        'User satisfaction tracking',
-        'Performance metrics',
-        'Optimization suggestions'
+        'Gantt charts',
+        'Milestone tracking',
+        'Resource management',
+        'Project analytics'
+      ]
+    },
+    {
+      title: 'Automation Workflows',
+      description: 'Create automated workflows to streamline repetitive tasks and processes.',
+      icon: '⚙️',
+      benefits: [
+        'Workflow automation',
+        'Task templates',
+        'Recurring tasks',
+        'Smart notifications'
+      ]
+    },
+    {
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and reporting for better productivity insights.',
+      icon: '📈',
+      benefits: [
+        'Productivity metrics',
+        'Team performance',
+        'Project insights',
+        'Custom reports'
       ]
     }
   ];
 
-  const useCases = [
+  const taskTypes = [
     {
-      industry: 'E-commerce',
-      title: 'Customer Support',
-      description: 'Handle product inquiries, order tracking, and returns with 24/7 availability.',
-      metrics: ['80% query resolution', '60% cost reduction', '24/7 availability']
+      type: 'Personal Tasks',
+      description: 'Individual task management and productivity',
+      price: '$39/month',
+      features: ['Personal dashboard', 'Task prioritization', 'Time tracking', 'Basic analytics']
     },
     {
-      industry: 'Healthcare',
-      title: 'Patient Assistance',
-      description: 'Provide appointment scheduling, symptom checking, and basic health information.',
-      metrics: ['90% appointment accuracy', '50% call volume reduction', 'HIPAA compliant']
+      type: 'Team Tasks',
+      description: 'Team collaboration and task management',
+      price: '$79/month',
+      features: ['Team collaboration', 'Task assignment', 'Progress tracking', 'Team analytics']
     },
     {
-      industry: 'Finance',
-      title: 'Banking Assistant',
-      description: 'Help with account inquiries, transaction history, and basic banking services.',
-      metrics: ['95% accuracy rate', '70% self-service', 'Secure transactions']
+      type: 'Project Management',
+      description: 'Complete project management solution',
+      price: '$149/month',
+      features: ['Project planning', 'Gantt charts', 'Resource management', 'Project analytics']
     },
     {
-      industry: 'Education',
-      title: 'Student Support',
-      description: 'Answer course questions, provide study materials, and assist with enrollment.',
-      metrics: ['85% query resolution', '40% staff workload reduction', '24/7 support']
+      type: 'Agile Development',
+      description: 'Agile project management with sprints and boards',
+      price: '$199/month',
+      features: ['Sprint planning', 'Kanban boards', 'Scrum tools', 'Agile analytics']
+    },
+    {
+      type: 'Client Management',
+      description: 'Client project and task management',
+      price: '$129/month',
+      features: ['Client portals', 'Project tracking', 'Billing integration', 'Client reports']
+    },
+    {
+      type: 'Enterprise Tasks',
+      description: 'Large-scale task and project management',
+      price: '$299/month',
+      features: ['Enterprise features', 'Custom workflows', 'Advanced security', 'Dedicated support']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small businesses getting started with chatbots',
+      name: 'Personal',
+      price: '$39/month',
+      description: 'Perfect for individuals and freelancers',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic templates',
-        'Website integration',
+        'Up to 100 tasks/month',
+        'Basic AI features',
+        'Time tracking',
         'Email support',
-        '1 chatbot included'
+        '1 user included'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299/month',
-      description: 'Advanced features for growing businesses',
+      price: '$79/month',
+      description: 'Advanced features for small teams',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI training',
-        'Multi-channel deployment',
+        'Up to 1,000 tasks/month',
+        'Advanced AI prioritization',
+        'Team collaboration',
         'Priority support',
-        'Up to 5 chatbots',
-        'Analytics dashboard',
-        'API access'
+        'Up to 5 users',
+        'API access',
+        'Custom workflows'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799/month',
-      description: 'Complete chatbot solution for large organizations',
+      price: '$199/month',
+      description: 'Complete task management for large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited tasks',
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
-        'Unlimited chatbots',
-        'Advanced analytics',
-        'Custom integrations',
+        'Unlimited users',
+        'Advanced integrations',
         'SLA guarantee'
       ],
       popular: false
@@ -149,38 +160,38 @@ const AIChatbotBuilderPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation." />
-        <meta name="keywords" content="ai chatbot, chatbot builder, conversational ai, customer support automation, nlp chatbot, no-code chatbot" />
+        <title>Task Manager Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered task management with intelligent prioritization, team collaboration, and productivity analytics. Boost your team's efficiency." />
+        <meta name="keywords" content="task manager pro, task management, project management, team collaboration, productivity tools, ai task prioritization" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Chatbot Builder
+            Task Manager Pro
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation.
+            Advanced AI-powered task management with intelligent prioritization, team collaboration, and productivity analytics. Boost your team's efficiency.
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-              <div className="text-gray-300">Query Resolution</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-gray-300">Productivity Boost</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-gray-300">Availability</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
+              <div className="text-gray-300">Task Completion</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">Real-time</div>
+              <div className="text-gray-300">Collaboration</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">No-Code</div>
-              <div className="text-gray-300">Setup</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">AI Assistance</div>
             </div>
           </div>
 
@@ -208,10 +219,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful Chatbot Features
+            AI-Powered Task Management Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {chatbotFeatures.map((feature, index) => (
+            {taskFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{feature.icon}</div>
@@ -232,27 +243,25 @@ const AIChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Task Types Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Use Cases
+            Task Management Types & Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {taskTypes.map((task, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                    {useCase.industry}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-2">{useCase.title}</h3>
-                  <p className="text-gray-600 text-sm">{useCase.description}</p>
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{task.type}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{task.description}</p>
+                  <div className="text-2xl font-bold text-green-600 mb-4">{task.price}</div>
                 </div>
-                <ul className="space-y-1">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center text-sm text-gray-600">
-                      <TrendingUp className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                      {metric}
+                <ul className="space-y-2">
+                  {task.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -266,29 +275,29 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our Chatbot Builder?
+            Why Choose Task Manager Pro?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bot className="w-8 h-8 text-white" />
+                <CheckSquare className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Conversations</h3>
-              <p className="text-gray-300">Advanced AI that understands context and provides natural, helpful responses.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Intelligent Prioritization</h3>
+              <p className="text-gray-300">AI automatically prioritizes tasks based on importance, deadlines, and dependencies for maximum efficiency.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Easy Setup</h3>
-              <p className="text-gray-300">Create and deploy chatbots in minutes with our no-code visual builder.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Seamless Collaboration</h3>
+              <p className="text-gray-300">Real-time collaboration tools keep your team synchronized and productive across all projects.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Continuous Learning</h3>
-              <p className="text-gray-300">AI that learns from every conversation to improve responses and performance.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Productivity Insights</h3>
+              <p className="text-gray-300">Advanced analytics help you understand productivity patterns and optimize team performance.</p>
             </div>
           </div>
         </div>
@@ -298,7 +307,7 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Simple, Transparent Pricing
+            Choose Your Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -325,7 +334,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI Chatbot Builder Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Task Manager Pro Plan`}
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
@@ -344,10 +353,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Build Your AI Chatbot?
+            Ready to Boost Your Team's Productivity?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Create intelligent chatbots that provide 24/7 customer support and drive engagement. No coding required.
+            Let AI help your team work smarter, not harder. Start managing tasks more efficiently today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -369,4 +378,4 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+export default TaskManagerProPage;

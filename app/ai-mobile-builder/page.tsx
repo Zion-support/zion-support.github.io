@@ -1,146 +1,157 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, MessageCircle, Bot, Zap, Users, BarChart } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Smartphone, Code, Zap, Users, BarChart } from 'lucide-react';
 
-const AIChatbotBuilderPage: React.FC = () => {
-  const chatbotFeatures = [
+const AIMobileBuilderPage: React.FC = () => {
+  const builderFeatures = [
     {
-      title: 'No-Code Builder',
-      description: 'Create intelligent chatbots with our drag-and-drop interface - no programming required.',
+      title: 'Drag & Drop Interface',
+      description: 'Build native mobile apps with our intuitive visual builder - no coding required.',
       icon: '🛠️',
       benefits: [
-        'Visual conversation designer',
-        'Pre-built templates',
-        'Easy customization',
+        'Visual app builder',
+        'Pre-built components',
+        'Real-time preview',
         'Instant deployment'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP that understands context, intent, and sentiment for natural conversations.',
-      icon: '🧠',
+      title: 'AI Code Generation',
+      description: 'AI automatically generates clean, optimized code for iOS and Android platforms.',
+      icon: '🤖',
       benefits: [
-        'Understands 50+ languages',
-        'Context-aware responses',
-        'Sentiment analysis',
-        'Intent recognition'
+        'Auto-generated code',
+        'Platform optimization',
+        'Best practices',
+        'Performance tuning'
       ]
     },
     {
-      title: 'Multi-Channel Deployment',
-      description: 'Deploy your chatbot across websites, social media, messaging apps, and more.',
-      icon: '🌐',
+      title: 'Cross-Platform Support',
+      description: 'Build once, deploy everywhere - iOS, Android, and web from a single codebase.',
+      icon: '📱',
       benefits: [
-        'Website integration',
-        'Social media bots',
-        'WhatsApp integration',
-        'Slack/Teams support'
+        'iOS & Android apps',
+        'Web app generation',
+        'Consistent UI/UX',
+        'Single codebase'
       ]
     },
     {
-      title: 'AI Training & Learning',
-      description: 'Chatbots that learn from every conversation to improve responses over time.',
-      icon: '📚',
+      title: 'AI-Powered Design',
+      description: 'AI suggests optimal layouts, colors, and components based on your app type.',
+      icon: '🎨',
       benefits: [
-        'Continuous learning',
+        'Design suggestions',
+        'UI optimization',
+        'Color scheme generation',
+        'Layout recommendations'
+      ]
+    },
+    {
+      title: 'Smart Backend Integration',
+      description: 'Automatically integrate with databases, APIs, and cloud services.',
+      icon: '☁️',
+      benefits: [
+        'Database integration',
+        'API connections',
+        'Cloud deployment',
+        'Real-time sync'
+      ]
+    },
+    {
+      title: 'App Store Optimization',
+      description: 'AI helps optimize your app for better discoverability and downloads.',
+      icon: '📈',
+      benefits: [
+        'ASO optimization',
+        'Keyword research',
         'Performance analytics',
-        'Response optimization',
-        'User feedback integration'
-      ]
-    },
-    {
-      title: 'Human Handoff',
-      description: 'Seamlessly transfer complex queries to human agents when needed.',
-      icon: '👥',
-      benefits: [
-        'Smart escalation',
-        'Context preservation',
-        'Agent notifications',
-        'Seamless transitions'
-      ]
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and optimize your chatbot.',
-      icon: '📊',
-      benefits: [
-        'Conversation analytics',
-        'User satisfaction tracking',
-        'Performance metrics',
-        'Optimization suggestions'
+        'Download tracking'
       ]
     }
   ];
 
-  const useCases = [
+  const appTypes = [
     {
-      industry: 'E-commerce',
-      title: 'Customer Support',
-      description: 'Handle product inquiries, order tracking, and returns with 24/7 availability.',
-      metrics: ['80% query resolution', '60% cost reduction', '24/7 availability']
+      type: 'E-commerce App',
+      description: 'Complete online store with shopping cart, payments, and inventory',
+      price: '$399/month',
+      features: ['Product catalog', 'Shopping cart', 'Payment integration', 'Order management', 'Inventory tracking']
     },
     {
-      industry: 'Healthcare',
-      title: 'Patient Assistance',
-      description: 'Provide appointment scheduling, symptom checking, and basic health information.',
-      metrics: ['90% appointment accuracy', '50% call volume reduction', 'HIPAA compliant']
+      type: 'Social Media App',
+      description: 'Social networking platform with feeds, messaging, and profiles',
+      price: '$599/month',
+      features: ['User profiles', 'News feeds', 'Messaging', 'Media sharing', 'Push notifications']
     },
     {
-      industry: 'Finance',
-      title: 'Banking Assistant',
-      description: 'Help with account inquiries, transaction history, and basic banking services.',
-      metrics: ['95% accuracy rate', '70% self-service', 'Secure transactions']
+      type: 'Business App',
+      description: 'Professional business app with CRM, analytics, and team features',
+      price: '$499/month',
+      features: ['CRM integration', 'Analytics dashboard', 'Team collaboration', 'Document sharing', 'Meeting scheduler']
     },
     {
-      industry: 'Education',
-      title: 'Student Support',
-      description: 'Answer course questions, provide study materials, and assist with enrollment.',
-      metrics: ['85% query resolution', '40% staff workload reduction', '24/7 support']
+      type: 'Fitness App',
+      description: 'Health and fitness tracking with workouts, nutrition, and progress',
+      price: '$349/month',
+      features: ['Workout tracking', 'Nutrition logging', 'Progress charts', 'Goal setting', 'Social features']
+    },
+    {
+      type: 'Educational App',
+      description: 'Learning platform with courses, quizzes, and progress tracking',
+      price: '$449/month',
+      features: ['Course management', 'Quiz system', 'Progress tracking', 'Certificates', 'Video integration']
+    },
+    {
+      type: 'Custom App',
+      description: 'Fully customized app built to your specific requirements',
+      price: 'Custom pricing',
+      features: ['Custom features', 'Unique design', 'Special integrations', 'Dedicated support', 'SLA guarantee']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small businesses getting started with chatbots',
+      price: '$399/month',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 1,000 conversations/month',
+        '1 app included',
         'Basic templates',
-        'Website integration',
-        'Email support',
-        '1 chatbot included'
+        'Standard support',
+        'App store publishing',
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299/month',
+      price: '$799/month',
       description: 'Advanced features for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI training',
-        'Multi-channel deployment',
+        'Up to 3 apps',
+        'Premium templates',
         'Priority support',
-        'Up to 5 chatbots',
-        'Analytics dashboard',
-        'API access'
+        'Advanced analytics',
+        'Custom integrations',
+        'API access',
+        'White-label options'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799/month',
-      description: 'Complete chatbot solution for large organizations',
+      price: '$1,999/month',
+      description: 'Complete mobile app solution for large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI models',
-        'White-label solution',
+        'Unlimited apps',
+        'Custom development',
         'Dedicated support',
-        'Unlimited chatbots',
-        'Advanced analytics',
+        'Advanced security',
         'Custom integrations',
-        'SLA guarantee'
+        'SLA guarantee',
+        'On-premise deployment'
       ],
       popular: false
     }
@@ -149,38 +160,38 @@ const AIChatbotBuilderPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation." />
-        <meta name="keywords" content="ai chatbot, chatbot builder, conversational ai, customer support automation, nlp chatbot, no-code chatbot" />
+        <title>AI Mobile App Builder - Zion Tech Group</title>
+        <meta name="description" content="Build native mobile apps with AI assistance. Drag-and-drop interface, cross-platform support, and instant deployment. No coding required." />
+        <meta name="keywords" content="ai mobile app builder, no-code app development, cross-platform apps, mobile app development, app builder" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Chatbot Builder
+            AI Mobile App Builder
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation.
+            Build native mobile apps with AI assistance. Drag-and-drop interface, cross-platform support, and instant deployment. No coding required.
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-              <div className="text-gray-300">Query Resolution</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
+              <div className="text-gray-300">Faster Development</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-gray-300">Availability</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">No-Code</div>
+              <div className="text-gray-300">Required</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">Cross-Platform</div>
+              <div className="text-gray-300">Support</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">No-Code</div>
-              <div className="text-gray-300">Setup</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">AI Assistance</div>
             </div>
           </div>
 
@@ -208,10 +219,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful Chatbot Features
+            Powerful App Building Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {chatbotFeatures.map((feature, index) => (
+            {builderFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{feature.icon}</div>
@@ -232,27 +243,25 @@ const AIChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* App Types Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Use Cases
+            App Types & Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {appTypes.map((app, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                    {useCase.industry}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-2">{useCase.title}</h3>
-                  <p className="text-gray-600 text-sm">{useCase.description}</p>
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{app.type}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{app.description}</p>
+                  <div className="text-2xl font-bold text-green-600 mb-4">{app.price}</div>
                 </div>
-                <ul className="space-y-1">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center text-sm text-gray-600">
-                      <TrendingUp className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                      {metric}
+                <ul className="space-y-2">
+                  {app.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -266,29 +275,29 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our Chatbot Builder?
+            Why Choose AI Mobile App Builder?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bot className="w-8 h-8 text-white" />
+                <Smartphone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Conversations</h3>
-              <p className="text-gray-300">Advanced AI that understands context and provides natural, helpful responses.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Native Performance</h3>
+              <p className="text-gray-300">Build truly native apps with optimal performance and user experience.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Easy Setup</h3>
-              <p className="text-gray-300">Create and deploy chatbots in minutes with our no-code visual builder.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Rapid Development</h3>
+              <p className="text-gray-300">Build and deploy mobile apps in days, not months, with AI assistance.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart className="w-8 h-8 text-white" />
+                <Code className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Continuous Learning</h3>
-              <p className="text-gray-300">AI that learns from every conversation to improve responses and performance.</p>
+              <h3 className="text-xl font-bold text-white mb-4">No Coding Required</h3>
+              <p className="text-gray-300">Create professional mobile apps without any programming knowledge.</p>
             </div>
           </div>
         </div>
@@ -298,7 +307,7 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Simple, Transparent Pricing
+            Choose Your Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -325,7 +334,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI Chatbot Builder Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI Mobile App Builder Plan`}
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
@@ -344,10 +353,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Build Your AI Chatbot?
+            Ready to Build Your Mobile App?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Create intelligent chatbots that provide 24/7 customer support and drive engagement. No coding required.
+            Create professional mobile apps without coding. Start building today and launch in days, not months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -360,7 +369,7 @@ const AIChatbotBuilderPage: React.FC = () => {
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Start Free Trial
+              Start Building
             </a>
           </div>
         </div>
@@ -369,4 +378,4 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+export default AIMobileBuilderPage;

@@ -1,144 +1,155 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, MessageCircle, Bot, Zap, Users, BarChart } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Search, Target, BarChart, Zap, Globe } from 'lucide-react';
 
-const AIChatbotBuilderPage: React.FC = () => {
-  const chatbotFeatures = [
+const AISEOOptimizerPage: React.FC = () => {
+  const seoFeatures = [
     {
-      title: 'No-Code Builder',
-      description: 'Create intelligent chatbots with our drag-and-drop interface - no programming required.',
-      icon: '🛠️',
+      title: 'AI Keyword Research',
+      description: 'Discover high-value keywords and search opportunities using advanced AI analysis.',
+      icon: '🔍',
       benefits: [
-        'Visual conversation designer',
-        'Pre-built templates',
-        'Easy customization',
-        'Instant deployment'
+        'Long-tail keyword discovery',
+        'Competitor analysis',
+        'Search volume prediction',
+        'Difficulty scoring'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP that understands context, intent, and sentiment for natural conversations.',
-      icon: '🧠',
+      title: 'Content Optimization',
+      description: 'AI-powered content suggestions to improve rankings and user engagement.',
+      icon: '✍️',
       benefits: [
-        'Understands 50+ languages',
-        'Context-aware responses',
-        'Sentiment analysis',
-        'Intent recognition'
+        'Content gap analysis',
+        'Readability optimization',
+        'Keyword density analysis',
+        'Content structure suggestions'
       ]
     },
     {
-      title: 'Multi-Channel Deployment',
-      description: 'Deploy your chatbot across websites, social media, messaging apps, and more.',
-      icon: '🌐',
+      title: 'Technical SEO Audit',
+      description: 'Comprehensive technical analysis to identify and fix SEO issues.',
+      icon: '⚙️',
       benefits: [
-        'Website integration',
-        'Social media bots',
-        'WhatsApp integration',
-        'Slack/Teams support'
+        'Site speed optimization',
+        'Mobile responsiveness',
+        'Schema markup',
+        'Crawl error detection'
       ]
     },
     {
-      title: 'AI Training & Learning',
-      description: 'Chatbots that learn from every conversation to improve responses over time.',
-      icon: '📚',
+      title: 'Link Building Intelligence',
+      description: 'AI identifies high-quality link opportunities and outreach prospects.',
+      icon: '🔗',
       benefits: [
-        'Continuous learning',
-        'Performance analytics',
-        'Response optimization',
-        'User feedback integration'
+        'Link opportunity discovery',
+        'Domain authority analysis',
+        'Outreach automation',
+        'Link quality scoring'
       ]
     },
     {
-      title: 'Human Handoff',
-      description: 'Seamlessly transfer complex queries to human agents when needed.',
-      icon: '👥',
-      benefits: [
-        'Smart escalation',
-        'Context preservation',
-        'Agent notifications',
-        'Seamless transitions'
-      ]
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and optimize your chatbot.',
+      title: 'Ranking Tracking',
+      description: 'Monitor keyword rankings across search engines with detailed analytics.',
       icon: '📊',
       benefits: [
-        'Conversation analytics',
-        'User satisfaction tracking',
-        'Performance metrics',
-        'Optimization suggestions'
+        'Multi-engine tracking',
+        'Ranking history',
+        'Competitor monitoring',
+        'Performance alerts'
+      ]
+    },
+    {
+      title: 'Local SEO Optimization',
+      description: 'Optimize for local search with AI-powered location-based strategies.',
+      icon: '📍',
+      benefits: [
+        'Google My Business optimization',
+        'Local keyword targeting',
+        'Citation management',
+        'Review monitoring'
       ]
     }
   ];
 
-  const useCases = [
+  const seoPackages = [
     {
-      industry: 'E-commerce',
-      title: 'Customer Support',
-      description: 'Handle product inquiries, order tracking, and returns with 24/7 availability.',
-      metrics: ['80% query resolution', '60% cost reduction', '24/7 availability']
+      type: 'Basic SEO',
+      description: 'Essential SEO optimization for small websites',
+      price: '$129/month',
+      features: ['Keyword research', 'On-page optimization', 'Basic analytics', 'Monthly reports', 'Email support']
     },
     {
-      industry: 'Healthcare',
-      title: 'Patient Assistance',
-      description: 'Provide appointment scheduling, symptom checking, and basic health information.',
-      metrics: ['90% appointment accuracy', '50% call volume reduction', 'HIPAA compliant']
+      type: 'Advanced SEO',
+      description: 'Comprehensive SEO strategy for growing businesses',
+      price: '$299/month',
+      features: ['Advanced keyword research', 'Technical SEO audit', 'Content optimization', 'Link building', 'Competitor analysis', 'Priority support']
     },
     {
-      industry: 'Finance',
-      title: 'Banking Assistant',
-      description: 'Help with account inquiries, transaction history, and basic banking services.',
-      metrics: ['95% accuracy rate', '70% self-service', 'Secure transactions']
+      type: 'Enterprise SEO',
+      description: 'Complete SEO solution for large organizations',
+      price: '$599/month',
+      features: ['Custom SEO strategy', 'Advanced analytics', 'White-label reports', 'Dedicated support', 'Custom integrations', 'SLA guarantee']
     },
     {
-      industry: 'Education',
-      title: 'Student Support',
-      description: 'Answer course questions, provide study materials, and assist with enrollment.',
-      metrics: ['85% query resolution', '40% staff workload reduction', '24/7 support']
+      type: 'E-commerce SEO',
+      description: 'Specialized SEO for online stores',
+      price: '$399/month',
+      features: ['Product optimization', 'Category SEO', 'Schema markup', 'Image optimization', 'Conversion tracking', 'Shopping feed optimization']
+    },
+    {
+      type: 'Local SEO',
+      description: 'Location-based SEO for local businesses',
+      price: '$199/month',
+      features: ['Google My Business', 'Local citations', 'Review management', 'Local keywords', 'Map optimization', 'Local analytics']
+    },
+    {
+      type: 'Content SEO',
+      description: 'Content-focused SEO strategy',
+      price: '$249/month',
+      features: ['Content strategy', 'Topic research', 'Content optimization', 'Internal linking', 'Content performance', 'Editorial calendar']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small businesses getting started with chatbots',
+      price: '$129/month',
+      description: 'Perfect for small websites and blogs',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic templates',
-        'Website integration',
-        'Email support',
-        '1 chatbot included'
+        'Up to 10 pages',
+        'Basic keyword research',
+        'On-page optimization',
+        'Monthly reports',
+        'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
       price: '$299/month',
-      description: 'Advanced features for growing businesses',
+      description: 'Advanced SEO for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI training',
-        'Multi-channel deployment',
+        'Up to 100 pages',
+        'Advanced keyword research',
+        'Technical SEO audit',
+        'Content optimization',
+        'Link building',
         'Priority support',
-        'Up to 5 chatbots',
-        'Analytics dashboard',
-        'API access'
+        'Competitor analysis'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799/month',
-      description: 'Complete chatbot solution for large organizations',
+      price: '$599/month',
+      description: 'Complete SEO solution for large organizations',
       features: [
-        'Unlimited conversations',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Unlimited chatbots',
+        'Unlimited pages',
+        'Custom SEO strategy',
         'Advanced analytics',
+        'White-label reports',
+        'Dedicated support',
         'Custom integrations',
         'SLA guarantee'
       ],
@@ -149,38 +160,38 @@ const AIChatbotBuilderPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation." />
-        <meta name="keywords" content="ai chatbot, chatbot builder, conversational ai, customer support automation, nlp chatbot, no-code chatbot" />
+        <title>AI SEO Optimizer - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered SEO optimization with keyword research, content optimization, and technical analysis. Boost your search rankings and organic traffic." />
+        <meta name="keywords" content="ai seo, seo optimization, keyword research, content optimization, technical seo, search engine optimization" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Chatbot Builder
+            AI SEO Optimizer
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation.
+            Advanced AI-powered SEO optimization with keyword research, content optimization, and technical analysis. Boost your search rankings and organic traffic.
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-              <div className="text-gray-300">Query Resolution</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+              <div className="text-gray-300">Traffic Increase</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-gray-300">Availability</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">85%</div>
+              <div className="text-gray-300">Ranking Improvement</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">50%</div>
+              <div className="text-gray-300">Time Saved</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">No-Code</div>
-              <div className="text-gray-300">Setup</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Monitoring</div>
             </div>
           </div>
 
@@ -208,10 +219,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful Chatbot Features
+            AI-Powered SEO Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {chatbotFeatures.map((feature, index) => (
+            {seoFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{feature.icon}</div>
@@ -232,27 +243,25 @@ const AIChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* SEO Packages Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Use Cases
+            SEO Packages & Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {seoPackages.map((pkg, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                    {useCase.industry}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-2">{useCase.title}</h3>
-                  <p className="text-gray-600 text-sm">{useCase.description}</p>
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{pkg.type}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
+                  <div className="text-2xl font-bold text-green-600 mb-4">{pkg.price}</div>
                 </div>
-                <ul className="space-y-1">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center text-sm text-gray-600">
-                      <TrendingUp className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                      {metric}
+                <ul className="space-y-2">
+                  {pkg.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -266,29 +275,29 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our Chatbot Builder?
+            Why Choose AI SEO Optimizer?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bot className="w-8 h-8 text-white" />
+                <Search className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Conversations</h3>
-              <p className="text-gray-300">Advanced AI that understands context and provides natural, helpful responses.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Intelligent Analysis</h3>
+              <p className="text-gray-300">AI analyzes your website and competitors to identify the best SEO opportunities.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Easy Setup</h3>
-              <p className="text-gray-300">Create and deploy chatbots in minutes with our no-code visual builder.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Precise Targeting</h3>
+              <p className="text-gray-300">Target the right keywords and audiences for maximum SEO impact and ROI.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Continuous Learning</h3>
-              <p className="text-gray-300">AI that learns from every conversation to improve responses and performance.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Continuous Optimization</h3>
+              <p className="text-gray-300">AI continuously monitors and optimizes your SEO strategy for better results.</p>
             </div>
           </div>
         </div>
@@ -298,7 +307,7 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Simple, Transparent Pricing
+            Choose Your Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -325,7 +334,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI Chatbot Builder Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI SEO Optimizer Plan`}
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
@@ -344,10 +353,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Build Your AI Chatbot?
+            Ready to Dominate Search Rankings?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Create intelligent chatbots that provide 24/7 customer support and drive engagement. No coding required.
+            Let AI optimize your SEO strategy and drive more organic traffic to your website.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -360,7 +369,7 @@ const AIChatbotBuilderPage: React.FC = () => {
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Start Free Trial
+              Start Free Audit
             </a>
           </div>
         </div>
@@ -369,4 +378,4 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+export default AISEOOptimizerPage;

@@ -1,145 +1,156 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, MessageCircle, Bot, Zap, Users, BarChart } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Share2, Target, BarChart, Zap, Users } from 'lucide-react';
 
-const AIChatbotBuilderPage: React.FC = () => {
-  const chatbotFeatures = [
+const SocialMediaManagerPage: React.FC = () => {
+  const socialFeatures = [
     {
-      title: 'No-Code Builder',
-      description: 'Create intelligent chatbots with our drag-and-drop interface - no programming required.',
-      icon: '🛠️',
+      title: 'AI Content Generation',
+      description: 'Generate engaging social media content using AI analysis of trending topics and audience preferences.',
+      icon: '✍️',
       benefits: [
-        'Visual conversation designer',
-        'Pre-built templates',
-        'Easy customization',
-        'Instant deployment'
+        'Trending topic analysis',
+        'Content suggestions',
+        'Hashtag optimization',
+        'Platform-specific content'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP that understands context, intent, and sentiment for natural conversations.',
-      icon: '🧠',
+      title: 'Multi-Platform Management',
+      description: 'Manage all your social media accounts from one unified dashboard.',
+      icon: '📱',
       benefits: [
-        'Understands 50+ languages',
-        'Context-aware responses',
-        'Sentiment analysis',
-        'Intent recognition'
+        'Facebook integration',
+        'Twitter management',
+        'Instagram posting',
+        'LinkedIn automation'
       ]
     },
     {
-      title: 'Multi-Channel Deployment',
-      description: 'Deploy your chatbot across websites, social media, messaging apps, and more.',
-      icon: '🌐',
+      title: 'Smart Scheduling',
+      description: 'AI-powered scheduling that determines the optimal posting times for maximum engagement.',
+      icon: '⏰',
       benefits: [
-        'Website integration',
-        'Social media bots',
-        'WhatsApp integration',
-        'Slack/Teams support'
+        'Optimal timing analysis',
+        'Audience activity tracking',
+        'Automatic scheduling',
+        'Cross-platform coordination'
       ]
     },
     {
-      title: 'AI Training & Learning',
-      description: 'Chatbots that learn from every conversation to improve responses over time.',
-      icon: '📚',
-      benefits: [
-        'Continuous learning',
-        'Performance analytics',
-        'Response optimization',
-        'User feedback integration'
-      ]
-    },
-    {
-      title: 'Human Handoff',
-      description: 'Seamlessly transfer complex queries to human agents when needed.',
-      icon: '👥',
-      benefits: [
-        'Smart escalation',
-        'Context preservation',
-        'Agent notifications',
-        'Seamless transitions'
-      ]
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and optimize your chatbot.',
+      title: 'Engagement Analytics',
+      description: 'Comprehensive analytics to track performance and optimize your social media strategy.',
       icon: '📊',
       benefits: [
-        'Conversation analytics',
-        'User satisfaction tracking',
-        'Performance metrics',
-        'Optimization suggestions'
+        'Engagement tracking',
+        'Reach analysis',
+        'Follower growth',
+        'Performance insights'
+      ]
+    },
+    {
+      title: 'Community Management',
+      description: 'AI-powered community management with automated responses and sentiment analysis.',
+      icon: '👥',
+      benefits: [
+        'Automated responses',
+        'Sentiment analysis',
+        'Comment moderation',
+        'Community insights'
+      ]
+    },
+    {
+      title: 'Influencer Collaboration',
+      description: 'Find and collaborate with influencers using AI-powered matching and analytics.',
+      icon: '🌟',
+      benefits: [
+        'Influencer discovery',
+        'Audience matching',
+        'Campaign tracking',
+        'ROI analysis'
       ]
     }
   ];
 
-  const useCases = [
+  const socialTypes = [
     {
-      industry: 'E-commerce',
-      title: 'Customer Support',
-      description: 'Handle product inquiries, order tracking, and returns with 24/7 availability.',
-      metrics: ['80% query resolution', '60% cost reduction', '24/7 availability']
+      type: 'Content Creation',
+      description: 'AI-powered content generation and optimization',
+      price: '$45/month',
+      features: ['Content generation', 'Hashtag research', 'Trend analysis', 'A/B testing']
     },
     {
-      industry: 'Healthcare',
-      title: 'Patient Assistance',
-      description: 'Provide appointment scheduling, symptom checking, and basic health information.',
-      metrics: ['90% appointment accuracy', '50% call volume reduction', 'HIPAA compliant']
+      type: 'Scheduling & Publishing',
+      description: 'Automated posting and scheduling across platforms',
+      price: '$35/month',
+      features: ['Multi-platform posting', 'Optimal timing', 'Content calendar', 'Bulk scheduling']
     },
     {
-      industry: 'Finance',
-      title: 'Banking Assistant',
-      description: 'Help with account inquiries, transaction history, and basic banking services.',
-      metrics: ['95% accuracy rate', '70% self-service', 'Secure transactions']
+      type: 'Analytics & Reporting',
+      description: 'Comprehensive social media analytics and reporting',
+      price: '$55/month',
+      features: ['Performance tracking', 'Engagement metrics', 'Custom reports', 'Competitor analysis']
     },
     {
-      industry: 'Education',
-      title: 'Student Support',
-      description: 'Answer course questions, provide study materials, and assist with enrollment.',
-      metrics: ['85% query resolution', '40% staff workload reduction', '24/7 support']
+      type: 'Community Management',
+      description: 'AI-powered community engagement and management',
+      price: '$65/month',
+      features: ['Automated responses', 'Sentiment analysis', 'Comment moderation', 'Community insights']
+    },
+    {
+      type: 'Influencer Marketing',
+      description: 'Influencer discovery and collaboration management',
+      price: '$75/month',
+      features: ['Influencer discovery', 'Audience matching', 'Campaign tracking', 'ROI analysis']
+    },
+    {
+      type: 'Full Social Suite',
+      description: 'Complete social media management solution',
+      price: '$149/month',
+      features: ['All features', 'Advanced analytics', 'Custom models', 'Priority support']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small businesses getting started with chatbots',
+      price: '$45/month',
+      description: 'Perfect for small businesses getting started with social media',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic templates',
-        'Website integration',
+        'Up to 3 social accounts',
+        'Basic content generation',
+        'Simple scheduling',
         'Email support',
-        '1 chatbot included'
+        '1 user included'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299/month',
+      price: '$149/month',
       description: 'Advanced features for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI training',
-        'Multi-channel deployment',
+        'Up to 10 social accounts',
+        'Advanced AI features',
+        'Full analytics suite',
         'Priority support',
-        'Up to 5 chatbots',
-        'Analytics dashboard',
-        'API access'
+        'Up to 5 users',
+        'API access',
+        'Custom branding'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799/month',
-      description: 'Complete chatbot solution for large organizations',
+      price: '$399/month',
+      description: 'Complete social media management for large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited accounts',
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
-        'Unlimited chatbots',
-        'Advanced analytics',
-        'Custom integrations',
+        'Unlimited users',
+        'Advanced integrations',
         'SLA guarantee'
       ],
       popular: false
@@ -149,38 +160,38 @@ const AIChatbotBuilderPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation." />
-        <meta name="keywords" content="ai chatbot, chatbot builder, conversational ai, customer support automation, nlp chatbot, no-code chatbot" />
+        <title>AI Social Media Manager - Zion Tech Group</title>
+        <meta name="description" content="AI-powered social media management with content generation, scheduling, analytics, and community management. Grow your social presence." />
+        <meta name="keywords" content="ai social media manager, social media automation, content generation, social media analytics, community management, influencer marketing" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Chatbot Builder
+            AI Social Media Manager
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create intelligent chatbots with no coding required. Advanced NLP, multi-channel deployment, and 24/7 customer support automation.
+            AI-powered social media management with content generation, scheduling, analytics, and community management. Grow your social presence.
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-              <div className="text-gray-300">Query Resolution</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+              <div className="text-gray-300">Engagement Boost</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-gray-300">Availability</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
+              <div className="text-gray-300">Time Saved</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">Multi-Platform</div>
+              <div className="text-gray-300">Management</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">No-Code</div>
-              <div className="text-gray-300">Setup</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">AI Automation</div>
             </div>
           </div>
 
@@ -208,10 +219,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful Chatbot Features
+            AI-Powered Social Media Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {chatbotFeatures.map((feature, index) => (
+            {socialFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{feature.icon}</div>
@@ -232,27 +243,25 @@ const AIChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Social Types Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Use Cases
+            Social Media Types & Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {socialTypes.map((social, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                    {useCase.industry}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-2">{useCase.title}</h3>
-                  <p className="text-gray-600 text-sm">{useCase.description}</p>
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{social.type}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{social.description}</p>
+                  <div className="text-2xl font-bold text-green-600 mb-4">{social.price}</div>
                 </div>
-                <ul className="space-y-1">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center text-sm text-gray-600">
-                      <TrendingUp className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                      {metric}
+                <ul className="space-y-2">
+                  {social.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -266,29 +275,29 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our Chatbot Builder?
+            Why Choose AI Social Media Manager?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bot className="w-8 h-8 text-white" />
+                <Share2 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Conversations</h3>
-              <p className="text-gray-300">Advanced AI that understands context and provides natural, helpful responses.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Intelligent Content</h3>
+              <p className="text-gray-300">AI generates engaging content that resonates with your audience and drives engagement.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Easy Setup</h3>
-              <p className="text-gray-300">Create and deploy chatbots in minutes with our no-code visual builder.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Multi-Platform Management</h3>
+              <p className="text-gray-300">Manage all your social media accounts from one unified dashboard with AI optimization.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Continuous Learning</h3>
-              <p className="text-gray-300">AI that learns from every conversation to improve responses and performance.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Automated Engagement</h3>
+              <p className="text-gray-300">AI handles community management, responses, and engagement to keep your audience active.</p>
             </div>
           </div>
         </div>
@@ -298,7 +307,7 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Simple, Transparent Pricing
+            Choose Your Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -325,7 +334,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI Chatbot Builder Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} AI Social Media Manager Plan`}
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
@@ -344,10 +353,10 @@ const AIChatbotBuilderPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Build Your AI Chatbot?
+            Ready to Grow Your Social Media Presence?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Create intelligent chatbots that provide 24/7 customer support and drive engagement. No coding required.
+            Let AI help you create engaging content, manage your accounts, and grow your social media following.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -369,4 +378,4 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+export default SocialMediaManagerPage;
