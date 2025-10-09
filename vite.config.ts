@@ -4,15 +4,15 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
+  root: '.',
+  publicDir: './public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
+      '@': resolve(__dirname, './app'),
+      '@components': resolve(__dirname, './app/components'),
+      '@utils': resolve(__dirname, './app/utils'),
+      '@hooks': resolve(__dirname, './app/hooks'),
+      '@types': resolve(__dirname, './app/types'),
     },
   },
   build: {
@@ -20,6 +20,9 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
