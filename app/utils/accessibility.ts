@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Accessibility Utilities
  * WCAG 2.1 Level AA compliance helpers

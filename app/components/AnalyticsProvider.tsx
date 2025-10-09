@@ -1,4 +1,52 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
+=======
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+import { logger } from '../utils/logger';
+
+interface AnalyticsEvent {
+  event: string;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+}
+
+interface AnalyticsContextType {
+  trackEvent: (event: AnalyticsEvent) => void;
+  trackPageView: (page: string) => void;
+  trackPerformance: (metric: string, value: number) => void;
+  trackError: (error: Error, context?: string) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined
+);
+
+export const useAnalytics = () => {
+  const _context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+  googleAnalyticsId?: string;
+  enableDebug?: boolean;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+  googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID,
+  enableDebug = process.env['NODE_ENV'] === 'development',
+}) => {
+  const [isInitialized, setIsInitialized] = useState(false);
+>>>>>>> pr-26771
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -88,10 +136,18 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     trackPageView();
     trackInteractions();
 
+<<<<<<< HEAD
     // Track route changes (for SPA)
     const handleRouteChange = () => {
       trackPageView();
     };
+=======
+    if (enableDebug) {
+       
+      // eslint-disable-next-line no-console
+      console.error('Analytics Error:', error, context);
+    }
+>>>>>>> pr-26771
 
     window.addEventListener('popstate', handleRouteChange);
 

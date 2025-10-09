@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface PromotionBanner {
   id: string;
@@ -122,7 +124,7 @@ const ContentPromotionBanner: React.FC = () => {
 
               {/* CTA Button */}
               <Link
-                to={banner.ctaLink}
+                href={banner.ctaLink}
                 className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 {banner.ctaText}

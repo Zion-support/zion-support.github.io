@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface BlogPost {
   id: string;
@@ -208,7 +210,7 @@ const DynamicContentShowcase: React.FC = () => {
                   </div>
                   
                   <Link
-                    to={post.path}
+                    href={post.path}
                     className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium"
                   >
                     Read Full Article
@@ -260,7 +262,7 @@ const DynamicContentShowcase: React.FC = () => {
                   </div>
                   
                   <Link
-                    to={post.path}
+                    href={post.path}
                     className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
                   >
                     Read More
@@ -286,13 +288,13 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
             <div className="space-x-4">
               <Link
-                to="/blog"
+                href="/blog"
                 className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 View All Articles
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
               >
                 Get Custom Insights

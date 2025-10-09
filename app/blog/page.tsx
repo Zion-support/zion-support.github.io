@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+=======
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+>>>>>>> pr-26771
 import ContentPreviewCard from '../components/ContentPreviewCard';
 
 interface BlogPost {
@@ -232,7 +239,7 @@ export default function BlogPage() {
               and breakthrough content delivered directly to your inbox.
             </p>
             <Link
-              to="/"
+              href="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
               Subscribe to Newsletter

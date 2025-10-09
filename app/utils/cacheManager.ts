@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Cache Manager
  * Provides in-memory and localStorage caching with TTL support

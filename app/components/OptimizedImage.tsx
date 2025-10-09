@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+'use client';
+
+import React, { useState, useCallback, memo } from 'react';
+>>>>>>> pr-26771
 
 interface OptimizedImageProps {
   src: string;

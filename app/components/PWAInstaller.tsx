@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+'use client';
+
+>>>>>>> pr-26771
 import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 
 export default function Page() {
@@ -85,7 +85,7 @@ export default function Page() {
               </p>
             </div>
             <Link
-              to='/contact'
+              href='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />

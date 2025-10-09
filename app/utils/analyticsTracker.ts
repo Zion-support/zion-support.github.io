@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors

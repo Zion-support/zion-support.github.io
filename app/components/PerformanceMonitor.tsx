@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { X } from 'lucide-react';
+=======
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { logger } from '../utils/logger';
+>>>>>>> pr-26771
 
 interface PerformanceMetrics {
   lcp: number | null;

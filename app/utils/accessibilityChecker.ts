@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Accessibility Checker Utility
  *
@@ -558,6 +560,7 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+<<<<<<< HEAD
     let report = `Accessibility Report\n`;
     report += `===================\n\n`;
     report += `Total Issues: ${this.issues.length}\n`;
@@ -583,3 +586,7 @@ export class AccessibilityChecker {
 export const accessibilityChecker = new AccessibilityChecker();
 // Export default
 export default AccessibilityChecker;
+=======
+
+    let report = `Accessibility Report\n`;
+>>>>>>> pr-26771

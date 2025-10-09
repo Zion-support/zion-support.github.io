@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -135,6 +136,12 @@ const Footer: React.FC = memo(() => {
   ];
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+import Link from 'next/link';
+
+export default function Footer() {
+>>>>>>> pr-26771
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
 =======
@@ -169,6 +176,7 @@ const Footer: React.FC = memo(() => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
 <<<<<<< HEAD
@@ -601,10 +609,47 @@ const Footer: React.FC = memo(() => {
               We respect your privacy. Unsubscribe at any time.
             </p>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
+=======
+          <div className="md:col-span-2">
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-2">⚡</span>
+              <h3 className="text-2xl font-bold">Zion Tech Group</h3>
+            </div>
+            <p className="text-gray-300 mb-4 max-w-md">
+              Leading provider of AI-powered enterprise solutions, digital transformation, and cutting-edge technology services.
+            </p>
+            <div className="text-sm text-gray-400">
+              <p>Phone: (302) 600-9898</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Middletown, DE 19709</p>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Solutions</Link></li>
+              <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
+              <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white">Autonomous Systems</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white">Cybersecurity</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link href="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
+            </ul>
+>>>>>>> pr-26771
           </div>
         </div>
-      </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Bottom Footer */}
@@ -668,10 +713,15 @@ const Footer: React.FC = memo(() => {
           </div>
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
+=======
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> pr-26771
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 });
 
 Footer.displayName = 'Footer';
@@ -685,3 +735,6 @@ export default Footer;
 =======
 export default Footer;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
+=======
+}
+>>>>>>> pr-26771

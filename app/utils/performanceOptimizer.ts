@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Performance optimization utilities for the Zion Tech Group website
  * Provides tools for monitoring and optimizing application performance

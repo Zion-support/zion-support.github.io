@@ -128,7 +128,12 @@ const QuantumComputingPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">          <div className="absolute inset-0 bg-black opacity-20"></div>
+=======
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+>>>>>>> pr-26771
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -141,7 +146,12 @@ const QuantumComputingPage: React.FC = () => {
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                   Explore Quantum Solutions
                 </button>
+<<<<<<< HEAD
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">                  Schedule Consultation
+=======
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                  Schedule Consultation
+>>>>>>> pr-26771
                 </button>
               </div>
             </div>
@@ -156,7 +166,12 @@ const QuantumComputingPage: React.FC = () => {
                 Why Choose Our Quantum Computing Services?
               </h2>
               <p className="text-xl text-gray-600">
+<<<<<<< HEAD
                 Leading quantum computing expertise with proven track record in enterprise applications              </p>
+=======
+                Leading quantum computing expertise with proven track record in enterprise applications
+              </p>
+>>>>>>> pr-26771
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -171,7 +186,12 @@ const QuantumComputingPage: React.FC = () => {
                   <Zap className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
+<<<<<<< HEAD
                 <p className="text-gray-600">Solve complex problems exponentially faster than classical computers</p>              </div>
+=======
+                <p className="text-gray-600">Solve complex problems exponentially faster than classical computers</p>
+              </div>
+>>>>>>> pr-26771
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
@@ -184,7 +204,12 @@ const QuantumComputingPage: React.FC = () => {
                   <Target className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+<<<<<<< HEAD
                 <p className="text-gray-600">Successful quantum implementations across multiple industries</p>              </div>
+=======
+                <p className="text-gray-600">Successful quantum implementations across multiple industries</p>
+              </div>
+>>>>>>> pr-26771
             </div>
           </div>
         </section>
@@ -198,7 +223,12 @@ const QuantumComputingPage: React.FC = () => {
                   {category} Services
                 </h2>
                 <p className="text-xl text-gray-600">
+<<<<<<< HEAD
                   Advanced {category.toLowerCase()} solutions powered by cutting-edge quantum technology                </p>
+=======
+                  Advanced {category.toLowerCase()} solutions powered by cutting-edge quantum technology
+                </p>
+>>>>>>> pr-26771
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {quantumServices
@@ -211,7 +241,12 @@ const QuantumComputingPage: React.FC = () => {
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                           <span className="text-2xl font-bold text-purple-600">{service.price}</span>                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+=======
+                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
+                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+>>>>>>> pr-26771
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates
@@ -234,7 +269,12 @@ const QuantumComputingPage: React.FC = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
+<<<<<<< HEAD
                             <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">                              {tech}
+=======
+                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
+                              {tech}
+>>>>>>> pr-26771
                             </span>
                           ))}
                         </div>
@@ -252,7 +292,12 @@ const QuantumComputingPage: React.FC = () => {
                         </ul>
                       </div>
 
+<<<<<<< HEAD
                       <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">                        Get Quantum Consultation
+=======
+                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                        Get Quantum Consultation
+>>>>>>> pr-26771
                       </button>
                     </div>
                   ))}
@@ -301,7 +346,12 @@ const QuantumComputingPage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
                 <BarChart className="w-12 h-12 text-pink-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Analytics</h3>
+<<<<<<< HEAD
                 <p className="text-gray-600">Advanced quantum data analysis and pattern recognition</p>              </div>
+=======
+                <p className="text-gray-600">Advanced quantum data analysis and pattern recognition</p>
+              </div>
+>>>>>>> pr-26771
             </div>
           </div>
         </section>
@@ -312,21 +362,41 @@ const QuantumComputingPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Explore Quantum Computing?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl mb-8 text-purple-100">              Contact our quantum computing experts for a free consultation and custom quantum strategy
+=======
+            <p className="text-xl mb-8 text-purple-100">
+              Contact our quantum computing experts for a free consultation and custom quantum strategy
+>>>>>>> pr-26771
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
+<<<<<<< HEAD
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"              >
+=======
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+              >
+>>>>>>> pr-26771
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
+<<<<<<< HEAD
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"              >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
             <div className="mt-8 text-sm text-purple-200">              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                ✉️ kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="mt-8 text-sm text-purple-200">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+>>>>>>> pr-26771
             </div>
           </div>
         </section>

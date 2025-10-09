@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications

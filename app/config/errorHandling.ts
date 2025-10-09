@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings

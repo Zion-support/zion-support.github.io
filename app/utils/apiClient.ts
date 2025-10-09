@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Enhanced API Client with retry logic, caching, and error handling
  */
