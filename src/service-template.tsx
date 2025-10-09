@@ -3,16 +3,11 @@ import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star } from 'lucide-react';
 
 interface ServicePageProps {
   title: string;
   description: string;
-<<<<<<< HEAD
   icon: React.ComponentType<{ className?: string }>;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
   services: Array<{
     title: string;
     description: string;

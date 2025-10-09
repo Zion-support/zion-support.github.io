@@ -67,6 +67,7 @@ class PerformanceMonitoringService {
     }
     try {
       // Observe paint metrics (FCP)
+      const paintObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
@@ -86,6 +87,7 @@ class PerformanceMonitoringService {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver);
       // Observe CLS
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
@@ -128,7 +130,7 @@ class PerformanceMonitoringService {
       rating,
       timestamp: Date.now()
     };
-    this.webVitals[name] = metric;
+    this._webVitals[name] = metric;
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
     // Send to analytics
     this.sendToAnalytics(metric);
@@ -188,7 +190,7 @@ class PerformanceMonitoringService {
    * Get all Web Vitals
    */
   getWebVitals(): WebVitals {
-    return { ...this.webVitals };
+    return { ...this._webVitals };
   }
   /**
    * Get custom metrics
@@ -200,7 +202,7 @@ class PerformanceMonitoringService {
    * Get performance score (0-100)
    */
   getPerformanceScore(): number {
-    const vitals = Object.values(this.webVitals);
+    const vitals = Object.values(this._webVitals);
     if (vitals.length === 0) return 0;
     const scores = vitals.map(metric => {
       switch (metric.rating) {
@@ -224,24 +226,24 @@ class PerformanceMonitoringService {
     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
     // Generate recommendations based on metrics
-    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
+    if (this._webVitals.FCP && this._webVitals.FCP.rating !== 'good') {
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');
     }
-    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
+    if (this._webVitals.LCP && this._webVitals.LCP.rating !== 'good') {
       recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');
     }
-    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
+    if (this._webVitals.CLS && this._webVitals.CLS.rating !== 'good') {
       recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');
     }
-    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
+    if (this._webVitals.FID && this._webVitals.FID.rating !== 'good') {
       recommendations.push('Improve First Input Delay by reducing JavaScript execution time');
     }
-    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
+    if (this._webVitals.TTFB && this._webVitals.TTFB.rating !== 'good') {
       recommendations.push('Improve Time to First Byte by optimizing server response time');
     }
     return {
       score,
-      webVitals: this.webVitals,
+      webVitals: this._webVitals,
       customMetrics: this.customMetrics,
       recommendations
     };
@@ -296,7 +298,7 @@ class PerformanceMonitoringService {
    * Clear all metrics
    */
   clearMetrics(): void {
-    this.webVitals = {};
+    this._webVitals = {};
     this.customMetrics = [];
   }
   /**
@@ -308,4 +310,41 @@ class PerformanceMonitoringService {
   }
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
+
+// Export individual functions for easier testing
+export const recordMetric = (name: string, value: number, unit: CustomMetric['unit'] = 'ms') => {
+  performanceMonitoring.recordCustomMetric(name, value, unit);
+};
+
+export const getMetrics = () => {
+  return performanceMonitoring.getCustomMetrics();
+};
+
+export const clearMetrics = () => {
+  performanceMonitoring.clearMetrics();
+};
+
+export const measureFunction = <T>(name: string, fn: () => T): T => {
+  return performanceMonitoring.measureFunction(name, fn);
+};
+
+export const measureAsyncFunction = <T>(name: string, fn: () => Promise<T>): Promise<T> => {
+  return performanceMonitoring.measureAsyncFunction(name, fn);
+};
+
+export const getPerformanceScore = () => {
+  return performanceMonitoring.getPerformanceScore();
+};
+
+export const getRecommendations = () => {
+  return performanceMonitoring.getSummary().recommendations;
+};
+
+export enum MetricUnit {
+  Milliseconds = 'ms',
+  Bytes = 'bytes',
+  Count = 'count',
+  Percentage = 'percentage'
+}
+
 export default PerformanceMonitoringService;

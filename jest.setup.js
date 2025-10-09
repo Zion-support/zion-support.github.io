@@ -2,6 +2,9 @@
 require('@testing-library/jest-dom');
 const { TextEncoder, TextDecoder } = require('util');
 
+// Store original console methods
+const _originalError = console.error;
+
 // Polyfills for Node.js environment
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
