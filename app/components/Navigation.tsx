@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, Users, Palette, Music, Heart, Globe, Building } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, Users, Palette, Music, Heart, Globe, Building, Truck, Stethoscope, GraduationCap, Plane, Calendar, Briefcase } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +42,25 @@ const Navigation: React.FC = () => {
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Building },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: GraduationCap },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: Plane },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant', icon: Globe },
+    { name: 'AI Insurance Analyzer', href: '/ai-insurance-analyzer', icon: Shield },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Building },
+    { name: 'AI Event Planner', href: '/ai-event-planner', icon: Calendar },
+    { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager', icon: DollarSign },
+    { name: 'AI Home Automation', href: '/ai-home-automation', icon: Home },
+    { name: 'AI Language Learning', href: '/ai-language-learning', icon: MessageSquare },
+    { name: 'AI Mental Health Coach', href: '/ai-mental-health-coach', icon: Heart },
+    { name: 'AI Pet Care Assistant', href: '/ai-pet-care-assistant', icon: Heart },
+    { name: 'AI Wedding Planner', href: '/ai-wedding-planner', icon: Heart },
+    { name: 'AI Stock Trader', href: '/ai-stock-trader', icon: TrendingUp },
+    { name: 'AI Job Search Assistant', href: '/ai-job-search-assistant', icon: Briefcase },
+    { name: 'AI Dating Coach', href: '/ai-dating-coach', icon: Heart },
   ];
 
   const aiServices = [
@@ -53,6 +72,16 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions', icon: Box },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Globe },
+    { name: 'AI Biotechnology', href: '/ai-biotechnology', icon: Stethoscope },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
+    { name: 'AI Digital Twin', href: '/ai-digital-twin', icon: Box },
   ];
 
   const itServices = [
@@ -68,6 +97,21 @@ const Navigation: React.FC = () => {
     { name: 'IT Support', href: '/it-support', icon: Users },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
     { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu },
+    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development', icon: Car },
+    { name: 'Metaverse Development', href: '/metaverse-development', icon: Box },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Cpu },
+    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions', icon: Globe },
+    { name: 'Space Technology Services', href: '/space-technology-services', icon: Globe },
+    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions', icon: Stethoscope },
+    { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems', icon: Settings },
+    { name: 'Digital Twin Development', href: '/digital-twin-development', icon: Box },
+    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity', icon: Shield },
+    { name: 'Smart City Solutions', href: '/smart-city-solutions', icon: Building },
+    { name: 'FinTech Solutions', href: '/fintech-solutions', icon: DollarSign },
+    { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure', icon: Stethoscope },
+    { name: 'EdTech Solutions', href: '/edtech-solutions', icon: GraduationCap },
+    { name: 'RetailTech Solutions', href: '/retailtech-solutions', icon: Building },
   ];
 
   const handlePhoneClick = () => {
@@ -77,81 +121,14 @@ const Navigation: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
-=======
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'
     }`}>
->>>>>>> main
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-<<<<<<< HEAD
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
-            <span className="text-3xl mr-2">⚡</span>
-            Zion Tech Group
-          </Link>
-
-          {/* Contact Info - Desktop */}
-          <div className="hidden lg:flex items-center space-x-6 text-sm">
-            <div className="flex items-center text-gray-300">
-              <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-              <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex items-center text-gray-300">
-              <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
-              >
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-lg shadow-xl border py-6 z-50">
-                  <div className="grid grid-cols-4 gap-6 px-6">
-                    {/* Core Services */}
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">Core Services</h3>
-                      <div className="space-y-2">
-                        <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          All Services
-                        </Link>
-                        <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Micro SAAS Solutions
-                        </Link>
-                        <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Services
-                        </Link>
-                        <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          IT Services
-                        </Link>
-                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Cybersecurity
-                        </Link>
-=======
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
@@ -224,7 +201,7 @@ const Navigation: React.FC = () => {
                     <div>
                       <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
                       <div className="grid grid-cols-1 gap-1">
-                        {itServices.map((service) => (
+                        {itServices.slice(0, 4).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -234,113 +211,10 @@ const Navigation: React.FC = () => {
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
->>>>>>> main
-                      </div>
-                    </div>
-
-                    {/* AI Solutions */}
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">AI Solutions</h3>
-                      <div className="space-y-2">
-                        <Link to="/ai-marketing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Marketing
-                        </Link>
-                        <Link to="/ai-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Automation
-                        </Link>
-                        <Link to="/ai-healthcare" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Healthcare
-                        </Link>
-                        <Link to="/ai-fintech" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Fintech
-                        </Link>
-                        <Link to="/ai-data-analytics" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Data Analytics
-                        </Link>
-                        <Link to="/ai-cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Cybersecurity
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Advanced Technologies */}
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">Advanced Tech</h3>
-                      <div className="space-y-2">
-                        <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Quantum Computing
-                        </Link>
-                        <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Autonomous Systems
-                        </Link>
-                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Blockchain & Web3
-                        </Link>
-                        <Link to="/iot-edge-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          IoT & Edge Computing
-                        </Link>
-                        <Link to="/business-intelligence" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Business Intelligence
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Specialized Services */}
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">Specialized</h3>
-                      <div className="space-y-2">
-                        <Link to="/ai-workflow-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Workflow Automation
-                        </Link>
-                        <Link to="/ai-cloud-infrastructure" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Cloud Infrastructure
-                        </Link>
-                        <Link to="/ai-ecommerce-solutions" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI E-commerce Solutions
-                        </Link>
-                        <Link to="/ai-mobile-app-development" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          AI Mobile App Development
-                        </Link>
-                        <Link to="/services-advertising" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
-                          Advertising Services
-                        </Link>
                       </div>
                     </div>
                   </div>
                   
-<<<<<<< HEAD
-                  {/* CTA Section */}
-                  <div className="mt-6 pt-6 border-t border-gray-200 px-6">
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-600">
-                        Need help choosing the right solution?
-                      </div>
-                      <Link 
-                        to="/contact" 
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center"
-                      >
-                        Get Free Consultation
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Case Studies
-            </Link>
-            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Enterprise
-            </Link>
-            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Team
-            </Link>
-            <Link to="/contact" className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium">
-              Contact
-            </Link>
-=======
                   <div className="mt-4 pt-4 border-t border-gray-600">
                     <a
                       href="/services"
@@ -359,112 +233,23 @@ const Navigation: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+              onClick={handlePhoneClick}
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>
             </a>
->>>>>>> main
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
-            className="lg:hidden text-gray-300 hover:text-cyan-400"
-=======
             className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-            aria-label="Toggle menu"
->>>>>>> main
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden py-4 border-t border-cyan-500/20">
-            <div className="flex flex-col space-y-4">
-              {/* Contact Info - Mobile */}
-              <div className="space-y-3 pb-4 border-b border-cyan-500/20">
-                <div className="flex items-center text-gray-300">
-                  <Phone className="w-4 h-4 mr-3 text-cyan-400" />
-                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Mail className="w-4 h-4 mr-3 text-cyan-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-              </div>
-
-              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-                Home
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-                About
-              </Link>
-              
-              {/* Services Section */}
-              <div className="space-y-2">
-                <div className="text-gray-300 font-semibold text-lg">Services</div>
-                <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    IT Services
-                  </Link>
-                  <Link to="/ai-marketing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    AI Marketing
-                  </Link>
-                  <Link to="/ai-automation" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    AI Automation
-                  </Link>
-                  <Link to="/ai-healthcare" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    AI Healthcare
-                  </Link>
-                  <Link to="/ai-fintech" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    AI Fintech
-                  </Link>
-                  <Link to="/quantum-computing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    Quantum Computing
-                  </Link>
-                  <Link to="/autonomous-systems" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    Autonomous Systems
-                  </Link>
-                  <Link to="/blockchain-web3" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    Blockchain & Web3
-                  </Link>
-                  <Link to="/cybersecurity" className="block text-gray-400 hover:text-cyan-400 transition-colors">
-                    Cybersecurity
-                  </Link>
-                </div>
-              </div>
-              
-              <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-                Case Studies
-              </Link>
-              <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-                Enterprise
-              </Link>
-              <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-                Team
-              </Link>
-              <Link to="/contact" className="bg-cyan-600 text-white px-6 py-3 rounded-lg hover:bg-cyan-700 transition-colors font-medium text-center">
-                Contact Us
-              </Link>
-=======
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
@@ -472,7 +257,7 @@ const Navigation: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   <item.icon className="w-5 h-5" />
@@ -480,7 +265,7 @@ const Navigation: React.FC = () => {
                 </a>
               ))}
               
-              {/* Mobile Services Section */}
+              {/* Mobile Services */}
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
                 <div className="grid grid-cols-1 gap-2">
@@ -488,7 +273,7 @@ const Navigation: React.FC = () => {
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
@@ -497,52 +282,18 @@ const Navigation: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
-              <div className="pt-4 border-t border-gray-600">
-                <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {aiServices.slice(0, 4).map((service) => (
-                    <a
-                      key={service.name}
-                      href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span className="text-sm">{service.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="pt-4 border-t border-gray-600">
-                <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {itServices.map((service) => (
-                    <a
-                      key={service.name}
-                      href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span className="text-sm">{service.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-              
+
+              {/* Mobile Contact */}
               <div className="pt-4 border-t border-gray-600">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
+                  className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg transition-all duration-300"
+                  onClick={handlePhoneClick}
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
->>>>>>> main
             </div>
           </div>
         )}
