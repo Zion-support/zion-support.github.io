@@ -1,22 +1,36 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   const { amount, currency = 'usd' } = req.body || {};
 
-  if (!amount) {/* TODO: Fix JSX expression */}
-  r: 'Amount is required' });
+  if (!amount) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
     return;
   }
 
-  try {/* TODO: Fix JSX expression */}
+  try {
+    const paymentIntent = {
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      amount,
+      currency,
+      status: 'requires_payment_method'
     };
 
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Failed to create payment intent' });
+  } catch (error) {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
 
