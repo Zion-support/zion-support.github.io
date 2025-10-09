@@ -1,48 +1,42 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react;
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: any,
+    r: any, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
   enableReporting?: boolean;
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  hasError: any,
+    d: any;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
+  constructor(props: any,
+    r: any,
+      error: any,
+      errorInfo: any,
+      errorId: any,;
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
+  static getDerivedStateFromError(error: any,
+    r: any,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      errorId: any{Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: any, errorInfo: any{
     this.setState({
       error,
-      errorInfo,
+      errorInfo,);
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {';
+      console.error('Error Boundary caught an error: any, error, errorInfo);
     }
 
     // Report error to monitoring service
@@ -54,17 +48,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.props.onError?.(error, errorInfo);
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const _errorReport = {
-      errorId: this.state.errorId,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+  private reportError = (error: any, errorInfo: any,
+    d: any,
+      message: any,
+      stack: any,
+      componentStack: any,
+      timestamp: any,;
+      userAgent: any,;
+      url: any,;
+      userId: any,;
+      sessionId: any,;
     };
 
     // Send to error reporting service
@@ -73,36 +66,38 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-        },
+        description: any,
+        fatal: any,
+        custom_map: any,
+    d: any,
+}
+        }
+        },);
       });
     }
   };
 
-  private sendErrorReport = (errorReport: any) => {
-    // In a real application, you would send this to your error reporting service
-    // For now, we'll just log it
-    console.log('Error Report:', errorReport);
+  private sendErrorReport = (errorReport: any) => {;
+    // In a real application, you would send this to your error reporting service';
+    // For now, we'll just log it;
+    console.log('Error Report: any, errorReport);
 
-    // Example: Send to Sentry, LogRocket, or custom endpoint
+    // Example: any, LogRocket, or custom endpoint
     // fetch('/api/errors', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(errorReport),
+    //   method: any,
+    //   headers: any{ 'Content-Type': 'application/json' },);
+    //   body: any,
     // }).catch(console.error);
   };
 
-  private getUserId = (): string | null => {
-    // Get user ID from your auth system
+  private getUserId = (): string | null => {;
+    // Get user ID from your auth system;
     return localStorage.getItem('userId') || null;
   };
 
-  private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
+  private getSessionId = (): string => {';
+    let _sessionId = sessionStorage.getItem('sessionId');';
+    if (!sessionId) {'`';
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     }
@@ -111,10 +106,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
+      hasError: any,;
+      error: any,;
+      errorInfo: any,;
+      errorId: any,);
     });
   };
 
@@ -122,24 +117,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
+  private handleGoHome = () => {';
+    window.location.href = '/;
   };
 
   private copyErrorDetails = () => {
     const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
+      errorId: any,;
+      message: any,;
+      stack: any,;
+      componentStack: any,;
+      timestamp: any,;
     };
 
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
+      .then((: any) => {
         alert('Error details copied to clipboard');
       })
-      .catch(() => {
+      .catch((: any) => {
         alert('Failed to copy error details');
       });
   };
@@ -158,89 +153,52 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
+                Oops! Something went wrong";
+              </h1>"'";
               <p className="text-gray-300 mb-4">
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={this.handleReload}
-                  className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Reload Page
-                </button>
-                
-                <button
-                  onClick={this.handleGoHome}
-                  className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
-                >
-                  <Home className="w-4 h-4 mr-2" />
-                  Go Home
-                </button>
-              </div>
-
-              {this.state.errorId && (
-                <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
-                  <p className="text-sm text-gray-400 mb-2">
-                    Error ID: <code className="text-cyan-400">{this.state.errorId}</code>
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    Please include this ID when contacting support.
-                  </p>
-                </div>
+              <div className="flex flex-col sm: any,
+    k={this.handleRetry}
+                  className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover: any,
+    k={this.handleReload}
+                  className="flex items-center justify-center px-6 py-3 bg-blue-600 hover: any,">
+    k={this.handleGoHome}">
+                  className="flex items-center justify-center px-6 py-3 bg-purple-600 hover: any,>
+    D: any,>
+    e="text-cyan-400">{this.state.errorId}</code>
+                  </p>;
+                  <p className="text-xs text-gray-500">;
+                    Please include this ID when contacting support.;
+                  </p>;
+                </div>);
               )}
 
               {this.props.showDetails && this.state.error && (
                 <details className="mt-6 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2 flex items-center">
-                    <Bug className="w-4 h-4 mr-2" />
-                    Technical Details
-                  </summary>
-                  <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
-                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
+                  <summary className="cursor-pointer text-sm text-gray-400 hover: any,>";
+    e="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
                       {this.state.error.message}
                       {'\n\n'}
                       {this.state.error.stack}
                     </pre>
-                    <button
-                      onClick={this.copyErrorDetails}
-                      className="mt-2 text-xs text-cyan-400 hover:text-cyan-300"
-                    >
-                      Copy Error Details
-                    </button>
-                  </div>
-                </details>
-              )}
+                    <button onClick={this.copyErrorDetails}">
+                      className="mt-2 text-xs text-cyan-400 hover: any}>
             </div>
-
-            <div className="mt-8 text-sm text-gray-500">
-              <p>
-                If this problem persists, please contact our support team at{' '}
-                <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                  support@ziontechgroup.com
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+";
+            <div className="mt-8 text-sm text-gray-500">'";
+              <p>'";
+                If this problem persists, please contact our support team at{' '};
+                <a href="mailto: any,>;
+    r: any;
       );
     }
 
     return this.props.children;
   }
-}
-
-export default EnhancedErrorBoundary;
+}";
+"'"';
+export default EnhancedErrorBoundary;"'"'`"';

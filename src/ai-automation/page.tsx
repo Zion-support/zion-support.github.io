@@ -1,110 +1,88 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-=======
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer;
 
-const AIAutomationPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Settings,
-      title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
-      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
+const AIAutomationPage: any,
+    n: any,
+      title: any,
+      description: any,
+      benefits: any, 'Zero human error', '24/7 operation']
     },
     {
-      icon: Zap,
-      title: 'Workflow Optimization',
-      description: 'AI-powered workflow analysis and optimization for maximum productivity',
-      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
+      icon: any,
+      title: any,
+      description: any,
+      benefits: any, 'Smart routing', 'Dynamic optimization']
     },
     {
-      icon: Shield,
-      title: 'Decision Trees',
-      description: 'Advanced decision-making algorithms for complex business scenarios',
-      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
+      icon: any,
+      title: any,
+      description: any,
+      benefits: any, 'Risk mitigation', 'Compliance assurance']
     },
     {
-      icon: Clock,
-      title: 'Exception Handling',
-      description: 'Intelligent handling of exceptions and edge cases in automated processes',
-      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
+      icon: any,
+      title: any,
+      description: any,
+      benefits: any, 'Context awareness', 'Learning capabilities']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$1,400',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 10 automated processes',
+      name: any,
+      price: any,400',
+      period: any,
+      description: any,
+      features: any,
         'Basic AI decision making',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+  ]
+        'Basic analytics']
       ],
-      popular: false
-    },
+      popular: any},
     {
-      name: 'Professional',
-      price: '$2,800',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 50 automated processes',
+      name: any,
+      price: any,800',
+      period: any,
+      description: any,
+      features: any,
         'Advanced AI decision making',
         'Priority support',
         'Custom integrations',
         'Advanced analytics',
-        'Workflow optimization'
+  ]
+        'Workflow optimization']
       ],
-      popular: true
-    },
+      popular: any},
     {
-      name: 'Enterprise',
-      price: '$5,600',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited processes',
+      name: any,
+      price: any,600',
+      period: any,
+      description: any,
+      features: any,
         'Premium AI features',
         '24/7 support',
         'Custom development',
         'White-label options',
         'API access',
-        'Dedicated support'
+  ]
+        'Dedicated support']
       ],
-      popular: false
-    }
+      popular: any}
   ];
 
   const stats = [
-    { icon: Users, value: '200+', label: 'Automated Processes' },
-    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
+    { icon: any, value: any, label: any},
+    { icon: any, value: any, label: any},
+    { icon: any, value: any, label: any},
+    { icon: any, value: any, label: any}
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
-const AiAutomationPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Automation</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai automation solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
-    </div>
+const AiAutomationPage: any,
+    r: any;
   );
 };
 

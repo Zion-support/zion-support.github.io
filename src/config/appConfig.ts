@@ -3,78 +3,73 @@
  * Centralized configuration management for the Zion Tech Group application
  */
 export interface AppConfig {
-  app: {
-    name: string;
-    version: string;
-    environment: 'development' | 'production' | 'test';
+  app: any,
+    t: any;
+}
+  }
   };
-  api: {
-    baseUrl: string;
-    timeout: number;
-    retryAttempts: number;
+  api: any,
+    s: any;
+}
+  }
   };
-  features: {
-    analytics: boolean;
-    monitoring: boolean;
-    errorTracking: boolean;
-    performanceOptimization: boolean;
+  features: any,
+    n: any;
+}
+  }
   };
-  performance: {
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
-    cacheMaxAge: number;
+  performance: any,
+    e: any;
+}
+  }
   };
-  security: {
-    enableCSP: boolean;
-    enableHSTS: boolean;
-    enableXSSProtection: boolean;
+  security: any,
+    n: any;
+}
+  }
   };
 }
-const _config: AppConfig = {
-  app: {
-    name: 'Zion Tech Group',
-    version: '1.0.0',
-    environment:
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
+const _config: any,
+    e: any,
+    version: any,
+    environment: any}
+  }
   },
-  api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
-    timeout: 30000,
-    retryAttempts: 3
+  api: any,
+    s: any,
+    timeout: any,
+    retryAttempts: any}
+  }
   },
-  features: {
-    analytics: process.env['NODE_ENV'] === 'production',
-    monitoring: true,
-    errorTracking: true,
-    performanceOptimization: true
+  features: any,
+    s: process.env['NODE_ENV'] === 'production',
+    monitoring: any,
+    errorTracking: any,
+    performanceOptimization: any}
+  }
   },
-  performance: {
-    enableLazyLoading: true,
-    imageLazyLoadThreshold: 0.5,
-    componentLazyLoadThreshold: 0.25,
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
+  performance: any,
+    g: any,
+    imageLazyLoadThreshold: any,
+    componentLazyLoadThreshold: any,
+    cacheMaxAge: any, // 1 hour in milliseconds
+}
+  }
   },
-  security: {
-    enableCSP: true,
-    enableHSTS: true,
-    enableXSSProtection: true
+  security: any,
+    P: any,
+    enableHSTS: any,
+    enableXSSProtection: any}
+  }
   }
 };
 /**
  * Get configuration value by key path
- * @example getConfig('app.name') => 'Zion Tech Group'
+ * @example getConfig('app.name') => 'Zion Tech Group
  */
-export function getConfig<T = unknown>(keyPath: string): T {
-<<<<<<< HEAD
-  const keys = keyPath.split('.');
-=======
-  const __keys = keyPath.split('.');
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-  let value: unknown = config;
-  for (const key of keys) {
-    if (value && typeof value === 'object' && key in value) {
-      value = (value as Record<string, unknown>)[key];
+export function getConfig<T = unknown>(keyPath: any,;
+    e: any,;
+    e= (value as Record<string, unknown>)[key];
     } else {
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
@@ -97,12 +92,13 @@ export function getEnvironment(): string {
  * Check if running in production
  */
 export function isProduction(): boolean {
-  return config.app.environment === 'production';
+  return config.app.environment === 'production;
 }
 /**
  * Check if running in development
  */
 export function isDevelopment(): boolean {
-  return config.app.environment === 'development';
-}
-export default config;
+  return config.app.environment === 'development;
+}";
+export default config;"'"';
+"'"'`"';

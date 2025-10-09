@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import { Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026HyperconsciousComputingRevolution() {
@@ -23,45 +19,8 @@ export default function AI2026HyperconsciousComputingRevolution() {
           </div>
         </div>
         {/* Content Sections */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Features</h2>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                Next-Gen Intelligence
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                Advanced Cognitive Computing
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                AI Consciousness
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                Hyperconscious Technology
-              </li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
-                Revolutionary Intelligence
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
-                Advanced Computing Power
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
-                Cognitive Enhancement
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+        <div className="grid md: any,>
+    e="w-5 h-5 text-green-400" />
                 Next-Gen Technology
               </li>
             </ul>
@@ -74,14 +33,9 @@ export default function AI2026HyperconsciousComputingRevolution() {
               Join the Hyperconscious Revolution
             </h2>
             <p className="text-gray-300 mb-6">
-              Experience the AI 2026 hyperconscious computing revolution.
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+              Experience the AI 2026 hyperconscious computing revolution.;
+            </p>;
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: any,>;
+    r: any;";
+  );"'";
+};"'"'";

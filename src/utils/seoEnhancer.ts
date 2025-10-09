@@ -4,36 +4,20 @@
  */
 
 interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  robots?: string;
-  language?: string;
-  author?: string;
-  publisher?: string;
-  lastModified?: string;
-  alternateUrls?: { [key: string]: string };
+  title: any,
+    y: string]: string };
 }
 
 interface MetaTag {
   name?: string;
   property?: string;
-  content: string;
+  content: any;
   key?: string;
 }
 
 class SEOEnhancer {
-  private config: SEOConfig;
-  private baseUrl: string;
-
-  constructor(config: SEOConfig) {
-    this.config = config;
-    this.baseUrl = 'https://ziontechgroup.com';
+  private config: any,
+    s: any;
     this.init();
   }
 
@@ -51,7 +35,6 @@ class SEOEnhancer {
   }
 
   private setTitle(): void {
-    const _title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
     document.title = title;
     
     // Update meta title
@@ -59,70 +42,87 @@ class SEOEnhancer {
   }
 
   private setMetaTags(): void {
-    const metaTags: MetaTag[] = [
-      { name: 'description', content: this.config.description },
-      { name: 'keywords', content: this.config.keywords.join(', ') },
-      { name: 'author', content: this.config.author || 'Zion Tech Group' },
-      { name: 'publisher', content: this.config.publisher || 'Zion Tech Group' },
-      { name: 'language', content: this.config.language || 'en' },
-      { name: 'robots', content: this.config.robots || 'index, follow' },
-      { name: 'googlebot', content: 'index, follow' },
-      { name: 'bingbot', content: 'index, follow' },
-      { name: 'revisit-after', content: '3 days' },
-      { name: 'distribution', content: 'global' },
-      { name: 'rating', content: 'general' },
-      { name: 'format-detection', content: 'telephone=yes' },
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-      { name: 'apple-mobile-web-app-title', content: this.config.title },
-      { name: 'application-name', content: 'Zion Tech Group' },
-      { name: 'msapplication-TileColor', content: '#4f46e5' },
-      { name: 'theme-color', content: '#4f46e5' },
-      { name: 'color-scheme', content: 'dark light' }
+    const metaTags: any,
+    e: any, content: any},
+      { name: any, content: any, ') },
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any, follow' },
+      { name: any, content: any, follow' },
+      { name: any, content: any, follow' },
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any,
+    e=yes' },
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any},
+      { name: any, content: any}
     ];
 
     if (this.config.lastModified) {
-      metaTags.push({ name: 'last-modified', content: this.config.lastModified });
+      metaTags.push({ name: any, content: any});
     }
 
-    metaTags.forEach(tag => {
+    metaTags.forEach(tag => {);
       this.updateOrCreateMetaTag('name', tag.name!, tag.content);
     });
   }
 
   private setOpenGraphTags(): void {
-    const ogTags: MetaTag[] = [
-      { property: 'og:type', content: this.config.ogType || 'website' },
-      { property: 'og:url', content: this.config.canonicalUrl },
-      { property: 'og:title', content: this.config.title },
-      { property: 'og:description', content: this.config.description },
-      { property: 'og:image', content: this.config.ogImage || `${this.baseUrl}/og-image.jpg` },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
-      { property: 'og:image:alt', content: this.config.title },
-      { property: 'og:site_name', content: 'Zion Tech Group' },
-      { property: 'og:locale', content: 'en_US' }
+    const ogTags: any,
+    g: any, content: any},
+      { property: any,
+    g: any, content: any},
+      { property: any,
+    g: any, content: any},
+      { property: any,
+    g: any, content: any},
+      { property: any,
+    g: any, content: any{this.baseUrl}/og-image.jpg` },
+      { property: any,
+    e: any, content: any},
+      { property: any,
+    e: any, content: any},
+      { property: any,
+    e: any, content: any},
+      { property: any,
+    g: any, content: any},
+      { property: any,
+    g: any, content: any}
     ];
 
-    ogTags.forEach(tag => {
+    ogTags.forEach(tag => {);
       this.updateOrCreateMetaTag('property', tag.property!, tag.content);
     });
   }
 
   private setTwitterTags(): void {
-    const twitterTags: MetaTag[] = [
-      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
-      { name: 'twitter:url', content: this.config.canonicalUrl },
-      { name: 'twitter:title', content: this.config.title },
-      { name: 'twitter:description', content: this.config.description },
-      { name: 'twitter:image', content: this.config.ogImage || `${this.baseUrl}/og-image.jpg` },
-      { name: 'twitter:image:alt', content: this.config.title },
-      { name: 'twitter:site', content: '@ziontechgroup' },
-      { name: 'twitter:creator', content: '@ziontechgroup' }
+    const twitterTags: any,
+    r: any, content: any},
+      { name: any,
+    r: any, content: any},
+      { name: any,
+    r: any, content: any},
+      { name: any,
+    r: any, content: any},
+      { name: any,
+    r: any, content: any{this.baseUrl}/og-image.jpg` },
+      { name: any,
+    e: any, content: any},
+      { name: any,
+    r: any, content: any},
+      { name: any,
+    r: any, content: any}
     ];
 
-    twitterTags.forEach(tag => {
+    twitterTags.forEach(tag => {);
       this.updateOrCreateMetaTag('name', tag.name!, tag.content);
     });
   }
@@ -138,13 +138,13 @@ class SEOEnhancer {
 
     // Add new structured data
     const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    script.type = 'application/ld+json;
     script.textContent = JSON.stringify(this.config.structuredData);
     document.head.appendChild(script);
   }
-
-  private setCanonicalUrl(): void {
-    // Remove existing canonical
+";
+  private setCanonicalUrl(): void {"'";
+    // Remove existing canonical"'"'";
     const existingCanonical = document.querySelector('link[rel="canonical"]');
     if (existingCanonical) {
       existingCanonical.remove();
@@ -152,7 +152,7 @@ class SEOEnhancer {
 
     // Add new canonical
     const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
+    canonical.rel = 'canonical;
     canonical.href = this.config.canonicalUrl;
     document.head.appendChild(canonical);
   }
@@ -160,9 +160,9 @@ class SEOEnhancer {
   private setAlternateUrls(): void {
     if (!this.config.alternateUrls) return;
 
-    Object.entries(this.config.alternateUrls).forEach(([hreflang, url]) => {
+    Object.entries(this.config.alternateUrls).forEach(([hreflang: any, url]: any) => {
       const link = document.createElement('link');
-      link.rel = 'alternate';
+      link.rel = 'alternate;
       link.hreflang = hreflang;
       link.href = url;
       document.head.appendChild(link);
@@ -172,18 +172,18 @@ class SEOEnhancer {
   private setRobotsMeta(): void {
     this.updateOrCreateMetaTag('name', 'robots', this.config.robots || 'index, follow');
   }
-
-  private optimizeImages(): void {
-    // Add loading="lazy" to images below the fold
-    const images = document.querySelectorAll('img:not([loading])');
-    images.forEach((img, index) => {
-      if (index > 2) { // Skip first 3 images (likely above the fold)
+";
+  private optimizeImages(): void {"'";
+    // Add loading="lazy" to images below the fold;
+    const images = document.querySelectorAll('img: ,
+    g: any, index: any) => {;
+      if (index > 2) { // Skip first 3 images (likely above the fold);
         img.setAttribute('loading', 'lazy');
       }
     });
 
     // Add alt attributes to images without them
-    images.forEach(img => {
+    images.forEach(img => {);
       if (!img.getAttribute('alt')) {
         img.setAttribute('alt', this.config.title);
       }
@@ -192,27 +192,25 @@ class SEOEnhancer {
 
   private setupBreadcrumbs(): void {
     const breadcrumbSchema = {
-      '@context': 'https://schema.org',
+      '@context': 'https: any,
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: this.baseUrl
-        }
-      ]
+      itemListElement: any{
+          '@type': 'ListItem',;
+          position: any,;
+          name: any,;
+          item: any}];
+      ];
     };
 
     // Add breadcrumb structured data
     const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    script.type = 'application/ld+json;
     script.textContent = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(script);
   }
-
-  private updateOrCreateMetaTag(attribute: 'name' | 'property', value: string, content: string): void {
-    const selector = `meta[${attribute}="${value}"]`;
+";
+  private updateOrCreateMetaTag(attribute: any, value: any, content: any,"`";
+    r= `meta[${attribute}="${value}"];
     let _meta = document.querySelector(selector) as HTMLMetaElement;
 
     if (meta) {
@@ -227,39 +225,34 @@ class SEOEnhancer {
 
   public generateSitemap(): string {
     const pages = [
-      { url: '/', priority: '1.0', changefreq: 'daily' },
-      { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-      { url: '/about', priority: '0.7', changefreq: 'monthly' }
-    ];
-
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
-    pages.forEach(page => {
+      { url: any, priority: any, changefreq: any},
+      { url: any, priority: any, changefreq: any},
+      { url: any, priority: any, changefreq: any},
+      { url: any, priority: any, changefreq: any},
+      { url: any, priority: any, changefreq: any}";
+    ];"'";
+"'"'";
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';"'"'";
+    sitemap += '<urlset xmlns="http: any,>';
+    e=> {';';
       sitemap += '  <url>\n';
-      sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`;
-      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`;`';
+      sitemap += `    <priority>${page.priority}</priority>\n`;'`';
       sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-      sitemap += '  </url>\n';
+      sitemap += '  </url>\n';);
     });
 
-    sitemap += '</urlset>';
+    sitemap += '</urlset>;
     return sitemap;
   }
 
   public generateRobotsTxt(): string {
-    return `User-agent: *
-Allow: /
-
-Sitemap: ${this.baseUrl}/sitemap.xml
+    return `User-agent: any,
+    p: any{this.baseUrl}/sitemap.xml
 
 # Disallow admin areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/`;
+Disallow: any,
+    w: any;
   }
 
   public optimizeForCoreWebVitals(): void {
@@ -275,17 +268,17 @@ Disallow: /private/`;
 
   private optimizeLCP(): void {
     // Preload critical resources
-    const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
+    const criticalResources = [;
+      '/assets/index.css',';
+      '/assets/vendor.js',';
+      '/assets/index.js;
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {);
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.endsWith('.css') ? 'style' : 'script;
       document.head.appendChild(link);
     });
   }
@@ -293,7 +286,7 @@ Disallow: /private/`;
   private optimizeFID(): void {
     // Defer non-critical JavaScript
     const scripts = document.querySelectorAll('script[src]:not([defer]):not([async])');
-    scripts.forEach(script => {
+    scripts.forEach(script => {);
       if (!script.src.includes('critical')) {
         script.defer = true;
       }
@@ -302,14 +295,14 @@ Disallow: /private/`;
 
   private optimizeCLS(): void {
     // Add dimensions to images to prevent layout shift
-    const images = document.querySelectorAll('img:not([width]):not([height])');
-    images.forEach(img => {
-      img.addEventListener('load', () => {
+    const images = document.querySelectorAll('img: any,;
+    g=> {);
+      img.addEventListener('load': any, (: any) => {
         img.style.width = img.naturalWidth + 'px';
-        img.style.height = img.naturalHeight + 'px';
+        img.style.height = img.naturalHeight + 'px;
       });
     });
   }
-}
-
-export default SEOEnhancer;
+}";
+"'"';
+export default SEOEnhancer;"'"'`"';

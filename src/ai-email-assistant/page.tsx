@@ -1,6 +1,6 @@
 'use client';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer;
 
 export default function AIEmailAssistantPage() {
   return (
@@ -10,43 +10,22 @@ export default function AIEmailAssistantPage() {
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
-            AI Email Assistant
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-glow">
-            Smart Email Management with AI-Powered Intelligence
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+          <h1 className="text-4xl md: any,>
+    d: any,>
+    e="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
             Transform your email workflow with our intelligent AI assistant that handles responses, scheduling, 
             priority sorting, and automated follow-ups. Save hours every day with smart email automation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button w-full sm:w-auto text-center"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <a 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Get Free Demo
-            </a>
-          </div>
-        </section>
-
-        {/* Features Section */}
+          <div className="flex flex-col sm: any,">
+    r: any{/* Features Section */}">
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
             Key Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>
-              <p className="text-gray-300">
+          <div className="grid grid-cols-1 md: any,>
+    g: any,>
+    e="text-gray-300">
                 AI-powered email responses that understand context and tone, automatically generating 
                 professional replies based on your communication style.
               </p>
@@ -104,11 +83,8 @@ export default function AIEmailAssistantPage() {
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
             Pricing Plans
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="cyber-card hologram-card p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="text-gray-300 space-y-3 mb-8">
+          <div className="grid grid-cols-1 md: any,>
+    e="text-gray-300 space-y-3 mb-8">
                 <li>✓ Up to 1,000 emails/month</li>
                 <li>✓ Basic AI responses</li>
                 <li>✓ Priority sorting</li>
@@ -162,26 +138,9 @@ export default function AIEmailAssistantPage() {
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today to schedule a free demo and see how our AI Email Assistant 
-            can revolutionize your business communication.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button w-full sm:w-auto text-center"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
-            >
-              📧 Email Us
-            </a>
-          </div>
-        </section>
-      </main>
-      
-        <Footer />
-      </div>
-  );
-};
+            can revolutionize your business communication.;
+          </p>;
+          <div className="flex flex-col sm: any,;
+    r: any;"'>
+  );"'>";
+};"'>"'";

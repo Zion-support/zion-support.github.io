@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react;
 interface LinkProps {
-  href: string;
-  children: React.ReactNode;
+  href: any,
+    n: any;
   className?: string;
   target?: string;
   rel?: string;
@@ -18,7 +18,6 @@ export const Link: React.FC<LinkProps> = ({
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const _handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick();
     }
@@ -29,17 +28,16 @@ export const Link: React.FC<LinkProps> = ({
     }
   };
   return (
-    <a
-      href={href}
+    <a href={href}
       className={className}
       target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel}
-      {...props}
+      rel={rel}>
+      onClick={handleClick}>
+      aria-label={ariaLabel}>
+      {...props}>
     >
       {children}
-    </a>
+    </a>);
   );
 };
 export default Link;

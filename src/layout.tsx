@@ -2,115 +2,133 @@ import './globals.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
-import Analytics from './components/Analytics';
+import Analytics from './components/Analytics;
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: any;);
 }) {
-  const _structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https: any,
     '@type': 'TechCompany',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    services: [
-      'AI Solutions',
+    name: any,
+    url: any,
+    s: any,
+    logo: any,
+    s: any,
+    description: any, quantum computing, autonomous systems, and digital transformation services.',
+    foundingDate: any,
+    numberOfEmployees: any,
+    industry: any,
+    services: any,
       'Quantum Computing',
       'Autonomous Systems',
       'Digital Transformation',
       'Cloud Services',
       'Automation',
-      'Business Intelligence'
+  ]
+      'Business Intelligence']
     ],
-    contactPoint: {
+    contactPoint: any{
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en',
+      telephone: any,
+      contactType: any,
+      areaServed: any,
+      availableLanguage: any,
+  }
+}
+    }
     },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
+    sameAs: any,
+    s: any,
+      'https: any,]
     ],
-    address: {
+    address: any{
       '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
+      streetAddress: any,
+      addressLocality: any,
+      addressRegion: any,
+      postalCode: any,
+      addressCountry: any,
+  }
+}
+    }
     },
-    offers: [
-      {
+    offers: any{
         '@type': 'Offer',
-        category: 'AI Solutions',
-        description: 'Enterprise AI solutions, digital transformation, and cloud services',
-        price: '1500',
-        priceCurrency: 'USD',
-        priceSpecification: {
+        category: any,
+        description: any, digital transformation, and cloud services',
+        price: any,
+        priceCurrency: any,
+        priceSpecification: any{
           '@type': 'PriceSpecification',
-          price: '1500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
+          price: any,
+          priceCurrency: any,
+          billingIncrement: any}
+}
+        }
         }
       },
       {
         '@type': 'Offer',
-        category: 'Digital Transformation',
-        description: 'Process automation, legacy system modernization, and workflow optimization',
-        price: '2500',
-        priceCurrency: 'USD',
-        priceSpecification: {
+        category: any,
+        description: any, legacy system modernization, and workflow optimization',
+        price: any,
+        priceCurrency: any,
+        priceSpecification: any{
           '@type': 'PriceSpecification',
-          price: '2500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
+          price: any,
+          priceCurrency: any,
+          billingIncrement: any}
+}
         }
-      }
+        }
+  ]
+      }]
     ],
-    serviceArea: {
+    serviceArea: any{
       '@type': 'GeoCircle',
-      geoMidpoint: {
+      geoMidpoint: any{
         '@type': 'GeoCoordinates',
-        latitude: '39.8283',
-        longitude: '-75.5795'
+        latitude: any,
+        longitude: any}
+}
+    }
       },
-      geoRadius: '1000000'
-    },
-    hasOfferCatalog: {
+      geoRadius: any},
+    hasOfferCatalog: any{
       '@type': 'OfferCatalog',
-      name: 'AI Technology Services',
-      itemListElement: [
-        {
+      name: any,
+      itemListElement: any{
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: any{
             '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
+            name: any,
+            description: any}
+}
+    }
           }
         },
         {
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: any{
             '@type': 'Service',
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
+            name: any,
+            description: any}
+}
+          }
           }
         },
         {
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: any{
             '@type': 'Service',
-            name: 'Cloud Infrastructure',
-            description: 'Cloud migration and infrastructure optimization services'
+            name: any,
+            description: any}
+}
           }
-        }
+          }
+  ]
+        }]
       ]
     }
   };
@@ -125,7 +143,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#4f46e5" />
         <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow" />";
         <meta name="googlebot" content="index, follow" />
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
@@ -148,34 +166,23 @@ export default function RootLayout({
         <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
         <meta name='application-name' content='Zion Tech Group' />
         <meta name='msapplication-TileColor' content='#4f46e5' />
-        <meta name='msapplication-config' content='/browserconfig.xml' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
-        <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
-        {/* Resource hints for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta name='msapplication-config' content='/browserconfig.xml' />'";
+        <link rel='canonical' href='https: any,>
+    s: any{/* Resource hints for better performance */}
+        <link rel="preconnect" href="https: any,>
+    s: any{/* Open Graph / Facebook */}
+        <meta property="og: any,>
+    g: any,>
+    t="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta property="og: any,>
+    g: any,>
+    t="Zion Tech Group" />
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <meta name="twitter: any,>
+    r: any,>
+    t="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta name="twitter: any,>
+    l: any}}>
         />
       </head>
       <body className='antialiased'>
@@ -183,21 +190,12 @@ export default function RootLayout({
           <PerformanceMonitor />
           <Analytics />
           {children}
-        </ErrorBoundary>
-      </body>
-    </html>
+        </ErrorBoundary>;
+      </body>;
+    </html>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 
 export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+}";
+}"'";
+"'"'";

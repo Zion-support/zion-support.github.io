@@ -1,8 +1,8 @@
 import React, { Suspense, lazy, ComponentType, ReactNode } from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner;
 
 interface LazyComponentProps {
-  children: ReactNode;
+  children: any;
   fallback?: ReactNode;
   delay?: number;
   threshold?: number;
@@ -11,33 +11,28 @@ interface LazyComponentProps {
 
 // Higher-order component for lazy loading
 export const _withLazyLoading = <P extends object>(
-  Component: ComponentType<P>,
+  Component: any,
   fallback?: ReactNode
 ) => {
-  return (props: P) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <Component {...props} />
-    </Suspense>
+  return (props: any,;
+    k={fallback || <LoadingSpinner />}>;
+      <Component {...props} />;
+    </Suspense>;
   );
 };
 
 // Lazy component wrapper with intersection observer
-const LazyComponent: React.FC<LazyComponentProps> = ({
-  children,
-  fallback = <LoadingSpinner />,
-  delay = 0,
-  threshold = 0.1,
-  rootMargin = '50px',
-}) => {
+const LazyComponent: ,
+    n: any, fallback = <LoadingSpinner />: any, delay = 0: any, threshold = 0.1: any, rootMargin = '50px': any, }: any) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const elementRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+  React.useEffect((: any) => {
+    const observer = new IntersectionObserver();
+      ([entry]: any) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
+          setTimeout((: any) => {
             setIsVisible(true);
             setIsLoaded(true);
           }, delay);
@@ -62,65 +57,59 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       {isVisible ? (
         <Suspense fallback={fallback}>
           {children}
-        </Suspense>
+        </Suspense>);
       ) : (
         fallback
       )}
-    </div>
+    </div>;
   );
 };
 
 // Preload function for critical components
-export const preloadComponent = (importFunction: () => Promise<any>) => {
-  return () => {
-    const component = lazy(importFunction);
+export const preloadComponent = (importFunction: any,;
+    t= lazy(importFunction);
     return component;
   };
 };
 
 // Lazy load with preloading
 export const createLazyComponent = <P extends object>(
-  importFunction: () => Promise<{ default: ComponentType<P> }>,
+  importFunction: any,
+    t: any}>,
   fallback?: ReactNode
 ) => {
   const LazyComponent = lazy(importFunction);
   
-  return (props: P) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
-    </Suspense>
+  return (props: any,
+    k={fallback || <LoadingSpinner />}>;
+      <LazyComponent {...props} />;
+    </Suspense>;
   );
 };
 
 // Critical resource preloader
-export const preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return;
-
-  // Preload critical fonts
-  const fontPreloads = [
-    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
-    'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
+export const preloadCriticalResources: ,
+    s: any,
+    n: any,
+    y=swap',;
+    'https: any,
+    i: any,
+    y=swap',;
   ];
 
-  fontPreloads.forEach((href) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'style';
-    link.href = href;
+  fontPreloads.forEach((href: ,
+    f= href;
     document.head.appendChild(link);
   });
 
   // Preload critical images
-  const imagePreloads = [
-    '/og-image.jpg',
-    '/favicon.ico',
+  const imagePreloads = [;
+    '/og-image.jpg',';
+    '/favicon.ico',;
   ];
 
-  imagePreloads.forEach((src) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
+  imagePreloads.forEach((src: ,
+    f= src;
     document.head.appendChild(link);
   });
 };

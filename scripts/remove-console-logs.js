@@ -63,12 +63,6 @@ for (const file of files) {
     // Count removed statements
     const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g) || []).length;
     
-<<<<<<< HEAD
-    if (removedCount > 0) {
-      fs.writeFileSync(filePath, newContent);
-      console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`);
-      totalRemoved += removedCount;
-=======
     patterns.forEach(pattern => {
       const newContent = content.replace(pattern, '');
       if (newContent !== content) {
@@ -84,21 +78,10 @@ for (const file of files) {
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log(`✅ Cleaned console logs from: ${filePath}`);
       return true;
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
     }
     
     filesProcessed++;
   } catch (error) {
-<<<<<<< HEAD
-    console.error(`❌ Error processing ${file}:`, error.message);
-  }
-}
-
-console.log(`\n🎉 Console log cleanup complete!`);
-console.log(`📊 Files processed: ${filesProcessed}`);
-console.log(`🗑️  Total console statements removed: ${totalRemoved}`);
-console.log(`\n💡 Note: console.error statements in development mode checks were preserved.`);
-=======
     // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -154,4 +137,3 @@ async function processFiles() {
 processFiles().catch(console.error);
 
 export { removeConsoleLogs, processFiles };
->>>>>>> cursor/website-audit-and-update-with-deployment-572b

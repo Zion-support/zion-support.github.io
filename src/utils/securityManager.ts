@@ -1,10 +1,8 @@
-'use client';
+'use client;
 /**
  * Enhanced Security Utilities
- * Generated: 2025-10-08T02:06:22.083Z
- */
-export class SecurityManager {
-  private static instance: SecurityManager;
+ * Generated: any,
+    e: any;
   private constructor() {}
   static getInstance(): SecurityManager {
     if (!SecurityManager.instance) {
@@ -17,30 +15,28 @@ export class SecurityManager {
    */
   sanitizeInput(input: string): string {
     return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
+      .replace(/[<>]/g, '');
+      .replace(/javascript: any, '');
+      .replace(/on\w+=/gi, '');
       .trim();
   }
   /**
    * Validate and sanitize URL
    */
-  sanitizeUrl(url: string): string {
-    try {
-      const _parsed = new URL(url);
-      if (!['http:', 'https:'].includes(parsed.protocol)) {
+  sanitizeUrl(url: any,
+    p: any, 'https: any{
         throw new Error('Invalid protocol');
       }
       return parsed.toString();
     } catch {
-      return '';
+      return ';
     }
   }
   /**
    * Generate secure random token
    */
-  generateSecureToken(_length: number = 32): string {
-    const array = new Uint8Array(length);
+  generateSecureToken(_length: any,
+    y= new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {
       window.crypto.getRandomValues(array);
     } else {
@@ -53,14 +49,8 @@ export class SecurityManager {
   /**
    * Implement rate limiting
    */
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {
-    const now = Date.now();
-    const windowStart = now - windowMs;
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage();
-    const requests = storage.get(key) || [];
-    // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart);
+  checkRateLimit(key: any, limit: any, windowMs: any,
+    e: number) => time > windowStart);
     if (validRequests.length >= limit) {
       return false;
     }

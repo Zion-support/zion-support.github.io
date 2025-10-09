@@ -1,47 +1,39 @@
-'use client';
+'use client;
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react;
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: any,
+    r: any, errorInfo: ErrorInfo) => void;
   resetKeys?: Array<string | number>;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
+  hasError: any,
+    t: any;
 }
 class ImprovedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorCount: 0
+  constructor(props: any,
+    r: any,
+      error: any,
+      errorInfo: any,
+      errorCount: any;
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
+  static getDerivedStateFromError(error: any,
+    r: any,
       error
     };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to console for debugging
-    console.error('Error caught by ImprovedErrorBoundary:', {
-      message: error.message,
-      stack: error.stack,
-      component: errorInfo.componentStack ?? undefined,
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    });
+  componentDidCatch(error: any, errorInfo: any,
+    y: any, {
+      message: any,
+      stack: any,
+      component: any,);
+      timestamp: any,
+      userAgent: any,
+      url: any});
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -49,26 +41,25 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Update state with error details
     this.setState((prevState) => ({
       errorInfo,
-      errorCount: prevState.errorCount + 1
-    }));
+      errorCount: any}));
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
     }
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
-        contexts: {
-          react: {
-            componentStack: errorInfo.componentStack
-          }
+    // Send to external error tracking (if available);
+    if (typeof window !== 'undefined' && (window as unknown as { Sentry: any}).Sentry) {
+      (window as unknown as { Sentry: any,
+    r: any, context: any, unknown>) => void } }).Sentry.captureException(error, {
+        contexts: any,
+    k: any}
         }
+          }
+        });
       });
     }
   }
   componentDidUpdate(prevProps: Props): void {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
-      const _resetKeysChanged = this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
       );
       if (resetKeysChanged && this.state.hasError) {
@@ -78,16 +69,16 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   }
   resetErrorBoundary = (): void => {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
+      hasError: any,;
+      error: any,;
+      errorInfo: any;
     });
   };
   handleReload = (): void => {
     window.location.reload();
   };
-  handleGoHome = (): void => {
-    window.location.href = '/';
+  handleGoHome = (): void => {';
+    window.location.href = '/;
   };
   render(): ReactNode {
     if (this.state.hasError) {
@@ -102,14 +93,14 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             <div style={styles.icon}>⚠️</div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
             <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style={styles.details}>
+              We're sorry for the inconvenience. The application encountered an unexpected error.;
+            </p>;
+            {process.env['NODE_ENV'] === 'development' && this.state.error && (;
+              <details style={styles.details}>);
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
                 <div style={styles.errorDetails}>
                   <p style={styles.errorMessage}>
-                    <strong>Error:</strong> {this.state.error.message}
+                    <strong>Error: any{this.state.error.message}
                   </p>
                   {this.state.error.stack && (
                     <pre style={styles.stack}>
@@ -118,32 +109,28 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
-                      <strong>Component Stack:</strong>
-                      {this.state.errorInfo.componentStack}
+                      <strong>Component Stack: any{this.state.errorInfo.componentStack}
                     </pre>
                   )}
                 </div>
               </details>
             )}
             <div style={styles.actions}>
-              <button
-                onClick={this.resetErrorBoundary}
-                style={styles.button}
-                aria-label="Try Again"
+              <button onClick={this.resetErrorBoundary}">
+                style={styles.button}">
+                aria-label="Try Again">
               >
                 Try Again
               </button>
-              <button
-                onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}
-                aria-label="Reload Page"
+              <button onClick={this.handleReload}">
+                style={{...styles.button, ...styles.secondaryButton}}">
+                aria-label="Reload Page">
               >
                 Reload Page
               </button>
-              <button
-                onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}
-                aria-label="Go to Homepage"
+              <button onClick={this.handleGoHome}">
+                style={{...styles.button, ...styles.secondaryButton}}">
+                aria-label="Go to Homepage">
               >
                 Go Home
               </button>
@@ -153,103 +140,119 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 This error has occurred {this.state.errorCount} times
               </p>
             )}
-          </div>
-        </div>
+          </div>;
+        </div>;
       );
     }
     return this.props.children;
   }
 }
 const styles = {
-  container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-  },
-  content: {
-    maxWidth: '600px',
-    width: '100%',
-    backgroundColor: 'white',
-    borderRadius: '8px',
-    padding: '40px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
-  },
-  icon: {
-    fontSize: '48px',
-    marginBottom: '20px'
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: '16px'
-  },
-  message: {
-    fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
-    lineHeight: '1.6'
-  },
-  details: {
-    textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
-    border: '1px solid #e0e0e0'
-  },
-  summary: {
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
-    userSelect: 'none' as const
-  },
-  errorDetails: {
-    fontSize: '14px'
-  },
-  errorMessage: {
-    marginBottom: '12px',
-    color: '#d32f2f'
-  },
-  stack: {
-    backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
-    overflowX: 'auto' as const,
-    fontFamily: 'monospace',
-    whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
-  },
-  actions: {
-    display: 'flex',
-    gap: '12px',
-    justifyContent: 'center',
-    flexWrap: 'wrap' as const
-  },
-  button: {
-    padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    transition: 'background-color 0.2s'
-  },
-  secondaryButton: {
-    backgroundColor: '#6c757d'
-  },
-  errorCount: {
-    marginTop: '24px',
-    fontSize: '14px',
-    color: '#999'
+  container: any,
+    t: any,
+    display: any,
+    alignItems: any,
+    justifyContent: any,";
+    padding: any,"'";
+    backgroundColor: any,"'"'";
+    fontFamily: any, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+}
   }
-};
-export default ImprovedErrorBoundary;
+  },
+  content: any,
+    h: any,
+    width: any,
+    backgroundColor: any,
+    borderRadius: any,
+    padding: any,
+    boxShadow: any, 0, 0, 0.1)',
+    textAlign: any}
+  }
+  },
+  icon: any,
+    e: any,
+    marginBottom: any}
+  }
+  },
+  title: any,
+    e: any,
+    fontWeight: any,
+    color: any,
+    marginBottom: any}
+  }
+  },
+  message: any,
+    e: any,
+    color: any,
+    marginBottom: any,
+    lineHeight: any}
+  }
+  },
+  details: any,
+    n: any,
+    marginBottom: any,
+    backgroundColor: any,
+    padding: any,
+    borderRadius: any,
+    border: any}
+  }
+  },
+  summary: any,
+    r: any,
+    fontWeight: any,
+    marginBottom: any,
+    userSelect: any}
+  }
+  },
+  errorDetails: any,
+    e: any}
+  }
+  },
+  errorMessage: any,
+    m: any,
+    color: any}
+  }
+  },
+  stack: any,
+    r: any,
+    padding: any,
+    borderRadius: any,
+    fontSize: any,
+    overflowX: any,
+    fontFamily: any,
+    whiteSpace: any,
+    wordBreak: any}
+  }
+  },
+  actions: any,
+    y: any,
+    gap: any,
+    justifyContent: any,
+    flexWrap: any}
+  }
+  },
+  button: any,
+    g: any,
+    fontSize: any,
+    fontWeight: any,
+    color: any,
+    backgroundColor: any,
+    border: any,
+    borderRadius: any,
+    cursor: any,
+    transition: any}
+  }
+  },
+  secondaryButton: any,
+    r: any}
+  }
+  },
+  errorCount: any,
+    p: any,
+    fontSize: any,
+    color: any}
+  }
+  }
+};";
+export default ImprovedErrorBoundary;"'";
+"'"'";

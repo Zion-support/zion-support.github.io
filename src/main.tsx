@@ -6,20 +6,15 @@ import './globals.css';
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
-      .then(() => {
-        // Service Worker registered successfully
+      .then((registration) => {
+        console.log('Service Worker registered successfully:', registration);
       })
-      .catch(() => {
-        // Service Worker registration failed - handled silently
+      .catch((error) => {
+        console.log('Service Worker registration failed:', error);
       });
   });
 }
 
-const _root = document.getElementById('root');
-if (root) {
-  ReactDOM.createRoot(root).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-}
+// Create root and render app
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(<App />);

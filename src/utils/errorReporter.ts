@@ -1,39 +1,29 @@
-'use client';
+'use client;
 /**
  * Enhanced Error Reporting Utility
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 export interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: any,
+    y: any;
   context?: Record<string, unknown>;
 }
 export interface ErrorReporterConfig {
-  enableConsoleLogging: boolean;
-  enableRemoteLogging: boolean;
-  remoteEndpoint?: string;
-  maxErrorsInMemory: number;
-  captureContext: boolean;
+  enableConsoleLogging: any,
+    t: any;
 }
-const _defaultConfig: ErrorReporterConfig = {
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
+const _defaultConfig: any,
+    g: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true
+  maxErrorsInMemory: any,
+  captureContext: any;
 };
 /**
  * ErrorReporter class for comprehensive error handling
  */
 export class ErrorReporter {
-  private static instance: ErrorReporter;
-  private config: ErrorReporterConfig;
-  private errorQueue: ErrorReport[] = [];
-  private errorCount: Map<string, number> = new Map();
+  private static instance: any,
+    t: any, number> = new Map();
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
     this.config = { ...defaultConfig, ...config };
   }
@@ -50,23 +40,25 @@ export class ErrorReporter {
    * Report an error with full context
    */
   reportError(
-    error: Error,
+    error: any,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
+    context?: Record<string, unknown>);
   ): void {
-    const errorReport: ErrorReport = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+    const errorReport: any,
+    e: any,
+      stack: any,
+      timestamp: any,
+      userAgent: any,
+    t: any,
+      url: any,
+    f: any,
       severity,
-      context: this.config.captureContext ? context : undefined
+      context: any,
+    t: any;
     };
     // Track error frequency
-    const _errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit)
+    // Add to queue (with size limit);
     this.errorQueue.push(errorReport);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {
       this.errorQueue.shift();
@@ -83,8 +75,8 @@ export class ErrorReporter {
   /**
    * Log error to console with formatting
    */
-  private logToConsole(report: ErrorReport): void {
-    const style = this.getConsoleStyle(report.severity);
+  private logToConsole(report: any,
+    e= this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {
       }
@@ -105,13 +97,14 @@ export class ErrorReporter {
   /**
    * Get console styling based on severity
    */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {
-      low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
-    };
+  private getConsoleStyle(severity: any,
+    t: any,
+      medium: any,
+    t: any,
+      high: any,
+    t: any,
+      critical: any,
+    e: any};
     return styles[severity];
   }
   /**
@@ -121,16 +114,19 @@ export class ErrorReporter {
     if (!this.config.remoteEndpoint) return;
     try {
       await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(report)
+        method: any,
+        headers: any{
+          'Content-Type': 'application/json
+  }
+}
+        }
+        },);
+        body: any;
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error);
+        logger.warn('Failed to send error to remote endpoint: any, error);
       }
     }
   }
@@ -144,14 +140,13 @@ export class ErrorReporter {
    * Get error statistics
    */
   getErrorStats(): {
-    totalErrors: number;
-    uniqueErrors: number;
-    errorsByType: Record<string, number>;
+    totalErrors: any,
+    e: any, number>;
   } {
     return {
-      totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
+      totalErrors: any,
+      uniqueErrors: any,
+      errorsByType: any;
     };
   }
   /**
@@ -166,11 +161,10 @@ export class ErrorReporter {
    */
   exportErrors(): string {
     return JSON.stringify(
-      {
-        timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue
-      },
+      {);
+        timestamp: any,
+        stats: any,
+        errors: any},
       null,
       2
     );
@@ -180,7 +174,7 @@ export class ErrorReporter {
  * Convenience function to report errors
  */
 export const reportError = (
-  error: Error,
+  error: any,
   severity?: ErrorReport['severity'],
   context?: Record<string, unknown>
 ): void => {
@@ -190,14 +184,15 @@ export const reportError = (
  * React error boundary helper
  */
 export const captureComponentError = (
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string
-): void => {
-  const report = ErrorReporter.getInstance();
+  error: any,;
+  errorInfo: any,;
+    k: any},;
+  componentName: any,;
+    t= ErrorReporter.getInstance();
   report.reportError(error, 'high', {
     componentName,
-    componentStack: errorInfo.componentStack
+    componentStack: any;
   });
 };
-export default ErrorReporter;
+export default ErrorReporter;';
+'`';

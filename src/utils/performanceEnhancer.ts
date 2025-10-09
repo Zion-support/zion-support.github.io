@@ -4,32 +4,19 @@
  */
 
 interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-  tbt: number;
+  lcp: any,
+    t: any;
 }
 
 interface OptimizationConfig {
-  enableImageOptimization: boolean;
-  enableLazyLoading: boolean;
-  enableCodeSplitting: boolean;
-  enablePrefetching: boolean;
-  enableServiceWorker: boolean;
-  enableResourceHints: boolean;
-  enableCompression: boolean;
-  enableCaching: boolean;
+  enableImageOptimization: any,
+    g: any;
 }
 
 class PerformanceEnhancer {
-  private config: OptimizationConfig;
-  private metrics: PerformanceMetrics | null = null;
-  private observer: PerformanceObserver | null = null;
-
-  constructor(config: OptimizationConfig) {
-    this.config = config;
+  private config: any,
+    g: any,
+    g= config;
     this.init();
   }
 
@@ -49,40 +36,37 @@ class PerformanceEnhancer {
     if (!('PerformanceObserver' in window)) return;
 
     try {
-      this.observer = new PerformanceObserver((list) => {
+      this.observer = new PerformanceObserver((list: any) => {
         for (const entry of list.getEntries()) {
           this.analyzePerformanceEntry(entry);
         }
       });
 
       // Monitor Core Web Vitals
-      this.observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
+      this.observer.observe({ entryTypes: any, 'first-input', 'layout-shift', 'paint', 'navigation'] });
     } catch (error) {
-      console.warn('Performance monitoring setup failed:', error);
+      console.warn('Performance monitoring setup failed: any, error);
     }
   }
 
-  private analyzePerformanceEntry(entry: PerformanceEntry): void {
-    switch (entry.entryType) {
-      case 'largest-contentful-paint':
-        this.metrics = { ...this.metrics, lcp: entry.startTime } as PerformanceMetrics;
+  private analyzePerformanceEntry(entry: any,
+    s= { ...this.metrics, lcp: any} as PerformanceMetrics;
         break;
       case 'first-input':
-        this.metrics = { ...this.metrics, fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics;
+        this.metrics = { ...this.metrics, fid: any} as PerformanceMetrics;
         break;
       case 'layout-shift':
         if (!(entry as any).hadRecentInput) {
-          this.metrics = { ...this.metrics, cls: (this.metrics?.cls || 0) + (entry as any).value } as PerformanceMetrics;
+          this.metrics = { ...this.metrics, cls: any} as PerformanceMetrics;
         }
         break;
       case 'paint':
         if (entry.name === 'first-contentful-paint') {
-          this.metrics = { ...this.metrics, fcp: entry.startTime } as PerformanceMetrics;
+          this.metrics = { ...this.metrics, fcp: any} as PerformanceMetrics;
         }
         break;
       case 'navigation':
-        const _navEntry = entry as PerformanceNavigationTiming;
-        this.metrics = { ...this.metrics, ttfb: navEntry.responseStart - navEntry.requestStart } as PerformanceMetrics;
+        this.metrics = { ...this.metrics, ttfb: any} as PerformanceMetrics;
         break;
     }
   }
@@ -91,10 +75,8 @@ class PerformanceEnhancer {
     if (!this.config.enableImageOptimization) return;
 
     const images = document.querySelectorAll('img[data-src]');
-    images.forEach((img) => {
-      const imageElement = img as HTMLImageElement;
-      if (imageElement.dataset.src) {
-        imageElement.src = imageElement.dataset.src;
+    images.forEach((img: ,
+    c= imageElement.dataset.src;
         imageElement.removeAttribute('data-src');
       }
     });
@@ -105,26 +87,23 @@ class PerformanceEnhancer {
 
   private detectWebPSupport(): void {
     const webP = new Image();
-    webP.onload = webP.onerror = () => {
-      if (webP.height === 2) {
+    webP.onload = webP.onerror = () => {;
+      if (webP.height === 2) {';
         document.documentElement.classList.add('webp');
       } else {
         document.documentElement.classList.add('no-webp');
       }
     };
-    webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    webP.src = 'data: any;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA;
   }
 
   private setupLazyLoading(): void {
     if (!this.config.enableLazyLoading) return;
 
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
+      const imageObserver: ,
+    y: ,
+    c= img.dataset.src;
               img.removeAttribute('data-src');
               imageObserver.unobserve(img);
             }
@@ -132,7 +111,7 @@ class PerformanceEnhancer {
         });
       });
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
+      document.querySelectorAll('img[data-src]').forEach((img: any) => {
         imageObserver.observe(img);
       });
     }
@@ -143,17 +122,11 @@ class PerformanceEnhancer {
 
     // Preconnect to external domains
     const domains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.googletagmanager.com',
-      'https://www.google-analytics.com'
-    ];
-
-    domains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = domain;
-      link.crossOrigin = 'anonymous';
+      'https: any,;
+      'https: any,';
+      'https: any,';
+      'https: any,';
+    n= 'anonymous;
       document.head.appendChild(link);
     });
 
@@ -164,15 +137,15 @@ class PerformanceEnhancer {
   private prefetchCriticalResources(): void {
     if (!this.config.enablePrefetching) return;
 
-    const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
+    const criticalResources = [;
+      '/assets/index.css',';
+      '/assets/vendor.js',';
+      '/assets/index.js;
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {);
       const link = document.createElement('link');
-      link.rel = 'prefetch';
+      link.rel = 'prefetch;
       link.href = resource;
       document.head.appendChild(link);
     });
@@ -182,45 +155,41 @@ class PerformanceEnhancer {
     if (!this.config.enableServiceWorker) return;
 
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
+      window.addEventListener('load': any, (: any) => {
+        navigator.serviceWorker.register('/sw.js');
+          .then((registration: ,
+    d: any, registration);
           })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+          .catch((registrationError: ,
+    d: any, registrationError);
           });
       });
     }
   }
 
   private optimizeFonts(): void {
-    // Add font-display: swap to all font faces
-    const style = document.createElement('style');
-    style.textContent = `
-      @font-face {
-        font-family: 'Orbitron';
-        font-display: swap;
+    // Add font-display: any,
+    y: any;
       }
       @font-face {
-        font-family: 'Rajdhani';
-        font-display: swap;
+        font-family: any,
+    y: any;
       }
       @font-face {
-        font-family: 'Exo 2';
-        font-display: swap;
+        font-family: any,
+    y: any;
       }
-    `;
+    
     document.head.appendChild(style);
   }
 
   private setupCriticalCSS(): void {
     // Inline critical CSS for above-the-fold content
-    const criticalCSS = `
-      .hero-section { contain: layout style paint; }
-      .cyber-card { contain: layout style; }
-      .neon-text { will-change: transform; }
-      .cyber-text-3d { will-change: transform; }
+    const criticalCSS = ;
+      .hero-section { contain: any; }
+      .cyber-card { contain: any; }
+      .neon-text { will-change: any; }
+      .cyber-text-3d { will-change: any; }`';
     `;
 
     const style = document.createElement('style');
@@ -236,18 +205,19 @@ class PerformanceEnhancer {
   public optimizeBundle(): void {
     // Dynamic imports for non-critical components
     const lazyComponents = [
-      'ContentPromotionBanner',
-      'ContentCarousel',
-      'DynamicContentShowcase',
-      'ContentStatistics',
-      'ContentNewsletterSignup'
+      'ContentPromotionBanner',;
+      'ContentCarousel',';
+      'DynamicContentShowcase',';
+      'ContentStatistics',';
+      'ContentNewsletterSignup;
     ];
-
-    lazyComponents.forEach(component => {
-      const element = document.querySelector(`[data-component="${component}"]`);
+';
+    lazyComponents.forEach(component => {);';
+      const element: ,';
+    t="${component}"]`);
       if (element && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
+        const observer: ,
+    y: any) => {
             if (entry.isIntersecting) {
               this.loadComponent(component);
               observer.unobserve(entry.target);
@@ -259,9 +229,8 @@ class PerformanceEnhancer {
     });
   }
 
-  private async loadComponent(componentName: string): Promise<void> {
-    try {
-      const module = await import(`../components/${componentName}.tsx`);
+  private async loadComponent(componentName: any,
+    e= await import(`../components/${componentName}.tsx`);
       // Component loaded successfully
       console.log(`${componentName} loaded dynamically`);
     } catch (error) {
@@ -274,6 +243,6 @@ class PerformanceEnhancer {
       this.observer.disconnect();
     }
   }
-}
-
-export default PerformanceEnhancer;
+}";
+"'"';
+export default PerformanceEnhancer;"'"'`"';

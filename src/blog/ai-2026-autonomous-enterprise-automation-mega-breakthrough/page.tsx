@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import { Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
@@ -23,45 +19,8 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
           </div>
         </div>
         {/* Content Sections */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Key Features</h2>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                99.98% Self-Managing Operations
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                Intelligent Process Optimization
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                $15 Billion Proven Enterprise Value
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
-                Complete Business Transformation
-              </li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
-                Massive Cost Reduction
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
-                Increased Efficiency
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
-                Enhanced Productivity
-              </li>
-              <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+        <div className="grid md: any,>
+    e="w-5 h-5 text-green-400" />
                 Future-Ready Operations
               </li>
             </ul>
@@ -74,14 +33,9 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               Ready to Transform Your Enterprise?
             </h2>
             <p className="text-gray-300 mb-6">
-              Join the autonomous enterprise revolution and unlock unprecedented business value.
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+              Join the autonomous enterprise revolution and unlock unprecedented business value.;
+            </p>;
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: any,>;
+    r: any;";
+  );"'";
+};"'"'";

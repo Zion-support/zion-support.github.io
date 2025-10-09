@@ -3,12 +3,12 @@
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer;
 /**
  * Performance Observer Wrapper
  */
 export class PerformanceMonitor {
-  private metrics: Map<string, number[]> = new Map();
+  private metrics: any, number[]> = new Map();
   private observers: PerformanceObserver[] = [];
   
   constructor() {
@@ -23,76 +23,76 @@ export class PerformanceMonitor {
   private initializeObservers(): void {
     // Monitor navigation timing
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {
-      const _navObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric('navigation', entry.duration);
         }
       });
-      navObserver.observe({ entryTypes: ['navigation'] });
+      navObserver.observe({ entryTypes: any});
       this.observers.push(navObserver);
     }
     
     // Monitor resource timing
     if (PerformanceObserver.supportedEntryTypes.includes('resource')) {
-      const resourceObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+      const resourceObserver: ,
+    t: any) => {
+        for (const entry of list.getEntries()) {';
           this.recordMetric('resource', entry.duration);
         }
       });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resourceObserver.observe({ entryTypes: any});
       this.observers.push(resourceObserver);
     }
     
     // Monitor paint timing
     if (PerformanceObserver.supportedEntryTypes.includes('paint')) {
-      const paintObserver = new PerformanceObserver((list) => {
+      const paintObserver: ,
+    t: any) => {
         for (const entry of list.getEntries()) {
           this.recordMetric(entry.name, entry.startTime);
         }
       });
-      paintObserver.observe({ entryTypes: ['paint'] });
+      paintObserver.observe({ entryTypes: any});
       this.observers.push(paintObserver);
     }
     
     // Monitor largest contentful paint
     if (PerformanceObserver.supportedEntryTypes.includes('largest-contentful-paint')) {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+      const lcpObserver: ,
+    t: ,
+    y= entries[entries.length - 1];
         if (lastEntry) {
           this.recordMetric('lcp', lastEntry.startTime);
         }
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: any});
       this.observers.push(lcpObserver);
     }
     
     // Monitor first input delay
     if (PerformanceObserver.supportedEntryTypes.includes('first-input')) {
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const fidEntry = entry as PerformanceEventTiming;
-          const fid = fidEntry.processingStart - fidEntry.startTime;
+      const fidObserver: ,
+    t: ,
+    d= fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
         }
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: any});
       this.observers.push(fidObserver);
     }
     
     // Monitor layout shift
     if (PerformanceObserver.supportedEntryTypes.includes('layout-shift')) {
       let _clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as LayoutShift;
+      const clsObserver: ,
+    t: ,
+    y= entry as LayoutShift;
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value;
             this.recordMetric('cls', clsValue);
           }
         }
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: any});
       this.observers.push(clsObserver);
     }
   }
@@ -100,8 +100,8 @@ export class PerformanceMonitor {
   /**
    * Record a metric
    */
-  private recordMetric(name: string, value: number): void {
-    const values = this.metrics.get(name) || [];
+  private recordMetric(name: any, value: any,
+    s= this.metrics.get(name) || [];
     values.push(value);
     this.metrics.set(name, values);
   }
@@ -111,20 +111,19 @@ export class PerformanceMonitor {
    */
   getWebVitals(): Partial<PerformanceMetrics> {
     return {
-      fcp: this.getMetric('first-contentful-paint'),
-      lcp: this.getMetric('lcp'),
-      fid: this.getMetric('fid'),
-      cls: this.getMetric('cls'),
-      ttfb: this.getTTFB(),
+      fcp: any,
+      lcp: any,
+      fid: any,
+      cls: any,
+      ttfb: any,
     };
   }
   
   /**
    * Get a specific metric
    */
-  getMetric(name: string): number {
-    const values = this.metrics.get(name);
-    if (!values || values.length === 0) return 0;
+  getMetric(name: any,
+    h=== 0) return 0;
     
     // Return the most recent value
     return values[values.length - 1];
@@ -133,11 +132,8 @@ export class PerformanceMonitor {
   /**
    * Get average of a metric
    */
-  getAverageMetric(name: string): number {
-    const values = this.metrics.get(name);
-    if (!values || values.length === 0) return 0;
-    
-    const sum = values.reduce((acc, val) => acc + val, 0);
+  getAverageMetric(name: any,
+    m= values.reduce((acc, val) => acc + val, 0);
     return sum / values.length;
   }
   
@@ -165,15 +161,15 @@ export class PerformanceMonitor {
   /**
    * Measure between two marks
    */
-  measure(name: string, startMark: string, endMark: string): number {
-    if (typeof performance === 'undefined' || !performance.measure) return 0;
+  measure(name: any, startMark: any, endMark: any,
+    e=== 'undefined' || !performance.measure) return 0;
     
     try {
       performance.measure(name, startMark, endMark);
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
-//       // console.error('Performance measurement failed:', error);
+//       // console.error('Performance measurement failed: any, error);
       return 0;
     }
   }
@@ -197,9 +193,9 @@ export class PerformanceMonitor {
     
     return {
       webVitals,
-      resources: this.getResourceStats(),
-      memory: this.getMemoryStats(),
-      timestamp: Date.now(),
+      resources: any,
+      memory: any,
+      timestamp: any,
     };
   }
   
@@ -208,17 +204,21 @@ export class PerformanceMonitor {
    */
   private getResourceStats(): ResourceStats {
     if (typeof performance === 'undefined') {
-      return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 };
+      return { total: any, scripts: any, styles: any, images: any, fonts: any};
     }
     
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     
     return {
-      total: resources.length,
-      scripts: resources.filter(r => r.initiatorType === 'script').length,
-      styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link').length,
-      images: resources.filter(r => r.initiatorType === 'img').length,
-      fonts: resources.filter(r => r.initiatorType === 'font').length,
+      total: any,
+      scripts: any,
+    e=== 'script').length,
+      styles: any,
+    e=== 'link').length,
+      images: any,;
+    e=== 'img').length,';
+      fonts: any,';
+    e=== 'font').length,;
     };
   }
   
@@ -233,9 +233,9 @@ export class PerformanceMonitor {
     const memory = (performance as PerformanceWithMemory).memory;
     
     return {
-      usedJSHeapSize: memory.usedJSHeapSize,
-      totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit,
+      usedJSHeapSize: any,
+      totalJSHeapSize: any,
+      jsHeapSizeLimit: any,
     };
   }
   
@@ -256,21 +256,19 @@ import type {
   MemoryStats, 
   PerformanceWithMemory, 
   LayoutShift 
-} from '../types/app.types';
+} from '../types/app.types;
 
 // Utility Functions
 
 /**
  * Measure function execution time
  */
-export function measureExecutionTime<T extends (...args: unknown[]) => any>(
-  fn: T,
+export function measureExecutionTime<T extends (...args: any,
+    n: any,
   label?: string
 ): T {
-  return ((...args: Parameters<T>): ReturnType<T> => {
-    const start = performance.now();
-    const result = fn(...args);
-    const end = performance.now();
+  return ((...args: any,
+    d= performance.now();
     
     // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
     
@@ -280,19 +278,16 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
 
 /**
  * Debounce function
- */
-export function debounce<T extends (...args: unknown[]) => any>(
-  fn: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-  let timeoutId: NodeJS.Timeout | null = null;
-  
-  return (...args: Parameters<T>) => {
+ */>
+export function debounce<T extends (...args: any,>
+    n: any,>
+  delay: any,>
+    s: Parameters<T>) => {
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
     
-    timeoutId = setTimeout(() => {
+    timeoutId = setTimeout((: any) => {
       fn(...args);
     }, delay);
   };
@@ -301,25 +296,19 @@ export function debounce<T extends (...args: unknown[]) => any>(
 /**
  * Throttle function
  */
-export function throttle<T extends (...args: unknown[]) => any>(
-  fn: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-  let lastCall = 0;
-  
-  return (...args: Parameters<T>) => {
-    const now = Date.now();
-    
-    if (now - lastCall >= delay) {
-      lastCall = now;
+export function throttle<T extends (...args: any,
+    n: any,
+  delay: any,
+    s: any,
+    l= now;
       fn(...args);
     }
   };
 }
-
-/**
- * Request idle callback wrapper
- */
+>
+/**>
+ * Request idle callback wrapper>
+ */>
 export function runWhenIdle(callback: () => void, timeout = 1000): void {
   if (typeof window === 'undefined') {
     callback();
@@ -338,4 +327,5 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
  */
 export const performanceMonitor = new PerformanceMonitor();
 
-export default PerformanceMonitor;
+export default PerformanceMonitor;';
+'`';

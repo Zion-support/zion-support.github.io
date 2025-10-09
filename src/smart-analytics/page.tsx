@@ -1,98 +1,82 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import { Link } from 'react-router-dom;
 
-const SmartAnalyticsPage: React.FC = () => {
-  const _features = [
+const SmartAnalyticsPage: any,
+    n: any,
+      title: any,
+      description: any,
+      benefit: any},
     {
-      icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
-      benefit: 'Make decisions 10x faster'
-    },
+      icon: any,
+      title: any,
+      description: any,
+      benefit: any},
     {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit: 'Discover hidden opportunities'
-    },
+      icon: any,
+      title: any,
+      description: any,
+      benefit: any},
     {
-      icon: Target,
-      title: 'Custom Metrics',
-      description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
-      benefit: 'Focus on what drives growth'
-    },
+      icon: any,
+      title: any,
+      description: any,
+      benefit: any},
     {
-      icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit: 'Never miss critical changes'
-    },
+      icon: any,
+      title: any,
+      description: any,
+      benefit: any},
     {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Share insights and reports with your team with role-based access and collaborative features.',
-      benefit: 'Align your entire organization'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
-    }
+      icon: any,
+      title: any,
+      description: any, access controls, and compliance with industry standards.',
+      benefit: any}
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with analytics',
-      features: [
-        'Up to 5 data sources',
+      name: any,
+      price: any,
+      period: any,
+      description: any,
+      features: any,
         'Basic dashboards',
         'Email support',
         'Standard reports',
-        '1 user account'
+  ]
+        '1 user account']
       ],
-      popular: false
-    },
+      popular: any},
     {
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Advanced analytics for growing businesses',
-      features: [
-        'Unlimited data sources',
+      name: any,
+      price: any,
+      period: any,
+      description: any,
+      features: any,
         'Advanced AI insights',
         'Custom dashboards',
         'Priority support',
         'Up to 10 user accounts',
         'API access',
-        'Advanced reporting'
+  ]
+        'Advanced reporting']
       ],
-      popular: true
-    },
+      popular: any},
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Full-scale analytics solution for large organizations',
-      features: [
-        'Everything in Professional',
+      name: any,
+      price: any,
+      period: any,
+      description: any,
+      features: any,
         'Dedicated account manager',
         'Custom integrations',
         '24/7 phone support',
         'Unlimited users',
         'White-label options',
-        'SLA guarantee'
+  ]
+        'SLA guarantee']
       ],
-      popular: false
-    }
+      popular: any}
   ];
 
   return (
@@ -100,35 +84,11 @@ const SmartAnalyticsPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Smart Analytics
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics that drive real business results
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <Link
-              to="/contact"
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-        </section>
-
-        {/* Features Section */}
+          <h1 className="text-5xl md: any,">
+    r: any{/* Features Section */}">
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Analytics Features
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <h2 className="text-3xl md: any,>
+    g: any{features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -143,16 +103,13 @@ const SmartAnalyticsPage: React.FC = () => {
 
         {/* Pricing Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+          <h2 className="text-3xl md: any, Transparent Pricing>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
-                  plan.popular ? 'border-cyan-500' : 'border-gray-600'
-                } relative`}
+          <div className="grid md: any{pricingPlans.map((plan, index) => (
+              <div key={index}'>
+                className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${'>';
+                  plan.popular ? 'border-cyan-500' : 'border-gray-600'>
+                } relative`}>
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -175,13 +132,9 @@ const SmartAnalyticsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="tel:+13024640950"
-                  className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
-                  }`}
+                <a ">";
+                  href="tel: any,>
+    r: any}`}>
                 >
                   Get Started
                 </a>
@@ -192,58 +145,24 @@ const SmartAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <Link
-              to="/contact"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-            >
-              Get Free Demo
-            </Link>
-          </div>
-        </section>
-
-        {/* Contact Info */}
+          <h2 className="text-3xl md: any,">
+    r: any{/* Contact Info */}">
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-gray-300">
-              <div className="flex items-center justify-center">
-                <Phone className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center justify-center">
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+            <div className="grid md: any,>
+    r: any,>
+    e="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </div>;
   );
 };
 
-export default SmartAnalyticsPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+export default SmartAnalyticsPage;'";
+import React from 'react';"'"';
+"'"'`"';

@@ -1,96 +1,94 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react;
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
+  cls: any,
+    b: any;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: any,
+    C= () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
+    cls: any,;
+    fcp: any,;
+    lcp: any,;
+    ttfb: any,;
   });
 
-  useEffect(() => {
+  useEffect((: any) => {
     // Measure Core Web Vitals
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cls: metric.value }));
+    onCLS((metric: ,
+    v=> ({ ...prev, cls: any}));
       // Send to analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'CLS',
-          value: Math.round(metric.value * 1000),
+          event_category: any,
+          event_label: any,);
+          value: any,
         });
       }
     });
 
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, fcp: metric.value }));
+    onFCP((metric: ,
+    v=> ({ ...prev, fcp: any}));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'FCP',
-          value: Math.round(metric.value),
+          event_category: any,
+          event_label: any,);
+          value: any,
         });
       }
     });
 
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, lcp: metric.value }));
+    onLCP((metric: ,
+    v=> ({ ...prev, lcp: any}));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'LCP',
-          value: Math.round(metric.value),
+          event_category: any,
+          event_label: any,);
+          value: any,
         });
       }
     });
 
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
+    onTTFB((metric: ,
+    v=> ({ ...prev, ttfb: any}));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'TTFB',
-          value: Math.round(metric.value),
+          event_category: any,
+          event_label: any,);
+          value: any,
         });
       }
     });
 
     // Monitor resource loading performance
     if ('performance' in window) {
-      const _observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'resource') {
             const resource = entry as PerformanceResourceTiming;
             
             // Log slow resources
             if (resource.duration > 1000) {
-              console.warn('Slow resource detected:', {
-                name: resource.name,
-                duration: resource.duration,
-                size: resource.transferSize,
+              console.warn('Slow resource detected: any, {
+                name: any,
+                duration: any,
+                size: any,);
               });
             }
           }
         }
       });
 
-      observer.observe({ entryTypes: ['resource'] });
+      observer.observe({ entryTypes: any});
     }
 
-    // Monitor memory usage (if available)
+    // Monitor memory usage (if available);
     if ('memory' in performance) {
       const memory = (performance as any).memory;
-      console.log('Memory usage:', {
-        used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-        total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB',
+      console.log('Memory usage: any, {);
+        used: any,
+        total: any,
+        limit: any,
       });
     }
 

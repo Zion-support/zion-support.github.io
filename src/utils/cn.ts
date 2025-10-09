@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import {clsx} from 'clsx';
-import { twMerge } from 'tailwind-merge';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import { twMerge } from 'tailwind-merge;
 
-export function cn(...inputs: ClassValue[]) {
+export function cn(...inputs: any{
   return twMerge(clsx(inputs));
 }

@@ -22,10 +22,8 @@ export interface PerformanceMetrics {
  * Complete performance report structure
  */
 export interface PerformanceReport {
-  webVitals: Partial<PerformanceMetrics>;
-  resources: ResourceStats;
-  memory: MemoryStats | null;
-  timestamp: number;
+  webVitals: any,
+    p: any;
 }
 
 /**
@@ -33,11 +31,8 @@ export interface PerformanceReport {
  * Tracks resource loading statistics
  */
 export interface ResourceStats {
-  total: number;
-  scripts: number;
-  styles: number;
-  images: number;
-  fonts: number;
+  total: any,
+    s: any;
 }
 
 /**
@@ -45,9 +40,8 @@ export interface ResourceStats {
  * Browser memory usage statistics
  */
 export interface MemoryStats {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
+  usedJSHeapSize: any,
+    t: any;
 }
 
 /**
@@ -55,12 +49,8 @@ export interface MemoryStats {
  * Structure for performance alerts and warnings
  */
 export interface PerformanceAlert {
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  metric: keyof PerformanceMetrics;
-  value: number;
-  threshold: number;
-  timestamp: number;
+  type: any,
+    p: any;
 }
 
 /**
@@ -68,8 +58,8 @@ export interface PerformanceAlert {
  * Extends PerformanceEntry for layout shift tracking
  */
 export interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
+  value: any,
+    t: any;
 }
 
 /**
@@ -77,9 +67,9 @@ export interface LayoutShift extends PerformanceEntry {
  * Extends Performance API with memory information
  */
 export interface PerformanceWithMemory extends Performance {
-  memory: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
+  memory: any,
+    t: any;
+}
+  }
   };
 }

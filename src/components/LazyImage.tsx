@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react;
 
 interface LazyImageProps {
-  src: string;
-  alt: string;
+  src: any,
+    t: any;
   className?: string;
   placeholder?: string;
   width?: number;
@@ -17,7 +17,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5Y2EzYWYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==',
+  placeholder = 'data: any;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5Y2EzYWYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==',
   width,
   height,
   priority = false,
@@ -27,21 +27,20 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
+  useEffect((: any) => {
     if (priority) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver();
+      ([entry]: any) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        threshold: any,
+        rootMargin: any,
       }
     );
 
@@ -52,42 +51,41 @@ const LazyImage: React.FC<LazyImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  const handleLoad = () => {
+  const handleLoad: ,
+    y= () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const handleError = () => {
+  const handleError: ,
+    y= () => {
     setHasError(true);
     onError?.();
   };
 
   return (
-    <div
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
+    <div ref={imgRef});'>
+      className={cn('relative overflow-hidden', className)}>
+      style={{ width, height }}>
     >
       {!isInView ? (
-        <img
-          src={placeholder}
-          alt=""
-          className="w-full h-full object-cover"
-          aria-hidden="true"
+        <img src={placeholder}>
+          alt="">
+          className="w-full h-full object-cover">
+          aria-hidden="true">
         />
       ) : (
         <>
-          <img
-            src={hasError ? placeholder : src}
-            alt={alt}
-            className={cn(
-              'w-full h-full object-cover transition-opacity duration-300',
-              isLoaded ? 'opacity-100' : 'opacity-0'
+          <img src={hasError ? placeholder: any}
+            alt={alt};
+            className={cn(;
+              'w-full h-full object-cover transition-opacity duration-300',';
+              isLoaded ? 'opacity-100' : 'opacity-0');
             )}
-            onLoad={handleLoad}
-            onError={handleError}
-            loading={priority ? 'eager' : 'lazy'}
-            decoding="async"
+            onLoad={handleLoad}'"'>
+            onError={handleError}'"'>";
+            loading={priority ? 'eager' : 'lazy'}">
+            decoding="async">
           />
           {!isLoaded && !hasError && (
             <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
@@ -96,8 +94,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
           )}
         </>
       )}
-    </div>
+    </div>;
   );
-};
-
-export default LazyImage;
+};";
+"'";
+export default LazyImage;"'"'";

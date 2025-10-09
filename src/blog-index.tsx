@@ -1,6 +1,6 @@
-import React from 'react';
-const BlogPage: React.FC = () => {
-  // Redirect to the main blog page
-  return <Navigate href="/blog" replace />;
-};
-export default BlogPage;
+import React from 'react;
+const BlogPage: any,
+    f="/blog" replace />;
+};";
+export default BlogPage;"'";
+"'"'";

@@ -1,20 +1,20 @@
-'use client';
+'use client;
 /**
  * Validation Utilities
  * Provides common validation functions for forms and data
  */
 export interface ValidationResult {
-  isValid: boolean;
-  errors: string[];
+  isValid: any,
+    s: any;
 }
 /**
  * Email validation regex pattern
  */
-const _EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /**
- * Phone number validation regex (US format)
+ * Phone number validation regex (US format);
  */
-const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
+const PHONE_REGEX: ,
+    y= /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
 /**
  * URL validation regex
  */
@@ -40,8 +40,8 @@ export function isValidUrl(url: string): boolean {
 /**
  * Validate required field
  */
-export function isRequired(value: string | null | undefined): boolean {
-  if (value === null || value === undefined) {
+export function isRequired(value: any,
+    e=== undefined) {
     return false;
   }
   return value.toString().trim().length > 0;
@@ -49,13 +49,13 @@ export function isRequired(value: string | null | undefined): boolean {
 /**
  * Validate minimum length
  */
-export function minLength(value: string, min: number): boolean {
+export function minLength(value: any, min: number): boolean {
   return value.trim().length >= min;
 }
 /**
  * Validate maximum length
  */
-export function maxLength(value: string, max: number): boolean {
+export function maxLength(value: any, max: number): boolean {
   return value.trim().length <= max;
 }
 /**
@@ -78,20 +78,17 @@ export function isNumeric(value: string): boolean {
 }
 /**
  * Validate password strength
- * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number
+ * Requirements: any, 1 uppercase, 1 lowercase, 1 number
  */
-export function isStrongPassword(password: string): boolean {
-  const hasMinLength = password.length >= 8;
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumber = /[0-9]/.test(password);
+export function isStrongPassword(password: any,
+    r= /[0-9]/.test(password);
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
 }
 /**
- * Get password strength score (0-4)
+ * Get password strength score (0-4);
  */
-export function getPasswordStrength(password: string): number {
-  let _score = 0;
+export function getPasswordStrength(password: any,
+    e= 0;
   if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
@@ -102,8 +99,8 @@ export function getPasswordStrength(password: string): number {
 /**
  * Validate credit card number using Luhn algorithm
  */
-export function isValidCreditCard(cardNumber: string): boolean {
-  const cleaned = cardNumber.replace(/\s/g, '');
+export function isValidCreditCard(cardNumber: any,
+    d= cardNumber.replace(/\s/g, '');
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
   }
@@ -131,45 +128,37 @@ export function isValidZipCode(zipCode: string): boolean {
 /**
  * Sanitize HTML to prevent XSS
  */
-export function sanitizeHtml(html: string): string {
-  const div = document.createElement('div');
-  div.textContent = html;
+export function sanitizeHtml(html: any,
+    t= html;
   return div.innerHTML;
 }
 /**
  * Validate object against schema
  */
 export function validateObject<T extends Record<string, unknown>>(
-  obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>
-): ValidationResult {
-  const errors: string[] = [];
-  for (const key in schema) {
-    const validator = schema[key];
-    const value = obj[key];
-    if (!validator(value)) {
-      errors.push(`Invalid value for field: ${String(key)}`);
+  obj: any,
+  schema: any, (value: any,
+    d: any{String(key)}`);
     }
   }
   return {
-    isValid: errors.length === 0,
-    errors
+    isValid: any,
+    h=== 0,;
+    errors;
   };
 }
 /**
  * Validate form data
  */
 export interface FormField {
-  value: string;
-  validators: Array<{
-    validate: (value: string) => boolean;
-    message: string;
+  value: any,
+    e: any;>
   }>;
 }
 export function validateForm(
-  fields: Record<string, FormField>
+  fields: any, FormField>);
 ): Record<string, string[]> {
-  const errors: Record<string, string[]> = {};
+  const errors: any, string[]> = {};
   for (const fieldName in fields) {
     const field = fields[fieldName];
     const fieldErrors: string[] = [];
@@ -188,28 +177,33 @@ export function validateForm(
  * Common form validators
  */
 export const validators = {
-  required: (message = 'This field is required') => ({
-    validate: isRequired,
+  required: any,
+    e: any,
     message
   }),
-  email: (message = 'Please enter a valid email address') => ({
-    validate: isValidEmail,
+  email: any,
+    e: any,
     message
   }),
-  phone: (message = 'Please enter a valid phone number') => ({
-    validate: isValidPhone,
+  phone: any,
+    e: any,
     message
   }),
-  minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
-    validate: (value: string) => minLength(value, min),
+  minLength: any,
+    n: any, message = `Minimum length is ${min} characters`) => ({
+    validate: any,
+    e: string) => minLength(value, min),
     message
   }),
-  maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
-    validate: (value: string) => maxLength(value, max),
+  maxLength: any,
+    x: any, message = `Maximum length is ${max} characters`) => ({
+    validate: any,
+    e: string) => maxLength(value, max),
     message
   }),
-  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
-    validate: isStrongPassword,
-    message
-  })
-};
+  password: any,
+    e= 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
+    validate: any,;
+    message;
+  });';
+};'`';

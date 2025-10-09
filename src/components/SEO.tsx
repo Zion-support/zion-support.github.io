@@ -1,11 +1,11 @@
-'use client';
+'use client;
 
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
 
-import React from 'react';
+import React from 'react;
 
 export interface SEOProps {
   title?: string;
@@ -13,83 +13,70 @@ export interface SEOProps {
   keywords?: string[];
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
+  type?: 'website' | 'article' | 'product' | 'profile;
   author?: string;
   publishDate?: string;
   modifiedDate?: string;
   canonical?: string;
   noIndex?: boolean;
   structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player;
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: { locale: any,
+    l: any}[];
 }
 
-const _defaultSEO = {
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keywords: [
-    'AI',
+  title: any,
+  description: any,
+  keywords: any,
     'artificial intelligence',
     'enterprise solutions',
     'digital transformation',
-    'IT services',
+  ]
+    'IT services',]
   ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
-  type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+  image: any,
+    s: any,
+  url: any,
+    s: any,
+  type: any,
+  locale: any,
+  twitterCard: any,
 };
 
-export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type = defaultSEO.type,
-  author,
-  publishDate,
-  modifiedDate,
-  canonical,
-  noIndex = false,
-  structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
-  alternateLocales = [],
-}) => {
+export const SEO: ,
+    e: any, description: any, keywords: any, image: any, url: any, type = defaultSEO.type: any, author: any, publishDate: any, modifiedDate: any, canonical: any, noIndex = false: any, structuredData: any, twitterCard = defaultSEO.twitterCard: any, locale = defaultSEO.locale: any, alternateLocales = []: any, }: any) => {
   const seo = {
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
-    description: description || defaultSEO.description,
-    keywords: keywords || defaultSEO.keywords,
-    image: image || defaultSEO.image,
-    url: url || defaultSEO.url,
-    type,
-    twitterCard,
-    locale,
+    title: any{title} | Zion Tech Group` : defaultSEO.title,
+    description: any,
+    keywords: any,
+    image: any,;
+    url: any,;
+    type,;
+    twitterCard,;
+    locale,;
   };
 
   // Generate structured data
-  const generateStructuredData = () => {
+  const generateStructuredData: ,
+    y= () => {
     if (structuredData) {
       return structuredData;
     }
 
-    const baseStructuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
-      headline: seo.title,
-      description: seo.description,
-      url: seo.url,
-      image: seo.image,
+    const baseStructuredData: any, unknown> = {
+      '@context': 'https: any,
+      '@type': type === 'article' ? 'Article' : 'WebPage',;
+      headline: any,;
+      description: any,;
+      url: any,;
+      image: any,;
     };
 
     if (author) {
-      baseStructuredData.author = {
-        '@type': 'Person',
-        name: author,
+      baseStructuredData.author = {;
+        '@type': 'Person',;
+        name: any,;
       };
     }
 
@@ -107,4 +94,5 @@ export const SEO: React.FC<SEOProps> = ({
   return null;
 };
 
-export default SEO;
+export default SEO;';
+'`';

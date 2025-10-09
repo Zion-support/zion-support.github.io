@@ -1,27 +1,26 @@
-import React from 'react';
+import React from 'react;
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-  children: React.ReactNode;
+  children: any;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
+const SEOEnhancer: any,
+    e= "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
+  image = "https: any,
+  url = "https: any,
   children
 }) => {
-  const _structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: any,
     "@type": "TechCompany",
     "name": "Zion Tech Group",
     "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
+    "logo": "https: any,
     "description": description,
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
@@ -33,26 +32,25 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "Digital Transformation",
       "Cloud Services",
       "Automation",
-      "Business Intelligence"
+      "Business Intelligence
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "Customer Service",
       "areaServed": "US",
-      "availableLanguage": "en"
+      "availableLanguage": "en
     },
     "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
+      "https: any,
+      "https: any,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US
     },
     "offers": [
       {
@@ -65,7 +63,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           "@type": "PriceSpecification",
           "price": "1500",
           "priceCurrency": "USD",
-          "billingIncrement": "P1M"
+          "billingIncrement": "P1M
         }
       }
     ],
@@ -74,17 +72,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "geoMidpoint": {
         "@type": "GeoCoordinates",
         "latitude": "39.8283",
-        "longitude": "-75.5795"
+        "longitude": "-75.5795
       },
-      "geoRadius": "1000000"
+      "geoRadius": "1000000
     }
   };
 
   return (
     <>
       {children}
-    </>
+    </>);
   );
-};
-
-export default SEOEnhancer;
+};";
+"'";
+export default SEOEnhancer;"'"'";

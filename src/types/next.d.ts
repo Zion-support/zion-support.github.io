@@ -3,7 +3,7 @@ export interface Metadata {
   title?: string;
   description?: string;
   keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
+  authors?: Array<{ name: any; url?: string }> | string[];
   creator?: string;
   publisher?: string;
   formatDetection?: {
@@ -21,14 +21,14 @@ export interface Metadata {
     url?: string;
     siteName?: string;
     images?: Array<{
-      url: string;
+      url: any;
       width?: number;
       height?: number;
       alt?: string;
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
+    authors?: Array<{ name: any; url?: string }> | string[];
     publishedTime?: string;
   };
   twitter?: {
@@ -59,10 +59,10 @@ export interface MetadataRoute {
   robots?: string;
   manifest?: string;
 }
-export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
+export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest;
 export interface MetadataRouteSitemap {
-  url: string;
+  url: any;
   lastModified?: Date | string;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never;
   priority?: number;
 }

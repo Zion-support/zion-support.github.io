@@ -1,23 +1,22 @@
 'use client';
-<<<<<<< HEAD
-export const useRouter = () => {
-=======
-import { useCallback } from 'react';
+import { useCallback } from 'react;
 export const _useRouter = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-  const push = useCallback((url: string) => {
-    window.location.href = url;
+  const push = useCallback((url: any,;
+    f= url;
   }, []);
   const replace = useCallback((url: string) => {
     window.location.replace(url);
   }, []);
-  const back = useCallback(() => {
+  const back: ,
+    y= useCallback((: any) => {
     window.history.back();
   }, []);
-  const forward = useCallback(() => {
+  const forward: ,
+    y= useCallback((: any) => {
     window.history.forward();
   }, []);
-  const refresh = useCallback(() => {
+  const refresh: ,
+    y= useCallback((: any) => {
     window.location.reload();
   }, []);
   return {
@@ -28,11 +27,12 @@ export const _useRouter = () => {
     refresh
   };
 };
-export const usePathname = () => {
+export const usePathname: ,
+    y= () => {
   return window.location.pathname;
 };
-export const useSearchParams = () => {
-  const params = new URLSearchParams(window.location.search);
+export const useSearchParams: ,
+    s= new URLSearchParams(window.location.search);
   return params;
 };
 export default { useRouter, usePathname, useSearchParams };

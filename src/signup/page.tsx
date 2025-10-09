@@ -1,34 +1,29 @@
 'use client';
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer;
 
-const SignupPage: React.FC = () => {
+const SignupPage: any,
+    C= () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
-    agreeToTerms: false,
-    subscribeNewsletter: false
+    firstName: any,
+    lastName: any,
+    email: any,
+    company: any,
+    phone: any,;
+    password: any,;
+    confirmPassword: any,;
+    agreeToTerms: any,;
+    subscribeNewsletter: any;
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
+    setFormData(prev => ({;
+      ...prev,';
+      [name]: type === 'checkbox' ? checked: any;
     }));
   };
 
@@ -52,34 +47,31 @@ const SignupPage: React.FC = () => {
     
     setIsLoading(false);
     // Redirect to dashboard or home page
-    window.location.href = '/';
+    window.location.href = '/;
   };
 
   const features = [
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance'
-    },
+      icon: any,
+      title: any,
+      description: any},
     {
-      icon: Award,
-      title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients'
-    },
+      icon: any,
+      title: any,
+      description: any},
     {
-      icon: Globe,
-      title: 'Global Support',
-      description: '24/7 support and services across multiple time zones'
-    }
+      icon: any,
+      title: any,
+      description: any}
   ];
 
   const benefits = [
     'Free 14-day trial',
-    'No setup fees',
-    '24/7 expert support',
-    'Custom integrations',
-    'Scalable solutions',
-    'Regular updates'
+    'No setup fees',;
+    '24/7 expert support',';
+    'Custom integrations',';
+    'Scalable solutions',';
+    'Regular updates;
   ];
 
   return (
@@ -87,8 +79,7 @@ const SignupPage: React.FC = () => {
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Signup Form */}
+          <div className="grid grid-cols-1 lg: any{/* Left Side - Signup Form */}">
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
@@ -100,116 +91,40 @@ const SignupPage: React.FC = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name
-                    </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
+                <div className="grid grid-cols-1 md: any,
+    e={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Last Name
-                    </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
+                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,
+    s: any,
+    e={formData.lastName}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
+                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,
+    s: any,
+    e={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Company Name
-                  </label>
-                  <div className="relative">
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
+                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,
+    s: any,
+    e={formData.company}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Enter your company name"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Password
-                  </label>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type={showPassword ? 'text' : 'password'}
-                      name="password"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,
+    s: any,
+    e={formData.phone}
+                      onChange={handleInputChange}";
+                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,'";
+    s: any,'"'";
+    e={showPassword ? 'text' : 'password'}
+                      name="password
                       value={formData.password}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Create a password"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                    >
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      onChange={handleInputChange}">
+                      required">
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,>
+    s: any,>
+    k={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: any,
+    e="w-5 h-5" />}
                     </button>
                   </div>
                 </div>
@@ -218,93 +133,60 @@ const SignupPage: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Confirm Password
                   </label>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
+                  <div className="relative">";
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />'";
+                    <input '"'";
                       type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword"
+                      name="confirmPassword
                       value={formData.confirmPassword}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Confirm your password"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                    >
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      onChange={handleInputChange}">
+                      required">
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: any,>
+    s: any,>
+    k={() => setShowConfirmPassword(!showConfirmPassword)}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: any,
+    e="w-5 h-5" />}
                     </button>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <label className="flex items-start">
-                    <input
-                      type="checkbox"
-                      name="agreeToTerms"
+                    <input 
+                      type="checkbox
+                      name="agreeToTerms
                       checked={formData.agreeToTerms}
-                      onChange={handleInputChange}
-                      required
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
-                    />
-                    <span className="ml-2 text-sm text-gray-300">
-                      I agree to the{' '}
-                      <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-                        Terms of Service
-                      </a>{' '}
+                      onChange={handleInputChange}">
+                      required">
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus: any,>";
+    s: any,>"'";
+    e="ml-2 text-sm text-gray-300">'"'";
+                      I agree to the{' '}"'"'";
+                      <a href="/terms" className="text-cyan-400 hover: any{' '}'"'";
                       and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                        Privacy Policy
-                      </a>
-                    </span>
-                  </label>
-                  
-                  <label className="flex items-start">
-                    <input
-                      type="checkbox"
-                      name="subscribeNewsletter"
-                      checked={formData.subscribeNewsletter}
+                      <a href="/privacy" className="text-cyan-400 hover: any,
+    d={formData.subscribeNewsletter}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
-                    />
-                    <span className="ml-2 text-sm text-gray-300">
-                      Subscribe to our newsletter for updates and tips
-                    </span>
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus: any,
+    s: any,">
+    d={isLoading}">
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: any,>
+    d: any,>
+    e="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Creating Account...
                     </div>
                   ) : (
-                    'Create Account'
+                    'Create Account
                   )}
                 </button>
               </form>
-
-              <div className="mt-8 text-center">
-                <p className="text-gray-300">
+";
+              <div className="mt-8 text-center">"'";
+                <p className="text-gray-300">'";
                   Already have an account?{' '}
-                  <a
-                    href="/login"
-                    className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                  >
-                    Sign in here
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            {/* Right Side - Features and Benefits */}
+                  <a ">
+                    href="/login">
+                    className="text-cyan-400 hover: any{/* Right Side - Features and Benefits */}">
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -332,10 +214,8 @@ const SignupPage: React.FC = () => {
 
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">
-                  What You Get:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit, index) => (
+                  What You Get: any,
+    d: any{benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -355,15 +235,14 @@ const SignupPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
   );
 };
 
-export default SignupPage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+export default SignupPage;'";
+import React, { useState } from 'react';"'";
+"'"'";

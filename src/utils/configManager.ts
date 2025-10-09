@@ -1,186 +1,196 @@
-'use client';
+'use client;
 /**
  * Configuration Manager
  * Centralized configuration management with environment-based settings
  */
-export type Environment = 'development' | 'staging' | 'production' | 'test';
+export type Environment = 'development' | 'staging' | 'production' | 'test;
 export interface AppConfig {
-  environment: Environment;
-  api: {
-    baseURL: string;
-    timeout: number;
-    retryAttempts: number;
-    enableCaching: boolean;
+  environment: any,
+    g: any;
+}
+  }
   };
-  features: {
-    enableAnalytics: boolean;
-    enableErrorReporting: boolean;
-    enablePerformanceMonitoring: boolean;
-    enableAccessibility: boolean;
-    enableSEO: boolean;
-    enablePWA: boolean;
+  features: any,
+    A: any;
+}
+  }
   };
-  performance: {
-    enableCodeSplitting: boolean;
-    enableLazyLoading: boolean;
-    enableImageOptimization: boolean;
-    enableCaching: boolean;
+  performance: any,
+    g: any;
+}
+  }
   };
-  security: {
-    enableCSP: boolean;
-    enableCORS: boolean;
-    enableRateLimiting: boolean;
-    maxRequestsPerMinute: number;
+  security: any,
+    e: any;
+}
+  }
   };
-  ui: {
-    theme: 'light' | 'dark' | 'auto';
-    language: string;
-    timezone: string;
+  ui: any,
+    e: any;
+}
+  }
   };
-  logging: {
-    level: 'debug' | 'info' | 'warn' | 'error';
-    enableConsole: boolean;
-    enableNetwork: boolean;
+  logging: any,
+    k: any;
+}
+  }
   };
 }
-const _defaultConfig: AppConfig = {
-  environment: 'development',
-  api: {
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true
+const _defaultConfig: any,
+    t: any,
+  api: any,
+    s: any,
+    timeout: any,
+    retryAttempts: any,
+    enableCaching: any}
+  }
   },
-  features: {
-    enableAnalytics: false,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true
+  features: any,
+    s: any,
+    enableErrorReporting: any,
+    enablePerformanceMonitoring: any,
+    enableAccessibility: any,
+    enableSEO: any,
+    enablePWA: any}
+  }
   },
-  performance: {
-    enableCodeSplitting: true,
-    enableLazyLoading: true,
-    enableImageOptimization: true,
-    enableCaching: true
+  performance: any,
+    g: any,
+    enableLazyLoading: any,
+    enableImageOptimization: any,
+    enableCaching: any}
+  }
   },
-  security: {
-    enableCSP: true,
-    enableCORS: true,
-    enableRateLimiting: true,
-    maxRequestsPerMinute: 100
+  security: any,
+    P: any,
+    enableCORS: any,
+    enableRateLimiting: any,
+    maxRequestsPerMinute: any}
+  }
   },
-  ui: {
-    theme: 'auto',
-    language: 'en',
-    timezone: 'UTC'
+  ui: any,
+    e: any,
+    language: any,
+    timezone: any}
+  }
   },
-  logging: {
-    level: 'info',
-    enableConsole: true,
-    enableNetwork: false
+  logging: any,
+    l: any,
+    enableConsole: any,
+    enableNetwork: any}
+  }
   }
 };
-const developmentConfig: Partial<AppConfig> = {
-  environment: 'development',
-  api: {
-    baseURL: 'http://localhost:3000/api',
-    timeout: 30000,
-    retryAttempts: 1,
-    enableCaching: false
+const developmentConfig: any,
+    t: any,
+  api: any,
+    t: any,
+    timeout: any,
+    retryAttempts: any,
+    enableCaching: any}
+  }
   },
-  features: {
-    enableAnalytics: false,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: false,
-    enablePWA: false
+  features: any,
+    s: any,
+    enableErrorReporting: any,
+    enablePerformanceMonitoring: any,
+    enableAccessibility: any,
+    enableSEO: any,
+    enablePWA: any}
+  }
   },
-  logging: {
-    level: 'debug',
-    enableConsole: true,
-    enableNetwork: false
+  logging: any,
+    l: any,
+    enableConsole: any,
+    enableNetwork: any}
+  }
   }
 };
-const stagingConfig: Partial<AppConfig> = {
-  environment: 'staging',
-  api: {
-    baseURL: 'https://staging-api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true
+const stagingConfig: any,
+    t: any,
+  api: any,
+    s: any,
+    timeout: any,
+    retryAttempts: any,
+    enableCaching: any}
+  }
   },
-  features: {
-    enableAnalytics: true,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true
+  features: any,
+    s: any,
+    enableErrorReporting: any,
+    enablePerformanceMonitoring: any,
+    enableAccessibility: any,
+    enableSEO: any,
+    enablePWA: any}
+  }
   },
-  logging: {
-    level: 'info',
-    enableConsole: true,
-    enableNetwork: true
+  logging: any,
+    l: any,
+    enableConsole: any,
+    enableNetwork: any}
+  }
   }
 };
-const productionConfig: Partial<AppConfig> = {
-  environment: 'production',
-  api: {
-    baseURL: 'https://api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true
+const productionConfig: any,
+    t: any,
+  api: any,
+    s: any,
+    timeout: any,
+    retryAttempts: any,
+    enableCaching: any}
+  }
   },
-  features: {
-    enableAnalytics: true,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true
+  features: any,
+    s: any,
+    enableErrorReporting: any,
+    enablePerformanceMonitoring: any,
+    enableAccessibility: any,
+    enableSEO: any,
+    enablePWA: any}
+  }
   },
-  logging: {
-    level: 'error',
-    enableConsole: false,
-    enableNetwork: true
+  logging: any,
+    l: any,
+    enableConsole: any,
+    enableNetwork: any}
+  }
   },
-  security: {
-    enableCSP: true,
-    enableCORS: true,
-    enableRateLimiting: true,
-    maxRequestsPerMinute: 60
+  security: any,
+    P: any,
+    enableCORS: any,
+    enableRateLimiting: any,
+    maxRequestsPerMinute: any}
+  }
   }
 };
-const testConfig: Partial<AppConfig> = {
-  environment: 'test',
-  api: {
-    baseURL: 'http://localhost:3000/api',
-    timeout: 5000,
-    retryAttempts: 0,
-    enableCaching: false
+const testConfig: any,
+    t: any,
+  api: any,
+    t: any,
+    timeout: any,
+    retryAttempts: any,
+    enableCaching: any}
+  }
   },
-  features: {
-    enableAnalytics: false,
-    enableErrorReporting: false,
-    enablePerformanceMonitoring: false,
-    enableAccessibility: true,
-    enableSEO: false,
-    enablePWA: false
+  features: any,
+    s: any,
+    enableErrorReporting: any,
+    enablePerformanceMonitoring: any,
+    enableAccessibility: any,
+    enableSEO: any,
+    enablePWA: any}
+  }
   },
-  logging: {
-    level: 'error',
-    enableConsole: false,
-    enableNetwork: false
+  logging: any,
+    l: any,
+    enableConsole: any,
+    enableNetwork: any}
+  }
   }
 };
 export class ConfigManager {
-  private static instance: ConfigManager;
-  private config: AppConfig;
-  private environment: Environment;
-  private overrides: Partial<AppConfig> = {};
+  private static instance: any,
+    s: Partial<AppConfig> = {};
   constructor() {
     this.environment = this.detectEnvironment();
     this.config = this.loadConfig();
@@ -196,7 +206,6 @@ export class ConfigManager {
    */
   private detectEnvironment(): Environment {
     if (typeof process !== 'undefined') {
-      const _nodeEnv = process.env['NODE_ENV'];
       const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
       if (nextEnv) {
         return nextEnv as Environment;
@@ -205,7 +214,7 @@ export class ConfigManager {
       if (nodeEnv === 'production') return 'production';
       if (nodeEnv === 'development') return 'development';
     }
-    return 'development';
+    return 'development;
   }
   /**
    * Load configuration based on environment
@@ -233,18 +242,11 @@ export class ConfigManager {
   /**
    * Deep merge two config objects
    */
-  private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result = { ...base } as AppConfig;
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(
-      <K extends keyof AppConfig>(key: K) => {
-        const value = override[key];
-        if (value !== undefined) {
-          const baseValue = result[key];
-          if (
-            typeof value === 'object' &&
-            !Array.isArray(value) &&
-            value !== null &&
-            typeof baseValue === 'object' &&
+  private mergeConfig(base: any, override: any,
+    t= { ...base } as AppConfig;
+    (Object.keys(override) as Array<keyof AppConfig>).forEach();
+      <K extends keyof AppConfig>(key: any,
+    e=== 'object' &&
             !Array.isArray(baseValue) &&
             baseValue !== null
           ) {
@@ -262,11 +264,11 @@ export class ConfigManager {
    */
   get<K extends keyof AppConfig>(key: K): AppConfig[K];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
+    key: any,
     nestedKey: NK
   ): AppConfig[K][NK];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
+    key: any,
     nestedKey?: NK
   ): AppConfig[K] | AppConfig[K][NK] {
     if (nestedKey !== undefined) {
@@ -277,32 +279,32 @@ export class ConfigManager {
   /**
    * Set configuration value
    */
-  set<K extends keyof AppConfig>(key: K, value: AppConfig[K]): void;
+  set<K extends keyof AppConfig>(key: any, value: AppConfig[K]): void;
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
-    nestedKey: NK,
+    key: any,
+    nestedKey: any,
     value: AppConfig[K][NK]
   ): void;
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
-    nestedKeyOrValue: NK | AppConfig[K],
+    key: any,
+    nestedKeyOrValue: any,
     value?: AppConfig[K][NK]
   ): void {
-    if (value !== undefined && typeof nestedKeyOrValue === 'string') {
+    if (value !== undefined && typeof nestedKeyOrValue === 'string') {;
       const currentValue = this.config[key];
       if (
-        typeof currentValue === 'object' &&
+        typeof currentValue === 'object' &&);
         !Array.isArray(currentValue) &&
         currentValue !== null
       ) {
         this.config[key] = Object.assign({}, currentValue, {
-          [nestedKeyOrValue]: value
+          [nestedKeyOrValue]: value);
         }) as AppConfig[K];
       } else {
         // If current value is not an object, create a new object by merging with default
         const defaultValue = this.getDefaultForKey(key);
         this.config[key] = Object.assign({}, defaultValue, {
-          [nestedKeyOrValue]: value
+          [nestedKeyOrValue]: value);
         }) as AppConfig[K];
       }
     } else {
@@ -312,44 +314,49 @@ export class ConfigManager {
   /**
    * Get default value for a config key
    */
-  private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
-    const defaultValues: AppConfig = {
-      environment: 'development',
-      api: {
-        baseURL: '',
-        timeout: 30000,
-        retryAttempts: 3,
-        enableCaching: true
+  private getDefaultForKey<K extends keyof AppConfig>(key: any,
+    t: any,
+      api: any,
+    L: any,
+        timeout: any,
+        retryAttempts: any,
+        enableCaching: any}
+      }
       },
-      features: {
-        enableAnalytics: false,
-        enableErrorReporting: true,
-        enablePerformanceMonitoring: false,
-        enableAccessibility: true,
-        enableSEO: true,
-        enablePWA: false
+      features: any,
+    s: any,
+        enableErrorReporting: any,
+        enablePerformanceMonitoring: any,
+        enableAccessibility: any,
+        enableSEO: any,
+        enablePWA: any}
+      }
       },
-      performance: {
-        enableCodeSplitting: true,
-        enableLazyLoading: true,
-        enableImageOptimization: true,
-        enableCaching: true
+      performance: any,
+    g: any,
+        enableLazyLoading: any,
+        enableImageOptimization: any,
+        enableCaching: any}
+      }
       },
-      security: {
-        enableCSP: true,
-        enableCORS: false,
-        enableRateLimiting: true,
-        maxRequestsPerMinute: 100
+      security: any,
+    P: any,
+        enableCORS: any,
+        enableRateLimiting: any,
+        maxRequestsPerMinute: any}
+      }
       },
-      ui: {
-        theme: 'light',
-        language: 'en',
-        timezone: 'UTC'
+      ui: any,
+    e: any,
+        language: any,
+        timezone: any}
+      }
       },
-      logging: {
-        level: 'info',
-        enableConsole: true,
-        enableNetwork: false
+      logging: any,
+    l: any,
+        enableConsole: any,
+        enableNetwork: any}
+      }
       }
     };
     return defaultValues[key];
@@ -393,39 +400,38 @@ export class ConfigManager {
   /**
    * Update API configuration
    */
-  updateAPIConfig(config: Partial<AppConfig['api']>): void {
-    this.config.api = { ...this.config.api, ...config };
+  updateAPIConfig(config: any,
+    i= { ...this.config.api, ...config };
   }
   /**
    * Check if in production
    */
   isProduction(): boolean {
-    return this.environment === 'production';
+    return this.environment === 'production;
   }
   /**
    * Check if in development
    */
   isDevelopment(): boolean {
-    return this.environment === 'development';
+    return this.environment === 'development;
   }
   /**
    * Check if in test
    */
   isTest(): boolean {
-    return this.environment === 'test';
+    return this.environment === 'test;
   }
   /**
    * Check if in staging
    */
   isStaging(): boolean {
-    return this.environment === 'staging';
+    return this.environment === 'staging;
   }
   /**
    * Override configuration
    */
-  override(config: Partial<AppConfig>): void {
-    this.overrides = config;
-    this.config = this.loadConfig();
+  override(config: any,
+    g= this.loadConfig();
   }
   /**
    * Reset configuration
@@ -443,7 +449,8 @@ export class ConfigManager {
   /**
    * Validate configuration
    */
-  validate(): { valid: boolean; errors: string[] } {
+  validate(): { valid: any,
+    s: any} {
     const errors: string[] = [];
     // Validate API configuration
     if (!this.config.api.baseURL) {
@@ -460,8 +467,9 @@ export class ConfigManager {
       errors.push('Security maxRequestsPerMinute must be at least 1');
     }
     return {
-      valid: errors.length === 0,
-      errors
+      valid: any,
+    h=== 0,;
+      errors;
     };
   }
 }

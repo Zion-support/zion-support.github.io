@@ -1,4 +1,4 @@
-'use client';
+'use client;
 /**
  * Data Transformation Utilities
  * Provides utilities for transforming and formatting data
@@ -6,8 +6,8 @@
 /**
  * Deep clone an object
  */
-export function deepClone<T>(obj: T): T {
-  if (obj === null || typeof obj !== 'object') {
+export function deepClone<T>(obj: any,
+    j=== null || typeof obj !== 'object') {
     return obj;
   }
   if (obj instanceof Date) {
@@ -17,7 +17,6 @@ export function deepClone<T>(obj: T): T {
     return obj.map(item => deepClone(item)) as unknown as T;
   }
   if (obj instanceof Object) {
-    const _clonedObj = {} as T;
     for (const key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
         clonedObj[key] = deepClone(obj[key]);
@@ -30,23 +29,23 @@ export function deepClone<T>(obj: T): T {
 /**
  * Deep merge two objects
  */
-export function deepMerge<T extends Record<string, unknown>>(target: T, source: Partial<T>): T {
-  const output = { ...target };
+export function deepMerge<T extends Record<string, unknown>>(target: any, source: any,
+    t= { ...target };
   for (const key in source) {
     if (Object.prototype.hasOwnProperty.call(source, key)) {
       const sourceValue = source[key];
       const targetValue = output[key];
       if (
         sourceValue &&
-        typeof sourceValue === 'object' &&
+        typeof sourceValue === 'object' &&);
         !Array.isArray(sourceValue) &&
         targetValue &&
-        typeof targetValue === 'object' &&
-        !Array.isArray(targetValue)
+        typeof targetValue === 'object' &&;
+        !Array.isArray(targetValue);
       ) {
         output[key] = deepMerge(
           targetValue as Record<string, unknown>,
-          sourceValue as Record<string, unknown>
+          sourceValue as Record<string, unknown>);
         ) as T[Extract<keyof T, string>];
       } else {
         output[key] = sourceValue as T[Extract<keyof T, string>];
@@ -59,19 +58,19 @@ export function deepMerge<T extends Record<string, unknown>>(target: T, source: 
  * Flatten a nested object
  */
 export function flattenObject(
-  obj: Record<string, unknown>,
-  prefix = '',
-  separator = '.'
+  obj: any, unknown>,
+  prefix = '',';
+  separator = '.');
 ): Record<string, unknown> {
-  const flattened: Record<string, unknown> = {};
+  const flattened: any, unknown> = {};
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       const value = obj[key];
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {
-        Object.assign(
-          flattened,
-          flattenObject(value as Record<string, unknown>, newKey, separator)
+        Object.assign(;
+          flattened,);
+          flattenObject(value as Record<string, unknown>, newKey, separator);
         );
       } else {
         flattened[newKey] = value;
@@ -84,10 +83,10 @@ export function flattenObject(
  * Unflatten a flattened object
  */
 export function unflattenObject(
-  obj: Record<string, unknown>,
-  separator = '.'
+  obj: any, unknown>,
+  separator = '.');
 ): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
+  const result: any, unknown> = {};
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       const keys = key.split(separator);
@@ -109,11 +108,12 @@ export function unflattenObject(
  * Pick specific keys from an object
  */
 export function pick<T extends Record<string, unknown>, K extends keyof T>(
-  obj: T,
+  obj: any,
   keys: K[]
 ): Pick<T, K> {
-  const result = {} as Pick<T, K>;
-  keys.forEach(key => {
+  const result: ,
+    y= {} as Pick<T, K>;
+  keys.forEach(key => {);
     if (key in obj) {
       result[key] = obj[key];
     }
@@ -124,12 +124,13 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(
  * Omit specific keys from an object
  */
 export function omit<T extends Record<string, unknown>, K extends keyof T>(
-  obj: T,
+  obj: any,
   keys: K[]
 ): Omit<T, K> {
-  const result = { ...obj };
+  const result: ,
+    y= { ...obj };
   keys.forEach(key => {
-    delete result[key];
+    delete result[key];);
   });
   return result as Omit<T, K>;
 }
@@ -137,12 +138,13 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(
  * Group array items by a key
  */
 export function groupBy<T>(
-  array: T[],
-  key: keyof T | ((item: T) => string | number)
+  array: any,
+  key: any,
+    m: T) => string | number)
 ): Record<string, T[]> {
-  return array.reduce(
-    (result, item) => {
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
+  return array.reduce();
+    (result: any, item: ,
+    y=== 'function' ? String(key(item)) : String(item[key]);
       (result[groupKey] = result[groupKey] || []).push(item);
       return result;
     },
@@ -152,13 +154,13 @@ export function groupBy<T>(
 /**
  * Get unique items from an array
  */
-export function unique<T>(array: T[], key?: keyof T): T[] {
+export function unique<T>(array: any, key?: keyof T): T[] {
   if (!key) {
     return Array.from(new Set(array));
   }
   const seen = new Set();
   return array.filter(item => {
-    const value = item[key];
+    const value = item[key];);
     if (seen.has(value)) {
       return false;
     }
@@ -170,32 +172,24 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
  * Sort array by multiple keys
  */
 export function sortBy<T>(
-  array: T[],
-  keys: Array<keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
-): T[] {
-  return [...array].sort((a, b) => {
-    for (let i = 0; i < keys.length; i++) {
-      const key = keys[i];
-      const order = orders[i] || 'asc';
-      const aVal = typeof key === 'function' ? key(a) : a[key];
-      const bVal = typeof key === 'function' ? key(b) : b[key];
-      // Handle comparison with type safety
-      if (aVal == null || bVal == null) {
-        if (aVal == null && bVal == null) continue;
-        return aVal == null ? 1 : -1;
+  array: any,
+  keys: any,
+    m: T) => unknown)>,
+  orders: ,
+    a: any, b: ,
+    1: any;
       }
       // Convert to comparable values
-      const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-          ? aVal
+      const aComp =;
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean;
+          ? aVal;
           : String(aVal);
-      const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-          ? bVal
+      const bComp =;
+        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';
+          ? bVal;
           : String(bVal);
-      if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
+      if (aComp < bComp) return order === 'asc' ? -1: any,;
+    1: any;
     }
     return 0;
   });
@@ -203,9 +197,9 @@ export function sortBy<T>(
 /**
  * Chunk array into smaller arrays
  */
-export function chunk<T>(array: T[], size: number): T[][] {
-  const chunks: T[][] = [];
-  for (let i = 0; i < array.length; i += size) {
+export function chunk<T>(array: any, size: any,
+    s: any,
+    i= 0; i < array.length; i += size) {
     chunks.push(array.slice(i, i + size));
   }
   return chunks;
@@ -213,47 +207,46 @@ export function chunk<T>(array: T[], size: number): T[][] {
 /**
  * Zip multiple arrays together
  */
-export function zip<T>(...arrays: T[][]): T[][] {
-  const length = Math.max(...arrays.map(arr => arr.length));
-  const result: T[][] = [];
-  for (let i = 0; i < length; i++) {
-    result.push(arrays.map(arr => arr[i]));
+export function zip<T>(...arrays: any,
+    t: any,
+    r=> arr[i]));
   }
   return result;
 }
 /**
  * Format bytes to human readable string
  */
-export function formatBytes(bytes: number, decimals = 2): string {
+export function formatBytes(bytes: any, decimals = 2): string {';
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
-  const dm = decimals < 0 ? 0 : decimals;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
+  const dm = decimals < 0 ? 0: any,';
+    s= ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]};
 }
 /**
  * Format number with separators
  */
-export function formatNumber(num: number, locale = 'en-US'): string {
+export function formatNumber(num: any, locale = 'en-US'): string {
   return new Intl.NumberFormat(locale).format(num);
 }
 /**
  * Format currency
  */
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
+export function formatCurrency(amount: any, currency = 'USD', locale = 'en-US'): string {
   return new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency
+    style: any,;
+    currency);
   }).format(amount);
 }
 /**
  * Format date
  */
 export function formatDate(
-  date: Date | string | number,
-  options: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US'
+  date: any,
+  options: any,
+    s= {},';
+  locale = 'en-US');
 ): string {
   const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
   return new Intl.DateTimeFormat(locale, options).format(d);
@@ -261,29 +254,20 @@ export function formatDate(
 /**
  * Format relative time
  */
-export function formatRelativeTime(date: Date | string | number): string {
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
-  const now = new Date();
-  const diff = now.getTime() - d.getTime();
-  const seconds = Math.floor(diff / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-  const weeks = Math.floor(days / 7);
-  const months = Math.floor(days / 30);
-  const years = Math.floor(days / 365);
-  if (seconds < 60) return 'just now';
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
-  return `${years} year${years > 1 ? 's' : ''} ago`;
+export function formatRelativeTime(date: any,
+    s= Math.floor(days / 365);';
+  if (seconds < 60) return 'just now';'`';
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;'`';
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;'`';
+  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;'`';
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;'`';
+  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;'`';
+  return `${years} year${years > 1 ? 's' : ''} ago;
 }
 /**
  * Truncate string
  */
-export function truncate(str: string, length: number, suffix = '...'): string {
+export function truncate(str: any, length: any, suffix = '...'): string {
   if (str.length <= length) return str;
   return str.substring(0, length - suffix.length) + suffix;
 }
@@ -296,11 +280,8 @@ export function capitalize(str: string): string {
 /**
  * Convert to title case
  */
-export function titleCase(str: string): string {
-  return str
-    .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+export function titleCase(str: any,
+    d=> word.charAt(0).toUpperCase() + word.slice(1));
     .join(' ');
 }
 /**
@@ -309,7 +290,7 @@ export function titleCase(str: string): string {
 export function kebabCase(str: string): string {
   return str
     .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
+    .replace(/[\s_]+/g, '-');
     .toLowerCase();
 }
 /**
@@ -324,7 +305,7 @@ export function camelCase(str: string): string {
 export function snakeCase(str: string): string {
   return str
     .replace(/([a-z])([A-Z])/g, '$1_$2')
-    .replace(/[\s-]+/g, '_')
+    .replace(/[\s-]+/g, '_');
     .toLowerCase();
 }
 export default {
@@ -350,4 +331,5 @@ export default {
   kebabCase,
   camelCase,
   snakeCase
-};
+};';
+'`';

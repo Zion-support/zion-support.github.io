@@ -1,53 +1,42 @@
-'use client';
+'use client;
 /**
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
 interface AnalyticsEvent {
-  category: string;
-  action: string;
+  category: any,
+    n: any;
   label?: string;
   value?: number;
   nonInteraction?: boolean;
 }
 interface PerformanceMetrics {
-  metric: string;
-  value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
+  metric: any,
+    e: any;
+  rating?: 'good' | 'needs-improvement' | 'poor;
 }
 interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: any,
+    y: any;
 }
 class AnalyticsTracker {
   private isInitialized = false;
-  private queue: Array<() => void> = [];
-  /**
-   * Initialize the analytics tracker
-   */
-  initialize(): void {
-    if (typeof window === 'undefined') return;
-    this.isInitialized = true;
-    // Process queued events
-    this.queue.forEach(fn => fn());
-    this.queue = [];
+  private queue: any,
+    e= [];
     // Track initial page view
     this.trackPageView(window.location.pathname);
   }
   /**
    * Track a custom event
    */
-  trackEvent(event: AnalyticsEvent): void {
-    if (typeof window === 'undefined') return;
-    const _track = () => {
+  trackEvent(event: any,
+    w=== 'undefined') return;
       if (window.gtag) {
         window.gtag('event', event.action, {
-          event_category: event.category,
-          event_label: event.label,
-          value: event.value,
-          non_interaction: event.nonInteraction
+          event_category: any,
+          event_label: any,
+          value: any,
+          non_interaction: any;
         });
       }
       // Also log to console in development
@@ -63,14 +52,13 @@ class AnalyticsTracker {
   /**
    * Track page views
    */
-  trackPageView(path: string): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+  trackPageView(path: any,
+    k= () => {
       if (window.gtag) {
         window.gtag('event', 'page_view', {
-          page_path: path,
-          page_title: document.title,
-          page_location: window.location.href
+          page_path: any,;
+          page_title: any,;
+          page_location: any;
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -85,15 +73,14 @@ class AnalyticsTracker {
   /**
    * Track performance metrics
    */
-  trackPerformance(metrics: PerformanceMetrics): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+  trackPerformance(metrics: any,
+    k= () => {
       if (window.gtag) {
         window.gtag('event', 'performance', {
-          event_category: 'Web Vitals',
-          event_label: metrics.metric,
-          value: Math.round(metrics.value),
-          metric_rating: metrics.rating
+          event_category: any,;
+          event_label: any,);
+          value: any,
+          metric_rating: any;
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -108,14 +95,14 @@ class AnalyticsTracker {
   /**
    * Track errors
    */
-  trackError(error: ErrorReport): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+  trackError(error: any,
+    k= () => {
       if (window.gtag) {
         window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: error.severity === 'critical',
-          error_severity: error.severity
+          description: any,;
+          fatal: any,;
+    y=== 'critical',;
+          error_severity: any;
         });
       }
       // Always log errors to console
@@ -130,15 +117,15 @@ class AnalyticsTracker {
   /**
    * Track user timing
    */
-  trackTiming(category: string, variable: string, value: number, label?: string): void {
+  trackTiming(category: any, variable: any, value: any, label?: string): void {
     if (typeof window === 'undefined') return;
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'timing_complete', {
-          name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label
+          name: any,);
+          value: any,
+          event_category: any,
+          event_label: any;
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -153,14 +140,14 @@ class AnalyticsTracker {
   /**
    * Track conversions
    */
-  trackConversion(conversionId: string, value?: number): void {
+  trackConversion(conversionId: any, value?: number): void {
     if (typeof window === 'undefined') return;
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'conversion', {
-          send_to: conversionId,
-          value: value,
-          currency: 'USD'
+          send_to: any,;
+          value: any,;
+          currency: any;
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -177,10 +164,10 @@ class AnalyticsTracker {
 export const analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {
-  if (document.readyState === 'complete') {
+  if (document.readyState === 'complete') {;
     analyticsTracker.initialize();
   } else {
-    window.addEventListener('load', () => {
+    window.addEventListener('load': any, (: any) => {
       analyticsTracker.initialize();
     });
   }

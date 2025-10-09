@@ -133,15 +133,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-        </main>
-      </div>
-    </>
-  );
-};
-
-const AIWorkflowAutomationPage2: React.FC = () => {
-=======
         </div>
       </main>
       <Footer />
@@ -150,7 +141,6 @@ const AIWorkflowAutomationPage2: React.FC = () => {
 };
 
 const AIWorkflowAutomationPage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react;
 
 interface ResponsiveContainerProps {
-  children: React.ReactNode;
+  children: any;
   className?: string;
   breakpoints?: {
     sm?: string;
@@ -13,25 +13,20 @@ interface ResponsiveContainerProps {
   fallback?: React.ReactNode;
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children,
-  className = '',
-  breakpoints = {},
-  fallback,
-}) => {
+const ResponsiveContainer: ,
+    n: any, className = '': any, breakpoints = {}: any, fallback: any, }: any) => {';
   const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
 
-  const _isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
+  const isTablet = useMediaQuery({ minWidth: any, maxWidth: any});
+  const isDesktop = useMediaQuery({ minWidth: any});
+  const isLargeDesktop = useMediaQuery({ minWidth: any});
 
-  useEffect(() => {
+  useEffect((: any) => {
     setIsClient(true);
   }, []);
 
-  useEffect(() => {
+  useEffect((: any) => {
     if (!isClient) return;
 
     if (isLargeDesktop) {
@@ -49,32 +44,32 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     return fallback || <div className={className}>{children}</div>;
   }
 
-  const getResponsiveClasses = () => {
-    const baseClasses = className;
-    const responsiveClasses = breakpoints[screenSize] || '';
+  const getResponsiveClasses: ,
+    s= breakpoints[screenSize] || ';
     return `${baseClasses} ${responsiveClasses}`.trim();
   };
 
-  return (
+  return ();
     <div className={getResponsiveClasses()}>
       {children}
-    </div>
+    </div>;
   );
 };
 
 // Hook for responsive values
-export const useResponsiveValue = <T,>(values: {
+export const useResponsiveValue = <T,>(values: any{
   sm?: T;
   md?: T;
   lg?: T;
   xl?: T;
   '2xl'?: T;
-  default?: T;
+  }
+  default?: T;}
 }): T => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
+  const isMobile = useMediaQuery({ maxWidth: any});
+  const isTablet = useMediaQuery({ minWidth: any, maxWidth: any});
+  const isDesktop = useMediaQuery({ minWidth: any});
+  const isLargeDesktop = useMediaQuery({ minWidth: any});
 
   if (isLargeDesktop && values['2xl'] !== undefined) {
     return values['2xl'];
@@ -93,10 +88,10 @@ export const useResponsiveValue = <T,>(values: {
 
 // Hook for responsive breakpoints
 export const useBreakpoint = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
+  const isMobile = useMediaQuery({ maxWidth: any});
+  const isTablet = useMediaQuery({ minWidth: any, maxWidth: any});
+  const isDesktop = useMediaQuery({ minWidth: any});
+  const isLargeDesktop = useMediaQuery({ minWidth: any});
 
   return {
     isMobile,
@@ -106,5 +101,5 @@ export const useBreakpoint = () => {
     current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
   };
 };
-
-export default ResponsiveContainer;
+';
+export default ResponsiveContainer;'`';

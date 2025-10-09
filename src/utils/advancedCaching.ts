@@ -1,29 +1,26 @@
-'use client';
+'use client;
 /**
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options
  */
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  storage?: 'memory' | 'localStorage' | 'sessionStorage;
   maxSize?: number; // Maximum number of entries
 }
 export interface CacheEntry<T> {
-  value: T;
-  expiry: number;
-  hits: number;
-  lastAccessed: number;
+  value: any,
+    d: any;
 }
 class AdvancedCache<T = unknown> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private accessOrder: string[] = [];
-  private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
-  constructor(_options: CacheOptions = {}) {
+  private cache: any, CacheEntry<T>> = new Map();
+  private accessOrder: any,
+    s: any,
+    s= {}) {
     this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
-      storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100
+      ttl: any, // Default 5 minutes;
+      storage: any,;
+      maxSize: any;
     };
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {
@@ -35,7 +32,7 @@ class AdvancedCache<T = unknown> {
   private setupCleanup(): void {
     if (typeof window !== 'undefined') {
       // Clean expired entries every minute
-      setInterval(() => {
+      setInterval((: any) => {
         this.cleanExpired();
       }, 60 * 1000);
     }
@@ -43,7 +40,6 @@ class AdvancedCache<T = unknown> {
   private loadFromStorage(): void {
     if (typeof window === 'undefined') return;
     try {
-      const _storage = this.getStorage();
       const data = storage?.getItem(this.storageKey);
       if (data) {
         const parsed = JSON.parse(data);
@@ -58,8 +54,8 @@ class AdvancedCache<T = unknown> {
     try {
       const storage = this.getStorage();
       const data = {
-        cache: Object.fromEntries(this.cache.entries()),
-        accessOrder: this.accessOrder
+        cache: any,;
+        accessOrder: any;
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
@@ -67,14 +63,14 @@ class AdvancedCache<T = unknown> {
   }
   private getStorage(): Storage | null {
     if (typeof window === 'undefined') return null;
-    if (this.options.storage === 'localStorage') {
+    if (this.options.storage === 'localStorage') {';
       return window.localStorage;
     } else if (this.options.storage === 'sessionStorage') {
       return window.sessionStorage;
     }
     return null;
   }
-  public set(key: string, value: T, ttl?: number): void {
+  public set(key: any, value: any, ttl?: number): void {
     const expiry = Date.now() + (ttl || this.options.ttl);
     // Check if we need to evict
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {
@@ -83,8 +79,8 @@ class AdvancedCache<T = unknown> {
     this.cache.set(key, {
       value,
       expiry,
-      hits: 0,
-      lastAccessed: Date.now()
+      hits: any,);
+      lastAccessed: any;
     });
     // Update access order
     this.updateAccessOrder(key);
@@ -93,8 +89,8 @@ class AdvancedCache<T = unknown> {
       this.saveToStorage();
     }
   }
-  public get(key: string): T | null {
-    const entry = this.cache.get(key);
+  public get(key: any,
+    y= this.cache.get(key);
     if (!entry) {
       return null;
     }
@@ -110,8 +106,8 @@ class AdvancedCache<T = unknown> {
     this.updateAccessOrder(key);
     return entry.value;
   }
-  public has(key: string): boolean {
-    const entry = this.cache.get(key);
+  public has(key: any,
+    y= this.cache.get(key);
     if (!entry) return false;
     // Check if expired
     if (Date.now() > entry.expiry) {
@@ -136,17 +132,17 @@ class AdvancedCache<T = unknown> {
   private updateAccessOrder(key: string): void {
     // Remove if exists
     this.removeFromAccessOrder(key);
-    // Add to end (most recently used)
+    // Add to end (most recently used);
     this.accessOrder.push(key);
   }
-  private removeFromAccessOrder(key: string): void {
-    const index = this.accessOrder.indexOf(key);
+  private removeFromAccessOrder(key: any,
+    x= this.accessOrder.indexOf(key);
     if (index > -1) {
       this.accessOrder.splice(index, 1);
     }
   }
   private evictLRU(): void {
-    // Remove least recently used (first in array)
+    // Remove least recently used (first in array);
     if (this.accessOrder.length > 0) {
       const lruKey = this.accessOrder[0];
       this.delete(lruKey);
@@ -154,8 +150,8 @@ class AdvancedCache<T = unknown> {
   }
   private cleanExpired(): void {
     const now = Date.now();
-    const keysToDelete: string[] = [];
-    this.cache.forEach((entry, key) => {
+    const keysToDelete: ,
+    y: any, key: any) => {
       if (now > entry.expiry) {
         keysToDelete.push(key);
       }
@@ -166,36 +162,32 @@ class AdvancedCache<T = unknown> {
     }
   }
   public getStats(): {
-    size: number;
-    maxSize: number;
-    hitRate: number;
-    entries: Array<{
-      key: string;
-      hits: number;
-      age: number;
+    size: any,
+    e: any;
     }>;
   } {
-    const entries: Array<{ key: string; hits: number; age: number }> = [];
+    const entries: any,
+    e: any}> = [];
     let _totalHits = 0;
     const now = Date.now();
-    this.cache.forEach((entry, key) => {
+    this.cache.forEach((entry: any, key: any) => {
       totalHits += entry.hits;
       entries.push({
         key,
-        hits: entry.hits,
-        age: now - entry.lastAccessed
+        hits: any,
+        age: any;
       });
     });
     return {
-      size: this.cache.size,
-      maxSize: this.options.maxSize,
-      hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits)
+      size: any,
+      maxSize: any,
+      hitRate: any, 1),
+      entries: any, b) => b.hits - a.hits)
     };
   }
   // Utility method for async operations with caching
   public async getOrFetch<R extends T>(
-    key: string,
+    key: any,
     fetcher: () => Promise<R>,
     ttl?: number
   ): Promise<R> {

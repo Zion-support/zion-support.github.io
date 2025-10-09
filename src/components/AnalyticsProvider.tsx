@@ -1,35 +1,33 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react;
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, pagePath?: string) => void;
-  setUserId: (userId: string) => void;
-  setUserProperties: (properties: Record<string, unknown>) => void;
+  trackEvent: any,
+    e: any, parameters?: Record<string, unknown>) => void;
+  trackPageView: any,
+    e: any, pagePath?: string) => void;
+  setUserId: any,
+    s: any, unknown>) => void;
 }
 
-const _AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: any;
   trackingId?: string;
   enableDebug?: boolean;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX',
-  enableDebug = false,
-}) => {
+export const AnalyticsProvider: ,
+    n: any, trackingId = 'G-XXXXXXXXXX': any, enableDebug = false: any, }: any) => {
   const [isInitialized, setIsInitialized] = useState(false);
 
-  useEffect(() => {
+  useEffect((: any) => {
     if (typeof window === 'undefined') return;
 
     // Initialize Google Analytics
-    const initAnalytics = () => {
-      if (!trackingId || trackingId === 'G-XXXXXXXXXX') {
-        if (enableDebug) {
-          console.warn('Analytics: No valid tracking ID provided');
+    const initAnalytics = () => {;
+      if (!trackingId || trackingId === 'G-XXXXXXXXXX') {';
+        if (enableDebug) {';
+          console.warn('Analytics: any;
         }
         return;
       }
@@ -37,7 +35,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.src = `https: any,;
+    d=${trackingId}
       document.head.appendChild(script);
 
       // Initialize gtag
@@ -48,104 +47,113 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
       (window as any).gtag('js', new Date());
       (window as any).gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: any,
+        page_location: any,);
       });
 
       setIsInitialized(true);
 
       if (enableDebug) {
-        console.log('Analytics initialized with tracking ID:', trackingId);
+        console.log('Analytics initialized with tracking ID: any, trackingId);
       }
     };
 
     initAnalytics();
   }, [trackingId, enableDebug]);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = (eventName: any, parameters?: Record<string, unknown>) => {';
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      console.log('Analytics Event:', eventName, parameters);
+      console.log('Analytics Event: any, eventName, parameters);
     }
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', eventName, parameters);
+    if ((window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (pageName: string, pagePath?: string) => {
+  const trackPageView = (pageName: any, pagePath?: string) => {';
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      console.log('Analytics Page View:', pageName, pagePath);
+      console.log('Analytics Page View: any, pageName, pagePath);
     }
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_view', {
-        page_title: pageName,
-        page_location: pagePath || window.location.href,
+    if ((window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag('event', 'page_view', {
+        page_title: any,
+        page_location: any,);
       });
     }
   };
 
-  const setUserId = (userId: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', trackingId, {
-        user_id: userId,
+  const setUserId = (userId: any,
+    s: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag('config', trackingId, {
+        user_id: any,);
       });
     }
   };
 
-  const setUserProperties = (properties: Record<string, unknown>) => {
+  const setUserProperties = (properties: any, unknown>) => {';
     if (!isInitialized || typeof window === 'undefined') return;
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('set', properties);
+    if ((window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag('set', properties);
     }
   };
 
-  const trackError = (error: Error, context?: string) => {
+  const trackError = (error: any, context?: string) => {';
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);
+      console.error('Analytics Error: any, error, context);
     }
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          context: context || 'unknown',
-        },
+    if ((window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: any,
+    s: unknown[]) => void }).gtag('event', 'exception', {
+        description: any,
+        fatal: any,
+        custom_map: any,
+    t: any,
+}
+        }
+        },);
       });
     }
   };
 
-  const _contextValue: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUserId,
-    setUserProperties,
+  const _contextValue: any,
+    e= {
+    trackEvent,;
+    trackPageView,;
+    setUserId,;
+    setUserProperties,;
   };
 
   return (
     <AnalyticsContext.Provider value={contextValue}>
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>);
   );
 };
 
-export const useAnalytics = (): AnalyticsContextType => {
+export const useAnalytics = (): AnalyticsContextType => {;
   const context = useContext(AnalyticsContext);
-  if (context === undefined) {
+  if (context === undefined) {';
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
-
-export default AnalyticsProvider;
+';
+export default AnalyticsProvider;'`';

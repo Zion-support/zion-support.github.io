@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
-import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import {Menu, X, Phone, MapPin, Home} from 'lucide-react;
 
-const Navigation: React.FC = () => {
+const Navigation: any,
+    C= () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  useEffect(() => {
-    const _handleScroll = () => {
+  useEffect((: any) => {
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -19,64 +16,52 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeAllMenus = () => {
+  const closeAllMenus: ,
+    y= () => {
     setIsOpen(false);
     setServicesOpen(false);
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
-        : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${'>
+      isScrolled '>
+        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' '>';
+        : 'bg-transparent'>
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
-              <p className="text-xs text-cyan-400">AI & IT Solutions</p>
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover: any,>
+    e="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-            {/* Services Dropdown */}
+          <div className="hidden lg: any,>
+    r: any{/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white">
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-              </button>
-              
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                    <div className="grid grid-cols-2 gap-4">
+              <button className="flex items-center space-x-1 font-medium transition-colors hover: any,>
+    r: any,>
+    e="grid grid-cols-2 gap-4">
                       {/* AI Services */}
                       <div>
                         <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">AI Services</h4>
                         <div className="space-y-2">
-                          <Link to="/ai-analytics" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/ai-analytics" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             AI Analytics
                           </Link>
-                          <Link to="/ai-automation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/ai-automation" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             AI Automation
                           </Link>
-                          <Link to="/ai-content-generation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/ai-content-generation" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             AI Content Generation
                           </Link>
-                          <Link to="/ai-customer-support" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/ai-customer-support" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             AI Customer Support
                           </Link>
                         </div>
@@ -86,51 +71,52 @@ const Navigation: React.FC = () => {
                       <div>
                         <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4>
                         <div className="space-y-2">
-                          <Link to="/it-services" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/it-services" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             IT Services
                           </Link>
-                          <Link to="/cloud-migration" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/cloud-migration" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             Cloud Migration
                           </Link>
-                          <Link to="/devops" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/devops" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             DevOps
                           </Link>
-                          <Link to="/cybersecurity" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                          <Link to="/cybersecurity" className="block text-white hover: any,>
+    k={closeAllMenus}>
                             Cybersecurity
                           </Link>
                         </div>
                       </div>
                     </div>
                     <div className="border-t border-gray-700 mt-6 pt-4">
-                      <Link
-                        to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                        onClick={closeAllMenus}
+                      <Link 
+                        to="/services">
+                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: any,>
+    r: any,>
+    k={closeAllMenus}>
                       >
-                        View All Services
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                        View All Services;
+                      </Link>;
+                    </div>;
+                  </div>;
+                </div>);
               )}
             </div>
 
-            <Link 
-              to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
+            <Link ">
+              to="/case-studies" ">
+              className="font-medium transition-colors hover: any,>
+    k={closeAllMenus}>
             >
               Case Studies
             </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
-            </Link>
-
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
+            <Link to="/contact" className="text-white hover: any{/* CTA Button */}
+            <Link">
+              to="/contact">
+              className="cyber-button inline-flex items-center">
+              onClick={closeAllMenus}>
             >
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
@@ -138,49 +124,46 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-cyan-400 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <div className="lg: any,>
+    k={() => setIsOpen(!isOpen)}
+              className="text-white hover: any,
+    e="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
+          <div className="lg: any,>
+    e="px-4 py-6 space-y-6">
               {/* Main Navigation */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                <Link
-                  to="/"
-                  className="block text-white hover:text-cyan-400 transition-colors py-2"
-                  onClick={closeAllMenus}
+                <Link ">
+                  to="/">
+                  className="block text-white hover: any,>
+    k={closeAllMenus}>
                 >
                   Home
                 </Link>
-                <Link
-                  to="/about"
-                  className="block text-white hover:text-cyan-400 transition-colors py-2"
-                  onClick={closeAllMenus}
+                <Link ">
+                  to="/about">
+                  className="block text-white hover: any,>
+    k={closeAllMenus}>
                 >
                   About
                 </Link>
-                <Link
-                  to="/services"
-                  className="block text-white hover:text-cyan-400 transition-colors py-2"
-                  onClick={closeAllMenus}
+                <Link ">
+                  to="/services">
+                  className="block text-white hover: any,>
+    k={closeAllMenus}>
                 >
                   Services
                 </Link>
-                <Link
-                  to="/contact"
-                  className="block text-white hover:text-cyan-400 transition-colors py-2"
-                  onClick={closeAllMenus}
+                <Link ">
+                  to="/contact">
+                  className="block text-white hover: any,>
+    k={closeAllMenus}>
                 >
                   Contact
                 </Link>
@@ -189,35 +172,19 @@ const Navigation: React.FC = () => {
               {/* Contact Info */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>(302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <a
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                >
-                  <MapPin className="w-5 h-5" />
+                <a ">
+                  href="tel: any,>
+    r: any,>
+    e="w-5 h-5" />
                   <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
                 </a>
               </div>
             </div>
           </div>
         )}
-      </div>
-    </nav>
+      </div>;
+    </nav>;
   );
-};
-
-export default Navigation;
+};";
+"'"';
+export default Navigation;"'"'`"';

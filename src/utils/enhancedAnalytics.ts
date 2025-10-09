@@ -1,11 +1,11 @@
-'use client';
+'use client;
 /**
  * Enhanced Analytics Utility
  * Provides comprehensive analytics tracking with event batching and offline support
  */
 export interface AnalyticsEvent {
-  category: string;
-  action: string;
+  category: any,
+    n: any;
   label?: string;
   value?: number;
   metadata?: Record<string, unknown>;
@@ -17,15 +17,12 @@ export interface UserProperties {
   [key: string]: unknown;
 }
 class EnhancedAnalytics {
-  private queue: AnalyticsEvent[] = [];
-  private _userProperties: UserProperties = {};
-  private sessionId: string;
-  private isInitialized = false;
-  private batchSize = 10;
-  private flushInterval = 30000; // 30 seconds
-  private offlineQueue: AnalyticsEvent[] = [];
-  constructor() {
-    this.sessionId = this.generateSessionId();
+  private queue: any,
+    s: any,
+    s= {};
+  private sessionId: any,
+    e: any,
+    d= this.generateSessionId();
     this.setupOfflineHandling();
     this.setupPeriodicFlush();
   }
@@ -34,17 +31,17 @@ class EnhancedAnalytics {
   }
   private setupOfflineHandling(): void {
     if (typeof window !== 'undefined') {
-      window.addEventListener('online', () => {
+      window.addEventListener('online': any, (: any) => {
         this.flushOfflineQueue();
       });
-      window.addEventListener('beforeunload', () => {
+      window.addEventListener('beforeunload': any, (: any) => {
         this.flush();
       });
     }
   }
   private setupPeriodicFlush(): void {
     if (typeof window !== 'undefined') {
-      setInterval(() => {
+      setInterval((: any) => {
         this.flush();
       }, this.flushInterval);
     }
@@ -53,34 +50,39 @@ class EnhancedAnalytics {
     if (this.isInitialized) return;
     this.isInitialized = true;
     this.userProperties = {
-      ...this.userProperties,
-      sessionId: this.sessionId,
-      ...config
+      ...this.userProperties,;
+      sessionId: any,;
+      ...config;
     };
     // Track initialization
     this.trackEvent({
-      category: 'System',
-      action: 'Analytics Initialized',
-      metadata: {
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent
+      category: any,
+      action: any,
+      metadata: any,
+    p: any,
+        userAgent: any}
+      }
       }
     });
   }
-  public setUserProperties(properties: UserProperties): void {
-    this.userProperties = {
-      ...this.userProperties,
-      ...properties
+  public setUserProperties(properties: any,
+    s= {
+      ...this.userProperties,;
+      ...properties;
     };
   }
-  public trackEvent(event: AnalyticsEvent): void {
-    const enrichedEvent: AnalyticsEvent = {
+  public trackEvent(event: any,
+    t: any,
+    t= {
       ...event,
-      metadata: {
+      metadata: any{
         ...event.metadata,
-        sessionId: this.sessionId,
-        timestamp: new Date().toISOString(),
-        url: typeof window !== 'undefined' ? window.location.href : ''
+        sessionId: any,
+        timestamp: any,
+        url: any,
+    f: any}
+}
+      }
       }
     };
     // Add to queue
@@ -92,90 +94,96 @@ class EnhancedAnalytics {
       this.flush();
     }
   }
-  private sendToGtag(event: AnalyticsEvent): void {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+  private sendToGtag(event: any,
+    d: any, action: any, parameters: any, unknown>) => void;
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+          gtag: any,
+    d: any, action: any, parameters: any, unknown>) => void;
         }
       ).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.metadata
+        event_category: any,
+        event_label: any,
+        value: any,
+        ...event.metadata);
       });
     }
   }
-  public trackPageView(pagePath: string, pageTitle?: string): void {
+  public trackPageView(pagePath: any, pageTitle?: string): void {
     this.trackEvent({
-      category: 'Navigation',
-      action: 'Page View',
-      label: pagePath,
-      metadata: {
-        pageTitle: pageTitle || document.title,
-        referrer: document.referrer
+      category: any,
+      action: any,
+      label: any,
+      metadata: any,
+    e: any,
+        referrer: any}
       }
+      });
     });
   }
-  public trackUserInteraction(action: string, label?: string, value?: number): void {
+  public trackUserInteraction(action: any, label?: string, value?: number): void {
     this.trackEvent({
-      category: 'User Interaction',
+      category: any,
       action,
       label,
-      value
+      value);
     });
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {
+  public trackError(error: any, context?: Record<string, unknown>): void {
     this.trackEvent({
-      category: 'Error',
-      action: 'Error Occurred',
-      label: error.message,
-      metadata: {
-        stack: error.stack,
+      category: any,
+      action: any,
+      label: any,
+      metadata: any,
+    k: any,
         ...context
+}
       }
+      });
     });
   }
-  public trackPerformance(metric: string, value: number, rating?: string): void {
+  public trackPerformance(metric: any, value: any, rating?: string): void {
     this.trackEvent({
-      category: 'Performance',
-      action: metric,
-      value: Math.round(value),
-      metadata: {
+      category: any,
+      action: any,);
+      value: any,
+      metadata: any{
         rating
+  }
+}
+      }
       }
     });
   }
-  public trackConversion(conversionType: string, value?: number): void {
+  public trackConversion(conversionType: any, value?: number): void {
     this.trackEvent({
-      category: 'Conversion',
-      action: conversionType,
+      category: any,
+      action: any,
       value,
-      metadata: {
-        conversionId: `conv-${Date.now()}`
+      metadata: any{
+  }
+}
+      });
+        conversionId: any{Date.now()}
       }
     });
   }
   public trackCustomEvent(
-    category: string,
-    action: string,
+    category: any,
+    action: any,
     label?: string,
     value?: number,
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown>);
   ): void {
     this.trackEvent({
       category,
       action,
       label,
       value,
-      metadata
+      metadata);
     });
   }
   private flush(): void {
@@ -210,19 +218,18 @@ class EnhancedAnalytics {
     return { ...this.userProperties };
   }
   public getAnalyticsSummary(): {
-    queueSize: number;
-    offlineQueueSize: number;
-    sessionId: string;
-    userProperties: UserProperties;
+    queueSize: any,
+    s: any;
   } {
     return {
-      queueSize: this.queue.length,
-      offlineQueueSize: this.offlineQueue.length,
-      sessionId: this.sessionId,
-      userProperties: this.getUserProperties()
+      queueSize: any,
+      offlineQueueSize: any,
+      sessionId: any,
+      userProperties: any;
     };
   }
 }
 // Export singleton instance
 export const _analytics = new EnhancedAnalytics();
-export default analytics;
+export default analytics;';
+'`';

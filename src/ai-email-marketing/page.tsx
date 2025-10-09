@@ -1,124 +1,98 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react;
 
-const AIEmailMarketingPage: React.FC = () => {
-  const _features = [
+const AIEmailMarketingPage: any,
+    n: any,
+      title: any,
+      description: any},
     {
-      icon: Mail,
-      title: 'AI Content Generation',
-      description: 'Automatically create compelling email content that resonates with your audience'
-    },
+      icon: any,
+      title: any,
+      description: any},
     {
-      icon: Target,
-      title: 'Smart Segmentation',
-      description: 'AI-powered audience segmentation for highly targeted campaigns'
-    },
+      icon: any,
+      title: any,
+      description: any},
     {
-      icon: Send,
-      title: 'Optimal Send Times',
-      description: 'AI determines the best time to send emails for maximum engagement'
-    },
+      icon: any,
+      title: any,
+      description: any},
     {
-      icon: BarChart,
-      title: 'Predictive Analytics',
-      description: 'Forecast campaign performance and optimize for better results'
-    },
+      icon: any,
+      title: any,
+      description: any},
     {
-      icon: Users,
-      title: 'Behavioral Triggers',
-      description: 'Automated email sequences based on user behavior and actions'
-    },
-    {
-      icon: TrendingUp,
-      title: 'A/B Testing',
-      description: 'Intelligent A/B testing with AI-powered optimization'
-    }
+      icon: any,
+      title: any,
+      description: any}
   ];
 
   const benefits = [
-    'Increase open rates by 200%',
-    'Boost click-through rates by 150%',
-    'Reduce unsubscribe rates by 60%',
-    'Improve conversion rates by 180%',
-    'Save 15+ hours per week'
+    'Increase open rates by 200%',;
+    'Boost click-through rates by 150%',';
+    'Reduce unsubscribe rates by 60%',';
+    'Improve conversion rates by 180%',';
+    'Save 15+ hours per week;
   ];
 
   const emailTypes = [
-    { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
-    { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
-    { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
-    { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
-    { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
-    { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
+    { name: any, icon: any, description: any},
+    { name: any, icon: any, description: any},
+    { name: any, icon: any, description: any},
+    { name: any, icon: any, description: any},
+    { name: any, icon: any, description: any},
+    { name: any, icon: any, description: any}
   ];
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        '1,000 subscribers',
+      name: any,
+      price: any,
+      period: any,
+      description: any,
+      features: any,000 subscribers',
         '10,000 emails/month',
         'Basic AI features',
         'Email templates',
         'Basic analytics',
-        'Email support'
+  ]
+        'Email support']
       ],
-      popular: false
-    },
+      popular: any},
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        '10,000 subscribers',
+      name: any,
+      price: any,
+      period: any,
+      description: any,
+      features: any,000 subscribers',
         '100,000 emails/month',
         'Advanced AI features',
         'Custom templates',
         'Advanced analytics',
         'Priority support',
-        'A/B testing'
+  ]
+        'A/B testing']
       ],
-      popular: true
-    },
+      popular: any},
     {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited subscribers',
+      name: any,
+      price: any,
+      period: any,
+      description: any,
+      features: any,
         'Unlimited emails',
         'Full AI suite',
         'White-label options',
         'Custom integrations',
         'Dedicated support',
-        'Advanced automation'
+  ]
+        'Advanced automation']
       ],
-      popular: false
-    }
+      popular: any}
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
-const AiEmailMarketingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Email Marketing</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai email marketing solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
-    </div>
+const AiEmailMarketingPage: any,
+    r: any;
   );
 };
 

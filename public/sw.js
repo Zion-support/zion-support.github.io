@@ -23,11 +23,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-<<<<<<< HEAD
-// Activate event - clean up old caches
-=======
 // Activate event
->>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()

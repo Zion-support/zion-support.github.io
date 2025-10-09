@@ -1,57 +1,37 @@
-import React from 'react';
+import React from 'react;
 interface ContentPreviewCardProps {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured?: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
+  id: any,
+    t: any;
   };
   excerpt?: string;
 }
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  // id,
-  title,
-  description,
-  category,
-  readTime,
-  date,
-  path,
-  image,
-  featured = false,
-  stats,
-  excerpt
-}) => {
-  const _formatNumber = (num: number): string => {
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+const ContentPreviewCard: ,
+    d: any, title: any, description: any, category: any, readTime: any, date: any, path: any, image: any, featured = false: any, stats: any, excerpt
+}: any) => {;
+    if (num >= 1000) {';
+      return (num / 1000).toFixed(1) + 'k;
     }
     return num.toString();
   };
-  const getCategoryColor = (category: string): string => {
-    const colors: { [key: string]: string } = {
+  const getCategoryColor = (category: any,
+    y: string]: string } = {
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
-      'AI Agents': 'from-orange-500 to-red-600',
-      'Cost Optimization': 'from-yellow-500 to-orange-600',
-      'Intelligence': 'from-indigo-500 to-purple-600',
-      'Transformation': 'from-teal-500 to-blue-600',
-      'default': 'from-gray-500 to-gray-600'
+      'AI Agents': 'from-orange-500 to-red-600',;
+      'Cost Optimization': 'from-yellow-500 to-orange-600',';
+      'Intelligence': 'from-indigo-500 to-purple-600',';
+      'Transformation': 'from-teal-500 to-blue-600',';
+      'default': 'from-gray-500 to-gray-600;
     };
     return colors[category] || colors.default;
   };
   return (
-    <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
-      featured ? 'ring-2 ring-indigo-200' : ''
-    }`}>
-      {/* Image/Visual Header */}
+    <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover: any,'>
+    r: any{'>;
+      featured ? 'ring-2 ring-indigo-200' : ''>;
+    }`}>;
+      {/* Image/Visual Header */});
       <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}>
         <div className="text-center text-white">
           <div className="text-6xl mb-2">{image}</div>
@@ -119,18 +99,14 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {/* Date and CTA */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
-          <Link
-            href={path}
-            className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-          >
-            Read Article
-            <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
-};
-export default ContentPreviewCard;
+          <Link href={path}">
+            className="inline-flex items-center text-indigo-600 hover: any,>
+    h={2} d="M9 5l7 7-7 7" />
+            </svg>;
+          </Link>;
+        </div>;
+      </div>;
+    </article>;
+  );";
+};"'"';
+export default ContentPreviewCard;"'"'`"';

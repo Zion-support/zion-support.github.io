@@ -1,4 +1,4 @@
-'use client';
+'use client;
 /**
  * Enhanced API Client with retry logic, caching, and error handling
  */
@@ -11,115 +11,114 @@ export interface ApiClientConfig {
   cacheOptions?: CacheOptions;
 }
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
-  url: string;
+  url: any;
   cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
 }
 export interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Headers;
+  data: any,;
+    s: any;
 }
 export class ApiError extends Error {
   constructor(
-    message: string,
-    public status: number,
-    public response?: unknown
+    message: any,
+    public status: any,
+    public response?: unknown);
   ) {
     super(message);
-    this.name = 'ApiError';
+    this.name = 'ApiError;
   }
 }
 class ApiClient {
-  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
-    baseURL: string;
+  private config: any, 'cacheOptions' | 'baseURL'>> & {
+    baseURL: any;
     cacheOptions?: CacheOptions;
   };
-  private abortControllers: Map<string, AbortController> = new Map();
-  constructor(_config: ApiClientConfig = {}) {
+  private abortControllers: any, AbortController> = new Map();
+  constructor(_config: any,
+    g= {}) {
     this.config = {
-      baseURL: config.baseURL || '',
-      timeout: config.timeout || 30000,
-      retries: config.retries || 3,
-      retryDelay: config.retryDelay || 1000,
-      headers: config.headers || {
-        'Content-Type': 'application/json'
-      },
-      cacheOptions: config.cacheOptions
+      baseURL: any,
+      timeout: any,
+      retries: any,
+      retryDelay: any,
+      headers: any{;
+        'Content-Type': 'application/json;
+      },;
+      cacheOptions: any;
     };
   }
   /**
    * GET request
    */
   async get<T = unknown>(
-    url: string,
-    config: Omit<RequestConfig, 'url' | 'method' | 'body'> = {}
+    url: any,
+    config: any, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
-      method: 'GET'
+      ...config,;
+      url,;
+      method: any;
     });
   }
   /**
    * POST request
    */
   async post<T = unknown>(
-    url: string,
+    url: any,
     data?: unknown,
-    config: Omit<RequestConfig, 'url' | 'method'> = {}
+    config: any, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
-      method: 'POST',
-      body: JSON.stringify(data)
+      ...config,;
+      url,;
+      method: any,;
+      body: any;
     });
   }
   /**
    * PUT request
    */
   async put<T = unknown>(
-    url: string,
+    url: any,
     data?: unknown,
-    config: Omit<RequestConfig, 'url' | 'method'> = {}
+    config: any, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
-      method: 'PUT',
-      body: JSON.stringify(data)
+      ...config,;
+      url,;
+      method: any,;
+      body: any;
     });
   }
   /**
    * DELETE request
    */
   async delete<T = unknown>(
-    url: string,
-    config: Omit<RequestConfig, 'url' | 'method' | 'body'> = {}
+    url: any,
+    config: any, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
-      method: 'DELETE'
+      ...config,;
+      url,;
+      method: any;
     });
   }
   /**
    * PATCH request
    */
   async patch<T = unknown>(
-    url: string,
+    url: any,
     data?: unknown,
-    config: Omit<RequestConfig, 'url' | 'method'> = {}
+    config: any, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
-      method: 'PATCH',
-      body: JSON.stringify(data)
+      ...config,;
+      url,;
+      method: any,;
+      body: any;
     });
   }
   /**
@@ -130,58 +129,57 @@ class ApiClient {
       url,
       method = 'GET',
       headers = {},
-      cacheOptions: cacheConfig,
-      skipCache = false,
-      retries = this.config.retries,
-      timeout = this.config.timeout,
-      ...fetchConfig
+      cacheOptions: any,;
+      skipCache = false,;
+      retries = this.config.retries,;
+      timeout = this.config.timeout,;
+      ...fetchConfig;
     } = config;
-    const _fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
     const cacheKey = `${method}:${fullUrl}`;
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
       const cached = cacheManager.get<T>(cacheKey);
       if (cached !== undefined) {
         return {
-          data: cached,
-          status: 200,
-          statusText: 'OK (cached)',
-          headers: new Headers()
+          data: any,
+          status: any,
+          statusText: any,
+          headers: any;
         };
       }
     }
     // Create abort controller for timeout
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
-    const timeoutId = setTimeout(() => {
+    const timeoutId: ,
+    y= setTimeout((: any) => {
       controller.abort();
     }, timeout);
-    let lastError: Error | null = null;
-    let _attempt = 0;
-    while (attempt < retries) {
-      try {
-        const response = await fetch(fullUrl, {
+    let lastError: any,
+    e= await fetch(fullUrl, {
           ...fetchConfig,
           method,
-          headers: {
+          headers: any{
             ...this.config.headers,
             ...headers
-          },
-          signal: controller.signal
+  }
+}
+          }
+          },;
+          signal: any;
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
         if (!response.ok) {
           throw new ApiError(
             `HTTP ${response.status}: ${response.statusText}`,
-            response.status,
-            await response.text()
+            response.status,);
+            await response.text();
           );
         }
         const contentType = response.headers.get('content-type');
-        let data: T;
-        if (contentType?.includes('application/json')) {
-          data = await response.json();
+        let data: any,
+    a= await response.json();
         } else {
           data = (await response.text()) as T;
         }
@@ -191,10 +189,9 @@ class ApiClient {
         }
         return {
           data,
-          status: response.status,
-          statusText: response.statusText,
-          headers: response.headers
-        };
+          status: any,
+          statusText: any,
+          headers: any};
       } catch (error) {
         lastError = error as Error;
         attempt++;
@@ -202,15 +199,15 @@ class ApiClient {
         if (attempt === retries) {
           if (error instanceof ApiError && error.status >= 500) {
             logCritical(`API request failed after ${retries} attempts`, error as Error, {
-              url: fullUrl,
-              method,
-              attempt
+              url: any,;
+              method,;
+              attempt);
             });
           } else {
             logError(`API request failed`, error as Error, {
-              url: fullUrl,
+              url: any,
               method,
-              attempt
+              attempt);
             });
           }
         }
@@ -231,8 +228,8 @@ class ApiClient {
   /**
    * Cancel a pending request
    */
-  cancel(url: string, method: string = 'GET'): void {
-    const cacheKey = `${method}:${url}`;
+  cancel(url: any, method: any,
+    y= `${method}:${url};
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {
       controller.abort();
@@ -243,7 +240,7 @@ class ApiClient {
    * Cancel all pending requests
    */
   cancelAll(): void {
-    this.abortControllers.forEach(controller => {
+    this.abortControllers.forEach(controller => {);
       controller.abort();
     });
     this.abortControllers.clear();
@@ -251,21 +248,24 @@ class ApiClient {
   /**
    * Update default config
    */
-  setConfig(config: Partial<ApiClientConfig>): void {
-    this.config = {
+  setConfig(config: any,
+    g= {
       ...this.config,
       ...config,
-      headers: {
+      headers: any{
         ...this.config.headers,
+  }
+}
+      }
         ...(config.headers || {})
       }
     };
   }
   /**
    * Set authorization header
-   */
-  setAuthToken(token: string): void {
-    this.config.headers['Authorization'] = `Bearer ${token}`;
+   */';
+  setAuthToken(token: string): void {'`';
+    this.config.headers['Authorization'] = `Bearer ${token};
   }
   /**
    * Remove authorization header
@@ -276,15 +276,14 @@ class ApiClient {
   /**
    * Delay helper
    */
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  private delay(ms: any,
+    e=> setTimeout(resolve, ms));
   }
   /**
    * Health check
    */
-  async healthCheck(endpoint: string = '/health'): Promise<boolean> {
-    try {
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
+  async healthCheck(endpoint: any,
+    e= await this.get(endpoint, { timeout: any, retries: any});
       return response.status === 200;
     } catch {
       return false;
@@ -293,14 +292,17 @@ class ApiClient {
 }
 // Create default instance
 const apiClient = new ApiClient({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '',
-  timeout: 30000,
-  retries: 3,
-  retryDelay: 1000,
-  cacheOptions: {
-    ttl: 5 * 60 * 1000, // 5 minutes
+  baseURL: any,
+  timeout: any,
+  retries: any,
+  retryDelay: any,
+  cacheOptions: any,
+    l: any, // 5 minutes
+}
   }
+  });
 });
 // Export both the class and default instance
 export { apiClient };
-export default ApiClient;
+export default ApiClient;';
+'`';

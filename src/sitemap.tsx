@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react;
 
-const Sitemap: React.FC = () => {
-  const _sitemap = generateSitemap(getAllPages());
-  
-  return (
-    <div>
-      <pre>{sitemap}</pre>
-    </div>
+const Sitemap: any,
+    C= () => {
+  ;
+  return (;
+    <div>;
+      <pre>{sitemap}</pre>;
+    </div>);
   );
 };
 
 // This would typically be handled by a server-side route
 // For now, we'll create a static sitemap.xml file
-// eslint-disable-next-line react-refresh/only-export-components
-export const generateStaticSitemap = () => {
+export const generateStaticSitemap: ,
+    y= () => {
   return generateSitemap(getAllPages());
 };
 

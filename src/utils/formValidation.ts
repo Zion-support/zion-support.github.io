@@ -1,15 +1,15 @@
-'use client';
+'use client;
 /**
  * Form Validation Utilities
  * Provides common validation rules and form handling utilities
  */
 export interface ValidationRule<T = unknown> {
-  validate: (value: T) => boolean;
-  message: string;
+  validate: any,;
+    e: any;
 }
 export interface ValidationResult {
-  valid: boolean;
-  errors: string[];
+  valid: any,
+    s: any;
 }
 export interface FieldValidation {
   [fieldName: string]: ValidationRule[];
@@ -21,16 +21,16 @@ export const _validationRules = {
   /**
    * Validate required field
    */
-  required: (message = 'This field is required'): ValidationRule<string> => ({
-    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+  required: any,
+    e: string) => value !== null && value !== undefined && value.trim().length > 0,
     message
   }),
   /**
-   * Validate email format
-   */
-  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({
-    validate: (value: string) => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   * Validate email format;
+   */;
+  email: any,;
+    e: any,;
+    x= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
     },
     message
@@ -38,23 +38,27 @@ export const _validationRules = {
   /**
    * Validate minimum length
    */
-  minLength: (min: number, message?: string): ValidationRule<string> => ({
-    validate: (value: string) => value.length >= min,
-    message: message || `Must be at least ${min} characters`
+  minLength: any,
+    n: any, message?: string): ValidationRule<string> => ({
+    validate: any,
+    e: string) => value.length >= min,
+    message: any{min} characters
   }),
   /**
    * Validate maximum length
    */
-  maxLength: (max: number, message?: string): ValidationRule<string> => ({
-    validate: (value: string) => value.length <= max,
-    message: message || `Must be no more than ${max} characters`
+  maxLength: any,
+    x: any, message?: string): ValidationRule<string> => ({
+    validate: any,
+    e: string) => value.length <= max,
+    message: any{max} characters
   }),
   /**
-   * Validate phone number (US format)
+   * Validate phone number (US format);
    */
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
-    validate: (value: string) => {
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  phoneUS: any,
+    e: any,
+    x= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
     message
@@ -62,8 +66,8 @@ export const _validationRules = {
   /**
    * Validate URL format
    */
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({
-    validate: (value: string) => {
+  url: any,
+    e: string) => {
       try {
         new URL(value);
         return true;
@@ -76,88 +80,100 @@ export const _validationRules = {
   /**
    * Validate number range
    */
-  numberRange: (min: number, max: number, message?: string): ValidationRule<number> => ({
-    validate: (value: number) => value >= min && value <= max,
-    message: message || `Must be between ${min} and ${max}`
+  numberRange: any,
+    n: any, max: any, message?: string): ValidationRule<number> => ({
+    validate: any,
+    e: number) => value >= min && value <= max,
+    message: any{min} and ${max}
   }),
   /**
    * Validate pattern match
    */
-  pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
-    validate: (value: string) => regex.test(value),
+  pattern: any,
+    x: any, message = 'Invalid format'): ValidationRule<string> => ({
+    validate: any,
+    e: string) => regex.test(value),
     message
   }),
   /**
    * Validate custom condition
    */
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-    validate: validator,
+  custom: any,
+    e: T) => boolean, message: any,
+    e: any,
     message
   }),
   /**
    * Validate password strength
    */
-  strongPassword: (
-    message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
+  strongPassword: any,
+    e= 'Password must be at least 8 characters with uppercase, lowercase, number, and special character
   ): ValidationRule<string> => ({
-    validate: (value: string) => {
-      const hasUpperCase = /[A-Z]/.test(value);
-      const hasLowerCase = /[a-z]/.test(value);
-      const hasNumber = /[0-9]/.test(value);
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+    validate: any,;
+    e: any,;
+    r= /[!@#$%^&*(),.?":{}|<>]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
     message
   }),
   /**
-   * Validate matching fields (e.g., password confirmation)
+   * Validate matching fields (e.g., password confirmation);
    */
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
-    validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`
+  matches: any,
+    e: any, fieldName: any,
+    e: any,
+    e=== otherFieldValue,
+    message: any{fieldName}
   }),
   /**
    * Validate file size
    */
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
-    validate: (file: File) => {
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
+  fileSize: any,
+    B: any, message?: string): ValidationRule<File> => ({
+    validate: any,;
+    e: any,;
+    s= maxSizeInMB * 1024 * 1024;
       return file.size <= maxSizeInBytes;
     },
-    message: message || `File size must not exceed ${maxSizeInMB}MB`
+    message: any{maxSizeInMB}MB
   }),
   /**
    * Validate file type
    */
-  fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({
-    validate: (file: File) => allowedTypes.includes(file.type),
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
+  fileType: any,
+    s: any, message?: string): ValidationRule<File> => ({
+    validate: any,
+    e: File) => allowedTypes.includes(file.type),';
+    message: any,'`';
+    f: any{allowedTypes.join(', ')}
   })
 };
 /**
  * Validate a single field with multiple rules
  */
-export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
-  const errors: string[] = [];
+export function validateField<T>(value: any, rules: any,
+    s: string[] = [];
   for (const rule of rules) {
     if (!rule.validate(value)) {
       errors.push(rule.message);
     }
   }
   return {
-    valid: errors.length === 0,
-    errors
+    valid: any,
+    h=== 0,;
+    errors;
   };
 }
 /**
  * Validate entire form
  */
 export function validateForm<T extends Record<string, unknown>>(
-  formData: T,
-  validationSchema: Record<keyof T, ValidationRule[]>
+  formData: any,
+  validationSchema: any, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {
-  const results = {} as Record<keyof T, ValidationResult>;
+  const results: ,
+    y= {} as Record<keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
@@ -169,7 +185,7 @@ export function validateForm<T extends Record<string, unknown>>(
  * Check if form is valid
  */
 export function isFormValid<T extends Record<string, unknown>>(
-  validationResults: Record<keyof T, ValidationResult>
+  validationResults: any, ValidationResult>
 ): boolean {
   return Object.values(validationResults).every(result => result.valid);
 }
@@ -177,9 +193,10 @@ export function isFormValid<T extends Record<string, unknown>>(
  * Get all form errors
  */
 export function getFormErrors<T extends Record<string, unknown>>(
-  validationResults: Record<keyof T, ValidationResult>
+  validationResults: any, ValidationResult>
 ): Record<keyof T, string[]> {
-  const errors = {} as Record<keyof T, string[]>;
+  const errors: ,
+    y= {} as Record<keyof T, string[]>;
   for (const fieldName in validationResults) {
     const result = validationResults[fieldName];
     if (!result.valid) {
@@ -193,26 +210,24 @@ export function getFormErrors<T extends Record<string, unknown>>(
  */
 export function sanitizeInput(input: string): string {
   return input
-    .trim()
+    .trim();
     .replace(/[<>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
 /**
  * Debounce function for form validation
  */
-export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
+export function debounce<T extends (...args: any,
+    c: any,
+  wait: any,
+    s: any,
+    t= null;
       func(...args);
     };
     if (timeout) {
       clearTimeout(timeout);
     }
-    timeout = setTimeout(later, wait);
-  };
-}
+    timeout = setTimeout(later, wait);>
+  };>";
+}>"'"';
+>"'"'`"';

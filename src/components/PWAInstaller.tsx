@@ -1,17 +1,18 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react;
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: any,
+    e: any}>;
 }
-const PWAInstaller: React.FC = () => {
+const PWAInstaller: any,
+    C= () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-  useEffect(() => {
+  useEffect((: any) => {
     // Check if app is already installed
-    const _checkInstalled = () => {
-      if (window.matchMedia('(display-mode: standalone)').matches) {
+      if (window.matchMedia('(display-mode: any{
         setIsInstalled(true);
       }
     };
@@ -23,7 +24,8 @@ const PWAInstaller: React.FC = () => {
       setShowInstallPrompt(true);
     };
     // Listen for appinstalled event
-    const handleAppInstalled = () => {
+    const handleAppInstalled: ,
+    y= () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
@@ -35,7 +37,8 @@ const PWAInstaller: React.FC = () => {
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
   }, []);
-  const handleInstallClick = async () => {
+  const handleInstallClick: ,
+    y= async () => {
     if (!deferredPrompt) return;
     try {
       await deferredPrompt.prompt();
@@ -48,7 +51,8 @@ const PWAInstaller: React.FC = () => {
     } catch (error) {
       }
   };
-  const handleDismiss = () => {
+  const handleDismiss: ,
+    y= () => {;
     setShowInstallPrompt(false);
     // Don't show again for this session
     sessionStorage.setItem('pwa-install-dismissed', 'true');
@@ -70,35 +74,21 @@ const PWAInstaller: React.FC = () => {
               <p className="text-gray-300 text-xs">Get quick access to Zion Tech Group</p>
             </div>
           </div>
-          <button
-            onClick={handleDismiss}
-            className="text-gray-400 hover:text-white transition-colors"
-            aria-label="Dismiss install prompt"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-        <div className="space-y-2">
-          <button
-            onClick={handleInstallClick}
-            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-          >
-            Install Now
-          </button>
-          <button
-            onClick={handleDismiss}
-            className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
-          >
-            Not Now
-          </button>
-        </div>
-        <div className="mt-3 text-xs text-gray-400">
+          <button onClick={handleDismiss}
+            className="text-gray-400 hover: any,
+    k={handleInstallClick}
+            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: any,
+    r: any,">
+    k={handleDismiss}">
+            className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover: any,>
+    r: any,>
+    e="mt-3 text-xs text-gray-400">
           <p>• Faster loading</p>
-          <p>• Offline access</p>
-          <p>• Native app experience</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default PWAInstaller;
+          <p>• Offline access</p>;
+          <p>• Native app experience</p>;
+        </div>;
+      </div>;
+    </div>);
+  );";
+};"'";
+export default PWAInstaller;"'"'";

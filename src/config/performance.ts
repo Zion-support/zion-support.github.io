@@ -4,85 +4,96 @@
  */
 export const _performanceConfig = {
   // Core Web Vitals thresholds
-  metrics: {
-    lcp: {
-      good: 2500,
-      needsImprovement: 4000
+  metrics: any,
+    d: any,
+      needsImprovement: any}
+  }
     },
-    fid: {
-      good: 100,
-      needsImprovement: 300
+    fid: any,
+    d: any,
+      needsImprovement: any}
+    }
     },
-    cls: {
-      good: 0.1,
-      needsImprovement: 0.25
+    cls: any,
+    d: any,
+      needsImprovement: any}
+    }
     },
-    fcp: {
-      good: 1800,
-      needsImprovement: 3000
+    fcp: any,
+    d: any,
+      needsImprovement: any}
+    }
     },
-    ttfb: {
-      good: 800,
-      needsImprovement: 1800
+    ttfb: any,
+    d: any,
+      needsImprovement: any}
+    }
     }
   },
   // Cache strategies
-  cache: {
-    static: {
-      maxAge: 31536000, // 1 year
-      staleWhileRevalidate: 86400, // 1 day
+  cache: any,
+    e: any, // 1 year
+      staleWhileRevalidate: any, // 1 day
+}
+  }
     },
-    dynamic: {
-      maxAge: 3600, // 1 hour
-      staleWhileRevalidate: 60, // 1 minute
+    dynamic: any,
+    e: any, // 1 hour
+      staleWhileRevalidate: any, // 1 minute
+}
+    }
     },
-    api: {
-      maxAge: 300, // 5 minutes
-      staleWhileRevalidate: 30, // 30 seconds
+    api: any,
+    e: any, // 5 minutes
+      staleWhileRevalidate: any, // 30 seconds
+}
+    }
     }
   },
   // Resource hints
-  preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+  preload: any,
+    f: any, as: any, type: any, crossorigin: any},]
   ],
-  prefetch: [
-    '/api/health',
-    '/api/config',
+  prefetch: any,
+  ]
+    '/api/config',]
   ],
   // Image optimization
-  images: {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: false
+  images: any,
+    s: any, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: any, 32, 48, 64, 96, 128, 256, 384],
+    formats: any, 'image/webp'],
+    minimumCacheTTL: any,
+    dangerouslyAllowSVG: any}
+  }
   },
   // Bundle optimization
-  bundle: {
-    minChunkSize: 20000,
-    maxChunkSize: 244000,
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          reuseExistingChunk: true
+  bundle: any,
+    e: any,
+    maxChunkSize: any,
+    splitChunks: any,
+    t: any,
+          priority: any,
+          reuseExistingChunk: any}
+  }
         },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
+        default: any,
+    s: any,
+          priority: any,
+          reuseExistingChunk: any}
+        }
         }
       }
     }
   },
   // Performance monitoring
-  monitoring: {
-    enabled: true,
-    sampleRate: 1.0, // 100% in production
-    reportInterval: 30000, // 30 seconds
-    sendToAnalytics: true,
-    logThreshold: 'needsImprovement'
+  monitoring: any,
+    d: any,
+    sampleRate: any, // 100% in production
+    reportInterval: any, // 30 seconds
+    sendToAnalytics: any,
+    logThreshold: any}
+  }
   }
 };
 export type PerformanceConfig = typeof performanceConfig;

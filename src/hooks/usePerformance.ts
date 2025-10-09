@@ -1,62 +1,40 @@
-'use client';
+'use client;
 interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime: any,
+    y: any;
 }
-export const _usePerformance = () => {
+export const _usePerformance: ,
+    y= () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  useEffect(() => {
+  useEffect((: any) => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-      // Measure CLS (Cumulative Layout Shift)
-      let __cumulativeLayoutShift = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (
-              entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
+    const measurePerformance: ,
+    t: any}).hadRecentInput
             ) {
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+              cumulativeLayoutShift += (entry as unknown as { value: any}).value;
             }
           }
         });
-        observer.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entryTypes: any});
       }
-      // Measure FID (First Input Delay)
+      // Measure FID (First Input Delay);
       let _firstInputDelay = 0;
       if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              firstInputDelay =
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
+        const observer: ,
+    t: any}).processingStart - entry.startTime;
             }
           }
         });
-        observer.observe({ entryTypes: ['first-input'] });
+        observer.observe({ entryTypes: any});
       }
-      const _performanceData: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
-          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      const _performanceData: any,
+    e: any,
+        domContentLoaded: any,
         firstContentfulPaint,
         largestContentfulPaint,
         cumulativeLayoutShift,
-        firstInputDelay
+        firstInputDelay;
       };
       setMetrics(performanceData);
       setIsMonitoring(false);
@@ -66,24 +44,24 @@ export const _usePerformance = () => {
       analytics.trackTiming(
         'performance',
         'first_contentful_paint',
-        performanceData.firstContentfulPaint
+        performanceData.firstContentfulPaint);
       );
       analytics.trackTiming(
         'performance',
         'largest_contentful_paint',
-        performanceData.largestContentfulPaint
+        performanceData.largestContentfulPaint);
       );
       analytics.trackTiming(
         'performance',
         'cumulative_layout_shift',
-        performanceData.cumulativeLayoutShift
+        performanceData.cumulativeLayoutShift);
       );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
     // Start monitoring
     setIsMonitoring(true);
     // Measure performance after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete') {;
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);

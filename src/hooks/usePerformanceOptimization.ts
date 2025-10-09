@@ -1,50 +1,34 @@
-'use client';
+'use client;
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime: any,
+    y: any;
 }
-export const _usePerformanceOptimization = () => {
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
+export const _usePerformanceOptimization: ,
+    w=== 'undefined' || !('performance' in window)) {
       return null;
     }
-    const navigation = performance.getEntriesByType(
-      'navigation'
+    const navigation = performance.getEntriesByType(';
+      'navigation');
     )[0] as PerformanceNavigationTiming;
-<<<<<<< HEAD
-    const paintEntries = performance.getEntriesByType('paint');
-    const metrics: PerformanceMetrics = {
-=======
-    const _paintEntries = performance.getEntriesByType('paint');
-    const _metrics: PerformanceMetrics = {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
-        : 0,
-      firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+    const _metrics: any,
+    t: any,
+      firstContentfulPaint: any,
+    e=== 'first-contentful-paint');
           ?.startTime || 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0
+      largestContentfulPaint: any,
+      cumulativeLayoutShift: any,
+      firstInputDelay: any;
     };
     // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
-        metrics.largestContentfulPaint = lastEntry.startTime;
+    const lcpObserver: ,
+    t= lastEntry.startTime;
       }
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    lcpObserver.observe({ entryTypes: any});
     // Measure CLS
     let __clsValue = 0;
-    const clsObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & {
+    const clsObserver: ,
+    y= entry as PerformanceEntry & {
           hadRecentInput?: boolean;
           value?: number;
         };
@@ -54,33 +38,28 @@ export const _usePerformanceOptimization = () => {
       }
       metrics.cumulativeLayoutShift = clsValue;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    clsObserver.observe({ entryTypes: any});
     // Measure FID
-    const fidObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const fidEntry = entry as PerformanceEntry & {
+    const fidObserver: ,
+    y= entry as PerformanceEntry & {
           processingStart?: number;
         };
         metrics.firstInputDelay =
           (fidEntry.processingStart || 0) - entry.startTime;
       }
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({ entryTypes: any});
     // Cleanup observers after a delay
-    setTimeout(() => {
+    setTimeout((: any) => {
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
     }, 10000);
     return metrics;
   }, []);
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
+  const optimizeImages: ,
+    r: ,
+    c= img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
         }
@@ -88,23 +67,23 @@ export const _usePerformanceOptimization = () => {
     });
     images.forEach(img => imageObserver.observe(img));
   }, []);
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-    criticalResources.forEach(resource => {
+  const preloadCriticalResources: ,
+    s= ['/fonts/inter-var.woff2', '/css/critical.css'];
+    criticalResources.forEach(resource => {);
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+        link.crossOrigin = 'anonymous;
       }
       document.head.appendChild(link);
     });
   }, []);
-  useEffect(() => {
+  useEffect((: any) => {
     // Measure performance after page load
-    const timer = setTimeout(() => {
-      const metrics = measurePerformance();
+    const timer: ,
+    s= measurePerformance();
       if (metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {

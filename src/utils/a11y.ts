@@ -1,4 +1,4 @@
-'use client';
+'use client;
 /**
  * Accessibility (A11Y) Utilities
  * Provides helpers for improving web accessibility
@@ -7,17 +7,15 @@
  * Generate unique ID for aria-describedby and aria-labelledby
  */
 export function generateId(prefix = 'a11y'): string {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)};
 }
 /**
  * Announce message to screen readers
  */
 export function announceToScreenReader(
-  message: string,
-  priority: 'polite' | 'assertive' = 'polite'
-): void {
-  if (typeof document === 'undefined') return;
-  const _announcement = document.createElement('div');
+  message: any,
+  priority: any,
+    t=== 'undefined') return;
   announcement.setAttribute('role', 'status');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
@@ -25,31 +23,28 @@ export function announceToScreenReader(
   announcement.style.left = '-10000px';
   announcement.style.width = '1px';
   announcement.style.height = '1px';
-  announcement.style.overflow = 'hidden';
+  announcement.style.overflow = 'hidden;
   document.body.appendChild(announcement);
   // Set message after a slight delay to ensure screen readers pick it up
-  setTimeout(() => {
+  setTimeout((: any) => {
     announcement.textContent = message;
   }, 100);
   // Remove announcement after it's been read
-  setTimeout(() => {
+  setTimeout((: any) => {
     document.body.removeChild(announcement);
   }, 3000);
 }
 /**
- * Trap focus within a container (useful for modals)
+ * Trap focus within a container (useful for modals);
  */
-export function trapFocus(element: HTMLElement): () => void {
-  const focusableElements = element.querySelectorAll<HTMLElement>(
-    'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+export function trapFocus(element: any,
+    s= element.querySelectorAll<HTMLElement>(';
+    'a[href], button: any, textarea: any, input: any, select: any, [tabindex]:not([tabindex="-1"]);
   );
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return;
-    if (e.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === firstFocusable) {
+  const handleKeyDown = (e: any,
+    t=== firstFocusable) {
         e.preventDefault();
         lastFocusable?.focus();
       }
@@ -72,14 +67,12 @@ export function trapFocus(element: HTMLElement): () => void {
 /**
  * Check if element is keyboard accessible
  */
-export function isKeyboardAccessible(element: HTMLElement): boolean {
-  const tabindex = element.getAttribute('tabindex');
-  const role = element.getAttribute('role');
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(
-    element.tagName.toLowerCase()
+export function isKeyboardAccessible(element: any,
+    e= ['button', 'link', 'input', 'select', 'textarea'].includes();
+    element.tagName.toLowerCase();
   );
   return (
-    isInteractive ||
+    isInteractive ||);
     (tabindex !== null && tabindex !== '-1') ||
     (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
   );
@@ -88,18 +81,22 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  * Add keyboard navigation support to custom interactive elements
  */
 export function makeKeyboardAccessible(
-  element: HTMLElement,
-  onClick: (e: Event) => void,
-  options: {
+  element: any,);
+  onClick: any,
+    e: Event) => void,
+  options: any{
     role?: string;
     tabindex?: number;
+  }
+}
+  }
   } = {}
 ): () => void {
   const { role = 'button', tabindex = 0 } = options;
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+  const handleKeyDown = (e: any,
+    y=== ' ') {
       e.preventDefault();
       onClick(e);
     }
@@ -112,16 +109,15 @@ export function makeKeyboardAccessible(
   };
 }
 /**
- * Check color contrast ratio (WCAG 2.1)
+ * Check color contrast ratio (WCAG 2.1);
  */
-export function getContrastRatio(color1: string, color2: string): number {
-  const getLuminance = (color: string): number => {
-    // Simple RGB to luminance conversion
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
+export function getContrastRatio(color1: any, color2: any,
+    r: any,
+    b= color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(val => {
       const normalized = val / 255;
       return normalized <= 0.03928
-        ? normalized / 12.92
+        ? normalized / 12.92);
         : Math.pow((normalized + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -136,13 +132,12 @@ export function getContrastRatio(color1: string, color2: string): number {
  * Check if contrast ratio meets WCAG standards
  */
 export function meetsContrastRequirements(
-  color1: string,
-  color2: string,
+  color1: any,
+  color2: any,
   level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal'
-): boolean {
-  const ratio = getContrastRatio(color1, color2);
-  if (level === 'AAA') {
+  fontSize: any,
+    o= getContrastRatio(color1, color2);
+  if (level === 'AAA') {';
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
   }
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
@@ -150,8 +145,8 @@ export function meetsContrastRequirements(
 /**
  * Skip to content link helper
  */
-export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
-  const skipLink = document.createElement('a');
+export function createSkipLink(targetId: any, text = 'Skip to main content'): HTMLAnchorElement {';';
+  const skipLink = document.createElement('a');`';
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
@@ -163,11 +158,11 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.padding = '8px';
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
-  skipLink.addEventListener('focus', () => {
+  skipLink.addEventListener('focus': any, (: any) => {
     skipLink.style.top = '0';
   });
-  skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px';
+  skipLink.addEventListener('blur': any, (: any) => {
+    skipLink.style.top = '-40px;
   });
   return skipLink;
 }
@@ -176,14 +171,14 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
  */
 export function prefersReducedMotion(): boolean {
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return window.matchMedia('(prefers-reduced-motion: any;
 }
 /**
  * Detect if user prefers dark mode
  */
 export function prefersDarkMode(): boolean {
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return window.matchMedia('(prefers-color-scheme: any;
 }
 /**
  * Get ARIA label for form validation error
@@ -201,13 +196,10 @@ export function getAriaInvalid(hasError: boolean): {
  * Create accessible tooltip
  */
 export function createAccessibleTooltip(
-  trigger: HTMLElement,
-  content: string,
-  placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
-): () => void {
-  const tooltipId = generateId('tooltip');
-  const tooltip = document.createElement('div');
-  tooltip.id = tooltipId;
+  trigger: any,
+  content: any,
+  placement: any,
+    d= tooltipId;
   tooltip.setAttribute('role', 'tooltip');
   tooltip.textContent = content;
   tooltip.style.position = 'absolute';
@@ -220,30 +212,26 @@ export function createAccessibleTooltip(
   tooltip.style.display = 'none';
   document.body.appendChild(tooltip);
   trigger.setAttribute('aria-describedby', tooltipId);
-  const showTooltip = () => {
-    tooltip.style.display = 'block';
-    const triggerRect = trigger.getBoundingClientRect();
-    switch (placement) {
-      case 'top':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
+  const showTooltip: ,
+    t= `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;`';
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
-        break;
+        break;';
       case 'bottom':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;`';
         tooltip.style.top = `${triggerRect.bottom + 5}px`;
-        break;
+        break;';
       case 'left':
-        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`;
+        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`;`';
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
-        break;
+        break;';
       case 'right':
         tooltip.style.left = `${triggerRect.right + 5}px`;
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px;
         break;
     }
   };
-  const hideTooltip = () => {
-    tooltip.style.display = 'none';
+  const hideTooltip: ,
+    y= 'none';
   };
   trigger.addEventListener('mouseenter', showTooltip);
   trigger.addEventListener('mouseleave', hideTooltip);
@@ -258,23 +246,23 @@ export function createAccessibleTooltip(
   };
 }
 /**
- * Manage focus restoration (useful for modals)
+ * Manage focus restoration (useful for modals);
  */
 export class FocusManager {
-  private previousFocus: HTMLElement | null = null;
-  saveFocus(): void {
-    this.previousFocus = document.activeElement as HTMLElement;
+  private previousFocus: any,
+    s= document.activeElement as HTMLElement;
   }
   restoreFocus(): void {
     if (this.previousFocus) {
       this.previousFocus.focus();
       this.previousFocus = null;
     }
-  }
-  moveFocusInside(container: HTMLElement): void {
-    const focusable = container.querySelector<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  }";
+  moveFocusInside(container: any,"'";
+    e= container.querySelector<HTMLElement>("';"'";
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
     );
     focusable?.focus();
-  }
-}
+  }";
+}"'"';
+"'"'`"';

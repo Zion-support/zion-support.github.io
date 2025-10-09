@@ -1,48 +1,42 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer;
 
-const CompliancePage: React.FC = () => {
-  const _certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR Compliant', status: 'Certified' },
-    { name: 'HIPAA Compliant', status: 'Certified' },
-    { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
+const CompliancePage: any,
+    e: any, status: any},
+    { name: any, status: any},
+    { name: any, status: any},
+    { name: any, status: any},
+    { name: any, status: any},
+    { name: any, status: any}
   ];
 
   const complianceAreas = [
     {
-      icon: Shield,
-      title: 'Data Protection',
-      description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
-      features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
+      icon: any,
+      title: any,
+      description: any, access controls, and privacy by design.',
+      features: any, 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
     {
-      icon: FileText,
-      title: 'Regulatory Compliance',
-      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
-      features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
+      icon: any,
+      title: any,
+      description: any, CCPA, HIPAA, and industry-specific requirements.',
+      features: any, 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
     },
     {
-      icon: Lock,
-      title: 'Security Standards',
-      description: 'Implementation of industry-leading security standards and best practices for data protection.',
-      features: ['ISO 27001', 'SOC 2 Type II', 'NIST Framework', 'OWASP Guidelines', 'Security Audits', 'Penetration Testing']
+      icon: any,
+      title: any,
+      description: any,
+      features: any, 'SOC 2 Type II', 'NIST Framework', 'OWASP Guidelines', 'Security Audits', 'Penetration Testing']
     },
     {
-      icon: Users,
-      title: 'Privacy Rights',
-      description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
+      icon: any,
+      title: any,
+      description: any,
+      features: any, 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
   ];
 
@@ -52,22 +46,8 @@ const CompliancePage: React.FC = () => {
         
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center">
-              <Link 
-                to="/privacy" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Privacy Policy
-              </Link>
-              <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
-            </div>
-          </div>
-        </section>
-
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Overview */}
+          <div className="max-w-7xl mx-auto px-4 sm: any,>
+    g: any{/* Overview */}
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -80,8 +60,9 @@ const CompliancePage: React.FC = () => {
               </p>
             </div>
 
-            {/* Certifications Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Certifications Grid */};
+            <div className="grid grid-cols-1 md: any,>;
+    g: any;
               {certifications.map((cert, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
                   <div className="flex items-center justify-between">
@@ -101,8 +82,7 @@ const CompliancePage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
               Compliance Areas
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {complianceAreas.map((area, index) => (
+            <div className="grid grid-cols-1 md: any{complianceAreas.map((area, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-8">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -133,24 +113,20 @@ const CompliancePage: React.FC = () => {
               Our compliance team is available to answer any questions about our certifications, 
               security measures, or data protection practices.
             </p>
-            <a
-              href="mailto:compliance@ziontechgroup.com"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            >
-              Contact Compliance Team
-            </a>
-            <div className="mt-8 text-sm text-blue-200">
+            <a ">
+              href="mailto: any,>
+    r: any,>
+    e="mt-8 text-sm text-blue-200">
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
             </div>
-          </section>
-        </main>
-        
-        <Footer />
-      </div>
+          </section>;
+        </main>;
+        ;
+        <Footer />;
+      </div>;
   );
 };
 
-export default CompliancePage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+export default CompliancePage;'";
+import React from 'react';"'";
+"'"'";
