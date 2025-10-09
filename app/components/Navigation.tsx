@@ -91,13 +91,9 @@ const Navigation: React.FC = () => {
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
         { name: 'System Administration', path: '/system-admin', description: 'System management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
-        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
-        { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale IT solutions' },
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' }
       ]
     },
     {
@@ -165,6 +161,12 @@ const Navigation: React.FC = () => {
             </Link>
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
+            </Link>
+            <Link href="/services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Services
+            </Link>
+            <Link href="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
             </Link>
 
             {/* Services Dropdown */}
@@ -247,6 +249,14 @@ const Navigation: React.FC = () => {
             </Link>
 
             <Link
+              href="/careers"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Careers
+            </Link>
+
+            <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
@@ -294,6 +304,20 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link
+                href="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+              <Link
+                href="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
 
               {/* Mobile Services */}
@@ -345,6 +369,14 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Blog
+              </Link>
+
+              <Link
+                href="/careers"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Careers
               </Link>
 
               <Link
