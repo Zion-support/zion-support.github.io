@@ -1,67 +1,67 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Code, Zap, Target, BarChart, Users } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Eye, Target, Zap, Shield, Camera } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DeveloperToolsPage: React.FC = () => {
-  const devTools = [
+const AIImageRecognitionPage: React.FC = () => {
+  const imageServices = [
     {
-      title: 'AI Code Generator',
-      description: 'Generate high-quality code using advanced AI models',
-      icon: Code,
-      features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
-      benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
-      price: 'Starting at $99/month'
+      title: 'Object Detection & Recognition',
+      description: 'Advanced computer vision for identifying and classifying objects in images',
+      icon: Eye,
+      features: ['Real-time Detection', 'Multi-class Classification', 'Bounding Box Detection', 'Confidence Scoring'],
+      benefits: ['99.5% Accuracy Rate', 'Process 1000+ Images/Minute', 'Real-time Processing', 'Custom Model Training'],
+      price: 'Starting at $1,200/month'
     },
     {
-      title: 'API Testing Suite',
-      description: 'Comprehensive API testing and monitoring tools',
-      icon: Zap,
-      features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
-      benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
-      price: 'Starting at $149/month'
-    },
-    {
-      title: 'Database Management Tool',
-      description: 'Advanced database administration and optimization',
-      icon: BarChart,
-      features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
-      benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'DevOps Automation',
-      description: 'Streamline development and deployment processes',
+      title: 'Facial Recognition Systems',
+      description: 'Secure and accurate facial recognition for authentication and identification',
       icon: Target,
-      features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
-      benefits: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
-      price: 'Starting at $299/month'
+      features: ['Face Detection', 'Identity Verification', 'Emotion Analysis', 'Age Estimation'],
+      benefits: ['99.9% Recognition Accuracy', 'Anti-spoofing Protection', 'Real-time Processing', 'Privacy Compliant'],
+      price: 'Starting at $1,800/month'
     },
     {
-      title: 'Code Review Assistant',
-      description: 'AI-powered code review and quality assurance',
-      icon: Users,
-      features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
-      benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
-      price: 'Starting at $79/month'
+      title: 'Quality Control Automation',
+      description: 'Automated visual inspection for manufacturing and quality assurance',
+      icon: Shield,
+      features: ['Defect Detection', 'Dimensional Analysis', 'Surface Inspection', 'Color Verification'],
+      benefits: ['Reduce Inspection Time by 90%', 'Improve Quality by 95%', '24/7 Monitoring', 'Cost Reduction'],
+      price: 'Starting at $2,000/month'
     },
     {
-      title: 'Performance Profiler',
-      description: 'Advanced application performance monitoring and optimization',
-      icon: TrendingUp,
-      features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
-      benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
-      price: 'Starting at $179/month'
+      title: 'Medical Image Analysis',
+      description: 'AI-powered analysis of medical images for diagnosis and treatment planning',
+      icon: Camera,
+      features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Processing', 'Pathology Detection'],
+      benefits: ['Improve Diagnosis Accuracy', 'Reduce Analysis Time', 'Early Disease Detection', 'Radiologist Support'],
+      price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'Retail Visual Search',
+      description: 'Visual search technology for e-commerce and retail applications',
+      icon: Zap,
+      features: ['Product Recognition', 'Similar Item Search', 'Visual Recommendations', 'Inventory Management'],
+      benefits: ['Increase Sales by 30%', 'Improve User Experience', 'Reduce Search Time', 'Boost Conversion'],
+      price: 'Starting at $1,500/month'
+    },
+    {
+      title: 'Security & Surveillance',
+      description: 'Intelligent video surveillance and security monitoring systems',
+      icon: Shield,
+      features: ['Intrusion Detection', 'Behavior Analysis', 'Crowd Monitoring', 'Alert Generation'],
+      benefits: ['24/7 Security Monitoring', 'Reduce False Alarms', 'Improve Response Time', 'Cost-effective Security'],
+      price: 'Starting at $1,600/month'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Developer Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
+        <title>AI Image Recognition - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI image recognition and computer vision solutions. Object detection, facial recognition, quality control, and medical image analysis." />
+        <meta name="keywords" content="image recognition, computer vision, object detection, facial recognition, quality control, medical imaging" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -70,29 +70,29 @@ const DeveloperToolsPage: React.FC = () => {
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer Tools
+              AI Image Recognition
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity
+              Advanced computer vision solutions that can see, understand, and analyze images with human-level accuracy
             </p>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
-                <div className="text-gray-300">Productivity Boost</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Tools Available</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
+                <div className="text-gray-300">Images/Minute</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
-                <div className="text-gray-300">Active Developers</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
+                <div className="text-gray-300">Time Reduction</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-gray-300">Monitoring</div>
               </div>
             </div>
 
@@ -116,31 +116,31 @@ const DeveloperToolsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Tools Grid */}
+        {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Developer Tools
+              Our Image Recognition Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {devTools.map((tool, index) => (
+              {imageServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <tool.icon className="w-8 h-8 text-white" />
+                      <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}</h3>
-                    <p className="text-gray-600 text-sm">{tool.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                    <p className="text-gray-600 text-sm">{service.description}</p>
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
+                    <div className="text-2xl font-bold text-green-600 mb-4">{service.price}</div>
                   </div>
 
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {tool.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -152,7 +152,7 @@ const DeveloperToolsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-1">
-                      {tool.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                           {benefit}
@@ -163,7 +163,7 @@ const DeveloperToolsPage: React.FC = () => {
 
                   <div className="text-center">
                     <a
-                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                     >
                       Get Started Now
@@ -179,10 +179,10 @@ const DeveloperToolsPage: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Supercharge Your Development?
+              Ready to See the Future with AI Vision?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Join thousands of developers who have accelerated their productivity with our AI-powered tools.
+              Let our computer vision experts help you implement cutting-edge image recognition technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -207,4 +207,4 @@ const DeveloperToolsPage: React.FC = () => {
   );
 };
 
-export default DeveloperToolsPage;
+export default AIImageRecognitionPage;
