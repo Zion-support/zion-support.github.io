@@ -6,19 +6,11 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src/it-services/page.tsx
-<<<<<<< HEAD:src/it-services/page.tsx
-<<<<<<< HEAD:src/it-services/page.tsx
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
   const itServices = [
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
       icon: Cloud,
-<<<<<<< HEAD
       features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
       price: 'Starting at $1,500/month',
       category: 'Infrastructure',
@@ -234,19 +226,13 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
   const services = [
     {
       icon: Cloud,
       title: 'Cloud Migration & Management',
       description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
       features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
-=======
       features: ['Cloud Migration', 'Infrastructure Setup', 'Cost Optimization', 'Security Configuration', 'Monitoring', '24/7 Support'],
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
       price: 'Starting at $1,299/month',
       category: 'Cloud',
       color: 'text-blue-400'
@@ -327,16 +313,10 @@ const ITServicesPage: React.FC = () => {
       description: 'Access to certified professionals with years of experience in enterprise IT.'
     }
   ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-=======
       
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -387,16 +367,8 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+              ))}
+            </div>
                 </div>
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
@@ -430,8 +402,6 @@ const ITServicesPage: React.FC = () => {
                   </a>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
     <>
       <SEOOptimizer
         title="IT Services - Zion Tech Group"
@@ -485,10 +455,8 @@ const ITServicesPage: React.FC = () => {
                   </div>
                 ))}
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
             </div>
           </section>
-=======
             </div>
           </div>
         </section>
@@ -602,7 +570,6 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
       </main>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
 
           {/* Services Section */}
           <section className="container mx-auto px-4 py-16">

@@ -9,6 +9,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -17,13 +18,20 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Preload critical components with better performance
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
-    setTimeout(() => {
+    // Use requestIdleCallback for better performance
+    const preload = () => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
-    }, 100);
+    };
+    
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preload);
+    } else {
+      setTimeout(preload, 100);
+    }
   }
 };
 
@@ -40,11 +48,31 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState<{
+    loadTime: number;
+    renderTime: number;
+  } | null>(null);
 
   useEffect(() => {
+    const startTime = performance.now();
     setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      const endTime = performance.now();
+      setPerformanceMetrics({
+        loadTime: endTime - startTime,
+        renderTime: endTime - startTime
+      });
+    }, 100);
+    
     preloadComponents();
+    
+    // Performance monitoring
+    if ('performance' in window && 'measure' in performance) {
+      performance.mark('homepage-start');
+    }
+    
     return () => clearTimeout(timer);
   }, []);
 
@@ -232,6 +260,18 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
+          },
+          sameAs: [
+            'https://www.linkedin.com/company/ziontechgroup',
+            'https://twitter.com/ziontechgroup',
+            'https://github.com/ziontechgroup'
+          ],
+          offers: {
+            '@type': 'Offer',
+            name: 'AI and IT Solutions',
+            description: 'Comprehensive AI and IT services for enterprise clients',
+            priceRange: '$199-$50,000',
+            availability: 'https://schema.org/InStock'
           }
         }}
       />
@@ -770,6 +810,9 @@ const HomePage: React.FC = () => {
 
         {/* Footer */}
         <Footer />
+        
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
       </div>
     </>
   );
