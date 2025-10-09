@@ -59,6 +59,20 @@ const _BlogPage = lazy(() => import('./blog-index'));
 const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap/page'));
 
+// New Pages
+const _NewsPage = lazy(() => import('./news/page'));
+const _DocsPage = lazy(() => import('./docs/page'));
+const _APIPage = lazy(() => import('./api/page'));
+const _SupportPage = lazy(() => import('./support/page'));
+const _CareersPage = lazy(() => import('./careers/page'));
+const _CookiesPage = lazy(() => import('./cookies/page'));
+const _GDPRPage = lazy(() => import('./gdpr/page'));
+const _SecurityPage = lazy(() => import('./security/page'));
+const _CompliancePage = lazy(() => import('./compliance/page'));
+const _SLAPage = lazy(() => import('./sla/page'));
+const _StatusPage = lazy(() => import('./status/page'));
+const _SystemStatusPage = lazy(() => import('./system-status/page'));
+
 // Utils
 import { logger } from './utils/logger';
 
@@ -188,6 +202,20 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<_BlogPage />} />
                         <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
+                        
+                        {/* New Pages */}
+                        <Route path="/news" element={<_NewsPage />} />
+                        <Route path="/docs" element={<_DocsPage />} />
+                        <Route path="/api" element={<_APIPage />} />
+                        <Route path="/support" element={<_SupportPage />} />
+                        <Route path="/careers" element={<_CareersPage />} />
+                        <Route path="/cookies" element={<_CookiesPage />} />
+                        <Route path="/gdpr" element={<_GDPRPage />} />
+                        <Route path="/security" element={<_SecurityPage />} />
+                        <Route path="/compliance" element={<_CompliancePage />} />
+                        <Route path="/sla" element={<_SLAPage />} />
+                        <Route path="/status" element={<_StatusPage />} />
+                        <Route path="/system-status" element={<_SystemStatusPage />} />
                       </Routes>
                     </Suspense>
                   </main>
