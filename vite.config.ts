@@ -19,6 +19,7 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -129,7 +130,8 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
+    exclude: ['@vite/client', '@vite/env']
   },
   css: {
     postcss: './postcss.config.js',
