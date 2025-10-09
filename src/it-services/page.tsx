@@ -1,4 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Cloud, Shield, Server, Settings, Database, BarChart, Users, ArrowRight, Phone } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -106,7 +111,7 @@ const ITServicesPage: React.FC = () => {
   const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Data', 'Analytics', 'Consulting'];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
         title="IT Services - Zion Tech Group"
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, database management, and business intelligence solutions."
@@ -114,10 +119,9 @@ const ITServicesPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/it-services"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -182,8 +186,8 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
 
-          {/* Contact Section */}
-          <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+        {/* Contact Section */}
+        <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your IT Infrastructure?
             </h2>
@@ -214,9 +218,7 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
-    </>
-  );
+    );
 };
 
 export default ITServicesPage;
