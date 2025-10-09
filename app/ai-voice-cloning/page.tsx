@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
 const AIVoiceCloningPage: React.FC = () => {
@@ -60,10 +60,7 @@ const AIVoiceCloningPage: React.FC = () => {
       description: 'Produce consistent brand voice across all marketing materials',
       icon: '📢'
     }
-=======
-import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+  ];
 
 const AIVoiceCloningPage: React.FC = () => {
   const features = [
@@ -95,12 +92,10 @@ const AIVoiceCloningPage: React.FC = () => {
     'Accessibility solutions',
     'Marketing campaigns',
     'Entertainment industry'
->>>>>>> origin/main
   ];
 
   const pricing = [
     {
-<<<<<<< HEAD
       name: 'Starter',
       price: '$299/month',
       description: 'Perfect for small businesses',
@@ -139,11 +134,7 @@ const AIVoiceCloningPage: React.FC = () => {
         'Custom model training',
         'White-label solution',
         'SLA guarantee'
-      ],
-=======
-      plan: 'Starter',
-      price: '$99/month',
-      features: ['Up to 5 voice models', '10 hours of synthesis', 'Basic emotions', 'Standard quality'],
+      ]
       popular: false
     },
     {

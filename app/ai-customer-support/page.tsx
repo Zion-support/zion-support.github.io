@@ -52,8 +52,13 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-          {/* Features Section */}
-          <section className="mb-16">
+
+  return (
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Features Section */}
+        <section className="mb-16 pt-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
@@ -112,8 +117,10 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-          {/* CTA Section */}
-  );
+        </main>
+        <Footer />
+      </>
+    );
 };
 
 export default AICustomerSupportPage;

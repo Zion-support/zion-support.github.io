@@ -1,5 +1,9 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Target, Users, TrendingUp, BarChart, CheckCircle, Star, Phone, Mail, MapPin, Zap, Shield, Clock, Award, ArrowRight } from 'lucide-react';
+
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -48,8 +52,13 @@ const AISalesAutomationPage: React.FC = () => {
       features: ['Unlimited users', 'Custom AI training', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
-          {/* Features Section */}
-          <section className="mb-16">
+
+  return (
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Features Section */}
+        <section className="mb-16 pt-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
@@ -76,6 +85,12 @@ const AISalesAutomationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className="cyber-card p-8 text-center relative">
+                  {index === 1 && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -101,8 +116,10 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-          {/* CTA Section */}
-  );
+        </main>
+        <Footer />
+      </>
+    );
 };
 
 export default AISalesAutomationPage;
