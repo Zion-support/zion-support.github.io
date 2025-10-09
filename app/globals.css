@@ -128,8 +128,22 @@ a {
 .cyber-grid {
   background-image: 
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  background-size: 20px 20px, 20px 20px, 200px 200px, 200px 200px;
+  animation: cyber-grid-pulse 4s ease-in-out infinite;
+}
+
+@keyframes cyber-grid-pulse {
+  0%, 100% { 
+    background-size: 20px 20px, 20px 20px, 200px 200px, 200px 200px;
+    opacity: 0.8;
+  }
+  50% { 
+    background-size: 25px 25px, 25px 25px, 250px 250px, 250px 250px;
+    opacity: 1;
+  }
 }
 
 /* Neural Network Background */
@@ -137,7 +151,20 @@ a {
   background-image: 
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%);
+    radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.05) 50%, transparent 70%);
+  animation: neural-pulse 6s ease-in-out infinite;
+}
+
+@keyframes neural-pulse {
+  0%, 100% { 
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 0%;
+    opacity: 0.8;
+  }
+  50% { 
+    background-position: 100% 100%, 0% 0%, 50% 50%, 100% 100%;
+    opacity: 1;
+  }
 }
 
 /* Neon Text Effect */
@@ -170,6 +197,54 @@ a {
     inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
+/* Cyber Button */
+.cyber-button {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  border: 2px solid #00ffff;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  animation: cyber-button-glow 2s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+}
+
+@keyframes cyber-button-glow {
+  0%, 100% { 
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% { 
+    background-position: 100% 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+  }
+}
+
 /* Hologram Card */
 .hologram-card {
   background: rgba(255, 255, 255, 0.1);
@@ -178,6 +253,14 @@ a {
   animation: hologram-flicker 3s ease-in-out infinite;
   position: relative;
   overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.hologram-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.6);
 }
 
 .hologram-card::before {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
 
 const RoboticsPage: React.FC = () => {
@@ -142,11 +142,11 @@ const RoboticsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Robotics & Automation Services - Zion Tech Group</title>
         <meta name="description" content="Advanced robotics and automation services including RPA, industrial robots, service robots, and AI-powered automation solutions." />
         <meta name="keywords" content="robotics services, RPA, industrial automation, service robots, AI robotics, robotic process automation" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
         {/* Hero Section */}

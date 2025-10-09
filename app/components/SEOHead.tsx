@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 interface SEOHeadProps {
   title?: string;
@@ -39,7 +39,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
 
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -115,7 +115,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           }),
         })}
       </script>
-    </Helmet>
+    </Head>
   );
 };
 

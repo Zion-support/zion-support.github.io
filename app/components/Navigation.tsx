@@ -78,7 +78,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
         { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud AI solutions' },
         { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' },
+        { name: 'AI Voice Cloning', path: '/ai-voice-cloning', description: 'Advanced voice synthesis' },
+        { name: 'AI 3D Generation', path: '/ai-3d-generation', description: '3D model creation' },
+        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'Intelligent music generation' },
+        { name: 'AI Video Generation', path: '/ai-video-generation', description: 'AI video creation' }
       ]
     },
     {
@@ -94,7 +98,12 @@ const Navigation: React.FC = () => {
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
-        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' }
+        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
+        { name: 'API Management', path: '/api-management', description: 'API monitoring & optimization' },
+        { name: 'System Integration', path: '/system-integration', description: 'Enterprise integration' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'Managed Services', path: '/managed-services', description: '24/7 IT management' },
+        { name: 'Disaster Recovery', path: '/disaster-recovery', description: 'Business continuity' }
       ]
     },
     {
@@ -105,10 +114,17 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
+        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'Advanced writing tool' },
+        { name: 'AI Image Generator', path: '/ai-image-generator', description: 'Professional image creation' },
+        { name: 'AI Video Creator', path: '/ai-video-creator', description: 'Intelligent video production' },
+        { name: 'AI Music Composer', path: '/ai-music-composer', description: 'AI music generation' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Business intelligence' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Email campaign optimization' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Search engine optimization' },
+        { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant', description: 'E-commerce optimization' },
+        { name: 'AI Code Assistant', path: '/ai-code-assistant', description: 'Intelligent coding support' },
+        { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant', description: 'Meeting management' }
       ]
     },
     {
@@ -123,7 +139,13 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Robotic solutions' }
+        { name: 'Robotics', path: '/robotics', description: 'Robotic solutions' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology' },
+        { name: 'Environmental AI', path: '/environmental-ai', description: 'Sustainability solutions' },
+        { name: 'Space Technology', path: '/space-technology', description: 'Aerospace solutions' },
+        { name: 'Biotechnology AI', path: '/biotechnology-ai', description: 'Bio-tech applications' },
+        { name: 'Financial AI', path: '/financial-ai', description: 'Fintech solutions' }
       ]
     }
   ];
