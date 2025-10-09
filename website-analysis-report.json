@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-10-09T01:29:34.938Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "totalLinks": 0,
+    "brokenLinks": 0,
+    "missingPages": 0,
+    "validLinks": 0,
+    "pages": [
+      {
+        "url": "https://ziontechgroup.com",
+        "depth": 0,
+        "status": "valid",
+        "links": 0,
+        "title": "",
+        "description": "",
+        "headings": [],
+        "images": [],
+        "forms": []
+      }
+    ]
+  },
+  "brokenLinks": [],
+  "pages": [
+    {
+      "url": "https://ziontechgroup.com",
+      "depth": 0,
+      "status": "valid",
+      "links": 0,
+      "title": "",
+      "description": "",
+      "headings": [],
+      "images": [],
+      "forms": []
+    }
+  ],
+  "validLinks": []
+}
