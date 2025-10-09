@@ -7,10 +7,7 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-18a0
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -26,23 +23,28 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor Core Web Vitals
       if ('web-vitals' in window) {
         // This would typically use the web-vitals library
+        // eslint-disable-next-line no-console
         console.log('Performance monitoring enabled');
       }
       
       // Monitor page load time
       window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        // eslint-disable-next-line no-console
         console.log(`Page load time: ${loadTime}ms`);
       });
       
       // Monitor memory usage if available
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-        });
+        const memory = (performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (memory) {
+          // eslint-disable-next-line no-console
+          console.log('Memory usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+          });
+        }
       }
     };
 
@@ -53,6 +55,7 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
+            // eslint-disable-next-line no-console
             console.warn('Long task detected:', entry.duration + 'ms');
           }
         }

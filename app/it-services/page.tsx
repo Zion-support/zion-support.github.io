@@ -252,7 +252,7 @@ const ITServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
 
-  const itServices = [
+  const itServices = useMemo(() => [
     // Core IT Services
     {
       id: 'it-consulting',
@@ -674,7 +674,7 @@ const ITServicesPage: React.FC = () => {
         'Cost reduction'
       ]
     }
-  ];
+  ], []);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Grid3X3, count: itServices.length },
@@ -733,7 +733,7 @@ const ITServicesPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [searchTerm, selectedCategory, sortBy, itServices]);
 
   const totalValue = itServices.reduce((total, service) => {
     return total + service.pricing.yearly;

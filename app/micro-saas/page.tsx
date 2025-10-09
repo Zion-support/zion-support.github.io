@@ -9,7 +9,7 @@ const MicroSAASPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-  const microSAASServices = [
+  const microSAASServices = useMemo(() => [
     {
       id: 'ai-project-manager',
       name: 'AI Project Manager',
@@ -62,7 +62,7 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.9,
       users: 12000
     }
-  ];
+  ], []);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
@@ -107,7 +107,7 @@ const MicroSAASPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [searchTerm, selectedCategory, sortBy, microSAASServices]);
 
   return (
     <>

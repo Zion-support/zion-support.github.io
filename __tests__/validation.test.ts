@@ -111,8 +111,8 @@ describe('HTML Sanitization', () => {
 
   test('handles empty and non-string inputs', () => {
     expect(sanitizeHTML('')).toBe('');
-    expect(sanitizeHTML(null as any)).toBe('');
-    expect(sanitizeHTML(undefined as any)).toBe('');
+    expect(sanitizeHTML(null as unknown as string)).toBe('');
+    expect(sanitizeHTML(undefined as unknown as string)).toBe('');
   });
 });
 
