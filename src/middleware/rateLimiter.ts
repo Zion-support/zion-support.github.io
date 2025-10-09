@@ -41,23 +41,23 @@ export class RateLimiter {
     const _now = Date.now();
     const _record = this.requests.get(identifier);
     // No record or expired
-    if (!record || now > record.resetTime) {
-      const _resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime };
+    if (!_record || _now > _record.resetTime) {
+      const _resetTime = _now + this.config.windowMs;
+      this.requests.set(identifier, { count: 1, resetTime: _resetTime });
+      return { allowed: true, remaining: this.config.max - 1, resetTime: _resetTime };
     }
     // Increment count
-    if (record.count < this.config.max) {
-      record.count++;
-      this.requests.set(identifier, record);
+    if (_record.count < this.config.max) {
+      _record.count++;
+      this.requests.set(identifier, _record);
       return {
         allowed: true,
-        remaining: this.config.max - record.count,
-        resetTime: record.resetTime
+        remaining: this.config.max - _record.count,
+        resetTime: _record.resetTime
       };
     }
     // Limit exceeded
-    return { allowed: false, remaining: 0, resetTime: record.resetTime };
+    return { allowed: false, remaining: 0, resetTime: _record.resetTime };
   }
   /**
    * Reset rate limit for identifier
@@ -72,7 +72,7 @@ export class RateLimiter {
   private cleanup(): void {
     const _now = Date.now();
     for (const [key, record] of this.requests.entries()) {
-      if (now > record.resetTime) {
+      if (_now > record.resetTime) {
         this.requests.delete(key);
       }
     }
@@ -126,12 +126,12 @@ export const rateLimiters = {
 export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
   const _headers = request.headers;
-  const _forwardedFor = headers.get('x-forwarded-for');
-  const _realIp = headers.get('x-real-ip');
-  const _cfConnectingIp = headers.get('cf-connecting-ip');
-  if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
+  const _forwardedFor = _headers.get('x-forwarded-for');
+  const _realIp = _headers.get('x-real-ip');
+  const _cfConnectingIp = _headers.get('cf-connecting-ip');
+  if (_cfConnectingIp) return _cfConnectingIp;
+  if (_realIp) return _realIp;
+  if (_forwardedFor) return _forwardedFor.split(',')[0].trim();
   // Fallback to a default identifier
   return 'unknown';
 }
@@ -143,7 +143,7 @@ export function getClientIdentifier(request: Request): string {
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
     const _identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
+    const { allowed, remaining, resetTime } = limiter.check(_identifier);
     if (!allowed) {
       return new Response(
         JSON.stringify({

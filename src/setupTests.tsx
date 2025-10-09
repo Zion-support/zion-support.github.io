@@ -12,11 +12,11 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 const _originalConsoleError = console.error;
 console.error = (...args) => {
   const _message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
+  if (_message.includes('Not implemented: navigation') || 
+      _message.includes('navigation (except hash changes)')) {
     return;
   }
-  originalConsoleError(...args);
+  _originalConsoleError(...args);
 };
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -62,10 +62,10 @@ const _originalConsoleWarn = console.warn;
 const _originalConsoleInfo = console.info;
 console.warn = (...args) => {
   const _message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
-  originalConsoleWarn(...args);
+  _originalConsoleWarn(...args);
 };
 console.info = (...args) => {
   const _message = args[0]?.toString?.() || '';
