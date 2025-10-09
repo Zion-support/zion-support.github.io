@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 
 const Analytics: React.FC = () => {
-  const _pathname = usePathname();
 
   useEffect(() => {
     // Google Analytics 4

@@ -46,7 +46,6 @@ export class ApiCache {
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig>
   ): Promise<T> {
-    const _cacheKey = this.getCacheKey(url, options);
     const mergedConfig = { ...this.config, ...cacheConfig };
     // Check cache first
     if (this.cache.has(cacheKey)) {

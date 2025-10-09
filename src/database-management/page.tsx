@@ -1,11 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Database, Shield, BarChart, Settings, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const DatabaseManagementPage: React.FC = () => {
   const _features = [
@@ -106,6 +101,3 @@ const DatabaseManagementPage: React.FC = () => {
 };
 
 export default DatabaseManagementPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

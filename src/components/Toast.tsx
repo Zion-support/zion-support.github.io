@@ -80,26 +80,3 @@ const Toast: React.FC<ToastProps> = ({
   );
 };
 export default Toast;
-// Toast Hook for easy usage
-export const useToast = () => {
-  const [toast, setToast] = useState<{
-    show: boolean;
-    message: string;
-    type: ToastType;
-  }>({
-    show: false,
-    message: '',
-    type: 'success'
-  });
-  const showToast = (message: string, _type: ToastType = 'success') => {
-    setToast({ show: true, message, type });
-  };
-  const hideToast = () => {
-    setToast(prev => ({ ...prev, show: false }));
-  };
-  return {
-    toast,
-    showToast,
-    hideToast
-  };
-};

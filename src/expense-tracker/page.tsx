@@ -1,11 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const ExpenseTrackerPage: React.FC = () => {
   const _features = [
@@ -325,6 +319,3 @@ const ExpenseTrackerPage: React.FC = () => {
 };
 
 export default ExpenseTrackerPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

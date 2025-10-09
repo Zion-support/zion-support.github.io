@@ -196,7 +196,6 @@ export class ConfigManager {
    */
   private detectEnvironment(): Environment {
     if (typeof process !== 'undefined') {
-      const _nodeEnv = process.env['NODE_ENV'];
       const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
       if (nextEnv) {
         return nextEnv as Environment;

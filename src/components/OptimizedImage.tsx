@@ -34,7 +34,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -83,14 +82,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   return (
     <div
-      ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
+      ref={imgRef} className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
-        <div
-          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+        <div className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
           style={{
             backgroundImage: `url(${blurDataURL})`,
           }}
@@ -104,9 +101,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
       {/* Error state */}
       {hasError && (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>
       )}
 
       {/* Actual image */}
@@ -119,8 +114,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           sizes={sizes}
           loading={loading}
           onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${
+          onError={handleError} className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{

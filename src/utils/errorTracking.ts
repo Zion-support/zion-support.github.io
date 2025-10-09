@@ -84,7 +84,6 @@ class ErrorTrackingService {
     error: Error,
     metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
-    const _errorId = this.generateErrorId(error.message);
     const timestamp = Date.now();
     const _fullMetadata: ErrorMetadata = {
       ...metadata,
@@ -249,31 +248,3 @@ class ErrorTrackingService {
 }
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
-// Export convenience functions for easier testing and usage
-export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {
-  const category = options?.category || ErrorCategory.Runtime;
-  const severity = options?.severity || ErrorSeverity.Medium;
-  return errorTracking.trackError(error, {
-    ...options,
-    category,
-    severity
-  });
-};
-export const getErrorStatistics = () => {
-  const stats = errorTracking.getStatistics();
-  const errors = errorTracking.getErrors().map(error => ({
-    ...error,
-    context: error.metadata.context
-  }));
-  return {
-    total: stats.total,
-    byCategory: stats.byCategory,
-    bySeverity: stats.bySeverity,
-    errors
-  };
-};
-export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = (listener: (error: TrackedError) => void) =>
-  errorTracking.addListener(listener);
-export const removeErrorListener = (listener: (error: TrackedError) => void) =>
-  errorTracking.removeListener(listener);

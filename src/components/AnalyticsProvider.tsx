@@ -7,7 +7,6 @@ interface AnalyticsContextType {
   setUserProperties: (properties: Record<string, unknown>) => void;
 }
 
-const _AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;

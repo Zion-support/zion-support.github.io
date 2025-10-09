@@ -224,5 +224,4 @@ class EnhancedAnalytics {
   }
 }
 // Export singleton instance
-export const _analytics = new EnhancedAnalytics();
 export default analytics;

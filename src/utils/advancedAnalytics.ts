@@ -140,7 +140,6 @@ class AdvancedAnalytics {
    */
   private trackClicks(): void {
     document.addEventListener('click', event => {
-      const _target = event.target as HTMLElement;
       const element = this.getElementInfo(target);
       const clickEvent: UserEvent = {
         id: this.generateEventId(),

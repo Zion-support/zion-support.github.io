@@ -78,7 +78,6 @@ export interface A11yCheckResult {
  *
  * @example
  * ```typescript
- * const _checker = new AccessibilityChecker();
  * const result = checker.checkElement(document.getElementById('main'));
  * if (import.meta.env.DEV) { }
  * ```

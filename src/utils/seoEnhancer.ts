@@ -51,7 +51,6 @@ class SEOEnhancer {
   }
 
   private setTitle(): void {
-    const _title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
     document.title = title;
     
     // Update meta title

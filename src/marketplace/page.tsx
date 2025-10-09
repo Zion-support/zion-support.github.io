@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -484,6 +479,3 @@ const MarketplacePage: React.FC = () => {
 };
 
 export default MarketplacePage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

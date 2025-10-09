@@ -85,7 +85,6 @@ const _defaultConfig: LoggerConfig = {
  *
  * @example
  * ```typescript
- * const _logger = EnhancedLogger.getInstance();
  * logger.info('User logged in', undefined, { userId: '123' });
  * logger.error('API request failed', { error: err }, err);
  * ```

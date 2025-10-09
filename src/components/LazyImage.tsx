@@ -27,7 +27,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (priority) return;
@@ -64,23 +63,19 @@ const LazyImage: React.FC<LazyImageProps> = ({
 
   return (
     <div
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
+      ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
     >
       {!isInView ? (
         <img
           src={placeholder}
-          alt=""
-          className="w-full h-full object-cover"
+          alt="" className="w-full h-full object-cover"
           aria-hidden="true"
         />
       ) : (
-        <>
-          <img
+        <><img
             src={hasError ? placeholder : src}
-            alt={alt}
-            className={cn(
+            alt={alt} className={cn(
               'w-full h-full object-cover transition-opacity duration-300',
               isLoaded ? 'opacity-100' : 'opacity-0'
             )}
@@ -90,9 +85,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
             decoding="async"
           />
           {!isLoaded && !hasError && (
-            <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
-              <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" />
-            </div>
+            <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>
           )}
         </>
       )}

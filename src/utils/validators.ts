@@ -10,7 +10,6 @@ export interface ValidationResult {
 /**
  * Email validation regex pattern
  */
-const _EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /**
  * Phone number validation regex (US format)
  */

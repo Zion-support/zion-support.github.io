@@ -42,7 +42,6 @@ class PerformanceMonitor {
         });
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {
-          const _lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             this.recordMetric(
               'LCP',

@@ -24,7 +24,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Check for user preferences
     if (typeof window !== 'undefined') {
-      const _prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       
       setIsHighContrast(prefersHighContrast);
@@ -163,8 +162,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {/* High Contrast Toggle */}
       {enableHighContrast && (
         <button
-          onClick={toggleHighContrast}
-          className="sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-3 py-2 rounded text-sm z-50"
+          onClick={toggleHighContrast} className="sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-3 py-2 rounded text-sm z-50"
           aria-label={`Toggle high contrast mode. Currently ${isHighContrast ? 'on' : 'off'}`}
         >
           {isHighContrast ? 'High Contrast: On' : 'High Contrast: Off'}
@@ -173,12 +171,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       {/* Skip to main content link */}
       <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
       >
         Skip to main content
-      </a>
-    </div>
+      </a></div>
   );
 };
 

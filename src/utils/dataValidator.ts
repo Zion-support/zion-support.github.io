@@ -35,7 +35,6 @@ export class ValidationError extends Error {
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
-  const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 /**

@@ -64,7 +64,6 @@ class UserExperienceEnhancer {
     if (!this.config.enableSmoothScrolling) return;
 
     // Add smooth scrolling to all anchor links
-    const _links = document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
       link.addEventListener('click', (e) => {

@@ -17,7 +17,6 @@ export function announceToScreenReader(
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
   if (typeof document === 'undefined') return;
-  const _announcement = document.createElement('div');
   announcement.setAttribute('role', 'status');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');

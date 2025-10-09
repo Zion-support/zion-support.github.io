@@ -21,7 +21,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
   // Handle online/offline status
   useEffect(() => {
-    const _handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
 
     window.addEventListener('online', handleOnline);

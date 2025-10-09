@@ -64,7 +64,6 @@ export class ErrorReporter {
       context: this.config.captureContext ? context : undefined
     };
     // Track error frequency
-    const _errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport);

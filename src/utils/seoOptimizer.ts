@@ -56,7 +56,6 @@ class SEOOptimizer {
    * Generate optimized title
    */
   generateTitle(pageTitle?: string): string {
-    const _title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName) 
       ? title 
       : `${title} | ${this.config.siteName}`;

@@ -43,7 +43,6 @@ class AdvancedCache<T = unknown> {
   private loadFromStorage(): void {
     if (typeof window === 'undefined') return;
     try {
-      const _storage = this.getStorage();
       const data = storage?.getItem(this.storageKey);
       if (data) {
         const parsed = JSON.parse(data);

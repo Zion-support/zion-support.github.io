@@ -29,7 +29,6 @@ class AccessibilityService {
     ratio: number;
     passes: { normal: boolean; large: boolean };
   } {
-    const _rgb1 = this.hexToRgb(foreground);
     const rgb2 = this.hexToRgb(background);
     const l1 = this.getLuminance(rgb1);
     const l2 = this.getLuminance(rgb2);

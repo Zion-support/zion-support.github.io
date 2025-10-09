@@ -115,7 +115,6 @@ class Logger {
       ...metadata
     };
     // Format the log entry
-    const _formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development
     if (this.isDevelopment && typeof console !== 'undefined') {
       this.outputToConsole(level, formattedMessage, logEntry);

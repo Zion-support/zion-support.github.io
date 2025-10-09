@@ -160,7 +160,6 @@ export class ErrorHandler {
   }
   // Determine error type
   private determineErrorType(error: Error): ErrorType {
-    const _message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {
       return ErrorType.NETWORK;
@@ -283,20 +282,14 @@ export class ErrorHandler {
       font-family: Arial, sans-serif;
     `;
     notification.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <strong>${error.severity} Error</strong>
-          <p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p>
-        </div>
-        <button onclick="this.parentElement.parentElement.remove()" style="
+      <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
           background: none;
           border: none;
           color: white;
           font-size: 18px;
           cursor: pointer;
           margin-left: 10px;
-        ">×</button>
-      </div>
+        ">×</button></div>
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors
@@ -460,10 +453,7 @@ export class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened.</p>
-            <button
+          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',
@@ -475,8 +465,7 @@ export class ErrorBoundary extends React.Component<
               }}
             >
               Try again
-            </button>
-          </div>
+            </button></div>
         )
       );
     }
