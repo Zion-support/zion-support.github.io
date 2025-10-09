@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
+import { CheckCircle, Star, Phone, Mail, Box, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -64,7 +64,7 @@ const AI3DGenerationPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Cube className="w-4 h-4" />
+            <Box className="w-4 h-4" />
             <span>AI 3D Technology</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -100,7 +100,7 @@ const AI3DGenerationPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Cube className="w-6 h-6 text-blue-400" />
+                  <Box className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </div>
