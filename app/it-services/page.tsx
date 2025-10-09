@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
 =======
@@ -33,7 +32,6 @@ const ITServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
     },
     {
-<<<<<<< HEAD
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: <HardDrive className="w-8 h-8" />,
@@ -264,7 +262,6 @@ const ITServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -361,7 +358,6 @@ const ITServicesPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-<<<<<<< HEAD
                 {service.benefits && (
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>

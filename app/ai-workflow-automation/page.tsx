@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -38,7 +37,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
     }
   ];
-<<<<<<< HEAD
   const pricingPlans = [
 =======
 
@@ -63,7 +61,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
   const stats = [
     { number: '90%', label: 'Time Savings' },
     { number: '75%', label: 'Error Reduction' },
@@ -201,7 +198,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -279,7 +275,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </a>
             </div>
           </section>
-<<<<<<< HEAD
         </main>
         <Footer />
       </div>

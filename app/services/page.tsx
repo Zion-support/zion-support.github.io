@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
@@ -74,7 +73,6 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
@@ -155,7 +153,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
@@ -213,7 +210,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
@@ -234,7 +230,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
