@@ -9,7 +9,7 @@ export const focusManagement = {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
@@ -45,7 +45,7 @@ export const focusManagement = {
 
   // Skip to main content
   skipToMain: (): void => {
-    const mainElement = document.querySelector('main') as HTMLElement;
+    const _mainElement = document.querySelector('main') as HTMLElement;
     if (mainElement) {
       mainElement.focus();
       mainElement.scrollIntoView();
@@ -67,7 +67,7 @@ export const ariaUtils = {
   },
 
   // Announce to screen readers
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -118,10 +118,10 @@ export const colorContrast = {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
-    const lum1 = colorContrast.getLuminance(...color1);
-    const lum2 = colorContrast.getLuminance(...color2);
-    const brightest = Math.max(lum1, lum2);
-    const darkest = Math.min(lum1, lum2);
+//     const lum1 = colorContrast.getLuminance(...color1);
+//     const lum2 = colorContrast.getLuminance(...color2);
+//     const brightest = Math.max(lum1, lum2);
+//     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
@@ -154,7 +154,7 @@ export const formAccessibility = {
   associateLabel: (
     input: HTMLInputElement,
   ): HTMLLabelElement => {
-    const label = document.createElement('label');
+    const _label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
     if (!input.id) {
@@ -169,7 +169,7 @@ export const formAccessibility = {
   },
 
   // Check color contrast
-    const thresholds = { AA: 4.5, AAA: 7 };
+    const _thresholds = { AA: 4.5, AAA: 7 };
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
     return contrastRatio >= thresholds[level];
@@ -187,7 +187,7 @@ export const screenReaderUtils = {
   },
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
-    const element = document.createElement('span');
+    const _element = document.createElement('span');
     element.textContent = text;
     element.className = 'sr-only';
     return element;
@@ -200,24 +200,24 @@ export const accessibilityTesting = {
     missing: HTMLImageElement[];
     empty: HTMLImageElement[];
   } => {
-    const images = Array.from(document.querySelectorAll('img'));
-    const missing = images.filter(img => !img.hasAttribute('alt'));
-    const empty = images.filter(img => img.getAttribute('alt') === '');
+    const _images = Array.from(document.querySelectorAll('img'));
+    const _missing = images.filter(img => !img.hasAttribute('alt'));
+    const _empty = images.filter(img => img.getAttribute('alt') === '');
     return { missing, empty };
   },
     );
     return inputs.filter(input => {
-      const id = input.id;
-      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+//       const id = input.id;
+      const _label = id ? document.querySelector(`label[for="${id}"]`) : null;
+//       const ariaLabel = input.getAttribute('aria-label');
+//       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
     );
     const issues: string[] = [];
     const structure: string[] = [];
-    let previousLevel = 0;
+    let _previousLevel = 0;
       if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
       }
@@ -234,15 +234,15 @@ export const accessibilityTesting = {
     headings: { issues: string[]; structure: string[] };
     score: number;
   } => {
-    const imageCheck = accessibilityTesting.checkImageAltText();
-    const formCheck = accessibilityTesting.checkFormLabels();
-    const headingCheck = accessibilityTesting.checkHeadingHierarchy();
+    const _imageCheck = accessibilityTesting.checkImageAltText();
+    const _formCheck = accessibilityTesting.checkFormLabels();
+    const _headingCheck = accessibilityTesting.checkHeadingHierarchy();
     const totalIssues =
       imageCheck.missing.length +
       imageCheck.empty.length +
       formCheck.length +
       headingCheck.issues.length;
-    const score = Math.max(0, 100 - totalIssues * 10);
+//     const score = Math.max(0, 100 - totalIssues * 10);
     return {
       images: {
         missing: imageCheck.missing.length,
@@ -270,7 +270,7 @@ export const accessibilityTesting = {
 // Initialize accessibility features
 export const initAccessibility = (): void => {
   // Add skip links
-  const skipLink = document.createElement('a');
+  const _skipLink = document.createElement('a');
   skipLink.href = '#main-content';
   skipLink.textContent = 'Skip to main content';
   skipLink.className = 'skip-link';

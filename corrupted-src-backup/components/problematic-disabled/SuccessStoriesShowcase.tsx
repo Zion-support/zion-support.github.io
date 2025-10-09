@@ -83,7 +83,7 @@ const SuccessStoriesShowcas, e: React.FC = () => {
                   className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2"
                 >
                   Read, Full, Story
-                  <ArrowRight, className="w-4 h-4" />
+                  <Link, className="w-4 h-4" />
                 </Li, n, k>
               </div>
             </div>
@@ -94,7 +94,7 @@ const SuccessStoriesShowcas, e: React.FC = () => {
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
           >
             View, All, Success Stori, e, s
-            <ArrowRight, className="w-6 h-6" />
+            <Link, className="w-6 h-6" />
           </Li, n, k>
         </div>
       </div>

@@ -1,58 +1,32 @@
 /**
- * Performance utilities for optimizing application performance
+ * Performance utility functions
  */
 
-// Debounce function for performance optimization
-  func: T,
-  wait: number,
-  immediate = false
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
-      if (!immediate) func(...args);
-    };
-    const callNow = immediate && !timeout;
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func(...args);
-  };
+export const measurePerformance = (name: string, fn: () => void) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    //     const start = performance.now();
+    fn();
+    //     const end = performance.now();
+    //     } else {
+    fn();
+  }
 };
 
-// Throttle function for performance optimization
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-    }
-  };
+export const getPageLoadTime = (): number | null => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    //     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    return perfData?.loadEventEnd - perfData?.fetchStart;
+  }
+  return null;
 };
 
+export const optimizeImages = () => {
+  if (typeof window !== 'undefined') {
+    const _images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+    });
+  }
 };
-
-// Preload critical resources
-export const preloadCriticalResources = (): void => {
-      link.crossOrigin = 'anonymous';
-    }
-    document.head.appendChild(link);
-  });
-};
-
-export const optimizeScrollPerformance = (): void => {
-  if (typeof window === 'undefined') return;
-
-  let ticking = false;
-
-  const updateScrollPosition = () => {
-    ticking = false;
-  };
-
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
-
-  window.addEventListener('scroll', requestTick, { passive: true });

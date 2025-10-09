@@ -1,0 +1,19 @@
+# Deployment Fix Summary
+
+## Problem
+Netlify build failing with @netlify/plugin-nextjs error
+
+## Cause  
+Plugin installed but this is a Vite project, not Next.js
+
+## Fix Required
+Remove @netlify/plugin-nextjs from Netlify UI:
+- Site Settings > Build & deploy > Build plugins
+
+## Files Updated
+1. netlify.toml - Added warning comments
+2. README.md - Added critical alert section
+3. NETLIFY_BUILD_FIX.md - Detailed instructions
+4. DEPLOYMENT_ISSUE.txt - Quick reference
+
+## See NETLIFY_BUILD_FIX.md for complete instructions

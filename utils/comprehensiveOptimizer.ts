@@ -204,7 +204,7 @@ export class ComprehensiveOptimizer {
    * Add skip links for accessibility
    */
   private addSkipLinks(): void {
-    const skipLink = document.createElement('a');
+    const _skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';

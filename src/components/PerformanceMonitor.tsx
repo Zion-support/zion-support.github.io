@@ -1,85 +1,98 @@
-import React, { useEffect, useState } from 'react';
-
+'use client';
+import React, { useEffect, useState, memo } from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
-
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
+const PerformanceMonitor: React.FC = memo(() => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
+  });
   useEffect(() => {
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
     const measurePerformance = () => {
-      if (typeof window === 'undefined' || !window.performance) return;
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0, // Would need to be measured with observer
-        firstInputDelay: 0, // Would need to be measured with observer
-      };
-
-      setMetrics(metrics);
+      // Measure First Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      }
+      // Measure Largest Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+      // Measure First Input Delay
+      if ('PerformanceObserver' in window) {
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            }
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      }
+      // Measure Cumulative Layout Shift
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+      // Measure Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        }));
+      }
     };
-
     // Measure after page load
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
     }
-    
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
   }, []);
-
-  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  if (!isVisible || !metrics) return null;
-
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold">Performance Metrics</h3>
-        <button 
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      <div className="space-y-1">
-        <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-        <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
-        <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-        <div className="text-xs text-gray-400 mt-2">
-          Press Ctrl+Shift+P to toggle
-        </div>
+    <div className="performance-monitor">
+      <h3>Performance Metrics</h3>
+      <div className="metrics">
+        <div>LCP: {metrics.lcp || 'N/A'}</div>
+        <div>FID: {metrics.fid || 'N/A'}</div>
+        <div>CLS: {metrics.cls || 'N/A'}</div>
+        <div>FCP: {metrics.fcp || 'N/A'}</div>
+        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
+        <div>Memory: N/A</div>
       </div>
     </div>
   );
-};
+});
 
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 export default PerformanceMonitor;

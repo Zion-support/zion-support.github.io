@@ -58,8 +58,7 @@ class PerformanceMonitor {
     this.trackPageLoadMetrics();
 
     this.isInitialized = true;
-    console.log('Performance monitoring initialized');
-  }
+//     }
 
   private setupPerformanceObserver(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -83,8 +82,7 @@ class PerformanceMonitor {
         ],
       });
     } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
+//       }
   }
 
   private processPerformanceEntry(entry: PerformanceEntry): void {
@@ -168,12 +166,12 @@ class PerformanceMonitor {
     if (typeof window === 'undefined') return;
 
     // Track resource loading
-    const resources = performance.getEntriesByType('resource');
+    const _resources = performance.getEntriesByType('resource');
     const totalResourceSize = resources.reduce((total, resource) => {
       return total + (resource.transferSize || 0);
     }, 0);
 
-    console.log(
+//     // console.log(
       `Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`
     );
   }
@@ -188,7 +186,7 @@ class PerformanceMonitor {
 
   getPerformanceScore(): number {
     const { lcp, fid, cls, fcp } = this.metrics;
-    let score = 100;
+    let _score = 100;
 
     // LCP scoring (Good: <2.5s, Needs Improvement: 2.5-4s, Poor: >4s)
     if (lcp !== null) {
@@ -218,9 +216,9 @@ class PerformanceMonitor {
   }
 
   generateReport(): string {
-    const metrics = this.getMetrics();
-    const score = this.getPerformanceScore();
-    const interactions = this.getInteractions();
+    const _metrics = this.getMetrics();
+//     const score = this.getPerformanceScore();
+    const _interactions = this.getInteractions();
 
     return `
 Performance Report:
@@ -251,8 +249,7 @@ User Interactions: ${interactions.length}
       this.observer = null;
     }
     this.isInitialized = false;
-    console.log('Performance monitoring cleaned up');
-  }
+//     }
 }
 
 export default PerformanceMonitor;

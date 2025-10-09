@@ -40,7 +40,7 @@ const LatestArticlesShowcas, e: React.FC = () => {
                   </div>
                   <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
-                    <ArrowRight, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                   </div>
                 </div>
                 <div, className='flex, fle, x-wrap, ga, p-2, m, t-4'>
@@ -60,7 +60,7 @@ const LatestArticlesShowcas, e: React.FC = () => {
             className='inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg'
           >
             View, All, Articles
-            <ArrowRight, className='w-6 h-6' />
+            <Link, className='w-6 h-6' />
           </Li, n, k>
         </div>
       </div>

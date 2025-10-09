@@ -190,7 +190,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                       d, a, y: 'nume, r, i, c',
                       ye, a, r: 'nume, r, i, c',
                     })}
-                  <ArrowRight, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
+                  <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
             { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: '⚛️' },
             { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: '🧠' },
             { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: '🎯' },
@@ -200,4 +200,4 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 >
                   <Sparkles, classNam, e='w-5 h-5' />
-                  <ArrowRight, classNam, e='w-5 h-5' />
+                  <Link, classNam, e='w-5 h-5' />

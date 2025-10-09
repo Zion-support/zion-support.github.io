@@ -83,7 +83,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
 
-      {/* Additional, Meta, Tags */}
+      {/* Additional, Metas */}
       <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e' conte, n, t='y, e, s' />

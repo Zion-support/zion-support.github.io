@@ -101,8 +101,8 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               classNa, m, e="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e
   r:g, a, p-3, transitio, n-a, l, l"
             >
-              Read, Full, Article <ArrowRight, className="w-5 h-5  />
-              Read, Full, Article <ArrowRight, className="w-5 h-5" />";
+              Read, Full, Article <Link, className="w-5 h-5  />
+              Read, Full, Article <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
           {/* Car, d, 2: Quant, u, m-Safe, Securit, y */}
@@ -167,8 +167,8 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               classNa, m, e="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e
   r:g, a, p-3, transitio, n-a, l, l"
             >
-              Read, Full, Article <ArrowRight, className="w-5 h-5  />
-              Read, Full, Article <ArrowRight, className="w-5 h-5" />";
+              Read, Full, Article <Link, className="w-5 h-5  />
+              Read, Full, Article <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
           {/* Car, d, 3: Cognitive, Business, Intelligence */}
@@ -233,8 +233,8 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               classNa, m, e="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e
   r:g, a, p-3, transitio, n-a, l, l"
             >
-              Read, Full, Article <ArrowRight, className="w-5 h-5  />
-              Read, Full, Article <ArrowRight, className="w-5 h-5" />";
+              Read, Full, Article <Link, className="w-5 h-5  />
+              Read, Full, Article <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>
@@ -252,16 +252,16 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl, inlin, e-flex, item, s-center, ga, p-2"
             >
-              Schedule, Free, Consultation <ArrowRight, className="w-5 h-5  />
-              Schedule, Free, Consultation <ArrowRight, className="w-5 h-5" />";
+              Schedule, Free, Consultation <Link, className="w-5 h-5  />
+              Schedule, Free, Consultation <Link, className="w-5 h-5" />";
             </Li, n, k>
             <Li, n, k
   to="/bl, o, g"
               classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hov, e
   r:bord, e, r-cy, a, n-400, inlin, e-flex, item, s-center, ga, p-2"
             >
-              Explore, All, Articles <ArrowRight, className="w-5 h-5  />
-              Explore, All, Articles <ArrowRight, className="w-5 h-5" />";
+              Explore, All, Articles <Link, className="w-5 h-5  />
+              Explore, All, Articles <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

@@ -147,7 +147,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                       </di, v>
                     )}
                   </div>
-                  <ArrowRight, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
+                  <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
                 </div>
               </Li, n, k>
             ))}

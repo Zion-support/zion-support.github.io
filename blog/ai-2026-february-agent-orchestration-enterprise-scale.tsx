@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'router-dom'
-import {ArrowLeft, TrendingUp, Zap} Network; CheckCircle } from 'lucide-react'
-const AgentOrchestrationEnterpriseScale2026 = () =>
+import { Link } from 'react-router-dom'
+import { ArrowLeft, TrendingUp, Zap, Network, CheckCircle } from 'lucide-react'
+
+const AgentOrchestrationEnterpriseScale2026 = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -24,16 +25,17 @@ const AgentOrchestrationEnterpriseScale2026 = () =>
             <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
-          <article className="text-left"></a>
+          <article className="text-left">
             <header className="text-left">
               <div className="text-left"></div>
                 <span className="text-left"></span>
                   Agentic AI
-                <
-                <span className="text-left">February 1, 2026<
-                <span className="text-left">•<
-                <span className="text-left">18 min read<
+                <span className="text-left">February 1, 2026</span>
+                <span className="text-left">•</span>
+                <span className="text-left">18 min read</span>
               </div>
+            </header>
+            <main>
               <h1 className="text-left">
                 Agent Orchestration at Enterprise Scale 2026: Managing 1000+ Autonomous AI Agents
               </h1>

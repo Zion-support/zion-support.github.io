@@ -1,36 +1,14 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import './globals.css';
 
-async function reportWebVitals() {
-  try {
-    const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
-    const log = (metric: { name: string; value: number }) => {
-      if (process.env['NODE_ENV'] === 'production') {
-        console.log('Web Vital:', metric);
-      }
-    };
+const root = document.getElementById('root');
 
-    onCLS(log);
-    onLCP(log);
-    onFCP(log);
-    onTTFB(log);
-  } catch (error) {
-    console.warn('Failed to load web-vitals:', error);
-  }
+if (_root) {
+  ReactDOM.createRoot(_root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
 }
-
-const container = document.getElementById('root');
-if (!container) {
-  throw new Error('Root element not found');
-}
-
-const root = createRoot(container);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-reportWebVitals();

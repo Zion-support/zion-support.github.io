@@ -54,19 +54,6 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
   TTFB: { good: 800, poor: 1800 },
 };
 
@@ -80,7 +67,7 @@ function getRating(
 ): 'good' | 'needs-improvement' | 'poor' {
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-  const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
+  const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
 
   if (value <= threshold.good) return 'good';
@@ -115,8 +102,7 @@ function sendToAnalytics(metric: Metric): void {
   };
 
   // Log in development
-    console.log('Performance Metric:', performanceMetric);
-  }
+//     }
 
     id: metric.id,
   };
@@ -124,8 +110,7 @@ function sendToAnalytics(metric: Metric): void {
   // Log in development
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console
-    console.log('Performance Metric:', performanceMetric);
-  }
+//     }
 
   // Send to analytics
   if (typeof window !== 'undefined' && window.gtag) {
@@ -176,7 +161,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch(error => console.error('Performance reporting error:', error));
+//     }).catch(error => // console.error('Performance reporting error:', error));
   }
     });
   }
@@ -211,8 +196,7 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
     }).catch(error => {
       // eslint-disable-next-line no-console
-      console.error('Performance reporting error:', error);
-    });
+//       });
   }
 }
 
@@ -240,17 +224,14 @@ export function initPerformanceMonitoring(): void {
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
   } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
-    onCLS(sendToAnalytics);
+//     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
-  } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
-  }
+//     } catch (error) {
+//     }
 /**
  * Generate performance report
  */
@@ -317,7 +298,7 @@ export function generatePerformanceReport(): PerformanceReport {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
 
@@ -350,13 +331,11 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
-    console.error('Error marking performance:', error);
-  }
+//     }
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error initializing performance monitoring:', error);
-  }
+//     }
 }
 
 /**
@@ -371,7 +350,7 @@ export function getPerformanceMetrics(): PerformanceMetric[] {
  * Measure performance of a custom function
  */
 export function measurePerformance(name: string, startTime: number): number {
-  const duration = performance.now() - startTime;
+  const _duration = performance.now() - startTime;
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {
@@ -384,7 +363,7 @@ export function measurePerformance(name: string, startTime: number): number {
   if (process.env['NODE_ENV'] === 'development') {
      
     // eslint-disable-next-line no-console
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
   return duration;
@@ -401,8 +380,7 @@ export function markPerformance(name: string): void {
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error marking performance:', error);
-  }
+//     }
 }
 
 /**
@@ -426,13 +404,12 @@ export function measureBetween(
 
   try {
     performance.measure(name, startMark, endMark);
-    const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
+    const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error measuring between marks:', error);
-    return 0;
+//     return 0;
   }
 }
 
@@ -441,8 +418,8 @@ export function measureBetween(
  */
 export function getNavigationTiming(): Record<string, number> | null {
 
-  const timing = performance.timing;
-  const navigationStart = timing.navigationStart;
+  const _timing = performance.timing;
+//   const navigationStart = timing.navigationStart;
 
   return {
     // DNS lookup
@@ -470,11 +447,10 @@ export function measureBetween(name: string, startMark: string, endMark: string)
   if (typeof performance !== 'undefined' && performance.measure) {
     try {
       performance.measure(name, startMark, endMark);
-      const entries = performance.getEntriesByName(name, 'measure');
+      const _entries = performance.getEntriesByName(name, 'measure');
       return entries.length > 0 ? entries[0]?.duration || 0 : 0;
     } catch (error) {
-      console.warn('Performance measure failed:', error);
-      return 0;
+//       return 0;
     }
   }
   return 0;
@@ -516,8 +492,7 @@ export function getNavigationTiming(): Record<string, number> | null {
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
-    console.error('Error getting resource timing:', error);
-    return [];
+//     return [];
   }
 }
 
@@ -525,7 +500,7 @@ export function getNavigationTiming(): Record<string, number> | null {
  * Analyze slow resources
  */
 export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {
-  const resources = getResourceTiming();
+  const _resources = getResourceTiming();
   return resources.filter(resource => resource.duration > threshold);
 }
 
@@ -540,27 +515,27 @@ export function getMemoryUsage(): Record<string, number> | null {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const _memory = (performance as any).memory;
   if (typeof performance === 'undefined' || !(performance as any).memory) {
     return null;
   }
-  const memory = (performance as any).memory;
-  if (typeof performance === 'undefined' || !(performance as any).memory) {
-    return null;
-  }
-
-  const memory = (performance as any).memory;
-  const memory = (performance as Record<string, unknown>).memory as Record<string, number>;
+  const _memory = (performance as any).memory;
   if (typeof performance === 'undefined' || !(performance as any).memory) {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const _memory = (performance as any).memory;
+  const _memory = (performance as Record<string, unknown>).memory as Record<string, number>;
   if (typeof performance === 'undefined' || !(performance as any).memory) {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const _memory = (performance as any).memory;
+  if (typeof performance === 'undefined' || !(performance as any).memory) {
+    return null;
+  }
+
+  const _memory = (performance as any).memory;
  * Get resource timing data
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
@@ -618,42 +593,42 @@ export function getMemoryUsage(): Record<string, number> | null {
  * Generate performance report
  */
 
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
   const metrics: PerformanceMetric[] = [];
 
 
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
 
-  const navigationTiming = getNavigationTiming();
-  const memoryUsage = getMemoryUsage();
-  const slowResources = getSlowResources();
+//   const navigationTiming = getNavigationTiming();
+//   const memoryUsage = getMemoryUsage();
+//   const slowResources = getSlowResources();
   const metrics: PerformanceMetric[] = [];
 
 
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
   // const memoryUsage = getMemoryUsage();
   // const slowResources = getSlowResources();
 
   const metrics: PerformanceMetric[] = [];
 
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
 
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
 
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
 export function generatePerformanceReport(): PerformanceReport | null {
   if (typeof window === 'undefined') return null;
 
-  const navigationTiming = getNavigationTiming();
-  const memoryUsage = getMemoryUsage();
-  const slowResources = getSlowResources();
+//   const navigationTiming = getNavigationTiming();
+//   const memoryUsage = getMemoryUsage();
+//   const slowResources = getSlowResources();
 
   const metrics: PerformanceMetric[] = [];
 
   // Add navigation timing metrics
   
   const metrics: PerformanceMetric[] = [];
-  const navigationTiming = getNavigationTiming();
+//   const navigationTiming = getNavigationTiming();
   
   if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
@@ -725,7 +700,7 @@ export function generatePerformanceReport(): PerformanceReport {
 
   try {
     const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       callback(entries);
     });
     observer.observe({ entryTypes: ['longtask'] });
@@ -733,8 +708,7 @@ export function generatePerformanceReport(): PerformanceReport {
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error monitoring long tasks:', error);
-    return null;
+//     return null;
   }
 }
 
@@ -746,7 +720,7 @@ export function generatePerformanceReport(): PerformanceReport {
 
   try {
     const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       callback(entries);
     });
     observer.observe({ entryTypes: ['layout-shift'] });
@@ -754,8 +728,7 @@ export function generatePerformanceReport(): PerformanceReport {
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error monitoring layout shifts:', error);
-    return null;
+//     return null;
   }
 }
 
@@ -766,8 +739,8 @@ export function isSlowConnection(): boolean {
     return false;
   }
 
-  const connection = (navigator as NavigatorWithConnection).connection;
-  const slowTypes = ['slow-2g', '2g'];
+  const _connection = (navigator as NavigatorWithConnection).connection;
+  const _slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
   );
@@ -784,7 +757,7 @@ export function getConnectionType(): string {
     return 'unknown';
   }
 
-  const connection = (navigator as NavigatorWithConnection).connection;
+  const _connection = (navigator as NavigatorWithConnection).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
@@ -834,14 +807,13 @@ export function monitorLongTasks(
 
   try {
     const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       callback(entries);
     });
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
-    console.error('Error monitoring long tasks:', error);
-    return null;
+//     return null;
   }
 }
 
@@ -861,14 +833,13 @@ export function monitorLayoutShifts(
 
   try {
     const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       callback(entries);
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   } catch (error) {
-    console.error('Error monitoring layout shifts:', error);
-    return null;
+//     return null;
   }
 }
 
@@ -880,31 +851,31 @@ export function getConnectionType(): string | null {
     return null;
   }
 
-  const connection = (navigator as any).connection;
-  const slowTypes = ['slow-2g', '2g'];
+  const _connection = (navigator as any).connection;
+  const _slowTypes = ['slow-2g', '2g'];
   return (
     (connection.effectiveType && slowTypes.includes(connection.effectiveType)) || 
     connection.saveData === true
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !(navigator as any).connection) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !(navigator as any).connection) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !(navigator as any).connection) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
-  const slowTypes = ['slow-2g', '2g'];
+  const _connection = (navigator as any).connection;
+  const _slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
  * Check if connection is slow
@@ -917,8 +888,8 @@ export function isSlowConnection(): boolean {
     return false;
   }
 
-  const connection = (navigator as any).connection;
-  const slowTypes = ['slow-2g', '2g'];
+  const _connection = (navigator as any).connection;
+  const _slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
 export function isSlowConnection(): boolean {
@@ -928,8 +899,8 @@ export function isSlowConnection(): boolean {
     return false;
   }
 
-  const connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
-  const slowTypes = ['slow-2g', '2g'];
+  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
+  const _slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType as string) || 
     connection.saveData === true
@@ -951,11 +922,11 @@ export function getConnectionType(): string {
     return 'unknown';
   }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
@@ -963,23 +934,23 @@ export function getConnectionType(): string {
   ) {
     return 'unknown';
   }
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-  const connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
+  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
   return (connection.effectiveType as string) || (connection.type as string) || 'unknown';
 }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
@@ -1032,9 +1003,7 @@ export function isPerformanceMonitoringSupported(): boolean {
   };
 
   // Send to analytics service
-  console.log('Performance Metric:', performanceMetric);
-  
-  // You can send this to your analytics service
+//   // You can send this to your analytics service
   // analytics.track('performance_metric', performanceMetric);
 }
 

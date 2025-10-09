@@ -1,14 +1,11 @@
 import React from 'react';
+const OperationalTrustScorecardsPage: React.FC = () => {
 
-export const metadata = {
-  
-  title: "Operational Trust Scorecards v3",
-  description: "Measure reliability, cost, safety, and value with live AI scorecards.",
-  type: 'article'};
-
-export default function Page() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+
+    <>
+
+      <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
           <div className="mb-6 inline-flex items-center gap-2">
@@ -76,5 +73,8 @@ export default function Page() {
         </div>
       </section>
     </main>
+    </>
   );
 }
+
+export default OperationalTrustScorecardsPage;

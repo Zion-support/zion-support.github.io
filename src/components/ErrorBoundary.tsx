@@ -4,13 +4,12 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorId?: string;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -20,84 +19,94 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
-  }
+      errorInfo
+    });
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Report error to analytics/monitoring service
-    this.reportError(error, errorInfo);
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-  }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+    // Send error to analytics/monitoring service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack,
-        },
+          error_stack: error.stack || '',
+          error_info: errorInfo.componentStack || ''
+        }
       });
     }
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorId: undefined });
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
-  private handleGoHome = () => {
-    if (window?.location) {
-      window.location.href = '/';
-    }
-  };
-
-  override render() {
+  render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
+                <AlertTriangle className="w-8 h-8 text-red-400" />
+              </div>
+            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
             <p className="text-gray-300 mb-6">
-              We&apos;re sorry, but something unexpected happened. Our team has been notified.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
-            {this.state.errorId && (
-              <p className="text-gray-400 mb-4 text-sm">
-                Error ID: {this.state.errorId}
-              </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-gray-900 rounded-lg text-left">
+                <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
+                <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-32">
+                  {this.state.error.message}
+                </pre>
+              </div>
             )}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={this.handleRetry}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               <button
                 onClick={this.handleGoHome}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                onClick={() => window.location.href = '/'}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
               >
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
             </div>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover:text-white text-sm underline"
-            >
-              Or refresh the page
-            </button>
+
+            <div className="mt-6 text-sm text-gray-400">
+              If this problem persists, please contact our support team.
+            </div>
           </div>
         </div>
       );

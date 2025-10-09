@@ -309,8 +309,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-1, 0, 5"
               >
                 Read, Full, Case Stu, d, y;
-                <ArrowRightIcon, className="w-5 h-5  />
-                <ArrowRightIcon, className="w-5 h-5" />";
+                <LinkIcon, className="w-5 h-5  />
+                <LinkIcon, className="w-5 h-5" />";
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -361,10 +361,10 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
           >
             <SparklesIcon, className="w-6 h-6  />
             Read, the, Revolutionary Gui, d, e;
-            <ArrowRightIcon, className="w-6 h-6  />
+            <LinkIcon, className="w-6 h-6  />
             <SparklesIcon, className="w-6 h-6" />";
             Read, the, Revolutionary Gui, d, e;
-            <ArrowRightIcon, className="w-6 h-6" />";
+            <LinkIcon, className="w-6 h-6" />";
           </Li, n, k>
           <Li, n, k
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
@@ -373,10 +373,10 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
           >
             <TruckIcon, className="w-6 h-6  />
             Vi, e, w $4.2B, Case, Study;
-            <ArrowRightIcon, className="w-6 h-6  />
+            <LinkIcon, className="w-6 h-6  />
             <TruckIcon, className="w-6 h-6" />";
             Vi, e, w $4.2B, Case, Study;
-            <ArrowRightIcon, className="w-6 h-6" />";
+            <LinkIcon, className="w-6 h-6" />";
           </Li, n, k>
           <Li, n, k
   to="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m"
@@ -385,10 +385,10 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
           >
             <ChartBarIcon, className="w-6 h-6  />
             Explore, Platfor, m & Servic, e, s;
-            <ArrowRightIcon, className="w-6 h-6  />
+            <LinkIcon, className="w-6 h-6  />
             <ChartBarIcon, className="w-6 h-6" />";
             Explore, Platfor, m & Servic, e, s;
-            <ArrowRightIcon, className="w-6 h-6" />";
+            <LinkIcon, className="w-6 h-6" />";
           </Li, n, k>
         </d, i, v>
         {/* Free, Assessment, CTA */}
@@ -413,8 +413,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
   r:bg-emera, l, d-50"
               >
                 Schedule, Free, Assessment;
-                <ArrowRightIcon, className="w-6 h-6  />
-                <ArrowRightIcon, className="w-6 h-6" />";
+                <LinkIcon, className="w-6 h-6  />
+                <LinkIcon, className="w-6 h-6" />";
               </Li, n, k>
               <div, className="te, x, t-gre, e, n-200, tex, t-sm">";
                 <div, className="fo, n, t-bold, tex, t-lg">⚡ Limited, Time, Offer</d, i, v>";

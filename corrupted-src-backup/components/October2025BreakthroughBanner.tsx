@@ -66,8 +66,8 @@ const, October2025BreakthroughBanne, r = () => {
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e
   r:g, a, p-3, transitio, n-a, l, l"
               >
-                Read, Articl, e <ArrowRight, className="w-4 h-4  />
-                Read, Articl, e <ArrowRight, className="w-4 h-4" />";
+                Read, Articl, e <Link, className="w-4 h-4  />
+                Read, Articl, e <Link, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
             {/* Articl, e, 2: Quantum, M, L */}
@@ -94,8 +94,8 @@ const, October2025BreakthroughBanne, r = () => {
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, hove, r: te, x, t-indi, g, o-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e
   r:g, a, p-3, transitio, n-a, l, l"
               >
-                Read, Articl, e <ArrowRight, className="w-4 h-4  />
-                Read, Articl, e <ArrowRight, className="w-4 h-4" />";
+                Read, Articl, e <Link, className="w-4 h-4  />
+                Read, Articl, e <Link, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
             {/* Articl, e, 3: Neuromorphic, Edg, e */}
@@ -123,8 +123,8 @@ const, October2025BreakthroughBanne, r = () => {
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, hove, r: te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e
   r:g, a, p-3, transitio, n-a, l, l"
               >
-                Read, Articl, e <ArrowRight, className="w-4 h-4  />
-                Read, Articl, e <ArrowRight, className="w-4 h-4" />";
+                Read, Articl, e <Link, className="w-4 h-4  />
+                Read, Articl, e <Link, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -135,8 +135,8 @@ const, October2025BreakthroughBanne, r = () => {
               classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e
   r:shad, o, w-purp, l, e-5, 0, 0/50, inlin, e-flex, item, s-center, ga, p-2"
             >
-              Explore, All, Articles <ArrowRight, className="w-5 h-5  />
-              Explore, All, Articles <ArrowRight, className="w-5 h-5" />";
+              Explore, All, Articles <Link, className="w-5 h-5  />
+              Explore, All, Articles <Link, className="w-5 h-5" />";
             </Li, n, k>
             <Li, n, k
   to="/conta, c, t"

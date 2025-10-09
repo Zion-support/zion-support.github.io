@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface EmergingTech2026ServiceV3 {;
@@ -38,7 +38,7 @@ export interface EmergingTech2026ServiceV3 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -86,7 +86,7 @@ export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [,
     link: "/services/2026-emerging-tech-v3",
     category: "Emerging Tech 2026 V3",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

@@ -28,9 +28,7 @@
       "type": "linting",
       "severity": "error",
       "message": "ESLint found 1 issues",
-      "issues": [
-        "> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
-      ],
+      "issues": ["> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"],
       "timestamp": "2025-08-29T15:31:15.753Z"
     },
     {

@@ -77,7 +77,7 @@ const October2025AIOperationsBanne, r = () => {
                   {/* C, T, A */}
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>
-                    <ArrowRight, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                    <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
                   </div>
                 </div>
               </Li, n, k>
@@ -91,7 +91,7 @@ const October2025AIOperationsBanne, r = () => {
               className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"
             >
               <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+              <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
             </Li, n, k>
             <Link, t, o="/conta, c, t"
               className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"

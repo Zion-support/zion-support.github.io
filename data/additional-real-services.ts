@@ -8,7 +8,7 @@ export interface AdditionalRealService {id: string;
   link: string;
   category: string;
   real_implementation: boolean;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string}
     email: string}
 }
@@ -23,7 +23,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [,
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
-    description: any,
+    description: unknown,
       'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.',
     features: [,
       'Workflow automation',
@@ -35,7 +35,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [,
     link: '/services / ai - automation - suite',
     category: 'AI & Automation',
     real_implementation: true,
-    contact_info: any,
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -46,7 +46,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string;
   id: string;
@@ -58,7 +58,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [,
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string,
@@ -114,7 +114,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     name: 'Data Warehouse Solution',
     tagline: 'Enterprise - grade data management and analytics',
     price: '$149 / month',
-    description: any,
+    description: unknown,
       'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.',
     features: [,
       'Data integration',
@@ -126,7 +126,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     link: '/services / data - warehouse - solution',
     category: 'Data & Analytics',
     real_implementation: true,
-    contact_info: any,
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -148,7 +148,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     link: "/services/ai-automation-suite",
     category: "AI & Automation",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -192,7 +192,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     link: "/services/ai-automation-suite",
     category: "AI & Automation",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -2978,7 +2978,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     marketSize: '$12B sales tech',
     growthRate: '19% CAGR',
     variant: 'agentic-suite',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

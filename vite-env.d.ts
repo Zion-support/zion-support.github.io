@@ -5,10 +5,9 @@ interface ImportMetaEnv {
   readonly PROD: boolean;
   readonly MODE: string;
   readonly SSR: boolean;
-  [key: string]: any;
+  readonly [key: string]: unknown;
 }
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
-  readonly url: string;
 }

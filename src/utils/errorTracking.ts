@@ -1,235 +1,280 @@
+'use client';
 /**
- * Enhanced Error Tracking System
- * Provides comprehensive error monitoring with context and severity levels
+ * Advanced Error Tracking and Reporting System
+ * Provides comprehensive error tracking with categorization and analytics
  */
-
+import { logger } from './logger';
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
 }
-
-export interface ErrorContext {
+export enum ErrorCategory {
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+export interface ErrorMetadata {
+  category: ErrorCategory;
+  severity: ErrorSeverity;
   userId?: string;
   sessionId?: string;
-  page?: string;
-  action?: string;
-  timestamp?: number;
+  context?: Record<string, unknown>;
+  tags?: string[];
+  timestamp: number;
+  stackTrace?: string;
   userAgent?: string;
-  metadata?: Record<string, any>;
+  url?: string;
 }
-
 export interface TrackedError {
+  id: string;
   message: string;
-  stack?: string;
-  severity: ErrorSeverity;
-  context: ErrorContext;
-  fingerprint: string;
+  metadata: ErrorMetadata;
+  occurrences: number;
+  firstSeen: number;
+  lastSeen: number;
 }
-
-class ErrorTracker {
-  private errors: TrackedError[] = [];
-  private maxErrors: number = 100;
-  private errorCallbacks: Array<(error: TrackedError) => void> = [];
-
+class ErrorTrackingService {
+  private static instance: ErrorTrackingService;
+  private errors: Map<string, TrackedError> = new Map();
+  private errorListeners: Array<(error: TrackedError) => void> = [];
+  private maxStoredErrors = 1000;
+  private constructor() {
+    this.setupGlobalErrorHandlers();
+  }
+  static getInstance(): ErrorTrackingService {
+    if (!ErrorTrackingService.instance) {
+      ErrorTrackingService.instance = new ErrorTrackingService();
+    }
+    return ErrorTrackingService.instance;
+  }
   /**
-   * Track an error with context and severity
+   * Set up global error handlers
+   */
+  private setupGlobalErrorHandlers(): void {
+    if (typeof window === 'undefined') return;
+    // Handle unhandled errors
+    window.addEventListener('error', event => {
+      this.trackError(event.error || new Error(event.message), {
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.High,
+        context: {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno
+        }
+      });
+    });
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', event => {
+      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      });
+    });
+  }
+  /**
+   * Track an error with metadata
    */
   trackError(
-    error: Error | string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    context: ErrorContext = {}
-  ): void {
-    const errorMessage = typeof error === 'string' ? error : error.message;
-    const errorStack = typeof error === 'string' ? undefined : error.stack;
-
-    const trackedError: TrackedError = {
-      message: errorMessage,
-      stack: errorStack,
-      severity,
-      context: {
-        ...context,
-        timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        page: typeof window !== 'undefined' ? window.location.pathname : undefined,
-      },
-      fingerprint: this.generateFingerprint(errorMessage, errorStack),
+    error: Error,
+    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+  ): string {
+    const errorId = this.generateErrorId(error.message);
+    const timestamp = Date.now();
+    const fullMetadata: ErrorMetadata = {
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined
     };
-
-    this.errors.push(trackedError);
-
-    // Keep only the last N errors
-    if (this.errors.length > this.maxErrors) {
-      this.errors.shift();
+    const existingError = this.errors.get(errorId);
+    if (existingError) {
+      // Update existing error
+      existingError.occurrences++;
+      existingError.lastSeen = timestamp;
+      existingError.metadata = fullMetadata;
+    } else {
+      // Create new error entry
+      const trackedError: TrackedError = {
+        id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+        lastSeen: timestamp
+      };
+      this.errors.set(errorId, trackedError);
+      // Notify listeners
+      this.notifyListeners(trackedError);
+      // Maintain max stored errors
+      if (this.errors.size > this.maxStoredErrors) {
+        const oldestKey = Array.from(this.errors.keys())[0];
+        this.errors.delete(oldestKey);
+      }
     }
-
-    // Notify callbacks
-    this.errorCallbacks.forEach((callback) => {
+    // Log the error
+    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
+      error_id: errorId,
+      category: metadata.category,
+      ...metadata.context
+    });
+    // Send to external service if critical
+    if (metadata.severity === ErrorSeverity.Critical) {
+      this.reportToExternalService(errorId);
+    }
+    return errorId;
+  }
+  /**
+   * Generate a unique error ID based on the message
+   */
+  private generateErrorId(message: string): string {
+    // Simple hash function for error ID
+    let hash = 0;
+    for (let i = 0; i < message.length; i++) {
+      const char = message.charCodeAt(i);
+      hash = (hash * 32) - hash + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return `err_${Math.abs(hash).toString(36)}`;
+  }
+  /**
+   * Add an error listener
+   */
+  addListener(listener: (error: TrackedError) => void): void {
+    this.errorListeners.push(listener);
+  }
+  /**
+   * Remove an error listener
+   */
+  removeListener(listener: (error: TrackedError) => void): void {
+    this.errorListeners = this.errorListeners.filter(l => l !== listener);
+  }
+  /**
+   * Notify all listeners of a new error
+   */
+  private notifyListeners(error: TrackedError): void {
+    this.errorListeners.forEach(listener => {
       try {
-        callback(trackedError);
-      } catch (e) {
-        console.error('Error in error callback:', e);
+        listener(error);
+      } catch (listenerError) {
+        logger.error('Error in error listener', listenerError as Error);
       }
     });
-
-    // Log to console based on severity
-    this.logError(trackedError);
-
-    // Send to external service if critical
-    if (severity === ErrorSeverity.CRITICAL) {
-      this.reportCriticalError(trackedError);
+  }
+  /**
+   * Report critical errors to external service
+   */
+  private async reportToExternalService(errorId: string): Promise<void> {
+    const error = this.errors.get(errorId);
+    if (!error) return;
+    try {
+      if (typeof window !== 'undefined' && 'fetch' in window) {
+        await fetch('/api/error-report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        });
+      }
+    } catch (reportError) {
+      logger.error('Failed to report error to external service', reportError as Error);
     }
   }
-
-  /**
-   * Register a callback for error notifications
-   */
-  onError(callback: (error: TrackedError) => void): () => void {
-    this.errorCallbacks.push(callback);
-    return () => {
-      this.errorCallbacks = this.errorCallbacks.filter((cb) => cb !== callback);
-    };
-  }
-
   /**
    * Get all tracked errors
    */
-  getErrors(severity?: ErrorSeverity): TrackedError[] {
-    if (severity) {
-      return this.errors.filter((error) => error.severity === severity);
-    }
-    return [...this.errors];
+  getErrors(): TrackedError[] {
+    return Array.from(this.errors.values());
   }
-
   /**
-   * Clear all tracked errors
+   * Get errors by category
    */
-  clearErrors(): void {
-    this.errors = [];
+  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
+    return this.getErrors().filter(e => e.metadata.category === category);
   }
-
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
+    return this.getErrors().filter(e => e.metadata.severity === severity);
+  }
   /**
    * Get error statistics
    */
   getStatistics(): {
     total: number;
+    byCategory: Record<ErrorCategory, number>;
     bySeverity: Record<ErrorSeverity, number>;
-    recentErrors: TrackedError[];
+    topErrors: TrackedError[];
   } {
-    const bySeverity = {
-      [ErrorSeverity.LOW]: 0,
-      [ErrorSeverity.MEDIUM]: 0,
-      [ErrorSeverity.HIGH]: 0,
-      [ErrorSeverity.CRITICAL]: 0,
-    };
-
-    this.errors.forEach((error) => {
-      bySeverity[error.severity]++;
+    const errors = this.getErrors();
+    const byCategory = {} as Record<ErrorCategory, number>;
+    const bySeverity = {} as Record<ErrorSeverity, number>;
+    errors.forEach(error => {
+      byCategory[error.metadata.category] =
+        (byCategory[error.metadata.category] || 0) + error.occurrences;
+      bySeverity[error.metadata.severity] =
+        (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
-
+    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {
-      total: this.errors.length,
+      total: errors.length,
+      byCategory,
       bySeverity,
-      recentErrors: this.errors.slice(-10),
+      topErrors
     };
   }
-
   /**
-   * Generate a unique fingerprint for error deduplication
+   * Clear all errors
    */
-  private generateFingerprint(message: string, stack?: string): string {
-    const content = stack ? `${message}:${stack.split('\n')[0]}` : message;
-    let hash = 0;
-    for (let i = 0; i < content.length; i++) {
-      const char = content.charCodeAt(i);
-      hash = (hash << 5) - hash + char;
-      hash = hash & hash;
-    }
-    return hash.toString(36);
+  clearErrors(): void {
+    this.errors.clear();
   }
-
   /**
-   * Log error to console with appropriate level
+   * Clear errors older than specified time
    */
-  private logError(error: TrackedError): void {
-    const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
-    
-    switch (error.severity) {
-      case ErrorSeverity.CRITICAL:
-      case ErrorSeverity.HIGH:
-        console.error(logMessage, error);
-        break;
-      case ErrorSeverity.MEDIUM:
-        console.warn(logMessage, error);
-        break;
-      case ErrorSeverity.LOW:
-        console.info(logMessage, error);
-        break;
-    }
-  }
-
-  /**
-   * Report critical errors to external service
-   */
-  private reportCriticalError(error: TrackedError): void {
-    // In production, this would send to error tracking service
-    // e.g., Sentry, Rollbar, LogRocket, etc.
-    if (typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production') {
-      // Example: Send to error tracking API
-      try {
-        fetch('/api/errors', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(error),
-        }).catch(() => {
-          // Fail silently to avoid error loops
-        });
-      } catch (e) {
-        // Fail silently
+  clearOldErrors(maxAge: number): void {
+    const now = Date.now();
+    for (const [id, error] of this.errors.entries()) {
+      if (now - error.lastSeen > maxAge) {
+        this.errors.delete(id);
       }
     }
   }
-
-  /**
-   * Set up global error handlers
-   */
-  setupGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
-
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      this.trackError(
-        new Error(`Unhandled Promise Rejection: ${event.reason}`),
-        ErrorSeverity.HIGH,
-        { action: 'unhandledrejection' }
-      );
-    });
-
-    // Handle global errors
-    window.addEventListener('error', (event) => {
-      this.trackError(
-        event.error || new Error(event.message),
-        ErrorSeverity.HIGH,
-        {
-          action: 'global_error',
-          metadata: {
-            filename: event.filename,
-            lineno: event.lineno,
-            colno: event.colno,
-          },
-        }
-      );
-    });
-  }
 }
-
-// Export singleton instance
-export const errorTracker = new ErrorTracker();
-
-// Initialize global handlers
-if (typeof window !== 'undefined') {
-  errorTracker.setupGlobalHandlers();
-}
-
-export default errorTracker;
+export const errorTracking = ErrorTrackingService.getInstance();
+export default ErrorTrackingService;
+// Export convenience functions for easier testing and usage
+export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {
+  const category = options?.category || ErrorCategory.Runtime;
+  const severity = options?.severity || ErrorSeverity.Medium;
+  return errorTracking.trackError(error, {
+    ...options,
+    category,
+    severity
+  });
+};
+export const getErrorStatistics = () => {
+  const stats = errorTracking.getStatistics();
+  const errors = errorTracking.getErrors().map(error => ({
+    ...error,
+    context: error.metadata.context
+  }));
+  return {
+    total: stats.total,
+    byCategory: stats.byCategory,
+    bySeverity: stats.bySeverity,
+    errors
+  };
+};
+export const clearErrorHistory = () => errorTracking.clearErrors();
+export const addErrorListener = (listener: (error: TrackedError) => void) =>
+  errorTracking.addListener(listener);
+export const removeErrorListener = (listener: (error: TrackedError) => void) =>
+  errorTracking.removeListener(listener);

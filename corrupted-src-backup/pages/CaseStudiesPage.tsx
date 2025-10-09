@@ -49,58 +49,48 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta
-          name='description'
-          content='Real-world case studies showcasing our AI solutions and their impact.'
+          name="description"
+          content="Real-world case studies showcasing our AI solutions and their impact."
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <div className='container mx-auto px-4 py-16'>
-          <div className='text-center mb-16'>
-            <h1 className='text-5xl font-bold text-gray-900 mb-6'>
-              Case Studies
-            </h1>
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Real-world case studies showcasing our AI solutions and their
-              transformative impact.
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Case Studies</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real-world case studies showcasing our AI solutions and their transformative impact.
             </p>
           </div>
 
           <SuccessStoriesShowcase />
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map(study => (
             <div
               key={study.id}
-              className='bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow'
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
             >
-              <div className='mb-4'>
-                <span className='inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
+              <div className="mb-4">
+                <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                   {study.industry}
                 </span>
-                <span className='ml-2 text-sm text-gray-500'>
-                  {study.duration}
-                </span>
+                <span className="ml-2 text-sm text-gray-500">{study.duration}</span>
               </div>
 
-              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                {study.title}
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{study.title}</h3>
 
-              <p className='text-gray-600 mb-4'>{study.description}</p>
+              <p className="text-gray-600 mb-4">{study.description}</p>
 
-              <ul className='space-y-2'>
+              <ul className="space-y-2">
                 {study.results.map((result, index) => (
-                  <li
-                    key={index}
-                    className='flex items-center text-sm text-gray-600'
-                  >
-                    <span className='w-2 h-2 bg-green-500 rounded-full mr-2'></span>
+                  <li key={index} className="flex items-center text-sm text-gray-600">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {result}
                   </li>
                 ))}

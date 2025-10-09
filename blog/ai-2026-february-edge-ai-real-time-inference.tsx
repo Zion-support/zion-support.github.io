@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import {ArrowLeft, TrendingUp, Zap, Target} CheckCircle; Clock } from 'lucide-react'
-const EdgeAIRealTimeInference2026 = () =>
+import { ArrowLeft, TrendingUp, Zap, Target, CheckCircle, Clock } from 'lucide-react'
+
+const EdgeAIRealTimeInference2026 = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -24,16 +25,17 @@ const EdgeAIRealTimeInference2026 = () =>
             <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
-          <article className="text-left"></a>
+          <article className="text-left">
             <header className="text-left">
               <div className="text-left"></div>
                 <span className="text-left"></span>
                   Edge AI
-                <
-                <span className="text-left">February 1, 2026<
-                <span className="text-left">•<
-                <span className="text-left">16 min read<
+                <span className="text-left">February 1, 2026</span>
+                <span className="text-left">•</span>
+                <span className="text-left">16 min read</span>
               </div>
+            </header>
+            <main>
               <h1 className="text-left">
                 Edge AI Real-Time Inference 2026: Sub-10ms Intelligence at the Edge
               </h1>

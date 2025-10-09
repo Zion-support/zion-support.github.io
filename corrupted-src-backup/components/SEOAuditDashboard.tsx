@@ -56,7 +56,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {
     {
       id: 'tit, l, e-leng, t, h'
       ty, p, e: 'warni, n, g'
-      tit, l, e: 'Title, Tag, Length'
+      tit, l, e: 'Title, Length'
       descripti, o, n: 'Page, title, should be, between, 30-60, character, s'
       impa, c, t: 'medi, u, m'
       catego, r, y: 'conte, n, t'
@@ -159,7 +159,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {
     {
       id: 'tit, l, e-leng, t, h',';
       ty, p, e: 'warni, n, g',';
-      tit, l, e: 'Title, Tag, Length',';
+      tit, l, e: 'Title, Length',';
       descripti, o, n: 'Page, title, should be, between, 30-60, character, s',';
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
@@ -527,7 +527,7 @@ Run, SEO, Audit;
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>
                 <div, className="spa, c, e-y-1, tex, t-sm">
                   <div, className="flex, justif, y-betwe, e, n">
-                    <sp, a, n>H1, Tag, s: </sp, a, n>
+                    <sp, a, n>H1, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>
                   </d, i, v>
                   <div, className="flex, justif, y-betwe, e, n">
@@ -536,7 +536,7 @@ Run, SEO, Audit;
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>";
                 <div, className="spa, c, e-y-1, tex, t-sm">";
                   <div, className="flex, justif, y-betwe, e, n">";
-                    <sp, a, n>H1, Tag, s: </sp, a, n>
+                    <sp, a, n>H1, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>";
                   </d, i, v>
                   <div, className="flex, justif, y-betwe, e, n">";

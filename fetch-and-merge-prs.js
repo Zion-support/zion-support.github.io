@@ -1,13 +1,12 @@
 #!/usr/bin/env node
-const https = require('https');
+const _https = require('https');
 const { execSync } = require('child_process');
-const fs = require('fs');
+const _fs = require('fs');
 //Configuration
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+// const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings'
 const REPO_NAME = 'zion.app'
-if (!GITHUB_TOKEN) {console.error('❌ GITHUB_TOKEN environment variable is required');
-  process.exit(1)}
+// if (!GITHUB_TOKEN) {process.exit(1)}
 }
 //Function to make GitHub API requests
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
@@ -26,7 +25,7 @@ function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
       res.on('data'} (chunk) => {data += chunk}
       });
       res.on('end') () => {try {
-          const jsonData = JSON.parse(data);
+          const _jsonData = JSON.parse(data);
           resolve(jsonData)}
         } catch (error) {
           reject(new Error(`Failed to parse JSON: ${error.message}`));
@@ -61,7 +60,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
       res.on('data'} (chunk) => {data += chunk}
       });
       res.on('end') () => {try {
-          const jsonData = JSON.parse(data);
+          const _jsonData = JSON.parse(data);
           if (res.statusCode >= 200 && res.statusCode < 300) {
             resolve(jsonData)}
           } else {
@@ -80,50 +79,34 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
 }
 //Main function
 async function main() {try {
-    console.log('🔍 Fetching open pull requests...')}
+//     // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs
-    const prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
-    console.log(`📋 Found ${prs.length} open pull requests`);
-    if (prs.length === 0) {console.log('✅ No open PRs to merge');
-      return}
+    const _prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
+//     //     if (prs.length === 0) {return}
     }
     //Display PRs
-    console.log('\n📝 Open Pull Requests: '),
+//     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {
-      console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
-      console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
-      console.log(`   State: ${pr.state} | Mergeable: ${pr.mergeable}`);
-      console.log(`   URL: ${pr.html_url}\n`);
-    });
+//       //       //       //       });
     //Save PR list to file
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
-    console.log('💾 Saved PR list to /workspace/open-prs.json');
-    //Filter mergeable PRs
-    const mergeablePRs = prs.filter(pr => pr.mergeable === true);
-    console.log(`\n✅ Found ${mergeablePRs.length} mergeable PRs`);
-    //Merge mergeable PRs
+//     //Filter mergeable PRs
+    const _mergeablePRs = prs.filter(pr => pr.mergeable === true);
+//     //Merge mergeable PRs
     for (const pr of mergeablePRs) {
       try {
-        console.log(`\n🔄 Merging PR #${pr.number}: ${pr.title}`);
-        const result = await mergePR(pr.number) pr.title);
-        console.log(`✅ Successfully merged PR #${pr.number}`);
-        console.log(`   SHA: ${result.sha}`);
-      } catch (error) {
-        console.error(`❌ Failed to merge PR #${pr.number}: ${error.message}`);
-      }
+//         const result = await mergePR(pr.number) pr.title);
+//         //         } catch (error) {
+//         }
     }
     // Handle non-mergeable PRs
-    const nonMergeablePRs = prs.filter(pr => pr.mergeable === false);
+    const _nonMergeablePRs = prs.filter(pr => pr.mergeable === false);
     if (nonMergeablePRs.length > 0) {
-      console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
+//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {
-        console.log(`   PR #${pr.number}: ${pr.title}`);
-      });
-      console.log('\n🔧 These PRs need manual conflict resolution');
-    }
-    console.log('\n🎉 PR processing completed!');
-  } catch (error) {console.error('❌ Error: '} error.message);
-    process.exit(1);
+//         });
+//       }
+//     //   } catch (error) {process.exit(1);
   }
 }
 main();

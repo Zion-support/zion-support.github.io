@@ -1,4 +1,3 @@
-const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
@@ -26,11 +25,7 @@ async function handler(req, res) {
       return;
     }
 
-    const file = path.join(
-      process.cwd(),
-      'data',
-      'newsletter-subscriptions.json'
-    );
+    const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
 
     let existing = [];
 
@@ -43,7 +38,7 @@ async function handler(req, res) {
 
     existing.push({
       email,
-      name,
+      name: name || '',
       source,
       subscribedAt: new Date().toISOString(),
     });
@@ -52,10 +47,9 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true });
   } catch (err) {
-    console.error('Subscribe API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }
 }
 
-module.exports = withSentry(handler);
+module.exports = { handler };

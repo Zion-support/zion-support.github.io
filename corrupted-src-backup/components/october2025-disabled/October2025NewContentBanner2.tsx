@@ -80,7 +80,7 @@ const October2025NewContentBanner, 2 = () => {
                 {/* Read, More, Link */}
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                   <sp, a, n>Read, Articl, e</sp, a, n>
-                  <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                  <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
@@ -94,7 +94,7 @@ const October2025NewContentBanner, 2 = () => {
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
           >
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
-            <ArrowRight, className="w-5 h-5" />
+            <Link, className="w-5 h-5" />
           </Li, n, k>
         </div>
       </div>

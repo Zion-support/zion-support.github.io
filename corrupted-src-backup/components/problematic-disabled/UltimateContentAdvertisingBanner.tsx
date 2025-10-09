@@ -195,7 +195,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {
                   className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 >
                   <sp, a, n>Explore, Content, Library</sp, a, n>
-                  <ArrowRight, className="w-6 h-6" />
+                  <Link, className="w-6 h-6" />
                 </a>
               </div>
             </div>

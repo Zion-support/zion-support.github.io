@@ -1,68 +1,85 @@
 {
-  "timestamp": "2025-10-01T16:05:01.658Z",
-  "optimizations": [],
-  "recommendations": [
-    {
-      "category": "Bundle Optimization",
-      "priority": "High",
-      "title": "Implement Code Splitting",
-      "description": "Split large components into smaller chunks to reduce initial bundle size",
-      "impact": "High"
+  "timestamp": "2025-10-08T23:38:45.100Z",
+  "optimizations": {
+    "bundleOptimization": {
+      "enableTreeShaking": true,
+      "enableCodeSplitting": true,
+      "enableLazyLoading": true,
+      "enablePreloading": true,
+      "enableCompression": true,
+      "enableMinification": true,
+      "enableDeadCodeElimination": true,
+      "enableUnusedCodeRemoval": true
     },
-    {
-      "category": "Image Optimization",
-      "priority": "Medium",
-      "title": "Optimize Images",
-      "description": "Convert images to WebP format and implement lazy loading",
-      "impact": "Medium"
+    "runtimeOptimization": {
+      "enableMemoization": true,
+      "enableCallbackOptimization": true,
+      "enableEffectOptimization": true,
+      "enableStateOptimization": true,
+      "enableRefOptimization": true,
+      "enableContextOptimization": true,
+      "enableReducerOptimization": true
     },
-    {
-      "category": "Performance",
-      "priority": "High",
-      "title": "Implement Service Worker",
-      "description": "Add service worker for caching and offline functionality",
-      "impact": "High"
+    "imageOptimization": {
+      "enableWebP": true,
+      "enableAVIF": true,
+      "enableResponsiveImages": true,
+      "enableLazyLoading": true,
+      "enablePreloading": true,
+      "enableCompression": true,
+      "enableOptimization": true
     },
-    {
-      "category": "SEO",
-      "priority": "Medium",
-      "title": "Improve Meta Tags",
-      "description": "Add comprehensive meta tags and structured data",
-      "impact": "Medium"
+    "cssOptimization": {
+      "enablePurgeCSS": true,
+      "enableCriticalCSS": true,
+      "enableCSSMinification": true,
+      "enableCSSCompression": true,
+      "enableCSSOptimization": true,
+      "enableUnusedCSSRemoval": true
     },
-    {
-      "category": "Accessibility",
-      "priority": "High",
-      "title": "Enhance Accessibility",
-      "description": "Add ARIA labels and improve keyboard navigation",
-      "impact": "High"
+    "jsOptimization": {
+      "enableES6Optimization": true,
+      "enableAsyncAwaitOptimization": true,
+      "enablePromiseOptimization": true,
+      "enableFunctionOptimization": true,
+      "enableVariableOptimization": true,
+      "enableImportOptimization": true,
+      "enableExportOptimization": true
+    },
+    "networkOptimization": {
+      "enableHTTP2": true,
+      "enableGzip": true,
+      "enableBrotli": true,
+      "enableCDN": true,
+      "enableCaching": true,
+      "enablePreloading": true,
+      "enablePrefetching": true
+    },
+    "coreWebVitals": {
+      "targetLCP": 2.5,
+      "targetFID": 100,
+      "targetCLS": 0.1,
+      "targetFCP": 1.8,
+      "targetTTFB": 600
     }
-  ],
-  "bundleAnalysis": {
-    "totalSize": 1517220,
-    "totalSizeMB": 1.45,
-    "largeFiles": [
-      {
-        "name": "assets/js/main-CL5yYamb.js",
-        "size": 627357,
-        "sizeKB": 613
-      },
-      {
-        "name": "assets/js/chunk-Cow-tSEN.js",
-        "size": 313947,
-        "sizeKB": 307
-      },
-      {
-        "name": "assets/js/chunk-hCpe_W5n.js",
-        "size": 190269,
-        "sizeKB": 186
-      },
-      {
-        "name": "sitemap-blog.xml",
-        "size": 150789,
-        "sizeKB": 147
-      }
-    ]
   },
-  "performanceMetrics": {}
+  "recommendations": [
+    "Enable aggressive tree shaking for smaller bundles",
+    "Implement code splitting for better loading performance",
+    "Use lazy loading for non-critical components",
+    "Optimize images with WebP and AVIF formats",
+    "Implement critical CSS inlining",
+    "Use service workers for caching",
+    "Enable HTTP/2 and compression",
+    "Implement preloading for critical resources",
+    "Use CDN for static assets",
+    "Optimize Core Web Vitals metrics"
+  ],
+  "metrics": {
+    "bundleSize": "Optimized for < 200KB gzipped",
+    "loadTime": "Target < 2.5s LCP",
+    "interactivity": "Target < 100ms FID",
+    "stability": "Target < 0.1 CLS",
+    "performance": "Target 90+ Lighthouse score"
+  }
 }

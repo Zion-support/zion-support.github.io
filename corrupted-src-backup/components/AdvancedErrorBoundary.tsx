@@ -25,9 +25,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
-
-    // Send to error tracking service
+    //     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.toString(),
@@ -40,7 +38,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className='error-boundary'>
+          <div className="error-boundary">
             <h2>Something went wrong.</h2>
             <details style={{ whiteSpace: 'pre-wrap' }}>
               {this.state.error && this.state.error.toString()}

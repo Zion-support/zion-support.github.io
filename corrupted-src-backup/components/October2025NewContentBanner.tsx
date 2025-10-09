@@ -70,8 +70,8 @@ const, October2025NewContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - AI, Security, Mesh */}
@@ -107,8 +107,8 @@ const, October2025NewContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-r, e, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-r, e, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-r, e, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-r, e, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - RA, G, 2.0 */}
@@ -144,8 +144,8 @@ const, October2025NewContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -157,8 +157,8 @@ const, October2025NewContentBanne, r = () => {
   r:shad, o, w-2, x, l"
           >
             <sp, a, n>Explore, All, Insights</sp, a, n>
-            <ArrowRight, className="w-6 h-6  />
-            <ArrowRight, className="w-6 h-6" />";
+            <Link, className="w-6 h-6  />
+            <Link, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-bl, u, e-2, 0, 0/70, tex, t-sm, m, t-4">";
             Join, 5, 0,0, 0, 0+ technology, leaders, staying ahead, of, the AI, curv, e;

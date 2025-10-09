@@ -25,7 +25,7 @@ export interface InnovativeEnergyService {id: string;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string}

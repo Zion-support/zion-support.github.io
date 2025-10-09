@@ -87,7 +87,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <Link, t, o = { multiCloudConte, n, t.c, t, a.l, i, n, k }, classNa, m, e = "flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"
             >
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>
-              <ArrowRight, classNam, e = "w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />
+              <Link, classNam, e = "w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />
             </Li, n, k>
           </div>
           {/* Conversational, AI, Ca, r, d */}
@@ -147,7 +147,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <Link, t, o = { conversationalAIConte, n, t.c, t, a.l, i, n, k }, classNa, m, e = "flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"
             >
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>
-              <ArrowRight, classNam, e = "w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />
+              <Link, classNam, e = "w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />
             </Li, n, k>
           </div>
         </div>

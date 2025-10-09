@@ -6,7 +6,6 @@
     `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,
     siz, e, s.deskt, o, p,
   ].jo, i, n(', ');
->>>>>>> origin/merge-fixes-20251005-193002
 export const getOptimizedUrl = (
   s, r, c: st, r, i, n, g,
   optio, n, s: { 
@@ -38,7 +37,6 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {
             observ, e, r.unobser, v, e(image);
         rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport
       },
->>>>>>> origin/merge-fixes-20251005-193002
 export const preloadImage = (
   s, r, c: st, r, i, n, g,
   ty, p, e: 'image' | 'fet, c, h' = 'im, a, g, e',
@@ -51,7 +49,6 @@ export const preloadImage = (
         wid, t, h: i, m, g.naturalWi, d, t, h,
         heig, h, t: i, m, g.naturalHei, g, h, t,
        });
->>>>>>> origin/merge-fixes-20251005-193002
 export const isFormatSupported = asy, n, c (
   form, a, t: 'we, b, p' | 'av, i, f',
 ): Promi, s, e<boolean> => {
@@ -64,7 +61,6 @@ export const isFormatSupported = asy, n, c (
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {
   if (await, isFormatSupporte, d('av, i, f')) return 'av, i, f'; if (await, isFormatSupporte, d('we, b, p')) return 'we, b, p';
   return 'j, p, g';
->>>>>>> origin/merge-fixes-20251005-193002
 export const createPictureElement = (
   conf, i, g: ResponsiveImageCo, n, f, i, g,
 ): HTMLPictureEleme, n, t = > { 
@@ -75,7 +71,6 @@ export const createPictureElement = (
     const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`),
     ); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
->>>>>>> origin/merge-fixes-20251005-193002
     placehold, e, r: string; // L o w-res placeholde r (e. g. 20x 2 0)
     s, r, c: string; // Full resolution image
     a, l, t: str, i, n, g;
@@ -92,7 +87,6 @@ export const createPictureElement = (
       fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0';
 
       // Remove placeholder after transition setTimeo u t(() = > {
->>>>>>> origin/merge-fixes-20251005-193002
 export const getOptimalQualit, y = (): number = > {
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigat, o, r)) {
     return, 8, 0; // Default qualit y
@@ -109,7 +103,6 @@ export const getOptimalQualit, y = (): number = > {
       return, 4, 0;
     defau, l, t: retur, n, 8, 0;
   }
->>>>>>> origin/merge-fixes-20251005-193002
 export const estimateDataUsage = (
   wid, t, h: nu, m, b, e, r,
   heig, h, t: num, b, e, r,
@@ -129,5 +122,3 @@ export const estimateDataUsage = (
         priori, t, y,
         callba, c, k: reso, l, v, e,
        }); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
-=======
->>>>>>> origin/main

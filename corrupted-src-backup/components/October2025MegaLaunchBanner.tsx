@@ -142,8 +142,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-1, 0, 5"
         >
           Read, All, 7 Articl, e, s;
-          <ArrowRight, className="w-5 h-5  />
-          <ArrowRight, className="w-5 h-5" />";
+          <Link, className="w-5 h-5  />
+          <Link, className="w-5 h-5" />";
         </Li, n, k>
       </d, i, v>
     </d, i, v>

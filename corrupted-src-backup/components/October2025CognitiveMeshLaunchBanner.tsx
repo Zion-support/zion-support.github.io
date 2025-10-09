@@ -214,8 +214,8 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             </p>
             <span, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-300, fon, t-semibo, l, d">";
               <sp, a, n>Read, Articl, e</sp, a, n>
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
             </sp, a, n>
           </Li, n, k>
           {/* Case, Study, Card */}
@@ -248,8 +248,8 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             </p>
             <span, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, fon, t-semibo, l, d">";
               <sp, a, n>View, Case, Study</sp, a, n>
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
             </sp, a, n>
           </Li, n, k>
           {/* Services, Car, d */}
@@ -281,8 +281,8 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             </p>
             <span, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, fon, t-semibo, l, d">";
               <sp, a, n>Explore, Service, s</sp, a, n>
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
             </sp, a, n>
           </Li, n, k>
         </n, a, v>
@@ -299,10 +299,10 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             >
               <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
               Schedule, Free, Consultation;
-              <ArrowRight, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
+              <Link, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
               <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />";
               Schedule, Free, Consultation;
-              <ArrowRight, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />";
+              <Link, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />";
             </Li, n, k>
             <Li, n, k
   to="/bl, o, g"

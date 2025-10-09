@@ -145,7 +145,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
                 className="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl"
               >
                 Explore, All, Content
-                <ArrowRight, className="ml-2 w-5 h-5" />
+                <Link, className="ml-2 w-5 h-5" />
               </a>
               <a, hre, f="/servic, e, s"
                 className="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, hove, r:bord, e, r-whi, t, e/30, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0"

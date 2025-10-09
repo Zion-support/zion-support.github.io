@@ -6,10 +6,8 @@ impo, r, t {
   Use, r, s,
   Z, a, p,
 } fr, o, m 'luci, d, e-rea, c, t';
-import React from 'react';
 
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import { Link } from 'react-router-dom';
 
 const AIMLOpsAutomatio, n = () => { 
   return (
@@ -34,8 +32,8 @@ const AIMLOpsAutomatio, n = () => {
               </h1>
               <p, className='te, x, t-xl, m, d:te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
                 De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
-                  Get, Starte, d
-                  <ArrowRight, classNam, e='ml-2 h-5 w-5' />
+                  Gette, d
+                  <Link, classNam, e='ml-2 h-5 w-5' />
               <div, classNam, e='p-6'>
                 <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%</d, i, v>
                 <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
@@ -81,8 +79,8 @@ const AIMLOpsAutomatio, n = () => {
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Reproducibili, t, y
                     </sp, a, n>
-                  Get, Starte, d
-                  <ArrowRight, className='ml-2 h-5 w-5' />
+                  Gette, d
+                  <Link, className='ml-2 h-5 w-5' />
 
         {/* Key, Metr, i, c, s */}
         <section, classNam, e = 'py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
@@ -177,7 +175,7 @@ const AIMLOpsAutomatio, n = () => {
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
             <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-6'>
                 Schedule, Consultatio, n
-                <ArrowRight, classNam, e='ml-2 h-5 w-5' />
+                <Link, classNam, e='ml-2 h-5 w-5' />
                   <li, className='flex, item, s-sta, r, t'>
                     <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                   <li, className='flex, item, s-sta, r, t'>
@@ -188,4 +186,4 @@ const AIMLOpsAutomatio, n = () => {
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
             <h2, className='te, x, t-4xl, fon, t-bold, m, b-6'>
                 Schedule, Consultatio, n
-                <ArrowRight, className='ml-2 h-5 w-5' />
+                <Link, className='ml-2 h-5 w-5' />

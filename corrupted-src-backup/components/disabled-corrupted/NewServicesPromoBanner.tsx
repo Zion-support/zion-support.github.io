@@ -55,7 +55,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
                   <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"
                   >
                     Learn, Mor, e
-                    <ArrowRight, className="w-4 h-4" />
+                    <Link, className="w-4 h-4" />
                   </Li, n, k>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
             >
               View, All, Services
-              <ArrowRight, className="w-6 h-6" />
+              <Link, className="w-6 h-6" />
             </Li, n, k>
           </div>
         </div>
@@ -93,7 +93,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
               </div>
               <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"
               >
-                Learn, Mor, e <ArrowRight, className="w-4 h-4" />
+                Learn, Mor, e <Link, className="w-4 h-4" />
               </Li, n, k>
             </div>
           ))}

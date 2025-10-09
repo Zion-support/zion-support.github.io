@@ -1,117 +1,92 @@
 #!/usr/bin/env node
 
 /**
- * Real-time Performance Monitoring Script
+ * Performance monitoring script for Zion Tech Group website
  * Monitors build performance and provides optimization suggestions
  */
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      chunkCount: 0,
-      timestamp: new Date().toISOString()
-    };
+const distPath = path.join(__dirname, '..', 'dist');
+
+function analyzeBuild() {
+  console.log('🔍 Analyzing build performance...\n');
+
+  // Check if dist directory exists
+  if (!fs.existsSync(distPath)) {
+    console.error('❌ Build directory not found. Please run npm run build first.');
+    process.exit(1);
   }
 
-  async measureBuildPerformance() {
-    const startTime = Date.now();
-    
-    try {
-      execSync('pnpm run build:netlify', { 
-        cwd: process.cwd(), 
-        stdio: 'pipe'
+  // Analyze file sizes
+  const files = fs.readdirSync(distPath, { recursive: true });
+  let totalSize = 0;
+  const fileSizes = [];
+
+  files.forEach(file => {
+    const filePath = path.join(distPath, file);
+    if (fs.statSync(filePath).isFile()) {
+      const size = fs.statSync(filePath).size;
+      totalSize += size;
+      fileSizes.push({
+        name: file,
+        size: size,
+        sizeKB: (size / 1024).toFixed(2)
       });
-      
-      this.metrics.buildTime = Date.now() - startTime;
-      this.analyzeBundle();
-      
-      console.log(`✅ Build completed in ${this.metrics.buildTime}ms`);
-      console.log(`📦 Bundle size: ${(this.metrics.bundleSize / 1024).toFixed(2)} KB`);
-      console.log(`📊 Chunk count: ${this.metrics.chunkCount}`);
-      
-      return this.metrics;
-    } catch (error) {
-      console.error('❌ Build failed:', error.message);
-      throw error;
     }
-  }
+  });
 
-  analyzeBundle() {
-    const distPath = path.join(process.cwd(), 'dist');
-    if (!fs.existsSync(distPath)) return;
+  // Sort by size
+  fileSizes.sort((a, b) => b.size - a.size);
 
-    const files = fs.readdirSync(distPath, { recursive: true });
-    let totalSize = 0;
-    let jsFiles = 0;
+  console.log('📊 File Size Analysis:');
+  console.log('─'.repeat(50));
+  fileSizes.forEach(file => {
+    const sizeColor = file.size > 100000 ? '🔴' : file.size > 50000 ? '🟡' : '🟢';
+    console.log(`${sizeColor} ${file.name.padEnd(30)} ${file.sizeKB.padStart(8)} KB`);
+  });
 
-    files.forEach(file => {
-      if (typeof file === 'string' && file.endsWith('.js')) {
-        const filePath = path.join(distPath, file);
-        const stats = fs.statSync(filePath);
-        totalSize += stats.size;
-        jsFiles++;
-      }
+  console.log('\n📈 Total Build Size:');
+  console.log(`   ${(totalSize / 1024).toFixed(2)} KB (${(totalSize / 1024 / 1024).toFixed(2)} MB)`);
+
+  // Performance recommendations
+  console.log('\n💡 Performance Recommendations:');
+  console.log('─'.repeat(50));
+
+  const largeFiles = fileSizes.filter(f => f.size > 100000);
+  if (largeFiles.length > 0) {
+    console.log('🔴 Large files detected:');
+    largeFiles.forEach(file => {
+      console.log(`   • ${file.name} (${file.sizeKB} KB) - Consider code splitting or optimization`);
     });
-
-    this.metrics.bundleSize = totalSize;
-    this.metrics.chunkCount = jsFiles;
   }
 
-  generateReport() {
-    const report = {
-      ...this.metrics,
-      recommendations: this.getRecommendations(),
-      score: this.calculatePerformanceScore()
-    };
-
-    const reportPath = path.join(process.cwd(), 'performance-monitor-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log(`📊 Performance report saved: ${reportPath}`);
-    return report;
+  if (totalSize > 500000) {
+    console.log('🟡 Total bundle size is large - consider:');
+    console.log('   • Tree shaking unused code');
+    console.log('   • Dynamic imports for non-critical components');
+    console.log('   • Image optimization');
   }
 
-  getRecommendations() {
-    const recommendations = [];
-    
-    if (this.metrics.buildTime > 10000) {
-      recommendations.push('Consider optimizing build process - build time is >10s');
-    }
-    
-    if (this.metrics.bundleSize > 1500000) {
-      recommendations.push('Bundle size is large - consider code splitting');
-    }
-    
-    if (this.metrics.chunkCount > 15) {
-      recommendations.push('High chunk count - consider consolidating chunks');
-    }
-    
-    return recommendations;
+  // Check for common performance issues
+  const jsFiles = fileSizes.filter(f => f.name.endsWith('.js'));
+  const cssFiles = fileSizes.filter(f => f.name.endsWith('.css'));
+
+  if (jsFiles.length > 5) {
+    console.log('🟡 Many JS files detected - consider:');
+    console.log('   • Consolidating smaller chunks');
+    console.log('   • Using dynamic imports');
   }
 
-  calculatePerformanceScore() {
-    let score = 100;
-    
-    if (this.metrics.buildTime > 10000) score -= 20;
-    if (this.metrics.bundleSize > 1500000) score -= 25;
-    if (this.metrics.chunkCount > 15) score -= 15;
-    
-    return Math.max(0, score);
+  if (cssFiles.length > 3) {
+    console.log('🟡 Multiple CSS files - consider:');
+    console.log('   • CSS code splitting optimization');
+    console.log('   • Critical CSS inlining');
   }
+
+  console.log('\n✅ Performance analysis complete!');
 }
 
-// Run the monitor
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.measureBuildPerformance()
-    .then(() => monitor.generateReport())
-    .catch(console.error);
-}
-
-module.exports = PerformanceMonitor;
+// Run analysis
+analyzeBuild();

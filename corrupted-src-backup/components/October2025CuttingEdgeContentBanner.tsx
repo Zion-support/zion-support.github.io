@@ -142,7 +142,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                 {/* Read, More, Link */}
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
                   Read, Full, Article;
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   Read, Full, Article;
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -164,8 +164,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {
             >
               <span, className="flex, item, s-center, ga, p-2">";
                 Explore, All, Latest Conte, n, t;
-                <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </sp, a, n>
             </Li, n, k>
             <Li, n, k

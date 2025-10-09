@@ -147,8 +147,8 @@ const, October2025NextGenAIBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <span, className="fo, n, t-medi, u, m">Oc, t, 1, 20, 2, 5</sp, a, n>";
               </d, i, v>
-              <ArrowRight, className="w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+              <Link, className="w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+              <Link, className="w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - Re, a, l-Time, Adaptive, AI */}
@@ -215,8 +215,8 @@ const, October2025NextGenAIBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <span, className="fo, n, t-medi, u, m">Oc, t, 1, 20, 2, 5</sp, a, n>";
               </d, i, v>
-              <ArrowRight, className="w-6 h-6, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-6 h-6, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+              <Link, className="w-6 h-6, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+              <Link, className="w-6 h-6, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - Hybrid, Huma, n-AI, Intelligenc, e */}
@@ -283,8 +283,8 @@ const, October2025NextGenAIBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <span, className="fo, n, t-medi, u, m">Oc, t, 1, 20, 2, 5</sp, a, n>";
               </d, i, v>
-              <ArrowRight, className="w-6 h-6, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-6 h-6, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+              <Link, className="w-6 h-6, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+              <Link, className="w-6 h-6, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -307,8 +307,8 @@ const, October2025NextGenAIBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               <sp, a, n>Explore, All, Articles</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5" />";
             </Li, n, k>
             <Li, n, k
   to="/conta, c, t"
@@ -316,8 +316,8 @@ const, October2025NextGenAIBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               <sp, a, n>Schedule, Consultatio, n</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

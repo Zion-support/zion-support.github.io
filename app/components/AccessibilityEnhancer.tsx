@@ -1,169 +1,144 @@
-'use client';
-
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-=======
-import React, { useEffect, useState } from 'react';
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
-
-interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableReducedMotion: boolean;
-  enableFocusManagement: boolean;
-  enableSkipLinks: boolean;
-  enableARIALabels: boolean;
-  enableColorContrast: boolean;
-}
+import React, { useEffect, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
-  config?: Partial<AccessibilityConfig>;
   children: React.ReactNode;
+  enableSkipLinks?: boolean;
+  enableKeyboardNav?: boolean;
+  enableFocusIndicators?: boolean;
 }
 
-interface AccessibilityEnhancerRef {
-  announceToScreenReader: (message: string) => void;
-  setFontSize: (size: number) => void;
-}
-
-const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, AccessibilityEnhancerProps>(({
-  config = {},
-  children
-}, ref) => {
+/**
+ * Accessibility Enhancer Component
+ * Provides comprehensive accessibility improvements
+ */
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableSkipLinks = true,
+  enableKeyboardNav = true,
+  enableFocusIndicators = true,
+}) => {
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
-<<<<<<< HEAD
   const [fontSize, setFontSize] = useState(16);
+
+  const addSkipLinks = useCallback(() => {
+    // Add skip links
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
-  const announcementRef = useRef<HTMLDivElement>(null);
-=======
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-  const [focusVisible, setFocusVisible] = useState(false);
-  // const skipLinkRef = useRef<HTMLAnchorElement>(null); // Unused ref
-  // const mainContentRef = useRef<HTMLElement>(null); // Unused ref
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
-
-  const defaultConfig: AccessibilityConfig = {
-    enableKeyboardNavigation: true,
-    enableScreenReaderSupport: true,
-    enableHighContrast: true,
-    enableReducedMotion: true,
-    enableFocusManagement: true,
-    enableSkipLinks: true,
-    enableARIALabels: true,
-    enableColorContrast: true,
-    ...config
-  };
-
-  const announceToScreenReader = useCallback((message: string) => {
-    if (announcementRef.current) {
-      announcementRef.current.textContent = message;
-      announcementRef.current.setAttribute('aria-live', 'polite');
-    }
-  }, []);
-
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (event.key === 'Tab') {
-      setIsKeyboardNavigation(true);
-    }
-  }, []);
-
-  const handleMouseDown = useCallback(() => {
-    setIsKeyboardNavigation(false);
-  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
   useEffect(() => {
-    // Check for user preferences
-    if (defaultConfig.enableHighContrast) {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-      setIsHighContrast(prefersHighContrast);
-    }
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+    setIsReducedMotion(mediaQuery.matches);
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+    mediaQuery.addEventListener('change', handleChange);
+    setIsReducedMotion(mediaQuery.matches);
 
-    if (defaultConfig.enableReducedMotion) {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      setIsReducedMotion(prefersReducedMotion);
-    }
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(highContrastQuery.matches);
 
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    // Check for font size preference
+    const computedStyle = getComputedStyle(document.documentElement);
+    const rootFontSize = parseFloat(computedStyle.fontSize);
+    setFontSize(rootFontSize);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      mediaQuery.removeEventListener('change', handleChange);
+      highContrastQuery.removeEventListener('change', handleContrastChange);
     };
-  }, [defaultConfig.enableHighContrast, defaultConfig.enableReducedMotion, handleKeyDown, handleMouseDown]);
 
-  useEffect(() => {
-    // Apply accessibility styles
-    const root = document.documentElement;
-    
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
 
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    if (isKeyboardNavigation) {
-      root.classList.add('keyboard-navigation');
-    } else {
-      root.classList.remove('keyboard-navigation');
-    }
-
-    // Set font size
-    root.style.fontSize = `${fontSize}px`;
-  }, [isHighContrast, isReducedMotion, isKeyboardNavigation, fontSize]);
-
-  // Expose methods via ref
-  React.useImperativeHandle(ref, () => ({
+  // Expose utility functions to children via context if needed
+  const accessibilityUtils = {
     announceToScreenReader,
-    setFontSize: (size: number) => {
-      setFontSize(Math.max(12, Math.min(24, size)));
-    }
-  }), [announceToScreenReader]);
+    isReducedMotion,
+    isHighContrast,
+    fontSize,
+  };
 
   return (
-    <div className="accessibility-enhancer">
-      {defaultConfig.enableSkipLinks && (
-        <div className="skip-links">
-          <a 
-            href="#main-content" 
-            className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-          >
-            Skip to main content
-          </a>
-          <a 
-            href="#navigation" 
-            className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50"
-          >
-            Skip to navigation
-          </a>
-        </div>
-      )}
-      
+    <div 
+      className="accessibility-enhanced"
+      style={{
+        '--reduced-motion': isReducedMotion ? 'reduce' : 'auto',
+        '--high-contrast': isHighContrast ? 'high' : 'normal',
+      } as React.CSSProperties}
+    >
       {children}
-      
-      {/* Screen reader announcements */}
-      {defaultConfig.enableScreenReaderSupport && (
-        <div
-          ref={announcementRef}
-          className="sr-only"
-          aria-live="polite"
-          aria-atomic="true"
-        />
-      )}
+      <style>{`
+        .accessibility-enhanced {
+          --animation-duration: var(--reduced-motion) === 'reduce' ? '0.01ms' : 'normal';
+          --animation-iteration-count: var(--reduced-motion) === 'reduce' ? '1' : 'infinite';
+        }
+        
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        
+        .skip-link:focus {
+          top: 6px !important;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+        
+        @media (prefers-contrast: high) {
+          .high-contrast {
+            filter: contrast(200%) brightness(150%);
+          }
+        }
+      `}</style>
+    // Announce page changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          announce('Page content updated');
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
     </div>
   );
-});
-
-AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+};
 
 export default AccessibilityEnhancer;

@@ -9,7 +9,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
       'Multi-tenant support',
       'Advanced analytics'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$199/month',
       professional: '$399/month'}
       enterprise: 'Custom'
@@ -26,7 +26,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
       'Revenue analytics',
       'Churn prediction'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$99/month',
       professional: '$199/month',
       enterprise: 'Custom'

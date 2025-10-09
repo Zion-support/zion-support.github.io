@@ -8,30 +8,27 @@
     if ('PerformanceObserver' in window) {
       // LCP
       new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime);
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+        const _entries = list.getEntries();
+        const _lastEntry = entries[entries.length - 1];
+//         }).observe({ entryTypes: ['largest-contentful-paint'] });
       
       // FID
       new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const _entries = list.getEntries();
         entries.forEach((entry) => {
-          console.log('FID:', entry.processingStart - entry.startTime);
-        });
+//           });
       }).observe({ entryTypes: ['first-input'] });
       
       // CLS
-      let clsValue = 0;
+      let _clsValue = 0;
       new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const _entries = list.getEntries();
         entries.forEach((entry) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
         });
-        console.log('CLS:', clsValue);
-      }).observe({ entryTypes: ['layout-shift'] });
+//         }).observe({ entryTypes: ['layout-shift'] });
     }
   }
   

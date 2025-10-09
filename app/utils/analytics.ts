@@ -1,155 +1,195 @@
-// Analytics utility for tracking user interactions and performance
-interface AnalyticsEvent {
-  event: string;
+'use client';
+import React from 'react'
+/**
+ * Enhanced Analytics Utility
+ * Provides type-safe analytics tracking with error handling
+ */
+export interface AnalyticsEvent {
+  action: string;
   category: string;
   label?: string;
   value?: number;
+  metadata?: Record<string, unknown>;
 }
-
-interface RateLimitConfig {
-  maxEventsPerMinute: number;
-  maxEventsPerHour: number;
+export interface AnalyticsUser {
+  id?: string;
+  properties?: Record<string, unknown>;
 }
-
-class Analytics {
-  private isInitialized = false;
-  private userOptedIn = true; // Default to true, should be checked against user preferences
-  private eventQueue: Array<{ event: AnalyticsEvent; timestamp: number }> = [];
-  private rateLimitConfig: RateLimitConfig = {
-    maxEventsPerMinute: 30,
-    maxEventsPerHour: 500,
-  };
-
-  constructor() {
-    this.initialize();
-    this.loadUserPreferences();
-  }
-
-  private initialize() {
-    if (typeof window === 'undefined') return;
-
-    // Initialize Google Analytics if available
-    if ('gtag' in window) {
-      this.isInitialized = true;
-    }
-  }
-
-  private loadUserPreferences() {
-    if (typeof window === 'undefined') return;
-    
+class AnalyticsService {
+  private isInitialized = false
+  private queue: AnalyticsEvent[] = []
+  private readonly maxQueueSize = 100
+  /**
+   * Initialize analytics service
+   */
+  initialize(): void {
+    if (this.isInitialized) return
     try {
-      const preferences = localStorage.getItem('analyticsPreferences');
-      if (preferences) {
-        const parsed = JSON.parse(preferences);
-        this.userOptedIn = parsed.optedIn ?? true;
+      // Check if we're in a browser environment
+      if (typeof window === 'undefined') return
+      // Process queued events
+      this.processQueue()
+      this.isInitialized = true
+    } catch (error) {
+      }
+  }
+  /**
+   * Track a custom event
+   */
+  trackEvent(event: AnalyticsEvent): void {
+    try {
+      if (!this.isInitialized) {
+        this.queueEvent(event)
+        return
+      }
+      // Send to Google Analytics if available
+      if (this.hasGtag()) {
+        gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          ...event.metadata
+        })
+      }
+      // Log in development
+      if (process.env['NODE_ENV'] === 'development') {
+        }
+    } catch (error) {
+      }
+  }
+  /**
+   * Track page view
+   */
+  trackPageView(path: string, title?: string): void {
+    try {
+      if (this.hasGtag()) {
+        gtag('config', this.config.gaId, {
+          page_path: path,
+          page_title: title
+        })
       }
     } catch (error) {
-      console.warn('Failed to load analytics preferences:', error);
-    }
-  }
-
-  setUserConsent(optedIn: boolean) {
-    this.userOptedIn = optedIn;
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.setItem('analyticsPreferences', JSON.stringify({ optedIn }));
-      } catch (error) {
-        console.warn('Failed to save analytics preferences:', error);
       }
-    }
   }
-
-  private isRateLimited(): boolean {
-    const now = Date.now();
-    const oneMinuteAgo = now - 60 * 1000;
-    const oneHourAgo = now - 60 * 60 * 1000;
-
-    // Clean old events
-    this.eventQueue = this.eventQueue.filter(item => item.timestamp > oneHourAgo);
-
-    const eventsInLastMinute = this.eventQueue.filter(item => item.timestamp > oneMinuteAgo).length;
-    const eventsInLastHour = this.eventQueue.length;
-
+  /**
+   * Track user properties
+   */
+  identifyUser(user: AnalyticsUser): void {
+    try {
+      if (this.hasGtag() && user.id) {
+        gtag('config', this.config.gaId, {
+          user_id: user.id,
+          ...user.properties
+        })
+      }
+    } catch (error) {
+      }
+  }
+  /**
+   * Track error events
+   */
+  trackError(error: Error, metadata?: Record<string, unknown>): void {
+    this.trackEvent({
+      action: 'error',
+      category: 'exception',
+      label: error.message,
+      metadata: {
+        stack: error.stack,
+        ...metadata
+      }
+    })
+  }
+  /**
+   * Track timing events (for performance monitoring)
+   */
+  trackTiming(
+    category: string,
+    variable: string,
+    value: number,
+    label?: string
+  ): void {
+    try {
+      if (this.hasGtag()) {
+        gtag('event', 'timing_complete', {
+          name: variable,
+          value: Math.round(value),
+          event_category: category,
+          event_label: label
+        });
+      }
+    } catch (error) {
+      }
+  }
+  /**
+   * Track performance metrics
+   */
+  trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    try {
+      this.trackEvent({
+        action: 'performance',
+        category: 'web_vitals',
+        label: metric,
+        value: Math.round(value),
+        metadata
+      })
+    } catch (error) {
+      }
+  }
+  /**
+   * Check if gtag is available
+   */
+  private hasGtag(): boolean {
     return (
-      eventsInLastMinute >= this.rateLimitConfig.maxEventsPerMinute ||
-      eventsInLastHour >= this.rateLimitConfig.maxEventsPerHour
-    );
+      typeof window !== 'undefined' &&
+      typeof window.gtag === 'function'
+    )
   }
-
-  track(event: AnalyticsEvent) {
-    // Check user consent
-    if (!this.userOptedIn) {
-      return;
+  /**
+   * Get Google Analytics ID
+   */
+  private getGtagId(): string {
+    // Return the tracking ID from environment or config
+    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
+  }
+  /**
+   * Queue event for later processing
+   */
+  private queueEvent(event: AnalyticsEvent): void {
+    if (this.queue.length < this.maxQueueSize) {
+      this.queue.push(event)
     }
-
-    // Check rate limit
-    if (this.isRateLimited()) {
-      if (process.env['NODE_ENV'] === 'development') {
-        console.warn('Analytics rate limit exceeded, event not tracked:', event);
+  }
+  /**
+   * Process queued events
+   */
+  private processQueue(): void {
+    while (this.queue.length > 0) {
+      const event = this.queue.shift()
+      if (event) {
+        this.trackEvent(event)
       }
-      return;
     }
-
-    if (!this.isInitialized || typeof window === 'undefined') {
-      // Fallback to console in development
-      if (process.env['NODE_ENV'] === 'development') {
-        // eslint-disable-next-line no-console
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Analytics Event:', event); } }
-      }
-      return;
-    }
-
-    // Add to queue
-    this.eventQueue.push({ event, timestamp: Date.now() });
-
-    const gtag = (
-      window as unknown as {
-        gtag: (
-          command: string,
-          eventName: string,
-          parameters: Record<string, unknown>
-        ) => void;
-      }
-    ).gtag;
-    gtag('event', event.event, {
-      event_category: event.category,
-      event_label: event.label,
-      value: event.value,
-    });
-  }
-
-  trackPageView(pageName: string) {
-    this.track({
-      event: 'page_view',
-      category: 'Navigation',
-      label: pageName,
-    });
-  }
-
-  trackPerformance(metric: string, value: number) {
-    this.track({
-      event: 'performance_metric',
-      category: 'Performance',
-      label: metric,
-      value: Math.round(value),
-    });
-  }
-
-  trackUserInteraction(action: string, element: string) {
-    this.track({
-      event: 'user_interaction',
-      category: 'Engagement',
-      label: `${action}_${element}`,
-    });
-  }
-
-  trackError(error: string, context?: string) {
-    this.track({
-      event: 'error_occurred',
-      category: 'Error',
-      label: context ? `${error}_${context}` : error,
-    });
   }
 }
-
-export const analytics = new Analytics();
+// Export singleton instance
+export const analytics = new AnalyticsService()
+// Export convenience functions
+export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
+export const trackPageView = (path: string, title?: string) =>
+  analytics.trackPageView(path, title)
+export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
+  analytics.trackError(error, metadata)
+export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
+  analytics.trackPerformance(metric, value, metadata)
+export const trackTiming = (
+  category: string,
+  variable: string,
+  value: number,
+  label?: string
+) => analytics.trackTiming(category, variable, value, label)
+export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
+// Initialize on import
+if (typeof window !== 'undefined') {
+  analytics.initialize()
+}
+export default analytics

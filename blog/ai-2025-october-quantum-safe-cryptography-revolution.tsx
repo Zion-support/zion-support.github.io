@@ -1,16 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import Shield,
-  Lock,
-  Zap,
-  TrendingUp,
-  CheckCircle,
-  AlertTriangle,
-  ArrowRight,
-  Cpu;
-  Network
-} from "lucide-react"
-const QuantumSafeCryptography = () =>
+import { Shield, Lock, Zap, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Cpu, Network } from "lucide-react"
+
+const QuantumSafeCryptography = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -28,16 +20,18 @@ const QuantumSafeCryptography = () =>
           href="https: //ziontechgroup.com/blog/ai-2025-october-quantum-safe-cryptography-revolution"
         />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
             <Shield className="text-left" />
-            <span className="text-left">Quantum Security<
-            <span className="text-left">•<
-            <time dateTime="2025-10-01">October 1) 2025</time>
-            <span className="text-left">•<
-            <span>18 min read<
+            <span className="text-left">Quantum Security</span>
+            <span className="text-left">•</span>
+            <time dateTime="2025-10-01">October 1, 2025</time>
+            <span className="text-left">•</span>
+            <span>18 min read</span>
           </div>
+        </header>
+        <main>
           <h1 className="text-left">
             Quantum-Safe Cryptography Revolution 2025: Protecting Enterprise Data
             Against Quantum Threats
@@ -442,7 +436,7 @@ const QuantumSafeCryptography = () =>
               to="/<contact" className="text-left"
             >
               Schedule Quantum Security Assessment
-              <ArrowRight className="text-left" />
+              <Link className="text-left" />
             </Link>
           </section>
           <section></section>

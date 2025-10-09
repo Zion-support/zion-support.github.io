@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Advanced Performance Monitoring Utility
  * Tracks Core Web Vitals and custom metrics
@@ -29,18 +31,58 @@ class PerformanceMonitor {
     this.setupResourceTiming();
   }
 
-  private setupWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp');
-    
-    // Largest Contentful Paint
-    this.observeLCP();
-    
-    // First Input Delay
-    this.observeFID();
-    
-    // Cumulative Layout Shift
-    this.observeCLS();
+  /**
+   * Initialize performance observers
+   */
+  private initializeObservers(): void {
+    try {
+      // Observe paint metrics
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint
+        this.observeEntry('paint', (entries) => {
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              this.recordMetric('FCP', entry.startTime);
+            }
+          });
+        });
+
+        // Largest Contentful Paint
+        this.observeEntry('largest-contentful-paint', entries => {
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            this.recordMetric(
+              'LCP',
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+            );
+          }
+        });
+
+        // First Input Delay
+        this.observeEntry('first-input', entries => {
+          const firstInput = entries[0];
+          if (firstInput && (firstInput as any).processingStart !== undefined) {
+            const fid = (firstInput as any).processingStart - firstInput.startTime;
+            this.recordMetric('FID', fid);
+          }
+        });
+
+        // Cumulative Layout Shift
+        this.observeEntry('layout-shift', (entries) => {
+          let clsValue = 0;
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          });
+          if (clsValue > 0) {
+            this.recordMetric('CLS', clsValue);
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Failed to initialize performance observers', error as Error);
+    }
   }
 
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
@@ -48,7 +90,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            this.metrics[metricKey] = entry.startTime;
+            (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -196,7 +238,6 @@ class PerformanceMonitor {
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
       if (this.metrics.fcp <= 1800) scores.push(100);
-      else if (this.metrics.fcp <= 3000) scores.push(75);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }
@@ -234,29 +275,14 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-==================
-Overall Score: ${score}/100
-
-Core Web Vitals:
-- First Contentful Paint: ${metrics.fcp?.toFixed(2) || 'N/A'}ms
-- Largest Contentful Paint: ${metrics.lcp?.toFixed(2) || 'N/A'}ms
-- First Input Delay: ${metrics.fid?.toFixed(2) || 'N/A'}ms
-- Cumulative Layout Shift: ${metrics.cls?.toFixed(3) || 'N/A'}
-- Time to First Byte: ${metrics.ttfb?.toFixed(2) || 'N/A'}ms
-
-Custom Metrics:
-${Object.entries(metrics.customMetrics)
-  .map(([key, value]) => `- ${key}: ${value.toFixed(2)}ms`)
-  .join('\n')}
-    `.trim();
-  }
-
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
+- Overall Score: ${score}%
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+- FCP: ${metrics.fcp}ms
+- TTFB: ${metrics.ttfb}ms
+- Memory Usage: ${metrics.memoryUsage}MB
+- Timestamp: ${new Date().toISOString()}
+`;
   }
 }
-
-export const performanceMonitor = new PerformanceMonitor();
-export default performanceMonitor;

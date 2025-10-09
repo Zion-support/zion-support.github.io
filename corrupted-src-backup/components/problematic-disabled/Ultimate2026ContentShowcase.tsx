@@ -219,7 +219,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {
                   className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-2"
                 >
                   <sp, a, n>Access, Masterclas, s</sp, a, n>
-                  <ArrowRight, className="w-5 h-5, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
                 </a>
               </div>
             </moti, o, n.d, i, v>
@@ -288,7 +288,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {
                   className="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 >
                   <sp, a, n>Explore, All, Masterclasses</sp, a, n>
-                  <ArrowRight, className="w-6 h-6" />
+                  <Link, className="w-6 h-6" />
                 </a>
               </div>
             </div>

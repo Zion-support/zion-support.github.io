@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring
@@ -152,7 +154,7 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if (currentElement.type === 'radio') {
+    if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {
       this.handleRadioGroupNavigation(event, currentElement);
     }
     
@@ -677,31 +679,13 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-====================
-Overall Score: ${metrics.overallScore}/100
-
-Keyboard Navigation: ${metrics.keyboardNavigationScore}/100
-Screen Reader Support: ${metrics.screenReaderScore}/100
-
-Issues Found:
-- Images without alt text: ${metrics.imagesWithoutAlt}
-- Links without text: ${metrics.linksWithoutText}
-- Empty headings: ${metrics.headingsWithoutContent}
-- Color contrast issues: ${metrics.colorContrastIssues}
-
-Focusable Elements: ${metrics.focusableElements}
-    `.trim();
-  }
-
-  /**
-   * Cleanup
-   */
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
+- Total Elements Checked: ${metrics.totalElements}
+- Issues Found: ${metrics.issuesFound}
+- WCAG Level A Issues: ${metrics.wcagLevelA}
+- WCAG Level AA Issues: ${metrics.wcagLevelAA}
+- WCAG Level AAA Issues: ${metrics.wcagLevelAAA}
+- Overall Score: ${metrics.overallScore}%
+- Last Checked: ${new Date().toISOString()}
+`;
   }
 }
-
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-export default accessibilityEnhancer;

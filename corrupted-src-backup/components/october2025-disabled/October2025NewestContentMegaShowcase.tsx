@@ -96,7 +96,7 @@ export default function October2025NewestContentMegaShowca, s, e() {
               {/* C, T, A */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                 <sp, a, n>Read, Complete, Guide</sp, a, n>
-                <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
+                <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
               </div>
               </d, i, v  > {/* Hover, Glow, Effe, c, t */}
               <div, classNam, e = { `absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k>

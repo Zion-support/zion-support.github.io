@@ -62,11 +62,11 @@ class AdvancedErrorBoundary extends Component<
     });
 
     // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
       logger.error(
         'Error Boundary caught an error',
         error,
-        { component: 'ErrorBoundary', errorInfo, stack: error.stack }
+        { context: 'ErrorBoundary', errorInfo }
       );
     }
 
@@ -141,7 +141,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Failed to send error report',
         reportError as Error,
-        { component: 'ErrorReporting' }
+        { context: 'ErrorReporting' }
       );
     }
   };
@@ -203,7 +203,7 @@ class AdvancedErrorBoundary extends Component<
                 </p>
               </div>
 
-              {process.env['NODE_ENV'] === 'development' && (
+              {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
                   <h3 className='text-sm font-medium text-red-800'>
                     Error Details:
