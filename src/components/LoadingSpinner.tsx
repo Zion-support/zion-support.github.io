@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/components/LoadingSpinner.tsx
 import { cn } from '@/utils/cn';
 
 interface LoadingSpinnerProps {
@@ -38,16 +37,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
-=======
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-8">
-      <div 
-        className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"
-        role="status"
-        aria-label="Loading"
-      ></div>
->>>>>>> cursor/website-audit-and-update-with-deployment-572b:src/components/LoadingSpinner.tsx
     </div>
   );
 

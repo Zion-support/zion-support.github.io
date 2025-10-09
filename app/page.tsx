@@ -956,8 +956,6 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </section>
-              </Suspense>
-            </div>
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
@@ -2024,10 +2022,10 @@ const HomePage: React.FC = () => {
                 </Suspense>
               ))}
             </div>
-          </div>
+          </section>
 
           {/* IT Services & Infrastructure */}
-          <div className="mb-12">
+          <section className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure
             </h3>
@@ -2197,9 +2195,9 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </div>
-          </div>
+          </section>
           {/* New AI Services Grid */}
-          <div className="mb-12">
+          <section className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Advanced AI Services
             </h3>
@@ -2283,9 +2281,9 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </div>
-          </div>
+          </section>
           {/* Emerging Technologies Grid */}
-          <div className="mb-12">
+          <section className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Emerging Technologies
             </h3>
@@ -2343,9 +2341,9 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </div>
-          </div>
+          </section>
           {/* IT Services Grid */}
-          <div className="mb-12">
+          <section className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure
             </h3>
@@ -2390,8 +2388,7 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </div>
-          </div>
-        </section>
+          </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -2648,16 +2645,17 @@ const HomePage: React.FC = () => {
         {/* Newsletter Signup */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
+        </Suspense>
+      </main>
 
-
-
-
-
-
+      <Footer />
       
       {/* Enhanced Components */}
       <EnhancedPerformanceMonitor />
       <EnhancedAccessibility />
-    </EnhancedErrorBoundary>
+    </div>
+    </>
+  );
+};
 
 
