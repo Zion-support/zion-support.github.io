@@ -241,7 +241,6 @@ const CompliancePage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Compliance & Certifications</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             We maintain the highest standards of security and compliance to protect your data and ensure regulatory adherence.
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
           </p>
         </section>
 

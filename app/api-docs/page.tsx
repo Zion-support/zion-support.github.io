@@ -502,7 +502,6 @@ console.log(result.predictions);`,
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };
