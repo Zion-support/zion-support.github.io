@@ -200,6 +200,41 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Business Intelligence',
+      description: 'Advanced AI-powered business intelligence with real-time analytics and predictive insights.',
+      icon: '🧠',
+      link: '/ai-business-intelligence',
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Automated Reporting'],
+      price: 'Starting at $1,299/month',
+      popular: true
+    },
+    {
+      title: 'AI Project Management',
+      description: 'Intelligent project management with AI-powered planning, automation, and team collaboration.',
+      icon: '📋',
+      link: '/ai-project-management',
+      features: ['AI Planning', 'Resource Optimization', 'Team Collaboration', 'Performance Analytics'],
+      price: 'Starting at $159/month',
+      popular: true
+    },
+    {
+      title: 'AI Customer Experience',
+      description: 'Create exceptional customer experiences with AI-powered personalization and intelligent support.',
+      icon: '💝',
+      link: '/ai-customer-experience',
+      features: ['Personalization', 'Intelligent Support', 'Journey Mapping', 'Experience Analytics'],
+      price: 'Starting at $299/month',
+      popular: true
+    },
+    {
+      title: 'AI Supply Chain',
+      description: 'Optimize your supply chain with AI-powered forecasting, logistics, and inventory management.',
+      icon: '🚚',
+      link: '/ai-supply-chain',
+      features: ['Demand Forecasting', 'Logistics Optimization', 'Inventory Management', 'Risk Management'],
+      price: 'Starting at $1,999/month'
     }
   ];
 

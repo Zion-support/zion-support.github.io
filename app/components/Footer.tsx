@@ -12,6 +12,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Analytics', url: '/ai-data-analytics' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation' },
+    { name: 'AI Business Intelligence', url: '/ai-business-intelligence' },
+    { name: 'AI Project Management', url: '/ai-project-management' },
+    { name: 'AI Customer Experience', url: '/ai-customer-experience' },
+    { name: 'AI Supply Chain', url: '/ai-supply-chain' },
   ];
 
   const itServices = [
@@ -72,15 +76,19 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">Delaware, USA</span>
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Globe className="w-5 h-5 text-blue-400" />
+                <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">https://ziontechgroup.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
