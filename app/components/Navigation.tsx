@@ -72,12 +72,21 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+<<<<<<< HEAD
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
         { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
         { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+=======
+        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
+        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
+        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
+        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
+        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
@@ -90,12 +99,13 @@ const Navigation: React.FC = () => {
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
-        { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
-        { name: 'Database Services', path: '/database', description: 'Database management' },
-        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
+        { name: 'Database Management', path: '/database-management', description: 'Database management' },
+        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
+        { name: 'System Administration', path: '/system-administration', description: 'System management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+<<<<<<< HEAD
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
         { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
@@ -103,6 +113,15 @@ const Navigation: React.FC = () => {
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+=======
+        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
+        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
+        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
+        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
+        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
+        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
@@ -112,18 +131,29 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
-        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
+        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
+        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
+        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
+        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
       ]
     },
     {
