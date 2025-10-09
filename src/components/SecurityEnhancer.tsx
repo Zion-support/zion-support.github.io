@@ -176,7 +176,9 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
-          }
+          // Block user or show warning
+          console.warn('Suspicious activity detected');
+        }
       }
     });
   };
