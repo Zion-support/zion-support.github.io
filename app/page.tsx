@@ -51,9 +51,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
     <>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -108,7 +105,6 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -132,13 +128,7 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
-          <div className="max-w-6xl mx-auto">
-            <h1 
-              id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-              data-text="Zion Tech Group"
-=======
+
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
@@ -184,7 +174,7 @@ const HomePage: React.FC = () => {
               onClick={handlePhoneClick}
               className="cyber-button w-full sm:w-auto text-center"
               aria-label="Call us at (302) 464-0950"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+
             >
               Zion Tech Group
             </h1>
@@ -426,8 +416,7 @@ const HomePage: React.FC = () => {
               </div>
             </article>
           </div>
-<<<<<<< HEAD
-=======
+
 
           {/* New AI Services Grid */}
           <div className="mb-12">
@@ -634,7 +623,7 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+
         </section>
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>

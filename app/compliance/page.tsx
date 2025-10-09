@@ -10,8 +10,7 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ];
   return (
-<<<<<<< HEAD
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
@@ -232,7 +231,7 @@ const CompliancePage: React.FC = () => {
           <p className="text-xl mb-8 text-blue-100">
             Our compliance team is available to answer your questions and provide additional documentation.
 =======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

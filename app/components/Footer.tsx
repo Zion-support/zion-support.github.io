@@ -13,7 +13,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI customer service' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'AI sales processes' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Data visualization' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -38,6 +41,15 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
+  const emergingTech = [
+    { name: 'Quantum Computing', url: '/quantum-computing' },
+    { name: 'Robotics', url: '/robotics' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3' },
+    { name: 'Business Intelligence', url: '/business-intelligence' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems' }
+  ];
+
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -55,12 +67,12 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.slice(0, 6).map((service, index) => (
+              {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -71,18 +83,46 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
+            <Link 
+              href="/ai-services"
+              className="text-cyan-400 hover:text-cyan-300 text-sm font-medium mt-3 inline-block"
+            >
+              View All AI Services →
+            </Link>
           </div>
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">IT Services</h3>
             <ul className="space-y-2">
-              {itServices.slice(0, 6).map((service, index) => (
+              {itServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link 
+              href="/it-services"
+              className="text-cyan-400 hover:text-cyan-300 text-sm font-medium mt-3 inline-block"
+            >
+              View All IT Services →
+            </Link>
+          </div>
+          {/* Emerging Technologies */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Emerging Tech</h3>
+            <ul className="space-y-2">
+              {emergingTech.map((tech, index) => (
+                <li key={index}>
+                  <Link 
+                    href={tech.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {tech.name}
                   </Link>
                 </li>
               ))}
