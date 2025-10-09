@@ -384,6 +384,188 @@ const MicroSAASPage: React.FC = () => {
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Supply Chain & Logistics
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+      icon: '🚚',
+      price: '$399/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
+      marketPrice: '$600-1200/month',
+      category: 'Supply Chain',
+      technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Warehouse Management System',
+      description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
+      icon: '🏭',
+      price: '$299/month',
+      features: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
+      benefits: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],
+      marketPrice: '$500-1000/month',
+      category: 'Supply Chain',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Agriculture & Food Tech
+    {
+      title: 'AI Precision Agriculture Platform',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+      icon: '🌾',
+      price: '$199/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
+      benefits: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],
+      marketPrice: '$300-600/month',
+      category: 'Agriculture',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Food Safety Monitor',
+      description: 'Automated food safety inspection with contamination detection and quality control.',
+      icon: '🥗',
+      price: '$249/month',
+      features: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
+      marketPrice: '$400-800/month',
+      category: 'Food Tech',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Energy & Sustainability
+    {
+      title: 'AI Energy Management System',
+      description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
+      icon: '⚡',
+      price: '$179/month',
+      features: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
+      benefits: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],
+      marketPrice: '$300-600/month',
+      category: 'Energy',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Carbon Footprint Tracker',
+      description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
+      icon: '🌱',
+      price: '$99/month',
+      features: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
+      benefits: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],
+      marketPrice: '$150-300/month',
+      category: 'Sustainability',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Gaming & Entertainment
+    {
+      title: 'AI Game Development Suite',
+      description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
+      icon: '🎮',
+      price: '$299/month',
+      features: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
+      benefits: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],
+      marketPrice: '$500-1000/month',
+      category: 'Gaming',
+      technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Content Moderation Platform',
+      description: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
+      icon: '🛡️',
+      price: '$199/month',
+      features: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
+      benefits: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],
+      marketPrice: '$300-600/month',
+      category: 'Content Moderation',
+      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Transportation & Mobility
+    {
+      title: 'AI Fleet Management System',
+      description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
+      icon: '🚛',
+      price: '$349/month',
+      features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
+      marketPrice: '$500-1000/month',
+      category: 'Transportation',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Traffic Management Platform',
+      description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
+      icon: '🚦',
+      price: '$499/month',
+      features: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
+      benefits: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],
+      marketPrice: '$800-1500/month',
+      category: 'Smart Cities',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Research & Development
+    {
+      title: 'AI Research Assistant Pro',
+      description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
+      icon: '🔬',
+      price: '$199/month',
+      features: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
+      marketPrice: '$300-600/month',
+      category: 'Research',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Patent Analysis Tool',
+      description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
+      icon: '📋',
+      price: '$299/month',
+      features: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
+      benefits: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],
+      marketPrice: '$500-1000/month',
+      category: 'Intellectual Property',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Personal Productivity
+    {
+      title: 'AI Personal Assistant Pro',
+      description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
+      icon: '👤',
+      price: '$49/month',
+      features: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
+      benefits: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],
+      marketPrice: '$80-150/month',
+      category: 'Personal Productivity',
+      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Meeting Assistant',
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+      icon: '📹',
+      price: '$79/month',
+      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
+      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],
+      marketPrice: '$120-250/month',
+      category: 'Meeting Management',
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
