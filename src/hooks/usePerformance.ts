@@ -22,7 +22,7 @@ export const _usePerformance = () => {
       const largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
-      let __cumulativeLayoutShift = 0;
+      // let __cumulativeLayoutShift = // Unused 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -37,7 +37,7 @@ export const _usePerformance = () => {
         observer.observe({ entryTypes: ['layout-shift'] });
       }
       // Measure FID (First Input Delay)
-      let _firstInputDelay = 0;
+      // let _firstInputDelay = // Unused 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {

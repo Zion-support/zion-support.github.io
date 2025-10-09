@@ -160,7 +160,7 @@ export class ErrorHandler {
   }
   // Determine error type
   private determineErrorType(error: Error): ErrorType {
-    const _message = error.message.toLowerCase();
+    // const _message = // Unused error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {
       return ErrorType.NETWORK;

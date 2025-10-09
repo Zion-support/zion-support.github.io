@@ -81,7 +81,7 @@ class PerformanceEnhancer {
         }
         break;
       case 'navigation':
-        const _navEntry = entry as PerformanceNavigationTiming;
+        // const _navEntry = // Unused entry as PerformanceNavigationTiming;
         this.metrics = { ...this.metrics, ttfb: navEntry.responseStart - navEntry.requestStart } as PerformanceMetrics;
         break;
     }

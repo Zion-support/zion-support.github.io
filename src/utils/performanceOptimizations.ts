@@ -190,7 +190,7 @@ export const useBundleSizeMonitoring = () => {
     if (typeof window === 'undefined') return;
     const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource');
-      let _totalSize = 0;
+      // let _totalSize = // Unused 0;
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;

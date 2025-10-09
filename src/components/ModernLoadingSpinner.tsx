@@ -12,7 +12,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   text = 'Loading...',
   fullScreen = false
 }) => {
-  const _sizeClasses = {
+  // const _sizeClasses = // Unused {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',

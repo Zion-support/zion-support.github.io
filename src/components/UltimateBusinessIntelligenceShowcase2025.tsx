@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligenceShowcase2025 = () => {
+// const _UltimateBusinessIntelligenceShowcase2025 = // Unused () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
     {

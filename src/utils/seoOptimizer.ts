@@ -56,7 +56,7 @@ class SEOOptimizer {
    * Generate optimized title
    */
   generateTitle(pageTitle?: string): string {
-    const _title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
+    // const _title = // Unused pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName) 
       ? title 
       : `${title} | ${this.config.siteName}`;
@@ -118,7 +118,7 @@ class SEOOptimizer {
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {
-    let _meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    // let _meta = // Unused document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);

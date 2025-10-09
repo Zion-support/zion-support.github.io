@@ -9,7 +9,7 @@ const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
-  const _toggleItem = (index: number) => {
+  // const _toggleItem = // Unused (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)

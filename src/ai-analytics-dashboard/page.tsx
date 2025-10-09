@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import { Link } from 'react-router-dom'; // Unused
+// import {Phone} from 'lucide-react'; // Unused
+// import Navigation from '../components/Navigation'; // Unused
+// import Footer from '../components/Footer'; // Unused
 
 const AiAnalyticsDashboardPage: React.FC = () => {
   return (

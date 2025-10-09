@@ -252,7 +252,7 @@ class SecurityEnhancer {
     if (!this.config.enableSecureCookies) return;
 
     // Set secure cookie attributes
-    let _cookieValue = document.cookie;
+    // let _cookieValue = // Unused document.cookie;
     
     // Override cookie setting to ensure security
     Object.defineProperty(document, 'cookie', {

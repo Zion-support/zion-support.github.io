@@ -33,7 +33,7 @@ export class BaseService {
    * Check if cached data is still valid
    */
   protected isCacheValid(key: string): boolean {
-    const __entry = this.cache.get(key);
+    // const __entry = // Unused this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);

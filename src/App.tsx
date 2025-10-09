@@ -1,5 +1,5 @@
-import React, { useEffect, useState, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -30,10 +30,38 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-'use client';
+// Additional page imports
+import HomePage from '../app/page';
+import PricingPage from './pricing/page';
+import DemoPage from './demo/page';
+import ConsultationPage from './consultation/page';
+import AIServicesPage from './ai-services/page';
+import AIMarketingPage from './ai-marketing/page';
+import AIAutomationPage from './ai-automation/page';
+import AIHealthcarePage from './ai-healthcare/page';
+import AIFintechPage from './ai-fintech/page';
+import AIContentGenerationPage from './ai-content-generation/page';
+import AIDataAnalyticsPage from './ai-data-analytics/page';
+import AICybersecurityPage from './ai-cybersecurity/page';
+import AIWorkflowAutomationPage from './ai-workflow-automation/page';
+import AIMobileAppDevelopmentPage from './ai-mobile-app-development/page';
+import AIEcommerceSolutionsPage from './ai-ecommerce-solutions/page';
+import AICustomerSupportPage from './ai-customer-support/page';
+import AISalesAutomationPage from './ai-sales-automation/page';
+import AIDataVisualizationPage from './ai-data-visualization/page';
+import AILeadGenerationPage from './ai-lead-generation/page';
+import AIDocumentProcessingPage from './ai-document-processing/page';
+import QuantumComputingPage from './quantum-computing/page';
+import AutonomousSystemsPage from './autonomous-systems/page';
+import BlockchainWeb3Page from './blockchain-web3/page';
+import IoTEdgeComputingPage from './iot-edge-computing/page';
+import BusinessIntelligencePage from './business-intelligence/page';
+import RoboticsPage from './robotics/page';
+
+// 'use client'; // This is a Next.js directive, not needed in React Router
 
 // Lazy load components for better performance
-const _HomePage = lazy(() => import('../app/page'));
+// const _HomePage = lazy(() => import('../app/page')); // Unused for now
 
 // Import enhancement utilities
 

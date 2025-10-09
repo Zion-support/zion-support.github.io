@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
  * Displayed when the user is offline and tries to access a page
  */
 const OfflinePage: React.FC = () => {
-  const _handleRetry = () => {
+  // const _handleRetry = // Unused () => {
     window.location.reload();
   };
 

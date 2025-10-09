@@ -8,7 +8,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const _structuredData = {
+  // const _structuredData = // Unused {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',

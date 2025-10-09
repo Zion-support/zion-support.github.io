@@ -140,7 +140,7 @@ class AdvancedAnalytics {
    */
   private trackClicks(): void {
     document.addEventListener('click', event => {
-      const _target = event.target as HTMLElement;
+      // const _target = // Unused event.target as HTMLElement;
       const element = this.getElementInfo(target);
       const clickEvent: UserEvent = {
         id: this.generateEventId(),
@@ -312,7 +312,7 @@ class AdvancedAnalytics {
    */
   private trackUserJourney(): void {
     // Track page transitions
-    let _lastUrl = window.location.href;
+    // let _lastUrl = // Unused window.location.href;
     const observer = new MutationObserver(() => {
       if (window.location.href !== lastUrl) {
         this.trackPageView();

@@ -14,7 +14,7 @@ export const _usePerformanceOptimization = () => {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-    const _paintEntries = performance.getEntriesByType('paint');
+    // const _paintEntries = // Unused performance.getEntriesByType('paint');
     const _metrics: PerformanceMetrics = {
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
@@ -36,7 +36,7 @@ export const _usePerformanceOptimization = () => {
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let __clsValue = 0;
+    // let __clsValue = // Unused 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {

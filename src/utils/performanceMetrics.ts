@@ -54,7 +54,7 @@ export class PerformanceMetrics {
     if ('PerformanceObserver' in window) {
       try {
         // Navigation timing
-        const _navObserver = new PerformanceObserver(list => {
+        // const _navObserver = // Unused new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
@@ -110,7 +110,7 @@ export class PerformanceMetrics {
         this.observers.push(lcpObserver);
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {
-          let _clsValue = 0;
+          // let _clsValue = // Unused 0;
           for (const entry of list.getEntries()) {
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;

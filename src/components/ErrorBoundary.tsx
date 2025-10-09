@@ -57,7 +57,7 @@ class ErrorBoundary extends Component<Props, State> {
     // In a real application, you would send this to your error tracking service
     // For example: Sentry, LogRocket, Bugsnag, etc.
     
-    const _errorReport = {
+    // const _errorReport = // Unused {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -79,7 +79,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   private getSessionId = (): string => {
     // Get or create session ID
-    let _sessionId = sessionStorage.getItem('sessionId');
+    // let _sessionId = // Unused sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
       sessionStorage.setItem('sessionId', sessionId);

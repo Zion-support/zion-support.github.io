@@ -1,123 +1,79 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Fix App.tsx - remove duplicate }, []);
-function fixAppTsx() {
-  const filePath = path.join(__dirname, 'App.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find and fix duplicate }, []);
-  content = content.replace(/    \[\]\s+\);\s+  }, \[\]\);/g, '    []\n  );');
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed App.tsx');
-}
-
-// Fix api/shipping-rates.js - remove duplicate module.exports and closing braces
-function fixShippingRates() {
-  const filePath = path.join(__dirname, 'api', 'shipping-rates.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove all lines after the first module.exports
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    const fixedLines = lines.slice(0, firstExportIndex + 1);
-    content = fixedLines.join('\n') + '\n';
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/shipping-rates.js');
-}
-
-// Fix api/subscribe.js - remove duplicate catch blocks and module.exports
-function fixSubscribe() {
-  const filePath = path.join(__dirname, 'api', 'subscribe.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove duplicate catch blocks and trailing content
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    // Find the line just before the duplicate catches
-    let lastGoodLine = firstExportIndex;
-    for (let i = firstExportIndex - 1; i >= 0; i--) {
-      if (lines[i].trim() === '}' && i > 0 && lines[i-1].includes('catch')) {
-        // Found legitimate closing brace for a catch block
-        lastGoodLine = i + 1;
-        break;
+// Fix syntax errors caused by the previous script
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix broken variable declarations
+    const patterns = [
+      // Fix broken const declarations
+      {
+        regex: /\/\/\s*const\s+(_[a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\/\/\s*Unused\s*\[/g,
+        replacement: 'const $1 = ['
+      },
+      
+      // Fix broken let/var declarations
+      {
+        regex: /\/\/\s*(let|var)\s+(_[a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\/\/\s*Unused\s*\[/g,
+        replacement: '$1 $2 = ['
+      },
+      
+      // Fix broken function declarations
+      {
+        regex: /\/\/\s*(const|let|var)\s+([A-Z][a-zA-Z0-9_]*)\s*=\s*\([^)]*\)\s*=>\s*\{\s*\/\/\s*Unused/g,
+        replacement: '$1 $2 = () => {'
       }
+    ];
+    
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern.regex, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
     }
     
-    // Re-read and fix more carefully
-    content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove lines with duplicate catch blocks
-    content = content.replace(/  } catch \(err\) {\s+console\.error\('Subscribe API error:', err\);\s+  } catch \(error\) {[\s\S]*?  } catch \(error\) {[\s\S]*?  } catch \(error\) {/g, '');
-    
-    // Keep only content up to first module.exports
-    const parts = content.split('module.exports = withSentry(handler);');
-    content = parts[0] + 'module.exports = withSentry(handler);\n';
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/subscribe.js');
 }
 
-// Fix app/components/ErrorBoundary.tsx - add missing closing paren
-function fixErrorBoundary() {
-  const filePath = path.join(__dirname, 'app', 'components', 'ErrorBoundary.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
+// Get all TypeScript/JavaScript files in src directory
+function getAllFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
   
-  // Find line 112 and add missing )
-  const lines = content.split('\n');
-  if (lines.length > 112) {
-    // Look for the missing closing paren context
-    for (let i = 110; i < 115 && i < lines.length; i++) {
-      if (lines[i].includes('      );') && !lines[i].includes(');')) {
-        lines[i] = lines[i].replace('      );', '      ));');
-        break;
-      }
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      getAllFiles(filePath, fileList);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      fileList.push(filePath);
     }
-    content = lines.join('\n');
-  }
+  });
   
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed app/components/ErrorBoundary.tsx');
+  return fileList;
 }
 
-// Fix src/utils/analytics.ts - close comment and add method
-function fixAnalytics() {
-  const filePath = path.join(__dirname, 'src', 'utils', 'analytics.ts');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix unclosed comment
-  content = content.replace(/  \/\*\*\s+\* Update user properties\s+  }\s+  \/\*\*\s+\* Update user properties\s+export default analytics;/g, 
-    `  /**
-   * Update user properties
-   */
-  updateUserProperties(properties: Record<string, any>) {
-    this.userProperties = { ...this.userProperties, ...properties };
-  }
-}
+// Main execution
+const srcDir = path.join(__dirname, 'src');
+const files = getAllFiles(srcDir);
 
-export default analytics;`);
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed src/utils/analytics.ts');
-}
+console.log(`Found ${files.length} files to check for syntax errors...`);
 
-// Run all fixes
-try {
-  fixAppTsx();
-  fixShippingRates();
-  fixSubscribe();
-  fixErrorBoundary();
-  fixAnalytics();
-  console.log('\nAll syntax errors fixed!');
-} catch (error) {
-  console.error('Error fixing files:', error);
-  process.exit(1);
-}
+files.forEach(file => {
+  fixSyntaxErrors(file);
+});
+
+console.log('Done fixing syntax errors!');

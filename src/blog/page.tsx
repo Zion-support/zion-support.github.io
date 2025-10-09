@@ -125,7 +125,7 @@ export default function BlogPage() {
   ], []);
 
   useEffect(() => {
-    const _timer = setTimeout(() => {
+    // const _timer = // Unused setTimeout(() => {
       setPosts(blogPosts);
       setLoading(false);
     }, 500);

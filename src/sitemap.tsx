@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sitemap: React.FC = () => {
-  const _sitemap = generateSitemap(getAllPages());
+  // const _sitemap = // Unused generateSitemap(getAllPages());
   
   return (
     <div>

@@ -19,7 +19,7 @@ const Toast: React.FC<ToastProps> = ({
   useEffect(() => {
     setIsVisible(show);
     if (show && duration > 0) {
-      const _timer = setTimeout(() => {
+      // const _timer = // Unused setTimeout(() => {
         setIsVisible(false);
         if (onClose) {
           onClose();

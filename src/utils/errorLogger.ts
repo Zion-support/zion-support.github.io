@@ -81,7 +81,7 @@ class ErrorLogger {
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
     try {
       // In production, you would send to a service like Sentry, LogRocket, etc.
-      const _endpoint = process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
+      // const _endpoint = // Unused process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
       if (!endpoint) {
         return;
       }

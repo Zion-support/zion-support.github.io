@@ -4,7 +4,7 @@
  * Provides tools for monitoring and optimizing application performance
  */
 // Simple logger for performance optimizer
-const _logger = {
+// const _logger = // Unused {
   info: (message: string, context?: string) => console.log('[INFO]', message, context),
   performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
@@ -139,7 +139,7 @@ class PerformanceOptimizer {
   }
   private observeCLS() {
     try {
-      let _clsValue = 0
+      // let _clsValue = // Unused 0
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {

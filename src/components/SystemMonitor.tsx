@@ -6,7 +6,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 // Collect basic performance metrics
-const __collectPerformanceMetrics = () => {
+// const __collectPerformanceMetrics = // Unused () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
@@ -19,7 +19,7 @@ const __collectPerformanceMetrics = () => {
 const calculatePerformanceScore = () => {
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  let __score = 100;
+  // let __score = // Unused 100;
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
@@ -99,7 +99,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get memory info
       const memoryInfo = getMemoryInfo();
       // Get network info
-      const _networkInfo = getNetworkInfo();
+      // const _networkInfo = // Unused getNetworkInfo();
       const _newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,

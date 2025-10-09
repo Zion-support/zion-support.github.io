@@ -435,7 +435,7 @@ export class EnhancedLogger {
   private getSessionId(): string | undefined {
     if (typeof window === 'undefined') return undefined;
     try {
-      let _sessionId = sessionStorage.getItem('sessionId');
+      // let _sessionId = // Unused sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);

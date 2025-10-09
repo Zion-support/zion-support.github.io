@@ -52,7 +52,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting
-    const _errorReport = {
+    // const _errorReport = // Unused {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,

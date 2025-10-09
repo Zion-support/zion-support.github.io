@@ -36,7 +36,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   // Web Vitals measurement
-  const _measureWebVitals = useCallback(() => {
+  // const _measureWebVitals = // Unused useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     // First Contentful Paint (FCP)
@@ -66,7 +66,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Cumulative Layout Shift (CLS)
-    let _clsValue = 0;
+    // let _clsValue = // Unused 0;
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (!(entry as any).hadRecentInput) {

@@ -64,7 +64,7 @@ class UserExperienceEnhancer {
     if (!this.config.enableSmoothScrolling) return;
 
     // Add smooth scrolling to all anchor links
-    const _links = document.querySelectorAll('a[href^="#"]');
+    // const _links = // Unused document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
       link.addEventListener('click', (e) => {
@@ -300,7 +300,7 @@ class UserExperienceEnhancer {
     });
 
     // Track scroll depth
-    let _maxScrollDepth = 0;
+    // let _maxScrollDepth = // Unused 0;
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       

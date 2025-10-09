@@ -1,7 +1,7 @@
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +15,7 @@ const ContactPage: React.FC = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import React, { memo } from 'react';
 
-'use client';
+// 'use client'; // This is a Next.js directive, not needed in React Router
 
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const _features = [

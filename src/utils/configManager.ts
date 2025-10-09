@@ -196,7 +196,7 @@ export class ConfigManager {
    */
   private detectEnvironment(): Environment {
     if (typeof process !== 'undefined') {
-      const _nodeEnv = process.env['NODE_ENV'];
+      // const _nodeEnv = // Unused process.env['NODE_ENV'];
       const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
       if (nextEnv) {
         return nextEnv as Environment;
@@ -211,7 +211,7 @@ export class ConfigManager {
    * Load configuration based on environment
    */
   private loadConfig(): AppConfig {
-    let _config = { ...defaultConfig };
+    // let _config = // Unused { ...defaultConfig };
     switch (this.environment) {
       case 'development':
         config = this.mergeConfig(config, developmentConfig);

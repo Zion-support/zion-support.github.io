@@ -8,7 +8,7 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
-    const _handleScroll = () => {
+    // const _handleScroll = // Unused () => {
       setIsScrolled(window.scrollY > 50);
     };
 

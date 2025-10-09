@@ -68,7 +68,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   componentDidUpdate(prevProps: Props): void {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
-      const _resetKeysChanged = this.props.resetKeys.some(
+      // const _resetKeysChanged = // Unused this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
       );
       if (resetKeysChanged && this.state.hasError) {

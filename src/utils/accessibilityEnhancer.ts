@@ -69,7 +69,7 @@ class AccessibilityEnhancer {
     });
 
     // Update focusable elements on DOM changes
-    const _observer = new MutationObserver(() => {
+    const observer = new MutationObserver(() => {
       this.updateFocusableElements();
     });
 
@@ -136,7 +136,7 @@ class AccessibilityEnhancer {
       const items = Array.from(parent.querySelectorAll('[role="menuitem"], [role="option"], [role="gridcell"]'));
       const currentIndex = items.indexOf(activeElement);
       
-      let _nextIndex = currentIndex;
+      // let _nextIndex = // Unused currentIndex;
       
       switch (e.key) {
         case 'ArrowUp':

@@ -81,7 +81,7 @@ export class APIInterceptor {
    * Make API request
    */
   async request<T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {
-    const _fullConfig = this.prepareRequest(config);
+    // const _fullConfig = // Unused this.prepareRequest(config);
     const cacheKey = this.getCacheKey(fullConfig);
     // Check cache for GET requests
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
@@ -115,7 +115,7 @@ export class APIInterceptor {
     const startTime = performance.now();
     try {
       // Apply request interceptor
-      let _finalConfig = config;
+      // let _finalConfig = // Unused config;
       if (this.config.interceptors?.request) {
         finalConfig = await this.config.interceptors.request(config);
       }

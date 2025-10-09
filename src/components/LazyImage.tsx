@@ -27,7 +27,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
+  // const _imgRef = // Unused useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (priority) return;

@@ -22,7 +22,7 @@ const PerformanceDashboard: React.FC = () => {
   });
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    const _updateMetrics = () => {
+    // const _updateMetrics = // Unused () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
@@ -33,16 +33,16 @@ const PerformanceDashboard: React.FC = () => {
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
       // Measure memory usage
-      let __memoryUsage = 0;
+      // let __memoryUsage = // Unused 0;
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
       // Measure FPS (simplified)
-      let _fps = 0;
+      // let _fps = // Unused 0;
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
+        // let _lastTime = // Unused performance.now();
+        // let _frameCount = // Unused 0;
         const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {

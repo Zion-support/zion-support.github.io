@@ -64,7 +64,7 @@ const PerformanceMonitor: React.FC = () => {
 
     // Monitor resource loading performance
     if ('performance' in window) {
-      const _observer = new PerformanceObserver((list) => {
+      // const _observer = // Unused new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'resource') {
             const resource = entry as PerformanceResourceTiming;

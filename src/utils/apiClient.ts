@@ -136,7 +136,7 @@ class ApiClient {
       timeout = this.config.timeout,
       ...fetchConfig
     } = config;
-    const _fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
+    // const _fullUrl = // Unused url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
     const cacheKey = `${method}:${fullUrl}`;
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
@@ -157,7 +157,7 @@ class ApiClient {
       controller.abort();
     }, timeout);
     let lastError: Error | null = null;
-    let _attempt = 0;
+    // let _attempt = // Unused 0;
     while (attempt < retries) {
       try {
         const response = await fetch(fullUrl, {

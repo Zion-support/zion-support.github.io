@@ -2,7 +2,7 @@ import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} f
 import { Link } from 'react-router-dom';
 import React from 'react';
 
-'use client';
+// 'use client'; // This is a Next.js directive, not needed in React Router
 
 const AISchedulerPage: React.FC = () => {
   const _features = [
