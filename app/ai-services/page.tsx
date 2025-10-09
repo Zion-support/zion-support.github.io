@@ -612,16 +612,9 @@ const AIServicesPage: React.FC = () => {
       technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
     },
     {
-      title: 'AI-Powered Smart City Management',
-      description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
-      icon: '🏛️',
-      price: 'Starting at $8,000/month',
-      features: ['Integrated services', 'Citizen engagement', 'Resource optimization', 'Service delivery', 'Data analytics'],
-      benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
-      marketPrice: '$15,000-40,000/month',
-      category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
-=======
+      title: 'AI Edge Computing Solutions',
+      description: 'Deploy AI models at the edge for real-time processing, reduced latency, and offline capabilities.',
+      icon: '⚡',
       price: '$1,700/month',
       features: [
         'Edge Model Deployment',
@@ -641,7 +634,126 @@ const AIServicesPage: React.FC = () => {
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> eb805111b9a39d156e248671e5cb99c5fd811fd8
+    },
+    {
+      title: 'AI-Powered Voice Cloning & Synthesis',
+      description: 'Advanced voice synthesis technology for creating realistic voice clones and personalized speech systems.',
+      icon: '🎤',
+      price: '$2,500/month',
+      features: [
+        'Voice Cloning Technology',
+        'Text-to-Speech Synthesis',
+        'Voice Conversion',
+        'Emotion Control',
+        'Multi-language Support',
+        'Real-time Processing'
+      ],
+      benefits: [
+        'Create personalized voice assistants',
+        'Improve accessibility by 100%',
+        'Enhance user experience',
+        'Enable multilingual operations'
+      ],
+      marketPrice: '$4,000-12,000/month',
+      category: 'Voice AI',
+      technologies: ['Tacotron', 'WaveNet', 'MelGAN', 'Real-time Voice Cloning', 'Custom Neural Networks', 'Voice SDKs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered 3D Model Generation',
+      description: 'Intelligent 3D model creation and optimization for gaming, VR, and architectural visualization.',
+      icon: '🎮',
+      price: '$3,500/month',
+      features: [
+        '3D Model Generation',
+        'Texture Synthesis',
+        'Animation Creation',
+        'LOD Optimization',
+        'VR/AR Integration',
+        'Custom Asset Creation'
+      ],
+      benefits: [
+        'Accelerate 3D content creation by 80%',
+        'Reduce production costs by 60%',
+        'Improve visual quality',
+        'Enable rapid prototyping'
+      ],
+      marketPrice: '$6,000-18,000/month',
+      category: '3D AI',
+      technologies: ['NeRF', '3D GANs', 'Blender API', 'Unity Integration', 'Custom 3D Models', 'OpenGL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Music Composition',
+      description: 'Intelligent music generation and composition with style transfer and emotional analysis.',
+      icon: '🎵',
+      price: '$1,800/month',
+      features: [
+        'Music Composition',
+        'Style Transfer',
+        'Emotional Analysis',
+        'Instrument Synthesis',
+        'Lyrics Generation',
+        'Multi-genre Support'
+      ],
+      benefits: [
+        'Create original music 10x faster',
+        'Reduce composition time by 70%',
+        'Explore new musical styles',
+        'Enable creative collaboration'
+      ],
+      marketPrice: '$3,000-8,000/month',
+      category: 'Creative AI',
+      technologies: ['MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing', 'Custom Music Models', 'Audio Processing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Video Generation',
+      description: 'Advanced video creation and editing using AI for content production and marketing.',
+      icon: '🎬',
+      price: '$4,500/month',
+      features: [
+        'Video Generation',
+        'Scene Synthesis',
+        'Motion Transfer',
+        'Style Transfer',
+        'Automated Editing',
+        'Real-time Processing'
+      ],
+      benefits: [
+        'Create professional videos 5x faster',
+        'Reduce production time by 80%',
+        'Lower video production costs by 70%',
+        'Enable automated content creation'
+      ],
+      marketPrice: '$7,500-20,000/month',
+      category: 'Video AI',
+      technologies: ['DALL-E Video', 'Runway ML', 'Stable Video Diffusion', 'OpenCV', 'Custom Video Models', 'FFmpeg'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Code Generation',
+      description: 'Intelligent code generation and completion for multiple programming languages and frameworks.',
+      icon: '💻',
+      price: '$2,200/month',
+      features: [
+        'Code Generation',
+        'Bug Fixing',
+        'Code Optimization',
+        'Documentation Generation',
+        'Multi-language Support',
+        'IDE Integration'
+      ],
+      benefits: [
+        'Accelerate development by 300%',
+        'Reduce coding errors by 80%',
+        'Improve code quality',
+        'Enable rapid prototyping'
+      ],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Development AI',
+      technologies: ['GitHub Copilot', 'CodeT5', 'CodeBERT', 'Custom Code Models', 'IDE Integration', 'LSP'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -658,7 +770,12 @@ const AIServicesPage: React.FC = () => {
     { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
     { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
     { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
+    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length },
+    { name: 'Voice AI', count: aiServices.filter(s => s.category === 'Voice AI').length },
+    { name: '3D AI', count: aiServices.filter(s => s.category === '3D AI').length },
+    { name: 'Creative AI', count: aiServices.filter(s => s.category === 'Creative AI').length },
+    { name: 'Video AI', count: aiServices.filter(s => s.category === 'Video AI').length },
+    { name: 'Development AI', count: aiServices.filter(s => s.category === 'Development AI').length }
   ];
 
   return (
