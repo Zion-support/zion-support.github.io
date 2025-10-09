@@ -2,18 +2,51 @@
 import React, { memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
+// Simple Link component for navigation
+const Link: React.FC<{ to: string; href?: string; className?: string; onClick?: () => void; children: React.ReactNode; 'aria-label'?: string }> = ({ to, href, className, onClick, children, ...props }) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onClick) onClick();
+    // For now, we'll use hash routing
+    window.location.hash = to;
+  };
+  
+  return (
+    <a 
+      href={href || to} 
+      className={className} 
+      onClick={handleClick}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+};
+
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+    { name: 'AI Smart Scheduler', url: '/ai-smart-scheduler', description: 'Intelligent meeting scheduling', icon: '📅', popular: true },
+    { name: 'AI Expense Optimizer', url: '/ai-expense-optimizer', description: 'Smart expense management', icon: '💰', popular: true },
+    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer intelligence', icon: '👥', popular: true },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory management', icon: '📦', popular: true },
+    { name: 'AI Performance Tracker', url: '/ai-performance-tracker', description: 'Performance monitoring', icon: '📊', popular: true },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📋', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'AI-driven SEO', icon: '🎯', popular: false },
+    { name: 'AI Time Tracker', url: '/ai-time-tracker', description: 'Intelligent time management', icon: '⏰', popular: false },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing', icon: '🧾', popular: false },
+    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification', icon: '🎯', popular: false },
+    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions', icon: '📈', popular: false },
+    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'Intelligent HR management', icon: '👨‍💼', popular: false },
+    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing', icon: '📄', popular: false },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Custom voice assistants', icon: '🎤', popular: false }
   ];
 
   const aiServices = [

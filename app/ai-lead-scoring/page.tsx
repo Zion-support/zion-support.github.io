@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { FileText, Brain, Zap, CheckCircle, Star, ArrowRight, Target, Mail, Phone, MapPin, Globe, BarChart, AlertCircle, Search, Download, Upload, Shield, Clock, Eye } from 'lucide-react';
+import { Target, Brain, Zap, CheckCircle, Star, ArrowRight, TrendingUp, Mail, Phone, MapPin, Globe, BarChart, AlertCircle, Users, Award, Trophy, TrendingDown, Percent } from 'lucide-react';
 
-const AIDocumentProcessorPage: React.FC = () => {
+const AILeadScoringPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,77 +12,77 @@ const AIDocumentProcessorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Intelligent Document Analysis',
-      description: 'Advanced AI algorithms extract, analyze, and understand content from any document format.',
-      benefits: ['95% accuracy in text extraction', 'Multi-format support', 'Context understanding']
+      title: 'AI Lead Analysis',
+      description: 'Advanced machine learning algorithms analyze lead behavior and predict conversion probability.',
+      benefits: ['95% accuracy in lead scoring', 'Real-time scoring updates', 'Behavioral pattern analysis']
     },
     {
-      icon: FileText,
-      title: 'Automated Processing',
-      description: 'Streamline document workflows with intelligent automation and smart categorization.',
-      benefits: ['Automated categorization', 'Smart routing', 'Workflow optimization']
+      icon: Target,
+      title: 'Predictive Scoring',
+      description: 'Intelligent scoring system that identifies high-value leads and prioritizes sales efforts.',
+      benefits: ['Conversion probability prediction', 'Lead quality ranking', 'Sales-ready identification']
     },
     {
-      icon: Search,
-      title: 'Advanced Search',
-      description: 'Powerful search capabilities that understand context and find relevant information instantly.',
-      benefits: ['Semantic search', 'Context-aware results', 'Instant retrieval']
+      icon: TrendingUp,
+      title: 'Sales Optimization',
+      description: 'AI-powered insights that optimize sales processes and improve conversion rates.',
+      benefits: ['40% increase in conversion rates', 'Sales process optimization', 'ROI improvement']
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance features for sensitive document handling.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and reporting on lead performance and sales trends.',
+      benefits: ['Lead performance insights', 'Sales trend analysis', 'Custom reporting']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic',
-      price: '$149',
+      name: 'Starter',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for small sales teams',
       features: [
-        'Up to 1,000 documents/month',
-        'Basic AI processing',
-        'Standard search',
+        'Up to 1,000 leads/month',
+        'Basic AI scoring',
+        'Standard analytics',
         'Email support',
         'Mobile app access',
-        'Basic security'
+        'Basic integrations'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$299',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 documents/month',
-        'Advanced AI processing',
-        'Advanced search',
+        'Up to 10,000 leads/month',
+        'Advanced AI scoring',
+        'Advanced analytics',
         'Priority support',
         'API integration',
-        'Advanced security',
-        'Custom workflows',
+        'Custom scoring models',
+        'A/B testing',
         'Multi-user access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited documents',
+        'Unlimited leads',
         'Enterprise AI features',
         'Custom integrations',
         'Dedicated support',
         'Advanced security',
         'Custom development',
         'SSO integration',
-        'Compliance tools'
+        'White-label options'
       ],
       popular: false
     }
@@ -90,24 +90,24 @@ const AIDocumentProcessorPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      role: 'Document Manager',
-      company: 'Legal Solutions Inc.',
-      content: 'AI Document Processor has transformed our document management. We process 10x more documents with 95% accuracy.',
+      name: 'Jessica Martinez',
+      role: 'Sales Director',
+      company: 'TechSales Pro',
+      content: 'AI Lead Scoring increased our conversion rates by 45% and helped us focus on the most promising leads.',
       rating: 5
     },
     {
-      name: 'Michael Brown',
-      role: 'Operations Director',
-      company: 'Finance Corp',
-      content: 'The intelligent search is incredible. We can find any document or information in seconds instead of hours.',
+      name: 'Robert Kim',
+      role: 'VP of Sales',
+      company: 'Growth Solutions',
+      content: 'The predictive scoring is incredibly accurate. We can now identify high-value leads before our competitors.',
       rating: 5
     },
     {
-      name: 'Sarah Davis',
-      role: 'Compliance Officer',
-      company: 'Healthcare Systems',
-      content: 'The security and compliance features give us peace of mind. Our sensitive documents are perfectly protected.',
+      name: 'Amanda Foster',
+      role: 'Sales Manager',
+      company: 'Enterprise Corp',
+      content: 'Finally, a lead scoring system that actually works. Our sales team productivity has increased dramatically.',
       rating: 5
     }
   ];
@@ -134,20 +134,20 @@ const AIDocumentProcessorPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-400/20 rounded-full px-4 py-2 mb-6">
-            <FileText className="w-5 h-5 text-emerald-400" />
-            <span className="text-emerald-400 font-medium">AI Document Processor</span>
+          <div className="inline-flex items-center space-x-2 bg-red-500/10 border border-red-400/20 rounded-full px-4 py-2 mb-6">
+            <Target className="w-5 h-5 text-red-400" />
+            <span className="text-red-400 font-medium">AI Lead Scoring</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Intelligent Document Processing
+            Intelligent Lead Scoring
           </h1>
-          <p className="text-xl text-emerald-400 mb-8 font-medium">
-            AI-Powered Document Analysis & Automation
+          <p className="text-xl text-red-400 mb-8 font-medium">
+            AI-Powered Lead Qualification & Sales Optimization
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your document management with AI that understands, processes, and extracts insights 
-            from any document format. Process 10x more documents with 95% accuracy.
+            Transform your sales process with AI that scores, ranks, and prioritizes leads automatically. 
+            Increase conversion rates by 40% and focus on the most promising prospects.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -162,16 +162,16 @@ const AIDocumentProcessorPage: React.FC = () => {
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">95%</div>
-              <div className="text-gray-300">Processing Accuracy</div>
+              <div className="text-3xl font-bold text-red-400 mb-2">95%</div>
+              <div className="text-gray-300">Scoring Accuracy</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
-              <div className="text-gray-300">Faster Processing</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-gray-300">Conversion Increase</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Guarantee</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+              <div className="text-gray-300">Time Savings</div>
             </div>
           </div>
         </section>
@@ -179,14 +179,14 @@ const AIDocumentProcessorPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16" id="features">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Advanced Document Intelligence
+            Advanced Lead Intelligence
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-600 rounded-lg flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -195,7 +195,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-emerald-400" />
+                      <CheckCircle className="w-4 h-4 text-red-400" />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -208,15 +208,15 @@ const AIDocumentProcessorPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16" id="pricing">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Scalable Pricing Plans
+            Flexible Pricing Plans
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-emerald-400' : ''}`}>
+              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-red-400' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-emerald-400 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-red-400 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -225,7 +225,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-emerald-400">{plan.price}</span>
+                    <span className="text-4xl font-bold text-red-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                   <p className="text-gray-400 mt-2">{plan.description}</p>
@@ -234,7 +234,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -244,7 +244,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-medium transition-all ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700'
+                      ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
                       : 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-600'
                   }`}
                 >
@@ -280,12 +280,12 @@ const AIDocumentProcessorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 rounded-lg p-12">
+        <section className="text-center bg-gradient-to-r from-red-600/20 to-pink-600/20 rounded-lg p-12">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Transform Your Document Management
+            Boost Your Sales Performance
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Join thousands of organizations already processing documents with AI
+            Join sales teams already using AI to identify and convert high-value leads
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="cyber-button">
@@ -314,4 +314,4 @@ const AIDocumentProcessorPage: React.FC = () => {
   );
 };
 
-export default AIDocumentProcessorPage;
+export default AILeadScoringPage;

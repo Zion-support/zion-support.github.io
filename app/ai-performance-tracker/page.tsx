@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { FileText, Brain, Zap, CheckCircle, Star, ArrowRight, Target, Mail, Phone, MapPin, Globe, BarChart, AlertCircle, Search, Download, Upload, Shield, Clock, Eye } from 'lucide-react';
+import { Activity, TrendingUp, Brain, BarChart, CheckCircle, Star, ArrowRight, Target, Mail, Phone, MapPin, Globe, Zap, PieChart, AlertCircle, Gauge, Clock, Award, Trophy } from 'lucide-react';
 
-const AIDocumentProcessorPage: React.FC = () => {
+const AIPerformanceTrackerPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,77 +12,77 @@ const AIDocumentProcessorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Intelligent Document Analysis',
-      description: 'Advanced AI algorithms extract, analyze, and understand content from any document format.',
-      benefits: ['95% accuracy in text extraction', 'Multi-format support', 'Context understanding']
+      title: 'AI Performance Analysis',
+      description: 'Advanced machine learning algorithms analyze performance patterns and identify optimization opportunities.',
+      benefits: ['Real-time performance monitoring', 'Predictive performance insights', 'Automated optimization recommendations']
     },
     {
-      icon: FileText,
-      title: 'Automated Processing',
-      description: 'Streamline document workflows with intelligent automation and smart categorization.',
-      benefits: ['Automated categorization', 'Smart routing', 'Workflow optimization']
+      icon: Activity,
+      title: 'Real-time Monitoring',
+      description: 'Comprehensive real-time monitoring of all key performance indicators with instant alerts.',
+      benefits: ['Live performance dashboards', 'Instant anomaly detection', 'Custom alert thresholds']
     },
     {
-      icon: Search,
-      title: 'Advanced Search',
-      description: 'Powerful search capabilities that understand context and find relevant information instantly.',
-      benefits: ['Semantic search', 'Context-aware results', 'Instant retrieval']
+      icon: TrendingUp,
+      title: 'Predictive Analytics',
+      description: 'AI-powered predictions of future performance trends and potential bottlenecks.',
+      benefits: ['Performance trend forecasting', 'Bottleneck prediction', 'Capacity planning insights']
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance features for sensitive document handling.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails']
+      icon: BarChart,
+      title: 'Advanced Reporting',
+      description: 'Detailed performance reports and analytics to drive data-driven decision making.',
+      benefits: ['Custom report generation', 'Executive dashboards', 'Performance benchmarking']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic',
-      price: '$149',
+      name: 'Starter',
+      price: '$59',
       period: '/month',
       description: 'Perfect for small teams',
       features: [
-        'Up to 1,000 documents/month',
-        'Basic AI processing',
-        'Standard search',
+        'Up to 10 users',
+        'Basic performance tracking',
+        'Standard dashboards',
         'Email support',
         'Mobile app access',
-        'Basic security'
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$159',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 documents/month',
-        'Advanced AI processing',
-        'Advanced search',
+        'Up to 50 users',
+        'Advanced AI analysis',
+        'Custom dashboards',
         'Priority support',
         'API integration',
-        'Advanced security',
-        'Custom workflows',
-        'Multi-user access'
+        'Advanced analytics',
+        'Predictive insights',
+        'Custom alerts'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$399',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited documents',
+        'Unlimited users',
         'Enterprise AI features',
         'Custom integrations',
         'Dedicated support',
         'Advanced security',
         'Custom development',
         'SSO integration',
-        'Compliance tools'
+        'White-label options'
       ],
       popular: false
     }
@@ -90,24 +90,24 @@ const AIDocumentProcessorPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      role: 'Document Manager',
-      company: 'Legal Solutions Inc.',
-      content: 'AI Document Processor has transformed our document management. We process 10x more documents with 95% accuracy.',
+      name: 'Rachel Green',
+      role: 'VP of Operations',
+      company: 'TechFlow Inc.',
+      content: 'AI Performance Tracker helped us identify bottlenecks we never knew existed. Productivity increased by 45%.',
       rating: 5
     },
     {
-      name: 'Michael Brown',
-      role: 'Operations Director',
-      company: 'Finance Corp',
-      content: 'The intelligent search is incredible. We can find any document or information in seconds instead of hours.',
+      name: 'James Wilson',
+      role: 'CTO',
+      company: 'Innovation Labs',
+      content: 'The predictive analytics are incredibly accurate. We can now prevent issues before they impact our business.',
       rating: 5
     },
     {
-      name: 'Sarah Davis',
-      role: 'Compliance Officer',
-      company: 'Healthcare Systems',
-      content: 'The security and compliance features give us peace of mind. Our sensitive documents are perfectly protected.',
+      name: 'Maria Garcia',
+      role: 'Performance Manager',
+      company: 'Global Solutions',
+      content: 'Finally, a performance tool that actually helps us improve instead of just reporting what happened.',
       rating: 5
     }
   ];
@@ -134,20 +134,20 @@ const AIDocumentProcessorPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-400/20 rounded-full px-4 py-2 mb-6">
-            <FileText className="w-5 h-5 text-emerald-400" />
-            <span className="text-emerald-400 font-medium">AI Document Processor</span>
+          <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-400/20 rounded-full px-4 py-2 mb-6">
+            <Activity className="w-5 h-5 text-blue-400" />
+            <span className="text-blue-400 font-medium">AI Performance Tracker</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Intelligent Document Processing
+            Intelligent Performance Monitoring
           </h1>
-          <p className="text-xl text-emerald-400 mb-8 font-medium">
-            AI-Powered Document Analysis & Automation
+          <p className="text-xl text-blue-400 mb-8 font-medium">
+            AI-Powered Performance Analytics & Optimization
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your document management with AI that understands, processes, and extracts insights 
-            from any document format. Process 10x more documents with 95% accuracy.
+            Monitor, analyze, and optimize performance with AI that identifies bottlenecks, 
+            predicts issues, and provides actionable insights to boost productivity by up to 45%.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -162,16 +162,16 @@ const AIDocumentProcessorPage: React.FC = () => {
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">95%</div>
-              <div className="text-gray-300">Processing Accuracy</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">45%</div>
+              <div className="text-gray-300">Productivity Increase</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
-              <div className="text-gray-300">Faster Processing</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime Monitoring</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Guarantee</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
+              <div className="text-gray-300">Issue Prevention</div>
             </div>
           </div>
         </section>
@@ -179,14 +179,14 @@ const AIDocumentProcessorPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16" id="features">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Advanced Document Intelligence
+            Advanced Performance Intelligence
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-lg flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -195,7 +195,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-emerald-400" />
+                      <CheckCircle className="w-4 h-4 text-blue-400" />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -208,15 +208,15 @@ const AIDocumentProcessorPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16" id="pricing">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Scalable Pricing Plans
+            Flexible Pricing Plans
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-emerald-400' : ''}`}>
+              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-emerald-400 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-blue-400 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -225,7 +225,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-emerald-400">{plan.price}</span>
+                    <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                   <p className="text-gray-400 mt-2">{plan.description}</p>
@@ -234,7 +234,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -244,7 +244,7 @@ const AIDocumentProcessorPage: React.FC = () => {
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-medium transition-all ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700'
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                       : 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-600'
                   }`}
                 >
@@ -280,12 +280,12 @@ const AIDocumentProcessorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 rounded-lg p-12">
+        <section className="text-center bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-12">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Transform Your Document Management
+            Boost Your Performance Today
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Join thousands of organizations already processing documents with AI
+            Join industry leaders using AI to optimize performance and drive growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="cyber-button">
@@ -314,4 +314,4 @@ const AIDocumentProcessorPage: React.FC = () => {
   );
 };
 
-export default AIDocumentProcessorPage;
+export default AIPerformanceTrackerPage;
