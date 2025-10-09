@@ -13,13 +13,7 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ];
   return (
-<<<<<<< HEAD
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

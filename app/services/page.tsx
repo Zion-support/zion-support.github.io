@@ -1,9 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-const ServicessPage: React.FC = () => {
-=======
 import Link from 'next/link';
 import { ArrowRight, Star, CheckCircle } from 'lucide-react';
 const ServicesPage: React.FC = () => {
@@ -87,7 +83,6 @@ const ServicesPage: React.FC = () => {
       description: 'World-class engineers and data scientists with proven track records'
     }
   ];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
   return (
     <>
       <SEOOptimizer
@@ -130,9 +125,7 @@ const ServicesPage: React.FC = () => {
             </div>
           </section>
         </div>
-<<<<<<< HEAD
-=======
-      </section>
+</section>
       {/* Main Service Categories */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -234,7 +227,6 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
   );
 };
 

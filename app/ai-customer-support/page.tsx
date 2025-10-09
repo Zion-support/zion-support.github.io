@@ -1,14 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-
-=======
 import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -57,10 +49,7 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
-
-=======
-  const testimonials = [
+const testimonials = [
     {
       name: 'Jennifer Martinez',
       role: 'Customer Success Manager',
@@ -83,7 +72,6 @@ const AICustomerSupportPage: React.FC = () => {
       rating: 5
     }
   ];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -92,103 +80,7 @@ const AICustomerSupportPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <SEOOptimizer
-        title="AI Customer Support - Zion Tech Group"
-        description="Revolutionary AI-powered customer support solutions with 24/7 availability, multi-language support, and intelligent automation."
-        keywords={['AI customer support', 'chatbot', 'customer service automation', 'AI helpdesk', 'virtual assistant']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
-        <Navigation />
-        <div className="container mx-auto px-4 py-8">
-          {/* Hero Section */}
-          <section className="text-center mb-16 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
-            <div className="relative z-10 py-16 px-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  AI Customer Support
-                </span>
-                <br />
-                <span className="text-2xl sm:text-3xl md:text-4xl text-gray-300">
-                  Revolutionize Your Customer Service
-                </span>
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your customer support with AI-powered solutions that provide instant, intelligent responses, 
-                reduce response times by 60%, and deliver 95% customer satisfaction.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Customer Support Inquiry"
-                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  Get Started Today
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call Now
-                </a>
-              </div>
-            </div>
-          </section>
-
-          {/* Stats Section */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Features Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful AI Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Pricing Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
-                <div key={index} className={`bg-slate-800/50 rounded-xl p-8 border ${index === 1 ? 'border-cyan-500' : 'border-slate-700'} relative`}>
-                  {index === 1 && (
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
@@ -356,7 +248,6 @@ const AICustomerSupportPage: React.FC = () => {
                   }`}
                 >
                   {plan.popular && (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -408,18 +299,7 @@ const AICustomerSupportPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-<<<<<<< HEAD
-              <div className="mt-6 text-sm text-gray-400">
-                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <Footer />
-    </>
-=======
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -483,7 +363,6 @@ const AICustomerSupportPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
   );
 };
 

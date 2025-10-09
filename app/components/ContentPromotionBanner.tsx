@@ -1,22 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const ContentPromotionBanner: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4">
-      <div className="container mx-auto text-center">
-        <p className="text-sm font-medium">
-          🚀 <strong>New:</strong> AI-Powered Business Intelligence Dashboard - 
-          <a href="/business-intelligence" className="underline hover:no-underline ml-1">
-            Learn More →
-          </a>
-        </p>
-      </div>
-    </div>
-  );
-};
-
-=======
 const ContentPromotionBanner: React.FC = () => {
   return (
     <section className="py-16 px-4">
@@ -39,5 +21,4 @@ const ContentPromotionBanner: React.FC = () => {
     </section>
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
 export default ContentPromotionBanner;

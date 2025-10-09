@@ -2,19 +2,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
-<<<<<<< HEAD
-=======
-import React, { useEffect, useCallback } from 'react';
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({

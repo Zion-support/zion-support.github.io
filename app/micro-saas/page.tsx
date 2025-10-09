@@ -83,12 +83,7 @@ const MicroSAASPage: React.FC = () => {
       features: ['24/7 support', 'Natural language processing', 'Ticket management', 'Knowledge base', 'Multi-language support', 'Human handoff'],
       benefits: ['Reduce support costs by 70%', 'Improve response time', 'Increase customer satisfaction', 'Handle 80% of queries automatically'],
       marketPrice: '$300-600/month',
-<<<<<<< HEAD
-      category: 'Support Tools',
-      technologies: ['OpenAI GPT', 'Custom AI Models', 'React', 'Node.js', 'WebSocket'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-=======
-      category: 'Content Strategy',
+category: 'Content Strategy',
       technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
@@ -312,7 +307,6 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/website-builder',
       popular: true
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5
     }
   ], []);
 

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:app/guides/page.tsx
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -297,4 +295,3 @@ const GuidesPage: React.FC = () => {
 };
 
 export default GuidesPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-dcb5

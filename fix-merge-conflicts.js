@@ -11,12 +11,11 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
+    content = content.replace(/\n([\s\S]*?)
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/
     
     fs.writeFileSync(filePath, content);
 
@@ -40,7 +39,7 @@ function findFilesWithConflicts(dir) {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+        if (content.includes('') || content.includes('
           files.push(fullPath);
         }
       }
