@@ -1,100 +1,65 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
+=======
+import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
+      icon: BarChart3,
       title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that automatically update with real-time data from any source.',
-      benefits: ['Real-time updates', 'Drag-and-drop builder', 'Mobile responsive']
+      description: 'Create stunning, interactive dashboards that bring your data to life with real-time updates.',
+      benefits: ['Real-time Updates', 'Customizable Layouts', 'Interactive Elements', 'Mobile Responsive']
     },
     {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Our AI automatically identifies patterns, trends, and anomalies in your data to provide actionable insights.',
-      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive analytics']
+      icon: PieChart,
+      title: 'Advanced Chart Types',
+      description: 'Comprehensive library of chart types including 3D visualizations and custom graphics.',
+      benefits: ['50+ Chart Types', '3D Visualizations', 'Custom Graphics', 'Animation Effects']
     },
     {
-      icon: Zap,
-      title: 'One-Click Integration',
-      description: 'Connect to 100+ data sources including databases, APIs, cloud services, and business applications.',
-      benefits: ['100+ connectors', 'Auto-sync', 'No coding required']
+      icon: TrendingUp,
+      title: 'Predictive Analytics',
+      description: 'AI-powered predictive analytics that forecast trends and identify patterns in your data.',
+      benefits: ['Trend Forecasting', 'Pattern Recognition', 'Anomaly Detection', 'Risk Assessment']
     },
     {
       icon: Eye,
-      title: 'Advanced Visualizations',
-      description: '50+ chart types including heatmaps, scatter plots, treemaps, and custom visualizations for any data type.',
-      benefits: ['50+ chart types', 'Custom visuals', '3D visualizations']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with role-based access, data encryption, and compliance with SOC 2 and GDPR.',
-      benefits: ['Role-based access', 'Data encryption', 'Audit logs']
-    },
-    {
-      icon: Users,
-      title: 'Collaborative Features',
-      description: 'Share dashboards, add comments, schedule reports, and collaborate with your team in real-time.',
-      benefits: ['Real-time sharing', 'Comments & annotations', 'Scheduled reports']
+      title: 'Data Storytelling',
+      description: 'Transform complex data into compelling visual stories that drive decision-making.',
+      benefits: ['Narrative Flow', 'Contextual Insights', 'Actionable Recommendations', 'Executive Summaries']
     }
   ];
-  const pricingPlans = [
+
+  const pricing = [
     {
-      name: 'Starter',
-      price: '$149',
-      period: '/month',
+      name: 'Basic',
+      price: '$299/month',
       description: 'Perfect for small teams',
-      features: [
-        'Up to 5 dashboards',
-        'Basic chart types',
-        'Standard data sources',
-        'Email support',
-        'Basic templates',
-        '1GB data storage'
-      ],
-      popular: false
+      features: ['Up to 5 dashboards', 'Basic chart types', 'Standard templates', 'Email support']
     },
     {
       name: 'Professional',
-      price: '$399',
-      period: '/month',
+      price: '$599/month',
       description: 'Ideal for growing businesses',
-      features: [
-        'Up to 25 dashboards',
-        'All chart types',
-        '100+ data sources',
-        'Priority support',
-        'Custom templates',
-        '10GB data storage',
-        'AI insights',
-        'Team collaboration'
-      ],
-      popular: true
+      features: ['Up to 25 dashboards', 'All chart types', 'Custom templates', 'Priority support', 'API access']
     },
     {
       name: 'Enterprise',
-      price: '$999',
-      period: '/month',
+      price: '$1,199/month',
       description: 'For large organizations',
-      features: [
-        'Unlimited dashboards',
-        'Custom visualizations',
-        'All integrations',
-        'Dedicated support',
-        'Custom development',
-        'Unlimited storage',
-        'Advanced AI features',
-        'White-label options',
-        'SLA guarantee'
-      ],
-      popular: false
+      features: ['Unlimited dashboards', 'Custom development', 'White-label options', '24/7 support', 'Dedicated account manager']
     }
   ];
+<<<<<<< HEAD
   const stats = [
     { number: '95%', label: 'Faster Insights' },
     { number: '100+', label: 'Data Sources' },
@@ -175,24 +140,56 @@ const AIDataVisualizationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
+=======
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Data Visualization
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into stunning visualizations with AI-powered insights, 
+              interactive dashboards, and predictive analytics.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button inline-flex items-center space-x-2"
+              >
+                <BarChart3 className="w-4 h-4" />
+                <span>Get Started</span>
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Learn More
+              </a>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             </div>
           </section>
           {/* Features Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Visualization Features
+              Key Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
-                        <CheckCircle className="w-4 h-4" />
-                        <span>{benefit}</span>
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -200,6 +197,7 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -215,11 +213,15 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
+=======
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
           {/* Pricing Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Pricing Plans
             </h2>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -231,33 +233,32 @@ const AIDataVisualizationPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {index === 1 && (
+                    <div className="text-center mb-4">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
                   <a
-                    href="tel:+13024640950"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                    className="cyber-button w-full text-center block"
                   >
                     Get Started
                   </a>
@@ -266,6 +267,7 @@ const AIDataVisualizationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
+<<<<<<< HEAD
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
@@ -297,6 +299,36 @@ const AIDataVisualizationPage: React.FC = () => {
         <Footer />
       </div>
     </>
+=======
+          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Visualize Your Data?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact us today to learn how AI data visualization can transform your business insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              >
+                Call (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Email Us
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   );
 };
+
 export default AIDataVisualizationPage;

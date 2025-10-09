@@ -131,8 +131,12 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
+<<<<<<< HEAD
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
+=======
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             >
               Zion Tech Group
             </h1>
@@ -175,17 +179,17 @@ const HomePage: React.FC = () => {
                 onClick={handlePhoneClick}
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
-              >
-                📞 Call: (302) 464-0950
-              </a>
-              <a 
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              >
-                Get Free Consultation
-              </a>
-            </div>
+            >
+              📞 Call: (302) 464-0950
+            </a>
+            <a 
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Get Free Consultation
+            </a>
           </div>
+        </div>
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">

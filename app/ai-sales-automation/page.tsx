@@ -1,98 +1,65 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+=======
+import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Lead Scoring',
-      description: 'Intelligent lead scoring using machine learning to identify high-value prospects and prioritize sales efforts.',
-      benefits: ['95% accuracy', 'Real-time scoring', 'Behavioral analysis']
-    },
-    {
       icon: Target,
-      title: 'Automated Outreach',
-      description: 'AI-powered email sequences, follow-ups, and personalized messaging that converts prospects into customers.',
-      benefits: ['3x higher open rates', 'Personalized content', 'Perfect timing']
+      title: 'Lead Scoring & Qualification',
+      description: 'AI-powered lead scoring that automatically identifies and prioritizes high-value prospects.',
+      benefits: ['Automated Scoring', 'Behavioral Analysis', 'Predictive Modeling', 'Priority Ranking']
     },
     {
       icon: Users,
-      title: 'CRM Integration',
-      description: 'Seamless integration with popular CRMs like Salesforce, HubSpot, and Pipedrive for unified sales management.',
-      benefits: ['One-click sync', 'Real-time updates', 'Unified pipeline']
+      title: 'Sales Pipeline Management',
+      description: 'Intelligent pipeline management that optimizes deals and predicts closing probabilities.',
+      benefits: ['Deal Tracking', 'Probability Prediction', 'Pipeline Optimization', 'Performance Analytics']
     },
     {
-      icon: BarChart,
-      title: 'Sales Analytics',
-      description: 'Advanced analytics and reporting to track performance, identify trends, and optimize sales strategies.',
-      benefits: ['Real-time insights', 'Predictive analytics', 'ROI tracking']
+      icon: TrendingUp,
+      title: 'Revenue Forecasting',
+      description: 'Advanced forecasting models that predict revenue with high accuracy using AI algorithms.',
+      benefits: ['Accurate Predictions', 'Trend Analysis', 'Risk Assessment', 'Scenario Planning']
     },
     {
-      icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Automate repetitive sales tasks, follow-ups, and administrative work to focus on closing deals.',
-      benefits: ['80% time savings', 'Consistent processes', 'Error reduction']
-    },
-    {
-      icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Built-in compliance with GDPR, CAN-SPAM, and other regulations to protect your business and customers.',
-      benefits: ['Legal compliance', 'Data protection', 'Audit trails']
+      icon: BarChart3,
+      title: 'Performance Analytics',
+      description: 'Comprehensive analytics dashboard that provides insights into sales performance and opportunities.',
+      benefits: ['Real-time Metrics', 'Performance Tracking', 'ROI Analysis', 'Team Insights']
     }
   ];
-  const pricingPlans = [
+
+  const pricing = [
     {
       name: 'Starter',
-      price: '$299',
-      period: '/month',
+      price: '$399/month',
       description: 'Perfect for small sales teams',
-      features: [
-        'Up to 1,000 leads/month',
-        'Basic AI lead scoring',
-        'Email automation',
-        'CRM integration',
-        'Standard analytics',
-        'Email support'
-      ],
-      popular: false
+      features: ['Up to 5 users', 'Basic lead scoring', 'Pipeline management', 'Email support']
     },
     {
       name: 'Professional',
-      price: '$799',
-      period: '/month',
+      price: '$799/month',
       description: 'Ideal for growing sales teams',
-      features: [
-        'Up to 10,000 leads/month',
-        'Advanced AI algorithms',
-        'Multi-channel automation',
-        'Advanced CRM features',
-        'Custom reporting',
-        'Priority support',
-        'A/B testing'
-      ],
-      popular: true
+      features: ['Up to 25 users', 'Advanced AI features', 'Revenue forecasting', 'Priority support', 'API access']
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
+      price: '$1,599/month',
       description: 'For large sales organizations',
-      features: [
-        'Unlimited leads',
-        'Custom AI models',
-        'All channels + voice',
-        'Custom integrations',
-        'Real-time dashboard',
-        'Dedicated account manager',
-        'Custom development',
-        'SLA guarantee'
-      ],
-      popular: false
+      features: ['Unlimited users', 'Custom AI training', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
+<<<<<<< HEAD
   const stats = [
     { number: '300%', label: 'Increase in Sales' },
     { number: '80%', label: 'Time Savings' },
@@ -173,24 +140,56 @@ const AISalesAutomationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
+=======
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Sales Automation
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Automate and optimize your sales process with AI-powered lead scoring, 
+              pipeline management, and revenue forecasting.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button inline-flex items-center space-x-2"
+              >
+                <Target className="w-4 h-4" />
+                <span>Get Started</span>
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Learn More
+              </a>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             </div>
           </section>
           {/* Features Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Sales Automation Features
+              Key Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
-                        <CheckCircle className="w-4 h-4" />
-                        <span>{benefit}</span>
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -198,6 +197,7 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -213,11 +213,15 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+=======
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
           {/* Pricing Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
+              Pricing Plans
             </h2>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -229,33 +233,32 @@ const AISalesAutomationPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {index === 1 && (
+                    <div className="text-center mb-4">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
                   <a
-                    href="tel:+13024640950"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                    className="cyber-button w-full text-center block"
                   >
                     Get Started
                   </a>
@@ -264,6 +267,7 @@ const AISalesAutomationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
+<<<<<<< HEAD
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
@@ -295,6 +299,36 @@ const AISalesAutomationPage: React.FC = () => {
         <Footer />
       </div>
     </>
+=======
+          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Automate Your Sales?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact us today to learn how AI sales automation can boost your revenue and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              >
+                Call (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Email Us
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   );
 };
+
 export default AISalesAutomationPage;
