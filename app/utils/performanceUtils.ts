@@ -60,7 +60,9 @@ export async function measureTime<T>(
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }ms`); } }
+  if (process.env['NODE_ENV'] === 'development') {
+    console.log(`${name} took ${duration}ms`);
+  }
   return { result, duration };
 }
 /**

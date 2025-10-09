@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect } from 'react';
 
 interface AdvancedSEOOptimizerProps {
   title?: string;
@@ -119,7 +120,24 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     
     // Add additional SEO meta tags
+    addAdditionalSEOTags();
     
+    // Add structured data
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      addBreadcrumbStructuredData(breadcrumbs);
+    }
+    
+    if (faqData && faqData.length > 0) {
+      addFAQStructuredData(faqData);
+    }
+    
+    if (organizationData) {
+      addStructuredData(organizationData);
+    }
+    
+    if (websiteData) {
+      addStructuredData(websiteData);
+    }
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
 
     if (!meta) {
@@ -189,8 +207,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const addAdditionalSEOTags = () => {
     // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {}
-
+    if (!document.querySelector('meta[name="viewport"]')) {
       const viewport = document.createElement('meta');
       viewport.name = 'viewport';
       viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';

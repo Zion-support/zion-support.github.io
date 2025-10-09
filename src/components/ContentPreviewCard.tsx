@@ -1,3 +1,6 @@
+import React from 'react';
+import Link from 'next/link';
+
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -14,6 +17,7 @@ interface ContentPreviewCardProps {
   };
   excerpt?: string;
 }
+
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   // id,
   title,
@@ -27,6 +31,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   stats,
   excerpt
 }) => {
+  const formatNumber = (num: number) => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
     }

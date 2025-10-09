@@ -384,7 +384,7 @@ ${disallowRules}
 Sitemap: ${sitemapUrl}`;
 };
 // SEO validation
-export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
+export const validateSEOData = (data: { title: string; description: string; url: string }) => {
   const issues: string[] = [];
   // Check title length
   if (data.title.length < 30) {
