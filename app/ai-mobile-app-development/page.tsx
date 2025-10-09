@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Smartphone, Code, Database, Cloud } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [

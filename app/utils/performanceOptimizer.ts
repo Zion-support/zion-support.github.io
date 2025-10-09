@@ -473,7 +473,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCaching();
     
     if (process.env.NODE_ENV === 'development') { 
-      console.log('Performance optimization completed in development mode');
+      logger.info('Performance optimization completed');
     }
   }
 }

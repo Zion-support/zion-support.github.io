@@ -4,7 +4,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   useEffect(() => {
     // Initialize Google Analytics
     const initAnalytics = () => {
-      const GA_TRACKING_ID = 'G-XXXXXXXXXX'; // Replace with actual tracking ID
+      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       
       // Load Google Analytics script
       const script = document.createElement('script');
@@ -30,7 +30,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     // Track page views
     const trackPageView = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('config', 'G-XXXXXXXXXX', {
+        (window as any).gtag('config', GA_TRACKING_ID, {
           page_title: document.title,
           page_location: window.location.href,
           send_page_view: true
