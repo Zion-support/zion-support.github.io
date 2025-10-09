@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Settings, FileText, Calendar, CreditCard, Database, Cloud, Smartphone, Monitor, Headphones, Camera, Music, Video, Image, Download, Upload, Share, Heart, ThumbsUp, MessageCircle, Bell, Search, Filter, Sort, Refresh, Play, Pause, Stop, Volume2, Wifi, Battery, Wrench, Hammer, Scissors, Pen, Pencil, Eraser, Book, BookOpen, File, Folder, Archive, Trash2, Edit, Copy, Cut, Paste, Save, Undo, Redo, Plus, Minus, X, Check, AlertTriangle, Info, HelpCircle, ExternalLink, Link, Unlink, Maximize, Minimize, RotateCcw, RotateCw, Move, Grid, List, Layout, Palette, Brush, Type, AlignLeft, AlignCenter, AlignRight, Bold, Italic, Underline, Strikethrough, Code, Terminal, Command, Keyboard, Mouse, Touchpad, Printer, Scanner, Fax, Mail as MailIcon, Send, Inbox, Outbox, Trash, Archive as ArchiveIcon, Flag, Tag, Bookmark, Star as StarIcon, Heart as HeartIcon, ThumbsUp as ThumbsUpIcon, MessageCircle as MessageCircleIcon, Bell as BellIcon, Search as SearchIcon, Filter as FilterIcon, Sort as SortIcon, Refresh as RefreshIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, Volume2 as Volume2Icon, Wifi as WifiIcon, Battery as BatteryIcon, Wrench as WrenchIcon, Hammer as HammerIcon, Scissors as ScissorsIcon, Pen as PenIcon, Pencil as PencilIcon, Eraser as EraserIcon, Book as BookIcon, BookOpen as BookOpenIcon, File as FileIcon, Folder as FolderIcon, Archive as ArchiveIcon2, Trash2 as Trash2Icon, Edit as EditIcon, Copy as CopyIcon, Cut as CutIcon, Paste as PasteIcon, Save as SaveIcon, Undo as UndoIcon, Redo as RedoIcon, Plus as PlusIcon, Minus as MinusIcon, X as XIcon, Check as CheckIcon, AlertTriangle as AlertTriangleIcon, Info as InfoIcon, HelpCircle as HelpCircleIcon, ExternalLink as ExternalLinkIcon, Link as LinkIcon, Unlink as UnlinkIcon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, RotateCcw as RotateCcwIcon, RotateCw as RotateCwIcon, Move as MoveIcon, Grid as GridIcon, List as ListIcon, Layout as LayoutIcon, Palette as PaletteIcon, Brush as BrushIcon, Type as TypeIcon, AlignLeft as AlignLeftIcon, AlignCenter as AlignCenterIcon, AlignRight as AlignRightIcon, Bold as BoldIcon, Italic as ItalicIcon, Underline as UnderlineIcon, Strikethrough as StrikethroughIcon, Code as CodeIcon, Terminal as TerminalIcon, Command as CommandIcon, Keyboard as KeyboardIcon, Mouse as MouseIcon, Touchpad as TouchpadIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Fax as FaxIcon } from 'lucide-react';
+
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     // AI-Powered Developer Tools
@@ -17,6 +18,114 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
       popular: true
+    },
+    {
+      title: 'AI Test Generation Suite',
+      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
+      icon: '🧪',
+      price: '$149/month',
+      features: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
+      benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
+      marketPrice: '$250-500/month',
+      category: 'Developer Tools',
+      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart API Documentation Generator',
+      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
+      icon: '📚',
+      price: '$79/month',
+      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
+      benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
+      marketPrice: '$120-250/month',
+      category: 'Developer Tools',
+      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Database Query Optimizer',
+      description: 'Intelligent database query optimization with performance analysis, index recommendations, and automated tuning.',
+      icon: '🗄️',
+      price: '$199/month',
+      features: ['Query optimization', 'Index recommendations', 'Performance monitoring', 'Automated tuning', 'Multi-database support', 'Real-time alerts'],
+      benefits: ['Improve query performance by 300%', 'Reduce database costs', 'Prevent performance issues', 'Optimize resource usage'],
+      marketPrice: '$300-600/month',
+      category: 'Developer Tools',
+      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI DevOps Pipeline Optimizer',
+      description: 'Intelligent CI/CD pipeline optimization with automated testing, deployment strategies, and performance monitoring.',
+      icon: '⚙️',
+      price: '$299/month',
+      features: ['Pipeline optimization', 'Automated testing', 'Deployment strategies', 'Performance monitoring', 'Error detection', 'Resource optimization'],
+      benefits: ['Reduce deployment time by 60%', 'Improve pipeline reliability', 'Optimize resource usage', 'Prevent deployment failures'],
+      marketPrice: '$500-1000/month',
+      category: 'Developer Tools',
+      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Security Scanner Pro',
+      description: 'Comprehensive security scanning with vulnerability detection, compliance checking, and automated remediation suggestions.',
+      icon: '🛡️',
+      price: '$249/month',
+      features: ['Vulnerability scanning', 'Compliance checking', 'Automated remediation', 'Security monitoring', 'Threat detection', 'Risk assessment'],
+      benefits: ['Prevent security breaches', 'Ensure compliance', 'Reduce security risks', 'Automate security tasks'],
+      marketPrice: '$400-800/month',
+      category: 'Developer Tools',
+      technologies: ['OWASP', 'NIST', 'Custom AI Models', 'Security APIs', 'Compliance Frameworks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Code Formatter & Linter',
+      description: 'Intelligent code formatting and linting with style consistency, best practices enforcement, and team standards.',
+      icon: '✨',
+      price: '$59/month',
+      features: ['Auto formatting', 'Style consistency', 'Best practices', 'Team standards', 'IDE integration', 'Custom rules'],
+      benefits: ['Improve code consistency', 'Enforce best practices', 'Save formatting time', 'Maintain code quality'],
+      marketPrice: '$100-200/month',
+      category: 'Developer Tools',
+      technologies: ['Prettier', 'ESLint', 'Custom AI Models', 'IDE Plugins', 'Git Hooks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Performance Profiler',
+      description: 'Advanced performance profiling with bottleneck detection, optimization suggestions, and real-time monitoring.',
+      icon: '📊',
+      price: '$179/month',
+      features: ['Performance profiling', 'Bottleneck detection', 'Optimization suggestions', 'Real-time monitoring', 'Memory analysis', 'CPU profiling'],
+      benefits: ['Identify performance issues', 'Optimize application speed', 'Reduce resource usage', 'Improve user experience'],
+      marketPrice: '$300-600/month',
+      category: 'Developer Tools',
+      technologies: ['Profiling Tools', 'Custom AI Models', 'Performance APIs', 'Monitoring Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Dependency Manager',
+      description: 'Intelligent dependency management with security scanning, version updates, and compatibility checking.',
+      icon: '📦',
+      price: '$99/month',
+      features: ['Dependency scanning', 'Security updates', 'Version management', 'Compatibility checking', 'Automated updates', 'License tracking'],
+      benefits: ['Keep dependencies secure', 'Automate updates', 'Prevent conflicts', 'Track licenses'],
+      marketPrice: '$150-300/month',
+      category: 'Developer Tools',
+      technologies: ['NPM', 'Yarn', 'Maven', 'Gradle', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Code Documentation Generator',
+      description: 'Automated code documentation generation with intelligent comments, API docs, and user guides.',
+      icon: '📖',
+      price: '$129/month',
+      features: ['Auto documentation', 'Intelligent comments', 'API documentation', 'User guides', 'Code examples', 'Multi-language support'],
+      benefits: ['Save documentation time', 'Improve code readability', 'Generate comprehensive docs', 'Maintain documentation'],
+      marketPrice: '$200-400/month',
+      category: 'Developer Tools',
+      technologies: ['JSDoc', 'Sphinx', 'Custom AI Models', 'Documentation Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI Test Generation Suite',
