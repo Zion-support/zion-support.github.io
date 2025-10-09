@@ -236,11 +236,8 @@ const CookiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default CookiesPage;
- cursor/analyze-improve-and-deploy-application-cde4

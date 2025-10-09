@@ -252,14 +252,6 @@ export class PerformanceMonitor {
 // Types
 // ============================================================================
 
-import type { 
-  PerformanceReport, 
-  ResourceStats, 
-  MemoryStats, 
-  PerformanceWithMemory, 
-  LayoutShift 
-} from '../types/app.types';
-
 // ============================================================================
 // Utility Functions
 // ============================================================================

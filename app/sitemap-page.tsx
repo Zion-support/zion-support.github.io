@@ -1,6 +1,7 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
 
 const SitemapPage: React.FC = () => {
   const pages = [
@@ -37,16 +38,7 @@ const SitemapPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Sitemap | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
-        />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white">
+            <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
@@ -89,7 +81,6 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
