@@ -29,10 +29,7 @@ const PerformanceDashboard: React.FC = () => {
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-815a
       // Measure memory usage
       let memoryUsage = 0;
       if ('memory' in performance) {
