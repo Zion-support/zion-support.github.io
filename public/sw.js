@@ -1,10 +1,9 @@
-const CACHE_NAME = 'zion-tech-v1';
+const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
-  '/manifest.json',
-  '/favicon.ico'
+  '/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
