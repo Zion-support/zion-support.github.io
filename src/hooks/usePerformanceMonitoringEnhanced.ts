@@ -5,9 +5,13 @@ export const usePerformanceMonitoring = () => {
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
     if (navigator.sendBeacon) {
-      navigator.sendBeacon(_url, _body);
+      navigator.sendBeacon(url, body);
     } else {
-      fetch(_url, { body: _body, method: 'POST', keepalive: true }).catch(console.error);
+<<<<<<< HEAD
+      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
+=======
+      fetch(url, { body: body, method: 'POST', keepalive: true }).catch(console.error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
     }
   }, []);
   useEffect(() => {

@@ -14,6 +14,7 @@ interface ITService {
   benefits: string[];
   technologies: string[];
   contactInfo: string;
+  color?: string;
 }
 
 const ITServicesPage: React.FC = () => {
@@ -59,7 +60,7 @@ const ITServicesPage: React.FC = () => {
     {
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
-      icon: Lock,
+      icon: ShieldCheck,
       features: ['SSO implementation', 'MFA setup', 'Privileged access management', 'Identity governance', 'Access reviews', 'Compliance reporting'],
       price: 'Starting at $1,800/month',
       category: 'Security',

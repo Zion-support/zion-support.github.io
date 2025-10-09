@@ -275,21 +275,21 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
-            </a>
+            </Link>
             
             <div className="flex items-center space-x-4">
               <a
@@ -384,6 +384,18 @@ const Navigation: React.FC = () => {
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
+              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Blog
+              </Link>
+              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Case Studies
+              </Link>
+              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </Link>
+              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Contact
+              </Link>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
