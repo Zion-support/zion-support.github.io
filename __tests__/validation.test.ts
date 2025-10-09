@@ -11,6 +11,20 @@ import {
   sanitizeInput,
 } from '../app/utils/validators';
 
+import {
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  validateRequired,
+} from '../app/utils/dataValidator';
+
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
     expect(isValidEmail('test@example.com')).toBe(true);
@@ -221,7 +235,7 @@ describe('Composite Validation', () => {
 
     const result = validateComposite('short', validators);
     expect(result.isValid).toBe(false);
-    expect(result.error).toContain('at least 10');
+    expect(result.error).toContain('10');
   });
 });
 

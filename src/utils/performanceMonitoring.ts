@@ -3,6 +3,30 @@
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics
  */
+
+// Mock logger for testing environment
+const logger = {
+  debug: (message: string, context?: string, data?: any) => {
+    if (process.env.NODE_ENV === 'test') {
+      console.log(`[DEBUG] ${context ? `[${context}] ` : ''}${message}`, data || '');
+    }
+  },
+  info: (message: string, context?: string, data?: any) => {
+    if (process.env.NODE_ENV === 'test') {
+      console.log(`[INFO] ${context ? `[${context}] ` : ''}${message}`, data || '');
+    }
+  },
+  warn: (message: string, context?: string, data?: any) => {
+    if (process.env.NODE_ENV === 'test') {
+      console.warn(`[WARN] ${context ? `[${context}] ` : ''}${message}`, data || '');
+    }
+  },
+  error: (message: string, context?: string, data?: any) => {
+    if (process.env.NODE_ENV === 'test') {
+      console.error(`[ERROR] ${context ? `[${context}] ` : ''}${message}`, data || '');
+    }
+  }
+};
 export interface PerformanceMetric {
   name: string;
   value: number;
