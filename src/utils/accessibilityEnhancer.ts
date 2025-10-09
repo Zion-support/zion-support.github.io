@@ -584,10 +584,6 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
-<<<<<<< HEAD
-=======
-Score: ${metrics.overallScore}/100
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
 Focusable Elements: ${metrics.focusableElements}
 Images Without Alt: ${metrics.imagesWithoutAlt}
 Links Without Text: ${metrics.linksWithoutText}

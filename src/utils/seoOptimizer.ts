@@ -132,11 +132,7 @@ class SEOOptimizer {
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';
     const directives: string[] = [];
-<<<<<<< HEAD
-    if (!this.currentPageData.noindex) {
-=======
     if (this.currentPageData.noindex) {
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       directives.push('noindex');
     } else {
       directives.push('index');
