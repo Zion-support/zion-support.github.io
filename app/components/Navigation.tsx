@@ -182,7 +182,7 @@ const Navigation: React.FC = memo(() => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -267,6 +267,14 @@ const Navigation: React.FC = memo(() => {
             </div>
 
             <Link 
+              to="/pricing" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+
+            <Link 
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
@@ -330,6 +338,14 @@ const Navigation: React.FC = memo(() => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
 
               {/* Mobile Services */}
