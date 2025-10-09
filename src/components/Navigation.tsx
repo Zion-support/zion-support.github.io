@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -44,8 +44,37 @@ const Navigation: React.FC = memo(() => {
     }
   };
 
+  const mainNavItems = [
+    { name: 'Home', path: '/', icon: '🏠' },
+    { name: 'About', path: '/about', icon: 'ℹ️' },
+    { name: 'Services', path: '/services', icon: '⚙️' },
+    { name: 'Case Studies', path: '/case-studies', icon: '📊' },
+    { name: 'Blog', path: '/blog', icon: '📝' },
+    { name: 'Contact', path: '/contact', icon: '📞' }
+  ];
+
   const serviceCategories = [
     {
+      title: 'Micro SAAS Solutions',
+      icon: Zap,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      hoverColor: 'hover:bg-cyan-500/20',
+      services: [
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'AI-powered business intelligence', icon: '📈', popular: true },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
+        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
+        { name: 'AI Video Generator', path: '/ai-video-generation', description: 'AI-powered video creation', icon: '🎬', popular: true },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-driven SEO optimization', icon: '🎯', popular: false },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing', icon: '📄', popular: false },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation', icon: '⚡', popular: true }
+      ]
+    },
+    {
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4059
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-400',
@@ -165,7 +194,7 @@ const Navigation: React.FC = memo(() => {
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
-                                to={service.path}
+                                href={service.path}
                                 className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                                 onClick={closeAllMenus}
                               >
@@ -177,7 +206,7 @@ const Navigation: React.FC = memo(() => {
                             ))}
                             {category.services.length > 6 && (
                               <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                                href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                                 className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                                 onClick={closeAllMenus}
                               >
@@ -190,13 +219,14 @@ const Navigation: React.FC = memo(() => {
                     </div>
                     <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                       <Link
-                        to="/services"
+                        href="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
                       >
                         View All Services
                       </Link>
                     </div>
+                  </div>
                   </div>
                 </div>
               )}
@@ -249,24 +279,25 @@ const Navigation: React.FC = memo(() => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link
-                to="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                About
-              </Link>
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+            <div className="px-4 py-6 space-y-6">
+              {/* Main Navigation */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
+                {mainNavItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.path}
+                    onClick={closeAllMenus}
+                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  >
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="font-medium">{item.name}</span>
+                  </Link>
+                ))}
+              </div>
 
               {/* Mobile Services */}
               <div>
@@ -307,6 +338,7 @@ const Navigation: React.FC = memo(() => {
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
 
               <Link
                 to="/case-studies"
@@ -316,21 +348,6 @@ const Navigation: React.FC = memo(() => {
                 Case Studies
               </Link>
 
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
 
               <a
                 href="tel:+13024640950"
