@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
@@ -20,7 +20,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Predictive modeling AI' },
+    { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Conversational AI builder' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -49,7 +52,13 @@ const Footer: React.FC = memo(() => {
     { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
     { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
     { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' },
+    { name: 'AI Music Generator', url: '/ai-music-generator', description: 'AI music creation' },
+    { name: 'AI Video Editor', url: '/ai-video-editor', description: 'AI video editing' },
+    { name: 'AI Image Generator', url: '/ai-image-generator', description: 'AI image creation' },
+    { name: 'Financial Dashboard', url: '/financial-dashboard', description: 'Financial analytics' },
+    { name: 'Payment Processor', url: '/payment-processor', description: 'Payment processing' },
+    { name: 'Investment Tracker', url: '/investment-tracker', description: 'Investment management' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },

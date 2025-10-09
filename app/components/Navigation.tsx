@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Music, Video, Image, Mic, Languages, DollarSign, CreditCard, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -53,7 +53,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics', icon: BarChart, description: 'Predictive AI' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Email AI' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Users, description: 'Chatbot AI' }
   ];
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
@@ -82,7 +85,15 @@ const Navigation: React.FC = () => {
     { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
+    { name: 'AI Music Generator', href: '/ai-music-generator', icon: Music, description: 'Music AI' },
+    { name: 'AI Video Editor', href: '/ai-video-editor', icon: Video, description: 'Video AI' },
+    { name: 'AI Image Generator', href: '/ai-image-generator', icon: Image, description: 'Image AI' },
+    { name: 'AI Voice Generator', href: '/ai-voice-generator', icon: Mic, description: 'Voice AI' },
+    { name: 'AI Translator', href: '/ai-translator', icon: Languages, description: 'Translation AI' },
+    { name: 'Financial Dashboard', href: '/financial-dashboard', icon: DollarSign, description: 'Finance AI' },
+    { name: 'Payment Processor', href: '/payment-processor', icon: CreditCard, description: 'Payment AI' },
+    { name: 'Investment Tracker', href: '/investment-tracker', icon: TrendingUp, description: 'Investment AI' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
