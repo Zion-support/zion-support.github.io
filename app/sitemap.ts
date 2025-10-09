@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai-sales-automation',
     '/ai-data-visualization',
     '/ai-customer-support',
+    '/ai-predictive-analytics',
+    '/ai-image-recognition',
+    '/ai-voice-processing',
+    '/ai-recommendation-engine',
+    '/ai-sentiment-analysis',
+    '/ai-research-assistant',
     '/it-services',
     '/it-infrastructure',
     '/cybersecurity',
@@ -49,7 +55,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/cookies',
     '/gdpr',
     '/security',
-    '/compliance'
+    '/compliance',
+    '/pricing',
+    '/demo',
+    '/consultation'
   ]
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
