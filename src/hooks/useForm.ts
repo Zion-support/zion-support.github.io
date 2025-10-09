@@ -45,11 +45,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
   // Validate a single field
   const validateSingleField = useCallback(
     (field: keyof T): void => {
-<<<<<<< HEAD
-      const fieldRules = validationSchema?.[field];
-=======
       const fieldRules = validationSchema?.[field as keyof typeof validationSchema];
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
       if (!fieldRules) return;
       const fieldValue = values[field];
       const rules = fieldRules as ValidationRule<T[keyof T]>[];

@@ -85,12 +85,12 @@ const WebDevelopmentPage: React.FC = () => {
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications']}
         canonicalUrl="https://ziontechgroup.com/web-development"
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePreloading={true}
-      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
