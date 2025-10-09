@@ -361,4 +361,6 @@ interface LayoutShift extends PerformanceEntry {
 }
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();
+}
+
 export default PerformanceMetrics;

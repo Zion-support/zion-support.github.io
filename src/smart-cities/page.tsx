@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
 
 const SmartCitiesPage: React.FC = () => {
@@ -102,6 +101,3 @@ const SmartCitiesPage: React.FC = () => {
 };
 
 export default SmartCitiesPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

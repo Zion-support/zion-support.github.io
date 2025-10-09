@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
@@ -215,6 +214,3 @@ const AnalyticsToolsPage: React.FC = () => {
   );
 };
 export default AnalyticsToolsPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

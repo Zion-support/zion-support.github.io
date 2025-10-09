@@ -171,5 +171,4 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     }
     return this.props.children;
   }
-}
 export default ComprehensiveErrorBoundary;

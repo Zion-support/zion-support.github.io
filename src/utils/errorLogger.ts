@@ -142,4 +142,6 @@ export const logWarning = (message: string, context?: Record<string, unknown>) =
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export const logInfo = (message: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+}
+
 export default errorLogger;

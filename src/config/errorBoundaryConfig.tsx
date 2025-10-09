@@ -224,5 +224,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
-}
 export default getErrorBoundaryConfig;

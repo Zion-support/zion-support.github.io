@@ -161,6 +161,5 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
-  );
-};
+  );;
 export default HomePage;

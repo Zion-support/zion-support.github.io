@@ -313,4 +313,6 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
   healthCheck.register(name, checkFn)
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
+}
+
 export default healthCheck

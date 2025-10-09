@@ -132,5 +132,4 @@ export default function AIAutonomousBusinessSystems2026() {
         </div>
       </div>
     </div>
-  );
-};
+  );;

@@ -563,4 +563,6 @@ class AdvancedAnalytics {
 }
 // Export singleton instance
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
+}
+
 export default advancedAnalytics;

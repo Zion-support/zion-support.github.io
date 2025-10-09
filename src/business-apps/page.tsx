@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
 
 const BusinessAppsPage: React.FC = () => {
@@ -276,6 +275,3 @@ const BusinessAppsPage: React.FC = () => {
 };
 
 export default BusinessAppsPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

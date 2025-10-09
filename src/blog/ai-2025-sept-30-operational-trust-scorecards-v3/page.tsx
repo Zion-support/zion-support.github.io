@@ -75,6 +75,4 @@ const OperationalTrustScorecardsPage: React.FC = () => {
     </main>
     </>
   );
-}
-
 export default OperationalTrustScorecardsPage;

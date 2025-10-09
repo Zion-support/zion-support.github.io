@@ -142,6 +142,6 @@ export async function getServiceWorkerStatus(): Promise<{
       registered: false,
       active: false
     };
-  }
 }
+
 export default registerServiceWorker;

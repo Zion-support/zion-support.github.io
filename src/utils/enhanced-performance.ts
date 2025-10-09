@@ -337,5 +337,6 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
  * Default performance monitor instance
  */
 export const performanceMonitor = new PerformanceMonitor();
+}
 
 export default PerformanceMonitor;

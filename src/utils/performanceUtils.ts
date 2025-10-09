@@ -284,8 +284,8 @@ export class FPSMonitor {
   }
   getFPS(): number {
     return this.fps;
-  }
 }
+
 export default {
   debounce,
   throttle,

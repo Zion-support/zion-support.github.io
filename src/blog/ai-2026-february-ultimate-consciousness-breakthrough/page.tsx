@@ -79,5 +79,4 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
         </div>
       </div>
     </div>
-  );
-};
+  );;

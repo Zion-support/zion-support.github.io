@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -68,6 +67,3 @@ const ItConsulting: React.FC = () => {
 };
 
 export default ItConsulting;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

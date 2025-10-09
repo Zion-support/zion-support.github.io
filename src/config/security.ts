@@ -112,7 +112,6 @@ export function generateSecureToken(length: number = 32): string {
     }
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-}
 export default {
   securityHeaders,
   rateLimitConfig,

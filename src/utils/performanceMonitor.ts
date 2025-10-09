@@ -252,4 +252,6 @@ First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms
 
 // Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();
+}
+
 export default performanceMonitor;

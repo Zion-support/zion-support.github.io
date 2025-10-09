@@ -73,6 +73,6 @@ export class SecurityManager {
       global._rateLimitStorage = new Map();
     }
     return global._rateLimitStorage;
-  }
 }
+
 export default SecurityManager.getInstance();

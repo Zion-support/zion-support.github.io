@@ -513,4 +513,6 @@ export const useErrorHandler = () => {
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   };
 };
+}
+
 export default ErrorHandler;

@@ -183,6 +183,6 @@ if (typeof window !== 'undefined') {
     window.addEventListener('load', () => {
       analyticsTracker.initialize();
     });
-  }
 }
+
 export default analyticsTracker;

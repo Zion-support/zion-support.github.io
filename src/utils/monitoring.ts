@@ -216,4 +216,6 @@ class MonitoringService {
 }
 // Singleton instance
 const monitoring = new MonitoringService()
+}
+
 export default monitoring

@@ -198,4 +198,5 @@ export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user
 if (typeof window !== 'undefined') {
   analytics.initialize()
 }
+
 export default analytics

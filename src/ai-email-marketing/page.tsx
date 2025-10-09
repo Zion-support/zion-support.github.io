@@ -1,7 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
+import { Mail, Target, BarChart, Users, Zap, Shield, Send } from 'lucide-react';
 
-const AIEmailMarketingPage: React.FC = () => {
+const AiEmailMarketingPage: React.FC = () => {
   const features = [
     {
       icon: Mail,
@@ -101,8 +101,6 @@ const AIEmailMarketingPage: React.FC = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiEmailMarketingPage: React.FC = () => {
   return (

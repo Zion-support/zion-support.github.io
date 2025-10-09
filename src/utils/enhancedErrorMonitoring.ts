@@ -348,4 +348,6 @@ ${stats.recent.map(error => `
 }
 // Export singleton instance
 export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
+}
+
 export default enhancedErrorMonitoring

@@ -110,6 +110,4 @@ declare global {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
   }
-}
-
 export default Analytics;

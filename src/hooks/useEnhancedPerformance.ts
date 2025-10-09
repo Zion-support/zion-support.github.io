@@ -102,5 +102,4 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackUserAction,
     measureOperation
   };
-}
 export default useEnhancedPerformance;

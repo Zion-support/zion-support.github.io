@@ -1,9 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
+import { Brain, Zap, Bot, BarChart, Shield, Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIServicesPage: React.FC = () => {
+const AiServicesPage: React.FC = () => {
   const services = [
     {
       title: 'AI Strategy & Consulting',
@@ -41,8 +41,6 @@ const AIServicesPage: React.FC = () => {
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiServicesPage: React.FC = () => {
   return (

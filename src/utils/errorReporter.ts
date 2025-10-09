@@ -200,4 +200,6 @@ export const captureComponentError = (
     componentStack: errorInfo.componentStack
   });
 };
+}
+
 export default ErrorReporter;

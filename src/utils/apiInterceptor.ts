@@ -361,4 +361,6 @@ export class APIInterceptor {
 }
 // Export singleton instance
 export const apiInterceptor = APIInterceptor.getInstance();
+}
+
 export default APIInterceptor;

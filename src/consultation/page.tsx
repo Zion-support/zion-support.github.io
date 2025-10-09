@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const ConsultationPage: React.FC = () => {
   return (

@@ -234,7 +234,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
     .use(authMiddleware)
     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
-}
 export default {
   MiddlewareExecutor,
   loggingMiddleware,

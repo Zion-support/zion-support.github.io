@@ -115,4 +115,6 @@ class EnhancedErrorTracker {
 }
 // Export singleton instance
 export const errorTracker = new EnhancedErrorTracker();
+}
+
 export default errorTracker;

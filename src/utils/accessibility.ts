@@ -268,4 +268,6 @@ class AccessibilityService {
 }
 // Singleton instance
 const a11y = new AccessibilityService();
+}
+
 export default a11y;
