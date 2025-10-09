@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 interface SEOData {
   title: string;
   description: string;
@@ -163,7 +163,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       <meta name="description" content={seoData.description} />
@@ -226,7 +226,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
+    </Head>
   );
 };
 export default AdvancedSEOOptimizer;

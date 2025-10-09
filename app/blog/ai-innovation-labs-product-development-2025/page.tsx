@@ -1,13 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
+import Link from 'next/link';
 const InnovationLabsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
         <meta name="description" content="Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration." />
         <meta property="og:url" content="/og/ai-innovation-labs-2025.jpg" />
-      </Helmet>
+      </Head>
       <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -114,11 +115,11 @@ const InnovationLabsPage: React.FC = () => {
                 Join leading companies transforming product development with AI-powered innovation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <Link href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Schedule Innovation Assessment
                 </Link>
-                <Link to="/services"
+                <Link href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
                 </Link>

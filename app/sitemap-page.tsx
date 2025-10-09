@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -36,14 +36,14 @@ const SitemapPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Sitemap | Zion Tech Group</title>
         <meta
           name="description"
           content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
         />
         <meta name="robots" content="index, follow" />
-      </Helmet>
+      </Head>
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
           <header className="text-center mb-12">

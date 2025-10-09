@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import Head from 'next/head';
+import { CheckCircle, Code, Smartphone, Database, Cloud } from 'lucide-react';
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
@@ -211,11 +211,11 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
-      <Helmet>
+      <Head>
         <title>AI Mobile App Development | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered mobile app development services including iOS, Android, and cross-platform solutions. Build intelligent mobile apps with cutting-edge AI technology." />
         <meta name="keywords" content="mobile app development, AI mobile apps, iOS development, Android development, cross-platform apps, mobile AI integration" />
-      </Helmet>
+      </Head>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
