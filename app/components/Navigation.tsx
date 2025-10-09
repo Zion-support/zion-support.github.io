@@ -1,17 +1,16 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Zap } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsMenuOpen(false);
         setServicesOpen(false);
       }
     };
@@ -29,13 +28,13 @@ const Navigation: React.FC = memo(() => {
   }, []);
 
   const closeAllMenus = () => {
-    setIsOpen(false);
+    setIsMenuOpen(false);
     setServicesOpen(false);
   };
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
+    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) {
       setServicesOpen(false);
     }
   };
@@ -98,50 +97,27 @@ const Navigation: React.FC = memo(() => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
-        : 'bg-transparent'
+        : 'bg-slate-900/50 backdrop-blur-lg border-b border-white/10'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
+              <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-=======
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = memo(() => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  return (
-    <nav className="bg-slate-900/50 backdrop-blur-lg border-b border-white/10 fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white">
-            Zion Tech Group
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
               About
             </Link>
             <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
@@ -156,7 +132,6 @@ const Navigation: React.FC = memo(() => {
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Pricing
             </Link>
-<<<<<<< HEAD
 
             {/* Services Dropdown */}
             <div className="relative group">
@@ -249,7 +224,7 @@ const Navigation: React.FC = memo(() => {
             {/* CTA Button */}
             <Link 
               to="/contact" 
-              className="cyber-button inline-flex items-center"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-flex items-center"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -258,43 +233,20 @@ const Navigation: React.FC = memo(() => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-            <div className="flex items-center space-x-4 ml-4">
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Phone className="w-5 h-5" />
-              </a>
-              <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-            >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
               <Link
                 to="/"
@@ -308,48 +260,36 @@ const Navigation: React.FC = memo(() => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-=======
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-lg">
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
                 About
               </Link>
               <Link
                 to="/services"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
               >
                 Services
               </Link>
               <Link
                 to="/ai-services"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
               >
                 AI Services
               </Link>
               <Link
                 to="/micro-saas"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
               >
                 Micro SAAS
               </Link>
               <Link
                 to="/pricing"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
               >
                 Pricing
               </Link>
-<<<<<<< HEAD
 
               {/* Mobile Services */}
               <div>
@@ -423,23 +363,6 @@ const Navigation: React.FC = memo(() => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-=======
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
-              <div className="flex items-center space-x-4 px-3 py-2">
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  <Phone className="w-5 h-5" />
-                </a>
-                <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  <Mail className="w-5 h-5" />
-                </a>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
             </div>
           </div>
         )}
@@ -449,9 +372,5 @@ const Navigation: React.FC = memo(() => {
 });
 
 Navigation.displayName = 'Navigation';
-<<<<<<< HEAD
-export default Navigation;
-=======
 
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
