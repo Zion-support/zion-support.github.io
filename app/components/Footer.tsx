@@ -105,7 +105,10 @@ const Footer: React.FC = memo(() => {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
+    hours: 'Mon-Fri: 9AM-6PM EST',
+    website: 'https://ziontechgroup.com',
+    linkedin: 'https://linkedin.com/company/ziontechgroup',
+    twitter: 'https://twitter.com/ziontechgroup'
   };
 
   const achievements = [
@@ -128,8 +131,8 @@ const Footer: React.FC = memo(() => {
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
-                  <p className="text-sm text-cyan-400">AI & IT Solutions</p>
+                  <h3 className="text-xl font-bold text-white cyber-text-enhanced neon-glow-enhanced">Zion Tech Group</h3>
+                  <p className="text-sm text-cyan-400 neon-glow">AI & IT Solutions</p>
                 </div>
               </Link>
             </div>
@@ -158,7 +161,7 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-glow-enhanced">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
@@ -185,7 +188,7 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-glow-enhanced">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -212,7 +215,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Emerging Technologies */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-glow-enhanced">Emerging Tech</h3>
             <ul className="space-y-3">
               {emergingTech.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -240,7 +243,7 @@ const Footer: React.FC = memo(() => {
 
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
+          <h3 className="text-xl font-bold text-white mb-4 text-center neon-glow-enhanced">Get In Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-cyan-400" />
@@ -268,6 +271,30 @@ const Footer: React.FC = memo(() => {
               <div>
                 <div className="text-white font-medium">{contactInfo.hours}</div>
                 <div className="text-gray-400 text-sm">Business hours</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Additional Contact Methods */}
+          <div className="mt-6 pt-6 border-t border-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-cyan-400 font-medium mb-2">Website</div>
+                <a href={contactInfo.website} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  {contactInfo.website}
+                </a>
+              </div>
+              <div>
+                <div className="text-cyan-400 font-medium mb-2">LinkedIn</div>
+                <a href={contactInfo.linkedin} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  @ziontechgroup
+                </a>
+              </div>
+              <div>
+                <div className="text-cyan-400 font-medium mb-2">Twitter</div>
+                <a href={contactInfo.twitter} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  @ziontechgroup
+                </a>
               </div>
             </div>
           </div>

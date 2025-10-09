@@ -186,17 +186,17 @@ const Navigation: React.FC = memo(() => {
               <span className="text-white font-bold text-lg">Z</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
-              <p className="text-xs text-cyan-400">AI & IT Solutions</p>
+              <h1 className="text-xl font-bold text-white cyber-text-enhanced neon-glow-enhanced">Zion Tech Group</h1>
+              <p className="text-xs text-cyan-400 neon-glow">AI & IT Solutions</p>
             </div>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium hover:neon-glow">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium hover:neon-glow">              
               About
             </Link>
 
@@ -204,7 +204,7 @@ const Navigation: React.FC = memo(() => {
             <div className="relative group">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
+                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white hover:neon-glow"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
@@ -214,9 +214,9 @@ const Navigation: React.FC = memo(() => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 cyber-card">
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
+                    <h3 className="text-lg font-bold text-white mb-4 neon-glow-enhanced">Our Services</h3>
                     <div className="grid grid-cols-2 gap-4">
                       {serviceCategories.map((category, index) => (
                         <div key={index} className="space-y-2">
