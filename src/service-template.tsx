@@ -28,7 +28,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            {title}
+            {Title}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             {description}

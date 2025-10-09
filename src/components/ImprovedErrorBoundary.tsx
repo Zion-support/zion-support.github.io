@@ -150,7 +150,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
         <div className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}></div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
+            <h1 style={styles.title}>Oops! Something Went Wrong</h1>
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>

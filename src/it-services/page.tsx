@@ -1,67 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
+
 const ItServicesPage: React.FC = () => {
-      title: 'Advanced Threat Protection',
-      description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
-      icon: Shield,
-      features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
-      price: 'Starting at $2,000/month',
-      category: 'Security',
-      benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
-      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
-      title: 'IT Infrastructure',
-      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
-      icon: Server,
-      features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
-      price: 'Starting at $1,200/month',
-      benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      title: 'Business Intelligence',
-      description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
-      icon: BarChart,
-      features: ['Data visualization', 'Report generation', 'Dashboard creation', 'Data warehousing', 'ETL processes', 'Predictive analytics'],
-      price: 'Starting at $1,000/month',
-      category: 'Analytics',
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
-      icon: Users,
-      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost analysis', 'Implementation guidance', 'Training'],
-      price: 'Starting at $150/hour',
-      category: 'Consulting',
-      benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
-      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
-    }
-  ];
   return (
-  // TODO: Add parameters,
-)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced IT services solutions by Zion Tech Group." />
-      </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
+      <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">IT Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-//             Coming Soon - Advanced IT services solutions that will transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-//               Contact Us
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-Learn More
-          </div>
+          <h1 className="text-4xl font-bold text-white mb-4">It Services</h1>
+          <p className="text-gray-300 mb-8">Coming Soon - Advanced it services solutions</p>
+          <Link 
+            to="/contact" 
+            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
       <Footer />
+    </div>
   );
 };
-export default ITServicesPage;
+
+export default ItServicesPage;

@@ -176,7 +176,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-white mb-2">
-//                 Oops! Something went wrong
+//                 Oops! Something Went Wrong
               </h1>
               <p className="text-gray-300 mb-4">
 //                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.

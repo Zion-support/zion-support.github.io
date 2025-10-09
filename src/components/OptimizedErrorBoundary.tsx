@@ -234,7 +234,7 @@ className='w-6 h-6 text-red-600'
           </div>
         </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-//           Something went wrong
+//           Something Went Wrong
         </h1>
         <p className='text-gray-600 mb-4'>
           We&apos;re sorry, but something unexpected happened. Please try again.

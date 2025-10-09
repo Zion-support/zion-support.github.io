@@ -72,7 +72,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
             {/* Error Message */}
             <h1 className="text-2xl font-bold text-white mb-4">
-//               Something went wrong
+//               Something Went Wrong
             </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
