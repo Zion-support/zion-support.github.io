@@ -140,12 +140,68 @@ export const monitorPerformance = () => {
   observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 };
 
+// Resource hints for better performance
+export const addResourceHints = () => {
+  if (typeof window === 'undefined') return;
+
+  const hints = [
+    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+    { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+  ];
+
+  hints.forEach(hint => {
+    const link = document.createElement('link');
+    link.rel = hint.rel;
+    link.href = hint.href;
+    if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
+    document.head.appendChild(link);
+  });
+};
+
+// Optimize third-party scripts
+export const optimizeThirdPartyScripts = () => {
+  if (typeof window === 'undefined') return;
+
+  // Defer non-critical scripts
+  const scripts = document.querySelectorAll('script[src]');
+  scripts.forEach(script => {
+    if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+      script.setAttribute('defer', '');
+    }
+  });
+};
+
+// Memory management
+export const optimizeMemoryUsage = () => {
+  if (typeof window === 'undefined') return;
+
+  // Clean up event listeners on page unload
+  window.addEventListener('beforeunload', () => {
+    // Remove any global event listeners
+    document.removeEventListener('click', () => {});
+    document.removeEventListener('submit', () => {});
+  });
+
+  // Periodic garbage collection hint
+  if ('gc' in window) {
+    setInterval(() => {
+      (window as any).gc();
+    }, 30000); // Every 30 seconds
+  }
+};
+
 // Initialize all optimizations
 export const initializePerformanceOptimizations = () => {
+  addResourceHints();
   preloadCriticalResources();
   optimizeImages();
   setupAdvancedLazyLoading();
   registerServiceWorker();
   inlineCriticalCSS();
   monitorPerformance();
+  optimizeThirdPartyScripts();
+  optimizeMemoryUsage();
 };

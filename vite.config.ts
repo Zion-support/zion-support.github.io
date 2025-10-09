@@ -21,12 +21,33 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          router: ['react-router-dom'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('recharts')) {
+              return 'charts-vendor';
+            }
+            if (id.includes('react-router')) {
+              return 'router-vendor';
+            }
+            return 'vendor';
+          }
+          // Page chunks - group by feature
+          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp')) {
+            return 'ai-pages';
+          }
+          if (id.includes('/src/blog/')) {
+            return 'blog-pages';
+          }
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
