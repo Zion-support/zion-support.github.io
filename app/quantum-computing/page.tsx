@@ -10,7 +10,7 @@ const QuantumComputingPage: React.FC = () => {
       icon: '⚛️',
       price: 'Starting at $15,000/project',
       features: ['Custom quantum algorithms', 'Quantum circuit design', 'Optimization problems', 'Cryptographic protocols', 'Performance benchmarking'],
-      benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],cursor/add-new-services-and-deploy-updates-f159
+      benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],
       marketPrice: '$25,000-75,000/project',
       category: 'Algorithm Development',
       technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Assembly']
@@ -112,7 +112,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Navigate quantum landscape', 'Make informed technology decisions', 'Maximize quantum investment'],
       marketPrice: '$800-1,500/hour',
       category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
     }
   ];
 
@@ -328,18 +328,18 @@ const QuantumComputingPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"cursor/add-new-services-and-deploy-updates-f159
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"cursor/add-new-services-and-deploy-updates-f159
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">cursor/add-new-services-and-deploy-updates-f159
+            <div className="mt-8 text-sm text-purple-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

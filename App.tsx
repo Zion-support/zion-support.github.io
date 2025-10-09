@@ -1,42 +1,33 @@
 import React, { memo, useMemo, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
+// Import pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import MicroSAASPage from './app/micro-saas/page';
+import QuantumComputingPage from './app/quantum-computing/page';
+import AutonomousSystemsPage from './app/autonomous-systems/page';
+import BusinessIntelligencePage from './app/business-intelligence/page';
+import BlockchainWeb3Page from './app/blockchain-web3/page';
+import IoTPage from './app/iot-edge-computing/page';
+import CybersecurityPage from './app/cybersecurity/page';
+import CaseStudiesPage from './app/case-studies/page';
+import BlogPage from './app/blog/page';
+import EnterprisePage from './app/enterprise/page';
+import TeamPage from './app/team/page';
+import ServicesAdvertisingPage from './app/services-advertising/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import NotFoundPage from './app/not-found';
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
-
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
-
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
+// Import components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -163,20 +154,39 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        <Router>
+          <div className="min-h-screen bg-white">
+            <Navigation />
+            <main>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSAASPage />} />
+                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                  <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                  <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                  <Route path="/iot-edge-computing" element={<IoTPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/enterprise" element={<EnterprisePage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );
