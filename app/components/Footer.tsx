@@ -120,13 +120,13 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white cyber-grid-enhanced neural-network-bg">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center cyber-text-enhanced neon-text">
+              <Brain className="w-5 h-5 mr-2 neon-pulse" />
               AI Services
             </h3>
             <ul className="space-y-2">

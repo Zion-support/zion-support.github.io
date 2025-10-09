@@ -1,346 +1,388 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
-export default function ServicesAdvertisingPage() {
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, DollarSign, Rocket, Database, Cloud, Lock, Code, Settings, Monitor, Smartphone, Laptop, Server, Network, HardDrive, Wifi, Bluetooth, Battery, Camera, Headphones, Microphone, Speaker, Printer, Scanner, Fax, Router, Switch, Hub, Modem, Firewall, Antivirus, Backup, Recovery, Migration, Integration, Optimization, Maintenance, Support, Training, Consulting, Development, Testing, Deployment, Monitoring, Analytics, Reporting, Automation, Workflow, Process, Management, Administration, Configuration, Customization, Personalization, Scalability, Performance, Security, Compliance, Governance, Risk, Audit, Assessment, Planning, Strategy, Implementation, Execution, Delivery, Quality, Excellence, Innovation, Transformation, Digital, Modern, Advanced, Cutting-edge, State-of-the-art, Revolutionary, Breakthrough, Game-changing, Disruptive, Next-generation, Future-ready, AI-powered, Machine-learning, Deep-learning, Neural-network, Natural-language, Computer-vision, Predictive, Prescriptive, Descriptive, Diagnostic, Cognitive, Intelligent, Smart, Automated, Autonomous, Self-learning, Self-optimizing, Self-healing, Self-scaling, Self-securing, Self-monitoring, Self-reporting, Self-analyzing, Self-predicting, Self-prescribing, Self-diagnosing, Self-cognitive, Self-intelligent, Self-smart, Self-automated, Self-autonomous } from 'lucide-react';
+
+const ServicesAdvertisingPage: React.FC = () => {
+  const serviceCategories = [
+    {
+      title: 'AI & Machine Learning Services',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-900/20',
+      borderColor: 'border-purple-500/30',
+      services: [
+        {
+          name: 'AI Consulting & Strategy',
+          description: 'Comprehensive AI strategy development and implementation planning for enterprise organizations.',
+          price: '$2,500/month',
+          marketPrice: '$5,000-10,000/month',
+          features: ['AI Strategy Development', 'Technology Assessment', 'Implementation Roadmap', 'Change Management', 'ROI Analysis', 'Executive Training'],
+          benefits: ['Accelerate AI adoption by 300%', 'Reduce implementation risks by 60%', 'Achieve 400% ROI within 12 months', 'Future-proof your technology stack'],
+          technologies: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Cloud AI', 'Edge Computing'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/ai-consulting'
+        },
+        {
+          name: 'Machine Learning Solutions',
+          description: 'Custom machine learning models for predictive analytics, pattern recognition, and intelligent decision-making systems.',
+          price: '$1,500/month',
+          marketPrice: '$3,000-6,000/month',
+          features: ['Custom ML Model Development', 'Data Preprocessing & Cleaning', 'Model Training & Optimization', 'Real-time Inference', 'Model Monitoring & Maintenance', 'A/B Testing Framework'],
+          benefits: ['Improve accuracy by 40-80%', 'Reduce manual work by 70%', 'Enable real-time predictions', 'Scale with your business growth'],
+          technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/machine-learning'
+        },
+        {
+          name: 'Natural Language Processing',
+          description: 'Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.',
+          price: '$1,200/month',
+          marketPrice: '$2,500-5,000/month',
+          features: ['Text Classification & Analysis', 'Sentiment Analysis', 'Language Translation', 'Named Entity Recognition', 'Text Summarization', 'Chatbot Development'],
+          benefits: ['Process 10,000+ documents/hour', 'Improve customer satisfaction by 50%', 'Reduce response time by 80%', 'Enable multilingual operations'],
+          technologies: ['OpenAI GPT', 'BERT', 'Transformers', 'spaCy', 'NLTK', 'Hugging Face'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/nlp'
+        },
+        {
+          name: 'Computer Vision Solutions',
+          description: 'Image and video analysis solutions for object detection, facial recognition, quality control, and automated inspection.',
+          price: '$1,800/month',
+          marketPrice: '$3,500-7,000/month',
+          features: ['Object Detection & Recognition', 'Facial Recognition Systems', 'Image Classification', 'Video Analysis', 'Quality Control Automation', 'Real-time Processing'],
+          benefits: ['Reduce inspection time by 90%', 'Improve accuracy to 99.5%', 'Enable 24/7 monitoring', 'Reduce human error by 95%'],
+          technologies: ['OpenCV', 'YOLO', 'ResNet', 'TensorFlow', 'PyTorch', 'CUDA'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/computer-vision'
+        }
+      ]
+    },
+    {
+      title: 'IT Infrastructure & Cloud Services',
+      icon: Cloud,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-900/20',
+      borderColor: 'border-blue-500/30',
+      services: [
+        {
+          name: 'Cloud Migration & Setup',
+          description: 'Complete cloud migration services with AWS, Azure, and Google Cloud Platform integration.',
+          price: '$2,000/month',
+          marketPrice: '$4,000-8,000/month',
+          features: ['Cloud Architecture Design', 'Migration Planning', 'Data Migration', 'Security Configuration', 'Performance Optimization', 'Cost Management'],
+          benefits: ['Reduce infrastructure costs by 40%', 'Improve scalability and flexibility', 'Enhance security and compliance', 'Enable remote work capabilities'],
+          technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/cloud-migration'
+        },
+        {
+          name: 'DevOps & CI/CD Implementation',
+          description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
+          price: '$1,800/month',
+          marketPrice: '$3,500-7,000/month',
+          features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Security Scanning', 'Automated Testing'],
+          benefits: ['Faster deployments', 'Improved quality', 'Reduced errors', 'Better collaboration'],
+          technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/devops'
+        },
+        {
+          name: 'Database Administration',
+          description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
+          price: '$1,200/month',
+          marketPrice: '$2,500-5,000/month',
+          features: ['Performance Tuning', 'Backup & Recovery', 'High Availability', 'Data Migration', 'Monitoring', 'Capacity Planning'],
+          benefits: ['Improved performance', 'Reduced downtime', 'Cost optimization', 'Data protection'],
+          technologies: ['SQL Server', 'Oracle', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/database-admin'
+        },
+        {
+          name: 'Network Infrastructure',
+          description: 'Complete network design, implementation, and management for enterprise environments.',
+          price: '$1,500/month',
+          marketPrice: '$3,000-6,000/month',
+          features: ['Network Design', 'Router & Switch Configuration', 'Wireless Setup', 'Security Implementation', 'Monitoring', 'Troubleshooting'],
+          benefits: ['Improved connectivity', 'Enhanced security', 'Better performance', 'Reduced downtime'],
+          technologies: ['Cisco', 'Juniper', 'Aruba', 'Fortinet', 'Palo Alto', 'Ubiquiti'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/network-infrastructure'
+        }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'text-red-400',
+      bgColor: 'bg-red-900/20',
+      borderColor: 'border-red-500/30',
+      services: [
+        {
+          name: 'Advanced Threat Protection',
+          description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
+          price: '$2,500/month',
+          marketPrice: '$5,000-10,000/month',
+          features: ['AI Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Security Monitoring', 'Vulnerability Scanning', 'Penetration Testing'],
+          benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
+          technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/threat-protection'
+        },
+        {
+          name: 'Identity & Access Management',
+          description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
+          price: '$1,800/month',
+          marketPrice: '$3,500-7,000/month',
+          features: ['SSO Implementation', 'MFA Setup', 'Privileged Access Management', 'Identity Governance', 'Access Reviews', 'Compliance Reporting'],
+          benefits: ['Enhanced security', 'Improved user experience', 'Compliance support', 'Reduced IT overhead'],
+          technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/iam'
+        },
+        {
+          name: 'Security Compliance & Audit',
+          description: 'Comprehensive security compliance services for SOC 2, ISO 27001, HIPAA, and other regulatory requirements.',
+          price: '$3,000/month',
+          marketPrice: '$6,000-12,000/month',
+          features: ['Compliance Assessment', 'Policy Development', 'Audit Preparation', 'Risk Assessment', 'Training Programs', 'Ongoing Monitoring'],
+          benefits: ['Achieve compliance', 'Reduce audit time', 'Minimize risks', 'Build trust'],
+          technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Audit Tools'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/compliance'
+        },
+        {
+          name: 'Security Operations Center (SOC)',
+          description: '24/7 security monitoring and incident response with dedicated security analysts and advanced threat hunting.',
+          price: '$5,000/month',
+          marketPrice: '$10,000-20,000/month',
+          features: ['24/7 Monitoring', 'Threat Hunting', 'Incident Response', 'Security Analytics', 'Threat Intelligence', 'Forensic Analysis'],
+          benefits: ['Continuous protection', 'Rapid response', 'Expert analysis', 'Proactive defense'],
+          technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Forensic Tools'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/soc'
+        }
+      ]
+    },
+    {
+      title: 'Micro SAAS Solutions',
+      icon: Zap,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-900/20',
+      borderColor: 'border-yellow-500/30',
+      services: [
+        {
+          name: 'AI Code Quality Monitor',
+          description: 'Real-time code quality monitoring with automated refactoring suggestions, technical debt tracking, and team performance analytics.',
+          price: '$199/month',
+          marketPrice: '$300-600/month',
+          features: ['Real-time Code Analysis', 'Automated Refactoring Suggestions', 'Technical Debt Tracking', 'Team Performance Metrics', 'Git Integration', 'Custom Quality Rules'],
+          benefits: ['Improve code quality by 60%', 'Reduce technical debt by 40%', 'Accelerate development', 'Prevent bugs before deployment'],
+          technologies: ['SonarQube', 'ESLint', 'GitHub Actions', 'Custom AI Models', 'React', 'Node.js'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/ai-code-quality'
+        },
+        {
+          name: 'AI API Performance Optimizer',
+          description: 'Intelligent API performance monitoring and optimization with automatic caching, load balancing, and response time improvements.',
+          price: '$149/month',
+          marketPrice: '$250-500/month',
+          features: ['API Performance Monitoring', 'Automatic Caching Optimization', 'Load Balancing', 'Response Time Analysis', 'Traffic Pattern Analysis', 'Auto-scaling Recommendations'],
+          benefits: ['Improve API response time by 70%', 'Reduce server costs by 30%', 'Handle 10x more traffic', 'Prevent downtime'],
+          technologies: ['Redis', 'Nginx', 'Kubernetes', 'Prometheus', 'Grafana', 'Custom AI Models'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/ai-api-optimizer'
+        },
+        {
+          name: 'AI Security Vulnerability Scanner',
+          description: 'Advanced security scanning with AI-powered threat detection, vulnerability assessment, and compliance checking.',
+          price: '$299/month',
+          marketPrice: '$500-1000/month',
+          features: ['Automated Vulnerability Scanning', 'AI Threat Detection', 'Compliance Checking', 'Security Recommendations', 'Real-time Monitoring', 'Incident Response'],
+          benefits: ['Detect 99.9% of vulnerabilities', 'Reduce security risks by 90%', 'Ensure compliance', 'Prevent data breaches'],
+          technologies: ['OWASP ZAP', 'Nessus', 'Custom AI Models', 'Machine Learning', 'Python', 'React'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/ai-security-scanner'
+        },
+        {
+          name: 'AI Load Testing Suite',
+          description: 'Intelligent load testing with realistic user simulation, performance bottleneck detection, and capacity planning.',
+          price: '$199/month',
+          marketPrice: '$300-600/month',
+          features: ['Realistic User Simulation', 'Performance Bottleneck Detection', 'Capacity Planning', 'Automated Test Generation', 'Real-time Monitoring', 'Scalability Recommendations'],
+          benefits: ['Identify performance issues early', 'Optimize system capacity', 'Prevent crashes under load', 'Improve user experience'],
+          technologies: ['JMeter', 'Gatling', 'K6', 'Custom AI Models', 'Docker', 'Kubernetes'],
+          contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+          link: 'https://ziontechgroup.com/ai-load-testing'
+        }
+      ]
+    }
+  ];
+
+  const stats = [
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: TrendingUp, value: '300%', label: 'Average ROI' },
+    { icon: Shield, value: '99.9%', label: 'Uptime SLA' },
+    { icon: Award, value: '50+', label: 'Awards Won' },
+    { icon: Globe, value: '25+', label: 'Countries Served' },
+    { icon: Clock, value: '24/7', label: 'Support Available' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg">
+      <Helmet>
+        <title>Services Advertising - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services with detailed features, capabilities, benefits, and competitive pricing. Transform your business with Zion Tech Group's cutting-edge solutions." />
+        <meta name="keywords" content="ai services, it services, micro saas, cloud migration, cybersecurity, devops, machine learning, artificial intelligence, business solutions" />
+      </Helmet>
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
-              <Target className="w-4 h-4 mr-2" />
-              AI-Powered Advertising Solutions
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Advertising Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Revolutionize Your Marketing with 300% ROI Guaranteed
-            </p>
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
-              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link 
-                href="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                View Our Services
-              </Link>
-            </div>
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto cyber-text-enhanced">
+            Comprehensive AI and IT solutions designed to transform your business operations and drive unprecedented growth.
+          </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+            {stats.map((stat, index) => (
+              <div key={index} className="quantum-card p-6 floating-element" style={{animationDelay: `${index * 0.2}s`}}>
+                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3 neon-pulse" />
+                <div className="text-2xl font-bold text-white mb-2 cyber-text-enhanced">{stat.value}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
-      {/* Key Metrics */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Advertising Results
-            </h2>
-            <p className="text-xl text-gray-600">
-              Our AI-powered advertising delivers measurable business impact
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
-              <div className="text-gray-600">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-              <div className="text-gray-600">Targeting Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
-              <div className="text-gray-600">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600">Campaign Optimization</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI Advertising Solutions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive AI-powered advertising services for maximum impact
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-blue-600 text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Behavioral analysis</li>
-                <li>• Predictive modeling</li>
-                <li>• Real-time optimization</li>
-                <li>• Lookalike audience creation</li>
-                <li>• Cross-platform targeting</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
+          
+          {/* Contact Info */}
+          <div className="holographic-border rounded-lg p-6 mb-12">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-5 h-5 text-cyan-400 neon-pulse" />
+                <span className="text-white font-medium cyber-text-enhanced">+1 302 464 0950</span>
               </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-green-600 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• A/B testing automation</li>
-                <li>• Budget allocation</li>
-                <li>• Performance monitoring</li>
-                <li>• Bid optimization</li>
-                <li>• Landing page optimization</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $3,000-7,000/month | Our Price: $1,800/month
+              <div className="flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-cyan-400 neon-pulse" />
+                <span className="text-white font-medium cyber-text-enhanced">kleber@ziontechgroup.com</span>
               </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-purple-600 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold mb-3">Creative Generation</h3>
-              <p className="text-gray-600 mb-4">
-                AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Dynamic creative optimization</li>
-                <li>• Personalization at scale</li>
-                <li>• Multi-platform adaptation</li>
-                <li>• Video ad generation</li>
-                <li>• Brand consistency maintenance</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,500-6,000/month | Our Price: $1,500/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-orange-600 text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-semibold mb-3">Social Media Advertising</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive social media advertising management across all major platforms with AI optimization.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Facebook & Instagram ads</li>
-                <li>• LinkedIn advertising</li>
-                <li>• TikTok & Snapchat ads</li>
-                <li>• Twitter advertising</li>
-                <li>• Cross-platform analytics</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-red-600 text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-3">Search Engine Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Google Ads management</li>
-                <li>• Bing advertising</li>
-                <li>• Keyword research & optimization</li>
-                <li>• Ad copy generation</li>
-                <li>• Performance tracking</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,500-4,000/month | Our Price: $900/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-indigo-600 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-3">Analytics & Reporting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced analytics and reporting with AI insights and automated performance recommendations.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Real-time dashboards</li>
-                <li>• AI-powered insights</li>
-                <li>• Automated reporting</li>
-                <li>• ROI optimization</li>
-                <li>• Competitive analysis</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,000-3,000/month | Our Price: $600/month
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-5 h-5 text-cyan-400 neon-pulse" />
+                <span className="text-white font-medium cyber-text-enhanced">Middletown, DE</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Pricing Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose the plan that fits your advertising needs
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Up to $10K ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>AI targeting optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Basic reporting & analytics</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Email support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>2 platforms included</span>
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
-            </div>
-            <div className="bg-blue-600 text-white rounded-lg p-8 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+
+      {/* Service Categories */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {serviceCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="mb-16">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-4 cyber-text-enhanced neon-text flex items-center justify-center">
+                  <category.icon className="w-8 h-8 mr-3 neon-pulse" />
+                  {category.title}
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full"></div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Professional</h3>
-              <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>
-              <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Up to $50K ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Advanced AI optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Creative generation</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Priority support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Custom reporting</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>All platforms included</span>
-                </li>
-              </ul>
-              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                {category.services.map((service, serviceIndex) => (
+                  <div key={serviceIndex} className={`quantum-card p-8 hover:scale-105 transition-all duration-300 data-stream ${category.bgColor} ${category.borderColor} border`}>
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-white mb-3 cyber-text-enhanced">{service.name}</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                      
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-3xl font-bold text-green-400 neon-text">{service.price}</div>
+                        <div className="text-sm text-gray-500">Market: {service.marketPrice}</div>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-cyan-400 mb-3 cyber-text-enhanced">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-green-400 mb-3 cyber-text-enhanced">Benefits:</h4>
+                      <ul className="space-y-1">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="text-sm text-gray-300 flex items-center">
+                            <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-purple-400 mb-3 cyber-text-enhanced">Technologies:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.technologies.map((tech, techIndex) => (
+                          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <a
+                        href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
+                        className="holographic-button w-full text-center block py-3 px-4 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                      >
+                        Get Started Now
+                      </a>
+                      <p className="text-xs text-gray-500 mt-2">
+                        {service.contactInfo}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Unlimited ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Full AI suite</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Dedicated account manager</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>24/7 support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Custom integrations</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>White-label options</span>
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
+
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Advertising?
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6 cyber-text-enhanced neon-text">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get a free AI advertising assessment and discover how we can boost your ROI by 300%
+          <p className="text-xl text-purple-100 mb-8">
+            Get started with our comprehensive AI and IT services today and achieve unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+            <a
+              href="tel:+13024640950"
+              className="holographic-button px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105"
             >
-              Get Free Assessment
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link 
-              href="/case-studies"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              View Success Stories
-            </Link>
+              Email Us
+            </a>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default ServicesAdvertisingPage;
