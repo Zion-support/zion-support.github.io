@@ -18,9 +18,9 @@ const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const DocsPage = React.lazy(() => import('./app/docs/page'));
 const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const StatusPage = React.lazy(() => import('./app/status/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
+// const SupportPage = React.lazy(() => import('./app/support/page'));
+// const StatusPage = React.lazy(() => import('./app/status/page'));
+// const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
 // Memoized components for better performance
@@ -188,9 +188,9 @@ const App: React.FC = () => {
                 <Route path="/cookies" element={<CookiesPage />} />
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
-                <Route path="/support" element={<SupportPage />} />
-                <Route path="/status" element={<StatusPage />} />
-                <Route path="/demo" element={<DemoPage />} />
+                {/* <Route path="/support" element={<SupportPage />} /> */}
+                {/* <Route path="/status" element={<StatusPage />} /> */}
+                {/* <Route path="/demo" element={<DemoPage />} /> */}
                 <Route path="/consultation" element={<ConsultationPage />} />
               </Routes>
             </Suspense>
