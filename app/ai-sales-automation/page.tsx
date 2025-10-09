@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
+import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3, BarChart, X } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {

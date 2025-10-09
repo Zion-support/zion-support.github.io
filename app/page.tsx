@@ -1,10 +1,11 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Star, Phone, Home } from 'lucide-react';
+import { useCallback, useState, useEffect, React, lazy, Suspense, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { SEOOptimizer } from './components/SEOOptimizer';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));

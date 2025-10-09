@@ -1,4 +1,5 @@
 import React from 'react';
+import { Head } from 'next/head';
 // import { Metadata } from 'next'; // Removed for Vite
 const metadata = {
   title: 'Our Team - Zion Tech Group',

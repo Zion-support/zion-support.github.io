@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Database, Cloud } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {

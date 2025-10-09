@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye, BarChart } from 'lucide-react';
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
@@ -206,7 +206,7 @@ const AIDataVisualizationPage: React.FC = () => {
             <div className="text-center cyber-card">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-2">Bar Charts</h3>
-              <p className="text-gray-300 text-sm">Perfect for comparing categories and values</p>
+              <p className="text-gray-300 text-sm">Perfect for comparing [] and values</p>
             </div>
             <div className="text-center cyber-card">
               <div className="text-4xl mb-4">📈</div>

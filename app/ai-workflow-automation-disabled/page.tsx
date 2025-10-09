@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import Head from 'next/head';
+import { CheckCircle, Code, ArrowRight, Star, X, Settings, Bot, Workflow, Zap, Clock, Shield, BarChart, Users, Target, ArrowRight as ArrowRightIcon, TrendingUp, Activity, Database, Globe, Smartphone, Laptop, Monitor, Server, Cloud, Lock, Eye, AlertTriangle, CheckCircle as CheckCircleIcon, Star as StarIcon, Phone, Mail, MapPin, Award, Brain, Cpu, HardDrive, Wifi, Router, Smartphone as SmartphoneIcon, Laptop as LaptopIcon, Monitor as MonitorIcon, Server as ServerIcon, Cloud as CloudIcon, Lock as LockIcon, Eye as EyeIcon, AlertTriangle as AlertTriangleIcon, CheckCircle as CheckCircleIcon2, Star as StarIcon2, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Award as AwardIcon, Brain as BrainIcon, Cpu as CpuIcon, HardDrive as HardDriveIcon, Wifi as WifiIcon, Router as RouterIcon, TrendingUp as TrendingUpIcon, Activity as ActivityIcon, Database as DatabaseIcon, Globe as GlobeIcon } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const automationServices = [
     {
@@ -206,11 +206,11 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-      <Helmet>
+      <Head>
         <title>AI Workflow Automation Services | Zion Tech Group</title>
         <meta name="description" content="Intelligent workflow automation solutions that streamline business processes, reduce costs, and improve efficiency. AI-powered automation for every industry." />
         <meta name="keywords" content="workflow automation, business process automation, RPA, AI automation, process optimization, digital transformation" />
-      </Helmet>
+      </Head>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>

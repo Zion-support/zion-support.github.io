@@ -1,5 +1,6 @@
 import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
+import { Phone } from 'lucide-react';
+// import { Metadata, Phone } from 'next'; // Removed for Vite
 const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
   description:

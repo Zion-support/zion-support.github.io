@@ -36,14 +36,14 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
+        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
+        { name: 'AI E-commerce', path: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+        { name: 'AI Mobile Apps', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Sales process automation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' }
       ]
     },
     {
@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
@@ -87,10 +87,10 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Enterprise-grade solutions' }
       ]
     }
   ];
@@ -184,11 +184,18 @@ const Navigation: React.FC = () => {
               Case Studies
             </Link>
             <Link 
-              href="/blog" 
+              href="/team" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Blog
+              Team
+            </Link>
+            <Link 
+              href="/careers" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              onClick={closeAllMenus}
+            >
+              Careers
             </Link>
             <Link 
               href="/contact" 
@@ -242,11 +249,25 @@ const Navigation: React.FC = () => {
                 Services
               </Link>
               <Link
-                href="/blog"
+                href="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Blog
+                Case Studies
+              </Link>
+              <Link
+                href="/team"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Team
+              </Link>
+              <Link
+                href="/careers"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Careers
               </Link>
               <Link
                 href="/contact"

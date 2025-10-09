@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle } from 'lucide-react';
+import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle, Cloud } from 'lucide-react';
 const DevOpsPage: React.FC = () => {
   const services = [
     {
