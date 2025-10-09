@@ -1,15 +1,26 @@
 import React from 'react';
 
 interface ContentStatisticsProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
+export default function ContentStatistics({ 
+  className = '', 
+  children 
+}: ContentStatisticsProps) {
   return (
-    <div className="contentstatistics">
-      {/* Component content */}
+    <div className={`contentstatistics ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">
+            Content Statistics
+          </h3>
+          <p className="text-gray-600">
+            Component content will be added here.
+          </p>
+        </div>
+      )}
     </div>
   );
-};
-
-export default ContentStatistics;
+}

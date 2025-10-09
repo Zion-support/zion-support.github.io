@@ -1,26 +1,26 @@
-<<<<<<< HEAD
-
 import React from 'react';
 
 interface PWAInstallerProps {
-  // Add props here
-
-=======
-'use client';
-interface BeforeInstallPromptEvent extends Event {// TODO: Add content;}
-}
-  prompt(): Promise;
-          <void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const PWAInstaller: React.FC<PWAInstallerProps> = () => {
+export default function PWAInstaller({ 
+  className = '', 
+  children 
+}: PWAInstallerProps) {
   return (
-    <div className="pwainstaller">
-      {/* Component content */}
+    <div className={`pwainstaller ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">
+            PW A Installer
+          </h3>
+          <p className="text-gray-600">
+            Component content will be added here.
+          </p>
+        </div>
+      )}
     </div>
   );
-};
-
-export default PWAInstaller;
+}

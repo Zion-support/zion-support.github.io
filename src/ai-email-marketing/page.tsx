@@ -1,62 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import {Mail, Target, Send, BarChart, Users, TrendingUp, TrendingUp from 'lucide-react';}
-const AiEmailMarketingPage: React.FC = () => {
-import { Mail, CheckCircle, ArrowRight, Star } from 'lucide-react';
-const AIEmailMarketingPage: React.FC = () => {return (}
-    <div>Coming Soon</div>
-  );
-};
-  const _features = [
-  // TODO: Add items;
-];;
-    {// TODO: Add content;}
-};
-  icon: Mail,
-      title: 'AI Content Generation',
-      description: 'Automatically create compelling email content that resonates with your audience'
-    },
-icon: Target,
-      title: 'Smart Segmentation',
-      description: 'AI-powered audience segmentation for highly targeted campaigns',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
+export default function page() {
   return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          Page
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This page is under development. Content will be added soon.
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us;
-          </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-Learn More;
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-      <Footer />
+        </div>
+      </div>
     </div>
   );
-};
-
-export default PagePage;
+}

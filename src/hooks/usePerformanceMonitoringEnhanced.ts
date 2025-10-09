@@ -1,82 +1,11 @@
-'use client'
-export const usePerformanceMonitoring = () => {
-import { useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-export const _usePerformanceMonitoring = () => {
-    // TODO: Add content
+// UsePerformanceMonitoringEnhanced utility
+// This file contains utility functions and configurations
+
+export const usePerformanceMonitoringEnhanced = {
+  // Add utility functions here
+  init: () => {
+    console.log('usePerformanceMonitoringEnhanced initialized');
   }
-  const reportWebVitals = useCallback((metric: any) => {
-    // TODO: Add content
-  }
-    const body = JSON.stringify(metric)
-    const url = '/api/analytics'
-    if (navigator.sendBeacon) {
-    // TODO: Add content
-  }
-      navigator.sendBeacon(url, body)
-    } else {
-    // TODO: Add content
-  }
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
-    // TODO: Add content
-  }
-        // Analytics reporting failed
-      }
-  )
-    }
-  }, [])
-  useEffect(() => {
-    // TODO: Add content
-  }
-    if (typeof window !== 'undefined' && 'performance' in window) {
-    // TODO: Add content
-  }
-      // Monitor Core Web Vitals
-const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
-  }
-        for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-          reportWebVitals({
-    // TODO: Add content
-  }
-=======
-export const _usePerformanceMonitoring = () => {// TODO: Add content;}
-}
-  const reportWebVitals = useCallback((metric: any) => {// TODO: Add content;}
-}
-    const body = JSON.stringify(metric);
-    const url = '/api/analytics';
-    if (navigator.sendBeacon) {// TODO: Add content;}
-}
-      navigator.sendBeacon(url, body);
-    } else {// TODO: Add content;}
-}
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {// TODO: Add content;}
-}
-        // Analytics reporting failed;
-      });
-    }
-  }, []);
-  useEffect(() => {// TODO: Add content;}
-}
-    if (typeof window !== 'undefined' && 'performance' in window) {// TODO: Add content;}
-}
-      // Monitor Core Web Vitals;
-const observer = new PerformanceObserver((list) => {// TODO: Add content;}
-}
-        for (const entry of list.getEntries()) {// TODO: Add content;}
-}
-          reportWebVitals({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  name: entry.name,
-            value: entry.startTime,
-            timestamp: Date.now()
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }
-  )
-      return () => observer.disconnect()
-  }, [reportWebVitals])
-  return { reportWebVitals }
-}
+
+export default usePerformanceMonitoringEnhanced;

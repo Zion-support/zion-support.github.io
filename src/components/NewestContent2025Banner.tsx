@@ -1,15 +1,26 @@
 import React from 'react';
 
 interface NewestContent2025BannerProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const NewestContent2025Banner: React.FC<NewestContent2025BannerProps> = () => {
+export default function NewestContent2025Banner({ 
+  className = '', 
+  children 
+}: NewestContent2025BannerProps) {
   return (
-    <div className="newestcontent2025banner">
-      {/* Component content */}
+    <div className={`newestcontent2025banner ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">
+            Newest Content2025 Banner
+          </h3>
+          <p className="text-gray-600">
+            Component content will be added here.
+          </p>
+        </div>
+      )}
     </div>
   );
-};
-
-export default NewestContent2025Banner
+}

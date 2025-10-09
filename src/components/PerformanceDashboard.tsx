@@ -1,72 +1,26 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-interface PerformanceMetrics {
-
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+interface PerformanceDashboardProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-
-=======
-'use client';
-interface PerformanceMetrics {// TODO: Add content;}
-};
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
+export default function PerformanceDashboard({ 
+  className = '', 
+  children 
+}: PerformanceDashboardProps) {
+  return (
+    <div className={`performancedashboard ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">
+            Performance Dashboard
+          </h3>
+          <p className="text-gray-600">
+            Component content will be added here.
+          </p>
+        </div>
+      )}
+    </div>
+  );
 }
-interface PerformanceMetrics {// TODO: Add content;}
-};
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-}
-
-const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-  });
-
-  useEffect(() => {
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-      });
-    });
-
-    try {
-      observer.observe({ entryTypes: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
-};
-
-export default PerformanceDashboard;

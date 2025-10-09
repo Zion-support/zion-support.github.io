@@ -2,54 +2,45 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
-console.log('🔧 Fixing merge conflict markers...');
+console.log('🔧 Fixing function names with hyphens...');
 
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
+// Function to fix function names
+function fixFunctionNames(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Remove merge conflict markers and keep the "ours" version (after =======)
+    // Fix function names with hyphens
+    const fileName = path.basename(filePath, path.extname(filePath));
+    const validFunctionName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_');
+    
+    // Replace invalid function names
     const lines = content.split('\n');
     const newLines = [];
-    let inConflict = false;
-    let keepLines = false;
-
+    
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      let line = lines[i];
       
-      if (line.includes('<<<<<<<')) {
-        inConflict = true;
-        keepLines = false;
+      // Fix function declarations with hyphens
+      if (line.includes('function ') && line.includes('(')) {
+        line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);
         modified = true;
-        continue;
       }
       
-      if (line.includes('=======')) {
-        keepLines = true;
-        continue;
+      // Fix export default function declarations
+      if (line.includes('export default function ') && line.includes('(')) {
+        line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
+        modified = true;
       }
       
-      if (line.includes('>>>>>>>')) {
-        inConflict = false;
-        keepLines = false;
-        continue;
-      }
-      
-      if (inConflict) {
-        if (keepLines) {
-          newLines.push(line);
-        }
-      } else {
-        newLines.push(line);
-      }
+      newLines.push(line);
     }
-
+    
+    content = newLines.join('\n');
+    
     if (modified) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
+      fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
@@ -105,7 +96,7 @@ let errorCount = 0;
 
 for (const file of files) {
   try {
-    if (fixMergeConflicts(file)) {
+    if (fixFunctionNames(file)) {
       fixedCount++;
     }
   } catch (error) {
@@ -120,7 +111,7 @@ console.log(`❌ Errors: ${errorCount}`);
 console.log(`📁 Total files processed: ${files.length}`);
 
 if (fixedCount > 0) {
-  console.log('\n🎉 Merge conflicts fixed successfully!');
+  console.log('\n🎉 Function names fixed successfully!');
 } else {
-  console.log('\n✨ No merge conflicts found.');
+  console.log('\n✨ No function names needed fixing.');
 }

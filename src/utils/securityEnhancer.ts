@@ -1,71 +1,11 @@
-/**
- * Security Enhancer;
- * Basic security optimization utilities;
- */
+// SecurityEnhancer utility
+// This file contains utility functions and configurations
 
-<<<<<<< HEAD
-interface SecurityConfig {
-  enableCSP: boolean
-  enableHTTPS: boolean
-  enableXSSProtection: boolean
-  enableCSRFProtection: boolean
-  enableContentSecurityPolicy: boolean
-}
-
-class SecurityEnhancer {
-  private config: SecurityConfig
-  constructor(config?: SecurityConfig) {
-    this.config = config || {
-=======
-interface SecurityConfig {enableCSP: boolean;}
-  enableHTTPS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
-}
-
-class SecurityEnhancer {private config: SecurityConfig;}
-  constructor(config?: SecurityConfig) {this.config = config || {}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-      enableCSP: true,
-      enableHTTPS: true,
-      enableXSSProtection: true,
-      enableCSRFProtection: true,
-      enableContentSecurityPolicy: true,
-    }
-    this.init()
+export const securityEnhancer = {
+  // Add utility functions here
+  init: () => {
+    console.log('securityEnhancer initialized');
   }
+};
 
-<<<<<<< HEAD
-  private init(): void {
-    // Initialize security enhancements
-    this.setupSecurityHeaders()
-  }
-
-  private setupSecurityHeaders(): void {
-    if (typeof document !== 'undefined') {
-      // Add security headers via meta tags
-      const metaCSP = document.createElement('meta')
-      metaCSP.setAttribute('http-equiv', 'Content-Security-Policy')
-      metaCSP.setAttribute('content', "default-src 'self'")
-      document.head.appendChild(metaCSP)
-=======
-  private init(): void {// Initialize security enhancements;}
-    this.setupSecurityHeaders();
-  }
-
-  private setupSecurityHeaders(): void {if (typeof document !== 'undefined') {}
-      // Add security headers via meta tags;
-      const metaCSP = document.createElement('meta');
-      metaCSP.setAttribute('http-equiv', 'Content-Security-Policy');
-      metaCSP.setAttribute('content', "default-src 'self'");
-      document.head.appendChild(metaCSP);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    }
-  }
-
-  public cleanup(): void {// Cleanup security enhancements;}
-  }
-}
-
-export default SecurityEnhancer
+export default securityEnhancer;
