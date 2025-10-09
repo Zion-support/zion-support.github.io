@@ -1,10 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Package, Mic, PenTool, Box, Shirt, Wifi, Link, Atom } from 'lucide-react';
-=======
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -23,16 +19,24 @@ const MicroSAASPage: React.FC = () => {
       pricing: { starting: 79, period: 'month' },
       features: ['Smart task scheduling', 'Resource optimization', 'Risk prediction', 'Team collaboration', 'Gantt charts', 'Time tracking'],
       benefits: ['Complete projects 30% faster', 'Reduce project risks', 'Better team coordination'],
-      popular: false,
-      rating: 4.6,
-<<<<<<< HEAD
+        popular: false,
+        rating: 4.6,
       users: 4200,
       link: 'https://ziontechgroup.com/ai-project-manager'
-=======
-      reviews: 892,
-      features: ['Automatic receipt scanning', 'Smart categorization', 'Budget alerts', 'Expense analytics'],
+    },
+    {
+      id: 'ai-expense-tracker',
+      name: 'Smart Expense Tracker',
+      description: 'Automate expense management with AI-powered receipt scanning and categorization.',
       icon: DollarSign,
-      popular: true
+      category: 'finance',
+      pricing: { starting: 29, period: 'month' },
+      features: ['Automatic receipt scanning', 'Smart categorization', 'Budget alerts', 'Expense analytics'],
+      benefits: ['Save 2 hours weekly', 'Reduce errors by 90%', 'Better budget control'],
+      popular: true,
+      rating: 4.8,
+      users: 12000,
+      link: 'https://ziontechgroup.com/ai-expense-tracker'
     },
     {
       id: 'ai-scheduler',
@@ -55,9 +59,9 @@ const MicroSAASPage: React.FC = () => {
       features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization'],
       benefits: ['Save 80% time on content creation', 'Consistent brand voice', 'SEO-optimized content'],
       popular: true,
-      rating: 4.9,
-      users: 12500
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+        rating: 4.9,
+        users: 12500,
+        link: 'https://ziontechgroup.com/ai-scheduler'
     },
     {
       id: 'ai-chatbot-builder',
@@ -92,18 +96,14 @@ const MicroSAASPage: React.FC = () => {
       name: 'Smart Data Viz',
       description: 'Transform complex data into beautiful, interactive visualizations with AI-powered insights.',
       icon: BarChart,
-      category: 'analytics',
-<<<<<<< HEAD
+        category: 'analytics',
       pricing: { starting: 69, period: 'month' },
       features: ['Auto chart generation', 'Interactive dashboards', 'Real-time updates', 'Custom themes', 'Export options', 'Collaboration tools'],
       benefits: ['Make data accessible', 'Faster decision making', 'Professional presentations'],
-=======
-      pricing: { starting: 39, period: 'month' },
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization'],
-      benefits: ['Make data-driven decisions', 'Identify trends early', 'Automated reporting'],
       popular: false,
       rating: 4.7,
-      users: 5600
+      users: 5600,
+      link: 'https://ziontechgroup.com/ai-data-visualization'
     },
     {
       id: 'ai-email-marketing',

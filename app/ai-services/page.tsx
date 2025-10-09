@@ -328,16 +328,11 @@ const AIServicesPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-<<<<<<< HEAD
+          <Navigation />
+          
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
-=======
-        {/* Hero Section */}
-        <section className="container mx-auto px-4 py-16 pt-24">
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
                 AI Services
@@ -379,9 +374,7 @@ const AIServicesPage: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <tech.icon className="w-8 h-8 text-purple-400 mr-3" />
                     <h3 className="text-xl font-bold text-white">{tech.name}</h3>
-                  </div>
-                  
-<<<<<<< HEAD
+                    </div>
                   <p className="text-gray-300 mb-4">{tech.description}</p>
                   
                   <div>
@@ -427,12 +420,9 @@ const AIServicesPage: React.FC = () => {
                         {feature}
                       </li>
                     ))}
-                  </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-<<<<<<< HEAD
+                    </ul>
+                    
+                    <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -478,17 +468,10 @@ const AIServicesPage: React.FC = () => {
                   <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
                 </div>
               ))}
             </div>
           </section>
-<<<<<<< HEAD
-
-          {/* AI Implementation Process */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Our AI Implementation Process</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We follow a proven methodology to ensure successful AI implementation and maximum ROI.
               </p>
