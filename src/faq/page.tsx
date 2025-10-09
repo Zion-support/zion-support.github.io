@@ -4,159 +4,235 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
 'use client';
-
 const FAQPage: React.FC = () => {
+  // TODO: Add content
+}
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-
   const _toggleItem = (index: number) => {
-    setOpenItems(prev => 
-//       prev.includes(index) 
+  // TODO: Add content
+}
+    setOpenItems(prev =>
+//       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
-
   const faqData = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       category: 'General Questions',
       questions: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           question: 'What is Zion Tech Group?',
           answer: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
         },
         {
+  // TODO: Add content
+}
           question: 'What services do you offer?',
           answer: 'We offer comprehensive AI services, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.'
         },
         {
+  // TODO: Add content
+}
           question: 'How can I get started?',
           answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do you offer custom solutions?',
           answer: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
         }
 //       ]
     },
     {
+  // TODO: Add content
+}
       category: 'AI Services',
       questions: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           question: 'What AI services do you provide?',
           answer: 'We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.'
         },
         {
+  // TODO: Add content
+}
           question: 'How much do AI services cost?',
           answer: 'Our AI services start at $1,500/month for basic packages. Pricing varies based on complexity, scope, and specific requirements. Contact us for a detailed quote tailored to your needs.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do you provide AI training for our team?',
           answer: 'Yes, we offer comprehensive AI training programs to help your team understand and effectively use AI technologies. We provide both on-site and remote training sessions.'
         },
         {
+  // TODO: Add content
+}
           question: 'Can you integrate AI with our existing systems?',
           answer: 'Absolutely! We specialize in integrating AI solutions with existing enterprise systems, ensuring seamless operation and minimal disruption to your current workflows.'
         }
 //       ]
     },
     {
+  // TODO: Add content
+}
       category: 'IT Services',
       questions: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           question: 'What IT services do you offer?',
           answer: 'We offer comprehensive IT services including cloud migration, cybersecurity, DevOps & CI/CD, database management, network solutions, system administration, IT consulting, and 24/7 support.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do you provide 24/7 support?',
           answer: 'Yes, we offer 24/7 IT support and monitoring services to ensure your systems are always running smoothly. Our support team is available around the clock to address any issues.'
         },
         {
+  // TODO: Add content
+}
           question: 'Can you help with cloud migration?',
           answer: 'Absolutely! We specialize in cloud migration services for AWS, Azure, and GCP. We ensure seamless migration with 99.9% uptime guarantee and minimal business disruption.'
         },
         {
+  // TODO: Add content
+}
           question: 'What cybersecurity services do you provide?',
           answer: 'We provide comprehensive cybersecurity services including threat detection, vulnerability assessment, security monitoring, compliance management, and incident response.'
         }
 //       ]
     },
     {
+  // TODO: Add content
+}
       category: 'Micro SAAS Solutions',
       questions: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           question: 'What are Micro SAAS solutions?',
           answer: 'Micro SAAS solutions are ready-to-use AI-powered applications that solve specific business problems. They include AI CRM, analytics dashboards, chatbot builders, and other specialized tools.'
         },
         {
+  // TODO: Add content
+}
           question: 'How quickly can I deploy a Micro SAAS solution?',
           answer: 'Most Micro SAAS solutions can be deployed within 24-48 hours. They are designed for quick implementation and immediate value delivery.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do I need technical expertise to use Micro SAAS?',
           answer: 'No, our Micro SAAS solutions are designed to be user-friendly and require minimal technical expertise. We provide training and support to ensure smooth adoption.'
         },
         {
+  // TODO: Add content
+}
           question: 'Can Micro SAAS solutions be customized?',
           answer: 'Yes, while our Micro SAAS solutions are ready-to-use, they can be customized to better fit your specific business processes and requirements.'
         }
 //       ]
     },
     {
+  // TODO: Add content
+}
       category: 'Pricing & Billing',
       questions: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           question: 'What are your pricing models?',
           answer: 'We offer flexible pricing models including monthly subscriptions, project-based pricing, and enterprise contracts. Pricing depends on the scope and complexity of services required.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do you offer free consultations?',
           answer: 'Yes, we offer free initial consultations to assess your needs and recommend the best solutions. Contact us to schedule your free consultation.'
         },
         {
+  // TODO: Add content
+}
           question: 'Are there any setup fees?',
           answer: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\'ll provide clear pricing details during consultation.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do you offer discounts for long-term contracts?',
           answer: 'Yes, we offer attractive discounts for annual contracts and long-term partnerships. Contact us to discuss the best pricing options for your needs.'
         }
 //       ]
     },
     {
+  // TODO: Add content
+}
       category: 'Support & Contact',
       questions: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           question: 'How can I contact support?',
           answer: 'You can contact our support team at (302) 464-0950, email kleber@ziontechgroup.com, or use our online support portal. We also offer 24/7 emergency support for critical issues.'
         },
         {
+  // TODO: Add content
+}
           question: 'What are your business hours?',
           answer: 'Our business hours are Monday-Friday, 9AM-6PM EST. However, our support team is available 24/7 for critical issues and emergency support.'
         },
         {
+  // TODO: Add content
+}
           question: 'Do you offer remote support?',
           answer: 'Yes, we provide comprehensive remote support services, allowing us to assist you quickly and efficiently without the need for on-site visits.'
         },
         {
+  // TODO: Add content
+}
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
         }
 //       ]
     }
   ];
-
   const filteredData = faqData.map(category => ({
+  // TODO: Add content
+}
 //     ...category,
-    questions: category.questions.filter(q => 
+    questions: category.questions.filter(q =>
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
   })).filter(category => category.questions.length > 0);
-
   return (
+  // TODO: Add parameters,
+)
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -169,12 +245,11 @@ const FAQPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 //               Find answers to common questions about our AI and IT services, pricing, and support.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
+              <input;
+type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -182,20 +257,24 @@ const FAQPage: React.FC = () => {
 //               />
             </div>
           </div>
-
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => (
+  // TODO: Add parameters,
+)
               <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
+  // TODO: Add content
+}
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                    
                     return (
+  // TODO: Add parameters,
+)
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
@@ -203,12 +282,18 @@ const FAQPage: React.FC = () => {
 //                         >
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
+  // TODO: Add parameters,
+)
                             <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : (
+  // TODO: Add parameters,
+)
                             <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         </button>
                         {isOpen && (
+  // TODO: Add parameters,
+)
                           <div className="px-6 pb-4">
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                           </div>
@@ -220,7 +305,6 @@ const FAQPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -259,5 +343,4 @@ const FAQPage: React.FC = () => {
     </>
   );
 };
-
 export default FAQPage;

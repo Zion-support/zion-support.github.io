@@ -1,45 +1,58 @@
 import React from 'react';
 const CareersPage: React.FC = () => {
+  // TODO: Add content
+}
   const _openPositions = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'Senior AI Engineer',
       department: 'Engineering',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE',;
       type: 'Full-time',
       description: 'Lead development of cutting-edge AI solutions and machine learning models',
       requirements: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],
       icon: Brain
     },
     {
+  // TODO: Add content
+}
       title: 'Full-Stack Developer',
       department: 'Engineering',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE',;
       type: 'Full-time',
       description: 'Build scalable web applications and integrate AI solutions',
       requirements: ['3+ years full-stack experience', 'React, Node.js, TypeScript', 'Cloud platform experience'],
       icon: Code
     },
     {
+  // TODO: Add content
+}
       title: 'AI Product Manager',
       department: 'Product',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE',;
       type: 'Full-time',
       description: 'Drive AI product strategy and work with cross-functional teams',
       requirements: ['3+ years product management', 'AI/ML domain knowledge', 'Strong analytical skills'],
       icon: Users
     },
     {
+  // TODO: Add content
+}
       title: 'Cybersecurity Specialist',
       department: 'Security',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE',;
       type: 'Full-time',
       description: 'Ensure security of AI systems and protect client data',
       requirements: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
       icon: Shield
     }
   ];
-
   const benefits = [
+  // TODO: Add items,
+]
 //     'Competitive salary and equity',
 //     'Comprehensive health insurance',
 //     'Flexible remote work options',
@@ -49,8 +62,9 @@ const CareersPage: React.FC = () => {
 //     'Team building events',
 //     'Mentorship programs'
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Careers</h1>
@@ -62,5 +76,4 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
-
 export default CareersPage;

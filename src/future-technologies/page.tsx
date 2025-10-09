@@ -2,40 +2,50 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import {Rocket, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const FutureTechnologiesPage: React.FC = () => {
+  // TODO: Add content
+}
   const _features = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: Rocket,
       title: 'Emerging Technologies',
       description: 'Cutting-edge technologies and future innovations',
       benefits: ['AI advancement', 'Quantum computing', 'Blockchain']
     },
     {
+  // TODO: Add content
+}
       icon: Target,
       title: 'Technology Forecasting',
       description: 'Predict and prepare for future technology trends',
       benefits: ['Trend analysis', 'Market prediction', 'Strategic planning']
     },
     {
+  // TODO: Add content
+}
       icon: Zap,
       title: 'Innovation Labs',
       description: 'Research and development of next-gen technologies',
       benefits: ['R&D projects', 'Prototype development', 'Testing']
     },
     {
+  // TODO: Add content
+}
       icon: Settings,
       title: 'Technology Integration',
       description: 'Integrate emerging technologies with existing systems',
       benefits: ['System integration', 'Migration support', 'Compatibility']
     }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -45,10 +55,9 @@ const FutureTechnologiesPage: React.FC = () => {
 //             Emerging Technology Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-//             Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing, 
+//             Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing,
             we help you prepare for and adopt the technologies of tomorrow.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,14 +74,14 @@ const FutureTechnologiesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Future Tech Solutions
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+  // TODO: Add parameters,
+)
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -85,6 +94,8 @@ const FutureTechnologiesPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
+  // TODO: Add parameters,
+)
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -96,10 +107,8 @@ const FutureTechnologiesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default FutureTechnologiesPage;

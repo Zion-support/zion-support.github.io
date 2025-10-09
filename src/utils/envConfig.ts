@@ -4,6 +4,8 @@
  * Provides type-safe access to environment variables with validation
  */
 export interface EnvConfig {
+  // TODO: Add content
+}
   nodeEnv: 'development' | 'production' | 'test';
   apiUrl: string;
   apiKey?: string;
@@ -14,16 +16,24 @@ export interface EnvConfig {
   gaTrackingId?: string;
 }
 class EnvironmentConfig {
+  // TODO: Add content
+}
   private config: EnvConfig;
   private isInitialized = false;
   constructor() {
+  // TODO: Add content
+}
     this.config = this.loadConfig();
     this.isInitialized = true;
   }
   private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults
-    const _nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
+  // TODO: Add content
+}
+    // Safely access environment variables with defaults;
+const _nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
     return {
+  // TODO: Add content
+}
 //       nodeEnv,
       apiUrl:
         process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
@@ -41,46 +51,66 @@ class EnvironmentConfig {
    * Get the entire configuration object
    */
   public getConfig(): Readonly<EnvConfig> {
+  // TODO: Add content
+}
     return Object.freeze({ ...this.config });
   }
   /**
    * Get a specific configuration value
    */
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
+  // TODO: Add content
+}
     return this.config[key];
   }
   /**
    * Check if running in production
    */
   public isProduction(): boolean {
+  // TODO: Add content
+}
     return this.config.nodeEnv === 'production';
   }
   /**
    * Check if running in development
    */
   public isDevelopment(): boolean {
+  // TODO: Add content
+}
     return this.config.nodeEnv === 'development';
   }
   /**
    * Check if running in test mode
    */
   public isTest(): boolean {
+  // TODO: Add content
+}
     return this.config.nodeEnv === 'test';
   }
   /**
    * Validate required environment variables
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {
+  // TODO: Add content
+}
     valid: boolean;
     missing: string[];
   } {
+  // TODO: Add content
+}
     const missing: string[] = [];
     for (const varName of requiredVars) {
+  // TODO: Add content
+}
       if (!this.config[varName]) {
+  // TODO: Add content
+}
         missing.push(varName);
       }
     }
     return {
+  // TODO: Add content
+}
       valid: missing.length === 0,
 //       missing
     };
@@ -89,10 +119,16 @@ class EnvironmentConfig {
    * Get API headers with authentication
    */
   public getApiHeaders(): Record<string, string> {
+  // TODO: Add content
+}
     const headers: Record<string, string> = {
+  // TODO: Add content
+}
       'Content-Type': 'application/json'
     };
     if (this.config.apiKey) {
+  // TODO: Add content
+}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
     return headers;
@@ -101,9 +137,15 @@ class EnvironmentConfig {
    * Log configuration in development mode
    */
   public logConfig(): void {
+  // TODO: Add content
+}
     if (this.isDevelopment()) {
-      console.group('🔧 Environment Configuration');
+  // TODO: Add content
+}
+      console.group(' Environment Configuration');
       console.table({
+  // TODO: Add content
+}
         Environment: this.config.nodeEnv,
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
@@ -117,9 +159,9 @@ class EnvironmentConfig {
     }
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions
+// Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction();
 export const isDevelopment = () => envConfig.isDevelopment();
 export const isTest = () => envConfig.isTest();

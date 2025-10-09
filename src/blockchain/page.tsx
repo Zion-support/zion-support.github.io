@@ -1,11 +1,16 @@
 import React from 'react';
-
 const BlockchainPage: React.FC = () => {
+  // TODO: Add content
+}
   const _blockchainServices = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise blockchain applications.',
-      icon: '📜',
+      icon: '',
       price: 'Starting at $8,000/project',
       features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing & deployment', 'Documentation'],
       benefits: ['Automate business processes', 'Reduce transaction costs', 'Ensure transparency'],
@@ -14,9 +19,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript']
     },
     {
+  // TODO: Add content
+}
       title: 'DeFi Protocol Development',
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming.',
-      icon: '🏦',
+      icon: '',
       price: 'Starting at $25,000/project',
       features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools', 'Governance tokens'],
       benefits: ['Create new revenue streams', 'Access global liquidity', 'Reduce financial barriers'],
@@ -25,9 +32,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
     },
     {
+  // TODO: Add content
+}
       title: 'NFT Marketplace Development',
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
-      icon: '🎨',
+      icon: '',
       price: 'Starting at $15,000/project',
       features: ['NFT minting', 'Marketplace functionality', 'Auction system', 'Royalty management', 'Mobile app'],
       benefits: ['Monetize digital assets', 'Create new business models', 'Engage communities'],
@@ -36,9 +45,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['IPFS', 'OpenSea API', 'Web3.js', 'Ethers.js', 'React']
     },
     {
+  // TODO: Add content
+}
       title: 'Blockchain Integration Services',
       description: 'Integrate blockchain technology into existing business systems and applications.',
-      icon: '🔗',
+      icon: '',
       price: 'Starting at $5,000/month',
       features: ['API development', 'System integration', 'Data synchronization', 'Security implementation', 'Maintenance'],
       benefits: ['Modernize legacy systems', 'Improve data integrity', 'Enable new capabilities'],
@@ -47,9 +58,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Web3 APIs', 'REST APIs', 'GraphQL', 'Microservices', 'Cloud Integration']
     },
     {
+  // TODO: Add content
+}
       title: 'Cryptocurrency Wallet Development',
       description: 'Secure multi-chain cryptocurrency wallets with advanced features and security.',
-      icon: '👛',
+      icon: '',
       price: 'Starting at $12,000/project',
       features: ['Multi-chain support', 'Hardware wallet integration', 'DeFi integration', 'Security features', 'Mobile & web'],
       benefits: ['Secure asset management', 'Multi-chain compatibility', 'Enhanced user experience'],
@@ -58,9 +71,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['React Native', 'Flutter', 'Web3.js', 'WalletConnect', 'Hardware Security']
     },
     {
+  // TODO: Add content
+}
       title: 'Blockchain Security Auditing',
       description: 'Comprehensive security audits for smart contracts and blockchain applications.',
-      icon: '🔒',
+      icon: '',
       price: 'Starting at $3,000/audit',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking', 'Remediation'],
       benefits: ['Prevent security breaches', 'Ensure compliance', 'Build user trust'],
@@ -69,9 +84,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Mythril', 'Slither', 'Oyente', 'Echidna', 'Custom Tools']
     },
     {
+  // TODO: Add content
+}
       title: 'Token Development & ICO/IDO',
       description: 'Custom token development with ICO/IDO launch support and marketing strategies.',
-      icon: '🪙',
+      icon: '',
       price: 'Starting at $10,000/project',
       features: ['Token creation', 'ICO/IDO platform', 'Marketing strategy', 'Legal compliance', 'Community building'],
       benefits: ['Raise capital efficiently', 'Build community', 'Create utility tokens'],
@@ -80,9 +97,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['ERC-20', 'ERC-721', 'ERC-1155', 'BEP-20', 'Custom Standards']
     },
     {
+  // TODO: Add content
+}
       title: 'Enterprise Blockchain Solutions',
       description: 'Private blockchain networks for enterprise use cases with custom governance.',
-      icon: '🏢',
+      icon: '',
       price: 'Starting at $20,000/project',
       features: ['Private networks', 'Custom governance', 'Consensus mechanisms', 'Integration APIs', 'Management tools'],
       benefits: ['Improve transparency', 'Reduce costs', 'Enhance security'],
@@ -91,9 +110,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Hyperledger', 'Ethereum Private', 'Quorum', 'Corda', 'Custom Blockchains']
     },
     {
+  // TODO: Add content
+}
       title: 'Cross-Chain Bridge Development',
       description: 'Secure cross-chain bridges for asset transfers between different blockchain networks.',
-      icon: '🌉',
+      icon: '',
       price: 'Starting at $18,000/project',
       features: ['Multi-chain support', 'Asset locking', 'Minting & burning', 'Security mechanisms', 'Monitoring'],
       benefits: ['Enable interoperability', 'Expand user base', 'Increase liquidity'],
@@ -102,9 +123,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Cosmos SDK', 'Polkadot', 'LayerZero', 'Wormhole', 'Custom Bridges']
     },
     {
+  // TODO: Add content
+}
       title: 'DAO Development & Governance',
       description: 'Decentralized Autonomous Organizations with voting, treasury, and governance mechanisms.',
-      icon: '🗳️',
+      icon: '',
       price: 'Starting at $12,000/project',
       features: ['Voting systems', 'Treasury management', 'Proposal mechanisms', 'Governance tokens', 'Integration'],
       benefits: ['Decentralize decision making', 'Increase transparency', 'Engage communities'],
@@ -113,9 +136,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Aragon', 'Snapshot', 'Governor', 'Custom Governance', 'Voting Mechanisms']
     },
     {
+  // TODO: Add content
+}
       title: 'Blockchain Analytics & Monitoring',
       description: 'Real-time blockchain analytics, monitoring, and compliance reporting solutions.',
-      icon: '📊',
+      icon: '',
       price: 'Starting at $2,500/month',
       features: ['Transaction monitoring', 'Compliance reporting', 'Risk assessment', 'Analytics dashboards', 'Alerts'],
       benefits: ['Ensure compliance', 'Monitor risks', 'Gain insights'],
@@ -124,9 +149,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['The Graph', 'Alchemy', 'Moralis', 'Custom Analytics', 'Compliance Tools']
     },
     {
+  // TODO: Add content
+}
       title: 'Web3 Application Development',
       description: 'Complete Web3 applications with frontend, backend, and blockchain integration.',
-      icon: '🌐',
+      icon: '',
       price: 'Starting at $15,000/project',
       features: ['Frontend development', 'Backend APIs', 'Blockchain integration', 'User authentication', 'Deployment'],
       benefits: ['Create Web3 experiences', 'Engage crypto users', 'Build decentralized apps'],
@@ -135,10 +162,10 @@ const BlockchainPage: React.FC = () => {
       technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']
     }
   ];
-
   const categories = [...new Set(blockchainServices.map(service => service.category))];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-700 text-white py-20">
@@ -162,7 +189,6 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,9 +232,10 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {categories.map(category => (
+  // TODO: Add parameters,
+)
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
@@ -223,11 +250,12 @@ const BlockchainPage: React.FC = () => {
                 {blockchainServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
+  // TODO: Add parameters,
+)
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-orange-600">{service.price}</span>
@@ -237,11 +265,12 @@ const BlockchainPage: React.FC = () => {
 //                           Save up to 50% vs market rates
                         </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
+  // TODO: Add parameters,
+)
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -249,22 +278,24 @@ const BlockchainPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
+  // TODO: Add parameters,
+)
                             <span key={techIndex} className="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
+  // TODO: Add parameters,
+)
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
@@ -272,7 +303,6 @@ const BlockchainPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <button className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
 //                         Get Blockchain Consultation
                       </button>
@@ -282,7 +312,6 @@ const BlockchainPage: React.FC = () => {
             </div>
           </section>
         ))}
-
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -328,7 +357,6 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -339,26 +367,25 @@ const BlockchainPage: React.FC = () => {
               Contact our blockchain experts for a free consultation and custom Web3 strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
 //               >
-//                 📞 +1 302 464 0950
+//                  +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
 //               >
-//                 ✉️ kleber@ziontechgroup.com
+//                  kleber@ziontechgroup.com
               </a>
             </div>
             <div className="mt-8 text-sm text-orange-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p> 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
       </div>
   );
 };
-
 export default BlockchainPage;

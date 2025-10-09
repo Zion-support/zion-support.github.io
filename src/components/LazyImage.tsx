@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-
 interface LazyImageProps {
+  // TODO: Add content
+}
   src: string;
   alt: string;
   className?: string;
@@ -12,8 +13,9 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const LazyImage: React.FC<LazyImageProps> = ({
+  // TODO: Add content
+}
 //   src,
 //   alt,
 //   className,
@@ -24,51 +26,66 @@ const LazyImage: React.FC<LazyImageProps> = ({
 //   onLoad,
 //   onError,
 }) => {
+  // TODO: Add content
+}
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const _imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
+  // TODO: Add content
+}
     if (priority) return;
-
     const observer = new IntersectionObserver(
+  // TODO: Add parameters,
+)
       ([entry]) => {
+  // TODO: Add content
+}
         if (entry.isIntersecting) {
+  // TODO: Add content
+}
           setIsInView(true);
           observer.disconnect();
         }
       },
       {
+  // TODO: Add content
+}
         threshold: 0.1,
         rootMargin: '50px',
       }
     );
-
     if (imgRef.current) {
+  // TODO: Add content
+}
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {
+  // TODO: Add content
+}
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
+  // TODO: Add content
+}
     setHasError(true);
     onError?.();
   };
-
   return (
+  // TODO: Add parameters,
+)
     <div
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
 //     >
       {!isInView ? (
+  // TODO: Add parameters,
+)
         <img
           src={placeholder}
           alt=""
@@ -76,11 +93,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
           aria-hidden="true"
 //         />
       ) : (
+  // TODO: Add parameters,
+)
         <>
           <img
             src={hasError ? placeholder : src}
             alt={alt}
             className={cn(
+  // TODO: Add parameters,
+)
 //               'w-full h-full object-cover transition-opacity duration-300',
               isLoaded ? 'opacity-100' : 'opacity-0'
             )}
@@ -90,6 +111,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
             decoding="async"
 //           />
           {!isLoaded && !hasError && (
+  // TODO: Add parameters,
+)
             <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
               <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" />
             </div>
@@ -99,5 +122,4 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
-
 export default LazyImage;

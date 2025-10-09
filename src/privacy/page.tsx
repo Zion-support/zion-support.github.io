@@ -2,12 +2,14 @@ import React from 'react';
 import { Shield, Eye, Lock, Database, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PrivacyPage: React.FC = () => {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -16,7 +18,6 @@ const PrivacyPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Last updated: January 2025
           </p>
-
           <div className="cyber-card p-8 space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -24,7 +25,7 @@ const PrivacyPage: React.FC = () => {
 //                 Information We Collect
               </h2>
               <p className="text-gray-300 mb-4">
-//                 We collect information you provide directly to us, such as when you create an account, 
+//                 We collect information you provide directly to us, such as when you create an account,
                 use our services, or contact us for support.
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -34,7 +35,6 @@ const PrivacyPage: React.FC = () => {
                 <li>Communication records and support requests</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Eye className="w-6 h-6 mr-3 text-cyan-400" />
@@ -51,14 +51,13 @@ const PrivacyPage: React.FC = () => {
                 <li>Improve our services and develop new features</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Lock className="w-6 h-6 mr-3 text-cyan-400" />
 //                 Data Security
               </h2>
               <p className="text-gray-300 mb-4">
-//                 We implement appropriate security measures to protect your personal information against 
+//                 We implement appropriate security measures to protect your personal information against
 //                 unauthorized access, alteration, disclosure, or destruction.
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -68,18 +67,16 @@ const PrivacyPage: React.FC = () => {
                 <li>Employee training on data protection</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Database className="w-6 h-6 mr-3 text-cyan-400" />
 //                 Data Sharing
               </h2>
               <p className="text-gray-300 mb-4">
-//                 We do not sell, trade, or otherwise transfer your personal information to third parties 
+//                 We do not sell, trade, or otherwise transfer your personal information to third parties
 //                 without your consent, except as described in this policy.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">
 //                 Your Rights
@@ -96,7 +93,6 @@ const PrivacyPage: React.FC = () => {
                 <li>Withdraw consent at any time</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">
 //                 Contact Us
@@ -124,10 +120,8 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default PrivacyPage;

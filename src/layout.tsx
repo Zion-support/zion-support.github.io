@@ -5,11 +5,19 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 import Analytics from './components/Analytics';
 export default function RootLayout({
+  // TODO: Add content
+}
 //   children,
 }: {
+  // TODO: Add content
+}
   children: React.ReactNode;
 }) {
+  // TODO: Add content
+}
   const _structuredData = {
+  // TODO: Add content
+}
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -20,6 +28,8 @@ export default function RootLayout({
     numberOfEmployees: '50-100',
     industry: 'Technology',
     services: [
+  // TODO: Add items,
+]
 //       'AI Solutions',
 //       'Quantum Computing',
 //       'Autonomous Systems',
@@ -29,6 +39,8 @@ export default function RootLayout({
 //       'Business Intelligence'
 //     ],
     contactPoint: {
+  // TODO: Add content
+}
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
@@ -36,10 +48,14 @@ export default function RootLayout({
       availableLanguage: 'en',
     },
     sameAs: [
+  // TODO: Add items,
+]
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
 //     ],
     address: {
+  // TODO: Add content
+}
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
@@ -48,13 +64,19 @@ export default function RootLayout({
       addressCountry: 'US',
     },
     offers: [
+  // TODO: Add items,
+]
       {
+  // TODO: Add content
+}
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
         price: '1500',
         priceCurrency: 'USD',
         priceSpecification: {
+  // TODO: Add content
+}
           '@type': 'PriceSpecification',
           price: '1500',
           priceCurrency: 'USD',
@@ -62,12 +84,16 @@ export default function RootLayout({
         }
       },
       {
+  // TODO: Add content
+}
         '@type': 'Offer',
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
         priceCurrency: 'USD',
         priceSpecification: {
+  // TODO: Add content
+}
           '@type': 'PriceSpecification',
           price: '2500',
           priceCurrency: 'USD',
@@ -76,8 +102,12 @@ export default function RootLayout({
       }
 //     ],
     serviceArea: {
+  // TODO: Add content
+}
       '@type': 'GeoCircle',
       geoMidpoint: {
+  // TODO: Add content
+}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude: '-75.5795'
@@ -85,28 +115,44 @@ export default function RootLayout({
       geoRadius: '1000000'
     },
     hasOfferCatalog: {
+  // TODO: Add content
+}
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [
+  // TODO: Add items,
+]
         {
+  // TODO: Add content
+}
           '@type': 'Offer',
           itemOffered: {
+  // TODO: Add content
+}
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
           }
         },
         {
+  // TODO: Add content
+}
           '@type': 'Offer',
           itemOffered: {
+  // TODO: Add content
+}
             '@type': 'Service',
             name: 'Digital Automation',
             description: 'Process automation and workflow optimization services'
           }
         },
         {
+  // TODO: Add content
+}
           '@type': 'Offer',
           itemOffered: {
+  // TODO: Add content
+}
             '@type': 'Service',
             name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'
@@ -116,6 +162,8 @@ export default function RootLayout({
     }
   };
   return (
+  // TODO: Add parameters,
+)
     <html lang='en'>
       <head>
         <meta charSet="UTF-8" />
@@ -174,8 +222,8 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
-        <script
-          type='application/ld+json'
+        <script;
+type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 //         />
       </head>
@@ -188,7 +236,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-
 export default RootLayout;
 }
 }

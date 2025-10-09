@@ -1,5 +1,7 @@
 'use client';
 interface PerformanceMetrics {
+  // TODO: Add content
+}
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -7,15 +9,25 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 export const _usePerformanceOptimization = () => {
+  // TODO: Add content
+}
   const measurePerformance = useCallback(() => {
+  // TODO: Add content
+}
     if (typeof window === 'undefined' || !('performance' in window)) {
+  // TODO: Add content
+}
       return null;
     }
     const navigation = performance.getEntriesByType(
+  // TODO: Add parameters,
+)
 //       'navigation'
     )[0] as PerformanceNavigationTiming;
     const _paintEntries = performance.getEntriesByType('paint');
     const _metrics: PerformanceMetrics = {
+  // TODO: Add content
+}
       loadTime: navigation
 //         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
@@ -26,34 +38,52 @@ export const _usePerformanceOptimization = () => {
       cumulativeLayoutShift: 0,
       firstInputDelay: 0
     };
-    // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
+    // Measure LCP;
+const lcpObserver = new PerformanceObserver(list => {
+  // TODO: Add content
+}
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
+  // TODO: Add content
+}
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    // Measure CLS
-    let __clsValue = 0;
+    // Measure CLS;
+let __clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
+  // TODO: Add content
+}
       for (const entry of list.getEntries()) {
+  // TODO: Add content
+}
         const layoutShiftEntry = entry as PerformanceEntry & {
+  // TODO: Add content
+}
           hadRecentInput?: boolean;
           value?: number;
         };
         if (!layoutShiftEntry.hadRecentInput) {
+  // TODO: Add content
+}
           clsValue += layoutShiftEntry.value || 0;
         }
       }
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
-    // Measure FID
-    const fidObserver = new PerformanceObserver(list => {
+    // Measure FID;
+const fidObserver = new PerformanceObserver(list => {
+  // TODO: Add content
+}
       for (const entry of list.getEntries()) {
+  // TODO: Add content
+}
         const fidEntry = entry as PerformanceEntry & {
+  // TODO: Add content
+}
           processingStart?: number;
         };
         metrics.firstInputDelay =
@@ -63,6 +93,8 @@ export const _usePerformanceOptimization = () => {
     fidObserver.observe({ entryTypes: ['first-input'] });
     // Cleanup observers after a delay
     setTimeout(() => {
+  // TODO: Add content
+}
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
@@ -70,10 +102,18 @@ export const _usePerformanceOptimization = () => {
     return metrics;
   }, []);
   const optimizeImages = useCallback(() => {
+  // TODO: Add content
+}
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver(entries => {
+  // TODO: Add content
+}
       entries.forEach(entry => {
+  // TODO: Add content
+}
         if (entry.isIntersecting) {
+  // TODO: Add content
+}
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
@@ -84,30 +124,48 @@ export const _usePerformanceOptimization = () => {
     images.forEach(img => imageObserver.observe(img));
   }, []);
   const preloadCriticalResources = useCallback(() => {
+  // TODO: Add content
+}
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
     criticalResources.forEach(resource => {
+  // TODO: Add content
+}
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
       if (resource.endsWith('.woff2')) {
+  // TODO: Add content
+}
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
     });
   }, []);
   useEffect(() => {
-    // Measure performance after page load
-    const timer = setTimeout(() => {
+  // TODO: Add content
+}
+    // Measure performance after page load;
+const timer = setTimeout(() => {
+  // TODO: Add content
+}
       const metrics = measurePerformance();
       if (metrics) {
+  // TODO: Add content
+}
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
+  // TODO: Add content
+}
           // Track metrics in production
         }
-        if (process.env['NODE_ENV'] === 'development') { 
-          if (import.meta.env.DEV) { 
-          } 
+        if (process.env['NODE_ENV'] === 'development') {
+  // TODO: Add content
+}
+          if (import.meta.env.DEV) {
+  // TODO: Add content
+}
+          }
         }
       }
     }, 1000);
@@ -118,6 +176,8 @@ export const _usePerformanceOptimization = () => {
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
   return {
+  // TODO: Add content
+}
 //     measurePerformance,
 //     optimizeImages,
 //     preloadCriticalResources

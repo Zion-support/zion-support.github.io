@@ -5,9 +5,14 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  const _itServices = [
+  // TODO: Add content
+}
+const _itServices = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
       icon: Cloud,
@@ -19,6 +24,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
+  // TODO: Add content
+}
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
@@ -30,6 +37,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
+  // TODO: Add content
+}
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
       icon: Server,
@@ -41,6 +50,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
+  // TODO: Add content
+}
       title: 'Database Management',
       description: 'Expert database administration, optimization, and migration services for all major database platforms.',
       icon: Database,
@@ -52,6 +63,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
+  // TODO: Add content
+}
       title: 'Business Intelligence',
       description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
       icon: BarChart,
@@ -63,6 +76,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
+  // TODO: Add content
+}
       title: 'IT Consulting',
       description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
       icon: Users,
@@ -74,20 +89,18 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-
 const ItServicesPage: React.FC = () => {
+  // TODO: Add content
+}
   return (
-=======
-    return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services | Zion Tech Group</title>
         <meta name="description" content="Advanced IT services solutions by Zion Tech Group." />
       </Helmet>
-      
       <Navigation />
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">IT Services</h1>
@@ -104,11 +117,9 @@ const ItServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );
 };
 }
-
 export default ITServicesPage;

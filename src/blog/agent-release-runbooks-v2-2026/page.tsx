@@ -1,18 +1,22 @@
 export default function Page() {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
             <ListChecks />
-            <span className='text-sm font-semibold'>Agent Ops • 2026</span>
+            <span className='text-sm font-semibold'>Agent Ops  2026</span>
           </div>
           <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
 //             Agent Release Runbooks v2 (2026)
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
 //             Ship autonomous agents with budgeted actions, KPI
-//             canaries, approvals and one‑click rollback.
+//             canaries, approvals and oneclick rollback.
           </p>
           <div className='flex items-center gap-6 text-white/70 mt-8'>
             <div className='flex items-center gap-2'>
@@ -75,7 +79,7 @@ export default function Page() {
                 <FileWarning /> Prevent Regressions
               </h3>
               <p className='text-white/90'>
-//                 We implement v2 runbooks in 4–6 weeks with audits and training.
+//                 We implement v2 runbooks in 46 weeks with audits and training.
               </p>
             </div>
             <Link

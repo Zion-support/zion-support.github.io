@@ -1,24 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {CheckCircle, Star, Phone} from 'lucide-react';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
 interface ServicePageProps {
+  // TODO: Add content
+}
   title: string;
   description: string;
-<<<<<<< HEAD
-  icon: React.ComponentType<{ className?: string }>;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
   icon: React.ComponentType<{ className?: string }>;
   services: Array<{
+  // TODO: Add content
+}
     title: string;
     description: string;
     icon: React.ComponentType<{ className?: string }>;
@@ -27,12 +21,14 @@ interface ServicePageProps {
   }>;
   benefits: string[];
 }
-
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
@@ -59,11 +55,12 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             </a>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
+  // TODO: Add parameters,
+)
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <service.icon className="w-12 h-12 text-cyan-400 mr-4" />
@@ -72,6 +69,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
+  // TODO: Add parameters,
+)
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                       {feature}
@@ -89,7 +88,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -97,6 +95,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
+  // TODO: Add parameters,
+)
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
@@ -106,7 +106,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -135,10 +134,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default ServicePage;

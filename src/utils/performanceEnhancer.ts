@@ -26,253 +26,163 @@ interface OptimizationConfig {
 class PerformanceEnhancer {
   private config: OptimizationConfig;
   private metrics: PerformanceMetrics | null = null;
-  private observer: PerformanceObserver | null = null;
 
-  constructor(config: OptimizationConfig) {
-    this.config = config;
-    this.init();
-  }
-
-  private init(): void {
-    if (typeof window === 'undefined') return;
-
-    this.setupPerformanceMonitoring();
-    this.optimizeImages();
-    this.setupLazyLoading();
-    this.setupResourceHints();
-    this.setupServiceWorker();
-    this.optimizeFonts();
-    this.setupCriticalCSS();
-  }
-
-  private setupPerformanceMonitoring(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    try {
-      this.observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.analyzePerformanceEntry(entry);
-        }
-      });
-
-      // Monitor Core Web Vitals
-      this.observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
-    } catch (error) {
-      console.warn('Performance monitoring setup failed:', error);
-    }
-  }
-
-  private analyzePerformanceEntry(entry: PerformanceEntry): void {
-    switch (entry.entryType) {
-      case 'largest-contentful-paint':
-        this.metrics = { ...this.metrics, lcp: entry.startTime } as PerformanceMetrics;
-        break;
-      case 'first-input':
-        this.metrics = { ...this.metrics, fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics;
-        break;
-      case 'layout-shift':
-        if (!(entry as any).hadRecentInput) {
-          this.metrics = { ...this.metrics, cls: (this.metrics?.cls || 0) + (entry as any).value } as PerformanceMetrics;
-        }
-        break;
-      case 'paint':
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics = { ...this.metrics, fcp: entry.startTime } as PerformanceMetrics;
-        }
-        break;
-      case 'navigation':
-        const _navEntry = entry as PerformanceNavigationTiming;
-        this.metrics = { ...this.metrics, ttfb: navEntry.responseStart - navEntry.requestStart } as PerformanceMetrics;
-        break;
-    }
-  }
-
-  private optimizeImages(): void {
-    if (!this.config.enableImageOptimization) return;
-
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach((img) => {
-      const imageElement = img as HTMLImageElement;
-      if (imageElement.dataset.src) {
-        imageElement.src = imageElement.dataset.src;
-        imageElement.removeAttribute('data-src');
-      }
-    });
-
-    // Add WebP support detection
-    this.detectWebPSupport();
-  }
-
-  private detectWebPSupport(): void {
-    const webP = new Image();
-    webP.onload = webP.onerror = () => {
-      if (webP.height === 2) {
-        document.documentElement.classList.add('webp');
-      } else {
-        document.documentElement.classList.add('no-webp');
-      }
+  constructor(config?: Partial<OptimizationConfig>) {
+    this.config = {
+      enableImageOptimization: true,
+      enableLazyLoading: true,
+      enableCodeSplitting: true,
+      enablePrefetching: true,
+      enableServiceWorker: true,
+      enableResourceHints: true,
+      enableCompression: true,
+      enableCaching: true,
+      ...config,
     };
-    webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
 
-  private setupLazyLoading(): void {
-    if (!this.config.enableLazyLoading) return;
-
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
-      });
+  async initialize(): Promise<void> {
+    try {
+      if (this.config.enableServiceWorker) {
+        await this.registerServiceWorker();
+      }
+      
+      if (this.config.enableResourceHints) {
+        this.addResourceHints();
+      }
+      
+      if (this.config.enableLazyLoading) {
+        this.enableLazyLoading();
+      }
+    } catch (error) {
+      console.error('Performance enhancer initialization failed:', error);
     }
   }
 
-  private setupResourceHints(): void {
-    if (!this.config.enableResourceHints) return;
-
-    // Preconnect to external domains
-    const domains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.googletagmanager.com',
-      'https://www.google-analytics.com'
-    ];
-
-    domains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = domain;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-
-    // Prefetch critical resources
-    this.prefetchCriticalResources();
+  private async registerServiceWorker(): Promise<void> {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('/sw.js');
+      } catch (error) {
+        console.error('Service worker registration failed:', error);
+      }
+    }
   }
 
-  private prefetchCriticalResources(): void {
-    if (!this.config.enablePrefetching) return;
-
+  private addResourceHints(): void {
+    // Add preload hints for critical resources
     const criticalResources = [
-//       '/assets/index.css',
-//       '/assets/vendor.js',
-//       '/assets/index.js'
+      '/fonts/inter.woff2',
+      '/css/critical.css',
     ];
 
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
-      link.rel = 'prefetch';
+      link.rel = 'preload';
       link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
       document.head.appendChild(link);
     });
   }
 
-  private setupServiceWorker(): void {
-    if (!this.config.enableServiceWorker) return;
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-//         navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
+  private enableLazyLoading(): void {
+    // Enable lazy loading for images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
       });
-    }
-  }
-
-  private optimizeFonts(): void {
-    // Add font-display: swap to all font faces
-    const style = document.createElement('style');
-    style.textContent = `
-      @font-face {
-        font-family: 'Orbitron';
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Rajdhani';
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Exo 2';
-        font-display: swap;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  private setupCriticalCSS(): void {
-    // Inline critical CSS for above-the-fold content
-    const criticalCSS = `
-      .hero-section { contain: layout style paint; }
-      .cyber-card { contain: layout style; }
-      .neon-text { will-change: transform; }
-      .cyber-text-3d { will-change: transform; }
-    `;
-
-    const style = document.createElement('style');
-    style.textContent = criticalCSS;
-    style.setAttribute('data-critical', 'true');
-    document.head.insertBefore(style, document.head.firstChild);
-  }
-
-  public getMetrics(): PerformanceMetrics | null {
-    return this.metrics;
-  }
-
-  public optimizeBundle(): void {
-    // Dynamic imports for non-critical components
-    const lazyComponents = [
-//       'ContentPromotionBanner',
-//       'ContentCarousel',
-//       'DynamicContentShowcase',
-//       'ContentStatistics',
-//       'ContentNewsletterSignup'
-    ];
-
-    lazyComponents.forEach(component => {
-      const element = document.querySelector(`[data-component="${component}"]`);
-      if (element && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              this.loadComponent(component);
-              observer.unobserve(entry.target);
-            }
-          });
-        });
-        observer.observe(element);
-      }
     });
+
+    images.forEach(img => imageObserver.observe(img));
   }
 
-  private async loadComponent(componentName: string): Promise<void> {
+  async measurePerformance(): Promise<PerformanceMetrics> {
+    if (this.metrics) {
+      return this.metrics;
+    }
+
+    const metrics: PerformanceMetrics = {
+      lcp: 0,
+      fid: 0,
+      cls: 0,
+      fcp: 0,
+      ttfb: 0,
+      tbt: 0,
+    };
+
     try {
-      const module = await import(`../components/${componentName}.tsx`);
-      // Component loaded successfully
-      console.log(`${componentName} loaded dynamically`);
+      // Measure Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              metrics.lcp = entry.startTime;
+            } else if (entry.entryType === 'first-input') {
+              metrics.fid = (entry as any).processingStart - entry.startTime;
+            } else if (entry.entryType === 'layout-shift') {
+              if (!(entry as any).hadRecentInput) {
+                metrics.cls += (entry as any).value;
+              }
+            } else if (entry.entryType === 'paint') {
+              if (entry.name === 'first-contentful-paint') {
+                metrics.fcp = entry.startTime;
+              }
+            }
+          }
+        });
+
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+      }
+
+      // Measure TTFB
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      }
+
+      // Measure TBT
+      const longTasks = performance.getEntriesByType('longtask');
+      metrics.tbt = longTasks.reduce((total, task) => total + task.duration, 0);
+
+      this.metrics = metrics;
     } catch (error) {
-      console.warn(`Failed to load ${componentName}:`, error);
+      console.error('Performance measurement failed:', error);
     }
+
+    return metrics;
   }
 
-  public cleanup(): void {
-    if (this.observer) {
-      this.observer.disconnect();
+  getOptimizationRecommendations(): string[] {
+    const recommendations: string[] = [];
+
+    if (this.metrics) {
+      if (this.metrics.lcp > 2500) {
+        recommendations.push('Optimize Largest Contentful Paint (LCP)');
+      }
+      if (this.metrics.fid > 100) {
+        recommendations.push('Reduce First Input Delay (FID)');
+      }
+      if (this.metrics.cls > 0.1) {
+        recommendations.push('Improve Cumulative Layout Shift (CLS)');
+      }
+      if (this.metrics.fcp > 1800) {
+        recommendations.push('Optimize First Contentful Paint (FCP)');
+      }
+      if (this.metrics.ttfb > 600) {
+        recommendations.push('Improve Time to First Byte (TTFB)');
+      }
+      if (this.metrics.tbt > 200) {
+        recommendations.push('Reduce Total Blocking Time (TBT)');
+      }
     }
+
+    return recommendations;
   }
 }
 

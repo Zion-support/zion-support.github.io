@@ -1,6 +1,10 @@
 import React from 'react';
 const ContentPromotionBanner: React.FC = () => {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-white mb-4">

@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {
+  // TODO: Add content
+}
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
-
 export default function HomePage() {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
@@ -50,7 +51,7 @@ export default function HomePage() {
               <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-//               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+//               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
 //               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -162,7 +163,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
-//                 © 2026 Zion Tech Group. All rights reserved.
+//                  2026 Zion Tech Group. All rights reserved.
               </p>
             </div>
           </div>

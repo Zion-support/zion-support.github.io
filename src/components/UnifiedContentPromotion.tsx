@@ -1,26 +1,38 @@
 import React from 'react';
 const UnifiedContentPromotion: React.FC = () => {
+  // TODO: Add content
+}
   const _features = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: "Enterprise AI Solutions",
       description: "Transform your business with cutting-edge AI automation and intelligent systems.",
       link: "/services",
-      icon: "🤖"
+      icon: ""
     },
     {
+  // TODO: Add content
+}
       title: "Digital Transformation",
       description: "Modernize your infrastructure with cloud-native solutions and DevOps practices.",
       link: "/services",
-      icon: "🚀"
+      icon: ""
     },
     {
+  // TODO: Add content
+}
       title: "Expert Consultation",
       description: "Work with our team of experts to design and implement your AI strategy.",
       link: "/contact",
-      icon: "👨‍💼"
+      icon: ""
     }
   ];
   return (
+  // TODO: Add parameters,
+)
     <div className="unified-content-promotion py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -28,7 +40,9 @@ const UnifiedContentPromotion: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+  // TODO: Add parameters,
+)
+            <div
               key={index}
               className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
 //             >
@@ -39,7 +53,7 @@ const UnifiedContentPromotion: React.FC = () => {
                 href={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
 //               >
-//                 Learn More →
+//                 Learn More
               </Link>
             </div>
           ))}

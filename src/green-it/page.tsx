@@ -4,14 +4,17 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
 'use client';
-
 const GreenITPage: React.FC = () => {
+  // TODO: Add content
+}
   const [activeTab, setActiveTab] = useState('solutions');
-
   const _tabs = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
@@ -19,6 +22,8 @@ const GreenITPage: React.FC = () => {
       bgColor: 'bg-green-500/10'
     },
     {
+  // TODO: Add content
+}
       id: 'benefits',
       name: 'Benefits',
       icon: Target,
@@ -26,6 +31,8 @@ const GreenITPage: React.FC = () => {
       bgColor: 'bg-blue-500/10'
     },
     {
+  // TODO: Add content
+}
       id: 'certifications',
       name: 'Certifications',
       icon: Award,
@@ -33,14 +40,19 @@ const GreenITPage: React.FC = () => {
       bgColor: 'bg-yellow-500/10'
     }
   ];
-
   const greenSolutions = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
       color: 'text-yellow-400',
       features: [
+  // TODO: Add items,
+]
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -50,11 +62,15 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $2,500/month'
     },
     {
+  // TODO: Add content
+}
       title: 'Cloud Carbon Footprint Reduction',
       description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
       icon: Cloud,
       color: 'text-blue-400',
       features: [
+  // TODO: Add items,
+]
 //         'Carbon footprint monitoring',
 //         'Green cloud migration',
 //         'Resource optimization',
@@ -64,11 +80,15 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $1,800/month'
     },
     {
+  // TODO: Add content
+}
       title: 'Sustainable IT Asset Management',
       description: 'Implement circular economy principles for IT equipment lifecycle management',
       icon: Recycle,
       color: 'text-green-400',
       features: [
+  // TODO: Add items,
+]
 //         'Equipment refurbishment',
 //         'Responsible disposal',
 //         'Asset tracking and optimization',
@@ -78,11 +98,15 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $1,200/month'
     },
     {
+  // TODO: Add content
+}
       title: 'Green Software Development',
       description: 'Develop energy-efficient software applications and optimize existing systems',
       icon: Code,
       color: 'text-purple-400',
       features: [
+  // TODO: Add items,
+]
 //         'Energy-efficient coding practices',
 //         'Performance optimization',
 //         'Resource usage monitoring',
@@ -92,11 +116,15 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $1,500/month'
     },
     {
+  // TODO: Add content
+}
       title: 'Remote Work Infrastructure',
       description: 'Enable sustainable remote work with optimized digital infrastructure',
       icon: Users,
       color: 'text-cyan-400',
       features: [
+  // TODO: Add items,
+]
 //         'Virtual desktop infrastructure',
 //         'Collaboration tools optimization',
 //         'Energy-efficient hardware',
@@ -106,11 +134,15 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $800/month'
     },
     {
+  // TODO: Add content
+}
       title: 'Environmental Monitoring',
       description: 'Real-time monitoring and reporting of environmental impact metrics',
       icon: Globe,
       color: 'text-emerald-400',
       features: [
+  // TODO: Add items,
+]
 //         'Carbon footprint tracking',
 //         'Energy consumption monitoring',
 //         'Sustainability reporting',
@@ -120,13 +152,18 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $600/month'
     }
   ];
-
   const benefits = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
+  // TODO: Add items,
+]
 //         'Up to 40% reduction in energy costs',
 //         'Lower maintenance and replacement costs',
 //         'Improved resource utilization',
@@ -134,10 +171,14 @@ const GreenITPage: React.FC = () => {
 //       ]
     },
     {
+  // TODO: Add content
+}
       icon: Leaf,
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
       details: [
+  // TODO: Add items,
+]
 //         '60% reduction in carbon emissions',
 //         '50% less electronic waste',
 //         '100% renewable energy options',
@@ -145,10 +186,14 @@ const GreenITPage: React.FC = () => {
 //       ]
     },
     {
+  // TODO: Add content
+}
       icon: Award,
       title: 'Compliance & Certification',
       description: 'Meet environmental regulations and achieve sustainability certifications',
       details: [
+  // TODO: Add items,
+]
 //         'ISO 14001 environmental management',
 //         'LEED certification support',
 //         'Carbon Trust certification',
@@ -156,10 +201,14 @@ const GreenITPage: React.FC = () => {
 //       ]
     },
     {
+  // TODO: Add content
+}
       icon: Users,
       title: 'Brand Reputation',
       description: 'Enhance your brand image and attract environmentally conscious customers',
       details: [
+  // TODO: Add items,
+]
 //         'Improved brand perception',
 //         'Customer loyalty increase',
 //         'Investor confidence boost',
@@ -167,9 +216,12 @@ const GreenITPage: React.FC = () => {
 //       ]
     }
   ];
-
   const certifications = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
       icon: Award,
@@ -177,6 +229,8 @@ const GreenITPage: React.FC = () => {
       status: 'Certified'
     },
     {
+  // TODO: Add content
+}
       name: 'LEED Platinum',
       description: 'Leadership in Energy and Environmental Design',
       icon: Leaf,
@@ -184,6 +238,8 @@ const GreenITPage: React.FC = () => {
       status: 'Certified'
     },
     {
+  // TODO: Add content
+}
       name: 'Carbon Trust Standard',
       description: 'Carbon Footprint Management',
       icon: Globe,
@@ -191,6 +247,8 @@ const GreenITPage: React.FC = () => {
       status: 'Certified'
     },
     {
+  // TODO: Add content
+}
       name: 'Green IT Certification',
       description: 'Sustainable IT Practices',
       icon: Zap,
@@ -198,41 +256,55 @@ const GreenITPage: React.FC = () => {
       status: 'Certified'
     }
   ];
-
   const stats = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: Leaf,
       value: '60%',
       label: 'Carbon Footprint Reduction',
       color: 'text-green-400'
     },
     {
+  // TODO: Add content
+}
       icon: Zap,
       value: '40%',
       label: 'Energy Cost Savings',
       color: 'text-yellow-400'
     },
     {
+  // TODO: Add content
+}
       icon: Recycle,
       value: '50%',
       label: 'Waste Reduction',
       color: 'text-blue-400'
     },
     {
+  // TODO: Add content
+}
       icon: Globe,
       value: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
     }
   ];
-
   const caseStudies = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
       solution: 'Implemented energy-efficient data center design with renewable energy integration',
       results: [
+  // TODO: Add items,
+]
 //         '45% reduction in energy consumption',
 //         '$2.3M annual cost savings',
 //         'Carbon neutral operations achieved',
@@ -242,11 +314,15 @@ const GreenITPage: React.FC = () => {
       color: 'text-blue-400'
     },
     {
+  // TODO: Add content
+}
       company: 'FinanceFirst Bank',
       industry: 'Financial Services',
       challenge: 'Large carbon footprint from IT operations',
       solution: 'Green cloud migration and sustainable IT asset management',
       results: [
+  // TODO: Add items,
+]
 //         '55% reduction in carbon emissions',
 //         '60% improvement in energy efficiency',
 //         'ISO 14001 certification achieved',
@@ -256,8 +332,9 @@ const GreenITPage: React.FC = () => {
       color: 'text-green-400'
     }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -268,7 +345,7 @@ const GreenITPage: React.FC = () => {
 //               Green IT Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-//               Transform your IT infrastructure into a sustainable, environmentally friendly system 
+//               Transform your IT infrastructure into a sustainable, environmentally friendly system
               that reduces costs while protecting our planet.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -286,10 +363,11 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
+  // TODO: Add parameters,
+)
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
@@ -299,15 +377,18 @@ const GreenITPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {tabs.map((tab) => (
+  // TODO: Add parameters,
+)
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+  // TODO: Add content
+}
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
@@ -319,15 +400,18 @@ const GreenITPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Tab Content */}
           {activeTab === 'solutions' && (
+  // TODO: Add parameters,
+)
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 //                 Our Green IT Solutions
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => (
+  // TODO: Add parameters,
+)
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="flex items-start mb-4">
                       <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
@@ -338,11 +422,12 @@ const GreenITPage: React.FC = () => {
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                       </div>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
                         {solution.features.map((feature, featureIndex) => (
+  // TODO: Add parameters,
+)
                           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
@@ -350,12 +435,10 @@ const GreenITPage: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="mb-4">
                       <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
                       <div className="text-sm text-gray-300">{solution.impact}</div>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
@@ -373,14 +456,17 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'benefits' && (
+  // TODO: Add parameters,
+)
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 //                 Benefits of Green IT
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => (
+  // TODO: Add parameters,
+)
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                     <div className="flex items-start mb-4">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -393,6 +479,8 @@ const GreenITPage: React.FC = () => {
                     </div>
                     <ul className="space-y-2">
                       {benefit.details.map((detail, detailIndex) => (
+  // TODO: Add parameters,
+)
                         <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                           {detail}
@@ -404,14 +492,17 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'certifications' && (
+  // TODO: Add parameters,
+)
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 //                 Our Certifications
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {certifications.map((cert, index) => (
+  // TODO: Add parameters,
+)
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
@@ -424,7 +515,6 @@ const GreenITPage: React.FC = () => {
               </div>
             </div>
           )}
-
           {/* Case Studies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -432,6 +522,8 @@ const GreenITPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study, index) => (
+  // TODO: Add parameters,
+)
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
@@ -442,17 +534,16 @@ const GreenITPage: React.FC = () => {
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>
-                    
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
-                    
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
                     <ul className="space-y-1">
                       {study.results.map((result, resultIndex) => (
+  // TODO: Add parameters,
+)
                         <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                           {result}
@@ -464,14 +555,13 @@ const GreenITPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
 //               Ready to Go Green?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-//               Start your journey towards sustainable IT operations. Get a free environmental 
+//               Start your journey towards sustainable IT operations. Get a free environmental
               assessment and discover how much you can save while protecting the planet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -504,5 +594,4 @@ const GreenITPage: React.FC = () => {
     </>
   );
 };
-
 export default GreenITPage;

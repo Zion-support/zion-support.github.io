@@ -1,50 +1,62 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AICustomerSupportBotPage: React.FC = () => {
+  // TODO: Add content
+}
   const _features = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
     {
+  // TODO: Add content
+}
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
     },
     {
+  // TODO: Add content
+}
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
     },
     {
+  // TODO: Add content
+}
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
-
   const pricingPlans = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       name: 'Starter',
       price: '$149',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
+  // TODO: Add items,
+]
 //         'Up to 1,000 conversations/month',
 //         'Basic AI responses',
 //         'Email support',
@@ -54,11 +66,15 @@ const AICustomerSupportBotPage: React.FC = () => {
       popular: false
     },
     {
+  // TODO: Add content
+}
       name: 'Professional',
       price: '$299',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
+  // TODO: Add items,
+]
 //         'Up to 10,000 conversations/month',
 //         'Advanced AI responses',
 //         'Priority support',
@@ -69,11 +85,15 @@ const AICustomerSupportBotPage: React.FC = () => {
       popular: true
     },
     {
+  // TODO: Add content
+}
       name: 'Enterprise',
       price: '$599',
       period: '/month',
       description: 'For large organizations',
       features: [
+  // TODO: Add items,
+]
 //         'Unlimited conversations',
 //         'Premium AI features',
 //         '24/7 support',
@@ -85,34 +105,35 @@ const AICustomerSupportBotPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
+  // TODO: Add items,
+]
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support Bot | Zion Tech Group</title>
         <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
       </Helmet>
-      
       <Navigation />
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
+//             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands
 //             natural language and escalates complex issues to human agents seamlessly.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
+  // TODO: Add parameters,
+)
             <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -120,15 +141,18 @@ const AICustomerSupportBotPage: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
+  // TODO: Add parameters,
+)
             <div key={index} className="bg-slate-800/50 rounded-lg p-6">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
                 {feature.benefits.map((benefit, benefitIndex) => (
+  // TODO: Add parameters,
+)
                   <li key={benefitIndex} className="flex items-center text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
@@ -138,13 +162,16 @@ const AICustomerSupportBotPage: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+  // TODO: Add parameters,
+)
               <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
+  // TODO: Add parameters,
+)
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
 //                     Most Popular
                   </div>
@@ -156,6 +183,8 @@ const AICustomerSupportBotPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
+  // TODO: Add parameters,
+)
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {feature}
@@ -169,7 +198,6 @@ const AICustomerSupportBotPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -185,13 +213,10 @@ const AICustomerSupportBotPage: React.FC = () => {
           </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );
 };
-
 }
-
 export default AiCustomerSupportBotPage;
 export default AICustomerSupportBotPage;

@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
+  // TODO: Add content
+}
   src: string;
   alt: string;
   width?: number;
@@ -17,6 +19,8 @@ interface ImageProps {
   onError?: () => void;
 }
 export const Image: React.FC<ImageProps> = ({
+  // TODO: Add content
+}
 //   src,
 //   alt,
 //   width,
@@ -33,19 +37,29 @@ export const Image: React.FC<ImageProps> = ({
 //   onError,
 //   ...props
 }) => {
+  // TODO: Add content
+}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {
+  // TODO: Add content
+}
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
   const handleError = useCallback(() => {
+  // TODO: Add content
+}
     setHasError(true);
     if (onError) onError();
   }, [onError]);
   const imageStyle: React.CSSProperties = {
+  // TODO: Add content
+}
 //     ...style,
     ...(fill && {
+  // TODO: Add content
+}
       position: 'absolute',
       top: 0,
       left: 0,
@@ -55,9 +69,13 @@ export const Image: React.FC<ImageProps> = ({
     })
   };
   if (hasError) {
+  // TODO: Add content
+}
     return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+  // TODO: Add parameters,
+)
+      <div;
+className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 //       >
@@ -66,6 +84,8 @@ export const Image: React.FC<ImageProps> = ({
     );
   }
   return (
+  // TODO: Add parameters,
+)
     <img
       src={src}
       alt={alt}

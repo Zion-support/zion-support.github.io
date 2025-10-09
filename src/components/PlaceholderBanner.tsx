@@ -5,6 +5,8 @@ import React from 'react';
  * Used as a fallback when actual banner components are not available
  */
 const PlaceholderBanner: React.FC = () => {
+  // TODO: Add content
+}
   return null;
 };
 export default PlaceholderBanner;

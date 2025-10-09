@@ -2,10 +2,15 @@ import React from 'react';
 import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const TeamPage: React.FC = () => {
+  // TODO: Add content
+}
   const _teamMembers = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
@@ -15,6 +20,8 @@ const TeamPage: React.FC = () => {
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
     {
+  // TODO: Add content
+}
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
@@ -24,6 +31,8 @@ const TeamPage: React.FC = () => {
       expertise: ['Machine Learning', 'Deep Learning', 'Research']
     },
     {
+  // TODO: Add content
+}
       name: 'Michael Rodriguez',
       role: 'CTO',
       bio: 'Technology architect with expertise in scalable systems and cloud infrastructure',
@@ -33,6 +42,8 @@ const TeamPage: React.FC = () => {
       expertise: ['Cloud Architecture', 'DevOps', 'Security']
     },
     {
+  // TODO: Add content
+}
       name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
@@ -42,6 +53,8 @@ const TeamPage: React.FC = () => {
       expertise: ['Data Science', 'Analytics', 'Statistics']
     },
     {
+  // TODO: Add content
+}
       name: 'James Kim',
       role: 'Lead AI Engineer',
       bio: 'Full-stack AI engineer with expertise in natural language processing and computer vision',
@@ -51,6 +64,8 @@ const TeamPage: React.FC = () => {
       expertise: ['NLP', 'Computer Vision', 'AI Engineering']
     },
     {
+  // TODO: Add content
+}
       name: 'Lisa Thompson',
       role: 'Head of Client Success',
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
@@ -60,15 +75,17 @@ const TeamPage: React.FC = () => {
       expertise: ['Client Relations', 'Project Management', 'Customer Success']
     }
   ];
-
   const stats = [
+  // TODO: Add items,
+]
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '100+', label: 'AI Projects', icon: Brain },
     { number: '99.9%', label: 'Client Satisfaction', icon: Shield }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Team</h1>
@@ -80,5 +97,4 @@ const TeamPage: React.FC = () => {
     </div>
   );
 };
-
 export default TeamPage;

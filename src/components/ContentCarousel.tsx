@@ -1,6 +1,10 @@
 import React from 'react';
 const ContentCarousel: React.FC = () => {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -24,5 +28,4 @@ const ContentCarousel: React.FC = () => {
     </section>
   );
 };
-
 export default ContentCarousel;

@@ -1,53 +1,71 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIProjectManagerPage: React.FC = () => {
+  // TODO: Add content
+}
   const _features = [
+  // TODO: Add items,
+]
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AiProjectManagerPage: React.FC = () => {
+  // TODO: Add content
+}
   const features = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
     },
     {
+  // TODO: Add content
+}
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
       benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
     },
     {
+  // TODO: Add content
+}
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Advanced analytics to predict project outcomes and identify potential risks',
       benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
     },
     {
+  // TODO: Add content
+}
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
     }
   ];
-
   const pricingPlans = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       name: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small teams',
       features: [
+  // TODO: Add items,
+]
 //         'Up to 5 projects',
 //         'Basic AI planning',
 //         'Team collaboration',
@@ -57,11 +75,15 @@ const AiProjectManagerPage: React.FC = () => {
       popular: false
     },
     {
+  // TODO: Add content
+}
       name: 'Professional',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
+  // TODO: Add items,
+]
 //         'Up to 25 projects',
 //         'Advanced AI planning',
 //         'Full team collaboration',
@@ -72,11 +94,15 @@ const AiProjectManagerPage: React.FC = () => {
       popular: true
     },
     {
+  // TODO: Add content
+}
       name: 'Enterprise',
       price: '$399',
       period: '/month',
       description: 'For large organizations',
       features: [
+  // TODO: Add items,
+]
 //         'Unlimited projects',
 //         'Premium AI features',
 //         'Enterprise collaboration',
@@ -88,27 +114,23 @@ const AiProjectManagerPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
+  // TODO: Add items,
+]
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   ];
-
   return (
-=======
-const AIProjectManagerPage: React.FC = () => {
-        return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Project Manager | Zion Tech Group</title>
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
       </Helmet>
-      
       <Navigation />
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
@@ -125,13 +147,10 @@ const AIProjectManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );
 };
-
 }
-
 export default AiProjectManagerPage;
 export default AIProjectManagerPage;

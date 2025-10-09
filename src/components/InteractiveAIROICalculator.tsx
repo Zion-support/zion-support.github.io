@@ -1,10 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
+  // TODO: Add content
+}
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
   const _calculateROI = () => {
+  // TODO: Add content
+}
     const _annualSavings = (currentCost * efficiencyGain) / 100;
     const _totalSavings = annualSavings * (timeframe / 12);
     const _roi = ((totalSavings - currentCost) / currentCost) * 100;
@@ -12,6 +16,8 @@ const InteractiveAIROICalculator: React.FC = () => {
   };
   const roi = calculateROI();
   return (
+  // TODO: Add parameters,
+)
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
@@ -24,8 +30,8 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
 //                   Current Annual Cost ($)
                 </label>
-                <input
-                  type='number'
+                <input;
+type='number'
                   value={currentCost}
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
@@ -35,8 +41,8 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
 //                   Expected Efficiency Gain (%)
                 </label>
-                <input
-                  type='range'
+                <input;
+type='range'
                   min='10'
                   max='90'
                   value={efficiencyGain}

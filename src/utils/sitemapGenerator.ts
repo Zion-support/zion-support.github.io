@@ -1,19 +1,23 @@
-// Sitemap generator utility
+// Sitemap generator utility;
 export interface SitemapUrl {
+  // TODO: Add content
+}
   loc: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-
 export const _generateSitemap = (urls: SitemapUrl[]): string => {
+  // TODO: Add content
+}
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
-
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map((url) => {
+  // TODO: Add content
+}
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
     return `  <url>
     <loc>${fullUrl}</loc>
@@ -24,15 +28,16 @@ ${urls
   })
   .join('\n')}
 </urlset>`;
-
   return sitemap;
 };
-
-// Define all the pages for the sitemap
+// Define all the pages for the sitemap;
 export const getAllPages = (): SitemapUrl[] => {
+  // TODO: Add content
+}
   const currentDate = new Date().toISOString().split('T')[0];
-  
   return [
+  // TODO: Add items,
+]
     // Main pages
     { loc: '/', priority: 1.0, changefreq: 'daily' },
     { loc: '/about', priority: 0.9, changefreq: 'monthly' },
@@ -43,7 +48,6 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/pricing', priority: 0.8, changefreq: 'monthly' },
     { loc: '/team', priority: 0.7, changefreq: 'monthly' },
     { loc: '/careers', priority: 0.7, changefreq: 'weekly' },
-    
     // AI Services
     { loc: '/ai-services', priority: 0.9, changefreq: 'weekly' },
     { loc: '/ai-marketing', priority: 0.8, changefreq: 'weekly' },
@@ -67,7 +71,6 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/ai-fashion-design', priority: 0.8, changefreq: 'weekly' },
     { loc: '/ai-fitness-coach', priority: 0.8, changefreq: 'weekly' },
     { loc: '/ai-3d-generation', priority: 0.8, changefreq: 'weekly' },
-    
     // IT Services
     { loc: '/it-services', priority: 0.9, changefreq: 'weekly' },
     { loc: '/cloud-migration', priority: 0.8, changefreq: 'weekly' },
@@ -76,7 +79,6 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/database-management', priority: 0.8, changefreq: 'weekly' },
     { loc: '/it-consulting', priority: 0.8, changefreq: 'weekly' },
     { loc: '/it-infrastructure', priority: 0.8, changefreq: 'weekly' },
-    
     // Micro SAAS
     { loc: '/micro-saas', priority: 0.9, changefreq: 'weekly' },
     { loc: '/ai-crm', priority: 0.8, changefreq: 'weekly' },
@@ -87,7 +89,6 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/ai-design-studio', priority: 0.8, changefreq: 'weekly' },
     { loc: '/ai-seo-optimizer', priority: 0.8, changefreq: 'weekly' },
     { loc: '/ai-writing-assistant', priority: 0.8, changefreq: 'weekly' },
-    
     // Specialized Solutions
     { loc: '/quantum-computing', priority: 0.8, changefreq: 'monthly' },
     { loc: '/autonomous-systems', priority: 0.8, changefreq: 'monthly' },
@@ -95,7 +96,6 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/iot-edge-computing', priority: 0.8, changefreq: 'monthly' },
     { loc: '/business-intelligence', priority: 0.8, changefreq: 'monthly' },
     { loc: '/digital-transformation', priority: 0.8, changefreq: 'monthly' },
-    
     // Legal pages
     { loc: '/privacy', priority: 0.5, changefreq: 'yearly' },
     { loc: '/terms', priority: 0.5, changefreq: 'yearly' },

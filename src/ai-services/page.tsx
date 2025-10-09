@@ -4,9 +4,14 @@ import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-rea
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 const AIServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  const _services = [
+  // TODO: Add content
+}
+const _services = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
@@ -14,6 +19,8 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month'
     },
     {
+  // TODO: Add content
+}
       title: 'Machine Learning Solutions',
       description: 'Custom machine learning models and algorithms for your business needs',
       icon: Zap,
@@ -21,6 +28,8 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $1,500/month'
     },
     {
+  // TODO: Add content
+}
       title: 'AI Security & Compliance',
       description: 'Enterprise-grade AI security and compliance solutions',
       icon: Shield,
@@ -28,6 +37,8 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $1,200/month'
     },
     {
+  // TODO: Add content
+}
       title: 'AI Analytics & Insights',
       description: 'Advanced analytics and business intelligence powered by AI',
       icon: BarChart,
@@ -35,26 +46,23 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $800/month'
     }
   ];
-
   const benefits = [
+  // TODO: Add items,
+]
 //     '300% Average ROI Increase',
 //     '95% Process Automation',
 //     '50% Cost Reduction',
 //     '99.9% Uptime Guarantee'
   ];
-
   return (
-=======
-      return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services | Zion Tech Group</title>
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
       </Helmet>
-      
       <Navigation />
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Services</h1>
@@ -71,13 +79,10 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );
 };
-
 }
-
 export default AiServicesPage;
 export default AIServicesPage;

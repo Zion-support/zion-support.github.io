@@ -1,24 +1,32 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-
 const AboutPage: React.FC = () => {
+  // TODO: Add content
+}
   const _team = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
     {
+  // TODO: Add content
+}
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.',
     },
     {
+  // TODO: Add content
+}
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
@@ -27,39 +35,52 @@ const AboutPage: React.FC = () => {
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
-
 const AboutPage: React.FC = () => {
+  // TODO: Add content
+}
   const stats = [
+  // TODO: Add items,
+]
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
-
   const values = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: Brain,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
     },
     {
+  // TODO: Add content
+}
       icon: Shield,
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.',
     },
     {
+  // TODO: Add content
+}
       icon: Target,
       title: 'Results',
       description: 'We focus on delivering measurable business outcomes and ROI.',
     },
     {
+  // TODO: Add content
+}
       icon: Users,
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.',
     },
   ];
-
   const stats = [
+  // TODO: Add items,
+]
     { number: '500+', label: 'Projects Completed' },
     { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
@@ -69,41 +90,55 @@ const AboutPage: React.FC = () => {
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
     },
     {
+  // TODO: Add content
+}
       icon: Brain,
       title: 'Excellence',
       description: 'We deliver solutions that exceed expectations and drive real business value.'
     },
     {
+  // TODO: Add content
+}
       icon: Shield,
       title: 'Integrity',
       description: 'We maintain the highest ethical standards in all our business practices.'
     },
     {
+  // TODO: Add content
+}
       icon: Users,
       title: 'Collaboration',
       description: 'We work closely with our clients as partners in their success.'
     }
   ];
-
   const team = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.'
     },
     {
+  // TODO: Add content
+}
       name: 'Sarah Johnson',
       role: 'CTO',
       bio: 'Technical expert specializing in machine learning and cloud architecture.'
     },
     {
+  // TODO: Add content
+}
       name: 'Michael Chen',
       role: 'Lead Developer',
       bio: 'Full-stack developer passionate about creating scalable solutions.'
     }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -111,17 +146,16 @@ const AboutPage: React.FC = () => {
 //             About Zion Tech Group
           </h1>
           <p className='text-xl text-gray-600'>
-//             Leading the future of AI and IT solutions
+//             Leading the future of AI and IT solutions;
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-=======
-
-import {Target, Brain, Shield} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Footer from '../components/Footer';
-
 const AboutPage: React.FC = () => {
+  // TODO: Add content
+}
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -130,7 +164,6 @@ const AboutPage: React.FC = () => {
 //             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <Users className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
@@ -153,12 +186,13 @@ const AboutPage: React.FC = () => {
             <p className="text-gray-300">Enterprise-grade security</p>
           </div>
         </div>
-
       {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
+  // TODO: Add parameters,
+)
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -171,7 +205,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,11 +214,11 @@ const AboutPage: React.FC = () => {
 //                   Our Mission
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-//                   To democratize access to advanced AI technology and empower businesses of all sizes 
+//                   To democratize access to advanced AI technology and empower businesses of all sizes
 //                   to achieve their full potential through innovative digital solutions.
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
-//                   We believe that every business deserves access to cutting-edge technology that can 
+//                   We believe that every business deserves access to cutting-edge technology that can
 //                   transform their operations, improve efficiency, and drive growth.
                 </p>
                 <Link
@@ -198,15 +231,14 @@ const AboutPage: React.FC = () => {
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-600">
-//                   To be the world's leading provider of AI-powered business solutions, 
-//                   helping organizations across all industries achieve digital transformation 
+//                   To be the world's leading provider of AI-powered business solutions,
+//                   helping organizations across all industries achieve digital transformation
 //                   and sustainable growth in the age of artificial intelligence.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,9 +250,10 @@ const AboutPage: React.FC = () => {
 //                 The principles that guide everything we do
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
+  // TODO: Add parameters,
+)
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
@@ -236,7 +269,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,9 +280,10 @@ const AboutPage: React.FC = () => {
 //                 The experts behind our innovative solutions
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
+  // TODO: Add parameters,
+)
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
@@ -273,7 +306,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -299,7 +331,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
       <Footer />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -317,5 +348,4 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
-
 export default AboutPage;

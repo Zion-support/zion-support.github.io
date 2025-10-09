@@ -1,30 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
-
 const Navigation: React.FC = () => {
+  // TODO: Add content
+}
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
   useEffect(() => {
+  // TODO: Add content
+}
     const _handleScroll = () => {
+  // TODO: Add content
+}
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const closeAllMenus = () => {
+  // TODO: Add content
+}
     setIsOpen(false);
     setServicesOpen(false);
   };
-
   return (
+  // TODO: Add parameters,
+)
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-//       isScrolled 
-//         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
+  // TODO: Add content
+}
+//       isScrolled
+//         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20'
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -39,13 +46,12 @@ const Navigation: React.FC = () => {
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
 //               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
 //               About
             </Link>
             {/* Services Dropdown */}
@@ -54,8 +60,9 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
-              
               {servicesOpen && (
+  // TODO: Add parameters,
+)
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
@@ -78,7 +85,6 @@ const Navigation: React.FC = () => {
                           </Link>
                         </div>
                       </div>
-                      
                       {/* IT Services */}
                       <div>
                         <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4>
@@ -111,9 +117,8 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
-            <Link 
-              to="/case-studies" 
+            <Link
+              to="/case-studies"
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
 //             >
@@ -122,7 +127,6 @@ const Navigation: React.FC = () => {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
 //               Contact
             </Link>
-
             {/* CTA Button */}
             <Link
               to="/contact"
@@ -133,7 +137,6 @@ const Navigation: React.FC = () => {
 //               (302) 464-0950
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -145,9 +148,10 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile menu */}
         {isOpen && (
+  // TODO: Add parameters,
+)
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-6">
               {/* Main Navigation */}
@@ -182,7 +186,6 @@ const Navigation: React.FC = () => {
 //                   Contact
                 </Link>
               </div>
-
               {/* Contact Info */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
@@ -216,5 +219,4 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-
 export default Navigation;

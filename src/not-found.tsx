@@ -1,43 +1,61 @@
 export default function NotFound() {
+  // TODO: Add content
+}
   const _popularPages = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'Home',
       description: 'Return to our homepage',
       href: '/',
-      icon: '🏠'
+      icon: ''
     },
     {
+  // TODO: Add content
+}
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
-      icon: '🤖'
+      icon: ''
     },
     {
+  // TODO: Add content
+}
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
-      icon: '📚'
+      icon: ''
     },
     {
+  // TODO: Add content
+}
       title: 'About Us',
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
-      icon: '🏢'
+      icon: ''
     },
     {
+  // TODO: Add content
+}
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
-      icon: '📊'
+      icon: ''
     },
     {
+  // TODO: Add content
+}
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
-      icon: '📞'
+      icon: ''
     },
   ];
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
         {/* Error Code */}
@@ -45,7 +63,7 @@ export default function NotFound() {
           <h1 className="text-9xl font-bold text-white/20 mb-4">
 //             404
           </h1>
-          <div className="text-6xl mb-4">🔍</div>
+          <div className="text-6xl mb-4"></div>
         </div>
         {/* Error Message */}
         <div className="mb-12">
@@ -53,13 +71,15 @@ export default function NotFound() {
 //             Page Not Found
           </h2>
           <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved. 
+            The page you're looking for doesn't exist or has been moved.
 //             Don't worry, let's get you back on track!
           </p>
         </div>
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {popularPages.map((page, index) => (
+  // TODO: Add parameters,
+)
             <Link
               key={index}
               href={page.href}

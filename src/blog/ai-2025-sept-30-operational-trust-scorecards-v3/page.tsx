@@ -1,10 +1,11 @@
 import React from 'react';
 const OperationalTrustScorecardsPage: React.FC = () => {
-
+  // TODO: Add content
+}
   return (
-
+  // TODO: Add parameters,
+)
     <>
-
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
@@ -20,14 +21,13 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 //             Operational Trust    Scorecards    v3
           </h1>
           <p className="text-gray-300 text-lg">
-//             A practical blueprint to ship reliable, safe, and cost‑effective AI
+//             A practical blueprint to ship reliable, safe, and costeffective AI
 //             by tracking reliability, safety, cost, and value in a single live
 //             scorecard.    Prevent    regressions with budgets, gates, and instant
 //             rollback.
           </p>
         </div>
       </section>
-
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4 space-y-10">
           <div>
@@ -39,7 +39,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 //               outcomes) so leaders can make tradeoffs responsibly.
             </p>
           </div>
-
           <div>
             <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
             <ul className="list-disc pl-6 text-gray-300 space-y-2">
@@ -49,10 +48,10 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               </li>
               <li>
                 <strong className="text-white">Safety   :</strong> policy blocks,
-                red‑team strikes, jailbreak resistance, PII leaks.
+                redteam strikes, jailbreak resistance, PII leaks.
               </li>
               <li>
-                <strong className="text-white">Cost   :</strong> per‑task spend,
+                <strong className="text-white">Cost   :</strong> pertask spend,
 //                 model tier mix, cache hit rate, budget headroom.
               </li>
               <li>
@@ -61,7 +60,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
             <p className="text-gray-300">
@@ -76,5 +74,4 @@ const OperationalTrustScorecardsPage: React.FC = () => {
     </>
   );
 }
-
 export default OperationalTrustScorecardsPage;

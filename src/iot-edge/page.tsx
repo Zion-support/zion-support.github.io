@@ -1,13 +1,17 @@
 import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
 import React from 'react';
-
-
 const IoTEdgePage: React.FC = () => {
+  // TODO: Add content
+}
   const _iotServices = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
-      icon: '📱',
+      icon: '',
       price: 'Starting at $3,500/month',
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
       benefits: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],
@@ -16,9 +20,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
     },
     {
+  // TODO: Add content
+}
       title: 'Edge Computing Solutions',
       description: 'Real-time data processing at the edge with low latency and high performance.',
-      icon: '⚡',
+      icon: '',
       price: 'Starting at $4,500/month',
       features: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI'],
       benefits: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations'],
@@ -27,9 +33,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU']
     },
     {
+  // TODO: Add content
+}
       title: 'Industrial IoT (IIoT) Systems',
       description: 'Smart manufacturing and industrial automation with predictive maintenance.',
-      icon: '🏭',
+      icon: '',
       price: 'Starting at $8,000/month',
       features: ['Sensor integration', 'Predictive maintenance', 'Process optimization', 'Quality control', 'Safety monitoring'],
       benefits: ['Reduce downtime by 50%', 'Improve efficiency by 30%', 'Prevent equipment failures'],
@@ -38,9 +46,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['OPC UA', 'Modbus', 'MQTT', 'Time Series DB', 'Machine Learning']
     },
     {
+  // TODO: Add content
+}
       title: 'Smart City Solutions',
       description: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
-      icon: '🏙️',
+      icon: '',
       price: 'Starting at $12,000/month',
       features: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services'],
       benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience'],
@@ -49,9 +59,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics']
     },
     {
+  // TODO: Add content
+}
       title: 'IoT Security & Compliance',
       description: 'Comprehensive security solutions for IoT devices and networks with compliance management.',
-      icon: '🔒',
+      icon: '',
       price: 'Starting at $2,800/month',
       features: ['Device authentication', 'Encryption', 'Vulnerability scanning', 'Compliance monitoring', 'Incident response'],
       benefits: ['Protect against cyber threats', 'Ensure compliance', 'Build trust'],
@@ -60,9 +72,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Compliance Tools']
     },
     {
+  // TODO: Add content
+}
       title: 'Real-Time Data Analytics',
       description: 'Streaming analytics for IoT data with real-time insights and alerting.',
-      icon: '📊',
+      icon: '',
       price: 'Starting at $3,200/month',
       features: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
       benefits: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
@@ -71,9 +85,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana']
     },
     {
+  // TODO: Add content
+}
       title: 'IoT Integration Services',
       description: 'Connect existing systems with IoT devices and cloud platforms seamlessly.',
-      icon: '🔗',
+      icon: '',
       price: 'Starting at $2,500/month',
       features: ['Legacy system integration', 'API development', 'Data transformation', 'Protocol conversion', 'Cloud connectivity'],
       benefits: ['Modernize existing systems', 'Enable new capabilities', 'Reduce integration costs'],
@@ -82,9 +98,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['REST APIs', 'GraphQL', 'Message Queues', 'ETL Tools', 'Cloud Platforms']
     },
     {
+  // TODO: Add content
+}
       title: 'Predictive Maintenance Systems',
       description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
-      icon: '🔧',
+      icon: '',
       price: 'Starting at $5,500/month',
       features: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling'],
       benefits: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life'],
@@ -93,9 +111,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models']
     },
     {
+  // TODO: Add content
+}
       title: 'Environmental Monitoring',
       description: 'Comprehensive environmental monitoring with air quality, water, and soil sensors.',
-      icon: '🌍',
+      icon: '',
       price: 'Starting at $2,200/month',
       features: ['Air quality monitoring', 'Water quality sensors', 'Soil analysis', 'Weather stations', 'Compliance reporting'],
       benefits: ['Ensure environmental compliance', 'Protect public health', 'Optimize resource usage'],
@@ -104,9 +124,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Environmental Sensors', 'Data Loggers', 'Satellite Data', 'GIS', 'Compliance Systems']
     },
     {
+  // TODO: Add content
+}
       title: 'Smart Agriculture Solutions',
       description: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
-      icon: '🌾',
+      icon: '',
       price: 'Starting at $4,000/month',
       features: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization'],
       benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use'],
@@ -115,9 +137,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture']
     },
     {
+  // TODO: Add content
+}
       title: 'IoT Device Development',
       description: 'Custom IoT device design and development for specific business requirements.',
-      icon: '⚙️',
+      icon: '',
       price: 'Starting at $15,000/project',
       features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support'],
       benefits: ['Custom solutions', 'Competitive advantage', 'Optimized performance'],
@@ -126,9 +150,11 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs']
     },
     {
+  // TODO: Add content
+}
       title: 'IoT Data Management',
       description: 'Comprehensive data management for IoT with storage, processing, and analytics.',
-      icon: '🗄️',
+      icon: '',
       price: 'Starting at $2,800/month',
       features: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
       benefits: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
@@ -137,10 +163,10 @@ const IoTEdgePage: React.FC = () => {
       technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
   ];
-
   const categories = [...new Set(iotServices.map(service => service.category))];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
@@ -164,7 +190,6 @@ const IoTEdgePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,9 +233,10 @@ const IoTEdgePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {categories.map(category => (
+  // TODO: Add parameters,
+)
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
@@ -225,11 +251,12 @@ const IoTEdgePage: React.FC = () => {
                 {iotServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
+  // TODO: Add parameters,
+)
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-cyan-600">{service.price}</span>
@@ -239,11 +266,12 @@ const IoTEdgePage: React.FC = () => {
 //                           Save up to 40% vs market rates
                         </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
+  // TODO: Add parameters,
+)
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -251,22 +279,24 @@ const IoTEdgePage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
+  // TODO: Add parameters,
+)
                             <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
+  // TODO: Add parameters,
+)
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
@@ -274,7 +304,6 @@ const IoTEdgePage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
 //                         Get IoT Consultation
                       </button>
@@ -284,7 +313,6 @@ const IoTEdgePage: React.FC = () => {
             </div>
           </section>
         ))}
-
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,7 +358,6 @@ const IoTEdgePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -341,26 +368,25 @@ const IoTEdgePage: React.FC = () => {
               Contact our IoT experts for a free consultation and custom connected solution strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 //               >
-//                 📞 +1 302 464 0950
+//                  +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
 //               >
-//                 ✉️ kleber@ziontechgroup.com
+//                  kleber@ziontechgroup.com
               </a>
             </div>
             <div className="mt-8 text-sm text-cyan-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p> 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
       </div>
   );
 };
-
 export default IoTEdgePage;

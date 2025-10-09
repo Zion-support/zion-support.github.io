@@ -2,40 +2,50 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import {Shield, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
 import Footer from '../components/Footer';
-
-
 const ITDisasterRecoveryPage: React.FC = () => {
+  // TODO: Add content
+}
   const _features = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       icon: Shield,
       title: 'Backup Solutions',
       description: 'Comprehensive backup and recovery solutions',
       benefits: ['Automated backups', 'Data protection', 'Recovery testing']
     },
     {
+  // TODO: Add content
+}
       icon: Zap,
       title: 'Rapid Recovery',
       description: 'Fast disaster recovery and business continuity',
       benefits: ['RTO optimization', 'RPO minimization', 'Quick restoration']
     },
     {
+  // TODO: Add content
+}
       icon: Settings,
       title: 'Disaster Planning',
       description: 'Comprehensive disaster recovery planning and testing',
       benefits: ['Risk assessment', 'Recovery planning', 'Testing']
     },
     {
+  // TODO: Add content
+}
       icon: BarChart,
       title: 'Monitoring & Alerts',
       description: 'Real-time monitoring and alerting for disaster recovery',
       benefits: ['Health monitoring', 'Alert systems', 'Status reporting']
     }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -45,10 +55,9 @@ const ITDisasterRecoveryPage: React.FC = () => {
 //             Comprehensive Disaster Recovery Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-//             Protect your business with comprehensive disaster recovery solutions. Ensure business continuity 
+//             Protect your business with comprehensive disaster recovery solutions. Ensure business continuity
 //             and minimize downtime with our robust backup and recovery services.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,14 +74,14 @@ const ITDisasterRecoveryPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Recovery Services
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+  // TODO: Add parameters,
+)
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -85,6 +94,8 @@ const ITDisasterRecoveryPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
+  // TODO: Add parameters,
+)
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -96,10 +107,8 @@ const ITDisasterRecoveryPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default ITDisasterRecoveryPage;

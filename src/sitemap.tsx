@@ -1,6 +1,7 @@
 import React from 'react';
-
 const Sitemap: React.FC = () => {
+  // TODO: Add content
+}
   const _sitemap = generateSitemap(getAllPages());
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -25,12 +26,12 @@ const Sitemap: React.FC = () => {
     <changefreq>monthly</changefreq>
   </url>
 </urlset>`;
-  
   return (
+  // TODO: Add parameters,
+)
     <div>
       <pre>{sitemap}</pre>
     </div>
   );
 };
-
 export default Sitemap;
