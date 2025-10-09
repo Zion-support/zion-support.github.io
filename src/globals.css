@@ -523,34 +523,14 @@ body {
   }
 }
 
-.neural-pattern {
-  position: relative;
-  overflow: hidden;
-}
-
-.neural-pattern::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0.1) 0%, transparent 50%);
-  animation: neural-float 8s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes neural-float {
-  0%, 100% { 
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.3;
+/* Enhanced Responsive Design */
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-size: 20px 20px;
   }
-  50% { 
-    transform: translateY(-20px) rotate(180deg);
-    opacity: 0.6;
+  
+  .neon-text {
+    font-size: 1.25rem;
   }
 }
 
@@ -573,9 +553,10 @@ body {
     background-position: 0% 50%;
     transform: perspective(1000px) rotateX(15deg) scale(1);
   }
-  50% { 
-    background-position: 100% 50%;
-    transform: perspective(1000px) rotateX(15deg) scale(1.05);
+  
+  .cyber-card {
+    padding: 0.75rem;
+    margin: 0.5rem;
   }
 }
 
@@ -592,39 +573,6 @@ body {
       0 0 20px currentColor;
     filter: brightness(1);
   }
-  50% { 
-    text-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 30px currentColor,
-      0 0 40px currentColor;
-    filter: brightness(1.2);
-  }
-}
-
-.cyber-scan-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.cyber-scan-effect::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 255, 255, 0.4) 50%, 
-    transparent 100%);
-  animation: cyber-scan 3s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes cyber-scan {
-  0% { left: -100%; }
-  100% { left: 100%; }
 }
 
 /* Loading Animations */
@@ -693,8 +641,12 @@ body {
     letter-spacing: 1px;
   }
   
-  .cyber-card {
-    padding: 1rem;
+  .quantum-field {
+    animation-duration: 3s;
+  }
+  
+  .holographic-text {
+    font-size: 2rem;
   }
   
   .cyber-button {
@@ -722,9 +674,8 @@ body {
     margin: 0.5rem;
   }
   
-  .cyber-button {
-    padding: 8px 16px;
-    font-size: 0.8rem;
+  .hologram-card {
+    padding: 0.75rem;
   }
 }
 
@@ -735,10 +686,6 @@ body {
   
   .neon-text {
     font-size: 1rem;
-    text-shadow: 
-      0 0 2px #00ffff,
-      0 0 4px #00ffff,
-      0 0 6px #00ffff;
   }
   
   .cyber-text {
@@ -886,44 +833,4 @@ body {
     background: rgba(255, 255, 255, 0.8);
     border-color: rgba(0, 0, 0, 0.1);
   }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .cyber-card,
-  .hologram-card,
-  .quantum-card {
-    border: 2px solid currentColor;
-  }
-  
-  .neon-text {
-    text-shadow: 2px 2px 0 currentColor;
-  }
-  
-  .cyber-button {
-    border: 2px solid currentColor;
-  }
-}
-
-/* Performance optimizations */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Critical CSS for above-the-fold content */
-.hero-section {
-  contain: layout style paint;
-}
-
-.cyber-card {
-  contain: layout style;
-}
-
-/* GPU acceleration for animations */
-.cyber-text-3d,
-.quantum-field,
-.neon-pulse {
-  transform: translateZ(0);
-  will-change: transform;
 }

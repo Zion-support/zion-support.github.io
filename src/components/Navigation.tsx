@@ -1,5 +1,5 @@
-import React, { useState, useEffect, memo } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -138,11 +138,7 @@ const Navigation: React.FC = memo(() => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
-        : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -251,7 +247,6 @@ const Navigation: React.FC = memo(() => {
                     </Link>
                   </div>
                 </div>
-              )}
             </div>
 
             <Link 
@@ -409,7 +404,10 @@ const Navigation: React.FC = memo(() => {
                               to={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                              {typeof service.icon === 'string' ? service.icon : (() => {
+                                const IconComponent = service.icon;
+                                return <IconComponent className="w-3 h-3 inline mr-1" />;
+                              })()} {service.name}
                             </Link>
                           ))}
                           <Link
