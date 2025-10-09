@@ -51,9 +51,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
     <>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -108,7 +105,6 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -132,87 +128,46 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
-=======
-          <h1 
-            id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
-          >
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-            Advanced AI and IT Solutions
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-            Transform your business with our cutting-edge technology and achieve unprecedented growth.
-          </p>
-          
-          {/* Key Benefits */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-              <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-              <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-              <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-              <div className="text-2xl sm:text-3xl mb-3">🌐</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
-            </div>
-          </div>
-          
-          {/* CTA Buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
-              aria-label="Call us at (302) 464-0950"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
             >
               Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-glow" role="doc-subtitle">
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
               Advanced AI and IT Solutions
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>
+            
             {/* Key Benefits */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
-              <div className="cyber-card hologram-card p-4 sm:p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-2xl sm:text-3xl mb-3">🚀</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6">
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-2xl sm:text-3xl mb-3">🔒</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
               </div>
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                <div className="text-2xl sm:text-3xl mb-3">🌐</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
+              </div>
             </div>
+            
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -220,7 +175,7 @@ const HomePage: React.FC = () => {
                 onClick={handlePhoneClick}
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
-              >
+            >
                 📞 Call: (302) 464-0950
               </a>
               <a 
@@ -426,215 +381,304 @@ const HomePage: React.FC = () => {
               </div>
             </article>
           </div>
-<<<<<<< HEAD
-=======
 
-          {/* New AI Services Grid */}
-          <div className="mb-12">
+          {/* Real Micro SAAS Services Section */}
+          <div className="mb-16">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services
+              Real Micro SAAS Solutions
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Revolutionary AI-powered customer support with chatbots, omnichannel communication, and intelligent automation.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-customer-support" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-4xl mx-auto px-4">
+              Powerful, affordable AI-driven tools for modern businesses. 50+ ready-to-use applications with real market value.
+            </p>
+            
+            {/* Developer Tools */}
+            <div className="mb-12">
+              <h4 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-6 text-center">Developer Tools</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Code Review Pro</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Advanced automated code analysis with AI-powered bug detection and security scanning.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-400 mb-2">$89/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $150-300/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
 
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Boost sales by 300% with intelligent lead scoring, automated outreach, and CRM integration.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $299/month</div>
-                  <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧪</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Test Generator</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Intelligent automated test generation with coverage analysis and performance testing.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-400 mb-2">$149/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $250-500/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
 
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Automate any business process with intelligent workflows, 90% time savings, and 500+ integrations.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">Starting at $99/month</div>
-                  <a href="/ai-workflow-automation" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart API Docs</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    AI-powered API documentation with interactive examples and automatic updates.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-400 mb-2">$79/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $120-250/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
 
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Transform data into actionable insights with AI-powered visualization, interactive dashboards, and 100+ data sources.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">Starting at $149/month</div>
-                  <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Performance Monitor</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Real-time application performance monitoring with AI-powered insights and alerts.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-yellow-400 mb-2">$199/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $300-600/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
 
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Generate high-quality leads with AI-powered prospecting, email sequences, and automated follow-ups.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-lead-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
+            {/* Marketing Tools */}
+            <div className="mb-12">
+              <h4 className="text-xl sm:text-2xl font-bold text-pink-400 mb-6 text-center">Marketing Tools</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI SEO Optimizer</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Advanced SEO analysis with AI-driven content suggestions and competitor analysis.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-pink-400 mb-2">$199/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $300-600/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
 
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Automatically extract, process, and analyze documents with AI-powered OCR and intelligent data extraction.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month</div>
-                  <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Social Manager</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Automated social media content creation, scheduling, and engagement optimization.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-cyan-400 mb-2">$129/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $200-400/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Email Marketing</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Intelligent email campaigns with personalization, A/B testing, and optimization.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-indigo-400 mb-2">$149/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $200-400/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">✍️</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Content Generator</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    High-quality content creation for blogs, social media, and marketing materials.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-orange-400 mb-2">$119/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $180-350/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            {/* Business Intelligence Tools */}
+            <div className="mb-12">
+              <h4 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-6 text-center">Business Intelligence</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Analytics Dashboard</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Real-time business intelligence with predictive analytics and automated insights.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-cyan-400 mb-2">$199/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $300-500/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Sales Predictor</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Predictive sales analytics with lead scoring and revenue forecasting.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-400 mb-2">$299/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $400-800/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generator</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Automated lead generation with AI-powered prospecting and outreach.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-400 mb-2">$199/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $300-600/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Intelligent chatbots and customer service automation with 24/7 support.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-400 mb-2">$149/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $200-400/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            {/* Productivity Tools */}
+            <div className="mb-12">
+              <h4 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-6 text-center">Productivity Tools</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Automate any business process with intelligent workflows and 500+ integrations.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-yellow-400 mb-2">$99/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $150-300/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Document Processor</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Automatically extract, process, and analyze documents with AI-powered OCR.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-indigo-400 mb-2">$149/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $200-400/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Transform data into actionable insights with AI-powered visualization and dashboards.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-cyan-400 mb-2">$149/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $200-400/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Search Engine</h3>
+                  <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                    Intelligent search with natural language processing and semantic understanding.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-pink-400 mb-2">$199/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Market: $300-600/month</div>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                      Contact Us →
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 neon-text">
+                Ready to Transform Your Business?
+              </h3>
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Get started with our micro SAAS solutions today. Contact us for custom pricing and implementation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button w-full sm:w-auto text-center"
+                >
+                  📞 Call: (302) 464-0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                >
+                  ✉️ Email Us
+                </a>
+              </div>
             </div>
           </div>
-
-          {/* Emerging Technologies Grid */}
-          <div className="mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Intelligent robotic solutions for manufacturing, healthcare, and service industries.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>
-                  <a href="/robotics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Connected devices and edge computing solutions for smart cities and industrial automation.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-400 mb-2">Starting at $499/month</div>
-                  <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Decentralized solutions, smart contracts, and Web3 applications for the future of business.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>
-                  <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Data-driven insights and predictive analytics to optimize business performance and decision-making.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
-                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          {/* IT Services Grid */}
-          <div className="mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Streamline development workflows with automated testing, deployment, and monitoring solutions.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-blue-400 mb-2">Starting at $299/month</div>
-                  <a href="/devops" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Native and cross-platform mobile applications with AI integration and modern UX design.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
-                  <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Database design, optimization, migration, and management with AI-powered performance tuning.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-teal-400 mb-2">Starting at $199/month</div>
-                  <a href="/database" className="text-teal-400 hover:text-teal-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
         </section>
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
