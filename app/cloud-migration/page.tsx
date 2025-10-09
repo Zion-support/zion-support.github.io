@@ -13,7 +13,6 @@ const CloudMigrationPage: React.FC = () => {
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
     {
-<<<<<<< HEAD
       icon: Database,
       title: 'Data Migration',
       description: 'Secure and efficient migration of databases and data warehouses',
@@ -29,8 +28,6 @@ const CloudMigrationPage: React.FC = () => {
       benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
     },
     {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
       icon: Shield,
       title: 'Security First',
       description: 'Enterprise-grade security throughout the migration process',
@@ -39,7 +36,6 @@ const CloudMigrationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Performance Optimization',
-<<<<<<< HEAD
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
     },
@@ -48,25 +44,15 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
-=======
-      description: 'Optimize your applications for cloud performance',
-      benefits: ['Faster load times', 'Better scalability', 'Cost efficiency']
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
     }
   ];
 
   const migrationSteps = [
     {
-<<<<<<< HEAD
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of current infrastructure and migration strategy',
       icon: CheckCircle,
       features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
-=======
-      step: '1',
-      title: 'Assessment',
-      description: 'Analyze current infrastructure and identify migration requirements'
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
     },
     {
       step: '2',
@@ -74,7 +60,6 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Create detailed migration plan with timelines and rollback strategies'
     },
     {
-<<<<<<< HEAD
       title: 'Optimization & Support',
       description: 'Post-migration optimization and ongoing support',
       icon: Shield,
@@ -185,21 +170,10 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Scale resources up or down based on demand automatically.',
       icon: Target,
       percentage: 'Unlimited'
-=======
-      step: '3',
-      title: 'Migration',
-      description: 'Execute migration with minimal downtime and maximum data integrity'
-    },
-    {
-      step: '4',
-      title: 'Optimization',
-      description: 'Fine-tune cloud resources for optimal performance and cost'
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div className="relative overflow-hidden">
@@ -260,9 +234,6 @@ const CloudMigrationPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -313,7 +284,6 @@ const CloudMigrationPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -329,11 +299,6 @@ const CloudMigrationPage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-              ))}
-            </div>
-          </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
 
           {/* Migration Process */}
           <section className="mb-16">
@@ -361,7 +326,6 @@ const CloudMigrationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let our experts help you migrate to the cloud safely and efficiently
             </p>
-<<<<<<< HEAD
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -484,9 +448,6 @@ const CloudMigrationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-=======
-            <a
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
               href="/contact"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
@@ -495,7 +456,6 @@ const CloudMigrationPage: React.FC = () => {
             </a>
           </section>
         </div>
-<<<<<<< HEAD
       </div>
       </section>
 
@@ -587,17 +547,10 @@ const CloudMigrationPage: React.FC = () => {
         </div>
       </section>
 
-=======
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default CloudMigrationPage;
 export default CloudMigrationPage;
-=======
-export default CloudMigrationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5

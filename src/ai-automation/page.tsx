@@ -1,14 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { CheckCircle, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

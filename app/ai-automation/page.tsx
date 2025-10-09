@@ -42,6 +42,27 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
+  const automationTypes = [
+    {
+      title: 'Process Automation',
+      description: 'Automate complex business processes with intelligent decision-making capabilities',
+      icon: Settings,
+      examples: ['Invoice processing', 'Data entry', 'Report generation', 'Email workflows']
+    },
+    {
+      title: 'Customer Service',
+      description: 'AI-powered chatbots and automated customer support systems',
+      icon: Bot,
+      examples: ['24/7 chat support', 'Ticket routing', 'FAQ automation', 'Call center optimization']
+    },
+    {
+      title: 'Data Processing',
+      description: 'Automated data collection, validation, and analysis workflows',
+      icon: BarChart,
+      examples: ['Data extraction', 'Quality checks', 'Trend analysis', 'Real-time reporting']
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -52,25 +73,6 @@ const AIAutomationPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-        <main className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-              AI Automation Solutions
-            </h1>
-            <p className="text-xl text-gray-600 text-center mb-12">
-              Streamline your business processes with intelligent automation
-            </p>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-<<<<<<< HEAD
-export default AIAutomationPage;
-        
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Hero Section */}
@@ -125,9 +127,10 @@ export default AIAutomationPage;
                 {benefits.map((benefit, index) => (
                   <div key={index} className="text-center">
                     <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-8 h-8 text-blue-600" />
+                      <benefit.icon className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
                   </div>
                 ))}
               </div>
@@ -196,30 +199,4 @@ export default AIAutomationPage;
   );
 };
 
-        <main className="pt-16">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI Automation Solutions
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Automate your business processes with intelligent AI solutions that save time, reduce costs, and improve efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
-                Get Started
-              </button>
-              <button className="bg-transparent text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
 export default AIAutomationPage;

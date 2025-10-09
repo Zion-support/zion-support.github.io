@@ -168,8 +168,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [seoData]);
 
   const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
+  const breadcrumbData = null; // Placeholder for breadcrumb data
+  const faqData = null; // Placeholder for FAQ data
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -205,9 +208,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {
@@ -258,12 +262,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
+      {openGraphData && Object.entries(openGraphData).map(([property, content]) => (
         <meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
+      {twitterCardData && Object.entries(twitterCardData).map(([name, content]) => (
         <meta key={name} name={name} content={content} />
       ))}
 

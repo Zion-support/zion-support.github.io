@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { CheckSquare, CheckCircle, Star, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const TaskManagerProPage: React.FC = () => {
   const features = [

@@ -148,7 +148,7 @@ class PerformanceMonitoringService {
     if (this.customMetrics.length > this.maxMetrics) {
       this.customMetrics.shift();
     }
-    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
+    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
   }
   /**
    * Send metric to analytics service

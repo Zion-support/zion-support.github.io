@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Receipt, CheckCircle, Star, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
