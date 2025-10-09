@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD:src/it-services/page.tsx
+<<<<<<< HEAD:src/it-services/page.tsx
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -351,10 +352,13 @@ const ITServicesPage: React.FC = () => {
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
+<<<<<<< HEAD:src/it-services/page.tsx
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
@@ -403,6 +407,8 @@ const ITServicesPage: React.FC = () => {
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD:app/it-services/page.tsx
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
                         {feature}
                       </li>
                     ))}
@@ -450,6 +456,7 @@ const ITServicesPage: React.FC = () => {
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
+<<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:app/it-services/page.tsx
               </div>
@@ -592,6 +599,8 @@ const ITServicesPage: React.FC = () => {
           </section>
         </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
       </main>
 
       <Footer />

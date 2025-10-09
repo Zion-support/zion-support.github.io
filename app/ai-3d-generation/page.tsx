@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
 
@@ -385,3 +386,5 @@ const AI3DGenerationPage: React.FC = () => {
 };
 
 export default AI3DGenerationPage;
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-10f7
