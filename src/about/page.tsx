@@ -85,7 +85,7 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
