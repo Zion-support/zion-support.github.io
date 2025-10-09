@@ -1585,7 +1585,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     // Additional Real Micro SAAS Services
     {
       title: 'AI Invoice Generator Pro',
@@ -2139,7 +2138,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
     }
   ];
   const categories = [

@@ -1,159 +1,180 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
+
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
+
   const apiEndpoints = [
     {
       title: 'AI Services',
-      description: 'Access our AI-powered services through RESTful APIs',
+      description: 'Access our AI-powered services and solutions',
       endpoints: [
         {
           method: 'POST',
-          path: '/api/ai/analyze',
-          description: 'Analyze text using AI',
-          example: `curl -X POST https://api.ziontechgroup.com/ai/analyze \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -d '{"text": "Your text to analyze"}'`
+          path: '/api/ai/generate-content',
+          description: 'Generate AI content for various use cases',
+          example: {
+            request: {
+              prompt: 'Write a blog post about AI trends',
+              type: 'blog',
+              length: 'medium'
+            },
+            response: {
+              content: 'Generated blog post content...',
+              metadata: {
+                wordCount: 500,
+                tone: 'professional'
+              }
+            }
+          }
         },
         {
-          method: 'GET',
-          path: '/api/ai/status',
-          description: 'Check AI service status',
-          example: `curl -X GET https://api.ziontechgroup.com/ai/status \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
+          method: 'POST',
+          path: '/api/ai/analyze-data',
+          description: 'Analyze data using AI algorithms',
+          example: {
+            request: {
+              data: 'Your dataset here',
+              analysisType: 'sentiment'
+            },
+            response: {
+              results: 'Analysis results...',
+              confidence: 0.95
+            }
+          }
         }
       ]
     },
     {
-      title: 'Data Analytics',
-      description: 'Retrieve and analyze your data',
+      title: 'Authentication',
+      description: 'Manage API authentication and access',
       endpoints: [
         {
-          method: 'GET',
-          path: '/api/analytics/dashboard',
-          description: 'Get dashboard data',
-          example: `curl -X GET https://api.ziontechgroup.com/analytics/dashboard \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
+          method: 'POST',
+          path: '/api/auth/login',
+          description: 'Authenticate and get access token',
+          example: {
+            request: {
+              email: 'user@example.com',
+              password: 'password123'
+            },
+            response: {
+              token: 'jwt_token_here',
+              expiresIn: 3600
+            }
+          }
         }
       ]
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             API Documentation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services.
           </p>
-        </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">API Endpoints</h2>
-          <div className="space-y-8">
-            {apiEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="cyber-card hologram-card p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-6">{category.description}</p>
-                <div className="space-y-4">
-                  {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">
-                      <div className="flex items-center mb-2">
-                        <span className={`px-3 py-1 rounded text-sm font-bold mr-4 ${
-                          endpoint.method === 'GET' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          {apiEndpoints.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">{section.title}</h2>
+              <p className="text-gray-300 mb-8">{section.description}</p>
+              
+              <div className="space-y-6">
+                {section.endpoints.map((endpoint, endpointIndex) => (
+                  <div key={endpointIndex} className="bg-white rounded-lg shadow-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-4">
+                        <span className={`px-3 py-1 rounded text-sm font-semibold ${
+                          endpoint.method === 'POST' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
                         }`}>
                           {endpoint.method}
                         </span>
-                        <code className="text-cyan-400 font-mono">{endpoint.path}</code>
-                      </div>
-                      <p className="text-gray-300 mb-3">{endpoint.description}</p>
-                      <div className="bg-gray-900 rounded p-4 relative">
-                        <button
-                          onClick={() => copyToClipboard(endpoint.example, `${categoryIndex}-${endpointIndex}`)}
-                          className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        </button>
-                        <pre className="text-sm text-gray-300 overflow-x-auto">
-                          <code>{endpoint.example}</code>
-                        </pre>
+                        <code className="text-lg font-mono text-gray-800">{endpoint.path}</code>
                       </div>
                     </div>
-                  ))}
-                </div>
+                    
+                    <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Request Example:</h4>
+                        <div className="bg-gray-100 rounded-lg p-4 relative">
+                          <button
+                            onClick={() => copyToClipboard(JSON.stringify(endpoint.example.request, null, 2), `request-${sectionIndex}-${endpointIndex}`)}
+                            className="absolute top-2 right-2 p-2 hover:bg-gray-200 rounded"
+                          >
+                            {copiedCode === `request-${sectionIndex}-${endpointIndex}` ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
+                          </button>
+                          <pre className="text-sm overflow-x-auto">
+                            <code>{JSON.stringify(endpoint.example.request, null, 2)}</code>
+                          </pre>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Response Example:</h4>
+                        <div className="bg-gray-100 rounded-lg p-4 relative">
+                          <button
+                            onClick={() => copyToClipboard(JSON.stringify(endpoint.example.response, null, 2), `response-${sectionIndex}-${endpointIndex}`)}
+                            className="absolute top-2 right-2 p-2 hover:bg-gray-200 rounded"
+                          >
+                            {copiedCode === `response-${sectionIndex}-${endpointIndex}` ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
+                          </button>
+                          <pre className="text-sm overflow-x-auto">
+                            <code>{JSON.stringify(endpoint.example.response, null, 2)}</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
-                All API requests require authentication using your API key. Include it in the Authorization header:
-              </p>
-              <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY
-              </code>
             </div>
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
-              <p className="text-gray-300 mb-4">
-                API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
-          <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Need Help Getting Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Our developer support team is here to help you integrate our APIs successfully.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:dev@ziontechgroup.com"
-              className="cyber-button"
+              href="/contact"
+              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Email Support
+              Contact Support
             </a>
             <a
-              href="/contact"
-              className="cyber-button"
+              href="tel:+13024640950"
+              className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all"
             >
-              Contact Us
+              Call: (302) 464-0950
             </a>
           </div>
-        </section>
+        </div>
       </main>
       <Footer />
     </div>
   );
 };
+
 export default ApiDocsPage;
