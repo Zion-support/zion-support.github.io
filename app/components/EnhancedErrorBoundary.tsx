@@ -27,6 +27,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
+<<<<<<< HEAD
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
@@ -60,6 +61,52 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
+=======
+    // Report error if enabled
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error for debugging
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+    }
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="error-boundary">
+          <h2>Something went wrong</h2>
+          <p>An error occurred while rendering this component.</p>
+          {this.state.retryCount < this.maxRetries && (
+            <button onClick={this.handleRetry}>
+              Try Again ({this.maxRetries - this.state.retryCount} retries left)
+            </button>
+          )}
+          {process.env.NODE_ENV === 'development' && this.state.error && (
+            <details>
+              <summary>Error Details</summary>
+              <pre>{this.state.error.toString()}</pre>
+              {this.state.errorInfo && (
+                <pre>{this.state.errorInfo.componentStack}</pre>
+              )}
+            </details>
+          )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b53
         </div>
       );
     }
@@ -68,5 +115,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export { EnhancedErrorBoundary as GlobalErrorBoundary };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b53
 export default EnhancedErrorBoundary;

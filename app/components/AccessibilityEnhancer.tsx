@@ -13,6 +13,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     };
 
+<<<<<<< HEAD
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {
       const style = document.createElement('style');
@@ -75,6 +76,30 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       observer.disconnect();
     };
   }, []);
+=======
+/**
+ * Accessibility Enhancer Component
+ * Provides comprehensive accessibility improvements
+ */
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableSkipLinks = true,
+  enableKeyboardNav = true,
+  enableFocusIndicators = true,
+}) => {
+  useEffect(() => {
+    // Initialize accessibility enhancements
+    if (enableSkipLinks) {
+      // Add skip links functionality
+    }
+    if (enableKeyboardNav) {
+      // Add keyboard navigation
+    }
+    if (enableFocusIndicators) {
+      // Add focus indicators
+    }
+  }, [enableSkipLinks, enableKeyboardNav, enableFocusIndicators]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b53
 
   return <>{children}</>;
 };
