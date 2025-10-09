@@ -66,11 +66,9 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   ];
->>>>>>> main
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-slate-900 border-t border-cyan-400/20">
       {/* Main Footer Content */}
       <div className="py-16">
         <div className="container mx-auto px-4">
