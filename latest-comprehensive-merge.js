@@ -55,11 +55,7 @@ function resolveConflictsAndMerge(branchName) {
           );
 
           return { success: true, method: 'theirs' };
-        } catch (theirsError) {
-
-        }
-
-        //Strategy 2: Auto-resolve with ours
+        } catch () {}//Strategy 2: Auto-resolve with ours
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -68,11 +64,7 @@ function resolveConflictsAndMerge(branchName) {
           );
 
           return { success: true, method: 'ours' };
-        } catch (oursError) {
-
-        }
-
-        //Strategy 3: Manual conflict resolution
+        } catch () {}//Strategy 3: Manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
@@ -93,10 +85,7 @@ function resolveConflictsAndMerge(branchName) {
                 });
                 execSync(`git add "${file}"`, { stdio: 'inherit' });
 
-              } catch (fileError) {
-
-              }
-            }
+              } catch () {}}
           }
 
           //Complete the merge
@@ -105,15 +94,8 @@ function resolveConflictsAndMerge(branchName) {
           });
 
           return { success: true, method: 'manual' };
-        } catch (manualError) {
-
-        }
-      }
-    } catch (statusError) {
-
-    }
-
-    //If all strategies fail, abort and skip
+        } catch () {}}
+    } catch () {}//If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
 
@@ -147,7 +129,7 @@ for (let i = 0; i < branches.length; i += batchSize) {
 
 for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
   const _batch = batches[batchIndex];
-  console.log(
+  // console.log(
     `\n🔄 Processing batch ${batchIndex + 1}/${batches.length} (${batch.length} branches)...`
   );
 
@@ -187,19 +169,9 @@ fs.writeFileSync('latest-comprehensive-merge-report.json', JSON.stringify(result
 
 //Step 6: Display summary
 
-
-
-
-
-
-
-
-
-
-
 if (results.failed.length > 0) {
 
-  results.failed.forEach(result => console.log(`  - ${result.branch}`));
+  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
 
 // Step 7: Push changes
@@ -207,8 +179,4 @@ if (results.failed.length > 0) {
 try {
   execSync('git push origin main', { stdio: 'inherit' });
 
-} catch (error) {
-
-
-}
-
+} catch () {}

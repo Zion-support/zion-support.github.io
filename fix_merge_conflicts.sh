@@ -1,17 +1,22 @@
 #!/bin/bash
 
-# Fix merge conflicts by removing conflict markers and keeping the latest version
-find /workspace/app -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-  if grep -q "^<<<<<<<\|^=======\|^>>>>>>>" "$file"; then
+# Find all files with merge conflicts and clean them up
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+  if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file"; then
     echo "Fixing merge conflicts in: $file"
     
-    # Remove merge conflict markers and keep the latest version (after =======)
-    sed -i '/^<<<<<<<.*/,/^=======/d' "$file"
-    sed -i '/^>>>>>>>.*/d' "$file"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Clean up any remaining empty lines
-    sed -i '/^$/N;/^\n$/d' "$file"
+    # Remove merge conflict markers and keep the newer version (after =======)
+    awk '
+    /<<<<<<< HEAD/ { in_old = 1; next }
+    /=======/ { in_old = 0; in_new = 1; next }
+    />>>>>>> / { in_new = 0; next }
+    in_old { next }
+    { print }
+    ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
   fi
 done
 
-echo "Fixed merge conflicts in all files"
+echo "Merge conflicts fixed!"

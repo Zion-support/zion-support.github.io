@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'roadmap_curator'}
       });
     };
-//   } catch (error) {console.error('❌ roadmap_curator function failed: ') error
+//   } catch (error) {// console.error('❌ roadmap_curator function failed: ') error
       }
     return {
       statusCode: 500,

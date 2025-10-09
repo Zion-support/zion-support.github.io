@@ -1,56 +1,13 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
+import React from 'react';
+import Link from 'next/link';
+import { Phone, CheckCircle, Star } from 'lucide-react';
+export const metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components
-    preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
-    }
-  }, []);
+export default function HomePage() {
   return (
+<<<<<<< HEAD
     <>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -166,26 +123,35 @@ const HomePage: React.FC = () => {
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
               </div>
+=======
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
+            <div className="flex items-center">
+              <Link href="/" className="text-2xl font-bold text-gray-900">
+                Zion Tech Group
+              </Link>
+>>>>>>> main
             </div>
-            
-            {/* CTA Buttons */}
-            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="tel:+13024640950"
-                onClick={handlePhoneClick}
-                className="cyber-button w-full sm:w-auto text-center"
-                aria-label="Call us at (302) 464-0950"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <a 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Get Free Consultation
-            </a>
+            <nav className="hidden md:flex space-x-8">
+              <Link href="/" className="text-gray-900 hover:text-blue-600">
+                Home
+              </Link>
+              <Link href="/services" className="text-gray-900 hover:text-blue-600">
+                Services
+              </Link>
+              <Link href="/blog" className="text-gray-900 hover:text-blue-600">
+                Blog
+              </Link>
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
+                Contact
+              </Link>
+            </nav>
           </div>
         </div>
+<<<<<<< HEAD
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
@@ -782,426 +748,136 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
+=======
+      </header>
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Transform Your Business with
+              <span className="block text-blue-200">AI-Powered Solutions</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              and enterprise IT solutions that drive growth, efficiency, and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+              >
+                Explore Our Services
+                <Link className="w-5 h-5 ml-2" />
+              </Link>
+              <a href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call +1 302 464 0950
+              </a>
+>>>>>>> main
             </div>
           </div>
         </section>
-        {/* Micro SAAS Solutions Section */}
-        <section className="mb-16" aria-labelledby="micro-saas-heading">
-          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions
-          </h2>
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
-          </p>
-          {/* Productivity Tools */}
-          <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
-                  <a href="/ai-writing-assistant" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Real-time business analytics with AI insights, automated reports, and predictive forecasting.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
-                  <a href="/smart-analytics" className="text-green-400 hover:text-green-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Intelligent scheduling with calendar optimization, meeting coordination, and time management.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
-                  <a href="/ai-scheduler" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered expense management with receipt scanning, categorization, and budget insights.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-yellow-400 mb-2">$15/month</div>
-                  <a href="/expense-tracker" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Advanced task management with AI prioritization, team collaboration, and progress tracking.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>
-                  <a href="/task-manager-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-pink-400 mb-2">$59/month</div>
-                  <a href="/crm-lite" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>
-                  <a href="/email-optimizer" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-driven social media management with content creation, scheduling, and performance analytics.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-orange-400 mb-2">$45/month</div>
-                  <a href="/social-media-manager" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
+        {/* Features Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600">
+                We deliver measurable results through innovative AI solutions
+              </p>
             </div>
-          </div>
-          {/* Marketing & Sales Tools */}
-          <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Create stunning graphics, logos, and marketing materials with AI-powered design tools.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>
-                  <a href="/ai-design-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
-                    Try Free →
-                  </a>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <CheckCircle className="w-6 h-6 text-blue-600" />
                 </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Build high-converting landing pages with AI optimization and A/B testing capabilities.
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Proven Results
+                </h3>
+                <p className="text-gray-600">
+                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
-                  <a href="/landing-page-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
-                    Try Free →
-                  </a>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <Star className="w-6 h-6 text-green-600" />
                 </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered SEO analysis and optimization with keyword research and content suggestions.
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Expert Team
+                </h3>
+                <p className="text-gray-600">
+                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
-                  <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm">
-                    Try Free →
-                  </a>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                  <Link className="w-6 h-6 text-purple-600" />
                 </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Fast Implementation
+                </h3>
+                <p className="text-gray-600">
+                  Get your AI solutions up and running quickly with our streamlined implementation process.
                 </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-yellow-400 mb-2">$79/month</div>
-                  <a href="/ad-campaign-manager" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-          {/* Developer Tools */}
-          <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered code completion, debugging, and optimization for multiple programming languages.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>
-                  <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Create and manage APIs with AI assistance, documentation generation, and testing tools.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>
-                  <a href="/api-builder" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-red-400 mb-2">$25/month</div>
-                  <a href="/bug-tracker-pro" className="text-red-400 hover:text-red-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Automatically generate technical documentation, API docs, and user guides from code.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
-                  <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
-                    Try Free →
-                  </a>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
-        {/* Statistics Section */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentStatistics />
-        </Suspense>
-        {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentCarousel />
-        </Suspense>
-        {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-        {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentNewsletterSignup />
-        </Suspense>
-
-        {/* Contact Section */}
-        <section className="mb-16" aria-labelledby="contact-heading">
-          <div className="max-w-6xl mx-auto">
-            <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
+            <p className="text-xl mb-8 text-blue-100">
+              Let's discuss how our AI solutions can drive your success.
             </p>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Contact Information */}
-              <div className="cyber-card hologram-card p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">Phone</p>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        +1 (302) 464-0950
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">Address</p>
-                      <p className="text-white font-semibold">
-                        364 E Main St STE 1008<br />
-                        Middletown, DE 19709
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">Business Hours</p>
-                      <p className="text-white font-semibold">
-                        Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                        24/7 Emergency Support Available
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Quick Contact Form */}
-              <div className="cyber-card hologram-card p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="ai-services">AI Services</option>
-                      <option value="it-services">IT Services</option>
-                      <option value="micro-saas">Micro SAAS Solutions</option>
-                      <option value="consulting">IT Consulting</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Tell us about your project or requirements"
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full cyber-button text-center py-4"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+              >
+                Get Started Today
+                <Link className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              >
+                View Our Blog
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
         </section>
       </main>
       {/* Footer */}
-      <Footer />
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 mb-6">
+              Advanced AI and IT Solutions for Enterprise Transformation
+            </p>
+            <div className="flex justify-center space-x-6">
+              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+            </div>
+            <div className="mt-8 pt-8 border-t border-gray-800">
+              <p className="text-gray-400 text-sm">
+                © 2026 Zion Tech Group. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    </>
   );
 };
-export default HomePage;

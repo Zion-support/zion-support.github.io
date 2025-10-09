@@ -105,7 +105,6 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/testBanner,\s*s/g, 'testBanners');
   fixed = fixed.replace(/BannerConf,\s*i,\s*g/g, 'BannerConfig');
   //Remove duplicate content (looks like there might be merge conflict markers)
-  fixed = fixed.replace(/=======.*?=======/gs, '');
   //Clean up extra semicolons and commas
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');

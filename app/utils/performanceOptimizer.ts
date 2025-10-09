@@ -5,9 +5,15 @@
  */
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => console.log('[INFO]', message, context),
-  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
-  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+  info: (message: string, context?: string) => {
+    // Logging disabled for production
+  },
+  performance: (message: string, data: Record<string, unknown>, context?: string) => {
+    // Logging disabled for production
+  },
+  error: (message: string, error: Error) => {
+    // Logging disabled for production
+  }
 };
 interface PerformanceMetrics {
   loadTime: number;
@@ -85,9 +91,7 @@ class PerformanceOptimizer {
       if (navigation) {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
-    } catch (error) {
-      }
-  }
+    } catch () {}}
   /**
    * Measure render time using PerformanceObserver
    */

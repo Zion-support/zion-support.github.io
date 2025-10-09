@@ -79,13 +79,13 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
 }
 //Main function
 async function main() {try {
-//     console.log('🔍 Fetching open pull requests...')}
+//     // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs
     const _prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
 //     //     if (prs.length === 0) {return}
     }
     //Display PRs
-//     console.log('\n📝 Open Pull Requests: '),
+//     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {
 //       //       //       //       });
     //Save PR list to file
@@ -102,7 +102,7 @@ async function main() {try {
     // Handle non-mergeable PRs
     const _nonMergeablePRs = prs.filter(pr => pr.mergeable === false);
     if (nonMergeablePRs.length > 0) {
-//       console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
+//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {
 //         });
 //       }

@@ -1,24 +1,29 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-Disallow: /temp/
-Disallow: /backup/
+<<<<<<< HEAD
 
 # Allow important pages
 Allow: /
 Allow: /about
 Allow: /services
 Allow: /contact
+Allow: /ai-services
+Allow: /it-services
+=======
+Disallow: /static/
+
+# Allow important pages
+Allow: /ai-services
+Allow: /contact
+Allow: /about
+Allow: /pricing
 Allow: /blog
-Allow: /case-studies
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b

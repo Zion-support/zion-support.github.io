@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'a11y_alt_text_runner'}
       });
     };
-//   } catch (error) {console.error('❌ a11y_alt_text_runner function failed: ') error
+//   } catch (error) {// console.error('❌ a11y_alt_text_runner function failed: ') error
       }
     return {
       statusCode: 500,

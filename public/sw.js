@@ -1,5 +1,8 @@
-// Service Worker for Zion Tech Group
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
+=======
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
@@ -7,7 +10,7 @@ const urlsToCache = [
   '/manifest.json'
 ];
 
-// Install event
+// Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,18 +21,22 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event
+// Fetch event - serve from cache when offline
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        return response || fetch(event.request);
-      })
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
   );
 });
 
-// Activate event
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -44,3 +51,15 @@ self.addEventListener('activate', (event) => {
     })
   );
 });
+
+// Background sync for analytics
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+async function doBackgroundSync() {
+  // Sync analytics data when back online
+  console.log('Background sync triggered');
+}

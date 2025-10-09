@@ -173,7 +173,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
-//       console.error('Performance measurement failed:', error);
+//       // console.error('Performance measurement failed:', error);
       return 0;
     }
   }
@@ -248,9 +248,7 @@ export class PerformanceMonitor {
   }
 }
 
-// ============================================================================
 // Types
-// ============================================================================
 
 import type { 
   PerformanceReport, 
@@ -260,9 +258,7 @@ import type {
   LayoutShift 
 } from '../types/app.types';
 
-// ============================================================================
 // Utility Functions
-// ============================================================================
 
 /**
  * Measure function execution time
@@ -276,7 +272,7 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     const result = fn(...args);
     const end = performance.now();
     
-    console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
+    // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
   }) as T;
