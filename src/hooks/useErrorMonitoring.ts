@@ -14,12 +14,13 @@ declare global {
   }
 }
 export const useErrorMonitoring = () => {
-  const { trackError } = useAnalytics();
+  // const { trackError } = useAnalytics();
   const reportError = useCallback(
     (error: Error, context?: string) => {
-      trackError(error, context);
+      console.error('Error reported:', error, context);
+      // trackError(error, context);
     },
-    [trackError]
+    []
   );
   useEffect(() => {
     // Global error handler
