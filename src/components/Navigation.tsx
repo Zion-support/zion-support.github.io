@@ -68,27 +68,27 @@ const Navigation: React.FC = () => {
   };
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, popular: true },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, popular: true },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3, popular: true },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, popular: true },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, popular: true },
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, popular: false },
+    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, popular: true },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, popular: true },
+    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, popular: false },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, popular: true },
+    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, popular: true },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, popular: false },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, popular: true },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, popular: true },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, popular: false },
+    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, popular: false },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, popular: true },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, popular: true },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, popular: true },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, popular: false },
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, popular: false }
   ];
 
   const aiServices = [
@@ -170,7 +170,7 @@ const Navigation: React.FC = () => {
                         Micro SAAS
                       </h3>
                       <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
+                        {microSAASServices.filter(service => service.popular).slice(0, 6).map((service) => (
                           <a key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -178,6 +178,7 @@ const Navigation: React.FC = () => {
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
+                            {service.popular && <span className="text-xs bg-cyan-400 text-slate-900 px-1 rounded">Popular</span>}
                           </a>
                         ))}
                       </div>
