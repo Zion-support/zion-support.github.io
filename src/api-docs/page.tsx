@@ -29,6 +29,7 @@ const ApiDocs: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+            >
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
             </a>
@@ -42,9 +43,13 @@ const ApiDocs: React.FC = () => {
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today for a free consultation and discover how our solutions can help your business.
+            </p>
+          </div>
+        </section>
       </main>
 
       <Footer />
+    </div>
   );
 };
 

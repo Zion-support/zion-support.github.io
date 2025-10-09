@@ -83,8 +83,8 @@ const AIAnalyticsPage: React.FC = () => {
         'API access'
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+    name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations with extensive requirements',
@@ -190,8 +190,8 @@ const AIAnalyticsPage: React.FC = () => {
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
-                  <a
-                    href="/contact"
+                  <a,
+    href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
@@ -213,18 +213,18 @@ const AIAnalyticsPage: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Data?
+              Ready to Transform Your Data?</h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey with AI analytics today. Get a free consultation and discover 
-              how our platform can revolutionize your business intelligence.
+              Start your journey with AI analytics today. Get a free consultation and discover,
+    how our platform can revolutionize your business intelligence.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                Get Free Consultation
-                href="tel:+13024640950"
+                Get Free Consultation,
+    href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
+                (302) 464-0950,
+    href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us

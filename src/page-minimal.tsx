@@ -22,11 +22,11 @@ export default function HomePage() {
             </div>
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
-                Home
+                Home</Link>
               <Link href="/services" className="text-gray-900 hover:text-blue-600">
-                Services
+                Services</Link>
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
-                Blog
+                Blog</Link>
               <Link href="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
             </nav>
@@ -44,12 +44,12 @@ export default function HomePage() {
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
+              <Link,
+    href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
-                Explore Our Services
-                <Link className="w-5 h-5 ml-2" />
+                Explore Our Services</Link>
+                <Link className="w-5 h-5 ml-2" /></Link>
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 <Phone className="w-5 h-5 mr-2" />
@@ -63,7 +63,7 @@ export default function HomePage() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600">
-                We deliver measurable results through innovative AI solutions
+                We deliver measurable results through innovative AI solutions</p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -72,25 +72,25 @@ export default function HomePage() {
                   Proven Results
                 </h3>
                 <p className="text-gray-600">
-                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
+                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.</p>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
-                  Expert Team
-                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
+                  Expert Team,
+    Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                   <Link className="w-6 h-6 text-purple-600" />
-                  Fast Implementation
-                  Get your AI solutions up and running quickly with our streamlined implementation process.
-        {/* CTA Section */}
+                  Fast Implementation,
+    Get your AI solutions up and running quickly with our streamlined implementation process.
+        {/* CTA Section */}</Link>
         <section className="py-20 bg-blue-600 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
+              Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 text-blue-100">
               Let's discuss how our AI solutions can drive your success.
                 href="/contact"
-                Get Started Today
-                href="/blog"
-                View Our Blog
+                Get Started Today,
+    href="/blog"
+                View Our Blog</p>
                 <ArrowRight className="w-5 h-5 ml-2" />
       </main>
       {/* Footer */}
@@ -98,7 +98,7 @@ export default function HomePage() {
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-6">
-              Advanced AI and IT Solutions for Enterprise Transformation
+              Advanced AI and IT Solutions for Enterprise Transformation</p>
             <div className="flex justify-center space-x-6">
               <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
               <Link href="/about" className="text-gray-400 hover:text-white">About</Link>

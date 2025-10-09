@@ -69,6 +69,7 @@ class AccessibilityEnhancer {
     });
 
     // Update focusable elements on DOM changes
+    observer = new MutationObserver(() => {
       this.updateFocusableElements();
     });
 

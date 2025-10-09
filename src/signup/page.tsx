@@ -26,7 +26,7 @@ const SignupPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
+  }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,11 +42,11 @@ const SignupPage: React.FC = () => {
     
     setIsLoading(true);
     
-    // Simulate signup process
+    // Simulate signup process,
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsLoading(false);
-    // Redirect to dashboard or home page
+    // Redirect to dashboard or home page,
     window.location.href = '/';
 
   const features = [
@@ -96,17 +96,17 @@ const SignupPage: React.FC = () => {
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-                        type="text"
+                      <input,
+    type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        required,
+    className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your first name"
                       />
-                      Last Name
-                        name="lastName"
+                      Last Name,
+    name="lastName"
                         value={formData.lastName}
                         placeholder="Enter your last name"
 
@@ -137,16 +137,16 @@ const SignupPage: React.FC = () => {
                       value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Create a password"
-                    <button
-                      type="button"
+                    <button,
+    type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
 
-                    Confirm Password
-                      type={showConfirmPassword ? 'text' : 'password'}
+                    Confirm Password,
+    type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       placeholder="Confirm your password"
@@ -172,9 +172,8 @@ const SignupPage: React.FC = () => {
                   
                       name="subscribeNewsletter"
                       checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips
-
-                  type="submit"
+                      Subscribe to our newsletter for updates and tips,
+    type="submit"
                   disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? (
@@ -188,8 +187,8 @@ const SignupPage: React.FC = () => {
 
               <div className="mt-8 text-center">
                   Already have an account?{' '}
-                  <a
-                    href="/login"
+                  <a,
+    href="/login"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                     Sign in here
 
@@ -199,8 +198,8 @@ const SignupPage: React.FC = () => {
                   Transform Your Business Today
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI and IT solutions 
-                  to achieve unprecedented growth and efficiency.
+                  Join thousands of businesses already using our AI and IT solutions,
+    to achieve unprecedented growth and efficiency.</p>
 
               <div className="space-y-6">
                 {features.map((feature, index) => (
@@ -223,7 +222,7 @@ const SignupPage: React.FC = () => {
 
               <div className="text-center">
                 <p className="text-gray-400 text-sm mb-4">
-                  Trusted by 1000+ companies worldwide
+                  Trusted by 1000+ companies worldwide</p>
                 <div className="flex justify-center items-center space-x-6 opacity-60">
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>

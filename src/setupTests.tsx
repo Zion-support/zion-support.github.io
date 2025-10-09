@@ -4,13 +4,13 @@
  */
 /* eslint-disable no-console */
 import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
+// Polyfill for TextEncoder/TextDecoder,
+    global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
-// Suppress jsdom navigation warnings
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-const __originalConsoleError = console.error;
+// Suppress jsdom navigation warnings,
+    const originalConsoleError = console.error;
+// eslint-disable-next-line no-console,
+    const __originalConsoleError = console.error;
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -19,39 +19,39 @@ console.error = (...args) => {
   }
   originalConsoleError(...args);
 };
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+// Mock window.matchMedia,
+    Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(), // deprecated,
+    removeListener: jest.fn(), // deprecated,
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
 });
-// Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+// Mock requestAnimationFrame,
+    global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
-// Mock localStorage
-const localStorageMock = {
+// Mock localStorage,
+    const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
-// Mock sessionStorage
-const sessionStorageMock = {
+// Mock sessionStorage,
+    const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock
-// Mock fetch
-global.fetch = jest.fn();
-// Mock console methods for cleaner test output
-const originalConsoleWarn = console.warn;
+// Mock fetch,
+    global.fetch = jest.fn();
+// Mock console methods for cleaner test output,
+    const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
@@ -60,8 +60,8 @@ console.warn = (...args) => {
 console.info = (...args) => {
   if (message.includes('ReactDOM.render is no longer supported')) {
   originalConsoleInfo(...args);
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
+// Mock PerformanceObserver,
+    global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
@@ -69,14 +69,14 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
 // Additional JSDOM navigation warning suppression
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const suppressNavigationWarnings = (...args: unknown[]) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars,
+    const suppressNavigationWarnings = (...args: unknown[]) => {
   if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
-// Suppress JSDOM navigation warnings
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+// Suppress JSDOM navigation warnings,
+    if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
+// Mock window.location,
+    delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',

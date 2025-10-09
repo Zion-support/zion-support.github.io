@@ -23,6 +23,8 @@ export interface ServiceOptions {
 export interface CacheEntry<T> {
   data: T;
   timestamp: number;
+}
+
 export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;

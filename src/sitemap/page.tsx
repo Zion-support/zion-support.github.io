@@ -1,5 +1,5 @@
-// Sitemap page placeholder
-import React from 'react';
+// Sitemap page placeholder,
+    import React from 'react';
 
 const SitemapPage: React.FC = () => {
   return (
