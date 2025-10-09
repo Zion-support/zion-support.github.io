@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Building, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Building, Target, Zap, Settings, CheckCircle } from 'lucide-react';;
 
 const SmartCitiesPage: React.FC = () => {
   const features = [

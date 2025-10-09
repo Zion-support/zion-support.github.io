@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Bot, Cpu, Settings, Shield, Zap, CheckCircle, ArrowRight, Star, TrendingUp, Target, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Bot, Cpu, Settings, Shield, CheckCircle } from 'lucide-react';;
 
 const AIRoboticsPage: React.FC = () => {
   const features = [
