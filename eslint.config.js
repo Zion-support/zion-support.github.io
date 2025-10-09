@@ -6,44 +6,46 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-
-  {/* TODO: Fix JSX expression */}
-
+  // Base JavaScript configuration
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+    },
   },
-  // Base JavaScript configuration;
-  {/* TODO: Fix JSX expression */}
-  s: ['**/*.{js,jsx}'],
-    languageOption,
-  s: {/* TODO: Fix JSX expression */}
-  s: { ...globals.browser, ...globals.node },
-      parserOption,
-  s: {/* TODO: Fix JSX expression */}
+  // TypeScript configuration
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
         },
       },
     },
-    rule,
-  s: {/* TODO: Fix JSX expression */}
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
-  },
-  // TypeScript configuration;
-  {/* TODO: Fix JSX expression */}
-  s: ['**/*.{ts,tsx}'],
-    languageOption,
-  s: {/* TODO: Fix JSX expression */}
-  s: { ...globals.browser, ...globals.node },
-      parse,
-  r: tsParser,
-      parserOption,
-  s: {/* TODO: Fix JSX expression */}
-        },
-      },
-    },
-    plugin,
-  s: {/* TODO: Fix JSX expression */}
-    },
-    rule,
-  s: {/* TODO: Fix JSX expression */}
-  t: true },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
