@@ -273,7 +273,6 @@ const AIWorkflowAutomationPage = () => {
         </main>
         <Footer />
       </div>
-    </div>
   );
 };
 
