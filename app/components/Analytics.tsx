@@ -16,7 +16,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: unknown[]) {
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
@@ -126,8 +126,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 
