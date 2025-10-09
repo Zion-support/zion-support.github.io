@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Star } from 'lucide-react';;
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
