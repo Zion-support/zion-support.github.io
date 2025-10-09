@@ -5,6 +5,24 @@
  */
 import React from 'react'
 import { performanceConfig } from '../../performance.config'
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -154,12 +172,7 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      console.log(`[Performance] ${name}:`, {
-        value,
-        rating,
-        unit: name === 'cls' ? 'score' : 'ms'
-      })
-    }
+      }
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
@@ -190,8 +203,7 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-        console.log('[Memory]', {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+        }MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         })
@@ -202,8 +214,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
-        console.log('[Navigation Timing]', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+        }ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
           'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,

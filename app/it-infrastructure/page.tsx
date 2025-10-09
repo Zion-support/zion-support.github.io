@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
-const ITInfrastructurePage: React.FC = () => {
+const ITInfrastructurePage: React.FC = React.memo(() => {
   const itServices = [
     {
       title: 'Cloud Infrastructure Management',
@@ -316,7 +316,7 @@ const ITInfrastructurePage: React.FC = () => {
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                      <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                     </div>
                     <div className="text-sm text-green-600 font-semibold">
                       Save up to 50% vs market rates
@@ -444,4 +444,23 @@ const ITInfrastructurePage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ITInfrastructurePage;

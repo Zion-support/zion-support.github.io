@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
-const RoboticsPage: React.FC = () => {
+const RoboticsPage: React.FC = React.memo(() => {
   const roboticsServices = [
     {
       title: 'Robotic Process Automation (RPA)',
@@ -157,10 +157,10 @@ const RoboticsPage: React.FC = () => {
                 Transform your operations with intelligent robots and advanced automation solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors">
+                <button role="button" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors">
                   Explore Robotics Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
+                <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
                   Schedule Demo
                 </button>
               </div>
@@ -233,7 +233,7 @@ const RoboticsPage: React.FC = () => {
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-teal-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates
@@ -271,7 +271,7 @@ const RoboticsPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-teal-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                      <button role="button" className="w-full bg-teal-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
                         Get Robotics Consultation
                       </button>
                     </div>
@@ -357,4 +357,23 @@ const RoboticsPage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default RoboticsPage;

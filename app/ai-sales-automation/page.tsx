@@ -3,8 +3,7 @@ import React from 'react';
 import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AISalesAutomationPage: React.FC = () => {
+const AISalesAutomationPage: React.FC = React.memo(() => {
   const features = [
     {
       icon: Target,
@@ -31,7 +30,6 @@ const AISalesAutomationPage: React.FC = () => {
       benefits: ['Real-time Metrics', 'Performance Tracking', 'ROI Analysis', 'Team Insights']
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -52,19 +50,18 @@ const AISalesAutomationPage: React.FC = () => {
       features: ['Unlimited users', 'Custom AI training', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
       
-      <main className="pt-24 pb-16 px-4">
+      <main role="main" role="main" className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Sales Automation
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
               Automate and optimize your sales process with AI-powered lead scoring, 
               pipeline management, and revenue forecasting.
             </p>
@@ -94,11 +91,11 @@ const AISalesAutomationPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <p className="text-gray-500 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-500">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -107,7 +104,6 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -124,12 +120,12 @@ const AISalesAutomationPage: React.FC = () => {
                     </div>
                   )}
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <p className="text-gray-500 mb-4">{plan.description}</p>
                   <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-500">
+                        <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -155,7 +151,7 @@ const AISalesAutomationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
                 Call (302) 464-0950
               </a>
@@ -174,5 +170,23 @@ const AISalesAutomationPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default AISalesAutomationPage;

@@ -60,7 +60,7 @@ try {
   );
   
   if (foundHeavyDeps.length > 0) {
-    console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
+    );
   } else {
 
   }
@@ -118,4 +118,4 @@ fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 
 
 
-report.improvements.forEach(improvement => console.log(`  ${improvement}`));
+report.improvements.forEach(improvement => );

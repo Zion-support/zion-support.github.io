@@ -13,7 +13,7 @@ interface PerformanceMetrics {
   fps: number;
   [key: string]: number;
 }
-const PerformanceDashboard: React.FC = () => {
+const PerformanceDashboard: React.FC = React.memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -69,7 +69,7 @@ const PerformanceDashboard: React.FC = () => {
   if (!isVisible) {
     return (
       <button
-        onClick={() => setIsVisible(true)}
+        onClick={() => setIsVisible(true)} onKeyDown={(e) => e.key === 'Enter' && () => setIsVisible(true)(e)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
         Show Performance
@@ -81,8 +81,8 @@ const PerformanceDashboard: React.FC = () => {
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
+          onClick={() => setIsVisible(false)} onKeyDown={(e) => e.key === 'Enter' && () => setIsVisible(false)(e)}
+          className="text-gray-700 hover:text-gray-700"
         >
           ×
         </button>
@@ -111,7 +111,7 @@ const PerformanceDashboard: React.FC = () => {
           <span className="text-sm font-mono">{metrics.fps}</span>
         </div>
         <div className="pt-2 border-t border-gray-200">
-          <div className="text-xs text-gray-500">
+          <div className="text-xs text-gray-700">
             Last updated: {new Date().toLocaleTimeString()}
           </div>
         </div>
@@ -119,4 +119,23 @@ const PerformanceDashboard: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default PerformanceDashboard;

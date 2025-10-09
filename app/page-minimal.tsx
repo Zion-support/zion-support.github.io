@@ -1,6 +1,24 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, CheckCircle, Star } from 'lucide-react';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
@@ -9,7 +27,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header role="banner" className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
@@ -17,7 +35,7 @@ export default function HomePage() {
                 Zion Tech Group
               </Link>
             </div>
-            <nav className="hidden md:flex space-x-8">
+            <nav role="navigation" className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
                 Home
               </Link>
@@ -34,7 +52,7 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-      <main>
+      <main role="main">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -140,21 +158,21 @@ export default function HomePage() {
         </section>
       </main>
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer role="contentinfo" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-600 mb-6">
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link href="/services" className="text-gray-600 hover:text-white">Services</Link>
+              <Link href="/about" className="text-gray-600 hover:text-white">About</Link>
+              <Link href="/contact" className="text-gray-600 hover:text-white">Contact</Link>
+              <Link href="/privacy" className="text-gray-600 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 © 2026 Zion Tech Group. All rights reserved.
               </p>
             </div>

@@ -7,6 +7,24 @@ import React from 'react';
 /**
  * Debounce function to limit execution rate
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
@@ -79,7 +97,7 @@ export async function measureTime<T>(
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }ms`); } }
   return { result, duration };
 }
 /**

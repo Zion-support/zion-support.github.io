@@ -8,6 +8,24 @@ interface LinkProps {
   onClick?: () => void;
   'aria-label'?: string;
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const Link: React.FC<LinkProps> = ({
   href,
   children,
@@ -34,7 +52,7 @@ export const Link: React.FC<LinkProps> = ({
       className={className}
       target={target}
       rel={rel}
-      onClick={handleClick}
+      onClick={handleClick} onKeyDown={(e) => e.key === 'Enter' && handleClick(e)}
       aria-label={ariaLabel}
       {...props}
     >

@@ -3,6 +3,24 @@
  * Enhanced Error Tracking Utility
  * Provides comprehensive error tracking with detailed context
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export interface ErrorContext {
   component?: string;
   action?: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
-const IoTEdgePage: React.FC = () => {
+const IoTEdgePage: React.FC = React.memo(() => {
   const iotServices = [
     {
       title: 'IoT Device Management Platform',
@@ -157,10 +157,10 @@ const IoTEdgePage: React.FC = () => {
                 Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
+                <button role="button" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
                   Explore IoT Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
                   Schedule Demo
                 </button>
               </div>
@@ -233,7 +233,7 @@ const IoTEdgePage: React.FC = () => {
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-cyan-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates
@@ -271,7 +271,7 @@ const IoTEdgePage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
+                      <button role="button" className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
                         Get IoT Consultation
                       </button>
                     </div>
@@ -357,4 +357,23 @@ const IoTEdgePage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default IoTEdgePage;

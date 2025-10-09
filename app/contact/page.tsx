@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = React.memo(() => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
@@ -64,7 +64,7 @@ const ContactPage: React.FC = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 ></textarea>
               </div>
-              <button
+              <button role="button"
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
@@ -76,4 +76,23 @@ const ContactPage: React.FC = () => {
       </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ContactPage;

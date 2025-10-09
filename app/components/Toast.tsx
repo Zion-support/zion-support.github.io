@@ -1,5 +1,23 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
   message: string;
@@ -70,7 +88,10 @@ const Toast: React.FC<ToastProps> = ({
         onClick={() => {
           setIsVisible(false);
           if (onClose) onClose();
-        }}
+        } onKeyDown={(e) => e.key === 'Enter' && () => {
+          setIsVisible(false);
+          if (onClose) onClose();
+        (e)}}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
       >

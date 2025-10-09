@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
-const AIEcommerceSolutionsPage: React.FC = () => {
+const AIEcommerceSolutionsPage: React.FC = React.memo(() => {
   const ecommerceServices = [
     {
       title: 'AI-Powered E-commerce Platform',
@@ -263,7 +263,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
+                  <span className="text-sm text-gray-700 ml-2">Market: {service.marketPrice}</span>
                 </div>
                 <div className="mb-4">
                   <span className="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
@@ -335,19 +335,19 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Zion Tech Group's AI e-commerce platform increased our online sales by 150% in just 6 months. The personalized recommendations are incredible!"</p>
               <div className="font-semibold text-gray-900">Sarah Johnson</div>
-              <div className="text-sm text-gray-500">CEO, Fashion Forward</div>
+              <div className="text-sm text-gray-700">CEO, Fashion Forward</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"The AI inventory management system reduced our stockouts by 80% and saved us $500K annually. Highly recommended!"</p>
               <div className="font-semibold text-gray-900">Michael Chen</div>
-              <div className="text-sm text-gray-500">Operations Director, TechGear</div>
+              <div className="text-sm text-gray-700">Operations Director, TechGear</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Their AI customer service automation reduced our support costs by 70% while improving customer satisfaction. Amazing results!"</p>
               <div className="font-semibold text-gray-900">Emily Rodriguez</div>
-              <div className="text-sm text-gray-500">Customer Success Manager, HomeDecor Plus</div>
+              <div className="text-sm text-gray-700">Customer Success Manager, HomeDecor Plus</div>
             </div>
           </div>
         </div>
@@ -383,4 +383,23 @@ const AIEcommerceSolutionsPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AIEcommerceSolutionsPage;

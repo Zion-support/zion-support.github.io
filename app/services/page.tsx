@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = React.memo(() => {
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -68,7 +67,6 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -91,7 +89,6 @@ const ServicesPage: React.FC = () => {
       description: 'World-class engineers and data scientists with proven track records'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Helmet>
@@ -105,26 +102,26 @@ const ServicesPage: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
             Our Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations and drive innovation.
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-300">Services</div>
+              <div className="text-gray-500">Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-green-400 mb-2">$99</div>
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">$99</div>
+              <div className="text-gray-500">Starting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
-              <div className="text-gray-300">Average ROI</div>
+              <div className="text-gray-500">Average ROI</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-gray-500">Support</div>
             </div>
           </div>
           {/* Contact Info */}
@@ -146,7 +143,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -162,22 +158,22 @@ const ServicesPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">Comprehensive solutions for your business needs</p>
+                    <p className="text-gray-500">Comprehensive solutions for your business needs</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                      <p className="text-gray-500 mb-4 text-sm">{service.description}</p>
                       
                       {/* Features */}
                       <div className="mb-4">
                         <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                              <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-xs text-gray-500">
+                              <CheckCircle className="w-3 h-3 text-green-600 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -201,7 +197,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -213,13 +208,12 @@ const ServicesPage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <p className="text-gray-500 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -232,7 +226,7 @@ const ServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
               Call (302) 464-0950
             </a>
@@ -248,5 +242,23 @@ const ServicesPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default ServicesPage;

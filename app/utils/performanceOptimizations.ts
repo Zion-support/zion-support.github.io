@@ -2,7 +2,25 @@
 // Performance optimization utilities
 import { useEffect, useCallback, useMemo, useState } from 'react';
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
+export const debounce = <T extends (...args: unknown[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -13,7 +31,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   };
 };
 // Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {

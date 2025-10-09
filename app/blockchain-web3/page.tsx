@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
-const BlockchainWeb3Page: React.FC = () => {
+const BlockchainWeb3Page: React.FC = React.memo(() => {
   const blockchainServices = [
     {
       title: 'Smart Contract Development',
@@ -157,10 +157,10 @@ const BlockchainWeb3Page: React.FC = () => {
                 Build the future of decentralized applications with cutting-edge blockchain and Web3 solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                <button role="button" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                   Explore Web3 Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                   Schedule Consultation
                 </button>
               </div>
@@ -233,7 +233,7 @@ const BlockchainWeb3Page: React.FC = () => {
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates
@@ -271,7 +271,7 @@ const BlockchainWeb3Page: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                      <button role="button" className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                         Get Web3 Consultation
                       </button>
                     </div>
@@ -357,4 +357,23 @@ const BlockchainWeb3Page: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default BlockchainWeb3Page;

@@ -3,8 +3,7 @@ import React from 'react';
 import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive, Lock, FileText, Activity, ArrowRight, Code, Cog, Globe, Users, Target, Award, Rocket, Mail, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ITServicesPage: React.FC = () => {
+const ITServicesPage: React.FC = React.memo(() => {
 <<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
@@ -223,7 +222,6 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-
   const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -270,17 +268,16 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 >>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
 <<<<<<< HEAD
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             IT Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -299,7 +296,6 @@ const ITServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
             Our IT Services
@@ -308,7 +304,7 @@ const ITServicesPage: React.FC = () => {
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category, index) => (
-              <button
+              <button role="button"
                 key={index}
                 className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-cyan-600 transition-colors duration-200"
               >
@@ -316,7 +312,6 @@ const ITServicesPage: React.FC = () => {
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
@@ -324,23 +319,23 @@ const ITServicesPage: React.FC = () => {
                   <service.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <p className="text-gray-500 mb-4 text-sm">{service.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                  <ul className="text-sm text-gray-600 space-y-1">
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-600 mr-2 flex-shrink-0" />
 =======
       
-      <main className="pt-24 pb-16 px-4">
+      <main role="main" role="main" className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               IT Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
               Comprehensive IT solutions including infrastructure, cybersecurity, 
               database management, and DevOps services.
             </p>
@@ -360,7 +355,6 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Services Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -371,12 +365,12 @@ const ITServicesPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-gray-500 mb-4">{service.description}</p>
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
 >>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                         {feature}
                       </li>
@@ -385,7 +379,7 @@ const ITServicesPage: React.FC = () => {
                 </div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                  <ul className="text-sm text-gray-600 space-y-1">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
                       <li key={idx} className="flex items-center">
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
@@ -401,7 +395,7 @@ const ITServicesPage: React.FC = () => {
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-1">
                     {service.technologies.slice(0, 4).map((tech, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
+                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-500 text-xs rounded">
                         {tech}
                       </span>
                     ))}
@@ -420,11 +414,10 @@ const ITServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your IT Infrastructure?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-500 mb-6 max-w-2xl mx-auto">
             Contact us today for a free consultation and discover how our IT services can help your business grow and succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -448,7 +441,6 @@ const ITServicesPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -460,7 +452,7 @@ const ITServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
                 Call (302) 464-0950
               </a>
@@ -479,5 +471,23 @@ const ITServicesPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default ITServicesPage;

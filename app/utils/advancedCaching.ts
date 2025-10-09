@@ -3,6 +3,24 @@
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
   storage?: 'memory' | 'localStorage' | 'sessionStorage';

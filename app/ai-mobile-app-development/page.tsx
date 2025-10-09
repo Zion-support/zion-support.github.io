@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
-const AIMobileAppDevelopmentPage: React.FC = () => {
+const AIMobileAppDevelopmentPage: React.FC = React.memo(() => {
   const mobileServices = [
     {
       title: 'AI-Powered Mobile App Development',
@@ -287,7 +287,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-indigo-600">{service.price}</span>
-                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
+                  <span className="text-sm text-gray-700 ml-2">Market: {service.marketPrice}</span>
                 </div>
                 <div className="mb-4">
                   <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded">
@@ -359,19 +359,19 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!"</p>
               <div className="font-semibold text-gray-900">David Kim</div>
-              <div className="text-sm text-gray-500">Founder, FitAI</div>
+              <div className="text-sm text-gray-700">Founder, FitAI</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!"</p>
               <div className="font-semibold text-gray-900">Lisa Wang</div>
-              <div className="text-sm text-gray-500">CEO, ShopSmart</div>
+              <div className="text-sm text-gray-700">CEO, ShopSmart</div>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly."</p>
               <div className="font-semibold text-gray-900">Robert Johnson</div>
-              <div className="text-sm text-gray-500">CTO, ServicePro</div>
+              <div className="text-sm text-gray-700">CTO, ServicePro</div>
             </div>
           </div>
         </div>
@@ -407,4 +407,23 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AIMobileAppDevelopmentPage;

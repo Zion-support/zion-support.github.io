@@ -4,11 +4,29 @@ import Link from 'next/link';
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const metadata = {
   title: 'Offline - Zion Tech Group',
   description: 'You are currently offline. Please check your internet connection.'
 };
-const OfflinePage: React.FC = () => {
+const OfflinePage: React.FC = React.memo(() => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
       <div className='max-w-md w-full text-center'>
@@ -92,20 +110,20 @@ const OfflinePage: React.FC = () => {
           </ul>
         </div>
         <div className='space-y-3'>
-          <button
-            onClick={() => window.location.reload()}
-            className='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+          <button role="button"
+            onClick={() => window.location.reload()} onKeyDown={(e) => e.key === 'Enter' && () => window.location.reload()(e)}
+            className='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           >
             Try Again
           </button>
           <Link
             href="/"
-            className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             Go to Homepage
           </Link>
         </div>
-        <div className='mt-8 text-sm text-gray-500'>
+        <div className='mt-8 text-sm text-gray-700'>
           <p>
             Need help?{' '}
             <a href='tel:+13024640950'
@@ -119,4 +137,5 @@ const OfflinePage: React.FC = () => {
     </div>
   );
 };
+);
 export default OfflinePage;

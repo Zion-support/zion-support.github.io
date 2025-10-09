@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
-const CybersecurityPage: React.FC = () => {
+const CybersecurityPage: React.FC = React.memo(() => {
   const securityServices = [
     {
       title: 'Advanced Threat Detection',
@@ -155,10 +155,10 @@ const CybersecurityPage: React.FC = () => {
               <p className="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
                 Protect your business with advanced cybersecurity solutions and expert threat protection              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
+                <button role="button" className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                   Get Security Assessment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
+                <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
                   Schedule Consultation
                 </button>
               </div>
@@ -228,7 +228,7 @@ const CybersecurityPage: React.FC = () => {
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-red-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates                        </div>
@@ -264,7 +264,7 @@ const CybersecurityPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                      <button role="button" className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
                         Get Security Consultation
                       </button>
                     </div>
@@ -347,4 +347,23 @@ const CybersecurityPage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default CybersecurityPage;

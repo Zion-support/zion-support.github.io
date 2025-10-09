@@ -188,7 +188,7 @@ class PerformanceMonitor {
   }
   private logMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`);
+      }ms`);
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {

@@ -137,7 +137,7 @@ for (const branch of openPRBranches) {
 
 //Generate report
 // // // // // // // // // // if (results.failed.length > 0) {
-//   //   results.failed.forEach(result => console.log(`  - ${result.branch}`));
+//   //   results.failed.forEach(result => );
 }
 
 //Save report

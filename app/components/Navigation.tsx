@@ -1,29 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-const Navigation: React.FC = () => {
+const Navigation: React.FC = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -31,7 +25,6 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -39,14 +32,12 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
 
   const serviceCategories = [
     {
@@ -147,12 +138,12 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-=======
+  ];
+
   const toggleServices = () => setServicesOpen(!servicesOpen);
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
-
   const aiServices = [
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -171,7 +162,6 @@ const Navigation: React.FC = () => {
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
     { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
   ];
-
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -182,7 +172,6 @@ const Navigation: React.FC = () => {
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
     { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
   ];
-
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
@@ -202,7 +191,6 @@ const Navigation: React.FC = () => {
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
     { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
   ];
-
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
@@ -210,23 +198,20 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav role="navigation" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
           </Link>
-
 <<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
@@ -236,20 +221,19 @@ const Navigation: React.FC = () => {
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-
             {/* Services Dropdown */}
             <div className="relative">
 =======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={() => setAiServicesOpen(!aiServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setAiServicesOpen(!aiServicesOpen)(e)}
+                className="flex items-center space-x-1 text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Brain className="w-4 h-4" />
                 <span>AI Services</span>
@@ -263,14 +247,14 @@ const Navigation: React.FC = () => {
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
                           <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-xs text-gray-600">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
@@ -280,8 +264,8 @@ const Navigation: React.FC = () => {
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setItServicesOpen(!itServicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={() => setItServicesOpen(!itServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setItServicesOpen(!itServicesOpen)(e)}
+                className="flex items-center space-x-1 text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Cloud className="w-4 h-4" />
                 <span>IT Services</span>
@@ -295,14 +279,14 @@ const Navigation: React.FC = () => {
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
                           <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-xs text-gray-600">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
@@ -312,8 +296,8 @@ const Navigation: React.FC = () => {
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={() => setMicroSaasOpen(!microSaasOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setMicroSaasOpen(!microSaasOpen)(e)}
+                className="flex items-center space-x-1 text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Zap className="w-4 h-4" />
                 <span>Micro SAAS</span>
@@ -327,26 +311,25 @@ const Navigation: React.FC = () => {
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
                           <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-xs text-gray-600">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
 >>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
+                onClick={() => setServicesOpen(!servicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setServicesOpen(!servicesOpen)(e)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
@@ -376,11 +359,11 @@ const Navigation: React.FC = () => {
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
+                              className="block px-3 py-2 text-sm text-gray-500 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                             >
                               <div className="font-medium">{service.name}</div>
-                              <div className="text-xs text-gray-500 group-hover:text-purple-500">
+                              <div className="text-xs text-gray-700 group-hover:text-purple-500">
                                 {service.description}
                               </div>
                             </Link>
@@ -389,7 +372,7 @@ const Navigation: React.FC = () => {
                             <Link
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                              onClick={closeAllMenus}
+                              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                             >
                               View All →
                             </Link>
@@ -402,7 +385,7 @@ const Navigation: React.FC = () => {
                     <Link
                       href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
+                      onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                     >
                       View All Services
                     </Link>
@@ -411,19 +394,18 @@ const Navigation: React.FC = () => {
               )}
             </div>
 <<<<<<< HEAD
-
             <Link 
               href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
+              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
 =======
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/about" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/contact" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/blog" className="text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
             </Link>
           </div>
@@ -436,46 +418,41 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
-
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
             >
               Blog
             </Link>
-
             <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
             >
               Contact
             </Link>
-
             {/* CTA Button */}
             <Link
               href="/contact"
               className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
+              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
             >
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              onClick={toggleMenu} onKeyDown={(e) => e.key === 'Enter' && toggleMenu(e)}
+              className="text-gray-500 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-
 <<<<<<< HEAD
         {/* Mobile menu */}
         {isOpen && (
@@ -484,30 +461,29 @@ const Navigation: React.FC = () => {
               <Link
                 href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
 =======
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link href="/" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
 >>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 Home
               </Link>
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
                 About
               </Link>
-
               {/* Mobile Services */}
               <div>
                 <button
 <<<<<<< HEAD
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={() => setServicesOpen(!servicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setServicesOpen(!servicesOpen)(e)}
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 >
                   <span className="flex items-center space-x-2">
@@ -526,8 +502,8 @@ const Navigation: React.FC = () => {
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                              onClick={closeAllMenus}
+                              className="block text-sm text-gray-500 hover:text-cyan-400 transition-colors"
+                              onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                             >
                               {service.name}
                             </Link>
@@ -535,8 +511,8 @@ const Navigation: React.FC = () => {
                         </div>
                       </div>
 =======
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  onClick={() => setAiServicesOpen(!aiServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setAiServicesOpen(!aiServicesOpen)(e)}
+                  className="flex items-center justify-between w-full text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
@@ -550,8 +526,8 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
+                        className="block text-sm text-gray-600 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                       >
                         {service.name}
                       </Link>
@@ -559,7 +535,7 @@ const Navigation: React.FC = () => {
                     <Link
                       href="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
+                      onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                     >
                       View All AI Services →
                     </Link>
@@ -569,8 +545,8 @@ const Navigation: React.FC = () => {
               {/* Mobile IT Services */}
               <div>
                 <button
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  onClick={() => setItServicesOpen(!itServicesOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setItServicesOpen(!itServicesOpen)(e)}
+                  className="flex items-center justify-between w-full text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Cloud className="w-4 h-4" />
@@ -584,8 +560,8 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
+                        className="block text-sm text-gray-600 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                       >
                         {service.name}
                       </Link>
@@ -595,35 +571,31 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 <<<<<<< HEAD
-
               <Link
                 href="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
                 Case Studies
               </Link>
-
               <Link
                 href="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
                 Blog
               </Link>
-
               <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
                 Contact
               </Link>
-
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
@@ -632,8 +604,8 @@ const Navigation: React.FC = () => {
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  onClick={() => setMicroSaasOpen(!microSaasOpen)} onKeyDown={(e) => e.key === 'Enter' && () => setMicroSaasOpen(!microSaasOpen)(e)}
+                  className="flex items-center justify-between w-full text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Zap className="w-4 h-4" />
@@ -647,8 +619,8 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
+                        className="block text-sm text-gray-600 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                       >
                         {service.name}
                       </Link>
@@ -656,20 +628,20 @@ const Navigation: React.FC = () => {
                     <Link
                       href="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
+                      onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}
                     >
                       View All Micro SAAS →
                     </Link>
                   </div>
                 )}
               </div>
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link href="/about" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
                 About
               </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link href="/contact" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
                 Contact
               </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link href="/blog" className="block text-gray-500 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus} onKeyDown={(e) => e.key === 'Enter' && closeAllMenus(e)}>
                 Blog
               </Link>
               {/* Mobile Contact Info */}
@@ -688,7 +660,7 @@ const Navigation: React.FC = () => {
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </a>
-                <div className="flex items-center space-x-2 text-gray-400">
+                <div className="flex items-center space-x-2 text-gray-600">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
@@ -701,9 +673,28 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-
 <<<<<<< HEAD
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default Navigation;
 =======
+);
 export default Navigation;
 >>>>>>> cursor/website-audit-and-update-with-deployment-11c2

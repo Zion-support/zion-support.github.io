@@ -4,6 +4,24 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function AutonomousBusinessProcessesBlog() {
   return (
     <div className="min-h-screen bg-gray-50">

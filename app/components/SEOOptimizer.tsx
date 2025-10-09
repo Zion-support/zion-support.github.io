@@ -1,15 +1,13 @@
 'use client';
 import React, { useEffect } from 'react';
-
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -59,7 +57,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
@@ -69,7 +66,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     meta.setAttribute('content', content);
   };
-
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -79,8 +75,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     canonical.setAttribute('href', url);
   };
-
-  const addStructuredData = (data: any) => {
+  const addStructuredData = (data: unknown) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -92,7 +87,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(script);
   };
-
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
       '@context': 'https://schema.org',
@@ -117,7 +111,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(script);
   };
-
   const addFAQStructuredData = () => {
     const faqData = {
       '@context': 'https://schema.org',
@@ -160,7 +153,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(script);
   };
-
   const addOrganizationStructuredData = () => {
     const organizationData = {
       '@context': 'https://schema.org',
@@ -203,8 +195,24 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(script);
   };
-
   return null;
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default SEOOptimizer;

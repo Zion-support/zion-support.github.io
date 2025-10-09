@@ -1,11 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header role="banner" className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -28,7 +46,7 @@ export default function ServicesAdvertisingPage() {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
+            <p className="text-lg mb-8 text-gray-500 max-w-4xl mx-auto">
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
@@ -213,7 +231,7 @@ export default function ServicesAdvertisingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-700">/month</span></div>
               <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
@@ -237,7 +255,7 @@ export default function ServicesAdvertisingPage() {
                   <span>2 platforms included</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button role="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Get Started
               </button>
             </div>
@@ -274,13 +292,13 @@ export default function ServicesAdvertisingPage() {
                   <span>All platforms included</span>
                 </li>
               </ul>
-              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button role="button" className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Get Started
               </button>
             </div>
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-700">/month</span></div>
               <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
@@ -308,7 +326,7 @@ export default function ServicesAdvertisingPage() {
                   <span>White-label options</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button role="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Contact Sales
               </button>
             </div>
@@ -327,7 +345,7 @@ export default function ServicesAdvertisingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+              className="bg-white text-blue-600 hover:bg-gray-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
             >
               Get Free Assessment
               <ArrowRight className="w-4 h-4 ml-2" />

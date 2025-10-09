@@ -4,8 +4,26 @@ const metadata = {
   title: 'Terms of Service - Zion Tech Group',
   description: 'Terms of service and usage agreement for Zion Tech Group services and website.'
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export { metadata };
-const TermsPage: React.FC = () => {
+const TermsPage: React.FC = React.memo(() => {
   return (
     <>
       <div className='min-h-screen bg-slate-50 py-16'>
@@ -125,4 +143,5 @@ const TermsPage: React.FC = () => {
     </>
   );
 };
+);
 export default TermsPage;

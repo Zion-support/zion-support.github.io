@@ -9,19 +9,14 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting performance optimization...');
-
 // 1. Optimize CSS
-console.log('📝 Optimizing CSS...');
 try {
   execSync('npx postcss app/globals.css -o dist/optimized.css --use autoprefixer --use cssnano', { stdio: 'inherit' });
-  console.log('✅ CSS optimized successfully');
-} catch (error) {
-  console.log('⚠️  CSS optimization skipped (dependencies not installed)');
+  } catch (error) {
+  ');
 }
 
 // 2. Generate service worker for caching
-console.log('🔧 Generating service worker...');
 const serviceWorkerContent = `
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-v1';
@@ -54,10 +49,7 @@ self.addEventListener('fetch', (event) => {
 `;
 
 fs.writeFileSync('dist/sw.js', serviceWorkerContent);
-console.log('✅ Service worker generated');
-
 // 3. Generate manifest.json for PWA
-console.log('📱 Generating PWA manifest...');
 const manifest = {
   "name": "Zion Tech Group - AI Solutions",
   "short_name": "Zion Tech",
@@ -81,10 +73,7 @@ const manifest = {
 };
 
 fs.writeFileSync('dist/manifest.json', JSON.stringify(manifest, null, 2));
-console.log('✅ PWA manifest generated');
-
 // 4. Generate robots.txt
-console.log('🤖 Generating robots.txt...');
 const robotsTxt = `User-agent: *
 Allow: /
 
@@ -92,10 +81,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 `;
 
 fs.writeFileSync('dist/robots.txt', robotsTxt);
-console.log('✅ robots.txt generated');
-
 // 5. Generate sitemap.xml
-console.log('🗺️  Generating sitemap.xml...');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -125,10 +111,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 </urlset>`;
 
 fs.writeFileSync('dist/sitemap.xml', sitemap);
-console.log('✅ sitemap.xml generated');
-
 // 6. Optimize HTML
-console.log('📄 Optimizing HTML...');
 const indexPath = 'dist/index.html';
 if (fs.existsSync(indexPath)) {
   let html = fs.readFileSync(indexPath, 'utf8');
@@ -159,13 +142,9 @@ if (fs.existsSync(indexPath)) {
   );
   
   fs.writeFileSync(indexPath, html);
-  console.log('✅ HTML optimized');
-}
+  }
 
-console.log('🎉 Performance optimization completed successfully!');
-console.log('📊 Bundle size analysis:');
 try {
   execSync('npx vite-bundle-analyzer dist/stats.html', { stdio: 'inherit' });
 } catch (error) {
-  console.log('📦 Bundle analyzer not available, but optimization complete');
-}
+  }

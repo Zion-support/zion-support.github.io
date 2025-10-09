@@ -70,11 +70,11 @@ if (!existsSync(resolve(process.cwd(), '.env.example'))) {
 
 // Report results
 // if (errors.length > 0) {
-//   //   errors.forEach((error) => console.log(`   - ${error}`));
+//   //   errors.forEach((error) => );
 }
 
 if (warnings.length > 0) {
-//   //   warnings.forEach((warning) => console.log(`   - ${warning}`));
+//   //   warnings.forEach((warning) => );
 }
 
 if (errors.length === 0 && warnings.length === 0) {
@@ -82,6 +82,6 @@ if (errors.length === 0 && warnings.length === 0) {
 } else if (errors.length > 0) {
 //   process.exit(1);
 } else {
-//   console.log('\n✅ Build can proceed (with warnings).\n');
+//   .\n');
   process.exit(0);
 }

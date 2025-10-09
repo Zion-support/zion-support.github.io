@@ -6,6 +6,24 @@
 import React from 'react';
 import { useEffect, useRef } from 'react';
 // Debounce function for performance optimization
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
@@ -45,7 +63,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-      console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`);
+      }ms`);
     }
   }
   // Track memory usage
@@ -184,8 +202,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('[Web Vitals] LCP:', entry.startTime);
-        }
+          }
       }
     });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -200,8 +217,7 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('[Web Vitals] FID:', fid);
-        }
+          }
       }
     });
     observer.observe({ entryTypes: ['first-input'] });
@@ -261,6 +277,5 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    console.log('Performance metrics:', metrics);
-  }
+    }
 };

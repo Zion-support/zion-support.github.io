@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-const InteractiveContentShowcase2026: React.FC = () => {
+const InteractiveContentShowcase2026: React.FC = React.memo(() => {
   const [activeTab, setActiveTab] = useState(0);
   const tabs = [
     {
@@ -41,11 +41,11 @@ const InteractiveContentShowcase2026: React.FC = () => {
             {tabs.map((tab, index) => (
               <button
                 key={index}
-                onClick={() => setActiveTab(index)}
+                onClick={() => setActiveTab(index)} onKeyDown={(e) => e.key === 'Enter' && () => setActiveTab(index)(e)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   activeTab === index
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                    : 'bg-white text-gray-600 hover:bg-gray-50'
                 }`}
               >
                 <span className='mr-2'>{tab.icon}</span>
@@ -69,4 +69,23 @@ const InteractiveContentShowcase2026: React.FC = () => {
     </section>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default InteractiveContentShowcase2026;

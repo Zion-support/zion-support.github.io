@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
-const AIContentGenerationPage: React.FC = () => {
+function AIContentGenerationPage() {
   const contentServices = [
     {
       title: 'AI Blog Content Generator Pro',
@@ -67,13 +67,13 @@ const AIContentGenerationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Content Generation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Transform your content strategy with our AI-powered content generation services. 
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
@@ -102,11 +102,11 @@ const AIContentGenerationPage: React.FC = () => {
               <div key={index} className="cyber-card hologram-card p-6">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">{service.description}</p>
+                <ul className="text-sm text-gray-600 mb-4">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center mb-1">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
                       {feature}
                     </li>
                   ))}
@@ -135,7 +135,7 @@ const AIContentGenerationPage: React.FC = () => {
                 </div>
                 <div className="text-cyan-400 mb-2">{step.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300 text-sm">{step.description}</p>
+                <p className="text-gray-500 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -145,7 +145,7 @@ const AIContentGenerationPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Transform Your Content?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using our AI content generation services to create 
             engaging, high-quality content at scale.
           </p>
@@ -168,5 +168,6 @@ const AIContentGenerationPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
+}
+
 export default AIContentGenerationPage;

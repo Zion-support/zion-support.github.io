@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
-const BusinessIntelligencePage: React.FC = () => {
+const BusinessIntelligencePage: React.FC = React.memo(() => {
   const biServices = [
     {
       id: 'data-analytics',
@@ -48,10 +48,10 @@ const BusinessIntelligencePage: React.FC = () => {
               Transform your data into strategic insights that drive business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button role="button" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                 Explore BI Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -135,7 +135,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
-                    <span className="text-sm text-gray-500">{service.category}</span>
+                    <span className="text-sm text-gray-700">{service.category}</span>
                   </div>
                 </div>
               </div>
@@ -153,10 +153,10 @@ const BusinessIntelligencePage: React.FC = () => {
             Let our BI experts help you unlock the full potential of your business data
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <button role="button" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Learn More
             </button>
           </div>
@@ -165,4 +165,23 @@ const BusinessIntelligencePage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default BusinessIntelligencePage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-const MarketingToolsPage: React.FC = () => {
+const MarketingToolsPage: React.FC = React.memo(() => {
   const marketingTools = [
     {
       title: 'AI Content Generator',
@@ -87,26 +87,26 @@ const MarketingToolsPage: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Marketing Tools
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Marketing Tools</div>
+              <div className="text-gray-500">Marketing Tools</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">$179</div>
+              <div className="text-gray-500">Starting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>
-              <div className="text-gray-300">Average ROI</div>
+              <div className="text-gray-500">Average ROI</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>
-              <div className="text-gray-300">Time Saved</div>
+              <div className="text-gray-500">Time Saved</div>
             </div>
           </div>
           {/* Contact Info */}
@@ -140,7 +140,7 @@ const MarketingToolsPage: React.FC = () => {
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
+                  <p className="text-gray-500 text-sm mb-4">{tool.description}</p>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
                     {tool.category}
                   </div>
@@ -149,8 +149,8 @@ const MarketingToolsPage: React.FC = () => {
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
                     {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -181,7 +181,7 @@ const MarketingToolsPage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <p className="text-gray-500 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -199,7 +199,7 @@ const MarketingToolsPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
               Call (302) 464-0950
             </a>
@@ -215,4 +215,23 @@ const MarketingToolsPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default MarketingToolsPage;

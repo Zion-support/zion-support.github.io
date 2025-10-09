@@ -116,25 +116,25 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-500 mb-6">
               We encountered an unexpected error. Our team has been notified and is working to fix it.
             </p>
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
               <h3 className="text-white font-semibold mb-2">Error Details:</h3>
-              <p className="text-sm text-gray-300 mb-2">
+              <p className="text-sm text-gray-500 mb-2">
                 <strong>Error ID:</strong> {this.state.errorId}
               </p>
-              <p className="text-sm text-gray-300 mb-2">
+              <p className="text-sm text-gray-500 mb-2">
                 <strong>Message:</strong> {this.state.error?.message || 'Unknown error'}
               </p>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-500">
                 <strong>Retry Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {this.state.retryCount < this.maxRetries && (
                 <button
-                  onClick={this.handleRetry}
+                  onClick={this.handleRetry} onKeyDown={(e) => e.key === 'Enter' && this.handleRetry(e)}
                   className="cyber-button"
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
                 >
@@ -142,7 +142,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </button>
               )}
               <button
-                onClick={this.handleReload}
+                onClick={this.handleReload} onKeyDown={(e) => e.key === 'Enter' && this.handleReload(e)}
                 className="cyber-button"
                 aria-label="Reload the entire page"
               >
@@ -161,7 +161,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 <summary className="text-white cursor-pointer hover:text-cyan-400">
                   Technical Details (Development)
                 </summary>
-                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">
+                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-500 overflow-auto">
                   {this.state.error.stack}
                 </pre>
               </details>
@@ -173,4 +173,22 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ComprehensiveErrorBoundary;

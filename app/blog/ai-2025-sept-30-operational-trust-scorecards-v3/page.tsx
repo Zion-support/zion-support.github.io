@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const OperationalTrustScorecardsPage: React.FC = () => {
+const OperationalTrustScorecardsPage: React.FC = React.memo(() => {
   return (
     <>
       <Helmet>
@@ -8,7 +8,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
         <meta name="description" content="Measure reliability, cost, safety, and value with live AI scorecards." />
         <meta property="og:type" content="article" />
       </Helmet>
-      <main className="min-h-screen bg-slate-950 text-white">
+      <main role="main" role="main" className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
           <div className="mb-6 inline-flex items-center gap-2">
@@ -22,7 +22,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-500 text-lg">
             A practical blueprint to ship reliable, safe, and cost‑effective AI
             by tracking reliability, safety, cost, and value in a single live
             scorecard.    Prevent    regressions with budgets, gates, and instant
@@ -34,7 +34,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
         <div className="max-w-3xl mx-auto px-4 space-y-10">
           <div>
             <h2 className="text-2xl font-bold mb-3">Why Operational    Trust</h2>
-            <p className="text-gray-300">
+            <p className="text-gray-500">
               Enterprise AI fails without measurable trust. Scorecards unify
               KP    Is    across reliability (accuracy, grounding, latency), safety
               (policy adherence), cost (per task, per user), and value (business
@@ -43,7 +43,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
-            <ul className="list-disc pl-6 text-gray-300 space-y-2">
+            <ul className="list-disc pl-6 text-gray-500 space-y-2">
               <li>
                 <strong className="text-white">Reliability   :</strong> pass rates,
                 hallucination rate, grounding success, latency SLO.
@@ -64,7 +64,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
-            <p className="text-gray-300">
+            <p className="text-gray-500">
               Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
               safety violations spike, auto-rollback to last known good state.
@@ -76,4 +76,23 @@ const OperationalTrustScorecardsPage: React.FC = () => {
     </>
   );
 }
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default OperationalTrustScorecardsPage;

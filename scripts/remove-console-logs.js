@@ -36,7 +36,6 @@ function removeConsoleLogs(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Cleaned console logs from: ${filePath}`);
       return true;
     }
     
@@ -80,20 +79,12 @@ async function processFiles() {
     }
   }
   
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total files processed: ${totalFiles}`);
-  console.log(`   Files modified: ${modifiedFiles}`);
-  console.log(`   Files unchanged: ${totalFiles - modifiedFiles}`);
-  
   if (modifiedFiles > 0) {
-    console.log(`\n✨ Console logs removed successfully!`);
-  } else {
-    console.log(`\n✨ No console logs found to remove.`);
-  }
+    } else {
+    }
 }
 
 // Run the script
-console.log('🧹 Removing console logs for production...\n');
 processFiles().catch(console.error);
 
 export { removeConsoleLogs, processFiles };

@@ -13,7 +13,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   rounded = false,
   animated = true
 }) => {
-  const baseClasses = 'bg-gray-200';
+  const baseClasses = 'bg-gray-100';
   const roundedClasses = rounded ? 'rounded' : '';
   const animatedClasses = animated ? 'animate-pulse' : '';
   return (
@@ -28,6 +28,24 @@ const Skeleton: React.FC<SkeletonProps> = ({
   );
 };
 // Predefined skeleton components for common use cases
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-lg p-6">
     <Skeleton height="24px" width="75%" className="mb-4" />
@@ -51,7 +69,7 @@ export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
   aspectRatio = '16/9' 
 }) => (
   <div 
-    className="bg-gray-200 rounded-lg animate-pulse"
+    className="bg-gray-100 rounded-lg animate-pulse"
     style={{ aspectRatio }}
     role="status"
     aria-label="Loading image"

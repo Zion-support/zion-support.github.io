@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
 }
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = React.memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -93,4 +93,23 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default PerformanceMonitor;

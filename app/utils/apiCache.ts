@@ -17,6 +17,24 @@ interface PendingRequest<T> {
 /**
  * API Cache Manager with request deduplication
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export class ApiCache {
   private cache: CacheManager<unknown>;
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();

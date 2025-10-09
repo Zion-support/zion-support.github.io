@@ -1,5 +1,5 @@
 import React from 'react';
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = React.memo(() => {
   const features = [
     {
       icon: "🚀",
@@ -40,7 +40,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3 neon-text">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-500 mb-4 leading-relaxed">
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
@@ -59,4 +59,23 @@ const DynamicContentShowcase: React.FC = () => {
     </section>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default DynamicContentShowcase;

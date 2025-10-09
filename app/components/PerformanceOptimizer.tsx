@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -9,7 +8,6 @@ interface PerformanceOptimizerProps {
   enableResourceHints?: boolean;
   enableServiceWorker?: boolean;
 }
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -26,7 +24,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     resourceHints: 0,
     serviceWorker: false
   });
-
   useEffect(() => {
     if (enableImageOptimization) {
       optimizeImages();
@@ -47,7 +44,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       registerServiceWorker();
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
-
   const optimizeImages = () => {
     const images = document.querySelectorAll('img');
     let optimized = 0;
@@ -75,7 +71,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
   };
-
   const setupLazyLoading = () => {
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
@@ -100,7 +95,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
     }
   };
-
   const preloadCriticalResources = () => {
     const criticalResources = [
       {
@@ -114,7 +108,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         type: 'text/css'
       }
     ];
-
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -125,15 +118,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
       document.head.appendChild(link);
     });
-
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   };
-
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
-
   const addResourceHints = () => {
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
@@ -143,7 +133,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
     ];
-
     hints.forEach((hint) => {
       const link = document.createElement('link');
       link.rel = hint.rel;
@@ -153,21 +142,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
       document.head.appendChild(link);
     });
-
     setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
   };
-
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-        console.log('Service Worker registration failed:', error);
-      }
+        }
     }
   };
-
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -189,8 +174,24 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
     }
   }, []);
-
   return null;
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default PerformanceOptimizer;

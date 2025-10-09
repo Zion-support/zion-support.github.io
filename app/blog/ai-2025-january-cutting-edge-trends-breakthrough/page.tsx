@@ -1,6 +1,24 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function January2025CuttingEdgeTrendsBreakthrough() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -83,7 +101,7 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
               <li>• <strong>Zero-downtime operations</strong> with self-healing systems</li>
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
-            <div className="bg-gray-100 p-6 rounded-lg mb-6">
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <pre className="text-sm text-gray-800 overflow-x-auto">
 {`January 2025 Cutting-Edge AI Stack:
 ├── Neural Consciousness

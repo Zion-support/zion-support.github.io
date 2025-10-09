@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-const UnifiedContentPromotion: React.FC = () => {
+const UnifiedContentPromotion: React.FC = React.memo(() => {
   const features = [
     {
       title: "Enterprise AI Solutions",
@@ -49,4 +49,23 @@ const UnifiedContentPromotion: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default UnifiedContentPromotion;

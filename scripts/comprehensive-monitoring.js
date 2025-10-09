@@ -275,8 +275,8 @@ class ComprehensiveMonitor {
 //     this.analyzeAccessibility();
 //     this.analyzeUserExperience();
 //     const report = this.generateReport();
-//     console.log('\n✅ Analysis complete!')}
-//     //     //     if (report.recommendations.length > 0) {console.log('\n💡 Key Recommendations: '),
+//     }
+//     //     //     if (report.recommendations.length > 0) {,
       report.recommendations.slice(0) 3).forEach((rec} index) => {
 //         });
     }

@@ -16,6 +16,24 @@ interface ImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const Image: React.FC<ImageProps> = ({
   src,
   alt,
@@ -57,16 +75,16 @@ export const Image: React.FC<ImageProps> = ({
   if (hasError) {
     return (
       <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        className={`bg-gray-100 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
+        <span className="text-gray-700 text-sm">Failed to load image</span>
       </div>
     );
   }
   return (
-    <img
+    <img aria-label="Image"
       src={src}
       alt={alt}
       width={width}

@@ -4,6 +4,24 @@
  * Centralized configuration for error handling across the application
  */
 import React from 'react';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -102,18 +120,18 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           {error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && (
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
+          <pre className="mt-4 p-4 bg-gray-50 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
         <div className="mt-6 flex gap-4">
           <button
-            onClick={resetError}
+            onClick={resetError} onKeyDown={(e) => e.key === 'Enter' && resetError(e)}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Try Again
           </button>
           <button
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            onClick={() => (window.location.href = '/')} onKeyDown={(e) => e.key === 'Enter' && () => (window.location.href = '/')(e)}
+            className="flex-1 bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Home
           </button>
@@ -150,7 +168,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </p>
         <div className="mt-6">
           <button
-            onClick={resetError}
+            onClick={resetError} onKeyDown={(e) => e.key === 'Enter' && resetError(e)}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Retry Connection
@@ -174,14 +192,14 @@ function NotFoundFallback(): JSX.Element {
         </p>
         <div className="mt-6 flex gap-4 justify-center">
           <button
-            onClick={() => (window.location.href = '/')}
+            onClick={() => (window.location.href = '/')} onKeyDown={(e) => e.key === 'Enter' && () => (window.location.href = '/')(e)}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Go Home
           </button>
           <button
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            onClick={() => window.history.back()} onKeyDown={(e) => e.key === 'Enter' && () => window.history.back()(e)}
+            className="bg-gray-100 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Back
           </button>

@@ -1,6 +1,26 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function RootLayout({
   children
 }: {
@@ -176,11 +196,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
+      
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+          onClick={(e) => { e.preventDefault(); skipToMain(); }}
+        >
+          Skip to main content
+        </a>
+      
       <body className='antialiased'>
-        <ErrorBoundary>
+        <EnhancedErrorBoundary>
           <PerformanceMonitor />
+          <EnhancedPerformanceMonitor showUI={process.env.NODE_ENV === 'development'} />
           {children}
-        </ErrorBoundary>
+        </EnhancedErrorBoundary>
       </body>
     </html>
   );

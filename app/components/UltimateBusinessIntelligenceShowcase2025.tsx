@@ -95,7 +95,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               Showcase 2025
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-4xl mx-auto">
             Explore our comprehensive collection of AI-powered business intelligence
             content that&apos;s transforming enterprises worldwide
           </p>
@@ -105,11 +105,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={() => setSelectedCategory(category.id)} onKeyDown={(e) => e.key === 'Enter' && () => setSelectedCategory(category.id)(e)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  : 'bg-white/10 text-gray-500 hover:bg-white/20'
               }`}
             >
               {category.name}
@@ -126,17 +126,17 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Badge */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 font-semibold text-sm">
+                <span className="text-green-600 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 </span>
-                <span className="text-gray-400 text-sm">{item.type}</span>
+                <span className="text-gray-600 text-sm">{item.type}</span>
               </div>
               {/* Title */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                 {item.title}
               </h3>
               {/* Description */}
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+              <p className="text-gray-500 mb-6 text-sm leading-relaxed">
                 {item.description}
               </p>
               {/* Metrics */}
@@ -145,13 +145,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   <div className="text-2xl font-bold text-cyan-400">
                     {item.metrics.roi}
                   </div>
-                  <div className="text-gray-400 text-xs">ROI</div>
+                  <div className="text-gray-600 text-xs">ROI</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">
+                  <div className="text-2xl font-bold text-green-600">
                     {item.metrics.timeline}
                   </div>
-                  <div className="text-gray-400 text-xs">Timeline</div>
+                  <div className="text-gray-600 text-xs">Timeline</div>
                 </div>
               </div>
               {/* Tags */}
@@ -159,7 +159,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 {item.tags.slice(0, 3).map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                    className="px-3 py-1 bg-white/10 text-gray-500 text-xs rounded-full"
                   >
                     {tag}
                   </span>
@@ -213,4 +213,22 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     </section>
   );
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default UltimateBusinessIntelligenceShowcase2025;

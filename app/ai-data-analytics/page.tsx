@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-const AIDataAnalyticsPage: React.FC = () => {
+const AIDataAnalyticsPage: React.FC = React.memo(() => {
   const analyticsServices = [
     {
       title: 'Real-Time Business Intelligence Platform',
@@ -230,7 +230,7 @@ const AIDataAnalyticsPage: React.FC = () => {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
+                  <span className="text-sm text-gray-700 ml-2">Market: {service.marketPrice}</span>
                 </div>
                 <div className="mb-4">
                   <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
@@ -316,5 +316,23 @@ const AIDataAnalyticsPage: React.FC = () => {
       </section>
     </div>
   );
+});
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 };
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AIDataAnalyticsPage;

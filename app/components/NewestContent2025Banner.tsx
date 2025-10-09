@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-const NewestContent2025Banner: React.FC = () => {
+const NewestContent2025Banner: React.FC = React.memo(() => {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
       <div className="absolute inset-0 opacity-20">
@@ -20,7 +20,7 @@ const NewestContent2025Banner: React.FC = () => {
               Transforming Business in 2025
             </span>
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-12 max-w-3xl mx-auto">
             Discover the latest innovations in AI, quantum computing, and autonomous systems 
             that are reshaping the future of enterprise technology.
           </p>
@@ -31,7 +31,7 @@ const NewestContent2025Banner: React.FC = () => {
             <h3 className="text-xl font-semibold text-white mb-3">
               AI-Powered Automation
             </h3>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-500 mb-4">
               Advanced machine learning solutions that automate complex business processes 
               and drive unprecedented efficiency gains.
             </p>
@@ -47,7 +47,7 @@ const NewestContent2025Banner: React.FC = () => {
             <h3 className="text-xl font-semibold text-white mb-3">
               Quantum Computing
             </h3>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-500 mb-4">
               Next-generation quantum computing solutions revolutionizing data processing 
               and complex problem-solving capabilities.
             </p>
@@ -59,17 +59,17 @@ const NewestContent2025Banner: React.FC = () => {
             </Link>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="text-blue-400 text-4xl mb-4">🔒</div>
+            <div className="text-blue-600 text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-semibold text-white mb-3">
               Secure Infrastructure
             </h3>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-500 mb-4">
               Enterprise-grade security with quantum-enhanced encryption protecting 
               your most critical business data and operations.
             </p>
             <Link 
               href="/blog/quantum-secure-ai-infrastructure-2025"
-              className="text-blue-400 hover:text-blue-300 font-semibold transition-colors inline-flex items-center gap-2"
+              className="text-blue-600 hover:text-blue-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Discover →
             </Link>
@@ -79,7 +79,7 @@ const NewestContent2025Banner: React.FC = () => {
           <h3 className="text-3xl font-bold text-white mb-6 text-center">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto text-center">
+          <p className="text-gray-500 mb-6 max-w-2xl mx-auto text-center">
             Join thousands of forward-thinking organizations already leveraging these breakthrough 
             AI technologies to achieve unprecedented competitive advantage.
           </p>
@@ -106,16 +106,35 @@ const NewestContent2025Banner: React.FC = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">AI Innovation</h3>
-            <p className="text-gray-300 text-sm">Latest breakthroughs in artificial intelligence and machine learning technologies.</p>
+            <p className="text-gray-500 text-sm">Latest breakthroughs in artificial intelligence and machine learning technologies.</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-xl font-bold text-white mb-2">Autonomous Systems</h3>
-            <p className="text-gray-300">Intelligent automation driving enterprise efficiency</p>
+            <p className="text-gray-500">Intelligent automation driving enterprise efficiency</p>
           </div>
         </div>
       </div>
     </section>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default NewestContent2025Banner;

@@ -185,7 +185,25 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Export data
   const handleExport = () => {
     if (!metrics) return;
-    const exportData = {
+    const 
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
+exportData = {
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
@@ -216,12 +234,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       case 'high': return 'text-red-500 bg-red-50';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-gray-600 bg-gray-50';
     }
   };
   if (!metrics) {
     return (
-      <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
+      <div className={`p-4 bg-gray-50 rounded-lg ${className}`}>
         <div className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
@@ -242,8 +260,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
           {enableExport && (
             <button
-              onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onClick={handleExport} onKeyDown={(e) => e.key === 'Enter' && handleExport(e)}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-blue-500"
             >
               Export Data
             </button>
@@ -251,7 +269,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
       </div>
       {lastUpdate && (
-        <p className="text-sm text-gray-500 mb-4">
+        <p className="text-sm text-gray-700 mb-4">
           Last updated: {lastUpdate.toLocaleTimeString()}
         </p>
       )}
@@ -366,7 +384,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 <span>Limit</span>
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-100 rounded-full h-2">
                 <div
                   className={`h-2 rounded-full ${
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
@@ -413,7 +431,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                     {error.severity}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-gray-500">
+                <div className="flex items-center justify-between text-xs text-gray-700">
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
                 </div>

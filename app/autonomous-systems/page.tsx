@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
-const AutonomousSystemsPage: React.FC = () => {
+const AutonomousSystemsPage: React.FC = React.memo(() => {
   const autonomousServices = [
     {
       id: 'self-healing-infrastructure',
@@ -48,10 +48,10 @@ const AutonomousSystemsPage: React.FC = () => {
               Transform your operations with intelligent autonomous systems that work 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              <button role="button" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
                 Explore Autonomous Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -135,7 +135,7 @@ const AutonomousSystemsPage: React.FC = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-green-600">{service.marketPrice}</span>
-                    <span className="text-sm text-gray-500">{service.category}</span>
+                    <span className="text-sm text-gray-700">{service.category}</span>
                   </div>
                 </div>
               </div>
@@ -153,10 +153,10 @@ const AutonomousSystemsPage: React.FC = () => {
             Let our autonomous systems transform your business with intelligent automation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+            <button role="button" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+            <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
               Learn More
             </button>
           </div>
@@ -165,4 +165,23 @@ const AutonomousSystemsPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AutonomousSystemsPage;

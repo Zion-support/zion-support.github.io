@@ -38,7 +38,7 @@ async function main() {
   if (prs.length === 0) {
 
   } else {
-    console.log(`📋 Found ${prs.length} open PR(s):`);
+    :`);
     prs.forEach(pr => {
 
 

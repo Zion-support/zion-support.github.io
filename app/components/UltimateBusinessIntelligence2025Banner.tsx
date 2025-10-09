@@ -86,7 +86,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+          <p className="text-xl text-gray-500 max-w-4xl mx-auto mb-8">
             {currentContent.description}
           </p>
         </div>
@@ -136,7 +136,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">
+                  <div className="text-sm text-gray-500 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
@@ -177,7 +177,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => setCurrentSlide(index)} onKeyDown={(e) => e.key === 'Enter' && () => setCurrentSlide(index)(e)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}
@@ -196,11 +196,29 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-gray-500">{stat.label}</div>
             </div>
           ))}
         </div>
     </section>
   );
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default UltimateBusinessIntelligence2025Banner;

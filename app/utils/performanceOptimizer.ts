@@ -5,8 +5,8 @@
  */
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => console.log('[INFO]', message, context),
-  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  info: (message: string, context?: string) => ,
+  performance: (message: string, data: Record<string, unknown>, context?: string) => ,
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 };
 interface PerformanceMetrics {
@@ -453,6 +453,24 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   }
 }
 // Export singleton instance
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
 export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };

@@ -1,5 +1,5 @@
 import React from 'react';
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = React.memo(() => {
   const stats = [
     {
       number: "500+",
@@ -36,7 +36,7 @@ const ContentStatistics: React.FC = () => {
             <div className="text-lg font-semibold text-white mb-2">
               {stat.label}
             </div>
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-gray-500">
               {stat.description}
             </div>
           </div>
@@ -45,4 +45,23 @@ const ContentStatistics: React.FC = () => {
     </section>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ContentStatistics;

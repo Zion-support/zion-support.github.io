@@ -1,5 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
   description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
@@ -100,7 +118,7 @@ export default function AICostOptimizationBreakthrough2026() {
             <p className="text-gray-700 mb-6">
               Our optimization strategies deliver measurable value across multiple dimensions:
             </p>
-            <div className="bg-gray-100 p-6 rounded-lg mb-6">
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Cost Savings Breakdown</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• <strong>Compute Costs:</strong> 85% reduction through optimization</li>
@@ -110,7 +128,7 @@ export default function AICostOptimizationBreakthrough2026() {
               </ul>
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
-            <div className="bg-gray-100 p-6 rounded-lg mb-6">
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <pre className="text-sm text-gray-800 overflow-x-auto">
 {`AI Cost Optimization Stack:
 ├── Model Optimization

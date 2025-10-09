@@ -160,8 +160,7 @@ const results = {
 
 for (let i = 0; i < batches.length; i++) {
   const _batch = batches[i];
-//   console.log(
-    `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
+//   ...`
   );
 
   const batchResults = {

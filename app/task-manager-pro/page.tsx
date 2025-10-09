@@ -2,8 +2,7 @@
 import React from 'react';
 import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Shield, Clock } from 'lucide-react';
 import Link from 'next/link';
-
-const TaskManagerProPage: React.FC = () => {
+const TaskManagerProPage: React.FC = React.memo(() => {
   const features = [
     {
       icon: CheckSquare,
@@ -42,7 +41,6 @@ const TaskManagerProPage: React.FC = () => {
       benefit: 'Data-driven improvements'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Individual',
@@ -94,7 +92,6 @@ const TaskManagerProPage: React.FC = () => {
       popular: false
     }
   ];
-
   const integrations = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
@@ -105,7 +102,6 @@ const TaskManagerProPage: React.FC = () => {
     { name: 'Notion', icon: '📝', description: 'Documentation' },
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
   ];
-
   const testimonials = [
     {
       name: 'Rachel Green',
@@ -129,7 +125,6 @@ const TaskManagerProPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -144,7 +139,7 @@ const TaskManagerProPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
             AI-Powered Productivity Platform
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8 leading-relaxed">
             Supercharge your productivity with our AI-powered task management platform. 
             Get intelligent prioritization, automated workflows, and team collaboration 
             tools that help you achieve more in less time.
@@ -165,31 +160,29 @@ const TaskManagerProPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
             <div className="text-white font-semibold mb-2">More Productive</div>
-            <div className="text-gray-300 text-sm">With AI prioritization</div>
+            <div className="text-gray-500 text-sm">With AI prioritization</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-purple-400 mb-2">60%</div>
             <div className="text-white font-semibold mb-2">Team Efficiency</div>
-            <div className="text-gray-300 text-sm">Better collaboration tools</div>
+            <div className="text-gray-500 text-sm">Better collaboration tools</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">70%</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">70%</div>
             <div className="text-white font-semibold mb-2">Less Manual Work</div>
-            <div className="text-gray-300 text-sm">With automation</div>
+            <div className="text-gray-500 text-sm">With automation</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-orange-400 mb-2">85%</div>
             <div className="text-white font-semibold mb-2">Goal Achievement</div>
-            <div className="text-gray-300 text-sm">With smart tracking</div>
+            <div className="text-gray-500 text-sm">With smart tracking</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -200,13 +193,12 @@ const TaskManagerProPage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
+                <p className="text-gray-500 mb-4 leading-relaxed">{feature.description}</p>
                 <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
               </div>
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -217,12 +209,11 @@ const TaskManagerProPage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
-                <p className="text-gray-300 text-sm">{integration.description}</p>
+                <p className="text-gray-500 text-sm">{integration.description}</p>
               </div>
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -241,20 +232,20 @@ const TaskManagerProPage: React.FC = () => {
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
+                <p className="text-gray-500 mb-6">{plan.description}</p>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-300">{plan.period}</span>
+                  <span className="text-gray-500">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-500">
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button role="button" className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
@@ -265,7 +256,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -279,23 +269,22 @@ const TaskManagerProPage: React.FC = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-500 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                  <div className="text-gray-600 text-sm">{testimonial.company}</div>
                 </div>
               </div>
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more, 
             work smarter, and reach their goals faster.
           </p>
@@ -319,5 +308,23 @@ const TaskManagerProPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default TaskManagerProPage;

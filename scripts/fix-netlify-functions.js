@@ -79,10 +79,10 @@ async function main() {
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
-        console.log(`✅ Fixed: ${path.basename(filePath)}`);
+        }`);
         fixedCount++;
       } else {
-        console.log(`⏭️  Skipped: ${path.basename(filePath)} (no changes needed)`);
+        } (no changes needed)`);
       }
     } catch (error) {
 

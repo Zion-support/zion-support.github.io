@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = React.memo(() => {
   const caseStudies = [
     {
       id: 1,
@@ -77,7 +77,7 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b">
+        <header role="banner" className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -95,7 +95,7 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
                 Real results from real companies using our AI solutions
               </p>
-              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
+              <p className="text-lg mb-8 text-gray-500 max-w-4xl mx-auto">
                 Discover how leading companies across industries have transformed their operations 
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
@@ -114,7 +114,7 @@ const CaseStudiesPage: React.FC = () => {
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900 mb-1">{study.title}</h3>
                         <p className="text-blue-600 font-semibold">{study.company}</p>
-                        <p className="text-gray-500 text-sm">{study.industry}</p>
+                        <p className="text-gray-700 text-sm">{study.industry}</p>
                       </div>
                     </div>
                     <p className="text-gray-600 mb-6">{study.description}</p>
@@ -204,7 +204,7 @@ const CaseStudiesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+                className="bg-white text-blue-600 hover:bg-gray-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
                 Start Your Project
                 <TrendingUp className="w-4 h-4 ml-2" />
@@ -222,4 +222,23 @@ const CaseStudiesPage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default CaseStudiesPage;

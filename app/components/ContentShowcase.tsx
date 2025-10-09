@@ -1,5 +1,5 @@
 import React from 'react';
-const ContentShowcase: React.FC = () => {
+const ContentShowcase: React.FC = React.memo(() => {
   return (
     <div className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -32,4 +32,23 @@ const ContentShowcase: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ContentShowcase;

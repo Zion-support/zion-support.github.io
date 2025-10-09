@@ -2,6 +2,24 @@
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 // PerformanceMetrics interface removed as it's not used in this hook
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const usePerformanceMonitoring = () => {
   const { trackPerformance } = useAnalytics();
   const reportMetric = useCallback(

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-const API: React.FC = () => {
+const API: React.FC = React.memo(() => {
   const apiEndpoints = [
     {
       method: 'GET',
@@ -174,4 +174,23 @@ const API: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default API;

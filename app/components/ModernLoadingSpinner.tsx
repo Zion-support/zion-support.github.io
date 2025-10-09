@@ -43,11 +43,29 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
           <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
         </div>
         {text && (
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+          <p className="text-sm text-gray-500 animate-pulse">{text}</p>
         )}
       </div>
       <span className="sr-only">Loading content, please wait...</span>
     </div>
   );
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ModernLoadingSpinner;

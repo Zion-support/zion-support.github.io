@@ -128,21 +128,21 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             )}
             <div style={styles.actions}>
               <button
-                onClick={this.resetErrorBoundary}
+                onClick={this.resetErrorBoundary} onKeyDown={(e) => e.key === 'Enter' && this.resetErrorBoundary(e)}
                 style={styles.button}
                 aria-label="Try Again"
               >
                 Try Again
               </button>
               <button
-                onClick={this.handleReload}
+                onClick={this.handleReload} onKeyDown={(e) => e.key === 'Enter' && this.handleReload(e)}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
               >
                 Reload Page
               </button>
               <button
-                onClick={this.handleGoHome}
+                onClick={this.handleGoHome} onKeyDown={(e) => e.key === 'Enter' && this.handleGoHome(e)}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
               >
@@ -253,4 +253,22 @@ const styles = {
     color: '#999'
   }
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ImprovedErrorBoundary;

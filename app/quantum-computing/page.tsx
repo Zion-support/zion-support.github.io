@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';
-const QuantumComputingPage: React.FC = () => {
+const QuantumComputingPage: React.FC = React.memo(() => {
   const quantumServices = [
     {
       id: 'quantum-algorithms',
@@ -48,7 +48,7 @@ const QuantumComputingPage: React.FC = () => {
               Harness the power of quantum mechanics to solve the world's most complex computational problems
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+              <button role="button" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                 Explore Quantum Solutions
               </button>
             </div>
@@ -132,7 +132,7 @@ const QuantumComputingPage: React.FC = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-purple-600">{service.marketPrice}</span>
-                    <span className="text-sm text-gray-500">{service.category}</span>
+                    <span className="text-sm text-gray-700">{service.category}</span>
                   </div>
                 </div>
               </div>
@@ -150,10 +150,10 @@ const QuantumComputingPage: React.FC = () => {
             Let our quantum experts help you harness the power of quantum computing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button role="button" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+            <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Learn More
             </button>
           </div>
@@ -162,4 +162,23 @@ const QuantumComputingPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default QuantumComputingPage;

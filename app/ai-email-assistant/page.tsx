@@ -3,12 +3,29 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function AIEmailAssistantPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg particle-system">
+    <article >
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
@@ -17,7 +34,7 @@ export default function AIEmailAssistantPage() {
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-glow">
             Smart Email Management with AI-Powered Intelligence
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+          <p className="text-lg text-gray-500 max-w-4xl mx-auto mb-8">
             Transform your email workflow with our intelligent AI assistant that handles responses, scheduling, 
             priority sorting, and automated follow-ups. Save hours every day with smart email automation.
           </p>
@@ -37,7 +54,6 @@ export default function AIEmailAssistantPage() {
             </a>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -47,7 +63,7 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 AI-powered email responses that understand context and tone, automatically generating 
                 professional replies based on your communication style.
               </p>
@@ -56,7 +72,7 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">📅</div>
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Automatically schedule meetings, set reminders, and manage your calendar based on 
                 email content and your availability preferences.
               </p>
@@ -65,7 +81,7 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 AI analyzes email importance and urgency, automatically organizing your inbox 
                 with smart priority levels and categorization.
               </p>
@@ -74,7 +90,7 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Automated follow-up sequences for sales, customer service, and project management 
                 with personalized timing and content.
               </p>
@@ -83,7 +99,7 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Track email performance, response times, and engagement metrics with detailed 
                 analytics and insights.
               </p>
@@ -92,14 +108,13 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Bank-level encryption and security protocols ensure your email data remains 
                 private and protected at all times.
               </p>
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -108,8 +123,8 @@ export default function AIEmailAssistantPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="cyber-card hologram-card p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="text-gray-300 space-y-3 mb-8">
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-600">/month</span></div>
+              <ul className="text-gray-500 space-y-3 mb-8">
                 <li>✓ Up to 1,000 emails/month</li>
                 <li>✓ Basic AI responses</li>
                 <li>✓ Priority sorting</li>
@@ -124,8 +139,8 @@ export default function AIEmailAssistantPage() {
             <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400">
               <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="text-gray-300 space-y-3 mb-8">
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-600">/month</span></div>
+              <ul className="text-gray-500 space-y-3 mb-8">
                 <li>✓ Up to 10,000 emails/month</li>
                 <li>✓ Advanced AI responses</li>
                 <li>✓ Smart scheduling</li>
@@ -140,8 +155,8 @@ export default function AIEmailAssistantPage() {
             
             <div className="cyber-card hologram-card p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="text-gray-300 space-y-3 mb-8">
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-600">/month</span></div>
+              <ul className="text-gray-500 space-y-3 mb-8">
                 <li>✓ Unlimited emails</li>
                 <li>✓ Custom AI training</li>
                 <li>✓ Advanced integrations</li>
@@ -155,13 +170,12 @@ export default function AIEmailAssistantPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8 neon-text">
             Ready to Transform Your Email Workflow?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
             Contact us today to schedule a free demo and see how our AI Email Assistant 
             can revolutionize your business communication.
           </p>

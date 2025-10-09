@@ -167,10 +167,10 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         </p>
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
+            <summary className='cursor-pointer text-sm text-gray-700 hover:text-gray-700'>
               Error Details (Development)
             </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
+            <div className='mt-2 p-3 bg-gray-50 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
                 <strong>Error:</strong> {error.message}
               </div>
@@ -191,24 +191,42 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         )}
         <div className='flex flex-col sm:flex-row gap-2 justify-center'>
           <button
-            onClick={onRetry}
-            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
+            onClick={onRetry} onKeyDown={(e) => e.key === 'Enter' && onRetry(e)}
+            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
           >
             Try Again
           </button>
           <button
-            onClick={() => window.location.reload()}
-            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
+            onClick={() => window.location.reload()} onKeyDown={(e) => e.key === 'Enter' && () => window.location.reload()(e)}
+            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page
           </button>
         </div>
         {errorId && (
-          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
+          <p className='mt-4 text-xs text-gray-600'>Error ID: {errorId}</p>
         )}
       </div>
     </div>
   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default OptimizedErrorBoundary;

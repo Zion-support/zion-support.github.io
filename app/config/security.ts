@@ -2,6 +2,24 @@
  * Security Configuration
  * Defines security headers and policies for the application
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const securityHeaders = {
   // Content Security Policy
   contentSecurityPolicy: {

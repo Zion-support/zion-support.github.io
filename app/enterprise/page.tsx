@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-const EnterprisePage: React.FC = () => {
+const EnterprisePage: React.FC = React.memo(() => {
   return (
     <>
       <div className="min-h-screen bg-slate-50 py-16">
@@ -49,7 +49,7 @@ const EnterprisePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise AI Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 max-w-3xl mx-auto">
               Comprehensive suite of enterprise-grade AI and IT solutions tailored for large organizations
             </p>
           </div>
@@ -57,42 +57,42 @@ const EnterprisePage: React.FC = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Automation</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Automate complex workflows with advanced AI. Reduce manual work by 70% and improve accuracy.
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Bank-grade security with SOC 2 compliance, encryption, and advanced threat detection.
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Advanced Analytics</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Real-time insights with predictive analytics. Make data-driven decisions faster.
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">☁️</div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Scalable, resilient cloud architecture with 99.9% uptime guarantee.
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Integration</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Seamlessly integrate AI into existing systems. No disruption to operations.
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Dedicated enterprise support team available around the clock.
               </p>
             </div>
@@ -100,7 +100,7 @@ const EnterprisePage: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               href="/contact"
-              className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              className="inline-block bg-white hover:bg-gray-50 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               Get Started Today
             </Link>
@@ -110,4 +110,23 @@ const EnterprisePage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default EnterprisePage;

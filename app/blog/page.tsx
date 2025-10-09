@@ -17,6 +17,24 @@ interface BlogPost {
     engagement: number;
   };
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -136,16 +154,16 @@ export default function BlogPage() {
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
+            <div className="h-12 bg-gray-100 rounded w-96 mx-auto mb-4 animate-pulse"></div>
+            <div className="h-6 bg-gray-100 rounded w-64 mx-auto animate-pulse"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+              <div key={item} className="bg-gray-50 rounded-lg p-6 animate-pulse">
+                <div className="h-48 bg-gray-100 rounded-lg mb-4"></div>
+                <div className="h-6 bg-gray-100 rounded mb-2"></div>
+                <div className="h-4 bg-gray-100 rounded mb-2"></div>
+                <div className="h-4 bg-gray-100 rounded w-3/4"></div>
               </div>
             ))}
           </div>
@@ -157,7 +175,7 @@ export default function BlogPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <header className="text-center mb-12">
+        <header role="banner" className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Latest insights on AI, enterprise automation, and digital transformation from our expert team
@@ -166,13 +184,13 @@ export default function BlogPage() {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
-            <button
+            <button role="button"
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => setSelectedCategory(category)} onKeyDown={(e) => e.key === 'Enter' && () => setSelectedCategory(category)(e)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                  : 'bg-white text-gray-600 hover:bg-gray-50'
               }`}
             >
               {category === 'all' ? 'All Articles' : category}

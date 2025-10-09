@@ -53,8 +53,7 @@ const createContent = async () => {
         'Content-Type': 'application/json'
       }
     })
-//     console.log('Content created:', response.data)
-  } catch (error) {
+//     } catch (error) {
 //     console.error('Error:', error.response?.data || error.message)
   }
 }`}

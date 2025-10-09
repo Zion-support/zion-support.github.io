@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
-const CompliancePage: React.FC = () => {
+const CompliancePage: React.FC = React.memo(() => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -87,7 +87,7 @@ const CompliancePage: React.FC = () => {
                   }`}>
                     {framework.status}
                   </span>
-                  <span className="text-sm text-gray-500">Valid until: {framework.validUntil}</span>
+                  <span className="text-sm text-gray-700">Valid until: {framework.validUntil}</span>
                 </div>
                 <ul className="space-y-3">
                   {framework.details.map((detail, detailIndex) => (
@@ -124,7 +124,7 @@ const CompliancePage: React.FC = () => {
                   <p className="text-gray-600 text-sm mb-4">{area.description}</p>
                   <div className="space-y-1">
                     {area.frameworks.map((framework, frameworkIndex) => (
-                      <span key={frameworkIndex} className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded mr-1">
+                      <span key={frameworkIndex} className="inline-block bg-gray-50 text-gray-700 text-xs px-2 py-1 rounded mr-1">
                         {framework}
                       </span>
                     ))}
@@ -192,7 +192,7 @@ const CompliancePage: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Our latest SOC 2 Type II audit report covering security, availability, and confidentiality controls.
               </p>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <button role="button" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Download Report
               </button>
             </div>
@@ -204,7 +204,7 @@ const CompliancePage: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Our ISO 27001 certification demonstrating our information security management system.
               </p>
-              <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+              <button role="button" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
                 View Certificate
               </button>
             </div>
@@ -221,10 +221,10 @@ const CompliancePage: React.FC = () => {
             Our compliance team is available to answer your questions and provide additional documentation.
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Compliance & Certifications</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             We maintain the highest standards of security and compliance to protect your data and ensure regulatory adherence.
           </p>
         </section>
@@ -235,7 +235,7 @@ const CompliancePage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 text-center">
                 <Award className="w-12 h-12 text-cyan-400 mb-4 mx-auto" />
                 <h3 className="text-xl font-semibold text-white mb-2">{cert.name}</h3>
-                <div className="flex items-center justify-center text-green-400">
+                <div className="flex items-center justify-center text-green-600">
                   <CheckCircle className="w-5 h-5 mr-2" />
                   {cert.status}
                 </div>
@@ -250,24 +250,24 @@ const CompliancePage: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <Shield className="w-12 h-12 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Data Encryption</h3>
-              <p className="text-gray-300">All data is encrypted in transit and at rest using industry-standard encryption protocols.</p>
+              <p className="text-gray-500">All data is encrypted in transit and at rest using industry-standard encryption protocols.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <CheckCircle className="w-12 h-12 text-green-400 mb-4" />
+              <CheckCircle className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Regular Audits</h3>
-              <p className="text-gray-300">We conduct regular security audits and penetration testing to ensure our systems remain secure.</p>
+              <p className="text-gray-500">We conduct regular security audits and penetration testing to ensure our systems remain secure.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <Award className="w-12 h-12 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Compliance Monitoring</h3>
-              <p className="text-gray-300">Continuous monitoring and reporting to ensure ongoing compliance with all relevant regulations.</p>
+              <p className="text-gray-500">Continuous monitoring and reporting to ensure ongoing compliance with all relevant regulations.</p>
             </div>
           </div>
         </section>
         {/* Contact Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Questions About Our Compliance?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-500 mb-8">
             Our compliance team is available to answer any questions about our security measures and certifications.
           </p>
           <a
@@ -285,4 +285,23 @@ const CompliancePage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default CompliancePage;

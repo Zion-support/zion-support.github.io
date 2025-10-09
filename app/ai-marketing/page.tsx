@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
-const AIMarketingPage: React.FC = () => {
+const AIMarketingPage: React.FC = React.memo(() => {
   const aiMarketingServices = [
     {
       title: 'AI-Powered Ad Campaign Optimization',
@@ -157,10 +157,10 @@ const AIMarketingPage: React.FC = () => {
                 Transform your marketing with cutting-edge AI technology that automates, optimizes, and scales your campaigns
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
+                <button role="button" className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
                   Start AI Marketing
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors">
+                <button role="button" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors">
                   View Case Studies
                 </button>
               </div>
@@ -233,7 +233,7 @@ const AIMarketingPage: React.FC = () => {
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-pink-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 60% vs market rates
@@ -271,7 +271,7 @@ const AIMarketingPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-pink-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
+                      <button role="button" className="w-full bg-pink-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
                         Get Marketing Consultation
                       </button>
                     </div>
@@ -357,4 +357,23 @@ const AIMarketingPage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AIMarketingPage;

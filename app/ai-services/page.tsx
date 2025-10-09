@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC = React.memo(() => {
   const aiServices = [
     {
       title: 'AI Consulting & Strategy',
@@ -652,26 +652,26 @@ const AIServicesPage: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Comprehensive artificial intelligence solutions designed to transform your business operations and drive innovation.
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
-              <div className="text-gray-300">AI Services</div>
+              <div className="text-gray-500">AI Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$800</div>
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">$800</div>
+              <div className="text-gray-500">Starting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Accuracy</div>
+              <div className="text-gray-500">Accuracy</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-gray-500">Support</div>
             </div>
           </div>
           {/* Contact Info */}
@@ -710,7 +710,7 @@ const AIServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                    <span className="text-sm text-gray-700">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
                     {service.category}
@@ -726,7 +726,7 @@ const AIServicesPage: React.FC = () => {
                       </li>
                     ))}
                     {service.features.length > 4 && (
-                      <li className="text-sm text-gray-500">
+                      <li className="text-sm text-gray-700">
                         +{service.features.length - 4} more features
                       </li>
                     )}
@@ -747,7 +747,7 @@ const AIServicesPage: React.FC = () => {
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                      <span key={techIndex} className="bg-gray-50 text-gray-700 text-xs px-2 py-1 rounded">
                         {tech}
                       </span>
                     ))}
@@ -760,7 +760,7 @@ const AIServicesPage: React.FC = () => {
                   >
                     Get Started Now
                   </a>
-                  <p className="text-xs text-gray-500 mt-2">
+                  <p className="text-xs text-gray-700 mt-2">
                     {service.contactInfo}
                   </p>
                 </div>
@@ -781,7 +781,7 @@ const AIServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
               Call (302) 464-0950
             </a>
@@ -797,4 +797,23 @@ const AIServicesPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AIServicesPage;

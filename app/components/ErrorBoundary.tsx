@@ -56,26 +56,26 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
-                <AlertTriangle className="w-8 h-8 text-red-400" />
+                <AlertTriangle className="w-8 h-8 text-red-600" />
               </div>
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-500 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-gray-900 rounded-lg text-left">
-                <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
-                <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-32">
+                <h3 className="text-sm font-semibold text-red-600 mb-2">Error Details:</h3>
+                <pre className="text-xs text-gray-500 whitespace-pre-wrap overflow-auto max-h-32">
                   {this.state.error.message}
                 </pre>
               </div>
             )}
             <div className="flex flex-col sm:flex-row gap-3">
               <button
-                onClick={this.handleRetry}
+                onClick={this.handleRetry} onKeyDown={(e) => e.key === 'Enter' && this.handleRetry(e)}
                 className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
@@ -89,7 +89,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </Link>
             </div>
-            <div className="mt-6 text-sm text-gray-400">
+            <div className="mt-6 text-sm text-gray-600">
               If this problem persists, please contact our support team.
             </div>
           </div>
@@ -99,4 +99,22 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ErrorBoundary;

@@ -3,6 +3,24 @@
  * Configuration Manager
  * Centralized configuration management with environment-based settings
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {
   environment: Environment;

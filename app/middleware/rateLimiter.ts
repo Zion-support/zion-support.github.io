@@ -4,6 +4,24 @@
  * Prevents abuse by limiting the number of requests from a single IP
  * @module rateLimiter
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export interface RateLimitConfig {
   windowMs: number; // Time window in milliseconds
   max: number; // Maximum number of requests per window

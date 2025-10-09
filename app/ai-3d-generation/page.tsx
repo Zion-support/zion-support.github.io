@@ -3,8 +3,7 @@ import React from 'react';
 import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AI3DGenerationPage: React.FC = () => {
+const AI3DGenerationPage: React.FC = React.memo(() => {
   const features = [
     'AI-powered 3D model creation',
     'Texture synthesis and mapping',
@@ -15,7 +14,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Custom model training',
     'Batch processing'
   ];
-
   const benefits = [
     'Accelerate 3D content creation by 80%',
     'Reduce production costs by 60%',
@@ -24,7 +22,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Support multiple file formats',
     'Integrate with popular 3D software'
   ];
-
   const useCases = [
     'Game development',
     'Architectural visualization',
@@ -35,7 +32,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Marketing materials',
     'Educational content'
   ];
-
   const pricing = [
     {
       plan: 'Starter',
@@ -56,21 +52,20 @@ const AI3DGenerationPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Cube className="w-4 h-4" />
             <span>AI 3D Technology</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             AI 3D Model Generation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Create stunning 3D models, textures, and animations with our advanced AI technology. 
             Perfect for gaming, VR/AR, architecture, and product design.
           </p>
@@ -84,13 +79,12 @@ const AI3DGenerationPage: React.FC = () => {
             </a>
             <a
               href="/contact"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-blue-400 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >
               Get Free Demo
             </a>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -100,14 +94,13 @@ const AI3DGenerationPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Cube className="w-6 h-6 text-blue-400" />
+                  <Cube className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </div>
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -116,10 +109,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-500 text-sm">
                     Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
                   </p>
                 </div>
@@ -127,7 +120,6 @@ const AI3DGenerationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -140,14 +132,13 @@ const AI3DGenerationPage: React.FC = () => {
                   <Zap className="w-5 h-5 text-purple-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-500 text-sm">
                   Perfect for creating immersive 3D experiences and accelerating design workflows.
                 </p>
               </div>
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -165,21 +156,21 @@ const AI3DGenerationPage: React.FC = () => {
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-300">per month</p>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{plan.price}</div>
+                  <p className="text-gray-500">per month</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-500">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
+                <button role="button" className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                    : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
+                    : 'border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-slate-900'
                 }`}>
                   Get Started
                 </button>
@@ -187,7 +178,6 @@ const AI3DGenerationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Technology Stack */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -199,16 +189,15 @@ const AI3DGenerationPage: React.FC = () => {
                 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <Shield className="w-4 h-4 text-cyan-400" />
                 </div>
-                <span className="text-sm text-gray-300">{tech}</span>
+                <span className="text-sm text-gray-500">{tech}</span>
               </div>
             ))}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Create Amazing 3D Content?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-500 mb-6 max-w-2xl mx-auto">
             Contact us today to learn more about our AI 3D generation technology and how it can transform your creative workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -221,7 +210,7 @@ const AI3DGenerationPage: React.FC = () => {
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
+              className="border-2 border-blue-400 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
             >
               <Mail className="w-4 h-4" />
               <span>Email Us</span>
@@ -233,5 +222,23 @@ const AI3DGenerationPage: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default AI3DGenerationPage;

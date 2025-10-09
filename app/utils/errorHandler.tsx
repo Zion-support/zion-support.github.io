@@ -5,6 +5,24 @@
  */
 import React, { ErrorInfo, useCallback } from 'react';
 // Error types
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export enum ErrorType {
   RUNTIME = 'RUNTIME',
   NETWORK = 'NETWORK',
@@ -221,8 +239,7 @@ export class ErrorHandler {
         case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {
             if (import.meta.env.DEV) {
-              console.info(logMessage, error);
-            }
+              }
           }
           break;
       }
@@ -347,7 +364,7 @@ export class ErrorHandler {
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
-            console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
+            `);
           }
         }
         // Add your retry logic here
@@ -464,7 +481,7 @@ export class ErrorBoundary extends React.Component<
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
             <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
+              onClick={() => this.setState({ hasError: false, error: undefined } onKeyDown={(e) => e.key === 'Enter' && () => this.setState({ hasError: false, error: undefined (e)})}
               style={{
                 padding: '10px 20px',
                 backgroundColor: '#007bff',

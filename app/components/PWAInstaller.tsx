@@ -5,7 +5,7 @@ interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
-const PWAInstaller: React.FC = () => {
+const PWAInstaller: React.FC = React.memo(() => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
@@ -42,10 +42,8 @@ const PWAInstaller: React.FC = () => {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
-        console.log('PWA installation accepted');
-      } else {
-        console.log('PWA installation dismissed');
-      }
+        } else {
+        }
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
     } catch (error) {
@@ -71,12 +69,12 @@ const PWAInstaller: React.FC = () => {
             </div>
             <div>
               <h3 className="text-white text-sm font-medium">Install App</h3>
-              <p className="text-gray-300 text-xs">Get quick access to Zion Tech Group</p>
+              <p className="text-gray-500 text-xs">Get quick access to Zion Tech Group</p>
             </div>
           </div>
           <button
-            onClick={handleDismiss}
-            className="text-gray-400 hover:text-white transition-colors"
+            onClick={handleDismiss} onKeyDown={(e) => e.key === 'Enter' && handleDismiss(e)}
+            className="text-gray-600 hover:text-white transition-colors"
             aria-label="Dismiss install prompt"
           >
             <X className="w-4 h-4" />
@@ -84,19 +82,19 @@ const PWAInstaller: React.FC = () => {
         </div>
         <div className="space-y-2">
           <button
-            onClick={handleInstallClick}
+            onClick={handleInstallClick} onKeyDown={(e) => e.key === 'Enter' && handleInstallClick(e)}
             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
           >
             Install Now
           </button>
           <button
-            onClick={handleDismiss}
-            className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
+            onClick={handleDismiss} onKeyDown={(e) => e.key === 'Enter' && handleDismiss(e)}
+            className="w-full bg-transparent border border-gray-600 text-gray-500 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
           >
             Not Now
           </button>
         </div>
-        <div className="mt-3 text-xs text-gray-400">
+        <div className="mt-3 text-xs text-gray-600">
           <p>• Faster loading</p>
           <p>• Offline access</p>
           <p>• Native app experience</p>
@@ -105,4 +103,23 @@ const PWAInstaller: React.FC = () => {
     </div>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default PWAInstaller;

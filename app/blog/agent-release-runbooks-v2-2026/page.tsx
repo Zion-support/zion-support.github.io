@@ -1,9 +1,27 @@
 import Link from 'next/link';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function Page() {
   return (
-    <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
-      <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
+    <main role="main" role="main" className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
+      <header role="banner" className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
             <ListChecks />

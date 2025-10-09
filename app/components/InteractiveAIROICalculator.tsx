@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-const InteractiveAIROICalculator: React.FC = () => {
+const InteractiveAIROICalculator: React.FC = React.memo(() => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
@@ -82,4 +82,23 @@ const InteractiveAIROICalculator: React.FC = () => {
     </section>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default InteractiveAIROICalculator;

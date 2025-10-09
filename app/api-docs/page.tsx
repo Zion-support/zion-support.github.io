@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-const ApiDocsPage: React.FC = () => {
+const ApiDocsPage: React.FC = React.memo(() => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
@@ -14,7 +14,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-const ApiDocsPage: React.FC = () => {
+const ApiDocsPage: React.FC = React.memo(() => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
@@ -61,12 +61,12 @@ const ApiDocsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main role="main" role="main" className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             API Documentation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
             Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services
           </p>
         </section>
@@ -76,7 +76,7 @@ const ApiDocsPage: React.FC = () => {
             {apiEndpoints.map((category, categoryIndex) => (
               <div key={categoryIndex} className="cyber-card hologram-card p-6">
                 <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-6">{category.description}</p>
+                <p className="text-gray-500 mb-6">{category.description}</p>
                 <div className="space-y-4">
                   {category.endpoints.map((endpoint, endpointIndex) => (
                     <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">
@@ -88,15 +88,15 @@ const ApiDocsPage: React.FC = () => {
                         </span>
                         <code className="text-cyan-400 font-mono">{endpoint.path}</code>
                       </div>
-                      <p className="text-gray-300 mb-3">{endpoint.description}</p>
+                      <p className="text-gray-500 mb-3">{endpoint.description}</p>
                       <div className="bg-gray-900 rounded p-4 relative">
-                        <button
-                          onClick={() => copyToClipboard(endpoint.example, `${categoryIndex}-${endpointIndex}`)}
-                          className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
+                        <button role="button"
+                          onClick={() => copyToClipboard(endpoint.example, `${categoryIndex} onKeyDown={(e) => e.key === 'Enter' && () => copyToClipboard(endpoint.example, `${categoryIndex(e)}-${endpointIndex}`)}
+                          className="absolute top-2 right-2 p-2 text-gray-600 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                         </button>
-                        <pre className="text-sm text-gray-300 overflow-x-auto">
+                        <pre className="text-sm text-gray-500 overflow-x-auto">
                           <code>{endpoint.example}</code>
                         </pre>
                       </div>
@@ -112,7 +112,7 @@ const ApiDocsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-500 mb-4">
                 All API requests require authentication using your API key. Include it in the Authorization header:
               </p>
               <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
@@ -121,7 +121,7 @@ const ApiDocsPage: React.FC = () => {
             </div>
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-500 mb-4">
                 API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
               </p>
             </div>
@@ -129,7 +129,7 @@ const ApiDocsPage: React.FC = () => {
         </section>
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
-          <p className="text-gray-300 mb-8">
+          <p className="text-gray-500 mb-8">
             Contact our developer support team for assistance with API integration
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -152,4 +152,24 @@ const ApiDocsPage: React.FC = () => {
     </div>
   );
 };
+);
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default ApiDocsPage;

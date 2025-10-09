@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, CheckCircle, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings } from 'lucide-react';
-const AICybersecurityPage: React.FC = () => {
+const AICybersecurityPage: React.FC = React.memo(() => {
   const features = [
     {
       icon: Brain,
@@ -134,7 +134,7 @@ const AICybersecurityPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="pt-16">
+        <main role="main" role="main" className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
@@ -144,7 +144,7 @@ const AICybersecurityPage: React.FC = () => {
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Protect your business with AI-powered security
               </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
                 Our AI-powered cybersecurity platform provides advanced threat detection, 
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
@@ -172,7 +172,7 @@ const AICybersecurityPage: React.FC = () => {
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
                       {stat.number}
                     </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                    <div className="text-gray-500 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -188,7 +188,7 @@ const AICybersecurityPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <p className="text-gray-500 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
@@ -211,7 +211,7 @@ const AICybersecurityPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <threat.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3>
-                  <p className="text-gray-300">{threat.description}</p>
+                  <p className="text-gray-500">{threat.description}</p>
                 </div>
               ))}
             </div>
@@ -238,17 +238,17 @@ const AICybersecurityPage: React.FC = () => {
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <p className="text-gray-600 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                      <span className="text-gray-600 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-500">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -272,7 +272,7 @@ const AICybersecurityPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Secure Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-500 mb-8">
                 Join 3,000+ companies already protected by our AI cybersecurity platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -299,5 +299,23 @@ const AICybersecurityPage: React.FC = () => {
       </div>
     </>
   );
+});
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 };
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AICybersecurityPage;

@@ -12,6 +12,24 @@
 /**
  * Accessibility issue severity levels
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export enum A11ySeverity {
   /** Minor issue that may affect some users */
   MINOR = 'MINOR',
@@ -150,7 +168,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img aria-label="Image" src="..." alt="Description of image" />'
         });
       }
       // Check for empty alt on decorative images without role
@@ -163,7 +181,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img aria-label="Image" src="..." alt="" role="presentation" />'
         });
       }
     });
@@ -403,7 +421,7 @@ export class AccessibilityChecker {
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={handleClick} onKeyDown={(e) => e.key === 'Enter' && handleClick(e)}>Click me</button>'
         });
       }
     });
@@ -485,8 +503,8 @@ export class AccessibilityChecker {
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
-        fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
+        fix: 'Add a <main role="main"> element or role="main"',
+        codeExample: '<main role="main"><!-- Main content --></main>'
       });
     }
   }

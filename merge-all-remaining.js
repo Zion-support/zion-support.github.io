@@ -113,8 +113,7 @@ for (let batch = 0; batch < totalBatches; batch++) {
 //   const end = Math.min(start + batchSize, relevantBranches.length);
   const _batchBranches = relevantBranches.slice(start, end);
 
-//   console.log(
-    `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
+//   ...`
   );
 
   for (const branch of batchBranches) {

@@ -22,6 +22,24 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -31,7 +49,7 @@ export default function OptimizedHomePage() {
       </AccessibilityEnhancer>
       <PerformanceMonitor />
       {/* Main Content */}
-      <main className="relative">
+      <main role="main" className="relative">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>

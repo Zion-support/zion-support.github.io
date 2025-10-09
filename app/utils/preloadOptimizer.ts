@@ -2,6 +2,24 @@
  * Preload Optimizer
  * Optimizes resource loading for better performance
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return
   // Preload critical fonts

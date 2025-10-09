@@ -33,7 +33,7 @@ class PerformanceEnhancer {
       await this.optimizeBuild();
       await this.generateReport();
 
-//       //       console.log(`📊 Report saved to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`);
+//       //       , 'performance-enhancement-report.json')}`);
     } catch (error) {
 //       process.exit(1);
     }
@@ -75,7 +75,7 @@ class PerformanceEnhancer {
         details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
       });
       
-//       console.log(`✅ Bundle analysis completed. Total size: ${(totalSize / 1024).toFixed(2)} KB`);
+//       .toFixed(2)} KB`);
     } catch (error) {
 //       }
   }

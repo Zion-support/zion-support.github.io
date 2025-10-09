@@ -3,6 +3,24 @@
  * Accessibility Utilities
  * WCAG 2.1 Level AA compliance helpers
  */
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export interface A11yReport {
   errors: A11yError[];
   warnings: A11yWarning[];

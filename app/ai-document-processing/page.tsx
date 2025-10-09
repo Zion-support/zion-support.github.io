@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { FileText, Eye, Zap, Brain, BarChart, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings, FileImage, Search } from 'lucide-react';
-const AIDocumentProcessingPage: React.FC = () => {
+const AIDocumentProcessingPage: React.FC = React.memo(() => {
   const features = [
     {
       icon: Eye,
@@ -131,7 +131,7 @@ const AIDocumentProcessingPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="pt-16">
+        <main role="main" role="main" className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
@@ -141,7 +141,7 @@ const AIDocumentProcessingPage: React.FC = () => {
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Automate document processing with 99.9% accuracy
               </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
                 Our AI-powered document processing platform automatically extracts, analyzes, and processes 
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
@@ -169,7 +169,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
                       {stat.number}
                     </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                    <div className="text-gray-500 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -185,7 +185,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <p className="text-gray-500 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
@@ -208,7 +208,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
+                  <p className="text-gray-500">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -235,17 +235,17 @@ const AIDocumentProcessingPage: React.FC = () => {
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <p className="text-gray-600 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                      <span className="text-gray-600 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-500">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -269,7 +269,7 @@ const AIDocumentProcessingPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Automate Your Documents?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-500 mb-8">
                 Join 1,800+ companies already using our document processing platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -297,4 +297,23 @@ const AIDocumentProcessingPage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AIDocumentProcessingPage;

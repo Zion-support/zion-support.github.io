@@ -5,8 +5,26 @@ const metadata = {
   description:
     'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.'
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export { metadata };
-const TeamPage: React.FC = () => {
+const TeamPage: React.FC = React.memo(() => {
   const teamMembers = [
     {
       name: 'Dr. Sarah Johnson',
@@ -72,7 +90,7 @@ const TeamPage: React.FC = () => {
                 mission of advancing AI and IT solutions.
               </p>
               <div className='text-center'>
-                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                <button role="button" className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                   View Open Positions
                 </button>
               </div>
@@ -83,4 +101,5 @@ const TeamPage: React.FC = () => {
     </>
   );
 };
+);
 export default TeamPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Helmet } from 'react-helmet-async';
-const SitemapPage: React.FC = () => {
+const SitemapPage: React.FC = React.memo(() => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
     { url: '/about', title: 'About Us', priority: '0.8' },
@@ -46,9 +46,9 @@ const SitemapPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
-          <header className="text-center mb-12">
+          <header role="banner" className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-500">
               Complete directory of all pages on our website
             </p>
           </header>
@@ -60,14 +60,14 @@ const SitemapPage: React.FC = () => {
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
                     <Link
                       href={page.url}
-                      className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
+                      className="text-blue-600 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
                     </Link>
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-600">
                       Priority: {page.priority}
                     </div>
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-700">
                       {page.url}
                     </div>
                   </div>
@@ -88,4 +88,23 @@ const SitemapPage: React.FC = () => {
     </>
   );
 };
+);
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default SitemapPage;

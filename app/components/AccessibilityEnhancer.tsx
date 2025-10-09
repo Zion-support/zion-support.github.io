@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useCallback } from 'react';
-
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -9,7 +8,6 @@ interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
   enableARIALabels?: boolean;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -29,7 +27,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
   }, [enableSkipLinks]);
-
   // Add keyboard navigation
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (enableKeyboardNavigation) {
@@ -65,14 +62,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     }
   }, [enableKeyboardNavigation]);
-
   useEffect(() => {
     if (enableKeyboardNavigation) {
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNavigation, handleKeyDown]);
-
   // Add focus indicators
   useEffect(() => {
     if (enableFocusManagement) {
@@ -116,7 +111,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.head.appendChild(style);
     }
   }, [enableFocusManagement]);
-
   // Add ARIA labels and roles
   useEffect(() => {
     if (enableARIALabels) {
@@ -126,7 +120,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         main.setAttribute('role', 'main');
         main.setAttribute('aria-label', 'Main content');
       }
-
       // Add ARIA labels to buttons without text
       const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
       buttons.forEach((button, index) => {
@@ -135,13 +128,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           button.setAttribute('aria-label', `Button ${index + 1}`);
         }
       });
-
       // Add ARIA labels to images without alt text
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach((img, index) => {
         img.setAttribute('alt', `Image ${index + 1}`);
       });
-
       // Add ARIA labels to form inputs
       const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
       inputs.forEach((input) => {
@@ -152,7 +143,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       });
     }
   }, [enableARIALabels]);
-
   // Add high contrast mode support
   useEffect(() => {
     if (enableHighContrast) {
@@ -165,21 +155,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           document.body.classList.remove('high-contrast');
         }
       };
-
       // Check initial state
       if (mediaQuery.matches) {
         document.body.classList.add('high-contrast');
       }
-
       // Listen for changes
       mediaQuery.addEventListener('change', handleContrastChange);
-
       return () => {
         mediaQuery.removeEventListener('change', handleContrastChange);
       };
     }
   }, [enableHighContrast]);
-
   // Add reduced motion support
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -191,20 +177,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.body.classList.remove('reduced-motion');
       }
     };
-
     // Check initial state
     if (mediaQuery.matches) {
       document.body.classList.add('reduced-motion');
     }
-
     // Listen for changes
     mediaQuery.addEventListener('change', handleMotionChange);
-
     return () => {
       mediaQuery.removeEventListener('change', handleMotionChange);
     };
   }, []);
-
   // Add screen reader announcements
   useEffect(() => {
     if (enableScreenReaderSupport) {
@@ -216,8 +198,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(announcement);
     }
   }, [enableScreenReaderSupport]);
-
   return null;
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
 
 export default AccessibilityEnhancer;

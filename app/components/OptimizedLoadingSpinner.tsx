@@ -73,14 +73,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           return (
             <div className='space-y-2' role='status' aria-label='Loading'>
               <div
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                className={`h-4 bg-gray-100 rounded animate-pulse ${sizeClasses[size]}`}
               />
               <div
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                className={`h-4 bg-gray-100 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' }}
               />
               <div
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                className={`h-4 bg-gray-100 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               />
             </div>
@@ -131,4 +131,22 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default OptimizedLoadingSpinner;

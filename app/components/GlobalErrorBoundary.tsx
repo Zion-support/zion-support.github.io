@@ -42,7 +42,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full text-center">
             {/* Error Icon */}
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
             </div>
@@ -50,13 +50,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-bold text-white mb-4">
               Something went wrong
             </h1>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-500 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
+                <summary className="text-sm text-gray-600 cursor-pointer hover:text-white">
                   Error Details (Development)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">
@@ -77,27 +77,27 @@ class GlobalErrorBoundary extends Component<Props, State> {
             {/* Action Buttons */}
             <div className="space-y-3">
               <button
-                onClick={this.handleRetry}
+                onClick={this.handleRetry} onKeyDown={(e) => e.key === 'Enter' && this.handleRetry(e)}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
               >
                 Try Again
               </button>
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => window.location.reload()} onKeyDown={(e) => e.key === 'Enter' && () => window.location.reload()(e)}
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
               >
                 Refresh Page
               </button>
               <a
                 href="/"
-                className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
+                className="block w-full bg-transparent border border-gray-600 text-gray-500 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
               >
                 Go Home
               </a>
             </div>
             {/* Contact Information */}
             <div className="mt-8 pt-6 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-2">
+              <p className="text-sm text-gray-600 mb-2">
                 Need help? Contact our support team:
               </p>
               <a
@@ -114,4 +114,22 @@ class GlobalErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export { GlobalErrorBoundary };

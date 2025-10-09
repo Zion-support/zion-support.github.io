@@ -217,28 +217,28 @@ class AdvancedErrorBoundary extends Component<
                 {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
                     <button
-                      onClick={this.handleRetry}
-                      className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      onClick={this.handleRetry} onKeyDown={(e) => e.key === 'Enter' && this.handleRetry(e)}
+                      className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     >
                       Try Again ({this.maxRetries - this.retryCount} attempts
                       left)
                     </button>
                   )}
                 <button
-                  onClick={this.handleReload}
-                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                  onClick={this.handleReload} onKeyDown={(e) => e.key === 'Enter' && this.handleReload(e)}
+                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Reload Page
                 </button>
                 <button
-                  onClick={this.handleGoHome}
-                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                  onClick={this.handleGoHome} onKeyDown={(e) => e.key === 'Enter' && this.handleGoHome(e)}
+                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Go to Homepage
                 </button>
               </div>
               <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>
+                <p className='text-xs text-gray-700'>
                   If this problem persists, please contact our support team
                   at&nbsp;
                   <a
@@ -257,4 +257,22 @@ class AdvancedErrorBoundary extends Component<
     return this.props.children;
   }
 }
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export default AdvancedErrorBoundary;

@@ -195,7 +195,7 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: unknown): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -336,5 +336,23 @@ const defaultConfig: SEOConfig = {
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
 };
+
+// Focus management utility
+const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
+// Skip to main content functionality
+const skipToMain = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    focusElement(main);
+  }
+};
+
+
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
