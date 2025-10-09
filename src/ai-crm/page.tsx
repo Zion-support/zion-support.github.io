@@ -1,7 +1,5 @@
 import React from 'react';
-
 const AICRMPage: React.FC = () => {
-
 const AiCrmPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -14,7 +12,10 @@ const AiCrmPage: React.FC = () => {
       </div>
   );
 };
-
 }
-
-export default AiCrmPage;
+const AiCrmPage: React.FC = () => {
+  // TODO: Add content
+}
+const AICRMPage: React.FC = () => {
+  // TODO: Add content
+}

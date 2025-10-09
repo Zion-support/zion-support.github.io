@@ -2,6 +2,8 @@
  * Google Analytics gtag types;
  */
 interface GtagEvent {
+  // TODO: Add content
+}
   event_category?: string;
   event_label?: string;
   value?: number;
@@ -9,10 +11,14 @@ interface GtagEvent {
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 interface Window {
+  // TODO: Add content
+}
   gtag?: (
+  // TODO: Add parameters,
+)
     command: GtagCommand,
     targetId: string | Date,
-    config?: GtagEvent;
+config?: GtagEvent;
   ) => void;
   dataLayer?: unknown[];
 }

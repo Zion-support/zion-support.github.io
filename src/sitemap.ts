@@ -1,7 +1,6 @@
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const _baseUrl = 'https://ziontechgroup.com'
-  
+const _baseUrl = 'https://ziontechgroup.com'
   const _routes = [
     '',
     '/about',
@@ -38,8 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms',
     '/support',
   ]
-
   return routes.map((route) => ({
+  // TODO: Add content
+}
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'daily' : 'weekly',

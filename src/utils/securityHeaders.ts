@@ -3,6 +3,8 @@
  * Comprehensive security headers for production applications
  */
 export interface SecurityHeadersConfig {
+  // TODO: Add content
+}
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
@@ -11,29 +13,35 @@ export interface SecurityHeadersConfig {
   permissionsPolicy?: string;
 }
 export const _defaultSecurityHeaders: SecurityHeadersConfig = {
-  // Content Security Policy
+  // TODO: Add content
+}
+  // Content Security Policy,
   contentSecurityPolicy: [
-    "default-src 'self'",
+  // TODO: Add items,
+]
+//     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",
+//     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https: blob:",
     "font-src 'self' data:",
     "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    'upgrade-insecure-requests',
+//     "frame-ancestors 'none'",
+//     "base-uri 'self'",
+//     "form-action 'self'",
+//     'upgrade-insecure-requests',
   ].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
-  // Prevent clickjacking
+  // Prevent clickjacking,
   xFrameOptions: 'DENY',
-  // Prevent MIME type sniffing
+  // Prevent MIME type sniffing,
   xContentTypeOptions: 'nosniff',
-  // Referrer Policy
+  // Referrer Policy,
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [
+  // TODO: Add items,
+]
     'camera=()',
     'microphone=()',
     'geolocation=()',
@@ -43,34 +51,50 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
     'accelerometer=()',
     'gyroscope=()',
     'magnetometer=()',
-  ].join(', ')
+//   ].join(', ')
 };
 /**
  * Get security headers as key-value pairs
  */
 export function getSecurityHeaders(
+  // TODO: Add parameters,
+)
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {
   const headers: Record<string, string> = {
+  // TODO: Add content
+}
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
   };
   if (config.contentSecurityPolicy) {
+  // TODO: Add content
+}
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;
   }
   if (config.strictTransportSecurity) {
+  // TODO: Add content
+}
     headers['Strict-Transport-Security'] = config.strictTransportSecurity;
   }
   if (config.xFrameOptions) {
+  // TODO: Add content
+}
     headers['X-Frame-Options'] = config.xFrameOptions;
   }
   if (config.xContentTypeOptions) {
+  // TODO: Add content
+}
     headers['X-Content-Type-Options'] = config.xContentTypeOptions;
   }
   if (config.referrerPolicy) {
+  // TODO: Add content
+}
     headers['Referrer-Policy'] = config.referrerPolicy;
   }
   if (config.permissionsPolicy) {
+  // TODO: Add content
+}
     headers['Permissions-Policy'] = config.permissionsPolicy;
   }
   return headers;
@@ -79,12 +103,18 @@ export function getSecurityHeaders(
  * Get security headers in Next.js format
  */
 export function getNextSecurityHeaders(
+  // TODO: Add parameters,
+)
   customConfig?: Partial<SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {
+  // TODO: Add content
+}
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
-    key,
-    value
+  // TODO: Add content
+}
+//     key,
+//     value
   }));
 }
 export default defaultSecurityHeaders;

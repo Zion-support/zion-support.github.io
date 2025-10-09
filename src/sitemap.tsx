@@ -1,5 +1,4 @@
 import React from 'react';
-
 const getAllPages = () => {
   return [
     { url: '/', priority: 1.0, changefreq: 'daily' },
@@ -11,7 +10,6 @@ const getAllPages = () => {
     { url: '/blog', priority: 0.8, changefreq: 'weekly' },
   ];
 };
-
 const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {
   const baseUrl = 'https://ziontechgroup.com';
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -23,27 +21,11 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
   return sitemap;
-
-const Sitemap: React.FC = () => {
-  const _sitemap = generateSitemap(getAllPages());
-  <url>
-    <loc>https://ziontechgroup.com/</loc>
-    <priority>1.0</priority>
-    <changefreq>daily</changefreq>
-  </url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-    <loc>https://ziontechgroup.com/services</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <priority>0.7</priority>
-  
   return (
+  // TODO: Add parameters,
+)
     <div>
       <pre>{sitemap}</pre>
     </div>
   );
-
 export default Sitemap;

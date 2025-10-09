@@ -1,6 +1,6 @@
 /**
- * Advanced User Experience Enhancer
- * Comprehensive UX optimization utilities
+ * User Experience Enhancer
+ * Improves user experience
  */
 interface UXConfig {
   enableSmoothScrolling: boolean;
@@ -57,13 +57,11 @@ class UserExperienceEnhancer {
   private setupSmoothScrolling(): void {
     if (!this.config.enableSmoothScrolling) return;
     // Add smooth scrolling to all anchor links
-    
     links.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href')?.substring(1);
         const targetElement = document.getElementById(targetId || '');
-        
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
@@ -86,7 +84,6 @@ class UserExperienceEnhancer {
     if (!this.config.enableLoadingStates) return;
     // Add loading states to buttons
     const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]');
-    
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         this.showLoadingState(button as HTMLButtonElement);
@@ -94,7 +91,6 @@ class UserExperienceEnhancer {
     });
     // Add loading states to forms
     const forms = document.querySelectorAll('form');
-    
     forms.forEach(form => {
       form.addEventListener('submit', () => {
         this.showFormLoadingState(form);
@@ -102,7 +98,6 @@ class UserExperienceEnhancer {
     });
     // Add loading states to links
     const links = document.querySelectorAll('a[data-loading]');
-    
     links.forEach(link => {
       link.addEventListener('click', () => {
         this.showLinkLoadingState(link as HTMLAnchorElement);
@@ -112,20 +107,16 @@ class UserExperienceEnhancer {
   private showLoadingState(button: HTMLButtonElement): void {
     const originalText = button.textContent;
     const loadingText = button.dataset.loadingText || 'Loading...';
-    
     button.disabled = true;
     button.textContent = loadingText;
     button.classList.add('loading');
-    
     // Add spinner
     const spinner = document.createElement('span');
     spinner.className = 'spinner';
     spinner.innerHTML = '⏳';
     button.appendChild(spinner);
-    
     // Store original state
     this.loadingStates.set(button.id || 'button', true);
-    
     // Reset after 3 seconds (or when action completes)
     setTimeout(() => {
       this.hideLoadingState(button, originalText);
@@ -135,12 +126,10 @@ class UserExperienceEnhancer {
     button.disabled = false;
     button.textContent = originalText;
     button.classList.remove('loading');
-    
     const spinner = button.querySelector('.spinner');
     if (spinner) {
       spinner.remove();
     }
-    
     this.loadingStates.set(button.id || 'button', false);
   }
   private showFormLoadingState(form: HTMLFormElement): void {
@@ -148,7 +137,6 @@ class UserExperienceEnhancer {
     if (submitButton) {
       this.showLoadingState(submitButton);
     }
-    
     // Disable all form inputs
     const inputs = form.querySelectorAll('input, textarea, select, button');
     inputs.forEach(input => {
@@ -158,16 +146,13 @@ class UserExperienceEnhancer {
   private showLinkLoadingState(link: HTMLAnchorElement): void {
     const originalText = link.textContent;
     const loadingText = link.dataset.loadingText || 'Loading...';
-    
     link.textContent = loadingText;
     link.classList.add('loading');
-    
     // Add spinner
     const spinner = document.createElement('span');
     spinner.className = 'spinner';
     spinner.innerHTML = '⏳';
     link.appendChild(spinner);
-    
     this.loadingStates.set(link.href, true);
   }
   private setupErrorBoundaries(): void {
@@ -185,13 +170,10 @@ class UserExperienceEnhancer {
   }
   private handleError(error: Error, type: string): void {
     console.error(`${type}:`, error);
-    
     // Store error
     this.errorBoundaries.set(type, error);
-    
     // Show user-friendly error message
     this.showErrorMessage('Something went wrong. Please try again.');
-    
     // Report error to analytics
     if (this.config.enableAnalytics) {
       this.reportError(error, type);
@@ -209,9 +191,7 @@ class UserExperienceEnhancer {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50';
     errorDiv.textContent = message;
-    
     document.body.appendChild(errorDiv);
-    
     // Auto-remove after 5 seconds
     setTimeout(() => {
       errorDiv.remove();
@@ -221,13 +201,10 @@ class UserExperienceEnhancer {
     if (!this.config.enableAnalytics) return;
     // Track page views
     this.trackPageView();
-    
     // Track user interactions
     this.trackUserInteractions();
-    
     // Track performance metrics
     this.trackPerformanceMetrics();
-    
     // Track user satisfaction
     this.trackUserSatisfaction();
   }
@@ -239,7 +216,6 @@ class UserExperienceEnhancer {
       userAgent: navigator.userAgent,
       referrer: document.referrer
     };
-    
     this.sendAnalytics('page_view', pageData);
   }
   private trackUserInteractions(): void {
@@ -254,7 +230,6 @@ class UserExperienceEnhancer {
         text: target.textContent?.substring(0, 100),
         timestamp: Date.now()
       };
-      
       this.sendAnalytics('user_interaction', interactionData);
     });
     // Track form submissions
@@ -266,13 +241,11 @@ class UserExperienceEnhancer {
         formAction: form.action,
         timestamp: Date.now()
       };
-      
       this.sendAnalytics('form_submit', formData);
     });
     // Track scroll depth
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
         this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() });
@@ -283,7 +256,6 @@ class UserExperienceEnhancer {
     if ('performance' in window) {
       window.addEventListener('load', () => {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
         const metrics = {
           pageLoadTime: perfData.loadEventEnd - perfData.navigationStart,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
@@ -291,7 +263,6 @@ class UserExperienceEnhancer {
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
           timestamp: Date.now()
         };
-        
         this.metrics.pageLoadTime = metrics.pageLoadTime;
         this.sendAnalytics('performance_metrics', metrics);
       });
@@ -300,13 +271,11 @@ class UserExperienceEnhancer {
   private trackUserSatisfaction(): void {
     // Simple satisfaction tracking based on user behavior
     let satisfactionScore = 100;
-    
     // Decrease score for errors
     window.addEventListener('error', () => {
       satisfactionScore -= 10;
       this.metrics.userSatisfaction = Math.max(0, satisfactionScore);
     });
-    
     // Decrease score for slow interactions
     let lastInteractionTime = Date.now();
     document.addEventListener('click', () => {
@@ -321,7 +290,6 @@ class UserExperienceEnhancer {
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
     console.log('Analytics:', event, data);
-    
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event, data);
@@ -336,7 +304,6 @@ class UserExperienceEnhancer {
       timestamp: Date.now(),
       userAgent: navigator.userAgent
     };
-    
     this.sendAnalytics('error', errorData);
   }
   private setupNotifications(): void {
@@ -359,10 +326,8 @@ class UserExperienceEnhancer {
     if (!this.config.enableProgressiveWebApp) return;
     // Add PWA meta tags
     this.addPWAMetaTags();
-    
     // Setup service worker
     this.setupServiceWorker();
-    
     // Add install prompt
     this.setupInstallPrompt();
   }
@@ -399,11 +364,9 @@ class UserExperienceEnhancer {
   }
   private setupInstallPrompt(): void {
     let deferredPrompt: any;
-    
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      
       // Show install button
       this.showInstallButton(deferredPrompt);
     });
@@ -412,7 +375,6 @@ class UserExperienceEnhancer {
     const installButton = document.createElement('button');
     installButton.textContent = 'Install App';
     installButton.className = 'fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
-    
     installButton.addEventListener('click', () => {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult: any) => {
@@ -423,7 +385,6 @@ class UserExperienceEnhancer {
         installButton.remove();
       });
     });
-    
     document.body.appendChild(installButton);
   }
   private setupOfflineSupport(): void {
@@ -438,7 +399,6 @@ class UserExperienceEnhancer {
   }
   private showOfflineIndicator(isOffline: boolean): void {
     const indicator = document.getElementById('offline-indicator');
-    
     if (isOffline) {
       if (!indicator) {
         const offlineDiv = document.createElement('div');
@@ -481,11 +441,9 @@ class UserExperienceEnhancer {
     if (!this.config.enableDarkMode) return;
     // Detect system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
     if (prefersDark.matches) {
       document.documentElement.classList.add('dark');
     }
-    
     // Listen for changes
     prefersDark.addEventListener('change', (e) => {
       if (e.matches) {
@@ -494,7 +452,6 @@ class UserExperienceEnhancer {
         document.documentElement.classList.remove('dark');
       }
     });
-    
     // Add dark mode toggle
     this.addDarkModeToggle();
   }
@@ -503,21 +460,18 @@ class UserExperienceEnhancer {
     toggle.className = 'dark-mode-toggle fixed top-4 right-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg z-50';
     toggle.innerHTML = '🌙';
     toggle.setAttribute('aria-label', 'Toggle dark mode');
-    
     toggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
       const isDark = document.documentElement.classList.contains('dark');
       toggle.innerHTML = isDark ? '☀️' : '🌙';
       localStorage.setItem('darkMode', isDark.toString());
     });
-    
     // Load saved preference
     const savedDarkMode = localStorage.getItem('darkMode');
     if (savedDarkMode === 'true') {
       document.documentElement.classList.add('dark');
       toggle.innerHTML = '☀️';
     }
-    
     document.body.appendChild(toggle);
   }
   private setupAnimations(): void {
@@ -537,7 +491,6 @@ class UserExperienceEnhancer {
   private setupUserPreferences(): void {
     // Load user preferences from localStorage
     const preferences = JSON.parse(localStorage.getItem('userPreferences') || '{}');
-    
     // Apply preferences
     Object.entries(preferences).forEach(([key, value]) => {
       if (key === 'darkMode') {
@@ -556,7 +509,6 @@ class UserExperienceEnhancer {
           }
         }
       });
-      
       observer.observe({ entryTypes: ['measure'] });
     }
   }
@@ -565,7 +517,6 @@ class UserExperienceEnhancer {
     const accessibilityObserver = new MutationObserver(() => {
       this.metrics.accessibilityScore = this.calculateAccessibilityScore();
     });
-    
     accessibilityObserver.observe(document.body, {
       childList: true,
       subtree: true,
@@ -586,7 +537,6 @@ class UserExperienceEnhancer {
     // Simplified accessibility score calculation
     const totalElements = document.querySelectorAll('*').length;
     const accessibleElements = document.querySelectorAll('[aria-label], [aria-labelledby], [role]').length;
-    
     return totalElements > 0 ? Math.round((accessibleElements / totalElements) * 100) : 0;
   }
   public getMetrics(): UXMetrics {
@@ -619,9 +569,7 @@ ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''
 ${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''}
 ${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
     `;
-    
-    return report.trim();
+    document.head.appendChild(style);
   }
 }
-
 export default UserExperienceEnhancer;

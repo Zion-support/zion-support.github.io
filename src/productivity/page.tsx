@@ -2,17 +2,14 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, Star} from 'lucide-react';
-
-
 const ProductivityPage: React.FC = () => {
       return (
     <div>
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Productivity Tools</h1>
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Productivity Tools</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">AI-powered productivity tools to streamline your workflow, boost efficiency, and achieve more in less time</p>
             <a
               href="/contact"
@@ -23,13 +20,12 @@ const ProductivityPage: React.FC = () => {
             >View All Tools</a>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Why Choose Our Productivity Tools?
+//             Why Choose Our Productivity Tools?
           </h2>
-              <div className="text-4xl mb-4">⚡</div>
+<div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
               <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>
               <div className="text-4xl mb-4">🎯</div>
@@ -41,41 +37,44 @@ const ProductivityPage: React.FC = () => {
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>
               <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>
-
         {/* Tools by Category */}
         {categories.map(category => (
+  // TODO: Add parameters,
+)
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
             <div>{productivityTools
                 .filter(tool => tool.category === category)
                 .map((tool, index) => (
-                    <div className="text-4xl mb-4 text-center">{tool.icon}</div>
+<div className="text-4xl mb-4 text-center">{tool.icon}</div>
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>
                     <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>
-                    
                         <span className="text-2xl font-bold text-cyan-400">{tool.price}</span>
                         <span className="text-sm text-gray-400">Market: {tool.marketPrice}</span>
                       <div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
                         {tool.features.slice(0, 3).map((feature, featureIndex) => (
+  // TODO: Add parameters,
+)
                           <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
                         {tool.features.length > 3 && (
-                          <li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>
+<li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>
                         )}
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
                         {tool.benefits.map((benefit, benefitIndex) => (
+  // TODO: Add parameters,
+)
                           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
                             {benefit}
-                        className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
+className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
                       >Get This Tool</a>
-
         {/* CTA Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
@@ -85,8 +84,7 @@ const ProductivityPage: React.FC = () => {
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
       </main>
-      
       <Footer />
-    </div>);
+</div>);
 }
 export default ProductivityPage

@@ -1,6 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import './globals.css';
-
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -13,11 +14,11 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-
+const root = document.getElementById('root');
 if (root) {
   ReactDOM.createRoot(root).render(
-    <React.StrictMode><App /></React.StrictMode>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   );
 }
-
-export default Main;

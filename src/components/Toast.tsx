@@ -1,6 +1,8 @@
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
+  // TODO: Add content
+}
   message: string;
   type?: ToastType;
   duration?: number;
@@ -8,17 +10,23 @@ export interface ToastProps {
   show: boolean;
 }
 const Toast: React.FC<ToastProps> = ({
-  message,
+  // TODO: Add content
+}
+//   message,
   type = 'success',
   duration = 3000,
-  onClose,
-  show
+//   onClose,
+//   show
 }) => {
+  // TODO: Add content
+}
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {
+  // TODO: Add content
+}
     setIsVisible(show);
     if (show && duration > 0) {
-        setIsVisible(false);
+setIsVisible(false);
         if (onClose) {
         }
       }, duration);
@@ -28,7 +36,11 @@ const Toast: React.FC<ToastProps> = ({
   }, [show, duration, onClose]);
   if (!isVisible) return null;
   const getToastStyles = () => {
+  // TODO: Add content
+}
     switch (type) {
+  // TODO: Add content
+}
       case 'success':
         return 'bg-green-600 text-white';
       case 'error':
@@ -42,36 +54,44 @@ const Toast: React.FC<ToastProps> = ({
     }
   };
   const getIcon = () => {
+  // TODO: Add content
+}
     switch (type) {
+  // TODO: Add content
+}
       case 'success':
-        return '✓';
+        return '';
       case 'error':
-        return '✕';
+        return '';
       case 'warning':
-        return '⚠';
+        return '';
       case 'info':
-        return 'ℹ';
+        return '';
       default:
         return '';
     }
   };
   return (
-    <div
-      className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
+  // TODO: Add parameters,
+)
+    <div;
+className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert"
       aria-live="polite"
-    >
+//     >
       <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
         onClick={() => {
+  // TODO: Add content
+}
           setIsVisible(false);
           if (onClose) onClose();
         }}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
-      >
-        ✕
+//       >
+//
       </button>
     </div>
   );

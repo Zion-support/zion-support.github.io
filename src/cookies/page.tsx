@@ -2,28 +2,29 @@ import React from 'react';
 import { Cookie, Settings, Shield, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const CookiesPage: React.FC = () => {
+  // TODO: Add content
+}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             Cookie Policy
           </h1><p className="text-xl text-gray-300 mb-8">
             Last updated: January 2025
           </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Cookie className="w-6 h-6 mr-3 text-cyan-400" />
                 What Are Cookies?
               </h2><p className="text-gray-300">
-                Cookies are small text files that are placed on your computer or mobile device when you visit our website. 
+                Cookies are small text files that are placed on your computer or mobile device when you visit our website.
                 They help us provide you with a better experience by remembering your preferences and enabling certain functionality.
               </p></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Settings className="w-6 h-6 mr-3 text-cyan-400" />
                 Types of Cookies We Use
               </h2><div className="space-y-6"><div><h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3><p className="text-gray-300">
-                    These cookies are necessary for the website to function properly. They enable basic functions like page 
+                    These cookies are necessary for the website to function properly. They enable basic functions like page
                     navigation and access to secure areas of the website.
                   </p></div><div><h3 className="text-lg font-semibold text-white mb-2">Analytics Cookies</h3><p className="text-gray-300">
-                    These cookies help us understand how visitors interact with our website by collecting and reporting 
+                    These cookies help us understand how visitors interact with our website by collecting and reporting
                     information anonymously.
                   </p></div><div><h3 className="text-lg font-semibold text-white mb-2">Functional Cookies</h3><p className="text-gray-300">
-                    These cookies enable the website to provide enhanced functionality and personalization, such as 
+                    These cookies enable the website to provide enhanced functionality and personalization, such as
                     remembering your preferences.
                   </p></div><div><h3 className="text-lg font-semibold text-white mb-2">Marketing Cookies</h3><p className="text-gray-300">
                     These cookies are used to track visitors across websites to display relevant and engaging advertisements.
@@ -48,5 +49,4 @@ const CookiesPage: React.FC = () => {
                 </a></div></section></div></div></main><Footer /></div>
   );
 };
-
 export default CookiesPage;

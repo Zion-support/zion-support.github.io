@@ -23,7 +23,7 @@ interface OptimizationConfig {
 class PerformanceEnhancer {
   private config: OptimizationConfig;
   private metrics: PerformanceMetrics | null = null;
-  private observer: PerformanceObserver | null = null;
+private observer: PerformanceObserver | null = null;
   constructor(config: OptimizationConfig) {
     this.config = config;
     this.init();
@@ -97,9 +97,8 @@ class PerformanceEnhancer {
         document.documentElement.classList.add('no-webp');
       }
     };
-    webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
-  private setupLazyLoading(): void {
+private setupLazyLoading(): void {
     if (!this.config.enableLazyLoading) return;
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries) => {
@@ -141,18 +140,18 @@ class PerformanceEnhancer {
   private prefetchCriticalResources(): void {
     if (!this.config.enablePrefetching) return;
     const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
+      '/fonts/inter.woff2',
+      '/css/critical.css',
     ];
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
-      link.rel = 'prefetch';
+      link.rel = 'preload';
       link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
       document.head.appendChild(link);
     });
   }
-  private setupServiceWorker(): void {
+private setupServiceWorker(): void {
     if (!this.config.enableServiceWorker) return;
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -224,8 +223,9 @@ class PerformanceEnhancer {
         observer.observe(element);
       }
     });
+    images.forEach(img => imageObserver.observe(img));
   }
-  private async loadComponent(componentName: string): Promise<void> {
+private async loadComponent(componentName: string): Promise<void> {
     try {
       const module = await import(`../components/${componentName}.tsx`);
       // Component loaded successfully
@@ -233,12 +233,13 @@ class PerformanceEnhancer {
     } catch (error) {
       // console.warn(`Failed to load ${componentName}:`, error);
     }
+    return metrics;
   }
-  public cleanup(): void {
+public cleanup(): void {
     if (this.observer) {
       this.observer.disconnect();
     }
+    return recommendations;
   }
 }
-
 export default PerformanceEnhancer;

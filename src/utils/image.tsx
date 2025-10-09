@@ -1,8 +1,9 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-
 const Image: React.FC = () => {
 interface ImageProps {
+  // TODO: Add content
+}
   src: string;
   alt: string;
   width?: number;
@@ -19,35 +20,47 @@ interface ImageProps {
   onError?: () => void;
 }
 export const Image: React.FC<ImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
+  // TODO: Add content
+}
+//   src,
+//   alt,
+//   width,
+//   height,
+//   className,
   priority = false,
-  quality = 75,
+quality = 75,
   placeholder = 'empty',
   blurDataURL,
   fill = false,
-  sizes,
-  style,
-  onLoad,
-  onError,
-  ...props
+//   sizes,
+//   style,
+//   onLoad,
+//   onError,
+//   ...props
 }) => {
+  // TODO: Add content
+}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {
+  // TODO: Add content
+}
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
   const handleError = useCallback(() => {
+  // TODO: Add content
+}
     setHasError(true);
     if (onError) onError();
   }, [onError]);
   const imageStyle: React.CSSProperties = {
-    ...style,
+  // TODO: Add content
+}
+//     ...style,
     ...(fill && {
+  // TODO: Add content
+}
       position: 'absolute',
       top: 0,
       left: 0,
@@ -57,17 +70,23 @@ export const Image: React.FC<ImageProps> = ({
     })
   };
   if (hasError) {
+  // TODO: Add content
+}
     return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+  // TODO: Add parameters,
+)
+      <div;
+className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
-      >
+//       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );
   }
   return (
+  // TODO: Add parameters,
+)
     <img
       src={src}
       alt={alt}
@@ -80,7 +99,7 @@ export const Image: React.FC<ImageProps> = ({
       onLoad={handleLoad}
       onError={handleError}
       {...props}
-    />
+//     />
   );
 };
 export default Image;

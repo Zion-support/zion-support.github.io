@@ -1,4 +1,6 @@
 interface ServiceCardProps {
+  // TODO: Add content
+}
   title: string;
   description: string;
   icon?: React.ReactNode;
@@ -8,12 +10,18 @@ interface ServiceCardProps {
  * Reusable ServiceCard component with accessibility features
  */
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, className = '' }) => {
+  // TODO: Add content
+}
   return (
-    <article
-      className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
+  // TODO: Add parameters,
+)
+    <article;
+className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
       role="article"
-    >
+//     >
       {icon && (
+  // TODO: Add parameters,
+)
         <div className="mb-4 text-indigo-600" aria-hidden="true">
           {icon}
         </div>

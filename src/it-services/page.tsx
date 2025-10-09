@@ -5,21 +5,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
-
 const ItServicesPage: React.FC = () => {
-const ITServicesPage: React.FC = () => {
-  const _itServices = [
-    {
-      title: 'Cloud Services',
-      description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
-      icon: Cloud,
-      features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
-      price: 'Starting at $1,500/month',
-      category: 'Infrastructure',
-      benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
@@ -35,14 +21,6 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,200/month',
       benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
       technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      title: 'Database Management',
-      description: 'Expert database administration, optimization, and migration services for all major database platforms.',
-      icon: Database,
-      features: ['Database design', 'Performance tuning', 'Migration services', 'Backup & recovery', 'Security hardening', 'Monitoring'],
-      price: 'Starting at $800/month',
-      category: 'Data Management',
-      benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
-      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
       title: 'Business Intelligence',
       description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
       icon: BarChart,
@@ -61,32 +39,29 @@ const ITServicesPage: React.FC = () => {
       technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
     }
   ];
-
   return (
+  // TODO: Add parameters,
+)
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services | Zion Tech Group</title>
         <meta name="description" content="Advanced IT services solutions by Zion Tech Group." />
       </Helmet>
-      
       <Navigation />
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">IT Services</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced IT services solutions that will transform your business.
+//             Coming Soon - Advanced IT services solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+//               Contact Us
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+Learn More
           </div>
-      
       <Footer />
   );
 };
-
 export default ITServicesPage;

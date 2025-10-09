@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const testPagetsx: React.FC = () => {
   const _features = [
     {
@@ -25,16 +24,13 @@ const testPagetsx: React.FC = () => {
       benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>testtsx - Zion Tech Group</title>
         <meta name="description" content="Advanced testtsx solutions powered by AI and cutting-edge technology" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -55,7 +51,6 @@ const testPagetsx: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -79,7 +74,6 @@ const testPagetsx: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gray-800">
           <div className="max-w-4xl mx-auto text-center">
@@ -91,10 +85,8 @@ const testPagetsx: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default testPagetsx;

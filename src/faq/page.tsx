@@ -3,25 +3,27 @@ import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 const FAQPage: React.FC = () => {
+  // TODO: Add content
+}
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
+const toggleItem = (index: number) => {
+    setOpenItems(prev =>
+      prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
-
   const faqData = [
+  // TODO: Add items,
+]
     {
+  // TODO: Add content
+}
       category: 'General Questions',
       questions: [
-          question: 'What is Zion Tech Group?',
+question: 'What is Zion Tech Group?',
           answer: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
         },
           question: 'What services do you offer?',
@@ -78,16 +80,18 @@ const FAQPage: React.FC = () => {
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-
   const filteredData = faqData.map(category => ({
-    ...category,
-    questions: category.questions.filter(q => 
-      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+  // TODO: Add content
+}
+//     ...category,
+    questions: category.questions.filter(q =>
+//       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+//     )
   })).filter(category => category.questions.length > 0);
-
   return (
+  // TODO: Add parameters,
+)
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -95,55 +99,61 @@ const FAQPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Frequently Asked Questions
+//               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to common questions about our AI and IT services, pricing, and support.
+//               Find answers to common questions about our AI and IT services, pricing, and support.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
+              <input;
+type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
+//               />
             </div>
-
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => (
+  // TODO: Add parameters,
+)
               <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
+  // TODO: Add content
+}
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                    
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
-                        >
+//                         >
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
+  // TODO: Add parameters,
+)
                             <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : (
+  // TODO: Add parameters,
+)
                             <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         </button>
                         {isOpen && (
+  // TODO: Add parameters,
+)
                           <div className="px-6 pb-4">
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
             ))}
-
-          {/* Contact CTA */}
+{/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
@@ -154,7 +164,7 @@ const FAQPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
+//                 Call (302) 464-0950
               </a>
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -166,5 +176,4 @@ const FAQPage: React.FC = () => {
                 Contact Form
       <Footer />
     </>
-
 export default FAQPage;

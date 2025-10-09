@@ -1,4 +1,6 @@
 interface ContentPreviewCardProps {
+  // TODO: Add content
+}
   id: string;
   title: string;
   description: string;
@@ -9,31 +11,41 @@ interface ContentPreviewCardProps {
   image: string;
   featured?: boolean;
   stats?: {
+  // TODO: Add content
+}
     views: number;
     engagement: number;
   };
   excerpt?: string;
 }
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
+  // TODO: Add content
+}
   // id,
-  title,
-  description,
-  category,
-  readTime,
-  date,
-  path,
-  image,
+//   title,
+//   description,
+//   category,
+//   readTime,
+//   date,
+//   path,
+//   image,
   featured = false,
-  stats,
-  excerpt
+//   stats,
+//   excerpt
 }) => {
     if (num >= 1000) {
+  // TODO: Add content
+}
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
   };
   const getCategoryColor = (category: string): string => {
+  // TODO: Add content
+}
     const colors: { [key: string]: string } = {
+  // TODO: Add content
+}
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
@@ -46,7 +58,11 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     return colors[category] || colors.default;
   };
   return (
+  // TODO: Add parameters,
+)
     <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
+  // TODO: Add content
+}
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}>
       {/* Image/Visual Header */}
@@ -57,14 +73,18 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </div>
         {/* Featured Badge */}
         {featured && (
+  // TODO: Add parameters,
+)
           <div className="absolute top-4 left-4">
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-              ⭐ Featured
+//                Featured
             </span>
           </div>
         )}
         {/* Stats Overlay */}
         {stats && (
+  // TODO: Add parameters,
+)
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2">
             <div className="text-center">
               <div className="text-lg font-bold text-white">
@@ -96,6 +116,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </p>
         {/* Stats Row */}
         {stats && (
+  // TODO: Add parameters,
+)
           <div className="flex items-center justify-between mb-4 text-sm">
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
@@ -120,8 +142,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <Link
             href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-          >
-            Read Article
+//           >
+//             Read Article
             <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
