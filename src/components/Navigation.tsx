@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src/components/Navigation.tsx
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
@@ -215,10 +214,11 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                  <div className="grid grid-cols-2 gap-4">
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
+                    <div className="grid grid-cols-2 gap-4">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-2">
                         <div className="flex items-center space-x-2 mb-2">
@@ -251,15 +251,16 @@ const Navigation: React.FC = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
-                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-                    <Link
-                      href="/services"
-                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
+                    </div>
+                    <div className="border-t border-gray-700 mt-6 pt-4 px-6">
+                      <Link
+                        href="/services"
+                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                        onClick={closeAllMenus}
+                      >
+                        View All Services
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
