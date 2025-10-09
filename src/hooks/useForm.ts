@@ -15,7 +15,7 @@ import {
 } from '../utils/formValidation';
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule<T[keyof T]>[]>>;
+  validationSchema?: Record<keyof T, ValidationRule<T[keyof T]>[]>;
   onSubmit: (values: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
