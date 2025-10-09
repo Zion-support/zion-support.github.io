@@ -3,7 +3,7 @@
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications
  */
-import React, { ErrorInfo, useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 // Error types
 export enum ErrorType {
   RUNTIME = 'RUNTIME',
@@ -213,10 +213,10 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-          // console.error(logMessage, error);
+
           break;
         case ErrorSeverity.MEDIUM:
-          // console.warn(logMessage, error);
+
           break;
         case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {
@@ -243,7 +243,7 @@ export class ErrorHandler {
         body: JSON.stringify(error)
       });
     } catch (err) {
-      // console.error('Failed to log error to network:', err);
+
     }
   }
   // Report error
@@ -261,7 +261,7 @@ export class ErrorHandler {
         })
       });
     } catch (err) {
-      // console.error('Failed to report error:', err);
+
     }
   }
   // Notify user
@@ -295,7 +295,7 @@ export class ErrorHandler {
           font-size: 18px;
           cursor: pointer;
           margin-left: 10px;
-        ">×</button>
+        " aria-label="Button">×</button>
       </div>
     `;
     document.body.appendChild(notification);
@@ -356,7 +356,7 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        // console.error('Max retries exceeded for error:', retryItem.error);
+
       }
     }
   }
@@ -464,7 +464,7 @@ export class ErrorBoundary extends React.Component<
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
             <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
+              onClick={() = aria-label="Button"> this.setState({ hasError: false, error: undefined } onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { () = aria-label="Button"> this.setState({ hasError: false, error: undefined (e); } }})}
               style={{
                 padding: '10px 20px',
                 backgroundColor: '#007bff',

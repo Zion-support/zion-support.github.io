@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
@@ -104,7 +104,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+               onClick={useCallback(() => setSelectedCategory(category.id), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setSelectedCategory(category.id), [])(e); } }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'

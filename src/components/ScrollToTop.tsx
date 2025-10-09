@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +25,7 @@ const ScrollToTop: React.FC = () => {
   }
   return (
     <button
-      onClick={scrollToTop}
+      onClick={useCallback(scrollToTop, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(scrollToTop, [])(e); } }}
       className="fixed bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
       aria-label="Scroll to top"
     >

@@ -68,8 +68,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   override componentDidCatch() {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-       
-      // console.error('App Error Boundary caught an error');
+
     }
   }
 
@@ -83,7 +82,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
               We're working to fix this issue. Please try refreshing the page.
             </p>
             <button
-              onClick={() => window.location.reload()}
+               onClick={useCallback(() => window.location.reload(), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => window.location.reload(), [])(e); } }}
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Refresh Page
@@ -97,7 +96,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
-export default function App() {
+const App = React.memo(function App() {
   const structuredData = useMemo(
     () => ({
       '@context': 'https://schema.org',
@@ -180,4 +179,6 @@ export default function App() {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+export default $1;

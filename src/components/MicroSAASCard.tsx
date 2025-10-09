@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 interface MicroSAASCardProps {

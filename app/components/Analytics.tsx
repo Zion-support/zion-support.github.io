@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 const Analytics: React.FC = () => {
   useEffect(() => {
@@ -11,11 +11,11 @@ const Analytics: React.FC = () => {
       document.head.appendChild(script);
 
       // Initialize gtag
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) {
-        (window as any).dataLayer.push(args);
+      (window as Window & typeof globalThis).dataLayer = (window as Window & typeof globalThis).dataLayer || [];
+      function gtag(...args: unknown[]) {
+        (window as Window & typeof globalThis).dataLayer.push(args);
       }
-      (window as any).gtag = gtag;
+      (window as Window & typeof globalThis).gtag = gtag;
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX', {
         page_title: document.title,

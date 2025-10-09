@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -173,7 +173,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={useCallback(() => setCurrentSlide(index), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setCurrentSlide(index), [])(e); } }}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}

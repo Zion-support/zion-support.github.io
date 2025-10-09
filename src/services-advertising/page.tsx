@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
-export default function ServicesAdvertisingPage() {
+const ServicesAdvertisingPage = React.memo(function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -234,7 +234,7 @@ export default function ServicesAdvertisingPage() {
                   <span>2 platforms included</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Button">
                 Get Started
               </button>
             </div>
@@ -271,7 +271,7 @@ export default function ServicesAdvertisingPage() {
                   <span>All platforms included</span>
                 </li>
               </ul>
-              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Button">
                 Get Started
               </button>
             </div>
@@ -305,7 +305,7 @@ export default function ServicesAdvertisingPage() {
                   <span>White-label options</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Button">
                 Contact Sales
               </button>
             </div>
@@ -338,4 +338,6 @@ export default function ServicesAdvertisingPage() {
       </section>
     </div>
   );
-}
+});
+
+export default $1;

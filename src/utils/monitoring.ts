@@ -83,7 +83,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // console.error('Error setting up performance observers:', error);
+
       }
     }
   }
@@ -121,7 +121,7 @@ class MonitoringService {
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        // console.error('Error monitoring resources:', _error);
+
       }
     }
   }

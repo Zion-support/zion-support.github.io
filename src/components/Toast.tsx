@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
   message: string;
@@ -67,10 +67,13 @@ const Toast: React.FC<ToastProps> = ({
       <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
-        onClick={() => {
+        onClick={useCallback(() => {
           setIsVisible(false);
           if (onClose) onClose();
-        }}
+        , [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => {
+          setIsVisible(false);
+          if (onClose) onClose();
+        , [])(e); } }}}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
       >

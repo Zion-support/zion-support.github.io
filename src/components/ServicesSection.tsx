@@ -1,5 +1,5 @@
 'use client';
-import React, { Suspense, memo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (

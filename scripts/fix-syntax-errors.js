@@ -1,1 +1,176 @@
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') { cwd: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {' const filePath = path.join('/workspace') file); try {' let content = fs.readFileSync(filePath) 'utf8'); let originalContent = content; let fileFixed = 0; // Fix merge conflict markers const conflictPattern = /^<<.*?\\n(.*?)\\n\\n(.*?)\\n>>>>>>>.*?$/gms} content = content.replace(conflictPattern, (match) ours} theirs) => {fileFixed++; // Keep the first version (ours) by default return ours.trim()} }); // Fix unterminated string literals (extra quotes)' content = content.replace(/")\s*$/gm) '"');' content = content.replace(/")\s*$/gm) '"'); // Fix extra commas in interfaces' content = content.replace(/(\w+):\s*([^]+);,/g, '$1: $2;'), // Fix function declarations with extra commas' content = content.replace(/\(\s*\)\s*=>\s*{,\s*$/gm, '() => {')}' content = content.replace(/React\.FC\s*=\s*\(\s*\)\s*=>\s*{,\s*$/gm} 'React.FC = () => {')} // Fix enum declarations content = content.replace(/enum\\s+(\\w+)\\s*{\\s*([^}]+)\\s*}/g, (match, name) body) => {' const fixedBody = body.replace(/(\w+)\s*=\s*'([^']+)'\s*(\w+)/g, '$1 = \'$2\'}\n $3'); return `enum ${name} {\\n ${fixedBody}\\n}`; }); // Fix missing commas in object literals' content = content.replace(/(\w+):\s*([^)}]+)\s*(\w+):/g, '$1: $2,\n $3: '), // Fix unterminated template literals' content = content.replace(/`([^`]*?)\s*$/gm, '`$1`'); // Fix import statements with extra quotes' content = content.replace(/from\s+["']([^"']+)["'];/g, 'from "$1"'); // Fix missing commas in arrays' content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n $2'); // Fix malformed JSX' content = content.replace(/<(\w+)\s*([^>]*?)\s*\/>\s*$/gm, '<$1 $2 />'); // Fix missing semicolons' content = content.replace(/(\w+)\s*$/gm, '$1;'); // Clean up extra whitespace' content = content.replace(/\n\s*\n\s*\n/g) '\n\n');' content = content.replace(/^\s*\n/gm) ''); if (content !== originalContent) {fs.writeFileSync(filePath} content); totalFixed += fileFixed; } } catch (error) { // console.error(`❌ Error processing ${file}:`) error.message); totalErrors++; } } // console.log(`\\n🎉 Cleanup completed: `), '
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/**
+ * Fix syntax errors caused by accessibility enhancement script
+ */
+
+class SyntaxErrorFixer {
+  constructor() {
+    this.workspacePath = process.cwd();
+    this.processedFiles = 0;
+    this.fixedErrors = 0;
+    this.errors = [];
+  }
+
+  // Read file safely
+  readFile(filePath) {
+    try {
+      return fs.readFileSync(path.join(this.workspacePath, filePath), 'utf8');
+    } catch (error) {
+      this.errors.push(`Could not read file ${filePath}: ${error.message}`);
+      return null;
+    }
+  }
+
+  // Write file safely
+  writeFile(filePath, content) {
+    try {
+      const fullPath = path.join(this.workspacePath, filePath);
+      const dir = path.dirname(fullPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      fs.writeFileSync(fullPath, content);
+      return true;
+    } catch (error) {
+      this.errors.push(`Error writing file ${filePath}: ${error.message}`);
+      return false;
+    }
+  }
+
+  // Fix syntax errors
+  fixSyntaxErrors(content) {
+    let modifiedContent = content;
+    let fixedCount = 0;
+
+    // Fix malformed useCallback with aria-label
+    const malformedCallbackPattern = /useCallback\(\(\) = aria-label="([^"]+)"[^>]*> ([^,]+), \[\]\)/g;
+    modifiedContent = modifiedContent.replace(malformedCallbackPattern, (match, ariaLabel, callback) => {
+      fixedCount++;
+      return `useCallback(() => ${callback}, [])`;
+    });
+
+    // Fix malformed onClick with aria-label
+    const malformedOnClickPattern = /onClick=\{useCallback\(\(\) = aria-label="([^"]+)"[^>]*> ([^,]+), \[\]\)\}/g;
+    modifiedContent = modifiedContent.replace(malformedOnClickPattern, (match, ariaLabel, callback) => {
+      fixedCount++;
+      return `onClick={useCallback(() => ${callback}, [])}`;
+    });
+
+    // Fix malformed onKeyDown with aria-label
+    const malformedOnKeyDownPattern = /onKeyDown=\{\(e\) => \{ if \(e\.key === "Enter" \|\| e\.key === " "\) \{ useCallback\(\(\) = aria-label="([^"]+)"[^>]*> ([^,]+), \[\]\)\(e\); \} \}\}/g;
+    modifiedContent = modifiedContent.replace(malformedOnKeyDownPattern, (match, ariaLabel, callback) => {
+      fixedCount++;
+      return `onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { ${callback}; } }}`;
+    });
+
+    // Add proper aria-label attributes to buttons
+    modifiedContent = modifiedContent.replace(
+      /<button([^>]*?)onClick=\{useCallback\(\(\) => ([^,]+), \[\]\)\}/g,
+      (match, attrs, callback) => {
+        if (!attrs.includes('aria-label')) {
+          return `<button${attrs} onClick={useCallback(() => ${callback}, [])} aria-label="Button"`;
+        }
+        return match;
+      }
+    );
+
+    return { content: modifiedContent, fixedCount };
+  }
+
+  // Process a single file
+  processFile(filePath) {
+    const content = this.readFile(filePath);
+    if (!content) return false;
+
+    const { content: modifiedContent, fixedCount } = this.fixSyntaxErrors(content);
+    
+    if (fixedCount > 0) {
+      if (this.writeFile(filePath, modifiedContent)) {
+        this.fixedErrors += fixedCount;
+        console.log(`✅ Fixed ${fixedCount} syntax errors in ${filePath}`);
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  // Get all files recursively
+  getAllFiles(dir, extensions) {
+    let files = [];
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          files = files.concat(this.getAllFiles(fullPath, extensions));
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      this.errors.push(`Error reading directory ${dir}: ${error.message}`);
+    }
+    return files;
+  }
+
+  // Main execution
+  async run() {
+    console.log('🔧 Starting syntax error fixes...');
+    
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+    const files = this.getAllFiles(this.workspacePath, extensions);
+    
+    // Filter out test files and node_modules
+    const filteredFiles = files.filter(file => 
+      !file.includes('node_modules') &&
+      !file.includes('__tests__') &&
+      !file.includes('.test.') &&
+      !file.includes('.spec.') &&
+      !file.includes('jest.setup') &&
+      !file.includes('scripts/') &&
+      !file.includes('netlify/') &&
+      !file.includes('backup') &&
+      !file.includes('dist/')
+    );
+
+    console.log(`📁 Found ${filteredFiles.length} files to process`);
+
+    for (const file of filteredFiles) {
+      const relativePath = path.relative(this.workspacePath, file);
+      if (this.processFile(relativePath)) {
+        this.processedFiles++;
+      }
+    }
+
+    // Summary
+    console.log('\n📊 Summary:');
+    console.log(`✅ Processed: ${this.processedFiles} files`);
+    console.log(`🔧 Fixed: ${this.fixedErrors} syntax errors`);
+    
+    if (this.errors.length > 0) {
+      console.log(`❌ Errors: ${this.errors.length}`);
+      this.errors.forEach(error => console.log(`   ${error}`));
+    }
+
+    console.log('\n🎉 Syntax error fixes completed!');
+  }
+}
+
+// Run the script
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new SyntaxErrorFixer();
+  fixer.run().catch(console.error);
+}
+
+export default SyntaxErrorFixer;

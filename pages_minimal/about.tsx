@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function about() {
+const about = React.memo(function about() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -42,4 +42,6 @@ export default function about() {
       </div>
     </div>
   );
-}
+});
+
+export default $1;

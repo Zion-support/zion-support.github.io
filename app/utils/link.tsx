@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 interface LinkProps {
   href: string;
   children: React.ReactNode;
@@ -34,7 +34,7 @@ export const Link: React.FC<LinkProps> = ({
       className={className}
       target={target}
       rel={rel}
-      onClick={handleClick}
+      onClick={useCallback(handleClick, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(handleClick, [])(e); } }}
       aria-label={ariaLabel}
       {...props}
     >

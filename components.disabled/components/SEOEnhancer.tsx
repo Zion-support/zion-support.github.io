@@ -1,6 +1,4 @@
-import React from 'react'
-import Head from 'next/head'
-interface SEOEnhancerProps {title?: string;
+import React, { useCallback, useMemo } from 'react';
   description?: string;
   keywords?: string;
   ogImage?: string;

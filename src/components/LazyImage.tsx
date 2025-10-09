@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useCallback, useMemo } from 'react';
 interface LazyImageProps {
   src: string;
   alt: string;

@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -176,7 +176,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             // Track LCP
             if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
+              (window as Window & typeof globalThis).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'

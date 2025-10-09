@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOData {
   title: string;
@@ -141,19 +141,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     _structuredDataRef.current = script;
   };
   const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+      (window as Window & typeof globalThis).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl
       });
     }
   };
   const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
+          (window as Window & typeof globalThis).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckCircle, TrendingUp, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -60,7 +60,11 @@ const AIFitnessCoachPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -180,7 +184,7 @@ const AIFitnessCoachPage: React.FC = () => {
                   plan.popular 
                     ? 'bg-green-600 text-white hover:bg-green-700' 
                     : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
-                }`}>
+                }`} aria-label="Button">
                   Get Started
                 </button>
               </div>

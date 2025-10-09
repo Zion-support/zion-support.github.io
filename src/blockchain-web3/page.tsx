@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Link, Shield, Zap, Globe, Star, Coins, Database, Brain } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
@@ -157,10 +157,10 @@ const BlockchainWeb3Page: React.FC = () => {
                 Build the future of decentralized applications with cutting-edge blockchain and Web3 solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors" aria-label="Button">
                   Explore Web3 Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors" aria-label="Button">
                   Schedule Consultation
                 </button>
               </div>
@@ -271,7 +271,7 @@ const BlockchainWeb3Page: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors" aria-label="Button">
                         Get Web3 Consultation
                       </button>
                     </div>

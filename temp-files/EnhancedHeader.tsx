@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const EnhancedHeader: React.FC = () => {
@@ -31,7 +31,7 @@ const EnhancedHeader: React.FC = () => {
             ))}
           </nav>
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
+          <button  onClick={useCallback(() => setIsOpen(!isOpen), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(!isOpen), [])(e); } }} className="md:hidden text-gray-700">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -43,7 +43,7 @@ const EnhancedHeader: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsOpen(false)}
+                onClick={useCallback(() => setIsOpen(false), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(false), [])(e); } }}
               >
                 {item.name}
               </Link>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, MapPin, Clock, Users, Award, Zap, CheckCircle } from 'lucide-react';
@@ -40,7 +40,11 @@ const CareersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Join Our Team</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -63,7 +67,7 @@ const CareersPage: React.FC = () => {
                   {position.type}
                 </div>
                 <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all" aria-label="Button">
                   Apply Now
                 </button>
               </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [

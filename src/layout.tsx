@@ -1,7 +1,7 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
-export default function RootLayout({
+const RootLayout = React.memo(function RootLayout({
   children
 }: {
   children: React.ReactNode;
@@ -184,4 +184,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+});
+
+export default $1;

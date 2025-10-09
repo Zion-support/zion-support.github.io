@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
@@ -80,8 +80,10 @@ const ApiDocsPage: React.FC = () => {
                       <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
                     </div>
                     <button
-                      onClick={() => copyToClipboard(endpoint.example, endpoint.id)}
+                      onClick={useCallback(() => copyToClipboard(endpoint.example, endpoint.id), [])} 
+                      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { copyToClipboard(endpoint.example, endpoint.id); } }}
                       className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
+                      aria-label="Copy code example"
                     >
                       {copiedCode === endpoint.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                       <span>{copiedCode === endpoint.id ? 'Copied!' : 'Copy'}</span>

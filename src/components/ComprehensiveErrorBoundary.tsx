@@ -1,5 +1,5 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
 interface Props {
   children: ReactNode;
@@ -64,7 +64,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     };
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as Window & typeof globalThis).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -133,7 +133,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {this.state.retryCount < this.maxRetries && (
                 <button
-                  onClick={this.handleRetry}
+                  onClick={useCallback(this.handleRetry, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleRetry, [])(e); } }}
                   className="cyber-button"
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
                 >
@@ -141,7 +141,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </button>
               )}
               <button
-                onClick={this.handleReload}
+                onClick={useCallback(this.handleReload, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleReload, [])(e); } }}
                 className="cyber-button"
                 aria-label="Reload the entire page"
               >

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function QuantumNeuralConsensusImplementation() {
+const QuantumNeuralConsensusImplementation = React.memo(function QuantumNeuralConsensusImplementation() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -34,4 +34,6 @@ export default function QuantumNeuralConsensusImplementation() {
       </div>
     </div>
   );
-}
+});
+
+export default $1;

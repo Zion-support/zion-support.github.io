@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -44,6 +44,7 @@ const ContentNewsletterSignup: React.FC = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                aria-describedby="input-help"
                 placeholder="Enter your email address"
                 className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
                 required

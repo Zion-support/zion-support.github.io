@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 interface HeroSectionProps {
   isLoaded: boolean;
@@ -61,7 +61,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href="tel:+13024640950"
-            onClick={onPhoneClick}
+            onClick={useCallback(onPhoneClick, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(onPhoneClick, [])(e); } }}
             className="cyber-button w-full sm:w-auto text-center"
             aria-label="Call us at (302) 464-0950"
           >

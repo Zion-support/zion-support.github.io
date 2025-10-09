@@ -1,3 +1,4 @@
+import React from 'react';
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -30,21 +31,21 @@ export class PerformanceMonitor {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(lcpObserver);
     } catch (e) {
-      console.warn('LCP observer not supported');
+
     }
 
     // Monitor First Input Delay
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: React.MouseEvent<HTMLElement>) => {
           this.metrics.set('fid', entry.processingStart - entry.startTime);
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
     } catch (e) {
-      console.warn('FID observer not supported');
+
     }
 
     // Monitor Cumulative Layout Shift
@@ -61,7 +62,7 @@ export class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (e) {
-      console.warn('CLS observer not supported');
+
     }
   }
 
@@ -77,7 +78,7 @@ export class PerformanceMonitor {
     ttfb?: number;
   } {
     const metrics = this.getMetrics();
-    const vitals: any = {};
+    const vitals: React.MouseEvent<HTMLElement> = {};
 
     // Get FCP from performance API
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -103,13 +104,12 @@ export class PerformanceMonitor {
 
   public reportMetrics(): void {
     const vitals = this.getCoreWebVitals();
-    console.log('Core Web Vitals:', vitals);
 
     // Send to analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       Object.entries(vitals).forEach(([metric, value]) => {
         if (value !== undefined) {
-          (window as any).gtag('event', metric, {
+          (window as Window & typeof globalThis).gtag('event', metric, {
             event_category: 'Web Vitals',
             value: Math.round(value),
             non_interaction: true,

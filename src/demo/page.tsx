@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -85,6 +85,10 @@ const DemoPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
+        
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -139,7 +143,7 @@ const DemoPage: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                         placeholder="Enter your full name"
-                      />
+                      aria-describedby="input-help" />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -154,7 +158,7 @@ const DemoPage: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                         placeholder="Enter your email"
-                      />
+                      aria-describedby="input-help" />
                     </div>
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -169,7 +173,7 @@ const DemoPage: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                         placeholder="Enter your company name"
-                      />
+                      aria-describedby="input-help" />
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
@@ -183,7 +187,7 @@ const DemoPage: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                         placeholder="Enter your phone number"
-                      />
+                      aria-describedby="input-help" />
                     </div>
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -222,7 +226,7 @@ const DemoPage: React.FC = () => {
                     <button
                       type="submit"
                       className="w-full cyber-button py-3 px-6 text-center"
-                    >
+                     aria-label="Button">
                       Schedule Demo
                     </button>
                   </form>

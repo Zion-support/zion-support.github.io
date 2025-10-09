@@ -354,7 +354,7 @@ const CognitiveLoadOptimizationAI2026 = () =>
                     <span className="text-left">Human-Centered Design<
                   </div>
                 </div>
-                <button className="text-left">
+                <button className="text-left" aria-label="Button">
                   <Share2 className="text-left" />
                   <span>Share<
                 </button>

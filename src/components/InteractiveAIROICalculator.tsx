@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
@@ -27,7 +27,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <input
                   type='number'
                   value={currentCost}
-                  onChange={e => setCurrentCost(Number(e.target.value))}
+                  onChange={e = aria-describedby="input-help"> setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
               </div>
@@ -40,7 +40,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   min='10'
                   max='90'
                   value={efficiencyGain}
-                  onChange={e => setEfficiencyGain(Number(e.target.value))}
+                  onChange={e = aria-describedby="input-help"> setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
                 />
                 <div className='text-center text-sm text-gray-600'>

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';

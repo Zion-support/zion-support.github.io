@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 /**
  * Advanced SEO Optimization Utility
@@ -195,7 +196,7 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: React.MouseEvent<HTMLElement>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -242,8 +243,8 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'seo_metric', {
+    if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+      (window as Window & typeof globalThis).gtag('event', 'seo_metric', {
         metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'

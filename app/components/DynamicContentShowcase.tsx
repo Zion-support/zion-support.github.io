@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 const DynamicContentShowcase: React.FC = () => {
   return (

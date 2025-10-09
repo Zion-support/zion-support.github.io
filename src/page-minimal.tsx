@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
-export default function HomePage() {
+const HomePage = React.memo(function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -33,7 +33,11 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-      <main>
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

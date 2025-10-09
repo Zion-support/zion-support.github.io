@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 const ContentPromotionBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
 const AIHealthcarePage: React.FC = () => {
@@ -157,10 +157,10 @@ const AIHealthcarePage: React.FC = () => {
                 Transform healthcare with cutting-edge AI technology that improves patient outcomes, reduces costs, and accelerates medical breakthroughs
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors" aria-label="Button">
                   Start Healthcare AI
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors" aria-label="Button">
                   View Case Studies
                 </button>
               </div>
@@ -271,7 +271,7 @@ const AIHealthcarePage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors" aria-label="Button">
                         Get Healthcare Consultation
                       </button>
                     </div>

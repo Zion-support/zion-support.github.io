@@ -3,7 +3,7 @@
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import monitoring from '../utils/monitoring';
 interface Props {
   children: ReactNode;
@@ -128,21 +128,21 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             )}
             <div style={styles.actions}>
               <button
-                onClick={this.resetErrorBoundary}
+                onClick={useCallback(this.resetErrorBoundary, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.resetErrorBoundary, [])(e); } }}
                 style={styles.button}
                 aria-label="Try Again"
               >
                 Try Again
               </button>
               <button
-                onClick={this.handleReload}
+                onClick={useCallback(this.handleReload, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleReload, [])(e); } }}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
               >
                 Reload Page
               </button>
               <button
-                onClick={this.handleGoHome}
+                onClick={useCallback(this.handleGoHome, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleGoHome, [])(e); } }}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
               >

@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as Window & typeof globalThis).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -272,6 +272,10 @@ const HomePage: React.FC = () => {
           <ContentPromotionBanner />
         </Suspense>
 
+        
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -331,7 +335,7 @@ const HomePage: React.FC = () => {
                 </a>
                 <a
                   href="tel:+13024640950"
-                  onClick={handlePhoneClick}
+                  onClick={handlePhoneClick} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { handlePhoneClick(e); } }}
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
@@ -509,7 +513,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
                 <a 
                   href="tel:+13024640950" 
-                  onClick={handlePhoneClick}
+                  onClick={handlePhoneClick} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { handlePhoneClick(e); } }}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Call Now

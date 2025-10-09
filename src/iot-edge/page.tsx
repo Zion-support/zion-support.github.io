@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
@@ -157,10 +157,10 @@ const IoTEdgePage: React.FC = () => {
                 Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
+                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors" aria-label="Button">
                   Explore IoT Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" aria-label="Button">
                   Schedule Demo
                 </button>
               </div>
@@ -271,7 +271,7 @@ const IoTEdgePage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
+                      <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors" aria-label="Button">
                         Get IoT Consultation
                       </button>
                     </div>

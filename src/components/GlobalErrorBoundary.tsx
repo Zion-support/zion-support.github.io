@@ -76,13 +76,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
             {/* Action Buttons */}
             <div className="space-y-3">
               <button
-                onClick={this.handleRetry}
+                onClick={useCallback(this.handleRetry, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleRetry, [])(e); } }}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
-              >
+               aria-label="Button">
                 Try Again
               </button>
               <button
-                onClick={() => window.location.reload()}
+                 onClick={useCallback(() => window.location.reload(), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => window.location.reload(), [])(e); } }}
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
               >
                 Refresh Page

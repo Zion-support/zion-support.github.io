@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,14 +60,14 @@ const ContentCarousel: React.FC = () => {
         </div>
         {/* Navigation buttons */}
         <button
-          onClick={prevSlide}
+          onClick={useCallback(prevSlide, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(prevSlide, [])(e); } }}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
-          onClick={nextSlide}
+          onClick={useCallback(nextSlide, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(nextSlide, [])(e); } }}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Next slide"
         >
@@ -78,7 +78,7 @@ const ContentCarousel: React.FC = () => {
           {slides.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={useCallback(() => setCurrentSlide(index), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setCurrentSlide(index), [])(e); } }}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}

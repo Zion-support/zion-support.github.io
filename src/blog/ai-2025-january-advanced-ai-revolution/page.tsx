@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
-export default function January2025AdvancedAIRevolution() {
+const January2025AdvancedAIRevolution = React.memo(function January2025AdvancedAIRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -118,4 +118,6 @@ export default function January2025AdvancedAIRevolution() {
       </div>
     </div>
   );
-}
+});
+
+export default $1;

@@ -1,5 +1,5 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { useCallback, useMemo } from 'react';
 // import { logger } from '../utils/logger';
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -56,11 +56,7 @@ class AdvancedErrorBoundary extends Component<
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error', { 
-        context: 'ErrorBoundary', 
-        error: error.message,
-        errorInfo 
-      });
+
     }
     // Call custom error handler
     if (this.props.onError) {
@@ -123,10 +119,7 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
-      console.error('Failed to send error report', { 
-        context: 'ErrorReporting',
-        error: reportError 
-      });
+
     }
   };
   private handleRetry = () => {
@@ -216,23 +209,23 @@ class AdvancedErrorBoundary extends Component<
                 {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
                     <button
-                      onClick={this.handleRetry}
+                      onClick={useCallback(this.handleRetry, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleRetry, [])(e); } }}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                    >
+                     aria-label="Button">
                       Try Again ({this.maxRetries - this.retryCount} attempts
                       left)
                     </button>
                   )}
                 <button
-                  onClick={this.handleReload}
+                  onClick={useCallback(this.handleReload, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleReload, [])(e); } }}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
+                 aria-label="Button">
                   Reload Page
                 </button>
                 <button
-                  onClick={this.handleGoHome}
+                  onClick={useCallback(this.handleGoHome, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleGoHome, [])(e); } }}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
+                 aria-label="Button">
                   Go to Homepage
                 </button>
               </div>

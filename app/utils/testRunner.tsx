@@ -3,7 +3,7 @@
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
-import React, { ReactElement, useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 // Test result types
 export interface PerformanceMetrics {
@@ -690,7 +690,7 @@ export class TestRunner {
         default:
           result = { passed: false, error: 'Unknown test type' };
       }
-    const results: any[] = [];
+    const results: unknown[] = [];
       results.push({ ...result, name: test.name, type: test.type });
     }
     const passed = results.every(result => result.passed);

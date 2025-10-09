@@ -1,5 +1,5 @@
 import { Menu, X, Home, User, Settings } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const SidebarNavigation: React.FC = () => {
@@ -17,7 +17,7 @@ const SidebarNavigation: React.FC = () => {
       <div className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}>
         <div className="p-4">
           <button
-            onClick={() => setIsOpen(!isOpen)}
+             onClick={useCallback(() => setIsOpen(!isOpen), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(!isOpen), [])(e); } }}
             className="w-full flex items-center justify-center p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const tabs = [
@@ -41,7 +41,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
             {tabs.map((tab, index) => (
               <button
                 key={index}
-                onClick={() => setActiveTab(index)}
+                 onClick={useCallback(() => setActiveTab(index), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setActiveTab(index), [])(e); } }}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   activeTab === index
                     ? 'bg-blue-600 text-white shadow-lg'

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -74,7 +74,11 @@ const ContactPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Contact Us">
@@ -206,7 +210,7 @@ const ContactPage: React.FC = () => {
                     required
                     className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="Your full name"
-                  />
+                  aria-describedby="input-help" />
                 </div>
 
                 <div>
@@ -222,7 +226,7 @@ const ContactPage: React.FC = () => {
                     required
                     className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="your@email.com"
-                  />
+                  aria-describedby="input-help" />
                 </div>
               </div>
 
@@ -239,7 +243,7 @@ const ContactPage: React.FC = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="Your company name"
-                  />
+                  aria-describedby="input-help" />
                 </div>
 
                 <div>
@@ -254,7 +258,7 @@ const ContactPage: React.FC = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="+1 (555) 123-4567"
-                  />
+                  aria-describedby="input-help" />
                 </div>
               </div>
 
@@ -296,7 +300,7 @@ const ContactPage: React.FC = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-              >
+               aria-label="Button">
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>

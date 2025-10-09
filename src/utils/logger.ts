@@ -161,11 +161,11 @@ class Logger {
         console.info(`%c${message}`, styles, entry);
         break;
       case LogLevel.WARN:
-        // console.warn(`%c${message}`, styles, entry);
+
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        // console.error(`%c${message}`, styles, entry);
+
         break;
     }
   }

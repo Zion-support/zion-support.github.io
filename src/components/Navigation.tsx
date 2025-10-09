@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -173,7 +173,7 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+          <a href="/" className="flex items-center space-x-2" onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
@@ -184,9 +184,9 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
               <button
-                onClick={toggleServices}
+                onClick={useCallback(toggleServices, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(toggleServices, [])(e); } }}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
-              >
+               aria-label="Button">
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -204,7 +204,7 @@ const Navigation: React.FC = () => {
                           <a key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
@@ -222,7 +222,7 @@ const Navigation: React.FC = () => {
                           <a key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
@@ -241,7 +241,7 @@ const Navigation: React.FC = () => {
                             key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
@@ -255,7 +255,7 @@ const Navigation: React.FC = () => {
                       <a
                         href="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
+                        onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
@@ -263,7 +263,7 @@ const Navigation: React.FC = () => {
                       <a
                         href="/specialized-services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
+                        onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                       >
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
@@ -308,9 +308,9 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
+            onClick={useCallback(toggleMenu, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(toggleMenu, [])(e); } }}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-          >
+           aria-label="Button">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -321,9 +321,9 @@ const Navigation: React.FC = () => {
             <div className="px-4 py-6 space-y-4">
               <div>
                 <button
-                  onClick={toggleServices}
+                  onClick={useCallback(toggleServices, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(toggleServices, [])(e); } }}
                   className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
+                 aria-label="Button">
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -337,7 +337,7 @@ const Navigation: React.FC = () => {
                           <a key={service.name}
                             href={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                           >
                             {service.name}
                           </a>
@@ -351,7 +351,7 @@ const Navigation: React.FC = () => {
                           <a key={service.name}
                             href={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                           >
                             {service.name}
                           </a>
@@ -360,7 +360,7 @@ const Navigation: React.FC = () => {
                     </div>
                     <a href="/services"
                       className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
+                      onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                     >
                       View All Services →
                     </a>
@@ -368,19 +368,19 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}>
                 About
               </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}>
                 Blog
               </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}>
                 Case Studies
               </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}>
                 Pricing
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}>
                 Contact
               </a>
               
@@ -394,7 +394,7 @@ const Navigation: React.FC = () => {
                 </a>
                 <a href="/contact"
                   className="block cyber-button px-4 py-2 text-center"
-                  onClick={closeAllMenus}
+                  onClick={useCallback(closeAllMenus, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(closeAllMenus, [])(e); } }}
                 >
                   Get Started
                 </a>

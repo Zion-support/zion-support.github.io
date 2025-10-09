@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 interface SkeletonProps {
   className?: string;
   width?: string | number;

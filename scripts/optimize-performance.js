@@ -1,174 +1,279 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to optimize React components for better performance
-function optimizeComponent(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Add React.memo to functional components that don't have it
-    if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo')) {
-      // This is a basic optimization - in practice, you'd want more sophisticated detection
-      // console.log(`📝 Component ${filePath} could benefit from React.memo optimization`);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/**
+ * Performance optimization script
+ * This script applies various performance optimizations to the codebase
+ */
+
+class PerformanceOptimizer {
+  constructor() {
+    this.workspacePath = process.cwd();
+    this.processedFiles = 0;
+    this.optimizations = 0;
+    this.errors = [];
+  }
+
+  // Read file safely
+  readFile(filePath) {
+    try {
+      return fs.readFileSync(path.join(this.workspacePath, filePath), 'utf8');
+    } catch (error) {
+      this.errors.push(`Could not read file ${filePath}: ${error.message}`);
+      return null;
     }
-    
+  }
+
+  // Write file safely
+  writeFile(filePath, content) {
+    try {
+      const fullPath = path.join(this.workspacePath, filePath);
+      const dir = path.dirname(fullPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      fs.writeFileSync(fullPath, content);
+      return true;
+    } catch (error) {
+      this.errors.push(`Error writing file ${filePath}: ${error.message}`);
+      return false;
+    }
+  }
+
+  // Optimize React components
+  optimizeReactComponent(content) {
+    let modifiedContent = content;
+    let optimizations = 0;
+
+    // Add React.memo to functional components
+    if (content.includes('export default function') && !content.includes('React.memo')) {
+      modifiedContent = modifiedContent.replace(
+        /export default function (\w+)/g,
+        'const $1 = React.memo(function $1'
+      );
+      modifiedContent = modifiedContent.replace(
+        /}\s*$/,
+        '});\n\nexport default $1;'
+      );
+      optimizations++;
+    }
+
     // Add useCallback to event handlers
-    if (content.includes('onClick') && !content.includes('useCallback')) {
-      // console.log(`📝 Component ${filePath} could benefit from useCallback for event handlers`);
+    if (content.includes('onClick=') && !content.includes('useCallback')) {
+      if (!content.includes("import { useCallback }")) {
+        modifiedContent = modifiedContent.replace(
+          /import React from 'react';/,
+          "import React, { useCallback } from 'react';"
+        );
+      }
+      
+      // Wrap onClick handlers with useCallback
+      modifiedContent = modifiedContent.replace(
+        /onClick=\{([^}]+)\}/g,
+        'onClick={useCallback($1, [])}'
+      );
+      optimizations++;
+    }
+
+    // Add useMemo for expensive calculations
+    if (content.includes('const ') && content.includes('=') && !content.includes('useMemo')) {
+      if (!content.includes("import { useMemo }")) {
+        modifiedContent = modifiedContent.replace(
+          /import React[^;]*;/,
+          "import React, { useCallback, useMemo } from 'react';"
+        );
+      }
+      optimizations++;
+    }
+
+    // Optimize imports - use specific imports
+    if (content.includes("import * as React")) {
+      modifiedContent = modifiedContent.replace(
+        /import \* as React from 'react';/,
+        "import React, { memo, useCallback, useMemo, useState, useEffect } from 'react';"
+      );
+      optimizations++;
+    }
+
+    return { content: modifiedContent, optimizations };
+  }
+
+  // Optimize CSS
+  optimizeCSS(content) {
+    let modifiedContent = content;
+    let optimizations = 0;
+
+    // Remove unused CSS rules (basic cleanup)
+    const unusedPatterns = [
+      /\/\*.*?\*\//gs, // Remove comments
+      /\s+/g, // Normalize whitespace
+    ];
+
+    unusedPatterns.forEach(pattern => {
+      if (pattern.test(modifiedContent)) {
+        modifiedContent = modifiedContent.replace(pattern, ' ');
+        optimizations++;
+      }
+    });
+
+    // Optimize animations for better performance
+    modifiedContent = modifiedContent.replace(
+      /animation:\s*([^;]+);/g,
+      'animation: $1; will-change: transform, opacity;'
+    );
+    optimizations++;
+
+    return { content: modifiedContent, optimizations };
+  }
+
+  // Add performance optimizations to main page
+  optimizeMainPage(content) {
+    let modifiedContent = content;
+    let optimizations = 0;
+
+    // Add preload hints
+    if (!content.includes('rel="preload"')) {
+      const preloadHints = `
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/images/hero-bg.webp" as="image">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">`;
+      
+      modifiedContent = modifiedContent.replace(
+        /<head>/,
+        `<head>${preloadHints}`
+      );
+      optimizations++;
+    }
+
+    // Add resource hints
+    if (!content.includes('rel="preconnect"')) {
+      const resourceHints = `
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`;
+      
+      modifiedContent = modifiedContent.replace(
+        /<head>/,
+        `<head>${resourceHints}`
+      );
+      optimizations++;
+    }
+
+    return { content: modifiedContent, optimizations };
+  }
+
+  // Process a single file
+  processFile(filePath) {
+    const content = this.readFile(filePath);
+    if (!content) return false;
+
+    let modifiedContent = content;
+    let totalOptimizations = 0;
+
+    // Apply different optimizations based on file type
+    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
+      const { content: optimized, optimizations } = this.optimizeReactComponent(modifiedContent);
+      modifiedContent = optimized;
+      totalOptimizations += optimizations;
+    }
+
+    if (filePath.endsWith('.css')) {
+      const { content: optimized, optimizations } = this.optimizeCSS(modifiedContent);
+      modifiedContent = optimized;
+      totalOptimizations += optimizations;
+    }
+
+    if (filePath.includes('index.html') || filePath.includes('page.tsx')) {
+      const { content: optimized, optimizations } = this.optimizeMainPage(modifiedContent);
+      modifiedContent = optimized;
+      totalOptimizations += optimizations;
     }
     
-    // Check for missing key props in lists
-    if (content.includes('.map(') && !content.includes('key=')) {
-      // console.log(`⚠️  Component ${filePath} has .map() without key props`);
+    if (totalOptimizations > 0) {
+      if (this.writeFile(filePath, modifiedContent)) {
+        this.optimizations += totalOptimizations;
+        console.log(`✅ Applied ${totalOptimizations} optimizations to ${filePath}`);
+        return true;
+      }
     }
     
-    // Check for inline object/function definitions in JSX
-    if (content.includes('style={{') || content.includes('onClick={()')) {
-      // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`);
-    }
-    
-    return modified;
-  } catch (error) {
-    // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
-}
 
-// Function to add performance optimizations
-async function addPerformanceOptimizations() {
-  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {
-    ignore: ['**/node_modules/**', '**/dist/**', '**/build/**']
-  });
-  
-  // console.log('🚀 Analyzing components for performance optimizations...\n');
-  
-  let totalFiles = 0;
-  let optimizedFiles = 0;
-  
-  for (const file of componentFiles) {
-    totalFiles++;
-    if (optimizeComponent(file)) {
-      optimizedFiles++;
-    }
-  }
-  
-  // console.log(`\n📊 Performance Analysis Summary:`);
-  // console.log(`   Total components analyzed: ${totalFiles}`);
-  // console.log(`   Components with optimization opportunities: ${optimizedFiles}`);
-}
-
-// Function to create a performance monitoring component
-function createPerformanceMonitor() {
-  const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
-      
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          }
+  // Get all files recursively
+  getAllFiles(dir, extensions) {
+    let files = [];
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          files = files.concat(this.getAllFiles(fullPath, extensions));
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
         }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      
-      return () => observer.disconnect();
+      }
+    } catch (error) {
+      this.errors.push(`Error reading directory ${dir}: ${error.message}`);
     }
-  }, []);
+    return files;
+  }
 
-  if (!isVisible || !metrics) return null;
+  // Main execution
+  async run() {
+    console.log('⚡ Starting performance optimizations...');
+    
+    const extensions = ['.ts', '.tsx', '.js', '.jsx', '.css', '.html'];
+    const files = this.getAllFiles(this.workspacePath, extensions);
+    
+    // Filter out test files and node_modules
+    const filteredFiles = files.filter(file => 
+      !file.includes('node_modules') &&
+      !file.includes('__tests__') &&
+      !file.includes('.test.') &&
+      !file.includes('.spec.') &&
+      !file.includes('jest.setup') &&
+      !file.includes('scripts/') &&
+      !file.includes('netlify/') &&
+      !file.includes('backup') &&
+      !file.includes('dist/')
+    );
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
-      <div>FID: {metrics.fid?.toFixed(2)}ms</div>
-      <div>CLS: {metrics.cls?.toFixed(3)}</div>
-    </div>
-  );
-};
+    console.log(`📁 Found ${filteredFiles.length} files to process`);
 
-export default PerformanceMonitor;
-`;
+    for (const file of filteredFiles) {
+      const relativePath = path.relative(this.workspacePath, file);
+      if (this.processFile(relativePath)) {
+        this.processedFiles++;
+      }
+    }
 
-  fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent);
-  // console.log('✅ Created PerformanceMonitor component');
+    // Summary
+    console.log('\n📊 Summary:');
+    console.log(`✅ Processed: ${this.processedFiles} files`);
+    console.log(`⚡ Applied: ${this.optimizations} optimizations`);
+    
+    if (this.errors.length > 0) {
+      console.log(`❌ Errors: ${this.errors.length}`);
+      this.errors.forEach(error => console.log(`   ${error}`));
+    }
+
+    console.log('\n🎉 Performance optimizations completed!');
+  }
 }
 
-// Function to optimize images
-function createImageOptimization() {
-  const imageOptimizationContent = `import React from 'react';
-
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
+// Run the script
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.run().catch(console.error);
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false
-}) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={\`\${className}\`}
-      loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-      style={{
-        width: width ? \`\${width}px\` : 'auto',
-        height: height ? \`\${height}px\` : 'auto'
-      }}
-    />
-  );
-};
-
-export default OptimizedImage;
-`;
-
-  fs.writeFileSync('app/components/OptimizedImage.tsx', imageOptimizationContent);
-  // console.log('✅ Created OptimizedImage component');
-}
-
-// Main function
-async function main() {
-  // console.log('🚀 Starting performance optimization...\n');
-  
-  await addPerformanceOptimizations();
-  createPerformanceMonitor();
-  createImageOptimization();
-  
-  // console.log('\n✨ Performance optimization completed!');
-}
-
-main().catch(console.error);
+export default PerformanceOptimizer;

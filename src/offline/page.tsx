@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
@@ -92,7 +92,7 @@ const OfflinePage: React.FC = () => {
         </div>
         <div className='space-y-3'>
           <button
-            onClick={() => window.location.reload()}
+             onClick={useCallback(() => window.location.reload(), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => window.location.reload(), [])(e); } }}
             className='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           >
             Try Again

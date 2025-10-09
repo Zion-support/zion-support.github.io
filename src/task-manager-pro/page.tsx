@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Shield, Clock } from 'lucide-react';
 
 const TaskManagerProPage: React.FC = () => {
@@ -256,7 +256,7 @@ const TaskManagerProPage: React.FC = () => {
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                }`} aria-label="Button">
                   Get Started
                 </button>
               </div>

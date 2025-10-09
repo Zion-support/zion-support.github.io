@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean;
@@ -40,11 +40,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
     document.head.appendChild(script);
 
     // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+    (window as Window & typeof globalThis).dataLayer = (window as Window & typeof globalThis).dataLayer || [];
+    function gtag(...args: unknown[]) {
+      (window as Window & typeof globalThis).dataLayer.push(args);
     }
-    (window as any).gtag = gtag;
+    (window as Window & typeof globalThis).gtag = gtag;
     
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
@@ -173,9 +173,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
     });
   };
 
-  const trackEvent = (category: string, action: string, value?: any) => {
+  const trackEvent = (category: string, action: string, value?: React.MouseEvent<HTMLElement>) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
+      (window as Window & typeof globalThis).gtag('event', action, {
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined

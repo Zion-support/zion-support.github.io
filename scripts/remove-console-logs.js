@@ -2,98 +2,183 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { fileURLToPath } from 'url';
 
-// Function to remove console.log statements from a file
-function removeConsoleLogs(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Remove console.log, console.warn, console.error statements
-    // but keep console.error for actual error handling
-    const patterns = [
-      // Remove console.log statements
-      /console\.log\([^)]*\);?\s*/g,
-      // Remove console.warn statements (but keep error handling ones)
-      /console\.warn\([^)]*\);?\s*(?!.*error|.*Error|.*failed|.*Failed)/g,
-      // Remove console.info statements
-      /console\.info\([^)]*\);?\s*/g,
-      // Remove console.debug statements
-      /console\.debug\([^)]*\);?\s*/g,
-    ];
-    
-    patterns.forEach(pattern => {
-      const newContent = content.replace(pattern, '');
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/**
+ * Remove console.log statements from production code
+ * This script removes console.log, console.warn, console.error statements
+ * while preserving console.debug for development debugging
+ */
+
+class ConsoleLogRemover {
+  constructor() {
+    this.workspacePath = process.cwd();
+    this.processedFiles = 0;
+    this.removedLogs = 0;
+    this.errors = [];
+  }
+
+  // Read file safely
+  readFile(filePath) {
+    try {
+      return fs.readFileSync(path.join(this.workspacePath, filePath), 'utf8');
+    } catch (error) {
+      this.errors.push(`Could not read file ${filePath}: ${error.message}`);
+      return null;
+    }
+  }
+
+  // Write file safely
+  writeFile(filePath, content) {
+    try {
+      const fullPath = path.join(this.workspacePath, filePath);
+      const dir = path.dirname(fullPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
       }
-    });
-    
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      // console.log(`✅ Cleaned console logs from: ${filePath}`);
+      fs.writeFileSync(fullPath, content);
       return true;
+    } catch (error) {
+      this.errors.push(`Error writing file ${filePath}: ${error.message}`);
+      return false;
     }
-    
-    return false;
-  } catch (error) {
-    // console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
   }
-}
 
-// Function to process all TypeScript and JavaScript files
-async function processFiles() {
-  const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}',
-  ];
-  
-  let totalFiles = 0;
-  let modifiedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.d.ts',
-        '**/__tests__/**',
-        '**/test/**',
-        '**/*.test.*',
-        '**/*.spec.*',
-      ]
+  // Remove console statements from content
+  removeConsoleStatements(content) {
+    let modifiedContent = content;
+    let removedCount = 0;
+
+    // Patterns to match and remove
+    const patterns = [
+      // console.log statements
+      {
+        regex: /^\s*console\.log\([^)]*\);\s*$/gm,
+        replacement: ''
+      },
+      // console.warn statements
+      {
+        regex: /^\s*console\.warn\([^)]*\);\s*$/gm,
+        replacement: ''
+      },
+      // console.error statements (but keep error logging in catch blocks)
+      {
+        regex: /^\s*console\.error\([^)]*\);\s*$/gm,
+        replacement: ''
+      },
+      // Multi-line console statements
+      {
+        regex: /^\s*console\.(log|warn|error)\(\s*[\s\S]*?\);\s*$/gm,
+        replacement: ''
+      },
+      // Console statements with comments
+      {
+        regex: /^\s*\/\/\s*console\.(log|warn|error)\([^)]*\);\s*$/gm,
+        replacement: ''
+      }
+    ];
+
+    patterns.forEach(pattern => {
+      const matches = modifiedContent.match(pattern.regex);
+      if (matches) {
+        removedCount += matches.length;
+        modifiedContent = modifiedContent.replace(pattern.regex, pattern.replacement);
+      }
     });
+
+    // Clean up empty lines left by removed console statements
+    modifiedContent = modifiedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
+
+    return { content: modifiedContent, removedCount };
+  }
+
+  // Process a single file
+  processFile(filePath) {
+    const content = this.readFile(filePath);
+    if (!content) return false;
+
+    const { content: modifiedContent, removedCount } = this.removeConsoleStatements(content);
     
-    for (const file of files) {
-      totalFiles++;
-      if (removeConsoleLogs(file)) {
-        modifiedFiles++;
+    if (removedCount > 0) {
+      if (this.writeFile(filePath, modifiedContent)) {
+        this.removedLogs += removedCount;
+        console.log(`✅ Removed ${removedCount} console statements from ${filePath}`);
+        return true;
       }
     }
+    
+    return false;
   }
-  
-  // console.log(`\n📊 Summary:`);
-  // console.log(`   Total files processed: ${totalFiles}`);
-  // console.log(`   Files modified: ${modifiedFiles}`);
-  // console.log(`   Files unchanged: ${totalFiles - modifiedFiles}`);
-  
-  if (modifiedFiles > 0) {
-    // console.log(`\n✨ Console logs removed successfully!`);
-  } else {
-    // console.log(`\n✨ No console logs found to remove.`);
+
+  // Get all files recursively
+  getAllFiles(dir, extensions) {
+    let files = [];
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          files = files.concat(this.getAllFiles(fullPath, extensions));
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      this.errors.push(`Error reading directory ${dir}: ${error.message}`);
+    }
+    return files;
+  }
+
+  // Main execution
+  async run() {
+    console.log('🧹 Starting console log removal...');
+    
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+    const files = this.getAllFiles(this.workspacePath, extensions);
+    
+    // Filter out test files and node_modules
+    const filteredFiles = files.filter(file => 
+      !file.includes('node_modules') &&
+      !file.includes('__tests__') &&
+      !file.includes('.test.') &&
+      !file.includes('.spec.') &&
+      !file.includes('jest.setup') &&
+      !file.includes('scripts/') &&
+      !file.includes('netlify/')
+    );
+
+    console.log(`📁 Found ${filteredFiles.length} files to process`);
+
+    for (const file of filteredFiles) {
+      const relativePath = path.relative(this.workspacePath, file);
+      if (this.processFile(relativePath)) {
+        this.processedFiles++;
+      }
+    }
+
+    // Summary
+    console.log('\n📊 Summary:');
+    console.log(`✅ Processed: ${this.processedFiles} files`);
+    console.log(`🗑️  Removed: ${this.removedLogs} console statements`);
+    
+    if (this.errors.length > 0) {
+      console.log(`❌ Errors: ${this.errors.length}`);
+      this.errors.forEach(error => console.log(`   ${error}`));
+    }
+
+    console.log('\n🎉 Console log removal completed!');
   }
 }
 
 // Run the script
-// console.log('🧹 Removing console logs for production...\n');
-processFiles().catch(console.error);
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const remover = new ConsoleLogRemover();
+  remover.run().catch(console.error);
+}
 
-export { removeConsoleLogs, processFiles };
+export default ConsoleLogRemover;

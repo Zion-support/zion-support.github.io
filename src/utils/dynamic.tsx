@@ -1,5 +1,5 @@
 'use client';
-import React, { lazy, Suspense, ComponentType } from 'react';
+import React, { useCallback, useMemo } from 'react';
 interface DynamicOptions {
   loading?: () => React.ReactElement;
   ssr?: boolean;

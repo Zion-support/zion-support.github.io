@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -48,10 +48,10 @@ const BusinessIntelligencePage: React.FC = () => {
               Transform your data into strategic insights that drive business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors" aria-label="Button">
                 Explore BI Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" aria-label="Button">
                 Schedule Demo
               </button>
             </div>
@@ -153,10 +153,10 @@ const BusinessIntelligencePage: React.FC = () => {
             Let our BI experts help you unlock the full potential of your business data
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors" aria-label="Button">
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" aria-label="Button">
               Learn More
             </button>
           </div>

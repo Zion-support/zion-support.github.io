@@ -1,7 +1,8 @@
+import React from 'react';
 'use client';
 import { useEffect, useCallback } from 'react';
 export const usePerformanceMonitoring = () => {
-  const reportWebVitals = useCallback((metric: any) => {
+  const reportWebVitals = useCallback((metric: React.MouseEvent<HTMLElement>) => {
     const _body = JSON.stringify(metric);
     const _url = '/api/analytics';
     if (navigator.sendBeacon) {

@@ -186,8 +186,8 @@ class PerformanceMonitor {
       }ms`);
     }
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {
+    if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+      (window as Window & typeof globalThis).gtag('event', 'performance_metric', {
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'

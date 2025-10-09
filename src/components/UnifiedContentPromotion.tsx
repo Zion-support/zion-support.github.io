@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
     {

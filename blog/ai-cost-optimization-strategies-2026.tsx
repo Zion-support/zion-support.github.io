@@ -316,7 +316,7 @@ const AICostOptimizationStrategies2026 = () =>
               <span className="text-left">Caching<
             </div>
             <div className="text-left"></div>
-              <button className="text-left">
+              <button className="text-left" aria-label="Button">
                 <Share2 className="text-left" />
                 <span>Share Article<
               </button>

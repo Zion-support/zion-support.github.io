@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 const metadata = {
   title: 'Terms of Service - Zion Tech Group',

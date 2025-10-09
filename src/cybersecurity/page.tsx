@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
@@ -155,10 +155,10 @@ const CybersecurityPage: React.FC = () => {
               <p className="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
                 Protect your business with advanced cybersecurity solutions and expert threat protection              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
+                <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors" aria-label="Button">
                   Get Security Assessment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors" aria-label="Button">
                   Schedule Consultation
                 </button>
               </div>
@@ -264,7 +264,7 @@ const CybersecurityPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                      <button className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors" aria-label="Button">
                         Get Security Consultation
                       </button>
                     </div>

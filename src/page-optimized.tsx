@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -22,7 +22,7 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
-export default function OptimizedHomePage() {
+const OptimizedHomePage = React.memo(function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
@@ -31,7 +31,11 @@ export default function OptimizedHomePage() {
       </AccessibilityEnhancer>
       <PerformanceMonitor />
       {/* Main Content */}
-      <main className="relative">
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main className="relative">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>

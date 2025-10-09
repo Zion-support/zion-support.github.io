@@ -126,8 +126,8 @@ export const monitorPerformance = () => {
     list.getEntries().forEach((entry) => {
       if (entry.entryType === 'largest-contentful-paint') {
         // Track LCP
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'web_vitals', {
+        if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+          (window as Window & typeof globalThis).gtag('event', 'web_vitals', {
             metric_name: 'LCP',
             metric_value: Math.round(entry.startTime),
             metric_rating: entry.startTime < 2500 ? 'good' : entry.startTime < 4000 ? 'needs-improvement' : 'poor'

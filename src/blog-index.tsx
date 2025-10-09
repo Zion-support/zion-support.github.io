@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 const BlogPage: React.FC = () => {
   // Redirect to the main blog page

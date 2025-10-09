@@ -1,5 +1,5 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
@@ -191,13 +191,13 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         )}
         <div className='flex flex-col sm:flex-row gap-2 justify-center'>
           <button
-            onClick={onRetry}
+            onClick={useCallback(onRetry, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(onRetry, [])(e); } }}
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
-          >
+           aria-label="Button">
             Try Again
           </button>
           <button
-            onClick={() => window.location.reload()}
+             onClick={useCallback(() => window.location.reload(), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => window.location.reload(), [])(e); } }}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page

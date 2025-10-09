@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Users, Award, TrendingUp, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -27,7 +27,7 @@ const ContactPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
+
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
@@ -67,7 +67,11 @@ const ContactPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -108,6 +112,7 @@ const ContactPage: React.FC = () => {
                       required
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Your full name"
+                      aria-describedby="input-help"
                     />
                   </div>
                   <div>
@@ -123,7 +128,7 @@ const ContactPage: React.FC = () => {
                       required
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="your@email.com"
-                    />
+                    aria-describedby="input-help" />
                   </div>
                 </div>
 
@@ -140,7 +145,7 @@ const ContactPage: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Your company name"
-                    />
+                    aria-describedby="input-help" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
@@ -154,7 +159,7 @@ const ContactPage: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="(555) 123-4567"
-                    />
+                    aria-describedby="input-help" />
                   </div>
                 </div>
 
@@ -195,7 +200,7 @@ const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center"
-                >
+                 aria-label="Button">
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
                 </button>

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckCircle, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -158,10 +158,10 @@ const CloudMigrationPage: React.FC = () => {
               Seamlessly migrate your infrastructure to the cloud with our expert team. Reduce costs, improve performance, and enhance security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg">
+              <button className="cyber-button px-8 py-4 text-lg" aria-label="Button">
                 Get Free Assessment
               </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
+              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Button">
                 View Case Studies
               </button>
             </div>
@@ -308,7 +308,7 @@ const CloudMigrationPage: React.FC = () => {
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                }`} aria-label="Button">
                   Get Started
                 </button>
               </div>
@@ -325,10 +325,10 @@ const CloudMigrationPage: React.FC = () => {
             Join hundreds of businesses that have successfully migrated to the cloud with our expert team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg">
+            <button className="cyber-button px-8 py-4 text-lg" aria-label="Button">
               Get Free Assessment
             </button>
-            <button className="cyber-button-outline px-8 py-4 text-lg">
+            <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Button">
               Contact Our Experts
             </button>
           </div>

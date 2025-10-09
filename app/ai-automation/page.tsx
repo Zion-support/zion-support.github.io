@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { CheckCircle, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -124,10 +124,10 @@ const AIAutomationPage: React.FC = () => {
               Transform your business operations with intelligent automation that learns, adapts, and optimizes your processes in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg">
+              <button className="cyber-button px-8 py-4 text-lg" aria-label="Button">
                 Start Free Trial
               </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
+              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Button">
                 Watch Demo
               </button>
             </div>
@@ -246,7 +246,7 @@ const AIAutomationPage: React.FC = () => {
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                }`} aria-label="Button">
                   Get Started
                 </button>
               </div>
@@ -263,10 +263,10 @@ const AIAutomationPage: React.FC = () => {
             Join thousands of businesses already using AI automation to streamline their operations and boost productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg">
+            <button className="cyber-button px-8 py-4 text-lg" aria-label="Button">
               Start Free Trial
             </button>
-            <button className="cyber-button-outline px-8 py-4 text-lg">
+            <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Button">
               Contact Sales
             </button>
           </div>

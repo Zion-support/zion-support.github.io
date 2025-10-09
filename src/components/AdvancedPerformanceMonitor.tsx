@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -135,12 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
-      console.log('Slow resources:', slowResources.map(r => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize
-        }))
-      );
+
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {

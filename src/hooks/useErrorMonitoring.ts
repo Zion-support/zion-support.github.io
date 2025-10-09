@@ -12,7 +12,7 @@ export const useErrorMonitoring = () => {
   // const { trackError } = useAnalytics();
   const reportError = useCallback(
     (error: Error, context?: string) => {
-      console.error('Error reported:', error, context);
+
       // trackError(error, context);
     },
     []

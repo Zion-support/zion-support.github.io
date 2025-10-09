@@ -339,7 +339,7 @@ const AIContractIntelligence2026 = () =>
                     <span className="text-left">Compliance<
                   </div>
                 </div>
-                <button className="text-left">
+                <button className="text-left" aria-label="Button">
                   <Share2 className="text-left" />
                   <span>Share<
                 </button>

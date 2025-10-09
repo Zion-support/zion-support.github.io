@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
@@ -72,7 +72,7 @@ const PWAInstaller: React.FC = () => {
             </div>
           </div>
           <button
-            onClick={handleDismiss}
+            onClick={useCallback(handleDismiss, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(handleDismiss, [])(e); } }}
             className="text-gray-400 hover:text-white transition-colors"
             aria-label="Dismiss install prompt"
           >
@@ -81,13 +81,13 @@ const PWAInstaller: React.FC = () => {
         </div>
         <div className="space-y-2">
           <button
-            onClick={handleInstallClick}
+            onClick={useCallback(handleInstallClick, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(handleInstallClick, [])(e); } }}
             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
           >
             Install Now
           </button>
           <button
-            onClick={handleDismiss}
+            onClick={useCallback(handleDismiss, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(handleDismiss, [])(e); } }}
             className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
           >
             Not Now

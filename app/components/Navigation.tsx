@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -181,7 +181,7 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={useCallback(() => setIsOpen(!isOpen), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(!isOpen), [])(e); } }}
             className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
             aria-label="Toggle menu"
           >
@@ -198,7 +198,7 @@ const Navigation: React.FC = () => {
                   key={item.name}
                   href={item.href}
                   className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  onClick={() => setIsOpen(false)}
+                  onClick={useCallback(() => setIsOpen(false), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(false), [])(e); } }}
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
@@ -214,7 +214,7 @@ const Navigation: React.FC = () => {
                       key={service.name}
                       href={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
-                      onClick={() => setIsOpen(false)}
+                      onClick={useCallback(() => setIsOpen(false), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(false), [])(e); } }}
                     >
                       <service.icon className="w-4 h-4" />
                       <span className="text-sm">{service.name}</span>
@@ -231,7 +231,7 @@ const Navigation: React.FC = () => {
                       key={service.name}
                       href={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
-                      onClick={() => setIsOpen(false)}
+                      onClick={useCallback(() => setIsOpen(false), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(false), [])(e); } }}
                     >
                       <service.icon className="w-4 h-4" />
                       <span className="text-sm">{service.name}</span>
@@ -248,7 +248,7 @@ const Navigation: React.FC = () => {
                       key={service.name}
                       href={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
-                      onClick={() => setIsOpen(false)}
+                      onClick={useCallback(() => setIsOpen(false), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(false), [])(e); } }}
                     >
                       <service.icon className="w-4 h-4" />
                       <span className="text-sm">{service.name}</span>
@@ -261,7 +261,7 @@ const Navigation: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
+                  onClick={useCallback(() => setIsOpen(false), [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setIsOpen(false), [])(e); } }}
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call +1 302 464 0950</span>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 const ContentShowcase: React.FC = () => {
   return (
     <div className="bg-white py-16 px-4">

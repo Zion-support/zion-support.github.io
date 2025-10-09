@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Sparkles, ArrowRight, Star } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {

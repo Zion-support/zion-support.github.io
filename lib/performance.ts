@@ -165,8 +165,8 @@ function sendToAnalytics(metric: Metric): void {
   }
     });
   }
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', metric.name, {
       event_category: 'Web Vitals',
       event_label: performanceMetric.rating,
       value: Math.round(metric.value),
@@ -174,8 +174,8 @@ function sendToAnalytics(metric: Metric): void {
     });
   }
   // Send to analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', metric.name, {
       event_category: 'Web Vitals',
       event_label: metric.id,
       value: Math.round(metric.value),
@@ -183,8 +183,8 @@ function sendToAnalytics(metric: Metric): void {
     });
   }
   // Send to analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', metric.name, {
       event_category: 'Web Vitals',
       event_label: metric.id,
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
@@ -259,8 +259,8 @@ export function generatePerformanceReport(): PerformanceReport {
  * Get current performance report
  */
       event_category: 'Performance'
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'timing_complete', {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', 'timing_complete', {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance',
@@ -274,8 +274,8 @@ export function generatePerformanceReport(): PerformanceReport {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance'
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'timing_complete', {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', 'timing_complete', {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance'
@@ -284,13 +284,13 @@ export function generatePerformanceReport(): PerformanceReport {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance'
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'timing_complete', {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', 'timing_complete', {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance'
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'timing_complete', {
+  if (typeof window !== 'undefined' && (window as Window & typeof globalThis).gtag) {
+    (window as Window & typeof globalThis).gtag('event', 'timing_complete', {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance',

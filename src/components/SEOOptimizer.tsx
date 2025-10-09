@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -80,7 +80,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (data: any) => {
+  const addStructuredData = (data: React.MouseEvent<HTMLElement>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);

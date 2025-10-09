@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 const ContentStatistics: React.FC = () => {
   const stats = [
     {

@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as Window & typeof globalThis).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -136,7 +136,11 @@ const HomePage: React.FC = () => {
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>
-      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+      
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
@@ -190,7 +194,7 @@ const HomePage: React.FC = () => {
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
-                onClick={handlePhoneClick}
+                onClick={handlePhoneClick} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { handlePhoneClick(e); } }}
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
             >
@@ -1393,7 +1397,7 @@ const HomePage: React.FC = () => {
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Enter your full name"
                       required
-                    />
+                    aria-describedby="input-help" />
                   </div>
                   
                   <div>
@@ -1407,7 +1411,7 @@ const HomePage: React.FC = () => {
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Enter your email"
                       required
-                    />
+                    aria-describedby="input-help" />
                   </div>
                   
                   <div>
@@ -1420,7 +1424,7 @@ const HomePage: React.FC = () => {
                       name="phone"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Enter your phone number"
-                    />
+                    aria-describedby="input-help" />
                   </div>
                   
                   <div>

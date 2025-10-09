@@ -1,5 +1,5 @@
 import { Home, Phone } from 'lucide-react';
-export default function NotFound() {
+const NotFound = React.memo(function NotFound() {
   const popularPages = [
     {
       title: 'Home',
@@ -111,4 +111,6 @@ export default function NotFound() {
       </div>
     </div>
   );
-}
+});
+
+export default $1;

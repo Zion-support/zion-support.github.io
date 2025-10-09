@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {

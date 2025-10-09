@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useRef, useEffect } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
   id: string;
@@ -16,7 +16,7 @@ interface BlogPost {
     engagement: number;
   };
 }
-export default function BlogPage() {
+const BlogPage = React.memo(function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -167,7 +167,7 @@ export default function BlogPage() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+               onClick={useCallback(() => setSelectedCategory(category), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => setSelectedCategory(category), [])(e); } }}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
@@ -229,4 +229,6 @@ export default function BlogPage() {
       </div>
     </div>
   );
-}
+});
+
+export default $1;

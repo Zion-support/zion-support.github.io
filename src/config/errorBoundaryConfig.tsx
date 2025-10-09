@@ -3,7 +3,7 @@
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
  */
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -106,13 +106,13 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         )}
         <div className="mt-6 flex gap-4">
           <button
-            onClick={resetError}
+            onClick={useCallback(resetError, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(resetError, [])(e); } }}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
+           aria-label="Button">
             Try Again
           </button>
           <button
-            onClick={() => (window.location.href = '/')}
+             onClick={useCallback(() => (window.location.href = '/'), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => (window.location.href = '/'), [])(e); } }}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Home
@@ -150,9 +150,9 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </p>
         <div className="mt-6">
           <button
-            onClick={resetError}
+            onClick={useCallback(resetError, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(resetError, [])(e); } }}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
+           aria-label="Button">
             Retry Connection
           </button>
         </div>
@@ -174,13 +174,13 @@ function NotFoundFallback(): JSX.Element {
         </p>
         <div className="mt-6 flex gap-4 justify-center">
           <button
-            onClick={() => (window.location.href = '/')}
+             onClick={useCallback(() => (window.location.href = '/'), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => (window.location.href = '/'), [])(e); } }}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Go Home
           </button>
           <button
-            onClick={() => window.history.back()}
+             onClick={useCallback(() => window.history.back(), [])} aria-label="Button" onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(() => window.history.back(), [])(e); } }}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Back

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function About() {
+const About = React.memo(function About() {
   return (
     <>
       <Head>
@@ -221,4 +221,6 @@ export default function About() {
       </div>
     </>
   );
-}
+});
+
+export default $1;

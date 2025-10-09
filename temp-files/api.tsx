@@ -1,6 +1,6 @@
 import { Zap } from 'lucide-react';
 import { ArrowRight, Zap } from 'lucide-react';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 const API: React.FC = () => {

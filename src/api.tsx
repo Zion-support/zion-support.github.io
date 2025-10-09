@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 const API: React.FC = () => {
   const apiEndpoints = [
     {

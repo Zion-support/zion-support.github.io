@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+
     }
 
     // Call custom error handler if provided
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Send error to analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as Window & typeof globalThis).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
       });
@@ -64,14 +64,18 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-4">
               <button
-                onClick={() => window.location.reload()}
+                onClick={useCallback(() => window.location.reload(), [])} 
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { window.location.reload(); } }}
                 className="bg-cyan-400 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition-colors"
+                aria-label="Refresh Page"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={useCallback(() => window.location.href = '/', [])} 
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { window.location.href = '/'; } }}
                 className="block w-full text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                aria-label="Go to Home Page"
               >
                 Go to Homepage
               </button>

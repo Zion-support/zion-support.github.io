@@ -3,7 +3,7 @@
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
@@ -129,7 +129,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      console.error('Error updating metrics:', error);
+
     }
   }, []);
   // Initialize monitoring
@@ -242,9 +242,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
           {enableExport && (
             <button
-              onClick={handleExport}
+              onClick={handleExport} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { handleExport(e); } }}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+             aria-label="Button">
               Export Data
             </button>
           )}

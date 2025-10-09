@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;

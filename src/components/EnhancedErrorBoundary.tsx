@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { useCallback, useMemo } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -145,22 +145,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="space-y-4">
               {canRetry && (
                 <button
-                  onClick={this.handleRetry}
+                  onClick={useCallback(this.handleRetry, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleRetry, [])(e); } }}
                   className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
+                 aria-label="Button">
                   Try Again ({this.maxRetries - retryCount} attempts left)
                 </button>
               )}
               <button
-                onClick={this.handleReload}
+                onClick={useCallback(this.handleReload, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleReload, [])(e); } }}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
+               aria-label="Button">
                 Try Again
               </button>
               <button
-                onClick={this.handleGoHome}
+                onClick={useCallback(this.handleGoHome, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.handleGoHome, [])(e); } }}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
+               aria-label="Button">
                 Go Home
               </button>
             </div>
@@ -175,9 +175,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </pre>
                 <button
                   id="copy-error-details"
-                  onClick={this.copyErrorDetails}
+                  onClick={useCallback(this.copyErrorDetails, [])} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { useCallback(this.copyErrorDetails, [])(e); } }}
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
+                 aria-label="Button">
                   Copy Error Details
                 </button>
               </details>
