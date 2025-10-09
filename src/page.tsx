@@ -75,6 +75,127 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
+      title: 'AI Writing Assistant Pro',
+      description: 'Advanced AI-powered writing tool for content creation, editing, and optimization',
+      icon: '✍️',
+      price: '$89/month',
+      features: ['Content generation', 'Grammar checking', 'Style optimization', 'SEO writing', 'Multi-language support', 'Brand voice consistency'],
+      benefits: ['10x faster writing', '95% error reduction', 'SEO-optimized content', 'Consistent brand voice'],
+      link: '/ai-writing-assistant',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      title: 'AI CRM Intelligence',
+      description: 'Smart CRM with AI-powered customer insights and automated sales processes',
+      icon: '👥',
+      price: '$299/month',
+      features: ['Customer analytics', 'Lead scoring', 'Sales forecasting', 'Automated follow-ups', 'Sentiment analysis', 'Churn prediction'],
+      benefits: ['40% better conversions', 'Automated workflows', 'Customer insights', 'Sales optimization'],
+      link: '/ai-crm',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'AI-powered healthcare management and patient care optimization system',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Patient monitoring', 'Diagnostic assistance', 'Treatment optimization', 'Medical imaging analysis', 'Health records management', 'Appointment scheduling'],
+      benefits: ['95% diagnostic accuracy', 'Faster patient care', 'Reduced errors', 'Cost savings'],
+      link: '/ai-healthcare',
+      popular: false,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Fintech Analyzer',
+      description: 'Advanced financial analysis and fraud detection with AI-powered insights',
+      icon: '💳',
+      price: '$349/month',
+      features: ['Fraud detection', 'Risk assessment', 'Credit scoring', 'Algorithmic trading', 'Regulatory compliance', 'Real-time analytics'],
+      benefits: ['99.9% fraud detection', 'Real-time processing', 'Regulatory compliance', 'Risk mitigation'],
+      link: '/ai-fintech',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Mobile App Builder',
+      description: 'Create intelligent mobile applications with AI-powered features and automation',
+      icon: '📱',
+      price: '$499/month',
+      features: ['AI integration', 'Smart features', 'User behavior analysis', 'Personalization', 'Voice recognition', 'Image processing'],
+      benefits: ['Enhanced user experience', 'Smart automation', 'Personalized content', 'Advanced features'],
+      link: '/ai-mobile-app-development',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      title: 'AI Cybersecurity Shield',
+      description: 'AI-powered threat detection and prevention system for enterprise security',
+      icon: '🛡️',
+      price: '$399/month',
+      features: ['Threat detection', 'Anomaly detection', 'Behavioral analysis', 'Incident response', 'Risk assessment', 'Compliance monitoring'],
+      benefits: ['99.9% threat detection', 'Real-time monitoring', 'Automated response', 'Reduced false positives'],
+      link: '/ai-cybersecurity',
+      popular: true,
+      category: 'Security'
+    },
+    {
+      title: 'AI Marketing Automation',
+      description: 'Complete marketing automation platform with AI-powered campaign optimization',
+      icon: '📈',
+      price: '$249/month',
+      features: ['Campaign automation', 'Lead scoring', 'Email marketing', 'Social media management', 'A/B testing', 'ROI tracking'],
+      benefits: ['300% more leads', '50% better conversion', 'Automated nurturing', 'ROI optimization'],
+      link: '/ai-marketing',
+      popular: true,
+      category: 'Marketing'
+    },
+    {
+      title: 'AI Task Manager Pro',
+      description: 'Intelligent task management with AI-powered prioritization and automation',
+      icon: '✅',
+      price: '$149/month',
+      features: ['Smart prioritization', 'Automated scheduling', 'Progress tracking', 'Team collaboration', 'Deadline management', 'Productivity analytics'],
+      benefits: ['50% productivity boost', 'Better organization', 'Automated workflows', 'Team efficiency'],
+      link: '/task-manager-pro',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Expense Tracker',
+      description: 'AI-powered expense management and financial tracking for businesses',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Expense tracking', 'Receipt OCR', 'Budget management', 'Approval workflows', 'Reporting & analytics', 'Integration APIs'],
+      benefits: ['Automated tracking', 'Cost control', 'Compliance', 'Financial insights'],
+      link: '/expense-tracker',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Chatbot Builder',
+      description: 'Create intelligent chatbots with natural language processing and automation',
+      icon: '🤖',
+      price: '$179/month',
+      features: ['Natural language processing', 'Multi-language support', 'Integration APIs', 'Analytics dashboard', 'Custom training', 'Human handoff'],
+      benefits: ['24/7 customer support', '90% query resolution', 'Cost savings', 'Better customer experience'],
+      link: '/ai-chatbot-builder',
+      popular: true,
+      category: 'Support'
+    },
+    {
+      title: 'AI Data Analytics Pro',
+      description: 'Advanced data analytics platform with AI-powered insights and predictions',
+      icon: '📊',
+      price: '$299/month',
+      features: ['Predictive analytics', 'Data visualization', 'Real-time dashboards', 'Custom reports', 'Machine learning', 'API integration'],
+      benefits: ['Better insights', 'Faster decisions', 'Predictive capabilities', 'Data-driven culture'],
+      link: '/ai-data-analytics',
+      popular: true,
+      category: 'Analytics'
+    },
+    {
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation and smart scheduling',
       icon: '📱',
@@ -307,6 +428,105 @@ const HomePage: React.FC = () => {
       benefits: ['40% better predictions', '60% faster insights', 'ROI tracking', 'Scalable models']
     },
     {
+      title: 'AI-Powered Business Intelligence',
+      description: 'Advanced business intelligence with AI-driven insights and automated reporting',
+      icon: BarChart,
+      price: '$3,200/month',
+      features: ['AI Insights', 'Automated Reporting', 'Predictive Analytics', 'Real-time Dashboards', 'Data Integration', 'Custom Visualizations'],
+      color: 'text-blue-400',
+      benefits: ['50% faster insights', 'Automated reporting', 'Better decisions', 'Competitive advantage']
+    },
+    {
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with AI-powered optimization and forecasting',
+      icon: Globe,
+      price: '$4,500/month',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment', 'Cost Optimization'],
+      color: 'text-green-400',
+      benefits: ['30% cost reduction', '95% accuracy', 'Risk mitigation', 'Efficiency gains']
+    },
+    {
+      title: 'AI Quality Assurance',
+      description: 'Automated quality control and testing with AI-powered defect detection',
+      icon: Shield,
+      price: '$2,800/month',
+      features: ['Automated Testing', 'Defect Detection', 'Quality Metrics', 'Process Optimization', 'Compliance Monitoring', 'Performance Analysis'],
+      color: 'text-red-400',
+      benefits: ['90% defect reduction', 'Faster testing', 'Cost savings', 'Quality improvement']
+    },
+    {
+      title: 'AI Human Resources',
+      description: 'Intelligent HR management with AI-powered recruitment and employee analytics',
+      icon: Users,
+      price: '$2,200/month',
+      features: ['Talent Acquisition', 'Employee Analytics', 'Performance Management', 'Retention Analysis', 'Skills Assessment', 'Workforce Planning'],
+      color: 'text-orange-400',
+      benefits: ['50% better hiring', 'Employee satisfaction', 'Retention improvement', 'Workforce optimization']
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'AI-powered legal research, document analysis, and compliance management',
+      icon: FileText,
+      price: '$3,500/month',
+      features: ['Legal Research', 'Document Analysis', 'Compliance Monitoring', 'Contract Review', 'Risk Assessment', 'Case Law Analysis'],
+      color: 'text-indigo-400',
+      benefits: ['80% time savings', 'Better accuracy', 'Cost reduction', 'Compliance assurance']
+    },
+    {
+      title: 'AI Real Estate Analytics',
+      description: 'Intelligent real estate market analysis and property valuation with AI',
+      icon: Home,
+      price: '$2,600/month',
+      features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Risk Assessment', 'Trend Prediction', 'Portfolio Optimization'],
+      color: 'text-teal-400',
+      benefits: ['Accurate valuations', 'Market insights', 'Investment optimization', 'Risk mitigation']
+    },
+    {
+      title: 'AI Manufacturing Intelligence',
+      description: 'Smart manufacturing with AI-powered process optimization and predictive maintenance',
+      icon: Factory,
+      price: '$4,200/month',
+      features: ['Predictive Maintenance', 'Process Optimization', 'Quality Control', 'Supply Chain Management', 'Energy Optimization', 'Safety Monitoring'],
+      color: 'text-amber-400',
+      benefits: ['25% efficiency gain', 'Reduced downtime', 'Cost savings', 'Safety improvement']
+    },
+    {
+      title: 'AI Transportation & Logistics',
+      description: 'Intelligent transportation management with AI-powered route optimization and fleet management',
+      icon: Truck,
+      price: '$3,800/month',
+      features: ['Route Optimization', 'Fleet Management', 'Demand Forecasting', 'Fuel Optimization', 'Driver Analytics', 'Maintenance Scheduling'],
+      color: 'text-cyan-400',
+      benefits: ['20% fuel savings', 'Route optimization', 'Fleet efficiency', 'Cost reduction']
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning platform with AI-powered adaptive education and assessment',
+      icon: GraduationCap,
+      price: '$2,400/month',
+      features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Content Recommendation', 'Learning Analytics', 'Skill Gap Analysis'],
+      color: 'text-pink-400',
+      benefits: ['Better learning outcomes', 'Personalized experience', 'Progress tracking', 'Skill development']
+    },
+    {
+      title: 'AI Energy Management',
+      description: 'Smart energy management with AI-powered optimization and consumption analytics',
+      icon: Zap,
+      price: '$2,900/month',
+      features: ['Energy Optimization', 'Consumption Analytics', 'Predictive Maintenance', 'Demand Response', 'Renewable Integration', 'Cost Analysis'],
+      color: 'text-yellow-400',
+      benefits: ['30% energy savings', 'Cost reduction', 'Sustainability', 'Efficiency gains']
+    },
+    {
+      title: 'AI Insurance Analytics',
+      description: 'Intelligent insurance risk assessment and claims processing with AI',
+      icon: Shield,
+      price: '$3,600/month',
+      features: ['Risk Assessment', 'Claims Processing', 'Fraud Detection', 'Underwriting', 'Customer Analytics', 'Policy Optimization'],
+      color: 'text-emerald-400',
+      benefits: ['Accurate risk assessment', 'Faster claims', 'Fraud prevention', 'Cost reduction']
+    },
+    {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding',
       icon: MessageSquare,
@@ -416,6 +636,105 @@ const HomePage: React.FC = () => {
       features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Auto-scaling', 'Disaster Recovery'],
       color: 'text-blue-400',
       benefits: ['50% cost reduction', '99.9% uptime', 'Global deployment', '24/7 monitoring']
+    },
+    {
+      title: 'Enterprise Security Solutions',
+      description: 'Comprehensive security solutions for enterprise-grade protection',
+      icon: Shield,
+      price: '$3,500/month',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Incident Response', 'Threat Intelligence', 'Security Training'],
+      color: 'text-red-400',
+      benefits: ['99.9% threat detection', 'Compliance ready', 'Risk mitigation', '24/7 monitoring']
+    },
+    {
+      title: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure design, implementation, and management',
+      icon: Settings,
+      price: '$2,800/month',
+      features: ['Infrastructure Design', 'Server Management', 'Network Setup', 'Storage Solutions', 'Backup & Recovery', 'Performance Monitoring'],
+      color: 'text-green-400',
+      benefits: ['99.9% uptime', 'Scalable infrastructure', 'Cost optimization', 'Proactive maintenance']
+    },
+    {
+      title: 'Data Center Solutions',
+      description: 'Enterprise data center design, implementation, and management services',
+      icon: Database,
+      price: '$4,200/month',
+      features: ['Data Center Design', 'Power & Cooling', 'Security Systems', 'Monitoring & Management', 'Disaster Recovery', 'Compliance'],
+      color: 'text-purple-400',
+      benefits: ['High availability', 'Energy efficiency', 'Security compliance', 'Scalable design']
+    },
+    {
+      title: 'Network Security & Firewall',
+      description: 'Advanced network security with next-generation firewall solutions',
+      icon: Lock,
+      price: '$2,200/month',
+      features: ['Firewall Management', 'Intrusion Detection', 'VPN Solutions', 'Network Monitoring', 'Threat Prevention', 'Compliance'],
+      color: 'text-orange-400',
+      benefits: ['Advanced threat protection', 'Network visibility', 'Compliance ready', '24/7 monitoring']
+    },
+    {
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting and digital transformation advisory services',
+      icon: Briefcase,
+      price: '$2,500/month',
+      features: ['Digital Strategy', 'Technology Roadmap', 'Architecture Design', 'Vendor Selection', 'Change Management', 'ROI Analysis'],
+      color: 'text-indigo-400',
+      benefits: ['Strategic guidance', 'Technology alignment', 'Cost optimization', 'Future-proofing']
+    },
+    {
+      title: 'Managed IT Services',
+      description: 'Comprehensive managed IT services for complete business support',
+      icon: Users,
+      price: '$1,800/month',
+      features: ['24/7 Support', 'Remote Monitoring', 'Proactive Maintenance', 'Help Desk', 'Software Management', 'Security Updates'],
+      color: 'text-cyan-400',
+      benefits: ['Reduced downtime', 'Cost predictability', 'Expert support', 'Proactive maintenance']
+    },
+    {
+      title: 'Cloud Security & Compliance',
+      description: 'Specialized cloud security and compliance management services',
+      icon: Shield,
+      price: '$2,600/month',
+      features: ['Cloud Security Assessment', 'Compliance Auditing', 'Data Protection', 'Access Management', 'Security Monitoring', 'Incident Response'],
+      color: 'text-amber-400',
+      benefits: ['Cloud security', 'Compliance assurance', 'Data protection', 'Risk mitigation']
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset lifecycle management and optimization',
+      icon: BarChart,
+      price: '$1,500/month',
+      features: ['Asset Discovery', 'Inventory Management', 'License Management', 'Cost Optimization', 'Lifecycle Planning', 'Compliance Tracking'],
+      color: 'text-teal-400',
+      benefits: ['Cost optimization', 'License compliance', 'Asset visibility', 'Lifecycle management']
+    },
+    {
+      title: 'Backup & Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions for business continuity',
+      icon: Database,
+      price: '$1,900/month',
+      features: ['Automated Backups', 'Disaster Recovery Planning', 'Data Replication', 'Recovery Testing', 'Cloud Backup', 'Business Continuity'],
+      color: 'text-pink-400',
+      benefits: ['Data protection', 'Quick recovery', 'Business continuity', 'Compliance ready']
+    },
+    {
+      title: 'IT Training & Support',
+      description: 'Comprehensive IT training and user support services',
+      icon: GraduationCap,
+      price: '$1,200/month',
+      features: ['User Training', 'Technical Support', 'Documentation', 'Best Practices', 'Security Awareness', 'Software Training'],
+      color: 'text-violet-400',
+      benefits: ['User empowerment', 'Reduced support tickets', 'Better adoption', 'Security awareness']
+    },
+    {
+      title: 'IT Performance Optimization',
+      description: 'IT infrastructure performance optimization and tuning services',
+      icon: Zap,
+      price: '$2,300/month',
+      features: ['Performance Analysis', 'System Tuning', 'Capacity Planning', 'Optimization', 'Monitoring Setup', 'Performance Reports'],
+      color: 'text-yellow-400',
+      benefits: ['Improved performance', 'Cost optimization', 'Better efficiency', 'Proactive monitoring']
     },
     {
       title: 'Cybersecurity',
