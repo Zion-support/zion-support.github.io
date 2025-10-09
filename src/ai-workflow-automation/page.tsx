@@ -224,7 +224,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 

@@ -225,7 +225,6 @@ const AISalesAutomationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 

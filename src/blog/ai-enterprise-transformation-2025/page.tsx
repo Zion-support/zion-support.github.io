@@ -2,14 +2,7 @@ import React from 'react';
 const EnterpriseTransformationPage: React.FC = () => {
 
   return (
-<<<<<<< HEAD:app/blog/ai-enterprise-transformation-2025/page.tsx
-
-    <>
-
-      <div className="min-h-screen bg-gray-50">
-=======
-    <div className="min-h-screen bg-gray-50">
->>>>>>> origin/main:src/blog/ai-enterprise-transformation-2025/page.tsx
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">

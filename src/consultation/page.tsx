@@ -463,7 +463,6 @@ const ConsultationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 

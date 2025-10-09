@@ -140,12 +140,7 @@ const IoTEdgePage: React.FC = () => {
   const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD:app/iot-edge/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
->>>>>>> origin/main:src/iot-edge/page.tsx
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

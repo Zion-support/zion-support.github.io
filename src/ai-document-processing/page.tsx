@@ -294,7 +294,6 @@ const AIDocumentProcessingPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 export default AIDocumentProcessingPage;

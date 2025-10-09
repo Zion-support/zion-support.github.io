@@ -140,12 +140,7 @@ const BlockchainPage: React.FC = () => {
   const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD:app/blockchain/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
->>>>>>> origin/main:src/blockchain/page.tsx
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

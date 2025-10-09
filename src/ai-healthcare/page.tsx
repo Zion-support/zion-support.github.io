@@ -140,12 +140,7 @@ const AIHealthcarePage: React.FC = () => {
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD:app/ai-healthcare/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
->>>>>>> origin/main:src/ai-healthcare/page.tsx
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -363,7 +358,7 @@ const AIHealthcarePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+    </div>
   );
 };
 

@@ -31,10 +31,7 @@
     "postbuild": "echo \"Build completed successfully\"",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
-<<<<<<< HEAD
     "optimize": "node scripts/performance-optimizer.cjs",
-=======
->>>>>>> origin/main
     "build:ci": "pnpm run build:no-check && pnpm run test:ci",
     "health-check": "pnpm run type-check && pnpm run lint && pnpm run build:no-check",
     "audit:performance": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
@@ -96,11 +93,7 @@
     "predeploy": "pnpm run deploy:check",
     "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
     "check:performance": "pnpm run build && du -sh dist",
-<<<<<<< HEAD
-    "build:optimized": "npm run build && npm run optimize",
-=======
     "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096 --no-warnings\" vite build --mode production --minify terser",
->>>>>>> origin/main
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild"
   },
   "dependencies": {

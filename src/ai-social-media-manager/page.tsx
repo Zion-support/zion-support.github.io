@@ -359,7 +359,6 @@ const AISocialMediaManagerPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

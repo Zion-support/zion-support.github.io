@@ -221,7 +221,6 @@ const AICybersecurityPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 

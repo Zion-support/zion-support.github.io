@@ -352,7 +352,6 @@ const AIEmailMarketingPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

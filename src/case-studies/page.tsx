@@ -71,12 +71,7 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD:app/case-studies/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
->>>>>>> origin/main:src/case-studies/page.tsx
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

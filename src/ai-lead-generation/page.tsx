@@ -294,7 +294,6 @@ const AILeadGenerationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 export default AILeadGenerationPage;

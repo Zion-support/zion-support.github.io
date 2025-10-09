@@ -140,12 +140,7 @@ const AIMarketingPage: React.FC = () => {
   const categories = [...new Set(aiMarketingServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD:app/ai-marketing/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
->>>>>>> origin/main:src/ai-marketing/page.tsx
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 to-rose-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

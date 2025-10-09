@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:app/blockchain-web3/page.tsx
 import { CheckCircle } from 'lucide-react';
-=======
 import { CheckCircle, Star, Shield, Zap, Globe, Link, Coins, Database, Brain } from 'lucide-react';
->>>>>>> origin/main:src/blockchain-web3/page.tsx
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
@@ -144,12 +141,7 @@ const BlockchainWeb3Page: React.FC = () => {
   const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD:app/blockchain-web3/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
->>>>>>> origin/main:src/blockchain-web3/page.tsx
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

@@ -124,4 +124,3 @@ export default function AITrends2026FutureEnterpriseTransformation() {
       </div>
     </div>
   );
-}

@@ -1,12 +1,7 @@
 import React from 'react';
 const AIMegaTrends20252026: React.FC = () => {
   return (
-<<<<<<< HEAD:app/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx
-    <>
-      <div className="min-h-screen bg-gray-50">
-=======
-    <div className="min-h-screen bg-gray-50">
->>>>>>> origin/main:src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="text-center mb-8">

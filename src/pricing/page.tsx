@@ -241,7 +241,6 @@ const PricingPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 

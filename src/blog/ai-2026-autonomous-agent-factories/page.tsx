@@ -106,4 +106,3 @@ export default function AI2026AutonomousAgentFactoriesPage() {
       </div>
     </div>
   );
-}

@@ -95,11 +95,8 @@ class ErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
               <button
-<<<<<<< HEAD:app/components/ErrorBoundary.tsx
                 onClick={this.handleGoHome}
-=======
                 onClick={() => window.location.href = '/'}
->>>>>>> origin/main:src/components/ErrorBoundary.tsx
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />

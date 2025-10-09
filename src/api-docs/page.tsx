@@ -46,8 +46,7 @@ const ApiDocsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <Navigation />
         <div className="container mx-auto px-4 py-8">
           {/* Hero Section */}

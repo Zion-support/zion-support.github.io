@@ -319,7 +319,6 @@ const AIProjectManagerPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

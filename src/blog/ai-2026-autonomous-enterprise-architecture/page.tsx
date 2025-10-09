@@ -95,4 +95,3 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
       </div>
     </div>
   );
-}

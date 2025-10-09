@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:app/cybersecurity/page.tsx
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
-=======
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
->>>>>>> origin/main:src/cybersecurity/page.tsx
 
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -144,12 +141,7 @@ const CybersecurityPage: React.FC = () => {
   const categories = [...new Set(securityServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD:app/cybersecurity/page.tsx
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
->>>>>>> origin/main:src/cybersecurity/page.tsx
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

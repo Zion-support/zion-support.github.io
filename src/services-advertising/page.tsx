@@ -343,4 +343,3 @@ export default function ServicesAdvertisingPage() {
       </section>
     </div>
   );
-}

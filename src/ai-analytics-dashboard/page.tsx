@@ -348,7 +348,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

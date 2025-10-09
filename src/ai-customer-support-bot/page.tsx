@@ -352,7 +352,6 @@ const AICustomerSupportBotPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 
