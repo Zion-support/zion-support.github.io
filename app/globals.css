@@ -212,6 +212,243 @@ a {
       0 0 6px #00ffff,
       0 0 9px #00ffff;
   }
+
+  /* Mobile Navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Mobile Cards */
+  .hologram-card,
+  .quantum-card {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  /* Mobile Text Sizes */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .mobile-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .mobile-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .mobile-text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  /* Mobile Grid Adjustments */
+  .mobile-grid-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Mobile Spacing */
+  .mobile-p-2 {
+    padding: 0.5rem;
+  }
+
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+
+  .mobile-p-6 {
+    padding: 1.5rem;
+  }
+
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  /* Mobile Buttons */
+  .mobile-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Mobile Forms */
+  .mobile-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  /* Mobile Images */
+  .mobile-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Mobile Tables */
+  .mobile-table {
+    font-size: 0.75rem;
+    overflow-x: auto;
+  }
+
+  /* Mobile Modals */
+  .mobile-modal {
+    width: 95%;
+    max-width: 500px;
+    margin: 1rem auto;
+  }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tablet-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tablet-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .tablet-text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .tablet-text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* Large Screen Responsive Design */
+@media (min-width: 1025px) {
+  .desktop-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .desktop-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .desktop-text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .desktop-text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .desktop-text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Ultra-wide Screen Support */
+@media (min-width: 1920px) {
+  .ultra-wide-container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .ultra-wide-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .ultra-wide-grid-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break {
+    page-break-before: always;
+  }
+
+  .print-text {
+    color: black !important;
+    background: white !important;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-card {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: rgba(75, 85, 99, 0.3);
+  }
+
+  .dark-mode-text {
+    color: #f9fafb;
+  }
+
+  .dark-mode-bg {
+    background: #111827;
+  }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .landscape-mobile {
+    padding: 0.5rem;
+  }
+
+  .landscape-mobile-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* Portrait Mobile */
+@media (max-width: 768px) and (orientation: portrait) {
+  .portrait-mobile {
+    padding: 1rem;
+  }
+
+  .portrait-mobile-text {
+    font-size: 1rem;
+  }
 }
 
 /* Loading Animation */
