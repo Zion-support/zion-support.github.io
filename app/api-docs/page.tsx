@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 'use client';
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -15,14 +12,10 @@ const ApiDocsPage: React.FC = () => {
     setTimeout(() => setCopiedCode(null), 2000);
   };
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
 import Link from 'next/link';
-=======
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -319,7 +312,6 @@ console.log(result.predictions);`,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </section>
 
         <section className="mb-16">
@@ -369,7 +361,6 @@ console.log(result.predictions);`,
       
       <Footer />
  cursor/analyze-improve-and-deploy-application-cde4
-=======
         </div>
       </section>
 
@@ -516,13 +507,9 @@ console.log(result.predictions);`,
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };
 
 export default ApiDocsPage;
-<<<<<<< HEAD
  cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19

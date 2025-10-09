@@ -226,11 +226,17 @@ const GdprPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-03be
     </div>
   );
 };
 
 export default GdprPage;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-03be
