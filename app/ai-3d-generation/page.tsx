@@ -8,52 +8,40 @@ import Footer from '../components/Footer';
 const,
   AI3DGenerationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
-      titl,
-  e: 'Architecture & Real Estate',
-      descriptio,
-  n: 'Create 3D visualizations and virtual tours',
-      ico,
-  n: '🏗️',
-      example,
-  s: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
-      titl,
-  e: 'E-commerce',
-      descriptio,
-  n: 'Generate product visualizations and AR experiences',
-      ico,
-  n: '🛒',
-      example,
-  s: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
-      titl,
-  e: 'Education & Training',
-      descriptio,
-  n: 'Create interactive 3D learning materials',
-      ico,
-  n: '📚',
-      example,
-  s: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
-      titl,
-  e: 'Entertainment & Media',
-      descriptio,
-  n: 'Produce 3D content for films and animations',
-      ico,
-  n: '🎬',
-      example,
-  s: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
-      titl,
-  e: 'Manufacturing',
-      descriptio,
-  n: 'Design and prototype products in 3D',
-      ico,
-  n: '🏭',
-      example,
-  s: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
 
+    {
+      title: 'Architecture & Real Estate',
+      description: 'Create 3D visualizations and virtual tours',
+      icon: '🏗️',
+      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+    },
+    {
+      title: 'E-commerce',
+      description: 'Generate product visualizations and AR experiences',
+      icon: '🛒',
+      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+    },
+    {
+      title: 'Education & Training',
+      description: 'Create interactive 3D learning materials',
+      icon: '📚',
+      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+    },
+    {
+      title: 'Entertainment & Media',
+      description: 'Produce 3D content for films and animations',
+      icon: '🎬',
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+    },
+    {
+      title: 'Manufacturing',
+      description: 'Design and prototype products in 3D',
+      icon: '🏭',
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
   ];
 
-
-  const capabilities = [
+  const features = [
 
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
@@ -294,5 +282,6 @@ const,
 
 
 export default AI3DGenerationPage;"`
+
 
 
