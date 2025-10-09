@@ -408,4 +408,8 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-0133
 export default Footer;
