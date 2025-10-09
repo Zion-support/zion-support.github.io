@@ -170,7 +170,7 @@ const ContentStatistics: React.FC = () => {
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Content Categories</h3>
             <div className="space-y-4">
-              {stats.topCategories.map((category, index) => (
+              {stats.topCategories.map((category) => (
                 <div key={category.name} className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-3 h-3 rounded-full bg-indigo-500 mr-3"></div>
@@ -228,7 +228,7 @@ const ContentStatistics: React.FC = () => {
         <div className="mt-8 bg-gray-50 rounded-xl p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-6">Content Growth Trend</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {stats.monthlyGrowth.map((month, index) => (
+            {stats.monthlyGrowth.map((month) => (
               <div key={month.month} className="text-center">
                 <div className="text-sm text-gray-600 mb-2">{month.month}</div>
                 <div className="bg-indigo-500 rounded-t-lg mx-auto mb-2" style={{ height: `${(month.views / 40000) * 100}px`, width: '20px' }}></div>

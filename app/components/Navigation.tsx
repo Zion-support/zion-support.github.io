@@ -1,40 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-fe44
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
-=======
-import { ChevronDown, Menu, X } from 'lucide-react';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,45 +23,6 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false);
   };
 
-<<<<<<< HEAD
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
-    }
-  };
-
-  const aiServices = [
-    { name: 'AI Consulting', href: '/ai-services', icon: Brain },
-    { name: 'Machine Learning', href: '/ai-services', icon: Brain },
-    { name: 'Natural Language Processing', href: '/ai-services', icon: Brain },
-    { name: 'Computer Vision', href: '/ai-services', icon: Brain },
-    { name: 'Predictive Analytics', href: '/ai-services', icon: BarChart },
-    { name: 'AI Automation', href: '/ai-services', icon: Zap },
-  ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: Cloud },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Code },
-    { name: 'Web Development', href: '/web-development', icon: Code },
-    { name: 'DevOps', href: '/devops', icon: Code },
-  ];
-
-  const emergingTech = [
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Shield },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap },
-    { name: 'IoT Solutions', href: '/iot-solutions', icon: Cloud },
-    { name: 'AR/VR Development', href: '/ar-vr', icon: Code },
-    { name: 'Edge Computing', href: '/edge-computing', icon: Cloud },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Zap },
-  ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
@@ -112,12 +39,6 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
           <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
@@ -168,21 +89,6 @@ const Navigation: React.FC = () => {
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Home
-            </Link>
-<<<<<<< HEAD
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              About
-            </Link>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 =======
@@ -211,20 +117,6 @@ const Navigation: React.FC = () => {
               Home
             </Link>
             
-<<<<<<< HEAD
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
-<<<<<<< HEAD
-                onClick={() => setServicesOpen(!servicesOpen)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"              >
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
                 className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
@@ -259,15 +151,6 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
               </button>
               
-<<<<<<< HEAD
-              {servicesOpen && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 =======
@@ -283,14 +166,6 @@ const Navigation: React.FC = () => {
                           className="block py-2 text-sm text-gray-700 hover:text-cyan-600 transition-colors"
                           onClick={() => setServicesOpen(false)}
                         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          {service.name}                        </Link>
-=======
-                          {service.name}
-                        </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
                           {service.name}
                         </Link>
@@ -314,45 +189,6 @@ const Navigation: React.FC = () => {
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                          </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
-                        </div>
-                        <div className="space-y-2">
-                          {category.services.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
-=======
-              {aiServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setAiServicesOpen(true)}
-                  onMouseLeave={() => setAiServicesOpen(false)}
-                >
-                  {aiServices.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
                     <Link
                       key={index}
                       to={service.href}
@@ -482,8 +318,6 @@ const Navigation: React.FC = () => {
                 Home
               </Link>
               
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
               {/* Services Section */}
               <div className="space-y-2">
                 <div className="text-gray-700 font-semibold text-lg">Services</div>
@@ -512,13 +346,6 @@ const Navigation: React.FC = () => {
                   <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Cybersecurity
                   </Link>
-<<<<<<< HEAD
-                </div>              </div>
-=======
-                </div>
-              </div>
-              
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
@@ -533,10 +360,6 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
                   </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-14d1
@@ -582,13 +405,6 @@ const Navigation: React.FC = () => {
                         <service.icon className="w-4 h-4" />
                         <span>{service.name}</span>
                       </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    ))}                  </div>
-=======
-                    ))}
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
                   </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
@@ -663,51 +479,6 @@ const Navigation: React.FC = () => {
             >
               About
             </Link>
-<<<<<<< HEAD
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Contact
-            </Link>
-            
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center"
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
-
-=======
-            <Link
-              to="/contact"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              onClick={closeAllMenus}
-            >
-              Contact
-            </Link>
-            <Link
-              to="/blog"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              onClick={closeAllMenus}
-            >
-              Blog
-            </Link>
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-          </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -716,15 +487,6 @@ const Navigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        )}
-      </div>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
 =======
@@ -732,36 +494,6 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
-          <div className="lg:hidden py-4 border-t border-gray-700">
-            <div className="space-y-4">
-              <Link
-                to="/"
-                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
-              {/* Services Section */}
-              <div className="space-y-2">
-                <div className="text-gray-300 font-semibold text-lg">Services</div>
-                <div className="ml-4 space-y-2">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.url}
-                      className="block text-gray-400 hover:text-cyan-400 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-=======
-                    ))}
-                  </div>
-                )}
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
               </div>
 
               {/* Mobile IT Services */}
@@ -855,110 +587,6 @@ const Navigation: React.FC = () => {
               </Link>
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
               <Link
-<<<<<<< HEAD
-                to="/contact"
-<<<<<<< HEAD
-                className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium text-center mt-4"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-              
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors font-medium"
-                >
-                  Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {services.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-                        onClick={() => {
-                          setIsOpen(false);
-                          setServicesOpen(false);
-                        }}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link
-                to="/case-studies"
-                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link
-                to="/contact"
-                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-              
-              {/* Mobile CTA */}
-              <Link
-                to="/contact"
-                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-=======
-            {/* Contact Button */}
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
-              onClick={closeAllMenus}
-            >
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled 
-                ? 'text-gray-700 hover:bg-gray-100' 
-                : 'text-white hover:bg-white/10'
-            }`}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
-            <div className="space-y-6">
-              <Link 
-                to="/" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-=======
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
                 onClick={closeAllMenus}
               >
                 Contact
@@ -971,14 +599,6 @@ const Navigation: React.FC = () => {
                 Blog
               </Link>
               
-<<<<<<< HEAD
-              <Link 
-                to="/about" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-=======
-                to="/about"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
                 onClick={closeAllMenus}
               >
                 About
@@ -1025,16 +645,11 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
   );
 };
 
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 export default Navigation;
 =======
   );

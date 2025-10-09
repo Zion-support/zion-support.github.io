@@ -10,11 +10,11 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+// import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
@@ -110,12 +110,8 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       // const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
