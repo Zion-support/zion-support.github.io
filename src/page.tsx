@@ -8,6 +8,8 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import ImageOptimizer from './components/ImageOptimizer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -430,6 +432,11 @@ const HomePage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
+      <PerformanceMonitor 
+        enableReporting={true}
+        enableConsoleLogging={process.env.NODE_ENV === 'development'}
+        enableAnalytics={true}
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}

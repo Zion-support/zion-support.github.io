@@ -9,15 +9,64 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
+Disallow: /static/
 
 # Allow important pages
-Allow: /contact
-Allow: /about
-Allow: /services
 Allow: /ai-services
+Allow: /it-services
+Allow: /about
+Allow: /contact
+Allow: /pricing
 Allow: /blog
+Allow: /case-studies
+
+# Block specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow CSS and JS for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Block duplicate content
+Disallow: /?*
+Disallow: /#*
+
+# Block search parameters
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+
+# Block social media crawlers from certain areas
+User-agent: facebookexternalhit
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Twitterbot
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: LinkedInBot
+Disallow: /admin/
+Disallow: /private/
+
+# Block AI training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /

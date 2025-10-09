@@ -26,6 +26,7 @@ export default defineConfig({
           ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
           utils: ['clsx', 'tailwind-merge'],
           charts: ['recharts'],
+          analytics: ['web-vitals'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -34,16 +35,26 @@ export default defineConfig({
     },
     terserOptions: {
       compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
+        drop_console: process.env.NODE_ENV === 'production',
+        drop_debugger: process.env.NODE_ENV === 'production',
+        pure_funcs: process.env.NODE_ENV === 'production' ? ['console.log', 'console.info'] : [],
         passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
       },
       mangle: {
         safari10: true,
+        properties: {
+          regex: /^_/
+        }
       },
     },
     chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
