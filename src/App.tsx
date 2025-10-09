@@ -1,13 +1,10 @@
 import React, { useEffect, useState, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
-<<<<<<< HEAD
-=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -38,11 +35,6 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-// Lazy load components for better performance
-const _HomePage = lazy(() => import('../app/page'));
-
-// Import enhancement utilities
-
 // Loading component
 const LoadingSpinner: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -61,25 +53,9 @@ const LoadingSpinner: React.FC = () => (
 // Specialized Solutions Pages
 
 // Company Pages
-<<<<<<< HEAD
 
 // Support Pages
 
-
-// Support Pages
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import AboutPage from './about/page';
-import ContactPage from './contact/page';
-import ServicesPage from './services/page';
-import BlogPage from './blog/page';
-import CaseStudiesPage from './case-studies/page';
-
-// Support Pages
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 // Additional Pages
 
 // AI Services
@@ -141,14 +117,14 @@ const App: React.FC = () => {
           numberOfEmployees: '50-100',
           industry: 'Technology',
           services: [
-//             'AI Solutions',
-//             'Quantum Computing',
-//             'Autonomous Systems',
-//             'Digital Transformation',
-//             'Cloud Services',
-//             'Automation',
-//             'Business Intelligence'
-//           ],
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
@@ -229,13 +205,6 @@ const App: React.FC = () => {
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-<<<<<<< HEAD
-      // Continue even if enhancers fail
-      setIsInitialized(true);
-// Silently handle enhancer initialization errors
-      setIsInitialized(true); // Continue even if enhancers fail
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
     }
   };
 
@@ -334,8 +303,8 @@ const NotFoundPage: React.FC = () => (
       <a
         href="/"
         className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-//       >
-//         Go Home
+      >
+        Go Home
       </a>
     </div>
   </div>

@@ -61,19 +61,19 @@ class SecurityEnhancer {
         ? 'max-age=31536000; includeSubDomains; preload' 
         : '',
       'X-Content-Type-Options': this.config.enableContentTypeOptions 
-//         ? 'nosniff' 
+        ? 'nosniff' 
         : '',
       'X-Frame-Options': this.config.enableClickjackingProtection 
-//         ? 'DENY' 
+        ? 'DENY' 
         : '',
       'X-XSS-Protection': this.config.enableXSSProtection 
         ? '1; mode=block' 
         : '',
       'Referrer-Policy': this.config.enableReferrerPolicy 
-//         ? 'strict-origin-when-cross-origin' 
+        ? 'strict-origin-when-cross-origin' 
         : '',
       'Permissions-Policy': this.config.enablePermissionsPolicy 
-//         ? this.generatePermissionsPolicy() 
+        ? this.generatePermissionsPolicy() 
         : '',
       'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Opener-Policy': 'same-origin',

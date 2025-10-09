@@ -201,7 +201,7 @@ class SEOEnhancer {
           name: 'Home',
           item: this.baseUrl
         }
-//       ]
+      ]
     };
 
     // Add breadcrumb structured data
