@@ -93,6 +93,9 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home

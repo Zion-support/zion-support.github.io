@@ -13,3 +13,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+    </div>
+  );
+};
+
+export default AccessibilityEnhancer;
