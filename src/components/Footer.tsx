@@ -83,6 +83,42 @@ const Footer: React.FC = () => {
     { name: 'Demo', url: '/demo' }
   ];
 
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      services: [
+        { name: 'Machine Learning', url: '/machine-learning' },
+        { name: 'Natural Language Processing', url: '/nlp' },
+        { name: 'Computer Vision', url: '/computer-vision' },
+        { name: 'AI Automation', url: '/ai-automation' },
+        { name: 'Quantum AI Computing', url: '/quantum-ai' },
+        { name: 'AI Cybersecurity', url: '/ai-cybersecurity' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      services: [
+        { name: 'Cloud Services', url: '/cloud-services' },
+        { name: 'Cybersecurity', url: '/cybersecurity' },
+        { name: 'DevOps & CI/CD', url: '/devops' },
+        { name: 'Database Services', url: '/database-services' },
+        { name: 'Network Infrastructure', url: '/network-infrastructure' },
+        { name: 'IT Support & Helpdesk', url: '/it-support' }
+      ]
+    },
+    {
+      title: 'Specialized Solutions',
+      services: [
+        { name: 'Quantum Computing', url: '/quantum-computing' },
+        { name: 'Autonomous Systems', url: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', url: '/blockchain' },
+        { name: 'IoT & Edge Computing', url: '/iot-edge' },
+        { name: 'Business Intelligence', url: '/business-intelligence' },
+        { name: 'Robotics Solutions', url: '/robotics' }
+      ]
+    }
+  ];
+
   const supportLinks = [
     { name: 'Contact Us', url: '/contact' },
     { name: 'Support Center', url: '/support' },
@@ -104,9 +140,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -136,99 +172,37 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              Micro SAAS
-            </h3>
-            <ul className="space-y-2">
-              {microSaasServices.map((service) => (
-                <li key={service.name}>
-                  <a href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Micro SAAS →
-            </a>
-          </div>
-
-          {/* AI & IT Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Service Categories */}
+          {serviceCategories.map((category, index) => (
+            <div key={index}>
+              <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+                <Brain className="w-4 h-4 mr-2" />
+                {category.title}
+              </h3>
+              <ul className="space-y-2">
+                {category.services.map((service) => (
+                  <li key={service.name}>
+                    <a href={service.url}
+                      className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      <span>{service.name}</span>
+                      <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+              >
+                View All {category.title} →
+              </a>
             </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Services →
-            </a>
-          </div>
-
-          {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              AI Tools
-            </h3>
-            <ul className="space-y-2">
-              {additionalServices.map((service) => (
-                <li key={service.name}>
-                  <a
-                    href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
 
           {/* Company & Support */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
               <div>
                 <h4 className="text-white font-medium mb-2">Company</h4>
                 <ul className="space-y-1">

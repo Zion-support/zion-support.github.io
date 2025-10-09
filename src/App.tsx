@@ -105,6 +105,7 @@ const SystemStatusPage = lazy(() => import('./system-status/page'));
 const TaskManagerProPage = lazy(() => import('./task-manager-pro/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const TermsPage = lazy(() => import('./terms/page'));
+const SpecializedServicesPage = lazy(() => import('./specialized-services/page'));
 
 // Blog Pages
 const BlogAgentReleaseRunbooksV22026Page = lazy(() => import('./blog/agent-release-runbooks-v2-2026/page'));
@@ -254,6 +255,7 @@ const App: React.FC = () => {
             <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/terms" element={<TermsPage />} />
+            <Route path="/specialized-services" element={<SpecializedServicesPage />} />
             
             {/* Blog Pages */}
             <Route path="/blog/agent-release-runbooks-v2-2026" element={<BlogAgentReleaseRunbooksV22026Page />} />
