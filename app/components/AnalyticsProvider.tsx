@@ -1,29 +1,36 @@
+<<<<<<< HEAD
+=======
+import React, { createContext, useContext, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics
-    const initAnalytics = () => {
-      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-      
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-      document.head.appendChild(script);
-
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
-      }
-      (window as { gtag: typeof gtag }).gtag = gtag;
-      
-      gtag('js', new Date());
-      gtag('config', GA_TRACKING_ID, {
+    // Initialize analytics
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
-        send_page_view: true
       });
+<<<<<<< HEAD
     };
 
     // Track page views
@@ -93,9 +100,36 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
     };
+=======
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
   }, []);
 
-  return <>{children}</>;
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', eventName, parameters);
+    }
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+  };
+
+  const value = {
+    trackEvent,
+    trackPageView,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 
 export default AnalyticsProvider;

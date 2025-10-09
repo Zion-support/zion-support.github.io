@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const LoadingSpinner: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" role="status" aria-label="Loading">
@@ -39,16 +40,33 @@ const LoadingSpinner: React.FC = () => {
 =======
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
+=======
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'gray';
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
   className?: string;
+  text?: string;
+  fullScreen?: boolean;
 }
 
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'primary',
+  className = '',
+  text,
+  fullScreen = false,
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+<<<<<<< HEAD
     lg: 'w-12 h-12'
   };
 
@@ -62,8 +80,49 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <span className="sr-only">Loading...</span>
 >>>>>>> cursor/analyze-improve-and-deploy-application-7970
       </div>
+=======
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
+  };
+
+  const colorClasses = {
+    primary: 'border-blue-500',
+    secondary: 'border-purple-500',
+    white: 'border-white',
+    gray: 'border-gray-500',
+  };
+
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div
+        className={`animate-spin rounded-full border-2 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}
+        role="status"
+        aria-label="Loading"
+      />
+      {text && (
+        <p className={`mt-3 text-sm ${
+          color === 'white' ? 'text-white' : 
+          color === 'gray' ? 'text-gray-500' : 
+          'text-gray-600'
+        }`}>
+          {text}
+        </p>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-white rounded-lg p-8 shadow-xl">
+          {spinner}
+        </div>
+      </div>
+    );
+  }
+
+  return spinner;
 };
 
 export default LoadingSpinner;

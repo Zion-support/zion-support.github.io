@@ -1,65 +1,40 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
-
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-    this.maxRetries = props.maxRetries || 3;
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { 
-      hasError: true, 
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      retryCount: 0
-    };
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
-    
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Enhanced error reporting
-    if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
-    }
   }
 
+<<<<<<< HEAD
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting logic
     const errorReport = {
@@ -149,64 +124,62 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.error('Failed to copy error details');
       });
   };
+=======
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
+<<<<<<< HEAD
       const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 text-center">
+            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
+              Something went wrong
             </h1>
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <div className="space-y-4">
-              {canRetry && (
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
-                  Try Again ({this.maxRetries - retryCount} attempts left)
-                </button>
-              )}
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                Try Again
-              </button>
-              <button
-                onClick={this.handleGoHome}
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
-                Go Home
-              </button>
-            </div>
-            {process.env.NODE_ENV === 'development' && error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500 mb-2">
                   Error Details (Development)
                 </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {error.toString()}
+                <pre className="text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                  {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
-                <button
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
-                  Copy Error Details
-                </button>
               </details>
             )}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <RefreshCw className="w-4 h-4" />
+                <span>Try Again</span>
+              </button>
+              <a
+                href="/"
+                className="flex items-center justify-center space-x-2 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
+              </a>
+            </div>
           </div>
         </div>
       );

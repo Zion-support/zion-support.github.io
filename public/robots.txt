@@ -12,6 +12,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 Disallow: /temp/
 Disallow: /backup/
 
@@ -22,3 +23,26 @@ Allow: /services
 Allow: /contact
 Allow: /blog
 Allow: /case-studies
+=======
+Disallow: /internal/
+
+# Allow important pages
+Allow: /ai-services
+Allow: /it-services
+Allow: /contact
+Allow: /about
+Allow: /blog
+Allow: /case-studies
+
+# Block specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow search engines to access CSS and JS files
+Allow: /static/
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f

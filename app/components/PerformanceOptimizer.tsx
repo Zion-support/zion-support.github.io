@@ -4,25 +4,22 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
+      const criticalImages = [
+        '/og-image.jpg',
+        '/favicon.ico',
+        '/apple-touch-icon.png'
       ];
 
-      criticalResources.forEach(resource => {
+      criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };
 
-    // Optimize images
+    // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
@@ -39,6 +36,7 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(img => imageObserver.observe(img));
     };
 
+<<<<<<< HEAD
     // Optimize fonts
     const optimizeFonts = () => {
       if ('fonts' in document) {
@@ -46,11 +44,31 @@ const PerformanceOptimizer: React.FC = () => {
           document.body.classList.add('fonts-loaded');
         });
       }
+=======
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScroll = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScroll, { passive: true });
+      return () => window.removeEventListener('scroll', updateScroll);
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
+<<<<<<< HEAD
     optimizeFonts();
 
     // Performance monitoring
@@ -75,6 +93,12 @@ const PerformanceOptimizer: React.FC = () => {
         const observer = new PerformanceObserver(() => {});
         observer.disconnect();
       }
+=======
+    const cleanupScroll = optimizeScroll();
+
+    return () => {
+      cleanupScroll();
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
     };
   }, []);
 

@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
-  const aiServices = [
-    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
-    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+  const currentYear = new Date().getFullYear();
+
+  const services = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'Business Intelligence', href: '/business-intelligence' },
+    { name: 'Cloud Services', href: '/cloud-services' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'IT Consulting', href: '/it-consulting' },
+    { name: 'Web Development', href: '/web-development' }
   ];
 
+<<<<<<< HEAD
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
@@ -63,24 +63,68 @@ const Footer: React.FC = memo(() => {
 
   return (
     <footer className="bg-gray-900 text-white">
+=======
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'GDPR Compliance', href: '/gdpr' },
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Security', href: '/security' }
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Developer Tools', href: '/developer-tools' },
+    { name: 'Support', href: '/support' },
+    { name: 'System Status', href: '/system-status' },
+    { name: 'Status', href: '/status' }
+  ];
+
+  return (
+    <footer className="bg-slate-900 text-white">
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
+=======
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
               </div>
-              <span className="text-2xl font-bold">Zion Tech Group</span>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </div>
+<<<<<<< HEAD
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
+=======
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
+<<<<<<< HEAD
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <span>+1 302 464 0950</span>
@@ -110,12 +154,30 @@ const Footer: React.FC = memo(() => {
                 <div>• SOC 2 Type II Compliant</div>
                 <div>• GDPR Compliant</div>
                 <div>• AWS Advanced Partner</div>
+=======
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <MapPin className="w-4 h-4" />
+                <span>Middletown, DE</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
               </div>
             </div>
           </div>
 
-          {/* AI Services */}
+          {/* Services */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <Brain className="w-5 h-5 mr-2 text-cyan-400" />
               AI Services
@@ -203,6 +265,51 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
+=======
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.name}>
+                  <Link
+                    to={resource.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {resource.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
                   </Link>
                 </li>
               ))}
@@ -210,6 +317,7 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="max-w-2xl mx-auto text-center">
@@ -271,6 +379,25 @@ const Footer: React.FC = memo(() => {
                 <span>Industry Leader</span>
               </div>
             </div>
+=======
+        {/* Legal Links */}
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
+              {legal.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
           </div>
         </div>
       </div>
@@ -280,4 +407,8 @@ const Footer: React.FC = memo(() => {
 
 Footer.displayName = 'Footer';
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-398f
