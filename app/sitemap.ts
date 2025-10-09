@@ -1,6 +1,4 @@
-import { MetadataRoute } from 'next'
-
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap() {
   const baseUrl = 'https://ziontechgroup.com'
   
   return [
@@ -22,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    // AI Services
     {
       url: `${baseUrl}/ai-services`,
       lastModified: new Date(),
@@ -29,19 +28,74 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/ai-marketing`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/ai-automation`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/enterprise`,
+      url: `${baseUrl}/ai-healthcare`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-fintech`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-data-analytics`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-cybersecurity`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-workflow-automation`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-cloud-infrastructure`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-ecommerce-solutions`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-mobile-app-development`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    // IT Services
+    {
+      url: `${baseUrl}/it-services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/micro-saas`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -52,6 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    // Advanced Technologies
     {
       url: `${baseUrl}/quantum-computing`,
       lastModified: new Date(),
@@ -82,6 +137,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Company Pages
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/enterprise`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/case-studies`,
       lastModified: new Date(),
@@ -94,6 +168,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    // Legal Pages
     {
       url: `${baseUrl}/privacy`,
       lastModified: new Date(),

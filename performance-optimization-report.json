@@ -1,85 +1,55 @@
 {
-  "timestamp": "2025-10-08T23:38:45.100Z",
+  "timestamp": "2025-10-09T00:00:58.998Z",
   "optimizations": {
-    "bundleOptimization": {
-      "enableTreeShaking": true,
-      "enableCodeSplitting": true,
-      "enableLazyLoading": true,
-      "enablePreloading": true,
-      "enableCompression": true,
-      "enableMinification": true,
-      "enableDeadCodeElimination": true,
-      "enableUnusedCodeRemoval": true
+    "images": {
+      "formats": [
+        "webp",
+        "avif"
+      ],
+      "quality": 85,
+      "sizes": [
+        320,
+        640,
+        768,
+        1024,
+        1200,
+        1920
+      ],
+      "lazy": true
     },
-    "runtimeOptimization": {
-      "enableMemoization": true,
-      "enableCallbackOptimization": true,
-      "enableEffectOptimization": true,
-      "enableStateOptimization": true,
-      "enableRefOptimization": true,
-      "enableContextOptimization": true,
-      "enableReducerOptimization": true
+    "codeSplitting": {
+      "vendor": true,
+      "common": true,
+      "async": true
     },
-    "imageOptimization": {
-      "enableWebP": true,
-      "enableAVIF": true,
-      "enableResponsiveImages": true,
-      "enableLazyLoading": true,
-      "enablePreloading": true,
-      "enableCompression": true,
-      "enableOptimization": true
+    "caching": {
+      "static": "1y",
+      "dynamic": "1h",
+      "api": "5m"
     },
-    "cssOptimization": {
-      "enablePurgeCSS": true,
-      "enableCriticalCSS": true,
-      "enableCSSMinification": true,
-      "enableCSSCompression": true,
-      "enableCSSOptimization": true,
-      "enableUnusedCSSRemoval": true
-    },
-    "jsOptimization": {
-      "enableES6Optimization": true,
-      "enableAsyncAwaitOptimization": true,
-      "enablePromiseOptimization": true,
-      "enableFunctionOptimization": true,
-      "enableVariableOptimization": true,
-      "enableImportOptimization": true,
-      "enableExportOptimization": true
-    },
-    "networkOptimization": {
-      "enableHTTP2": true,
-      "enableGzip": true,
-      "enableBrotli": true,
-      "enableCDN": true,
-      "enableCaching": true,
-      "enablePreloading": true,
-      "enablePrefetching": true
-    },
-    "coreWebVitals": {
-      "targetLCP": 2.5,
-      "targetFID": 100,
-      "targetCLS": 0.1,
-      "targetFCP": 1.8,
-      "targetTTFB": 600
+    "compression": {
+      "gzip": true,
+      "brotli": true,
+      "minify": true
     }
   },
   "recommendations": [
-    "Enable aggressive tree shaking for smaller bundles",
-    "Implement code splitting for better loading performance",
-    "Use lazy loading for non-critical components",
-    "Optimize images with WebP and AVIF formats",
+    "Enable service worker for offline functionality",
     "Implement critical CSS inlining",
-    "Use service workers for caching",
-    "Enable HTTP/2 and compression",
-    "Implement preloading for critical resources",
+    "Use resource hints (preload, prefetch)",
+    "Optimize third-party scripts loading",
+    "Implement lazy loading for images and components",
+    "Use modern image formats (WebP, AVIF)",
+    "Minimize JavaScript bundle size",
+    "Implement proper caching headers",
     "Use CDN for static assets",
-    "Optimize Core Web Vitals metrics"
+    "Optimize database queries and API responses"
   ],
   "metrics": {
-    "bundleSize": "Optimized for < 200KB gzipped",
-    "loadTime": "Target < 2.5s LCP",
-    "interactivity": "Target < 100ms FID",
-    "stability": "Target < 0.1 CLS",
-    "performance": "Target 90+ Lighthouse score"
+    "targetLCP": "< 2.5s",
+    "targetFID": "< 100ms",
+    "targetCLS": "< 0.1",
+    "targetFCP": "< 1.8s",
+    "targetTTI": "< 3.8s"
   }
 }

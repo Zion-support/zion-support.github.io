@@ -1,75 +1,8 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
-  const aiServices = [
-    { name: 'AI Services', url: '/ai-services' },
-    { name: 'AI Marketing', url: '/ai-marketing' },
-    { name: 'AI Automation', url: '/ai-automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare' },
-    { name: 'AI Fintech', url: '/ai-fintech' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation' },
-  ];
-
-  const itServices = [
-    { name: 'IT Services', url: '/it-services' },
-    { name: 'Micro SAAS', url: '/micro-saas' },
-    { name: 'Cybersecurity', url: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development' },
-  ];
-
-  const technologies = [
-    { name: 'Quantum Computing', url: '/quantum-computing' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems' },
-    { name: 'Business Intelligence', url: '/business-intelligence' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing' },
-  ];
-
-  const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Enterprise Solutions', url: '/enterprise' },
-    { name: 'Contact Us', url: '/contact' },
-  ];
-
-  const resources = [
-    { name: 'Blog & Insights', url: '/blog' },
-    { name: 'Technical Guides', url: '/guides' },
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Sitemap', url: '/sitemap' },
-  ];
-
-  return (
-    <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <span className="text-3xl mr-2">⚡</span>
-              <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
-            </div>
-<<<<<<< HEAD
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
-              Transform your business with cutting-edge technology.
-            </p>
-<<<<<<< HEAD
-=======
-          </div>
-=======
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Code, BarChart, Users, Globe, ArrowRight } from 'lucide-react';
-
-const Footer: React.FC = () => {
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -80,7 +13,10 @@ const Footer: React.FC = () => {
         { name: 'AI Marketing', path: '/ai-marketing' },
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' }
+        { name: 'AI Fintech', path: '/ai-fintech' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
       ]
     },
     {
@@ -89,26 +25,15 @@ const Footer: React.FC = () => {
       color: 'text-blue-400',
       services: [
         { name: 'IT Services', path: '/it-services' },
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'DevOps', path: '/devops' },
-        { name: 'Database Services', path: '/database' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-400',
-      services: [
         { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/developer-tools' },
-        { name: 'Business Apps', path: '/business-apps' },
-        { name: 'Productivity Tools', path: '/productivity' },
-        { name: 'Marketing Tools', path: '/marketing-tools' }
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
+        { name: 'E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+        { name: 'Mobile App Development', path: '/ai-mobile-app-development' }
       ]
     },
     {
-      title: 'Specialized',
+      title: 'Advanced Technologies',
       icon: Zap,
       color: 'text-orange-400',
       services: [
@@ -120,7 +45,6 @@ const Footer: React.FC = () => {
       ]
     }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 
   const quickLinks = [
     { name: 'Home', path: '/' },
@@ -191,192 +115,6 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services */}
-<<<<<<< HEAD
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
-                  AI Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
-                  AI Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
-                  AI Workflow Automation
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
-                  AI Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
-                  AI E-commerce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
-                  AI Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
-                </Link>
-              </li>
-              <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
-                  Quantum Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
-                  Autonomous Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
-                  Blockchain & Web3
-                </Link>
-              </li>
-              <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  contact@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">24/7 Support Available</span>
-<<<<<<< HEAD
-              </div>              <div className="flex space-x-4 mt-4">
-=======
-              </div>
-              <div className="flex space-x-4 mt-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </div>
-              
-              {/* Contact Info */}
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>              </div>
-            </div>
-          </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
-                    Blog & Insights
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
-                    Technical Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    Documentation
-                  </a>
-                </li>
-              </ul>            </div>
-=======
           <div className="lg:col-span-2">
             <h4 className="text-xl font-semibold mb-6 text-white">Our Services</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -401,98 +139,87 @@ const Footer: React.FC = () => {
                   </ul>
                 </div>
               ))}
-=======
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
             </div>
           </div>
 
-          {/* AI Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
-            <ul className="space-y-3">
-              {aiServices.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* IT Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">IT Services</h4>
-            <ul className="space-y-3">
-              {itServices.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Technologies */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Technologies</h4>
-            <ul className="space-y-3">
-              {technologies.map((tech, index) => (
-                <li key={index}>
-                  <Link 
-                    to={tech.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {tech.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company & Resources */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Company</h4>
+          {/* Quick Links & Resources */}
+          <div className="lg:col-span-1">
+            <h4 className="text-xl font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3 mb-8">
-              {company.map((item, index) => (
+              {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={item.url} 
+                    to={link.path} 
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
             
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Resources</h4>
+            <h4 className="text-xl font-semibold mb-6 text-white">Resources</h4>
             <ul className="space-y-3">
               {resources.map((resource, index) => (
                 <li key={index}>
                   <Link 
-                    to={resource.url} 
+                    to={resource.path} 
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {resource.name}
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a 
+                href="https://linkedin.com/company/ziontechgroup" 
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="https://twitter.com/ziontechgroup" 
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter
+              </a>
+              <a 
+                href="https://github.com/ziontechgroup" 
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+});
+
+Footer.displayName = 'Footer';
+
+export default Footer;
             </ul>
           </div>
         </div>
@@ -685,9 +412,6 @@ const Footer: React.FC = () => {
   );
 });
 
-<<<<<<< HEAD
 Footer.displayName = 'Footer';
 
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 export default Footer;
