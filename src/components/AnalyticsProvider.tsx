@@ -65,47 +65,23 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track phone number clicks
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-<<<<<<< HEAD
         const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
         if (href && href.startsWith('tel:')) {
-          if ((window as any).gtag) {
-            (window as any).gtag('event', 'phone_click', {
-              event_category: 'engagement',
-              event_label: 'phone_number',
-              value: href
-=======
-        if ((target as HTMLAnchorElement).href && (target as HTMLAnchorElement).href.startsWith('tel:')) {
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
               event_category: 'engagement',
               event_label: 'phone_number',
-              value: (target as HTMLAnchorElement).href
->>>>>>> fa31b9b3cde054d762720c2f5dd59f6a9ac62112
+              value: href
             });
           }
         }
       });
     };
-<<<<<<< HEAD
     
     // Handle route changes
     const handleRouteChange = () => {
       trackPageView();
     };
-    
-=======
-    // Handle route changes
-    const handleRouteChange = () => {
-      if ((window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          send_page_view: true
-        });
-      }
-    };
-
->>>>>>> fa31b9b3cde054d762720c2f5dd59f6a9ac62112
     // Initialize analytics
     initAnalytics();
     trackPageView();
