@@ -1,15 +1,8 @@
-'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { FileWarning } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
 }
 
 interface State {
@@ -29,30 +22,22 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo,
+    });
+
     // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Report error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      // Send to error tracking service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
-          description: error.message,
-          fatal: false
-        });
-      }
-    }
-    
-    this.setState({ errorInfo });
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
-
+    // Send error to analytics if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+      });
     }
   }
 
@@ -63,41 +48,36 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="mb-6">
-              <FileWarning className="mx-auto h-16 w-16 text-red-500" />
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h1>
-            <p className="text-gray-600 mb-6">
-              We&apos;re sorry for the inconvenience. Please try refreshing the page.
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-xl p-6 text-center">
+            <div className="text-red-400 text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
               >
                 Refresh Page
               </button>
-              <Link
-                to="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
               >
-                Go to Homepage
-              </Link>
+                Go Home
+              </button>
             </div>
-            {this.props.enableErrorReporting && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                </div>
-                </details>
-              )}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4 text-left">
+                <summary className="text-gray-400 cursor-pointer">Error Details</summary>
+                <pre className="text-xs text-red-400 mt-2 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
       );
