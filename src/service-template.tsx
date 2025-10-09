@@ -1,45 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
-const AIAutomationPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Process Automation',
-      description: 'Automate repetitive business processes with intelligent decision-making capabilities',
-      icon: Zap,
-      features: ['Workflow Design', 'Rule Engine', 'Exception Handling', 'Performance Monitoring'],
-      price: 'Starting at $399/month'
-    },
-    {
-      title: 'Document Processing',
-      description: 'Intelligent document processing and data extraction using AI',
-      icon: Brain,
-      features: ['OCR Technology', 'Data Extraction', 'Classification', 'Validation'],
-      price: 'Starting at $299/month'
-    }
-  ];
+interface ServicePageProps {
+  title: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  services: Array<{
+    title: string;
+    description: string;
+    icon: React.ComponentType<any>;
+    features: string[];
+    price: string;
+  }>;
+  benefits: string[];
+}
 
-  const benefits = [
-    '95% Process Automation',
-    '50% Cost Reduction',
-    '300% Efficiency Gain',
-    '24/7 Operation'
-  ];
-
+const ServicePage: React.FC<ServicePageProps> = ({ title, description, icon: Icon, services, benefits }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main className="pt-20">
+        {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Automation
+            {title}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Intelligent automation solutions that transform your business processes with AI-powered decision making
+            {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -59,6 +50,7 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -88,9 +80,10 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Benefits Section */}
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our AI Automation?
+            Why Choose Our {title}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -103,6 +96,34 @@ const AIAutomationPage: React.FC = () => {
             ))}
           </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get a free consultation and discover how our solutions can revolutionize your operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Get Free Consultation
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                (302) 464-0950
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
@@ -110,4 +131,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-export default AIAutomationPage;
+export default ServicePage;

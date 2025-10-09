@@ -6,21 +6,6 @@ import { Phone, Mail, MapPin, Clock, Brain, Cloud, Shield, Code, BarChart, Users
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
-  const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'AI-powered analytics', icon: '📈', popular: true },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false },
-    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation', icon: '💰', popular: false },
-    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification', icon: '🎯', popular: false },
-    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions', icon: '📊', popular: false },
-    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization', icon: '🛒', popular: false }
-  ];
-
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -37,13 +22,7 @@ const Footer: React.FC = () => {
     { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' },
-    { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
-    { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
-    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
-    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
+    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' }
   ];
 
   const itServices = [
@@ -56,13 +35,7 @@ const Footer: React.FC = () => {
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
     { name: 'System Administration', url: '/system-administration', description: 'System management' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
-    { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
-    { name: 'IT Infrastructure Design', url: '/it-infrastructure-design', description: 'Custom infrastructure' },
-    { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'Real-time monitoring' },
-    { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
-    { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
-    { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
+    { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' }
   ];
 
   const microSaasServices = [
@@ -73,23 +46,7 @@ const Footer: React.FC = () => {
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
     { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'AI-assisted app development' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
-    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
-    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
-    { name: 'AI Design Assistant', url: '/ai-design-assistant', description: 'AI-powered design tool' },
-    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
-    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' },
-    { name: 'AI Performance Tracker', url: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Custom voice assistants' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'Intelligent HR management' },
-    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory management' },
-    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-    { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' }
   ];
 
   const emergingTech = [
@@ -101,10 +58,7 @@ const Footer: React.FC = () => {
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
-    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
-    { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
-    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
-    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
+    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' }
   ];
 
   const companyLinks = [
@@ -212,7 +166,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Micro SAAS Solutions */}
+          {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
@@ -266,7 +220,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Micro SAAS Solutions */}
+          {/* Micro SAAS & Emerging Tech */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS</h3>
             <ul className="space-y-3">
@@ -287,7 +241,7 @@ const Footer: React.FC = () => {
                   to="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
-                  View All Micro SAAS →
+                  View All Solutions →
                 </Link>
               </li>
             </ul>
