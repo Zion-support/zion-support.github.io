@@ -22,6 +22,8 @@ const CompliancePage = lazy(() => import('./app/compliance/page'));
 const GdprPage = lazy(() => import('./app/gdpr/page'));
 const AIServicesPage = lazy(() => import('./app/ai-services/page'));
 const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AICRMAutomationPage = lazy(() => import('./app/ai-crm-automation/page'));
 const ITConsultingPage = lazy(() => import('./app/it-consulting/page'));
 const ITInfrastructurePage = lazy(() => import('./app/it-infrastructure/page'));
 const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
@@ -50,18 +52,11 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-<<<<<<< HEAD
-=======
     this.setState({ error, errorInfo });
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
     // Log error to monitoring service in production
     // In production, this should be sent to an error tracking service
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-      // Error logging would be handled by error tracking service in production
-=======
       console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
     }
   }
 
@@ -78,11 +73,7 @@ class ErrorBoundary extends React.Component<
               onClick={() => window.location.reload()}
               className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
             >
-<<<<<<< HEAD
-              Refresh Page
-=======
               Reload Page
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             </button>
           </div>
         </div>
@@ -105,7 +96,6 @@ const LoadingSpinner = memo(() => (
 
 // Main App Component
 const App: React.FC = () => {
-<<<<<<< HEAD
   const routes = useMemo(() => [
     { path: '/', component: HomePage },
     { path: '/about', component: AboutPage },
@@ -126,6 +116,8 @@ const App: React.FC = () => {
     { path: '/gdpr', component: GdprPage },
     { path: '/ai-services', component: AIServicesPage },
     { path: '/micro-saas', component: MicroSaasPage },
+    { path: '/ai-content-generator', component: AIContentGeneratorPage },
+    { path: '/ai-crm-automation', component: AICRMAutomationPage },
     { path: '/it-consulting', component: ITConsultingPage },
     { path: '/it-infrastructure', component: ITInfrastructurePage },
     { path: '/cloud-infrastructure', component: CloudInfrastructurePage },
@@ -133,13 +125,12 @@ const App: React.FC = () => {
     { path: '/security', component: SecurityPage },
     { path: '/support', component: SupportPage },
   ], []);
-=======
+
   const helmetContext = useMemo(() => ({}), []);
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 
   return (
     <ErrorBoundary>
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <Helmet>
           <title>Zion Tech Group - Advanced AI and IT Solutions</title>
           <meta name="description" content="Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide." />

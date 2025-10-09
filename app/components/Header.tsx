@@ -14,24 +14,35 @@ const Header: React.FC = () => {
 
   const navigation = {
     'Services': [
+      { name: 'All Services', href: '/services', icon: Briefcase },
       { name: 'AI Services', href: '/ai-services', icon: Brain },
       { name: 'IT Services', href: '/it-services', icon: Code },
+      { name: 'Micro SAAS', href: '/micro-saas', icon: Code },
       { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
-      { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { name: 'All Services', href: '/services', icon: Briefcase }
+      { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield }
     ],
-    'Solutions': [
-      { name: 'AI Marketing', href: '/ai-marketing', icon: Brain },
-      { name: 'AI Automation', href: '/ai-automation', icon: Brain },
-      { name: 'AI Healthcare', href: '/ai-healthcare', icon: Brain },
-      { name: 'AI Fintech', href: '/ai-fintech', icon: Brain },
-      { name: 'Quantum Computing', href: '/quantum-computing', icon: Brain }
+    'Micro SAAS': [
+      { name: 'AI Content Generator', href: '/ai-content-generator', icon: FileText },
+      { name: 'AI CRM Automation', href: '/ai-crm-automation', icon: Users },
+      { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: CreditCard },
+      { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar },
+      { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share2 },
+      { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail }
+    ],
+    'AI Solutions': [
+      { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: MessageSquare },
+      { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart },
+      { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: Camera },
+      { name: 'AI Marketing', href: '/ai-marketing', icon: Target },
+      { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+      { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart }
     ],
     'Company': [
       { name: 'About Us', href: '/about', icon: Users },
       { name: 'Our Team', href: '/team', icon: Users },
       { name: 'Careers', href: '/careers', icon: Briefcase },
       { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+      { name: 'Blog', href: '/blog', icon: BookOpen },
       { name: 'Contact', href: '/contact', icon: MessageSquare }
     ]
   };

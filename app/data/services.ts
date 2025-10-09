@@ -1,853 +1,1334 @@
 export interface Service {
   id: string;
   name: string;
+  description: string;
+  longDescription: string;
+  icon: string;
   category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech';
   subcategory: string;
-  description: string;
   features: string[];
+  benefits: string[];
   pricing: {
     starting: number;
-    currency: string;
     period: 'month' | 'year' | 'one-time';
-    custom?: boolean;
-  };
-  benefits: string[];
-  useCases: string[];
-  icon: string;
-  popular: boolean;
-  new?: boolean;
-  path: string;
-  contact: {
-    phone: string;
-    email: string;
-    demo: string;
+    currency: 'USD';
+    popular?: boolean;
   };
   marketPrice?: {
     min: number;
     max: number;
-    currency: string;
+    period: 'month' | 'year';
   };
+  capabilities: string[];
+  useCases: string[];
+  technologies: string[];
+  targetAudience: string[];
+  implementationTime: string;
+  support: string[];
+  compliance: string[];
+  integrations: string[];
+  demoUrl?: string;
+  documentationUrl?: string;
+  contactEmail: string;
+  contactPhone: string;
 }
 
-export const services: Service[] = [
-  // AI Services
-  {
-    id: 'ai-project-manager',
-    name: 'AI Project Manager Pro',
-    category: 'ai',
-    subcategory: 'Project Management',
-    description: 'Intelligent project management with AI-powered scheduling, resource allocation, and risk prediction.',
-    features: [
-      'AI-powered task prioritization',
-      'Automated resource allocation',
-      'Risk prediction and mitigation',
-      'Real-time progress tracking',
-      'Team collaboration tools',
-      'Integration with 50+ tools'
-    ],
-    pricing: {
-      starting: 299,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '40% faster project delivery',
-      '25% reduction in project costs',
-      '95% accuracy in deadline prediction',
-      'Real-time risk assessment'
-    ],
-    useCases: [
-      'Software development projects',
-      'Marketing campaign management',
-      'Construction project oversight',
-      'Event planning and execution'
-    ],
-    icon: '📊',
-    popular: true,
-    new: true,
-    path: '/ai-project-manager',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-project-manager'
-    },
-    marketPrice: {
-      min: 200,
-      max: 500,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'ai-customer-support-bot',
-    name: 'AI Customer Support Bot',
-    category: 'ai',
-    subcategory: 'Customer Service',
-    description: '24/7 AI-powered customer support with natural language processing and multi-channel support.',
-    features: [
-      'Natural language understanding',
-      'Multi-language support (50+ languages)',
-      'Integration with CRM systems',
-      'Sentiment analysis',
-      'Escalation to human agents',
-      'Analytics and reporting'
-    ],
-    pricing: {
-      starting: 199,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '80% reduction in response time',
-      '24/7 availability',
-      '90% customer satisfaction rate',
-      '60% cost reduction vs human agents'
-    ],
-    useCases: [
-      'E-commerce customer support',
-      'SaaS product support',
-      'Healthcare patient inquiries',
-      'Financial services support'
-    ],
-    icon: '🤖',
-    popular: true,
-    path: '/ai-customer-support-bot',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'
-    },
-    marketPrice: {
-      min: 150,
-      max: 400,
-      currency: 'USD'
-    }
-  },
+export const microSaasServices: Service[] = [
   {
     id: 'ai-content-generator',
-    name: 'AI Content Generator Studio',
-    category: 'ai',
-    subcategory: 'Content Creation',
-    description: 'Advanced AI-powered content creation for blogs, social media, emails, and marketing materials.',
+    name: 'AI Content Generator Pro',
+    description: 'Generate high-quality content at scale with advanced AI technology',
+    longDescription: 'Our AI Content Generator Pro is a comprehensive platform that uses cutting-edge natural language processing to create engaging, SEO-optimized content for blogs, social media, marketing materials, and more. With advanced AI models and customizable templates, you can produce professional content 10x faster than traditional methods.',
+    icon: 'FileText',
+    category: 'micro-saas',
+    subcategory: 'content-creation',
     features: [
-      'Multi-format content generation',
-      'SEO optimization',
-      'Brand voice consistency',
-      'Plagiarism detection',
-      'Content scheduling',
-      'Performance analytics'
+      'Multi-format content generation (blogs, social media, emails, ads)',
+      'SEO optimization with keyword research integration',
+      'Brand voice customization and tone adjustment',
+      'Plagiarism detection and originality scoring',
+      'Multi-language support (50+ languages)',
+      'Content calendar and scheduling',
+      'Team collaboration tools',
+      'Analytics and performance tracking',
+      'API integration for existing workflows',
+      'Custom template creation'
+    ],
+    benefits: [
+      'Save 80% time on content creation',
+      'Increase content output by 500%',
+      'Improve SEO rankings by 40%',
+      'Reduce content costs by 60%',
+      'Maintain consistent brand voice',
+      'Scale content production effortlessly'
+    ],
+    pricing: {
+      starting: 97,
+      period: 'month',
+      currency: 'USD',
+      popular: true
+    },
+    marketPrice: {
+      min: 29,
+      max: 299,
+      period: 'month'
+    },
+    capabilities: [
+      'Blog post generation (500-3000 words)',
+      'Social media content creation',
+      'Email marketing campaigns',
+      'Product descriptions',
+      'Ad copy generation',
+      'Press releases',
+      'Technical documentation',
+      'Creative writing'
+    ],
+    useCases: [
+      'Marketing agencies scaling content production',
+      'E-commerce businesses creating product descriptions',
+      'Bloggers and content creators',
+      'SaaS companies needing documentation',
+      'Real estate agents creating property listings',
+      'Restaurants updating menus and descriptions'
+    ],
+    technologies: [
+      'GPT-4 and Claude AI models',
+      'Natural Language Processing',
+      'Machine Learning algorithms',
+      'RESTful API architecture',
+      'React and Node.js frontend',
+      'PostgreSQL database',
+      'Redis caching',
+      'AWS cloud infrastructure'
+    ],
+    targetAudience: [
+      'Content marketers',
+      'Digital agencies',
+      'E-commerce businesses',
+      'Bloggers and influencers',
+      'SaaS companies',
+      'Small to medium businesses'
+    ],
+    implementationTime: '1-2 weeks',
+    support: [
+      '24/7 email support',
+      'Live chat during business hours',
+      'Video tutorials and documentation',
+      'Monthly webinars',
+      'Dedicated account manager for enterprise'
+    ],
+    compliance: [
+      'GDPR compliant',
+      'SOC 2 Type II certified',
+      'CCPA compliant',
+      'ISO 27001 security standards'
+    ],
+    integrations: [
+      'WordPress',
+      'HubSpot',
+      'Salesforce',
+      'Mailchimp',
+      'Hootsuite',
+      'Google Analytics',
+      'Zapier',
+      'Custom API endpoints'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/ai-content-generator',
+    documentationUrl: 'https://docs.ziontechgroup.com/ai-content-generator',
+    contactEmail: 'content@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  },
+  {
+    id: 'ai-crm-automation',
+    name: 'AI-Powered CRM Automation Suite',
+    description: 'Intelligent customer relationship management with AI-driven insights and automation',
+    longDescription: 'Transform your sales and customer service with our AI-powered CRM that learns from your data to predict customer behavior, automate follow-ups, and optimize your sales pipeline. Built with advanced machine learning algorithms, it provides actionable insights and automates routine tasks to maximize your team\'s productivity.',
+    icon: 'Users',
+    category: 'micro-saas',
+    subcategory: 'crm',
+    features: [
+      'AI-powered lead scoring and qualification',
+      'Automated email sequences and follow-ups',
+      'Predictive analytics for sales forecasting',
+      'Customer sentiment analysis',
+      'Smart task prioritization',
+      'Automated data entry and enrichment',
+      'Custom dashboard and reporting',
+      'Mobile app for on-the-go access',
+      'Integration with 100+ tools',
+      'Advanced workflow automation'
+    ],
+    benefits: [
+      'Increase sales conversion by 35%',
+      'Reduce manual data entry by 90%',
+      'Improve customer satisfaction by 45%',
+      'Save 15 hours per week per sales rep',
+      'Boost lead qualification accuracy by 60%',
+      'Enhance customer retention by 25%'
     ],
     pricing: {
       starting: 149,
+      period: 'month',
       currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '10x faster content creation',
-      'Consistent brand messaging',
-      'SEO-optimized content',
-      'Multi-language support'
-    ],
-    useCases: [
-      'Blog content creation',
-      'Social media marketing',
-      'Email marketing campaigns',
-      'Product descriptions'
-    ],
-    icon: '✍️',
-    popular: true,
-    path: '/ai-content-generation',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-content-generator'
+      popular: true
     },
     marketPrice: {
-      min: 99,
-      max: 300,
-      currency: 'USD'
-    }
+      min: 25,
+      max: 500,
+      period: 'month'
+    },
+    capabilities: [
+      'Lead management and tracking',
+      'Sales pipeline automation',
+      'Customer communication history',
+      'Deal forecasting and analytics',
+      'Email marketing automation',
+      'Task and activity management',
+      'Document and file storage',
+      'Team collaboration tools'
+    ],
+    useCases: [
+      'Sales teams managing leads and opportunities',
+      'Customer service departments',
+      'Real estate agencies',
+      'Insurance companies',
+      'Financial services',
+      'Healthcare practices',
+      'E-commerce businesses'
+    ],
+    technologies: [
+      'Machine Learning algorithms',
+      'Natural Language Processing',
+      'Predictive analytics',
+      'RESTful API',
+      'React and Node.js',
+      'MongoDB database',
+      'Redis caching',
+      'AWS cloud services'
+    ],
+    targetAudience: [
+      'Sales teams',
+      'Customer service managers',
+      'Small to medium businesses',
+      'Sales managers',
+      'Marketing teams',
+      'Customer success managers'
+    ],
+    implementationTime: '2-3 weeks',
+    support: [
+      '24/7 technical support',
+      'Dedicated onboarding specialist',
+      'Training sessions and workshops',
+      'Custom integration support',
+      'Priority support for enterprise'
+    ],
+    compliance: [
+      'GDPR compliant',
+      'SOC 2 Type II certified',
+      'HIPAA compliant (healthcare)',
+      'PCI DSS compliant'
+    ],
+    integrations: [
+      'Salesforce',
+      'HubSpot',
+      'Pipedrive',
+      'Zapier',
+      'Mailchimp',
+      'Slack',
+      'Microsoft Teams',
+      'Google Workspace'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/ai-crm',
+    documentationUrl: 'https://docs.ziontechgroup.com/ai-crm',
+    contactEmail: 'crm@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  },
+  {
+    id: 'ai-invoice-generator',
+    name: 'Smart Invoice Generator',
+    description: 'Automated invoice generation with AI-powered expense tracking and payment processing',
+    longDescription: 'Streamline your billing process with our intelligent invoice generator that automatically creates professional invoices, tracks expenses, manages recurring billing, and processes payments. Our AI learns from your billing patterns to suggest optimal payment terms and identify potential issues before they become problems.',
+    icon: 'Receipt',
+    category: 'micro-saas',
+    subcategory: 'finance',
+    features: [
+      'AI-powered invoice generation and customization',
+      'Automated recurring billing setup',
+      'Smart expense categorization and tracking',
+      'Payment processing integration',
+      'Late payment reminders and follow-ups',
+      'Multi-currency support',
+      'Tax calculation and compliance',
+      'Client portal for invoice viewing',
+      'Advanced reporting and analytics',
+      'Mobile app for expense tracking'
+    ],
+    benefits: [
+      'Reduce invoice processing time by 85%',
+      'Improve payment collection by 40%',
+      'Eliminate manual data entry errors',
+      'Save 10+ hours per week on billing',
+      'Increase cash flow visibility',
+      'Reduce late payments by 60%'
+    ],
+    pricing: {
+      starting: 29,
+      period: 'month',
+      currency: 'USD',
+      popular: false
+    },
+    marketPrice: {
+      min: 9,
+      max: 99,
+      period: 'month'
+    },
+    capabilities: [
+      'Invoice creation and customization',
+      'Expense tracking and categorization',
+      'Payment processing',
+      'Client management',
+      'Recurring billing automation',
+      'Financial reporting',
+      'Tax preparation assistance',
+      'Multi-business support'
+    ],
+    useCases: [
+      'Freelancers and consultants',
+      'Small businesses and startups',
+      'Service-based companies',
+      'E-commerce businesses',
+      'Real estate professionals',
+      'Healthcare practices',
+      'Legal firms',
+      'Creative agencies'
+    ],
+    technologies: [
+      'Machine Learning for categorization',
+      'OCR for receipt scanning',
+      'Blockchain for secure transactions',
+      'React and Node.js',
+      'PostgreSQL database',
+      'Stripe payment processing',
+      'AWS cloud infrastructure',
+      'Mobile React Native app'
+    ],
+    targetAudience: [
+      'Freelancers',
+      'Small business owners',
+      'Accountants',
+      'Bookkeepers',
+      'Service providers',
+      'E-commerce merchants'
+    ],
+    implementationTime: '1 week',
+    support: [
+      'Email support',
+      'Live chat',
+      'Video tutorials',
+      'Phone support for premium users',
+      'Account setup assistance'
+    ],
+    compliance: [
+      'PCI DSS compliant',
+      'SOC 2 Type II certified',
+      'GDPR compliant',
+      'Tax compliance automation'
+    ],
+    integrations: [
+      'QuickBooks',
+      'Xero',
+      'Stripe',
+      'PayPal',
+      'Bank accounts',
+      'Credit card processors',
+      'Accounting software',
+      'CRM systems'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/invoice-generator',
+    documentationUrl: 'https://docs.ziontechgroup.com/invoice-generator',
+    contactEmail: 'billing@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  },
+  {
+    id: 'ai-project-manager',
+    name: 'AI Project Management Suite',
+    description: 'Intelligent project management with AI-powered resource optimization and risk prediction',
+    longDescription: 'Revolutionize your project management with AI that predicts bottlenecks, optimizes resource allocation, and provides intelligent insights to keep projects on track. Our platform learns from your team\'s patterns to suggest the best project approaches and automatically adjusts timelines based on real-time data.',
+    icon: 'Calendar',
+    category: 'micro-saas',
+    subcategory: 'project-management',
+    features: [
+      'AI-powered project planning and scheduling',
+      'Resource optimization and allocation',
+      'Risk prediction and mitigation suggestions',
+      'Automated progress tracking',
+      'Team performance analytics',
+      'Smart task prioritization',
+      'Budget tracking and forecasting',
+      'Collaborative workspace',
+      'Time tracking and reporting',
+      'Integration with 50+ tools'
+    ],
+    benefits: [
+      'Complete projects 30% faster',
+      'Reduce project overruns by 50%',
+      'Improve resource utilization by 40%',
+      'Increase team productivity by 25%',
+      'Better project visibility and control',
+      'Proactive risk management'
+    ],
+    pricing: {
+      starting: 79,
+      period: 'month',
+      currency: 'USD',
+      popular: true
+    },
+    marketPrice: {
+      min: 5,
+      max: 200,
+      period: 'month'
+    },
+    capabilities: [
+      'Project planning and scheduling',
+      'Task and milestone tracking',
+      'Team collaboration tools',
+      'Resource management',
+      'Budget and cost tracking',
+      'Risk assessment and management',
+      'Reporting and analytics',
+      'Client communication tools'
+    ],
+    useCases: [
+      'Software development teams',
+      'Marketing agencies',
+      'Construction companies',
+      'Consulting firms',
+      'Event planning companies',
+      'Creative agencies',
+      'IT departments',
+      'Non-profit organizations'
+    ],
+    technologies: [
+      'Machine Learning algorithms',
+      'Predictive analytics',
+      'Natural Language Processing',
+      'React and Node.js',
+      'MongoDB database',
+      'WebSocket for real-time updates',
+      'AWS cloud services',
+      'Mobile responsive design'
+    ],
+    targetAudience: [
+      'Project managers',
+      'Team leads',
+      'Agency owners',
+      'Consultants',
+      'Small to medium businesses',
+      'Enterprise teams'
+    ],
+    implementationTime: '1-2 weeks',
+    support: [
+      '24/7 email support',
+      'Live chat during business hours',
+      'Video training sessions',
+      'Custom onboarding',
+      'Dedicated success manager'
+    ],
+    compliance: [
+      'SOC 2 Type II certified',
+      'GDPR compliant',
+      'ISO 27001 security standards',
+      'Data encryption at rest and in transit'
+    ],
+    integrations: [
+      'Slack',
+      'Microsoft Teams',
+      'Jira',
+      'Trello',
+      'Asana',
+      'GitHub',
+      'Google Workspace',
+      'Microsoft Office 365'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/project-manager',
+    documentationUrl: 'https://docs.ziontechgroup.com/project-manager',
+    contactEmail: 'projects@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  },
+  {
+    id: 'ai-social-media-manager',
+    name: 'AI Social Media Manager',
+    description: 'Automated social media management with AI-powered content creation and scheduling',
+    longDescription: 'Take your social media presence to the next level with our AI-powered social media management platform. It creates engaging content, schedules posts at optimal times, analyzes performance, and provides actionable insights to grow your audience and engagement across all major social platforms.',
+    icon: 'Share2',
+    category: 'micro-saas',
+    subcategory: 'social-media',
+    features: [
+      'AI-generated social media content',
+      'Optimal posting time recommendations',
+      'Hashtag research and optimization',
+      'Multi-platform posting (Facebook, Instagram, Twitter, LinkedIn)',
+      'Engagement tracking and analytics',
+      'Competitor analysis and monitoring',
+      'Influencer identification and outreach',
+      'Content calendar management',
+      'Automated responses and engagement',
+      'ROI tracking and reporting'
+    ],
+    benefits: [
+      'Increase social media engagement by 200%',
+      'Save 20+ hours per week on social media management',
+      'Grow followers by 150% on average',
+      'Improve content performance by 80%',
+      'Reduce social media management costs by 70%',
+      'Better brand consistency across platforms'
+    ],
+    pricing: {
+      starting: 49,
+      period: 'month',
+      currency: 'USD',
+      popular: true
+    },
+    marketPrice: {
+      min: 15,
+      max: 299,
+      period: 'month'
+    },
+    capabilities: [
+      'Content creation and curation',
+      'Post scheduling and automation',
+      'Engagement monitoring',
+      'Analytics and reporting',
+      'Hashtag research',
+      'Competitor tracking',
+      'Influencer marketing',
+      'Social listening'
+    ],
+    useCases: [
+      'Small businesses managing social presence',
+      'Marketing agencies',
+      'E-commerce brands',
+      'Personal brands and influencers',
+      'Restaurants and local businesses',
+      'Non-profit organizations',
+      'Real estate agents',
+      'Healthcare practices'
+    ],
+    technologies: [
+      'Natural Language Processing',
+      'Computer Vision for image analysis',
+      'Machine Learning for optimization',
+      'Social media APIs',
+      'React and Node.js',
+      'MongoDB database',
+      'Redis for caching',
+      'AWS cloud infrastructure'
+    ],
+    targetAudience: [
+      'Social media managers',
+      'Marketing professionals',
+      'Small business owners',
+      'Content creators',
+      'Digital agencies',
+      'E-commerce businesses'
+    ],
+    implementationTime: '1 week',
+    support: [
+      'Email support',
+      'Live chat',
+      'Video tutorials',
+      'Social media strategy consultation',
+      'Content creation tips and best practices'
+    ],
+    compliance: [
+      'GDPR compliant',
+      'SOC 2 Type II certified',
+      'Platform API compliance',
+      'Data privacy protection'
+    ],
+    integrations: [
+      'Facebook Business',
+      'Instagram Business',
+      'Twitter API',
+      'LinkedIn Business',
+      'TikTok for Business',
+      'Pinterest Business',
+      'Google Analytics',
+      'Canva for design'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/social-media-manager',
+    documentationUrl: 'https://docs.ziontechgroup.com/social-media-manager',
+    contactEmail: 'social@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  },
+  {
+    id: 'ai-email-marketing',
+    name: 'AI Email Marketing Automation',
+    description: 'Intelligent email marketing with AI-powered personalization and automation',
+    longDescription: 'Maximize your email marketing ROI with our AI-powered platform that personalizes every email, optimizes send times, and automates complex campaigns. Our machine learning algorithms analyze subscriber behavior to deliver the right message to the right person at the right time, dramatically improving open rates and conversions.',
+    icon: 'Mail',
+    category: 'micro-saas',
+    subcategory: 'email-marketing',
+    features: [
+      'AI-powered email personalization',
+      'Automated campaign creation and optimization',
+      'Smart send time optimization',
+      'Advanced segmentation and targeting',
+      'A/B testing with AI recommendations',
+      'Subject line optimization',
+      'Content generation and suggestions',
+      'Behavioral trigger automation',
+      'Advanced analytics and reporting',
+      'Integration with 100+ platforms'
+    ],
+    benefits: [
+      'Increase email open rates by 60%',
+      'Boost click-through rates by 85%',
+      'Improve conversion rates by 45%',
+      'Reduce unsubscribe rates by 30%',
+      'Save 15+ hours per week on email marketing',
+      'Increase revenue by 200% from email campaigns'
+    ],
+    pricing: {
+      starting: 99,
+      period: 'month',
+      currency: 'USD',
+      popular: true
+    },
+    marketPrice: {
+      min: 9,
+      max: 500,
+      period: 'month'
+    },
+    capabilities: [
+      'Email campaign creation',
+      'List management and segmentation',
+      'Automation workflows',
+      'Template design and customization',
+      'A/B testing',
+      'Analytics and reporting',
+      'Deliverability optimization',
+      'Compliance management'
+    ],
+    useCases: [
+      'E-commerce businesses',
+      'SaaS companies',
+      'Marketing agencies',
+      'Non-profit organizations',
+      'Real estate professionals',
+      'Healthcare practices',
+      'Educational institutions',
+      'Event organizers'
+    ],
+    technologies: [
+      'Machine Learning algorithms',
+      'Natural Language Processing',
+      'Predictive analytics',
+      'Email deliverability optimization',
+      'React and Node.js',
+      'PostgreSQL database',
+      'Redis caching',
+      'AWS SES integration'
+    ],
+    targetAudience: [
+      'Email marketers',
+      'Digital marketing managers',
+      'E-commerce businesses',
+      'Marketing agencies',
+      'Small business owners',
+      'Content creators'
+    ],
+    implementationTime: '1-2 weeks',
+    support: [
+      '24/7 email support',
+      'Live chat during business hours',
+      'Email marketing strategy consultation',
+      'Template customization assistance',
+      'Deliverability optimization support'
+    ],
+    compliance: [
+      'CAN-SPAM Act compliant',
+      'GDPR compliant',
+      'CASL compliant',
+      'SOC 2 Type II certified'
+    ],
+    integrations: [
+      'Shopify',
+      'WooCommerce',
+      'Salesforce',
+      'HubSpot',
+      'Mailchimp',
+      'Constant Contact',
+      'Zapier',
+      'Google Analytics'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/email-marketing',
+    documentationUrl: 'https://docs.ziontechgroup.com/email-marketing',
+    contactEmail: 'email@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  }
+];
+
+export const aiServices: Service[] = [
+  {
+    id: 'ai-chatbot-builder',
+    name: 'AI Chatbot Builder Pro',
+    description: 'Build intelligent chatbots with advanced natural language processing and machine learning',
+    longDescription: 'Create sophisticated chatbots that understand context, learn from conversations, and provide human-like responses. Our platform uses state-of-the-art NLP models to build chatbots that can handle complex queries, integrate with your existing systems, and provide 24/7 customer support.',
+    icon: 'MessageCircle',
+    category: 'ai',
+    subcategory: 'conversational-ai',
+    features: [
+      'Drag-and-drop chatbot builder',
+      'Advanced NLP and intent recognition',
+      'Multi-language support (100+ languages)',
+      'Voice and text conversation modes',
+      'Integration with CRM and helpdesk systems',
+      'Analytics and conversation insights',
+      'A/B testing for responses',
+      'Custom training with your data',
+      'API for custom integrations',
+      'White-label solutions'
+    ],
+    benefits: [
+      'Reduce customer support costs by 60%',
+      'Improve response time by 90%',
+      'Handle 80% of customer queries automatically',
+      'Increase customer satisfaction by 40%',
+      'Scale support 24/7 without additional staff',
+      'Gather valuable customer insights'
+    ],
+    pricing: {
+      starting: 199,
+      period: 'month',
+      currency: 'USD',
+      popular: true
+    },
+    marketPrice: {
+      min: 29,
+      max: 999,
+      period: 'month'
+    },
+    capabilities: [
+      'Natural language understanding',
+      'Intent recognition and classification',
+      'Context-aware conversations',
+      'Multi-turn dialogue management',
+      'Sentiment analysis',
+      'Knowledge base integration',
+      'Live agent handoff',
+      'Conversation analytics'
+    ],
+    useCases: [
+      'Customer support automation',
+      'Lead qualification and nurturing',
+      'E-commerce product recommendations',
+      'Healthcare patient triage',
+      'Financial services inquiries',
+      'HR and recruitment screening',
+      'Educational tutoring',
+      'Real estate property inquiries'
+    ],
+    technologies: [
+      'GPT-4 and Claude AI models',
+      'Natural Language Processing',
+      'Machine Learning algorithms',
+      'WebSocket for real-time communication',
+      'React and Node.js',
+      'MongoDB for conversation storage',
+      'Redis for session management',
+      'AWS cloud infrastructure'
+    ],
+    targetAudience: [
+      'Customer service managers',
+      'E-commerce businesses',
+      'SaaS companies',
+      'Healthcare organizations',
+      'Financial institutions',
+      'Educational institutions'
+    ],
+    implementationTime: '2-4 weeks',
+    support: [
+      '24/7 technical support',
+      'Dedicated implementation specialist',
+      'Training and onboarding sessions',
+      'Custom integration support',
+      'Ongoing optimization assistance'
+    ],
+    compliance: [
+      'GDPR compliant',
+      'SOC 2 Type II certified',
+      'HIPAA compliant (healthcare)',
+      'PCI DSS compliant'
+    ],
+    integrations: [
+      'Salesforce',
+      'Zendesk',
+      'Intercom',
+      'Slack',
+      'Microsoft Teams',
+      'WhatsApp Business',
+      'Facebook Messenger',
+      'Custom APIs'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/chatbot-builder',
+    documentationUrl: 'https://docs.ziontechgroup.com/chatbot-builder',
+    contactEmail: 'chatbot@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
   },
   {
     id: 'ai-data-analytics',
     name: 'AI Data Analytics Platform',
+    description: 'Advanced data analytics with AI-powered insights and predictive modeling',
+    longDescription: 'Transform your raw data into actionable insights with our AI-powered analytics platform. It automatically identifies patterns, predicts trends, and generates intelligent reports that help you make data-driven decisions. Our machine learning algorithms continuously learn from your data to provide increasingly accurate predictions and recommendations.',
+    icon: 'BarChart3',
     category: 'ai',
-    subcategory: 'Analytics',
-    description: 'Advanced AI-powered data analytics with predictive insights and automated reporting.',
+    subcategory: 'data-analytics',
     features: [
-      'Real-time data processing',
-      'Predictive analytics',
-      'Automated report generation',
-      'Custom dashboard creation',
-      'Data visualization',
-      'Machine learning models'
+      'Automated data processing and cleaning',
+      'AI-powered pattern recognition',
+      'Predictive modeling and forecasting',
+      'Natural language query interface',
+      'Interactive dashboards and visualizations',
+      'Real-time data monitoring',
+      'Anomaly detection and alerting',
+      'Custom model training',
+      'API for data integration',
+      'Automated report generation'
+    ],
+    benefits: [
+      'Reduce data analysis time by 75%',
+      'Improve decision accuracy by 50%',
+      'Identify hidden patterns and opportunities',
+      'Predict future trends with 85% accuracy',
+      'Automate routine reporting tasks',
+      'Enable data-driven decision making'
     ],
     pricing: {
-      starting: 499,
+      starting: 299,
+      period: 'month',
       currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '50% faster insights generation',
-      'Predictive accuracy up to 95%',
-      'Automated reporting saves 20 hours/week',
-      'Real-time decision making'
-    ],
-    useCases: [
-      'Business intelligence',
-      'Sales forecasting',
-      'Customer behavior analysis',
-      'Financial risk assessment'
-    ],
-    icon: '📈',
-    popular: true,
-    path: '/ai-data-analytics',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-data-analytics'
-    },
-    marketPrice: {
-      min: 300,
-      max: 1000,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'ai-cybersecurity',
-    name: 'AI Cybersecurity Suite',
-    category: 'ai',
-    subcategory: 'Security',
-    description: 'Advanced AI-powered cybersecurity with threat detection, prevention, and response automation.',
-    features: [
-      'Real-time threat detection',
-      'Behavioral analysis',
-      'Automated incident response',
-      'Vulnerability assessment',
-      'Compliance monitoring',
-      'Security training'
-    ],
-    pricing: {
-      starting: 799,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '99.9% threat detection accuracy',
-      '50% faster incident response',
-      'Automated compliance reporting',
-      '24/7 security monitoring'
-    ],
-    useCases: [
-      'Enterprise security',
-      'Financial services',
-      'Healthcare data protection',
-      'Government agencies'
-    ],
-    icon: '🔒',
-    popular: true,
-    path: '/ai-cybersecurity',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'
-    },
-    marketPrice: {
-      min: 500,
-      max: 2000,
-      currency: 'USD'
-    }
-  },
-
-  // Micro SAAS Services
-  {
-    id: 'ai-social-media-manager',
-    name: 'AI Social Media Manager',
-    category: 'micro-saas',
-    subcategory: 'Social Media',
-    description: 'Automated social media management with AI-powered content creation and scheduling.',
-    features: [
-      'Multi-platform posting',
-      'AI content suggestions',
-      'Optimal timing analysis',
-      'Engagement tracking',
-      'Hashtag optimization',
-      'Competitor analysis'
-    ],
-    pricing: {
-      starting: 79,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '3x more engagement',
-      'Save 15 hours/week',
-      'Consistent posting schedule',
-      'Data-driven content strategy'
-    ],
-    useCases: [
-      'Small business marketing',
-      'Personal branding',
-      'E-commerce promotion',
-      'Content creators'
-    ],
-    icon: '📱',
-    popular: true,
-    path: '/ai-social-media-manager',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'
+      popular: true
     },
     marketPrice: {
       min: 50,
-      max: 150,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'ai-email-marketing',
-    name: 'AI Email Marketing Pro',
-    category: 'micro-saas',
-    subcategory: 'Email Marketing',
-    description: 'Intelligent email marketing with AI-powered segmentation, personalization, and automation.',
-    features: [
-      'AI-powered segmentation',
-      'Personalized content',
-      'Send time optimization',
-      'A/B testing automation',
-      'Email template library',
-      'Performance analytics'
-    ],
-    pricing: {
-      starting: 99,
-      currency: 'USD',
+      max: 2000,
       period: 'month'
     },
-    benefits: [
-      '40% higher open rates',
-      '60% increase in click-through rates',
-      'Automated campaign optimization',
-      'Personalized customer journeys'
+    capabilities: [
+      'Data visualization and dashboards',
+      'Statistical analysis and modeling',
+      'Machine learning predictions',
+      'Time series analysis',
+      'Clustering and segmentation',
+      'Regression analysis',
+      'Classification algorithms',
+      'Deep learning models'
     ],
     useCases: [
-      'E-commerce marketing',
-      'Newsletter campaigns',
-      'Lead nurturing',
-      'Customer retention'
+      'Business intelligence and reporting',
+      'Sales forecasting and planning',
+      'Customer behavior analysis',
+      'Financial risk assessment',
+      'Supply chain optimization',
+      'Marketing campaign optimization',
+      'Healthcare patient outcomes',
+      'Manufacturing quality control'
     ],
-    icon: '📧',
-    popular: true,
-    path: '/ai-email-marketing',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-email-marketing'
-    },
-    marketPrice: {
-      min: 60,
-      max: 200,
-      currency: 'USD'
-    }
+    technologies: [
+      'Python and R for data science',
+      'TensorFlow and PyTorch',
+      'Apache Spark for big data',
+      'React and D3.js for visualization',
+      'PostgreSQL and MongoDB',
+      'Redis for caching',
+      'AWS and Google Cloud',
+      'Jupyter notebooks'
+    ],
+    targetAudience: [
+      'Data scientists',
+      'Business analysts',
+      'Marketing managers',
+      'Financial analysts',
+      'Operations managers',
+      'C-level executives'
+    ],
+    implementationTime: '3-6 weeks',
+    support: [
+      '24/7 technical support',
+      'Dedicated data scientist consultation',
+      'Custom model development',
+      'Training and workshops',
+      'Ongoing optimization'
+    ],
+    compliance: [
+      'GDPR compliant',
+      'SOC 2 Type II certified',
+      'HIPAA compliant (healthcare)',
+      'Data encryption and security'
+    ],
+    integrations: [
+      'Google Analytics',
+      'Salesforce',
+      'HubSpot',
+      'MySQL and PostgreSQL',
+      'Excel and CSV files',
+      'REST APIs',
+      'Webhook integrations',
+      'Cloud storage services'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/data-analytics',
+    documentationUrl: 'https://docs.ziontechgroup.com/data-analytics',
+    contactEmail: 'analytics@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
   },
   {
-    id: 'ai-seo-optimizer',
-    name: 'AI SEO Optimizer',
-    category: 'micro-saas',
-    subcategory: 'SEO',
-    description: 'AI-powered SEO optimization with keyword research, content analysis, and ranking tracking.',
+    id: 'ai-image-recognition',
+    name: 'AI Image Recognition System',
+    description: 'Advanced computer vision for automated image analysis and object detection',
+    longDescription: 'Leverage cutting-edge computer vision technology to automatically analyze, categorize, and extract insights from images. Our AI system can identify objects, faces, text, and scenes with high accuracy, making it perfect for content moderation, quality control, security, and automated image processing workflows.',
+    icon: 'Camera',
+    category: 'ai',
+    subcategory: 'computer-vision',
     features: [
-      'AI keyword research',
-      'Content optimization suggestions',
-      'Competitor analysis',
-      'Ranking tracking',
-      'Technical SEO audit',
-      'Link building recommendations'
+      'Object detection and classification',
+      'Facial recognition and analysis',
+      'Text extraction (OCR) from images',
+      'Scene and context understanding',
+      'Content moderation and filtering',
+      'Quality assessment and enhancement',
+      'Batch processing capabilities',
+      'Real-time image analysis',
+      'Custom model training',
+      'API for easy integration'
+    ],
+    benefits: [
+      'Automate image processing workflows',
+      'Improve content quality and consistency',
+      'Reduce manual image review time by 90%',
+      'Enhance security and monitoring',
+      'Enable automated content moderation',
+      'Extract valuable data from images'
     ],
     pricing: {
-      starting: 129,
+      starting: 149,
+      period: 'month',
       currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '50% faster SEO results',
-      'Comprehensive keyword analysis',
-      'Automated optimization suggestions',
-      'Competitive advantage insights'
-    ],
-    useCases: [
-      'Website optimization',
-      'Blog content SEO',
-      'E-commerce SEO',
-      'Local business SEO'
-    ],
-    icon: '🎯',
-    popular: true,
-    path: '/ai-seo-optimizer',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'
-    },
-    marketPrice: {
-      min: 80,
-      max: 250,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'ai-invoice-generator',
-    name: 'AI Invoice Generator',
-    category: 'micro-saas',
-    subcategory: 'Finance',
-    description: 'Automated invoice generation with AI-powered data extraction and payment tracking.',
-    features: [
-      'Automated invoice creation',
-      'AI data extraction',
-      'Payment tracking',
-      'Recurring billing',
-      'Multi-currency support',
-      'Tax calculation'
-    ],
-    pricing: {
-      starting: 49,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '90% time savings on invoicing',
-      'Reduced billing errors',
-      'Faster payment processing',
-      'Professional invoice templates'
-    ],
-    useCases: [
-      'Freelancer billing',
-      'Small business invoicing',
-      'Service-based businesses',
-      'Contractor payments'
-    ],
-    icon: '💰',
-    popular: false,
-    path: '/ai-invoice-generator',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'
-    },
-    marketPrice: {
-      min: 30,
-      max: 100,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'ai-time-tracker',
-    name: 'AI Time Tracker Pro',
-    category: 'micro-saas',
-    subcategory: 'Productivity',
-    description: 'Intelligent time tracking with AI-powered productivity insights and automated reporting.',
-    features: [
-      'Automatic time tracking',
-      'AI productivity insights',
-      'Project time allocation',
-      'Team collaboration',
-      'Detailed reporting',
-      'Integration with 100+ tools'
-    ],
-    pricing: {
-      starting: 39,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      'Accurate time tracking',
-      'Productivity optimization',
-      'Project profitability analysis',
-      'Team performance insights'
-    ],
-    useCases: [
-      'Freelancer time tracking',
-      'Team productivity monitoring',
-      'Project billing',
-      'Remote work management'
-    ],
-    icon: '⏰',
-    popular: false,
-    path: '/ai-time-tracker',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-time-tracker'
+      popular: false
     },
     marketPrice: {
       min: 20,
-      max: 80,
-      currency: 'USD'
-    }
-  },
+      max: 500,
+      period: 'month'
+    },
+    capabilities: [
+      'Object detection and recognition',
+      'Facial recognition and verification',
+      'Optical Character Recognition (OCR)',
+      'Image classification and tagging',
+      'Content moderation',
+      'Quality assessment',
+      'Custom model training',
+      'Batch processing'
+    ],
+    useCases: [
+      'E-commerce product categorization',
+      'Security and surveillance',
+      'Content moderation for social media',
+      'Medical image analysis',
+      'Quality control in manufacturing',
+      'Document digitization',
+      'Automotive safety systems',
+      'Retail inventory management'
+    ],
+    technologies: [
+      'Convolutional Neural Networks (CNN)',
+      'TensorFlow and PyTorch',
+      'OpenCV for image processing',
+      'YOLO for object detection',
+      'React and Node.js',
+      'MongoDB for metadata storage',
+      'AWS and Google Cloud',
+      'GPU acceleration'
+    ],
+    targetAudience: [
+      'E-commerce businesses',
+      'Security companies',
+      'Content platforms',
+      'Healthcare organizations',
+      'Manufacturing companies',
+      'Software developers'
+    ],
+    implementationTime: '2-4 weeks',
+    support: [
+      '24/7 technical support',
+      'Custom model development',
+      'Integration assistance',
+      'Performance optimization',
+      'Training and documentation'
+    ],
+    compliance: [
+      'GDPR compliant',
+      'SOC 2 Type II certified',
+      'Data privacy protection',
+      'Secure image processing'
+    ],
+    integrations: [
+      'AWS S3 and Google Cloud Storage',
+      'REST APIs',
+      'Webhook notifications',
+      'Database systems',
+      'Content management systems',
+      'Mobile applications',
+      'IoT devices',
+      'Custom applications'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/image-recognition',
+    documentationUrl: 'https://docs.ziontechgroup.com/image-recognition',
+    contactEmail: 'vision@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  }
+];
 
-  // IT Services
+export const itServices: Service[] = [
   {
-    id: 'cloud-infrastructure',
-    name: 'Cloud Infrastructure Solutions',
+    id: 'cloud-migration',
+    name: 'Cloud Migration Services',
+    description: 'Seamless migration to cloud infrastructure with zero downtime and enhanced security',
+    longDescription: 'Migrate your applications and data to the cloud with our expert cloud migration services. We ensure zero downtime, enhanced security, and optimized performance while reducing costs. Our certified cloud architects handle everything from planning to execution, ensuring a smooth transition to AWS, Azure, or Google Cloud.',
+    icon: 'Cloud',
     category: 'it',
-    subcategory: 'Cloud Computing',
-    description: 'Enterprise-grade cloud infrastructure with 99.9% uptime guarantee and 24/7 support.',
+    subcategory: 'cloud-services',
     features: [
-      'Multi-cloud deployment',
-      'Auto-scaling capabilities',
-      'Disaster recovery',
-      'Security compliance',
-      'Performance monitoring',
-      'Cost optimization'
+      'Comprehensive cloud readiness assessment',
+      'Zero-downtime migration strategy',
+      'Data security and compliance validation',
+      'Performance optimization and monitoring',
+      'Cost optimization and management',
+      'Disaster recovery and backup solutions',
+      'Multi-cloud and hybrid cloud strategies',
+      '24/7 monitoring and support',
+      'Training and knowledge transfer',
+      'Post-migration optimization'
     ],
-    pricing: {
-      starting: 999,
-      currency: 'USD',
-      period: 'month'
-    },
     benefits: [
-      '99.9% uptime guarantee',
-      '50% cost reduction vs on-premise',
-      'Instant scalability',
-      'Enhanced security'
-    ],
-    useCases: [
-      'Enterprise applications',
-      'E-commerce platforms',
-      'Data analytics',
-      'Web applications'
-    ],
-    icon: '☁️',
-    popular: true,
-    path: '/cloud-infrastructure',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure'
-    },
-    marketPrice: {
-      min: 500,
-      max: 2000,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'cybersecurity-suite',
-    name: 'Enterprise Cybersecurity Suite',
-    category: 'it',
-    subcategory: 'Security',
-    description: 'Comprehensive cybersecurity solution with threat detection, prevention, and compliance.',
-    features: [
-      'Network security monitoring',
-      'Endpoint protection',
-      'Email security',
-      'Web application firewall',
-      'Compliance reporting',
-      'Incident response'
-    ],
-    pricing: {
-      starting: 1299,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '360-degree security coverage',
-      'Compliance with industry standards',
-      '24/7 security monitoring',
-      'Rapid threat response'
-    ],
-    useCases: [
-      'Enterprise security',
-      'Healthcare compliance',
-      'Financial services',
-      'Government agencies'
-    ],
-    icon: '🛡️',
-    popular: true,
-    path: '/cybersecurity-suite',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite'
-    },
-    marketPrice: {
-      min: 800,
-      max: 3000,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'devops-automation',
-    name: 'DevOps & CI/CD Automation',
-    category: 'it',
-    subcategory: 'DevOps',
-    description: 'Complete DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',
-    features: [
-      'Automated CI/CD pipelines',
-      'Infrastructure as Code',
-      'Container orchestration',
-      'Monitoring and alerting',
-      'Security scanning',
-      'Performance optimization'
-    ],
-    pricing: {
-      starting: 799,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      '10x faster deployments',
-      'Reduced deployment errors',
-      'Automated testing',
-      'Improved team productivity'
-    ],
-    useCases: [
-      'Software development',
-      'Microservices deployment',
-      'Cloud migration',
-      'Application modernization'
-    ],
-    icon: '🔄',
-    popular: true,
-    path: '/devops-automation',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/devops-automation'
-    },
-    marketPrice: {
-      min: 500,
-      max: 1500,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'database-management',
-    name: 'Database Management & Optimization',
-    category: 'it',
-    subcategory: 'Database',
-    description: 'Professional database management with optimization, backup, and performance tuning.',
-    features: [
-      'Database optimization',
-      'Automated backups',
-      'Performance monitoring',
-      'Security hardening',
-      'Migration services',
-      '24/7 support'
-    ],
-    pricing: {
-      starting: 599,
-      currency: 'USD',
-      period: 'month'
-    },
-    benefits: [
-      'Improved database performance',
-      'Data security and compliance',
-      'Reduced downtime',
-      'Expert database administration'
-    ],
-    useCases: [
-      'Enterprise databases',
-      'E-commerce platforms',
-      'Data analytics',
-      'Application databases'
-    ],
-    icon: '🗄️',
-    popular: false,
-    path: '/database-management',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/database-management'
-    },
-    marketPrice: {
-      min: 300,
-      max: 1200,
-      currency: 'USD'
-    }
-  },
-
-  // Emerging Technologies
-  {
-    id: 'quantum-computing',
-    name: 'Quantum Computing Solutions',
-    category: 'emerging-tech',
-    subcategory: 'Quantum',
-    description: 'Next-generation quantum computing capabilities for complex problem solving and optimization.',
-    features: [
-      'Quantum algorithm development',
-      'Optimization problems',
-      'Cryptography solutions',
-      'Simulation capabilities',
-      'Research collaboration',
-      'Custom quantum applications'
+      'Reduce infrastructure costs by 40%',
+      'Improve system performance by 60%',
+      'Enhance security and compliance',
+      'Enable scalability and flexibility',
+      'Reduce maintenance overhead',
+      'Improve disaster recovery capabilities'
     ],
     pricing: {
       starting: 5000,
+      period: 'one-time',
       currency: 'USD',
-      period: 'month',
-      custom: true
-    },
-    benefits: [
-      'Exponential computational power',
-      'Revolutionary problem solving',
-      'Future-proof technology',
-      'Competitive advantage'
-    ],
-    useCases: [
-      'Drug discovery',
-      'Financial modeling',
-      'Cryptography',
-      'Optimization problems'
-    ],
-    icon: '⚛️',
-    popular: false,
-    new: true,
-    path: '/quantum-computing',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/quantum-computing'
-    },
-    marketPrice: {
-      min: 3000,
-      max: 10000,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'blockchain-solutions',
-    name: 'Blockchain & Web3 Solutions',
-    category: 'emerging-tech',
-    subcategory: 'Blockchain',
-    description: 'Comprehensive blockchain solutions including smart contracts, DeFi, and NFT platforms.',
-    features: [
-      'Smart contract development',
-      'DeFi platform creation',
-      'NFT marketplace development',
-      'Blockchain integration',
-      'Token development',
-      'Security auditing'
-    ],
-    pricing: {
-      starting: 2999,
-      currency: 'USD',
-      period: 'month',
-      custom: true
-    },
-    benefits: [
-      'Decentralized solutions',
-      'Enhanced security',
-      'Transparency and trust',
-      'Future of digital assets'
-    ],
-    useCases: [
-      'DeFi applications',
-      'NFT marketplaces',
-      'Supply chain tracking',
-      'Digital identity'
-    ],
-    icon: '⛓️',
-    popular: false,
-    new: true,
-    path: '/blockchain-solutions',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/blockchain-solutions'
+      popular: true
     },
     marketPrice: {
       min: 2000,
-      max: 8000,
-      currency: 'USD'
-    }
-  },
-  {
-    id: 'iot-edge-computing',
-    name: 'IoT & Edge Computing Platform',
-    category: 'emerging-tech',
-    subcategory: 'IoT',
-    description: 'Complete IoT and edge computing solution with real-time data processing and analytics.',
-    features: [
-      'IoT device management',
-      'Edge computing infrastructure',
-      'Real-time data processing',
-      'Predictive maintenance',
-      'Device security',
-      'Analytics dashboard'
-    ],
-    pricing: {
-      starting: 1299,
-      currency: 'USD',
-      period: 'month'
+      max: 50000,
+      period: 'one-time'
     },
-    benefits: [
-      'Real-time data processing',
-      'Reduced latency',
-      'Cost-effective data management',
-      'Scalable IoT solutions'
+    capabilities: [
+      'Application migration',
+      'Database migration',
+      'Data migration and synchronization',
+      'Infrastructure as Code (IaC)',
+      'Container orchestration',
+      'Load balancing and auto-scaling',
+      'Security hardening',
+      'Performance monitoring'
     ],
     useCases: [
-      'Smart manufacturing',
-      'Smart cities',
-      'Healthcare monitoring',
-      'Agriculture automation'
+      'Legacy system modernization',
+      'Data center consolidation',
+      'Disaster recovery planning',
+      'Scalability improvements',
+      'Cost reduction initiatives',
+      'Compliance requirements',
+      'Global expansion',
+      'Digital transformation'
     ],
-    icon: '🌐',
-    popular: false,
-    path: '/iot-edge-computing',
-    contact: {
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/iot-edge-computing'
+    technologies: [
+      'AWS, Azure, Google Cloud',
+      'Docker and Kubernetes',
+      'Terraform and CloudFormation',
+      'Ansible and Chef',
+      'Jenkins and GitLab CI/CD',
+      'Prometheus and Grafana',
+      'ELK Stack for logging',
+      'Security scanning tools'
+    ],
+    targetAudience: [
+      'Enterprise companies',
+      'Mid-size businesses',
+      'Government agencies',
+      'Healthcare organizations',
+      'Financial institutions',
+      'E-commerce businesses'
+    ],
+    implementationTime: '4-12 weeks',
+    support: [
+      '24/7 migration support',
+      'Dedicated project manager',
+      'Certified cloud architects',
+      'Training and documentation',
+      'Post-migration support'
+    ],
+    compliance: [
+      'SOC 2 Type II certified',
+      'ISO 27001 compliant',
+      'HIPAA compliant (healthcare)',
+      'PCI DSS compliant'
+    ],
+    integrations: [
+      'AWS services',
+      'Microsoft Azure',
+      'Google Cloud Platform',
+      'On-premises systems',
+      'Third-party applications',
+      'Monitoring tools',
+      'Security solutions',
+      'Backup systems'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/cloud-migration',
+    documentationUrl: 'https://docs.ziontechgroup.com/cloud-migration',
+    contactEmail: 'cloud@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
+  },
+  {
+    id: 'cybersecurity-audit',
+    name: 'Comprehensive Cybersecurity Audit',
+    description: 'Complete security assessment and vulnerability analysis with remediation recommendations',
+    longDescription: 'Protect your business with our comprehensive cybersecurity audit that identifies vulnerabilities, assesses risks, and provides actionable recommendations. Our certified security experts use industry-leading tools and methodologies to evaluate your security posture and help you implement robust security measures.',
+    icon: 'Shield',
+    category: 'it',
+    subcategory: 'cybersecurity',
+    features: [
+      'Vulnerability assessment and penetration testing',
+      'Security policy review and recommendations',
+      'Network security analysis',
+      'Application security testing',
+      'Compliance assessment (SOC 2, ISO 27001, HIPAA)',
+      'Employee security awareness evaluation',
+      'Incident response plan review',
+      'Security architecture assessment',
+      'Risk assessment and prioritization',
+      'Detailed remediation roadmap'
+    ],
+    benefits: [
+      'Identify and fix security vulnerabilities',
+      'Improve compliance posture',
+      'Reduce security risks by 80%',
+      'Enhance incident response capabilities',
+      'Protect sensitive data and assets',
+      'Meet regulatory requirements'
+    ],
+    pricing: {
+      starting: 2500,
+      period: 'one-time',
+      currency: 'USD',
+      popular: true
     },
     marketPrice: {
-      min: 800,
-      max: 2500,
-      currency: 'USD'
-    }
+      min: 1000,
+      max: 25000,
+      period: 'one-time'
+    },
+    capabilities: [
+      'Network penetration testing',
+      'Web application security testing',
+      'Mobile application security',
+      'Social engineering testing',
+      'Physical security assessment',
+      'Wireless security testing',
+      'Database security assessment',
+      'Cloud security evaluation'
+    ],
+    useCases: [
+      'Compliance requirements',
+      'Security incident investigation',
+      'Merger and acquisition due diligence',
+      'Regular security assessments',
+      'Third-party vendor evaluation',
+      'Insurance requirements',
+      'Customer security requirements',
+      'Regulatory compliance'
+    ],
+    technologies: [
+      'Nessus and OpenVAS',
+      'Burp Suite and OWASP ZAP',
+      'Metasploit Framework',
+      'Nmap and Wireshark',
+      'Custom security tools',
+      'SIEM platforms',
+      'Vulnerability scanners',
+      'Penetration testing tools'
+    ],
+    targetAudience: [
+      'Enterprise companies',
+      'Healthcare organizations',
+      'Financial institutions',
+      'Government agencies',
+      'E-commerce businesses',
+      'SaaS companies'
+    ],
+    implementationTime: '2-4 weeks',
+    support: [
+      '24/7 security support',
+      'Certified security experts',
+      'Detailed reporting',
+      'Remediation assistance',
+      'Follow-up assessments'
+    ],
+    compliance: [
+      'SOC 2 Type II certified',
+      'ISO 27001 compliant',
+      'CISSP certified professionals',
+      'CISA certified auditors'
+    ],
+    integrations: [
+      'SIEM platforms',
+      'Security monitoring tools',
+      'Incident response systems',
+      'Compliance management tools',
+      'Vulnerability management',
+      'Security awareness platforms',
+      'Identity management systems',
+      'Network security tools'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/cybersecurity-audit',
+    documentationUrl: 'https://docs.ziontechgroup.com/cybersecurity-audit',
+    contactEmail: 'security@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
   }
 ];
 
-export const serviceCategories = [
+export const emergingTechServices: Service[] = [
   {
-    id: 'ai',
-    name: 'AI Services',
-    description: 'Advanced artificial intelligence solutions',
-    icon: '🤖',
-    color: 'text-purple-400',
-    bgColor: 'bg-purple-500/10'
-  },
-  {
-    id: 'micro-saas',
-    name: 'Micro SAAS Solutions',
-    description: 'Affordable, powerful AI-driven tools',
-    icon: '⚡',
-    color: 'text-cyan-400',
-    bgColor: 'bg-cyan-500/10'
-  },
-  {
-    id: 'it',
-    name: 'IT Services',
-    description: 'Enterprise-grade IT solutions',
-    icon: '☁️',
-    color: 'text-blue-400',
-    bgColor: 'bg-blue-500/10'
-  },
-  {
-    id: 'emerging-tech',
-    name: 'Emerging Technologies',
-    description: 'Next-generation technology solutions',
-    icon: '🚀',
-    color: 'text-pink-400',
-    bgColor: 'bg-pink-500/10'
+    id: 'quantum-computing',
+    name: 'Quantum Computing Solutions',
+    description: 'Harness the power of quantum computing for complex problem solving and optimization',
+    longDescription: 'Explore the future of computing with our quantum computing solutions. We help businesses leverage quantum algorithms for optimization, cryptography, machine learning, and complex simulations. Our quantum experts work with leading quantum hardware providers to deliver practical quantum solutions for real-world problems.',
+    icon: 'Atom',
+    category: 'emerging-tech',
+    subcategory: 'quantum-computing',
+    features: [
+      'Quantum algorithm development and optimization',
+      'Quantum machine learning implementations',
+      'Quantum cryptography and security',
+      'Quantum simulation and modeling',
+      'Hybrid classical-quantum workflows',
+      'Quantum cloud access and management',
+      'Quantum error correction strategies',
+      'Performance benchmarking and analysis',
+      'Custom quantum applications',
+      'Quantum education and training'
+    ],
+    benefits: [
+      'Solve complex optimization problems',
+      'Enhance cryptographic security',
+      'Accelerate machine learning training',
+      'Enable breakthrough discoveries',
+      'Future-proof your technology stack',
+      'Gain competitive advantage'
+    ],
+    pricing: {
+      starting: 10000,
+      period: 'month',
+      currency: 'USD',
+      popular: false
+    },
+    marketPrice: {
+      min: 5000,
+      max: 100000,
+      period: 'month'
+    },
+    capabilities: [
+      'Quantum algorithm design',
+      'Quantum circuit optimization',
+      'Quantum machine learning',
+      'Quantum cryptography',
+      'Quantum simulation',
+      'Hybrid computing',
+      'Quantum benchmarking',
+      'Custom quantum software'
+    ],
+    useCases: [
+      'Financial portfolio optimization',
+      'Drug discovery and molecular simulation',
+      'Supply chain optimization',
+      'Cryptographic key generation',
+      'Machine learning acceleration',
+      'Climate modeling',
+      'Traffic optimization',
+      'Logistics and routing'
+    ],
+    technologies: [
+      'IBM Qiskit',
+      'Google Cirq',
+      'Microsoft Q#',
+      'Rigetti Forest',
+      'D-Wave Ocean',
+      'IonQ quantum computers',
+      'Quantum simulators',
+      'Hybrid quantum-classical frameworks'
+    ],
+    targetAudience: [
+      'Research institutions',
+      'Financial services',
+      'Pharmaceutical companies',
+      'Government agencies',
+      'Technology companies',
+      'Academic institutions'
+    ],
+    implementationTime: '6-12 months',
+    support: [
+      'Dedicated quantum experts',
+      '24/7 technical support',
+      'Quantum education programs',
+      'Custom development',
+      'Ongoing optimization'
+    ],
+    compliance: [
+      'Research compliance',
+      'Data security standards',
+      'Export control regulations',
+      'Intellectual property protection'
+    ],
+    integrations: [
+      'Classical computing systems',
+      'Cloud platforms',
+      'High-performance computing',
+      'Machine learning frameworks',
+      'Database systems',
+      'API endpoints',
+      'Visualization tools',
+      'Simulation software'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/quantum-computing',
+    documentationUrl: 'https://docs.ziontechgroup.com/quantum-computing',
+    contactEmail: 'quantum@ziontechgroup.com',
+    contactPhone: '+1 302 464 0950'
   }
 ];
 
-export const contactInfo = {
-  phone: '+1 (302) 464-0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
-  website: 'https://ziontechgroup.com',
-  hours: 'Mon-Fri: 9AM-6PM EST'
+export const allServices = [
+  ...microSaasServices,
+  ...aiServices,
+  ...itServices,
+  ...emergingTechServices
+];
+
+export const getServiceById = (id: string): Service | undefined => {
+  return allServices.find(service => service.id === id);
+};
+
+export const getServicesByCategory = (category: string): Service[] => {
+  return allServices.filter(service => service.category === category);
+};
+
+export const getServicesBySubcategory = (subcategory: string): Service[] => {
+  return allServices.filter(service => service.subcategory === subcategory);
 };
