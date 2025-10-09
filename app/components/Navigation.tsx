@@ -1,6 +1,34 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Home, 
+  Settings, 
+  Brain, 
+  Cpu, 
+  BarChart, 
+  MessageSquare, 
+  PieChart, 
+  Bot, 
+  Code, 
+  Video, 
+  Mic, 
+  Zap, 
+  TrendingUp, 
+  FileText, 
+  DollarSign, 
+  Eye, 
+  Cube, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Smartphone, 
+  Lock, 
+  Menu, 
+  X 
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +91,7 @@ const Navigation: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 cyber-scan-lines' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -73,7 +101,7 @@ const Navigation: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text holographic-text">Zion Tech Group</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -172,7 +200,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-              className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+              className="flex items-center space-x-2 cyber-button-enhanced px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>

@@ -4,114 +4,110 @@ import {
   CheckCircle, 
   Star, 
   ArrowRight, 
-  BarChart, 
-  Users, 
-  Calendar, 
-  Target,
+  Code, 
+  Palette, 
+  Smartphone, 
+  Search, 
   Zap,
   Shield,
-  Brain,
+  Globe,
+  Users,
+  BarChart,
   Clock,
   DollarSign,
   Phone,
   Mail,
-  MapPin,
-  TrendingUp,
-  PieChart,
-  Settings,
-  FileText,
-  MessageSquare
+  MapPin
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIProjectManagerPage: React.FC = () => {
+const AIWebsiteBuilderPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Planning',
-      description: 'Intelligent project planning with predictive analytics and resource optimization'
+      icon: Code,
+      title: 'AI-Powered Design',
+      description: 'Generate stunning website designs automatically using advanced AI algorithms'
     },
     {
-      icon: BarChart,
-      title: 'Smart Analytics',
-      description: 'Real-time project insights and performance metrics with AI-driven recommendations'
+      icon: Palette,
+      title: 'Smart Templates',
+      description: 'Choose from hundreds of professionally designed templates that adapt to your brand'
     },
     {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team communication and task management with AI-powered workflow optimization'
+      icon: Smartphone,
+      title: 'Mobile Responsive',
+      description: 'All websites are automatically optimized for mobile devices and tablets'
     },
     {
-      icon: Target,
-      title: 'Goal Tracking',
-      description: 'Automated milestone tracking and progress monitoring with predictive completion dates'
-    },
-    {
-      icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-optimized scheduling that considers team availability and project dependencies'
+      icon: Search,
+      title: 'SEO Optimized',
+      description: 'Built-in SEO tools ensure your website ranks high in search results'
     },
     {
       icon: Zap,
-      title: 'Automation',
-      description: 'Automate repetitive tasks and streamline project workflows with intelligent automation'
+      title: 'Lightning Fast',
+      description: 'Optimized for speed with CDN delivery and advanced caching'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security with SSL certificates and regular backups'
     }
   ];
 
   const benefits = [
-    '40% increase in project delivery speed',
-    '70% reduction in project delays',
-    '85% improvement in planning accuracy',
-    '50% reduction in project management overhead',
-    'Real-time risk identification and mitigation',
-    'Automated resource allocation and optimization'
+    '90% faster development time compared to traditional methods',
+    'Professional designs without hiring expensive designers',
+    'Zero coding knowledge required',
+    'Automatic content generation based on your business',
+    'Real-time preview and editing',
+    'One-click publishing to any domain'
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$29',
       period: '/month',
       features: [
-        'Up to 5 projects',
-        'Basic AI planning',
-        'Team of up to 10 members',
-        'Standard templates',
+        'Up to 5 pages',
+        'Basic AI templates',
+        'Mobile responsive',
+        'Basic SEO tools',
         'Email support',
-        'Basic analytics'
+        '1GB storage'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$99',
+      price: '$59',
       period: '/month',
       features: [
-        'Up to 25 projects',
-        'Advanced AI planning',
-        'Team of up to 50 members',
-        'Custom templates',
+        'Up to 25 pages',
+        'Premium AI templates',
+        'Advanced SEO tools',
+        'E-commerce integration',
         'Priority support',
-        'Advanced analytics',
-        'API integration',
-        'Time tracking'
+        '10GB storage',
+        'Custom domain'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$99',
       period: '/month',
       features: [
-        'Unlimited projects',
+        'Unlimited pages',
         'Custom AI training',
-        'Unlimited team members',
         'White-label solution',
+        'API access',
         '24/7 phone support',
-        'Custom integrations',
-        'Advanced reporting',
-        'Dedicated account manager'
+        '100GB storage',
+        'Multiple domains',
+        'Advanced analytics'
       ],
       popular: false
     }
@@ -127,13 +123,13 @@ const AIProjectManagerPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch holographic-text">
-                AI Project Manager
+                AI Website Builder
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect cyber-text-glow">
-                Intelligent project planning with AI-powered optimization
+                Create stunning websites in minutes with AI-powered design
               </p>
               <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your project management with AI-powered planning, predictive analytics, and intelligent automation. Deliver projects faster, more accurately, and with better resource utilization.
+                Build professional, responsive websites without any coding knowledge. Our AI analyzes your business and creates a custom website that converts visitors into customers.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -141,7 +137,7 @@ const AIProjectManagerPage: React.FC = () => {
                   href="#pricing"
                   className="cyber-button-enhanced px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
-                  Start Managing Projects
+                  Start Building Now
                 </a>
                 <a
                   href="tel:+13024640950"
@@ -155,16 +151,16 @@ const AIProjectManagerPage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
                 <div className="holographic-card p-6 text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300">Faster Delivery</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">10,000+</div>
+                  <div className="text-gray-300">Websites Created</div>
                 </div>
                 <div className="holographic-card p-6 text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">70%</div>
-                  <div className="text-gray-300">Fewer Delays</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
+                  <div className="text-gray-300">Faster Development</div>
                 </div>
                 <div className="holographic-card p-6 text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">85%</div>
-                  <div className="text-gray-300">Planning Accuracy</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">4.9/5</div>
+                  <div className="text-gray-300">Customer Rating</div>
                 </div>
               </div>
             </div>
@@ -175,7 +171,7 @@ const AIProjectManagerPage: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text holographic-text">
-              Powerful AI Features
+              Powerful Features
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -196,7 +192,7 @@ const AIProjectManagerPage: React.FC = () => {
         <section className="py-16 bg-slate-800/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text holographic-text">
-              Proven Results
+              Why Choose Our AI Website Builder?
             </h2>
             
             <div className="max-w-4xl mx-auto">
@@ -212,48 +208,11 @@ const AIProjectManagerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text holographic-text">
-              How It Works
-            </h2>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="holographic-card p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-white">1</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Define Project</h3>
-                  <p className="text-gray-300">Input your project details, goals, and constraints. Our AI analyzes your requirements and creates an optimized project plan.</p>
-                </div>
-                
-                <div className="holographic-card p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-white">2</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">AI Planning</h3>
-                  <p className="text-gray-300">Our AI creates detailed timelines, assigns resources, identifies risks, and optimizes your project workflow automatically.</p>
-                </div>
-                
-                <div className="holographic-card p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-white">3</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Execute & Monitor</h3>
-                  <p className="text-gray-300">Track progress in real-time, receive AI-powered insights, and automatically adjust plans based on changing conditions.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
-        <section id="pricing" className="py-16 bg-slate-800/30">
+        <section id="pricing" className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text holographic-text">
-              Choose Your Plan
+              Simple, Transparent Pricing
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -301,10 +260,10 @@ const AIProjectManagerPage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16">
+        <section className="py-16 bg-slate-800/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text holographic-text">
-              Ready to Transform Your Project Management?
+              Ready to Build Your Website?
             </h2>
             
             <div className="max-w-4xl mx-auto">
@@ -357,4 +316,4 @@ const AIProjectManagerPage: React.FC = () => {
   );
 };
 
-export default AIProjectManagerPage;
+export default AIWebsiteBuilderPage;

@@ -270,6 +270,1217 @@ const HomePage: React.FC = () => {
       benefits: ['Faster reviews', 'Risk identification', 'Cost savings'],
       link: '/ai-legal-assistant',
       popular: false
+    },
+    // NEW MICRO SAAS SERVICES
+    {
+      title: 'AI Website Builder',
+      description: 'Create stunning websites with AI-powered design and content generation',
+      icon: '🌐',
+      price: '$89/month',
+      features: ['AI design templates', 'Auto content generation', 'SEO optimization', 'Mobile responsive'],
+      benefits: ['90% faster development', 'Professional designs', 'Zero coding required'],
+      link: '/ai-website-builder',
+      popular: true
+    },
+    {
+      title: 'AI Logo Designer',
+      description: 'Generate professional logos with AI-powered design intelligence',
+      icon: '🎨',
+      price: '$49/month',
+      features: ['Unlimited logo generation', 'Brand guidelines', 'Multiple formats', 'Vector graphics'],
+      benefits: ['Professional quality', 'Brand consistency', 'Cost effective'],
+      link: '/ai-logo-designer',
+      popular: true
+    },
+    {
+      title: 'AI Email Signature Generator',
+      description: 'Create professional email signatures with AI-powered design',
+      icon: '✉️',
+      price: '$29/month',
+      features: ['Auto-generated signatures', 'Brand consistency', 'Social media integration', 'Mobile optimized'],
+      benefits: ['Professional appearance', 'Time savings', 'Brand recognition'],
+      link: '/ai-email-signature',
+      popular: false
+    },
+    {
+      title: 'AI Business Card Designer',
+      description: 'Design professional business cards with AI-powered creativity',
+      icon: '💳',
+      price: '$39/month',
+      features: ['AI design templates', 'Print-ready files', 'QR code integration', 'Multiple formats'],
+      benefits: ['Professional designs', 'Print quality', 'Brand consistency'],
+      link: '/ai-business-card',
+      popular: false
+    },
+    {
+      title: 'AI Presentation Maker',
+      description: 'Create compelling presentations with AI-powered content and design',
+      icon: '📽️',
+      price: '$79/month',
+      features: ['AI content generation', 'Smart templates', 'Auto animations', 'Export options'],
+      benefits: ['Professional presentations', 'Time savings', 'Engaging content'],
+      link: '/ai-presentation-maker',
+      popular: true
+    },
+    {
+      title: 'AI Invoice Generator',
+      description: 'Generate professional invoices with AI-powered automation',
+      icon: '🧾',
+      price: '$59/month',
+      features: ['Auto invoice generation', 'Payment tracking', 'Tax calculations', 'Client management'],
+      benefits: ['Faster billing', 'Reduced errors', 'Professional appearance'],
+      link: '/ai-invoice-generator',
+      popular: true
+    },
+    {
+      title: 'AI Contract Generator',
+      description: 'Create legal contracts with AI-powered document generation',
+      icon: '📋',
+      price: '$199/month',
+      features: ['Legal templates', 'Custom clauses', 'Risk assessment', 'E-signature integration'],
+      benefits: ['Legal compliance', 'Time savings', 'Risk reduction'],
+      link: '/ai-contract-generator',
+      popular: false
+    },
+    {
+      title: 'AI Resume Builder',
+      description: 'Create professional resumes with AI-powered optimization',
+      icon: '📄',
+      price: '$39/month',
+      features: ['ATS optimization', 'Multiple templates', 'Skills matching', 'Cover letter generation'],
+      benefits: ['Higher interview rates', 'Professional appearance', 'Time savings'],
+      link: '/ai-resume-builder',
+      popular: true
+    },
+    {
+      title: 'AI Job Description Writer',
+      description: 'Generate compelling job descriptions with AI-powered content',
+      icon: '💼',
+      price: '$49/month',
+      features: ['Industry-specific templates', 'Skills matching', 'Compliance checking', 'Bias reduction'],
+      benefits: ['Better candidates', 'Time savings', 'Legal compliance'],
+      link: '/ai-job-description',
+      popular: false
+    },
+    {
+      title: 'AI Meeting Scheduler',
+      description: 'Intelligent meeting scheduling with AI-powered optimization',
+      icon: '📅',
+      price: '$69/month',
+      features: ['Smart scheduling', 'Time zone handling', 'Calendar integration', 'Conflict resolution'],
+      benefits: ['Reduced scheduling time', 'Fewer conflicts', 'Better productivity'],
+      link: '/ai-meeting-scheduler',
+      popular: true
+    },
+    {
+      title: 'AI Expense Tracker',
+      description: 'Track and categorize expenses with AI-powered automation',
+      icon: '💸',
+      price: '$49/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Tax preparation', 'Reporting'],
+      benefits: ['Time savings', 'Accuracy', 'Tax compliance'],
+      link: '/ai-expense-tracker',
+      popular: false
+    },
+    {
+      title: 'AI Time Tracker',
+      description: 'Track productivity with AI-powered time management',
+      icon: '⏰',
+      price: '$39/month',
+      features: ['Automatic tracking', 'Productivity insights', 'Project management', 'Reporting'],
+      benefits: ['Better productivity', 'Accurate billing', 'Insights'],
+      link: '/ai-time-tracker',
+      popular: true
+    },
+    {
+      title: 'AI Password Manager',
+      description: 'Secure password management with AI-powered security',
+      icon: '🔐',
+      price: '$59/month',
+      features: ['Password generation', 'Security monitoring', 'Breach alerts', 'Multi-device sync'],
+      benefits: ['Enhanced security', 'Convenience', 'Peace of mind'],
+      link: '/ai-password-manager',
+      popular: true
+    },
+    {
+      title: 'AI Document Scanner',
+      description: 'Scan and digitize documents with AI-powered OCR',
+      icon: '📱',
+      price: '$79/month',
+      features: ['OCR technology', 'Document organization', 'Search functionality', 'Cloud storage'],
+      benefits: ['Paperless office', 'Easy search', 'Space savings'],
+      link: '/ai-document-scanner',
+      popular: false
+    },
+    {
+      title: 'AI Translation Service',
+      description: 'Real-time translation with AI-powered language processing',
+      icon: '🌍',
+      price: '$99/month',
+      features: ['100+ languages', 'Real-time translation', 'Document translation', 'Voice translation'],
+      benefits: ['Global communication', 'Time savings', 'Accuracy'],
+      link: '/ai-translation',
+      popular: true
+    },
+    {
+      title: 'AI Voice Assistant',
+      description: 'Custom voice assistant for business operations',
+      icon: '🎙️',
+      price: '$149/month',
+      features: ['Custom commands', 'Integration APIs', 'Multi-language', 'Analytics'],
+      benefits: ['Hands-free operation', 'Efficiency', 'Customization'],
+      link: '/ai-voice-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Weather Predictor',
+      description: 'Advanced weather forecasting for business planning',
+      icon: '🌤️',
+      price: '$89/month',
+      features: ['Accurate forecasts', 'Business impact analysis', 'Alerts', 'API integration'],
+      benefits: ['Better planning', 'Risk mitigation', 'Cost savings'],
+      link: '/ai-weather-predictor',
+      popular: false
+    },
+    {
+      title: 'AI Stock Tracker',
+      description: 'Intelligent stock market analysis and tracking',
+      icon: '📈',
+      price: '$199/month',
+      features: ['Real-time analysis', 'Predictive modeling', 'Portfolio optimization', 'Alerts'],
+      benefits: ['Better investments', 'Risk management', 'Higher returns'],
+      link: '/ai-stock-tracker',
+      popular: true
+    },
+    {
+      title: 'AI News Aggregator',
+      description: 'Curated news feed with AI-powered relevance filtering',
+      icon: '📰',
+      price: '$69/month',
+      features: ['Smart filtering', 'Industry focus', 'Real-time updates', 'Customization'],
+      benefits: ['Relevant news', 'Time savings', 'Better decisions'],
+      link: '/ai-news-aggregator',
+      popular: false
+    },
+    {
+      title: 'AI Calendar Optimizer',
+      description: 'Optimize your calendar with AI-powered scheduling intelligence',
+      icon: '📅',
+      price: '$59/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Productivity analysis', 'Integration'],
+      benefits: ['Better time management', 'Reduced conflicts', 'Higher productivity'],
+      link: '/ai-calendar-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Email Optimizer',
+      description: 'Optimize email performance with AI-powered insights',
+      icon: '📧',
+      price: '$79/month',
+      features: ['Send time optimization', 'Subject line testing', 'Content analysis', 'A/B testing'],
+      benefits: ['Higher open rates', 'Better engagement', 'Improved ROI'],
+      link: '/ai-email-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Scheduler',
+      description: 'Intelligent social media posting with AI optimization',
+      icon: '📱',
+      price: '$89/month',
+      features: ['Optimal timing', 'Content suggestions', 'Hashtag optimization', 'Analytics'],
+      benefits: ['Better engagement', 'Time savings', 'Higher reach'],
+      link: '/ai-social-scheduler',
+      popular: true
+    },
+    {
+      title: 'AI Lead Scoring',
+      description: 'Score and prioritize leads with AI-powered analysis',
+      icon: '🎯',
+      price: '$149/month',
+      features: ['Behavioral analysis', 'Predictive scoring', 'CRM integration', 'Automation'],
+      benefits: ['Higher conversion', 'Better targeting', 'Sales efficiency'],
+      link: '/ai-lead-scoring',
+      popular: true
+    },
+    {
+      title: 'AI Customer Segmentation',
+      description: 'Segment customers with AI-powered behavioral analysis',
+      icon: '👥',
+      price: '$129/month',
+      features: ['Behavioral analysis', 'Predictive modeling', 'Personalization', 'Campaign optimization'],
+      benefits: ['Better targeting', 'Higher conversion', 'Personalized experience'],
+      link: '/ai-customer-segmentation',
+      popular: false
+    },
+    {
+      title: 'AI Price Optimizer',
+      description: 'Optimize pricing strategies with AI-powered market analysis',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Market analysis', 'Competitor tracking', 'Dynamic pricing', 'Revenue optimization'],
+      benefits: ['Higher revenue', 'Competitive advantage', 'Market insights'],
+      link: '/ai-price-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Inventory Optimizer',
+      description: 'Optimize inventory levels with AI-powered demand forecasting',
+      icon: '📦',
+      price: '$179/month',
+      features: ['Demand forecasting', 'Stock optimization', 'Reorder automation', 'Analytics'],
+      benefits: ['Reduced costs', 'Better availability', 'Higher efficiency'],
+      link: '/ai-inventory-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered logistics',
+      icon: '🚚',
+      price: '$299/month',
+      features: ['Route optimization', 'Demand planning', 'Risk assessment', 'Cost analysis'],
+      benefits: ['Reduced costs', 'Faster delivery', 'Risk mitigation'],
+      link: '/ai-supply-chain',
+      popular: false
+    },
+    {
+      title: 'AI Quality Assurance',
+      description: 'Automated quality testing with AI-powered defect detection',
+      icon: '🔍',
+      price: '$159/month',
+      features: ['Automated testing', 'Defect detection', 'Quality metrics', 'Reporting'],
+      benefits: ['Higher quality', 'Reduced defects', 'Cost savings'],
+      link: '/ai-quality-assurance',
+      popular: true
+    },
+    {
+      title: 'AI Performance Monitor',
+      description: 'Monitor system performance with AI-powered analytics',
+      icon: '📊',
+      price: '$119/month',
+      features: ['Real-time monitoring', 'Predictive alerts', 'Performance optimization', 'Reporting'],
+      benefits: ['Better performance', 'Proactive maintenance', 'Reduced downtime'],
+      link: '/ai-performance-monitor',
+      popular: true
+    },
+    {
+      title: 'AI Security Monitor',
+      description: 'Advanced security monitoring with AI-powered threat detection',
+      icon: '🛡️',
+      price: '$249/month',
+      features: ['Threat detection', 'Anomaly detection', 'Incident response', 'Compliance'],
+      benefits: ['Enhanced security', 'Threat prevention', 'Compliance'],
+      link: '/ai-security-monitor',
+      popular: true
+    },
+    {
+      title: 'AI Backup Manager',
+      description: 'Intelligent backup management with AI-powered optimization',
+      icon: '💾',
+      price: '$89/month',
+      features: ['Automated backups', 'Storage optimization', 'Recovery testing', 'Monitoring'],
+      benefits: ['Data protection', 'Cost optimization', 'Reliability'],
+      link: '/ai-backup-manager',
+      popular: false
+    },
+    {
+      title: 'AI Compliance Checker',
+      description: 'Ensure compliance with AI-powered regulatory monitoring',
+      icon: '✅',
+      price: '$199/month',
+      features: ['Regulatory monitoring', 'Compliance reporting', 'Risk assessment', 'Updates'],
+      benefits: ['Regulatory compliance', 'Risk reduction', 'Peace of mind'],
+      link: '/ai-compliance-checker',
+      popular: false
+    },
+    {
+      title: 'AI Training Platform',
+      description: 'Personalized employee training with AI-powered learning paths',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning', 'Progress tracking', 'Skill assessment', 'Certification'],
+      benefits: ['Better training', 'Skill development', 'Employee retention'],
+      link: '/ai-training-platform',
+      popular: true
+    },
+    {
+      title: 'AI Knowledge Base',
+      description: 'Intelligent knowledge management with AI-powered search',
+      icon: '📚',
+      price: '$99/month',
+      features: ['Smart search', 'Content organization', 'Auto-categorization', 'Analytics'],
+      benefits: ['Easy access', 'Better organization', 'Knowledge sharing'],
+      link: '/ai-knowledge-base',
+      popular: false
+    },
+    {
+      title: 'AI Survey Builder',
+      description: 'Create intelligent surveys with AI-powered question optimization',
+      icon: '📝',
+      price: '$69/month',
+      features: ['Question optimization', 'Response analysis', 'Insights generation', 'Reporting'],
+      benefits: ['Better surveys', 'Higher response rates', 'Actionable insights'],
+      link: '/ai-survey-builder',
+      popular: true
+    },
+    {
+      title: 'AI Feedback Analyzer',
+      description: 'Analyze customer feedback with AI-powered sentiment analysis',
+      icon: '💬',
+      price: '$89/month',
+      features: ['Sentiment analysis', 'Trend identification', 'Actionable insights', 'Reporting'],
+      benefits: ['Better understanding', 'Improved service', 'Customer satisfaction'],
+      link: '/ai-feedback-analyzer',
+      popular: true
+    },
+    {
+      title: 'AI Competitor Analyzer',
+      description: 'Analyze competitors with AI-powered market intelligence',
+      icon: '🔍',
+      price: '$179/month',
+      features: ['Competitor tracking', 'Market analysis', 'Strategy insights', 'Reporting'],
+      benefits: ['Competitive advantage', 'Market insights', 'Strategic planning'],
+      link: '/ai-competitor-analyzer',
+      popular: false
+    },
+    {
+      title: 'AI Trend Predictor',
+      description: 'Predict market trends with AI-powered forecasting',
+      icon: '📈',
+      price: '$299/month',
+      features: ['Trend analysis', 'Predictive modeling', 'Market forecasting', 'Insights'],
+      benefits: ['Early insights', 'Competitive advantage', 'Better planning'],
+      link: '/ai-trend-predictor',
+      popular: true
+    },
+    {
+      title: 'AI Risk Assessor',
+      description: 'Assess business risks with AI-powered analysis',
+      icon: '⚠️',
+      price: '$199/month',
+      features: ['Risk identification', 'Impact analysis', 'Mitigation strategies', 'Monitoring'],
+      benefits: ['Risk mitigation', 'Better planning', 'Cost savings'],
+      link: '/ai-risk-assessor',
+      popular: false
+    },
+    {
+      title: 'AI Decision Support',
+      description: 'Make better decisions with AI-powered data analysis',
+      icon: '🧠',
+      price: '$249/month',
+      features: ['Data analysis', 'Scenario modeling', 'Recommendations', 'Visualization'],
+      benefits: ['Better decisions', 'Data-driven insights', 'Risk reduction'],
+      link: '/ai-decision-support',
+      popular: true
+    },
+    {
+      title: 'AI Process Optimizer',
+      description: 'Optimize business processes with AI-powered analysis',
+      icon: '⚙️',
+      price: '$189/month',
+      features: ['Process analysis', 'Bottleneck identification', 'Optimization suggestions', 'Monitoring'],
+      benefits: ['Higher efficiency', 'Cost reduction', 'Better performance'],
+      link: '/ai-process-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Innovation Lab',
+      description: 'Foster innovation with AI-powered idea generation and evaluation',
+      icon: '💡',
+      price: '$299/month',
+      features: ['Idea generation', 'Innovation tracking', 'Collaboration tools', 'Evaluation'],
+      benefits: ['More innovation', 'Better ideas', 'Competitive advantage'],
+      link: '/ai-innovation-lab',
+      popular: false
+    },
+    {
+      title: 'AI Sustainability Tracker',
+      description: 'Track and optimize sustainability with AI-powered environmental monitoring',
+      icon: '🌱',
+      price: '$159/month',
+      features: ['Environmental tracking', 'Carbon footprint analysis', 'Optimization suggestions', 'Reporting'],
+      benefits: ['Environmental impact', 'Cost savings', 'Compliance'],
+      link: '/ai-sustainability-tracker',
+      popular: false
+    },
+    {
+      title: 'AI Wellness Coach',
+      description: 'Employee wellness program with AI-powered health monitoring',
+      icon: '💚',
+      price: '$99/month',
+      features: ['Health monitoring', 'Wellness recommendations', 'Progress tracking', 'Gamification'],
+      benefits: ['Employee health', 'Productivity', 'Retention'],
+      link: '/ai-wellness-coach',
+      popular: true
+    },
+    {
+      title: 'AI Meeting Assistant',
+      description: 'AI-powered meeting transcription and action item tracking',
+      icon: '🎤',
+      price: '$79/month',
+      features: ['Transcription', 'Action items', 'Meeting summaries', 'Integration'],
+      benefits: ['Better meetings', 'Time savings', 'Follow-up'],
+      link: '/ai-meeting-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Process documents with AI-powered extraction and analysis',
+      icon: '📄',
+      price: '$119/month',
+      features: ['Document extraction', 'Data analysis', 'Classification', 'Automation'],
+      benefits: ['Time savings', 'Accuracy', 'Automation'],
+      link: '/ai-document-processor',
+      popular: false
+    },
+    {
+      title: 'AI Form Builder',
+      description: 'Create intelligent forms with AI-powered optimization',
+      icon: '📋',
+      price: '$59/month',
+      features: ['Smart forms', 'Auto-validation', 'Response analysis', 'Integration'],
+      benefits: ['Better forms', 'Higher completion', 'Data quality'],
+      link: '/ai-form-builder',
+      popular: true
+    },
+    {
+      title: 'AI Chatbot Builder',
+      description: 'Build intelligent chatbots with AI-powered conversation design',
+      icon: '🤖',
+      price: '$149/month',
+      features: ['Conversation design', 'NLP integration', 'Multi-channel', 'Analytics'],
+      benefits: ['Better customer service', '24/7 availability', 'Cost savings'],
+      link: '/ai-chatbot-builder',
+      popular: true
+    },
+    {
+      title: 'AI API Gateway',
+      description: 'Manage APIs with AI-powered monitoring and optimization',
+      icon: '🔌',
+      price: '$199/month',
+      features: ['API monitoring', 'Performance optimization', 'Security', 'Analytics'],
+      benefits: ['Better performance', 'Security', 'Monitoring'],
+      link: '/ai-api-gateway',
+      popular: false
+    },
+    {
+      title: 'AI Database Optimizer',
+      description: 'Optimize database performance with AI-powered analysis',
+      icon: '🗄️',
+      price: '$179/month',
+      features: ['Performance analysis', 'Query optimization', 'Indexing', 'Monitoring'],
+      benefits: ['Better performance', 'Cost savings', 'Reliability'],
+      link: '/ai-database-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Cloud Optimizer',
+      description: 'Optimize cloud resources with AI-powered cost management',
+      icon: '☁️',
+      price: '$159/month',
+      features: ['Cost optimization', 'Resource management', 'Performance monitoring', 'Automation'],
+      benefits: ['Cost savings', 'Better performance', 'Efficiency'],
+      link: '/ai-cloud-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI DevOps Assistant',
+      description: 'Streamline DevOps with AI-powered automation and monitoring',
+      icon: '🔧',
+      price: '$229/month',
+      features: ['Automation', 'Monitoring', 'Deployment optimization', 'Incident response'],
+      benefits: ['Faster deployments', 'Better reliability', 'Cost savings'],
+      link: '/ai-devops-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Testing Assistant',
+      description: 'Automated testing with AI-powered test generation and execution',
+      icon: '🧪',
+      price: '$169/month',
+      features: ['Test generation', 'Automated execution', 'Bug detection', 'Reporting'],
+      benefits: ['Better quality', 'Time savings', 'Coverage'],
+      link: '/ai-testing-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Code Generator',
+      description: 'Generate code with AI-powered development assistance',
+      icon: '💻',
+      price: '$199/month',
+      features: ['Code generation', 'Bug fixing', 'Documentation', 'Best practices'],
+      benefits: ['Faster development', 'Better code', 'Learning'],
+      link: '/ai-code-generator',
+      popular: true
+    },
+    {
+      title: 'AI Design System',
+      description: 'Create consistent designs with AI-powered design system management',
+      icon: '🎨',
+      price: '$129/month',
+      features: ['Design tokens', 'Component library', 'Consistency checking', 'Automation'],
+      benefits: ['Design consistency', 'Time savings', 'Brand coherence'],
+      link: '/ai-design-system',
+      popular: false
+    },
+    {
+      title: 'AI Accessibility Checker',
+      description: 'Ensure accessibility compliance with AI-powered testing',
+      icon: '♿',
+      price: '$89/month',
+      features: ['Accessibility testing', 'Compliance checking', 'Recommendations', 'Monitoring'],
+      benefits: ['Compliance', 'Better UX', 'Legal protection'],
+      link: '/ai-accessibility-checker',
+      popular: true
+    },
+    {
+      title: 'AI SEO Optimizer',
+      description: 'Optimize SEO with AI-powered content and technical analysis',
+      icon: '🔍',
+      price: '$119/month',
+      features: ['Content optimization', 'Technical SEO', 'Keyword analysis', 'Ranking tracking'],
+      benefits: ['Better rankings', 'More traffic', 'Higher conversions'],
+      link: '/ai-seo-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Conversion Optimizer',
+      description: 'Optimize conversions with AI-powered A/B testing and analysis',
+      icon: '📈',
+      price: '$149/month',
+      features: ['A/B testing', 'Conversion analysis', 'Personalization', 'Optimization'],
+      benefits: ['Higher conversions', 'Better ROI', 'Data-driven decisions'],
+      link: '/ai-conversion-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Personalization Engine',
+      description: 'Personalize user experiences with AI-powered recommendations',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['User profiling', 'Recommendation engine', 'Real-time personalization', 'Analytics'],
+      benefits: ['Better engagement', 'Higher conversions', 'User satisfaction'],
+      link: '/ai-personalization-engine',
+      popular: true
+    },
+    {
+      title: 'AI Fraud Detector',
+      description: 'Detect fraud with AI-powered pattern recognition and analysis',
+      icon: '🚨',
+      price: '$299/month',
+      features: ['Pattern recognition', 'Real-time detection', 'Risk scoring', 'Alert system'],
+      benefits: ['Fraud prevention', 'Cost savings', 'Security'],
+      link: '/ai-fraud-detector',
+      popular: true
+    },
+    {
+      title: 'AI Compliance Monitor',
+      description: 'Monitor compliance with AI-powered regulatory tracking',
+      icon: '📋',
+      price: '$249/month',
+      features: ['Regulatory tracking', 'Compliance monitoring', 'Risk assessment', 'Reporting'],
+      benefits: ['Compliance assurance', 'Risk reduction', 'Peace of mind'],
+      link: '/ai-compliance-monitor',
+      popular: false
+    },
+    {
+      title: 'AI Audit Assistant',
+      description: 'Conduct audits with AI-powered analysis and reporting',
+      icon: '📊',
+      price: '$199/month',
+      features: ['Audit planning', 'Data analysis', 'Risk assessment', 'Report generation'],
+      benefits: ['Better audits', 'Time savings', 'Accuracy'],
+      link: '/ai-audit-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Tax Optimizer',
+      description: 'Optimize tax strategies with AI-powered analysis and planning',
+      icon: '🧾',
+      price: '$179/month',
+      features: ['Tax planning', 'Deduction optimization', 'Compliance checking', 'Reporting'],
+      benefits: ['Tax savings', 'Compliance', 'Optimization'],
+      link: '/ai-tax-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Insurance Optimizer',
+      description: 'Optimize insurance coverage with AI-powered risk analysis',
+      icon: '🛡️',
+      price: '$159/month',
+      features: ['Risk analysis', 'Coverage optimization', 'Cost analysis', 'Recommendations'],
+      benefits: ['Better coverage', 'Cost savings', 'Risk management'],
+      link: '/ai-insurance-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Investment Advisor',
+      description: 'Get investment advice with AI-powered portfolio analysis',
+      icon: '💼',
+      price: '$299/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Investment recommendations', 'Monitoring'],
+      benefits: ['Better returns', 'Risk management', 'Professional advice'],
+      link: '/ai-investment-advisor',
+      popular: true
+    },
+    {
+      title: 'AI Retirement Planner',
+      description: 'Plan retirement with AI-powered financial modeling',
+      icon: '🏖️',
+      price: '$199/month',
+      features: ['Retirement modeling', 'Savings optimization', 'Risk analysis', 'Scenario planning'],
+      benefits: ['Better planning', 'Financial security', 'Peace of mind'],
+      link: '/ai-retirement-planner',
+      popular: false
+    },
+    {
+      title: 'AI Estate Planner',
+      description: 'Plan estate with AI-powered legal and financial analysis',
+      icon: '🏛️',
+      price: '$249/month',
+      features: ['Estate analysis', 'Tax optimization', 'Legal compliance', 'Documentation'],
+      benefits: ['Tax efficiency', 'Legal compliance', 'Family protection'],
+      link: '/ai-estate-planner',
+      popular: false
+    },
+    {
+      title: 'AI Business Valuator',
+      description: 'Value businesses with AI-powered financial analysis',
+      icon: '💎',
+      price: '$399/month',
+      features: ['Financial analysis', 'Market comparison', 'Valuation models', 'Reporting'],
+      benefits: ['Accurate valuation', 'Market insights', 'Investment decisions'],
+      link: '/ai-business-valuator',
+      popular: false
+    },
+    {
+      title: 'AI Merger Advisor',
+      description: 'Advise on mergers with AI-powered analysis and due diligence',
+      icon: '🤝',
+      price: '$499/month',
+      features: ['Due diligence', 'Synergy analysis', 'Risk assessment', 'Integration planning'],
+      benefits: ['Better decisions', 'Risk mitigation', 'Value creation'],
+      link: '/ai-merger-advisor',
+      popular: false
+    },
+    {
+      title: 'AI IPO Advisor',
+      description: 'Guide IPOs with AI-powered market analysis and preparation',
+      icon: '📈',
+      price: '$599/month',
+      features: ['Market analysis', 'Valuation modeling', 'Regulatory compliance', 'Timing optimization'],
+      benefits: ['Successful IPO', 'Optimal timing', 'Regulatory compliance'],
+      link: '/ai-ipo-advisor',
+      popular: false
+    },
+    {
+      title: 'AI Crisis Manager',
+      description: 'Manage crises with AI-powered response planning and communication',
+      icon: '🚨',
+      price: '$399/month',
+      features: ['Crisis planning', 'Response automation', 'Communication management', 'Monitoring'],
+      benefits: ['Faster response', 'Better communication', 'Damage control'],
+      link: '/ai-crisis-manager',
+      popular: false
+    },
+    {
+      title: 'AI Reputation Manager',
+      description: 'Manage reputation with AI-powered monitoring and response',
+      icon: '⭐',
+      price: '$179/month',
+      features: ['Reputation monitoring', 'Sentiment analysis', 'Response automation', 'Crisis prevention'],
+      benefits: ['Better reputation', 'Crisis prevention', 'Brand protection'],
+      link: '/ai-reputation-manager',
+      popular: true
+    },
+    {
+      title: 'AI Brand Monitor',
+      description: 'Monitor brand mentions with AI-powered social listening',
+      icon: '👂',
+      price: '$129/month',
+      features: ['Social listening', 'Mention tracking', 'Sentiment analysis', 'Alert system'],
+      benefits: ['Brand awareness', 'Crisis prevention', 'Market insights'],
+      link: '/ai-brand-monitor',
+      popular: true
+    },
+    {
+      title: 'AI Influencer Finder',
+      description: 'Find influencers with AI-powered matching and analysis',
+      icon: '🌟',
+      price: '$149/month',
+      features: ['Influencer discovery', 'Audience analysis', 'Engagement prediction', 'Campaign management'],
+      benefits: ['Better partnerships', 'Higher ROI', 'Targeted reach'],
+      link: '/ai-influencer-finder',
+      popular: true
+    },
+    {
+      title: 'AI Content Moderator',
+      description: 'Moderate content with AI-powered filtering and analysis',
+      icon: '🛡️',
+      price: '$199/month',
+      features: ['Content filtering', 'Inappropriate content detection', 'Automated moderation', 'Human review'],
+      benefits: ['Safer content', 'Compliance', 'Cost savings'],
+      link: '/ai-content-moderator',
+      popular: false
+    },
+    {
+      title: 'AI Copyright Checker',
+      description: 'Check copyright with AI-powered content analysis',
+      icon: '©️',
+      price: '$89/month',
+      features: ['Copyright detection', 'Plagiarism checking', 'Originality verification', 'Legal compliance'],
+      benefits: ['Legal protection', 'Originality assurance', 'Risk reduction'],
+      link: '/ai-copyright-checker',
+      popular: false
+    },
+    {
+      title: 'AI Patent Analyzer',
+      description: 'Analyze patents with AI-powered intellectual property research',
+      icon: '🔬',
+      price: '$299/month',
+      features: ['Patent research', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence'],
+      benefits: ['IP protection', 'Innovation insights', 'Competitive advantage'],
+      link: '/ai-patent-analyzer',
+      popular: false
+    },
+    {
+      title: 'AI Trademark Monitor',
+      description: 'Monitor trademarks with AI-powered brand protection',
+      icon: '™️',
+      price: '$159/month',
+      features: ['Trademark monitoring', 'Infringement detection', 'Alert system', 'Legal support'],
+      benefits: ['Brand protection', 'Legal compliance', 'Risk mitigation'],
+      link: '/ai-trademark-monitor',
+      popular: false
+    },
+    {
+      title: 'AI License Manager',
+      description: 'Manage licenses with AI-powered compliance and renewal tracking',
+      icon: '📜',
+      price: '$119/month',
+      features: ['License tracking', 'Renewal alerts', 'Compliance monitoring', 'Cost optimization'],
+      benefits: ['Compliance', 'Cost savings', 'Risk reduction'],
+      link: '/ai-license-manager',
+      popular: false
+    },
+    {
+      title: 'AI Contract Analyzer',
+      description: 'Analyze contracts with AI-powered legal document review',
+      icon: '📋',
+      price: '$249/month',
+      features: ['Contract analysis', 'Risk assessment', 'Clause identification', 'Compliance checking'],
+      benefits: ['Risk reduction', 'Time savings', 'Better contracts'],
+      link: '/ai-contract-analyzer',
+      popular: false
+    },
+    {
+      title: 'AI Legal Research',
+      description: 'Conduct legal research with AI-powered case law analysis',
+      icon: '⚖️',
+      price: '$199/month',
+      features: ['Case law research', 'Precedent analysis', 'Legal document search', 'Citation tracking'],
+      benefits: ['Better research', 'Time savings', 'Comprehensive analysis'],
+      link: '/ai-legal-research',
+      popular: false
+    },
+    {
+      title: 'AI Court Filing',
+      description: 'File court documents with AI-powered preparation and submission',
+      icon: '📁',
+      price: '$299/month',
+      features: ['Document preparation', 'Filing automation', 'Deadline tracking', 'Compliance checking'],
+      benefits: ['Accuracy', 'Time savings', 'Compliance'],
+      link: '/ai-court-filing',
+      popular: false
+    },
+    {
+      title: 'AI Deposition Assistant',
+      description: 'Assist depositions with AI-powered transcription and analysis',
+      icon: '🎤',
+      price: '$179/month',
+      features: ['Transcription', 'Question analysis', 'Response tracking', 'Summary generation'],
+      benefits: ['Better preparation', 'Time savings', 'Accuracy'],
+      link: '/ai-deposition-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Settlement Negotiator',
+      description: 'Negotiate settlements with AI-powered analysis and strategy',
+      icon: '🤝',
+      price: '$399/month',
+      features: ['Settlement analysis', 'Strategy recommendations', 'Risk assessment', 'Outcome prediction'],
+      benefits: ['Better outcomes', 'Risk mitigation', 'Strategic advantage'],
+      link: '/ai-settlement-negotiator',
+      popular: false
+    },
+    {
+      title: 'AI Jury Selection',
+      description: 'Select juries with AI-powered analysis and profiling',
+      icon: '👥',
+      price: '$299/month',
+      features: ['Jury profiling', 'Bias analysis', 'Selection optimization', 'Outcome prediction'],
+      benefits: ['Better juries', 'Strategic advantage', 'Outcome optimization'],
+      link: '/ai-jury-selection',
+      popular: false
+    },
+    {
+      title: 'AI Evidence Analyzer',
+      description: 'Analyze evidence with AI-powered pattern recognition and analysis',
+      icon: '🔍',
+      price: '$249/month',
+      features: ['Evidence analysis', 'Pattern recognition', 'Timeline reconstruction', 'Report generation'],
+      benefits: ['Better analysis', 'Time savings', 'Accuracy'],
+      link: '/ai-evidence-analyzer',
+      popular: false
+    },
+    {
+      title: 'AI Witness Preparation',
+      description: 'Prepare witnesses with AI-powered coaching and analysis',
+      icon: '👤',
+      price: '$199/month',
+      features: ['Witness coaching', 'Question preparation', 'Response analysis', 'Confidence building'],
+      benefits: ['Better preparation', 'Confidence', 'Performance'],
+      link: '/ai-witness-preparation',
+      popular: false
+    },
+    {
+      title: 'AI Case Predictor',
+      description: 'Predict case outcomes with AI-powered analysis and modeling',
+      icon: '🔮',
+      price: '$399/month',
+      features: ['Outcome prediction', 'Risk assessment', 'Strategy optimization', 'Settlement analysis'],
+      benefits: ['Better decisions', 'Risk mitigation', 'Strategic planning'],
+      link: '/ai-case-predictor',
+      popular: false
+    },
+    {
+      title: 'AI Legal Document Generator',
+      description: 'Generate legal documents with AI-powered templates and customization',
+      icon: '📄',
+      price: '$179/month',
+      features: ['Document generation', 'Template customization', 'Legal compliance', 'Review assistance'],
+      benefits: ['Time savings', 'Accuracy', 'Compliance'],
+      link: '/ai-legal-document-generator',
+      popular: false
+    },
+    {
+      title: 'AI Legal Translator',
+      description: 'Translate legal documents with AI-powered language processing',
+      icon: '🌍',
+      price: '$149/month',
+      features: ['Legal translation', 'Terminology accuracy', 'Context understanding', 'Quality assurance'],
+      benefits: ['Accuracy', 'Time savings', 'Cost effectiveness'],
+      link: '/ai-legal-translator',
+      popular: false
+    },
+    {
+      title: 'AI Legal Calendar',
+      description: 'Manage legal deadlines with AI-powered calendar and reminder system',
+      icon: '📅',
+      price: '$99/month',
+      features: ['Deadline tracking', 'Reminder system', 'Court calendar integration', 'Compliance monitoring'],
+      benefits: ['Deadline compliance', 'Time management', 'Risk reduction'],
+      link: '/ai-legal-calendar',
+      popular: false
+    },
+    {
+      title: 'AI Legal Billing',
+      description: 'Manage legal billing with AI-powered time tracking and invoicing',
+      icon: '💰',
+      price: '$129/month',
+      features: ['Time tracking', 'Billing automation', 'Expense management', 'Client reporting'],
+      benefits: ['Accurate billing', 'Time savings', 'Client satisfaction'],
+      link: '/ai-legal-billing',
+      popular: false
+    },
+    {
+      title: 'AI Legal Marketing',
+      description: 'Market legal services with AI-powered content and strategy',
+      icon: '📢',
+      price: '$199/month',
+      features: ['Content generation', 'SEO optimization', 'Client targeting', 'Campaign management'],
+      benefits: ['More clients', 'Better marketing', 'ROI improvement'],
+      link: '/ai-legal-marketing',
+      popular: false
+    },
+    {
+      title: 'AI Legal Analytics',
+      description: 'Analyze legal performance with AI-powered metrics and insights',
+      icon: '📊',
+      price: '$179/month',
+      features: ['Performance metrics', 'Client analysis', 'Case outcomes', 'Trend identification'],
+      benefits: ['Better insights', 'Performance improvement', 'Strategic planning'],
+      link: '/ai-legal-analytics',
+      popular: false
+    },
+    {
+      title: 'AI Legal Training',
+      description: 'Train legal professionals with AI-powered learning and assessment',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning', 'Skill assessment', 'Continuing education', 'Certification tracking'],
+      benefits: ['Skill development', 'Compliance', 'Professional growth'],
+      link: '/ai-legal-training',
+      popular: false
+    },
+    {
+      title: 'AI Legal Compliance',
+      description: 'Ensure legal compliance with AI-powered monitoring and reporting',
+      icon: '✅',
+      price: '$229/month',
+      features: ['Compliance monitoring', 'Regulatory updates', 'Risk assessment', 'Reporting'],
+      benefits: ['Compliance assurance', 'Risk mitigation', 'Peace of mind'],
+      link: '/ai-legal-compliance',
+      popular: false
+    },
+    {
+      title: 'AI Legal Innovation',
+      description: 'Drive legal innovation with AI-powered research and development',
+      icon: '💡',
+      price: '$299/month',
+      features: ['Innovation research', 'Technology assessment', 'Process improvement', 'Future planning'],
+      benefits: ['Innovation leadership', 'Competitive advantage', 'Future readiness'],
+      link: '/ai-legal-innovation',
+      popular: false
+    },
+    {
+      title: 'AI Legal Strategy',
+      description: 'Develop legal strategy with AI-powered analysis and planning',
+      icon: '🎯',
+      price: '$399/month',
+      features: ['Strategic analysis', 'Risk assessment', 'Opportunity identification', 'Implementation planning'],
+      benefits: ['Strategic advantage', 'Risk mitigation', 'Value creation'],
+      link: '/ai-legal-strategy',
+      popular: false
+    },
+    {
+      title: 'AI Legal Operations',
+      description: 'Optimize legal operations with AI-powered process improvement',
+      icon: '⚙️',
+      price: '$249/month',
+      features: ['Process analysis', 'Efficiency optimization', 'Resource allocation', 'Performance monitoring'],
+      benefits: ['Operational efficiency', 'Cost reduction', 'Better service'],
+      link: '/ai-legal-operations',
+      popular: false
+    },
+    {
+      title: 'AI Legal Technology',
+      description: 'Implement legal technology with AI-powered solutions and integration',
+      icon: '🔧',
+      price: '$299/month',
+      features: ['Technology assessment', 'Solution implementation', 'Integration management', 'Training'],
+      benefits: ['Technology adoption', 'Efficiency gains', 'Competitive advantage'],
+      link: '/ai-legal-technology',
+      popular: false
+    },
+    {
+      title: 'AI Legal Consulting',
+      description: 'Provide legal consulting with AI-powered analysis and recommendations',
+      icon: '💼',
+      price: '$499/month',
+      features: ['Legal analysis', 'Recommendation engine', 'Risk assessment', 'Strategic advice'],
+      benefits: ['Expert advice', 'Risk mitigation', 'Strategic guidance'],
+      link: '/ai-legal-consulting',
+      popular: false
+    },
+    {
+      title: 'AI Legal Research Assistant',
+      description: 'Assist legal research with AI-powered analysis and insights',
+      icon: '🔍',
+      price: '$179/month',
+      features: ['Research automation', 'Case law analysis', 'Precedent identification', 'Citation tracking'],
+      benefits: ['Research efficiency', 'Comprehensive analysis', 'Time savings'],
+      link: '/ai-legal-research-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Legal Writing Assistant',
+      description: 'Assist legal writing with AI-powered drafting and editing',
+      icon: '✍️',
+      price: '$149/month',
+      features: ['Document drafting', 'Grammar checking', 'Style optimization', 'Citation formatting'],
+      benefits: ['Writing quality', 'Time savings', 'Professional appearance'],
+      link: '/ai-legal-writing-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Legal Proofreader',
+      description: 'Proofread legal documents with AI-powered error detection and correction',
+      icon: '📝',
+      price: '$99/month',
+      features: ['Error detection', 'Grammar checking', 'Style consistency', 'Legal terminology'],
+      benefits: ['Accuracy', 'Professional quality', 'Time savings'],
+      link: '/ai-legal-proofreader',
+      popular: false
+    },
+    {
+      title: 'AI Legal Formatter',
+      description: 'Format legal documents with AI-powered styling and layout optimization',
+      icon: '📄',
+      price: '$79/month',
+      features: ['Document formatting', 'Style consistency', 'Layout optimization', 'Template application'],
+      benefits: ['Professional appearance', 'Consistency', 'Time savings'],
+      link: '/ai-legal-formatter',
+      popular: false
+    },
+    {
+      title: 'AI Legal Indexer',
+      description: 'Index legal documents with AI-powered categorization and search optimization',
+      icon: '📚',
+      price: '$119/month',
+      features: ['Document indexing', 'Categorization', 'Search optimization', 'Metadata extraction'],
+      benefits: ['Easy retrieval', 'Organization', 'Efficiency'],
+      link: '/ai-legal-indexer',
+      popular: false
+    },
+    {
+      title: 'AI Legal Archiver',
+      description: 'Archive legal documents with AI-powered organization and storage optimization',
+      icon: '🗄️',
+      price: '$89/month',
+      features: ['Document archiving', 'Storage optimization', 'Retention management', 'Access control'],
+      benefits: ['Storage efficiency', 'Compliance', 'Security'],
+      link: '/ai-legal-archiver',
+      popular: false
+    },
+    {
+      title: 'AI Legal Backup',
+      description: 'Backup legal data with AI-powered security and recovery optimization',
+      icon: '💾',
+      price: '$109/month',
+      features: ['Automated backup', 'Security encryption', 'Recovery optimization', 'Compliance monitoring'],
+      benefits: ['Data protection', 'Security', 'Compliance'],
+      link: '/ai-legal-backup',
+      popular: false
+    },
+    {
+      title: 'AI Legal Security',
+      description: 'Secure legal data with AI-powered threat detection and prevention',
+      icon: '🔒',
+      price: '$199/month',
+      features: ['Threat detection', 'Access control', 'Encryption', 'Compliance monitoring'],
+      benefits: ['Data security', 'Threat prevention', 'Compliance'],
+      link: '/ai-legal-security',
+      popular: false
+    },
+    {
+      title: 'AI Legal Privacy',
+      description: 'Protect legal privacy with AI-powered data protection and compliance',
+      icon: '🛡️',
+      price: '$179/month',
+      features: ['Privacy protection', 'Data anonymization', 'Compliance monitoring', 'Risk assessment'],
+      benefits: ['Privacy protection', 'Compliance', 'Risk mitigation'],
+      link: '/ai-legal-privacy',
+      popular: false
+    },
+    {
+      title: 'AI Legal Audit',
+      description: 'Audit legal processes with AI-powered analysis and compliance checking',
+      icon: '📊',
+      price: '$229/month',
+      features: ['Process auditing', 'Compliance checking', 'Risk assessment', 'Recommendation generation'],
+      benefits: ['Compliance assurance', 'Risk identification', 'Process improvement'],
+      link: '/ai-legal-audit',
+      popular: false
+    },
+    {
+      title: 'AI Legal Reporting',
+      description: 'Generate legal reports with AI-powered analysis and visualization',
+      icon: '📈',
+      price: '$159/month',
+      features: ['Report generation', 'Data visualization', 'Trend analysis', 'Insight extraction'],
+      benefits: ['Better insights', 'Time savings', 'Professional reports'],
+      link: '/ai-legal-reporting',
+      popular: false
+    },
+    {
+      title: 'AI Legal Dashboard',
+      description: 'Monitor legal operations with AI-powered dashboard and analytics',
+      icon: '📊',
+      price: '$189/month',
+      features: ['Real-time monitoring', 'Performance metrics', 'Alert system', 'Customization'],
+      benefits: ['Operational visibility', 'Performance tracking', 'Proactive management'],
+      link: '/ai-legal-dashboard',
+      popular: false
+    },
+    {
+      title: 'AI Legal Workflow',
+      description: 'Optimize legal workflows with AI-powered automation and management',
+      icon: '⚡',
+      price: '$219/month',
+      features: ['Workflow automation', 'Process optimization', 'Task management', 'Performance monitoring'],
+      benefits: ['Efficiency gains', 'Process optimization', 'Better outcomes'],
+      link: '/ai-legal-workflow',
+      popular: false
+    },
+    {
+      title: 'AI Legal Collaboration',
+      description: 'Enhance legal collaboration with AI-powered communication and coordination',
+      icon: '🤝',
+      price: '$169/month',
+      features: ['Team collaboration', 'Communication optimization', 'Task coordination', 'Knowledge sharing'],
+      benefits: ['Better collaboration', 'Efficiency', 'Knowledge sharing'],
+      link: '/ai-legal-collaboration',
+      popular: false
+    },
+    {
+      title: 'AI Legal Knowledge Management',
+      description: 'Manage legal knowledge with AI-powered organization and retrieval',
+      icon: '🧠',
+      price: '$199/month',
+      features: ['Knowledge organization', 'Search optimization', 'Content management', 'Expertise mapping'],
+      benefits: ['Knowledge accessibility', 'Efficiency', 'Expertise utilization'],
+      link: '/ai-legal-knowledge-management',
+      popular: false
+    },
+    {
+      title: 'AI Legal Decision Support',
+      description: 'Support legal decisions with AI-powered analysis and recommendations',
+      icon: '🎯',
+      price: '$299/month',
+      features: ['Decision analysis', 'Risk assessment', 'Outcome prediction', 'Recommendation engine'],
+      benefits: ['Better decisions', 'Risk mitigation', 'Strategic advantage'],
+      link: '/ai-legal-decision-support',
+      popular: false
+    },
+    {
+      title: 'AI Legal Innovation Lab',
+      description: 'Drive legal innovation with AI-powered research and development',
+      icon: '🔬',
+      price: '$399/month',
+      features: ['Innovation research', 'Technology assessment', 'Process improvement', 'Future planning'],
+      benefits: ['Innovation leadership', 'Competitive advantage', 'Future readiness'],
+      link: '/ai-legal-innovation-lab',
+      popular: false
+    },
+    {
+      title: 'AI Legal Transformation',
+      description: 'Transform legal operations with AI-powered digital transformation',
+      icon: '🚀',
+      price: '$499/month',
+      features: ['Digital transformation', 'Process reengineering', 'Technology integration', 'Change management'],
+      benefits: ['Operational transformation', 'Efficiency gains', 'Competitive advantage'],
+      link: '/ai-legal-transformation',
+      popular: false
+    },
+    {
+      title: 'AI Legal Excellence',
+      description: 'Achieve legal excellence with AI-powered performance optimization',
+      icon: '⭐',
+      price: '$599/month',
+      features: ['Performance optimization', 'Excellence metrics', 'Continuous improvement', 'Best practices'],
+      benefits: ['Operational excellence', 'Performance improvement', 'Competitive advantage'],
+      link: '/ai-legal-excellence',
+      popular: false
+    },
+    {
+      title: 'AI Legal Future',
+      description: 'Prepare for legal future with AI-powered strategic planning and innovation',
+      icon: '🔮',
+      price: '$699/month',
+      features: ['Future planning', 'Strategic foresight', 'Innovation management', 'Transformation leadership'],
+      benefits: ['Future readiness', 'Strategic advantage', 'Innovation leadership'],
+      link: '/ai-legal-future',
+      popular: false
     }
   ];
 
@@ -533,7 +1744,7 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-rain-enhanced particle-field quantum-field data-stream cyber-scan-lines">
         {/* Navigation */}
         <Navigation />
         
@@ -563,12 +1774,12 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch holographic-text"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect cyber-text-glow" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -603,14 +1814,14 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  className="cyber-button-enhanced px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Get Started Today
                 </a>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="flex items-center gap-2 neon-border text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 cyber-text-glow"
                 >
                   <Phone className="w-5 h-5" />
                   +1 302 464 0950
@@ -621,7 +1832,7 @@ const HomePage: React.FC = () => {
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text holographic-text">
               Micro SAAS Solutions
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -630,7 +1841,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article key={index} className={`holographic-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400 energy-pulse' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
@@ -672,7 +1883,7 @@ const HomePage: React.FC = () => {
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                     <a 
                       href={service.link} 
-                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      className="cyber-button-enhanced px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >
                       Learn More
                     </a>
@@ -684,7 +1895,7 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text holographic-text">
               AI Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -730,7 +1941,7 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text holographic-text">
               IT Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -776,7 +1987,7 @@ const HomePage: React.FC = () => {
 
           {/* Pricing & Benefits Section */}
           <section className="mb-16" aria-labelledby="pricing-heading">
-            <h2 id="pricing-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
+            <h2 id="pricing-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text holographic-text">
               Why Choose Zion Tech Group?
             </h2>
             
@@ -828,7 +2039,7 @@ const HomePage: React.FC = () => {
 
           {/* Contact Information */}
           <section className="mb-16" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
+            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text holographic-text">
               Get In Touch
             </h2>
             
