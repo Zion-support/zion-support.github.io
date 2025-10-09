@@ -1,379 +1,426 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-
-import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, Globe, Building, Users } from 'lucide-react';
 
 const CompliancePage: React.FC = () => {
   const complianceFrameworks = [
     {
-      name: 'SOC 2 Type II',
-      description: 'Security, availability, and confidentiality controls',
+      name: 'ISO 27001',
+      description: 'Information Security Management System',
       status: 'Certified',
-      validUntil: '2025-12-31',
       icon: Shield,
       details: [
-        'Annual third-party audits',
-        'Comprehensive control testing',
-        'Management assertion reports',
-        'Continuous monitoring'
+        'Information security management system',
+        'Risk assessment and treatment',
+        'Security controls implementation',
+        'Continuous improvement processes'
       ]
     },
     {
-      name: 'ISO 27001',
-      description: 'Information security management system',
+      name: 'SOC 2 Type II',
+      description: 'Security, Availability, and Confidentiality',
       status: 'Certified',
-      validUntil: '2025-08-15',
       icon: Lock,
       details: [
-        'Information security policies',
-        'Risk management framework',
-        'Security awareness training',
-        'Regular internal audits'
+        'Security controls and procedures',
+        'System availability monitoring',
+        'Data confidentiality protection',
+        'Processing integrity controls'
       ]
     },
     {
       name: 'GDPR',
-      description: 'EU General Data Protection Regulation',
+      description: 'General Data Protection Regulation',
       status: 'Compliant',
-      validUntil: 'Ongoing',
-      icon: Users,
+      icon: Eye,
       details: [
+        'Data subject rights protection',
+        'Lawful basis for processing',
         'Data protection by design',
-        'Privacy impact assessments',
-        'Data subject rights management',
-        'Breach notification procedures'
+        'Privacy impact assessments'
       ]
     },
     {
       name: 'CCPA',
       description: 'California Consumer Privacy Act',
       status: 'Compliant',
-      validUntil: 'Ongoing',
-      icon: FileText,
+      icon: Users,
       details: [
-        'Consumer rights management',
+        'Consumer privacy rights',
         'Data collection transparency',
         'Opt-out mechanisms',
-        'Privacy policy compliance'
+        'Data deletion rights'
+      ]
+    },
+    {
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act',
+      status: 'Ready',
+      icon: Database,
+      details: [
+        'Protected health information security',
+        'Administrative safeguards',
+        'Physical safeguards',
+        'Technical safeguards'
+      ]
+    },
+    {
+      name: 'PCI DSS',
+      description: 'Payment Card Industry Data Security Standard',
+      status: 'Compliant',
+      icon: FileText,
+      details: [
+        'Secure payment processing',
+        'Cardholder data protection',
+        'Network security requirements',
+        'Regular security testing'
       ]
     }
   ];
 
   const complianceAreas = [
     {
-      title: 'Data Protection',
-      description: 'Comprehensive data protection measures and privacy controls',
-      frameworks: ['GDPR', 'CCPA', 'ISO 27001'],
-      icon: Shield
+      category: 'Data Protection',
+      icon: Shield,
+      measures: [
+        'End-to-end encryption for all data',
+        'Regular data classification and handling',
+        'Secure data disposal procedures',
+        'Data minimization practices',
+        'Privacy by design implementation'
+      ]
     },
     {
-      title: 'Security Controls',
-      description: 'Robust security controls and monitoring systems',
-      frameworks: ['SOC 2', 'ISO 27001'],
-      icon: Lock
+      category: 'Access Controls',
+      icon: Lock,
+      measures: [
+        'Multi-factor authentication required',
+        'Role-based access controls',
+        'Regular access reviews and audits',
+        'Privileged access management',
+        'Session monitoring and management'
+      ]
     },
     {
-      title: 'Access Management',
-      description: 'Strict access controls and user management',
-      frameworks: ['SOC 2', 'ISO 27001'],
-      icon: Users
+      category: 'Security Monitoring',
+      icon: Eye,
+      measures: [
+        '24/7 security operations center',
+        'Automated threat detection',
+        'Incident response procedures',
+        'Security event logging',
+        'Regular vulnerability assessments'
+      ]
     },
     {
-      title: 'Incident Response',
-      description: 'Comprehensive incident response and breach notification',
-      frameworks: ['GDPR', 'SOC 2'],
-      icon: FileText
+      category: 'Business Continuity',
+      icon: Building,
+      measures: [
+        'Disaster recovery planning',
+        'Regular backup procedures',
+        'Business continuity testing',
+        'Incident response planning',
+        'Recovery time objectives defined'
+      ]
     }
   ];
 
   const auditSchedule = [
     {
-      quarter: 'Q1 2024',
-      audits: [
-        'SOC 2 Type II Annual Audit',
-        'ISO 27001 Internal Audit',
-        'GDPR Compliance Review'
-      ],
-      status: 'Completed'
+      framework: 'ISO 27001',
+      lastAudit: '2024-01-15',
+      nextAudit: '2024-07-15',
+      auditor: 'BSI Group',
+      status: 'Certified'
     },
     {
-      quarter: 'Q2 2024',
-      audits: [
-        'Penetration Testing',
-        'Vulnerability Assessment',
-        'Security Control Testing'
-      ],
-      status: 'Completed'
+      framework: 'SOC 2 Type II',
+      lastAudit: '2023-12-01',
+      nextAudit: '2024-12-01',
+      auditor: 'Deloitte',
+      status: 'Certified'
     },
     {
-      quarter: 'Q3 2024',
-      audits: [
-        'CCPA Compliance Review',
-        'Data Protection Impact Assessment',
-        'Access Control Audit'
-      ],
-      status: 'Completed'
+      framework: 'GDPR Assessment',
+      lastAudit: '2024-01-01',
+      nextAudit: '2024-07-01',
+      auditor: 'Internal DPO',
+      status: 'Compliant'
     },
     {
-      quarter: 'Q4 2024',
-      audits: [
-        'SOC 2 Type II Interim Review',
-        'ISO 27001 Management Review',
-        'Annual Security Assessment'
-      ],
-      status: 'In Progress'
+      framework: 'Penetration Testing',
+      lastAudit: '2024-01-10',
+      nextAudit: '2024-04-10',
+      auditor: 'External Security Firm',
+      status: 'Passed'
     }
   ];
 
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'Certified':
+      case 'Compliant':
+      case 'Passed':
+        return 'text-green-400 bg-green-400/20';
+      case 'Ready':
+        return 'text-blue-400 bg-blue-400/20';
+      case 'In Progress':
+        return 'text-yellow-400 bg-yellow-400/20';
+      default:
+        return 'text-gray-400 bg-gray-400/20';
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Navigation */}
+      <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-cyan-400">
+              <span className="text-3xl">⚡</span>
+              <span>Zion Tech Group</span>
             </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Compliance</h1>
-              <p className="text-gray-600 mt-1">
-                Our commitment to regulatory compliance and industry standards
-              </p>
+            <div className="hidden lg:flex items-center space-x-8">
+              <Link to="/" className="text-white hover:text-cyan-400 transition-colors">Home</Link>
+              <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">About</Link>
+              <Link to="/services" className="text-white hover:text-cyan-400 transition-colors">Services</Link>
+              <Link to="/compliance" className="text-cyan-400 font-semibold">Compliance</Link>
+              <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</Link>
             </div>
           </div>
         </div>
-      </section>
+      </nav>
 
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Compliance Excellence
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              We maintain the highest standards of compliance with industry regulations and security frameworks.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Request Compliance Report
-              </Link>
-              <Link 
-                to="/security"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Security Information
-              </Link>
+      <main className="container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center space-x-4 mb-6">
+            <Award className="w-16 h-16 text-cyan-400" />
+            <h1 className="text-4xl md:text-6xl font-bold text-white">
+              Compliance <span className="text-cyan-400">& Standards</span>
+            </h1>
+          </div>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We maintain the highest standards of compliance and security across all our services, 
+            ensuring your data is protected according to industry best practices and regulatory requirements.
+          </p>
+        </div>
+
+        {/* Compliance Overview */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Our Compliance Commitment</h2>
+          <div className="bg-slate-800 rounded-lg p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Regulatory Compliance</h3>
+                <p className="text-gray-300 mb-4">
+                  We adhere to all applicable laws and regulations in the jurisdictions where we operate, 
+                  including data protection, privacy, and industry-specific requirements.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Regular compliance assessments</li>
+                  <li>• Legal requirement monitoring</li>
+                  <li>• Policy and procedure updates</li>
+                  <li>• Staff training and awareness</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Industry Standards</h3>
+                <p className="text-gray-300 mb-4">
+                  We follow internationally recognized standards and frameworks to ensure consistent 
+                  security and quality across all our operations.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• ISO 27001 certification</li>
+                  <li>• SOC 2 Type II compliance</li>
+                  <li>• Industry best practices</li>
+                  <li>• Continuous improvement</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Compliance Frameworks */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Compliance Frameworks
-            </h2>
-            <p className="text-xl text-gray-600">
-              Third-party verified compliance with industry standards
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Compliance Frameworks */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Compliance Frameworks</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {complianceFrameworks.map((framework, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
-                <div className="flex items-center mb-6">
-                  <framework.icon className="w-8 h-8 text-blue-600 mr-4" />
-                  <div>
-                    <h3 className="text-2xl font-semibold text-gray-900">{framework.name}</h3>
-                    <p className="text-gray-600">{framework.description}</p>
+              <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+                <div className="flex items-start space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <framework.icon className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <h3 className="text-lg font-semibold text-white">{framework.name}</h3>
+                      <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(framework.status)}`}>
+                        {framework.status}
+                      </span>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-3">{framework.description}</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    framework.status === 'Certified' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-blue-100 text-blue-800'
-                  }`}>
-                    {framework.status}
-                  </span>
-                  <span className="text-sm text-gray-500">Valid until: {framework.validUntil}</span>
-                </div>
-                <ul className="space-y-3">
+                <ul className="space-y-1">
                   {framework.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{detail}</span>
+                    <li key={detailIndex} className="text-gray-400 text-sm flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {detail}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Compliance Areas */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Compliance Areas
-            </h2>
-            <p className="text-xl text-gray-600">
-              Key areas of compliance and regulatory adherence
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Compliance Areas */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Compliance Areas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {complianceAreas.map((area, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <area.icon className="w-8 h-8 text-blue-600" />
+              <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center">
+                    <area.icon className="w-5 h-5 text-cyan-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{area.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{area.description}</p>
-                  <div className="space-y-1">
-                    {area.frameworks.map((framework, frameworkIndex) => (
-                      <span key={frameworkIndex} className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded mr-1">
-                        {framework}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* Audit Schedule */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Audit Schedule
-            </h2>
-            <p className="text-xl text-gray-600">
-              Regular audits and assessments to maintain compliance
-            </p>
-          </div>
-          <div className="space-y-6">
-            {auditSchedule.map((quarter, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900">{quarter.quarter}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    quarter.status === 'Completed' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-yellow-100 text-yellow-800'
-                  }`}>
-                    {quarter.status}
-                  </span>
+                  <h3 className="text-xl font-semibold text-white">{area.category}</h3>
                 </div>
                 <ul className="space-y-2">
-                  {quarter.audits.map((audit, auditIndex) => (
-                    <li key={auditIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">{audit}</span>
+                  {area.measures.map((measure, measureIndex) => (
+                    <li key={measureIndex} className="text-gray-300 text-sm flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      {measure}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Compliance Reports */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Compliance Reports
-            </h2>
-            <p className="text-xl text-gray-600">
-              Access our latest compliance reports and certifications
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Award className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">SOC 2 Report</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Our latest SOC 2 Type II audit report covering security, availability, and confidentiality controls.
-              </p>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                Download Report
-              </button>
+        {/* Audit Schedule */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Audit Schedule</h2>
+          <div className="bg-slate-800 rounded-lg overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-slate-700">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Framework</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Last Audit</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Next Audit</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Auditor</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {auditSchedule.map((audit, index) => (
+                    <tr key={index} className="border-t border-slate-700 hover:bg-slate-700/50">
+                      <td className="px-6 py-4">
+                        <div className="flex items-center space-x-3">
+                          <Award className="w-5 h-5 text-cyan-400" />
+                          <span className="text-white font-medium">{audit.framework}</span>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 text-gray-300">{audit.lastAudit}</td>
+                      <td className="px-6 py-4 text-gray-300">{audit.nextAudit}</td>
+                      <td className="px-6 py-4 text-gray-300">{audit.auditor}</td>
+                      <td className="px-6 py-4">
+                        <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(audit.status)}`}>
+                          {audit.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <FileText className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">ISO 27001 Certificate</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Our ISO 27001 certification demonstrating our information security management system.
-              </p>
-              <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                View Certificate
-              </button>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Compliance Team */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        {/* Compliance Documents */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Compliance Documents</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+              <div className="flex items-center space-x-3 mb-4">
+                <FileText className="w-8 h-8 text-cyan-400" />
+                <h3 className="text-lg font-semibold text-white">Privacy Policy</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Our comprehensive privacy policy detailing how we collect, use, and protect your data.
+              </p>
+              <Link
+                to="/privacy"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+              >
+                View Policy →
+              </Link>
+            </div>
+            
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+              <div className="flex items-center space-x-3 mb-4">
+                <Shield className="w-8 h-8 text-cyan-400" />
+                <h3 className="text-lg font-semibold text-white">Security Policy</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Detailed information about our security measures and data protection practices.
+              </p>
+              <Link
+                to="/security"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+              >
+                View Policy →
+              </Link>
+            </div>
+            
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+              <div className="flex items-center space-x-3 mb-4">
+                <Globe className="w-8 h-8 text-cyan-400" />
+                <h3 className="text-lg font-semibold text-white">GDPR Compliance</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Our commitment to GDPR compliance and your data protection rights.
+              </p>
+              <Link
+                to="/gdpr"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+              >
+                View Details →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Compliance Team */}
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Compliance Questions?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Our compliance team is available to answer your questions and provide additional documentation.
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our compliance team is available to answer questions about our certifications, 
+            audit results, and compliance practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+            >
+              Contact Compliance Team
+            </Link>
+            <a
               href="mailto:compliance@ziontechgroup.com"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
             >
-              compliance@ziontechgroup.com
-            </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Call: (302) 464-0950
+              Email Compliance
             </a>
           </div>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 };
 
-
 export default CompliancePage;
-=======
-import React from "react"; export default function Page() { return <div>Compliance</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
-=======
->>>>>>> main
