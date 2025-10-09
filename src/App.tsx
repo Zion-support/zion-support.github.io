@@ -36,6 +36,13 @@ const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
 
+// Missing AI Services Pages
+const AIBusinessIntelligencePage = lazy(() => import('./ai-business-intelligence/page'));
+const AICodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
+const AIEducationPage = lazy(() => import('./ai-education/page'));
+const AIEnergyPage = lazy(() => import('./ai-energy/page'));
+const AIHRPage = lazy(() => import('./ai-hr/page'));
+
 // Additional AI Services Pages
 const AIProjectManagerPage = lazy(() => import('./ai-project-manager/page'));
 const AISocialMediaManagerPage = lazy(() => import('./ai-social-media-manager/page'));
@@ -69,6 +76,7 @@ const BusinessAppsPage = lazy(() => import('./business-apps/page'));
 const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 const CareersPage = lazy(() => import('./careers/page'));
 const CloudServicesPage = lazy(() => import('./cloud-services/page'));
+const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
 const CompliancePage = lazy(() => import('./compliance/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
@@ -185,6 +193,13 @@ const App: React.FC = () => {
             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
             <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
             
+            {/* Missing AI Services Pages */}
+            <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+            <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
+            <Route path="/ai-education" element={<AIEducationPage />} />
+            <Route path="/ai-energy" element={<AIEnergyPage />} />
+            <Route path="/ai-hr" element={<AIHRPage />} />
+            
             {/* Additional AI Services Pages */}
             <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
             <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
@@ -218,6 +233,7 @@ const App: React.FC = () => {
             <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/cloud-services" element={<CloudServicesPage />} />
+            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
             <Route path="/compliance" element={<CompliancePage />} />
             <Route path="/consultation" element={<ConsultationPage />} />
             <Route path="/cookies" element={<CookiesPage />} />
