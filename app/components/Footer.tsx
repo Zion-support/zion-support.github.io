@@ -9,8 +9,11 @@ const Footer: React.FC = memo(() => {
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
+    { name: 'AI Social Media Scheduler', url: '/ai-social-media-scheduler', description: 'AI-powered content scheduling', icon: '📅', popular: true },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+    { name: 'AI Email Marketing Automation', url: '/ai-email-marketing-automation', description: 'Advanced email automation', icon: '⚡', popular: true },
+    { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Smart financial management', icon: '💰', popular: true },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
@@ -240,34 +243,42 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 mb-8 cyber-card">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">Get In Touch</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                <Phone className="w-6 h-6 text-cyan-400" />
+              </div>
               <div>
-                <div className="text-white font-medium">{contactInfo.phone}</div>
+                <div className="text-white font-semibold text-lg">{contactInfo.phone}</div>
                 <div className="text-gray-400 text-sm">Call us anytime</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                <Mail className="w-6 h-6 text-cyan-400" />
+              </div>
               <div>
-                <div className="text-white font-medium">{contactInfo.email}</div>
+                <div className="text-white font-semibold text-lg">{contactInfo.email}</div>
                 <div className="text-gray-400 text-sm">Email us</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-cyan-400" />
+              </div>
               <div>
-                <div className="text-white font-medium">Middletown, DE</div>
+                <div className="text-white font-semibold text-lg">Middletown, DE</div>
                 <div className="text-gray-400 text-sm">{contactInfo.address}</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="w-5 h-5 text-cyan-400" />
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                <Clock className="w-6 h-6 text-cyan-400" />
+              </div>
               <div>
-                <div className="text-white font-medium">{contactInfo.hours}</div>
+                <div className="text-white font-semibold text-lg">{contactInfo.hours}</div>
                 <div className="text-gray-400 text-sm">Business hours</div>
               </div>
             </div>

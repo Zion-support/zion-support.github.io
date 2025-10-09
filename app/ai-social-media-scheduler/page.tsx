@@ -2,44 +2,54 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  CreditCard, 
-  TrendingUp, 
-  PieChart, 
-  DollarSign, 
   Calendar, 
-  Receipt, 
-  Smartphone, 
-  Shield, 
-  Zap, 
+  Clock, 
+  TrendingUp, 
+  Users, 
   BarChart3, 
+  Zap, 
   Target, 
   CheckCircle,
   Star,
   ArrowRight,
-  Download,
-  Upload,
-  Filter,
-  Search,
-  Plus,
+  Share2,
+  MessageSquare,
+  Image,
+  Video,
+  Hash,
+  AtSign,
+  Heart,
+  ThumbsUp,
+  Eye,
+  Send,
   Edit,
   Trash2,
-  Eye,
-  EyeOff,
-  Bell,
+  Plus,
+  Filter,
+  Search,
   Settings,
-  HelpCircle,
-  Users,
-  Building,
+  Bell,
   Globe,
+  Smartphone,
+  Monitor,
+  Tablet,
   Lock,
-  Unlock,
-  AlertTriangle,
-  Info,
-  Check,
-  X
+  Shield,
+  Award,
+  TrendingDown,
+  Activity,
+  PieChart,
+  LineChart,
+  Instagram,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Youtube,
+  Tiktok,
+  Pinterest
 } from 'lucide-react';
 
-const AiExpenseTrackerPage: React.FC = () => {
+const AiSocialMediaSchedulerPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
   const [showPricing, setShowPricing] = useState(false);
@@ -51,53 +61,63 @@ const AiExpenseTrackerPage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Categorization",
-      description: "Automatically categorizes expenses using machine learning algorithms with 95% accuracy",
-      benefits: ["Saves 2+ hours per week", "Reduces manual data entry", "Improves accuracy"]
+      title: "AI-Powered Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI algorithms",
+      benefits: ["10x faster content creation", "Brand voice consistency", "Trending hashtag suggestions"]
     },
     {
-      icon: <PieChart className="w-8 h-8 text-purple-400" />,
-      title: "Real-Time Analytics",
-      description: "Advanced analytics and insights powered by AI to help you understand spending patterns",
-      benefits: ["Visual spending breakdowns", "Trend analysis", "Predictive insights"]
+      icon: <Calendar className="w-8 h-8 text-purple-400" />,
+      title: "Smart Scheduling",
+      description: "AI determines optimal posting times based on your audience engagement patterns",
+      benefits: ["40% higher engagement", "Automated posting", "Cross-platform sync"]
     },
     {
-      icon: <Receipt className="w-8 h-8 text-green-400" />,
-      title: "Smart Receipt Scanning",
-      description: "OCR technology extracts data from receipts and invoices automatically",
-      benefits: ["No manual entry needed", "Works with any receipt", "Stores digital copies"]
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics and insights to track performance across all platforms",
+      benefits: ["Real-time metrics", "ROI tracking", "Audience insights"]
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
-      title: "Intelligent Budgeting",
-      description: "AI creates personalized budgets based on your spending patterns and financial goals",
-      benefits: ["Custom budget recommendations", "Spending alerts", "Goal tracking"]
+      icon: <Users className="w-8 h-8 text-orange-400" />,
+      title: "Team Collaboration",
+      description: "Collaborate with your team with approval workflows and role-based permissions",
+      benefits: ["Multi-user access", "Approval workflows", "Content calendar sharing"]
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-400" />,
-      title: "Bank-Level Security",
-      description: "Enterprise-grade security with 256-bit encryption and SOC 2 compliance",
-      benefits: ["Data encryption", "Secure cloud storage", "Regular security audits"]
+      title: "Enterprise Security",
+      description: "Bank-level security with 256-bit encryption and SOC 2 compliance",
+      benefits: ["Data encryption", "Secure API access", "Regular security audits"]
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-pink-400" />,
-      title: "Mobile-First Design",
-      description: "Beautiful, responsive mobile app with offline capabilities and sync",
-      benefits: ["Works offline", "Cross-device sync", "Intuitive interface"]
+      icon: <Globe className="w-8 h-8 text-pink-400" />,
+      title: "Multi-Platform Support",
+      description: "Manage all major social media platforms from one unified dashboard",
+      benefits: ["8+ platforms supported", "Unified interface", "Cross-platform analytics"]
     }
+  ];
+
+  const platforms = [
+    { name: 'Instagram', icon: <Instagram className="w-6 h-6" />, color: 'text-pink-400' },
+    { name: 'Twitter', icon: <Twitter className="w-6 h-6" />, color: 'text-blue-400' },
+    { name: 'Facebook', icon: <Facebook className="w-6 h-6" />, color: 'text-blue-600' },
+    { name: 'LinkedIn', icon: <Linkedin className="w-6 h-6" />, color: 'text-blue-700' },
+    { name: 'YouTube', icon: <Youtube className="w-6 h-6" />, color: 'text-red-500' },
+    { name: 'TikTok', icon: <Tiktok className="w-6 h-6" />, color: 'text-black' },
+    { name: 'Pinterest', icon: <Pinterest className="w-6 h-6" />, color: 'text-red-600' }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$9.99",
+      price: "$29.99",
       period: "/month",
-      description: "Perfect for individuals and small businesses",
+      description: "Perfect for small businesses and influencers",
       features: [
-        "Up to 100 transactions/month",
-        "AI categorization",
-        "Basic analytics",
-        "Receipt scanning (10/month)",
+        "3 social media accounts",
+        "30 posts per month",
+        "Basic AI content generation",
+        "Standard analytics",
         "Mobile app access",
         "Email support"
       ],
@@ -106,35 +126,35 @@ const AiExpenseTrackerPage: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "$19.99",
+      price: "$79.99",
       period: "/month",
-      description: "Ideal for growing businesses and professionals",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Unlimited transactions",
+        "10 social media accounts",
+        "Unlimited posts",
         "Advanced AI features",
-        "Real-time analytics",
-        "Unlimited receipt scanning",
+        "Detailed analytics & reporting",
         "Team collaboration (up to 5 users)",
         "Priority support",
-        "Custom categories",
-        "Export to accounting software"
+        "Content calendar",
+        "Hashtag research"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$49.99",
+      price: "$199.99",
       period: "/month",
       description: "For large organizations with advanced needs",
       features: [
+        "Unlimited accounts",
         "Everything in Professional",
-        "Unlimited team members",
-        "Advanced reporting",
+        "White-label solution",
         "API access",
         "Custom integrations",
         "Dedicated account manager",
-        "On-premise deployment option",
+        "Advanced team management",
         "Custom training"
       ],
       popular: false,
@@ -144,45 +164,72 @@ const AiExpenseTrackerPage: React.FC = () => {
 
   const testimonials = [
     {
+      name: "Jessica Martinez",
+      role: "Social Media Manager",
+      company: "Digital Marketing Agency",
+      content: "AI Social Media Scheduler increased our client engagement by 65% and saved us 15 hours per week. The AI content suggestions are incredibly accurate and engaging.",
+      rating: 5,
+      improvement: "65% engagement increase"
+    },
+    {
+      name: "David Kim",
+      role: "E-commerce Owner",
+      company: "TechGear Store",
+      content: "The optimal posting time feature alone increased our sales by 30%. The platform is intuitive and the analytics help us make data-driven decisions.",
+      rating: 5,
+      improvement: "30% sales increase"
+    },
+    {
       name: "Sarah Johnson",
-      role: "Small Business Owner",
-      company: "Johnson & Associates",
-      content: "AI Expense Tracker saved me 5 hours per week on bookkeeping. The AI categorization is incredibly accurate and the mobile app is perfect for on-the-go expense tracking.",
-      rating: 5,
-      savings: "$2,400/year saved"
-    },
-    {
-      name: "Michael Chen",
-      role: "CFO",
-      company: "TechStart Inc.",
-      content: "The real-time analytics and budget recommendations helped us reduce unnecessary expenses by 23% in just 3 months. The ROI was immediate.",
-      rating: 5,
-      savings: "23% cost reduction"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Freelance Consultant",
+      role: "Content Creator",
       company: "Independent",
-      content: "As a freelancer, tracking expenses was always a headache. This tool makes it effortless and the receipt scanning feature is a game-changer.",
+      content: "As a solo creator, this tool is a game-changer. The AI helps me maintain consistent posting and the analytics show me exactly what content performs best.",
       rating: 5,
-      savings: "3 hours/week saved"
+      improvement: "3x content output"
     }
   ];
 
   const stats = [
+    { number: "100,000+", label: "Posts Scheduled Daily", icon: <Send className="w-6 h-6" /> },
     { number: "50,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "2.5M+", label: "Transactions Processed", icon: <CreditCard className="w-6 h-6" /> },
-    { number: "95%", label: "Categorization Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
+    { number: "65%", label: "Average Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "4.8/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
+  ];
+
+  const workflowSteps = [
+    {
+      step: "1",
+      title: "Content Creation",
+      description: "Use AI to generate engaging posts, captions, and hashtags tailored to your brand voice",
+      icon: <Edit className="w-8 h-8" />
+    },
+    {
+      step: "2",
+      title: "Smart Scheduling",
+      description: "AI analyzes your audience data to determine optimal posting times for maximum engagement",
+      icon: <Calendar className="w-8 h-8" />
+    },
+    {
+      step: "3",
+      title: "Multi-Platform Publishing",
+      description: "Automatically publish to all your connected social media platforms simultaneously",
+      icon: <Share2 className="w-8 h-8" />
+    },
+    {
+      step: "4",
+      title: "Performance Analytics",
+      description: "Track engagement, reach, and ROI with comprehensive analytics and insights",
+      icon: <BarChart3 className="w-8 h-8" />
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Expense Tracker - Intelligent Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered expense tracking with automatic categorization, receipt scanning, and real-time analytics. Save time and money with intelligent financial management." />
-        <meta name="keywords" content="AI expense tracker, financial management, receipt scanning, budget tracking, expense categorization, fintech" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-expense-tracker" />
+        <title>AI Social Media Scheduler - Intelligent Content Management | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered social media scheduling with content generation, optimal timing, and multi-platform management. Boost engagement by 65% with intelligent automation." />
+        <meta name="keywords" content="AI social media scheduler, content management, social media automation, content generation, social media analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-social-media-scheduler" />
       </Helmet>
 
       {/* Hero Section */}
@@ -190,20 +237,20 @@ const AiExpenseTrackerPage: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
             <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Management</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Management</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Expense Tracker
+            AI Social Media Scheduler
           </h1>
           
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Financial Management Made Simple
+            Intelligent Content Management & Scheduling
           </p>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Transform your expense management with AI-powered categorization, smart receipt scanning, 
-            and real-time analytics. Save time, reduce errors, and gain valuable insights into your spending patterns.
+            Transform your social media strategy with AI-powered content generation, smart scheduling, 
+            and comprehensive analytics. Increase engagement by 65% while saving 15+ hours per week.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -234,6 +281,31 @@ const AiExpenseTrackerPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Supported Platforms */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Connect All Your Platforms
+          </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Manage all your social media accounts from one unified dashboard
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+          {platforms.map((platform, index) => (
+            <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className={`${platform.color} mb-3 flex justify-center`}>
+                {platform.icon}
+              </div>
+              <div className="text-white font-medium text-sm">
+                {platform.name}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -241,8 +313,8 @@ const AiExpenseTrackerPage: React.FC = () => {
             Powerful AI Features
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Our AI-powered platform automates expense management and provides intelligent insights 
-            to help you make better financial decisions.
+            Our AI-powered platform automates content creation, scheduling, and analytics 
+            to maximize your social media impact.
           </p>
         </div>
 
@@ -278,40 +350,23 @@ const AiExpenseTrackerPage: React.FC = () => {
             How It Works
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Get started in minutes with our simple 3-step process
+            Transform your social media strategy in 4 simple steps
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Upload className="w-8 h-8 text-cyan-400" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {workflowSteps.map((step, index) => (
+            <div key={index} className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                {step.icon}
+              </div>
+              <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
+              <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+              <p className="text-gray-300">
+                {step.description}
+              </p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">1. Upload Receipts</h3>
-            <p className="text-gray-300">
-              Take photos of receipts or upload files. Our AI automatically extracts all relevant information.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Zap className="w-8 h-8 text-purple-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">2. AI Processing</h3>
-            <p className="text-gray-300">
-              Our AI categorizes expenses, detects duplicates, and identifies tax-deductible items automatically.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <BarChart3 className="w-8 h-8 text-green-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">3. Get Insights</h3>
-            <p className="text-gray-300">
-              View detailed analytics, set budgets, and receive intelligent recommendations for better financial health.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -322,7 +377,7 @@ const AiExpenseTrackerPage: React.FC = () => {
             What Our Users Say
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Join thousands of satisfied users who have transformed their expense management
+            Join thousands of satisfied users who have transformed their social media strategy
           </p>
         </div>
 
@@ -342,7 +397,7 @@ const AiExpenseTrackerPage: React.FC = () => {
                 <div className="text-sm text-cyan-400">{testimonial.role}</div>
                 <div className="text-sm text-gray-400">{testimonial.company}</div>
                 <div className="text-sm text-green-400 font-medium mt-2">
-                  {testimonial.savings}
+                  {testimonial.improvement}
                 </div>
               </div>
             </div>
@@ -408,11 +463,11 @@ const AiExpenseTrackerPage: React.FC = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="cyber-card p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Expense Management?
+            Ready to Transform Your Social Media Strategy?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of users who have already revolutionized their financial management 
-            with our AI-powered expense tracker.
+            Join thousands of users who have already revolutionized their social media management 
+            with our AI-powered scheduling platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="cyber-button px-8 py-4 text-lg">
@@ -431,4 +486,4 @@ const AiExpenseTrackerPage: React.FC = () => {
   );
 };
 
-export default AiExpenseTrackerPage;
+export default AiSocialMediaSchedulerPage;

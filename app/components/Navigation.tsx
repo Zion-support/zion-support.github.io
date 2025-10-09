@@ -54,8 +54,11 @@ const Navigation: React.FC = memo(() => {
       services: [
         { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Social Media Scheduler', path: '/ai-social-media-scheduler', description: 'AI-powered content scheduling', icon: '📅', popular: true },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
         { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', description: 'Advanced email automation', icon: '⚡', popular: true },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker', description: 'Smart financial management', icon: '💰', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
         { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
@@ -102,6 +105,7 @@ const Navigation: React.FC = memo(() => {
       services: [
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'IT Infrastructure Management', path: '/it-infrastructure-management', description: 'Complete infrastructure management' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
@@ -126,6 +130,7 @@ const Navigation: React.FC = memo(() => {
       hoverColor: 'hover:bg-pink-500/20',
       services: [
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
+        { name: 'AI CRM Advanced', path: '/ai-crm-advanced', description: 'Advanced AI-powered CRM system' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
         { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
@@ -316,7 +321,7 @@ const Navigation: React.FC = memo(() => {
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 max-h-96 overflow-y-auto">
               <Link
                 to="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -345,26 +350,34 @@ const Navigation: React.FC = memo(() => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
+                  <div className="mt-2 ml-4 space-y-3">
                     {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                      <div key={categoryIndex} className="border-l border-gray-700 pl-4">
+                        <div className="text-sm font-medium text-cyan-400 mb-2 flex items-center">
+                          <category.icon className="w-4 h-4 mr-2" />
+                          {category.title}
+                        </div>
+                        <div className="space-y-1">
+                          {category.services.slice(0, 4).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               to={service.path}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
+                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1 pl-2 border-l border-gray-600 hover:border-cyan-400"
+                              onClick={closeAllMenus}
                             >
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                              <span className="mr-2">{typeof service.icon === 'string' ? service.icon : '•'}</span>
+                              {service.name}
                             </Link>
                           ))}
-                          <Link
-                            to="/services"
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          >
-                            View All →
-                          </Link>
+                          {category.services.length > 4 && (
+                            <Link
+                              to="/services"
+                              className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 pl-2 font-medium"
+                              onClick={closeAllMenus}
+                            >
+                              View All {category.title} →
+                            </Link>
+                          )}
                         </div>
                       </div>
                     ))}
@@ -396,14 +409,24 @@ const Navigation: React.FC = memo(() => {
                 Contact
               </Link>
 
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
-              >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
+              <div className="border-t border-gray-700 pt-4">
+                <a
+                  href="tel:+13024640950"
+                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                  onClick={closeAllMenus}
+                >
+                  <Phone className="w-4 h-4 inline mr-2" />
+                  (302) 464-0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="block w-full text-center border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg font-medium hover:bg-cyan-400 hover:text-black transition-all mt-2"
+                  onClick={closeAllMenus}
+                >
+                  <Mail className="w-4 h-4 inline mr-2" />
+                  Email Us
+                </a>
+              </div>
             </div>
           </div>
         )}

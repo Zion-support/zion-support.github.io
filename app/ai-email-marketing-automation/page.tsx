@@ -2,44 +2,63 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  CreditCard, 
-  TrendingUp, 
-  PieChart, 
-  DollarSign, 
-  Calendar, 
-  Receipt, 
-  Smartphone, 
-  Shield, 
-  Zap, 
+  Mail, 
+  Send, 
+  Users, 
   BarChart3, 
+  Zap, 
   Target, 
   CheckCircle,
   Star,
   ArrowRight,
-  Download,
-  Upload,
+  TrendingUp,
+  Eye,
+  MousePointer,
+  Clock,
+  Calendar,
   Filter,
   Search,
   Plus,
   Edit,
   Trash2,
-  Eye,
-  EyeOff,
-  Bell,
   Settings,
-  HelpCircle,
-  Users,
-  Building,
+  Bell,
   Globe,
+  Smartphone,
+  Monitor,
   Lock,
-  Unlock,
-  AlertTriangle,
+  Shield,
+  Award,
+  Activity,
+  PieChart,
+  LineChart,
+  MessageSquare,
+  AtSign,
+  Hash,
+  Image,
+  Video,
+  FileText,
+  Download,
+  Upload,
+  RefreshCw,
+  Play,
+  Pause,
+  Square,
+  RotateCcw,
+  Copy,
+  Share2,
+  Heart,
+  ThumbsUp,
+  AlertCircle,
   Info,
   Check,
-  X
+  X,
+  DollarSign,
+  Percent,
+  TrendingDown
 } from 'lucide-react';
 
-const AiExpenseTrackerPage: React.FC = () => {
+const AiEmailMarketingAutomationPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
   const [showPricing, setShowPricing] = useState(false);
@@ -51,54 +70,93 @@ const AiExpenseTrackerPage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Categorization",
-      description: "Automatically categorizes expenses using machine learning algorithms with 95% accuracy",
-      benefits: ["Saves 2+ hours per week", "Reduces manual data entry", "Improves accuracy"]
+      title: "AI-Powered Email Generation",
+      description: "Generate compelling email content, subject lines, and CTAs using advanced AI algorithms",
+      benefits: ["10x faster content creation", "Higher open rates", "Personalized messaging"]
     },
     {
-      icon: <PieChart className="w-8 h-8 text-purple-400" />,
-      title: "Real-Time Analytics",
-      description: "Advanced analytics and insights powered by AI to help you understand spending patterns",
-      benefits: ["Visual spending breakdowns", "Trend analysis", "Predictive insights"]
+      icon: <Target className="w-8 h-8 text-purple-400" />,
+      title: "Smart Segmentation",
+      description: "AI automatically segments your audience based on behavior, preferences, and engagement patterns",
+      benefits: ["40% higher click-through rates", "Reduced unsubscribes", "Better deliverability"]
     },
     {
-      icon: <Receipt className="w-8 h-8 text-green-400" />,
-      title: "Smart Receipt Scanning",
-      description: "OCR technology extracts data from receipts and invoices automatically",
-      benefits: ["No manual entry needed", "Works with any receipt", "Stores digital copies"]
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics and insights to track performance and optimize campaigns",
+      benefits: ["Real-time metrics", "ROI tracking", "A/B testing insights"]
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
-      title: "Intelligent Budgeting",
-      description: "AI creates personalized budgets based on your spending patterns and financial goals",
-      benefits: ["Custom budget recommendations", "Spending alerts", "Goal tracking"]
+      icon: <Clock className="w-8 h-8 text-orange-400" />,
+      title: "Automated Workflows",
+      description: "Create sophisticated email sequences that nurture leads and convert prospects automatically",
+      benefits: ["24/7 lead nurturing", "Increased conversions", "Reduced manual work"]
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-400" />,
-      title: "Bank-Level Security",
-      description: "Enterprise-grade security with 256-bit encryption and SOC 2 compliance",
-      benefits: ["Data encryption", "Secure cloud storage", "Regular security audits"]
+      title: "Deliverability Optimization",
+      description: "AI ensures your emails reach the inbox with advanced deliverability monitoring and optimization",
+      benefits: ["98% deliverability rate", "Spam score monitoring", "Reputation management"]
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-pink-400" />,
-      title: "Mobile-First Design",
-      description: "Beautiful, responsive mobile app with offline capabilities and sync",
-      benefits: ["Works offline", "Cross-device sync", "Intuitive interface"]
+      icon: <Users className="w-8 h-8 text-pink-400" />,
+      title: "Personalization Engine",
+      description: "Dynamic content personalization based on user behavior, preferences, and demographics",
+      benefits: ["Higher engagement", "Better customer experience", "Increased sales"]
+    }
+  ];
+
+  const automationWorkflows = [
+    {
+      name: "Welcome Series",
+      description: "Onboard new subscribers with a 5-email sequence",
+      icon: <Mail className="w-6 h-6" />,
+      metrics: "35% higher engagement"
+    },
+    {
+      name: "Abandoned Cart Recovery",
+      description: "Recover lost sales with intelligent follow-up emails",
+      icon: <ShoppingCart className="w-6 h-6" />,
+      metrics: "25% recovery rate"
+    },
+    {
+      name: "Re-engagement Campaign",
+      description: "Win back inactive subscribers with targeted content",
+      icon: <RefreshCw className="w-6 h-6" />,
+      metrics: "20% reactivation rate"
+    },
+    {
+      name: "Birthday & Anniversary",
+      description: "Celebrate special occasions with personalized offers",
+      icon: <Heart className="w-6 h-6" />,
+      metrics: "50% higher open rates"
+    },
+    {
+      name: "Product Recommendations",
+      description: "Suggest relevant products based on purchase history",
+      icon: <Target className="w-6 h-6" />,
+      metrics: "30% increase in sales"
+    },
+    {
+      name: "Post-Purchase Follow-up",
+      description: "Nurture customers after purchase with valuable content",
+      icon: <CheckCircle className="w-6 h-6" />,
+      metrics: "40% repeat purchase rate"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$9.99",
+      price: "$49.99",
       period: "/month",
-      description: "Perfect for individuals and small businesses",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 100 transactions/month",
-        "AI categorization",
+        "Up to 1,000 subscribers",
+        "5,000 emails per month",
+        "Basic AI content generation",
+        "Email templates",
         "Basic analytics",
-        "Receipt scanning (10/month)",
-        "Mobile app access",
         "Email support"
       ],
       popular: false,
@@ -106,36 +164,36 @@ const AiExpenseTrackerPage: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "$19.99",
+      price: "$149.99",
       period: "/month",
-      description: "Ideal for growing businesses and professionals",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Unlimited transactions",
+        "Up to 10,000 subscribers",
+        "Unlimited emails",
         "Advanced AI features",
-        "Real-time analytics",
-        "Unlimited receipt scanning",
-        "Team collaboration (up to 5 users)",
+        "Automation workflows",
+        "Advanced analytics & reporting",
+        "A/B testing",
         "Priority support",
-        "Custom categories",
-        "Export to accounting software"
+        "API access"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$49.99",
+      price: "$399.99",
       period: "/month",
       description: "For large organizations with advanced needs",
       features: [
+        "Unlimited subscribers",
         "Everything in Professional",
-        "Unlimited team members",
-        "Advanced reporting",
-        "API access",
+        "White-label solution",
         "Custom integrations",
         "Dedicated account manager",
-        "On-premise deployment option",
-        "Custom training"
+        "Advanced team management",
+        "Custom training",
+        "SLA guarantee"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -144,45 +202,72 @@ const AiExpenseTrackerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Small Business Owner",
-      company: "Johnson & Associates",
-      content: "AI Expense Tracker saved me 5 hours per week on bookkeeping. The AI categorization is incredibly accurate and the mobile app is perfect for on-the-go expense tracking.",
+      name: "Michael Rodriguez",
+      role: "Marketing Director",
+      company: "E-commerce Store",
+      content: "AI Email Marketing Automation increased our email revenue by 85% and reduced our campaign creation time by 70%. The AI-generated content performs better than our manual campaigns.",
       rating: 5,
-      savings: "$2,400/year saved"
+      improvement: "85% revenue increase"
     },
     {
-      name: "Michael Chen",
-      role: "CFO",
-      company: "TechStart Inc.",
-      content: "The real-time analytics and budget recommendations helped us reduce unnecessary expenses by 23% in just 3 months. The ROI was immediate.",
+      name: "Sarah Chen",
+      role: "Founder",
+      company: "SaaS Startup",
+      content: "The automation workflows are incredible. We set up a welcome series and saw a 40% increase in user activation. The platform is intuitive and the analytics are comprehensive.",
       rating: 5,
-      savings: "23% cost reduction"
+      improvement: "40% activation increase"
     },
     {
-      name: "Emily Rodriguez",
-      role: "Freelance Consultant",
-      company: "Independent",
-      content: "As a freelancer, tracking expenses was always a headache. This tool makes it effortless and the receipt scanning feature is a game-changer.",
+      name: "David Thompson",
+      role: "Email Marketing Manager",
+      company: "Digital Agency",
+      content: "Our client's email performance improved dramatically. Open rates increased by 60% and click-through rates by 45%. The AI personalization is game-changing.",
       rating: 5,
-      savings: "3 hours/week saved"
+      improvement: "60% open rate increase"
     }
   ];
 
   const stats = [
+    { number: "2M+", label: "Emails Sent Daily", icon: <Send className="w-6 h-6" /> },
     { number: "50,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "2.5M+", label: "Transactions Processed", icon: <CreditCard className="w-6 h-6" /> },
-    { number: "95%", label: "Categorization Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "85%", label: "Average Revenue Increase", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
+  ];
+
+  const workflowSteps = [
+    {
+      step: "1",
+      title: "AI Content Generation",
+      description: "Generate compelling email content, subject lines, and CTAs using advanced AI algorithms",
+      icon: <Edit className="w-8 h-8" />
+    },
+    {
+      step: "2",
+      title: "Smart Segmentation",
+      description: "AI automatically segments your audience based on behavior and preferences for targeted messaging",
+      icon: <Target className="w-8 h-8" />
+    },
+    {
+      step: "3",
+      title: "Automated Workflows",
+      description: "Create sophisticated email sequences that nurture leads and convert prospects automatically",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      step: "4",
+      title: "Performance Optimization",
+      description: "AI continuously optimizes campaigns based on performance data and user behavior",
+      icon: <BarChart3 className="w-8 h-8" />
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Expense Tracker - Intelligent Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered expense tracking with automatic categorization, receipt scanning, and real-time analytics. Save time and money with intelligent financial management." />
-        <meta name="keywords" content="AI expense tracker, financial management, receipt scanning, budget tracking, expense categorization, fintech" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-expense-tracker" />
+        <title>AI Email Marketing Automation - Intelligent Email Campaigns | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered email marketing automation with content generation, smart segmentation, and automated workflows. Increase revenue by 85% with intelligent email campaigns." />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, email marketing automation, email personalization" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-email-marketing-automation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -190,20 +275,20 @@ const AiExpenseTrackerPage: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
             <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Management</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Marketing</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Expense Tracker
+            AI Email Marketing Automation
           </h1>
           
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Financial Management Made Simple
+            Intelligent Email Campaigns That Convert
           </p>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Transform your expense management with AI-powered categorization, smart receipt scanning, 
-            and real-time analytics. Save time, reduce errors, and gain valuable insights into your spending patterns.
+            Transform your email marketing with AI-powered content generation, smart segmentation, 
+            and automated workflows. Increase revenue by 85% while saving 70% of your campaign creation time.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -234,6 +319,37 @@ const AiExpenseTrackerPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Automation Workflows */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Pre-Built Automation Workflows
+          </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Launch powerful email sequences with our ready-to-use automation templates
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {automationWorkflows.map((workflow, index) => (
+            <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-4">
+                  {workflow.icon}
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white">{workflow.name}</h3>
+                  <p className="text-sm text-cyan-400 font-medium">{workflow.metrics}</p>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm">
+                {workflow.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -241,8 +357,8 @@ const AiExpenseTrackerPage: React.FC = () => {
             Powerful AI Features
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Our AI-powered platform automates expense management and provides intelligent insights 
-            to help you make better financial decisions.
+            Our AI-powered platform automates email marketing and provides intelligent insights 
+            to maximize your campaign performance.
           </p>
         </div>
 
@@ -278,40 +394,23 @@ const AiExpenseTrackerPage: React.FC = () => {
             How It Works
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Get started in minutes with our simple 3-step process
+            Transform your email marketing strategy in 4 simple steps
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Upload className="w-8 h-8 text-cyan-400" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {workflowSteps.map((step, index) => (
+            <div key={index} className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                {step.icon}
+              </div>
+              <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
+              <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+              <p className="text-gray-300">
+                {step.description}
+              </p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">1. Upload Receipts</h3>
-            <p className="text-gray-300">
-              Take photos of receipts or upload files. Our AI automatically extracts all relevant information.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Zap className="w-8 h-8 text-purple-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">2. AI Processing</h3>
-            <p className="text-gray-300">
-              Our AI categorizes expenses, detects duplicates, and identifies tax-deductible items automatically.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <BarChart3 className="w-8 h-8 text-green-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">3. Get Insights</h3>
-            <p className="text-gray-300">
-              View detailed analytics, set budgets, and receive intelligent recommendations for better financial health.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -322,7 +421,7 @@ const AiExpenseTrackerPage: React.FC = () => {
             What Our Users Say
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Join thousands of satisfied users who have transformed their expense management
+            Join thousands of satisfied users who have transformed their email marketing
           </p>
         </div>
 
@@ -342,7 +441,7 @@ const AiExpenseTrackerPage: React.FC = () => {
                 <div className="text-sm text-cyan-400">{testimonial.role}</div>
                 <div className="text-sm text-gray-400">{testimonial.company}</div>
                 <div className="text-sm text-green-400 font-medium mt-2">
-                  {testimonial.savings}
+                  {testimonial.improvement}
                 </div>
               </div>
             </div>
@@ -408,11 +507,11 @@ const AiExpenseTrackerPage: React.FC = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="cyber-card p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Expense Management?
+            Ready to Transform Your Email Marketing?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of users who have already revolutionized their financial management 
-            with our AI-powered expense tracker.
+            Join thousands of users who have already revolutionized their email marketing 
+            with our AI-powered automation platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="cyber-button px-8 py-4 text-lg">
@@ -431,4 +530,4 @@ const AiExpenseTrackerPage: React.FC = () => {
   );
 };
 
-export default AiExpenseTrackerPage;
+export default AiEmailMarketingAutomationPage;
