@@ -1,0 +1,149 @@
+'use client';
+import React from 'react';
+import { Settings, Zap, CheckCircle, ArrowRight, Cloud, Code } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+
+const DevOpsPage: React.FC = () => {
+  const features = [
+    'CI/CD Pipelines',
+    'Automated Testing',
+    'Container Orchestration',
+    'Monitoring Setup',
+    'Infrastructure as Code',
+    'GitOps Implementation'
+  ];
+
+  const benefits = [
+    '90% faster deployments',
+    '99.9% uptime guarantee',
+    '50% reduction in bugs',
+    'Automated scaling'
+  ];
+
+  return (
+    <>
+      <SEOOptimizer
+        title="DevOps & CI/CD Solutions - Zion Tech Group"
+        description="Streamlined development workflows with automated testing, deployment, and monitoring. Accelerate your development process with our DevOps expertise."
+        keywords={['devops', 'ci/cd', 'automated testing', 'container orchestration', 'infrastructure as code', 'gitops']}
+        canonicalUrl="https://ziontechgroup.com/devops"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-24">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              DevOps & CI/CD Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Accelerate your development process with streamlined workflows, automated testing, 
+              and continuous deployment solutions that ensure faster, more reliable software delivery.
+            </p>
+          </section>
+
+          {/* Service Details */}
+          <section className="mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6 neon-text">
+                  Streamlined Development Workflows
+                </h2>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Our DevOps experts design and implement comprehensive CI/CD pipelines that 
+                  automate your entire development lifecycle. From code commit to production 
+                  deployment, we ensure faster, more reliable software delivery.
+                </p>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-green-400 mb-3">Key Features:</h3>
+                  <ul className="space-y-2">
+                    {features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="cyber-card p-8">
+                <div className="text-center mb-6">
+                  <Settings className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Starting at</h3>
+                  <div className="text-4xl font-bold text-green-400 mb-4">$1,199/month</div>
+                  <p className="text-gray-300">Complete DevOps implementation</p>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white mb-3">What's Included:</h4>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Custom CI/CD pipeline setup</li>
+                    <li>• Automated testing integration</li>
+                    <li>• Container orchestration</li>
+                    <li>• Infrastructure automation</li>
+                    <li>• Monitoring and alerting</li>
+                    <li>• 24/7 support and maintenance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+              Development Benefits
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-green-400 mb-2">
+                    {benefit.split(' ')[0]}
+                  </div>
+                  <p className="text-gray-300 text-sm">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="cyber-card p-8 max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+                Ready to Accelerate Your Development?
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                Let our DevOps experts help you build efficient development workflows 
+                that deliver software faster and more reliably.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="cyber-button px-8 py-4 text-lg font-semibold"
+                >
+                  Start Your DevOps Journey
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  <span>+1 302 464 0950</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default DevOpsPage;
