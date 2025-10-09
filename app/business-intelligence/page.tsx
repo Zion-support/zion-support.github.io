@@ -137,3 +137,52 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Business Intelligence Solutions | Zion Tech Group</title>
+        <meta name="description" content="Advanced business intelligence solutions for data-driven decision making and strategic insights." />
+      </Helmet>
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Business Intelligence Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Transform your data into actionable insights with our comprehensive business intelligence services
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {biServices.map((service, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              <div className="space-y-2 mb-4">
+                <h4 className="font-semibold text-white">Features:</h4>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white mb-2">{service.price}</div>
+                <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
+                <div className="text-xs text-blue-300 mt-1">{service.category}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default BusinessIntelligencePage;

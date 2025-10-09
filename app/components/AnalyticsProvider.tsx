@@ -11,21 +11,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
         document.head.appendChild(script);
 
-<<<<<<< HEAD
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
-      }
-      (window as { gtag: typeof gtag }).gtag = gtag;
-      
-      gtag('js', new Date());
-      gtag('config', GA_TRACKING_ID, {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-=======
+
         window.dataLayer = window.dataLayer || [];
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
@@ -37,18 +23,15 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
           page_location: window.location.href,
         });
       }
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
+
     };
 
     // Track page views
     const trackPageView = () => {
-<<<<<<< HEAD
-      if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
-=======
+
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'page_view', {
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
+
           page_title: document.title,
           page_location: window.location.href,
           page_path: window.location.pathname,
@@ -78,15 +61,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track form submissions
       document.addEventListener('submit', (e) => {
         const form = e.target as HTMLFormElement;
-<<<<<<< HEAD
-        if ((window as { gtag: unknown }).gtag) {
-          (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'form_submit', {
-=======
+
         const formName = form.getAttribute('name') || 'unknown_form';
         
         if ((window as any).gtag) {
           (window as any).gtag('event', 'form_submit', {
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
+
             event_category: 'engagement',
             event_label: formName,
           });
@@ -96,17 +76,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track phone number clicks
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-<<<<<<< HEAD
-        if (target.href && target.href.startsWith('tel:')) {
-          if ((window as { gtag: unknown }).gtag) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
-              event_category: 'engagement',
-=======
+
         if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('tel:')) {
           if ((window as any).gtag) {
             (window as any).gtag('event', 'phone_click', {
               event_category: 'contact',
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
+
               event_label: 'phone_number',
             });
           }
