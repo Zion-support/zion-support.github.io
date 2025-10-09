@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -90,10 +84,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
-const AiCustomerSupportBotPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

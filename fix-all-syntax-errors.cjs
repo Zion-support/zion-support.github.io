@@ -27,45 +27,55 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   return results;
 }
 
-// Function to fix common syntax issues
-function fixSyntaxIssues(filePath) {
+// Function to fix all syntax issues
+function fixAllSyntaxIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     let fixed = false;
     
-    // Fix missing function declaration before return statement
-    if (content.includes('import React from \'react\';\n  return (')) {
-      content = content.replace(
-        /import React from 'react';\n  return \(/g,
-        "import React from 'react';\n\nconst ComponentName: React.FC = () => {\n  return ("
-      );
-      fixed = true;
-    }
-    
-    // Fix missing function declaration with different patterns
-    if (content.match(/^import React from 'react';\n\s*return \(/m)) {
-      content = content.replace(
-        /^import React from 'react';\n\s*return \(/m,
-        "import React from 'react';\n\nconst ComponentName: React.FC = () => {\n  return ("
-      );
-      fixed = true;
-    }
-    
-    // Fix missing export default with proper component name
-    if (content.includes('export default ComponentName;') && !content.includes('const ComponentName')) {
-      // Extract the actual component name from the file path
+    // Fix missing function declaration before state hooks
+    if (content.includes('import React, { useState') && content.includes('const [') && !content.includes(': React.FC = () => {')) {
       const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase()) + 'Page';
+      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
       
-      content = content.replace('export default ComponentName;', `export default ${componentName};`);
-      content = content.replace('const ComponentName: React.FC = () => {', `const ${componentName}: React.FC = () => {`);
+      // Find the line with useState and add function declaration before it
+      const lines = content.split('\n');
+      let newLines = [];
+      let foundImport = false;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('import React, { useState') && !foundImport) {
+          newLines.push(line);
+          newLines.push('');
+          newLines.push(`const ${componentName}: React.FC = () => {`);
+          foundImport = true;
+        } else if (line.includes('const [') && !foundImport) {
+          newLines.push(`const ${componentName}: React.FC = () => {`);
+          newLines.push(line);
+          foundImport = true;
+        } else {
+          newLines.push(line);
+        }
+      }
+      
+      content = newLines.join('\n');
+      fixed = true;
+    }
+    
+    // Fix missing export default
+    if (content.includes('import React') && !content.includes('export default')) {
+      const fileName = path.basename(filePath, path.extname(filePath));
+      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+      
+      content += '\n\nexport default ' + componentName + ';';
       fixed = true;
     }
     
     // Fix missing closing brace before export
     if (content.includes('};\n\nexport default') && !content.includes('const ')) {
-      // This is likely a malformed component, let's fix it
       const lines = content.split('\n');
       let newLines = [];
       let inComponent = false;
@@ -93,10 +103,27 @@ function fixSyntaxIssues(filePath) {
       fixed = true;
     }
     
+    // Fix malformed gtag calls
+    if (content.includes('event_category:') && !content.includes('window.gtag(')) {
+      content = content.replace(
+        /if \(typeof window !== 'undefined' && 'gtag' in window\) \{\s*event_category:/g,
+        "if (typeof window !== 'undefined' && 'gtag' in window) {\n      window.gtag('event', 'phone_click', {\n        event_category:"
+      );
+      fixed = true;
+    }
+    
+    // Fix missing closing parenthesis in gtag calls
+    if (content.includes('event_category:') && !content.includes('});')) {
+      content = content.replace(
+        /(\s+event_label: '[^']+')\s*\);/g,
+        '$1\n      });'
+      );
+      fixed = true;
+    }
+    
     // Fix duplicate component definitions
     const componentMatches = content.match(/const \w+: React\.FC = \(\) => \{/g);
     if (componentMatches && componentMatches.length > 1) {
-      // Keep only the last component definition
       const lines = content.split('\n');
       let newLines = [];
       let foundFirstComponent = false;
@@ -106,8 +133,7 @@ function fixSyntaxIssues(filePath) {
         
         if (line.includes('const ') && line.includes(': React.FC = () => {')) {
           if (foundFirstComponent) {
-            // Skip this duplicate component definition
-            continue;
+            continue; // Skip duplicate component definitions
           } else {
             foundFirstComponent = true;
             newLines.push(line);
@@ -146,7 +172,7 @@ let fixedCount = 0;
 
 files.forEach(file => {
   try {
-    if (fixSyntaxIssues(file)) {
+    if (fixAllSyntaxIssues(file)) {
       fixedCount++;
     }
   } catch (error) {
@@ -158,7 +184,7 @@ console.log(`\n📊 Summary:`);
 console.log(`Files fixed: ${fixedCount}`);
 
 if (fixedCount > 0) {
-  console.log('\n✅ Syntax issues have been resolved!');
+  console.log('\n✅ All syntax issues have been resolved!');
 } else {
   console.log('\n✅ No syntax issues found.');
 }

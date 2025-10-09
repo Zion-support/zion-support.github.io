@@ -1,28 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {CheckCircle, Star, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-=======
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 interface ServicePageProps {
   title: string;
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  icon: React.ComponentType<{ className?: string }>;
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-=======
-  icon: React.ComponentType<{ className?: string }>;
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
   services: Array<{
     title: string;
     description: string;
@@ -37,7 +19,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">

@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { FileText, Scale, Shield, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -10,7 +6,7 @@ const TermsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -27,7 +23,7 @@ const TermsPage: React.FC = () => {
                 Acceptance of Terms
               </h2>
               <p className="text-gray-300">
-                By accessing and using our services, you accept and agree to be bound by the terms and 
+                By accessing and using our services, you accept and agree to be bound by the terms and
                 provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
@@ -38,7 +34,7 @@ const TermsPage: React.FC = () => {
                 Use License
               </h2>
               <p className="text-gray-300 mb-4">
-                Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only. 
+                Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.
                 This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -55,7 +51,7 @@ const TermsPage: React.FC = () => {
                 Service Availability
               </h2>
               <p className="text-gray-300">
-                We strive to maintain high service availability but do not guarantee uninterrupted access. 
+                We strive to maintain high service availability but do not guarantee uninterrupted access.
                 We reserve the right to modify, suspend, or discontinue any part of our services at any time.
               </p>
             </section>
@@ -80,8 +76,8 @@ const TermsPage: React.FC = () => {
                 Limitation of Liability
               </h2>
               <p className="text-gray-300">
-                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
-                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation,
+                damages for loss of data or profit, or due to business interruption) arising out of the use or inability
                 to use our services, even if we have been notified orally or in writing of the possibility of such damage.
               </p>
             </section>

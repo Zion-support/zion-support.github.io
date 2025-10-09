@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Shield, Eye, Lock, Database, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -10,7 +6,7 @@ const PrivacyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -27,7 +23,7 @@ const PrivacyPage: React.FC = () => {
                 Information We Collect
               </h2>
               <p className="text-gray-300 mb-4">
-                We collect information you provide directly to us, such as when you create an account, 
+                We collect information you provide directly to us, such as when you create an account,
                 use our services, or contact us for support.
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -61,7 +57,7 @@ const PrivacyPage: React.FC = () => {
                 Data Security
               </h2>
               <p className="text-gray-300 mb-4">
-                We implement appropriate security measures to protect your personal information against 
+                We implement appropriate security measures to protect your personal information against
                 unauthorized access, alteration, disclosure, or destruction.
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -78,7 +74,7 @@ const PrivacyPage: React.FC = () => {
                 Data Sharing
               </h2>
               <p className="text-gray-300 mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties 
+                We do not sell, trade, or otherwise transfer your personal information to third parties
                 without your consent, except as described in this policy.
               </p>
             </section>

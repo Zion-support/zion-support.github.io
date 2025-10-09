@@ -14,13 +14,6 @@ export const _usePerformanceOptimization = () => {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-<<<<<<< HEAD
-    const paintEntries = performance.getEntriesByType('paint');
-    const metrics: PerformanceMetrics = {
-=======
-    const _paintEntries = performance.getEntriesByType('paint');
-    const _metrics: PerformanceMetrics = {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
@@ -110,9 +103,9 @@ export const _usePerformanceOptimization = () => {
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
         }
-        if (process.env['NODE_ENV'] === 'development') { 
-          if (import.meta.env.DEV) { 
-          } 
+        if (process.env['NODE_ENV'] === 'development') {
+          if (import.meta.env.DEV) {
+          }
         }
       }
     }, 1000);

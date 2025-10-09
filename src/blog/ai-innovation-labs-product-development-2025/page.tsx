@@ -133,6 +133,6 @@ const InnovationLabsPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default InnovationLabsPage;

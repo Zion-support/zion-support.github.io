@@ -3,14 +3,6 @@ import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Fallback component
-<<<<<<< HEAD
-const EmptyComponent = () => null;
-=======
-const __EmptyComponent = () => null;
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 // Lazy load heavy components - these may not exist, so make them optional
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const UnifiedBanner = lazy(() =>
@@ -30,9 +22,6 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-=======
 
 // Lazy load heavy components - these may not exist, so make them optional
 // const UnifiedBanner = lazy(() =>
@@ -50,7 +39,6 @@ const ContentShowcase = lazy(() =>
 //     default: EmptyComponent
 //   }))
 // );
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -73,8 +61,8 @@ export default function OptimizedHomePage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
-                70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
+                Transform your enterprise with AI-powered solutions that deliver 300% ROI,
+                70% cost reduction, and 90% efficiency gains. Expert AI consulting,
                 autonomous systems, and digital transformation services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

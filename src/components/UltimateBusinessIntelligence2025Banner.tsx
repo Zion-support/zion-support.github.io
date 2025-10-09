@@ -1,11 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-const UltimateBusinessIntelligence2025Banner = () => {
-=======
-import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligence2025Banner = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+
+const UltimateBusinessIntelligence2025Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [

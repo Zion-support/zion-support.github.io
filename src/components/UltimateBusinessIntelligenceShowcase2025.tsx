@@ -1,11 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-const UltimateBusinessIntelligenceShowcase2025 = () => {
-=======
-import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligenceShowcase2025 = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+
+const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
     {
@@ -66,8 +62,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
   ];
-  const filteredContent = selectedCategory === 'all' 
-    ? content 
+  const filteredContent = selectedCategory === 'all'
+    ? content
     : content.filter(item => item.category === selectedCategory);
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">

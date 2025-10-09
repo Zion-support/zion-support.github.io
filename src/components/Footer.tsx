@@ -1,14 +1,9 @@
 'use client';
 import React, { memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const Footer: React.FC = memo(() => {
   const _currentYear = new Date().getFullYear();
-  
+
   const aiServices = [
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
     { name: 'Natural Language Processing', url: '/ai-nlp', description: 'Advanced text analysis and understanding' },
@@ -86,7 +81,7 @@ const Footer: React.FC = memo(() => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
       <div className="absolute inset-0 cyber-grid opacity-10"></div>
-      
+
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
@@ -105,7 +100,7 @@ const Footer: React.FC = memo(() => {
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -155,7 +150,7 @@ const Footer: React.FC = memo(() => {
               <ul className="space-y-3">
                 {aiServices.slice(0, 8).map((service, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       to={service.url}
                       className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -166,8 +161,8 @@ const Footer: React.FC = memo(() => {
                   </li>
                 ))}
                 <li>
-                  <Link 
-                    to="/ai-services" 
+                  <Link
+                    to="/ai-services"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium flex items-center"
                   >
                     View All AI Services →
@@ -182,7 +177,7 @@ const Footer: React.FC = memo(() => {
               <ul className="space-y-3">
                 {itServices.slice(0, 8).map((service, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       to={service.url}
                       className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -193,8 +188,8 @@ const Footer: React.FC = memo(() => {
                   </li>
                 ))}
                 <li>
-                  <Link 
-                    to="/it-services" 
+                  <Link
+                    to="/it-services"
                     className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
                   >
                     View All IT Services →
@@ -209,7 +204,7 @@ const Footer: React.FC = memo(() => {
               <ul className="space-y-3">
                 {microSaasServices.slice(0, 8).map((service, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       to={service.url}
                       className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -220,8 +215,8 @@ const Footer: React.FC = memo(() => {
                   </li>
                 ))}
                 <li>
-                  <Link 
-                    to="/micro-saas" 
+                  <Link
+                    to="/micro-saas"
                     className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
                   >
                     View All Micro SAAS →
@@ -239,7 +234,7 @@ const Footer: React.FC = memo(() => {
               <ul className="space-y-3">
                 {emergingTech.slice(0, 6).map((service, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       to={service.url}
                       className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -258,7 +253,7 @@ const Footer: React.FC = memo(() => {
               <ul className="space-y-3">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       to={link.url}
                       className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -276,7 +271,7 @@ const Footer: React.FC = memo(() => {
               <ul className="space-y-3">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       to={link.url}
                       className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -321,7 +316,7 @@ const Footer: React.FC = memo(() => {
               </div>
               <div className="flex flex-wrap justify-center md:justify-end space-x-6">
                 {legalLinks.map((link, index) => (
-                  <Link 
+                  <Link
                     key={index}
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"

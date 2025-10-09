@@ -23,3 +23,5 @@ if (root) {
     </React.StrictMode>
   );
 }
+
+export default Main;

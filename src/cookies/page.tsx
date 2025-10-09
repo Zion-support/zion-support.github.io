@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Cookie, Settings, Shield, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -10,7 +6,7 @@ const CookiesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -27,7 +23,7 @@ const CookiesPage: React.FC = () => {
                 What Are Cookies?
               </h2>
               <p className="text-gray-300">
-                Cookies are small text files that are placed on your computer or mobile device when you visit our website. 
+                Cookies are small text files that are placed on your computer or mobile device when you visit our website.
                 They help us provide you with a better experience by remembering your preferences and enabling certain functionality.
               </p>
             </section>
@@ -41,21 +37,21 @@ const CookiesPage: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3>
                   <p className="text-gray-300">
-                    These cookies are necessary for the website to function properly. They enable basic functions like page 
+                    These cookies are necessary for the website to function properly. They enable basic functions like page
                     navigation and access to secure areas of the website.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Analytics Cookies</h3>
                   <p className="text-gray-300">
-                    These cookies help us understand how visitors interact with our website by collecting and reporting 
+                    These cookies help us understand how visitors interact with our website by collecting and reporting
                     information anonymously.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Functional Cookies</h3>
                   <p className="text-gray-300">
-                    These cookies enable the website to provide enhanced functionality and personalization, such as 
+                    These cookies enable the website to provide enhanced functionality and personalization, such as
                     remembering your preferences.
                   </p>
                 </div>

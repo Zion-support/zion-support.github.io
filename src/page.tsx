@@ -1,27 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-
-// Dynamically import heavy components for better performance
-<<<<<<< HEAD
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-<<<<<<< HEAD
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-=======
-const _ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
@@ -29,12 +6,10 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-=======
 // const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 // const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 // const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 
 // Preload critical components
 const preloadComponents = () => {
@@ -70,11 +45,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-      (window as unknown as { gtag: (event: string, data: Record<string, string>) => void }).gtag('event', 'phone_click', {
-=======
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
+      window.gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -560,11 +531,11 @@ const HomePage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-advanced cyber-matrix-bg particle-field">
         {/* Navigation */}
         <Navigation />
-        
+
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
@@ -582,15 +553,15 @@ const HomePage: React.FC = () => {
           {/* Hero Section */}
           <section
             className={`text-center mb-12 sm:mb-16 lg:mb-20 transition-all duration-1000 cyber-scan-line ${
-              isLoaded && isVisible 
-                ? 'opacity-100 translate-y-0' 
+              isLoaded && isVisible
+                ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-8'
             }`}
             aria-labelledby="hero-heading"
           >
             <div className="max-w-6xl mx-auto">
-              <h1 
-                id="hero-heading" 
+              <h1
+                id="hero-heading"
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-advanced neon-pulse glitch"
                 data-text="Zion Tech Group"
               >
@@ -603,7 +574,7 @@ const HomePage: React.FC = () => {
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
-              
+
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -655,7 +626,7 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'cyber-glow-advanced ring-2 ring-cyan-400' : 'holographic-card-advanced'}`}>
@@ -666,7 +637,7 @@ const HomePage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-4">
                     <div className="text-4xl mb-3">{service.icon}</div>
                     <div className="inline-block bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-3 py-1 rounded-full text-xs font-medium text-cyan-400 mb-2">
@@ -677,7 +648,7 @@ const HomePage: React.FC = () => {
                       {service.description}
                     </p>
                   </div>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -694,7 +665,7 @@ const HomePage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -706,11 +677,11 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
-                    <Link 
-                      to={service.link} 
+                    <Link
+                      to={service.link}
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >
                       Learn More
@@ -719,10 +690,10 @@ const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
-            
+
             <div className="text-center">
-              <a 
-                href="/micro-saas" 
+              <a
+                href="/micro-saas"
                 className="cyber-button px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 View All Micro SAAS Solutions
@@ -738,14 +709,14 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Advanced artificial intelligence solutions for enterprise applications
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-entanglement p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
@@ -762,7 +733,7 @@ const HomePage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -774,11 +745,11 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <Link 
-                      to="/ai-services" 
+                    <Link
+                      to="/ai-services"
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Learn More
@@ -787,10 +758,10 @@ const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
-            
+
             <div className="text-center">
-              <a 
-                href="/ai-services" 
+              <a
+                href="/ai-services"
                 className="cyber-button px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 View All AI Services
@@ -806,14 +777,14 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="holographic-card-advanced p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
@@ -830,7 +801,7 @@ const HomePage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -842,11 +813,11 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <Link 
-                      to="/it-services" 
+                    <Link
+                      to="/it-services"
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Learn More
@@ -855,10 +826,10 @@ const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
-            
+
             <div className="text-center">
-              <a 
-                href="/it-services" 
+              <a
+                href="/it-services"
                 className="cyber-button px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 View All IT Services
@@ -871,7 +842,7 @@ const HomePage: React.FC = () => {
             <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Our Impact
             </h2>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="text-3xl font-bold text-cyan-400 mb-2 neon-text">500+</div>
@@ -900,7 +871,7 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Cutting-edge technologies for next-generation business solutions
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -933,8 +904,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold mb-2 neon-text text-purple-400">Custom Pricing</div>
-                  <a 
-                    href="/quantum-computing" 
+                  <a
+                    href="/quantum-computing"
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-purple-400 border border-purple-400 hover:bg-purple-400 hover:text-slate-900"
                   >
                     Learn More
@@ -973,8 +944,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold mb-2 neon-text text-cyan-400">Custom Pricing</div>
-                  <a 
-                    href="/autonomous-systems" 
+                  <a
+                    href="/autonomous-systems"
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-cyan-400 border border-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
                   >
                     Learn More
@@ -1013,8 +984,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold mb-2 neon-text text-green-400">$1,999/month</div>
-                  <a 
-                    href="/blockchain-web3" 
+                  <a
+                    href="/blockchain-web3"
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-green-400 border border-green-400 hover:bg-green-400 hover:text-slate-900"
                   >
                     Learn More
@@ -1053,8 +1024,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold mb-2 neon-text text-orange-400">$1,499/month</div>
-                  <a 
-                    href="/iot-edge-computing" 
+                  <a
+                    href="/iot-edge-computing"
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-orange-400 border border-orange-400 hover:bg-orange-400 hover:text-slate-900"
                   >
                     Learn More
@@ -1093,8 +1064,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold mb-2 neon-text text-indigo-400">$1,799/month</div>
-                  <a 
-                    href="/business-intelligence" 
+                  <a
+                    href="/business-intelligence"
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-indigo-400 border border-indigo-400 hover:bg-indigo-400 hover:text-slate-900"
                   >
                     Learn More
@@ -1133,8 +1104,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold mb-2 neon-text text-gray-400">Custom Pricing</div>
-                  <a 
-                    href="/robotics" 
+                  <a
+                    href="/robotics"
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-gray-400 border border-gray-400 hover:bg-gray-400 hover:text-slate-900"
                   >
                     Learn More
@@ -1152,39 +1123,39 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Ready to transform your business? Contact us for a free consultation and discover how our solutions can drive your success.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-glow-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Call Now
                 </a>
               </div>
-              
+
               <div className="holographic-card-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
                 >
                   Send Email
                 </a>
               </div>
-              
+
               <div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                <a 
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                <a
+                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:text-green-300 font-medium transition-colors"
@@ -1193,7 +1164,7 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
             </div>
-            
+
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
@@ -1227,6 +1198,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-=======
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

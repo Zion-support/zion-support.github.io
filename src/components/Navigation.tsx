@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +21,8 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
+      isScrolled
+        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20'
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -48,7 +43,7 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
             {/* Services Dropdown */}
@@ -57,7 +52,7 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6">
@@ -81,7 +76,7 @@ const Navigation: React.FC = () => {
                           </Link>
                         </div>
                       </div>
-                      
+
                       {/* IT Services */}
                       <div>
                         <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4>
@@ -115,8 +110,8 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link 
-              to="/case-studies" 
+            <Link
+              to="/case-studies"
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
