@@ -3,10 +3,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {TestTube, Target} from 'lucide-react';
 const AIABTestingPage: React.FC = () => {
-const features = [
+  const features = [
     {
-  // TODO: Add content
-}
       icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
