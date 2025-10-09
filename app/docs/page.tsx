@@ -1,33 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const DocsPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Docs</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under construction. Please check back soon for updates.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      
-      <Footer />
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -38,297 +15,224 @@ const DocsPage: React.FC = () => {
       icon: '🚀',
       description: 'Quick start guides and basic setup instructions',
       docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'First Project', description: 'Create your first AI project', link: '/docs/first-project' },
-        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
+        { title: 'Installation Guide', url: '/docs/installation', type: 'Guide' },
+        { title: 'Quick Start', url: '/docs/quick-start', type: 'Tutorial' },
+        { title: 'Configuration', url: '/docs/configuration', type: 'Reference' }
       ]
     },
     {
       title: 'API Reference',
-      icon: '🔌',
-      description: 'Complete API documentation and endpoints',
-      docs: [
-        { title: 'Authentication', description: 'API authentication and security', link: '/docs/api/auth' },
-        { title: 'AI Services API', description: 'AI service endpoints and parameters', link: '/docs/api/ai-services' },
-        { title: 'Data Processing API', description: 'Data processing and analytics endpoints', link: '/docs/api/data-processing' },
-        { title: 'Webhooks', description: 'Event notifications and webhooks', link: '/docs/api/webhooks' }
-      ]
-    },
-    {
-      title: 'SDKs & Libraries',
       icon: '📚',
-      description: 'Client libraries and SDKs for different languages',
+      description: 'Complete API documentation and reference materials',
       docs: [
-        { title: 'Python SDK', description: 'Python client library and examples', link: '/docs/sdk/python' },
-        { title: 'JavaScript SDK', description: 'JavaScript/Node.js client library', link: '/docs/sdk/javascript' },
-        { title: 'Java SDK', description: 'Java client library and integration', link: '/docs/sdk/java' },
-        { title: 'REST API', description: 'RESTful API documentation', link: '/docs/api/rest' }
+        { title: 'Authentication', url: '/docs/api/auth', type: 'Reference' },
+        { title: 'Endpoints', url: '/docs/api/endpoints', type: 'Reference' },
+        { title: 'Error Codes', url: '/docs/api/errors', type: 'Reference' }
       ]
     },
     {
       title: 'Tutorials',
       icon: '🎓',
-      description: 'Step-by-step tutorials and examples',
+      description: 'Step-by-step tutorials and learning resources',
       docs: [
-        { title: 'AI Model Training', description: 'Train custom AI models', link: '/docs/tutorials/model-training' },
-        { title: 'Data Pipeline Setup', description: 'Set up data processing pipelines', link: '/docs/tutorials/data-pipeline' },
-        { title: 'Deployment Guide', description: 'Deploy models to production', link: '/docs/tutorials/deployment' },
-        { title: 'Best Practices', description: 'AI development best practices', link: '/docs/tutorials/best-practices' }
+        { title: 'Building Your First App', url: '/docs/tutorials/first-app', type: 'Tutorial' },
+        { title: 'Advanced Features', url: '/docs/tutorials/advanced', type: 'Tutorial' },
+        { title: 'Best Practices', url: '/docs/tutorials/best-practices', type: 'Guide' }
       ]
     },
     {
-      title: 'Integration Guides',
-      icon: '🔗',
-      description: 'Integration with popular platforms and services',
-      docs: [
-        { title: 'AWS Integration', description: 'Integrate with AWS services', link: '/docs/integrations/aws' },
-        { title: 'Google Cloud', description: 'Google Cloud Platform integration', link: '/docs/integrations/gcp' },
-        { title: 'Azure Integration', description: 'Microsoft Azure integration', link: '/docs/integrations/azure' },
-        { title: 'Docker Setup', description: 'Containerized deployment with Docker', link: '/docs/integrations/docker' }
-      ]
-    },
-    {
-      title: 'Troubleshooting',
+      title: 'SDKs & Libraries',
       icon: '🔧',
-      description: 'Common issues and solutions',
+      description: 'Client libraries and SDK documentation',
       docs: [
-        { title: 'Common Issues', description: 'Frequently encountered problems', link: '/docs/troubleshooting/common-issues' },
-        { title: 'Error Codes', description: 'API error codes and meanings', link: '/docs/troubleshooting/error-codes' },
-        { title: 'Performance Tips', description: 'Optimize performance and speed', link: '/docs/troubleshooting/performance' },
-        { title: 'Debugging Guide', description: 'Debug and troubleshoot issues', link: '/docs/troubleshooting/debugging' }
+        { title: 'JavaScript SDK', url: '/docs/sdks/javascript', type: 'SDK' },
+        { title: 'Python SDK', url: '/docs/sdks/python', type: 'SDK' },
+        { title: 'React Components', url: '/docs/sdks/react', type: 'Library' }
       ]
     }
   ];
 
   const popularDocs = [
-    { title: 'Quick Start Guide', views: '12.5k', link: '/docs/quick-start' },
-    { title: 'API Authentication', views: '8.9k', link: '/docs/api/auth' },
-    { title: 'Python SDK Setup', views: '7.2k', link: '/docs/sdk/python' },
-    { title: 'Model Training Tutorial', views: '6.8k', link: '/docs/tutorials/model-training' },
-    { title: 'Deployment Guide', views: '5.4k', link: '/docs/tutorials/deployment' }
+    { title: 'Authentication Guide', url: '/docs/auth', views: '12.5k' },
+    { title: 'API Rate Limits', url: '/docs/rate-limits', views: '8.2k' },
+    { title: 'Webhook Setup', url: '/docs/webhooks', views: '6.7k' },
+    { title: 'Error Handling', url: '/docs/errors', views: '5.9k' }
   ];
 
-  const recentUpdates = [
-    { title: 'New AI Model API endpoints', date: '2024-10-08', type: 'API Update' },
-    { title: 'Python SDK v2.1.0 released', date: '2024-10-05', type: 'SDK Update' },
-    { title: 'Enhanced documentation for webhooks', date: '2024-10-03', type: 'Documentation' },
-    { title: 'New integration guide for Azure', date: '2024-10-01', type: 'Integration' }
-  ];
+  const filteredCategories = docCategories.map(category => ({
+    ...category,
+    docs: category.docs.filter(doc => 
+      doc.title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.docs.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Documentation
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Everything you need to build with our AI platform
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Documentation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive guides, tutorials, and API references to help you build amazing applications.
+          </p>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto relative">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search documentation..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Quick Links */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Quick Start
-            </h2>
-            <p className="text-xl text-gray-600">
-              Get started with our most popular resources
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
-              <div className="flex items-center mb-4">
-                <BookOpen className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Quick Start Guide</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Get up and running with our AI platform in just 5 minutes.
-              </p>
-              <Link 
-                to="/docs/quick-start"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
+        {/* Popular Docs */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-6">Popular Documentation</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {popularDocs.map((doc, index) => (
+              <Link
+                key={index}
+                href={doc.url}
+                className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-colors group"
               >
-                Start Here
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
-              <div className="flex items-center mb-4">
-                <Code className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">API Reference</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Complete API documentation with examples and code snippets.
-              </p>
-              <Link 
-                to="/docs/api"
-                className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
-              >
-                View API Docs
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 border border-purple-200">
-              <div className="flex items-center mb-4">
-                <FileText className="w-8 h-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">SDKs & Libraries</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Client libraries for Python, JavaScript, Java, and more.
-              </p>
-              <Link 
-                to="/docs/sdk"
-                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
-              >
-                Browse SDKs
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Documentation Categories */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Documentation Categories
-            </h2>
-            <p className="text-xl text-gray-600">
-              Browse our comprehensive documentation by category
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {docCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{category.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    {doc.title}
+                  </h3>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                 </div>
-                <p className="text-gray-600 mb-6">{category.description}</p>
+                <p className="text-sm text-gray-400">{doc.views} views</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Documentation Categories */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-8">Browse by Category</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredCategories.map((category, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-4">{category.icon}</span>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                    <p className="text-gray-400">{category.description}</p>
+                  </div>
+                </div>
+                
                 <div className="space-y-3">
                   {category.docs.map((doc, docIndex) => (
-                    <Link 
+                    <Link
                       key={docIndex}
-                      to={doc.link}
-                      className="block p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      href={doc.url}
+                      className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors group"
                     >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="font-medium text-gray-900 group-hover:text-blue-600">{doc.title}</h4>
-                          <p className="text-sm text-gray-500">{doc.description}</p>
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-cyan-600 rounded flex items-center justify-center mr-3">
+                          {doc.type === 'Guide' && <BookOpen className="w-4 h-4 text-white" />}
+                          {doc.type === 'Tutorial' && <Code className="w-4 h-4 text-white" />}
+                          {doc.type === 'Reference' && <FileText className="w-4 h-4 text-white" />}
+                          {doc.type === 'SDK' && <Download className="w-4 h-4 text-white" />}
+                          {doc.type === 'Library' && <Code className="w-4 h-4 text-white" />}
                         </div>
-                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
+                        <div>
+                          <h4 className="text-white group-hover:text-cyan-400 transition-colors">
+                            {doc.title}
+                          </h4>
+                          <p className="text-sm text-gray-400">{doc.type}</p>
+                        </div>
                       </div>
+                      <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                     </Link>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Popular & Recent Updates */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Popular Documentation */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Most Popular</h3>
-              <div className="space-y-4">
-                {popularDocs.map((doc, index) => (
-                  <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                    <div>
-                      <Link 
-                        to={doc.link}
-                        className="font-medium text-gray-900 hover:text-blue-600"
-                      >
-                        {doc.title}
-                      </Link>
-                      <p className="text-sm text-gray-500">{doc.views} views</p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-400" />
-                  </div>
-                ))}
+        {/* Quick Links */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-8">Quick Links</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link
+              href="/api-docs"
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg p-6 text-white hover:from-cyan-700 hover:to-blue-700 transition-all group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">API Reference</h3>
+                  <p className="text-cyan-100">Complete API documentation</p>
+                </div>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </div>
-            </div>
-
-            {/* Recent Updates */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recent Updates</h3>
-              <div className="space-y-4">
-                {recentUpdates.map((update, index) => (
-                  <div key={index} className="p-4 bg-gray-50 rounded-lg">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-900">{update.title}</h4>
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                        {update.type}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-500">{update.date}</p>
-                  </div>
-                ))}
+            </Link>
+            
+            <Link
+              href="/contact"
+              className="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-colors group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Get Support</h3>
+                  <p className="text-gray-400">Need help? Contact our team</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" />
               </div>
-            </div>
+            </Link>
+            
+            <Link
+              href="/blog"
+              className="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-colors group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Blog & Updates</h3>
+                  <p className="text-gray-400">Latest news and updates</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+              </div>
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Download Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Download Documentation
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get offline access to our complete documentation
+        {/* CTA Section */}
+        <section className="text-center bg-gray-800/50 rounded-lg p-12 border border-gray-700">
+          <h2 className="text-3xl font-bold text-white mb-4">Can't Find What You're Looking For?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our documentation is constantly updated. If you can't find what you need, our support team is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">
-              <Download className="w-5 h-5 mr-2" />
-              Download PDF
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">
-              <Download className="w-5 h-5 mr-2" />
-              Download ePub
-            </button>
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+            >
+              Contact Support
+            </Link>
+            <Link
+              href="/api-docs"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
+            >
+              Browse API Docs
+            </Link>
           </div>
-          <p className="text-sm text-blue-200 mt-4">
-            Updated daily • Available in multiple formats
-          </p>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+        </section>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default DocsPage;
-=======
-export default DocsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
