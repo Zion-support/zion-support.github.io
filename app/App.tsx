@@ -14,6 +14,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
+import { registerServiceWorker } from './utils/serviceWorker';
 
 // Lazy load components for better performance
 
@@ -82,6 +83,9 @@ const App: React.FC = () => {
     // Initialize accessibility enhancements
     accessibilityEnhancer.init();
     
+    // Register service worker
+    registerServiceWorker();
+    
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
@@ -101,12 +105,6 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());

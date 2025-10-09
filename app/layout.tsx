@@ -4,6 +4,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
+import SEOOptimizer from './components/SEOOptimizer';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
 export default function RootLayout({
@@ -192,6 +193,7 @@ export default function RootLayout({
             <AccessibilityEnhancer>
               <PerformanceMonitor />
               <PerformanceOptimizer />
+              <SEOOptimizer />
               <PWAInstaller />
               {children}
             </AccessibilityEnhancer>
