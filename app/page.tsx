@@ -22,7 +22,7 @@ const preloadComponents = () => {
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+  <div className="cyber-card-enhanced hologram-card-enhanced p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -55,7 +55,10 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced">
+      {/* Matrix Rain Background */}
+      <div className="matrix-rain"></div>
+      
       {/* Navigation */}
       <Navigation />
       
@@ -72,7 +75,7 @@ const HomePage: React.FC = () => {
         <ContentPromotionBanner />
       </Suspense>
 
-      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+      <main id="main-content" className="container mx-auto px-4 py-16 pt-24 relative z-10" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -84,7 +87,7 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text-enhanced"
           >
             Zion Tech Group
           </h1>
@@ -98,17 +101,17 @@ const HomePage: React.FC = () => {
           
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6">
+            <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl mb-3">🚀</div>
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
+            <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl mb-3">⚡</div>
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+            <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
               <div className="text-2xl sm:text-3xl mb-3">🔒</div>
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
@@ -120,14 +123,14 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button-enhanced w-full sm:w-auto text-center"
               aria-label="Call us at (302) 464-0950"
             >
               📞 Call Now: (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button-enhanced w-full sm:w-auto text-center"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               Get Free Consultation
@@ -137,7 +140,7 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
             Our Services
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -147,7 +150,7 @@ const HomePage: React.FC = () => {
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -163,7 +166,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📢</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Marketing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -179,7 +182,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚙️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Automation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -198,7 +201,7 @@ const HomePage: React.FC = () => {
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -214,7 +217,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -230,7 +233,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -246,29 +249,33 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
-          {/* Additional Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
+          {/* Micro SAAS Services */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Micro SAAS Solutions</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
+                Affordable, powerful AI-driven tools for modern businesses. Start from $69/month.
               </p>
               <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
+                <li>• 12+ Ready-to-use Tools</li>
+                <li>• AI-Powered Automation</li>
+                <li>• Instant Setup</li>
+                <li>• 24/7 Support</li>
               </ul>
+              <div className="mt-4">
+                <div className="text-lg font-bold text-cyan-400 mb-2">Starting at $69/month</div>
+                <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                  Explore Micro SAAS →
+                </a>
+              </div>
             </article>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
+            <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
+                Transform your business processes with cutting-edge technology and expert consultation.
               </p>
               <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                 <li>• Process Automation</li>
@@ -278,7 +285,7 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
+            <article className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -296,7 +303,7 @@ const HomePage: React.FC = () => {
           <div className="text-center mt-8">
             <a 
               href="/services"
-              className="inline-block bg-indigo-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 text-sm sm:text-base"
+              className="cyber-button-enhanced text-sm sm:text-base"
             >
               View All Services
             </a>
@@ -319,32 +326,32 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Social Proof Section */}
-        <section className="bg-gradient-to-r from-slate-800 to-purple-900 py-12 sm:py-16 rounded-2xl" aria-labelledby="social-proof-heading">
+        <section className="bg-gradient-to-r from-slate-800 to-purple-900 py-12 sm:py-16 rounded-2xl cyber-card-enhanced" aria-labelledby="social-proof-heading">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 id="social-proof-heading" className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12 neon-text">
+            <h2 id="social-proof-heading" className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12 neon-text-enhanced">
               Trusted by Industry Leaders
             </h2>
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-8 sm:mb-12">
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-enhanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-300 text-xs sm:text-base">Enterprise Clients</div>
               </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-enhanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
                 <div className="text-gray-300 text-xs sm:text-base">Cost Savings Delivered</div>
               </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-enhanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
                 <div className="text-gray-300 text-xs sm:text-base">Uptime Guarantee</div>
               </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-enhanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-gray-300 text-xs sm:text-base">Support Available</div>
               </div>
             </div>
 
-            <div className="cyber-card hologram-card p-6 sm:p-8">
+            <div className="cyber-card-enhanced hologram-card-enhanced p-6 sm:p-8">
               <div className="text-center mb-6 sm:mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">What Our Clients Say</h3>
               </div>
@@ -381,8 +388,8 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Call to Action Section */}
-        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text">
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card-enhanced" aria-labelledby="cta-heading">
+          <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text-enhanced">
             Ready to Transform Your Business?
           </h2>
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
@@ -392,14 +399,14 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button-enhanced w-full sm:w-auto text-center"
               aria-label="Call us at (302) 464-0950"
             >
               📞 Call Now: (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button-enhanced w-full sm:w-auto text-center"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               Get Free Consultation
