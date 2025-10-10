@@ -80,7 +80,6 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-<<<<<<< HEAD
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
       icon: '🎯',
@@ -141,7 +140,6 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-=======
       title: 'AI Quantum Task Optimizer',
       description: 'Revolutionary quantum-inspired task optimization that processes millions of task combinations to find the perfect workflow. Achieve 99.9% efficiency.',
       icon: '⚛️',
@@ -202,7 +200,6 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b5fe
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
