@@ -92,7 +92,7 @@ function fixCorruptedText(text) {
   );
   //Fix array syntax;
   fixed = fixed.replace(/\[\s*\{/g, '[{');
-function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
+function fixCorruptedText(text) {/* TODO: Fix JSX expression */};
   d:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
     "{/* TODO: Fix JSX expression */}"
   e: $7 }"
@@ -115,8 +115,12 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
+<<<<<<< HEAD
   return fixed;
 }
+=======
+  return fixed};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to process a file;
 function processFile(filePath) {
   try {
@@ -125,12 +129,20 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
+<<<<<<< HEAD
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
+=======
+function processFile(filePath) {/* TODO: Fix JSX expression */};
+    };
+    return false} catch (error) {/* TODO: Fix JSX expression */};
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to recursively find and process files;
 function processDirectory(dirPath) {
   try {
@@ -141,13 +153,14 @@ function processDirectory(dirPath) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
-function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
-        }
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
+        };
       } else if ()
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
+<<<<<<< HEAD
       ) {/* TODO: Fix JSX expression */}
         }
       }
@@ -156,6 +169,15 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     //     }
   return processedCount;
 }
+=======
+      ) {/* TODO: Fix JSX expression */};
+        };
+      };
+    };
+  } catch (error) {/* TODO: Fix JSX expression */};
+    //     };
+  return processedCount};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 

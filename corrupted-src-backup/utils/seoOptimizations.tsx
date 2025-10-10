@@ -4,9 +4,9 @@
  */
 import { Helmet } from 'react-helmet-async';
 // Meta tags utilities;
-export const seoUtils = {/* content */}
+export const seoUtils = {/* content */};
   // Generate structured data for organization;
-  generateOrganizationSchema: () => ({/* content */}
+  generateOrganizationSchema: () => ({/* content */};
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -16,10 +16,10 @@ export const seoUtils = {/* content */}
     "sameAs": [
       "https: //linkedin.com/company/zion-tech"]}),
   // Generate breadcrumb structured data;
-  generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */}
+  generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */};
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({/* content */}
+    "itemListElement": items.map((item, index) => ({/* content */};
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
@@ -27,40 +27,56 @@ export const seoUtils = {/* content */}
     }))
   }),
   // Generate FAQ structured data;
-  generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */}
+  generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */};
     "@context": "https: //schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map(faq => ({/* content */})
       "@type": "Question")
       "name": faq.question)
-      "acceptedAnswer": {/* content */}
+      "acceptedAnswer": {/* content */};
         "@type": "Answer")
+<<<<<<< HEAD
         "text": faq.answer;
       }
+=======
+        "text": faq.answer};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }))
   }),
   // Generate article structured data;
-  generateArticleSchema: (article: {/* content */}
+  generateArticleSchema: (article: {/* content */};
     title: string;
     description: string;
     author: string;
     datePublished: string;
+<<<<<<< HEAD
     dateModified: string
     image?: string
     url: string,
   }) => ({/* content */}
+=======
+    dateModified: string;
+    image?: string;
+    url: string}) => ({/* content */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "@context": "https: //schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "author": {/* content */}
+    "author": {/* content */};
       "@type": "Person",
+<<<<<<< HEAD
       "name": article.author;
     },
     "image": {/* content */}
       "url": article.image || "https: //zion.app/logo.png"}
+=======
+      "name": article.author},
+    "image": {/* content */};
+      "url": article.image || "https: //zion.app/logo.png"};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate structured data for organization,
-  generateOrganizationSchema: () => ({/* content */}
+  generateOrganizationSchema: () => ({/* content */};
     "@context": "http,"
   s://schema.org","
     "@type": "Organization","
@@ -107,7 +123,7 @@ export const seoUtils = {/* content */}
   }),
   // Generate article structured data,
   generateArticleSchema: (articl,
-  e: {/* content */}
+  e: {/* content */};
     titl,
   e: string,
     descriptio,
@@ -136,28 +152,36 @@ export const seoUtils = {/* content */}
   s://zion.app/logo.png"
     })
   })
+<<<<<<< HEAD
 });
 }
+=======
+})};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Sitemap generation utilities;
-export const sitemapUtils = {/* content */}
+export const sitemapUtils = {/* content */};
   // Generate sitemap entries;
-  generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
-    return {/* content */}
+  generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */};
+    return {/* content */};
       url,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
       changefreq: changefreq || 'weekly',
+<<<<<<< HEAD
       priority: priority || '0.8'}
   },
+=======
+      priority: priority || '0.8'}},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate robots.txt content;
-  generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
+  generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */};
     return `User-agent: *,
 Allow: /,
 ,
 Sitemap: ${sitemapUrl}`;
   // Generate sitemap entries,
   generateSitemapEntry: (ur)
-  l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
-    return {/* content */}
+  l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */};
+    return {/* content */};
       url,
       lastmo,
   d: lastmod || new Date().toISOString().split('T')[0],
@@ -165,23 +189,33 @@ Sitemap: ${sitemapUrl}`;
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
+<<<<<<< HEAD
     }
   },
+=======
+    }},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
   l: string = 'http)
-  s://zion.app/sitemap.xml') => {/* content */}
+  s://zion.app/sitemap.xml') => {/* content */};
     return `User-agen,
   t: *
 Allo,
   w: /
 Sitema,`
+<<<<<<< HEAD
   p: ${sitemapUrl}`;
   }
 }
+=======
+  p: ${sitemapUrl}`};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // URL optimization utilities;
-export const urlUtils = {/* content */}
+export const urlUtils = {/* content */};
   // Generate canonical URL;
+<<<<<<< HEAD
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
   },
@@ -189,89 +223,134 @@ export const urlUtils = {/* content */}
   generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
   },
+=======
+  generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */};
+    return `${baseUrl}${path}`},
+  // Generate Open Graph URL;
+  generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */};
+    return `${baseUrl}${path}`},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate Twitter Card URL;
-  generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
+  generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */};
   // Generate canonical URL,
   generateCanonicalUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
+<<<<<<< HEAD
     return `${baseUrl}${path}`;
   },
+=======
+    return `${baseUrl}${path}`},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate Open Graph URL,
   generateOGUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
+<<<<<<< HEAD
     return `${baseUrl}${path}`;
   },
+=======
+    return `${baseUrl}${path}`},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate Twitter Card URL,
   generateTwitterUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
+<<<<<<< HEAD
     return `${baseUrl}${path}`;
   }
 }
+=======
+    return `${baseUrl}${path}`};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Content optimization utilities;
-export const contentOptimization = {/* content */}
+export const contentOptimization = {/* content */};
   // Extract keywords from content;
-  extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
+  extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */};
   // Extract keywords from content,
   extractKeywords: (conten,
   t: string, minLengt)
-  h: number = 3): string[] => {/* content */}
+  h: number = 3): string[] => {/* content */};
     const words = content.toLowerCase()
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
       .filter(word => word.length >= minLength);
+<<<<<<< HEAD
     const wordCount = words.reduce((acc, word) => {/* content */}
+=======
+    ;
+const wordCount = words.reduce((acc, word) => {/* content */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       acc[word] = (acc[word] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
+<<<<<<< HEAD
       .map(([word]) => word);
   },
+=======
+      .map(([word]) => word)},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate meta description;
-  generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
+  generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */};
   // Generate meta description,
   generateMetaDescription: (conten,
   t: string, maxLengt)
-  h: number = 160): string => {/* content */}
+  h: number = 160): string => {/* content */};
     const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
+<<<<<<< HEAD
     return cleanContent.substring(0, maxLength - 3) + '...';
   },
+=======
+    return cleanContent.substring(0, maxLength - 3) + '...'},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate title tag;
-  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */}
+  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */};
   // Generate title tag,
   generateTitle: (pageTitl,
   e: string, siteNam,
   e: string = 'Zion Tech Group', separato)
   r: string = ' | '): string => {/* content */}`
+<<<<<<< HEAD
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
   }
 }
+=======
+    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Performance SEO utilities;
-export const performanceSEO = {/* content */}
+export const performanceSEO = {/* content */};
   // Preload critical resources;
   // Preload critical resources,
-  preloadCriticalResources: () => {/* content */}
+  preloadCriticalResources: () => {/* content */};
     const criticalResources = [
-      {/* TODO: Fix JSX expression */}
+];
+      {/* TODO: Fix JSX expression */};
   e: 'font/woff2' },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */};
   s: 'style' },
-      {/* TODO: Fix JSX expression */}
-  s: 'image' }
+      {/* TODO: Fix JSX expression */};
+  s: 'image' };
     ];
+<<<<<<< HEAD
     criticalResources.forEach(resource => {/* content */})
       const _link = document.createElement('link');
+=======
+    criticalResources.forEach(resource => {/* content */});
+const _link = document.createElement('link');
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) link.type = resource.type;
+<<<<<<< HEAD
       document.head.appendChild(link);
     });
   },
@@ -279,10 +358,17 @@ export const performanceSEO = {/* content */}
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
     src: string
     alt: string,
+=======
+      document.head.appendChild(link)})},
+  // Optimize images for SEO;
+  optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */};
+    src: string;
+    alt: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Optimize images for SEO,
   optimizeImageSEO: (sr,
   c: string, al)
-  t: string, width?: number, height?: number): {/* content */}
+  t: string, width?: number, height?: number): {/* content */};
     sr,
   c: string,
     al,
@@ -290,9 +376,14 @@ export const performanceSEO = {/* content */}
     width?: number
     height?: number,
     loadin,
+<<<<<<< HEAD
   g: 'lazy',
   } => {/* content */}
     return {/* content */}
+=======
+  g: 'lazy'} => {/* content */};
+    return {/* content */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       sr,`
   c: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
       alt,
@@ -300,80 +391,106 @@ export const performanceSEO = {/* content */}
       height,
       loading: 'lazy' as const,
       loadin,
+<<<<<<< HEAD
   g: 'lazy' as const,
     }
   }
 }
+=======
+  g: 'lazy' as const}};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Analytics and tracking utilities;
-export const analyticsUtils = {/* content */}
+export const analyticsUtils = {/* content */};
   // Track page views;
-  trackPageView: (url: string, title: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+  trackPageView: (url: string, title: string) => {/* content */};
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */};
       (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
         page_location: url,
   // Track page views,
   trackPageView: (ur,
   l: string, titl)
-  e: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+  e: string) => {/* content */};
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */};
       (window as typeof window & {/* TODO: Fix JSX expression */})
-  g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
+  g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */};
         page_titl,
   e: title,
         page_locatio,
+<<<<<<< HEAD
   n: url,)
       });
     }
+=======
+  n: url;)
+      })};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   // Track custom events;
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */};
   // Track custom events,
   trackEvent: (eventNam)
-  e: string, parameters?: Record<string, unknown>) => {/* content */}
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
+  e: string, parameters?: Record<string, unknown>) => {/* content */};
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */};
       (window as Window & {/* TODO: Fix JSX expression */})
+<<<<<<< HEAD
   g: Function }).gtag('event', eventName, parameters);
     }
+=======
+  g: Function }).gtag('event', eventName, parameters)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   // Track conversion events;
-  trackConversion: (conversionId: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+  trackConversion: (conversionId: string, value?: number) => {/* content */};
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */};
       (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
         value: value,
   // Track conversion events,
   trackConversion: (conversionI)
-  d: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+  d: string, value?: number) => {/* content */};
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */};
       (window as typeof window & {/* TODO: Fix JSX expression */})
-  g: Function }).gtag('event', 'conversion', {/* content */}
+  g: Function }).gtag('event', 'conversion', {/* content */};
         send_t,
   o: conversionId,
         valu,
+<<<<<<< HEAD
   e: value,)
       });
     }
   }
 }
+=======
+  e: value;)
+      })};
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Core Web Vitals tracking;
-export const coreWebVitals = {/* content */}
+export const coreWebVitals = {/* content */};
   // Track Core Web Vitals;
-  trackCoreWebVitals: () => {/* content */}
+  trackCoreWebVitals: () => {/* content */};
     if (typeof window === 'undefined') return;
+<<<<<<< HEAD
     const trackMetric = (metric: { name: string; value: number; id: string, delta: number }) => {/* content */}
+=======
+;
+const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
         metric_id: metric.id
         metric_delta: metric.delta,
   // Track Core Web Vitals,
-  trackCoreWebVitals: () => {/* content */}
+  trackCoreWebVitals: () => {/* content */};
     if (typeof window === 'undefined') return;
     const trackMetric = (metri,
   c: {/* TODO: Fix JSX expression */})
-  a: number }) => {/* content */}
-      analyticsUtils.trackEvent('core_web_vitals', {/* content */}
+  a: number }) => {/* content */};
+      analyticsUtils.trackEvent('core_web_vitals', {/* content */};
         metric_nam,
   e: metric.name,
         metric_valu)
@@ -381,37 +498,55 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
+<<<<<<< HEAD
   a: metric.delta,
       });
     }
+=======
+  a: metric.delta})};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Import and track web vitals;
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */};
       onCLS(trackMetric);
       // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions;
       onFCP(trackMetric);
       onLCP(trackMetric);
+<<<<<<< HEAD
       onTTFB(trackMetric);
     });
   }
 }
+=======
+      onTTFB(trackMetric)})};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // SEO component for React;
-export const SEOComponent = ({/* content */}
+export const SEOComponent = ({/* content */};
   title, 
   description, 
   keywords, 
   image, 
   url, 
   type = 'website',
+<<<<<<< HEAD
   structuredData;
 }: {/* content */}
+=======
+  structuredData}: {/* content */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
+<<<<<<< HEAD
   structuredData?: Record<string>)
 }) => {/* content */}
+=======
+  structuredData?: Record<string, unknown>;)
+}) => {/* content */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //   const siteName = 'Zion Tech Group';
 //   const siteUrl = 'https: //zion.app',
 //   const siteUrl = 'http,
@@ -426,7 +561,7 @@ export const SEOComponent = ({/* content */}
       <meta name="description" content={description} /></meta>
       <meta name="keywords" content={keywords} /></meta>
       <link rel="canonical" href={fullUrl} /></link>
-      {/* Open Graph */}
+      {/* Open Graph */};
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />)
@@ -465,29 +600,39 @@ export const SEOComponent = ({/* content */}
   r:description" content={description} /></meta>"
       <meta name="twitte,"
   r:image" content={fullImage} /></meta>
-      {/* Structured Data */}
+      {/* Structured Data */};
       {/* TODO: Fix JSX expression */})
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(structuredData)};
         </script>
-      )}
+      )};
     </Helmet>
+<<<<<<< HEAD
   );
 }
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Initialize SEO optimizations;
-export const initializeSEO = () => {/* content */}
+export const initializeSEO = () => {/* content */};
   // Preload critical resources;
   performanceSEO.preloadCriticalResources();
   // Track Core Web Vitals;
   coreWebVitals.trackCoreWebVitals();
   // Set up meta tags;
-  if (typeof document !== 'undefined') {/* content */}
+  if (typeof document !== 'undefined') {/* content */};
   if (typeof document !== 'undefined') {/* content */}"
 //     const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {/* content */}
+    if (!viewport) {/* content */};
       const _meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
+<<<<<<< HEAD
       document.head.appendChild(meta);
     }
   }
 }"`
+=======
+      document.head.appendChild(meta)};
+  };
+};"`
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

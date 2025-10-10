@@ -1,5 +1,10 @@
 export interface AIBreakthroughContent {
+<<<<<<< HEAD
     id: string;
+=======
+}
+  id: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title: string;
   description: string;
   content: string;
@@ -7,12 +12,19 @@ export interface AIBreakthroughContent {
   publishedAt: string;
   category: string;
   tags: string[];
+<<<<<<< HEAD
   featured: boolean
   readTime: string
   image?: string,,
   valueProposition: string
   }
 
+=======
+  featured: boolean;
+  readTime: string;
+  image?: string;,
+  valueProposition: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
   {,
     id: 'ai-2026-hyperconscious-computing-revolution',
@@ -22,7 +34,6 @@ export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
     content: `,
 # AI 2026 Hyperconscious Computing Revolution;
 The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
-
 ## Key Breakthroughs;
 - Genuine self-awareness and emotional intelligence;
 - Creative autonomy and artistic expression;
@@ -44,7 +55,6 @@ The next evolution of AI is here - systems that not only think but feel, create,
     content: `
 # Quantum AI Synthesis 2026;
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
-
 ## Revolutionary Capabilities;
 - Quantum-enhanced machine learning algorithms;
 - Exponential speedup in complex problem solving
@@ -59,12 +69,11 @@ The convergence of quantum computing and artificial intelligence opens new front
     readTime: '20 min read',
     image: '/images/quantum-ai-synthesis-2026.jpg',
     valueProposition: 'Exponential computational capabilities',
-export interface AIBreakthroughContent {/* TODO: Fix JSX expression */}
-}
-
+export interface AIBreakthroughContent {/* TODO: Fix JSX expression */};
+};
 export const,
   new2026AIBreakthroughContent: AIBreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   }];

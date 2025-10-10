@@ -1,10 +1,20 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 // Generate sitemap for the website
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
+=======
+// Generate sitemap for the website;
+const generateSitemap = () => {
+};
+return (
+;
+const baseUrl = 'https://ziontechgroup.com';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const pages = [
+];
     '',
     '/about',
     '/services',
@@ -28,12 +38,11 @@ ${pages.map(page => `  <url>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
+  </url>`).join('\n')};
 </urlset>`;
 
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
   console.log('Sitemap generated successfully');
 };
-
 generateSitemap();

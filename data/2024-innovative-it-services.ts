@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export interface InnovativeITService2024 {id: string;
+=======
+import React from 'react';
+export interface InnovativeITService2024 {
+id: string;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   name: string;
   tagline: string;
   price: string;
@@ -26,6 +33,7 @@ export interface InnovativeITService2024 {id: string;
   marketSize: string;
   growthRate: string;
   variant: string;
+<<<<<<< HEAD
   contactInfo: unknown
     mobile: string
     email: string,
@@ -37,6 +45,18 @@ export interface InnovativeITService2024 {id: string;
   launchDate: string
   reviews: number,
 }
+=======
+  contactInfo: unknown;
+    mobile: string;
+    email: string;
+    address: string};
+    website: string};
+};
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -82,6 +102,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       website: "https://ziontechgroup.com"},
     realImplementation: true,
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
+<<<<<<< HEAD
     launchDate: "2024-01-15"
     customers: 950
     rating: 4.8
@@ -91,6 +112,18 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
 }
+=======
+    launchDate: '2024-01-15',
+    customers:
+        customers: 950;
+    rating: 4.8;
+    reviews: 520;
+export interface InnovativeITService2024 {/* TODO: Fix JSX expression */};
+  s: string};
+    websit,
+  e: string};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -98,7 +131,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   launchDat,
   e: string,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeITServices2024: InnovativeITService2024[] = [,
     i,
@@ -189,7 +222,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 520}
+  s: 520};
 ];
 export interface InnovativeITService2024,
   id: string, nam,
@@ -269,4 +302,8 @@ export interface InnovativeITService2024,
   e: "2024-01-15", customer,
   s: 950, ratin,
   g: 4.8, review,
+<<<<<<< HEAD
   s: 520 } ];"
+=======
+  s: 520 } ];"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

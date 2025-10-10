@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 interface PerformanceMetrics {
     // TODO: Add content
   }
@@ -31,16 +32,53 @@ const EnhancedPerformanceMonitor: React.FC,
     // TODO: Add content
   }
 }
+=======
+interface PerformanceMetrics {// TODO: Add content}
+};
+  fc,
+  p: number | null;
+    lc,
+  p: number | null;
+    fi,
+  d: number | null;,
+    cl,
+  s: number | null;,
+    ttf,
+  b: number | null;,
+    fm,
+  p: number | null;,
+    tb,
+  t: number | null;,
+    s,
+  i: number | null};
+interface PerformanceMonitorProps {// TODO: Add content}
+};
+interface PerformanceProps {/* TODO: Fix JSX expression */}
+};
+;
+const EnhancedPerformanceMonitor: React.FC;
+          <PerformanceMonitorProps> = ({// TODO: Add content}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //   onMetricsUpdate,
   enableReporting = true,
   reportInterval = 10000)
 }) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
   const [metrics, setMetrics] = useState;
           <PerformanceMetrics>({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+  const [metrics, setMetrics] = useState;
+          <PerformanceMetrics>({/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fcp: null,
     lcp: null,
     fid: null,
@@ -49,6 +87,7 @@ const EnhancedPerformanceMonitor: React.FC,
   const [isVisible, setIsVisible] = useState(false);
 // Web Vitals measurement;
     if (typeof window === 'undefined' || !('performance' in window)) return;
+<<<<<<< HEAD
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -70,6 +109,28 @@ const EnhancedPerformanceMonitor: React.FC,
     const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    // First Contentful Paint (FCP);
+const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+          setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  p: entry.startTime }))};
+      };
+    });
+    fcpObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['paint'] });
+    // Largest Contentful Paint (LCP);
+const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -77,6 +138,7 @@ const EnhancedPerformanceMonitor: React.FC,
     });
     lcpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
+<<<<<<< HEAD
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -105,12 +167,41 @@ const EnhancedPerformanceMonitor: React.FC,
   s: clsValue }));
         }
       }
+=======
+    // First Input Delay (FID);
+const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  d: entry.processingStart - entry.startTime }))};
+    });
+    fidObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['first-input'] });
+    // Cumulative Layout Shift (CLS);
+const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+          clsValue += (entry as any).value;
+          setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  s: clsValue }))};
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
     clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
     // Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -130,11 +221,31 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   p: entry.startTime }));
         }
       }
+=======
+  O: Add content};
+};
+      setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  b: navigationEntry.responseStart - navigationEntry.requestStart }))};
+    // First Meaningful Paint (FMP) - approximation;
+const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        if (entry.name === 'first-meaningful-paint') {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+          setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  p: entry.startTime }))};
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
     fmpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] });
     // Total Blocking Time (TBT) - approximation;
 const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
       let totalBlockingTime = 0;
@@ -147,6 +258,19 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT;
         }
       }
+=======
+  O: Add content};
+};
+      let totalBlockingTime = 0;
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        if (entry.entryType === 'longtask') {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT};
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
   t: totalBlockingTime }));
     });
@@ -154,6 +278,7 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   s: ['longtask'] });
     // Speed Index (SI) - approximation using LCP;
 const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
       for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -166,12 +291,30 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
   i: entry.startTime }));
         }
       }
+=======
+  O: Add content};
+};
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+          setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  i: entry.startTime }))};
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
     siObserver.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
     return () => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       fcpObserver.disconnect();
       lcpObserver.disconnect();
       fidObserver.disconnect();
@@ -183,6 +326,7 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
   }, []);
   // Resource timing analysis;
 const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -190,6 +334,15 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
     const resourceMetrics = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+    const resources = performance.getEntriesByType('resource');
+    const resourceMetrics = {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   totalResource,
   s: resources.length,
       totalSiz,
@@ -200,8 +353,13 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   s: 0}
     resources.forEach((resourc)
   e: any) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       resourceMetrics.totalSize += resource.transferSize || 0;
       if (resource.duration > 1000) resourceMetrics.slowResources++;
       if (resource.transferSize === 0) resourceMetrics.cachedResources++;
@@ -210,6 +368,7 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
   // Memory usage monitoring;
 const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
     if (typeof window === 'undefined' || !('memory' in performance)) return null;
@@ -217,6 +376,15 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+    if (typeof window === 'undefined' || !('memory' in performance)) return null;
+    const memory = (performance as any).memory;
+    return {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   usedJSHeapSiz,
   e: memory.usedJSHeapSize,
       totalJSHeapSiz,
@@ -226,6 +394,7 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
   // Network information;
 const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
     if (typeof window === 'undefined' || !('connection' in navigator)) return null;
@@ -233,6 +402,15 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+    if (typeof window === 'undefined' || !('connection' in navigator)) return null;
+    const connection = (navigator as any).connection;
+    return {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   effectiveTyp,
   e: connection.effectiveType,
       downlin,
@@ -245,6 +423,7 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
   // Performance score calculation;
 const calculatePerformanceScore = useCallback((metric)
   s: PerformanceMetrics) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
     let score = 100;
@@ -284,14 +463,55 @@ const calculatePerformanceScore = useCallback((metric)
 const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+    let score = 100;
+    // FCP scoring (0-100)
+    if (metrics.fcp !== null) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      if (metrics.fcp > 3000) score -= 30;
+      else if (metrics.fcp > 1800) score -= 20;
+      else if (metrics.fcp > 1000) score -= 10};
+    // LCP scoring (0-100)
+    if (metrics.lcp !== null) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      if (metrics.lcp > 4000) score -= 30;
+      else if (metrics.lcp > 2500) score -= 20;
+      else if (metrics.lcp > 1500) score -= 10};
+    // FID scoring (0-100)
+    if (metrics.fid !== null) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      if (metrics.fid > 300) score -= 20;
+      else if (metrics.fid > 100) score -= 10};
+    // CLS scoring (0-100)
+    if (metrics.cls !== null) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      if (metrics.cls > 0.25) score -= 20;
+      else if (metrics.cls > 0.1) score -= 10};
+    return Math.max(0, score)}, []);
+  // Report metrics;
+const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (!enableReporting) return;
     const performanceScore = calculatePerformanceScore(metrics);
     const resourceMetrics = analyzeResourceTiming();
     const memoryUsage = getMemoryUsage();
     const networkInfo = getNetworkInfo();
     const report = {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   timestam,
   p: new Date().toISOString(),
 //       metrics,
@@ -305,11 +525,19 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   l: window.location.href}
     // Send to analytics (replace with your analytics service)
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
       (window as any).gtag('event', 'performance_metrics', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+      (window as any).gtag('event', 'performance_metrics', {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   event_categor,
   y: 'performance',
         event_labe,
@@ -318,6 +546,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   e: performanceScore,
         custom_ma,
   p: {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
   fcp: metrics.fcp,
@@ -330,14 +559,31 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       return () => observer.disconnect();
     } catch (error) {/* TODO: Fix JSX expression */}
     }
+=======
+  O: Add content};
+};
+  fcp: metrics.fcp,
+          lcp: metrics.lcp,
+          fid: metrics.fid,
+          cls: metrics.cls}})});
+    try {/* TODO: Fix JSX expression */}
+  s: ['paint'] });
+      return () => observer.disconnect()} catch (error) {/* TODO: Fix JSX expression */}
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Callback for custom handling;
     onMetricsUpdate?.(metrics);
 // console.log('Performance)
   Report:', report);
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
   useEffect(() => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const cleanup = measureWebVitals();
 // Report metrics periodically;
     const interval = setInterval(reportMetrics, reportInterval);
@@ -346,8 +592,13 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       cleanup?.();
       clearInterval(interval);
       window.removeEventListener('beforeunload', handleBeforeUnload);
@@ -355,6 +606,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [measureWebVitals, reportMetrics, reportInterval]);
   // Toggle visibility for debugging;
   useEffect(() => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
     const handleKeyPress = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
@@ -366,6 +618,18 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
         setIsVisible(prev => !prev);
       }
     }
+=======
+  O: Add content};
+};
+    const handleKeyPress = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        setIsVisible(prev => !prev)};
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
@@ -381,7 +645,11 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           className="text-gray-400,"
   hover:text-white"
 // >
+<<<<<<< HEAD
 /
+=======
+//
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </button>
       </div>"
       <div className="space-y-1"></div>"
@@ -397,41 +665,46 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   P:</span>
             <span>{metrics.fcp.toFixed(0)}ms</span>
           </div>
-        )}
+        )};
         {metrics.lcp !== null && ()}"
           <div className="flex justify-between"></div>
             <span>LC,
   P:</span>
             <span>{metrics.lcp.toFixed(0)}ms</span>
           </div>
-        )}
+        )};
         {metrics.fid !== null && ()}"
           <div className="flex justify-between"></div>
             <span>FI,
   D:</span>
             <span>{metrics.fid.toFixed(0)}ms</span>
           </div>
-        )}
+        )};
         {metrics.cls !== null && ()}"
           <div className="flex justify-between"></div>
             <span>CL,
   S:</span>
             <span>{metrics.cls.toFixed(3)}</span>
           </div>
-        )}
+        )};
         {metrics.ttfb !== null && ()}"
           <div className="flex justify-between"></div>
             <span>TTF,
   B:</span>
             <span>{metrics.ttfb.toFixed(0)}ms</span>
           </div>
-        )}
+        )};
       </div>"
       <div className="mt-2 text-gray-400 text-xs"></div>
 // Press Ctrl+Shift+P to toggle</div>
     </div>
+<<<<<<< HEAD
   );
 }
 export default EnhancedPerformanceMonitor;"
   </PerformanceMetrics>
   </PerformanceMonitorProps>
+=======
+  )};
+export default EnhancedPerformanceMonitor;"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

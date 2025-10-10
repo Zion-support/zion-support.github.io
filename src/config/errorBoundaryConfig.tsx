@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 'use client'
 /**
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
  */
+<<<<<<< HEAD
 export interface ErrorBoundaryConfig {
     // TODO: Add content
   }
@@ -11,6 +16,14 @@ export interface ErrorBoundaryConfig {
    * Whether to log errors to console;
    */;
   logErrors: boolean
+=======
+export interface ErrorBoundaryConfig {// TODO: Add content};
+};
+  /**
+   * Whether to log errors to console;
+   */;
+  logErrors: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Whether to show detailed error messages,
    */,
@@ -38,11 +51,17 @@ export interface ErrorBoundaryConfig {
   /**
    * Custom error messages by error type,
    */,
+<<<<<<< HEAD
   customMessages: Record
           <string>
+=======
+  customMessages: Record;
+          <string, string>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Fallback UI components,
    */
+<<<<<<< HEAD
   fallbackComponents: {
     // TODO: Add content
   }
@@ -50,15 +69,27 @@ export interface ErrorBoundaryConfig {
   defaul,
   t: React.ComponentType,
           <{/* TODO: Fix JSX expression */}
+=======
+  fallbackComponents: {// TODO: Add content};
+};
+  defaul,
+  t: React.ComponentType;
+          <{/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   r: () => void }>;
     networ,
-  k: React.ComponentType<{/* TODO: Fix JSX expression */}
+  k: React.ComponentType<{/* TODO: Fix JSX expression */};
   r: () => void }>;
     notFoun,
+<<<<<<< HEAD
   d: React.ComponentType<{/* TODO: Fix JSX expression */}
   r: () => void }>;
   }
 }
+=======
+  d: React.ComponentType<{/* TODO: Fix JSX expression */};
+  r: () => void }>}};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 /**
  * Default error messages;
  */
@@ -74,10 +105,11 @@ export interface ErrorBoundaryConfig {
   r: 'Server error occurred. Please try again later.',
   validatio,
   n: 'Validation error. Please check your input.'
-}
+};
 /**
  * Get error boundary configuration based on environment;
  */
+<<<<<<< HEAD
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     // TODO: Add content
   }
@@ -86,6 +118,14 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add content};
+};
+  const isDevelopment = process.env['NODE_ENV'] === 'development';
+  return {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -93,6 +133,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
+<<<<<<< HEAD
     fallbackComponents: {
     // TODO: Add content
   }
@@ -110,6 +151,20 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
     // TODO: Add content
   }
 }
+=======
+    fallbackComponents: {// TODO: Add content};
+};
+  default: DefaultErrorFallback,
+      network: NetworkErrorFallback,
+      notFound: NotFoundFallback};
+  };
+};
+/**
+ * Default error fallback component;
+ */;
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
           <div>Coming Soon</div>
   )
@@ -133,7 +188,7 @@ className="w-6 h-6 text-red-600""
 // Oops! Something went wrong;
           </h2>"
         <p className="mt-2 text-center text-gray-600"></p>
-          {error.message || 'An unexpected error occurred'}
+          {error.message || 'An unexpected error occurred'};
         </p>
         {process.env['NODE_ENV'] === 'development' && ()}"
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
@@ -157,14 +212,20 @@ className="w-6 h-6 text-red-600""
       </div>
     </div>
   )
-}
+};
 /**
  * Network error fallback component;
+<<<<<<< HEAD
  */
 function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {
     // TODO: Add content
   }
 }
+=======
+ */;
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
           <div>Coming Soon</div>
   )
@@ -201,14 +262,20 @@ className="w-6 h-6 text-yellow-600""
       </div>
     </div>
   )
-}
+};
 /**
  * Not found error fallback component;
+<<<<<<< HEAD
  */
 function NotFoundFallback(): JSX.Element {
     // TODO: Add content
   }
 }
+=======
+ */;
+function NotFoundFallback(): JSX.Element {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
           <div>Coming Soon</div>
   )
@@ -239,10 +306,11 @@ function NotFoundFallback(): JSX.Element {
       </div>
     </div>
   )
-}
+};
 /**
  * Get error type from error object;
  */
+<<<<<<< HEAD
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
     // TODO: Add content
   }
@@ -272,13 +340,38 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 }
     return 'validation';
   }
+=======
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {// TODO: Add content};
+};
+  if (error.message.includes('Network') || error.message.includes('fetch')) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    return 'network'};
+  if (error.message.includes('404') || error.message.includes('not found')) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    return 'notFound'};
+  if (error.message.includes('timeout')) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    return 'timeout'};
+  if (error.message.includes('500') || error.message.includes('server')) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    return 'serverError'};
+  if (error.message.includes('validation')) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    return 'validation'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return 'validation'
-  }
+  };
   return 'default'
-}
+};
 /**
  * Format error for logging;
  */
+<<<<<<< HEAD
 export function formatErrorForLogging(error: Error): Record,
           <string, unknown> {
     // TODO: Add content
@@ -287,6 +380,14 @@ export function formatErrorForLogging(error: Error): Record,
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+export function formatErrorForLogging(error: Error): Record;
+          <string, unknown> {// TODO: Add content};
+};
+  return {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   message: error.message,
     stack: error.stack,
     name: error.name,
@@ -294,7 +395,12 @@ export function formatErrorForLogging(error: Error): Record,
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+<<<<<<< HEAD
   }
 }"
   </path>
   </path>
+=======
+  };
+}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

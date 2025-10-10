@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (<div></div>
             <Link href="/blog" className="text-indigo-600,"
   hover:text-indigo-700 flex items-center mb-4">← Back to Blog</Link>
@@ -61,8 +67,8 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
               <li>• <strong>90% faster</strong> decision making and response times</li>
               <li>• <strong>Zero human errors</strong> in automated processes</li>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>"
-              <pre className="text-sm text-gray-800 overflow-x-auto">{/* TODO: Fix JSX expression */}
-  Stack:}
+              <pre className="text-sm text-gray-800 overflow-x-auto">{/* TODO: Fix JSX expression */};
+  Stack:};
 ├── AI/ML Platform;
 │   ├── TensorFlow & PyTorch;
 │   ├── Reinforcement Learning;
@@ -78,7 +84,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
 └── Infrastructure;
     ├── Edge Computing;
     ├── Cloud-native Architecture;
-    └── High Availability Systems`}
+    └── High Availability Systems`};
               </pre>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Autonomous Journey</h2>"
             <p className="text-gray-700 mb-6">Ready to achieve 95% automation? Our autonomous business systems can transform your;
@@ -89,6 +95,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
                   href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Automation Assessment</a>
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
     </div>)
+<<<<<<< HEAD
 }
 export default AiAutonomousBusinessSystems2026Page;
   </p>
@@ -101,3 +108,7 @@ export default AiAutonomousBusinessSystems2026Page;
   </li>
   </li>
   </p>
+=======
+};
+export default AiAutonomousBusinessSystems2026Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

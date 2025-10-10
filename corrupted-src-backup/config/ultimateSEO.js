@@ -55,19 +55,26 @@ module.exports = {
     priority: {
       home: 1;
       services: 0.9;
+<<<<<<< HEAD
       about: 0.8
       contact: 0.7
       blog: 0.6,
 module.exports = {/* TODO: Fix JSX expression */}
+=======
+      about: 0.8;
+      contact: 0.7;
+      blog: 0.6;
+module.exports = {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     twitterCard,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */};
     },
     additiona,
-  l: {/* TODO: Fix JSX expression */}
+  l: {/* TODO: Fix JSX expression */};
     }},
   structuredDat,
-  a: {/* TODO: Fix JSX expression */}
+  a: {/* TODO: Fix JSX expression */};
       },
       sameA,
   s: [
@@ -78,7 +85,7 @@ module.exports = {/* TODO: Fix JSX expression */}
         'http,
   s://github.com/Zion-Holdings']},
     websit,
-  e: {/* TODO: Fix JSX expression */}
+  e: {/* TODO: Fix JSX expression */};
   s://zion.app/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'}},
     breadcrumb,
@@ -92,10 +99,10 @@ module.exports = {/* TODO: Fix JSX expression */}
     event,
   s: true},
   sitemapOptimizatio,
-  n: {/* TODO: Fix JSX expression */}
+  n: {/* TODO: Fix JSX expression */};
     },
     changefre,
-  q: {/* TODO: Fix JSX expression */}
+  q: {/* TODO: Fix JSX expression */};
     },
     lastmod: true
     images: true
@@ -118,13 +125,13 @@ module.exports = {/* TODO: Fix JSX expression */}
     video,
   s: true},
   coreWebVital,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */};
     },
     fi,
-  d: {/* TODO: Fix JSX expression */}
+  d: {/* TODO: Fix JSX expression */};
     },
     cl,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */};
     }},
   timestam,
   p: '2025-10-06T0,

@@ -2,6 +2,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface Props {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 }
 interface State {/* TODO: Fix JSX expression */}
 }
@@ -12,11 +13,22 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error }
   }
+=======
+};
+interface State {/* TODO: Fix JSX expression */}
+};
+class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+  r: false }};
+  static getDerivedStateFromError(erro)
+  r: Error): State {/* TODO: Fix JSX expression */}
+  r: true, error }};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
     // Log error to monitoring service;
+<<<<<<< HEAD
     // console.error('ErrorBoundary caught an)
   error:', error, errorInfo);
     // You can also log to external services here;
@@ -31,6 +43,20 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   }
   render() {/* TODO: Fix JSX expression */}
       }
+=======
+    // // console.error removed for production
+error:', error, errorInfo);
+    // You can also log to external services here;
+    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+      })};
+  };
+  handleRetry = () => {/* TODO: Fix JSX expression */}
+  o: undefined })};
+  handleReload = () => {/* TODO: Fix JSX expression */}
+  };
+  render() {/* TODO: Fix JSX expression */}
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
             <div className="mb-6"></div>"
@@ -47,9 +73,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                       {this.state.errorInfo.componentStack}
                     </pre>
                   </details>)
-                )}
+                )};
               </div>
-            )}
+            )};
 "
             <div className="space-y-3"></div>
               <button></button>
@@ -108,9 +134,15 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       ),
     }
     return this.props.children;
   }
 }
+=======
+      )};
+    return this.props.children};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default ErrorBoundary;"

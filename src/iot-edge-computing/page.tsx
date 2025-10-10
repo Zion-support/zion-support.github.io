@@ -19,8 +19,12 @@ export default function IotEdgeComputingPage() {
             <p className="text-gray-300 mb-6">
               We're developing IoT and edge computing solutions. Contact us to learn more.
             </p>
+<<<<<<< HEAD
             <a
               href="/contact"
+=======
+            <a href="/contact"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us,
@@ -29,7 +33,11 @@ export default function IotEdgeComputingPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
   }
   </a>
   </h1>
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

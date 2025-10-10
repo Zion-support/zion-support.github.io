@@ -1,4 +1,5 @@
 export interface Insight {
+<<<<<<< HEAD
     id: string;
   title: string;
   summary: string
@@ -7,6 +8,15 @@ export interface Insight {
   readMinutes: number
   }
 
+=======
+}
+  id: string;
+  title: string;
+  summary: string;
+  category: string;
+  date: string; // ISO date string;
+  readMinutes: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const insights: Insight[] = [,
   {
     ,
@@ -34,15 +44,21 @@ export const insights: Insight[] = [,
       'Optimize RAG systems with quality budgets, freshness windows, and tiered caching strategies for cost-effective performance.',
     category: 'RAG Engineering',
     date: '2025-10-03',
+<<<<<<< HEAD
     readMinutes: 10,
 export interface Insight {/* TODO: Fix JSX expression */}
 }
 
+=======
+    readMinutes: 10;
+export interface Insight {/* TODO: Fix JSX expression */};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   insights: Insight[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   }];

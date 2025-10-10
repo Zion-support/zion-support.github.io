@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 interface ServiceCardProps {
@@ -10,6 +11,21 @@ interface ServiceCardProps {
   onSelect?: () => void,
   className?: string
   }
+=======
+import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+interface ServiceCardProps {
+  title: string
+}
+  description: string;
+  features: string[];
+  price?: string;
+  popular?: boolean;
+  onClick?: () => void;
+  className?: string;
+};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -35,6 +51,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </h3>
         <p className="text-gray-300 text-sm">{description}</p>
       </div>
+<<<<<<< HEAD
       <div className="space-y-2 mb-6">
         {features.map((feature, index) => (
           <div key={index} className="flex items-center gap-2">
@@ -53,12 +70,31 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <button
           onClick={onSelect}
           className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
+=======
+      <ul className="space-y-3 mb-6">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-start">
+            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-700">{feature}</span>
+          </li>
+        ))
+      </ul>
+      {onClick && (
+        <button onClick={onClick}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           Get Started
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 export default ServiceCard
   </ServiceCardProps>
+=======
+  );
+};
+export default ServiceCard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

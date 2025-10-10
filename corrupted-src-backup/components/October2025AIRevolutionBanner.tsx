@@ -1,16 +1,22 @@
+<<<<<<< HEAD
 interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
 }
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {
+=======
+interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */};
+};
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
   return (
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>
-      <div, className="container, m, x-auto, p, x-6, p, y-12">
+      <div , className="container, m, x-auto, p, x-6, p, y-12">
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4"></div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-            <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}
+            <Sparkles , className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <span , className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */};
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
       <div, className="container, m, x-auto, p, x-6, p, y-12"></div>
         {/* Head, e, r */}"
@@ -75,29 +81,28 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             The, definitive, guides for, forwar, d-thinking, organizations, transforming with, AI, in 20, 2, 5.
           </p>
         </d, i, v>
-        {/* Featured, Articles, Grid */}
+        {/* Featured, Articles, Grid */};
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* Artic, l, e;
-  1: Autonomous, AI, Agents */}
-          <Li, n, k;
+  1: Autonomous, AI, Agents */};
+          <Li , n, k;
           {/* Artic, l, e 
   1: Autonomous, AI, Agents */}</div>
-          <Li, n, k
+          <Li , n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-ai-agen, t, s-producti, o, n-deployme, n, t"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-purp, l, e-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e;
-  r:shad, o, w-purp, l, e-5, 0, 0/20"
-          >
+  r:shad, o, w-purp, l, e-5, 0, 0/20">
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
+                <Bot , className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";</div>
         {/* Featured, Articles, Grid */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {/* TODO: Fix JSX expression */}
-  1: Autonomous, AI, Agents */}
+          {/* TODO: Fix JSX expression */};
+  1: Autonomous, AI, Agents */};
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-ai-agen, t, s-producti, o, n-deployme, n, t""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-purp, l, e-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e,"
@@ -144,22 +149,21 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <Link, className="w-5 h-5  />
+              <Link , className="w-5 h-5  />
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
               <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e;
-  2: LLM, Development, Tools */}
-          <Li, n, k;
+  2: LLM, Development, Tools */};
+          <Li , n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-power, e, d-developme, n, t-too, l, s-revoluti, o, n"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/30, t, o-indi, g, o-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e;
-  r:shad, o, w-indi, g, o-5, 0, 0/20"
-          >
+  r:shad, o, w-indi, g, o-5, 0, 0/20">
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Code2, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  />
+                <Code2 , className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  />
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";</div>
             </p>"
@@ -185,8 +189,8 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
               <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
-          {/* TODO: Fix JSX expression */}
-  2: LLM, Development, Tools */}
+          {/* TODO: Fix JSX expression */};
+  2: LLM, Development, Tools */};
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-power, e, d-developme, n, t-too, l, s-revoluti, o, n""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/30, t, o-indi, g, o-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e,"
@@ -207,7 +211,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
               L, L, M-Powered, Development, Tools Revoluti, o, n;
             </h3>
-            <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">
+            <p , className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">
               Transform, your, engineering workflow, with, AI-native, tool, s. Top, teams, achieve 5x, faster, development;</p>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
@@ -239,22 +243,21 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <Link, className="w-5 h-5  />
+              <Link , className="w-5 h-5  />
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
               <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e;
-  3: AI, Safet, y & Alignme, n, t */}
-          <Li, n, k;
+  3: AI, Safet, y & Alignme, n, t */};
+          <Li , n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-ai-safe, t, y-alignme, n, t-enterpri, s, e-deployme, n, t"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-cy, a, n-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e;
-  r:shad, o, w-emera, l, d-5, 0, 0/20"
-          >
+  r:shad, o, w-emera, l, d-5, 0, 0/20">
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Shield, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
+                <Shield , className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">";</div>
             </p>"
@@ -280,8 +283,8 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
               <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
-          {/* TODO: Fix JSX expression */}
-  3: AI, Safet, y & Alignme, n, t */}
+          {/* TODO: Fix JSX expression */};
+  3: AI, Safet, y & Alignme, n, t */};
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-ai-safe, t, y-alignme, n, t-enterpri, s, e-deployme, n, t""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-cy, a, n-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e,"
@@ -302,7 +305,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
               AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
             </h3>
-            <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">
+            <p , className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">
               Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve 99.2% safety, complianc, e;</p>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
@@ -334,7 +337,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <Link, className="w-5 h-5  />
+              <Link , className="w-5 h-5  />
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
             </p>"
@@ -361,7 +364,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
           </Li, n, k>
         </d, i, v>
-        {/* Call, to, Action */}
+        {/* Call, to, Action */};
         <div, className="te, x, t-cent, e, r">";
           <Li, n, k;
         <div, className="te, x, t-cent, e, r">";</div>
@@ -383,6 +386,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
         </d, i, v>
       </d, i, v>
     </d, i, v>
+<<<<<<< HEAD
   );
 }
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }"`

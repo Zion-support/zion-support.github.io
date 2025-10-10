@@ -2,7 +2,12 @@ exports.handler = async function (event, context) {
   try {
     //     // Todo scanning simulation;
     const result = {
+<<<<<<< HEAD
       statusCode: 200,
+=======
+};
+      statusCode: 200;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'},
@@ -24,13 +29,20 @@ exports.handler = async function (event, context) {
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({)
         error: 'Internal server error')
+<<<<<<< HEAD
         message: error.message),
         function: 'todo-scanner-runner'),
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+=======
+        message: error.message),;
+function: 'todo-scanner-runner'),
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
+  y: JSON.stringify({/* TODO: Fix JSX expression */};
         })
+<<<<<<< HEAD
       })}
     return result;
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -40,3 +52,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       })}
   }
 }
+=======
+      })};
+    return result} catch (error) {/* TODO: Fix JSX expression */};
+      },
+      bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
+      })}};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

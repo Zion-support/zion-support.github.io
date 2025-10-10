@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Files to process;
 const filePatterns = [
+];
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   'components/**/*.{ts,tsx}',
@@ -13,9 +13,9 @@ const filePatterns = [
   'hooks/**/*.{ts,tsx}',
   'lib/**/*.{ts,tsx}'
 ];
-
 // Files to exclude;
 const excludePatterns = [
+];
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -38,11 +38,9 @@ let removedImports = 0;
 function removeUnusedImports(content) {
   let newContent = content;
   let removedCount = 0;
-
   // Find all import statements;
   const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g;
   const imports = content.match(importRegex) || [];
-
   imports.forEach(importStatement => {)
     // Extract imported names;)
     const importMatch = importStatement.match(/import\s+{([^}]+)}/);
@@ -51,23 +49,24 @@ function removeUnusedImports(content) {
         .split(',')
         .map(name => name.trim().split(' as ')[0].trim())
         .filter(name => name);
-
       // Check if any of these names are used in the file;
       const usedNames = importedNames.filter(name => {)
         // Skip default imports and special cases;)
         if (name === 'default' || name === '*' || name.includes(' ')) return true;
-        
         // Create regex to find usage of this name;
         const usageRegex = new RegExp(`\\b${name}\\b`, 'g');
         const matches = newContent.match(usageRegex) || [];
-        
         // Count occurrences, excluding the import statement itself;
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         const totalOccurrences = matches.length;
+<<<<<<< HEAD
         
         return totalOccurrences>importOccurrences</totalOccurrences>
       });
 
+=======
+        return totalOccurrences>importOccurrences</totalOccurrences>});
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // If no names are used, remove the entire import;
       if (usedNames.length === 0) {
     newContent = newContent.replace(importStatement, '');
@@ -79,8 +78,12 @@ function removeUnusedImports(content) {
           `{ ${usedNames.join(', ')} }`
         );
         newContent = newContent.replace(importStatement, newImportStatement);
+<<<<<<< HEAD
         removedCount += importedNames.length - usedNames.length;
       }
+=======
+        removedCount += importedNames.length - usedNames.length};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     } else {
       // Handle default imports;
       const defaultImportMatch = importStatement.match(/import\s+(\w+)/);
@@ -89,28 +92,38 @@ function removeUnusedImports(content) {
         const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
         const matches = newContent.match(usageRegex) || [];
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
-        
         if (matches.length <= importOccurrences) {
+<<<<<<< HEAD
     newContent = newContent.replace(importStatement, '');
           removedCount++
   }
       }
     }
+=======
+          newContent = newContent.replace(importStatement, '');
+          removedCount++};
+      };
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   });
-
   // Clean up multiple empty lines;
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
+<<<<<<< HEAD
   
   return { content: newContent, removedCount }
 }
 
+=======
+  return { content: newContent, removedCount }};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const result = removeUnusedImports(content);
-    
     if (result.removedCount > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
+<<<<<<< HEAD
       console.log(`✅ ${filePath}: Removed ${result.removedCount} unused imports`);
       removedImports += result.removedCount;
     }
@@ -121,6 +134,14 @@ function processFile(filePath) {
   }
 }
 
+=======
+      // console.log removed for production
+removedImports += result.removedCount};
+    processedFiles++} catch (error) {
+    // console.error removed for production
+};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 async function main() {
   console.log('🚀 Starting unused import removal...\n');
 
@@ -130,6 +151,7 @@ async function main() {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
+<<<<<<< HEAD
     allFiles.push(...files);
   }
 
@@ -153,3 +175,20 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
 
 export { processFile, removeUnusedImports }
+=======
+    allFiles.push(...files)};
+  // Remove duplicates;
+  const uniqueFiles = [...new Set(allFiles)];
+  totalFiles = uniqueFiles.length;
+  // console.log removed for production
+// Process each file;
+  uniqueFiles.forEach(processFile);
+  // console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
+};
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main()};
+export { processFile, removeUnusedImports };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

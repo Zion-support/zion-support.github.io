@@ -4,7 +4,6 @@
  * Advanced Performance Monitoring Utility
  * Tracks Core Web Vitals and custom metrics
  */
-
 interface PerformanceMetrics {
   fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
@@ -24,7 +23,6 @@ class PerformanceMonitor {
 
   init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
-    
     this.isInitialized = true;
     this.setupWebVitals();
     this.setupCustomMetrics();
@@ -33,13 +31,10 @@ class PerformanceMonitor {
   private setupWebVitals(): void {
     // First Contentful Paint
     this.observePaint('first-contentful-paint', 'fcp');
-    
     // Largest Contentful Paint
     this.observeLCP();
-    
     // First Input Delay
     this.observeFID();
-    
     // Cumulative Layout Shift
     this.observeCLS();
   }
@@ -56,7 +51,11 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
+<<<<<<< HEAD
       console.warn(`Failed to observe ${name}:`, error);
+=======
+      // console.warn removed for production
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -72,7 +71,11 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
+<<<<<<< HEAD
       console.warn('Failed to observe LCP:', error);
+=======
+      // console.warn removed for production
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -87,7 +90,11 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
+<<<<<<< HEAD
       console.warn('Failed to observe FID:', error);
+=======
+      // console.warn removed for production
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -106,7 +113,11 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
+<<<<<<< HEAD
       console.warn('Failed to observe CLS:', error);
+=======
+      // console.warn removed for production
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -115,7 +126,10 @@ class PerformanceMonitor {
     if (performance.timing) {
       this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Navigation timing
     if (performance.navigation) {
       this.addCustomMetric('navigation_type', performance.navigation.type);
@@ -132,9 +146,13 @@ class PerformanceMonitor {
 
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
+<<<<<<< HEAD
     
     console.log('Performance Metrics:', this._metrics);
     
+=======
+    // console.log removed for production
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Send to analytics service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {
@@ -162,7 +180,6 @@ const performanceMonitor = new PerformanceMonitor();
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
     performanceMonitor.init();
-    
     // Report metrics after a delay to ensure all metrics are collected
     setTimeout(() => {
       performanceMonitor.reportMetrics();

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 interface PerformanceMetrics {
+<<<<<<< HEAD
     loadTime: number
   renderTime: number
   memoryUsage: number,
@@ -7,15 +8,38 @@ interface PerformanceMetrics {
   }
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+=======
+}
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number};
+;
+const PerformanceDashboard: React.FC = () => {
+};
+return (
+;
+const [metrics, setMetrics] = useState<PerformanceMetrics>
+);
+}({
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0,
   })
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
+=======
+  useEffect(() => {;
+const updateMetrics = () => {
+;
+};
+const navigation = performance.getEntriesByType(
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
@@ -24,6 +48,7 @@ const PerformanceDashboard: React.FC = () => {
       setMetrics(prev => ({
         ...prev,
         loadTime,
+<<<<<<< HEAD
         memoryUsage,
       }));
     }
@@ -37,14 +62,30 @@ const PerformanceDashboard: React.FC = () => {
   if (process.env['NODE_ENV'] !== 'development') {
     return null
   }
+=======
+        memoryUsage}))};
+    //Update metrics on load
+    updateMetrics();
+    //Update metrics periodically;
+const interval = setInterval(updateMetrics, 1000);
+    return () => clearInterval(interval)}, []);
+  //Only show in development
+  if (process.env['NODE_ENV'] !== 'development') {
+    return null};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={() => setIsVisible(!isVisible)};
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
         aria-label="Toggle performance dashboard"
       >
+<<<<<<< HEAD
         Perf</span>
+=======
+        Perf
+      </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
           <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Metrics</h3>
@@ -63,9 +104,14 @@ const PerformanceDashboard: React.FC = () => {
             </div>
           </div>
         </div>
-      )}
+      )};
     </div>
+<<<<<<< HEAD
   );
 }
 export default PerformanceDashboard</button>
   </PerformanceMetrics>
+=======
+  )};
+export default PerformanceDashboard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

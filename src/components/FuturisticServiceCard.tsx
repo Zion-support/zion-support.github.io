@@ -2,7 +2,12 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 }
+=======
+};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const,
   FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -21,9 +26,16 @@ const,
     },
     orang,
   e: {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
     }
   }
   const currentColor = colorClasses[color];
+=======
+    };
+  };
+;
+const currentColor = colorClasses[color];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
       }`})
@@ -32,21 +44,25 @@ const,
     >
       {/* Popular Badge */}
       {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
       )}
+=======
+      )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {/* Card */}
       <div></div>
         className={/* TODO: Fix JSX expression */}
         } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
           isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'`
         }`}
-      >
+                >
         {/* Icon */}
         <div className="relative mb-6"></div>
           <div></div>`
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hove,
   r:scale-110 transition-transform duration-300 ${/* TODO: Fix JSX expression */}`
             }`}
-          >"
+                >"
             <Icon className="w-8 h-8 text-white" /></Icon>
           </div>
           {/* Animated Background */}"
@@ -76,10 +92,16 @@ const,
               <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
               {feature}
             </li>
-          ))}
+          ))};
           {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
               +{features.length - 4} more features</li>
           )}
+=======
+              +{features.length - 4} more features;
+            </li>
+          )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </ul>
         {/* CTA Button */}
         <button></button>
@@ -87,7 +109,7 @@ const,
               : `border border-${color}-500 text-${color}-300,`
   hover:bg-${color}-500/20``
           } flex items-center justify-center group`}
-        >
+                >
           Get Started;"
           <ArrowRight className="w-4 h-4 ml-2 group-hove,"
   r:translate-x-1 transition-transform" /></ArrowRight>
@@ -96,15 +118,20 @@ const,
         <div></div>`
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-5 rounded-2xl transition-opacity duration-500`}
-        ></div>
+                ></div>
       </div>
       {/* Glow Effect */}
       <div></div>`
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
-      ></div>
+                ></div>
     </div>
+<<<<<<< HEAD
   );
 }
 export default FuturisticServiceCard;"`
   </FuturisticServiceCardProps>
+=======
+  )};
+export default FuturisticServiceCard;"`
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,9 +1,19 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react'
 const CloudInfrastructurePage: React.FC = () => {
   const features = [
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
+;
+const CloudInfrastructurePage: React.FC = () => {
+const features = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
 icon: Shield,
       title: 'Secure Cloud Infrastructure',
@@ -20,6 +30,7 @@ icon: Shield,
       description: 'Intelligent cloud management powered by advanced AI technology'
     },
     {
+<<<<<<< HEAD
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
@@ -30,11 +41,29 @@ icon: Shield,
     'Real-time monitoring and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible cloud solutions',
+=======
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security and compliance standards'
+    };
+  ];
+;
+const benefits = [
+];
+    'Scalable cloud infrastructure',
+    'Cost-effective solutions',
+    'High availability and reliability',
+    'Automated scaling and management',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ]
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -42,9 +71,16 @@ icon: Shield,
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
+=======
+      {/* Hero Section */};
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             Cloud Infrastructure
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -52,6 +88,7 @@ icon: Shield,
             Powered by cutting-edge AI technology and industry expertise.
           </p>
         </div>
+<<<<<<< HEAD
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Cloud Infrastructure Solutions?
@@ -61,6 +98,10 @@ icon: Shield,
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
       {/* Features Section */}
+=======
+      </section>
+      {/* Features Section */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -74,7 +115,7 @@ icon: Shield,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <feature .icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -82,7 +123,11 @@ icon: Shield,
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Benefits Section */}
+=======
+      {/* Benefits Section */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -102,7 +147,12 @@ icon: Shield,
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 {/* CTA Section */}
+=======
+      </section>
+      {/* CTA Section */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">

@@ -3,9 +3,9 @@ import https from 'https';
 import http from 'http';
 import { URL } from 'url';
 import fs from 'fs';
-
 // List of all routes from App.tsx;
 const routes = [
+];
   // Main Pages;
   '/',
   '/about',
@@ -29,12 +29,10 @@ const routes = [
   '/security',
   '/compliance',
   '/gdpr',
-
   // Service Category Pages;
   '/ai-services',
   '/it-services',
   '/micro-saas',
-
   // AI Services Pages;
   '/ai-3d-generation',
   '/ai-agricultural-intelligence-pro',
@@ -77,7 +75,6 @@ const routes = [
   '/ai-supply-chain-optimization-pro',
   '/ai-video-generator',
   '/ai-workflow-automation',
-
   // IT Services Pages;
   '/cloud-migration',
   '/cybersecurity',
@@ -89,7 +86,6 @@ const routes = [
   '/network-design',
   '/blockchain-integration-services',
   '/smart-contract-security-audit',
-
   // Emerging Technologies Pages;
   '/autonomous-systems',
   '/blockchain-web3',
@@ -100,7 +96,6 @@ const routes = [
   '/innovation-labs',
   '/business-intelligence',
   '/robotics',
-
   // Additional Pages;
   '/edge-computing',
   '/financial-it',
@@ -111,6 +106,7 @@ const routes = [
 
 const baseUrl = 'https: //ziontechgroup.com',
 const results = {
+};
   working: []
   broken: [],
   missing: [],
@@ -120,14 +116,22 @@ function checkUrl(url) {
   return new Promise((resolve) => {
     const parsedUrl = new URL(url);
     const client = parsedUrl.protocol === 'https: ' ? https : http;
+<<<<<<< HEAD
     
     const options = {
       hostname: parsedUrl.hostname
+=======
+    ;
+const options = {
+};
+      hostname: parsedUrl.hostname;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
       path: parsedUrl.pathname + parsedUrl.search
       method: 'HEAD'
       timeout: 10000,
       headers: {,
+<<<<<<< HEAD
         'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
     }
 
@@ -140,19 +144,35 @@ function checkUrl(url) {
   });
     });
 
+=======
+        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'};
+    };
+;
+const req = client.request(options, (res) => {
+      resolve({)
+        url)
+        status: res.statusCode),
+        statusText: res.statusMessage),
+        headers: res.headers})});
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     req.on('error', (error) => {
     resolve({)
         url)
         error: error.message),
+<<<<<<< HEAD
         status: 0
   });
     });
 
+=======
+        status: 0})});
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     req.on('timeout', () => {
     req.destroy();
       resolve({)
         url)
         error: 'Request timeout'),
+<<<<<<< HEAD
         status: 0
   });
     });
@@ -161,6 +181,10 @@ function checkUrl(url) {
   });
 }
 
+=======
+        status: 0})});
+    req.end()})};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 async function auditWebsite() {
   console.log('🔍 Starting comprehensive website audit...\n');
   console.log(`Testing ${routes.length} routes on ${baseUrl}\n`);
@@ -168,11 +192,15 @@ async function auditWebsite() {
   for (let i = 0; i < routes.length; i++) {
     const route = routes[i];
     const fullUrl = baseUrl + route;
-    
     process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... `);
+<<<<<<< HEAD
     
     const result = await checkUrl(fullUrl);
     
+=======
+    ;
+const result = await checkUrl(fullUrl);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (result.error) {
       results.errors.push({ url: fullUrl, error: result.error });
       console.log(`❌ ERROR: ${result.error}`);
@@ -184,6 +212,7 @@ async function auditWebsite() {
       console.log(`❌ 404 - Missing`);
     } else {
       results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText });
+<<<<<<< HEAD
       console.log(`❌ ${result.status} - ${result.statusText}`);
     }
     
@@ -248,4 +277,58 @@ async function auditWebsite() {
   console.log('\n📄 Results saved to audit-results.json');
 }
 
+=======
+      // console.log removed for production
+};
+    // Small delay to avoid overwhelming the server;
+    await new Promise(resolve => setTimeout(resolve, 100))};
+  // console.log removed for production
+);
+  // console.log removed for production
+// console.log removed for production
+);
+  // console.log removed for production
+results.working.forEach(item => {)
+    // console.log removed for production
+`)});
+  // console.log removed for production
+results.broken.forEach(item => {)
+    // console.log removed for production
+`)});
+  // console.log removed for production
+: ${results.missing.length}`);
+  results.missing.forEach(item => {)
+    // console.log removed for production
+});
+  // console.log removed for production
+results.errors.forEach(item => {)
+    // console.log removed for production
+});
+  // console.log removed for production
+);
+  // console.log removed for production
+// console.log removed for production
+);
+  if (results.missing.length > 0) {
+    // console.log removed for production
+results.missing.forEach(item => {),;
+const route = item.url.replace(baseUrl, '');
+      // console.log removed for production
+})};
+  if (results.broken.length > 0) {
+    // console.log removed for production
+results.broken.forEach(item => {),
+      // console.log removed for production
+`)})};
+  if (results.errors.length > 0) {
+    // console.log removed for production
+results.errors.forEach(item => {),
+      // console.log removed for production
+})};
+  // console.log removed for production
+// Save results to file;
+  fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2));
+  // console.log removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 auditWebsite().catch(console.error);

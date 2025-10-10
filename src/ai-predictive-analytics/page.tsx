@@ -4,32 +4,41 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 const AIPredictiveAnalyticsPage: React.FC = () => {
   const features = [
     {
+=======
+;
+const AIPredictiveAnalyticsPage: React.FC = () => {
+};
+const features = [
+[
+        {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: TrendingUp,
       title: 'Predictive Modeling',
       description: 'AI-powered predictive modeling and forecasting',
       benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
     },
-    {
+        {
       icon: Target,
       title: 'Data Analysis',
       description: 'Advanced data analysis and pattern recognition',
       benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
     },
-    {
+        {
       icon: Zap,
       title: 'Automated Insights',
       description: 'Intelligent insight generation and recommendations',
       benefits: ['Auto insights', 'Recommendations', 'Action suggestions']
     },
-    {
+        {
       icon: Settings,
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
       benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
-    }
+    };
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -47,6 +56,7 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
             Make data-driven decisions and stay ahead of trends with intelligent forecasting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -54,6 +64,13 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
   </
             <a
               href="tel:+13024640950"
+=======
+            <a href="/contact"
+              className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+              Get Started
+            </a>
+            <a href="tel:+13024640950"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               <TrendingUp className="w-5 h-5" />
               +1 302 464 0950
@@ -62,35 +79,41 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+<<<<<<< HEAD
             Predictive Analytics Features,
   </
+=======
+            Predictive Analytics Features
+          </h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
+                  {feature.title};
                 </h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
+                  {feature.description};
                 </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      {benefit};
                     </li>
-                  ))}
+                  ))};
                 </ul>
               </div>
-            ))}
+            ))};
           </div>
         </section>
       </main>
       <Footer />
     </div>
+<<<<<<< HEAD
   );
 }
 export default AIPredictiveAnalyticsPage;
@@ -99,3 +122,7 @@ export default AIPredictiveAnalyticsPage;
   </a>
   </p>
   </h1>
+=======
+  )};
+export default AIPredictiveAnalyticsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -3,12 +3,23 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
 import { services, serviceCategories, contactInfo } from '../data/services';
 interface ServiceCardProps {
+<<<<<<< HEAD
     service: typeof services[0],
   index: number
   }
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     const [isHovered, setIsHovered] = useState(false);
   const formatPrice = (pricing: typeof service.pricing) => {
+=======
+  service: typeof services[0]
+}
+  index: number};
+;
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {;
+const [isHovered, setIsHovered] = useState(false);
+;
+const formatPrice = (pricing: typeof service.pricing) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (pricing.custom) {
       return 'Custom Pricing'
   }
@@ -17,6 +28,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
+<<<<<<< HEAD
       case 'micro-saas': return Zap
       case 'it': return Cloud
       case 'emerging-tech': return Rocket,
@@ -24,11 +36,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   }
   }
   const CategoryIcon = getCategoryIcon(service.category);
+=======
+      case 'micro-saas': return Zap;
+      case 'it': return Cloud;
+      case 'emerging-tech': return Rocket;
+      default: return Target}
+  };
+;
+const CategoryIcon = getCategoryIcon(service.category);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
         isHovered ? 'shadow-2xl' : 'shadow-lg'
-      }`}
+      }`};
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -37,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
           : 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))'
       }}
-    >
+                >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-3">
@@ -85,12 +106,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
               {feature}
             </li>
-          ))}
+          ))};
           {service.features.length > 3 && (
             <li className="text-xs text-cyan-400">
+<<<<<<< HEAD
               +{service.features.length - 3} more features;
   </
           )}
+=======
+              +{service.features.length - 3} more features
+            </li>
+          )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </ul>
       </div>
       {/* Benefits */}
@@ -104,7 +131,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
               {benefit}
             </div>
-          ))}
+          ))};
         </div>
       </div>
       {/* Pricing */}
@@ -118,7 +145,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
               <div className="text-xs text-gray-400">
                 Market: ${service.marketPrice.min}-${service.marketPrice.max}
               </div>
-            )}
+            )};
           </div>
           <div className="text-right">
             <div className="text-xs text-cyan-400 font-medium">Starting Price</div>
@@ -128,13 +155,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       </div>
       {/* Contact Actions */}
       <div className="space-y-2">
+<<<<<<< HEAD
         <a
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
+=======
+        <a href={`tel:${contactInfo.phone}`};
+          className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now,
   </
         <div className="grid grid-cols-2 gap-2">
+<<<<<<< HEAD
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
@@ -146,6 +179,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
+=======
+          <a href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`};
+            className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
+            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
+            Email
+          </a>
+          <a href={service.contact.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Demo,
   </
@@ -159,14 +203,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             <span key={idx} className="text-xs bg-slate-700/50 text-gray-300 px-2 py-1 rounded">
               {useCase}
             </span>
-          ))}
+          ))};
         </div>
       </div>
     </div>
   );
 }
 const EnhancedServicesShowcase: React.FC = () => {
+<<<<<<< HEAD
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
+=======
+}
+return (
+;
+const [selectedCategory, setSelectedCategory] = useState<string>
+);
+}('all');
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [filteredServices, setFilteredServices] = useState(services);
   useEffect(() => {
     if (selectedCategory === 'all') {
@@ -186,8 +239,13 @@ const EnhancedServicesShowcase: React.FC = () => {
             Our Services,
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
   </
+=======
+            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -224,9 +282,15 @@ const EnhancedServicesShowcase: React.FC = () => {
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
             }`}
+<<<<<<< HEAD
           >
             All Services;
   </
+=======
+                >
+            All Services
+          </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           {serviceCategories.map((category) => (
             <button
               key={category.id}
@@ -236,17 +300,17 @@ const EnhancedServicesShowcase: React.FC = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                   : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
               }`}
-            >
+                >
               <span className="text-lg">{category.icon}</span>
               <span>{category.name}</span>
             </button>
-          ))}
+          ))};
         </div>
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredServices.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
-          ))}
+          ))};
         </div>
         {/* Popular Services Section */}
         {selectedCategory === 'all' && (
@@ -264,17 +328,25 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div className="text-lg font-bold text-cyan-400 mb-2">
                       ${service.pricing.starting.toLocaleString()}/{service.pricing.period === 'month' ? 'mo' : 'yr'}
                     </div>
+<<<<<<< HEAD
                     <a
                       href={`tel:${contactInfo.phone}`}
+=======
+                    <a href={`tel:${contactInfo.phone}`};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Call Now →
                     </a>
                   </div>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
+<<<<<<< HEAD
         )}
+=======
+        )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
           <h3 className="text-2xl font-bold text-white mb-4 neon-text">
@@ -284,17 +356,19 @@ const EnhancedServicesShowcase: React.FC = () => {
             Get a free consultation and discover how our AI and IT solutions can drive your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
             <a
               href={`tel:${contactInfo.phone}`}
+=======
+            <a href={`tel:${contactInfo.phone}`};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="cyber-button inline-flex items-center justify-center px-8 py-3">
               <Phone className="w-5 h-5 mr-2" />
               Call {contactInfo.phone}
             </a>
-            <a
-              href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
+            <a href={`mailto:${contactInfo.email}?subject=Free Consultation Request`};
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
               <Mail className="w-5 h-5 mr-2" />
               Get Free Consultation;
   </
@@ -302,6 +376,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 }
 export default EnhancedServicesShowcase;
@@ -320,3 +395,7 @@ export default EnhancedServicesShowcase;
   </span>
   </span>
   </ServiceCardProps>
+=======
+  )};
+export default EnhancedServicesShowcase;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

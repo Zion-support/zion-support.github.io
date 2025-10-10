@@ -48,11 +48,18 @@
     address: string,
 }
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
+<<<<<<< HEAD
   // Cloud Infrastructure & DevOps
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps,,
     website: string,
   }
+=======
+  // Cloud Infrastructure & DevOps;
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
+  // Cloud Infrastructure & DevOps;,
+    website: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -67,7 +74,7 @@ const contact =
   website: 'https://ziontechgroup.com'}  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
+  website: 'https://ziontechgroup.com'};
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -199,7 +206,7 @@ export const,
 export const,
   specializedITSolutions2026: SpecializedITSolution2026[] = [,
   // Cloud Infrastructure & DevOps,
-  website: string}
+  website: string};
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -231,7 +238,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -305,7 +312,7 @@ const contact =
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 const contact =
   mobil,
   e: '+1 302 464 0950', emai,
@@ -313,9 +320,16 @@ const contact =
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'}
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps,
+=======
+  website: 'https://ziontechgroup.com'};
+;
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
+  // Cloud Infrastructure & DevOps;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'cloud - infrastructure - automation',
     name: 'Cloud Infrastructure Automation Platform',
     tagline: unknown,
@@ -326,7 +340,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   websit,
   e: 'http,
   s://ziontechgroup.com'
+<<<<<<< HEAD
 }
+=======
+};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   specializedITSolutions2026: SpecializedITSolution2026[] = [,
   // Cloud Infrastructure & DevOps,
@@ -1358,11 +1377,19 @@ export const,
     implementationDetails: export const specializedITSolutions2026: SpecializedITSolution2026[] = [,
   // Cloud Infrastructure & DevOps;
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
+<<<<<<< HEAD
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
     reviews: 33,
   }
+=======
+    launchDate: '2024-05-25',
+    customers:
+        customers: 67;
+    rating: 4.4;
+    reviews: 33};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25'
     customers: 67
@@ -1398,7 +1425,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     ratin,
   g: 4.4,
     review,
-  s: 33}
+  s: 33};
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDat,
   e: '2024-05-25',
@@ -1412,12 +1439,19 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category)
-  )}
+  )};
 export const getPopularSpecializedITSolutions2026 = () =>
+<<<<<<< HEAD
 }
 export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */}
   return specializedITSolutions2026.filter(solution => solution.popular)}
 }
+=======
+};
+export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */};
+  return specializedITSolutions2026.filter(solution => solution.popular)};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular);
 }
@@ -1429,6 +1463,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   maxPric,
   e: number)
 ) =>
+<<<<<<< HEAD
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
     const _price = parseInt(solution && solution.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice,
@@ -1436,6 +1471,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
 }    return price >= minPrice && price <= maxPrice;
   })
 }
+=======
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>);
+const _price = parseInt(solution && solution.price.replace('$') ''));
+    return price >= minPrice && price <= maxPrice})
+};    return price >= minPrice && price <= maxPrice})
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -1631,10 +1673,16 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     growthRate: '16% annual growth', contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
+<<<<<<< HEAD
     launchDate: '2024-05-25', customers: 67
     rating: 4.4
     reviews: 33,
   }
+=======
+    launchDate: '2024-05-25', customers: 67;
+    rating: 4.4;
+    reviews: 33};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category),
@@ -2101,7 +2149,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     ratin,
   g: 4.4,
     review,
-  s: 33}
+  s: 33};
 ];
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>,
@@ -2125,11 +2173,19 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: un
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown
   return specializedITSolutions2026.filter ()
+<<<<<<< HEAD
     solution => solution.category === category),
 }
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
   return specializedITSolutions2026.filter (solution => solution.popular);
 }
+=======
+    solution => solution.category === category)};
+;
+export const getPopularSpecializedITSolutions2026 = () =>: unknown;
+  return specializedITSolutions2026.filter (solution => solution.popular)};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return specializedITSolutions2026.filter(solution =>),
@@ -2137,6 +2193,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
+<<<<<<< HEAD
   return specializedITSolutions2026.filter (solution =>)
     const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
@@ -2147,6 +2204,15 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string}
   }
+=======
+  return specializedITSolutions2026.filter (solution =>);
+const _price = parse_int (solution.price.replace ('$') ''));
+    return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})};
+;
+export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */};
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   })
 }
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown
@@ -2154,6 +2220,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: un
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown
   return specializedITSolutions2026.filter ()
+<<<<<<< HEAD
     solution => solution.category === category),
 }
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
@@ -2161,6 +2228,14 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   }
+=======
+    solution => solution.category === category)};
+export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */};
+  s: string};
+    websit,
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2178,10 +2253,18 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
+<<<<<<< HEAD
   s: number}
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
   return specializedITSolutions2026.filter (solution => solution.popular);
 }
+=======
+  s: number};
+;
+export const getPopularSpecializedITSolutions2026 = () =>: unknown;
+  return specializedITSolutions2026.filter (solution => solution.popular)};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return specializedITSolutions2026.filter(solution =>),
@@ -2189,6 +2272,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
+<<<<<<< HEAD
   return specializedITSolutions2026.filter (solution =>)
     const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
@@ -2198,6 +2282,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
 }
 export interface SpecializedITSolution2026;
 }
+=======
+  return specializedITSolutions2026.filter (solution =>);
+const _price = parse_int (solution.price.replace ('$') ''));
+    return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})};
+;
+export interface SpecializedITSolution2026};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 i,
   d: string, nam,
   e: string, taglin,
@@ -2874,9 +2965,15 @@ i,
   e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')), return price >= minPrice && price <= maxPrice }) } export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category), } export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
+<<<<<<< HEAD
   e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price, }); } return price >= min_price && price <= max_price; }); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string} } }) } export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category), } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
+=======
+  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */};
+  e: string} } }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category)} export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

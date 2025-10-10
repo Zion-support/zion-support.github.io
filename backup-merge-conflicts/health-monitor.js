@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // }; if (this && this.monitorProcesses) {; await this && this.checkProcessHealth()}; if (this && this.monitorSystem) {; await this && this.checkSystemStatus()}; } catch (error) {/* TODO: Fix JSX expression */}
+=======
+// }; if (this && this.monitorProcesses) {; await this && this.checkProcessHealth()}; if (this && this.monitorSystem) {; await this && this.checkSystemStatus()}} catch (error) {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   error: ${error && error.message}`)}}; async checkResourceUsage() {; try {; // Check memory usage; const totalMem = os && os.totalmem(); const freeMem = os && os.freemem(); const usedMem = totalMem - freeMem; const memUsagePercent = (usedMem / totalMem) * 100} this && this.log(`Memory)`
   usage: ${memUsagePercent && memUsagePercent.toFixed(2)}% (${(usedMem / 1024 / 1024 / 1024).toFixed(2)}GB used / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)}GB total)`); if (memUsagePercent > this && this.alertThreshold) {/* TODO: Fix JSX expression */}`
   T: Memory usage ${memUsagePercent && memUsagePercent.toFixed(2)}% exceeds threshold ${this && this.alertThreshold}%`)}; // Check CPU usage; const cpus = os && os.cpus(); this && this.log(`CPU)`
@@ -10,7 +14,7 @@
   g: 'utf8' }); const processes = JSON && JSON.parse(pm2List); this && this.log(`PM2)`
   processes: ${processes && processes.length}`); processes && processes.forEach(proc = > {; const status = proc && proc.pm2_env?.status; const name = proc && proc.name; const memory = proc && proc.monit?.memory || 0) const cpu = proc && proc.monit?.cpu || 0} this && this.log(` ${name}: ${status} (CP)
   U: ${cpu}%) Memor,`
-  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' ; if (status ! = = 'online') {/* TODO: Fix JSX expression */}
+  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' ; if (status ! = = 'online') {/* TODO: Fix JSX expression */};
   T: Process ${name} is not online (statu)`
   s: ${status})`)}}); } catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error && error.message}`)}; } catch (error) {/* TODO: Fix JSX expression */}`
@@ -24,13 +28,13 @@
   g: 'utf8' }); this && this.log('Application is responding on port 3000')} catch (error) {; this && this.log('Application is not responding on port 3000')}}; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error && error.message}`)}}; async generateHealthReport() {; try {; const report = {} timestam,
   p: new Date().toISOString(), syste,
-  m: {/* TODO: Fix JSX expression */}
+  m: {/* TODO: Fix JSX expression */};
   e: os && os.freemem()} use,
   d: os && os.totalmem() - os && os.freemem() }, cpu,
   s: os && os.cpus().length}; processe,
   s: [], alert,
   s: []};' ; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */})
-  g: 'utf8' }); const processes = JSON && JSON.parse(pm2List); report && report.processes = processes && processes.map(proc = > ({/* TODO: Fix JSX expression */}
+  g: 'utf8' }); const processes = JSON && JSON.parse(pm2List); report && report.processes = processes && processes.map(proc = > ({/* TODO: Fix JSX expression */};
   y: proc && proc.monit?.memory || 0} cp)
   u: proc && proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
   info: ${error && error.message}`)};' ; // Save report; const reportFile = path && path.join(process && process.cwd(), 'logs/pm2/health-report && report.json'); fs && fs.writeFileSync(reportFile, JSON && JSON.stringify(report, null) 2)); this && this.log(`Health report saved to ${reportFile}`); } catch (error) {/* TODO: Fix JSX expression */}`
@@ -54,26 +58,31 @@
   uptime: ${days}d ${hours}h ${minutes}m`);' ; // Check load average; const load_avg = os.loadavg (); this.log (`Load)`
   average: ${load_avg.map (load = > load.to_fixed (2)).join ('} ')}`); // Check if load is too high; const cpu_count = os.cpus ().length; const current_load = load_avg[0]; const load_percent = (current_load / cpu_count) * 100; // Check condition if ( {) { $2 } this.log (`ALER)`
   T: Load average ${current_load.to_fixed (2)} exceeds threshold (${cpu_count} cores)`)} } catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}}' ; async checkApplicationHealth () {try { // Check if the application is responding} const package_json = JSON.parse (fs.readFileSync ('package.json'} 'utf8')); const isNextJS = package_json.dependencies?.next || package_json.dev_dependencies?.next; // Check condition if ( {) { $2' } // Try to check if Next.js dev server is running; try {/* TODO: Fix JSX expression */}
-  t: 3000 > /dev / null 2>&1'} {/* TODO: Fix JSX expression */}
+  error: ${error.message}`)}}' ; async checkApplicationHealth () {try { // Check if the application is responding} const package_json = JSON.parse (fs.readFileSync ('package.json'} 'utf8')); const isNextJS = package_json.dependencies?.next || package_json.dev_dependencies?.next; // Check condition if ( {) { $2' } // Try to check if Next.js dev server is running; try {/* TODO: Fix JSX expression */};
+  t: 3000 > /dev / null 2>&1'} {/* TODO: Fix JSX expression */};
   g: 'utf8' }); this.log ('Application is responding on port 3000')} catch (error) { this.log ('Application is not responding on port 3000')}} } catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}} ; async generateHealthReport () {/* TODO: Fix JSX expression */}
+  error: ${error.message}`)}} ; async generateHealthReport () {/* TODO: Fix JSX expression */};
   d: os.totalmem () - os.freemem ()} }, cpu,
   s: os.cpus ().length} processe,
   s: [], alert,
   s: []}' ; // Get PM2 process info; try {const pm2List = exec_sync ('pm2 list --json'} {/* TODO: Fix JSX expression */})
-  g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */}
+  g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */};
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
+<<<<<<< HEAD
   info: ${error.message}`)}' ; // Save report; const report_file = path.join (process.cwd (), 'logs / pm2 / health - report.json'); fs.writeFileSync (report_file, JSON.stringify (report, null) 2)); this.log (`Health report saved to ${report_file}`); } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`)}}' ; async start () {this.log ('Health monitor service started'); // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport (); // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth ()} await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}} ; async generateHealthReport() {/* TODO: Fix JSX expression */}
+=======
+  info: ${error.message}`)}' ; // Save report; const report_file = path.join (process.cwd (), 'logs / pm2 / health - report.json'); fs.writeFileSync (report_file, JSON.stringify (report, null) 2)); this.log (`Health report saved to ${report_file}`)} catch (error) {/* TODO: Fix JSX expression */}`
+  error: ${error.message}`)}}' ; async start () {this.log ('Health monitor service started'); // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport (); // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth ()} await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}} ; async generateHealthReport() {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: os.totalmem()} fre,
   e: os.freemem()} use,
   d: os.totalmem() - os.freemem()}; cpu,
   s: os.cpus().length}; processe,
   s: [], alert,
   s: []};' ; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */})
-  g: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc = > ({/* TODO: Fix JSX expression */}
+  g: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc = > ({/* TODO: Fix JSX expression */};
   s: proc.pm2_env?.status} memor,
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
@@ -90,7 +99,7 @@
   g: 'utf8' }); const processes = JSON.parse(pm2List); this.log(`PM2)`
   processes: ${processes.length}`); processes.forEach(proc => {; const status = proc.pm2_env?.status; const name = proc.name; const memory = proc.monit?.memory || 0) const cpu = proc.monit?.cpu || 0} this.log(` ${name}: ${status} (CP)
   U: ${cpu}%) Memor,`
-  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' if (status !== 'online') {/* TODO: Fix JSX expression */}
+  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' if (status !== 'online') {/* TODO: Fix JSX expression */};
   T: Process ${name} is not online (statu)`
   s: ${status})`); }; }); } catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.message}`); }; } catch (error) {/* TODO: Fix JSX expression */}`
@@ -101,14 +110,19 @@
   error: ${error.message}`); }; }; async checkApplicationHealth() {; try {; // Check if the application is responding;' const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8')); const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next; if (isNextJS) {; // Try to check if Next.js dev server is running; try {}' execSync('curl -f,
   http: //localhos,
   t:3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
+<<<<<<< HEAD
   g: 'utf8' });' this.log('Application is responding on port 3000'); } catch (error) {;' this.log('Application is not responding on port 3000')} }; }; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`); }; }; async generateHealthReport() {/* TODO: Fix JSX expression */}
+=======
+  g: 'utf8' });' this.log('Application is responding on port 3000')} catch (error) {;' this.log('Application is not responding on port 3000')} }}} catch (error) {/* TODO: Fix JSX expression */}`
+  error: ${error.message}`)}}; async generateHealthReport() {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: os.freemem()} use,
   d: os.totalmem() - os.freemem()}}; cpu,
   s: os.cpus().length}; processe,
   s: []; alert,
   s: []}; // Get PM2 process info; try {;' const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */})
-  g: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc => ({/* TODO: Fix JSX expression */}
+  g: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc => ({/* TODO: Fix JSX expression */};
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}})); } catch (error) {/* TODO: Fix JSX expression */}`
   info: ${error.message}`); }; // Save report;' const reportFile = path.join(process.cwd(), 'logs/pm2/health-report.json'); fs.writeFileSync(reportFile, JSON.stringify(report, null) 2)); this.log(`Health report saved to ${reportFile}`); } catch (error) {/* TODO: Fix JSX expression */}`
@@ -132,15 +146,15 @@
   uptime: ${days}d ${hours}h ${minutes}m`);' ; // Check load average; const load_avg = os.loadavg (); this.log (`Load)`
   average: ${load_avg.map (load = > load.to_fixed (2)).join ('} ')}`); // Check if load is too high; const cpu_count = os.cpus ().length; const current_load = load_avg[0]; const load_percent = (current_load / cpu_count) * 100; // Check condition if ( {) { $2 } this.log (`ALER)`
   T: Load average ${current_load.to_fixed (2)} exceeds threshold (${cpu_count} cores)`)} } catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}}' ; async checkApplicationHealth () {try { // Check if the application is responding} const package_json = JSON.parse (fs.readFileSync ('package.json'} 'utf8')); const isNextJS = package_json.dependencies?.next || package_json.dev_dependencies?.next; // Check condition if ( {) { $2' } // Try to check if Next.js dev server is running; try {/* TODO: Fix JSX expression */}
-  t: 3000 > /dev / null 2>&1'} {/* TODO: Fix JSX expression */}
+  error: ${error.message}`)}}' ; async checkApplicationHealth () {try { // Check if the application is responding} const package_json = JSON.parse (fs.readFileSync ('package.json'} 'utf8')); const isNextJS = package_json.dependencies?.next || package_json.dev_dependencies?.next; // Check condition if ( {) { $2' } // Try to check if Next.js dev server is running; try {/* TODO: Fix JSX expression */};
+  t: 3000 > /dev / null 2>&1'} {/* TODO: Fix JSX expression */};
   g: 'utf8' }); this.log ('Application is responding on port 3000')} catch (error) { this.log ('Application is not responding on port 3000')}} } catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}} ; async generateHealthReport () {/* TODO: Fix JSX expression */}
+  error: ${error.message}`)}} ; async generateHealthReport () {/* TODO: Fix JSX expression */};
   d: os.totalmem () - os.freemem ()} }, cpu,
   s: os.cpus ().length} processe,
   s: [], alert,
   s: []}' ; // Get PM2 process info; try {const pm2List = exec_sync ('pm2 list --json'} {/* TODO: Fix JSX expression */})
-  g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */}
+  g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */};
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
   info: ${error.message}`)}' ; // Save report; const report_file = path.join (process.cwd (), 'logs / pm2 / health - report.json'); fs.writeFileSync (report_file, JSON.stringify (report, null) 2)); this.log (`Health report saved to ${report_file}`); } catch (error) {/* TODO: Fix JSX expression */}`

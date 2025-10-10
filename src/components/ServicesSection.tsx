@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 export default function ServicesSection() {
   const services = [
+=======
+import React from 'react';
+export default function ServicesSection() {;
+const services = [
+[
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       title: 'AI & Machine Learning',
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth=    {2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
       features: ['Predictive Analytics', 'NLP Solutions', 'Computer Vision', 'Deep Learning']
@@ -59,7 +66,7 @@ export default function ServicesSection() {
         </svg>
       ),
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
-    }
+    };
   ];
   return (
     <section id="services" className="py-20 relative">
@@ -77,8 +84,12 @@ export default function ServicesSection() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
+<<<<<<< HEAD
             <div
               key={index}
+=======
+            <div key={index}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
               {/* Icon */}
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
@@ -100,12 +111,16 @@ export default function ServicesSection() {
                     </svg>
                     {feature}
                   </li>
-                ))}
+                ))};
               </ul>
               {/* Learn More Button */}
               <div className="mt-6">
+<<<<<<< HEAD
                 <a
                   href="#contact"
+=======
+                <a href="#contact"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +129,7 @@ export default function ServicesSection() {
                 </a>
               </div>
             </div>
-          ))}
+          ))};
         </div>
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -125,6 +140,7 @@ export default function ServicesSection() {
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="#contact"
@@ -133,6 +149,14 @@ export default function ServicesSection() {
   </
               <a
                 href="tel:+1234567890"
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#contact"
+                className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                Get Free Consultation
+              </a>
+              <a href="tel:+1234567890"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
                 Call Now
   </
@@ -141,7 +165,11 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   ),
 }
   </a>
   </a>
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

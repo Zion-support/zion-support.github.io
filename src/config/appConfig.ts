@@ -1,8 +1,8 @@
-
 /**
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
  */
+<<<<<<< HEAD
 
 export interface AppConfig {
     // TODO: Add content
@@ -13,6 +13,14 @@ export interface AppConfig {
   p: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+export interface AppConfig {// TODO: Add content};
+};
+  ap,
+  p: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   nam,
   e: string,,
     versio,
@@ -21,9 +29,15 @@ export interface AppConfig {
   t: 'development' | 'production' | 'test',
   }
   ap,
+<<<<<<< HEAD
   i: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  i: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   baseUr,
   l: string,,
     timeou,
@@ -31,6 +45,7 @@ export interface AppConfig {
     retryAttempt,
   s: number,,
     feature,
+<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -53,9 +68,27 @@ export interface AppConfig {
 }
   enableCSP: boolean,,
     enableHSTS: boolean,,
+=======
+  s: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  analytics: boolean;,
+    monitoring: boolean;,
+    errorTracking: boolean;,
+    performanceOptimization: boolean;,
+    performance: {// TODO: Add content};
+};
+  enableLazyLoading: boolean;,
+    imageLazyLoadThreshold: number;,
+    componentLazyLoadThreshold: number;,
+    cacheMaxAge: number;,
+    security: {// TODO: Add content};
+};
+  enableCSP: boolean;,
+    enableHSTS: boolean;,
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     enableXSSProtection: boolean
-
-}
+};
     nam,
   e: 'Zion Tech Group',
     versio,
@@ -82,6 +115,7 @@ export interface AppConfig {
  * @example getConfig('app.name') => 'Zion Tech Group'
 export function getConfig,
           <T = unknown>(keyPat)
+<<<<<<< HEAD
   h: string): T {
     const keys = keyPath.split('.')
   }
@@ -99,10 +133,27 @@ export function getConfig,
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  h: string): T {const keys = keyPath.split('.')};
+  const __keys = keyPath.split('.');
+  let,
+  value: unknown = config;
+  for (const key of keys) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      value = (value as Record;)
+          <string, unknown>)[key]} else {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       throw new Error(`Configuration key "${keyPath}" not found`);
   return value as T;
  * Check if a feature is enabled;
 export function isFeatureEnabled(featur)
+<<<<<<< HEAD
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -124,3 +175,25 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   return config.app.environment === 'development';
 export default config;
 
+=======
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  return config.features[feature];
+ * Get current environment;
+export function getEnvironment(): string {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  return config.app.environment;
+ * Check if running in production;
+export function isProduction(): boolean {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  return config.app.environment === 'production';
+ * Check if running in development;
+export function isDevelopment(): boolean {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  return config.app.environment === 'development';
+export default config;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

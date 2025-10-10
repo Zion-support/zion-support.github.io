@@ -1,16 +1,28 @@
 export type CaseStudy = {
+<<<<<<< HEAD
     id: string;
+=======
+};
+  id: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title: string;
   company: string;
   industry: string;
   challenge: string;
   solution: string;
+<<<<<<< HEAD
   results: string[]
   technologies: string[]
   duration: string,
   imageUrl?: string
   }
 
+=======
+  results: string[];
+  technologies: string[];
+  duration: string;
+  imageUrl?: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const caseStudies: CaseStudy[] = [
   {
     id: 'global-energy-digital-twin-850 m',
@@ -170,26 +182,31 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
+<<<<<<< HEAD
 export type CaseStudy = {/* TODO: Fix JSX expression */}
 }
 
+=======
+export type CaseStudy = {/* TODO: Fix JSX expression */};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   caseStudies: CaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   }];

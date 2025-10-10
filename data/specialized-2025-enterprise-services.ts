@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -27,10 +31,16 @@
   variant: ServiceVariant;
   contact_info: unknown;
     mobile: string;
+<<<<<<< HEAD
     email: string
     address: string
     website: string,
   }
+=======
+    email: string;
+    address: string;
+    website: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -48,7 +58,7 @@ const contact =
   website: 'https://ziontechgroup.com'}  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
+  website: 'https://ziontechgroup.com'};
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -56,6 +66,7 @@ const contact =
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
+<<<<<<< HEAD
 export interface SpecializedEnterpriseService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -73,6 +84,27 @@ export interface SpecializedEnterpriseService {id: string, name: string,
     mobile: string, email: string
     address: string,
     website: string}
+=======
+export interface SpecializedEnterpriseService {
+id: string, name: string;
+}
+  tagline: string, price: string;
+  period: string, description: string;
+  features: string[], popular: boolean;
+  icon: string, color: string;
+  textColor: string, link: string;
+  marketPosition: string, targetAudience: string;
+  trialDays: number, setupTime: string;
+  category: string, realService: boolean;
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string;
+  competitors: string[], marketSize: string;
+  growthRate: string, variant: ServiceVariant;
+  contactInfo: unknown;
+    mobile: string, email: string;
+    address: string;
+    website: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -140,7 +172,7 @@ export interface SpecializedEnterpriseService {id: string, name: string,
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   real_implementatio,
   n: boolean,
   implementation_detail,
@@ -178,7 +210,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -196,8 +228,8 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -212,7 +244,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string[], capabilitie,
   s: string[],
   marketAdvantag,
-  e: string}
+  e: string};
 const contact =
   mobil,
   e: '+1 302 464 0950', emai,
@@ -222,9 +254,16 @@ const contact =
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [,
   // Advanced AI & Consciousness Services;
       'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'}
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services,
+=======
+  website: 'https://ziontechgroup.com'};
+;
+export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
+  // Advanced AI & Consciousness Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - consciousness - research - platform',
     name: 'AI Consciousness Research Platform',
     tagline: 'Advanced AI consciousness simulation and research',
@@ -238,7 +277,12 @@ export const,
   websit,
   e: 'http,
   s://ziontechgroup.com'
+<<<<<<< HEAD
 }
+=======
+};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   specializedEnterpriseServices: SpecializedEnterpriseService[] = [,
   // Advanced AI & Consciousness Services,
@@ -1401,8 +1445,14 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ]
     capabilities: [,
       'Quantum ML algorithms_quantum optimization_hybrid computing_error correction_research tools'],
+<<<<<<< HEAD
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities'}
 // Advanced Cybersecurity Services;
+=======
+    market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities'};
+;
+  // Advanced Cybersecurity Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'quantum - resistant - cryptography',
     name: 'Quantum - Resistant Cryptography Platform',
     tagline: 'Future - proof cryptography for the quantum era',
@@ -1444,8 +1494,14 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ]
     capabilities: [,
       'Post - quantum algorithms_lattice cryptography_hash - based signatures_migration tools_compliance support'],
+<<<<<<< HEAD
     market_advantage: 'Comprehensive quantum - resistant cryptography platform with migration support'}
 // Space Technology Services;
+=======
+    market_advantage: 'Comprehensive quantum - resistant cryptography platform with migration support'};
+;
+  // Space Technology Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'satellite - ai - orchestration',
     name: 'Satellite AI Orchestration Platform',
     tagline: 'Intelligent satellite constellation management',
@@ -1487,8 +1543,14 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ]
     capabilities: [,
       'Autonomous operations_constellation optimization_mission planning_data processing_collision avoidance'],
+<<<<<<< HEAD
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities'}
 // Neural Interface Services;
+=======
+    market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities'};
+;
+  // Neural Interface Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Advanced neural interface technology',
@@ -1530,8 +1592,14 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ]
     capabilities: [,
       'Neural signal processing_brain - computer communication_cognitive enhancement_medical applications_research tools'],
+<<<<<<< HEAD
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools'}
 // Advanced IoT Services;
+=======
+    market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools'};
+;
+  // Advanced IoT Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'autonomous - iot - ecosystem',
     name: 'Autonomous IoT Ecosystem Platform',
     tagline: 'Self - managing IoT infrastructure',
@@ -1573,8 +1641,14 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ]
     capabilities: [,
       'Autonomous management_self - healing networksAI optimization_predictive maintenance_security automation'],
+<<<<<<< HEAD
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities'}
 // Advanced Analytics Services;
+=======
+    market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities'};
+;
+  // Advanced Analytics Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
@@ -1721,8 +1795,14 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Advanced quantum ML platform with hybrid computing capabilities'
+<<<<<<< HEAD
   }
 // Advanced Cybersecurity Services;
+=======
+  };
+;
+  // Advanced Cybersecurity Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'quantum - resistant - cryptography'
     nam,
@@ -1803,8 +1883,14 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Comprehensive quantum - resistant cryptography platform with migration support'
+<<<<<<< HEAD
   }
 // Space Technology Services;
+=======
+  };
+;
+  // Space Technology Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'satellite - ai - orchestration'
     nam,
@@ -1885,8 +1971,14 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Advanced AI satellite orchestration with autonomous capabilities'
+<<<<<<< HEAD
   }
 // Neural Interface Services;
+=======
+  };
+;
+  // Neural Interface Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'brain - computer - interface - platform'
     nam,
@@ -1967,8 +2059,14 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Advanced BCI platform with medical - grade capabilities and research tools'
+<<<<<<< HEAD
   }
 // Advanced IoT Services;
+=======
+  };
+;
+  // Advanced IoT Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'autonomous - iot - ecosystem'
     nam,
@@ -2049,8 +2147,14 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Advanced autonomous IoT platform with AI - powered management capabilities'
+<<<<<<< HEAD
   }
 // Advanced Analytics Services;
+=======
+  };
+;
+  // Advanced Analytics Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'predictive - analytics - engine'
     nam,
@@ -2131,22 +2235,32 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Advanced predictive analytics platform with custom ML model development'
-  }
+  };
 ];
 export default specializedEnterpriseServices;
 export default specializedEnterpriseServices;
 export default specializedEnterpriseServices;
+<<<<<<< HEAD
 export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
+=======
+;
+export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */};
+  s: string};
+    websit,
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
   benefits: string[]
   capabilities: string[]
   marketAdvantage: string,
@@ -2155,6 +2269,18 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
+=======
+  benefits: string[];
+  capabilities: string[];
+  marketAdvantage: string};
+;
+// const contact = {
+;
+};
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean,
@@ -2173,9 +2299,16 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
+<<<<<<< HEAD
   e: string}
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
+=======
+  e: string};
+;
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -2222,10 +2355,10 @@ export const,
     reviews: 18,
     benefits: [,
       'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access',
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Consciousness simulationCognitive modelingEmotional intelligenceResearch collaborationAdvanced analytics'
     ];
     marketAdvantage: 'Only comprehensive AI consciousness research platform available'}
@@ -2273,10 +2406,10 @@ export const,
   e: 'Only comprehensive AI consciousness research platform available'
   }
   // Quantum Computing Services;
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Quantum ML algorithmsQuantum optimizationHybrid computingError correctionResearch tools'
     ];
     marketAdvantage: 'Advanced quantum ML platform with hybrid computing capabilities'}
@@ -2324,10 +2457,10 @@ export const,
   e: 'Advanced quantum ML platform with hybrid computing capabilities'
   }
   // Advanced Cybersecurity Services;
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Post-quantum algorithmsLattice cryptographyHash-based signaturesMigration toolsCompliance support'
     ];
     marketAdvantage: 'Comprehensive quantum-resistant cryptography platform with migration support'}
@@ -2375,10 +2508,10 @@ export const,
   e: 'Comprehensive quantum-resistant cryptography platform with migration support'
   }
   // Space Technology Services;
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Autonomous operationsConstellation optimizationMission planningData processingCollision avoidance'
     ];
     marketAdvantage: 'Advanced AI satellite orchestration with autonomous capabilities'}
@@ -2426,10 +2559,10 @@ export const,
   e: 'Advanced AI satellite orchestration with autonomous capabilities'
   }
   // Neural Interface Services;
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Neural signal processingBrain-computer communicationCognitive enhancementMedical applicationsResearch tools'
     ];
     marketAdvantage: 'Advanced BCI platform with medical-grade capabilities and research tools'}
@@ -2477,10 +2610,10 @@ export const,
   e: 'Advanced BCI platform with medical-grade capabilities and research tools'
   }
   // Advanced IoT Services;
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Autonomous managementSelf-healing networksAI optimizationPredictive maintenanceSecurity automation'
     ];
     marketAdvantage: 'Advanced autonomous IoT platform with AI-powered management capabilities'}
@@ -2528,16 +2661,16 @@ export const,
   e: 'Advanced autonomous IoT platform with AI-powered management capabilities'
   }
   // Advanced Analytics Services;
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Predictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modeling'
     ];
     marketAdvantage: 'Advanced predictive analytics platform with custom ML model development',
     marketAdvantag,
   e: 'Advanced predictive analytics platform with custom ML model development'
-  }
+  };
 ];
 export default specializedEnterpriseServices;
 export default specializedEnterpriseServices;
@@ -3169,6 +3302,7 @@ i,
   n: true,' implementation_detail,
   s: 'Enterprise - grade predictive analytics platform with custom model development'' launch_dat,
   e: '2024 - 05 - 01' customer,
+<<<<<<< HEAD
   s: 189, ratin,
   g: 4 && 4.8, review,
   s: 145, benefit,
@@ -3186,9 +3320,29 @@ i,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
   e: string} const contact = {/* TODO: Fix JSX expression */}
+=======
+  s: 189; ratin,
+  g: 4 && 4.8; review,
+  s: 145; benefit,
+  s: [;' '60% decision accuracy improvement35% operational cost reduction_advanced ML algorithms_real - time predictions_custom model development' ]; capabilitie,
+  s: [;' 'Predictive modeling_time series forecasting_trend analysis_anomaly detection_scenario modeling' ],' market_advantag,
+  e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; ; export default specializedEnterpriseServices; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */};
+  s: string} websit,
+  e: string} }; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number; benefit,
+  s: string[]; capabilitie,
+  s: string[]; marketAdvantag,
+  e: string} ; const contact = {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
+<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   specializedEnterpriseServices: SpecializedEnterpriseService[] = [; // Advanced AI & Consciousness Services, {/* TODO: Fix JSX expression */}
   s: [,' 'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access' ]} capabilitie,
@@ -3212,3 +3366,28 @@ i,
   s: [,' '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development' ]} capabilitie,
   s: [,' 'Predictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modeling' ]}' marketAdvantag,
   e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; '
+=======
+  s://ziontechgroup.com' }; export const,
+  specializedEnterpriseServices: SpecializedEnterpriseService[] = [; // Advanced AI & Consciousness Services; {/* TODO: Fix JSX expression */};
+  s: [,' 'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access' ]} capabilitie,
+  s: [,' 'Consciousness simulationCognitive modelingEmotional intelligenceResearch collaborationAdvanced analytics' ]};' marketAdvantag,
+  e: 'Only comprehensive AI consciousness research platform available' }; // Quantum Computing Services; {/* TODO: Fix JSX expression */};
+  s: [,' '100x research accelerationQuantum advantage in optimizationHybrid computing capabilitiesMulti-quantum backend supportExpert quantum consulting' ]} capabilitie,
+  s: [,' 'Quantum ML algorithmsQuantum optimizationHybrid computingError correctionResearch tools' ]};' marketAdvantag,
+  e: 'Advanced quantum ML platform with hybrid computing capabilities' }; // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */};
+  s: [,' 'Future-proof securityQuantum-resistant algorithmsCompliance readinessMigration supportExpert consultation' ]} capabilitie,
+  s: [,' 'Post-quantum algorithmsLattice cryptographyHash-based signaturesMigration toolsCompliance support' ]};' marketAdvantag,
+  e: 'Comprehensive quantum-resistant cryptography platform with migration support' }; // Space Technology Services; {/* TODO: Fix JSX expression */};
+  s: [,' '400% operation optimization60% mission cost reductionAutonomous operationsAI mission planningExpert space consulting' ]} capabilitie,
+  s: [,' 'Autonomous operationsConstellation optimizationMission planningData processingCollision avoidance' ]};' marketAdvantag,
+  e: 'Advanced AI satellite orchestration with autonomous capabilities' }; // Neural Interface Services; {/* TODO: Fix JSX expression */};
+  s: [,' 'Revolutionary medical applicationsBreakthrough research capabilitiesCognitive enhancementMedical rehabilitationExpert neural consultation' ]} capabilitie,
+  s: [,' 'Neural signal processingBrain-computer communicationCognitive enhancementMedical applicationsResearch tools' ]};' marketAdvantag,
+  e: 'Advanced BCI platform with medical-grade capabilities and research tools' }; // Advanced IoT Services; {/* TODO: Fix JSX expression */};
+  s: [,' '70% management cost reduction50% operational efficiencyAutonomous managementSelf-healing networksAI optimization' ]} capabilitie,
+  s: [,' 'Autonomous managementSelf-healing networksAI optimizationPredictive maintenanceSecurity automation' ]};' marketAdvantag,
+  e: 'Advanced autonomous IoT platform with AI-powered management capabilities' }; // Advanced Analytics Services; {/* TODO: Fix JSX expression */};
+  s: [,' '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development' ]} capabilitie,
+  s: [,' 'Predictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modeling' ]};' marketAdvantag,
+  e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; '
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

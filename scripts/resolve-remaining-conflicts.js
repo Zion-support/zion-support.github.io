@@ -1,6 +1,7 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
+<<<<<<< HEAD
 
 console.log('🔧 Resolving remaining merge conflicts...\n');
 
@@ -9,6 +10,13 @@ function resolveMergeConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
+=======
+// console.log removed for production
+// Function to resolve merge conflicts in a file;
+function resolveMergeConflicts(filePath) {
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`);
@@ -32,6 +40,7 @@ function resolveMergeConflicts(filePath) {
         .replace(/        .replace(//g, '')
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
+<<<<<<< HEAD
       console.log(`✅ Resolved merge conflicts in ${filePath}`);
       return true;
     }
@@ -42,8 +51,17 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
+=======
+      // console.log removed for production
+return true};
+    return false} catch (error) {
+    // console.log removed for production
+return false};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // List of files with conflicts;
 const conflictedFiles = [
+];
   'App.tsx',
   'app/ai-services/page.tsx',
   'app/components/Navigation.tsx',
@@ -51,7 +69,6 @@ const conflictedFiles = [
   'app/micro-saas/page.tsx',
   'public/sitemap.xml'
 ];
-
 async function main() {
     console.log('🚀 Resolving remaining merge conflicts...\n');
   
@@ -59,6 +76,7 @@ async function main() {
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
+<<<<<<< HEAD
       resolvedCount++
   }
   }
@@ -66,19 +84,33 @@ async function main() {
   console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
   
   if (resolvedCount > 0) {
+=======
+      resolvedCount++};
+  };
+  // console.log removed for production
+if (resolvedCount > 0) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Add resolved files;
     console.log('\n📝 Adding resolved files...');
     try {
       execSync('git add .', { encoding: 'utf8', cwd: process.cwd() });
+<<<<<<< HEAD
       console.log('✅ Files added successfully');
     } catch (error) {
     console.log('❌ Error adding files:', error.message)
   }
     
+=======
+      // console.log removed for production
+} catch (error) {
+      // console.log removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Commit the resolution;
     console.log('\n📝 Committing merge resolution...');
     try {
       execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() });
+<<<<<<< HEAD
       console.log('✅ Merge resolution committed successfully');
     } catch (error) {
     console.log('❌ Error committing:', error.message)
@@ -97,4 +129,21 @@ async function main() {
   console.log('\n🎉 Remaining merge conflicts resolution completed!');
 }
 
+=======
+      // console.log removed for production
+} catch (error) {
+      // console.log removed for production
+};
+  };
+  // Final status;
+  // console.log removed for production
+try {,;
+const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() });
+    // console.log removed for production
+} catch (error) {
+    // console.log removed for production
+};
+  // console.log removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 main().catch(console.error);

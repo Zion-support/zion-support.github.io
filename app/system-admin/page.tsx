@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react'
 const PagePage: React.FC = () => {
@@ -96,3 +97,10 @@ const benefits = [
   )
 }
 export default PagePage
+=======
+;
+const PagePage: React.FC = () => {
+const features = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

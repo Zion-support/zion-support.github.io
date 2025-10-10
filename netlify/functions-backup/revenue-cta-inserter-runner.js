@@ -1,22 +1,22 @@
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler = async function () {/* TODO: Fix JSX expression */};
   const { execSync } = require('child_process');
   try {execSync('node automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs || true')
       { stdio: 'inherit'} shell: true,
       })
     );
     execSync('node automation/homepage-updater.cjs || true', {stdio: inherit),
-        shell: true}
-  try {/* TODO: Fix JSX expression */}
+        shell: true};
+  try {/* TODO: Fix JSX expression */};
   o: 'inherit'} shel,
   l: true,
       })
     );
-    execSync('node automation/homepage-updater.cjs || true', {/* TODO: Fix JSX expression */}
+    execSync('node automation/homepage-updater.cjs || true', {/* TODO: Fix JSX expression */};
   l: true})
     });
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(growth): auto-insert revenue CTA components [ci skip]" || true) && (git push origin main || true)',
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */};
   o: 'inherit'} shel,
   l: true });
     return {statusCode: 200,
@@ -26,6 +26,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
+<<<<<<< HEAD
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
   k: 'revenue-cta-inserter-runner' });
@@ -39,9 +40,18 @@ exports.handler = async function() { const { execSync } = require('child_process
       });' execSync('node automation/homepage-updater.cjs || true') {stdio: 'inherit'} shell: true,
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(growth): auto-insert revenue CTA components [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true,
       });' return {statusCode: 200,
+=======
+        error: String(e;),
+    return {/* TODO: Fix JSX expression */};
+  k: 'revenue-cta-inserter-runner' })}} catch (e) {/* TODO: Fix JSX expression */};
+      })}};
+};
+exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs || true') { stdio: 'inherit'} shell: true});' execSync('node automation/homepage-updater.cjs || true') {stdio: 'inherit'} shell: true});' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(growth): auto-insert revenue CTA components [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true});' return {statusCode: 200;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         body: JSON.stringify({ok: true),
         task: 'revenue-cta-inserter-runner' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
+<<<<<<< HEAD
         error: String(e,)}) } } }'
 exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
@@ -55,3 +65,16 @@ exports.handler = async function() { const { execSync } = require('child_process
       });' return {/* TODO: Fix JSX expression */}
   k: 'revenue-cta-inserter-runner' }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'"
+=======
+        error: String(e;)}) }} };'
+exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */};
+  o: 'inherit'} shel,
+  l: true});' execSync('node automation/homepage-updater.cjs || true') {/* TODO: Fix JSX expression */};
+  o: 'inherit'} shel,
+  l: true;"
+      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(growth): auto-insert revenue CTA components [ci skip]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */};
+  o: 'inherit'} shel,
+  l: true});' return {/* TODO: Fix JSX expression */};
+  k: 'revenue-cta-inserter-runner' }) }} catch (e) {/* TODO: Fix JSX expression */};
+      }) }} };'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

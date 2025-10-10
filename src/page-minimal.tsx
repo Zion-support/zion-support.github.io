@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
+};
+};
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 }
@@ -11,7 +13,7 @@ export default function HomePage() {
           <div>Coming Soon</div>
   )
           <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Header */};
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
@@ -32,7 +34,7 @@ Home;
             </nav>
       </header>
       <main>
-        {/* Hero Section */}
+        {/* Hero Section */};
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -43,18 +45,25 @@ Home;
 // Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
 //               and enterprise IT solutions that drive growth, efficiency, and innovation.
           </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
 // >
 //                 Explore Our Services
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+//>
+//                 Explore Our Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Link className="w-5 h-5 ml-2" />
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 <Phone className="w-5 h-5 mr-2" />
 // Call +1 302 464 0950,
           </a>
         </section>
-        {/* Features Section */}
+        {/* Features Section */};
         <section className="py-20 bg-gray-50">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
@@ -79,7 +88,7 @@ Expert Team
                   <Link className="w-6 h-6 text-purple-600" />
                   Fast Implementation,
                   Get your AI solutions up and running quickly with our streamlined implementation process.
-        {/* CTA Section */}
+        {/* CTA Section */};
         <section className="py-20 bg-blue-600 text-white">
             <h2 className="text-3xl md: text-4xl font-bold mb-6">
 Ready to Transform Your Business?
@@ -89,7 +98,7 @@ Ready to Transform Your Business?
                 href="/blog" View Our Blog,
                 <ArrowRight className="w-5 h-5 ml-2" />
       </main>
-      {/* Footer */}
+      {/* Footer */};
       <footer className="bg-gray-900 text-white py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
@@ -104,6 +113,7 @@ Ready to Transform Your Business?
               <p className="text-gray-400 text-sm">
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
+<<<<<<< HEAD
   ),
 }
   </p>
@@ -133,3 +143,6 @@ Ready to Transform Your Business?
   </div>
   </div>
   </div>
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

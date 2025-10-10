@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 interface SEOProps {/* TODO: Fix JSX expression */}
+=======
+interface SEOProps {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -12,7 +16,7 @@ interface SEOProps {/* TODO: Fix JSX expression */}
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
-}
+};
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <meta property="o,"

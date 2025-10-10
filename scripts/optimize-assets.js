@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
@@ -15,22 +14,24 @@ function optimizeCSS() {
       if (file.endsWith('.css')) {
 //         const filePath = path.join(cssPath, file);
         let _content = fs.readFileSync(filePath, 'utf8');
-        
         // Remove unnecessary whitespace;
         content = content.replace(/\s+/g, ' ');
-function optimizeCSS() {/* TODO: Fix JSX expression */}
-}
+function optimizeCSS() {/* TODO: Fix JSX expression */};
+};
 //   const cssPath = path.join(process.cwd(), '.next/static/css');
-  if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */}
+  if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */};
         content = content.replace(/;\s*}/g, '}');
         content = content.replace(/,\s+/g, ',');
+<<<<<<< HEAD
         
         fs.writeFileSync(filePath, content);
       }
+=======
+        fs.writeFileSync(filePath, content)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
-//     }
-}
-
+//     };
+};
 // Optimize JavaScript bundles;
 function optimizeJS() {
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
@@ -40,24 +41,28 @@ function optimizeJS() {
       if (file.endsWith('.js')) {
 //         const filePath = path.join(jsPath, file);
         let _content = fs.readFileSync(filePath, 'utf8');
-        
         // Remove console.log statements in production;
         if (process.env.NODE_ENV === 'production') {
           content = content.replace(/console\.log\([^)]*\);?/g, '');
           content = content.replace(/console\.warn\([^)]*\);?/g, '');
           content = content.replace(/console\.info\([^)]*\);?/g, '');
-function optimizeJS() {/* TODO: Fix JSX expression */}
-}
+function optimizeJS() {/* TODO: Fix JSX expression */};
+};
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
+<<<<<<< HEAD
   if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
         }
         
         fs.writeFileSync(filePath, content);
       }
+=======
+  if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */};
+        };
+        fs.writeFileSync(filePath, content)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
-//     }
-}
-
+//     };
+};
 optimizeCSS();
 optimizeJS();
 // 

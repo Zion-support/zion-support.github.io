@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 export interface InnovativeAIService {id: string;
+=======
+export interface InnovativeAIService {
+id: string;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   name: string;
   tagline: string;
   price: string;
@@ -46,6 +52,7 @@ export interface InnovativeAIService {id: string;
   description: string;
   features: string[];
   popular: boolean;
+<<<<<<< HEAD
   icon: string
   color: string
     mobile: string,
@@ -53,6 +60,15 @@ export interface InnovativeAIService {id: string;
     address: string,
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   l: string}
+=======
+  icon: string;
+  color: string;
+    mobile: string;
+    email: string};
+    address: string;
+export interface InnovativeAIService {/* TODO: Fix JSX expression */};
+  l: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     addres,
   s: string,
       'Advanced computer vision AI',
@@ -65,6 +81,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
       'Traffic prediction',
       'Emergency response systems',
       'Performance analytics'],
+<<<<<<< HEAD
     popular: true,
     website: string}
   }
@@ -75,6 +92,17 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   rating: number
   reviews: number,
 }
+=======
+    popular: true;
+    website: string};
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeAIServices: InnovativeAIService[] = [,
     id: 'quantum - ai - brain - computer - interface',
     name: 'Quantum AI Brain - Computer Interface',
@@ -85,8 +113,8 @@ export const innovativeAIServices: InnovativeAIService[] = [,
     popula,
   r: true,
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -98,7 +126,7 @@ export const innovativeAIServices: InnovativeAIService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeAIServices: InnovativeAIService[] = [,
     i,
@@ -1368,11 +1396,19 @@ export const,
     reviews: 6,
   },
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
+<<<<<<< HEAD
     launchDate: '2024-08-01'
     customers: 67
     rating: 4.7
     reviews: 34,
   }
+=======
+    launchDate: '2024-08-01',
+    customers:
+        customers: 67;
+    rating: 4.7;
+    reviews: 34};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01'
     customers: 67
@@ -1423,7 +1459,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 34}
+  s: 34};
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDat,
   e: '2024-08-01',
@@ -1541,14 +1577,22 @@ export const,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
+<<<<<<< HEAD
     implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.'
     launch_date: '2024 - 08 - 01'
     customers: 67
     rating: 4 && 4.7
     reviews: 34,
   }
+=======
+    implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.',
+    launch_date: '2024 - 08 - 01',
+    customers: 67;
+    rating: 4 && 4.7;
+    reviews: 34};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
     reviews: 34,
     market_siz,
@@ -1589,7 +1633,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1601,10 +1645,15 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 34}
+  s: 34};
 ];
     review,
+<<<<<<< HEAD
   s: 34}
+=======
+  s: 34};
+]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
   }
 ];
@@ -1687,13 +1736,18 @@ export const,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 ];
-export interface InnovativeAIService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeAIService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
+<<<<<<< HEAD
   e: string}
   }
+=======
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1711,7 +1765,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeAIServices: InnovativeAIService[] = [,
     i,
@@ -2726,10 +2780,10 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 34}
+  s: 34};
 ];
 ];
-}
+};
 ];
 export interface InnovativeAIService,
   id: string, nam,
@@ -3243,7 +3297,7 @@ export interface InnovativeAIService,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */}
+  s: number } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -3642,4 +3696,8 @@ export interface InnovativeAIService,
   e: '2024-08-01', customer,
   s: 67, ratin,
   g: 4.7, review,
+<<<<<<< HEAD
   s: 34 } ]; ]; } ]; '"
+=======
+  s: 34 } ]; ]} ]; '"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

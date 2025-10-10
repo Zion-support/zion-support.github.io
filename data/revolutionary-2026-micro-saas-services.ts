@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 export const revolutionary2026MicroSaasServices = [{name: 'Revolutionary 2026 Micro-SaaS Platform'
+=======
+export const revolutionary2026MicroSaasServices = [
+{name: 'Revolutionary 2026 Micro-SaaS Platform',
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     path: '/services/revolutionary-2026-micro-saas-platform',
     description: 'Next-generation 2026 micro-SaaS development and deployment',
     icon: 'Rocket',
@@ -11,8 +17,8 @@ export const revolutionary2026MicroSaasServices = [{name: 'Revolutionary 2026 Mi
     ],
     pricing: unknown,
       starter: '$299/month',
-      professional: '$599/month'}
-      enterprise: 'Custom'}
+      professional: '$599/month'};
+      enterprise: 'Custom'};
   },
     name: 'Revolutionary 2026 SaaS Analytics'
     path: '/services/revolutionary-2026-saas-analytics',
@@ -20,11 +26,13 @@ export const revolutionary2026MicroSaasServices = [{name: 'Revolutionary 2026 Mi
     icon: 'BarChart3',
     category: 'Analytics',
     features: [,
-export const revolutionary2026MicroSaasServices = [{/* TODO: Fix JSX expression */}
-  l: '$599/month'}
+export const revolutionary2026MicroSaasServices = [
+{/* TODO: Fix JSX expression */};
+];
+  l: '$599/month'};
       enterpris,
   e: 'Custom'
-    }
+    };
   },
     nam,
   e: 'Revolutionary 2026 SaaS Analytics',
@@ -55,8 +63,8 @@ export const revolutionary2026MicroSaasServices = [{/* TODO: Fix JSX expression 
   l: '$299/month',
       enterpris,
   e: 'Custom'
-    }
-  }
+    };
+  };
 ];
 export const revolutionary2026 MicroSaasCategories = [
   'Platform Development',
@@ -77,8 +85,15 @@ export const revolutionary2026MicroSaasStats = {}
   averageRatin,
   g: 4.8,
   activeUser,
+<<<<<<< HEAD
   s: 1800}
 export const revolutionary2026MicroSaasServices = [ nam,
+=======
+  s: 1800};
+export const revolutionary2026MicroSaasServices = [
+ nam,
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Revolutionary 2026 Micro-SaaS Platform',' pat,
   h: '/services/revolutionary-2026-micro-saas-platform',' descriptio,
   n: 'Next-generation 2026 micro-SaaS development and deployment',' ico,

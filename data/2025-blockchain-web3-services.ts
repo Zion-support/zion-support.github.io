@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true;
 export interface BlockchainWeb3Service;
 export interface BlockchainWeb3Service {
+<<<<<<< HEAD
+=======
+;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -18,12 +27,12 @@ export interface BlockchainWeb3Service {
     realImplementation: true,
     implementationDetails: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
-    useCases: [}
+    useCases: [};
     realImplementatio,
   n: true,
 export interface BlockchainWeb3Service;
-export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
-  s: [}
+export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */};
+  s: [};
       'Yield farming optimization'
       'Liquidity provision strategies'
       'Staking optimization'
@@ -53,7 +62,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       currency: 'USD',
       trial_days: 14,
       setup_time: '1 - 3 days',
-      enterprise: 'Custom pricing'}
+      enterprise: 'Custom pricing'};
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
@@ -81,7 +90,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       setup_tim,
   e: '1 - 3 days',
       enterpris,
-  e: 'Custom pricing'}
+  e: 'Custom pricing'};
     },
     feature,
   s: [,
@@ -727,6 +736,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
   roi: string, useCases: string[],
+<<<<<<< HEAD
   integrations: string[], support: string,
   compliance: string[], link: string,
   icon: string, color: string,
@@ -734,6 +744,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   customers: number, rating: number
   reviews: number,
 }
+=======
+  integrations: string[], support: string;
+  compliance: string[], link: string;
+  icon: string, color: string;
+  popular: boolean, launchDate: string;
+  customers: number, rating: number;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance'
     ];
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
@@ -821,7 +839,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: number, ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance'
     ];
     integration,
@@ -847,26 +865,46 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 18000}
-export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
-  }
+  s: 18000};
+export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */};
+  };
 ];
+<<<<<<< HEAD
 }
 ];
 export interface BlockchainWeb3Service {
   id: string
   name: string,
+=======
+;
+};
+];
+export interface BlockchainWeb3Service {
+;
+}
+  id: string;
+  name: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   tagline: string,,
   description: string;
   category: string;
   price: {
     monthly: number;
+<<<<<<< HEAD
     yearly: number
     currency: string
     trialDays: number,
     setupTime: string}
     enterprise: string}
   }
+=======
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string};
+    enterprise: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -885,18 +923,32 @@ export interface BlockchainWeb3Service {
   color: string;
   popular: boolean;
   launchDate: string;
+<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
 }
 export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [,
+=======
+  customers: number;
+  rating: number;
+  reviews: number};
+;
+export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   {,
     id: 'decentralized-identity-management'
     name: 'Decentralized Identity Management Platform',
     tagline: 'Self-sovereign identity with zero-knowledge proof verification',,
+<<<<<<< HEAD
   description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.',
     category: 'Blockchain & Web3'}
     price: {}
+=======
+  description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.';
+    category: 'Blockchain & Web3'};
+    price: {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       monthly: 99;
       yearly: 990;
       currency: 'USD'
@@ -937,8 +989,8 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [,
     name: 'AI-Powered DeFi Yield Optimizer',
     tagline: 'Intelligent yield farming with AI-driven strategy optimization',,
   description: 'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.';
-    category: 'DeFi & Yield Optimization'}
-    price: {}
+    category: 'DeFi & Yield Optimization'};
+    price: {};
       monthly: 199;
       yearly: 1990;
       currency: 'USD'
@@ -979,8 +1031,8 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [,
     name: 'NFT Marketplace Intelligence Platform',
     tagline: 'AI-powered NFT analytics, valuation, and trading insights',,
   description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.';
-    category: 'NFT & Digital Assets'}
-    price: {}
+    category: 'NFT & Digital Assets'};
+    price: {};
       monthly: 149;
       yearly: 1490;
       currency: 'USD'
@@ -1021,8 +1073,8 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [,
     name: 'Blockchain Supply Chain Traceability Platform',
     tagline: 'End-to-end transparency with immutable supply chain tracking',,
   description: 'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real-time tracking, compliance monitoring, and sustainability verification.';
-    category: 'Supply Chain & Traceability'}
-    price: {}
+    category: 'Supply Chain & Traceability'};
+    price: {};
       monthly: 299;
       yearly: 2990;
       currency: 'USD'
@@ -1063,8 +1115,8 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [,
     name: 'Web3 Social Media Platform',
     tagline: 'Decentralized social networking with content ownership',,
   description: 'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.';
-    category: 'Web3 & Social Media'}
-    price: {}
+    category: 'Web3 & Social Media'};
+    price: {};
       monthly: 0;
       yearly: 0;
       currency: 'USD'
@@ -1096,6 +1148,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [,
     color: 'from-purple-500 to-indigo-600';
     popular: true;
     launchDate: '2024-01-01';
+<<<<<<< HEAD
     customers: 25000
     rating: 4.6
     reviews: 18000,
@@ -1108,6 +1161,19 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     enterpris,
   e: string}
   }
+=======
+    customers: 25000;
+    rating: 4.6;
+    reviews: 18000};
+];
+    rating: 4.6;
+    reviews: 18000};
+export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */};
+  e: string};
+    enterpris,
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   feature,
   s: string[],
   benefit,
@@ -1149,13 +1215,22 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
+<<<<<<< HEAD
   s: number}
 export const,
   blockchainWeb3Services2025: BlockchainWeb3Service[] = [,
   {/* TODO: Fix JSX expression */}
   y: 'Blockchain & Web3'}
+=======
+  s: number};
+;
+export const,
+  blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
+  {/* TODO: Fix JSX expression */};
+  y: 'Blockchain & Web3'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 99,
       yearl,
@@ -1221,11 +1296,17 @@ export const,
     ratin,
   g: 4.8,
     review,
+<<<<<<< HEAD
   s: 850}
   {/* TODO: Fix JSX expression */}
   y: 'DeFi & Yield Optimization'}
+=======
+  s: 850};
+  {/* TODO: Fix JSX expression */};
+  y: 'DeFi & Yield Optimization'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 199,
       yearl,
@@ -1291,11 +1372,17 @@ export const,
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 6200}
   {/* TODO: Fix JSX expression */}
   y: 'NFT & Digital Assets'}
+=======
+  s: 6200};
+  {/* TODO: Fix JSX expression */};
+  y: 'NFT & Digital Assets'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 149,
       yearl,
@@ -1361,11 +1448,17 @@ export const,
     ratin,
   g: 4.7,
     review,
+<<<<<<< HEAD
   s: 2100}
   {/* TODO: Fix JSX expression */}
   y: 'Supply Chain & Traceability'}
+=======
+  s: 2100};
+  {/* TODO: Fix JSX expression */};
+  y: 'Supply Chain & Traceability'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 299,
       yearl,
@@ -1431,11 +1524,17 @@ export const,
     ratin,
   g: 4.8,
     review,
+<<<<<<< HEAD
   s: 680}
   {/* TODO: Fix JSX expression */}
   y: 'Web3 & Social Media'}
+=======
+  s: 680};
+  {/* TODO: Fix JSX expression */};
+  y: 'Web3 & Social Media'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 0,
       yearl,
@@ -1501,15 +1600,15 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 18000}
+  s: 18000};
 ];
     ratin,
   g: 4.6,
     review,
-  s: 18000}
+  s: 18000};
 ];
 'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'], realImplementatio,
-  n: true, export interface BlockchainWeb3Service export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
+  n: true, export interface BlockchainWeb3Service export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */};
   s: number} setupTim,
   e: string, ' 'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'], realImplementatio,
   n: true, implementationDetail,
@@ -1753,6 +1852,7 @@ export const,
   g: 4 && 4.6, review,
   s: 18000,
   rating: 4.6, review,
+<<<<<<< HEAD
   s: 18000} export interface BlockchainWeb3Service { } ]; ; } ]; export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} } feature,
@@ -1778,6 +1878,33 @@ export const,
   g: number, review,
   s: number} export const,
   blockchainWeb3Services2025: BlockchainWeb3Service[] = [, {/* TODO: Fix JSX expression */}
+=======
+  s: 18000} export interface BlockchainWeb3Service {} ]; } ]; export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */};
+  e: string} enterpris,
+  e: string} }; feature,
+  s: string[]; benefit,
+  s: string[]; targetAudienc,
+  e: string[]; marketPositio,
+  n: string; competitor,
+  s: string[]; techStac,
+  k: string[]; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; ro,
+  i: string; useCase,
+  s: string[]; integration,
+  s: string[]; suppor,
+  t: string; complianc,
+  e: string[]; lin,
+  k: string; ico,
+  n: string; colo,
+  r: string; popula,
+  r: boolean; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number} ; export const,
+  blockchainWeb3Services2025: BlockchainWeb3Service[] = [; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 30}' setupTim,
   e: '1-2 days'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1796,6 +1923,7 @@ export const,
   t: '24/7 technical support, compliance consulting, custom development, and dedicated success manager.';' complianc,
   e: ['GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/decentralized-identity-management',' ico,
   n: '🆔',' colo,
   r: 'from-indigo-500 to-purple-600', popula,
@@ -1804,6 +1932,16 @@ export const,
   s: 1200, ratin,
   g: 4.8, review,
   s: 850} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/decentralized-identity-management';' ico,
+  n: '🆔';' colo,
+  r: 'from-indigo-500 to-purple-600'; popula,
+  r: true;' launchDat,
+  e: '2024-02-20'; customer,
+  s: 1200; ratin,
+  g: 4.8; review,
+  s: 850}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 14}' setupTim,
   e: '1-3 days'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1822,6 +1960,7 @@ export const,
   t: '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/ai-powered-defi-yield-optimizer',' ico,
   n: '🌾',' colo,
   r: 'from-green-500 to-emerald-600', popula,
@@ -1830,6 +1969,16 @@ export const,
   s: 8500, ratin,
   g: 4.9, review,
   s: 6200} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/ai-powered-defi-yield-optimizer';' ico,
+  n: '🌾';' colo,
+  r: 'from-green-500 to-emerald-600'; popula,
+  r: true;' launchDat,
+  e: '2024-01-15'; customer,
+  s: 8500; ratin,
+  g: 4.9; review,
+  s: 6200}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 7}' setupTim,
   e: 'Immediate'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1848,6 +1997,7 @@ export const,
   t: '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/nft-marketplace-intelligence-platform',' ico,
   n: '🎨',' colo,
   r: 'from-pink-500 to-rose-600', popula,
@@ -1856,6 +2006,16 @@ export const,
   s: 3200, ratin,
   g: 4.7, review,
   s: 2100} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/nft-marketplace-intelligence-platform';' ico,
+  n: '🎨';' colo,
+  r: 'from-pink-500 to-rose-600'; popula,
+  r: true;' launchDat,
+  e: '2024-03-01'; customer,
+  s: 3200; ratin,
+  g: 4.7; review,
+  s: 2100}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 30}' setupTim,
   e: '2-4 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1874,6 +2034,7 @@ export const,
   t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.';' complianc,
   e: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/blockchain-supply-chain-traceability',' ico,
   n: '🔗',' colo,
   r: 'from-blue-500 to-cyan-600', popula,
@@ -1882,6 +2043,16 @@ export const,
   s: 950, ratin,
   g: 4.8, review,
   s: 680} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/blockchain-supply-chain-traceability';' ico,
+  n: '🔗';' colo,
+  r: 'from-blue-500 to-cyan-600'; popula,
+  r: true;' launchDat,
+  e: '2024-02-10'; customer,
+  s: 950; ratin,
+  g: 4.8; review,
+  s: 680}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 0}' setupTim,
   e: 'Immediate'}' enterpris,
   e: 'Custom pricing' } feature,

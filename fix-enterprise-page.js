@@ -1,26 +1,23 @@
 #!/usr/bin/env node;
 import fs from 'fs';
-
 // // const fixedContent = `import Link from 'next/link';
-
 export const metadata = {
+};
   title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
   keywords:,
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
-
 export default function EnterprisePage() {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <header className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div;
-export const metadata = {/* TODO: Fix JSX expression */}
+export const metadata = {/* TODO: Fix JSX expression */};
 };
-
-export default function EnterprisePage() {/* TODO: Fix JSX expression */}
-}
+export default function EnterprisePage() {/* TODO: Fix JSX expression */};
+};
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}"
       <header className="relative overflow-hidden"></header>"
@@ -28,8 +25,8 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div></div>"
             className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-            style={/* TODO: Fix JSX expression */}
-  y: '2s' }}
+            style={/* TODO: Fix JSX expression */};
+  y: '2s' }};
           ></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -52,10 +49,9 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link;
+              <Link ;
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Get Enterprise Demo;
               </Link>
               <Link;
@@ -106,7 +102,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
         </div>,
       </header>,
 ,
-      {/* Stats Section */}
+      {/* Stats Section */};
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
@@ -114,7 +110,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
         </div>
       </header>
-
       {/* Stats Section */}"
       <section className="py-20 bg-black/20"></section>"
         <div className="container mx-auto px-4"></div>"
@@ -140,7 +135,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
         </div>,
       </section>,
 ,
-      {/* Solutions Section */}
+      {/* Solutions Section */};
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -152,7 +147,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}"
       <section className="py-20"></section>"
         <div className="container mx-auto px-4"></div>"
@@ -165,7 +159,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               and mission-critical applications.
             </p>
           </div>
-
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
@@ -193,7 +186,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• Predictive maintenance</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -217,7 +209,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• Advanced cryptography</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -245,7 +236,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
         </div>)
       </section>)
 ),
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20"></section>
         <div className="container mx-auto px-4 text-center"></div>
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12 border border-white/20"></div>
@@ -256,19 +247,17 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link;
+              <Link ;
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Schedule Enterprise Demo;
               </Link>
-              <Link;
+              <Link ;
                 href="/services"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20"></section>"
         <div className="container mx-auto px-4 text-center"></div>"
@@ -309,8 +298,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   );
 }`
 `;
-
 // Write the fixed content;
 fs.writeFileSync('app/enterprise/page.tsx', fixedContent);
-
 // "`

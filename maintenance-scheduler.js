@@ -23,6 +23,11 @@
   o: "inherit" })} catch (error) {/* TODO: Fix JSX expression */}"`
   d: ${task.name}`)error.message)} })} runWeeklyMaintenance() {this.tasks; .filter(task => task.frequency === "weekly")} .forEach(task => {/* TODO: Fix JSX expression */}")
   o: "inherit" })} catch (error) {/* TODO: Fix JSX expression */}"`
+<<<<<<< HEAD
   d: ${task.name}`)error.message)} })} } const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else {/* TODO: Fix JSX expression */}"
   e: node maintenance-scheduler.js [daily|weekly]")}
+=======
+  d: ${task.name}`)error.message)} })} } ; const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else {/* TODO: Fix JSX expression */}"
+  e: node maintenance-scheduler.js [daily|weekly]")};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "`

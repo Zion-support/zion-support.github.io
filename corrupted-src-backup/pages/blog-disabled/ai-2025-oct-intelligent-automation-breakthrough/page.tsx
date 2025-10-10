@@ -1,11 +1,11 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
-  return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+  return(<div , classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
-      <Helm, e, t>
-        <title>
+      <Helm , e, t>
+        <title></title>
           Intelligent, Automation, Breakthrough 20, 2, 5: From, Tickets, to Outcom, e, s;
         </title>
         <meta, nam, e='description'
@@ -16,10 +16,10 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         />),
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
-        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+        <h1 , className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Intelligent, Automation, Breakthrough 20, 2, 5;
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p , className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Go, beyond, scripts with, agents, that pl, a, n, execu, t, e, and, recover, safely.
           Learn, production, patterns for, approval, s;
         </p>
@@ -29,11 +29,11 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           </p>
         </div>
         <div, className='mt-8'></div>
-          <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
+          <Link , t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
             ← Back, to, Blog;
           </Li, n, k>
         </div>
       </div>
     </d, i, v > );
-export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }
+export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+ };

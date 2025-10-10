@@ -9,6 +9,7 @@ console.log('♿ Starting accessibility audit...');
 
 // Accessibility checklist;
 const accessibilityChecklist = {
+};
   semanticHTML: {,
     description: 'Use semantic HTML elements',
     checks: [,
@@ -72,15 +73,21 @@ const accessibilityChecklist = {
       'Text is not cut off on small screens',
       'Touch targets are at least 44 px'
     ]
+<<<<<<< HEAD
   }
 }
 
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {
   console.log('📄 Auditing HTML files...');
   
   const distDir = path.join(__dirname, '../dist');
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
+<<<<<<< HEAD
   
   htmlFiles.forEach(file => {)
     const filePath = path.join(distDir, file);
@@ -97,18 +104,38 @@ function auditHTMLFiles() {
       console.log('    ⚠️  Missing <nav>element</nav>');</nav>
     }
     
+=======
+  htmlFiles.forEach(file => {);
+const filePath = path.join(distDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    // console.log removed for production
+// Check for semantic HTML;
+    if (!content.includes('<main ')) {
+      // console.log removed for production
+</main>
+    };
+    if (!content.includes('<nav ')) {
+      // console.log removed for production
+</nav>
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
     imgTags.forEach(img => {
     )
       if (!img.includes('alt=')) {
+<<<<<<< HEAD
         console.log('    ⚠️  Image missing alt attribute')
   }
+=======
+        // console.log removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
-    
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
+<<<<<<< HEAD
     console.log('    ⚠️  No heading elements found')
   }
     
@@ -119,12 +146,22 @@ function auditHTMLFiles() {
   });
 }
 
+=======
+      // console.log removed for production
+};
+    // Check for skip links;
+    if (!content.includes('skip') && !content.includes('Skip')) {
+      // console.log removed for production
+};
+  })};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Check CSS files for accessibility issues;
 function auditCSSFiles() {
   console.log('🎨 Auditing CSS files...');
   
   const distDir = path.join(__dirname, '../dist');
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
+<<<<<<< HEAD
   
   cssFiles.forEach(file => {)
     const filePath = path.join(distDir, file);
@@ -154,6 +191,31 @@ function generateAccessibilityReport() {
   console.log('📊 Generating accessibility report...');
   
   const report = {
+=======
+  cssFiles.forEach(file => {);
+const filePath = path.join(distDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    // console.log removed for production
+// Check for focus styles;
+    if (!content.includes(':focus')) {
+      // console.log removed for production
+};
+    // Check for high contrast support;
+    if (!content.includes('prefers-contrast')) {
+      // console.log removed for production
+};
+    // Check for reduced motion support;
+    if (!content.includes('prefers-reduced-motion')) {
+      // console.log removed for production
+};
+  })};
+// Generate accessibility report;
+function generateAccessibilityReport() {
+  // console.log removed for production
+;
+const report = {
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist,
     recommendations: [,
@@ -176,16 +238,25 @@ function generateAccessibilityReport() {
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
     ]
+<<<<<<< HEAD
   }
   
+=======
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
     JSON.stringify(report, null, 2)
   );
+<<<<<<< HEAD
   
   console.log('  - Generated accessibility-report.json');
 }
 
+=======
+  // console.log removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Generate accessibility improvements;
 function generateAccessibilityImprovements() {
     console.log('🔧 Generating accessibility improvements...');
@@ -196,7 +267,6 @@ function generateAccessibilityImprovements() {
 <button aria-label="Close dialog">×</button>
 <input aria-describedby="email-help" type="email" /></input>
 <div id="email-help">Enter your email address</div>
-
 // 2. Implement focus management;
 const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
@@ -204,17 +274,21 @@ const trapFocus = (element) => {
   );
   const firstElement = focusableElements[0];
   const lastElement = focusableElements[focusableElements.length - 1];
-  
   element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
+<<<<<<< HEAD
           e.preventDefault()
   }
+=======
+          e.preventDefault()};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       } else {
     if (document.activeElement === lastElement) {
           firstElement.focus();
+<<<<<<< HEAD
           e.preventDefault()
   }
       }
@@ -222,21 +296,24 @@ const trapFocus = (element) => {
   });
 }
 
+=======
+          e.preventDefault()};
+      };
+    };
+  })};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 3. Add live regions for dynamic content;
 <div aria-live="polite" aria-atomic="true" className="sr-only">
-  {announcement}
+  {announcement};
 </div>
-
 // 4. Ensure proper heading hierarchy;
 <h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
-
 // 5. Add skip links;
 <a href="#main-content" className="skip-link">
   Skip to main content;
 </a>
-
 // 6. Use semantic HTML;
 <main>
   <nav aria-label="Main navigation">
@@ -251,7 +328,6 @@ const trapFocus = (element) => {
     </article>
   </section>
 </main>
-
 // 7. Form accessibility;
 <form>
   <fieldset>
@@ -264,13 +340,12 @@ const trapFocus = (element) => {
       aria-describedby="email-error"
     /></input>
     <div id="email-error" role="alert" aria-live="polite"></di>
-      {emailError}
+      {emailError};
     </div>
   </fieldset>
 </form>
-
 // 8. Image accessibility;
-<img;
+<img ;
   src="chart.png" 
   alt="Sales chart showing 25% increase in Q3 2024"
   role="img"
@@ -291,10 +366,15 @@ const trapFocus = (element) => {
     path.join(__dirname, '../accessibility-improvements.js'), 
     improvements;
   );
+<<<<<<< HEAD
   
   console.log('  - Generated accessibility-improvements.js');
 }
 
+=======
+  // console.log removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main audit function;
 function audit() {
     try {
@@ -302,6 +382,7 @@ function audit() {
     auditCSSFiles();
     generateAccessibilityReport();
     generateAccessibilityImprovements();
+<<<<<<< HEAD
     
     console.log('✅ Accessibility audit completed successfully!');
     console.log('📋 Check accessibility-report.json for detailed results');
@@ -312,5 +393,14 @@ function audit() {
   }
 }
 
+=======
+    // console.log removed for production
+// console.log removed for production
+// console.log removed for production
+} catch (error) {
+    // console.error removed for production
+process.exit(1)};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run audit;
 audit();

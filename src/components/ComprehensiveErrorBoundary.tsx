@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   children: ReactNode
   fallback?: ReactNode,
   onError?: (erro,
@@ -10,6 +11,20 @@
 interface State {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+import React from 'react';
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (erro,
+  r: Error, errorInf)
+  o: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
+  maxRetries?: number;
+  showRetryButton?: boolean};
+interface State {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   hasErro,
   r: boolean;
   error?: Error
@@ -18,6 +33,7 @@ interface State {/* TODO: Fix JSX expression */}
     retryCoun,
   t: number,,
     isRetryin,
+<<<<<<< HEAD
   g: boolean,
 }
 class ComprehensiveErrorBoundary extends Component;
@@ -35,6 +51,21 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     this.state = {// TODO: Add content
   }
 }
+=======
+  g: boolean};
+class ComprehensiveErrorBoundary extends Component;
+          <Props, State> {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+  private maxRetries: number;
+  constructor(props: Props) {// TODO: Add content}
+};
+class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
+constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = {// TODO: Add content}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   hasErro,
   r: false,
       retryCoun,
@@ -43,17 +74,30 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   g: false,
       errorI,
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+<<<<<<< HEAD
     }
     this.maxRetries = props.maxRetries || 3;
   }
+=======
+    };
+    this.maxRetries = props.maxRetries || 3};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   static getDerivedStateFromError(erro)
   r: Error): Partial,
           <State> {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+    return {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   hasErro,
   r: true,
 //       error,
@@ -62,6 +106,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       retryCoun,
   t: 0,
       isRetryin,
+<<<<<<< HEAD
   g: false,
     }
   }
@@ -73,10 +118,22 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     this.setState({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  g: false}};
+  componentDidCatch(erro,
+  r: Error, errorInf)
+  o: ErrorInfo) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+    this.setState({/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //       error,
 //       errorInfo;)
     });
     if (this.props.onError) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
       this.props.onError(error, errorInfo);
@@ -87,6 +144,16 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       this.reportError(error, errorInfo);
     }
   }
+=======
+  O: Add content};
+};
+      this.props.onError(error, errorInfo)};
+    if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      this.reportError(error, errorInfo)};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private reportError = (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {// Enhanced error reporting}
@@ -109,17 +176,26 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
     // Send to error reporting service;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
       (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+      (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   descriptio,
   n: error.message,
         fata,
   l: false,
         custom_ma,
   p: {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
   error_i,
@@ -142,13 +218,40 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           < this.maxRetries) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+  error_i,
+  d: this.state.errorId,
+          retry_coun,
+  t: this.state.retryCount})
+      })};
+    // Log to console in development;
+    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      };
+  };
+  private handleRetry = async () => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+    if (this.state.retryCount;)
+          < this.maxRetries) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       this.setState({/* TODO: Fix JSX expression */})
   g: true });
       // Simulate retry delay;
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   hasErro,
   r: false,
         erro,
@@ -158,6 +261,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         retryCoun,
   t: prevState.retryCount + 1,
         isRetryin,
+<<<<<<< HEAD
   g: false,)
       }));
     }
@@ -181,6 +285,28 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  g: false;)
+      }))};
+  };
+  private handleReload = () => {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+    window.location.reload()};
+  render() {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+    if (this.state.hasError) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+      if (this.props.fallback) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+        return this.props.fallback};
+      if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         return (<div>Coming Soon</div>)
   )
           <ModernLoadingSpinner></ModernLoadingSpinner>
@@ -188,8 +314,12 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             text="Retrying..."
             fullScreen={true}
 //           />
+<<<<<<< HEAD
         );
       }
+=======
+        )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       return (<div>Coming Soon</div>)
   )
         "
@@ -224,11 +354,15 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           <button></button>
                   onClick={this.handleRetry}"
                   className="cyber-button"`
+<<<<<<< HEAD
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
+=======
+                  aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //                 >
                    Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
-              )}
+              )};
               <button></button>
                 onClick={this.handleReload}"
                 className="cyber-button""
@@ -254,9 +388,10 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                   {this.state.error.stack}
                 </pre>
               </details>
-            )}
+            )};
           </div>
         </div>
+<<<<<<< HEAD
       );
     }
     return this.props.children;
@@ -264,3 +399,9 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
 export default ComprehensiveErrorBoundary;"`
   </State>
+=======
+      )};
+    return this.props.children};
+};
+export default ComprehensiveErrorBoundary;"`
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

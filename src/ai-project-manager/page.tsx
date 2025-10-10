@@ -6,12 +6,28 @@ import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 const AIProjectManagerPage: React.FC = () => {
   const _features = [
 const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
+=======
+;
+const AIProjectManagerPage: React.FC = () => {
+};
+const _features = [
+;
+];
+const AiProjectManagerPage: React.FC = () => {
+};
+const features = [
+[
+        {
+      ico,
+    n: BarChart,
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
@@ -28,9 +44,15 @@ const AiProjectManagerPage: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
-    }
+    };
   ];
+<<<<<<< HEAD
   const pricingPlans = [
+=======
+;
+const pricingPlans = [
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Starter',
       price: '$99',
       period: '/month',
@@ -62,6 +84,7 @@ const AiProjectManagerPage: React.FC = () => {
         '24/7 support',
         'Custom analytics',
         'White-label options',
+<<<<<<< HEAD
         'API access'
   const stats = [
     { icon: Users, value: '500+', label: 'Active Teams' },
@@ -76,6 +99,19 @@ const AiProjectManagerPage: React.FC = () => {
       </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
+=======
+        'API access';
+const stats = [
+[
+        { icon: Users, value: '500+', label: 'Active Teams' },
+        { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
+        { icon: Clock, value: '70%', label: 'Time Saved' },
+        { icon: Star, value: '4.9
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <title>AI Project Manager | Zion Tech Group<
+        <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." 
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -87,10 +123,16 @@ const AiProjectManagerPage: React.FC = () => {
   </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
+<<<<<<< HEAD
   </
       <Footer />
   ),
 }
+=======
+          <
+      <Footer />
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';

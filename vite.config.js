@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-
 export default defineConfig({
   plugins: [
     react({
@@ -39,17 +38,25 @@ export default defineConfig({
         manualChunks: (id) => {
           // React and React DOM
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+<<<<<<< HEAD
             return 'react';
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
             return 'router';
           }
+=======
+            return 'react'};
+          // Router library
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
             id.includes('node_modules/lucide-react')
           ) {
+<<<<<<< HEAD
             return 'ui';
           }
           // Utilities and web vitals
@@ -60,6 +67,15 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return 'vendor';
           }
+=======
+            return 'ui'};
+          // Utilities and web vitals
+          if (id.includes('node_modules/web-vitals')) {
+            return 'vitals'};
+          // Split other node_modules into separate chunks
+          if (id.includes('node_modules')) {
+            return 'vendor'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         },
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',

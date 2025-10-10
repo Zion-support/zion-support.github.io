@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface AdvancedAIAutomationService {id: string;
   name: string;
   tagline: string;
@@ -715,3 +716,11 @@ export interface AdvancedAIAutomationService,
   s: 4, averageRatin,
   g: 4.9, activeUser,
   s: 3000 }'
+=======
+  return advancedAIAutomationServices.filter(service =>);
+const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
+    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
+export const advancedAIAutomationServices2026 = [
+{name: 'Advanced AI Automation Platform 2026'
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

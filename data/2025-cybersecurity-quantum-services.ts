@@ -1,18 +1,35 @@
+<<<<<<< HEAD
 
 export interface CybersecurityQuantumService;
 export interface CybersecurityQuantumService {
+=======
+import React from 'react';
+export interface CybersecurityQuantumService;
+export interface CybersecurityQuantumService {
+;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
   price: unknown;
+<<<<<<< HEAD
     monthly: number
     yearly: number
     currency: string,
     trialDays: number}
     setupTime: string,
     id: 'quantum - resistant - encryption - platform'
+=======
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number};
+    setupTime: string;
+    id: 'quantum - resistant - encryption - platform',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'Quantum - Resistant Encryption Platform',
     tagline: 'Future - proof security with post - quantum cryptography',
     description: unknown,
@@ -24,9 +41,9 @@ export interface CybersecurityQuantumService {
       currency: 'USD',
       trial_days: 30,
       setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing'}
-export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
-  s: number}
+      enterprise: 'Custom pricing'};
+export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  s: number};
     setupTim,
   e: string,
     i,
@@ -53,7 +70,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       setup_tim,
   e: '1 - 2 weeks',
       enterpris,
-  e: 'Custom pricing'}
+  e: 'Custom pricing'};
     },
     feature,
   s: [,
@@ -836,6 +853,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
   roi: string, useCases: string[],
+<<<<<<< HEAD
   integrations: string[], support: string,
   compliance: string[], link: string,
   icon: string, color: string,
@@ -843,6 +861,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   customers: number, rating: number
   reviews: number,
 }
+=======
+  integrations: string[], support: string;
+  compliance: string[], link: string;
+  icon: string, color: string;
+  popular: boolean, launchDate: string;
+  customers: number, rating: number;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -930,7 +956,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: number, ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integration,
@@ -956,13 +982,22 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 1900}
-export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
-  }
+  s: 1900};
+export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  };
 ];
+<<<<<<< HEAD
 }
 ];
 export interface CybersecurityQuantumService {
+=======
+;
+};
+];
+export interface CybersecurityQuantumService {
+;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -970,12 +1005,21 @@ export interface CybersecurityQuantumService {
   category: string;
   price: {
     monthly: number;
+<<<<<<< HEAD
     yearly: number
     currency: string
     trialDays: number,
     setupTime: string}
     enterprise: string}
   }
+=======
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string};
+    enterprise: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -994,18 +1038,25 @@ export interface CybersecurityQuantumService {
   color: string;
   popular: boolean;
   launchDate: string;
+<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
 }
+=======
+  customers: number;
+  rating: number;
+  reviews: number};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
   {
     id: 'quantum-resistant-encryption-platform'
     name: 'Quantum-Resistant Encryption Platform'
     tagline: 'Future-proof security with post-quantum cryptography',
     description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.';
-    category: 'Quantum Security & Cryptography'}
-    price: {}
+    category: 'Quantum Security & Cryptography'};
+    price: {};
       monthly: 499;
       yearly: 4990;
       currency: 'USD'
@@ -1046,8 +1097,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'AI-Powered Threat Hunting Platform'
     tagline: 'Proactive threat detection with autonomous security intelligence',
     description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.';
-    category: 'AI Cybersecurity & Threat Intelligence'}
-    price: {}
+    category: 'AI Cybersecurity & Threat Intelligence'};
+    price: {};
       monthly: 399;
       yearly: 3990;
       currency: 'USD'
@@ -1088,8 +1139,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'Zero-Trust Network Access Platform'
     tagline: 'Secure access with continuous verification and least privilege',
     description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.';
-    category: 'Zero-Trust Security & Access Control'}
-    price: {}
+    category: 'Zero-Trust Security & Access Control'};
+    price: {};
       monthly: 299;
       yearly: 2990;
       currency: 'USD'
@@ -1130,8 +1181,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'Quantum Key Distribution Network'
     tagline: 'Unhackable communication with quantum entanglement',
     description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.';
-    category: 'Quantum Communications & Security'}
-    price: {}
+    category: 'Quantum Communications & Security'};
+    price: {};
       monthly: 999;
       yearly: 9990;
       currency: 'USD'
@@ -1172,8 +1223,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'AI-Powered Vulnerability Assessment Platform'
     tagline: 'Intelligent security scanning with AI-driven risk analysis',
     description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.';
-    category: 'Vulnerability Management & Security Testing'}
-    price: {}
+    category: 'Vulnerability Management & Security Testing'};
+    price: {};
       monthly: 199;
       yearly: 1990;
       currency: 'USD'
@@ -1205,6 +1256,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     color: 'from-green-500 to-emerald-600';
     popular: true;
     launchDate: '2024-02-15';
+<<<<<<< HEAD
     customers: 2500
     rating: 4.8
     reviews: 1900,
@@ -1217,6 +1269,19 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     enterpris,
   e: string}
   }
+=======
+    customers: 2500;
+    rating: 4.8;
+    reviews: 1900};
+];
+    rating: 4.8;
+    reviews: 1900;
+export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  e: string};
+    enterpris,
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   feature,
   s: string[],
   benefit,
@@ -1258,13 +1323,22 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
+<<<<<<< HEAD
   s: number}
 export const,
   cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [,
   {/* TODO: Fix JSX expression */}
   y: 'Quantum Security & Cryptography'}
+=======
+  s: number};
+;
+export const,
+  cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
+  {/* TODO: Fix JSX expression */};
+  y: 'Quantum Security & Cryptography'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 499,
       yearl,
@@ -1330,11 +1404,17 @@ export const,
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 480}
   {/* TODO: Fix JSX expression */}
   y: 'AI Cybersecurity & Threat Intelligence'}
+=======
+  s: 480};
+  {/* TODO: Fix JSX expression */};
+  y: 'AI Cybersecurity & Threat Intelligence'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 399,
       yearl,
@@ -1400,11 +1480,17 @@ export const,
     ratin,
   g: 4.8,
     review,
+<<<<<<< HEAD
   s: 950}
   {/* TODO: Fix JSX expression */}
   y: 'Zero-Trust Security & Access Control'}
+=======
+  s: 950};
+  {/* TODO: Fix JSX expression */};
+  y: 'Zero-Trust Security & Access Control'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 299,
       yearl,
@@ -1470,11 +1556,17 @@ export const,
     ratin,
   g: 4.7,
     review,
+<<<<<<< HEAD
   s: 1400}
   {/* TODO: Fix JSX expression */}
   y: 'Quantum Communications & Security'}
+=======
+  s: 1400};
+  {/* TODO: Fix JSX expression */};
+  y: 'Quantum Communications & Security'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 999,
       yearl,
@@ -1541,11 +1633,17 @@ export const,
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 95}
   {/* TODO: Fix JSX expression */}
   y: 'Vulnerability Management & Security Testing'}
+=======
+  s: 95};
+  {/* TODO: Fix JSX expression */};
+  y: 'Vulnerability Management & Security Testing'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 199,
       yearl,
@@ -1611,14 +1709,14 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1900}
+  s: 1900};
 ];
     ratin,
   g: 4.8,
     review,
-  s: 1900}
+  s: 1900};
 ];
-export interface CybersecurityQuantumService export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
+export interface CybersecurityQuantumService export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
   s: number} setupTim,
   e: string, i,
   d: 'quantum - resistant - encryption - platform',' nam,
@@ -1889,6 +1987,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   g: 4 && 4.8, review,
   s: 1900,
   rating: 4.8, review,
+<<<<<<< HEAD
   s: 1900} export interface CybersecurityQuantumService { } ]; ; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} } feature,
@@ -1914,6 +2013,33 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   g: number, review,
   s: number} export const,
   cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [, {/* TODO: Fix JSX expression */}
+=======
+  s: 1900} export interface CybersecurityQuantumService {} ]; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  e: string} enterpris,
+  e: string} }; feature,
+  s: string[]; benefit,
+  s: string[]; targetAudienc,
+  e: string[]; marketPositio,
+  n: string; competitor,
+  s: string[]; techStac,
+  k: string[]; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; ro,
+  i: string; useCase,
+  s: string[]; integration,
+  s: string[]; suppor,
+  t: string; complianc,
+  e: string[]; lin,
+  k: string; ico,
+  n: string; colo,
+  r: string; popula,
+  r: boolean; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number} ; export const,
+  cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 30}' setupTim,
   e: '1-2 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1932,6 +2058,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   t: '24/7 technical support, security consulting, custom development, and dedicated security manager.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/quantum-resistant-encryption-platform',' ico,
   n: '🔐',' colo,
   r: 'from-red-500 to-orange-600', popula,
@@ -1940,6 +2067,16 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   s: 650, ratin,
   g: 4.9, review,
   s: 480} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/quantum-resistant-encryption-platform';' ico,
+  n: '🔐';' colo,
+  r: 'from-red-500 to-orange-600'; popula,
+  r: true;' launchDat,
+  e: '2024-01-15'; customer,
+  s: 650; ratin,
+  g: 4.9; review,
+  s: 480}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 21}' setupTim,
   e: '1-2 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1958,6 +2095,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   t: '24/7 security support, threat hunting training, custom development, and dedicated security manager.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/ai-powered-threat-hunting-platform',' ico,
   n: '🕵️',' colo,
   r: 'from-purple-500 to-indigo-600', popula,
@@ -1966,6 +2104,16 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   s: 1200, ratin,
   g: 4.8, review,
   s: 950} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/ai-powered-threat-hunting-platform';' ico,
+  n: '🕵️';' colo,
+  r: 'from-purple-500 to-indigo-600'; popula,
+  r: true;' launchDat,
+  e: '2024-02-01'; customer,
+  s: 1200; ratin,
+  g: 4.8; review,
+  s: 950}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 21}' setupTim,
   e: '1-2 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1984,6 +2132,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/zero-trust-network-access-platform',' ico,
   n: '🛡️',' colo,
   r: 'from-blue-500 to-cyan-600', popula,
@@ -1992,6 +2141,16 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   s: 1800, ratin,
   g: 4.7, review,
   s: 1400} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/zero-trust-network-access-platform';' ico,
+  n: '🛡️';' colo,
+  r: 'from-blue-500 to-cyan-600'; popula,
+  r: true;' launchDat,
+  e: '2024-01-20'; customer,
+  s: 1800; ratin,
+  g: 4.7; review,
+  s: 1400}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 30}' setupTim,
   e: '2-4 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -2011,6 +2170,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   t: 'Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.';' complianc,
   e: ['Highest security standards, Government security requirements, Industry-specific standards'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/quantum-key-distribution-network',' ico,
   n: '🔮',' colo,
   r: 'from-purple-500 to-pink-600', popula,
@@ -2019,6 +2179,16 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   s: 120, ratin,
   g: 4.9, review,
   s: 95} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/quantum-key-distribution-network';' ico,
+  n: '🔮';' colo,
+  r: 'from-purple-500 to-pink-600'; popula,
+  r: true;' launchDat,
+  e: '2024-03-01'; customer,
+  s: 120; ratin,
+  g: 4.9; review,
+  s: 95}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 14}' setupTim,
   e: '1-3 days'}' enterpris,
   e: 'Custom pricing' } feature,

@@ -1,4 +1,3 @@
-
   id: string;
   name: string;
   tagline: string;
@@ -31,10 +30,16 @@
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
+<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
 }
+=======
+  customers: number;
+  rating: number;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   //  AI Consciousness & Emotional Intelligence Services,
     id: 'ai-consciousness-evolution-platform'
@@ -114,7 +119,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   revolutionary2025Services: Revolutionary2025Service[] = [,
   //  AI Consciousness & Emotional Intelligence Services,
@@ -316,6 +321,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.'
@@ -333,6 +339,24 @@ export const,
     customers: 25
     rating: 5.0
     reviews: 15,
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.',
+    launchDate: '2025-01-15',
+    customers: 25;
+    rating: 5 && 5.0;
+    reviews: 15};
+  //  DNA Computing & Biotech Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional AI consciousness platform with genuine emotional intelligence, self - awareness, and consciousness development capabilities.',
+    launch_date: '2025 - 01 - 15',
+    customers: 25;
+    rating: 5.0;
+    reviews: 15;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     popula,
   r: true,
     ico,
@@ -393,13 +417,13 @@ export const,
     ratin,
   g: 5 && 5.0,
     review,
-  s: 15}
+  s: 15};
   //  DNA Computing & Biotech Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -411,8 +435,14 @@ export const,
     ratin,
   g: 5.0,
     review,
+<<<<<<< HEAD
   s: 15}
 //  DNA Computing & Biotech Services;
+=======
+  s: 15};
+;
+  //  DNA Computing & Biotech Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'dna - computing - platform'
     nam,
@@ -458,16 +488,25 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true;
+<<<<<<< HEAD
     implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.'
     launchDate: '2025-01-20'
     customers: 15
     rating: 4 && 4.9
     reviews: 8,
   }
+=======
+    implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.',
+    launchDate: '2025-01-20',
+    customers: 15;
+    rating: 4 && 4.9;
+    reviews: 8};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //  Space Technology & Satellite Services;
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
+<<<<<<< HEAD
     implementation_details: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.'
     launch_date: '2025 - 01 - 20'
     customers: 15
@@ -476,6 +515,16 @@ export const,
   }
 //  Space Technology & Satellite Services;
     id: 'space - tech - orchestrator'
+=======
+    implementation_details: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.',
+    launch_date: '2025 - 01 - 20',
+    customers: 15;
+    rating: 4.9;
+    reviews: 8};
+;
+  //  Space Technology & Satellite Services;
+    id: 'space - tech - orchestrator',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'Space Technology Orchestrator',
     link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator',
     marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
@@ -513,6 +562,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.'
@@ -533,6 +583,27 @@ export const,
   }
 //  Quantum Internet & Communication Services;
     id: 'quantum - internet - platform'
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.',
+    launchDate: '2025-01-25',
+    customers: 8;
+    rating: 5 && 5.0;
+    reviews: 5};
+  //  Quantum Internet & Communication Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.',
+    launch_date: '2025 - 01 - 25',
+    customers: 8;
+    rating: 5.0;
+    reviews: 5};
+;
+  //  Quantum Internet & Communication Services;
+    id: 'quantum - internet - platform',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'Quantum Internet & Communication Platform',
     tagline: 'Unhackable Quantum Internet with Instant Global Communication',
     price: '$599',
@@ -568,6 +639,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.'
@@ -587,6 +659,26 @@ export const,
     reviews: 22,
   }
 //  Advanced Healthcare AI Services;
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.',
+    launchDate: '2025-02-01',
+    customers: 35;
+    rating: 4 && 4.9;
+    reviews: 22};
+  //  Advanced Healthcare AI Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.',
+    launch_date: '2025 - 02 - 01',
+    customers: 35;
+    rating: 4.9;
+    reviews: 22};
+;
+  //  Advanced Healthcare AI Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'healthcare - ai - revolution',
     name: 'Healthcare AI Revolution Platform',
     tagline: 'AI - Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization',
@@ -623,6 +715,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.'
@@ -643,6 +736,27 @@ export const,
   }
 //  Financial Technology Revolution Services;
     id: 'fintech - revolution - platform'
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.',
+    launchDate: '2025-02-05',
+    customers: 120;
+    rating: 4 && 4.9;
+    reviews: 89};
+  //  Financial Technology Revolution Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.',
+    launch_date: '2025 - 02 - 05',
+    customers: 120;
+    rating: 4.9;
+    reviews: 89};
+;
+  //  Financial Technology Revolution Services;
+    id: 'fintech - revolution - platform',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'FinTech Revolution Platform',
     tagline: 'Next - Generation Financial Technology with AI - Powered Trading & Risk Management',
     price: '$699',
@@ -678,6 +792,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.'
@@ -697,6 +812,26 @@ export const,
     reviews: 67,
   }
 //  Industrial IoT & Smart Manufacturing Services;
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.',
+    launchDate: '2025-02-10',
+    customers: 85;
+    rating: 4 && 4.8;
+    reviews: 67};
+  //  Industrial IoT & Smart Manufacturing Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.',
+    launch_date: '2025 - 02 - 10',
+    customers: 85;
+    rating: 4.8;
+    reviews: 67};
+;
+  //  Industrial IoT & Smart Manufacturing Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'industrial - iot - revolution',
     name: 'Industrial IoT Revolution Platform',
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance',
@@ -740,6 +875,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.'
@@ -759,6 +895,26 @@ export const,
     reviews: 156,
   }
 //  Education Technology Revolution Services;
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.',
+    launchDate: '2025-02-15',
+    customers: 200;
+    rating: 4 && 4.8;
+    reviews: 156};
+  //  Education Technology Revolution Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.',
+    launch_date: '2025 - 02 - 15',
+    customers: 200;
+    rating: 4.8;
+    reviews: 156};
+;
+  //  Education Technology Revolution Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'edtech - revolution - platform',
     name: 'EdTech Revolution Platform',
     tagline: 'AI - Powered Personalized Learning with 10x Faster Knowledge Acquisition',
@@ -795,6 +951,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.'
@@ -814,6 +971,26 @@ export const,
     reviews: 234,
   }
 //  Sustainability & Green Technology Services;
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.',
+    launchDate: '2025-02-20',
+    customers: 300;
+    rating: 4 && 4.9;
+    reviews: 234};
+  //  Sustainability & Green Technology Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional edtech platform with AI - powered learning, adaptive curriculum, and personalized education capabilities.',
+    launch_date: '2025 - 02 - 20',
+    customers: 300;
+    rating: 4.9;
+    reviews: 234};
+;
+  //  Sustainability & Green Technology Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'sustainability - tech - platform',
     name: 'Sustainability Technology Platform',
     tagline: 'AI - Powered Environmental Solutions for Carbon Neutrality & Green Energy',
@@ -850,6 +1027,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.'
@@ -869,6 +1047,26 @@ export const,
     reviews: 58,
   }
 //  Logistics & Supply Chain Revolution Services;
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.',
+    launchDate: '2025-02-25',
+    customers: 75;
+    rating: 4 && 4.9;
+    reviews: 58};
+  //  Logistics & Supply Chain Revolution Services;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.',
+    launch_date: '2025 - 02 - 25',
+    customers: 75;
+    rating: 4.9;
+    reviews: 58};
+;
+  //  Logistics & Supply Chain Revolution Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'logistics - revolution - platform',
     name: 'Logistics Revolution Platform',
     tagline: 'AI - Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste',
@@ -912,6 +1110,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.'
@@ -920,11 +1119,21 @@ export const,
     rating: 4 && 4.8
     reviews: 112,
   }
+=======
+      website: 'https://ziontechgroup && ziontechgroup.com'};
+    realImplementation: true;
+    implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
+    launchDate: '2025-03-01',
+    customers: 150;
+    rating: 4 && 4.8;
+    reviews: 112};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 export default revolutionary2025 Services;
     growthRate: '1000%+ annual growth expected'
     contactInfo: unknown,
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.'
@@ -932,6 +1141,15 @@ export default revolutionary2025 Services;
     customers: 150
     rating: 4.8
     reviews: 112,
+=======
+      website: 'https://ziontechgroup.com'};
+    real_implementation: true;
+    implementation_details: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
+    launch_date: '2025 - 03 - 01',
+    customers: 150;
+    rating: 4.8;
+    reviews: 112;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     popula,
   r: true,
     ico,
@@ -1003,13 +1221,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.9,
     review,
-  s: 8}
+  s: 8};
   //  Space Technology & Satellite Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1021,8 +1239,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 8}
 //  Space Technology & Satellite Services;
+=======
+  s: 8};
+;
+  //  Space Technology & Satellite Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'space - tech - orchestrator'
     nam,
@@ -1114,13 +1338,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 5 && 5.0,
     review,
-  s: 5}
+  s: 5};
   //  Quantum Internet & Communication Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1132,8 +1356,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 5.0,
     review,
+<<<<<<< HEAD
   s: 5}
 //  Quantum Internet & Communication Services;
+=======
+  s: 5};
+;
+  //  Quantum Internet & Communication Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'quantum - internet - platform'
     nam,
@@ -1221,13 +1451,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.9,
     review,
-  s: 22}
+  s: 22};
   //  Advanced Healthcare AI Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1239,8 +1469,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 22}
 //  Advanced Healthcare AI Services;
+=======
+  s: 22};
+;
+  //  Advanced Healthcare AI Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'healthcare - ai - revolution'
     nam,
@@ -1328,13 +1564,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.9,
     review,
-  s: 89}
+  s: 89};
   //  Financial Technology Revolution Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1346,8 +1582,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 89}
 //  Financial Technology Revolution Services;
+=======
+  s: 89};
+;
+  //  Financial Technology Revolution Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'fintech - revolution - platform'
     nam,
@@ -1435,13 +1677,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.8,
     review,
-  s: 67}
+  s: 67};
   //  Industrial IoT & Smart Manufacturing Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1453,8 +1695,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.8,
     review,
+<<<<<<< HEAD
   s: 67}
 //  Industrial IoT & Smart Manufacturing Services;
+=======
+  s: 67};
+;
+  //  Industrial IoT & Smart Manufacturing Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'industrial - iot - revolution'
     nam,
@@ -1554,13 +1802,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.8,
     review,
-  s: 156}
+  s: 156};
   //  Education Technology Revolution Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1572,8 +1820,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.8,
     review,
+<<<<<<< HEAD
   s: 156}
 //  Education Technology Revolution Services;
+=======
+  s: 156};
+;
+  //  Education Technology Revolution Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'edtech - revolution - platform'
     nam,
@@ -1661,13 +1915,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.9,
     review,
-  s: 234}
+  s: 234};
   //  Sustainability & Green Technology Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1679,8 +1933,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 234}
 //  Sustainability & Green Technology Services;
+=======
+  s: 234};
+;
+  //  Sustainability & Green Technology Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'sustainability - tech - platform'
     nam,
@@ -1768,13 +2028,13 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.9,
     review,
-  s: 58}
+  s: 58};
   //  Logistics & Supply Chain Revolution Services,
   address: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1786,8 +2046,14 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 58}
 //  Logistics & Supply Chain Revolution Services;
+=======
+  s: 58};
+;
+  //  Logistics & Supply Chain Revolution Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'logistics - revolution - platform'
     nam,
@@ -1887,7 +2153,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4 && 4.8,
     review,
-  s: 112}
+  s: 112};
 ];
 export default revolutionary2025Services;
     growthRat,
@@ -1899,7 +2165,7 @@ export default revolutionary2025Services;
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1911,7 +2177,7 @@ export default revolutionary2025Services;
     ratin,
   g: 4.8,
     review,
-  s: 112}
+  s: 112};
 ];
 export default revolutionary2025Services;
     growth_rate: '1000%+ annual growth expected'
@@ -3232,6 +3498,7 @@ export default revolutionary2025Services;
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
+<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string
   growthRate: string
@@ -3245,6 +3512,19 @@ export default revolutionary2025Services;
   rating: number
   reviews: number,
 }
+=======
+  useCases: string[], roi: string;
+  competitors: string[], marketSize: string;
+  growthRate: string;
+  contactInfo: unknown;
+    mobile: string, email: string;
+    address: string;
+    website: string},
+    realImplementation: boolean, implementationDetails: string;
+  launchDate: string, customers: number;
+  rating: number;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const revolutionary2025Services: Revolutionary2025Service[] = [,
   //  AI Consciousness & Emotional Intelligence Services;
     id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform',
@@ -3603,7 +3883,7 @@ export default revolutionary2025Services;
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   revolutionary2025Services: Revolutionary2025Service[] = [,
   //  AI Consciousness & Emotional Intelligence Services,
@@ -4254,14 +4534,19 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 112}
+  s: 112};
 ];
 export default revolutionary2025Services;
-export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
-  s: string}
+export interface Revolutionary2025Service {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
+<<<<<<< HEAD
   e: string}
   }
+=======
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -4278,6 +4563,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
+<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string
   growthRate: string
@@ -4293,6 +4579,21 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
 }
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   //  AI Consciousness & Emotional Intelligence Services,
+=======
+  useCases: string[], roi: string;
+  competitors: string[], marketSize: string;
+  growthRate: string;
+  contactInfo: unknown;
+    mobile: string, email: string;
+    address: string;
+    website: string},
+    realImplementation: boolean, implementationDetails: string;
+  launchDate: string, customers: number;
+  rating: number;
+  reviews: number};
+export const revolutionary2025Services: Revolutionary2025Service[] = [;
+  //  AI Consciousness & Emotional Intelligence Services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const revolutionary2025Services: Revolutionary2025Service[] = [,
   //  AI Consciousness & Emotional Intelligence Services;
     id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform',
@@ -4322,10 +4623,16 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     reviews: 15,
   }
   //  DNA Computing & Biotech Services;
+<<<<<<< HEAD
   {reviews: 22}
   }
   //  Advanced Healthcare AI Services;
   }
+=======
+  {reviews: 22};
+  };
+  //  Advanced Healthcare AI Services};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //  Financial Technology Revolution Services;
     id: 'fintech-revolution-platform', name: 'FinTech Revolution Platform',
     tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management', price: '$699',
@@ -4454,7 +4761,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   revolutionary2025Services: Revolutionary2025Service[] = [
   //  AI Consciousness & Emotional Intelligence Services,
@@ -4526,11 +4833,18 @@ export const,
     review,
   s: 15}
   //  DNA Computing & Biotech Services;
+<<<<<<< HEAD
   {/* TODO: Fix JSX expression */}
   s: 22}
   }
   //  Advanced Healthcare AI Services;
   }
+=======
+  {/* TODO: Fix JSX expression */};
+  s: 22};
+  };
+  //  Advanced Healthcare AI Services};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //  Financial Technology Revolution Services,
   id: 'fintech-revolution-platform', nam,
   e: 'FinTech Revolution Platform',
@@ -4666,7 +4980,7 @@ export const,
   //  Sustainability & Green Technology Services;
   }
   //  Logistics & Supply Chain Revolution Services,
-  reviews: 112}
+  reviews: 112};
 export default revolutionary2025 Services;
 export default revolutionary2025 Services;
 i,
@@ -6067,7 +6381,7 @@ i,
   e: '2025-03-01', customer,
   s: 150, ratin,
   g: 4.8, review,
-  s: 112 } ]; export default revolutionary2025Services; export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
+  s: 112 } ]; export default revolutionary2025Services; export interface Revolutionary2025Service {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -6151,8 +6465,13 @@ i,
   e: '2025-01-15', customer,
   s: 25, ratin,
   g: 5.0, review,
+<<<<<<< HEAD
   s: 15 } // 🧬 DNA Computing & Biotech Services {/* TODO: Fix JSX expression */}
   s: 22 } // 🏥 Advanced Healthcare AI Services } // 🏦 Financial Technology Revolution Services ' i,
+=======
+  s: 15 }; // 🧬 DNA Computing & Biotech Services {/* TODO: Fix JSX expression */};
+  s: 22 }; // 🏥 Advanced Healthcare AI Services }; // 🏦 Financial Technology Revolution Services ' i,
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: 'fintech-revolution-platform', nam,
   e: 'FinTech Revolution Platform',' taglin,
   e: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management', pric,

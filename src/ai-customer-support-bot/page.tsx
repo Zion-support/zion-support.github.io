@@ -6,12 +6,26 @@ import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCirc
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 const AICustomerSupportBotPage: React.FC = () => {
   const features = [
     {
       icon: Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+=======
+;
+const AICustomerSupportBotPage: React.FC = () => {
+};
+const features = [
+[
+        {
+      ico,
+    n: Bot,
+      title: '24
+      descriptio,
+    n: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
@@ -26,9 +40,15 @@ const AICustomerSupportBotPage: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
-    }
+    };
   ];
+<<<<<<< HEAD
   const pricingPlans = [
+=======
+;
+const pricingPlans = [
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Starter',
       price: '$149',
       period: '/month',
@@ -60,6 +80,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access',
+<<<<<<< HEAD
         'Custom training'
   const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
@@ -74,11 +95,25 @@ const AICustomerSupportBotPage: React.FC = () => {
       </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
+=======
+        'Custom training';
+const stats = [
+[
+        { icon: Users, value: '1,000+', label: 'Happy Customers' },
+        { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
+        { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
+        { icon: Star, value: '4.8
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <title>AI Customer Support Bot | Zion Tech Group<)
+        <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance), natural language processing, and seamless human handoff." 
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
             natural language and escalates complex issues to human agents seamlessly.
+<<<<<<< HEAD
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -105,6 +140,32 @@ const AICustomerSupportBotPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+=======
+          <
+        <
+        <div className="grid md: grid-cols-2 l,
+    g:grid-cols-4 gap-8 mb-16">
+              {stats.map((stat), index) => (<div key=    {index} className="text-center">
+              <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" 
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}<
+              <div className="text-gray-300">{stat.label}<)
+          ))};
+        <div className="grid md: grid-cols-2 gap-8 mb-16">
+          {features.map((feature), index) => (<div key={index} className="bg-slate-800
+              <feature.icon className="h-10 w-10 text-cyan-400 mb-4" 
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
+              <p className="text-gray-300 mb-4">{feature.description}<
+              <ul className="space-y-2">)
+                {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" 
+                    {benefit};
+                  <
+              <
+          <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans<
+          <div className="grid md: grid-cols-3 gap-8">)
+            {pricingPlans.map((plan), index) => (
+              <div key={index} className = { `bg-slate-800
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
@@ -114,12 +175,20 @@ const AICustomerSupportBotPage: React.FC = () => {
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
+<<<<<<< HEAD
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
                   Get Started
   </
+=======
+                  {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">
+                      {feature};
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
+                  Get Started
+                <
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -130,8 +199,12 @@ const AICustomerSupportBotPage: React.FC = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
       <Footer />
+<<<<<<< HEAD
   ),
 }
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';

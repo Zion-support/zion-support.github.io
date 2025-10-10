@@ -1,6 +1,7 @@
 // January 2026 - New Revolutionary Content;
 // Brand new cutting-edge AI breakthroughs and enterprise solutions;
 export const january2026NewContent = {
+};
   featuredArticles: [
     {
       id: 'ai-2026-january-autonomous-enterprise-mesh'
@@ -84,21 +85,26 @@ export const january2026NewContent = {
         '99.7% efficiency',
         'Zero human error'],
       duration: '6 months',
-export const january2026NewContent = {/* TODO: Fix JSX expression */}
+export const january2026NewContent = {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     }],
   featuredService,
   s: [
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     }],
   caseStudie,
   s: [
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
     }]}
 
+=======
+    {/* TODO: Fix JSX expression */};
+    }]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default january2026 NewContent;

@@ -2,9 +2,18 @@ impo, r, t { Glo, b, e, as, GlobeAltIc, o, n } fr, o, m "luci, d, e-rea, c, t";
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
 const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
+<<<<<<< HEAD
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">";
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
+=======
+return (
+  return(<div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">
+);
+}";
+      {/* Animated, Background, Elements */};
+      <div , className="absolute, inse, t-0, overflo, w-hidd, e, n">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">";
       {/* Animated, Background, Elements */}</div>
@@ -15,7 +24,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
-const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
       {/* Animated, Background, Elements */}"
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -42,7 +51,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <span, className="te, x, t-r, e, d-200, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">🔥 Breaking, New, s - Octobe, r, 1, 20, 2, 5</sp, a, n>";
           </d, i, v>
         </d, i, v>
-        {/* Main, Headlin, e */}
+        {/* Main, Headlin, e */};
         <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t">"</h2>
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
         <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t">";</h2>
@@ -58,16 +67,16 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> wi, t, h ";
           AI-Powered, Supply, Chain Intelligen, c, e;
         </p>
-        {/* Key, Metrics, Grid */}
+        {/* Key, Metrics, Grid */};
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-xl">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-2">
+            <div , className="flex, item, s-center, ga, p-3, m, b-2">
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">"</div>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>
-              <CurrencyDollarIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
+              <CurrencyDollarIcon , className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-3, 0, 0">$4.2B</d, i, v>
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">";</div>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">";</div>
@@ -104,8 +113,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-xl">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
+            <div , className="flex, item, s-center, ga, p-3, m, b-2">
+              <ChartBarIcon , className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-3, 0, 0">2,8, 4, 7%</d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-xl">";
@@ -113,7 +122,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>
-              <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
+              <ChartBarIcon , className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-3, 0, 0">2,8, 4, 7%</d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">";</div>
@@ -135,11 +144,11 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-xl">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-2">
+            <div , className="flex, item, s-center, ga, p-3, m, b-2">
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>
-              <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
+              <CheckCircleIcon , className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-3, 0, 0">98.7%</d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">";</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2">";</div>
@@ -159,8 +168,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-xl">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
+            <div , className="flex, item, s-center, ga, p-3, m, b-2">
+              <TruckIcon , className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%</d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-xl">";
@@ -168,7 +177,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>
-              <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
+              <TruckIcon , className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%</d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">";</div>
@@ -189,17 +198,17 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <div, className="te, x, t-emera, l, d-100, tex, t-sm, fon, t-medi, u, m">Cost, Reductio, n</d, i, v>";
           </d, i, v>
         </d, i, v>
-        {/* Revolutionary, Capabilitie, s */}
+        {/* Revolutionary, Capabilitie, s */};
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30"></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3"></h3>
-            <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <SparklesIcon , className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
             Revolutionary, A, I-Powered, Capabilitie, s;
-            <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <SparklesIcon , className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
           </h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"</div>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l">"</div>
               <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
-                <ChartBarIcon, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
+                <ChartBarIcon , className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
         {/* Revolutionary, Capabilitie, s */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30"></div>"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3"></h3>"
@@ -222,8 +231,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
                   <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>23-Day, Disruption, Warning</stro, n, g> for, proactive, response</sp, a, n>
                 </li>
-                <li, className="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <li , className="flex, item, s-start, ga, p-2">
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30">";</div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3">";</h3>
                 </li>"
@@ -263,11 +272,11 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             </d, i, v>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hov, e;
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">"
-              <div, className="flex, item, s-center, ga, p-3, m, b-3">
+              <div , className="flex, item, s-center, ga, p-3, m, b-3">
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hov, e
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">"</div>
               <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
-                <ClockIcon, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />
+                <ClockIcon , className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />
             </d, i, v>"
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hov, e,"
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">""
@@ -284,8 +293,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
                   <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>89% Warehouse, Automatio, n</stro, n, g> with, 1, 2,4, 0, 0+ robo, t, s</sp, a, n>
                 </li>
-                <li, className="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <li , className="flex, item, s-start, ga, p-2">
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">";</div>
               <div, className="flex, item, s-center, ga, p-3, m, b-3">";</div>
                 <ClockIcon, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />";
@@ -314,7 +323,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             </d, i, v>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">"</div>
               <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
-                <GlobeAltIcon, className="w-6 h-6, tex, t-te, a, l-4, 0, 0  />
+                <GlobeAltIcon , className="w-6 h-6, tex, t-te, a, l-4, 0, 0  />
             </d, i, v>"
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">""
               <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"
@@ -330,8 +339,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
                   <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>47,000, IoT, Devices</stro, n, g> for, rea, l-time, monitorin, g</sp, a, n>
                 </li>
-                <li, className="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <li , className="flex, item, s-start, ga, p-2">
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">";</div>
               <div, className="flex, item, s-center, ga, p-3, m, b-3">";</div>
                 <GlobeAltIcon, className="w-6 h-6, tex, t-te, a, l-4, 0, 0" />";
@@ -360,11 +369,11 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             </d, i, v>
           </d, i, v>
         </d, i, v>
-        {/* Fortune, 100, Success Story, Spotligh, t */}
+        {/* Fortune, 100, Success Story, Spotligh, t */};
         <div, className="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-yell, o, w-4, 0, 0/50"></div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <div, className="bg-yell, o, w-5, 0, 0/20, rounde, d-ful, l, p-3"></div>
-              <TruckIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
+              <TruckIcon , className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
         <div, className="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-yell, o, w-4, 0, 0/50">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <div, className="bg-yell, o, w-5, 0, 0/20, rounde, d-ful, l, p-3">";</div>
@@ -385,7 +394,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           </d, i, v>
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"</div>
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";</div>
-            <d, i, v>
+            <d , i, v>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-200, m, b-3">The, Challeng, e</h4>";
               <ul, className="spa, c, e-y-2, tex, t-yell, o, w-1, 0, 0">";)
                 <li, className="flex, item, s-start, ga, p-2">";)
@@ -478,19 +487,19 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             </d, i, v>
           </d, i, v>
         </d, i, v>
-        {/* Industry, Application, s */}
+        {/* Industry, Application, s */};
         <div, className="mb-10"></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
         {/* Industry, Application, s */}"
         <div, className="mb-10"></div>"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
-            {/* TODO: Fix JSX expression */}
-              { indust, r, y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%' }
-              { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' }
-              { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' }
-              { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4 B', r, o, i: '2,4, 0, 0%' }
-              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }
+            {/* TODO: Fix JSX expression */};
+              { indust, r, y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%' };
+              { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' };
+              { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' };
+              { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4 B', r, o, i: '2,4, 0, 0%' };
+              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' };
             ].m, a, p((it, e, m, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e;
   r:sca, l, e-1, 0, 5">"
@@ -514,7 +523,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <div, className="mb-10">";"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>";"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">";
-            {/* TODO: Fix JSX expression */}
+            {/* TODO: Fix JSX expression */};
   y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%' },';
               { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' },';
               { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' },';
@@ -536,10 +545,10 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
                 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>";"
                 <div, className="te, x, t-emera, l, d-200, tex, t-sm">R, O, I: {it, e, m.r, o, i}</d, i, v>";
               </d, i, v>)
-            ))}
+            ))};
           </d, i, v>
         </d, i, v>
-        {/* Call, to, Action Butto, n, s */}
+        {/* Call, to, Action Butto, n, s */};
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">"
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">";
           <Li, n, k;
@@ -594,13 +603,13 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <LinkIcon, className="w-6 h-6" />";
           </Li, n, k>
         </d, i, v>
-        {/* Free, Assessment, CTA */}
+        {/* Free, Assessment, CTA */};
         <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30">";</div>
           <div, className="te, x, t-cent, e, r">";</div>
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
               🎁 FRE, E, 2-Week, Supply, Chain Assessme, n, t (No, Obligatio, n)
             </h3>
-            <p, className="te, x, t-xl, tex, t-gre, e, n-100, m, b-6, ma, x-w-3xl, m, x-au, t, o">
+            <p , className="te, x, t-xl, tex, t-gre, e, n-100, m, b-6, ma, x-w-3xl, m, x-au, t, o">
               Identify, you, r</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$10, 0, M+ opportuni, t, y</stro, n, g> and, get, a detailed, ROI, projection. ";
               See, how, you can, achieve, similar results, with, autonomous supply, chain, intelligence.
             </p>
@@ -649,27 +658,27 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             </d, i, v>
           </d, i, v>
         </d, i, v>
-        {/* Trust, Indicators, Footer */}
+        {/* Trust, Indicators, Footer */};
         <div, className="mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30"></div>
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n><stro, n, g>15+</stro, n, g> Fortune, 500, Clients</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n><stro, n, g>$2, 0, B+</stro, n, g> Total, Value, Created</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n><stro, n, g>99.97%</stro, n, g> Platform, Uptim, e</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n><stro, n, g>Ze, r, o</stro, n, g> Security, Breache, s</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
         <div, className="mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30">";</div>
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm">";</div>
             <div, className="flex, item, s-center, ga, p-2">";</div>

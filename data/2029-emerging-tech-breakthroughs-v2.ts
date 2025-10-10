@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -91,7 +95,7 @@
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
         'Real-time brain signal interpretation',
   real_implementatio,
   n: boolean,
@@ -1006,7 +1010,7 @@ export const,
       ratin,
   g: 5.0,
       review,
-  s: 2}
+  s: 2};
         mobil,
   e: '+1 302 464 0950',
         emai,

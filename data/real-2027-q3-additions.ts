@@ -1,6 +1,12 @@
-
 export const real2027Q3Additions = [
+<<<<<<< HEAD
 export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
+=======
+];
+export const real2027Q3Additions = [
+{id: 'it - asset - discovery - agent',
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -13,17 +19,30 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
       'Change detection and drift alerts'],
     category: 'Enterprise IT',
     link: '/it - asset - discovery - agent',
+<<<<<<< HEAD
     real_service: true,
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'}
+=======
+    real_service: true;
+    roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
     id: 'managed - postgres - ha',
     name: 'Managed Postgres HA',
     tagline: 'High availability PostgreSQL with SRE runbooks',
     price: '$1, 200',
     period: '/month',
+<<<<<<< HEAD
     description: unknown,
 export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'}
+=======
+    description: unknown;
+export const real2027Q3Additions = [
+{/* TODO: Fix JSX expression */};
+];
+  i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
     i,
   d: 'managed - postgres - ha',
@@ -627,11 +646,17 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   e: true,
     ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity'
@@ -646,11 +671,12 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   e: true,
     ro,
   i: 'Prevent high-severity API incidents and cut MTTR.'
-  }
+  };
 ];
 export const real2027Q3Additions = [
-  {/* TODO: Fix JSX expression */}
-  n: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'}
+];
+  {/* TODO: Fix JSX expression */};
+  n: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'};
     feature,
   s: [,
       'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow} and Jira exportChange detection and drift alerts'
@@ -667,11 +693,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Streaming replication and automatic failoverPITR backups with retention policiesPerformance tuning and query insightsSecurity hardening and auditing'
     ];
     category: 'Cloud & Infrastructure'
@@ -686,9 +718,15 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
   s: [,
       'Pinecone/Weaviate/Elastic integrationsChunking strategies and deduplicationEval harness with regression testsTracing, metrics} and dashboards'
@@ -705,9 +743,15 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Cut RAG prototyping time from weeks to days while improving answer quality.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
   s: [,
       'Idempotent job executionPer-job concurrency and rate limitsDLQ, retries, and exponential backoffMetrics, logs} and alerting'
@@ -724,9 +768,15 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Reduce failed job incidents by 70% and engineering toil by 50%.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
   s: [,
       'WHOIS expiry and registrar checksNS, MX, TXT, and CAA drift detectionTLS expiry and configuration healthSlack, Email} and Webhook alerts'
@@ -743,11 +793,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Avoid costly outages from expired domains and misconfigured DNS.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'SLO templates and burn-rate alertsMulti-region synthetic and API checksStatus pages and dashboardsChange annotations and incident links'
     ];
     category: 'Observability'
@@ -762,11 +818,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Cut false alerts by 60% and align reliability to user impact.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Just-in-time provisioningSCIM connectors and custom mappersAccess review workflowsAudit logs and exports'
     ];
     category: 'Security & Identity'
@@ -781,11 +843,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Reduce onboarding time by 80% and access risk by 50%.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Automatic instrumentation presetsLatency percentiles and error ratesSLO burn and dependency graphsAlert templates and runbooks'
     ];
     category: 'Observability'
@@ -800,11 +868,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Decrease MTTR by 40% and increase release confidence.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'RBAC graph analysis and reportsPolicy suggestions and PRsAudit trails and drift alertsMulti-cluster support'
     ];
     category: 'Security & Identity'
@@ -819,11 +893,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Reduce lateral movement risk and pass audits faster.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Terraform plan diffs as PR commentsChange approval workflowsSelective auto-remediationMulti-cloud support'
     ];
     category: 'Cloud & Infrastructure'
@@ -838,11 +918,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Prevent config drift incidents and reduce compliance toil.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Auto triage and severity suggestionChannel orchestration (Slack/Teams)Timeline and comms templatesPostmortem drafts and actions'
     ];
     category: 'Operations'
@@ -857,11 +943,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Reduce incident resolution time by 30–50% and improve learning capture.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Web and doc ingestion with citationsCompetitor profiles and matricesAlerts for launches and pricing changesExport to Slides/Docs'
     ];
     category: 'AI & Data'
@@ -876,11 +968,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Save 10–20 analyst hours per week while increasing coverage.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Lead enrichment and routingMultichannel sequencesAI-generated replies with approvalsPipeline analytics'
     ];
     category: 'Sales & Marketing'
@@ -895,11 +993,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Increase meetings booked by 20–40% with consistent outreach.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Smart clause detection and summariesRisk scoring and deviationsPlaybook alignment and suggestionsExport to Word/PDF'
     ];
     category: 'Legal & Compliance'
@@ -914,11 +1018,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Cut review cycles from weeks to days and reduce outside counsel spend.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Templates and brand voicesSEO scoring and suggestionsCollaboration and approvalsWordPress/Shopify integrations'
     ];
     category: 'Content & Marketing'
@@ -933,11 +1043,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Publish 3–5x more content while improving rankings.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'
     ];
     category: 'Security & Identity'
@@ -952,11 +1068,17 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.'
+<<<<<<< HEAD
   }
   {/* TODO: Fix JSX expression */}
   n: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'}
+=======
+  };
+  {/* TODO: Fix JSX expression */};
+  n: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     feature,
-  s: [}
+  s: [};
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity'
@@ -971,9 +1093,15 @@ export const real2027Q3Additions = [
   e: true,
     ro,
   i: 'Prevent high-severity API incidents and cut MTTR.'
-  }
+  };
 ];
+export const real2027Q3Additions = [
+ export const real2027Q3Additions = [; i,
+];
+<<<<<<< HEAD
 export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: 'it - asset - discovery - agent',' nam,
   e: 'IT Asset Discovery Agent',' taglin,
   e: 'Agentless network - wide discovery and enrichment',' pric,
@@ -1159,6 +1287,7 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
   y: 'Security & Identity'' lin,
   k: '/api - security - scanner' real_servic,
   e: true,' ro,
+<<<<<<< HEAD
   i: 'Prevent high - severity API incidents and cut MTTR.'' 'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports' ],' categor,
   y: 'Security & Identity',' lin,
   k: '/email-dmarc-analyzer', realServic,
@@ -1215,6 +1344,66 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
   k: '/email-dmarc-analyzer'} realServic,
   e: true}' ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.' } {/* TODO: Fix JSX expression */}
+=======
+  i: 'Prevent high - severity API incidents and cut MTTR.'' 'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports' ];' categor,
+  y: 'Security & Identity';' lin,
+  k: '/email-dmarc-analyzer'; realServic,
+  e: true;' ro,
+  i: 'Improve deliverability and block spoofing/phishing attempts.' }; {/* TODO: Fix JSX expression */};
+  k: '/api-security-scanner'} realServic,
+  e: true};' ro,
+  i: 'Prevent high-severity API incidents and cut MTTR.' } ]; export const real2027Q3Additions = [
+; {/* TODO: Fix JSX expression */};
+];
+  k: '/it-asset-discovery-agent'} realServic,
+  e: true};' ro,
+  i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.' }; {/* TODO: Fix JSX expression */};
+  k: '/managed-postgres-ha'} realServic,
+  e: true};' ro,
+  i: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.' }; {/* TODO: Fix JSX expression */};
+  k: '/vector-search-starter'} realServic,
+  e: true};' ro,
+  i: 'Cut RAG prototyping time from weeks to days while improving answer quality.' }; {/* TODO: Fix JSX expression */};
+  k: '/serverless-cron-manager'} realServic,
+  e: true};' ro,
+  i: 'Reduce failed job incidents by 70% and engineering toil by 50%.' }; {/* TODO: Fix JSX expression */};
+  k: '/domain-dns-monitor'} realServic,
+  e: true};' ro,
+  i: 'Avoid costly outages from expired domains and misconfigured DNS.' }; {/* TODO: Fix JSX expression */};
+  k: '/uptime-slo-monitor'} realServic,
+  e: true};' ro,
+  i: 'Cut false alerts by 60% and align reliability to user impact.' }; {/* TODO: Fix JSX expression */};
+  k: '/sso-user-lifecycle-automation'} realServic,
+  e: true};' ro,
+  i: 'Reduce onboarding time by 80% and access risk by 50%.' }; {/* TODO: Fix JSX expression */};
+  k: '/api-observability-starter'} realServic,
+  e: true};' ro,
+  i: 'Decrease MTTR by 40% and increase release confidence.' }; {/* TODO: Fix JSX expression */};
+  k: '/kubernetes-rbac-auditor'} realServic,
+  e: true};' ro,
+  i: 'Reduce lateral movement risk and pass audits faster.' }; {/* TODO: Fix JSX expression */};
+  k: '/infrastructure-drift-detector'} realServic,
+  e: true};' ro,
+  i: 'Prevent config drift incidents and reduce compliance toil.' }; {/* TODO: Fix JSX expression */};
+  k: '/incident-copilot'} realServic,
+  e: true};' ro,
+  i: 'Reduce incident resolution time by 30–50% and improve learning capture.' }; {/* TODO: Fix JSX expression */};
+  k: '/ai-market-research'} realServic,
+  e: true};' ro,
+  i: 'Save 10–20 analyst hours per week while increasing coverage.' }; {/* TODO: Fix JSX expression */};
+  k: '/ai-sales-automation'} realServic,
+  e: true};' ro,
+  i: 'Increase meetings booked by 20–40% with consistent outreach.' }; {/* TODO: Fix JSX expression */};
+  k: '/ai-legal-contract-analyzer'} realServic,
+  e: true};' ro,
+  i: 'Cut review cycles from weeks to days and reduce outside counsel spend.' }; {/* TODO: Fix JSX expression */};
+  k: '/ai-content-generator'} realServic,
+  e: true};' ro,
+  i: 'Publish 3–5x more content while improving rankings.' }; {/* TODO: Fix JSX expression */};
+  k: '/email-dmarc-analyzer'} realServic,
+  e: true};' ro,
+  i: 'Improve deliverability and block spoofing/phishing attempts.' }; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   k: '/api-security-scanner'} realServic,
   e: true}' ro,
   i: 'Prevent high-severity API incidents and cut MTTR.' } ]; '

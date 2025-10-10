@@ -1,18 +1,25 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
+}
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
+=======
+}
+const [currentSlide, setCurrentSlide] = useState(0);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [isVisible, setIsVisible] = useState(true);
   const content = [
+[
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-      metrics: {
+      metrics:     {
         efficiency: '300%',
         accuracy: '99.7%',
         timeline: '6 months',
@@ -38,7 +45,7 @@ tagstags: ['Case Study', 'Fortune 500', 'ROI', '2025']
         productivity: '300%',
         cost:       ,
 tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
-    }
+    };
   ];
   useEffect(() => {
     const timer = setInterval(() => {
@@ -47,8 +54,13 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     return () => clearInterval(timer);
   }, [content.length]);
   const handleClose = () => {
+<<<<<<< HEAD
     setIsVisible(false)
   }
+=======
+}
+    setIsVisible(false)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -77,13 +89,16 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             {currentContent.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+<<<<<<< HEAD
             <Link
               to="/services"
+=======
+            <Link to="/services"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
               Get Started Today
               <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
+                <path strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
@@ -97,8 +112,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  className="w-8 h-8 text-white"
+                <svg className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -110,12 +124,11 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
-              ))}
+              ))};
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
-                <span
-                  key={tag}
+                <span key={tag}
                   className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
                   {tag}
             {/* CTA Buttons */}
@@ -139,8 +152,8 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
+                }`};
+                aria-label={`Go to slide ${index + 1}`};
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -159,6 +172,7 @@ import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -170,6 +184,20 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const content = [
+];
+// TOD,
+  O: Add items;
+];;
+    {/* TODO: Fix JSX expression */}
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
@@ -183,8 +211,13 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   e: 'Blog Post',
       metric,
   s: {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   O: Add content,}
 }
+=======
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   efficienc,
   y: '300%',
         accurac,
@@ -247,6 +280,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
     </section>
+<<<<<<< HEAD
   );
 }
 export default UltimateBusinessIntelligence2025Banner;"
@@ -270,3 +304,7 @@ export default UltimateBusinessIntelligence2025Banner;"
   </div>
   </div>
   </div>
+=======
+  )};
+export default UltimateBusinessIntelligence2025Banner;"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,6 +1,15 @@
 const, October2025NewBreakthroughBanne, r = () => {
+<<<<<<< HEAD
     const, stat, s = octoberContentSta, t, s;
   const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>>> = {
+=======
+return (
+;
+const, stat, s = octoberContentSta, t, s;
+  const, iconMa, p: Reco, r, d<stri , n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>
+);
+}>> = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     '🧠': Bra, i, n;
     '💰': DollarSi, g, n;
     '🎨': E, y, e;
@@ -9,8 +18,8 @@ const, October2025NewBreakthroughBanne, r = () => {
     '🎨': E, y, e'
   }
   return(<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, opacit, y-30">
+      {/* Animated, background, effects */};
+      <div , className="absolute, inse, t-0, opacit, y-30">
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -21,8 +30,13 @@ const, October2025NewBreakthroughBanne, r = () => {
       <div, className="absolute, inse, t-0, opacit, y-30">";</div>
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+<<<<<<< HEAD
 const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
   }
+=======
+const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, opacit, y-30"></div>"
@@ -38,8 +52,8 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30"></div>
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
-            <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">
+            <Zap , className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <span , className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">
               🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5;
             </sp, a, n>
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
@@ -85,37 +99,54 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";)
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
+<<<<<<< HEAD
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             return(<Li, n, k;
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"</div>
+=======
+return (
+;
+const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
+            return(<Li , n, k;
+        {/* Content, Card, s */};
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+);
+}"</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             return (</div>
-              <Li, n, k
-  k, e, y={conte, n, t.id}
+              <Li , n, k
+  k, e, y={conte, n, t.id};
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
                 classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
+<<<<<<< HEAD
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
               >
+=======
+  r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0">
+);
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`</div>
-                    <Icon, className="w-8 h-8, tex, t-whi, t, e  />
+                    <Icon , className="w-8 h-8, tex, t-whi, t, e  />
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">";</div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`</div>
                     <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
                   </d, i, v>
                   <div, className="fl, e, x-1">";</div>
                     <div, className="te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r">";
-                      {conte, n, t.catego, r, y}
+                      {conte, n, t.catego, r, y};
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t">"</h3>
         {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {/* TODO: Fix JSX expression */}
-  k, e, y={conte, n, t.id}
+          {/* TODO: Fix JSX expression */};
+  k, e, y={conte, n, t.id};
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
@@ -129,29 +160,34 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                   </d, i, v>"
                   <div, className="fl, e, x-1">";"
                     <div, className="te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r">";
-                      {conte, n, t.catego, r, y}
+                      {conte, n, t.catego, r, y};
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t">""
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t">";
-                      {conte, n, t.tit, l, e}
+                      {conte, n, t.tit, l, e};
                     </h3>
                   </d, i, v>
                 </d, i, v>"
                 <p, className="te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d">";
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.descripti, o, n};
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className="grid, gri, d-co, l, s-2, ga, p-3, m, b-6">";)
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (
-                    <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">
+                    <div , ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">
                 </p>
                 {/* Key, Metric, s */}"
                 <div, className="grid, gri, d-co, l, s-2, ga, p-3, m, b-6">";
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (</div>
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10"></div>
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>
+<<<<<<< HEAD
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">
                         {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</div>
+=======
+                      <div , className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">
+                        {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()};</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">";</div>
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>";
                   {/* TODO: Fix JSX expression */}"
@@ -165,7 +201,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                         {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}';
                       </d, i, v>
                     </d, i, v>
-                  ))}
+                  ))};
                 </d, i, v>
                 {/* Highligh, t, s */}"
                 <ul, className="spa, c, e-y-3, m, b-6">";
@@ -177,11 +213,11 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                       <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";"
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                     </li>
-                  ))}
+                  ))};
                 </ul>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Guide;</div>
-                  <Link, className="w-5 h-5  />
+                  <Link , className="w-5 h-5  />
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Guide;</div>
                   Read, Full, Guide;"
@@ -191,13 +227,17 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                   <Link, className="w-5 h-5" />";
                 </d, i, v>
               </Li, n, k>
+<<<<<<< HEAD
             );
           })}
+=======
+            )})};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </d, i, v>
-        {/* CTA, Sectio, n */}
+        {/* CTA, Sectio, n */};
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l"></div>
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r"></div>
-            <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  />
+            <Target , className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  />
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e"></h3>
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">";</div>
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">";</div>
@@ -251,7 +291,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             </Li, n, k>
           </d, i, v>
         </d, i, v>
-        {/* Stats, Ba, r */}
+        {/* Stats, Ba, r */};
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">"</div>
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2">{sta, t, s.totalMarketVal, u, e}</d, i, v>
@@ -282,9 +322,9 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Payback, Period</d, i, v>";
           </d, i, v>
         </d, i, v>
-        {/* Technology, s */}
+        {/* Technology, s */};
         <div, className="mt-12, tex, t-cent, e, r"></div>
-          <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
+          <div , className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
             {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I'
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (</div>
         <div, className="mt-12, tex, t-cent, e, r">";</div>
@@ -294,7 +334,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <sp, a, n;
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (';</div>
               <sp, a, n
-  k, e, y={t, a, g}
+  k, e, y={t, a, g};
         {/* Stats, Ba, r */}"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">""
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>"
@@ -329,13 +369,13 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Technology, s */}"
         <div, className="mt-12, tex, t-cent, e, r"></div>"
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>
-            {/* TODO: Fix JSX expression */}
+            {/* TODO: Fix JSX expression */};
   k, e, y={t, a, g}"
                 classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
               ></sp>
-                {t, a, g}
+                {t, a, g};
               </sp, a, n>
-            ))}
+            ))};
           </d, i, v>
         </d, i, v>
       </d, i, v>

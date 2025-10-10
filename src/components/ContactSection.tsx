@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export default function ContactSection() {
   const [formData, setFormData] = useState({
+=======
+export default function ContactSection() {;
+const [formData, setFormData] = useState({
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: '',
     email: '',
     company: '',
@@ -16,13 +21,21 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle form submission here
+<<<<<<< HEAD
     console.log('Form submitted:', formData)
   }
   const contactInfo = [
+=======
+    // console.log removed for production
+}
+;
+const contactInfo = [
+[
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth=    {2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
       title: 'Email Us',
@@ -49,10 +62,17 @@ export default function ContactSection() {
       title: 'Visit Us',
       details: '123 Tech Street, Innovation City, IC 12345',
       link: '#'
-    }
+    };
   ];
+<<<<<<< HEAD
   const services = [
     'AI & Machine Learning',
+=======
+;
+const services = [
+];
+'AI & Machine Learning',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Cloud Solutions',
     'Web Development',
     'Mobile Development',
@@ -88,8 +108,7 @@ export default function ContactSection() {
               {/* Contact Info Cards */}
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
+                  <a key={index}
                     href={info.link}
                     className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300">
@@ -102,7 +121,7 @@ export default function ContactSection() {
                       <p className="text-gray-400">{info.details}</p>
                     </div>
                   </a>
-                ))}
+                ))};
               </div>
             </div>
             {/* Why Choose Us */}
@@ -148,8 +167,7 @@ export default function ContactSection() {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
-                  <input
-                    type="text"
+                  <input type="text"
                     id="name"
                     name="name"
                     value={formData.name}
@@ -163,8 +181,7 @@ export default function ContactSection() {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
-                  <input
-                    type="email"
+                  <input type="email"
                     id="email"
                     name="email"
                     value={formData.email}
@@ -177,9 +194,15 @@ export default function ContactSection() {
               </div>
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                   Company Name</span>
                 <input
                   type="text"
+=======
+                  Company Name
+                </label>
+                <input type="text"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   id="company"
                   name="company"
                   value={formData.company}
@@ -190,9 +213,15 @@ export default function ContactSection() {
               </div>
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                   Service Interested In</span>
                 <select
                   id="service"
+=======
+                  Service Interested In
+                </label>
+                <select id="service"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
@@ -202,15 +231,14 @@ export default function ContactSection() {
                     <option key={index} value={service}>
                       {service}
                     </option>
-                  ))}
+                  ))};
                 </select>
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
-                <textarea
-                  id="message"
+                <textarea id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -220,15 +248,23 @@ export default function ContactSection() {
                   placeholder="Tell us about your project..."
                 />
               </div>
+<<<<<<< HEAD
               <button
                 type="submit"
                 className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 Send Message</span>
+=======
+              <button type="submit"
+                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                Send Message
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </form>
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   ),
 }
   </button>
@@ -238,3 +274,6 @@ export default function ContactSection() {
   </h3>
   </h3>
   </HTMLInputElement>
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

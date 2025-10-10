@@ -1,6 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-      <Helm, e, t>
-        <title>
+      <Helm , e, t>
+        <title></title>
       <Helm, e, t></Helm>
         <title></title>
           Cognitive, Automatio, n: The, Enterprise, Revolution of, 202, 5 | Zion, Tech, Group;
@@ -13,9 +13,16 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
         /></meta>
       </Helm, e, t>
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+<<<<<<< HEAD
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
 const CognitiveAutomationEnterpriseRevolution: () => {
+=======
+      <div , classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
+        <Head, e, r />;
+const CognitiveAutomationEnterpriseRevolution: () => {
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div>),
       <Helmet>),
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>),
@@ -41,7 +48,13 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <Header />
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
+<<<<<<< HEAD
           {/* Back Link */}
+=======
+);
+};
+          {/* Back Link */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Link to="/blog">
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">,
@@ -54,17 +67,29 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <ArrowLeft className="w-4 h-4 mr-2" />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
+<<<<<<< HEAD
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/bl, o, g'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
+=======
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ };
+          <Link , t, o='/bl, o, g'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'>
+            <ArrowLeft , className='w-4 h-4, m, r-2' />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r /></Head>
 const,
+<<<<<<< HEAD
   CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
           {/* Back Link */}
+=======
+  CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */};
+          {/* Back Link */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Link to="/blog"></Link>"
   className="inline-flex items-center text-zion-cyan,"
   hover:text-zion-blue-light mb-8 transition-colors">"
@@ -72,7 +97,7 @@ const,
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header /></Header>
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ };
           <Link, t, o='/bl, o, g'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           ></Link>
@@ -81,28 +106,28 @@ const,
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>22, min, read</sp, a, n>
             </div>
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
-            <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+            <h1 , className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Cognitive, Automatio, n:</h1>
-              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-cy, a, n-400, m, t-2'>
+              <span , className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-cy, a, n-400, m, t-2'>
                 The, Enterprise, Revolution of, 202, 5;
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
-              <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r'>
+            <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
+              <div , className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r'>
                 The, Enterprise, Revolution of, 202, 5</span>
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r'></div>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+                <div , className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
                   92%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <div , className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Efficiency, Gain, s;
                 </d, i, v>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2 , classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 —intelligent, systems, that d, o, n't, just, execute ta, s, k, s, but, understand, context, make, decision, s, and, continuously, learn from, outcome, s.</h2>
-                <p, classNam, e='te, x, t-lg'>
+                <p , classNam, e='te, x, t-lg'>
                   Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from, experimental to, missio, n-critic, a, l.</p>
-                <p, className='te, x, t-lg'>
+                <p , className='te, x, t-lg'>
                   Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from experimental to, missio, n-critic, a, l.</p>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2 , classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 🧠 What, Makes, Automation "Cogniti, v, e"?
           {/* Header */}</h2>
           <div></div>
@@ -166,7 +191,7 @@ const,
                   Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from experimental to, missio, n-critic, a, l.
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>"
                 🧠 What, Makes, Automation "Cogniti, v, e"?
-          {/* Header */}
+          {/* Header */};
           <div></div>"
               <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30"></span>
                 🔥 NEW • October 2025;
@@ -211,7 +236,11 @@ const,
               innovators. Discover the cognitive automation revolution delivering 92% efficiency gains,
               $3.2M average cost savings, and 10x productivity increases across Fortune 500 companies.
             </p>
+<<<<<<< HEAD
             {/* Key Stats */}
+=======
+            {/* Key Stats */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div></div>
                 <div>Efficiency Gains</div>
             <div></div>
@@ -235,10 +264,10 @@ const,
   </div>
   </div>
   </div>
-          {/* Content */}
+          {/* Content */};
           <div>
             {/* Introduction */}</div>
-            <section >
+            <section>
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
               <p className="text-lg leading-relaxed mb-4">,"
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';';
@@ -247,9 +276,9 @@ const,
               <h2 className="text-3 xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
               <p className="text-lg leading-relaxed mb-4"></p>"
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '
-                robotic process automation (RPA) is giving way to</p> <strong className="text-white">cognitive automation</strong> 
+                robotic process automation (RPA) is giving way to</p> <strong className="text-white">cognitive automation</strong>
           <div></div>
-            {/* Introduction */}
+            {/* Introduction */};
             <section ></section>"
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>""
               <p className="text-lg leading-relaxed mb-4">,"
@@ -259,7 +288,7 @@ const,
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
               <p className="text-lg leading-relaxed mb-4">"
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '"
-                robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> 
+                robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong>
                 —intelligent systems that don't just execute tasks, but understand context, make decisions, '
                 and continuously learn from outcomes.
               </p>"
@@ -307,8 +336,8 @@ const,
   </div>,
             </section>,
 ,
-            {/* What is Cognitive Automation */}
-            <section >
+            {/* What is Cognitive Automation */};
+            <section>
               <h2 className="text-3xl font-bold text-white mb-6">🧠 What Makes Automation "Cognitive"?</h2>
               <p className="text-lg leading-relaxed mb-6">
   Cognitive automation systems possess four defining characteristics that separate them from;
@@ -493,8 +522,13 @@ const,
   </div>
   </div>
             </section>
+<<<<<<< HEAD
             {/* Business Impact */}
             <section >
+=======
+            {/* Business Impact */};
+            <section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
               <p className="text-lg leading-relaxed mb-6">
 Real-world implementations across industries are delivering transformational results: </p>
@@ -1046,7 +1080,7 @@ Real-world implementations across industries are delivering transformational,
   </div>,
             </section>,
 ,
-            {/* Implementation Framework */}
+            {/* Implementation Framework */};
             <section ></section>"
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Implementation Framework</h2>""
               <p className="text-lg leading-relaxed mb-6"></p>
@@ -1199,7 +1233,11 @@ Real-world implementations across industries are delivering transformational,
   </div>
   </div>
             </section>
+<<<<<<< HEAD
             {/* Call to Action */}
+=======
+            {/* Call to Action */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <section className="bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center">
               <Rocket className="w-16 h-16 text-purple-400 mx-auto mb-6 ">
               <h2 className="text-4xl font-bold text-white mb-6"></h2>
@@ -1211,24 +1249,24 @@ Real-world implementations across industries are delivering transformational,
               <h2 className="text-4xl font-bold text-white mb-6">
   Ready to Transform Your Enterprise?
               </h2>
-              <p, className='te, x, t-lg, leadin, g-relaxed, m, b-6'>
+              <p , className='te, x, t-lg, leadin, g-relaxed, m, b-6'>
                 Cognitive, automation, systems possess, four, defining;
                 characteristics, that, separate them, from traditional automati, o, n: </p>,
-              <div, className='spa, c, e-y-4'>
-                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30'>
-                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'>
+              <div , className='spa, c, e-y-4'>
+                <div , className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30'>
+                  <h3 , className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'>
                 Cognitive, automation, systems possess, four, defining
                 characteristics, that, separate them, from traditional automati, o, n: </p>
               <div, className='spa, c, e-y-4'></section>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
-                    <Brain, className='w-6 h-6, tex, t-cy, a, n-4, 0, 0' />
+                    <Brain , className='w-6 h-6, tex, t-cy, a, n-4, 0, 0' />
                     1. Contextual, Understandin, g;
-                  <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-3, 0, 0'>
+                  <p , classNam, e = 'te, x, t-sm, tex, t-cy, a, n-3, 0, 0'>
                     Examp, l, e: Processing, invoices, with missing, fie, l, d, s, unusual, format, s, or, partial, information by, inferring, context from, related, documents and, historical, patterns.</p>
-                  <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-3, 0, 0'>
+                  <p , classNam, e = 'te, x, t-sm, tex, t-cy, a, n-3, 0, 0'>
                     Examp, l, e: Processing, invoices, with missing, fie, l, d, s, unusual, format, s, or, partial, information by, inferring, context from related, documents and, historical, patterns.</p>
-                  <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'>
+                  <p , classNam, e = 'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'>
             {/* Call to Action */}"
             <section className="bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center"></section>"
               <Rocket className="w-16 h-16 text-purple-400 mx-auto mb-6 "></Rocket>"
@@ -1259,24 +1297,24 @@ Real-world implementations across industries are delivering transformational,
                 </div>
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-pi, n, k-5, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
-                    <Zap, className='w-6 h-6, tex, t-pi, n, k-4, 0, 0' />
+                    <Zap , className='w-6 h-6, tex, t-pi, n, k-4, 0, 0' />
                     <Zap, className='w-6 h-6, tex, t-pi, n, k-4, 0, 0' /></Zap>
                     3. Continuous, Learnin, g;
                 </div>
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
-                    <Shield, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
+                    <Shield , className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
                     4. Natural, Language, Interaction;
-                  <p, classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0'>
+                  <p , classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0'>
                     Examp, l, e: "Generate, a, quarterly sales, report, for the, Northeast, region focusing, on, accounts that, grew, more than, 2, 0%" executed, instantly, with contextual, intelligenc, e.</p>
-                    <li, classNam, e='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                      <sp, a, n>
+                    <li , classNam, e='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                      <sp , a, n>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
-                    <li, classNam, e='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                      <sp, a, n>
+                    <li , classNam, e='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                      <sp , a, n>
                     <Shield, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' /></Shield>
                     4. Natural, Language, Interaction;
                   <p, classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0'></p>"
@@ -1298,30 +1336,30 @@ Real-world implementations across industries are delivering transformational,
                   </p>
                 </div>
               </div>
-                    <li, className='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                      <sp, a, n>
+                    <li , className='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                      <sp , a, n>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
-                    <li, className='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                      <sp, a, n>
+                    <li , className='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                      <sp , a, n>
                         <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y;
                       </sp, a, n>
-                    <li, className='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-                      <sp, a, n>
+                    <li , className='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                      <sp , a, n>
                         <stro, n, g>$15.7M, annual, savings</stro, n, g> from intelligent, resource allocati, o, n;
                       </sp, a, n>
-                    <li, classNam, e='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
-                    <li, className='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
-                      <sp, a, n>
+                    <li , classNam, e='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , classNam, e='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
+                    <li , className='flex, item, s-start, ga, p-2'>
+                      <CheckCircle , className='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
+                      <sp , a, n>
                         <stro, n, g>$9.2M, reductio, n</stro, n, g> in, inventory, carrying;
                         cos, t, s;
                       </sp, a, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2 , classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                     <li, className='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                       <sp, a, n></sp>
@@ -1352,16 +1390,16 @@ Real-world implementations across industries are delivering transformational,
                 Successful, cognitive, automation requires, a, structured approa, c, h.
                 He, r, e's, our, proven 6-phase, framewor, k: </p>,
 ,
-              <div, className='spa, c, e-y-6'>
-                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
-                  <div, className='flex, item, s-start, ga, p-4'>
-                    <div, className='bg-cy, a, n-5, 0, 0/20, rounde, d-ful, l, w-1, 2, h-12, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
+              <div , className='spa, c, e-y-6'>
+                <div , className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <div , className='flex, item, s-start, ga, p-4'>
+                    <div , className='bg-cy, a, n-5, 0, 0/20, rounde, d-ful, l, w-1, 2, h-12, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
                 He, r, e's, our, proven 6-phase, framewor, k: </p>
               <div, className='spa, c, e-y-6'></div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
                   <div, className='flex, item, s-start, ga, p-4'></div>
                     <div, className='bg-cy, a, n-5, 0, 0/20, rounde, d-ful, l, w-1, 2, h-12, flex, items-center, justif, y-center, fle, x-shri, n, k-0'></div>
-                      <span, className='te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0'>
+                      <span , className='te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0'>
                       <span, className='te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0'></span>
                         1;
                       </sp, a, n>
@@ -1370,25 +1408,29 @@ Real-world implementations across industries are delivering transformational,
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'></h3>
                         Discove, r, y & Assessme, n, t (Week, s, 1-, 3)
                       </h3>
-                      <p, classNam, e = 'mb-4'>
+                      <p , classNam, e = 'mb-4'>
                         Identify, hig, h-value, automation, opportunities through, process, mini, n, g, stakeholder, interview, s, and, ROI, modeling. Prioritize, use, cases based, on, business impact, and, technical feasibili, t, y.</p>
-            <section, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'>
-              <Rocket, classNam, e='w-1, 6, h-16, tex, t-purp, l, e-400, m, x-auto, m, b-6' />
+            <section , classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'>
+              <Rocket , classNam, e='w-1, 6, h-16, tex, t-purp, l, e-400, m, x-auto, m, b-6' />
               <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-6'></h2>
-            <section, className='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'>
-              <Rocket, className='w-1, 6, h-16, tex, t-purp, l, e-400, m, x-auto, m, b-6' />
+            <section , className='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'>
+              <Rocket , className='w-1, 6, h-16, tex, t-purp, l, e-400, m, x-auto, m, b-6' />
               <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-6'></h2>
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></section>
-                <Link, t, o='/conta, c, t'
-                  className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-purp, l, e-500, hove, r:bg-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg'
-                >
-                  <Rocket, className='w-5 h-5' />
+                <Link , t, o='/conta, c, t'
+                  className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-purp, l, e-500, hove, r:bg-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg'>
+                  <Rocket , className='w-5 h-5' />
                   Schedule, Consultatio, n;
-                  <TrendingUp, classNam, e='w-5 h-5' />
+                  <TrendingUp , classNam, e='w-5 h-5' />
                   Explore, AI, Services;
+<<<<<<< HEAD
                   <TrendingUp, className='w-5 h-5' />
                   Explore, AI, Services;
 }
+=======
+                  <TrendingUp , className='w-5 h-5' />
+                  Explore, AI, Services};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       <p, classNam, e = 'mb-4'></p>
                         Identify, hig, h-value, automation, opportunities through, process, mini, n, g, stakeholder, interview, s, and, ROI, modeling. Prioritize, use, cases based, on, business impact, and, technical feasibili, t, y.
             <section, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'></section>

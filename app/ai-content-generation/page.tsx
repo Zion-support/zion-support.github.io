@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -180,3 +181,32 @@ export default AiContentGenerationPage
   </button>
   </h1>
   </main>
+=======
+import { CheckCircle, ArrowRight } from 'lucide-react';
+;
+const PagePage: React.FC = () => {
+const features = [
+];
+};
+    {
+      title: 'Feature 1',
+      description: 'Description of feature 1',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    };
+  ];
+const benefits = [
+];
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    </div>
+  );
+};
+    </div>)
+export default PagePage;
+export default AiContentGenerationPage;
+export default PagePage;
+export default AiContentGenerationPage;
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

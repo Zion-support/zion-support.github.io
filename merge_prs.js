@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
@@ -5,6 +6,11 @@ import https from 'https';
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
     const options = {
+=======
+  return new Promise((resolve, reject) => {;
+const options = {
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       hostname: 'api.github.com'
       port: 443
       path: endpoint

@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'],
     realImplementation: true;
 export interface SpaceMetaverseService;
 export interface SpaceMetaverseService {
+<<<<<<< HEAD
+=======
+;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -18,12 +27,12 @@ export interface SpaceMetaverseService {
     realImplementation: true,
     implementationDetails: 'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.',
-    useCases: [}
+    useCases: [};
     realImplementatio,
   n: true,
 export interface SpaceMetaverseService;
-export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
-  s: [}
+export interface SpaceMetaverseService {/* TODO: Fix JSX expression */};
+  s: [};
       'Virtual reality games'
       'Virtual events and conferences'
       'Virtual real estate'
@@ -50,7 +59,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
       currency: 'USD',
       trial_days: 21,
       setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing'}
+      enterprise: 'Custom pricing'};
     suppor,
   t: '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     complianc,
@@ -82,7 +91,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
       setup_tim,
   e: '1 - 2 weeks',
       enterpris,
-  e: 'Custom pricing'}
+  e: 'Custom pricing'};
     },
     feature,
   s: [,
@@ -660,6 +669,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
   roi: string, useCases: string[],
+<<<<<<< HEAD
   integrations: string[], support: string,
   compliance: string[], link: string,
   icon: string, color: string,
@@ -667,6 +677,14 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   customers: number, rating: number
   reviews: number,
 }
+=======
+  integrations: string[], support: string;
+  compliance: string[], link: string;
+  icon: string, color: string;
+  popular: boolean, launchDate: string;
+  customers: number, rating: number;
+  reviews: number};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations'
     ];
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
@@ -747,7 +765,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   s: number, ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations'
     ];
     integration,
@@ -769,13 +787,22 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 1400}
-export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
-  }
+  s: 1400};
+export interface SpaceMetaverseService {/* TODO: Fix JSX expression */};
+  };
 ];
+<<<<<<< HEAD
 }
 ];
 export interface SpaceMetaverseService {
+=======
+;
+};
+];
+export interface SpaceMetaverseService {
+;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -783,12 +810,21 @@ export interface SpaceMetaverseService {
   category: string;
   price: {
     monthly: number;
+<<<<<<< HEAD
     yearly: number
     currency: string
     trialDays: number,
     setupTime: string}
     enterprise: string}
   }
+=======
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string};
+    enterprise: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -807,18 +843,25 @@ export interface SpaceMetaverseService {
   color: string;
   popular: boolean;
   launchDate: string;
+<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
 }
+=======
+  customers: number;
+  rating: number;
+  reviews: number};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {
     id: 'ai-powered-space-resource-intelligence'
     name: 'AI-Powered Space Resource Intelligence Platform'
     tagline: 'Discover and optimize space resources with AI-driven analytics',
     description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.';
-    category: 'Space Technology & Resource Intelligence'}
-    price: {}
+    category: 'Space Technology & Resource Intelligence'};
+    price: {};
       monthly: 799;
       yearly: 7990;
       currency: 'USD'
@@ -859,8 +902,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     name: 'Metaverse Development Platform'
     tagline: 'Build immersive virtual worlds with AI-powered tools',
     description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.';
-    category: 'Metaverse & Virtual Reality'}
-    price: {}
+    category: 'Metaverse & Virtual Reality'};
+    price: {};
       monthly: 299;
       yearly: 2990;
       currency: 'USD'
@@ -901,8 +944,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     name: 'Quantum Space Communications Network'
     tagline: 'Ultra-secure space communications with quantum entanglement',
     description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.';
-    category: 'Quantum Space Communications'}
-    price: {}
+    category: 'Quantum Space Communications'};
+    price: {};
       monthly: 1299;
       yearly: 12990;
       currency: 'USD'
@@ -943,8 +986,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     name: 'AI-Powered Space Traffic Management Platform'
     tagline: 'Intelligent space traffic control with collision prevention',
     description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.';
-    category: 'Space Traffic Management & Safety'}
-    price: {}
+    category: 'Space Traffic Management & Safety'};
+    price: {};
       monthly: 599;
       yearly: 5990;
       currency: 'USD'
@@ -985,8 +1028,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     name: 'Virtual Reality Enterprise Platform'
     tagline: 'Transform business operations with immersive VR solutions',
     description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.';
-    category: 'Enterprise VR & Immersive Technology'}
-    price: {}
+    category: 'Enterprise VR & Immersive Technology'};
+    price: {};
       monthly: 199;
       yearly: 1990;
       currency: 'USD'
@@ -1018,6 +1061,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     color: 'from-orange-500 to-red-600';
     popular: true;
     launchDate: '2024-01-20';
+<<<<<<< HEAD
     customers: 1800
     rating: 4.7
     reviews: 1400,
@@ -1030,6 +1074,19 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     enterpris,
   e: string}
   }
+=======
+    customers: 1800;
+    rating: 4.7;
+    reviews: 1400};
+];
+    rating: 4.7;
+    reviews: 1400;
+export interface SpaceMetaverseService {/* TODO: Fix JSX expression */};
+  e: string};
+    enterpris,
+  e: string};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   feature,
   s: string[],
   benefit,
@@ -1071,13 +1128,22 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
+<<<<<<< HEAD
   s: number}
 export const,
   spaceMetaverseServices2025: SpaceMetaverseService[] = [,
   {/* TODO: Fix JSX expression */}
   y: 'Space Technology & Resource Intelligence'}
+=======
+  s: number};
+;
+export const,
+  spaceMetaverseServices2025: SpaceMetaverseService[] = [;
+  {/* TODO: Fix JSX expression */};
+  y: 'Space Technology & Resource Intelligence'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 799,
       yearl,
@@ -1143,11 +1209,17 @@ export const,
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 120}
   {/* TODO: Fix JSX expression */}
   y: 'Metaverse & Virtual Reality'}
+=======
+  s: 120};
+  {/* TODO: Fix JSX expression */};
+  y: 'Metaverse & Virtual Reality'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 299,
       yearl,
@@ -1213,11 +1285,17 @@ export const,
     ratin,
   g: 4.7,
     review,
+<<<<<<< HEAD
   s: 2400}
   {/* TODO: Fix JSX expression */}
   y: 'Quantum Space Communications'}
+=======
+  s: 2400};
+  {/* TODO: Fix JSX expression */};
+  y: 'Quantum Space Communications'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 1299,
       yearl,
@@ -1284,11 +1362,17 @@ export const,
     ratin,
   g: 4.9,
     review,
+<<<<<<< HEAD
   s: 65}
   {/* TODO: Fix JSX expression */}
   y: 'Space Traffic Management & Safety'}
+=======
+  s: 65};
+  {/* TODO: Fix JSX expression */};
+  y: 'Space Traffic Management & Safety'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 599,
       yearl,
@@ -1354,11 +1438,17 @@ export const,
     ratin,
   g: 4.8,
     review,
+<<<<<<< HEAD
   s: 320}
   {/* TODO: Fix JSX expression */}
   y: 'Enterprise VR & Immersive Technology'}
+=======
+  s: 320};
+  {/* TODO: Fix JSX expression */};
+  y: 'Enterprise VR & Immersive Technology'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 199,
       yearl,
@@ -1424,15 +1514,15 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1400}
+  s: 1400};
 ];
     ratin,
   g: 4.7,
     review,
-  s: 1400}
+  s: 1400};
 ];
 'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'], realImplementatio,
-  n: true, export interface SpaceMetaverseService export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
+  n: true, export interface SpaceMetaverseService export interface SpaceMetaverseService {/* TODO: Fix JSX expression */};
   s: number} setupTim,
   e: string, ' 'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'], realImplementatio,
   n: true, implementationDetail,
@@ -1653,6 +1743,7 @@ export const,
   g: 4 && 4.7, review,
   s: 1400,
   rating: 4.7, review,
+<<<<<<< HEAD
   s: 1400} export interface SpaceMetaverseService { } ]; ; } ]; export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} } feature,
@@ -1678,6 +1769,33 @@ export const,
   g: number, review,
   s: number} export const,
   spaceMetaverseServices2025: SpaceMetaverseService[] = [, {/* TODO: Fix JSX expression */}
+=======
+  s: 1400} export interface SpaceMetaverseService {} ]; } ]; export interface SpaceMetaverseService {/* TODO: Fix JSX expression */};
+  e: string} enterpris,
+  e: string} }; feature,
+  s: string[]; benefit,
+  s: string[]; targetAudienc,
+  e: string[]; marketPositio,
+  n: string; competitor,
+  s: string[]; techStac,
+  k: string[]; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; ro,
+  i: string; useCase,
+  s: string[]; integration,
+  s: string[]; suppor,
+  t: string; complianc,
+  e: string[]; lin,
+  k: string; ico,
+  n: string; colo,
+  r: string; popula,
+  r: boolean; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number} ; export const,
+  spaceMetaverseServices2025: SpaceMetaverseService[] = [; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 30}' setupTim,
   e: '2-4 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1696,6 +1814,7 @@ export const,
   t: 'Space technology experts, implementation consulting, custom development, and dedicated success manager.';' complianc,
   e: ['International space law, Government regulations, Industry standards'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/ai-powered-space-resource-intelligence',' ico,
   n: '🚀',' colo,
   r: 'from-blue-500 to-indigo-600', popula,
@@ -1704,6 +1823,16 @@ export const,
   s: 180, ratin,
   g: 4.9, review,
   s: 120} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/ai-powered-space-resource-intelligence';' ico,
+  n: '🚀';' colo,
+  r: 'from-blue-500 to-indigo-600'; popula,
+  r: true;' launchDat,
+  e: '2024-02-01'; customer,
+  s: 180; ratin,
+  g: 4.9; review,
+  s: 120}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 21}' setupTim,
   e: '1-2 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1722,6 +1851,7 @@ export const,
   t: '24/7 technical support, development consulting, custom development, and dedicated success manager.';' complianc,
   e: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/metaverse-development-platform',' ico,
   n: '🌐',' colo,
   r: 'from-purple-500 to-pink-600', popula,
@@ -1730,6 +1860,16 @@ export const,
   s: 3200, ratin,
   g: 4.7, review,
   s: 2400} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/metaverse-development-platform';' ico,
+  n: '🌐';' colo,
+  r: 'from-purple-500 to-pink-600'; popula,
+  r: true;' launchDat,
+  e: '2024-01-15'; customer,
+  s: 3200; ratin,
+  g: 4.7; review,
+  s: 2400}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 30}' setupTim,
   e: '4-6 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1749,6 +1889,7 @@ export const,
   t: 'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.';' complianc,
   e: ['International space law, Government security requirements, Industry standards'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/quantum-space-communications-network',' ico,
   n: '🛰️',' colo,
   r: 'from-indigo-500 to-purple-600', popula,
@@ -1757,6 +1898,16 @@ export const,
   s: 85, ratin,
   g: 4.9, review,
   s: 65} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/quantum-space-communications-network';' ico,
+  n: '🛰️';' colo,
+  r: 'from-indigo-500 to-purple-600'; popula,
+  r: true;' launchDat,
+  e: '2024-03-01'; customer,
+  s: 85; ratin,
+  g: 4.9; review,
+  s: 65}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 21}' setupTim,
   e: '2-3 weeks'}' enterpris,
   e: 'Custom pricing' } feature,
@@ -1775,6 +1926,7 @@ export const,
   t: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.';' complianc,
   e: ['International space law, Government regulations, Industry safety standards'];' lin,
   k: 'http,
+<<<<<<< HEAD
   s: //ziontechgroup.com/ai-powered-space-traffic-management',' ico,
   n: '🛸',' colo,
   r: 'from-green-500 to-emerald-600', popula,
@@ -1783,6 +1935,16 @@ export const,
   s: 420, ratin,
   g: 4.8, review,
   s: 320} {/* TODO: Fix JSX expression */}
+=======
+  s://ziontechgroup.com/ai-powered-space-traffic-management';' ico,
+  n: '🛸';' colo,
+  r: 'from-green-500 to-emerald-600'; popula,
+  r: true;' launchDat,
+  e: '2024-02-15'; customer,
+  s: 420; ratin,
+  g: 4.8; review,
+  s: 320}; {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: 14}' setupTim,
   e: '1-2 weeks'}' enterpris,
   e: 'Custom pricing' } feature,

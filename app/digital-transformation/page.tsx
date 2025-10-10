@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
 const features = [
     {}
@@ -37,3 +38,10 @@ return (
       </section>
 }
 export default PagePage
+=======
+;
+const PagePage: React.FC = () => {
+const features = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

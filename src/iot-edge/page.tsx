@@ -142,7 +142,7 @@ titl,
   y: 'Data Management',
       technologie,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
-    }
+    };
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (<div>Coming Soon</div>)
@@ -206,7 +206,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                   <Target className="w-8 h-8 text-orange-600" /></Target>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>"
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
-        {/* Services by Category */}
+        {/* Services by Category */};
         {categories.map(category => ()}"
           <section key={category} className="py-16 bg-gray-50"></section>
                   {category} Solutions;
@@ -214,9 +214,13 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
+<<<<<<< HEAD
                 {
     iotServices
   }
+=======
+                {iotServices};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
@@ -238,16 +242,16 @@ Save up to 40% vs market rates;"
                           {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
-                              {feature}
+                              {feature};
                             </li>
-                          ))}
+                          ))};
                         </ul>"
                         <h4 className="font-semibold text-gray-900 mb-2">Technologie,
   s:</h4>"
                         <div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded"></span>
-                              {tech}
+                              {tech};
                             </span>"
                       <div className="mb-6"></div>"
                         <h4 className="font-semibold text-gray-900 mb-2">Business,
@@ -257,9 +261,15 @@ Save up to 40% vs market rates;"
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" /></Star>
                               {benefit}"
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"
+<<<<<<< HEAD
   hover: bg-cyan-700 transition-colors"></button>
                         Get IoT Consultation,
         {/* IoT Capabilities Showcase */}
+=======
+  hover:bg-cyan-700 transition-colors"></button>
+                        Get IoT Consultation;
+        {/* IoT Capabilities Showcase */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 Our IoT & Edge Capabilities;
                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
               <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>"
@@ -295,17 +305,29 @@ Save up to 40% vs market rates;"
   md: text-4xl font-bold mb-4"></h2>
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
+<<<<<<< HEAD
               Contact our IoT experts for a free consultation and custom connected solution strategy
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
 //                  +1 302 464 0950
+=======
+              Contact our IoT experts for a free consultation and custom connected solution strategy;
+              <a href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
+//>
+//                  +1 302 464 0950;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com,
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+<<<<<<< HEAD
   );
 }
 export default IotEdgePage;
   </div>
+=======
+  )};
+export default IotEdgePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

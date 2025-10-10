@@ -8,9 +8,16 @@
  * - User engagement metrics
  * - Performance considerations,
  */
+<<<<<<< HEAD
 
 export interface BannerMetadata {,
   id: string,
+=======
+export interface BannerMetadata {
 ,
-export interface BannerMetadata {/* TODO: Fix JSX expression */}
 }
+  id: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+,
+export interface BannerMetadata {/* TODO: Fix JSX expression */};
+};

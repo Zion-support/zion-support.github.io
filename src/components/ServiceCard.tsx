@@ -2,6 +2,7 @@
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 }
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
@@ -9,14 +10,25 @@ const,
   }
   const bgColorClasses = {/* TODO: Fix JSX expression */}
   }
+=======
+};
+;
+const,
+  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  };
+;
+const bgColorClasses = {/* TODO: Fix JSX expression */}
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (<article></article>
       className="quantum-card p-4,"
   sm:p-6 energy-pulse group relative""
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
-    >
+                >
       {/* TODO: Fix JSX expression */}
-      )}
+      )};
       "
       <div className="text-4xl,
   sm:text-5xl mb-4,"
@@ -47,11 +59,11 @@ const,
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
               {feature}
             </li>
-          ))}
+          ))};
           {/* TODO: Fix JSX expression */}
               +{features.length - 3} more features;
             </li>
-          )}
+          )};
         </ul>
       </div>
       "
@@ -62,14 +74,14 @@ const,
           {/* TODO: Fix JSX expression */}
               key={idx} `
               className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
-            >
+                >
               {tech}
             </span>
-          ))}
+          ))};
           {/* TODO: Fix JSX expression */}
               +{technologies.length - 4}
             </span>
-          )}
+          )};
         </div>
       </div>
       "
@@ -92,13 +104,19 @@ const,
   focus:ring-offset-2,`
   focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}`
         aria-label={`Learn more about ${title}`}
-      >
+                >
         Learn More;"
         <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
+<<<<<<< HEAD
   );
 });
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;"`
   </ServiceCardProps>
+=======
+  )});
+ServiceCard.displayName = 'ServiceCard';
+export default ServiceCard;"`
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

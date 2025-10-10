@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
@@ -9,6 +10,19 @@ const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
     {
+=======
+import Navigation from '../components
+import Footer from '../components
+'use client';
+import React, { useState } from 'react';
+const SolutionsPage: React.FC = () => {
+};
+const [activeTab, setActiveTab] = useState('ai');
+;
+const _solutionCategories = [
+[
+        {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       id: 'ai',
       name: 'AI Solutions',
       icon: Brain,
@@ -16,7 +30,7 @@ const SolutionsPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description:     ,
 $4},
-    {
+        {
       id: 'it',
       name: 'IT Infrastructure',
       icon: Cloud,
@@ -24,7 +38,7 @@ $4},
       bgColor: 'bg-blue-500/10',
       description:     ,
 $4},
-    {
+        {
       id: 'security',
       name: 'Cybersecurity',
       icon: Shield,
@@ -32,16 +46,28 @@ $4},
       bgColor: 'bg-red-500/10',
       description:     ,
 $4},
-    {
+        {
       id: 'automation',
       name: 'Automation',
       icon: Zap,
       color: 'text-yellow-400',
+<<<<<<< HEAD
       bgColor: 'bg-yellow-500/10',
       description:     ,
 $4}
   ];
   const solutions = {
+=======
+      bgColor: 'bg-yellow-500
+      descriptio,
+    n:     ,
+$4};
+  ];
+;
+const solutions = {
+};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     ai: [
       {
         title: 'AI-Powered Analytics',
@@ -74,7 +100,7 @@ $4},
         pricing: 'Starting at $399/month',
         icon: Zap,
         color:       ,
-$4}
+$4};
     ],
     it: [
       {
@@ -108,7 +134,7 @@ $4},
         pricing: 'Starting at $399/month',
         icon: BarChart,
         color:       ,
-$4}
+$4};
     ],
     security: [
       {
@@ -142,7 +168,7 @@ $4},
         pricing: 'Starting at $199/month',
         icon: Users,
         color:       ,
-$4}
+$4};
     ],
     automation: [
       {
@@ -176,33 +202,41 @@ $4},
         pricing: 'Starting at $249/month',
         icon: BarChart,
         color:       ,
-$4}
+$4};
     ]
+<<<<<<< HEAD
   }
   const benefits = [
     {
+=======
+  };
+;
+const benefits = [
+[
+        {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Star,
       title: 'Proven Results',
       description:     ,
 $4},
-    {
+        {
       icon: Shield,
       title: 'Enterprise Security',
       description:     ,
 $4},
-    {
+        {
       icon: Globe,
       title: 'Global Support',
       description:     ,
 $4},
-    {
+        {
       icon: Users,
       title: 'Expert Team',
       description:     ,
-$4}
+$4};
   ];
   return (
-    <React.Fragment>
+    <React .Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -214,9 +248,15 @@ $4}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
+<<<<<<< HEAD
             </p>
           </div>
           {/* Solution Categories Tabs */}
+=======
+            <
+          <
+          {/* Solution Categories Tabs *
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => (
@@ -226,6 +266,7 @@ $4}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
+<<<<<<< HEAD
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -247,6 +288,29 @@ $4}
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
+                  }`};
+                >
+                  <category.icon className="w-5 h-5 mr-2" 
+                  <span className="font-medium">{category.name}<
+                <
+              ))};
+            <
+            <div className="text-center">
+              <p className="text-gray-300 max-w-2xl mx-auto">
+    <div>Coming Soon<
+  )};
+  const [activeTab, setActiveTab] = useState('ai');
+  const _solutionCategories = [
+];
+  /
+  O: Add items;
+];;
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'ai',
       nam,
@@ -260,9 +324,15 @@ $4}
       descriptio,
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'it',
       nam,
@@ -276,9 +346,15 @@ $4}
       descriptio,
   n: 'Robust and scalable IT infrastructure solutions'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'security',
       nam,
@@ -292,9 +368,15 @@ $4}
       descriptio,
   n: 'Comprehensive security solutions for your digital assets'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'automation',
       nam,
@@ -307,18 +389,30 @@ $4}
   r: 'bg-yellow-500/10',
       descriptio,
   n: 'Streamline operations with intelligent automation'
-    }
+    };
   ];
+<<<<<<< HEAD
   const solutions = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  const solutions = {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   a,
   i: [
   // TOD,
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'AI-Powered Analytics',
         descriptio,
@@ -332,9 +426,15 @@ $4}
         colo,
   r: 'text-blue-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'AI Marketing Automation',
         descriptio,
@@ -348,9 +448,15 @@ $4}
         colo,
   r: 'text-pink-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'AI Customer Support',
         descriptio,
@@ -364,9 +470,15 @@ $4}
         colo,
   r: 'text-green-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'AI Process Automation',
         descriptio,
@@ -379,15 +491,26 @@ $4}
   n: Zap,
         colo,
   r: 'text-yellow-400'
+<<<<<<< HEAD
       }
 //     ],
+=======
+      };
+/
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   t: [
   // TOD,
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Cloud Migration',
         descriptio,
@@ -401,9 +524,15 @@ $4}
         colo,
   r: 'text-blue-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'IT Infrastructure Management',
         descriptio,
@@ -417,9 +546,15 @@ $4}
         colo,
   r: 'text-green-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'DevOps & CI/CD',
         descriptio,
@@ -433,9 +568,15 @@ $4}
         colo,
   r: 'text-purple-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Database Management',
         descriptio,
@@ -448,15 +589,26 @@ $4}
   n: BarChart,
         colo,
   r: 'text-orange-400'
+<<<<<<< HEAD
       }
 //     ],
+=======
+      };
+/
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     securit,
   y: [
   // TOD,
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Cybersecurity Suite',
         descriptio,
@@ -470,9 +622,15 @@ $4}
         colo,
   r: 'text-red-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'AI Security Monitoring',
         descriptio,
@@ -486,9 +644,15 @@ $4}
         colo,
   r: 'text-purple-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Compliance Management',
         descriptio,
@@ -502,9 +666,15 @@ $4}
         colo,
   r: 'text-green-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Security Training',
         descriptio,
@@ -517,15 +687,26 @@ $4}
   n: Users,
         colo,
   r: 'text-blue-400'
+<<<<<<< HEAD
       }
 //     ],
+=======
+      };
+/
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     automatio,
   n: [
   // TOD,
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Business Process Automation',
         descriptio,
@@ -539,9 +720,15 @@ $4}
         colo,
   r: 'text-yellow-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'IT Automation',
         descriptio,
@@ -555,9 +742,15 @@ $4}
         colo,
   r: 'text-blue-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Marketing Automation',
         descriptio,
@@ -571,9 +764,15 @@ $4}
         colo,
   r: 'text-pink-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Data Automation',
         descriptio,
@@ -586,6 +785,7 @@ $4}
   n: BarChart,
         colo,
   r: 'text-green-400'
+<<<<<<< HEAD
       }
 //     ]
   }
@@ -596,6 +796,19 @@ $4}
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+      };
+/
+  };
+  const benefits = [
+];
+  /
+  O: Add items;
+];;
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Star,
       titl,
@@ -603,9 +816,15 @@ $4}
       descriptio,
   n: '300% average ROI and 95% process automation for our clients'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Shield,
       titl,
@@ -613,9 +832,15 @@ $4}
       descriptio,
   n: 'Bank-level security and compliance for all our solutions'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Globe,
       titl,
@@ -623,26 +848,37 @@ $4}
       descriptio,
   n: '24/7 support and services across multiple time zones'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Users,
       titl,
   e: 'Expert Team',
       descriptio,
   n: 'Certified professionals with years of industry experience'
-    }
+    };
   ];
   return (<div>Coming Soon</div>)
   )
+<<<<<<< HEAD
           <React.Fragment>
+=======
+          <React .Fragment>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
+<<<<<<< HEAD
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Our Solutions
           </h1>"
@@ -655,11 +891,26 @@ $4}
           <div className="mb-12"></div>"
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {solutionCategories.map((category) => ()}
+=======
+  md:text-5xl font-bold text-white mb-6 neon-text"><
+/
+          <
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"><
+/
+/
+          <
+          <
+          {/* Solution Categories Tabs *
+          <div className="mb-12"><
+            <div className="flex flex-wrap justify-center gap-4 mb-8"><
+              {solutionCategories.map((category) => ()};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <button></button>
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+                  key={category.id};
+                  onClick={() => setActiveTab(category.id)};
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${};
   // TOD,
+<<<<<<< HEAD
   O: Add content,
 }
                     activeTab === category.id;`
@@ -681,11 +932,34 @@ $4}
             </div>
           </div>
           {/* Solutions Grid */}
+=======
+  O: Add content};
+                    activeTab === category.id;`
+                      ? `${category.bgColor} ${category.color} border-2 border-current`
+                      : 'bg-slate-800
+  hover:bg-slate-700
+                  }`};
+/
+          "
+          <category.icon className="w-5 h-5 mr-2" /><
+                  <span className="font-medium">{category.name}<
+                <
+              ))};
+            <
+            <div className="text-center"><
+              <p className="text-gray-300 max-w-2xl mx-auto"><
+                {solutionCategories.find(cat => cat.id === activeTab)?.description};
+              <
+            <
+          <
+          {/* Solutions Grid *
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
+<<<<<<< HEAD
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
                     </div>
@@ -694,6 +968,16 @@ $4}
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                     </div>
                   </div>
+=======
+                    <div className={`w-12 h-12 bg-slate-700
+                      <solution.icon className={`w-6 h-6 ${solution.color}`};
+                    <
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}<
+                      <p className="text-gray-300 text-sm mb-4">{solution.description}<
+                    <
+                  <
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -718,6 +1002,7 @@ $4}
                   </div>"
                   <div className="mb-4"></div>"
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
+<<<<<<< HEAD
   Features:</h4>"
                     <ul className="space-y-1"></ul>
                       {solution.features.map((feature, featureIndex) => ()}"
@@ -786,6 +1071,75 @@ $4}
           </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+=======
+  Features: <
+                    <ul className="space-y-1"><
+                      {solution.features.map((feature), featureIndex) => ()}"
+          <li key={featureIndex} className="flex items-center text-sm text-gray-300"><
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /><
+                          {feature};
+                        <
+                      ))};
+                    <
+                  <
+                  <div className="flex items-center justify-between">
+                    <div className={`text-lg font-bold ${solution.color}`}>
+                      {solution.pricing};
+                    <
+                    <a href="
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" 
+                  <
+                  <div className="flex items-center justify-between"><
+                    <div className={`text-lg font-bold ${solution.color}`}><
+                      {solution.pricing};
+                    <
+                    <a
+                      href="
+/
+/
+          <ArrowRight className="w-4 h-4 ml-1" /><
+                    <
+                  <
+                <
+              ))};
+            <
+          <
+          {/* Benefits Section *
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+              Why Choose Our Solutions?
+            <
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-6">
+              {benefits.map((benefit), index) => (<div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500
+                    <benefit.icon className="w-8 h-8 text-cyan-400" 
+                  <
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
+          {/* Benefits Section *
+          <div className="mb-16"><
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"><
+/
+          <
+            <div className="grid grid-cols-1,
+  md:grid-cols-2,"
+  lg: grid-cols-4 gap-6"><)
+              {benefits.map((benefit), index) => ()}"
+          <div key={index} className="text-center"><
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><
+                    <benefit.icon className="w-8 h-8 text-cyan-400" /><
+                  <
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
+                  <p className="text-gray-300 text-sm">{benefit.description}<
+                <
+              ))};
+            <
+          <
+          {/* CTA Section *
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -794,6 +1148,7 @@ $4}
               and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -857,3 +1212,51 @@ export default SolutionsPage;
   </a>
   </a>
   </a>
+=======
+              <a href="
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                <Mail className="w-4 h-4 mr-2" 
+                Email Us
+              <
+          {/* CTA Section *
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"><
+            <h2 className="text-2xl font-bold text-white mb-4"><
+/
+          <
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"><
+/
+/
+          <
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="
+/
+          "
+          <Phone className="w-5 h-5 mr-2" /><
+/
+          <
+              <a
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+/
+          "
+          <Phone className="w-4 h-4 mr-2" /><
+/
+          <
+              <a
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
+    r:text-slate-900 transition-all duration-300 inline-flex items-center"
+/
+          "
+          <Mail className="w-4 h-4 mr-2" /><
+/
+          <
+            <
+          <
+        <
+      <
+      <Footer />
+    </React.Fragment>
+    </div>
+  )};
+export default SolutionsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

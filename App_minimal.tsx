@@ -5,6 +5,7 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
 const App: React.FC = () => {
+};
   return (
     <HelmetProvider>
       <Router>

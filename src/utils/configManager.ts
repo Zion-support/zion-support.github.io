@@ -5,7 +5,13 @@
  */
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {
+<<<<<<< HEAD
     environment: Environment;
+=======
+}
+}
+  environment: Environment;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   api: {
     baseURL: string
     timeout: number
@@ -38,11 +44,17 @@ export interface AppConfig {
     timezone: string
   }
   logging: {
+<<<<<<< HEAD
     level: 'debug' | 'info' | 'warn' | 'error'
     enableConsole: boolean,
     enableNetwork: boolean
   }
 }
+=======
+    level: 'debug' | 'info' | 'warn' | 'error';
+    enableConsole: boolean;
+    enableNetwork: boolean}};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   environment: 'development',
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
@@ -79,8 +91,13 @@ $4},
     level: 'info',
     enableConsole: true,
     enableNetwork: false
+<<<<<<< HEAD
   }
 }
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const developmentConfig: Partial<AppConfig> = {
   environment: 'development',
   api: {
@@ -91,22 +108,33 @@ const developmentConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: false,
-
 'use client'
 /**
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */
 export type Environment = 'development' | 'staging' | 'production' | 'test';
+<<<<<<< HEAD
 export interface AppConfig {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+export interface AppConfig {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   environmen,
   t: Environment,,
     ap,
+<<<<<<< HEAD
   i: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  i: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   baseUR,
   L: string,,
     timeou,
@@ -117,6 +145,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   g: boolean,
   }
   feature,
+<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -133,6 +162,21 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   e: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  s: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+    enablePWA: boolean};
+  performanc,
+  e: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableCodeSplittin,
   g: boolean,,
     enableLazyLoadin,
@@ -143,9 +187,15 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   g: boolean,
   }
   securit,
+<<<<<<< HEAD
   y: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  y: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableCS,
   P: boolean,,
     enableCOR,
@@ -156,9 +206,15 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   e: number,
   }
   u,
+<<<<<<< HEAD
   i: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  i: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   them,
   e: 'light' | 'dark' | 'auto',,
     languag,
@@ -167,16 +223,25 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   e: string,
   }
   loggin,
+<<<<<<< HEAD
   g: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
   level: 'debug' | 'info' | 'warn' | 'error',,
     enableConsole: boolean,,
+=======
+  g: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     enableNetwork: boolean
-  }
-}
+  };
+};
   environment: 'development',
+<<<<<<< HEAD
   api: {
     // TODO: Add content
   }
@@ -190,11 +255,22 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     // TODO: Add content
   }
 }
+=======
+  api: {// TODO: Add content};
+};
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true},
+  features: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableAnalytics: false,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
+<<<<<<< HEAD
     enablePWA: true,
   },
   performance: {
@@ -219,10 +295,28 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     // TODO: Add content
   }
 }
+=======
+    enablePWA: true},
+  performance: {// TODO: Add content};
+};
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true},
+  security: {// TODO: Add content};
+};
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100},
+  ui: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   theme: 'auto',
     language: 'en',
     timezone: 'UTC'
   },
+<<<<<<< HEAD
   logging: {
     // TODO: Add content
   }
@@ -251,6 +345,26 @@ const developmentConfig: Partial,
     // TODO: Add content
   }
 }
+=======
+  logging: {// TODO: Add content};
+};
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false};
+};
+const developmentConfig: Partial;
+          <AppConfig> = {// TODO: Add content};
+};
+  environment: 'development',
+  api: {// TODO: Add content};
+};
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false},
+  features: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableAnalytics: false,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -262,8 +376,13 @@ const developmentConfig: Partial,
     level: 'debug',
     enableConsole: true,
     enableNetwork: false
+<<<<<<< HEAD
   }
 }
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const stagingConfig: Partial<AppConfig> = {
   environment: 'staging',
   api: {
@@ -274,6 +393,7 @@ const stagingConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: true,
+<<<<<<< HEAD
     enablePWA: false
   },
   logging: {
@@ -304,6 +424,27 @@ const stagingConfig: Partial,
     // TODO: Add content
   }
 }
+=======
+    enablePWA: false},
+  logging: {// TODO: Add content};
+};
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false};
+};
+const stagingConfig: Partial;
+          <AppConfig> = {// TODO: Add content};
+};
+  environment: 'staging',
+  api: {// TODO: Add content};
+};
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true},
+  features: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -315,8 +456,13 @@ const stagingConfig: Partial,
     level: 'info',
     enableConsole: true,
     enableNetwork: true
+<<<<<<< HEAD
   }
 }
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const productionConfig: Partial<AppConfig> = {
   environment: 'production',
   api: {
@@ -327,6 +473,7 @@ const productionConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: true,
+<<<<<<< HEAD
     enablePWA: true
   },
   logging: {
@@ -357,6 +504,27 @@ const productionConfig: Partial,
     // TODO: Add content
   }
 }
+=======
+    enablePWA: true},
+  logging: {// TODO: Add content};
+};
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true};
+};
+const productionConfig: Partial;
+          <AppConfig> = {// TODO: Add content};
+};
+  environment: 'production',
+  api: {// TODO: Add content};
+};
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true},
+  features: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -374,8 +542,13 @@ const productionConfig: Partial,
     enableCORS: true,
     enableRateLimiting: true,
     maxRequestsPerMinute: 60
+<<<<<<< HEAD
   }
 }
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const testConfig: Partial<AppConfig> = {
   environment: 'test',
   api: {
@@ -386,6 +559,7 @@ const testConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: false,
+<<<<<<< HEAD
     enablePWA: true
   },
   logging: {
@@ -425,6 +599,33 @@ const testConfig: Partial,
     // TODO: Add content
   }
 }
+=======
+    enablePWA: true},
+  logging: {// TODO: Add content};
+};
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true},
+  security: {// TODO: Add content};
+};
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60};
+};
+const testConfig: Partial;
+          <AppConfig> = {// TODO: Add content};
+};
+  environment: 'test',
+  api: {// TODO: Add content};
+};
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false},
+  features: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableAnalytics: false,
     enableErrorReporting: false,
     enablePerformanceMonitoring: false,
@@ -436,8 +637,13 @@ const testConfig: Partial,
     level: 'error',
     enableConsole: false,
     enableNetwork: false
+<<<<<<< HEAD
   }
 }
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export class ConfigManager {
   private static instance: ConfigManager
   private config: AppConfig
@@ -445,6 +651,7 @@ export class ConfigManager {
   private overrides: Partial<AppConfig> = {}
   constructor() {
     this.environment = this.detectEnvironment();
+<<<<<<< HEAD
     this.config = this.loadConfig()
   }
   static getInstance(): ConfigManager {
@@ -486,6 +693,38 @@ export class ConfigManager {
     }
     return ConfigManager.instance;
   }
+=======
+    this.config = this.loadConfig()};
+  static getInstance(): ConfigManager {
+    if (!ConfigManager.instance) {
+    enablePWA: false},
+  logging: {// TODO: Add content};
+};
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false};
+};
+export class ConfigManager {// TODO: Add content};
+};
+  private static instance: ConfigManager;
+  private config: AppConfig;
+  private environment: Environment;
+  private overrides: Partial;
+          <AppConfig> = {};
+  constructor() {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    this.environment = this.detectEnvironment();
+    this.config = this.loadConfig()};
+  static getInstance(): ConfigManager {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    if (!ConfigManager.instance) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      ConfigManager.instance = new ConfigManager()};
+    return ConfigManager.instance};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Detect current environment
    */
@@ -493,6 +732,7 @@ export class ConfigManager {
     if (typeof process !== 'undefined') {
       const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
       if (nextEnv) {
+<<<<<<< HEAD
         return nextEnv as Environment
   }
       if (nodeEnv === 'test') return 'test';
@@ -501,6 +741,13 @@ export class ConfigManager {
     }
     return 'development';
   }
+=======
+        return nextEnv as Environment};
+      if (nodeEnv === 'test') return 'test';
+      if (nodeEnv === 'production') return 'production';
+      if (nodeEnv === 'development') return 'development'};
+    return 'development'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Load configuration based on environment
    */
@@ -517,6 +764,7 @@ export class ConfigManager {
         break;
       case 'test':
         config = this.mergeConfig(config, testConfig);
+<<<<<<< HEAD
         break
   }
     // Apply overrides
@@ -532,6 +780,17 @@ export class ConfigManager {
   // TOD,
   O: Add content,
 }
+=======
+        break};
+    // Apply overrides
+   * Detect current environment;
+   */
+  private detectEnvironment(): Environment {// TODO: Add content};
+};
+    if (typeof process !== 'undefined') {switch (this.environment) {};
+  // TOD,
+  O: Add content};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       case 'development':
         config = this.mergeConfig(config, developmentConfig)
         break;
@@ -543,12 +802,19 @@ export class ConfigManager {
         break;
       case 'test':
         config = this.mergeConfig(config, testConfig)
+<<<<<<< HEAD
         break;
     }
     // Apply overrides;
     config = this.mergeConfig(config, this.overrides);
     return config;
   }
+=======
+        break};
+    // Apply overrides;
+    config = this.mergeConfig(config, this.overrides);
+    return config};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Deep merge two config objects
    */
@@ -571,17 +837,23 @@ export class ConfigManager {
           } else {
     * Deep merge two config objects;
    */
+<<<<<<< HEAD
 
   private mergeConfig(base: AppConfig, override: Partial,
           <AppConfig>): AppConfig {// TODO: Add content
   }
 
 }
+=======
+  private mergeConfig(base: AppConfig, override: Partial;
+          <AppConfig>): AppConfig {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const result = { ...base } as AppConfig;
 //     (Object.keys(override) as Array;
           <keyof AppConfig>).forEach()
-      
           <K extends keyof AppConfig>(ke)
+<<<<<<< HEAD
   y: K) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -589,6 +861,15 @@ export class ConfigManager {
         if (value !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  y: K) => {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+        const value = override[key];
+        if (value !== undefined) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           const baseValue = result[key];
           if ()
             typeof value === 'object' &&
@@ -596,6 +877,7 @@ export class ConfigManager {
             value !== null &&
             typeof baseValue === 'object' &&
 //             !Array.isArray(baseValue) &&
+<<<<<<< HEAD
             baseValue !== null) {
     // TODO: Add content
   }
@@ -612,6 +894,18 @@ export class ConfigManager {
     );
     return result;
   }
+=======
+            baseValue !== null) {// TODO: Add content};
+};
+            result[key] = Object.assign({}, baseValue, value) as typeof baseValue} else {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+            result[key] = value as typeof baseValue};
+        };
+      };
+    );
+    return result};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get configuration value
    */
@@ -625,10 +919,15 @@ export class ConfigManager {
     nestedKey?: NK
   ): AppConfig[K] | AppConfig[K][NK] {
     if (nestedKey !== undefined) {
+<<<<<<< HEAD
       return this.config[key][nestedKey]
   }
     return this.config[key];
   }
+=======
+      return this.config[key][nestedKey]};
+    return this.config[key]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Set configuration value
    */
@@ -658,12 +957,19 @@ export class ConfigManager {
         const defaultValue = this.getDefaultForKey(key);
         this.config[key] = Object.assign({}, defaultValue, {
           [nestedKeyOrValue]: value
+<<<<<<< HEAD
         }) as AppConfig[K];
       }
     } else {
     )
     return result
   }
+=======
+        }) as AppConfig[K]};
+    } else {
+  )
+    return result};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get configuration value;
    */
@@ -680,6 +986,7 @@ export class ConfigManager {
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
+<<<<<<< HEAD
     nestedKey?: NK): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -688,8 +995,17 @@ export class ConfigManager {
 }
       return this.config[key][nestedKey];
     }
+=======
+    nestedKey?: NK): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    if (nestedKey !== undefined) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      return this.config[key][nestedKey]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return this.config[key]
-  }
+  };
   /**
    * Set configuration value;
    */
@@ -699,19 +1015,24 @@ export class ConfigManager {
   e: AppConfig[K]): void
 // set,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-
     key: K,
     nestedKey: NK,
     value: AppConfig[K][NK]
+<<<<<<< HEAD
 
   ): void
 // set,
+=======
+  ): void;
+// set;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
     nestedKeyOrValu,
   e: NK | AppConfig[K],
     value?: AppConfig[K][NK]
+<<<<<<< HEAD
 
   ): void {
     // TODO: Add content
@@ -721,10 +1042,18 @@ export class ConfigManager {
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
+=======
+  ): void {// TODO: Add content};
+};
+    if (value !== undefined && typeof nestedKeyOrValue === 'string') {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const currentValue = this.config[key];
       if ()
         typeof currentValue === 'object' &&
 //         !Array.isArray(currentValue) &&
+<<<<<<< HEAD
         currentValue !== null) {
     // TODO: Add content
   }
@@ -752,6 +1081,29 @@ const defaultValue = this.getDefaultForKey(key);
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
   }
+=======
+        currentValue !== null) {// TODO: Add content};
+};
+        this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+          [nestedKeyOrValue]: value;)
+        }) as AppConfig[K]} else {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+        // If current value is not an object, create a new object by merging with default;
+const defaultValue = this.getDefaultForKey(key);
+        this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+          [nestedKeyOrValue]: value;)
+        }) as AppConfig[K]};
+    } else {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      this.config[key] = nestedKeyOrValue as AppConfig[K]};
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get default value for a config key
    */
@@ -770,6 +1122,7 @@ const defaultValue = this.getDefaultForKey(key);
    */
   private getDefaultForKey;
           <K extends keyof AppConfig>(ke)
+<<<<<<< HEAD
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -793,6 +1146,27 @@ const defaultValue = this.getDefaultForKey(key);
     // TODO: Add content
   }
 }
+=======
+  y: K): AppConfig[K] {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    const,
+  defaultValues: AppConfig = {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  environmen,
+  t: 'development',
+      ap,
+  i: {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true},
+      features: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableAnalytics: false,
         enableErrorReporting: true,
         enablePerformanceMonitoring: false,
@@ -821,80 +1195,131 @@ $4},
         level: 'info',
         enableConsole: true,
         enableNetwork: false
+<<<<<<< HEAD
       }
     }
     return defaultValues[key];
   }
+=======
+      };
+    };
+    return defaultValues[key]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get full configuration
    */
   getConfig(): AppConfig {
+<<<<<<< HEAD
     return { ...this.config }
   }
+=======
+    return { ...this.config }};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get environment
    */
   getEnvironment(): Environment {
+<<<<<<< HEAD
     return this.environment
   }
+=======
+    return this.environment};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Check if feature is enabled
    */
   isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
+<<<<<<< HEAD
     return this.config.features[feature]
   }
+=======
+    return this.config.features[feature]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Enable feature
    */
   enableFeature(feature: keyof AppConfig['features']): void {
+<<<<<<< HEAD
     this.config.features[feature] = true
   }
+=======
+    this.config.features[feature] = true};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Disable feature
    */
   disableFeature(feature: keyof AppConfig['features']): void {
+<<<<<<< HEAD
     this.config.features[feature] = false
   }
+=======
+    this.config.features[feature] = false};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get API configuration
    */
   getAPIConfig() {
+<<<<<<< HEAD
     return { ...this.config.api }
   }
+=======
+    return { ...this.config.api }};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Update API configuration
    */
   updateAPIConfig(config: Partial<AppConfig['api']>): void {
+<<<<<<< HEAD
     this.config.api = { ...this.config.api, ...config }
   }
+=======
+    this.config.api = { ...this.config.api, ...config }};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Check if in production
    */
   isProduction(): boolean {
+<<<<<<< HEAD
     return this.environment === 'production'
   }
+=======
+    return this.environment === 'production'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Check if in development
    */
   isDevelopment(): boolean {
+<<<<<<< HEAD
     return this.environment === 'development'
   }
+=======
+    return this.environment === 'development'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Check if in test
    */
   isTest(): boolean {
+<<<<<<< HEAD
     return this.environment === 'test'
   }
+=======
+    return this.environment === 'test'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Check if in staging
    */
   isStaging(): boolean {
+<<<<<<< HEAD
     return this.environment === 'staging'
   }
+=======
+    return this.environment === 'staging'};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Override configuration
    */
   override(config: Partial<AppConfig>): void {
+<<<<<<< HEAD
     enablePWA: false
   },
       performance: {
@@ -919,10 +1344,28 @@ $4},
     // TODO: Add content
   }
 }
+=======
+        enablePWA: false},
+      performance: {// TODO: Add content};
+};
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true},
+      security: {// TODO: Add content};
+};
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100},
+      ui: {// TODO: Add content};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   theme: 'light',
         language: 'en',
         timezone: 'UTC'
       },
+<<<<<<< HEAD
       logging: {
     // TODO: Add content
   }
@@ -933,11 +1376,20 @@ $4},
 
       }
     }
+=======
+      logging: {// TODO: Add content};
+};
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false};
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return defaultValues[key]
-  }
+  };
   /**
    * Get full configuration;
    */
+<<<<<<< HEAD
 
   getConfig(): AppConfig {
     // TODO: Add content
@@ -1070,12 +1522,87 @@ $4},
     this.overrides = config;
     this.config = this.loadConfig();
   }
+=======
+  getConfig(): AppConfig {// TODO: Add content};
+};
+    return { ...this.config }};
+  /**
+   * Get environment;
+   */
+  getEnvironment(): Environment {// TODO: Add content};
+};
+    return this.environment};
+  /**
+   * Check if feature is enabled;
+   */
+  isFeatureEnabled(feature: keyof AppConfig['features']): boolean {// TODO: Add content};
+};
+    return this.config.features[feature]};
+  /**
+   * Enable feature;
+   */
+  enableFeature(feature: keyof AppConfig['features']): void {// TODO: Add content};
+};
+    this.config.features[feature] = true};
+  /**
+   * Disable feature;
+   */
+  disableFeature(feature: keyof AppConfig['features']): void {// TODO: Add content};
+};
+    this.config.features[feature] = false};
+  /**
+   * Get API configuration;
+   */
+  getAPIConfig() {// TODO: Add content};
+};
+    return { ...this.config.api }};
+  /**
+   * Update API configuration;
+   */
+  updateAPIConfig(config: Partial;
+          <AppConfig['api']>): void {// TODO: Add content};
+};
+    this.config.api = { ...this.config.api, ...config }};
+  /**
+   * Check if in production;
+   */
+  isProduction(): boolean {// TODO: Add content};
+};
+    return this.environment === 'production'};
+  /**
+   * Check if in development;
+   */
+  isDevelopment(): boolean {// TODO: Add content};
+};
+    return this.environment === 'development'};
+  /**
+   * Check if in test;
+   */
+  isTest(): boolean {// TODO: Add content};
+};
+    return this.environment === 'test'};
+  /**
+   * Check if in staging;
+   */
+  isStaging(): boolean {// TODO: Add content};
+};
+    return this.environment === 'staging'};
+  /**
+   * Override configuration;
+   */
+  override(config: Partial;
+          <AppConfig>): void {// TODO: Add content};
+};
+    this.overrides = config;
+    this.config = this.loadConfig()};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Reset configuration
    */
   reset(): void {
     * Reset configuration;
    */
+<<<<<<< HEAD
 
   reset(): void {// TODO: Add content
   }
@@ -1084,12 +1611,22 @@ $4},
     this.overrides = {}
     this.config = this.loadConfig();
   }
+=======
+  reset(): void {// TODO: Add content};
+};
+    this.overrides = {};
+    this.config = this.loadConfig()};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Export configuration as JSON
    */
   export(): string {
+<<<<<<< HEAD
     return JSON.stringify(this.config, null, 2)
   }
+=======
+    return JSON.stringify(this.config, null, 2)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Validate configuration
    */
@@ -1097,6 +1634,7 @@ $4},
     const errors: string[] = [],
     // Validate API configuration
     if (!this.config.api.baseURL) {
+<<<<<<< HEAD
       errors.push('API baseURL is required')
   }
     if (this.config.api.timeout < 1000) {
@@ -1115,10 +1653,26 @@ $4},
     }
   }
 }
+=======
+      errors.push('API baseURL is required')};
+    if (this.config.api.timeout < 1000) {
+      errors.push('API timeout must be at least 1000ms')};
+    if (this.config.api.retryAttempts < 0) {
+      errors.push('API retryAttempts must be non-negative')};
+    // Validate security configuration
+    if (this.config.security.maxRequestsPerMinute < 1) {
+      errors.push('Security maxRequestsPerMinute must be at least 1')};
+    return {
+      valid: errors.length === 0,
+      errors
+    }};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Export singleton instance
 export const configManager = ConfigManager.getInstance();
    * Export configuration as JSON;
    */
+<<<<<<< HEAD
 
   export(): string {
     // TODO: Add content
@@ -1173,3 +1727,44 @@ export const configManager = ConfigManager.getInstance();
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 
+=======
+  export(): string {// TODO: Add content};
+};
+    return JSON.stringify(this.config, null, 2)};
+  /**
+   * Validate configuration;
+   */
+  validate(): { valid: boolean; errors: string[] } {// TODO: Add content};
+};
+    const errors: string[] = [];
+    // Validate API configuration;
+    if (!this.config.api.baseURL) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      errors.push('API baseURL is required')};
+    if (this.config.api.timeout;)
+          < 1000) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      errors.push('API timeout must be at least 1000ms')};
+    if (this.config.api.retryAttempts;)
+          < 0) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      errors.push('API retryAttempts must be non-negative')};
+    // Validate security configuration;
+    if (this.config.security.maxRequestsPerMinute;)
+          < 1) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      errors.push('Security maxRequestsPerMinute must be at least 1')};
+    return {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+  vali,
+  d: errors.length === 0,
+//       errors}};
+};
+// Export singleton instance;
+export const configManager = ConfigManager.getInstance();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

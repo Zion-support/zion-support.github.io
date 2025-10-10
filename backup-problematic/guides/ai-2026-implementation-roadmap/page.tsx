@@ -1,20 +1,28 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
+<<<<<<< HEAD
 export const metadata = {/* TODO: Fix JSX expression */}
+=======
+export const metadata = {/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 };
 export default function AI2026ImplementationRoadmap() {
   return(<div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Header */};
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
-          <Link;
+          <Link ;
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}</div>
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6"></div>
+<<<<<<< HEAD
           <Link 
             href="/"
+=======
+          <Link href="/"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             className="inline-flex items-center text-blue-600 hover: text-blue-800 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home;
@@ -22,9 +30,9 @@ export default function AI2026ImplementationRoadmap() {
         </div>,
       </header>,
 ,
-      {/* Article Content */}
+      {/* Article Content */};
       <article className="max-w-4 xl mx-auto px-4 py-8"></article>
-        {/* Article Header */}
+        {/* Article Header */};
         <div className="mb-8"></div>
           <div className="flex items-center space-x-6 text-sm text-gray-600 mb-4"></div>
             <div className="flex items-center"></div>
@@ -51,8 +59,8 @@ export default function AI2026ImplementationRoadmap() {
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>
                 <Tag className="w-3 h-3 mr-1" />
-export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
-}
+export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */};
+};
   return (<div className="min-h-screen bg-white"></div>
       {/* Header */}"
       <header className="bg-white border-b border-gray-200"></header>"
@@ -99,12 +107,16 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             {/* TODO: Fix JSX expression */}"
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>"
                 <Tag className="w-3 h-3 mr-1" /></Tag>
-                {tag}
+                {tag};
               </span>)
-            ))}
+            ))};
           </div>
         </div>
+<<<<<<< HEAD
         {/* Executive Summary */}
+=======
+        {/* Executive Summary */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="mb-12"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8">
@@ -129,7 +141,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>,
         </div>,
 ,
-        {/* Article Content */}
+        {/* Article Content */};
         {/* Executive Summary */}"
         <div className="mb-12"></div>"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>"
@@ -560,7 +572,11 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <p></p>
             The future belongs to organizations that can successfully harness the power of AI to transform their operations, enhance customer experiences, and drive innovation. This roadmap provides the foundation for that transformation.
           </p>
+<<<<<<< HEAD
           {/* CTA Section */}
+=======
+          {/* CTA Section */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="bg-blue-50 p-8 rounded-lg mt-12"></div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Your AI Transformation Journey?</h3>
             <p className="text-gray-600 mb-6">
@@ -569,13 +585,17 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             <div className="flex flex-wrap gap-4">
               <Link;
             <div className="flex flex-wrap gap-4"></div>
+<<<<<<< HEAD
               <Link 
                 href="/case-studies/fortune-500-ai-transformation-success"
+=======
+              <Link href="/case-studies/fortune-500-ai-transformation-success"
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">
                 View Success Stories;
                 <Link className="w-4 h-4 ml-2" />
               </Link>
-              <Link;
+              <Link ;
                 href="/tools/ai-roi-calculator"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
                 Calculate Your ROI;
@@ -607,8 +627,12 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>
         </div>
       </article>,
+<<<<<<< HEAD
     </div>);
 };
+=======
+    </div>)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default AI2026ImplementationRoadmap;
 "
   </li>

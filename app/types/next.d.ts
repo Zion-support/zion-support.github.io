@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -44,6 +45,17 @@ const NextPage: React.FC = () => {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Type definitions for Next.js compatibility in Vite
+export interface Metadata {
+}
+}
+  title?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   description?: string;
   keywords?: string[]
   authors?: Array<{ name: string; url?: string }> | string[]
@@ -99,25 +111,31 @@ const NextPage: React.FC = () => {
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
+<<<<<<< HEAD
   }
 }
 
+=======
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export interface MetadataRoute {
+}
+}
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
-
+};
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
-
+};
 // Custom Next.js types
 export interface NextPageProps {
+<<<<<<< HEAD
   params: { [key: string]: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
@@ -284,3 +302,10 @@ declare module 'next' {
 
 export {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-00a6
+=======
+}
+}
+  params: { [key: string]: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

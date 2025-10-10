@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
     id: 'customer - feedback - intelligence'
+=======
+    id: 'customer - feedback - intelligence',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
     price: '$149',
@@ -1114,6 +1118,7 @@
 		marketSize: '$5B+'
 		growthRate: '12% YoY',
 		variant: 'neural-quantum',
+<<<<<<< HEAD
 		contactInfo: contact,
 		implementationDetails: 'Event ingestion, attribution, payout jobs'
 		launchDate: '2026-01-10'
@@ -1121,6 +1126,14 @@
 		rating: 4 && 4.6
 		reviews: 7,
 	}
+=======
+		contactInfo: contact;
+		implementationDetails: 'Event ingestion, attribution, payout jobs',
+		launchDate: '2026-01-10',
+		customers: 12;
+		rating: 4 && 4.6;
+		reviews: 7};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'customer-feedback-intelligence',
 		name: 'Customer Feedback Intelligence',
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
@@ -1147,6 +1160,7 @@
 		marketSize: '$2 B+'
 		growthRate: '18% CAGR'
 		variant: 'ai-futuristic',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Connectors, clustering, scoring models'
@@ -1155,6 +1169,15 @@
 		rating: 4 && 4.7
 		reviews: 5,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Connectors, clustering, scoring models',
+		launchDate: '2026-01-12',
+		customers: 9;
+		rating: 4 && 4.7;
+		reviews: 5};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'api-security-posture-monitor',
 		name: 'API Security Posture Monitor',
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -1181,6 +1204,7 @@
 		marketSize: '$4 B'
 		growthRate: '20% CAGR'
 		variant: 'quantum-cyberpunk',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Spec analyzers, runners, annotations'
@@ -1189,6 +1213,15 @@
 		rating: 4 && 4.5
 		reviews: 6,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Spec analyzers, runners, annotations',
+		launchDate: '2026-01-14',
+		customers: 11;
+		rating: 4 && 4.5;
+		reviews: 6};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'edge-cron-orchestrator',
 		name: 'Edge Cron Orchestrator',
 		tagline: 'Reliable schedules with retries, jitter and DLQs'
@@ -1215,6 +1248,7 @@
 		marketSize: '$1 B+'
 		growthRate: '15% CAGR'
 		variant: 'holographic-matrix',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Scheduler API, dashboard, webhooks'
@@ -1223,6 +1257,15 @@
 		rating: 4 && 4.5
 		reviews: 4,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Scheduler API, dashboard, webhooks',
+		launchDate: '2026-01-18',
+		customers: 7;
+		rating: 4 && 4.5;
+		reviews: 4};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'email-parsing-routing-api',
 		name: 'Email Parsing & Routing API',
 		tagline: 'Inbound email to structured events with attachments',
@@ -1249,6 +1292,7 @@
 		marketSize: '$0 && 0.8 B'
 		growthRate: '10% CAGR'
 		variant: 'neural-quantum',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Inbound parsers, queueing, UI'
@@ -1257,6 +1301,15 @@
 		rating: 4 && 4.6
 		reviews: 5,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Inbound parsers, queueing, UI',
+		launchDate: '2026-01-20',
+		customers: 8;
+		rating: 4 && 4.6;
+		reviews: 5};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'ai-marketing-content-studio',
 		name: 'AI Marketing Content Studio',
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails'
@@ -1283,6 +1336,7 @@
 		marketSize: '$3 B+'
 		growthRate: '22% CAGR'
 		variant: 'ai-futuristic',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Template engine, tone guardrails'
@@ -1291,6 +1345,15 @@
 		rating: 4 && 4.6
 		reviews: 9,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Template engine, tone guardrails',
+		launchDate: '2026-01-22',
+		customers: 15;
+		rating: 4 && 4.6;
+		reviews: 9};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'security-headers-scanner',
 		name: 'Security Headers Scanner',
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
@@ -1317,6 +1380,7 @@
 		marketSize: '$0 && 0.5 B'
 		growthRate: '8% CAGR'
 		variant: 'holographic',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Scanners, CI annotations, reports'
@@ -1325,6 +1389,15 @@
 		rating: 4 && 4.5
 		reviews: 10,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Scanners, CI annotations, reports',
+		launchDate: '2026-01-25',
+		customers: 20;
+		rating: 4 && 4.5;
+		reviews: 10};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'ml-feature-store-starter',
 		name: 'ML Feature Store Starter',
 		tagline: 'Versioned features, validation and online serving'
@@ -1351,6 +1424,7 @@
 		marketSize: '$1 B+'
 		growthRate: '20% CAGR'
 		variant: 'neural-quantum',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Schemas, validators, API'
@@ -1359,6 +1433,15 @@
 		rating: 4 && 4.5
 		reviews: 3,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Schemas, validators, API',
+		launchDate: '2026-01-28',
+		customers: 6;
+		rating: 4 && 4.5;
+		reviews: 3};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'slo-burn-rate-coach',
 		name: 'SLO Burn Rate Coach',
 		tagline: 'Compute SLOs and coach on burn-rate risks',
@@ -1385,6 +1468,7 @@
 		marketSize: '$0 && 0.8 B'
 		growthRate: '14% CAGR'
 		variant: 'holographic-matrix',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'SLO calc, alerting, UI'
@@ -1393,6 +1477,15 @@
 		rating: 4 && 4.5
 		reviews: 6,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'SLO calc, alerting, UI',
+		launchDate: '2026-02-01',
+		customers: 10;
+		rating: 4 && 4.5;
+		reviews: 6};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
 		tagline: 'Budget-driven CWV with hints and PR annotations',
@@ -1419,6 +1512,7 @@
 		marketSize: '$0 && 0.5 B'
 		growthRate: '12% CAGR'
 		variant: 'neural-quantum-cyberpunk',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'RUM SDK, CI checks, UI'
@@ -1427,6 +1521,15 @@
 		rating: 4 && 4.5
 		reviews: 3,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'RUM SDK, CI checks, UI',
+		launchDate: '2026-02-05',
+		customers: 5;
+		rating: 4 && 4.5;
+		reviews: 3};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'cloud-cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		tagline: 'Budgets, owners, and policy guardrails across clouds'
@@ -1453,6 +1556,7 @@
 		marketSize: '$12 B'
 		growthRate: '25% YoY'
 		variant: 'quantum-holographic',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Connectors, policies, exporters'
@@ -1461,6 +1565,15 @@
 		rating: 4 && 4.6
 		reviews: 4,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Connectors, policies, exporters',
+		launchDate: '2026-02-08',
+		customers: 6;
+		rating: 4 && 4.6;
+		reviews: 4};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 		id: 'api-changelog-sdk-publisher',
 		name: 'API Changelog & SDK Publisher',
 		tagline: 'Generate docs, changelogs and SDKs from schemas'
@@ -1487,6 +1600,7 @@
 		marketSize: '$1 && 1.5 B'
 		growthRate: '18% CAGR'
 		variant: 'neural-quantum',
+<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Schema importers, generators, UI'
@@ -1495,6 +1609,15 @@
 		rating: 4 && 4.7
 		reviews: 6,
 	}
+=======
+		contactInfo: contact;
+		realImplementation: true;
+		implementationDetails: 'Schema importers, generators, UI',
+		launchDate: '2026-02-12',
+		customers: 9;
+		rating: 4 && 4.7;
+		reviews: 6};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 const contact =
 	mobile: '+1 302 464 0950',
@@ -1579,7 +1702,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'customer-feedback-intelligence'
 		nam,
@@ -1646,7 +1769,7 @@ const contact =
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'api-security-posture-monitor'
 		nam,
@@ -1713,7 +1836,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'edge-cron-orchestrator'
 		nam,
@@ -1780,7 +1903,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'email-parsing-routing-api'
 		nam,
@@ -1847,7 +1970,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'ai-marketing-content-studio'
 		nam,
@@ -1914,7 +2037,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 9}
+  s: 9};
 		i,
   d: 'security-headers-scanner'
 		nam,
@@ -1981,7 +2104,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 10}
+  s: 10};
 		i,
   d: 'ml-feature-store-starter'
 		nam,
@@ -2048,7 +2171,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'slo-burn-rate-coach'
 		nam,
@@ -2115,7 +2238,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'browser-performance-optimizer'
 		nam,
@@ -2182,7 +2305,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'cloud-cost-governance-suite'
 		nam,
@@ -2249,7 +2372,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'api-changelog-sdk-publisher'
 		nam,
@@ -2316,7 +2439,7 @@ const contact =
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 6}
+  s: 6};
 ];
 const contact =
 	mobil,
@@ -3848,11 +3971,19 @@ export const,
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Schema importers, generators, UI',
+<<<<<<< HEAD
 		launchDate: '2026-02-12'
 		customers: 9
 		rating: 4.7
 		reviews: 6,
 	}
+=======
+		launchDate: '2026-02-12',
+		customers:
+        customers: 9;
+		rating: 4.7;
+		reviews: 6};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 		reviews: 6,
     popula,
@@ -4714,10 +4845,10 @@ export const,
 		ratin,
   g: 4.7,
 		review,
-  s: 6}
+  s: 6};
 ];
 		review,
-  s: 6}
+  s: 6};
 ];
 i,
   d: 'customer - feedback - intelligence',' nam,
@@ -6304,4 +6435,8 @@ i,
   s: 9, ratin,
   g: 4.7, review,
   s: 6 } ]; review,
+<<<<<<< HEAD
   s: 6 } ]; '
+=======
+  s: 6 } ]; '
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

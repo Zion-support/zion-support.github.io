@@ -1,21 +1,40 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
+<<<<<<< HEAD
     title?: string;
+=======
+  title?: string
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
+<<<<<<< HEAD
   type?: string
   }
+=======
+  type?: string};
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.png",
   url = "https://ziontechgroup.com",
   type = "website"
+<<<<<<< HEAD
 }) => {
   const structuredData = {
+=======
+}) => {;
+const structuredData = {
+};
+};
+};
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -54,7 +73,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Cloud Computing",
       "Automation"
     ]
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -89,7 +112,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
       {/* Fonts */}
+<<<<<<< HEAD
       <link href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700,800&display=swap" rel="stylesheet" /></link>
+=======
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" /></link>
       <link rel="apple-touch-icon" href="/logo192.png" /></link>
@@ -111,8 +138,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
-        })}
+          };
+        })};
       </script>
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>
@@ -170,6 +197,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
     </Helmet>
+<<<<<<< HEAD
   ),
 }
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default EnhancedSEOHead;

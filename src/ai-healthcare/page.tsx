@@ -19,9 +19,14 @@ export default function AIHealthcarePage() {
             <p className="text-gray-300 mb-6">
               Transform healthcare with AI-powered diagnostics, treatment recommendations, and patient care.
             </p>
+<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
+=======
+            <a href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us,
   </
@@ -29,7 +34,11 @@ export default function AIHealthcarePage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
   }
   </a>
   </h1>
+=======
+  )};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

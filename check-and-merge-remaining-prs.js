@@ -1,21 +1,25 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
+<<<<<<< HEAD
 
 console.log('🔍 Checking for remaining PRs to merge...');
 
+=======
+// console.log removed for production
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 try {
   // Get all remote branches;
   const branches = execSync('git branch -r', { encoding: 'utf8' })
     .split('\n')
     .filter(branch => branch.trim() && !branch.includes('HEAD'))
     .map(branch => branch.trim().replace('origin/', ''));
-
   // Filter for cursor branches that might have PRs;
   const cursorBranches = branches.filter(branch => )
     branch.includes('cursor/') && 
     !branch.includes('enhance-app-with-new-services-and-futuristic-design-c013') &&
     !branch.includes('aggressive-merge-backup')
   );
+<<<<<<< HEAD
 
   console.log(`📋 Found ${cursorBranches.length} cursor branches: `);
   cursorBranches.forEach(branch => console.log(`  - ${branch}`));
@@ -25,6 +29,14 @@ try {
     process.exit(0);
   }
 
+=======
+  // console.log removed for production
+cursorBranches.forEach(branch => // console.log removed for production
+);
+  if (cursorBranches.length === 0) {
+    // console.log removed for production
+process.exit(0)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Try to merge each branch;
   for (const branch of cursorBranches.slice(0, 5)) { // Limit to first 5 to avoid too many operations;
     try {
@@ -33,10 +45,15 @@ try {
       // Check if branch has changes;
       const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' });
       if (!diff.trim()) {
+<<<<<<< HEAD
         console.log(`⏭️  Branch ${branch} has no changes, skipping...`);
         continue;
       }
 
+=======
+        // console.log removed for production
+continue};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Try to merge;
       execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });
       console.log(`✅ Successfully merged ${branch}`);
@@ -46,6 +63,7 @@ try {
       
       // Try to abort the merge if it failed;
       try {
+<<<<<<< HEAD
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
         // Ignore abort errors;
@@ -62,3 +80,16 @@ try {
 } catch (error) {
   console.error('❌ Error processing PRs:', error.message);
 }
+=======
+        execSync('git merge --abort', { stdio: 'pipe' })} catch (abortError) {
+        // Ignore abort errors};
+    };
+  };
+  // Push all changes;
+  // console.log removed for production
+execSync('git push origin main', { stdio: 'inherit' });
+  // console.log removed for production
+} catch (error) {
+  // console.error removed for production
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

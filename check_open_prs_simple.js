@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
+=======
+  return new Promise((resolve, reject) => {;
+const options = {
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       hostname: 'api.github.com'
       path: path,
       method: 'GET'

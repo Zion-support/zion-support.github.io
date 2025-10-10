@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026'
+=======
+export const metaverseDigitalRealityServices2026 = [
+{name: 'Metaverse Development Platform 2026',
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
     icon: 'Globe',
@@ -11,8 +17,8 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
     ],
     pricing: unknown,
       starter: '$399/month',
-      professional: '$799/month'}
-      enterprise: 'Custom'}
+      professional: '$799/month'};
+      enterprise: 'Custom'};
   },
     name: 'Digital Reality Solutions 2026'
     path: '/services/digital-reality-solutions-2026',
@@ -20,11 +26,13 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
     icon: 'Eye',
     category: 'Digital Reality',
     features: [,
-export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression */}
-  l: '$799/month'}
+export const metaverseDigitalRealityServices2026 = [
+{/* TODO: Fix JSX expression */};
+];
+  l: '$799/month'};
       enterpris,
   e: 'Custom'
-    }
+    };
   },
     nam,
   e: 'Digital Reality Solutions 2026',
@@ -55,10 +63,11 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
   l: '$599/month',
       enterpris,
   e: 'Custom'
-    }
-  }
+    };
+  };
 ];
 export const metaverseDigitalCategories2026 = [
+];
   'Metaverse Development',
   'Virtual Reality',
   'Augmented Reality',
@@ -77,8 +86,15 @@ export const metaverseDigitalStats2026 = {}
   averageRatin,
   g: 4.7,
   activeUser,
+<<<<<<< HEAD
   s: 1200}
 export const metaverseDigitalRealityServices2026 = [ nam,
+=======
+  s: 1200};
+export const metaverseDigitalRealityServices2026 = [
+ nam,
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Metaverse Development Platform 2026',' pat,
   h: '/services/metaverse-development-platform-2026',' descriptio,
   n: 'Complete metaverse development and deployment solution',' ico,
