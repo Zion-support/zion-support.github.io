@@ -203,15 +203,15 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20 cyber-card-enhanced' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25 glow">
+                <Brain className="w-7 h-7 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
@@ -222,7 +222,7 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Home
             </Link>
             
@@ -408,25 +408,25 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               About
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Services
             </Link>
-            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Pricing
             </Link>
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Case Studies
             </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Blog
             </Link>
-            <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Tutorials
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               Contact
             </Link>
           </div>
@@ -435,13 +435,13 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               <Phone className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10">
               <Mail className="w-4 h-4" />
               <span className="text-sm">Email</span>
             </a>
@@ -451,7 +451,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
+              className="text-gray-300 hover:text-white p-3 rounded-lg transition-colors hover:bg-cyan-500/10"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -460,8 +460,8 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
-            <div className="pt-4 space-y-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20 cyber-card-enhanced">
+            <div className="pt-6 space-y-4 px-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>

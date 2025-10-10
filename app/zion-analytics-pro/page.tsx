@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-  Brain,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Star,
@@ -16,13 +16,16 @@ import {
   Clock,
   DollarSign,
   TrendingUp,
-  MessageSquare,
+  Database,
+  Eye,
   Settings,
   Target,
   Award,
   Rocket,
+  Brain,
   Cloud,
   Lock,
+  MessageSquare,
   Calendar,
   Download,
   Play,
@@ -30,59 +33,50 @@ import {
   BarChart,
   PieChart,
   LineChart,
-  Activity,
-  Bot,
-  MessageCircle,
-  Send,
-  Headphones,
-  Mic,
-  Eye,
-  Database,
-  ShoppingCart,
-  BookOpen
+  Activity
 } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIChatbotBuilderPage: React.FC = () => {
+const ZionAnalyticsProPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const features = [
     {
+      icon: BarChart3,
+      title: 'Real-time Data Visualization',
+      description: 'Interactive dashboards with live data updates and customizable widgets',
+      category: 'Analytics'
+    },
+    {
       icon: Brain,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP capabilities that understand context, intent, and sentiment in conversations',
-      category: 'AI Technology'
+      title: 'AI-powered Predictive Analytics',
+      description: 'Machine learning algorithms that predict trends and identify opportunities',
+      category: 'AI'
     },
     {
-      icon: Globe,
-      title: 'Multi-language Support',
-      description: 'Support for 50+ languages with automatic translation and cultural adaptation',
-      category: 'Globalization'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Sentiment Analysis',
-      description: 'Real-time emotion detection and response adaptation based on customer mood',
-      category: 'Intelligence'
+      icon: Settings,
+      title: 'Custom Dashboard Builder',
+      description: 'Drag-and-drop interface to create personalized business dashboards',
+      category: 'Customization'
     },
     {
       icon: Database,
-      title: 'CRM Integration',
-      description: 'Seamless integration with popular CRM systems for complete customer data access',
+      title: 'Advanced Data Connectors',
+      description: 'Connect to 100+ data sources including CRM, ERP, and cloud platforms',
       category: 'Integration'
     },
     {
       icon: Zap,
-      title: 'Real-time Learning',
-      description: 'AI that continuously learns from interactions to improve responses over time',
-      category: 'Machine Learning'
+      title: 'Automated Report Generation',
+      description: 'Schedule and automate reports with AI-powered insights and recommendations',
+      category: 'Automation'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance with GDPR, HIPAA standards',
+      icon: Users,
+      title: 'Multi-tenant Architecture',
+      description: 'Secure, scalable platform supporting multiple teams and organizations',
       category: 'Security'
     }
   ];
@@ -90,51 +84,51 @@ const AIChatbotBuilderPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$89',
       period: '/month',
-      description: 'Perfect for small businesses starting with AI chatbots',
+      description: 'Perfect for small businesses getting started with analytics',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic NLP capabilities',
-        '5 supported languages',
+        'Up to 5 data sources',
+        '10 custom dashboards',
+        'Basic AI insights',
         'Email support',
-        'Standard integrations',
-        'Basic analytics'
+        '1GB data storage',
+        'Standard reports'
       ],
       popular: false,
       cta: 'Start Free Trial'
     },
     {
       name: 'Professional',
-      price: '$599',
+      price: '$199',
       period: '/month',
       description: 'Advanced features for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI capabilities',
-        '20+ supported languages',
+        'Unlimited data sources',
+        'Unlimited dashboards',
+        'Advanced AI analytics',
         'Priority support',
-        'Advanced integrations',
-        'Detailed analytics',
-        'Custom training',
-        'Multi-channel support'
+        '10GB data storage',
+        'Custom reports',
+        'API access',
+        'Team collaboration'
       ],
       popular: true,
       cta: 'Start Free Trial'
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$399',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
-        'Unlimited conversations',
+        'Everything in Professional',
         'Custom AI models',
-        '50+ languages',
         '24/7 dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
+        'Unlimited data storage',
         'White-label solution',
+        'Custom integrations',
+        'Advanced security',
         'Dedicated account manager'
       ],
       popular: false,
@@ -144,68 +138,41 @@ const AIChatbotBuilderPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'Customer Success Director, RetailPlus',
-      content: 'Our customer satisfaction increased by 65% after implementing Zion AI Chatbot. Response time went from hours to seconds.',
+      name: 'Sarah Johnson',
+      role: 'CEO, TechStart Inc.',
+      content: 'Zion Analytics Pro transformed our data strategy. We increased our revenue by 40% in just 6 months using their AI insights.',
       rating: 5,
-      company: 'RetailPlus'
+      company: 'TechStart Inc.'
     },
     {
-      name: 'David Kim',
-      role: 'CTO, FinTech Solutions',
-      content: 'The AI understands complex financial queries perfectly. It handles 80% of our customer inquiries without human intervention.',
+      name: 'Michael Chen',
+      role: 'Data Director, GlobalCorp',
+      content: 'The real-time dashboards and predictive analytics have given us a competitive edge. Highly recommended!',
       rating: 5,
-      company: 'FinTech Solutions'
+      company: 'GlobalCorp'
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Head of Support, HealthCare Inc.',
-      content: 'The sentiment analysis feature helps us identify frustrated customers and escalate them quickly. Game changer!',
+      name: 'Emily Rodriguez',
+      role: 'Marketing Manager, GrowthCo',
+      content: 'Easy to use, powerful features, and excellent support. Our team productivity increased by 60%.',
       rating: 5,
-      company: 'HealthCare Inc.'
+      company: 'GrowthCo'
     }
   ];
 
   const stats = [
-    { label: 'Active Chatbots', value: '5,000+', icon: Bot },
-    { label: 'Languages Supported', value: '50+', icon: Globe },
-    { label: 'Response Time', value: '< 1s', icon: Zap },
-    { label: 'Customer Satisfaction', value: '4.8/5', icon: Star }
-  ];
-
-  const useCases = [
-    {
-      icon: Headphones,
-      title: '24/7 Customer Support',
-      description: 'Provide instant support across all channels with intelligent responses',
-      benefits: ['60% cost reduction', 'Instant responses', '24/7 availability']
-    },
-    {
-      icon: ShoppingCart,
-      title: 'E-commerce Assistant',
-      description: 'Guide customers through product selection and purchase decisions',
-      benefits: ['40% increase in sales', 'Reduced cart abandonment', 'Personalized recommendations']
-    },
-    {
-      icon: Users,
-      title: 'Lead Qualification',
-      description: 'Automatically qualify and route leads to the right sales team',
-      benefits: ['300% more qualified leads', 'Faster lead processing', 'Better conversion rates']
-    },
-    {
-      icon: BookOpen,
-      title: 'Knowledge Base',
-      description: 'Answer frequently asked questions with accurate, up-to-date information',
-      benefits: ['80% query resolution', 'Consistent information', 'Reduced support tickets']
-    }
+    { label: 'Active Users', value: '10,000+', icon: Users },
+    { label: 'Data Sources', value: '100+', icon: Database },
+    { label: 'Uptime', value: '99.9%', icon: Shield },
+    { label: 'Customer Satisfaction', value: '4.9/5', icon: Star }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI-Powered Chatbots - Advanced Conversational AI | Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots with natural language processing, sentiment analysis, and multi-language support. Reduce support costs by 60% with our AI chatbot solutions." />
-        <meta name="keywords" content="AI chatbot, conversational AI, NLP, customer support, automation, Zion Tech Group" />
+        <title>Zion Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with Zion Analytics Pro. AI-powered analytics, real-time dashboards, and predictive modeling for modern businesses." />
+        <meta name="keywords" content="business intelligence, analytics, AI, data visualization, dashboards, predictive analytics, Zion Analytics Pro" />
       </Helmet>
       
       <Navigation />
@@ -216,15 +183,15 @@ const AIChatbotBuilderPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
-                <Brain className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">AI Service</span>
+                <BarChart3 className="w-5 h-5 text-cyan-400" />
+                <span className="text-cyan-400 font-medium">Micro SAAS Solution</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text-enhanced">
-                AI-Powered Chatbots
+                Zion Analytics Pro
               </h1>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Advanced conversational AI with natural language processing and sentiment analysis for 24/7 customer support. 
-                Reduce support costs by 60% while improving customer satisfaction.
+                Advanced real-time business intelligence and analytics platform with AI-powered insights, 
+                predictive modeling, and customizable dashboards for data-driven decision making.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
@@ -258,49 +225,15 @@ const AIChatbotBuilderPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6 neon-text-enhanced">
-                Use Cases
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how AI chatbots can transform your business across different industries
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced p-6 hover:glow transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>
-                  <ul className="space-y-2">
-                    {useCase.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-green-400">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6 neon-text-enhanced">
-                Advanced Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge AI technology powering intelligent conversations
+                Everything you need to transform your data into actionable business insights
               </p>
             </div>
             
@@ -326,7 +259,7 @@ const AIChatbotBuilderPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6 neon-text-enhanced">
-                Transparent Pricing
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include a 14-day free trial.
@@ -363,7 +296,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                   </ul>
                   
                   <a
-                    href={plan.cta === 'Contact Sales' ? 'mailto:kleber@ziontechgroup.com?subject=AI Chatbot Enterprise Inquiry' : '#contact'}
+                    href={plan.cta === 'Contact Sales' ? 'mailto:kleber@ziontechgroup.com?subject=Zion Analytics Pro Enterprise Inquiry' : '#contact'}
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white hover:scale-105'
@@ -383,10 +316,10 @@ const AIChatbotBuilderPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6 neon-text-enhanced">
-                Customer Success Stories
+                What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are transforming customer support with AI chatbots
+                Join thousands of businesses that trust Zion Analytics Pro for their data needs
               </p>
             </div>
             
@@ -415,14 +348,14 @@ const AIChatbotBuilderPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="cyber-card-enhanced holographic-card-enhanced p-12 glow">
               <h2 className="text-4xl font-bold text-white mb-6 neon-text-enhanced">
-                Ready to Transform Customer Support?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Start your free trial today and see how AI chatbots can revolutionize your customer experience.
+                Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
                 <a
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Chatbot - Free Trial Request"
+                  href="mailto:kleber@ziontechgroup.com?subject=Zion Analytics Pro - Free Trial Request"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
                 >
                   Start Free Trial
@@ -448,4 +381,4 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+export default ZionAnalyticsProPage;
