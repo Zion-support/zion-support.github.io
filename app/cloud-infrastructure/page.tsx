@@ -44,89 +44,60 @@ icon: Shield,
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Infrastructure;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced cloud infrastructure solutions. 
-            Powered by cutting-edge AI technology and industry expertise.
+          <h1 className="text-5xl font-bold text-white mb-6">Cloud Infrastructure Transform your business with our advanced cloud infrastructure solutions. </h1 className="text-5xl font-bold text-white mb-6">
+            Powered by cutting-edge AI technology and industry expertise.</h1 className="text-5xl font-bold text-white mb-6">
           </p>
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Cloud Infrastructure Solutions?
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Cloud Infrastructure Solutions?</h2 className="text-3xl font-bold text-white text-center mb-8">
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div className="grid md:grid-cols-2 gap-6">
               <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-      {/* Features Section */}
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />{/* Features Section */}</CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud Infrastructure?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Infrastructure?</h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.</p className="text-xl text-gray-300 max-w-3xl mx-auto">
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              </div>))}<//div>
           </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
+      </section>{/* Benefits Section */}<//section>
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Benefits,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our cloud infrastructure solutions for your business.
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Benefits, Experience the power of our cloud infrastructure solutions for your business.</h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-{/* CTA Section */}
+              </div>))} {/* CTA Section */}<//div>
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?</h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your cloud infrastructure needs and get a customized solution.
+          <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your cloud infrastructure needs and get a customized solution.</p className="text-xl text-purple-100 mb-8">
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now
+              <Phone className="mr-2 h-5 w-5" />Call Now</Phone className="mr-2 h-5 w-5" />
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us
+              <Mail className="mr-2 h-5 w-5" />Email Us</Mail className="mr-2 h-5 w-5" />
   </
+          </div>),<//
           </div>
-        </div>
-      </div>
-    </div>
-  ),
-}
-export default CloudInfrastructurePage;
+}<//div>
+export default CloudInfrastructurePage<//div>
   </button>
   </button>
   </section>
@@ -134,5 +105,4 @@ export default CloudInfrastructurePage;
   </section>
   </div>
   </h1>
-  </div>
   </div>

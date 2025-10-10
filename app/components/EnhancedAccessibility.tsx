@@ -18,13 +18,13 @@ interface EnhancedAccessibilityProps {
   enableFocusManagement?: boolean
   }
 
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps>= ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
+  enableFocusManagement = true</EnhancedAccessibilityProps>
+}) => {</EnhancedAccessibilityProps>
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
@@ -76,19 +76,17 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     } else {
       root.classList.remove('reduced-motion');
     }
-
-    // Font size
-    root.classList.remove('font-small', 'font-medium', 'font-large');
-    root.classList.add(`font-${newSettings.fontSize}`);
-
-    // Screen reader optimizations
+</AccessibilitySettings>
+    // Font size</AccessibilitySettings>
+    root.classList.remove('font-small', 'font-medium', 'font-large')</AccessibilitySettings>
+    root.classList.add(`font-${newSettings.fontSize}`)</AccessibilitySettings>// Screen reader optimizations
     if (newSettings.screenReader) {
     root.classList.add('screen-reader-optimized')
   } else {
     root.classList.remove('screen-reader-optimized')
   }
-  }
-
+  }<//AccessibilitySettings>
+<//AccessibilitySettings>
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
@@ -167,28 +165,16 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     document.body.appendChild(announcement);
     
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  // Expose accessibility functions to window for global access
+      document.body.removeChild(announcement);</AccessibilitySettings>
+    }, 1000);</AccessibilitySettings>
+  }</AccessibilitySettings>// Expose accessibility functions to window for global access
   useEffect(() => {
     (window as any).accessibility = {
       updateSettings,
       announceToScreenReader,
-      settings
-    }
-  }, [settings]);
-
-  return (
-    <div 
-      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
-      data-font-size={settings.fontSize}
-      data-screen-reader={settings.screenReader}
-    >
-      {children}
-    </div>
-  );
-}
-
-export default EnhancedAccessibility;
+      settings<//AccessibilitySettings>
+    }<//AccessibilitySettings>
+  }, [settings])</AccessibilitySettings>return ( {children}<//AccessibilitySettings>
+    </div>)<//div>}<///div>
+<///div>
+export default EnhancedAccessibility<//div>

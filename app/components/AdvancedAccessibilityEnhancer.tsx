@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
     children: React.ReactNode
   }
-const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -35,56 +35,68 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     document.addEventListener('mousedown', handleMouseDown);
     return () => {
     document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)
-  }
-  }, [isHighContrast, isReducedMotion]);
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast')
+      document.removeEventListener('mousedown', handleMouseDown)</AccessibilityEnhancerProps>
+  }</AccessibilityEnhancerProps>
+  }, [isHighContrast, isReducedMotion])</AccessibilityEnhancerProps>const toggleHighContrast = () => {<//AccessibilityEnhancerProps>
+    setIsHighContrast(!isHighContrast)</AccessibilityEnhancerProps>document.documentElement.classList.toggle('high-contrast')
   }
   const changeFontSize = (size: string) => {
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
-  }
-  return (
+  }<//AccessibilityEnhancerProps>
+  return (<//AccessibilityEnhancerProps>
     <div className="accessibility-enhanced">
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
         <button
           onClick={toggleHighContrast}
           className="accessibility-button"
           aria-label="Toggle high contrast"
+        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'}</button
+          onClick={toggleHighContrast}
+          className="accessibility-button"
+          aria-label="Toggle high contrast"
         >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
         <div className="font-size-controls">
           <button
-            onClick={() => changeFontSize('small')}
+            onClick={() =>changeFontSize('small')}
             className="accessibility-button"
-            aria-label="Small font size"
-          >
-            A;
+            aria-label="Small font size"</button
+            onClick={() =>
+          ></button
+            onClick={() =>
+            A</button
+            onClick={() =>
   </
           <button
-            onClick={() => changeFontSize('medium')}
+            onClick={() =>changeFontSize('medium')}
             className="accessibility-button"
-            aria-label="Medium font size"
-          >
-            A;
+            aria-label="Medium font size"<//
+          <button
+            onClick={() =>
+          ><//
+          <button
+            onClick={() =>
+            A<//
+          <button
+            onClick={() =>
   </
           <button
-            onClick={() => changeFontSize('large')}
+            onClick={() =>changeFontSize('large')}
             className="accessibility-button"
-            aria-label="Large font size"
-          >
-            A;
+            aria-label="Large font size"<//
+          <button
+            onClick={() =>
+          ><//
+          <button
+            onClick={() =>
+            A<//
+          <button
+            onClick={() =>
   </
-        </div>
-      </div>
-      {children}
-    </div>
-  );
-}
-export default AdvancedAccessibilityEnhancer;
+        </div>{children} )<//
+        </div>}<///div>
+export default AdvancedAccessibilityEnhancer<//div>
   </button>
   </button>
   </button>

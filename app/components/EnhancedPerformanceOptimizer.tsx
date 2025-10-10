@@ -9,7 +9,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -108,19 +108,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
-        const metrics = {
+      if ('performance' in window) {</PerformanceOptimizerProps>
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;</PerformanceOptimizerProps>
+        const paint = performance.getEntriesByType('paint')</PerformanceOptimizerProps>const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
-        };
-
-        // Send metrics to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {
+          firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,<//PerformanceOptimizerProps>
+          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0<//PerformanceOptimizerProps>
+        }</PerformanceOptimizerProps>// Send metrics to analytics<//PerformanceOptimizerProps>
+        if (typeof window !== 'undefined' && 'gtag' in window) {<//PerformanceOptimizerProps>
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
           gtag('event', 'performance_metrics', {
             event_category: 'performance',
@@ -131,12 +127,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
-    // Measure performance after page load
-    window.addEventListener('load', measurePerformance);
-    return () => window.removeEventListener('load', measurePerformance);
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default PerformanceOptimizer;
+    // Measure performance after page load</string, unknown>
+    window.addEventListener('load', measurePerformance);</string, unknown>
+    return () => window.removeEventListener('load', measurePerformance)</string, unknown>
+  }, [])</string, unknown>
+  return <>{children}</>;<//>
+}<//>
+export default PerformanceOptimizer<//>

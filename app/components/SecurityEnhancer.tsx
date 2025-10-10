@@ -6,15 +6,15 @@ interface SecurityEnhancerProps {
     children: React.ReactNode
   }
 }
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps>= ({ children }) => {
     useEffect(() => {
     // Security enhancement logic;
     const enhanceSecurity = (;
       // Add security headers;
       const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',;
-        'X-Frame-Options': 'DENY',;
-        'X-XSS-Protection': '1; mode=block',;) => {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',) => {
   return (
     $3
   )
@@ -38,11 +38,9 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
           e.preventDefault()
   }
         }
-      });
-    }
-enhanceSecurity();
-  }, []);
-return <>{children}</>
-}
-export default SecurityEnhancer;
-
+      });</SecurityEnhancerProps>
+    }</SecurityEnhancerProps>
+enhanceSecurity()</SecurityEnhancerProps>
+  }, [])</SecurityEnhancerProps>
+return <>{children}</>}<//>
+export default SecurityEnhancer<//>

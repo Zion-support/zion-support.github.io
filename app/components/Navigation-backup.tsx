@@ -89,8 +89,7 @@ const Navigation: React.FC = () => {
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16">{/* Logo */}</div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -98,15 +97,9 @@ const Navigation: React.FC = () => {
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
-          </div>
-
-          {/* Desktop Navigation */}
+          </div>{/* Desktop Navigation */}<//div>
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home
-            </Link>
-            
-            {/* AI Services Dropdown */}
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Home {/* AI Services Dropdown */}</Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
             <div className="relative group">
               <button
                 onClick={toggleAiServices}
@@ -114,11 +107,9 @@ const Navigation: React.FC = () => {
                 <Brain className="w-4 h-4" />
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {aiServicesOpen && (
+              </button>{aiServicesOpen && (<//button>
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {aiServices.map((service) => (
+                  <div className="grid grid-cols-1 gap-2">{aiServices.map((service) => (</div className="grid grid-cols-1 gap-2">
                       <Link
                         key={service.name}
                         to={service.href}
@@ -129,32 +120,23 @@ const Navigation: React.FC = () => {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-
+                      </Link>))}<//Link>
+<//Link>
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Home
-              </Link>
-              
-              {/* Services Dropdown */}
+              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home {/* Services Dropdown */}</Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
               <div className="relative">
                 <button
                   onClick={toggleServices}
                   className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >Services</button
+                  onClick={toggleServices}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                 >
-                  Services
                   <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                
-                {servicesOpen && (
-
-            </div>
-
-            {/* IT Services Dropdown */}
+                </button>{servicesOpen && (<//button>
+ {/* IT Services Dropdown */}<//button>
             <div className="relative group">
               <button
                 onClick={toggleItServices}
@@ -162,11 +144,9 @@ const Navigation: React.FC = () => {
                 <Cloud className="w-4 h-4" />
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {itServicesOpen && (
+              </button>{itServicesOpen && (<//button>
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {itServices.map((service) => (
+                  <div className="grid grid-cols-1 gap-2">{itServices.map((service) => (</div className="grid grid-cols-1 gap-2">
                       <Link
                         key={service.name}
                         to={service.href}
@@ -177,16 +157,9 @@ const Navigation: React.FC = () => {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Micro SAAS Dropdown */}
+                      </Link>))} )}<//Link>
+            </div>{/* Micro SAAS Dropdown */}<//div>
             <div className="relative group">
               <button
                 onClick={toggleMicroSaas}
@@ -194,11 +167,9 @@ const Navigation: React.FC = () => {
                 <Cpu className="w-4 h-4" />
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {microSaasOpen && (
+              </button>{microSaasOpen && (<//button>
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {microSaasServices.map((service) => (
+                  <div className="grid grid-cols-1 gap-2">{microSaasServices.map((service) => (</div className="grid grid-cols-1 gap-2">
                       <Link
                         key={service.name}
                         to={service.href}
@@ -209,16 +180,9 @@ const Navigation: React.FC = () => {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Emerging Technologies Dropdown */}
+                      </Link>))} )}<//Link>
+            </div>{/* Emerging Technologies Dropdown */}<//div>
             <div className="relative group">
               <button
                 onClick={toggleServices}
@@ -226,11 +190,9 @@ const Navigation: React.FC = () => {
                 <Zap className="w-4 h-4" />
                 <span>Emerging Tech</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {servicesOpen && (
+              </button>{servicesOpen && (<//button>
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {emergingTech.map((service) => (
+                  <div className="grid grid-cols-1 gap-2">{emergingTech.map((service) => (</div className="grid grid-cols-1 gap-2">
                       <Link
                         key={service.name}
                         to={service.href}
@@ -241,34 +203,20 @@ const Navigation: React.FC = () => {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+                      </Link>))} )}<//Link>
             </div>
-
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
+ About<//div>
             </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
+            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Services</Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
             </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
+            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Pricing</Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
+            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Blog</Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-
-              Contact
+            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Contact</Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
             </Link>
-          </div>
-
-          {/* Contact Info */}
+          </div>{/* Contact Info */}<//div>
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
@@ -282,30 +230,20 @@ const Navigation: React.FC = () => {
               <Mail className="w-4 h-4" />
               <span className="text-sm">Email</span>
             </a>
-          </div>
-
-          {/* Mobile Menu Button */}
+          </div>{/* Mobile Menu Button */}<//div>
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}</Menu className="h-6 w-6" />
             </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-
+          </div>{/* Mobile Navigation */}
+        {isOpen && (<//div>
+<//div>
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-
-                Home
-              </Link>
-              
-              {/* Mobile AI Services */}
+              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>Home {/* Mobile AI Services */}</Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
               <div>
                 <button
                   onClick={toggleAiServices}
@@ -315,31 +253,29 @@ const Navigation: React.FC = () => {
                     <span>AI Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {aiServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {aiServices.slice(0, 8).map((service) => (
+                </button>{aiServicesOpen && ( {aiServices.slice(0, 8).map((service) => (<//button>
                       <Link
                         key={service.name}
                         to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
+                      >{service.name} ))}</Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
                       >
-                        {service.name}
-                      </Link>
-                    ))}
                     <Link
                       to="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
+                    >View All AI Services →</Link
+                      to="/ai-services"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
                     >
-                      View All AI Services →
                     </Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile IT Services */}
+                  </div>)} {/* Mobile IT Services */}<//div>
               <div>
                 <button
                   onClick={toggleItServices}
@@ -349,24 +285,19 @@ const Navigation: React.FC = () => {
                     <span>IT Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {itServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {itServices.map((service) => (
+                </button>{itServicesOpen && ( {itServices.map((service) => (<//button>
                       <Link
                         key={service.name}
                         to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
+                      >{service.name} ))}</Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
                       >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Micro SAAS */}
+                  </div>)} {/* Mobile Micro SAAS */}<//div>
               <div>
                 <button
                   onClick={toggleMicroSaas}
@@ -376,76 +307,58 @@ const Navigation: React.FC = () => {
                     <span>Micro SAAS</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {microSaasServices.slice(0, 8).map((service) => (
+                </button>{microSaasOpen && ( {microSaasServices.slice(0, 8).map((service) => (<//button>
                       <Link
                         key={service.name}
                         to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
+                      >{service.name} ))}</Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
                       >
-                        {service.name}
-                      </Link>
-                    ))}
                     <Link
                       to="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
+                    >View All Micro SAAS →</Link
+                      to="/micro-saas"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
                     >
-                      View All Micro SAAS →
                     </Link>
-                  </div>
-                )}
-              </div>
-
+                  </div>)} <//div>
+<//div>
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Home
+              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                AI Services
+              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">AI Services</Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                IT Services
+              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">IT Services</Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Micro SaaS
+              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Micro SaaS</Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                About
+              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Case Studies
+              <Link to="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Case Studies</Link to="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Blog
+              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Pricing
+              <Link to="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Pricing</Link to="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
               <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
+ About</Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
+              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>Services</Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
               </Link>
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
+              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>Pricing</Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
               </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
+              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>Blog</Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
               </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-
-                Contact
-              </Link>
-
-              {/* Mobile Contact Info */}
+              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>Contact {/* Mobile Contact Info */}</Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">
                 <a
                   href="tel:+13024640950"
@@ -462,54 +375,35 @@ const Navigation: React.FC = () => {
                 <div className="flex items-center space-x-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-
+<//span>
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Home
+              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                AI Services
+              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">AI Services</Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                IT Services
+              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">IT Services</Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Micro SaaS
+              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Micro SaaS</Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                About
+              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Blog
+              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Contact
-              </Link>
-              
-              {/* Mobile Contact Info */}
+              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact {/* Mobile Contact Info */}</Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               <div className="border-t border-white/10 pt-3 mt-3">
                 <a href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 302 464 0950
+                  <Phone className="w-4 h-4 mr-2" />+1 302 464 0950</Phone className="w-4 h-4 mr-2" />
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">
-                  <Mail className="w-4 h-4 mr-2" />
-                  kleber@ziontechgroup.com
+                  <Mail className="w-4 h-4 mr-2" />kleber@ziontechgroup.com</Mail className="w-4 h-4 mr-2" />
                 </a>
                 <div className="flex items-center text-gray-400 px-3 py-2 text-sm">
                   <MapPin className="w-4 h-4 mr-2" />
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+                  364 E Main St STE 1008<br />Middletown DE 19709</br />
+</br />
+                </div>)}<//div>
       </div>
-    </nav>
-  );
-}
-
-export default Navigation;
+    </nav>)<//nav>}<///nav>
+<///nav>
+export default Navigation<//nav>

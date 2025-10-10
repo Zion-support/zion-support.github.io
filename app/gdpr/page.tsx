@@ -5,36 +5,28 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 }
   ];
 const benefits = [
-    'Advanced AI technology integration',;
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
     'Proven track record of success';
   ];
 </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      </section>{/* Features Section */}<//section>
+      <section>
+          <div>
           <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our Page?,
+            <h2>Why Choose Our Page?,</h2>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.;
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              </div>))}<//div>
           </div>
-        </div>
-      </section>
-}
-export default PagePage;
+      </section>}<//section>
+export default PagePage<//section>

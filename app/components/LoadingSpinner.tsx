@@ -4,7 +4,7 @@ interface LoadingSpinnerProps {
   color?: 'primary' | 'secondary' | 'white';
   text?: string
   }
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+const LoadingSpinner: React.FC<LoadingSpinnerProps>= ({ 
   size = 'md', 
   color = 'primary', 
   text 
@@ -18,16 +18,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     primary: 'text-indigo-600',
     secondary: 'text-gray-600',
     white: 'text-white'
-  }
-  return (
+  }</LoadingSpinnerProps>
+  return (</LoadingSpinnerProps>
     <div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
-      {text && (
-        <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
-          {text}
-        </p>
-      )}
-    </div>
-  );
-}
-export default LoadingSpinner;
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>{text && ( {text}<//div>
+        </p>)} )<//p>}<///div>
+export default LoadingSpinner<//div>

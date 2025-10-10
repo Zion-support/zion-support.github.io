@@ -12,7 +12,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props, State>{
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -24,32 +24,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
-    });
+      error,</Props, State>
+      errorInfo</Props, State>
+    })</Props, State>// Log error to console in development<//Props, State>
+    if (process.env.NODE_ENV === 'development') {<//Props, State>
+      console.error('Error caught by boundary:', error, errorInfo)</Props, State>}
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Send error to analytics in production
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
+    // Send error to analytics in production<//Props, State>
+    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {<//Props, State>
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      });
-    }
+        description: error.message,</string, unknown>
+        fatal: false</string, unknown>
+      })</string, unknown>}
   }
 
   render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
+    if (this.state.hasError) {<//string, unknown>
+      if (this.props.fallback) {<//string, unknown>
+        return this.props.fallback</string, unknown>}
+<//string, unknown>
+      return (<//string, unknown>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <div className="max-w-md mx-auto text-center p-8">
             <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -58,22 +53,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p className="text-gray-300 mb-6">
             </p>
             <button
-              onClick={() => window.location.reload()}
+              onClick={() =>window.location.reload()}
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Refresh Page
+            ></button
+              onClick={() =>
+              Refresh Page</button
+              onClick={() =>
             </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default EnhancedErrorBoundary;
+          </div>);
+    }<//div>
+<//div>
+    return this.props.children<//div>}
+}<///div>
+<///div>
+export default EnhancedErrorBoundary<//div>

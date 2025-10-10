@@ -10,42 +10,28 @@ interface SEOOptimizerProps {
   structuredData?: object;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title,
   description,
   keywords = [],
   canonicalUrl,
-  structuredData
-}) => {
-  const keywordsString = keywords.join(', ');
-
-  return (
+  structuredData</SEOOptimizerProps>
+}) => {</SEOOptimizerProps>
+  const keywordsString = keywords.join(', ')</SEOOptimizerProps>return (<//SEOOptimizerProps>
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordsString} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
+      <link rel="canonical" href={canonicalUrl} />{/* Open Graph */}</link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      
-      {/* Twitter Card */}
+      <meta property="og:url" content={canonicalUrl} />{/* Twitter Card */}</meta property="og:url" content={canonicalUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-    </Helmet>
-  );
-};
-
-export default SEOOptimizer;
+      <meta name="twitter:description" content={description} />{/* Structured Data */}</meta name="twitter:description" content={description} />
+      {structuredData && ( {JSON.stringify(structuredData)}</meta name="twitter:description" content={description} />
+        </script>)} );<//script>
+}<//Helmet>
+export default SEOOptimizer<//Helmet>

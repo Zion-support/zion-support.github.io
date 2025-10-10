@@ -1056,46 +1056,28 @@ const ItServicesPage: React.FC = () => {
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
-      </Helmet>
-      
-      <Navigation />
-      
+      </Helmet>   <//Helmet>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                IT Services
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">IT Services</h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete IT solutions to modernize your infrastructure and drive business growth. 
-                From cloud migration to cybersecurity, we have the expertise you need.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Complete IT solutions to modernize your infrastructure and drive business growth. </p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From cloud migration to cybersecurity, we have the expertise you need.</p className="text-xl text-gray-300 max-w-3xl mx-auto">
               </p>
-            </div>
-
-            {/* Category Filter */}
+            </div>{/* Category Filter */}<//div>
             <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
+              <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => ( setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category.id
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                     }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {filteredServices.map((service) => (
+                  ></div className="flex flex-wrap justify-center gap-4">
+                    {category.name} ({category.count})</div className="flex flex-wrap justify-center gap-4">
+                  </button>))} {/* Services Grid */}<//button>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">{filteredServices.map((service) => (</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
@@ -1103,17 +1085,11 @@ const ItServicesPage: React.FC = () => {
                         <service.icon className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                    </div>
-                    {service.popular && (
+                    </div>{service.popular && (<//div>
                       <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Popular
-                      </span>
-                    )}
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
+                        <Star className="w-4 h-4 mr-1" />Popular )}</Star className="w-4 h-4 mr-1" />
+                  </div> <//div>
+                  <p className="text-gray-300 mb-4">{service.description}</p> <//p>
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <span className="text-2xl font-bold text-purple-400">{service.price}</span>
@@ -1121,71 +1097,64 @@ const ItServicesPage: React.FC = () => {
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
-
+<//div>
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, index) => (
+                    <ul className="space-y-2">{service.features.slice(0, 3).map((feature, index) => (</ul className="space-y-2">
                         <li key={index} className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
-                        </li>
-                      ))}
+                        </li>))}<//li>
                     </ul>
                   </div>
-
+<//div>
                   <div className="flex items-center justify-between">
                     <Link
                       to="/contact"
                       className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >Learn More</Link
+                      to="/contact"
+                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
                     >
-                      Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                     <Link
                       to="/contact"
                       className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                    >Get Quote</Link
+                      to="/contact"
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
-                      Get Quote
                     </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Section */}
+                  </div>))} {/* CTA Section */}<//div>
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Modernize Your IT Infrastructure?
+                <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2 className="text-2xl font-bold text-white mb-4">
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Let our IT experts help you choose the right solutions for your business needs. 
-                  Get a free consultation and see how we can transform your technology infrastructure.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Let our IT experts help you choose the right solutions for your business needs. </p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                  Get a free consultation and see how we can transform your technology infrastructure.</p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Get Free Consultation</Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Get Free Consultation
                   </Link>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Call: (302) 464-0950</a
+                    href="tel:+13024640950"
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
-      
+      </main> <//main>
       <Footer />
-    </>
-  );
-};
-
-export default ItServicesPage;
+    </>);<//>
+}<//>
+export default ItServicesPage<//>

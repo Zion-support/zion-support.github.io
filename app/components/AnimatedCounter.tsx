@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 interface AnimatedCounterProps {
-    end: number,;
+    end: number,
 
   end: number;
 
@@ -26,16 +26,35 @@ interface AnimatedCounterProps {
   }
     }
     animationFrame = requestAnimationFrame(animate);
-    return () => {
+    return () =>{
     if (animationFrame) {
         cancelAnimationFrame(animationFrame)
+  }</ 1) {
+        animationFrame = requestAnimationFrame(animate)
   }
     }
-  }, [end, duration]);
-  return (
+    animationFrame = requestAnimationFrame(animate);
+    return () =>
+    }</ 1) {
+        animationFrame = requestAnimationFrame(animate)
+  }
+    }
+    animationFrame = requestAnimationFrame(animate);
+    return () =>
+  }, [end, duration])</ 1) {
+        animationFrame = requestAnimationFrame(animate)
+  }
+    }
+    animationFrame = requestAnimationFrame(animate);
+    return () =>return (<// 1) {
+        animationFrame = requestAnimationFrame(animate)
+  }
+    }
+    animationFrame = requestAnimationFrame(animate);
+    return () =>
     <span className={className}>
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-    end,;
+const AnimatedCounter: React.FC<AnimatedCounterProps>= ({
+    end,
   duration = 2000,;
   prefix = '',;
   suffix = '',;
@@ -44,37 +63,29 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }) => {
     const [count, setCount] = useState(0);
 useEffect(() => {
-    let startTime: number,;
-    let animationFrame: number,;
+    let startTime: number,
+    let animationFrame: number,
     const animate = (;
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-// Easing function for smooth animation;
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-setCount(currentCount);
-if (progress < 1) {) => {
+// Easing function for smooth animation;</AnimatedCounterProps>
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);</AnimatedCounterProps>
+      const currentCount = Math.floor(easeOutQuart * end)</AnimatedCounterProps>
+setCount(currentCount)</AnimatedCounterProps>
+if (progress < 1) {) =>{
   return (
     $3
   )
   }
         animationFrame = requestAnimationFrame(animate);}
-      }
-    }
-animationFrame = requestAnimationFrame(animate);
-return () => {
+      }</ 1) {) =>
+    }</ 1) {) =>
+animationFrame = requestAnimationFrame(animate)</ 1) {) =>return () => {
     if (animationFrame) {
         cancelAnimationFrame(animationFrame)
   }
-      }
-    }
-  }, [end, duration]);
-return (
-    <span>
-
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
-  );
-}
-export default AnimatedCounter;
-
+      }<// 1) {) =>
+    }<// 1) {) =>
+  }, [end, duration])</ 1) {) =>return ( {prefix}{count.toLocaleString()}{suffix}<// 1) {) =>
+    </span>)<//span>}<///span>
+export default AnimatedCounter<//span>

@@ -214,75 +214,71 @@ const PricingPage: React.FC = () => {
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SaaS tools. Choose the perfect plan for your business needs." />
-      </Helmet>
-      
-      <Navigation />
-      
+      </Helmet>   <//Helmet>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transparent Pricing
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Transparent Pricing</h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our industry-leading support and regular updates.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect plan for your business needs. All plans include our industry-leading support and regular updates.</p className="text-xl text-gray-300 max-w-3xl mx-auto">
               </p>
-            </div>
-
-            {/* Plan Selector */}
+            </div>{/* Plan Selector */}<//div>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
-                onClick={() => setSelectedPlan('ai')}
+                onClick={() =>setSelectedPlan('ai')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedPlan === 'ai'
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                 }`}
-              >
-                AI Services
+              ></button
+                onClick={() =>
+                AI Services</button
+                onClick={() =>
               </button>
               <button
-                onClick={() => setSelectedPlan('it')}
+                onClick={() =>setSelectedPlan('it')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedPlan === 'it'
                     ? 'bg-purple-500 text-white'
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                 }`}
-              >
-                IT Services
+              ></button
+                onClick={() =>
+                IT Services</button
+                onClick={() =>
               </button>
               <button
-                onClick={() => setSelectedPlan('saas')}
+                onClick={() =>setSelectedPlan('saas')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedPlan === 'saas'
                     ? 'bg-green-500 text-white'
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                 }`}
-              >
-                Micro SaaS
+              ></button
+                onClick={() =>
+                Micro SaaS</button
+                onClick={() =>
               </button>
-            </div>
-
-            {/* Pricing Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {plans.map((plan, index) => (
+            </div>{/* Pricing Cards */} {plans.map((plan, index) => (<//div>
                 <div
                   key={index}
                   className={`relative bg-slate-800/50 rounded-lg p-8 hover:bg-slate-800/70 transition-all duration-300 ${
                     plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
                   }`}
+                >{plan.popular && (</div
+                  key={index}
+                  className={`relative bg-slate-800/50 rounded-lg p-8 hover:bg-slate-800/70 transition-all duration-300 ${
+                    plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
+                  }`}
                 >
-                  {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
+                        <Star className="w-4 h-4 mr-1" />Most Popular</Star className="w-4 h-4 mr-1" />
                       </span>
-                    </div>
-                  )}
-                  
+                    </div>)}<//div>
+                  <//div>
                   <div className="text-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
                       <plan.icon className="w-8 h-8 text-white" />
@@ -293,120 +289,100 @@ const PricingPage: React.FC = () => {
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+ {plan.features.map((feature, featureIndex) => (<//div>
                       <li key={featureIndex} className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
+                      </li>))} <//li>
+<//li>
                   <div className="text-center">
                     <a
                       href="/contact"
                       className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center`}
+                    >Get Started</a
+                      href="/contact"
+                      className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center`}
                     >
-                      Get Started
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Enterprise Section */}
+                  </div>))} {/* Enterprise Section */}<//div>
             <div className="bg-slate-800/50 rounded-lg p-8 text-center mb-16">
               <h2 className="text-2xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                For enterprise clients with specific requirements, we offer custom solutions tailored to your unique needs. 
-                Contact us for a personalized quote and consultation.
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">For enterprise clients with specific requirements, we offer custom solutions tailored to your unique needs. </p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Contact us for a personalized quote and consultation.</p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                >Contact Sales</a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Contact Sales
                 </a>
                 <a
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                >Call: (302) 464-0950</a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Call: (302) 464-0950
                 </a>
-              </div>
-            </div>
-
-            {/* FAQ Section */}
+              </div>{/* FAQ Section */}<//div>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Can I change plans anytime?</h3>
-                  <p className="text-gray-300">
-                    Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, 
-                    and we'll prorate any billing differences.
+                  <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, </p className="text-gray-300">
+                    and we'll prorate any billing differences.</p className="text-gray-300">
                   </p>
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Is there a free trial?</h3>
-                  <p className="text-gray-300">
-                    Yes, we offer a 14-day free trial for all our plans. No credit card required, 
-                    and you can cancel anytime during the trial period.
+                  <p className="text-gray-300">Yes, we offer a 14-day free trial for all our plans. No credit card required, </p className="text-gray-300">
+                    and you can cancel anytime during the trial period.</p className="text-gray-300">
                   </p>
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">What support is included?</h3>
-                  <p className="text-gray-300">
-                    All plans include email support. Professional and Enterprise plans include priority support, 
-                    and Enterprise includes 24/7 dedicated support.
+                  <p className="text-gray-300">All plans include email support. Professional and Enterprise plans include priority support, </p className="text-gray-300">
+                    and Enterprise includes 24/7 dedicated support.</p className="text-gray-300">
                   </p>
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Do you offer custom pricing?</h3>
-                  <p className="text-gray-300">
-                    Yes, for enterprise clients with specific needs, we offer custom pricing and solutions. 
-                    Contact our sales team to discuss your requirements.
+                  <p className="text-gray-300">Yes, for enterprise clients with specific needs, we offer custom pricing and solutions. </p className="text-gray-300">
+                    Contact our sales team to discuss your requirements.</p className="text-gray-300">
                   </p>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Section */}
+                </div>{/* CTA Section */}<//div>
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Get Started?
+                <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2 className="text-2xl font-bold text-white mb-4">
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Choose the perfect plan for your business and start transforming your operations with our AI and IT solutions.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Choose the perfect plan for your business and start transforming your operations with our AI and IT solutions.</p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Start Free Trial</a
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Start Free Trial
                   </a>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Call: (302) 464-0950</a
+                    href="tel:+13024640950"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
-      
+      </main> <//main>
       <Footer />
-    </>
-  );
-};
-
-export default PricingPage;
+    </>);<//>
+}<//>
+export default PricingPage<//>

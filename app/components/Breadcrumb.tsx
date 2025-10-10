@@ -26,12 +26,8 @@ const Breadcrumb: React.FC = () => {
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
+        <ol className="flex items-center space-x-2 text-sm">{breadcrumbItems.map((item, index) => ( {index > 0 && (</ol className="flex items-center space-x-2 text-sm">
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />)}</ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
               <a
                 href={item.path}
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
@@ -40,15 +36,11 @@ const Breadcrumb: React.FC = () => {
                     : 'text-gray-300 hover:text-cyan-400'
                 }`}
               >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
+                {item.icon && <item.icon className="w-4 h-4" />} {item.name}</item.icon className="w-4 h-4" />
               </a>
-            </li>
-          ))}
+            </li>))}<//li>
         </ol>
       </div>
-    </nav>
-  );
-};
-
-export default Breadcrumb;
+    </nav>);<//nav>
+}<//nav>
+export default Breadcrumb<//nav>

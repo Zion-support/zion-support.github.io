@@ -56,8 +56,7 @@ const ContentCarousel: React.FC = () => {
 
   return (
     <div className="relative bg-slate-900 rounded-lg overflow-hidden">
-      <div className="relative h-96">
-        {slides.map((slide, index) => (
+      <div className="relative h-96">{slides.map((slide, index) => (</div className="relative h-96">
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-500 ${
@@ -67,27 +66,20 @@ const ContentCarousel: React.FC = () => {
             <div className="h-full bg-gradient-to-r from-slate-800 to-slate-900 flex items-center">
               <div className="w-full px-8 md:px-16">
                 <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                    {slide.title}
+                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">{slide.title}</h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
                   </h2>
-                  <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-                    {slide.description}
+                  <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">{slide.description}</p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
                   </p>
                   <a
                     href={slide.href}
                     className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >{slide.cta}</a
+                    href={slide.href}
+                    className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    {slide.cta}
                     <ChevronRight className="w-5 h-5 ml-2" />
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Navigation Controls */}
+                </div>))} {/* Navigation Controls */}<//div>
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
         <button
           onClick={prevSlide}
@@ -95,16 +87,13 @@ const ContentCarousel: React.FC = () => {
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-5 h-5" />
-        </button>
-        
+        </button> <//button>
         <button
           onClick={togglePlayPause}
           className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
-          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-        </button>
-        
+          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}  </Play className="w-5 h-5" />
         <button
           onClick={nextSlide}
           className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
@@ -112,23 +101,19 @@ const ContentCarousel: React.FC = () => {
         >
           <ChevronRight className="w-5 h-5" />
         </button>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-4 right-4 flex space-x-2">
-        {slides.map((_, index) => (
+      </div>{/* Slide Indicators */} {slides.map((_, index) => (<//div>
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() =>setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
               index === currentSlide ? 'bg-white' : 'bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default ContentCarousel;
+          /></button
+            key={index}
+            onClick={() =>
+        ))} );</button
+            key={index}
+            onClick={() =>
+}<//div>
+export default ContentCarousel<//div>

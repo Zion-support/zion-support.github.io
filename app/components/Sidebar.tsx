@@ -55,7 +55,7 @@ const toggleSection = (;
   }
 const navigationSections = [
     {
-    title: 'Main',;
+    title: 'Main',
       items: [
   }
         { name: 'Home', path: '/', icon: Home },;
@@ -67,8 +67,8 @@ const navigationSections = [
       ];
     },;
     {
-    title: 'AI Services',;
-      key: 'ai-services',;
+    title: 'AI Services',
+      key: 'ai-services',
       items: [
   }
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },;
@@ -87,8 +87,8 @@ const navigationSections = [
       ];
     },;
     {
-    title: 'Micro SaaS',;
-      key: 'micro-saas',;
+    title: 'Micro SaaS',
+      key: 'micro-saas',
       items: [
   }
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },;
@@ -107,8 +107,8 @@ const navigationSections = [
       ];
     },;
     {
-    title: 'IT Services',;
-      key: 'it-services',;
+    title: 'IT Services',
+      key: 'it-services',
       items: [
   }
         { name: 'IT Services Overview', path: '/it-services', icon: Code },;
@@ -123,7 +123,7 @@ const navigationSections = [
       ];
     },;
     {
-    title: 'Company',;
+    title: 'Company',
       items: [
   }
         { name: 'Team', path: '/team', icon: Users },;
@@ -133,51 +133,51 @@ const navigationSections = [
       ];
     },;
     {
-    title: 'Resources',;
+    title: 'Resources',
       items: [
   }
         { name: 'Documentation', path: '/docs', icon: Settings },;
         { name: 'API Docs', path: '/api-docs', icon: Code },;
-        { name: 'Support', path: '/support', icon: Users },;
-        { name: 'Status', path: '/status', icon: Settings },;
-      ];
-    }
-  ];
-const contactInfo = {
-    phone: '(302) 464-0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown, DE 19709',;
+        { name: 'Support', path: '/support', icon: Users },;</Set<string>
+        { name: 'Status', path: '/status', icon: Settings },;</Set<string>
+      ]</Set<string>}<//Set<string>
+  ]</Set<string>const contactInfo = {
+    phone: '(302) 464-0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
   }
-  }
-return (
-    <></>
-
-      {/* Mobile Menu Button */}
-      <button;
-        onClick={() => setIsOpen(true)}
+  }<//Set<string>
+return (<//Set<string>
+    <>
+      </>{/* Mobile Menu Button */} setIsOpen(true)}
 
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-        aria-label="Open sidebar"
-      >,
+        aria-label="Open sidebar"<//>
+      >,<//>
+    </>
         <Menu>
-      </button>
-
-      {/* Sidebar Overlay */}
-      {
-    isOpen && (;
+      </button>{/* Sidebar Overlay */}<//button>
+      {<//button>
+    isOpen && (<//button>
         <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
   }
-          onClick={() => setIsOpen(false)}
-        />
-      )}
+          onClick={() =>setIsOpen(false)}
+        /></div;
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+  }
+          onClick={() =>
+      )}</div;
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+  }
+          onClick={() =>
 {/* Sidebar */}</div>
       <aside>
         <div className="flex flex-col h-full"></div>
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>;
+            <Link to="/" className="flex items-center space-x-3" onClick={() =>setIsOpen(false)}></Link to="/" className="flex items-center space-x-3" onClick={() =>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain>
               </div>
@@ -187,37 +187,33 @@ return (
               </div>
             </Link>
             <button;
-              onClick={() => setIsOpen(false)}
+              onClick={() =>setIsOpen(false)}
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
-              aria-label="Close sidebar"
-            >,
+              aria-label="Close sidebar"</button;
+              onClick={() =>
+            >,</button;
+              onClick={() =>
               <X>
             </button>
-          </div>
-
-          {/* Navigation */}
+          </div>{/* Navigation */}<//div>
           <div className="flex-1 overflow-y-auto py-6"></div>
-            <nav>
-              {
-    navigationSections.map((section, sectionIndex) => (
-  }
+            <nav>{
+    navigationSections.map((section, sectionIndex) => (</nav>
+  }</nav>
                 <div key={sectionIndex} className="space-y-1"></div>
                   <button;
-                    onClick={() => section.key && toggleSection(section.key)}
+                    onClick={() =>section.key && toggleSection(section.key)}
 
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors"
-                  >,
-                    <span>{section.title}</span>
-                    {
-    section.key && (;
-                      expandedSections.has(section.key) ?;
-                        <ChevronDown className="w-4 h-4" /> :;
-                        <ChevronRight className="w-4 h-4" />
-  }
-                    )}
-                  </button>
-                  {
-    (!section.key || expandedSections.has(section.key)) && (;
+                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors"</button;
+                    onClick={() =>
+                  >, {section.title}</button;
+                    onClick={() =>{<//span>
+    section.key && (<//span>
+                      expandedSections.has(section.key) ?<//span>
+                        <ChevronDown className="w-4 h-4" />: }</ChevronDown className="w-4 h-4" />
+                    )}</ChevronDown className="w-4 h-4" />
+                  </button>{<//button>
+    (!section.key || expandedSections.has(section.key)) && (<//button>
                     <div className="ml-4 space-y-1"></div>
                       {section.items.map((item, itemIndex) => (</div>
                         <Link
@@ -225,27 +221,50 @@ return (
 
                           key={itemIndex}
                           to={item.path}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() =>setIsOpen(false)}
                           className={
-    `flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-                            location.pathname === item.path;
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30';
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
+    `flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${</Link
   }
-                          }`}
-                        >;
-                          <item>
-                          <span>{item.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
 
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() =>
+                            location.pathname === item.path;</Link
+  }
+
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() =>
+                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'</Link
+  }
+
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() =>: 'text-gray-300 hover:text-white hover:bg-slate-800/50'
+  }<//Link
+  }
+
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() =>
+                          }`}<//Link
+  }
+
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() =>
+                        ></Link
+  }
+
+                          key={itemIndex}
+                          to={item.path}
+                          onClick={() =>
+                          <item>
+                          <span>{item.name} ))}</span>
+                    </div>)} ))}<//div>
+<//div>
             </nav>
-          </div>
-          {/* Contact Info */}
+          </div>{/* Contact Info */}<//div>
           <div className="border-t border-slate-700/50 p-6"></div>
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
             <div className="space-y-3 text-sm text-gray-300"></div>
@@ -265,11 +284,8 @@ return (
                 <Clock>
                 <span className="text-xs">{contactInfo.hours}</span>
               </div>
-          </div>
       </aside>
-    </>
-  );
-}
-Sidebar.displayName = 'Sidebar';
-export default Sidebar;
-
+    </>);<//>
+}<//>
+Sidebar.displayName = 'Sidebar'<//>
+export default Sidebar<//>

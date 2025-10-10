@@ -215,24 +215,16 @@ const ServicesPage: React.FC = () => {
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
-      </Helmet>
-      
-      <Navigation />
-      
+      </Helmet>   <//Helmet>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Services
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive solutions to transform your business with cutting-edge technology
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive solutions to transform your business with cutting-edge technology</p className="text-xl text-gray-300 max-w-3xl mx-auto">
               </p>
-            </div>
-
-            {/* Search and Filter */}
+            </div>{/* Search and Filter */}<//div>
             <div className="mb-12">
               <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <div className="flex-1 relative">
@@ -241,30 +233,33 @@ const ServicesPage: React.FC = () => {
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
+                    onChange={(e) =>setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"</input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) =>
+                  /></input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) =>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Filter className="text-gray-400 w-5 h-5" />
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    onChange={(e) =>setSelectedCategory(e.target.value)}
                     className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {categories.map(category => (
-                      <option key={category.id} value={category.id}>
-                        {category.name} ({category.count})
-                      </option>
-                    ))}
+                  ></select
+                    value={selectedCategory}
+                    onChange={(e) =>
+                    {categories.map(category => ( {category.name} ({category.count})</select
+                    value={selectedCategory}
+                    onChange={(e) =>
+                      </option>))}<//option>
                   </select>
-                </div>
-              </div>
-            </div>
-
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+                </div>{/* Services Grid */} {filteredServices.map((service, index) => (<//div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
@@ -273,95 +268,71 @@ const ServicesPage: React.FC = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
                       <div className="flex items-center space-x-2 mt-1">
-                        <span className="text-cyan-400 font-semibold">{service.price}</span>
-                        {service.marketPrice && (
-                          <span className="text-gray-400 text-sm line-through">{service.marketPrice}</span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
+                        <span className="text-cyan-400 font-semibold">{service.price}</span>{service.marketPrice && (<//span>
+                          <span className="text-gray-400 text-sm line-through">{service.marketPrice}</span>)}<//span>
+                      </div>  {service.description}<//div>
+                  </p> <//p>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <ul className="space-y-1">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul className="space-y-1">
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />{feature} ))}</CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                     </ul>
-                  </div>
-
-                  {service.benefits && (
+                  </div>{service.benefits && (<//div>
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                      <ul className="space-y-1">
-                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                      <ul className="space-y-1">{service.benefits.slice(0, 3).map((benefit, benefitIndex) => (</ul className="space-y-1">
                           <li key={benefitIndex} className="flex items-center text-sm text-green-300">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                            {benefit}
-                          </li>
-                        ))}
+                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />{benefit} ))}</CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       </ul>
-                    </div>
-                  )}
-                  
+                    </div>)}<//div>
+                  <//div>
                   <div className="flex items-center justify-between">
                     <a
                       href="/contact"
                       className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >Learn More</a
+                      href="/contact"
+                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                     <a
                       href="/contact"
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                    >Get Quote</a
+                      href="/contact"
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
-                      Get Quote
                     </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Section */}
+                  </div>))} {/* CTA Section */}<//div>
             <div className="mt-16 text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Get Started?
+                <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2 className="text-2xl font-bold text-white mb-4">
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Contact our experts for a free consultation and discover how our services can transform your business.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Contact our experts for a free consultation and discover how our services can transform your business.</p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Get Free Consultation</a
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Get Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Call: (302) 464-0950</a
+                    href="tel:+13024640950"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
-      
+      </main> <//main>
       <Footer />
-    </>
-  );
-};
-
-export default ServicesPage;
+    </>);<//>
+}<//>
+export default ServicesPage<//>

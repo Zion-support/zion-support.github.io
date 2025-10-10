@@ -4,9 +4,9 @@ import React from 'react';
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
   data?: Record<string, unknown>;
-}
-
-const StructuredData: React.FC<StructuredDataProps> = ({ 
+}</string, unknown>
+</string, unknown>
+const StructuredData: React.FC<StructuredDataProps>= ({ 
   type = 'Organization', 
   data 
 }) => {
@@ -163,20 +163,19 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         };
       
       default:
-        return {};
-    }
-  };
-
-  const structuredData = data || getDefaultData();
-
-  return (
-    <script
+        return {};</StructuredDataProps>
+    }</StructuredDataProps>
+  }</StructuredDataProps>
+  const structuredData = data || getDefaultData()</StructuredDataProps>return ( );<//StructuredDataProps>
+}</script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)
       }}
     />
-  );
-};
-
-export default StructuredData;
+export default StructuredData</script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2)
+      }}
+    />

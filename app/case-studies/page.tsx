@@ -125,56 +125,36 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Projects Completed' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '95%', label: 'Client Satisfaction' },
-    { icon: <Award className="w-8 h-8 text-purple-500" />, value: '15+', label: 'Industry Awards' },
-    { icon: <CheckCircle className="w-8 h-8 text-orange-500" />, value: '100%', label: 'On-Time Delivery' }
-  ];
-
-  return (
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Projects Completed' },</Users className="w-8 h-8 text-blue-500" />
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '95%', label: 'Client Satisfaction' },</TrendingUp className="w-8 h-8 text-green-500" />
+    { icon: <Award className="w-8 h-8 text-purple-500" />, value: '15+', label: 'Industry Awards' },</Award className="w-8 h-8 text-purple-500" />
+    { icon: <CheckCircle className="w-8 h-8 text-orange-500" />, value: '100%', label: 'On-Time Delivery' }</CheckCircle className="w-8 h-8 text-orange-500" />
+  ]</CheckCircle className="w-8 h-8 text-orange-500" />return (<//CheckCircle className="w-8 h-8 text-orange-500" />
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful projects and see how we've helped businesses transform with AI and IT solutions." />
-      </Helmet>
-      
-      <Navigation />
-      
+      </Helmet>   <//Helmet>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Case Studies
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Case Studies</h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how we've helped businesses transform with our AI and IT solutions. Real projects, real results.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how we've helped businesses transform with our AI and IT solutions. Real projects, real results.</p className="text-xl text-gray-300 max-w-3xl mx-auto">
               </p>
-            </div>
-
-            {/* Stats */}
+            </div>{/* Stats */}<//div>
             <div className="mb-16">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                   <div key={index} className="text-center">
-                    <div className="flex justify-center mb-4">
-                      {stat.icon}
+                    <div className="flex justify-center mb-4">{stat.icon}</div className="flex justify-center mb-4">
                     </div>
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                    <div className="text-sm text-gray-300">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Featured Case Study */}
-            {caseStudies.find(cs => cs.featured) && (
+                    <div className="text-sm text-gray-300">{stat.label}</div>))} {/* Featured Case Study */}<//div>
+            {caseStudies.find(cs => cs.featured) && (<//div>
               <div className="mb-16">
-                <h2 className="text-2xl font-bold text-white mb-8">Featured Project</h2>
-                {(() => {
-                  const featured = caseStudies.find(cs => cs.featured);
-                  return featured ? (
+                <h2 className="text-2xl font-bold text-white mb-8">Featured Project</h2>{(() => {<//h2>
+                  const featured = caseStudies.find(cs => cs.featured)<//h2>return featured ? (<///h2>
                     <div className="bg-slate-800/50 rounded-lg overflow-hidden">
                       <div className="md:flex">
                         <div className="md:w-1/2">
@@ -183,114 +163,92 @@ const CaseStudiesPage: React.FC = () => {
                               <div className="text-6xl mb-4">🚀</div>
                               <p className="text-lg">Featured Project</p>
                             </div>
-                          </div>
-                        </div>
                         <div className="md:w-1/2 p-8">
                           <div className="flex items-center space-x-4 mb-4">
-                            <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                              {featured.industry}
+                            <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">{featured.industry}</span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             </span>
                             <span className="text-gray-400 text-sm">{featured.duration}</span>
                           </div>
                           <h3 className="text-2xl font-bold text-white mb-4">{featured.title}</h3>
                           <p className="text-gray-300 mb-6 leading-relaxed">{featured.solution}</p>
-                          <div className="grid grid-cols-2 gap-4 mb-6">
-                            {featured.results.slice(0, 2).map((result, index) => (
+                          <div className="grid grid-cols-2 gap-4 mb-6">{featured.results.slice(0, 2).map((result, index) => (</div className="grid grid-cols-2 gap-4 mb-6">
                               <div key={index} className="flex items-center space-x-2">
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="text-sm text-gray-300">{result}</span>
-                              </div>
-                            ))}
+                              </div>))}<//div>
                           </div>
                           <Link
                             to={`/case-studies/${featured.id}`}
                             className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                          >Read Full Case Study</Link
+                            to={`/case-studies/${featured.id}`}
+                            className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                           >
-                            Read Full Case Study
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
-                        </div>
-                      </div>
-                    </div>
-                  ) : null;
-                })()}
-              </div>
-            )}
-
-            {/* Case Studies Grid */}
+                        </div>) : null<//div>})()} )}
+<///div>
+            {/* Case Studies Grid */}<///div>
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">All Projects</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {caseStudies.filter(cs => !cs.featured).map((caseStudy) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.filter(cs => !cs.featured).map((caseStudy) => (</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div key={caseStudy.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-800/70 transition-all duration-300">
                     <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
                       <div className="text-center text-white">
                         <div className="text-4xl mb-2">📊</div>
                         <p className="text-sm">Case Study</p>
                       </div>
-                    </div>
                     <div className="p-6">
                       <div className="flex items-center space-x-2 mb-3">
-                        <span className="bg-cyan-500 text-white px-2 py-1 rounded text-xs font-semibold">
-                          {caseStudy.industry}
+                        <span className="bg-cyan-500 text-white px-2 py-1 rounded text-xs font-semibold">{caseStudy.industry}</span className="bg-cyan-500 text-white px-2 py-1 rounded text-xs font-semibold">
                         </span>
                         <span className="text-gray-400 text-xs">{caseStudy.duration}</span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-3">{caseStudy.title}</h3>
                       <p className="text-gray-300 text-sm mb-4 line-clamp-3">{caseStudy.solution}</p>
-                      <div className="space-y-2 mb-4">
-                        {caseStudy.results.slice(0, 2).map((result, index) => (
+                      <div className="space-y-2 mb-4">{caseStudy.results.slice(0, 2).map((result, index) => (</div className="space-y-2 mb-4">
                           <div key={index} className="flex items-center space-x-2">
                             <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                             <span className="text-xs text-gray-300">{result}</span>
-                          </div>
-                        ))}
+                          </div>))}<//div>
                       </div>
                       <Link
                         to={`/case-studies/${caseStudy.id}`}
                         className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                      >Read More</Link
+                        to={`/case-studies/${caseStudy.id}`}
+                        className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                       >
-                        Read More
                         <ArrowRight className="w-3 h-3 ml-1" />
                       </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Section */}
+                    </div>))} {/* CTA Section */}<//div>
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Start Your Project?
+                <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h2 className="text-2xl font-bold text-white mb-4">
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Let's discuss how we can help transform your business with our AI and IT solutions.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Let's discuss how we can help transform your business with our AI and IT solutions.</p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Start Your Project</Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Start Your Project
                   </Link>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >Call: (302) 464-0950</a
+                    href="tel:+13024640950"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
-      
+      </main> <//main>
       <Footer />
-    </>
-  );
-};
-
-export default CaseStudiesPage;
+    </>);<//>
+}<//>
+export default CaseStudiesPage<//>

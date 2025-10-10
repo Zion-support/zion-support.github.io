@@ -8,10 +8,9 @@ const FAQPage: React.FC = () => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
-  const faqs = [
+        : [...prev, index]</number[]>
+    );</number[]>
+  }</number[]>const faqs = [
     {
       question: "What AI services do you offer?",
       answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."
@@ -42,10 +41,9 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
-    }
-  ];
-  return (
+      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."<//number[]>
+    }<//number[]>
+  ]</number[]>return (<//number[]>
     <React.Fragment>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
@@ -58,38 +56,27 @@ const FAQPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our AI and IT services, pricing, and implementation.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             </p>
           </div>
         </section>
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
+            <div className="space-y-4">{faqs.map((faq, index) => (</div className="space-y-4">
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
                   <button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    )}
-                  </button>
-                  {openItems.includes(index) && (
+                    onClick={() =>toggleItem(index)}</button
+                    onClick={() =>
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors"></button
+                    onClick={() =>
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>{openItems.includes(index) ? ( ) : (<//h3>
+                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />)} {openItems.includes(index) && (</ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <div className="px-6 pb-4">
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
+                    </div>)} ))}<//div>
             </div>
-          </div>
         </section>
       </div>
-    </React.Fragment>
-  );
-};
-export default FAQPage;
+    </React.Fragment>);<//React.Fragment>
+}<//React.Fragment>
+export default FAQPage<//React.Fragment>

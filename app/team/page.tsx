@@ -5,10 +5,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const TeamPage: React.FC = () => {
     return (
-    <></>
+    <>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation>
@@ -19,20 +19,16 @@ const TeamPage: React.FC = () => {
                 Our Team</h1>
               </h1>
               <div className="prose prose-lg max-w-none"></div>
-                <p>
-                  Meet the experts behind our success.
+                <p>Meet the experts behind our success.</p>
                 </p>
-                <p>
-                  Coming soon - stay tuned to meet our team!
+                <p>Coming soon - stay tuned to meet our team!</p>
                 </p>
               </div>
-            </div>
-          </div>
         </main>
         <Footer>
       </div>
     </>,
   )
-  }
-}
-export default TeamPage;
+  }<//>
+}<//>
+export default TeamPage<//>

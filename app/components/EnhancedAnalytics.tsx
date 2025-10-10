@@ -2,28 +2,26 @@
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 
 interface AnalyticsContextType {
-    track: (event: string, parameters?: Record<string, any>) => void;
-  page: (pageName: string, parameters?: Record<string, any>) => void;
+    track: (event: string, parameters?: Record<string, any>) => void</string, any>
+  page: (pageName: string, parameters?: Record<string, any>) => void</string, any>
   identify: (userId: string, traits?: Record<string, any>) => void
-  }
-
+  }</string, any>
+</string, any>
 const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 
 export const useAnalytics = () => {
-    const context = useContext(AnalyticsContext);
-  if (!context) {
-    console.warn('useAnalytics must be used within an AnalyticsProvider');
-    return null
-  }
-  return context;
-}
+    const context = useContext(AnalyticsContext);</AnalyticsContextType | null>
+  if (!context) {</AnalyticsContextType | null>
+    console.warn('useAnalytics must be used within an AnalyticsProvider')</AnalyticsContextType | null>return null<//AnalyticsContextType | null>
+  }<//AnalyticsContextType | null>
+  return context</AnalyticsContextType | null>}
 
 interface AnalyticsProviderProps {
     children: React.ReactNode,
   trackingId?: string
-  }
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  }<//AnalyticsContextType | null>
+<//AnalyticsContextType | null>
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps>= ({
   children,
   trackingId = 'G-XXXXXXXXXX'
 }) => {
@@ -45,53 +43,40 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
       gtag('js', new Date());
       gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href
-      });
-    }
-  }, [trackingId]);
-
+        page_title: document.title,</AnalyticsProviderProps>
+        page_location: window.location.href</AnalyticsProviderProps>
+      })</AnalyticsProviderProps>}<//AnalyticsProviderProps>
+  }, [trackingId])</AnalyticsProviderProps>
   const track = useCallback((event: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, {
         event_category: parameters?.category || 'general',
         event_label: parameters?.label,
-        value: parameters?.value,
-        ...parameters
-      });
-    }
-  }, []);
-
+        value: parameters?.value,</string, any>
+        ...parameters</string, any>
+      })</string, any>}<//string, any>
+  }, [])</string, any>
   const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: pageName,
-        page_location: window.location.href,
-        ...parameters
-      });
-    }
-  }, [trackingId]);
-
+        page_location: window.location.href,</string, any>
+        ...parameters</string, any>
+      })</string, any>}<//string, any>
+  }, [trackingId])</string, any>
   const identify = useCallback((userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
-        user_id: userId,
-        ...traits
-      });
-    }
-  }, [trackingId]);
-
-  const value: AnalyticsContextType = {
+        user_id: userId,</string, any>
+        ...traits</string, any>
+      })</string, any>}<//string, any>
+  }, [trackingId])</string, any>const value: AnalyticsContextType = {
     track,
     page,
     identify
   }
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-}
-
-export default AnalyticsProvider;
+<//string, any>
+  return ( {children}<//string, any>
+    </AnalyticsContext.Provider>)<//AnalyticsContext.Provider>}<///AnalyticsContext.Provider>
+<///AnalyticsContext.Provider>
+export default AnalyticsProvider<//AnalyticsContext.Provider>

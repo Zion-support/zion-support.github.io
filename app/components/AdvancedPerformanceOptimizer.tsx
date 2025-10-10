@@ -4,7 +4,7 @@ interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean
   }
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   children,
   enableOptimizations = true
 }) => {
@@ -91,14 +91,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }
         }
       });
-    });
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-    return () => observer.disconnect();
-  }, []);
-  return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
+    });</PerformanceOptimizerProps>
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });</PerformanceOptimizerProps>
+    return () => observer.disconnect()</PerformanceOptimizerProps>
+  }, [])</PerformanceOptimizerProps>return ( {children}<//PerformanceOptimizerProps>
+      {process.env.NODE_ENV === 'development' && (<//PerformanceOptimizerProps>
         <div className="optimization-debug" style={{
           position: 'fixed',
           bottom: '10px',
@@ -110,14 +107,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000
         }}>
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
-        </div>
-      )}
-    </div>
-  );
-}
-export default AdvancedPerformanceOptimizer;
+          <div>Images: {optimizationMetrics.imagesOptimized} Scripts: {optimizationMetrics.scriptsOptimized}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized} Total: {optimizationMetrics.totalSavings}</div>)}<//div>
+    </div>)<//div>}<///div>
+export default AdvancedPerformanceOptimizer<//div>
   </PerformanceOptimizerProps>

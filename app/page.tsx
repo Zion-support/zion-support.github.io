@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-  
+
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -760,11 +760,9 @@ description: 'Custom API development, third-party integrations, and microservice
       features: ['Container security', 'Kubernetes security', 'Cloud security posture management', 'Identity and access management', 'Network security', 'Data protection', 'Compliance monitoring', 'Incident response'],
       benefits: ['Cloud-native protection', 'Container security', 'Compliance assurance', 'Scalable security'],
       category: 'Cloud Security',
-      popular: false
-    }
-  ];
-
-  // Real Micro SaaS Services with actual capabilities and pricing
+      popular: false<//string, unknown>
+    }<//string, unknown>
+  ]</string, unknown>// Real Micro SaaS Services with actual capabilities and pricing
   const microSaasServices = [
     {
       icon: BarChart3,
@@ -1286,8 +1284,8 @@ description: 'Custom API development, third-party integrations, and microservice
       icon: Cloud,
       title: 'Zion Cloud Vault',
       description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
-      price: '$79/month',
-      marketPrice: '$150-400/month',
+      price: '$79/month',<//string, unknown>
+      marketPrice: '$150-400/month',<//string, unknown>
       features: ['AI-optimized backup scheduling and deduplication', 'Cross-cloud backup (AWS, Azure, GCP, OneDrive)', 'Instant disaster recovery with RTO < 15 minutes', 'Advanced version control and file history', 'End-to-end encryption with zero-knowledge architecture', 'Compliance and audit trail reporting', 'Automated testing and recovery validation', 'Global CDN for fast data access'],
       benefits: ['Data protection', 'Fast recovery', 'Cost optimization', 'Compliance ready'],
       category: 'Storage',
@@ -1441,13 +1439,164 @@ description: 'Custom API development, third-party integrations, and microservice
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },</ 15 minutes', 'Advanced version control and file history', 'End-to-end encryption with zero-knowledge architecture', 'Compliance and audit trail reporting', 'Automated testing and recovery validation', 'Global CDN for fast data access'],
+      benefits: ['Data protection', 'Fast recovery', 'Cost optimization', 'Compliance ready'],
+      category: 'Storage',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      icon: FileText,
+      title: 'Zion Content Studio',
+      description: 'AI-powered content creation and management platform with multi-channel publishing',
+      price: '$129/month',
+      marketPrice: '$200-600/month',
+      features: ['AI content generation for blogs, social media, and marketing', 'Multi-format support (text, images, videos, infographics)', 'Brand voice customization and consistency', 'SEO optimization and keyword research', 'Content calendar and scheduling', 'Collaboration tools and approval workflows', 'Performance analytics and ROI tracking', 'White-label content creation for agencies'],
+      benefits: ['10x faster content creation', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
+      category: 'Content',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      icon: Users,
+      title: 'Zion CRM Intelligence',
+      description: 'AI-enhanced customer relationship management with predictive analytics and automation',
+      price: '$199/month',
+      marketPrice: '$300-1000/month',
+      features: ['AI-powered lead scoring and qualification', 'Automated follow-up sequences and email campaigns', 'Predictive analytics for sales forecasting', 'Customer behavior analysis and insights', 'Integration with 500+ business tools', 'Custom field creation and data management', 'Advanced reporting and dashboards', 'Mobile app for sales teams'],
+      benefits: ['Higher conversion rates', 'Automated workflows', 'Seamless integrations', 'Predictive insights'],
+      category: 'CRM',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Database,
+      title: 'Zion Data Sync',
+      description: 'AI-powered data integration and synchronization platform for seamless data flow',
+      price: '$139/month',
+      marketPrice: '$200-600/month',
+      features: ['AI-powered data mapping and transformation', 'Real-time data synchronization across platforms', 'Data quality monitoring and cleansing', 'Custom data connectors and APIs', 'Automated data validation and error handling', 'Data lineage tracking and documentation', 'Compliance and security features', 'Custom data workflows and automation'],
+      benefits: ['Seamless data flow', 'Data quality assurance', 'Reduced manual work', 'Better insights'],
+      category: 'Data Integration',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      icon: Target,
+      title: 'Zion Lead Magnet',
+      description: 'Intelligent lead generation and qualification platform with AI-powered prospecting',
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      features: ['AI-powered lead identification and scoring', 'Multi-channel prospecting (email, LinkedIn, phone)', 'Automated outreach sequences and follow-ups', 'Lead enrichment and data verification', 'CRM integration and lead management', 'Performance analytics and conversion tracking', 'Compliance with data protection regulations', 'Custom lead qualification criteria'],
+      benefits: ['Higher quality leads', 'Automated prospecting', 'Better conversion rates', 'Time savings'],
+      category: 'Lead Generation',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      icon: Calendar,
+      title: 'Zion Project Master',
+      description: 'AI-powered project management with intelligent task allocation and progress tracking',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: ['AI-powered task prioritization and scheduling', 'Resource allocation optimization', 'Progress tracking with predictive analytics', 'Team collaboration tools and communication', 'Time tracking and productivity analytics', 'Risk assessment and mitigation alerts', 'Integration with popular tools (Slack, Teams, Jira)', 'Custom reporting and dashboards'],
+      benefits: ['Improve project delivery by 40%', 'Better resource utilization', 'Predictive risk management', 'Enhanced team collaboration'],
+      category: 'Project Management',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      icon: Mail,
+      title: 'Zion Email Automation',
+      description: 'Advanced email marketing automation with AI-powered personalization and segmentation',
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      features: ['AI-powered email personalization', 'Advanced segmentation and targeting', 'Automated drip campaigns and sequences', 'A/B testing and optimization', 'Email template builder with drag-and-drop', 'Deliverability optimization and monitoring', 'Advanced analytics and reporting', 'Integration with CRM and e-commerce platforms'],
+      benefits: ['Increase open rates by 60%', 'Automated personalization', 'Better deliverability', 'Comprehensive analytics'],
+      category: 'Email Marketing',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Package,
+      title: 'Zion Inventory Smart',
+      description: 'AI-powered inventory management with demand forecasting and automated reordering',
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      features: ['AI-powered demand forecasting', 'Automated reorder point calculations', 'Multi-location inventory tracking', 'Supplier management and ordering', 'Cost optimization and analysis', 'Integration with e-commerce platforms', 'Barcode scanning and mobile app', 'Advanced reporting and analytics'],
+      benefits: ['Reduce inventory costs by 35%', 'Prevent stockouts and overstock', 'Automated reordering', 'Better supplier management'],
+      category: 'Inventory Management',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      icon: DollarSign,
+      title: 'Zion Invoice Genius',
+      description: 'AI-powered invoice generation and management with automated billing and payment tracking',
+      price: '$49/month',
+      marketPrice: '$100-300/month',
+      features: ['AI-powered invoice generation from contracts and emails', 'Automated recurring billing and subscription management', 'Multi-currency support with real-time exchange rates', 'Payment tracking and automated follow-ups', 'Tax calculation and compliance reporting', 'Client portal with payment history', 'Integration with accounting software (QuickBooks, Xero)', 'Mobile app for on-the-go invoicing'],
+      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices'],
+      category: 'Finance',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      icon: Settings,
+      title: 'Zion Workflow Automation',
+      description: 'AI-powered business process automation with intelligent decision making',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: ['Visual workflow builder with drag-and-drop', 'AI-powered process optimization', 'Integration with 500+ applications', 'Conditional logic and decision trees', 'Automated error handling and retries', 'Real-time monitoring and analytics', 'Custom triggers and actions', 'Team collaboration and approval workflows'],
+      benefits: ['Reduce manual work by 85%', 'Process optimization', 'Error reduction', 'Scalable automation'],
+      category: 'Automation',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Monitor,
+      title: 'Zion Performance Monitor',
+      description: 'AI-powered application performance monitoring with predictive analytics and alerting',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: ['Real-time performance monitoring', 'AI-powered anomaly detection', 'Predictive performance analytics', 'Automated alerting and notifications', 'Custom dashboards and reporting', 'Integration with popular monitoring tools', 'User experience tracking', 'Performance optimization recommendations'],
+      benefits: ['Reduce downtime by 70%', 'Proactive issue detection', 'Better user experience', 'Performance optimization'],
+      category: 'Monitoring',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      icon: CheckSquare,
+      title: 'Zion Compliance Manager',
+      description: 'AI-powered compliance management with automated monitoring and reporting',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: ['Multi-framework compliance support (GDPR, HIPAA, SOC2)', 'AI-powered risk assessment', 'Automated compliance monitoring', 'Policy management and updates', 'Audit trail and documentation', 'Employee training and certification', 'Integration with security tools', 'Custom compliance reporting'],
+      benefits: ['Reduce compliance costs by 60%', 'Automated monitoring', 'Risk mitigation', 'Audit readiness'],
+      category: 'Compliance',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      icon: Globe,
+      title: 'Zion Social Scheduler',
+      description: 'AI-powered social media management with content optimization and scheduling',
+      price: '$69/month',
+      marketPrice: '$120-350/month',
+      features: ['AI-powered content creation and optimization', 'Multi-platform scheduling (Facebook, Instagram, Twitter, LinkedIn)', 'Optimal posting time recommendations', 'Hashtag research and optimization', 'Engagement analytics and performance tracking', 'Content calendar and planning tools', 'Social listening and trend analysis', 'Team collaboration and approval workflows'],
+      benefits: ['Increase engagement by 250%', 'Save 80% content creation time', 'Optimal posting times', 'Comprehensive analytics'],
+      category: 'Social Media',
+      popular: true,
+      users: 'Up to 5 users'
+    }
   ];
 
-  return (
+  const stats = [
+    { icon: <Users className="w-8 h-8 text-blue-500" />
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },</TrendingUp className="w-8 h-8 text-green-500" />
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },</Shield className="w-8 h-8 text-purple-500" />
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }</Zap className="w-8 h-8 text-orange-500" />
+  ]</Zap className="w-8 h-8 text-orange-500" />return (<//Zap className="w-8 h-8 text-orange-500" />
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -1501,23 +1650,15 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
-        {/* Navigation */}
-        <Navigation />
-        {/* Skip to main content for accessibility */}
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">{/* Navigation */} {/* Skip to main content for accessibility */}</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
         <a
           href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">Skip to main content {/* Content Promotion Banner */}</a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content
-        </a>
-        
-        {/* Content Promotion Banner */}
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}><//div>
           <ContentPromotionBanner />
-        </Suspense>
-        
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
-          {/* Hero Section */}
+        </Suspense>  {/* Hero Section */}<//Suspense>
           <section
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
               isLoaded && isVisible 
@@ -1531,18 +1672,17 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
                 data-text="Zion Tech Group"
+              >Zion Tech Group</h1 
+                id="hero-heading" 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
+                data-text="Zion Tech Group"
               >
-                Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
-                Advanced AI and IT Solutions
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">Advanced AI and IT Solutions</p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
-                startups, and enterprises worldwide with proven results and 24/7 expert support.
-              </p>
-              {/* Key Benefits */}
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,</p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                startups, and enterprises worldwide with proven results and 24/7 expert support. {/* Key Benefits */}</p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
                 <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3">🚀</div>
@@ -1563,77 +1703,64 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   <div className="text-2xl sm:text-3xl mb-3">🌐</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
-                </div>
-              </div>
-              {/* CTA Buttons */}
+                </div>{/* CTA Buttons */}<//div>
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="cyber-button-enhanced w-full sm:w-auto text-center"
                   aria-label="Call us at (302) 464-0950"
+                >📞 Call: (302) 464-0950</a
+                  href="tel:+13024640950"
+                  onClick={handlePhoneClick}
+                  className="cyber-button-enhanced w-full sm:w-auto text-center"
+                  aria-label="Call us at (302) 464-0950"
                 >
-                  📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">📧 Email Us</a 
+                  href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  📧 Email Us
                 </a>
                 <a 
                   href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a 
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                  Get Free Consultation
                 </a>
-              </div>
-              {/* Contact Info */}
+              </div>{/* Contact Info */}<//div>
               <div className="mt-8 text-center">
-                <p className="text-gray-300 text-sm mb-2">
-                  📍 364 E Main St STE 1008, Middletown, DE 19709
+                <p className="text-gray-300 text-sm mb-2">📍 364 E Main St STE 1008, Middletown, DE 19709</p className="text-gray-300 text-sm mb-2">
                 </p>
-                <p className="text-gray-300 text-sm">
-                  ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+                <p className="text-gray-300 text-sm">⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available</p className="text-gray-300 text-sm">
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* Stats Section */}
+          </section>{/* Stats Section */}<//section>
           <section className="mb-16" aria-labelledby="stats-heading">
-            <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
-              Our Impact
+            <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">Our Impact</h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">{stats.map((stat, index) => (</div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div key={index} className="text-center cyber-card-enhanced p-6">
-                  <div className="flex justify-center mb-4">
-                    {stat.icon}
+                  <div className="flex justify-center mb-4">{stat.icon}</div className="flex justify-center mb-4">
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
-                </div>
-              ))}
+                  <div className="text-sm text-gray-300">{stat.label}</div>))}<//div>
             </div>
-          </section>
-
-          {/* AI Services Section */}
+          </section>{/* AI Services Section */}<//section>
           <section className="mb-16" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
-              AI Services
+            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">AI Services</h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive AI solutions designed to transform your business operations
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Comprehensive AI solutions designed to transform your business operations</p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {aiServices.map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">{aiServices.map((service, index) => (</div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                    
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p> <//p>
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 font-semibold">Our Price:</span>
@@ -1643,56 +1770,45 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                         <span className="text-gray-400 text-sm">Market Price:</span>
                         <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
                       </div>
-                    </div>
-
-                    <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+ {service.features.slice(0, 4).map((feature, featureIndex) => (<//div>
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature} ))}</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                     </ul>
-
+<//ul>
                     <div className="flex items-center justify-between">
                       <a 
                         href="/contact"
                         className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >Learn More</a 
+                        href="/contact"
+                        className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
-                        Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
                       <a 
                         href="/contact"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      >Get Quote</a 
+                        href="/contact"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                       >
-                        Get Quote
                       </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                    </div>))}<//div>
             </div>
-          </section>
-
-          {/* IT Services Section */}
+          </section>{/* IT Services Section */}<//section>
           <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
-              IT Services
+            <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">IT Services</h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Complete IT solutions to modernize your infrastructure and drive business growth
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Complete IT solutions to modernize your infrastructure and drive business growth</p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {itServices.map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">{itServices.map((service, index) => (</div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                    
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p> <//p>
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
                         <span className="text-purple-400 font-semibold">Our Price:</span>
@@ -1702,56 +1818,45 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                         <span className="text-gray-400 text-sm">Market Price:</span>
                         <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
                       </div>
-                    </div>
-
-                    <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+ {service.features.slice(0, 4).map((feature, featureIndex) => (<//div>
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature} ))}</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                     </ul>
-
+<//ul>
                     <div className="flex items-center justify-between">
                       <a 
                         href="/contact"
                         className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                      >Learn More</a 
+                        href="/contact"
+                        className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
                       >
-                        Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
                       <a 
                         href="/contact"
                         className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      >Get Quote</a 
+                        href="/contact"
+                        className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                       >
-                        Get Quote
                       </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                    </div>))}<//div>
             </div>
-          </section>
-
-          {/* Micro SaaS Section */}
+          </section>{/* Micro SaaS Section */}<//section>
           <section className="mb-16" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
-              Micro SaaS Solutions
+            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">Micro SaaS Solutions</h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Ready-to-use business tools that solve specific problems with AI and automation
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Ready-to-use business tools that solve specific problems with AI and automation</p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {microSaasServices.map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">{microSaasServices.map((service, index) => (</div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                    
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p> <//p>
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
                         <span className="text-green-400 font-semibold">Our Price:</span>
@@ -1765,44 +1870,36 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                         <span className="text-gray-400 text-sm">Users:</span>
                         <span className="text-gray-300 text-sm">{service.users}</span>
                       </div>
-                    </div>
-
-                    <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+ {service.features.slice(0, 4).map((feature, featureIndex) => (<//div>
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature} ))}</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                     </ul>
-
+<//ul>
                     <div className="flex items-center justify-between">
                       <a 
                         href="/contact"
                         className="flex items-center text-green-400 hover:text-green-300 transition-colors"
+                      >Learn More</a 
+                        href="/contact"
+                        className="flex items-center text-green-400 hover:text-green-300 transition-colors"
                       >
-                        Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
                       <a 
                         href="/contact"
                         className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      >Start Trial</a 
+                        href="/contact"
+                        className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                       >
-                        Start Trial
                       </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                    </div>))}<//div>
             </div>
-          </section>
-
-          {/* CTA Section */}
+          </section>{/* CTA Section */}<//section>
           <section className="mb-16" aria-labelledby="cta-heading">
             <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Ready to transform your business? Contact our experts for a free consultation and discover how our AI and IT solutions can drive your success.
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Ready to transform your business? Contact our experts for a free consultation and discover how our AI and IT solutions can drive your success.</p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -1810,28 +1907,30 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   onClick={handlePhoneClick}
                   className="cyber-button-enhanced"
                   aria-label="Call us at (302) 464-0950"
+                >📞 Call: (302) 464-0950</a
+                  href="tel:+13024640950"
+                  onClick={handlePhoneClick}
+                  className="cyber-button-enhanced"
+                  aria-label="Call us at (302) 464-0950"
                 >
-                  📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">📧 Email Us</a 
+                  href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  📧 Email Us
                 </a>
                 <a 
                   href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a 
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                  Get Free Consultation
                 </a>
               </div>
-            </div>
           </section>
-        </main>
-        
+        </main> <//main>
         <Footer />
       </div>
-    </React.Fragment>
-  );
-};
-
-export default HomePage;
+    </React.Fragment>);<//React.Fragment>
+}<//React.Fragment>
+export default HomePage<//React.Fragment>

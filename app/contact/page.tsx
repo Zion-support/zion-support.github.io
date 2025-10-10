@@ -15,8 +15,7 @@ const ContactPage: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')</'idle' | 'success' | 'error'>
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -43,35 +42,25 @@ const ContactPage: React.FC = () => {
         message: ''
       });
     } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
-
-  return (
+      setSubmitStatus('error');</HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    } finally {</HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+      setIsSubmitting(false)</HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>}<//HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  }, [])</HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>return (<//HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
-      </Helmet>
-      
-      <Navigation />
-      
+      </Helmet>   <//Helmet>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Contact Us
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               </h1>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Ready to transform your business? Get in touch with our experts for a free consultation.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">Ready to transform your business? Get in touch with our experts for a free consultation.</p className="text-xl text-gray-300 max-w-2xl mx-auto">
               </p>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
+ {/* Contact Information */}<//div>
               <div className="space-y-8">
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
@@ -82,31 +71,23 @@ const ContactPage: React.FC = () => {
                         <h3 className="text-lg font-semibold text-white">Phone</h3>
                         <p className="text-gray-300">+1 302 464 0950</p>
                         <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
-                      </div>
-                    </div>
-                    
+                      </div> <//div>
                     <div className="flex items-start space-x-4">
                       <Mail className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
                         <h3 className="text-lg font-semibold text-white">Email</h3>
                         <p className="text-gray-300">kleber@ziontechgroup.com</p>
                         <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                      </div>
-                    </div>
-                    
+                      </div> <//div>
                     <div className="flex items-start space-x-4">
                       <MapPin className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
                         <h3 className="text-lg font-semibold text-white">Address</h3>
                         <p className="text-gray-300">
-                          364 E Main St STE 1008<br />
-                          Middletown, DE 19709
+                          364 E Main St STE 1008<br />Middletown, DE 19709</br />
                         </p>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
+<//div>
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-white mb-4">Why Choose Us?</h3>
                   <ul className="space-y-2 text-gray-300">
@@ -127,30 +108,18 @@ const ContactPage: React.FC = () => {
                       <span>Custom solutions for your business</span>
                     </li>
                   </ul>
-                </div>
-              </div>
-
-              {/* Contact Form */}
+                </div>{/* Contact Form */}<//div>
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-                
-                {submitStatus === 'success' && (
-                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">
-                    Thank you! Your message has been sent successfully. We'll get back to you soon.
-                  </div>
-                )}
-                
-                {submitStatus === 'error' && (
-                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
-                    Sorry, there was an error sending your message. Please try again.
-                  </div>
-                )}
-
+                <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>{submitStatus === 'success' && ( Thank you! Your message has been sent successfully. We'll get back to you soon.<//h2>
+                  </div>)}
+                <//div>
+                {submitStatus === 'error' && ( Sorry, there was an error sending your message. Please try again.<//div>
+                  </div>)}<//div>
+<//div>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Name *
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name *</label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       </label>
                       <input
                         type="text"
@@ -162,11 +131,9 @@ const ContactPage: React.FC = () => {
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your full name"
                       />
-                    </div>
-                    
+                    </div> <//div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email *</label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       </label>
                       <input
                         type="email"
@@ -179,12 +146,10 @@ const ContactPage: React.FC = () => {
                         placeholder="your@email.com"
                       />
                     </div>
-                  </div>
-
+<//div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company</label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       </label>
                       <input
                         type="text"
@@ -195,11 +160,9 @@ const ContactPage: React.FC = () => {
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
-                    </div>
-                    
+                    </div> <//div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone</label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       </label>
                       <input
                         type="tel"
@@ -211,11 +174,9 @@ const ContactPage: React.FC = () => {
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
-                  </div>
-
+<//div>
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interest</label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     </label>
                     <select
                       id="service"
@@ -232,10 +193,9 @@ const ContactPage: React.FC = () => {
                       <option value="other">Other</option>
                     </select>
                   </div>
-
+<//div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message *
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message *</label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     </label>
                     <textarea
                       id="message"
@@ -248,34 +208,18 @@ const ContactPage: React.FC = () => {
                       placeholder="Tell us about your project or requirements..."
                     />
                   </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    {isSubmitting ? (
+ {isSubmitting ? (<//div>
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span>Sending...</span>
-                      </>
-                    ) : (
+                        <span>Sending... ) : (</span>
                       <>
                         <Send className="w-5 h-5" />
-                        <span>Send Message</span>
-                      </>
-                    )}
+                        <span>Send Message )}</span>
                   </button>
                 </form>
               </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
+      </main> <//main>
       <Footer />
-    </>
-  );
-};
-
-export default ContactPage;
+    </>);<//>
+}<//>
+export default ContactPage<//>

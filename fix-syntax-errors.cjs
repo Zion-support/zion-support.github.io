@@ -1,106 +1,80 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix missing closing tags
-  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-  content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-  content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
-  content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
-  content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>');
-  content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>');
-  
-  // Fix JSX fragments
-  content = content.replace(/<>\s*$/gm, '<></>');
-  content = content.replace(/<>([^<]*)$/gm, '<>{$1}</>');
-  
-  // Fix missing semicolons in JSX
-  content = content.replace(/([^;}])\s*$/gm, '$1;');
-  
-  // Fix common JSX syntax issues
-  content = content.replace(/className\s*=\s*"([^"]*)"\s*$/gm, 'className="$1"');
-  content = content.replace(/onClick\s*=\s*{([^}]*)}\s*$/gm, 'onClick={$1}');
-  
-  // Fix missing closing braces
-  content = content.replace(/\{\s*$/gm, '{}');
-  
-  // Fix malformed JSX expressions
-  content = content.replace(/\{\s*([^}]*)\s*$/gm, '{$1}');
-  
-  // Fix missing return statements
-  content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{([^}]*)\s*$/gm, 'const $1 = ($2) => {\n  return (\n    $3\n  );\n};');
-  
-  return content;
-}
+// Pattern to find all TypeScript/JSX files in the app directory
+const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
 
-// Function to fix specific file patterns
-function fixSpecificFile(filePath, content) {
-  // Fix common patterns in AI pages
-  if (filePath.includes('/ai-')) {
-    // Ensure proper component structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[\s\S]*?)(\s*\});?$/m, '$1\n};\n\nexport default $1;');
-    }
-    
-    // Fix missing React import
-    if (!content.includes("import React")) {
-      content = "'use client';\nimport React from 'react';\n" + content;
-    }
+console.log(`Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+
+files.forEach(file => {
+  const filePath = path.join(__dirname, file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix object property syntax errors (remove semicolons after property names)
+  const propertyPattern = /(\w+):\s*([^,}]+),;/g;
+  if (propertyPattern.test(content)) {
+    content = content.replace(propertyPattern, '$1: $2,');
+    modified = true;
   }
-  
-  return content;
-}
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    let fixedContent = fixSyntaxErrors(content);
-    fixedContent = fixSpecificFile(filePath, fixedContent);
-    
-    // Only write if content changed
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✓ Fixed syntax errors in: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  // Fix object closing syntax errors
+  const objectClosePattern = /}\s*},;/g;
+  if (objectClosePattern.test(content)) {
+    content = content.replace(objectClosePattern, '},');
+    modified = true;
   }
-}
 
-// Function to find all TypeScript/TSX files with syntax errors
-function findFilesWithErrors(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        files.push(fullPath);
+  // Fix array closing syntax errors
+  const arrayClosePattern = /]\s*},;/g;
+  if (arrayClosePattern.test(content)) {
+    content = content.replace(arrayClosePattern, '],');
+    modified = true;
+  }
+
+  // Fix malformed JSX return statements
+  const jsxReturnPattern = /return\s*\(\s*<>\s*<\/>\s*<([^>]+)>/g;
+  if (jsxReturnPattern.test(content)) {
+    content = content.replace(jsxReturnPattern, 'return (\n    <>\n      <$1>');
+    modified = true;
+  }
+
+  // Fix missing closing tags in JSX
+  const unclosedTagPattern = /<meta[^>]*>(?!\s*<\/meta>)/g;
+  if (unclosedTagPattern.test(content)) {
+    content = content.replace(unclosedTagPattern, (match) => {
+      if (!match.includes('/>')) {
+        return match.replace('>', ' />');
       }
-    }
+      return match;
+    });
+    modified = true;
   }
-  
-  traverse(dir);
-  return files;
-}
 
-// Main execution
-console.log('🔍 Searching for files with syntax errors...');
-const filesToProcess = findFilesWithErrors('./app');
+  // Fix malformed object literals with extra semicolons
+  const malformedObjectPattern = /{\s*(\w+):\s*([^,}]+),;\s*}/g;
+  if (malformedObjectPattern.test(content)) {
+    content = content.replace(malformedObjectPattern, '{\n      $1: $2\n    }');
+    modified = true;
+  }
 
-console.log(`Found ${filesToProcess.length} files to process`);
+  // Fix array syntax with extra semicolons
+  const malformedArrayPattern = /\[\s*{\s*(\w+):\s*([^,}]+),;\s*}\s*\],;/g;
+  if (malformedArrayPattern.test(content)) {
+    content = content.replace(malformedArrayPattern, '[\n    {\n      $1: $2\n    }\n  ],');
+    modified = true;
+  }
 
-filesToProcess.forEach(file => {
-  processFile(file);
+  if (modified) {
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed: ${file}`);
+    fixedCount++;
+  }
 });
 
-console.log('✅ Syntax error fixing complete!');
+console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);

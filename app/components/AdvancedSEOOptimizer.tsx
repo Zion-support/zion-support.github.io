@@ -11,7 +11,7 @@ interface SEOOptimizerProps {
   structuredData?: object;
   children: React.ReactNode
   }
-const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
@@ -19,15 +19,14 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
-  children
-}) => {
-    const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
-  const analyzeSEO = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    let score = 0;
-    const newRecommendations: string[] = [],
-    // Check title length
+  children</SEOOptimizerProps>
+}) => {</SEOOptimizerProps>
+    const [seoScore, setSeoScore] = useState(0)</SEOOptimizerProps>
+  const [recommendations, setRecommendations] = useState<string[]>([]);</string[]>
+  const analyzeSEO = useCallback(() => {</string[]>
+    if (typeof window === 'undefined') return</string[]>
+    let score = 0</string[]>const newRecommendations: string[] = [],<//string[]>
+    // Check title length<//string[]>
     if (title.length >= 30 && title.length <= 60) {
       score += 20
   } else {
@@ -53,7 +52,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    if (headings.length > 0) {
+    if (headings.length >0) {
     score += 10
   } else {
     newRecommendations.push('Add proper heading structure')
@@ -76,10 +75,66 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
-  useEffect(() => {
-    analyzeSEO()
-  }, [analyzeSEO]);
-  const generateStructuredData = () => {
+  useEffect(() => {</= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >
+    analyzeSEO()</= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >
+  }, [analyzeSEO])</= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -90,35 +145,125 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "sameAs": [
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
-      ]
-    }
-    return structuredData || defaultStructuredData;
+      ]<//= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
   }
-  return (
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >
+    }<//= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >
+    return structuredData || defaultStructuredData</= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >}<//= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >
+  return (<//= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length >
     <React.Fragment>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        {/* Open Graph */}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link rel="canonical" href={canonicalUrl} />
+        {/* Open Graph */}</link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-        {/* Twitter Card */}
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}</meta property="og:url" content={canonicalUrl} />
+        {/* Twitter Card */}</meta property="og:url" content={canonicalUrl} />
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
+        <meta name="twitter:image" content={ogImage} />{/* Structured Data */} {JSON.stringify(generateStructuredData())}</meta name="twitter:image" content={ogImage} />
         </script>
-      </Helmet>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
+      </Helmet>{children}<//Helmet>
+      {process.env.NODE_ENV === 'development' && (<//Helmet>
         <div className="seo-debug" style={{
           position: 'fixed',
           top: '10px',
@@ -131,21 +276,12 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <div>SEO Score: {seoScore}/100</div>
-          {recommendations.length > 0 && (
+          <div>SEO Score: {seoScore}/100</div>{recommendations.length > 0 && (<//div>
             <div>
-              <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
-                {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
-                ))}
+              <div>Recommendations: {recommendations.map((rec, index) => (</div>
+                  <li key={index}>{rec}</li>))}<//li>
               </ul>
-            </div>
-          )}
-        </div>
-      )}
-    </React.Fragment>
-  );
-}
-export default AdvancedSEOOptimizer;
+            </div>)} )}<//div>
+    </React.Fragment>)<//React.Fragment>}<///React.Fragment>
+export default AdvancedSEOOptimizer<//React.Fragment>
   </SEOOptimizerProps>

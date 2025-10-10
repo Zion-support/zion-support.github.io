@@ -5,56 +5,39 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
     const features = [
     {
-      icon: Zap,;
-      title: 'High Performance',;
+      icon: Zap,
+      title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-  }
-    },;
+  },
     {
     ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
-      </Helmet>
-  }
-
-      {/* Hero Section */}
-            <h2>
-              Why Choose Our Page?;
+        <meta />
+        <meta />
+      </Helmet>}
+<//Helmet>
+      {/* Hero Section */} Why Choose Our Page?<//Helmet>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.;
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-
+              </div>))}<//div>
+<//div>
           </div>
-        </div>
       </section>
-            <h2>
-              Key Benefits;
+            <h2>Key Benefits</h2>
             </h2>
-            <p>
-              Experience the power of our page solutions for your business.;
+            <p>Experience the power of our page solutions for your business.</p>
             </p>
-              </div>
-            ))}
+              </div>))}<//div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+      </section>{/* CTA Section */}<//section>
           </div>
-        </div>
       </section>
-    </div>
-  );
-}
-export default PagePage;
-
+    </div>)<//div>}<///div>
+export default PagePage<//div>

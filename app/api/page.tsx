@@ -180,98 +180,83 @@ const ApiPage: React.FC = () => {
         <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />
         <link rel="canonical" href="https://ziontechgroup.com/api" />
       </Helmet>
-
+<//Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */}</div className="container mx-auto px-4 py-16 pt-24">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
-              API Reference
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">API Reference</h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive API documentation for all Zion Tech Group services. 
-              Build powerful applications with our AI, IT, and Micro SaaS APIs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Comprehensive API documentation for all Zion Tech Group services. </p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Build powerful applications with our AI, IT, and Micro SaaS APIs.</p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#getting-started"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >Get Started</a
+                href="#getting-started"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Get Started
               </a>
               <a
                 href="#authentication"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >Authentication</a
+                href="#authentication"
+                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Authentication
               </a>
               <a
                 href="#endpoints"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >View Endpoints</a
+                href="#endpoints"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                View Endpoints
               </a>
-            </div>
-          </div>
-
-          {/* Quick Stats */}
+            </div>{/* Quick Stats */}<//div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
             <div className="cyber-card-enhanced p-6 text-center">
               <Code className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300">API Endpoints</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Zap className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300">Uptime SLA</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Shield className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">256-bit</div>
               <div className="text-gray-300">SSL Encryption</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Globe className="w-8 h-8 text-orange-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
-            </div>
-          </div>
-
-          {/* Getting Started */}
+              <div className="text-gray-300">Support</div>{/* Getting Started */}<//div>
           <section id="getting-started" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Getting Started</h2>
             <div className="cyber-card-enhanced p-8">
               <h3 className="text-xl font-semibold text-white mb-4">1. Get Your API Key</h3>
-              <p className="text-gray-300 mb-6">
-                Sign up for a free account and get your API key from the dashboard.
-              </p>
-              
+              <p className="text-gray-300 mb-6">Sign up for a free account and get your API key from the dashboard.  </p className="text-gray-300 mb-6">
               <h3 className="text-xl font-semibold text-white mb-4">2. Make Your First Request</h3>
               <div className="bg-slate-800 rounded-lg p-4 mb-6">
-                <pre className="text-green-400 text-sm overflow-x-auto">
-{`curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
+                <pre className="text-green-400 text-sm overflow-x-auto">{`curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
     "message": "Hello, world!",
-    "model": "gpt-4"
-  }'`}
+    "model": "gpt-4"</pre className="text-green-400 text-sm overflow-x-auto">
+  }'`}</pre className="text-green-400 text-sm overflow-x-auto">
                 </pre>
               </div>
-
+<//div>
               <h3 className="text-xl font-semibold text-white mb-4">3. Explore the Documentation</h3>
-              <p className="text-gray-300">
-                Browse our comprehensive API documentation to discover all available endpoints and features.
+              <p className="text-gray-300">Browse our comprehensive API documentation to discover all available endpoints and features.</p className="text-gray-300">
               </p>
             </div>
-          </section>
-
-          {/* Authentication */}
+          </section>{/* Authentication */}<//section>
           <section id="authentication" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Authentication</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {authenticationMethods.map((method, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">{authenticationMethods.map((method, index) => (</div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div key={index} className="cyber-card-enhanced p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{method.name}</h3>
                   <p className="text-gray-300 mb-4">{method.description}</p>
@@ -282,16 +267,13 @@ const ApiPage: React.FC = () => {
                     <span className="text-sm text-gray-400">Security Level:</span>
                     <span className={`text-sm font-semibold ${
                       method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400'
+                    }`}>{method.security}</span className={`text-sm font-semibold ${
+                      method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400'
                     }`}>
-                      {method.security}
                     </span>
-                  </div>
-                </div>
-              ))}
+                  </div>))}<//div>
             </div>
-          </section>
-
-          {/* Rate Limits */}
+          </section>{/* Rate Limits */}<//section>
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Rate Limits</h2>
             <div className="cyber-card-enhanced p-8">
@@ -304,32 +286,24 @@ const ApiPage: React.FC = () => {
                       <th className="text-left text-white py-3 px-4">Burst Limit</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    {rateLimits.map((limit, index) => (
+                  <tbody>{rateLimits.map((limit, index) => (</tbody>
                       <tr key={index} className="border-b border-gray-800">
                         <td className="py-3 px-4 text-white font-semibold">{limit.tier}</td>
                         <td className="py-3 px-4 text-gray-300">{limit.requests}</td>
                         <td className="py-3 px-4 text-gray-300">{limit.burst}</td>
-                      </tr>
-                    ))}
+                      </tr>))}<//tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-          </section>
-
-          {/* API Endpoints */}
+          </section>{/* API Endpoints */}<//section>
           <section id="endpoints" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
-            <div className="space-y-8">
-              {apiEndpoints.map((category, categoryIndex) => (
+            <div className="space-y-8">{apiEndpoints.map((category, categoryIndex) => (</div className="space-y-8">
                 <div key={categoryIndex} className="cyber-card-enhanced p-8">
                   <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <Database className="w-6 h-6 mr-3 text-cyan-400" />
-                    {category.category}
+                    <Database className="w-6 h-6 mr-3 text-cyan-400" />{category.category}</Database className="w-6 h-6 mr-3 text-cyan-400" />
                   </h3>
-                  <div className="space-y-6">
-                    {category.endpoints.map((endpoint, endpointIndex) => (
+                  <div className="space-y-6">{category.endpoints.map((endpoint, endpointIndex) => (</div className="space-y-6">
                       <div key={endpointIndex} className="border border-gray-700 rounded-lg p-6">
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center space-x-4">
@@ -337,48 +311,36 @@ const ApiPage: React.FC = () => {
                               endpoint.method === 'GET' 
                                 ? 'bg-green-600 text-white' 
                                 : 'bg-blue-600 text-white'
+                            }`}>{endpoint.method}</span className={`px-3 py-1 rounded text-sm font-semibold ${
+                              endpoint.method === 'GET' 
+                                ? 'bg-green-600 text-white' 
+                                : 'bg-blue-600 text-white'
                             }`}>
-                              {endpoint.method}
                             </span>
                             <code className="text-cyan-400 font-mono">{endpoint.path}</code>
                           </div>
-                        </div>
-                        <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                        
+                        <p className="text-gray-300 mb-4">{endpoint.description}</p> <//p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
                             <h4 className="text-white font-semibold mb-2">Parameters</h4>
-                            <ul className="space-y-1">
-                              {endpoint.parameters.map((param, paramIndex) => (
+                            <ul className="space-y-1">{endpoint.parameters.map((param, paramIndex) => (</ul className="space-y-1">
                                 <li key={paramIndex} className="text-gray-300 text-sm">
                                   <code className="text-cyan-400">{param}</code>
-                                </li>
-                              ))}
+                                </li>))}<//li>
                             </ul>
                           </div>
                           <div>
                             <h4 className="text-white font-semibold mb-2">Example</h4>
                             <div className="bg-slate-800 rounded p-3">
                               <div className="text-xs text-gray-400 mb-2">Request:</div>
-                              <pre className="text-green-400 text-xs overflow-x-auto">
-                                {JSON.stringify(endpoint.example.request, null, 2)}
+                              <pre className="text-green-400 text-xs overflow-x-auto">{JSON.stringify(endpoint.example.request, null, 2)}</pre className="text-green-400 text-xs overflow-x-auto">
                               </pre>
                               <div className="text-xs text-gray-400 mb-2 mt-3">Response:</div>
-                              <pre className="text-blue-400 text-xs overflow-x-auto">
-                                {JSON.stringify(endpoint.example.response, null, 2)}
+                              <pre className="text-blue-400 text-xs overflow-x-auto">{JSON.stringify(endpoint.example.response, null, 2)}</pre className="text-blue-400 text-xs overflow-x-auto">
                               </pre>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                            </div>))} ))}<//div>
             </div>
-          </section>
-
-          {/* SDKs and Libraries */}
+          </section>{/* SDKs and Libraries */}<//section>
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -406,42 +368,40 @@ const ApiPage: React.FC = () => {
                   View on Packagist <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-            </div>
-          </section>
-
-          {/* Support */}
+          </section>{/* Support */}<//section>
           <section className="mb-16">
             <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
-              <p className="text-gray-300 mb-6">
-                Our developer support team is here to help you integrate our APIs successfully.
+              <p className="text-gray-300 mb-6">Our developer support team is here to help you integrate our APIs successfully.</p className="text-gray-300 mb-6">
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >Contact Support</a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Contact Support
                 </a>
                 <a
                   href="/docs"
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >View Documentation</a
+                  href="/docs"
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  View Documentation
                 </a>
                 <a
                   href="/community"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+                >Join Community</a
+                  href="/community"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
                 >
-                  Join Community
                 </a>
               </div>
-            </div>
           </section>
         </div>
-      </div>
-    </>
-  );
-};
-
-export default ApiPage;
+    </>);<//>
+}<//>
+export default ApiPage<//>
