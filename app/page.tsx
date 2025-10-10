@@ -192,6 +192,94 @@ const HomePage: React.FC = () => {
       benefits: ['Reduced latency', 'Lower bandwidth usage', 'Predictive maintenance', 'Energy savings'],
       category: 'IoT',
       popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'AI Quantum Computing',
+      description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
+      price: '$1,299/month',
+      marketPrice: '$2000-8000/month',
+      features: ['Quantum machine learning algorithms', 'Optimization problem solving', 'Cryptographic security', 'Quantum neural networks', 'Hybrid classical-quantum processing'],
+      benefits: ['Exponential speedup', 'Complex problem solving', 'Enhanced security', 'Future-proof technology'],
+      category: 'Quantum AI',
+      popular: false
+    },
+    {
+      icon: Monitor,
+      title: 'AI Augmented Reality',
+      description: 'AI-powered AR solutions for immersive experiences and spatial computing',
+      price: '$799/month',
+      marketPrice: '$1200-4000/month',
+      features: ['Object recognition and tracking', 'Spatial mapping', 'Real-time rendering', 'Gesture recognition', 'Mixed reality interfaces'],
+      benefits: ['Immersive experiences', 'Enhanced productivity', 'Interactive training', 'Spatial computing'],
+      category: 'AR/VR',
+      popular: false
+    },
+    {
+      icon: Package,
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automation',
+      price: '$649/month',
+      marketPrice: '$1000-3500/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier risk assessment', 'Real-time tracking'],
+      benefits: ['Reduced costs', 'Improved efficiency', 'Risk mitigation', 'Better visibility'],
+      category: 'Supply Chain',
+      popular: false
+    },
+    {
+      icon: Zap,
+      title: 'AI Energy Management',
+      description: 'Smart energy optimization using AI for sustainable and efficient operations',
+      price: '$499/month',
+      marketPrice: '$800-2500/month',
+      features: ['Energy consumption prediction', 'Smart grid optimization', 'Renewable energy integration', 'Carbon footprint tracking', 'Automated energy trading'],
+      benefits: ['Cost reduction', 'Sustainability', 'Efficiency gains', 'Environmental impact'],
+      category: 'Energy',
+      popular: false
+    },
+    {
+      icon: Lock,
+      title: 'AI Blockchain Solutions',
+      description: 'Decentralized AI applications with blockchain integration for secure and transparent operations',
+      price: '$899/month',
+      marketPrice: '$1500-5000/month',
+      features: ['Decentralized AI models', 'Smart contract integration', 'Cryptographic verification', 'Distributed computing', 'Tokenized AI services'],
+      benefits: ['Enhanced security', 'Transparency', 'Decentralization', 'Innovation'],
+      category: 'Blockchain AI',
+      popular: false
+    },
+    {
+      icon: Target,
+      title: 'AI Predictive Maintenance',
+      description: 'Machine learning-powered predictive maintenance for industrial equipment and machinery',
+      price: '$449/month',
+      marketPrice: '$700-2500/month',
+      features: ['Equipment failure prediction', 'Maintenance scheduling', 'Performance monitoring', 'Anomaly detection', 'Cost optimization'],
+      benefits: ['Reduced downtime', 'Lower maintenance costs', 'Improved reliability', 'Extended equipment life'],
+      category: 'Industrial AI',
+      popular: false
+    },
+    {
+      icon: Globe,
+      title: 'AI Climate Solutions',
+      description: 'Environmental AI for climate monitoring, carbon tracking, and sustainability optimization',
+      price: '$599/month',
+      marketPrice: '$900-3000/month',
+      features: ['Climate data analysis', 'Carbon footprint calculation', 'Environmental impact assessment', 'Sustainability reporting', 'Green energy optimization'],
+      benefits: ['Environmental compliance', 'Sustainability goals', 'Cost savings', 'Climate impact'],
+      category: 'Climate AI',
+      popular: false
+    },
+    {
+      icon: Users,
+      title: 'AI Personalization Engine',
+      description: 'Advanced personalization AI for customer experiences and product recommendations',
+      price: '$349/month',
+      marketPrice: '$500-2000/month',
+      features: ['Behavioral analysis', 'Dynamic content personalization', 'Recommendation algorithms', 'A/B testing automation', 'Real-time adaptation'],
+      benefits: ['Higher engagement', 'Increased conversions', 'Better customer experience', 'Data-driven personalization'],
+      category: 'Personalization',
+      popular: true
     }
   ];
 
@@ -305,6 +393,61 @@ const HomePage: React.FC = () => {
       features: ['IT strategy development', 'Digital transformation planning', 'Technology assessment', 'Vendor evaluation', 'ROI analysis', 'Implementation planning'],
       benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Future-proof solutions'],
       category: 'Consulting',
+      popular: true
+    },
+    {
+      icon: Cpu,
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT devices',
+      price: '$1,800/month',
+      marketPrice: '$3000-10000/month',
+      features: ['Edge server deployment', 'Content delivery optimization', 'IoT device management', 'Real-time data processing', 'Latency optimization', 'Distributed caching'],
+      benefits: ['Reduced latency', 'Better performance', 'Cost efficiency', 'Scalable edge network'],
+      category: 'Edge Computing',
+      popular: false
+    },
+    {
+      icon: Lock,
+      title: 'Blockchain Development',
+      description: 'Custom blockchain solutions, smart contracts, and decentralized applications',
+      price: '$3,500/month',
+      marketPrice: '$5000-20000/month',
+      features: ['Smart contract development', 'DApp creation', 'Blockchain integration', 'Cryptocurrency solutions', 'NFT platforms', 'DeFi applications'],
+      benefits: ['Decentralized solutions', 'Enhanced security', 'Transparency', 'Innovation'],
+      category: 'Blockchain',
+      popular: false
+    },
+    {
+      icon: Monitor,
+      title: 'AR/VR Development',
+      description: 'Immersive technology solutions including augmented and virtual reality applications',
+      price: '$4,500/project',
+      marketPrice: '$8000-30000/project',
+      features: ['AR/VR app development', '3D modeling and animation', 'Spatial computing', 'Gesture recognition', 'Mixed reality solutions', 'Immersive training'],
+      benefits: ['Immersive experiences', 'Enhanced engagement', 'Innovative solutions', 'Future-ready technology'],
+      category: 'AR/VR',
+      popular: false
+    },
+    {
+      icon: Zap,
+      title: '5G Network Implementation',
+      description: 'Next-generation 5G network deployment and optimization for ultra-fast connectivity',
+      price: '$5,000/month',
+      marketPrice: '$8000-25000/month',
+      features: ['5G network planning', 'Infrastructure deployment', 'Performance optimization', 'IoT connectivity', 'Network slicing', 'Edge computing integration'],
+      benefits: ['Ultra-fast speeds', 'Low latency', 'Massive connectivity', 'Future-proof network'],
+      category: '5G',
+      popular: false
+    },
+    {
+      icon: Globe,
+      title: 'Digital Transformation',
+      description: 'Comprehensive digital transformation services to modernize business operations',
+      price: '$4,000/month',
+      marketPrice: '$6000-20000/month',
+      features: ['Process digitization', 'Legacy system modernization', 'Cloud migration', 'Automation implementation', 'Change management', 'Training and support'],
+      benefits: ['Improved efficiency', 'Cost reduction', 'Better customer experience', 'Competitive advantage'],
+      category: 'Digital Transformation',
       popular: true
     }
   ];
@@ -454,6 +597,114 @@ const HomePage: React.FC = () => {
       category: 'Mobile Development',
       popular: true,
       users: 'Up to 20 users'
+    },
+    {
+      icon: Settings,
+      title: 'Zion Workflow AI',
+      description: 'Intelligent business process automation with AI-powered workflow optimization',
+      price: '$169/month',
+      marketPrice: '$250-800/month',
+      features: ['AI-powered workflow discovery and mapping', 'Automated process optimization suggestions', 'Visual workflow designer with drag-and-drop', 'Integration with 500+ business applications', 'Real-time process monitoring and analytics', 'Exception handling and error recovery', 'Custom workflow templates and libraries', 'Multi-tenant architecture for enterprises'],
+      benefits: ['Process efficiency', 'Cost reduction', 'Error elimination', 'Scalable automation'],
+      category: 'Automation',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      icon: Globe,
+      title: 'Zion SEO Master',
+      description: 'AI-powered SEO optimization platform with advanced keyword research and content optimization',
+      price: '$99/month',
+      marketPrice: '$150-500/month',
+      features: ['AI-powered keyword research and analysis', 'Automated SEO audits and recommendations', 'Content optimization suggestions', 'Competitor analysis and tracking', 'Local SEO optimization tools', 'Technical SEO monitoring', 'Ranking tracking and reporting', 'White-label SEO services for agencies'],
+      benefits: ['Higher search rankings', 'Increased organic traffic', 'Better content performance', 'Competitive advantage'],
+      category: 'SEO',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      icon: Package,
+      title: 'Zion Inventory AI',
+      description: 'Smart inventory management system with AI-powered demand forecasting and optimization',
+      price: '$189/month',
+      marketPrice: '$300-1000/month',
+      features: ['AI-powered demand forecasting and planning', 'Automated reorder point calculations', 'Multi-location inventory tracking', 'Supplier performance analytics', 'Cost optimization recommendations', 'Integration with e-commerce platforms', 'Real-time inventory alerts and notifications', 'Custom reporting and dashboards'],
+      benefits: ['Reduced stockouts', 'Lower inventory costs', 'Better cash flow', 'Improved efficiency'],
+      category: 'Inventory',
+      popular: false,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Heart,
+      title: 'Zion Health Monitor',
+      description: 'AI-powered health and wellness tracking platform for employee wellbeing',
+      price: '$79/month',
+      marketPrice: '$120-400/month',
+      features: ['AI-powered health risk assessment', 'Personalized wellness recommendations', 'Mental health monitoring and support', 'Fitness tracking and goal setting', 'Nutrition analysis and meal planning', 'Sleep pattern analysis', 'Stress level monitoring', 'Integration with wearable devices'],
+      benefits: ['Improved employee health', 'Reduced healthcare costs', 'Higher productivity', 'Better work-life balance'],
+      category: 'Health',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      icon: Lock,
+      title: 'Zion Compliance Pro',
+      description: 'Automated compliance management system with AI-powered risk assessment and reporting',
+      price: '$299/month',
+      marketPrice: '$500-1500/month',
+      features: ['AI-powered compliance risk assessment', 'Automated policy management and updates', 'Regulatory change monitoring', 'Audit trail and documentation', 'Compliance training and certification', 'Multi-jurisdiction compliance support', 'Real-time compliance dashboards', 'Custom compliance frameworks'],
+      benefits: ['Reduced compliance risk', 'Automated reporting', 'Cost savings', 'Peace of mind'],
+      category: 'Compliance',
+      popular: false,
+      users: 'Up to 75 users'
+    },
+    {
+      icon: Zap,
+      title: 'Zion Energy Optimizer',
+      description: 'AI-powered energy management and optimization platform for sustainable operations',
+      price: '$149/month',
+      marketPrice: '$200-600/month',
+      features: ['AI-powered energy consumption analysis', 'Smart grid integration and optimization', 'Renewable energy source management', 'Carbon footprint tracking and reporting', 'Energy cost optimization', 'Predictive maintenance scheduling', 'Real-time energy monitoring', 'Sustainability reporting and analytics'],
+      benefits: ['Reduced energy costs', 'Lower carbon footprint', 'Improved sustainability', 'Better resource utilization'],
+      category: 'Sustainability',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      icon: Monitor,
+      title: 'Zion Remote Work Hub',
+      description: 'Comprehensive remote work management platform with AI-powered productivity insights',
+      price: '$129/month',
+      marketPrice: '$200-600/month',
+      features: ['AI-powered productivity analytics', 'Virtual team collaboration tools', 'Time tracking and project management', 'Employee engagement monitoring', 'Remote work policy management', 'Digital workspace optimization', 'Performance metrics and reporting', 'Integration with popular remote work tools'],
+      benefits: ['Improved productivity', 'Better team collaboration', 'Enhanced employee engagement', 'Flexible work management'],
+      category: 'Remote Work',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      icon: Cpu,
+      title: 'Zion AI Model Builder',
+      description: 'No-code AI model development platform for custom machine learning solutions',
+      price: '$399/month',
+      marketPrice: '$600-2000/month',
+      features: ['Drag-and-drop AI model builder', 'Pre-trained model library and marketplace', 'Automated model training and optimization', 'Custom dataset management', 'Model deployment and monitoring', 'A/B testing for model performance', 'API generation for model integration', 'White-label AI solutions for clients'],
+      benefits: ['Faster AI development', 'No coding required', 'Custom AI solutions', 'Easy deployment'],
+      category: 'AI Development',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Zion Growth Analytics',
+      description: 'AI-powered growth hacking and business intelligence platform for scaling businesses',
+      price: '$199/month',
+      marketPrice: '$300-1000/month',
+      features: ['AI-powered growth opportunity identification', 'Customer acquisition cost optimization', 'Churn prediction and prevention', 'Revenue forecasting and planning', 'Market trend analysis', 'Competitive intelligence', 'Growth experiment tracking', 'Custom growth strategies'],
+      benefits: ['Faster business growth', 'Better customer retention', 'Optimized marketing spend', 'Data-driven decisions'],
+      category: 'Growth',
+      popular: true,
+      users: 'Up to 25 users'
     }
   ];
 
@@ -467,9 +718,9 @@ const HomePage: React.FC = () => {
   return (
     <React.Fragment>
       <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        title="Zion Tech Group - Advanced AI and IT Solutions | Enterprise AI Services"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology. Save $50M+ annually with our proven AI solutions."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'AI chatbots', 'AI analytics', 'AI cybersecurity', 'micro SaaS', 'IT consulting', 'AI development', 'business intelligence', 'AI automation', 'AI healthcare', 'AI fintech', 'AI e-commerce', 'AI HR solutions', 'AI computer vision', 'AI voice processing', 'AI workflow automation', 'AI blockchain', 'AI AR VR', 'AI supply chain', 'AI energy management', 'AI climate solutions', 'AI personalization', 'AI predictive maintenance', 'AI compliance', 'AI inventory management', 'AI remote work', 'AI model builder', 'AI growth analytics', 'Zion Tech Group', 'AI services Delaware', 'IT services Middletown', 'AI consulting USA']}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -487,7 +738,32 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
+            'AI Chatbots',
+            'AI Analytics',
+            'AI Cybersecurity',
+            'Micro SaaS',
+            'IT Consulting',
+            'AI Development',
+            'AI Healthcare',
+            'AI Fintech',
+            'AI E-commerce',
+            'AI HR Solutions',
+            'AI Computer Vision',
+            'AI Voice Processing',
+            'AI Workflow Automation',
+            'AI Blockchain',
+            'AI AR VR',
+            'AI Supply Chain',
+            'AI Energy Management',
+            'AI Climate Solutions',
+            'AI Personalization',
+            'AI Predictive Maintenance',
+            'AI Compliance',
+            'AI Inventory Management',
+            'AI Remote Work',
+            'AI Model Builder',
+            'AI Growth Analytics'
           ],
           contactPoint: {
             '@type': 'ContactPoint',
@@ -546,18 +822,19 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced cyber-glow"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced" role="doc-subtitle">
+              <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed px-4">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
-                startups, and enterprises worldwide with proven results and 24/7 expert support.
+                startups, and enterprises worldwide with proven results and 24/7 expert support. Our AI-powered solutions have helped 
+                clients save over $50M annually while increasing efficiency by 300% and reducing operational costs by 60%.
               </p>
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
@@ -641,9 +918,9 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive AI solutions designed to transform your business operations
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
               {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced cyber-glow">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -700,9 +977,9 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced cyber-glow">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -759,9 +1036,9 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Ready-to-use business tools that solve specific problems with AI and automation
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
               {microSaasServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced cyber-glow">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
