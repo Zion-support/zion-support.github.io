@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
@@ -10,6 +11,11 @@
 import { useCallback } from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+=======
+'use client'
+import { useCallback } from 'react'
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 /**
  * Accessibility utilities for enhanced user experience
  */
@@ -120,7 +126,11 @@ export class A11yManager {
  * Generate unique ID for aria-describedby and aria-labelledby
  */
 export function generateId(prefix = 'a11y'): string {
+<<<<<<< HEAD
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+=======
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 
 /**
@@ -147,6 +157,7 @@ export function announceToScreenReader(
   
   // Set message after a slight delay to ensure screen readers pick it up
   setTimeout(() => {
+<<<<<<< HEAD
     announcement.textContent = message;
   }, 100);
   
@@ -179,6 +190,14 @@ export function announceToScreenReader(
     document.body.removeChild(announcement);
   }, 1000);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+=======
+    announcement.textContent = message
+  }, 100)
+  // Remove announcement after it's been read
+  setTimeout(() => {
+    document.body.removeChild(announcement)
+  }, 3000)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 
 /**
@@ -193,6 +212,7 @@ export function trapFocus(element: HTMLElement): () => void {
   
   const firstFocusable = focusableElements[0]
   const lastFocusable = focusableElements[focusableElements.length - 1]
+<<<<<<< HEAD
   
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key !== 'Tab') return;
@@ -202,10 +222,20 @@ export function trapFocus(element: HTMLElement): () => void {
       if (document.activeElement === firstFocusable) {
         e.preventDefault();
         lastFocusable?.focus();
+=======
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key !== 'Tab') return
+    if (e.shiftKey) {
+      // Shift + Tab
+      if (document.activeElement === firstFocusable) {
+        e.preventDefault()
+        lastFocusable?.focus()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       }
     } else {
       // Tab
       if (document.activeElement === lastFocusable) {
+<<<<<<< HEAD
         e.preventDefault();
         firstFocusable?.focus();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
@@ -271,11 +301,20 @@ export function trapFocus(container: HTMLElement): () => void {
   
   element.addEventListener('keydown', handleKeyDown);
   
+=======
+        e.preventDefault()
+        firstFocusable?.focus()
+      }
+    }
+  }, [firstFocusable, lastFocusable])
+  element.addEventListener('keydown', handleKeyDown)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   // Focus first element
   firstFocusable?.focus();
   
   // Return cleanup function
   return () => {
+<<<<<<< HEAD
     element.removeEventListener('keydown', handleKeyDown);
   };
 <<<<<<< HEAD
@@ -290,6 +329,10 @@ export function trapFocus(container: HTMLElement): () => void {
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 =======
+=======
+    element.removeEventListener('keydown', handleKeyDown)
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 /**
  * Check if element is keyboard accessible
@@ -304,7 +347,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
     isInteractive ||
     (tabindex !== null && tabindex !== '-1') ||
     (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
-  );}
+  )
 }
 /**
  * Add keyboard navigation support to custom interactive elements
@@ -313,6 +356,7 @@ export function makeKeyboardAccessible(
   element: HTMLElement,
   onClick: (e: Event) => void,
   options: {
+<<<<<<< HEAD
     role?: string;
     tabindex?: number;
   } = {}
@@ -333,6 +377,27 @@ export function makeKeyboardAccessible(
     element.removeEventListener('keydown', handleKeyDown);
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea76
+=======
+    role?: string
+    tabindex?: number
+  } = {}
+): () => void {
+  const { role = 'button', tabindex = 0 } = options
+  element.setAttribute('role', role)
+  element.setAttribute('tabindex', tabindex.toString())
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      onClick(e)
+    }
+  }, [onClick])
+  element.addEventListener('click', onClick)
+  element.addEventListener('keydown', handleKeyDown)
+  return () => {
+    element.removeEventListener('click', onClick)
+    element.removeEventListener('keydown', handleKeyDown)
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 
 /**
@@ -400,8 +465,13 @@ export function getContrastRatio(color1: string, color2: string): number {
       const normalized = val / 255
       return normalized <= 0.03928
         ? normalized / 12.92
+<<<<<<< HEAD
         : Math.pow((normalized + 0.055) / 1.055, 2.4);
     });
+=======
+        : Math.pow((normalized + 0.055) / 1.055, 2.4)
+    })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     return 0.2126 * r + 0.7152 * g + 0.0722 * b
   }
   const lum1 = getLuminance(color1);
@@ -442,6 +512,7 @@ export function getAccessibleColor(
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
 <<<<<<< HEAD
+<<<<<<< HEAD
 ): string {
   const colors = [
     '#000000', // Black
@@ -457,6 +528,12 @@ export function getAccessibleColor(
       return color
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     }
+=======
+): boolean {
+  const ratio = getContrastRatio(color1, color2)
+  if (level === 'AAA') {
+    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -493,6 +570,7 @@ export function getAccessibleColor(
  * Skip to content link helper
  */
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
+<<<<<<< HEAD
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -512,27 +590,63 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
     skipLink.style.top = '-40px';
   });
   return skipLink;
+=======
+  const skipLink = document.createElement('a')
+  skipLink.href = `#${targetId}`
+  skipLink.textContent = text
+  skipLink.className = 'skip-link'
+  skipLink.style.position = 'absolute'
+  skipLink.style.top = '-40px'
+  skipLink.style.left = '0'
+  skipLink.style.background = '#000'
+  skipLink.style.color = '#fff'
+  skipLink.style.padding = '8px'
+  skipLink.style.textDecoration = 'none'
+  skipLink.style.zIndex = '100'
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '0'
+  })
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-40px'
+  })
+  return skipLink
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 /**
  * Detect if user prefers reduced motion
  */
 export function prefersReducedMotion(): boolean {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+=======
+  if (typeof window === 'undefined') return false
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 /**
  * Detect if user prefers dark mode
  */
 export function prefersDarkMode(): boolean {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
+=======
+  if (typeof window === 'undefined') return false
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 /**
  * Get ARIA label for form validation error
  */
 export function getAriaInvalid(hasError: boolean): {
+<<<<<<< HEAD
   'aria-invalid': boolean;
   'aria-describedby'?: string;
+=======
+  'aria-invalid': boolean
+  'aria-describedby'?: string
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 } {
   return {
     'aria-invalid': hasError,
@@ -547,6 +661,7 @@ export function createAccessibleTooltip(
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 ): () => void {
+<<<<<<< HEAD
   const tooltipId = generateId('tooltip');
   const tooltip = document.createElement('div');
   tooltip.id = tooltipId;
@@ -570,6 +685,31 @@ export function createAccessibleTooltip(
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
         break;
+=======
+  const tooltipId = generateId('tooltip')
+  const tooltip = document.createElement('div')
+  tooltip.id = tooltipId
+  tooltip.setAttribute('role', 'tooltip')
+  tooltip.textContent = content
+  tooltip.style.position = 'absolute'
+  tooltip.style.background = '#333'
+  tooltip.style.color = '#fff'
+  tooltip.style.padding = '4px 8px'
+  tooltip.style.borderRadius = '4px'
+  tooltip.style.fontSize = '14px'
+  tooltip.style.zIndex = '1000'
+  tooltip.style.display = 'none'
+  document.body.appendChild(tooltip)
+  trigger.setAttribute('aria-describedby', tooltipId)
+  const showTooltip = useCallback(() => {
+    tooltip.style.display = 'block'
+    const triggerRect = trigger.getBoundingClientRect()
+    switch (placement) {
+      case 'top':
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
+        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`
+        break
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       case 'bottom':
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
         tooltip.style.top = `${triggerRect.bottom + 5}px`;
@@ -583,6 +723,7 @@ export function createAccessibleTooltip(
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
         break;
     }
+<<<<<<< HEAD
   };
   const hideTooltip = () => {
     tooltip.style.display = 'none';
@@ -598,6 +739,23 @@ export function createAccessibleTooltip(
     trigger.removeEventListener('blur', hideTooltip);
     document.body.removeChild(tooltip);
   };
+=======
+  }, [tooltip, trigger, placement])
+  const hideTooltip = useCallback(() => {
+    tooltip.style.display = 'none'
+  }, [tooltip])
+  trigger.addEventListener('mouseenter', showTooltip)
+  trigger.addEventListener('mouseleave', hideTooltip)
+  trigger.addEventListener('focus', showTooltip)
+  trigger.addEventListener('blur', hideTooltip)
+  return () => {
+    trigger.removeEventListener('mouseenter', showTooltip)
+    trigger.removeEventListener('mouseleave', hideTooltip)
+    trigger.removeEventListener('focus', showTooltip)
+    trigger.removeEventListener('blur', hideTooltip)
+    document.body.removeChild(tooltip)
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 /**
  * Manage focus restoration (useful for modals)
@@ -605,10 +763,16 @@ export function createAccessibleTooltip(
 export class FocusManager {
   private previousFocus: HTMLElement | null = null;
   saveFocus(): void {
+<<<<<<< HEAD
     this.previousFocus = document.activeElement as HTMLElement;
+=======
+    this.previousFocus = document.activeElement as HTMLElement
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
+
   restoreFocus(): void {
     if (this.previousFocus) {
+<<<<<<< HEAD
       this.previousFocus.focus();
       this.previousFocus = null;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea76
@@ -686,6 +850,18 @@ export function handleKeyboardNavigation(
       onArrowRight?.();
       break;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+=======
+      this.previousFocus.focus()
+      this.previousFocus = null
+    }
+  }
+
+  moveFocusInside(container: HTMLElement): void {
+    const focusable = container.querySelector<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+    focusable?.focus()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 };
 

@@ -62,20 +62,35 @@ export class AccessibilityManager {
 =======
 export interface A11yReport {
   errors: A11yError[]
+<<<<<<< HEAD
   warnings: A11yWarning[];
   score: number;
+=======
+  warnings: A11yWarning[]
+  score: number
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
+
 export interface A11yError {
   type: string
   element: string
   message: string
+<<<<<<< HEAD
   wcag: string;
+=======
+  wcag: string
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
+
 export interface A11yWarning {
   type: string
   element: string
   message: string
+<<<<<<< HEAD
   suggestion: string;
+=======
+  suggestion: string
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
 }
 class AccessibilityService {
   // Check color contrast ratio
@@ -83,7 +98,7 @@ class AccessibilityService {
     foreground: string,
     background: string
   ): {
-    ratio: number;}
+    ratio: number
     passes: { normal: boolean; large: boolean }
   } {
     const rgb1 = this.hexToRgb(foreground)
@@ -99,22 +114,40 @@ class AccessibilityService {
       }
     }
   }
+<<<<<<< HEAD
   private hexToRgb(hex: string): { r: number; g: number; b: number } {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+=======
+
+  private hexToRgb(hex: string): { r: number; g: number; b: number } {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     return result
       ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
+<<<<<<< HEAD
           b: parseInt(result[3], 16),
+=======
+          b: parseInt(result[3], 16)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
       : { r: 0, g: 0, b: 0 };
   }
+
   private getLuminance(rgb: { r: number; g: number; b: number }): number {
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {
+<<<<<<< HEAD
       const v = val / 255;
       return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+=======
+      const v = val / 255
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)
+    })
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
   // Audit page for accessibility issues
   public auditPage(): A11yReport {
@@ -128,14 +161,22 @@ class AccessibilityService {
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
           wcag: '1.1.1 (Level A)'
+<<<<<<< HEAD
         });
+=======
+        })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       } else if (img.alt === '') {
         warnings.push({
           type: 'empty-alt',
           element: img['src'] || 'unknown',
           message: 'Image has empty alt text',
           suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+<<<<<<< HEAD
         });
+=======
+        })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       }
     });
     // Check for missing form labels
@@ -143,14 +184,22 @@ class AccessibilityService {
       const hasLabel =
         input.hasAttribute('aria-label') ||
         input.hasAttribute('aria-labelledby') ||
+<<<<<<< HEAD
         document.querySelector(`label[for="${input.id}"]`);
+=======
+        document.querySelector(`label[for="${input.id}"]`)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       if (!hasLabel) {
         errors.push({
           type: 'missing-label',
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
           wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
+<<<<<<< HEAD
         });
+=======
+        })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       }
     });
     // Check for proper heading hierarchy
@@ -175,7 +224,7 @@ class AccessibilityService {
         type: 'missing-skip-link',
         element: 'body',
         message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'}
+        suggestion: 'Add a skip link to main content for keyboard users'
       })
     }
     // Check for language attribute
@@ -185,7 +234,7 @@ class AccessibilityService {
         type: 'missing-lang',
         element: 'html',
         message: 'Missing lang attribute on html element',
-        wcag: '3.1.1 (Level A)'}
+        wcag: '3.1.1 (Level A)'
       })
     }
     // Check for sufficient link text
@@ -197,14 +246,14 @@ class AccessibilityService {
           type: 'empty-link',
           element: link.href || 'unknown',
           message: 'Link has no accessible text',
-          wcag: '2.4.4 (Level A)'}
+          wcag: '2.4.4 (Level A)'
         })
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {
         warnings.push({
           type: 'generic-link-text',
           element: text,
           message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'}
+          suggestion: 'Use more descriptive link text that makes sense out of context'
         })
       }
     })
@@ -252,14 +301,14 @@ class AccessibilityService {
       if (e.altKey && e.key === 'm') {
         const mainContent = document.querySelector('main')
         if (mainContent) {
-          (mainContent as HTMLElement).focus();}
+          (mainContent as HTMLElement).focus()
         }
       }
       // Alt + N: Go to navigation
       if (e.altKey && e.key === 'n') {
         const nav = document.querySelector('nav')
         if (nav) {
-          (nav as HTMLElement).focus();}
+          (nav as HTMLElement).focus()
         }
       }
     })
@@ -272,10 +321,15 @@ class AccessibilityService {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea76
     // Clear after announcement
     setTimeout(() => {
+<<<<<<< HEAD
       if (this.liveRegion) {
         this.liveRegion.textContent = '';
       }
     }, this.config.announceDelay);
+=======
+      announcer.textContent = ''
+    }, 1000)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -330,6 +384,7 @@ class AccessibilityService {
           }
         }
       }
+<<<<<<< HEAD
     };
 
     container.addEventListener('keydown', handleKeyDown);
@@ -368,6 +423,10 @@ class AccessibilityService {
         case 'Escape':
           element.blur();
           break;
+=======
+      if (e.key === 'Escape') {
+        element.dispatchEvent(new CustomEvent('close'))
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       }
     });
   }
@@ -379,6 +438,7 @@ class AccessibilityService {
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
       button.setAttribute('aria-label', 'Button');
     }
+<<<<<<< HEAD
     
     this.addKeyboardNavigation(button);
   }
@@ -461,6 +521,25 @@ class AccessibilityService {
       this.liveRegion = null;
     }
     this.focusHistory = [];
+=======
+    element.addEventListener('keydown', handleTabKey)
+    // Return cleanup function
+    return () => {
+      element.removeEventListener('keydown', handleTabKey)
+    }
+  }
+
+  // Check if element is visible to screen readers
+  public isAccessible(element: HTMLElement): boolean {
+    const style = window.getComputedStyle(element)
+    return !(
+      style.display === 'none' ||
+      style.visibility === 'hidden' ||
+      style.opacity === '0' ||
+      element.hasAttribute('hidden') ||
+      element.getAttribute('aria-hidden') === 'true'
+    )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 }
 

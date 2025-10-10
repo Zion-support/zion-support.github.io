@@ -134,10 +134,14 @@ class AdvancedAnalytics {
       browser: this.detectBrowser(),
       os: this.detectOS(),
 <<<<<<< HEAD
+<<<<<<< HEAD
       referrer: document.referrer
 =======
       referrer: typeof window !== 'undefined' ? document.referrer : ''
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
+=======
+      referrer: document.referrer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
   }
 
@@ -227,8 +231,18 @@ class AdvancedAnalytics {
         url: window.location.href,
         metadata: {
           element: element.tagName,
+<<<<<<< HEAD
           text: element.text,
           position: element.position
+=======
+          id: element.id,
+          className: element.className,
+          text: element.text?.substring(0, 100),
+          position: {
+            x: event.clientX,
+            y: event.clientY
+          }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
       }
@@ -265,7 +279,17 @@ class AdvancedAnalytics {
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
+<<<<<<< HEAD
           url: window.location.href
+=======
+          url: window.location.href,
+          metadata: {
+            scrollY: window.scrollY,
+            scrollPercentage: Math.round(
+              (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+            )
+          }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
         this.trackEvent(scrollEvent)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
@@ -304,7 +328,13 @@ class AdvancedAnalytics {
         metadata: {
           formId: form.id,
           formClass: form.className,
+<<<<<<< HEAD
           formAction: form.action
+=======
+          formAction: form.action,
+          formMethod: form.method,
+          fields: formFields
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
       }
       this.trackEvent(formEvent)
@@ -346,7 +376,11 @@ class AdvancedAnalytics {
           url: window.location.href,
           metadata: {
             downloadUrl: link.href,
+<<<<<<< HEAD
             downloadText: link.textContent || ''
+=======
+            downloadText: link.textContent?.substring(0, 100)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
           }
         }
         this.trackEvent(downloadEvent)
@@ -359,6 +393,7 @@ class AdvancedAnalytics {
    * Track performance metrics
    */
   private trackPerformance(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (typeof window.performance === 'undefined') return
 
@@ -380,6 +415,38 @@ class AdvancedAnalytics {
       setTimeout(() => {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const perfEvent: UserEvent = {
+=======
+    if ('PerformanceObserver' in window) {
+      // Track Core Web Vitals
+      new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint') {
+            const paintEvent: UserEvent = {
+              id: this.generateEventId(),
+              type: 'custom',
+              category: 'performance',
+              action: entry.name,
+              value: entry.startTime,
+              timestamp: new Date().toISOString(),
+              sessionId: this.currentSession.id,
+              userId: this.getUserId(),
+              url: window.location.href,
+              metadata: {
+                metric: entry.name,
+                value: entry.startTime
+              }
+            }
+            this.trackEvent(paintEvent)
+          }
+        }
+      }).observe({ entryTypes: ['paint'] })
+      // Track navigation timing
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming
+        const performanceEvent: UserEvent = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
           id: this.generateEventId(),
           type: 'custom',
           category: 'performance',
@@ -390,10 +457,17 @@ class AdvancedAnalytics {
           userId: this.getUserId(),
           url: window.location.href,
           metadata: {
+<<<<<<< HEAD
             loadTime: perfData.loadEventEnd - perfData.loadEventStart,
             domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
             firstPaint: this.getFirstPaint(),
             firstContentfulPaint: this.getFirstContentfulPaint()
+=======
+            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+            domContentLoaded:
+              navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            firstByte: navigation.responseStart - navigation.requestStart
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
           }
         }
         this.trackEvent(perfEvent)
@@ -434,8 +508,15 @@ class AdvancedAnalytics {
         lastUrl = window.location.href
       }
     })
+<<<<<<< HEAD
     observer.observe(document, { subtree: true, childList: true })
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
+=======
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -499,13 +580,23 @@ class AdvancedAnalytics {
   private trackEvent(event: UserEvent): void {
     this.currentSession.events.push(event)
     this.eventQueue.push(event)
+<<<<<<< HEAD
     
     if (this.eventQueue.length >= this.maxQueueSize) {
       this.flushEventQueue()
+=======
+    // Keep queue size manageable
+    if (this.eventQueue.length > this.maxQueueSize) {
+      this.eventQueue.shift()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
     
     if (this.isOnline) {
+<<<<<<< HEAD
       this.sendEventToServer(event)
+=======
+      this.sendEvent(event)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
   }
@@ -520,10 +611,22 @@ class AdvancedAnalytics {
 =======
   private async sendEventToServer(event: UserEvent): Promise<void> {
     try {
+<<<<<<< HEAD
       // In a real implementation, you would send to your analytics server
       console.log('Analytics event:', event)
     } catch (error) {
       console.error('Failed to send analytics event:', error)
+=======
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(event)
+      })
+    } catch (error) {
+      // Handle error silently
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
   }
 
@@ -535,23 +638,72 @@ class AdvancedAnalytics {
     
     const events = [...this.eventQueue]
     this.eventQueue = []
+<<<<<<< HEAD
     
     // Send all events to server
     events.forEach(event => this.sendEventToServer(event))
+=======
+    for (const event of eventsToSend) {
+      await this.sendEvent(event)
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Generate unique session ID
    */
+<<<<<<< HEAD
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+=======
+  private getElementInfo(element: HTMLElement): {
+    category: string
+    label: string
+    tagName: string
+    id: string
+    className: string
+    text?: string
+  } {
+    const tagName = element.tagName.toLowerCase()
+    const id = element.id || ''
+    const className = element.className || ''
+    const text = element.textContent?.trim()
+    // Determine category based on element type
+    let category = 'interaction'
+    if (tagName === 'button' || element.closest('button')) {
+      category = 'button'
+    } else if (tagName === 'a' || element.closest('a')) {
+      category = 'link'
+    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
+      category = 'form'
+    }
+    // Create label
+    let label = id || className || text?.substring(0, 50) || tagName
+    return {
+      category,
+      label,
+      tagName,
+      id,
+      className,
+      text
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Generate unique event ID
    */
+<<<<<<< HEAD
   private generateEventId(): string {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+=======
+  private isDownloadLink(link: HTMLAnchorElement): boolean {
+    return (
+      link.download !== '' ||
+      !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
+      link.getAttribute('data-download') === 'true'
+    )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -591,7 +743,11 @@ class AdvancedAnalytics {
     if (userAgent.includes('Firefox')) return 'Firefox'
     if (userAgent.includes('Safari')) return 'Safari'
     if (userAgent.includes('Edge')) return 'Edge'
+<<<<<<< HEAD
     return 'Other'
+=======
+    return 'Unknown'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -606,12 +762,17 @@ class AdvancedAnalytics {
     if (userAgent.includes('Linux')) return 'Linux'
     if (userAgent.includes('Android')) return 'Android'
     if (userAgent.includes('iOS')) return 'iOS'
+<<<<<<< HEAD
     return 'Other'
+=======
+    return 'Unknown'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Get element information for click tracking
    */
+<<<<<<< HEAD
   private getElementInfo(element: HTMLElement): {
     category: string
     label: string
@@ -626,23 +787,112 @@ class AdvancedAnalytics {
       tagName: element.tagName,
       text: element.textContent?.substring(0, 100) || '',
       position: { x: rect.left, y: rect.top }
+=======
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
+  /**
+   * Generate event ID
+   */
+  private generateEventId(): string {
+    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
+  /**
+   * Get user ID from storage or generate one
+   */
+  private getUserId(): string | undefined {
+    let userId = localStorage.getItem('analytics_user_id')
+    if (!userId) {
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      localStorage.setItem('analytics_user_id', userId)
+    }
+    return userId
+  }
+  /**
+   * Get analytics summary
+   */
+  getAnalyticsSummary(): {
+    session: UserSession
+    totalEvents: number
+    eventsByType: Record<string, number>
+    eventsByCategory: Record<string, number>
+    topPages: Array<{ url: string; views: number }>
+    conversionRate: number
+  } {
+    const events = this.currentSession.events
+    const totalEvents = events.length
+    const eventsByType = events.reduce(
+      (acc, event) => {
+        acc[event.type] = (acc[event.type] || 0) + 1
+        return acc
+      },
+      {} as Record<string, number>
+    )
+    const eventsByCategory = events.reduce(
+      (acc, event) => {
+        acc[event.category] = (acc[event.category] || 0) + 1
+        return acc
+      },
+      {} as Record<string, number>
+    )
+    const pageViews = events.filter(e => e.type === 'page_view')
+    const topPages = pageViews
+      .reduce(
+        (acc, event) => {
+          const existing = acc.find(p => p.url === event.url)
+          if (existing) {
+            existing.views++
+          } else {
+            acc.push({ url: event.url, views: 1 })
+          }
+          return acc
+        },
+        [] as Array<{ url: string; views: number }>
+      )
+      .sort((a, b) => b.views - a.views)
+    const conversions = events.filter(e => e.category === 'conversion').length
+    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0
+    return {
+      session: this.currentSession,
+      totalEvents,
+      eventsByType,
+      eventsByCategory,
+      topPages: topPages.slice(0, 10),
+      conversionRate
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
   }
 
   /**
    * Get element category for analytics
    */
+<<<<<<< HEAD
   private getElementCategory(element: HTMLElement): string {
     if (element.tagName === 'A') return 'link'
     if (element.tagName === 'BUTTON') return 'button'
     if (element.tagName === 'INPUT') return 'input'
     if (element.tagName === 'FORM') return 'form'
     return 'other'
+=======
+  private async sendSessionData(session: UserSession): Promise<void> {
+    try {
+      await fetch('/api/analytics/session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(session)
+      })
+    } catch (error) {
+      // Handle error silently
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Check if link is a download link
    */
+<<<<<<< HEAD
   private isDownloadLink(link: HTMLAnchorElement): boolean {
     const downloadExtensions = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.rar', '.exe', '.dmg']
     const href = link.href.toLowerCase()
@@ -690,6 +940,19 @@ class AdvancedAnalytics {
    */
   updateConfig(newConfig: Partial<AnalyticsConfig>): void {
     this.config = { ...this.config, ...newConfig }
+=======
+  endSession(): void {
+    this.currentSession.endTime = new Date().toISOString()
+    this.currentSession.duration =
+      new Date(this.currentSession.endTime).getTime() -
+      new Date(this.currentSession.startTime).getTime()
+    // Send session data
+    if (this.isOnline) {
+      this.sendSessionData(this.currentSession)
+    }
+    // Create new session
+    this.currentSession = this.createNewSession()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 }
 

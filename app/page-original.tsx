@@ -93,12 +93,18 @@ const HomePage: React.FC = React.memo((props) => {
             postalCode: '19709',
             addressCountry: 'US'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
           }
         }
       }}
+=======
+          }
+        }
+        }}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
