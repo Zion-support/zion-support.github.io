@@ -265,11 +265,25 @@ const Navigation: React.FC = () => {
               Services
             </Link>
             <Link 
+              to="/case-studies" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Case Studies
+            </Link>
+            <Link 
               to="/pricing" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Pricing
+            </Link>
+            <Link 
+              to="/blog" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Blog
             </Link>
 
             {/* Services Dropdown */}
@@ -323,20 +337,6 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link 
-              to="/case-studies" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-            </Link>
-            <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog
-            </Link>
             <Link
               to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"

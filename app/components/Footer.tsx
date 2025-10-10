@@ -84,7 +84,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Consultation', href: '/consultation' }
   ];
 
   const supportLinks = [
@@ -93,7 +95,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Demo Request', href: '/demo' },
+    { name: 'Free Consultation', href: '/consultation' }
   ];
 
   const legalLinks = [
