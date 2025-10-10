@@ -34,38 +34,38 @@ const AIServicesPage: React.FC = () => {
     {
       id: 1,
       title: 'AI-Powered Chatbots',
-      description: 'Intelligent conversational AI that understands context and provides human-like responses',
+      description: 'Intelligent conversational AI that understands context and provides human-like responses with 99% accuracy',
       icon: MessageSquare,
       category: 'Customer Service',
-      price: 'Starting at $2,999/month',
-      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis', '24/7 availability', 'Custom training', 'Analytics dashboard']
+      price: 'Starting at $1,999/month',
+      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis', '24/7 availability', 'Custom training', 'Analytics dashboard', 'Integration with 50+ platforms', 'Multi-language support']
     },
     {
       id: 2,
       title: 'Content Generation AI',
-      description: 'Automated content creation for blogs, social media, marketing materials, and more',
+      description: 'Automated content creation for blogs, social media, marketing materials, and more with brand consistency',
       icon: FileText,
       category: 'Content',
-      price: 'Starting at $1,999/month',
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Product descriptions', 'SEO optimization', 'Brand voice consistency']
+      price: 'Starting at $1,499/month',
+      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Product descriptions', 'SEO optimization', 'Brand voice consistency', 'Plagiarism detection', 'Content scheduling']
     },
     {
       id: 3,
       title: 'Predictive Analytics',
-      description: 'Advanced data analysis and forecasting to drive business decisions',
+      description: 'Advanced data analysis and forecasting to drive business decisions with 95% accuracy',
       icon: BarChart,
       category: 'Analytics',
-      price: 'Starting at $4,999/month',
-      features: ['Sales forecasting', 'Customer behavior analysis', 'Risk assessment', 'Market trends', 'Real-time insights', 'Custom dashboards']
+      price: 'Starting at $2,999/month',
+      features: ['Sales forecasting', 'Customer behavior analysis', 'Risk assessment', 'Market trends', 'Real-time insights', 'Custom dashboards', 'Automated reporting', 'API integration']
     },
     {
       id: 4,
       title: 'Computer Vision',
-      description: 'Image and video analysis for quality control, security, and automation',
+      description: 'Image and video analysis for quality control, security, and automation with real-time processing',
       icon: Eye,
       category: 'Computer Vision',
-      price: 'Starting at $3,999/month',
-      features: ['Object detection', 'Image classification', 'Quality inspection', 'Facial recognition', 'OCR processing', 'Real-time analysis']
+      price: 'Starting at $2,499/month',
+      features: ['Object detection', 'Image classification', 'Quality inspection', 'Facial recognition', 'OCR processing', 'Real-time analysis', 'Custom model training', 'Edge deployment']
     },
     {
       id: 5,
@@ -73,39 +73,75 @@ const AIServicesPage: React.FC = () => {
       description: 'Speech recognition and voice-enabled applications for enhanced user experience',
       icon: Mic,
       category: 'Voice AI',
-      price: 'Starting at $2,499/month',
-      features: ['Speech-to-text', 'Text-to-speech', 'Voice commands', 'Multi-language support', 'Noise cancellation', 'Custom voice models']
+      price: 'Starting at $1,999/month',
+      features: ['Speech-to-text', 'Text-to-speech', 'Voice commands', 'Multi-language support', 'Noise cancellation', 'Custom voice models', 'Real-time processing', 'Cloud and on-premise deployment']
     },
     {
       id: 6,
       title: 'Process Automation',
-      description: 'Intelligent automation of repetitive tasks and workflows',
+      description: 'Intelligent automation of repetitive tasks and workflows with 90% efficiency improvement',
       icon: Zap,
       category: 'Automation',
-      price: 'Starting at $3,499/month',
-      features: ['Workflow automation', 'Document processing', 'Data extraction', 'Email automation', 'Task scheduling', 'Error handling']
+      price: 'Starting at $2,499/month',
+      features: ['Workflow automation', 'Document processing', 'Data extraction', 'Email automation', 'Task scheduling', 'Error handling', 'Visual workflow builder', 'Integration with 200+ tools']
     },
     {
       id: 7,
       title: 'AI Security Solutions',
-      description: 'Advanced threat detection and security monitoring using AI',
+      description: 'Advanced threat detection and security monitoring using AI with real-time response',
       icon: Shield,
       category: 'Security',
-      price: 'Starting at $4,499/month',
-      features: ['Threat detection', 'Anomaly detection', 'Fraud prevention', 'Access control', 'Incident response', 'Compliance monitoring']
+      price: 'Starting at $3,499/month',
+      features: ['Threat detection', 'Anomaly detection', 'Fraud prevention', 'Access control', 'Incident response', 'Compliance monitoring', 'Real-time alerts', 'Automated remediation']
     },
     {
       id: 8,
       title: 'Mobile AI Integration',
-      description: 'AI-powered mobile applications with intelligent features',
+      description: 'AI-powered mobile applications with intelligent features and offline capabilities',
       icon: Box,
       category: 'Mobile',
-      price: 'Starting at $5,999/project',
-      features: ['Mobile app AI', 'Offline processing', 'Real-time inference', 'Cross-platform support', 'Performance optimization', 'User personalization']
+      price: 'Starting at $4,999/project',
+      features: ['Mobile app AI', 'Offline processing', 'Real-time inference', 'Cross-platform support', 'Performance optimization', 'User personalization', 'Custom model deployment', 'App store optimization']
+    },
+    {
+      id: 9,
+      title: 'AI Invoice Processor',
+      description: 'Revolutionary AI-powered invoice processing solution that automates data extraction and approval workflows',
+      icon: FileText,
+      category: 'Finance',
+      price: 'Starting at $299/month',
+      features: ['AI-powered data extraction', 'Automated approval workflows', 'Real-time payment tracking', 'Multi-currency support', 'Vendor management', 'Expense categorization', 'Integration with accounting systems', 'Compliance reporting']
+    },
+    {
+      id: 10,
+      title: 'AI Customer Insights',
+      description: 'Transform customer data into actionable insights with our AI-powered analytics platform',
+      icon: Brain,
+      category: 'Analytics',
+      price: 'Starting at $1,299/month',
+      features: ['Real-time customer behavior analysis', 'Predictive customer lifetime value', 'Sentiment analysis', 'Churn prediction', 'Personalized recommendations', 'Customer segmentation', 'Cross-channel journey mapping', 'Automated insights']
+    },
+    {
+      id: 11,
+      title: 'AI Workflow Automation',
+      description: 'Automate your business processes with intelligent AI-powered workflows',
+      icon: Settings,
+      category: 'Automation',
+      price: 'Starting at $799/month',
+      features: ['Visual workflow builder', 'AI-powered optimization', '500+ automation templates', 'Multi-step conditional logic', 'Real-time monitoring', '300+ integrations', 'Custom triggers', 'Advanced analytics']
+    },
+    {
+      id: 12,
+      title: 'AI Predictive Analytics',
+      description: 'Transform your data into powerful predictions with our advanced AI analytics platform',
+      icon: Target,
+      category: 'Analytics',
+      price: 'Starting at $1,999/month',
+      features: ['Advanced ML algorithms', 'Real-time data processing', 'Automated model training', 'Multi-variate forecasting', 'Anomaly detection', 'Custom prediction models', 'Interactive dashboards', 'API access']
     }
   ];
 
-  const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile'];
+  const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile', 'Finance'];
 
   const filteredServices = aiServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

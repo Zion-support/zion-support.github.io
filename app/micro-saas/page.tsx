@@ -163,6 +163,78 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 20 users',
       popular: false,
       category: 'Finance'
+    },
+    {
+      id: '9',
+      icon: '📄',
+      title: 'AI Invoice Processor',
+      description: 'Revolutionary AI-powered invoice processing solution that automates data extraction and approval workflows',
+      features: [
+        'AI-powered invoice data extraction',
+        'Automated approval workflows',
+        'Real-time payment tracking',
+        'Multi-currency support',
+        'Vendor management system',
+        'Expense categorization'
+      ],
+      price: '$49/month',
+      users: 'Up to 100 invoices/month',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      id: '10',
+      icon: '🧠',
+      title: 'AI Customer Insights',
+      description: 'Transform customer data into actionable insights with our AI-powered analytics platform',
+      features: [
+        'Real-time customer behavior analysis',
+        'Predictive customer lifetime value',
+        'Sentiment analysis across all channels',
+        'Churn prediction and prevention',
+        'Personalized recommendation engine',
+        'Customer segmentation automation'
+      ],
+      price: '$99/month',
+      users: 'Up to 1,000 customers',
+      popular: true,
+      category: 'Analytics'
+    },
+    {
+      id: '11',
+      icon: '⚙️',
+      title: 'AI Workflow Automation',
+      description: 'Automate your business processes with intelligent AI-powered workflows',
+      features: [
+        'Visual workflow builder with drag-and-drop',
+        'AI-powered process optimization',
+        '500+ pre-built automation templates',
+        'Multi-step conditional logic',
+        'Real-time process monitoring',
+        'Integration with 300+ applications'
+      ],
+      price: '$79/month',
+      users: 'Up to 5 workflows',
+      popular: false,
+      category: 'AI'
+    },
+    {
+      id: '12',
+      icon: '🔮',
+      title: 'AI Predictive Analytics',
+      description: 'Transform your data into powerful predictions with our advanced AI analytics platform',
+      features: [
+        'Advanced machine learning algorithms',
+        'Real-time data processing',
+        'Automated model training and deployment',
+        'Multi-variate forecasting',
+        'Anomaly detection and alerting',
+        'Custom prediction models'
+      ],
+      price: '$199/month',
+      users: 'Up to 10 prediction models',
+      popular: false,
+      category: 'Analytics'
     }
   ];
 

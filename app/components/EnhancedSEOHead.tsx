@@ -6,25 +6,13 @@ import { useLocation } from 'react-router-dom';
 interface SEOHeadProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string | string[];
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
   siteName?: string;
-  structuredData?: object;
-}
-
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - AI & IT Solutions",
-  description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, enterprise software, automation, machine learning",
-  image = "/images/og-image.jpg",
-  url,
-  type = 'website',
-  siteName = 'Zion Tech Group',
-=======
   structuredData?: any;
+  canonicalUrl?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -34,15 +22,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = 'https://ziontechgroup.com/og-image.jpg',
   url,
   type = 'website',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-  structuredData
+  siteName = 'Zion Tech Group',
+  structuredData,
+  canonicalUrl
 }) => {
   const location = useLocation();
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
   const defaultStructuredData = {
-<<<<<<< HEAD
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -77,10 +65,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "description": description,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group"
-    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
@@ -88,94 +72,57 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     }
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-=======
-    '@context': 'https://schema.org',
-    '@type': 'TechCompany',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    services: [
-      'AI Solutions',
-      'Quantum Computing',
-      'Autonomous Systems',
-      'Digital Transformation',
-      'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en'
+  const pageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": fullTitle,
+    "description": description,
+    "url": currentUrl,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
     },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US'
+    "about": {
+      "@type": "Organization",
+      "name": "Zion Tech Group"
     }
   };
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+  const finalStructuredData = structuredData || defaultStructuredData;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
+      <meta name="keywords" content={keywordsString} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={currentUrl} />
-
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={currentUrl} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={currentUrl} />
+      <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={fullImageUrl} />
-      <meta property="twitter:site" content="@ziontechgroup" />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta property="twitter:image" content={image} />
       
-      {/* Favicon and Icons */}
-      <link rel="icon" href="/favicon.ico" />
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl || currentUrl} />
+      
+      {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -183,31 +130,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       </script>
       <script type="application/ld+json">
         {JSON.stringify(websiteStructuredData)}
-=======
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={currentUrl} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0f172a" />
+      </script>
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+        {JSON.stringify(pageStructuredData)}
       </script>
     </Helmet>
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedSEOHead;
-=======
 export default SEOHead;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619

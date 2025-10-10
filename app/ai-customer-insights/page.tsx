@@ -3,9 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
+  Brain, 
   CheckCircle, 
   ArrowRight, 
+  Zap, 
   Star, 
   Users, 
   TrendingUp, 
@@ -16,76 +17,75 @@ import {
   DollarSign,
   Clock,
   Target,
-  Brain,
   Eye,
   Settings,
-  Workflow,
-  GitBranch,
-  Play
+  PieChart,
+  Activity,
+  Globe
 } from 'lucide-react';
 
-const AIWorkflowAutomationPage: React.FC = () => {
+const AICustomerInsightsPage: React.FC = () => {
   const features = [
-    'Visual workflow builder with drag-and-drop',
-    'AI-powered process optimization',
-    '500+ pre-built automation templates',
-    'Multi-step conditional logic',
-    'Real-time process monitoring',
-    'Error handling and retry mechanisms',
-    'Integration with 300+ applications',
-    'Custom trigger and action creation',
-    'Team collaboration features',
-    'Advanced analytics and reporting'
+    'Real-time customer behavior analysis',
+    'Predictive customer lifetime value',
+    'Sentiment analysis across all channels',
+    'Churn prediction and prevention',
+    'Personalized recommendation engine',
+    'Customer segmentation automation',
+    'Cross-channel journey mapping',
+    'Automated insight generation',
+    'Integration with 200+ tools',
+    'Custom dashboard creation'
   ];
 
   const benefits = [
-    'Reduce manual work by 80%',
-    'Increase team productivity by 60%',
-    'Eliminate human errors',
-    'Accelerate process completion',
-    'Improve compliance tracking',
-    'Scale operations without hiring'
+    'Increase customer retention by 35%',
+    'Boost revenue per customer by 40%',
+    'Reduce churn rate by 50%',
+    'Improve customer satisfaction scores',
+    'Identify upsell opportunities',
+    'Optimize marketing campaigns'
   ];
 
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '$79',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 5 workflows',
-        'Basic automation templates',
+        'Up to 1,000 customers',
+        'Basic analytics dashboard',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+        'Monthly reports'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$199',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 25 workflows',
-        'Advanced AI optimization',
+        'Up to 10,000 customers',
+        'Advanced AI insights',
         'Priority support',
         'All integrations',
-        'Advanced analytics',
-        'Custom triggers',
+        'Real-time analytics',
+        'Custom dashboards',
         'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$499',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited workflows',
-        'Custom AI training',
+        'Unlimited customers',
+        'Custom AI models',
         'Dedicated support',
         'White-label options',
         'Custom integrations',
@@ -97,32 +97,32 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '15,000+', label: 'Teams Using' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '80%', label: 'Time Saved' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Reliability' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '300+', label: 'Integrations' }
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10,000+', label: 'Businesses Using' },
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '40%', label: 'Revenue Increase' },
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '35%', label: 'Retention Boost' },
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Churn Reduction' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Workflow Automation - Zion Tech Group | Intelligent Process Automation</title>
-        <meta name="description" content="Automate your business processes with AI-powered workflow automation. Reduce manual work by 80% and increase productivity by 60% with intelligent automation." />
-        <meta name="keywords" content="AI workflow automation, process automation, business automation, workflow builder, intelligent automation, RPA" />
+        <title>AI Customer Insights - Zion Tech Group | Advanced Customer Analytics</title>
+        <meta name="description" content="Transform customer data into actionable insights with our AI-powered analytics platform. Increase retention by 35% and boost revenue by 40% with intelligent customer insights." />
+        <meta name="keywords" content="AI customer insights, customer analytics, customer behavior, churn prediction, customer lifetime value, sentiment analysis" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            AI Workflow
+            AI Customer
             <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Automation
+              Insights
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Automate your business processes with intelligent AI-powered workflows. 
-            Reduce manual work by 80% and accelerate your team's productivity.
+            Unlock the power of your customer data with our advanced AI analytics platform. 
+            Get real-time insights, predict behavior, and boost retention by 35%.
           </p>
           
           {/* Stats */}
@@ -161,9 +161,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Powerful Automation Features</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Powerful AI Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate your business processes and boost productivity.
+              Everything you need to understand your customers and drive growth.
             </p>
           </div>
           
@@ -184,9 +184,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Business</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Proven Results</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of teams that have revolutionized their operations with AI automation.
+              Join thousands of businesses that have transformed their customer understanding.
             </p>
           </div>
           
@@ -207,7 +207,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core automation features.
+              Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -264,10 +264,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Automate Your Workflows?
+              Ready to Understand Your Customers Better?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI-driven automation.
+              Start your free trial today and discover the power of AI-driven customer insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -292,4 +292,4 @@ const AIWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default AIWorkflowAutomationPage;
+export default AICustomerInsightsPage;

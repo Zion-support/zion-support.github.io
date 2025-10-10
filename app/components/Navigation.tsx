@@ -61,7 +61,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Voice Assistant', href: '/ai-voice-assistant-platform', icon: Mic, description: 'Voice AI platform' },
     { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Wrench, description: 'Equipment monitoring' },
     { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization' },
-    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Intelligent cloud management' }
+    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Intelligent cloud management' },
+    { name: 'AI Invoice Processor', href: '/ai-invoice-processor', icon: FileText, description: 'Automated invoice processing' },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Brain, description: 'Customer behavior analytics' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, description: 'Intelligent process automation' },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics', icon: Target, description: 'Advanced forecasting' }
   ];
 
   const itServices = [
@@ -74,7 +78,8 @@ const Navigation: React.FC = () => {
     { name: 'System Integration', href: '/ai-system-integration', icon: Settings, description: 'Seamless integration' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
+    { name: 'AI Cloud Optimization', href: '/ai-cloud-optimization', icon: Cloud, description: 'Intelligent cloud management' }
   ];
 
   const microSaasServices = [
@@ -85,7 +90,10 @@ const Navigation: React.FC = () => {
     { name: 'Team Collaboration', href: '/micro-saas-collaboration', icon: Users, description: 'Team productivity tools' },
     { name: 'Financial Tracking', href: '/micro-saas-finance', icon: DollarSign, description: 'Financial management' },
     { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
-    { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
+    { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' },
+    { name: 'AI Invoice Processor', href: '/ai-invoice-processor', icon: FileText, description: 'Automated invoice processing' },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Brain, description: 'Customer behavior analytics' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, description: 'Intelligent process automation' }
   ];
 
   return (

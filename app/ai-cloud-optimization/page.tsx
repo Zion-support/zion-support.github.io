@@ -3,14 +3,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
+  Cloud, 
   CheckCircle, 
   ArrowRight, 
+  Zap, 
   Star, 
   Users, 
   TrendingUp, 
   Shield, 
-  Cloud, 
   BarChart3, 
   MessageSquare,
   DollarSign,
@@ -19,73 +19,74 @@ import {
   Brain,
   Eye,
   Settings,
-  Workflow,
-  GitBranch,
-  Play
+  Activity,
+  PieChart,
+  Globe,
+  Server
 } from 'lucide-react';
 
-const AIWorkflowAutomationPage: React.FC = () => {
+const AICloudOptimizationPage: React.FC = () => {
   const features = [
-    'Visual workflow builder with drag-and-drop',
-    'AI-powered process optimization',
-    '500+ pre-built automation templates',
-    'Multi-step conditional logic',
-    'Real-time process monitoring',
-    'Error handling and retry mechanisms',
-    'Integration with 300+ applications',
-    'Custom trigger and action creation',
-    'Team collaboration features',
-    'Advanced analytics and reporting'
+    'AI-powered cost optimization',
+    'Automated resource scaling',
+    'Performance monitoring and alerting',
+    'Multi-cloud management',
+    'Security compliance monitoring',
+    'Automated backup and disaster recovery',
+    'Real-time cost tracking',
+    'Custom optimization recommendations',
+    'Integration with AWS, Azure, GCP',
+    '24/7 monitoring and support'
   ];
 
   const benefits = [
-    'Reduce manual work by 80%',
-    'Increase team productivity by 60%',
-    'Eliminate human errors',
-    'Accelerate process completion',
-    'Improve compliance tracking',
-    'Scale operations without hiring'
+    'Reduce cloud costs by 40%',
+    'Improve performance by 60%',
+    'Ensure 99.9% uptime',
+    'Automate routine maintenance',
+    'Enhance security posture',
+    'Scale resources automatically'
   ];
 
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '$79',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 5 workflows',
-        'Basic automation templates',
+        'Up to $5,000 monthly cloud spend',
+        'Basic optimization',
         'Email support',
-        'Standard integrations',
-        'Basic analytics'
+        'Standard monitoring',
+        'Monthly reports'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$199',
+      price: '$799',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 25 workflows',
+        'Up to $25,000 monthly cloud spend',
         'Advanced AI optimization',
         'Priority support',
-        'All integrations',
-        'Advanced analytics',
-        'Custom triggers',
-        'API access'
+        'Real-time monitoring',
+        'Custom recommendations',
+        'API access',
+        'Multi-cloud support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$499',
+      price: '$1,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited workflows',
-        'Custom AI training',
+        'Unlimited cloud spend',
+        'Custom AI models',
         'Dedicated support',
         'White-label options',
         'Custom integrations',
@@ -97,32 +98,32 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '15,000+', label: 'Teams Using' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '80%', label: 'Time Saved' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Reliability' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '300+', label: 'Integrations' }
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '12,000+', label: 'Cloud Environments' },
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '40%', label: 'Cost Reduction' },
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Uptime' },
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Performance Boost' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Workflow Automation - Zion Tech Group | Intelligent Process Automation</title>
-        <meta name="description" content="Automate your business processes with AI-powered workflow automation. Reduce manual work by 80% and increase productivity by 60% with intelligent automation." />
-        <meta name="keywords" content="AI workflow automation, process automation, business automation, workflow builder, intelligent automation, RPA" />
+        <title>AI Cloud Optimization - Zion Tech Group | Intelligent Cloud Management</title>
+        <meta name="description" content="Optimize your cloud infrastructure with AI-powered management. Reduce costs by 40%, improve performance by 60%, and ensure 99.9% uptime with intelligent cloud optimization." />
+        <meta name="keywords" content="AI cloud optimization, cloud management, cost optimization, cloud performance, multi-cloud, AWS optimization, Azure optimization" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            AI Workflow
+            AI Cloud
             <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Automation
+              Optimization
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Automate your business processes with intelligent AI-powered workflows. 
-            Reduce manual work by 80% and accelerate your team's productivity.
+            Optimize your cloud infrastructure with AI-powered management. 
+            Reduce costs by 40%, improve performance by 60%, and ensure 99.9% uptime.
           </p>
           
           {/* Stats */}
@@ -161,9 +162,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Powerful Automation Features</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Cloud Management</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate your business processes and boost productivity.
+              Everything you need to optimize your cloud infrastructure and maximize ROI.
             </p>
           </div>
           
@@ -184,9 +185,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Business</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Proven Results</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of teams that have revolutionized their operations with AI automation.
+              Join thousands of businesses that have optimized their cloud infrastructure.
             </p>
           </div>
           
@@ -207,7 +208,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core automation features.
+              Choose the plan that fits your cloud spend. All plans include our core optimization features.
             </p>
           </div>
           
@@ -264,10 +265,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Automate Your Workflows?
+              Ready to Optimize Your Cloud?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI-driven automation.
+              Start your free trial today and discover the power of AI-driven cloud optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -292,4 +293,4 @@ const AIWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default AIWorkflowAutomationPage;
+export default AICloudOptimizationPage;

@@ -24,78 +24,114 @@ const ItServicesPage: React.FC = () => {
     {
       id: 1,
       title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
+      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management with 99.9% uptime',
       icon: Cloud,
       category: 'Cloud',
-      price: 'Starting at $2,500/month',
-      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
+      price: 'Starting at $1,999/month',
+      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery', 'Auto-scaling', 'Multi-cloud management']
     },
     {
       id: 2,
       title: 'DevOps & CI/CD Pipeline',
-      description: 'Automated development workflows and deployment pipelines for faster delivery',
+      description: 'Automated development workflows and deployment pipelines for faster delivery with 50% faster deployments',
       icon: Settings,
       category: 'DevOps',
-      price: 'Starting at $3,000/month',
-      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
+      price: 'Starting at $2,499/month',
+      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring', 'GitOps workflows', 'Security scanning']
     },
     {
       id: 3,
       title: 'Database Management',
-      description: 'Comprehensive database services including design, optimization, and maintenance',
+      description: 'Comprehensive database services including design, optimization, and maintenance with 99.9% availability',
       icon: Database,
       category: 'Database',
-      price: 'Starting at $1,800/month',
-      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
+      price: 'Starting at $1,299/month',
+      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support', 'Real-time monitoring', 'Automated scaling']
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
-      description: 'Advanced security solutions to protect your digital assets and ensure compliance',
+      description: 'Advanced security solutions to protect your digital assets and ensure compliance with real-time threat detection',
       icon: Shield,
       category: 'Security',
-      price: 'Starting at $4,000/month',
-      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
+      price: 'Starting at $2,999/month',
+      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training', 'Penetration testing', 'Security awareness programs']
     },
     {
       id: 5,
       title: 'Managed IT Services',
-      description: 'Complete IT management including helpdesk, monitoring, and maintenance',
+      description: 'Complete IT management including helpdesk, monitoring, and maintenance with proactive support',
       icon: Settings,
       category: 'Managed',
-      price: 'Starting at $2,200/month',
-      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
+      price: 'Starting at $1,799/month',
+      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management', 'Remote support', 'IT documentation']
     },
     {
       id: 6,
       title: 'IT Strategy & Consulting',
-      description: 'Strategic IT consulting to align technology with business objectives',
+      description: 'Strategic IT consulting to align technology with business objectives and digital transformation',
       icon: Globe,
       category: 'Consulting',
-      price: 'Starting at $1,500/month',
-      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
+      price: 'Starting at $1,199/month',
+      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs', 'IT governance', 'Risk assessment']
     },
     {
       id: 7,
       title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX design',
       icon: Smartphone,
       category: 'Development',
-      price: 'Starting at $8,000/project',
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
+      price: 'Starting at $5,999/project',
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates', 'Performance optimization', 'Security implementation']
     },
     {
       id: 8,
       title: 'Web Application Development',
-      description: 'Custom web applications and e-commerce solutions built with modern technologies',
+      description: 'Custom web applications and e-commerce solutions built with modern technologies and best practices',
       icon: Globe,
       category: 'Development',
-      price: 'Starting at $6,000/project',
-      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
+      price: 'Starting at $4,999/project',
+      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization', 'Security implementation', 'Third-party integrations']
+    },
+    {
+      id: 9,
+      title: 'AI Cloud Optimization',
+      description: 'Optimize your cloud infrastructure with AI-powered management and cost reduction',
+      icon: Cloud,
+      category: 'Cloud',
+      price: 'Starting at $1,499/month',
+      features: ['AI-powered cost optimization', 'Automated resource scaling', 'Performance monitoring', 'Multi-cloud management', 'Security compliance', 'Automated backup', 'Real-time cost tracking', 'Custom optimization recommendations']
+    },
+    {
+      id: 10,
+      title: 'API Development & Management',
+      description: 'Comprehensive API development, management, and integration services for modern applications',
+      icon: Code,
+      category: 'Development',
+      price: 'Starting at $1,999/month',
+      features: ['RESTful API development', 'GraphQL APIs', 'API gateway setup', 'Rate limiting', 'Authentication & authorization', 'API documentation', 'Testing & monitoring', 'Version management']
+    },
+    {
+      id: 11,
+      title: 'Network Solutions',
+      description: 'Advanced networking solutions including SD-WAN, VPN, and network security implementation',
+      icon: Globe,
+      category: 'Network',
+      price: 'Starting at $1,599/month',
+      features: ['SD-WAN implementation', 'VPN setup & management', 'Network security', 'Load balancing', 'Network monitoring', 'Bandwidth optimization', 'Disaster recovery', 'Remote access solutions']
+    },
+    {
+      id: 12,
+      title: 'System Integration',
+      description: 'Seamless integration of disparate systems and applications for improved efficiency',
+      icon: Settings,
+      category: 'Integration',
+      price: 'Starting at $2,299/month',
+      features: ['Legacy system integration', 'API integration', 'Data synchronization', 'Workflow automation', 'Real-time data processing', 'Error handling', 'Monitoring & alerting', 'Custom connectors']
     }
   ];
 
-  const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development'];
+  const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development', 'Network', 'Integration'];
 
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

@@ -3,9 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
+  FileText, 
   CheckCircle, 
   ArrowRight, 
+  Zap, 
   Star, 
   Users, 
   TrendingUp, 
@@ -18,73 +19,70 @@ import {
   Target,
   Brain,
   Eye,
-  Settings,
-  Workflow,
-  GitBranch,
-  Play
+  Settings
 } from 'lucide-react';
 
-const AIWorkflowAutomationPage: React.FC = () => {
+const AIInvoiceProcessorPage: React.FC = () => {
   const features = [
-    'Visual workflow builder with drag-and-drop',
-    'AI-powered process optimization',
-    '500+ pre-built automation templates',
-    'Multi-step conditional logic',
-    'Real-time process monitoring',
-    'Error handling and retry mechanisms',
-    'Integration with 300+ applications',
-    'Custom trigger and action creation',
-    'Team collaboration features',
+    'AI-powered invoice data extraction',
+    'Automated approval workflows',
+    'Real-time payment tracking',
+    'Multi-currency support',
+    'Vendor management system',
+    'Expense categorization',
+    'Compliance monitoring',
+    'Integration with 100+ accounting systems',
+    'Mobile app for on-the-go processing',
     'Advanced analytics and reporting'
   ];
 
   const benefits = [
-    'Reduce manual work by 80%',
-    'Increase team productivity by 60%',
-    'Eliminate human errors',
-    'Accelerate process completion',
-    'Improve compliance tracking',
-    'Scale operations without hiring'
+    'Reduce invoice processing time by 90%',
+    'Eliminate manual data entry errors',
+    'Improve cash flow visibility',
+    'Ensure compliance with regulations',
+    'Save up to 40 hours per week',
+    'Reduce processing costs by 60%'
   ];
 
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '$79',
+      price: '$49',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 5 workflows',
-        'Basic automation templates',
+        'Up to 100 invoices/month',
+        'Basic AI extraction',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+        'Basic reporting'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$199',
+      price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 25 workflows',
-        'Advanced AI optimization',
+        'Up to 500 invoices/month',
+        'Advanced AI with 99% accuracy',
         'Priority support',
         'All integrations',
         'Advanced analytics',
-        'Custom triggers',
+        'Custom workflows',
         'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$499',
+      price: '$399',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited workflows',
+        'Unlimited invoices',
         'Custom AI training',
         'Dedicated support',
         'White-label options',
@@ -97,32 +95,32 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '15,000+', label: 'Teams Using' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '80%', label: 'Time Saved' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Reliability' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '300+', label: 'Integrations' }
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '5,000+', label: 'Businesses Trust Us' },
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Accuracy Rate' },
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '24/7', label: 'Processing' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Workflow Automation - Zion Tech Group | Intelligent Process Automation</title>
-        <meta name="description" content="Automate your business processes with AI-powered workflow automation. Reduce manual work by 80% and increase productivity by 60% with intelligent automation." />
-        <meta name="keywords" content="AI workflow automation, process automation, business automation, workflow builder, intelligent automation, RPA" />
+        <title>AI Invoice Processor - Zion Tech Group | Automated Invoice Management</title>
+        <meta name="description" content="Revolutionary AI-powered invoice processing solution that automates data extraction, approval workflows, and payment tracking. Save 90% time and reduce costs by 60%." />
+        <meta name="keywords" content="AI invoice processing, automated invoicing, invoice management, expense tracking, accounts payable, AI automation" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            AI Workflow
+            AI Invoice
             <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Automation
+              Processor
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Automate your business processes with intelligent AI-powered workflows. 
-            Reduce manual work by 80% and accelerate your team's productivity.
+            Transform your accounts payable with our revolutionary AI-powered invoice processing solution. 
+            Automate data extraction, approval workflows, and payment tracking with 99% accuracy.
           </p>
           
           {/* Stats */}
@@ -161,9 +159,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Powerful Automation Features</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Powerful Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate your business processes and boost productivity.
+              Everything you need to streamline your invoice processing and eliminate manual work.
             </p>
           </div>
           
@@ -184,9 +182,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Business</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our AI Invoice Processor?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of teams that have revolutionized their operations with AI automation.
+              Join thousands of businesses that have transformed their accounts payable operations.
             </p>
           </div>
           
@@ -207,7 +205,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core automation features.
+              Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -264,10 +262,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Automate Your Workflows?
+              Ready to Transform Your Invoice Processing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI-driven automation.
+              Join thousands of businesses that have already automated their accounts payable with our AI solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -292,4 +290,4 @@ const AIWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default AIWorkflowAutomationPage;
+export default AIInvoiceProcessorPage;
