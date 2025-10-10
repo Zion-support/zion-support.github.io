@@ -5,7 +5,30 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 
+// Define structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "url": "https://ziontechgroup.com/",
+  "logo": "https://ziontechgroup.com/favicon.svg",
+  "sameAs": [
+    "https://www.linkedin.com/company/ziontechgroup"
+  ],
+  "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Zion Tech Group"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@ziontechgroup.com"
+  }
+};
+
 // Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -25,6 +48,16 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+
+// Loading spinner component
+const LoadingSpinner: React.FC = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-white text-lg">Loading...</p>
+    </div>
+  </div>
+);
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -113,14 +146,7 @@ const App: React.FC = memo(() => {
             <main>
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
-                  <Route path="/" element={
-                    <>
-                      <UnifiedContentPromotion />
-                      <InteractiveAIROICalculator />
-                      <ContentShowcase />
-                      <InteractiveContentShowcase2026 />
-                    </>
-                  } />
+                  <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
