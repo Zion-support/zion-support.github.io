@@ -131,7 +131,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -189,7 +188,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -214,7 +212,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Team */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -249,7 +246,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Achievements */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -278,7 +274,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Timeline */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -310,7 +305,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

@@ -47,12 +47,10 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             5G Network
@@ -75,7 +73,6 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
           </div>
         </div>
       </section>
-
 {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -85,7 +82,6 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
               Comprehensive 5G network implementation designed for modern connectivity needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 group">
@@ -107,7 +103,6 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -125,7 +120,6 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

@@ -234,7 +234,6 @@ const Navigation: React.FC = () => {
                 <span className="text-cyan-400 text-xs font-medium">AI & IT Solutions</span>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <Link
@@ -251,7 +250,6 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
-              
               {/* Services Dropdown */}
               <div className="relative">
                 <button
@@ -263,7 +261,6 @@ const Navigation: React.FC = () => {
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
                 {servicesOpen && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20 py-6 z-50">
                     <div className="grid grid-cols-2 gap-6 px-6">
@@ -302,7 +299,6 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-
               <Link 
                 to="/ai-services" 
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
@@ -345,7 +341,6 @@ const Navigation: React.FC = () => {
               >
                 Pricing
               </Link>
-
               {/* Search Button */}
               <button
                 onClick={() => setIsSearchOpen(true)}
@@ -354,7 +349,6 @@ const Navigation: React.FC = () => {
               >
                 <Search className="w-5 h-5" />
               </button>
-              
               <Link
                 to="/contact"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -362,7 +356,6 @@ const Navigation: React.FC = () => {
               >
                 Contact
               </Link>
-              
               {/* CTA Button */}
               <Link
                 to="/contact"
@@ -373,7 +366,6 @@ const Navigation: React.FC = () => {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -383,7 +375,6 @@ const Navigation: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-
           {/* Mobile Navigation */}
           {isOpen && (
             <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
@@ -410,7 +401,6 @@ const Navigation: React.FC = () => {
                     <span>Services</span>
                     <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                   </button>
-
                   {servicesOpen && (
                     <div className="ml-6 mt-2 space-y-2">
                       {serviceCategories.map((category, categoryIndex) => (
@@ -436,7 +426,6 @@ const Navigation: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
                 {/* Mobile CTA */}
                 <Link
                   to="/contact"
@@ -450,7 +439,6 @@ const Navigation: React.FC = () => {
           )}
         </div>
       </nav>
-      
       {/* Search Modal */}
       <EnhancedSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>

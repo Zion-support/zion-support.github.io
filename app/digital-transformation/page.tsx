@@ -134,7 +134,6 @@ const DigitalTransformationPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Transformation Phases */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -166,7 +165,6 @@ const DigitalTransformationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Solutions Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -199,7 +197,6 @@ const DigitalTransformationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -218,7 +215,6 @@ const DigitalTransformationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Industry Focus */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -254,7 +250,6 @@ const DigitalTransformationPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -279,7 +274,6 @@ const DigitalTransformationPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

@@ -102,7 +102,6 @@ const PerformanceOptimizationPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Services Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -123,7 +122,6 @@ const PerformanceOptimizationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Optimization Areas */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -149,7 +147,6 @@ const PerformanceOptimizationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -168,7 +165,6 @@ const PerformanceOptimizationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Process Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -205,7 +201,6 @@ const PerformanceOptimizationPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Performance Metrics */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -232,7 +227,6 @@ const PerformanceOptimizationPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

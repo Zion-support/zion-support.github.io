@@ -62,7 +62,6 @@ const ContentPromotionBanner: React.FC = () => {
             </span>
           </div>
         </div>
-
         <div className="flex items-center space-x-2">
           <a
             href={currentBannerData.link}
@@ -71,7 +70,6 @@ const ContentPromotionBanner: React.FC = () => {
             <span>{currentBannerData.cta}</span>
             <ArrowRight className="w-3 h-3" />
           </a>
-
           <button
             onClick={() => setIsVisible(false)}
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -81,7 +79,6 @@ const ContentPromotionBanner: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Banner indicators */}
       <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">
         {banners.map((_, index) => (

@@ -127,7 +127,6 @@ const IoTEdgeComputingPage: React.FC = () => {
         <meta name="keywords" content="IoT development, edge computing, smart devices, real-time processing, AI at edge, device management, 5G integration" />
         <link rel="canonical" href="https://ziontechgroup.com/iot-edge-computing" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -155,7 +154,6 @@ const IoTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Services Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -164,7 +162,6 @@ const IoTEdgeComputingPage: React.FC = () => {
               Comprehensive solutions for building and managing intelligent IoT ecosystems with edge computing capabilities.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 group">
@@ -199,7 +196,6 @@ const IoTEdgeComputingPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Industry Solutions */}
         <div className="bg-slate-800/30 py-20">
           <div className="container mx-auto px-4">
@@ -209,7 +205,6 @@ const IoTEdgeComputingPage: React.FC = () => {
                 Tailored IoT and edge computing solutions for different industries and use cases.
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {industries.map((industry, index) => (
                 <div key={index} className="text-center group">
@@ -223,7 +218,6 @@ const IoTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Solution Examples */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -232,7 +226,6 @@ const IoTEdgeComputingPage: React.FC = () => {
               Real-world applications of IoT and edge computing across different industries.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
@@ -240,7 +233,6 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-green-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -252,7 +244,6 @@ const IoTEdgeComputingPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -264,7 +255,6 @@ const IoTEdgeComputingPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <button className="w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -273,7 +263,6 @@ const IoTEdgeComputingPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="bg-gradient-to-r from-green-600 to-cyan-600 rounded-2xl p-12 text-center">

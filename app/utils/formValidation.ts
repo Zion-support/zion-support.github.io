@@ -39,7 +39,7 @@ export const validationRules = {
    * Validate minimum length
    */
   minLength: (min: number, message?: string): ValidationRule<string> => ({
-    validate: (value: string) => value.length >= min,}
+    validate: (value: string) => value.length >= min}
     message: message || `Must be at least ${min} characters
   }),
   /**

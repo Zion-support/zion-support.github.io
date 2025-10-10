@@ -37,8 +37,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-  enableSchemaMarkup = true,
-}) => {
+  enableSchemaMarkup = true}) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
@@ -62,24 +61,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
         contactType: 'customer service',
-        availableLanguage: 'English',
-      },
+        availableLanguage: 'English'},
       address: {
         '@type': 'PostalAddress',
         streetAddress: '123 Tech Innovation Drive',
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
         postalCode: '94105',
-        addressCountry: 'US',
-      },
-      ...seoData.structuredData,
-    };
+        addressCountry: 'US'},
+      ...seoData.structuredData};
 
     if (seoData.author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: seoData.author,
-      };
+        name: seoData.author};
     }
 
     if (seoData.publishedTime) {
@@ -148,8 +143,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og:type': seoData.ogType || 'website',
       'og:image': seoData.ogImage || '/og-image.webp',
       'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
-    };
+      'og:locale': 'en_US'};
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data
@@ -162,8 +156,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'twitter:description': seoData.ogDescription || seoData.description,
       'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
       'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
-    };
+      'twitter:creator': '@ziontechgroup'};
   }, [seoData, enableTwitterCards]);
 
   // Generate meta tags
@@ -311,20 +304,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
       <link rel="manifest" href="/site.webmanifest" />
-
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
-
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />

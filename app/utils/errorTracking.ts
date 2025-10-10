@@ -73,7 +73,6 @@ class ErrorTrackingService {
         }
       })
     })
-
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -135,7 +134,6 @@ class ErrorTrackingService {
       category: metadata.category,
       severity: metadata.severity
     })
-
     // Notify listeners
     this.notifyListeners(trackedError)
 
@@ -209,7 +207,6 @@ class ErrorTrackingService {
     const errors = this.getErrors()
     const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number>
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number>
-
     // Initialize counters
     Object.values(ErrorCategory).forEach(category => {
       byCategory[category] = 0
@@ -217,13 +214,11 @@ class ErrorTrackingService {
     Object.values(ErrorSeverity).forEach(severity => {
       bySeverity[severity] = 0
     })
-
     // Count errors
     errors.forEach(error => {
       byCategory[error.metadata.category]++
       bySeverity[error.metadata.severity]++
     })
-
     return {
       total: errors.length,
       byCategory,

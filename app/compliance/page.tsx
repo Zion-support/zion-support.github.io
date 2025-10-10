@@ -157,7 +157,6 @@ const CompliancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -182,7 +181,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Compliance Frameworks */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2>
@@ -209,7 +207,6 @@ const CompliancePage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Compliance Areas */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2>
@@ -233,7 +230,6 @@ const CompliancePage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Current Certifications */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -269,7 +265,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Compliance Process */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -320,7 +315,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Industry-Specific Compliance */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -359,7 +353,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Compliance Documentation */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -405,7 +398,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -435,7 +427,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

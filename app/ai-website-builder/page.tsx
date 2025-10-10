@@ -121,9 +121,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
         <meta name="description" content="Build professional websites in minutes with our AI-powered website builder. No coding required, mobile-first design, and instant deployment." />
         <meta name="keywords" content="AI website builder, website creation, no-code, web design, AI development" />
       </Helmet>
-
       <Navigation />
-
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -156,7 +154,6 @@ const AIWebsiteBuilderPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-20 bg-slate-800/50">
             <div className="container mx-auto px-4">
@@ -187,7 +184,6 @@ const AIWebsiteBuilderPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
@@ -209,7 +205,6 @@ const AIWebsiteBuilderPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="py-16 px-4 bg-slate-800/50">
             <div className="max-w-6xl mx-auto">
@@ -255,7 +250,6 @@ const AIWebsiteBuilderPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
             <div className="max-w-4xl mx-auto text-center">
@@ -282,7 +276,6 @@ const AIWebsiteBuilderPage: React.FC = () => {
           </section>
         </div>
       </main>
-
       <Footer />
     </div>
   );

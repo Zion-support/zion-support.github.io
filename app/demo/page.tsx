@@ -112,7 +112,6 @@ const DemoPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -137,7 +136,6 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Demo Types */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2>
@@ -171,7 +169,6 @@ const DemoPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Demo Benefits */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -189,7 +186,6 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
@@ -211,7 +207,6 @@ const DemoPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Booking Form */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -318,7 +313,6 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -349,7 +343,6 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -125,7 +125,6 @@ const PerformanceMonitor: React.FC = () => {
           ×
         </button>
       </div>
-
       <div className="space-y-2 text-xs">
         <div className="flex justify-between items-center">
           <span className="text-gray-300">Load Time:</span>
@@ -133,21 +132,18 @@ const PerformanceMonitor: React.FC = () => {
             {metrics.loadTime}ms
           </span>
         </div>
-
         <div className="flex justify-between items-center">
           <span className="text-gray-300">First Paint:</span>
           <span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>
             {metrics.firstContentfulPaint}ms
           </span>
         </div>
-
         <div className="flex justify-between items-center">
           <span className="text-gray-300">Largest Paint:</span>
           <span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>
             {metrics.largestContentfulPaint}ms
           </span>
         </div>
-
         <div className="flex justify-between items-center">
           <span className="text-gray-300">Connection:</span>
           <div className="flex items-center space-x-1">
@@ -156,7 +152,6 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="mt-3 pt-2 border-t border-gray-700">
         <div className="flex items-center space-x-1 text-xs text-gray-400">
           <Clock className="w-3 h-3" />

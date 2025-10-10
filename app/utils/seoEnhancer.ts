@@ -81,7 +81,7 @@ const defaultSEOConfig: SEOConfig = {
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterSite: '@zionholdings',
-  twitterCreator: '@zionholdings',}
+  twitterCreator: '@zionholdings'}
   structuredData: {},
   robots: 'index, follow',
   language: 'en',

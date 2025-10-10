@@ -355,7 +355,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Filters */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -418,7 +417,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -456,7 +454,6 @@ export default function CareersPage() {
                       <div className="text-gray-400 text-sm">{position.experience}</div>
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>
@@ -480,7 +477,6 @@ export default function CareersPage() {
                       </div>
                     </div>
                   </div>
-
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       to={`/careers/${position.id}`}
@@ -499,7 +495,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -524,7 +519,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Culture */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -549,7 +543,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

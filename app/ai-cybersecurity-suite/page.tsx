@@ -17,7 +17,6 @@ const AICybersecuritySuitePage: React.FC = () => {
         canonical="https://ziontechgroup.com/ai-cybersecurity-suite"
       />
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -56,7 +55,6 @@ const AICybersecuritySuitePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -68,7 +66,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                 Advanced AI-powered cybersecurity tools to protect against modern threats
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl border border-red-100">
                 <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-6">
@@ -89,7 +86,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
                   <Zap className="w-6 h-6 text-white" />
@@ -109,7 +105,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
                   <Eye className="w-6 h-6 text-white" />
@@ -129,7 +124,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Target className="w-6 h-6 text-white" />
@@ -149,7 +143,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-xl border border-orange-100">
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
                   <AlertTriangle className="w-6 h-6 text-white" />
@@ -169,7 +162,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100">
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
                   <Users className="w-6 h-6 text-white" />
@@ -192,7 +184,6 @@ const AICybersecuritySuitePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +195,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                 Comprehensive protection against all types of cyber threats
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
@@ -216,7 +206,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                     <p className="text-gray-600">Advanced endpoint detection and response with AI-powered malware analysis and prevention.</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Globe className="w-6 h-6 text-white" />
@@ -226,7 +215,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                     <p className="text-gray-600">Comprehensive network security with AI-powered firewall, intrusion detection, and traffic analysis.</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Lock className="w-6 h-6 text-white" />
@@ -237,7 +225,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -248,7 +235,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                     <p className="text-gray-600">AI-powered security analytics and reporting with predictive threat modeling and risk assessment.</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Settings className="w-6 h-6 text-white" />
@@ -258,7 +244,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                     <p className="text-gray-600">Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and other regulations.</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <FileText className="w-6 h-6 text-white" />
@@ -272,7 +257,6 @@ const AICybersecuritySuitePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -284,7 +268,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                 Comprehensive security solutions for organizations of all sizes
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <div className="text-center">
@@ -320,7 +303,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-
               <div className="bg-white p-8 rounded-xl border-2 border-red-500 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -364,7 +346,6 @@ const AICybersecuritySuitePage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom</h3>
@@ -406,7 +387,6 @@ const AICybersecuritySuitePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 to-orange-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -434,7 +414,6 @@ const AICybersecuritySuitePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
@@ -455,7 +434,6 @@ const AICybersecuritySuitePage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </ErrorBoundary>
   );

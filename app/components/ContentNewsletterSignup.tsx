@@ -78,7 +78,6 @@ const ContentNewsletterSignup: React.FC = () => {
                   Join thousands of professionals who trust us for the latest in AI and IT solutions.
                   Get exclusive insights, early access to new features, and expert tips delivered to your inbox.
                 </p>
-
                 <div className="space-y-4 mb-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -92,7 +91,6 @@ const ContentNewsletterSignup: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
                   <div className="flex items-center space-x-1">
                     <Shield className="w-4 h-4" />
@@ -108,11 +106,9 @@ const ContentNewsletterSignup: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Form */}
               <div className="bg-slate-700/50 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">Get Started Today</h3>
-
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -128,7 +124,6 @@ const ContentNewsletterSignup: React.FC = () => {
                       required
                     />
                   </div>
-
                   <button
                     type="submit"
                     disabled={isLoading}
@@ -147,7 +142,6 @@ const ContentNewsletterSignup: React.FC = () => {
                     )}
                   </button>
                 </form>
-
                 <p className="text-xs text-gray-400 mt-4 text-center">
                   By subscribing, you agree to our Privacy Policy and Terms of Service.
                   You can unsubscribe at any time.

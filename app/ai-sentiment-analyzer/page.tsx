@@ -122,7 +122,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-sentiment-analyzer" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -130,16 +129,13 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             <Brain className="w-4 h-4" />
             <span>AI-Powered Analytics</span>
           </div>
-
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Sentiment Analyzer
           </h1>
-
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform customer feedback into actionable insights with our advanced AI-powered sentiment analysis platform.
             Monitor brand perception, optimize customer experience, and drive business growth with 95% accuracy.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -156,7 +152,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             </a>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -182,7 +177,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
@@ -202,7 +196,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Real-World Applications</h2>
@@ -219,7 +212,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
@@ -263,7 +255,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Insights?</h2>

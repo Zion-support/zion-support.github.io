@@ -44,7 +44,6 @@ const AIMLPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -56,7 +55,6 @@ const AIMLPage: React.FC = () => {
           </p>
           <div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,500/month</div>
         </section>
-
         {/* Features */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -73,7 +71,6 @@ const AIMLPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -90,7 +87,6 @@ const AIMLPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -106,7 +102,6 @@ const AIMLPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Process */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -145,7 +140,6 @@ const AIMLPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
@@ -173,7 +167,6 @@ const AIMLPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -71,10 +71,8 @@ const ITConsultingPage: React.FC = () => {
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." />
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Hero Section */}
@@ -87,7 +85,6 @@ const ITConsultingPage: React.FC = () => {
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>
             </div>
-
             {/* Services Section */}
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               {consultingServices.map((service, index) => (
@@ -101,7 +98,6 @@ const ITConsultingPage: React.FC = () => {
                       <p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -113,7 +109,6 @@ const ITConsultingPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
@@ -125,7 +120,6 @@ const ITConsultingPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                     <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
@@ -135,7 +129,6 @@ const ITConsultingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Benefits Section */}
             <section className="py-16 bg-white rounded-2xl shadow-lg mb-16">
               <div className="text-center mb-12">
@@ -154,7 +147,6 @@ const ITConsultingPage: React.FC = () => {
                 ))}
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?</h2>
@@ -180,7 +172,6 @@ const ITConsultingPage: React.FC = () => {
             </section>
           </div>
         </main>
-
         <Footer />
       </div>
     </>

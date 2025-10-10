@@ -9,7 +9,6 @@ const aiagriculturalintelligenceproPage: React.FC = () => {
         <meta name="description" content="Professional ai agricultural intelligence pro services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai agricultural intelligence pro, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
@@ -19,7 +18,6 @@ const aiagriculturalintelligenceproPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional ai agricultural intelligence pro services powered by advanced AI and cutting-edge technology.
             </p>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <div className="grid md:grid-cols-3 gap-6 text-left">
@@ -37,7 +35,6 @@ const aiagriculturalintelligenceproPage: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-4">
               <a
                 href="/contact"

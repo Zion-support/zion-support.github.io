@@ -83,8 +83,7 @@ const ContentStatistics: React.FC = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
-    );
+      { threshold: 0.1 });
 
     const element = document.getElementById('statistics-section');
     if (element) {
@@ -136,7 +135,6 @@ const ContentStatistics: React.FC = () => {
         <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
           Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.
         </p>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {stats.map((stat) => (
             <div
@@ -148,50 +146,42 @@ const ContentStatistics: React.FC = () => {
                   <stat.icon className="w-8 h-8" />
                 </div>
               </div>
-
               <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
                 {stat.id === 'uptime' || stat.id === 'satisfaction'
                   ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                   : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                 }
               </div>
-
               <h3 className="text-lg font-semibold text-white mb-2">
                 {stat.label}
               </h3>
-
               <p className="text-gray-400 text-sm">
                 {stat.description}
               </p>
             </div>
           ))}
         </div>
-
         {/* Additional achievements */}
         <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 cyber-card">
           <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">
             Industry Recognition
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🏆</div>
               <h4 className="font-semibold text-white mb-1">Best AI Company 2024</h4>
               <p className="text-gray-400 text-sm">Tech Innovation Awards</p>
             </div>
-
             <div className="text-center">
               <div className="text-3xl mb-2">⭐</div>
               <h4 className="font-semibold text-white mb-1">5-Star Rating</h4>
               <p className="text-gray-400 text-sm">Client Reviews</p>
             </div>
-
             <div className="text-center">
               <div className="text-3xl mb-2">lock</div>
               <h4 className="font-semibold text-white mb-1">ISO 27001 Certified</h4>
               <p className="text-gray-400 text-sm">Security Standards</p>
             </div>
-
             <div className="text-center">
               <div className="text-3xl mb-2">rocket</div>
               <h4 className="font-semibold text-white mb-1">Fastest Growing</h4>

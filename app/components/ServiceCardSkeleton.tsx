@@ -7,17 +7,14 @@ const ServiceCardSkeleton: React.FC = () => {
         <div className="w-12 h-12 bg-gray-600 rounded-lg"></div>
         <div className="w-16 h-6 bg-gray-600 rounded"></div>
       </div>
-
       <div className="h-6 bg-gray-600 rounded mb-4"></div>
       <div className="h-4 bg-gray-600 rounded mb-2"></div>
       <div className="h-4 bg-gray-600 rounded mb-2"></div>
       <div className="h-4 bg-gray-600 rounded w-3/4 mb-6"></div>
-
       <div className="flex items-center justify-between mb-6">
         <div className="h-5 bg-gray-600 rounded w-20"></div>
         <div className="h-4 bg-gray-600 rounded w-16"></div>
       </div>
-
       <div className="h-12 bg-gray-600 rounded"></div>
     </div>
   );

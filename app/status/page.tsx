@@ -159,7 +159,6 @@ const StatusPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-12">
@@ -169,7 +168,6 @@ const StatusPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.
           </p>
-          
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${getStatusColor(overallStatus)}`}>
               {getStatusIcon(overallStatus)}
@@ -186,12 +184,10 @@ const StatusPage: React.FC = () => {
               <span>Refresh</span>
             </button>
           </div>
-          
           <div className="text-sm text-gray-400">
             Last updated: {lastUpdated.toLocaleString()}
           </div>
         </section>
-
         {/* Service Status */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2>
@@ -203,7 +199,6 @@ const StatusPage: React.FC = () => {
                   {getStatusIcon(service.status)}
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400 text-sm">Uptime</span>
@@ -222,7 +217,6 @@ const StatusPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Recent Incidents */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Recent Incidents</h2>
@@ -243,7 +237,6 @@ const StatusPage: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div>
                     <span className="text-gray-400">Start Time:</span>
@@ -262,7 +255,6 @@ const StatusPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Performance Metrics */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Performance Metrics</h2>
@@ -289,7 +281,6 @@ const StatusPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
@@ -316,7 +307,6 @@ const StatusPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

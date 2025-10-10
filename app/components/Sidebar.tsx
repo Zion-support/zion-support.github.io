@@ -150,7 +150,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen]);
+  }, [isOpen]</div>
+  );
 
   if (!isOpen) return null;
 
@@ -161,7 +162,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
-
       {/* Sidebar */}
       <div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
         <div className="flex flex-col h-full">
@@ -180,7 +180,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <X className="w-6 h-6" />
             </button>
           </div>
-
           {/* Navigation Content */}
           <div className="flex-1 overflow-y-auto p-6 space-y-6">
             {/* Main Navigation */}
@@ -206,7 +205,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 ))}
               </nav>
             </div>
-
             {/* Services */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
@@ -229,7 +227,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
-
                     {expandedSections.includes(category.title) && (
                       <div className="ml-8 space-y-1 mt-2">
                         {category.services.map((service, serviceIndex) => (
@@ -252,7 +249,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 ))}
               </div>
             </div>
-
             {/* Support */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
@@ -276,7 +272,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 ))}
               </nav>
             </div>
-
             {/* Legal */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
@@ -301,7 +296,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </nav>
             </div>
           </div>
-
           {/* Footer */}
           <div className="p-6 border-t border-gray-700">
             <div className="space-y-4">
@@ -316,7 +310,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <span>kleber@ziontechgroup.com</span>
                 </div>
               </div>
-
               {/* Social Links */}
               <div className="flex space-x-4">
                 <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
@@ -329,7 +322,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <Github className="w-5 h-5" />
                 </a>
               </div>
-
               {/* CTA Button */}
               <Link
                 to="/contact"

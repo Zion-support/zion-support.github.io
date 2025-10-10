@@ -335,7 +335,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* Filters */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -383,7 +382,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -408,12 +406,10 @@ export default function CaseStudiesPage() {
                       </span>
                     </div>
                   </div>
-
                   <div className="p-8">
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                       {study.title}
                     </h3>
-
                     <div className="flex items-center space-x-4 mb-4">
                       <div className="flex items-center space-x-2">
                         <Building className="w-4 h-4 text-gray-400" />
@@ -424,7 +420,6 @@ export default function CaseStudiesPage() {
                         <span className="text-gray-300 text-sm">{study.duration}</span>
                       </div>
                     </div>
-
                     <div className="space-y-4 mb-6">
                       <div>
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
@@ -435,7 +430,6 @@ export default function CaseStudiesPage() {
                         <p className="text-gray-300 text-sm">{study.solution}</p>
                       </div>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:</h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -447,7 +441,6 @@ export default function CaseStudiesPage() {
                         ))}
                       </div>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -458,7 +451,6 @@ export default function CaseStudiesPage() {
                         ))}
                       </div>
                     </div>
-
                     <div className="border-t border-gray-700 pt-4">
                       <div className="flex items-center space-x-4">
                         <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -478,7 +470,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

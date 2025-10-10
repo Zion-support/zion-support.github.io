@@ -174,7 +174,6 @@ const PrivacyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -188,7 +187,6 @@ const PrivacyPage: React.FC = () => {
             Last updated: {lastUpdated}
           </div>
         </section>
-
         {/* Introduction */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -201,7 +199,6 @@ const PrivacyPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Main Content */}
         <section className="space-y-12">
           {sections.map((section, index) => (
@@ -210,7 +207,6 @@ const PrivacyPage: React.FC = () => {
                 <section.icon className="w-8 h-8 text-cyan-400 mr-4" />
                 <h2 className="text-2xl font-bold text-white neon-text">{section.title}</h2>
               </div>
-
               <div className="space-y-6">
                 {section.content.map((subsection, subIndex) => (
                   <div key={subIndex}>
@@ -229,7 +225,6 @@ const PrivacyPage: React.FC = () => {
             </div>
           ))}
         </section>
-
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -256,7 +251,6 @@ const PrivacyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Updates */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -284,7 +278,6 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

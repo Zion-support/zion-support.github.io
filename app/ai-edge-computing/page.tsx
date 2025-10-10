@@ -185,11 +185,9 @@ const AIEdgeComputingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-purple-800/20 opacity-20"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AI Edge Computing
@@ -198,7 +196,6 @@ const AIEdgeComputingPage: React.FC = () => {
             Bring artificial intelligence to the edge of your network. Process data locally with ultra-low latency, 
             enhanced security, and real-time decision making capabilities.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Deploy Edge AI
@@ -208,7 +205,6 @@ const AIEdgeComputingPage: React.FC = () => {
               View Solutions
             </button>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -230,7 +226,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -240,7 +235,6 @@ const AIEdgeComputingPage: React.FC = () => {
               Powerful edge computing capabilities that bring AI and real-time processing to your data sources.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
@@ -256,7 +250,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -268,7 +261,6 @@ const AIEdgeComputingPage: React.FC = () => {
               See how edge computing is transforming industries with real-time AI processing.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -292,7 +284,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Edge Devices Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -304,7 +295,6 @@ const AIEdgeComputingPage: React.FC = () => {
               Comprehensive range of edge devices designed for different applications and environments.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {edgeDevices.map((device, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
@@ -327,7 +317,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -339,7 +328,6 @@ const AIEdgeComputingPage: React.FC = () => {
               Flexible pricing options to match your edge computing requirements.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
@@ -358,7 +346,6 @@ const AIEdgeComputingPage: React.FC = () => {
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -367,7 +354,6 @@ const AIEdgeComputingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
@@ -380,7 +366,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -392,7 +377,6 @@ const AIEdgeComputingPage: React.FC = () => {
               See how organizations are leveraging edge computing for competitive advantage.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -421,7 +405,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -431,7 +414,6 @@ const AIEdgeComputingPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Transform your operations with real-time AI processing at the edge of your network.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Start Deployment
@@ -443,7 +425,6 @@ const AIEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

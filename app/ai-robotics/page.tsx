@@ -158,7 +158,6 @@ const AIRoboticsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -184,7 +183,6 @@ const AIRoboticsPage: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Capabilities */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {capabilities.map((capability, index) => (
@@ -199,7 +197,6 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -212,7 +209,6 @@ const AIRoboticsPage: React.FC = () => {
               autonomous operation in any environment.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
@@ -234,7 +230,6 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Applications Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-6xl">
@@ -246,7 +241,6 @@ const AIRoboticsPage: React.FC = () => {
               Discover how AI robotics is transforming industries and enabling new possibilities.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((app, index) => (
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
@@ -268,7 +262,6 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -280,7 +273,6 @@ const AIRoboticsPage: React.FC = () => {
               Choose the right plan for your AI robotics needs.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
@@ -320,7 +312,6 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center">
@@ -341,7 +332,6 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

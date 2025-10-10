@@ -92,7 +92,6 @@ const ContactForm: React.FC = () => {
               Ready to transform your business with AI? Let's discuss your project and how we can help you achieve your goals.
             </p>
           </div>
-
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -106,7 +105,6 @@ const ContactForm: React.FC = () => {
                 <p className="text-gray-400 text-sm mt-1">Mon-Fri 9AM-6PM EST</p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-white" />
@@ -119,7 +117,6 @@ const ContactForm: React.FC = () => {
                 <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
@@ -135,7 +132,6 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Contact Form */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -155,7 +151,6 @@ const ContactForm: React.FC = () => {
                   placeholder="John Doe"
                 />
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-white font-medium mb-2">
                   Email Address *
@@ -172,7 +167,6 @@ const ContactForm: React.FC = () => {
                 />
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -188,7 +182,6 @@ const ContactForm: React.FC = () => {
                   placeholder="Your Company"
                 />
               </div>
-
               <div>
                 <label htmlFor="phone" className="block text-white font-medium mb-2">
                   Phone Number
@@ -204,7 +197,6 @@ const ContactForm: React.FC = () => {
                 />
               </div>
             </div>
-
             <div>
               <label htmlFor="service" className="block text-white font-medium mb-2">
                 Service Interest
@@ -224,7 +216,6 @@ const ContactForm: React.FC = () => {
                 ))}
               </select>
             </div>
-
             <div>
               <label htmlFor="message" className="block text-white font-medium mb-2">
                 Message *
@@ -240,7 +231,6 @@ const ContactForm: React.FC = () => {
                 placeholder="Tell us about your project and how we can help..."
               />
             </div>
-
             {status.message && (
               <div className={`flex items-center space-x-2 p-4 rounded-lg ${
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :

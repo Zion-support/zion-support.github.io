@@ -10,7 +10,6 @@ const MicroSaasPage: React.FC = () => {
         <meta name="keywords" content="micro saas, ai solutions, business automation, productivity tools, ai software" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">

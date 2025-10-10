@@ -213,9 +213,7 @@ export const SecurityEnhancer: React.FC = () => {
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
-        custom_map: data,
-
-    }
+        custom_map: data}
   }, [rateLimit]);
 
   // Expose security utilities globally for debugging
@@ -227,8 +225,7 @@ export const SecurityEnhancer: React.FC = () => {
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings,
-      };
+        warnings: securityWarnings};
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 

@@ -30,9 +30,7 @@ const EnhancedHero: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number',
-
-    }
+        event_label: 'main_phone_number'}
   }, []);
 
   const containerVariants = {
@@ -81,7 +79,6 @@ const EnhancedHero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="absolute inset-0 cyber-grid opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
-
         {/* Floating Elements */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
@@ -110,7 +107,6 @@ const EnhancedHero: React.FC = () => {
           }}
         />
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16 pt-24">
         <motion.div
           className="text-center max-w-6xl mx-auto"
@@ -123,14 +119,12 @@ const EnhancedHero: React.FC = () => {
           >
             Zion Tech Group
           </motion.h1>
-
           <motion.p
             className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium"
             variants={itemVariants}
           >
             Advanced AI and IT Solutions
           </motion.p>
-
           <motion.p
             className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
@@ -138,7 +132,6 @@ const EnhancedHero: React.FC = () => {
             Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </motion.p>
-
           {/* Animated Stats */}
           <motion.div
             className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12"
@@ -159,7 +152,6 @@ const EnhancedHero: React.FC = () => {
                 <div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
               </motion.div>
             </AnimatePresence>
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={`savings-${currentStat}`}
@@ -175,7 +167,6 @@ const EnhancedHero: React.FC = () => {
                 <div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
               </motion.div>
             </AnimatePresence>
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={`uptime-${currentStat}`}
@@ -191,7 +182,6 @@ const EnhancedHero: React.FC = () => {
                 <div className="text-gray-300 text-sm sm:text-base">Uptime</div>
               </motion.div>
             </AnimatePresence>
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={`support-${currentStat}`}
@@ -208,7 +198,6 @@ const EnhancedHero: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -223,7 +212,6 @@ const EnhancedHero: React.FC = () => {
             >
               📞 Call Now: (302) 464-0950
             </motion.a>
-
             <motion.a
               href="/contact"
               className="cyber-button w-full sm:w-auto text-center"
@@ -234,7 +222,6 @@ const EnhancedHero: React.FC = () => {
               Get Free Consultation
             </motion.a>
           </motion.div>
-
           {/* Trust Indicators */}
           <motion.div
             className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60"
@@ -248,7 +235,6 @@ const EnhancedHero: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"

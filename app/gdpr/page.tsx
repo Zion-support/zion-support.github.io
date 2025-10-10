@@ -102,7 +102,6 @@ const GDPRPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -116,7 +115,6 @@ const GDPRPage: React.FC = () => {
             Last updated: {lastUpdated}
           </div>
         </section>
-
         {/* Introduction */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -129,7 +127,6 @@ const GDPRPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Your Rights */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR</h2>
@@ -156,7 +153,6 @@ const GDPRPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Legal Bases */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -185,7 +181,6 @@ const GDPRPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Data Protection Measures */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -236,7 +231,6 @@ const GDPRPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* How to Exercise Your Rights */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -289,7 +283,6 @@ const GDPRPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Data Breach Notification */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -317,7 +310,6 @@ const GDPRPage: React.FC = () => {
             </ul>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -347,7 +339,6 @@ const GDPRPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

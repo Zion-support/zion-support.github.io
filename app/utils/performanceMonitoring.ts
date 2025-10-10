@@ -157,7 +157,7 @@ class PerformanceMonitoringService {
     try {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/analytics/performance', {
-          method: 'POST',}
+          method: 'POST'}
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(metric)
         })

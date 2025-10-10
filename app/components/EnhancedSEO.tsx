@@ -77,16 +77,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
+      email: 'kleber@ziontechgroup.com'},
     address: {
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
-    },
+      addressCountry: 'US'},
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
@@ -101,9 +99,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
       price: '50000',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-    },
-  };
+      availability: 'https://schema.org/InStock'}};
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
@@ -120,10 +116,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="color-scheme" content={colorScheme} />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
-
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
-
       {/* Language and Locale */}
       <html lang={locale.split('_')[0]} />
       {alternateLocales.map((altLocale) => (
@@ -157,7 +151,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:image:alt" content={title} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-
       {/* Preconnect to external domains */}
       {preconnect.map((domain) => (
         <link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" />
@@ -193,25 +186,21 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
-
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-
       {/* Performance Hints */}
       <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/logo192.webp" />

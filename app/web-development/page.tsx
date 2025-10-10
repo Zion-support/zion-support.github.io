@@ -118,10 +118,8 @@ const WebDevelopmentPage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -147,13 +145,11 @@ const WebDevelopmentPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Services Grid */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Web Development Services
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webServices.map((service, index) => (
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -166,9 +162,7 @@ const WebDevelopmentPage: React.FC = () => {
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
                     </div>
                   </div>
-
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Features</h4>
                     <ul className="space-y-2">
@@ -180,7 +174,6 @@ const WebDevelopmentPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   {service.benefits && (
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
@@ -205,13 +198,11 @@ const WebDevelopmentPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Technologies */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Technologies We Use
             </h2>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {technologies.map((tech, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -222,13 +213,11 @@ const WebDevelopmentPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Process */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Development Process
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {process.map((step, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -241,7 +230,6 @@ const WebDevelopmentPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -268,7 +256,6 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>

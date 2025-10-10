@@ -175,7 +175,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -210,7 +209,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
       {/* Featured Post */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -293,7 +291,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
       {/* Blog Posts */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -359,7 +356,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-20">
         <div className="container mx-auto px-4">

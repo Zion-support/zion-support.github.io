@@ -47,8 +47,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {
         threshold: 0.1,
         rootMargin: '50px'
-      }
-    );
+      });
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -84,7 +83,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
     
-    return canvas.toDataURL();
+    return canvas.toDataURL(</div></div>
+  );
   };
 
   if (hasError) {

@@ -237,7 +237,6 @@ const SpecializedServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -249,7 +248,6 @@ const SpecializedServicesPage: React.FC = () => {
             We deliver innovative solutions that push the boundaries of what's possible.
           </p>
         </section>
-
         {/* Stats Section */}
         <section className="mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -262,13 +260,11 @@ const SpecializedServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Specialized Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Advanced Technology Solutions
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specializedServices.map((service, index) => (
               <article key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${service.borderColor}`}>
@@ -281,11 +277,9 @@ const SpecializedServicesPage: React.FC = () => {
                     <div className={`text-sm font-semibold ${service.color}`}>{service.category}</div>
                   </div>
                 </div>
-
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -297,7 +291,6 @@ const SpecializedServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -309,7 +302,6 @@ const SpecializedServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="text-center">
                   <div className={`text-lg font-bold mb-4 neon-text ${service.color}`}>
                     {service.price}
@@ -325,20 +317,17 @@ const SpecializedServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Business Apps Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Business Applications
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {businessApps.map((app, index) => (
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <app.icon className={`w-16 h-16 ${app.color} mx-auto mb-4`} />
                 <h3 className="text-xl font-bold text-white mb-3 neon-text">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p>
-
                 <ul className="space-y-2 mb-6">
                   {app.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -347,7 +336,6 @@ const SpecializedServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>
                   {app.price}
                 </div>
@@ -361,13 +349,11 @@ const SpecializedServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Why Choose Us Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Why Choose Our Specialized Solutions?
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Brain className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
@@ -376,7 +362,6 @@ const SpecializedServicesPage: React.FC = () => {
                 We leverage the latest technologies including quantum computing, AI, and blockchain to deliver innovative solutions.
               </p>
             </div>
-
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Shield className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Proven Expertise</h3>
@@ -384,7 +369,6 @@ const SpecializedServicesPage: React.FC = () => {
                 Our team has deep expertise in specialized technologies with a track record of successful implementations.
               </p>
             </div>
-
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Target className="w-16 h-16 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Custom Solutions</h3>
@@ -392,7 +376,6 @@ const SpecializedServicesPage: React.FC = () => {
                 Every solution is tailored to your specific needs and business requirements for maximum impact.
               </p>
             </div>
-
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Users className="w-16 h-16 text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Dedicated Support</h3>
@@ -400,7 +383,6 @@ const SpecializedServicesPage: React.FC = () => {
                 Our specialized team provides ongoing support and maintenance for all our advanced solutions.
               </p>
             </div>
-
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Zap className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Rapid Implementation</h3>
@@ -408,7 +390,6 @@ const SpecializedServicesPage: React.FC = () => {
                 We deliver complex solutions quickly without compromising on quality or security.
               </p>
             </div>
-
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <DollarSign className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3 neon-text">ROI Focused</h3>
@@ -418,7 +399,6 @@ const SpecializedServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -445,7 +425,6 @@ const SpecializedServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

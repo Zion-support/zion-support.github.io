@@ -885,44 +885,36 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
         <meta name="keywords" content="code security, vulnerability scanning, security audit, code analysis, OWASP, compliance, security testing" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-code-security-auditor" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-red-500/10 border border-red-400/20 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400 mr-2" />
               <span className="text-red-300 font-medium">AI Code Security Auditor Pro</span>
             </div>
-
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">
               Automated Security Analysis
             </h1>
-
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Secure Your Code with AI-Powered Analysis
             </p>
-
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
               Detect vulnerabilities, ensure compliance, and get automated fix suggestions.
               Protect your applications with comprehensive security analysis powered by advanced AI.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25">
                 <span className="relative z-10">Start Free Scan</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
-
               <button className="group inline-flex items-center px-8 py-4 border-2 border-red-400 text-red-400 font-semibold rounded-xl hover:bg-red-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
               </button>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -945,7 +937,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           </div>
         </div>
       </div>
-
       {/* Security Scanner Interface */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -957,7 +948,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Upload your code or connect your repository for instant security analysis
             </p>
           </div>
-
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Code Input Section */}
@@ -966,7 +956,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   <Code className="w-8 h-8 text-red-400 mr-3" />
                   Code Analysis
                 </h3>
-
                 <div className="space-y-6">
                   {/* File Upload */}
                   <div>
@@ -979,7 +968,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                       <p className="text-gray-500 text-sm">JS, TS, Python, Java, C++, etc.</p>
                     </div>
                   </div>
-
                   {/* Code Input */}
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -993,7 +981,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                       rows={8}
                     />
                   </div>
-
                   {/* Scan Button */}
                   <button
                     onClick={handleAnalyzeCode}
@@ -1014,14 +1001,12 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   </button>
                 </div>
               </div>
-
               {/* Results Section */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <Shield className="w-8 h-8 text-red-400 mr-3" />
                   Security Results
                 </h3>
-
                 <div className="space-y-4">
                   {vulnerabilities.length > 0 ? (
                     vulnerabilities.map((vuln, index) => (
@@ -1050,7 +1035,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           </div>
         </div>
       </div>
-
       {/* Security Issues Dashboard */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -1062,7 +1046,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Monitor and manage security issues across your codebase
             </p>
           </div>
-
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">
@@ -1085,7 +1068,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   )}
                 </button>
               </div>
-
               <div className="space-y-4">
                 {securityIssues.map((issue) => (
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors">
@@ -1114,7 +1096,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -1126,7 +1107,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Comprehensive security analysis tools for modern development
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">
@@ -1144,7 +1124,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           </div>
         </div>
       </div>
-
       {/* Pricing Section */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -1156,7 +1135,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Choose the security plan that fits your development needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
@@ -1176,7 +1154,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -1185,7 +1162,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 transform hover:scale-105'
@@ -1198,7 +1174,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           </div>
         </div>
       </div>
-
       {/* Contact Section */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -1210,7 +1185,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Contact our security experts to discuss your code security needs
             </p>
           </div>
-
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -1237,7 +1211,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
                 <div className="space-y-4">

@@ -172,7 +172,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered customer support chatbot with 24/7 availability, multi-channel support, and advanced analytics. Reduce support costs by 60%. Starting at $99/month." />
         <meta name="keywords" content="ai chatbot, customer support, virtual assistant, customer service automation, chatbot development" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -187,7 +186,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
             Transform your customer support with AI-powered chatbots that provide instant, accurate responses 24/7.
             Reduce support costs by 60% while improving customer satisfaction.
           </p>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (
@@ -198,7 +196,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
@@ -217,7 +214,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -243,7 +239,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600/20 to-blue-600/20">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +264,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -317,7 +311,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600/20 to-blue-600/20">
         <div className="max-w-7xl mx-auto">
@@ -342,7 +335,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">

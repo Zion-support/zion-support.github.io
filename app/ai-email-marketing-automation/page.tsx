@@ -172,7 +172,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered email marketing platform with automation, personalization, and analytics. Increase open rates by 40% and revenue by 60%. Starting at $39/month." />
         <meta name="keywords" content="ai email marketing, email automation, email personalization, email analytics, drip campaigns, lead nurturing" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -187,7 +186,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             Transform your email marketing with AI-powered automation, personalization, and analytics.
             Increase open rates by 40% and revenue by 60% with our intelligent platform.
           </p>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (
@@ -198,7 +196,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
@@ -217,7 +214,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Automation Types Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -243,7 +239,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +264,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -317,7 +311,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-7xl mx-auto">
@@ -342,7 +335,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">

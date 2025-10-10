@@ -173,7 +173,6 @@ const SupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -183,7 +182,6 @@ const SupportPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
@@ -198,7 +196,6 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Support Channels */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help Now</h2>
@@ -224,13 +221,11 @@ const SupportPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
             <p className="text-gray-300 mb-6">Find answers to common questions</p>
-            
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {categories.map((category) => (
@@ -248,7 +243,6 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           <div className="max-w-4xl mx-auto space-y-4">
             {filteredFaqs.map((faq) => (
               <div key={faq.id} className="cyber-card p-6">
@@ -268,7 +262,6 @@ const SupportPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Resources */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources</h2>
@@ -294,7 +287,6 @@ const SupportPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
@@ -321,7 +313,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -120,7 +120,6 @@ const EnhancedAccessibility: React.FC = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
         </svg>
       </button>
-
       {/* Accessibility Panel */}
       {isVisible && (
         <div
@@ -144,7 +143,6 @@ const EnhancedAccessibility: React.FC = () => {
               </svg>
             </button>
           </div>
-
           <div className="space-y-4">
             {/* Font Size */}
             <div>
@@ -170,7 +168,6 @@ const EnhancedAccessibility: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* High Contrast */}
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">
@@ -194,7 +191,6 @@ const EnhancedAccessibility: React.FC = () => {
                 />
               </button>
             </div>
-
             {/* Reduced Motion */}
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">
@@ -218,7 +214,6 @@ const EnhancedAccessibility: React.FC = () => {
                 />
               </button>
             </div>
-
             {/* Screen Reader Optimizations */}
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">
@@ -242,7 +237,6 @@ const EnhancedAccessibility: React.FC = () => {
                 />
               </button>
             </div>
-
             {/* Keyboard Navigation */}
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">
@@ -266,7 +260,6 @@ const EnhancedAccessibility: React.FC = () => {
                 />
               </button>
             </div>
-
             {/* Reset Button */}
             <button
               onClick={() => {
@@ -275,8 +268,7 @@ const EnhancedAccessibility: React.FC = () => {
                   highContrast: false,
                   reducedMotion: false,
                   screenReader: false,
-                  keyboardNavigation: false,
-                };
+                  keyboardNavigation: false};
                 setSettings(defaultSettings);
                 applyAccessibilitySettings(defaultSettings);
                 localStorage.removeItem('accessibility-settings');

@@ -44,7 +44,6 @@ const FuturisticHero: React.FC = memo(() => {
         <div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-20 right-10 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-500"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Main Content */}
@@ -54,7 +53,6 @@ const FuturisticHero: React.FC = memo(() => {
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">Leading AI Innovation</span>
             </div>
-
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
@@ -68,7 +66,6 @@ const FuturisticHero: React.FC = memo(() => {
                 to revolutionize your business operations and achieve unprecedented growth.
               </p>
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -83,7 +80,6 @@ const FuturisticHero: React.FC = memo(() => {
                 Watch Demo
               </button>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
               {stats.map((stat, index) => (
@@ -97,7 +93,6 @@ const FuturisticHero: React.FC = memo(() => {
               ))}
             </div>
           </div>
-
           {/* Right Column - Visual Elements */}
           <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             {/* Main Visual Container */}
@@ -114,7 +109,6 @@ const FuturisticHero: React.FC = memo(() => {
                   </div>
                 </div>
               </div>
-
               {/* Floating Feature Cards */}
               {features.map((feature, index) => (
                 <div
@@ -148,7 +142,6 @@ const FuturisticHero: React.FC = memo(() => {
                 <line x1="80%" y1="70%" x2="50%" y2="80%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse delay-2000" />
               </svg>
             </div>
-
             {/* Floating Elements */}
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full animate-bounce"></div>
             <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full animate-bounce delay-1000"></div>
@@ -156,7 +149,6 @@ const FuturisticHero: React.FC = memo(() => {
           </div>
         </div>
       </div>
-
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">

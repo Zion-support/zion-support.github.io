@@ -309,7 +309,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -335,7 +334,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -392,7 +390,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -414,7 +411,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Process */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -447,7 +443,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

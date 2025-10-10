@@ -137,7 +137,6 @@ const SecurityPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -162,7 +161,6 @@ const SecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Measures */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures</h2>
@@ -186,7 +184,6 @@ const SecurityPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Compliance Standards */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -210,7 +207,6 @@ const SecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features</h2>
@@ -231,7 +227,6 @@ const SecurityPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Security Best Practices */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -290,7 +285,6 @@ const SecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Incident Response */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -348,7 +342,6 @@ const SecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -378,7 +371,6 @@ const SecurityPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

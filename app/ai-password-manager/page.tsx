@@ -105,9 +105,7 @@ const AIPasswordManagerPage: React.FC = () => {
         <meta name="description" content="Secure your digital life with our AI-powered password manager. Military-grade encryption, automatic generation, and intelligent security monitoring." />
         <meta name="keywords" content="password manager, AI security, password protection, digital security, encryption" />
       </Helmet>
-
       <Navigation />
-
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -141,7 +139,6 @@ const AIPasswordManagerPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-20 bg-slate-800/50">
             <div className="container mx-auto px-4">
@@ -172,7 +169,6 @@ const AIPasswordManagerPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
@@ -194,7 +190,6 @@ const AIPasswordManagerPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="py-16 px-4 bg-slate-800/50">
             <div className="max-w-6xl mx-auto">
@@ -240,7 +235,6 @@ const AIPasswordManagerPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
             <div className="max-w-4xl mx-auto text-center">
@@ -267,7 +261,6 @@ const AIPasswordManagerPage: React.FC = () => {
           </section>
         </div>
       </main>
-
       <Footer />
     </div>
   );

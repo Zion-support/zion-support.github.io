@@ -7,8 +7,7 @@ import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export default function RootLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode;
 }) {
   return (
@@ -25,17 +24,14 @@ export default function RootLayout({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
         <meta name="color-scheme" content="dark light" />
-
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-
         {/* Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -53,15 +49,13 @@ export default function RootLayout({
                 addressLocality: 'Middletown',
                 addressRegion: 'DE',
                 postalCode: '19709',
-                addressCountry: 'US',
-              },
+                addressCountry: 'US'},
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
                 areaServed: 'US',
-                availableLanguage: 'English',
-              },
+                availableLanguage: 'English'},
               sameAs: [
                 'https://facebook.com/ziontechgroup',
                 'https://twitter.com/ziontechgroup',
@@ -74,21 +68,16 @@ export default function RootLayout({
                 {
                   '@type': 'Service',
                   name: 'AI Services',
-                  description: 'Advanced artificial intelligence solutions',
-                },
+                  description: 'Advanced artificial intelligence solutions'},
                 {
                   '@type': 'Service',
                   name: 'IT Services',
-                  description: 'Comprehensive IT support and infrastructure',
-                },
+                  description: 'Comprehensive IT support and infrastructure'},
                 {
                   '@type': 'Service',
                   name: 'Digital Transformation',
-                  description: 'Business modernization and process automation',
-                },
-              ],
-            }),
-          }}
+                  description: 'Business modernization and process automation'},
+              ]})}}
         />
       </head>
       <body className='antialiased'>

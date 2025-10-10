@@ -175,7 +175,6 @@ const CloudMigrationPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-20 bg-slate-800/50">
             <div className="container mx-auto px-4">
@@ -207,7 +206,6 @@ const CloudMigrationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Migration Process Section */}
           <section className="py-16 px-4 bg-slate-800/50">
             <div className="max-w-6xl mx-auto">
@@ -236,7 +234,6 @@ const CloudMigrationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
@@ -281,7 +278,6 @@ const CloudMigrationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="py-16 px-4 bg-slate-800/50">
             <div className="max-w-6xl mx-auto">
@@ -327,7 +323,6 @@ const CloudMigrationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
             <div className="max-w-4xl mx-auto text-center">

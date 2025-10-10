@@ -14,9 +14,7 @@ const NetworkInfrastructurePage: React.FC = () => {
         keywords={["network infrastructure","network design","network security","SD-WAN","network optimization"]}
         canonicalUrl="https://ziontechgroup.com/network-infrastructure"
       />
-
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -47,7 +45,6 @@ const NetworkInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -58,9 +55,7 @@ const NetworkInfrastructurePage: React.FC = () => {
               Powerful capabilities designed to transform your business
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Network Design</h3>
@@ -93,7 +88,6 @@ const NetworkInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -104,9 +98,7 @@ const NetworkInfrastructurePage: React.FC = () => {
               Proven results and measurable impact for your business
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Reliable Connectivity</h3>
@@ -129,7 +121,6 @@ const NetworkInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -140,7 +131,6 @@ const NetworkInfrastructurePage: React.FC = () => {
               Transparent pricing with no hidden fees
             </p>
           </div>
-
           <div className="max-w-md mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Network Infrastructure</h3>
@@ -155,7 +145,6 @@ const NetworkInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -166,7 +155,6 @@ const NetworkInfrastructurePage: React.FC = () => {
               Contact our experts to discuss your specific needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -176,7 +164,6 @@ const NetworkInfrastructurePage: React.FC = () => {
                 +1 302 464 0950
               </a>
             </div>
-
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
@@ -185,7 +172,6 @@ const NetworkInfrastructurePage: React.FC = () => {
                 kleber@ziontechgroup.com
               </a>
             </div>
-
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
@@ -198,7 +184,6 @@ const NetworkInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

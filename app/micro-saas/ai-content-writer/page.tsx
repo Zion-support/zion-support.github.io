@@ -141,7 +141,6 @@ export default function AIContentWriterPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -157,7 +156,6 @@ export default function AIContentWriterPage() {
               Transform your content strategy with our cutting-edge AI technology. Generate high-quality,
               SEO-optimized content at scale while maintaining your unique brand voice.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="#pricing"
@@ -172,7 +170,6 @@ export default function AIContentWriterPage() {
                 Watch Demo
               </a>
             </div>
-
             {/* Key Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-card hologram-card p-6">
@@ -190,7 +187,6 @@ export default function AIContentWriterPage() {
             </div>
           </div>
         </section>
-
         {/* Navigation Tabs */}
         <section className="py-8 px-4 bg-slate-800/30">
           <div className="max-w-6xl mx-auto">
@@ -211,7 +207,6 @@ export default function AIContentWriterPage() {
             </div>
           </div>
         </section>
-
         {/* Content Sections */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -226,7 +221,6 @@ export default function AIContentWriterPage() {
                     to deliver content that not only engages your audience but also drives results.
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="cyber-card hologram-card p-6">
                     <div className="text-4xl mb-4">🤖</div>
@@ -263,7 +257,6 @@ export default function AIContentWriterPage() {
                     Everything you need to create, optimize, and manage content at scale.
                   </p>
                 </div>
-
                 {features.map((category, index) => (
                   <div key={index} className="cyber-card hologram-card p-8">
                     <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
@@ -292,7 +285,6 @@ export default function AIContentWriterPage() {
                     Choose the plan that fits your content needs. All plans include a 14-day free trial.
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {pricingPlans.map((plan, index) => (
                     <div
@@ -317,7 +309,6 @@ export default function AIContentWriterPage() {
                           <span className="text-lg text-gray-400">/{plan.period}</span>
                         </div>
                       </div>
-
                       <ul className="space-y-4 mb-8">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center space-x-3">
@@ -326,7 +317,6 @@ export default function AIContentWriterPage() {
                           </li>
                         ))}
                       </ul>
-
                       <a
                         href={`/contact?service=ai-content-writer&plan=${plan.name.toLowerCase()}`}
                         className="w-full bg-cyan-400 text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 text-center block"
@@ -336,7 +326,6 @@ export default function AIContentWriterPage() {
                     </div>
                   ))}
                 </div>
-
                 <div className="text-center">
                   <p className="text-gray-300 mb-4">
                     Need a custom plan? We offer enterprise solutions tailored to your specific needs.
@@ -361,7 +350,6 @@ export default function AIContentWriterPage() {
                     Join thousands of satisfied customers who have transformed their content strategy.
                   </p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="cyber-card hologram-card p-6">
@@ -389,7 +377,6 @@ export default function AIContentWriterPage() {
                     Frequently Asked Questions
                   </h2>
                 </div>
-
                 <div className="space-y-6">
                   {[
                     {
@@ -427,7 +414,6 @@ export default function AIContentWriterPage() {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -454,7 +440,6 @@ export default function AIContentWriterPage() {
           </div>
         </section>
       </main>
-
       <Footer />
       <ScrollToTop />
     </div>

@@ -116,9 +116,7 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
         event_category: 'User Interaction',
-        event_label: element,
-
-    }
+        event_label: element}
   }, [preferences.analytics]);
 
   // Add click tracking to interactive elements
@@ -190,11 +188,9 @@ export const UserExperienceEnhancer: React.FC = () => {
       >
         {preferences.theme === 'dark' ? '☀️' : '🌙'}
       </button>
-
       {/* User Preferences Panel */}
       <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
         <h3 className="text-sm font-bold mb-3">Preferences</h3>
-
         <div className="space-y-2 text-sm">
           <div>
             <label className="block text-xs text-gray-300 mb-1">Theme</label>
@@ -208,7 +204,6 @@ export const UserExperienceEnhancer: React.FC = () => {
               <option value="dark">Dark</option>
             </select>
           </div>
-
           <div>
             <label className="block text-xs text-gray-300 mb-1">Language</label>
             <select
@@ -222,7 +217,6 @@ export const UserExperienceEnhancer: React.FC = () => {
               <option value="de">Deutsch</option>
             </select>
           </div>
-
           <div className="flex items-center space-x-2">
             <input
               type="checkbox"
@@ -233,7 +227,6 @@ export const UserExperienceEnhancer: React.FC = () => {
             />
             <label htmlFor="notifications" className="text-xs">Notifications</label>
           </div>
-
           <div className="flex items-center space-x-2">
             <input
               type="checkbox"
@@ -245,7 +238,6 @@ export const UserExperienceEnhancer: React.FC = () => {
             <label htmlFor="analytics" className="text-xs">Analytics</label>
           </div>
         </div>
-
         <div className="mt-3 pt-2 border-t border-gray-700">
           <p className="text-xs text-gray-400">
             Shortcuts: Ctrl+K (search), Ctrl+D (theme)

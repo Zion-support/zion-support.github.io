@@ -26,7 +26,6 @@ const AIFraudDetectionPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Fraud Detection">
@@ -37,7 +36,6 @@ const AIFraudDetectionPage: React.FC = () => {
           </p>
           <div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,900/month</div>
         </section>
-
         <section className="mb-16">
           <div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features</h2>
@@ -51,7 +49,6 @@ const AIFraudDetectionPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="mb-16">
           <div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2>
@@ -65,7 +62,6 @@ const AIFraudDetectionPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Protect Your Business?</h2>

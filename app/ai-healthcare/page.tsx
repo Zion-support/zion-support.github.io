@@ -132,7 +132,6 @@ const AIHealthcarePage: React.FC = memo(() => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -140,16 +139,13 @@ const AIHealthcarePage: React.FC = memo(() => {
             <Heart className="w-4 h-4" />
             <span>AI-Powered Healthcare</span>
           </div>
-
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Healthcare Solutions
           </h1>
-
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform healthcare delivery with AI-powered medical imaging, diagnostic assistance,
             and patient monitoring. Improve outcomes, reduce costs, and enhance patient care.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -166,7 +162,6 @@ const AIHealthcarePage: React.FC = memo(() => {
             </a>
           </div>
         </section>
-
         {/* Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -179,7 +174,6 @@ const AIHealthcarePage: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Healthcare Features</h2>
@@ -199,7 +193,6 @@ const AIHealthcarePage: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Medical Specialties</h2>
@@ -216,7 +209,6 @@ const AIHealthcarePage: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Solutions</h2>
@@ -260,7 +252,6 @@ const AIHealthcarePage: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-green-600/20 to-blue-600/20 p-12 rounded-lg border border-green-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Healthcare?</h2>

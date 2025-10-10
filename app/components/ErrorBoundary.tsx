@@ -28,9 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
-        fatal: false,
-
-    }
+        fatal: false}
   }
 
   handleRetry = () => {
@@ -59,7 +57,6 @@ class ErrorBoundary extends Component<Props, State> {
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
               </p>
             </div>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
@@ -82,7 +79,6 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-
               <button
                 onClick={this.handleGoHome}
                 className="w-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center"
@@ -91,7 +87,6 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-
             <div className="mt-6 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team:</p>
               <a

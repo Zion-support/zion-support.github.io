@@ -89,7 +89,6 @@ const LandingPageBuilderPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Features Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -110,7 +109,6 @@ const LandingPageBuilderPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Templates Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -129,7 +127,6 @@ const LandingPageBuilderPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

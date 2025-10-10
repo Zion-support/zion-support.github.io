@@ -32,8 +32,7 @@ export const PerformanceOptimizer: React.FC = () => {
       fid: 0,
       cls: 0,
       fcp: 0,
-      ttfb: 0,
-    };
+      ttfb: 0};
 
     // LCP - Largest Contentful Paint
     const lcpObserver = new PerformanceObserver((list) => {

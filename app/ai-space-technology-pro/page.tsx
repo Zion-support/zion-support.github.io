@@ -179,7 +179,6 @@ export default function AISpaceTechnologyProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -189,19 +188,16 @@ export default function AISpaceTechnologyProPage() {
               <Rocket className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">AI Space Technology Pro</span>
             </div>
-
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               AI-Powered Space Technology
               <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Exploring the Universe
               </span>
             </h1>
-
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Advanced space exploration and satellite management with AI-powered mission planning,
               orbital mechanics optimization, and astronomical data analysis. Reach for the stars.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#features"
@@ -221,7 +217,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       {/* Stats */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -241,7 +236,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       {/* Features */}
       <section id="features" className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -253,7 +247,6 @@ export default function AISpaceTechnologyProPage() {
               Cutting-edge AI technology designed specifically for space exploration and satellite operations
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
@@ -266,7 +259,6 @@ export default function AISpaceTechnologyProPage() {
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
                 </div>
-
                 <div className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-3">
@@ -280,7 +272,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       {/* Capabilities */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -292,7 +283,6 @@ export default function AISpaceTechnologyProPage() {
               End-to-end AI-powered solutions for space exploration and satellite operations
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -310,7 +300,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -322,23 +311,19 @@ export default function AISpaceTechnologyProPage() {
               Flexible pricing options for space agencies and aerospace companies
             </p>
           </div>
-
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-2xl p-8">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-white mb-2">AI Space Technology Pro</h3>
                 <p className="text-gray-300 mb-6">Complete AI-powered space technology platform</p>
-
                 <div className="flex items-baseline justify-center mb-6">
                   <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span>
                   <span className="text-gray-400 ml-2">/month</span>
                 </div>
-
                 <div className="text-green-400 text-sm mb-8">
                   Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing
                 </div>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
@@ -351,7 +336,6 @@ export default function AISpaceTechnologyProPage() {
                     ))}
                   </ul>
                 </div>
-
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Add-ons:</h4>
                   <ul className="space-y-3">
@@ -367,7 +351,6 @@ export default function AISpaceTechnologyProPage() {
                   </ul>
                 </div>
               </div>
-
               <div className="text-center">
                 <a
                   href="/contact"
@@ -381,7 +364,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -393,7 +375,6 @@ export default function AISpaceTechnologyProPage() {
               See how our AI technology is transforming space exploration
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -418,7 +399,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
@@ -428,7 +408,6 @@ export default function AISpaceTechnologyProPage() {
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Join leading space agencies using AI to advance space exploration and satellite operations.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="/contact"
@@ -445,7 +424,6 @@ export default function AISpaceTechnologyProPage() {
               Schedule Demo
             </a>
           </div>
-
           <div className="text-gray-200 text-sm">
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
@@ -453,7 +431,6 @@ export default function AISpaceTechnologyProPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

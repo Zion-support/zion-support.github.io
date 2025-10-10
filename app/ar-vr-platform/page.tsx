@@ -145,11 +145,9 @@ const ARVRPlatformPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-purple-800/20 opacity-20"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AR/VR Platform
@@ -158,7 +156,6 @@ const ARVRPlatformPage: React.FC = () => {
             Build immersive augmented and virtual reality experiences that transform how people work, learn, and interact. 
             Create photorealistic 3D environments with our cutting-edge platform.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Start Building
@@ -168,7 +165,6 @@ const ARVRPlatformPage: React.FC = () => {
               Watch Demo
             </button>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -190,7 +186,6 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -200,7 +195,6 @@ const ARVRPlatformPage: React.FC = () => {
               Everything you need to create, deploy, and manage immersive AR/VR experiences at scale.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
@@ -216,7 +210,6 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -228,7 +221,6 @@ const ARVRPlatformPage: React.FC = () => {
               Discover how AR/VR technology is revolutionizing industries across the globe.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -252,7 +244,6 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -264,7 +255,6 @@ const ARVRPlatformPage: React.FC = () => {
               Flexible pricing options to match your AR/VR development needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
@@ -283,7 +273,6 @@ const ARVRPlatformPage: React.FC = () => {
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -292,7 +281,6 @@ const ARVRPlatformPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
@@ -305,7 +293,6 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -317,7 +304,6 @@ const ARVRPlatformPage: React.FC = () => {
               See how leading organizations are transforming their operations with our AR/VR platform.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -346,7 +332,6 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -356,7 +341,6 @@ const ARVRPlatformPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of developers and organizations creating immersive experiences with our AR/VR platform.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Start Free Trial
@@ -368,7 +352,6 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

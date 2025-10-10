@@ -17,7 +17,6 @@ const AIVideoEditorPage: React.FC = () => {
         canonical="https://ziontechgroup.com/ai-video-editor"
       />
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -56,7 +55,6 @@ const AIVideoEditorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -68,7 +66,6 @@ const AIVideoEditorPage: React.FC = () => {
                 Transform your video content with intelligent automation and professional editing tools
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-100">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -89,7 +86,6 @@ const AIVideoEditorPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Film className="w-6 h-6 text-white" />
@@ -109,7 +105,6 @@ const AIVideoEditorPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
                   <Music className="w-6 h-6 text-white" />
@@ -129,7 +124,6 @@ const AIVideoEditorPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100">
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
                   <Palette className="w-6 h-6 text-white" />
@@ -149,7 +143,6 @@ const AIVideoEditorPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100">
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
                   <Zap className="w-6 h-6 text-white" />
@@ -169,7 +162,6 @@ const AIVideoEditorPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100">
                 <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
                   <Users className="w-6 h-6 text-white" />
@@ -192,7 +184,6 @@ const AIVideoEditorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +195,6 @@ const AIVideoEditorPage: React.FC = () => {
                 Professional video editing tools for every budget
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <div className="text-center">
@@ -240,7 +230,6 @@ const AIVideoEditorPage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-
               <div className="bg-white p-8 rounded-xl border-2 border-blue-500 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -284,7 +273,6 @@ const AIVideoEditorPage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
@@ -326,7 +314,6 @@ const AIVideoEditorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -354,7 +341,6 @@ const AIVideoEditorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
@@ -375,7 +361,6 @@ const AIVideoEditorPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </ErrorBoundary>
   );

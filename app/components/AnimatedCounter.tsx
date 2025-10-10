@@ -14,13 +14,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   duration = 2000,
   suffix = '',
   prefix = '',
-  className = '',
-}) => {
+  className = ''}) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({
-    threshold: 0.5,
-  });
+    threshold: 0.5});
 
   useEffect(() => {
     if (entry?.isIntersecting && !isVisible) {

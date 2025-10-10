@@ -126,7 +126,7 @@ class EnhancedErrorHandler {
             href?: string;}
           }
           this.handleError({
-            type: 'resource',}
+            type: 'resource'}
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
             src: target?.src || target?.href

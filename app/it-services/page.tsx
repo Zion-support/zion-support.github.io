@@ -2,7 +2,8 @@
 import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, Clock, Shield, TrendingUp, MessageSquare } from 'lucide-react';
 
 export default function ITServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('overview'</div></div></div></div>
+  );
 
   const itServices = [
     {
@@ -687,23 +688,18 @@ name: 'AI-Powered Infrastructure Management',
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">
-
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-
 <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-
               IT Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
-
               Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.
               From infrastructure to security, we've got you covered.
             </p>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
@@ -723,7 +719,6 @@ name: 'AI-Powered Infrastructure Management',
                 <div className="text-gray-300">Support</div>
               </div>
             </div>
-
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-cyan-400" />
@@ -741,7 +736,6 @@ name: 'AI-Powered Infrastructure Management',
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -767,7 +761,6 @@ name: 'AI-Powered Infrastructure Management',
           </div>
         </div>
       </section>
-
       {/* IT Services */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -791,7 +784,6 @@ name: 'AI-Powered Infrastructure Management',
 
 <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
 <div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
-
                       {service.popular && (
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                           Popular
@@ -801,7 +793,6 @@ name: 'AI-Powered Infrastructure Management',
                       <div className="relative z-10">
                         <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h4>
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
                         <div className="space-y-4 mb-6">
                           <h5 className="text-lg font-semibold text-white flex items-center">
                             <Zap className="w-4 h-4 mr-2 text-cyan-400" />
@@ -821,7 +812,6 @@ name: 'AI-Powered Infrastructure Management',
                             )}
                           </ul>
                         </div>
-
                         <div className="space-y-3 mb-6">
                           <div className="flex justify-between items-center">
                             <span className="text-sm text-gray-400">Pricing:</span>
@@ -836,7 +826,6 @@ name: 'AI-Powered Infrastructure Management',
                             <span className="text-sm font-medium text-purple-400">{service.timeline}</span>
                           </div>
                         </div>
-
                         <div className="space-y-3">
                           <a
                             href={service.link}
@@ -867,7 +856,6 @@ name: 'AI-Powered Infrastructure Management',
                           Get Started
                         </a>
                       </div>
-
                     </div>
                   ))}
                 </div>
@@ -876,7 +864,6 @@ name: 'AI-Powered Infrastructure Management',
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -907,7 +894,6 @@ name: 'AI-Powered Infrastructure Management',
           </div>
         </div>
       </section>
-
       {/* Process */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -940,7 +926,6 @@ name: 'AI-Powered Infrastructure Management',
           </div>
         </div>
       </section>
-
       {/* Case Studies */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -988,13 +973,11 @@ name: 'AI-Powered Infrastructure Management',
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">
             Ready to Modernize Your IT Infrastructure?
@@ -1025,7 +1008,6 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
           </div>
           <div className="text-gray-200 text-sm">
             <p>Email: kleber@ziontechgroup.com | Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-
           </div>
         </div>
       </section>

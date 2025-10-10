@@ -227,8 +227,7 @@ export function validateForm<T extends Record<string, unknown>>(
             field,
             errors: fieldErrors
           }
-        }
-      );
+        });
     }
   }
   return {

@@ -143,7 +143,6 @@ const ConsultationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -168,7 +167,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Consultation Types */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation</h2>
@@ -203,7 +201,6 @@ const ConsultationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Consultation Process */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -222,7 +219,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?</h2>
@@ -238,7 +234,6 @@ const ConsultationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
@@ -260,7 +255,6 @@ const ConsultationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Booking Form */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -367,7 +361,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
@@ -398,7 +391,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

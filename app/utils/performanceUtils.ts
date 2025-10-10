@@ -375,8 +375,7 @@ class PerformanceOptimizer {
       enableCodeSplitting: true,
       enablePreloading: true,
       enableCaching: true,
-      ...config,
-    };
+      ...config};
   }
 
   init(): void {
@@ -486,8 +485,7 @@ class PerformanceOptimizer {
       cumulativeLayoutShift: 0, // Would need to be measured separately
       totalBlockingTime: 0, // Would need to be measured separately
       speedIndex: 0, // Would need to be measured separately
-      timeToInteractive: navigation.domInteractive - navigation.navigationStart,
-    };
+      timeToInteractive: navigation.domInteractive - navigation.navigationStart};
 
     return this.metrics;
   }
@@ -642,8 +640,7 @@ export function collectPerformanceMetrics(): PerformanceMetrics | null {
     cumulativeLayoutShift: 0,
     totalBlockingTime: 0,
     speedIndex: 0,
-    timeToInteractive: navigation.domInteractive - navigation.navigationStart,
-  };
+    timeToInteractive: navigation.domInteractive - navigation.navigationStart};
 }
 
 // Export instances

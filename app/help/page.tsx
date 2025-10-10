@@ -143,11 +143,9 @@ const HelpPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Help Center
@@ -155,7 +153,6 @@ const HelpPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Find answers, get support, and learn how to make the most of our AI solutions
           </p>
-
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">
             <div className="relative">
@@ -171,7 +168,6 @@ const HelpPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quick Links */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +179,6 @@ const HelpPage: React.FC = () => {
               Access our most popular resources and support channels
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickLinks.map((link, index) => (
               <a
@@ -207,7 +202,6 @@ const HelpPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,7 +213,6 @@ const HelpPage: React.FC = () => {
               Find answers to common questions about our services and solutions
             </p>
           </div>
-
           <div className="space-y-6">
             {faqCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="cyber-card">
@@ -237,7 +230,6 @@ const HelpPage: React.FC = () => {
                     <ChevronRight className="w-6 h-6 text-cyan-400" />
                   )}
                 </button>
-
                 {expandedCategory === category.title && (
                   <div className="px-6 pb-6 space-y-4">
                     {category.questions.map((faq, faqIndex) => (
@@ -253,7 +245,6 @@ const HelpPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Support */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -265,7 +256,6 @@ const HelpPage: React.FC = () => {
               Our support team is here to help you succeed
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactMethods.map((method, index) => (
               <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
@@ -283,7 +273,6 @@ const HelpPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

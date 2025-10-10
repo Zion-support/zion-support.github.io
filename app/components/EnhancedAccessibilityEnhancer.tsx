@@ -22,8 +22,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   enableReducedMotion = true,
   enableSkipLinks = true,
   enableColorContrast = true,
-  enableFontScaling = true,
-}) => {
+  enableFontScaling = true}) => {
   // Keyboard navigation enhancement
   const enhanceKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined' || !enableKeyboardNavigation) return;

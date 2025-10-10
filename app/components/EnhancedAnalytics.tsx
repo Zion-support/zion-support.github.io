@@ -20,8 +20,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   enablePerformanceTracking = true,
   enableUserBehaviorTracking = true,
   enableConversionTracking = true,
-  enableHeatmapTracking = false,
-}) => {
+  enableHeatmapTracking = false}) => {
   // Google Analytics setup
   const setupGoogleAnalytics = useCallback(() => {
     if (typeof window === 'undefined' || !enableGoogleAnalytics) return;

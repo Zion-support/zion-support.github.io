@@ -263,12 +263,10 @@ class AdvancedAnalytics {
         visibilityState: document.visibilityState
       })
     })
-
     // Track focus changes
     window.addEventListener('focus', () => {
       this.trackEvent('window_focus')
     })
-
     window.addEventListener('blur', () => {
       this.trackEvent('window_blur')
     })

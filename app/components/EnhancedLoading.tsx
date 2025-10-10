@@ -62,7 +62,8 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
       case 'skeleton':
         return renderSkeleton();
       default:
-        return renderSpinner();
+        return renderSpinner(</div></div></div></div></div></div></div>
+  );
     }
   };
 

@@ -39,7 +39,6 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
         <p className="text-gray-300">{description}</p>
         {price && <div className="text-cyan-400 font-bold text-xl">{price}</div>}
       </div>
-
       <div className="space-y-3">
         <h4 className="text-white font-semibold">Key Features:</h4>
         <ul className="space-y-2">
@@ -51,7 +50,6 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
           ))}
         </ul>
       </div>
-
       <Link
         to={href}
         className="w-full cyber-button inline-flex items-center justify-center px-6 py-3 text-center font-semibold rounded-lg transition-all duration-300 group"

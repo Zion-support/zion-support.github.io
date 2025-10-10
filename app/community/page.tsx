@@ -139,11 +139,9 @@ const CommunityPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Community
@@ -151,7 +149,6 @@ const CommunityPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Connect, learn, and grow with AI professionals and enthusiasts worldwide
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Join Community
@@ -163,7 +160,6 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,7 +176,6 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Tabs Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +211,6 @@ const CommunityPage: React.FC = () => {
               Resources
             </button>
           </div>
-
           {/* Discussions Tab */}
           {activeTab === 'discussions' && (
             <div className="space-y-6">
@@ -227,7 +221,6 @@ const CommunityPage: React.FC = () => {
                   New Discussion
                 </button>
               </div>
-
               {discussions.map((discussion) => (
                 <div key={discussion.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start space-x-4">
@@ -337,7 +330,6 @@ const CommunityPage: React.FC = () => {
           )}
         </div>
       </section>
-
       <Footer />
     </div>
   );

@@ -173,7 +173,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* Billing Toggle */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -206,7 +205,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -248,7 +246,6 @@ export default function PricingPage() {
                       </div>
                     )}
                   </div>
-
                   <div className="space-y-4 mb-8">
                     <h4 className="text-lg font-semibold text-white mb-3">What's included:</h4>
                     {plan.features.map((feature, featureIndex) => (
@@ -264,7 +261,6 @@ export default function PricingPage() {
                       </div>
                     ))}
                   </div>
-
                   <button
                     onClick={() => setSelectedPlan(plan.name.toLowerCase())}
                     className={`w-full py-3 px-6 rounded-lg font-bold transition-all ${
@@ -281,7 +277,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* Add-ons */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -315,7 +310,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* FAQ */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -339,7 +333,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

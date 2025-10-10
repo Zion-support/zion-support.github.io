@@ -288,7 +288,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -305,7 +304,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -328,7 +326,6 @@ export default function TeamPage() {
                 <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
-
                 <div className="space-y-2 mb-6">
                   <div className="text-sm text-gray-400">
                     <strong>Experience:</strong> {member.experience}
@@ -337,7 +334,6 @@ export default function TeamPage() {
                     <strong>Education:</strong> {member.education}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
                   <div className="flex flex-wrap justify-center gap-2">
@@ -348,7 +344,6 @@ export default function TeamPage() {
                     ))}
                   </div>
                 </div>
-
                 <div className="flex justify-center space-x-4">
                   {member.social.linkedin && (
                     <a href={member.social.linkedin} className="text-gray-400 hover:text-cyan-400 transition-colors">
@@ -376,7 +371,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Departments */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -409,7 +403,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -434,7 +427,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

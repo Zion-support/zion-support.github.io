@@ -120,7 +120,6 @@ const BlockchainWeb3Page: React.FC = () => {
         <meta name="keywords" content="blockchain development, Web3, smart contracts, DeFi, NFT marketplace, DApp development, cryptocurrency, blockchain consulting" />
         <link rel="canonical" href="https://ziontechgroup.com/blockchain-web3" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -148,7 +147,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Services Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -157,7 +155,6 @@ const BlockchainWeb3Page: React.FC = () => {
               Comprehensive blockchain solutions from smart contracts to complete DeFi platforms and NFT marketplaces.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300 group">
@@ -192,7 +189,6 @@ const BlockchainWeb3Page: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Supported Platforms */}
         <div className="bg-slate-800/30 py-20">
           <div className="container mx-auto px-4">
@@ -202,7 +198,6 @@ const BlockchainWeb3Page: React.FC = () => {
                 We develop on all major blockchain platforms to ensure maximum compatibility and reach.
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {platforms.map((platform, index) => (
                 <div key={index} className="text-center group">
@@ -216,7 +211,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -225,7 +219,6 @@ const BlockchainWeb3Page: React.FC = () => {
               Transparent pricing for blockchain development services with no hidden costs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pricing.map((package_, index) => (
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
@@ -247,7 +240,6 @@ const BlockchainWeb3Page: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center">

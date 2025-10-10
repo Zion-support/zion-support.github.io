@@ -17,8 +17,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     FID: null,
     FCP: null,
     LCP: null,
-    TTFB: null,
-  });
+    TTFB: null});
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -86,7 +85,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           ✕
         </button>
       </div>
-      
       <div className="space-y-2 text-xs">
         <div className="flex justify-between items-center">
           <span className="text-gray-300">CLS:</span>
@@ -94,28 +92,24 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             {metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})
           </span>
         </div>
-        
         <div className="flex justify-between items-center">
           <span className="text-gray-300">FID:</span>
           <span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>
             {metrics.FID ? `${metrics.FID.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FID, { good: 100, needsImprovement: 300 })})
           </span>
         </div>
-        
         <div className="flex justify-between items-center">
           <span className="text-gray-300">FCP:</span>
           <span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>
             {metrics.FCP ? `${metrics.FCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FCP, { good: 1800, needsImprovement: 3000 })})
           </span>
         </div>
-        
         <div className="flex justify-between items-center">
           <span className="text-gray-300">LCP:</span>
           <span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>
             {metrics.LCP ? `${metrics.LCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.LCP, { good: 2500, needsImprovement: 4000 })})
           </span>
         </div>
-        
         <div className="flex justify-between items-center">
           <span className="text-gray-300">TTFB:</span>
           <span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>
@@ -123,7 +117,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           </span>
         </div>
       </div>
-      
       <div className="mt-3 pt-2 border-t border-gray-700">
         <p className="text-xs text-gray-400">
           Press Ctrl+Shift+P to toggle

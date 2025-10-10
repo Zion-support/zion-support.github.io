@@ -478,7 +478,6 @@ export class TestRunner {
                 <p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
-
           )
           .join('')}
     </div>
@@ -580,7 +579,6 @@ export class TestRunner {
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/>' : ''}
             </testcase>
-
           )
           .join('')}
     </testsuite>
@@ -943,8 +941,7 @@ export class Assert {
       fn();}
     } catch (error) {
       throw new Error(`}
-        `Expected function not to throw, but it threw: ${(error as Error).message}
-      )
+        `Expected function not to throw, but it threw: ${(error as Error).message})
     }
   }
   /**
@@ -957,8 +954,7 @@ export class Assert {
   ): void {
     if (!(value instanceof constructor)) {
       throw new Error(`}
-        message || `Expected ${value} to be an instance of ${constructor.name}
-      )
+        message || `Expected ${value} to be an instance of ${constructor.name})
     }
   }
   /**

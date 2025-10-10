@@ -144,7 +144,6 @@ const AILogoDesignerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -190,7 +189,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
@@ -202,7 +200,6 @@ const AILogoDesignerPage: React.FC = () => {
               Everything you need to create professional logos that represent your brand perfectly.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
@@ -231,7 +228,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Logo Styles Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -243,7 +239,6 @@ const AILogoDesignerPage: React.FC = () => {
               Choose from various design styles or let AI suggest the perfect style for your brand.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {logoStyles.map((style, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
@@ -271,7 +266,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
@@ -283,7 +277,6 @@ const AILogoDesignerPage: React.FC = () => {
               Experience the future of logo design with AI-powered creativity and professional results.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -304,7 +297,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -316,7 +308,6 @@ const AILogoDesignerPage: React.FC = () => {
               Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>
@@ -338,7 +329,6 @@ const AILogoDesignerPage: React.FC = () => {
                     <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
                   )}
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -347,7 +337,6 @@ const AILogoDesignerPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="#contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -363,7 +352,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
@@ -375,7 +363,6 @@ const AILogoDesignerPage: React.FC = () => {
               See how AI Logo Designer Pro has helped businesses create amazing brand identities.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6">
@@ -394,7 +381,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto max-w-4xl text-center">
@@ -428,7 +414,6 @@ const AILogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

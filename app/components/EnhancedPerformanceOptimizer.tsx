@@ -197,9 +197,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               event_category: 'Performance',
               event_label: metric.name,
               value: Math.round(metric.value),
-              non_interaction: true,
-
-          }
+              non_interaction: true}
         };
 
         getCLS(reportMetric);
@@ -326,10 +324,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             event_category: 'Performance',
             event_label: key,
             value: Math.round(value),
-            non_interaction: true,
-
-
-      }
+            non_interaction: true}
     }
   }, []);
 

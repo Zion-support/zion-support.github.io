@@ -9,10 +9,8 @@ export default function AIInventoryManagementPage() {
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-inventory-management" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -26,7 +24,6 @@ export default function AIInventoryManagementPage() {
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
             </p>
           </section>
-
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
@@ -38,7 +35,6 @@ export default function AIInventoryManagementPage() {
                   AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.
                 </p>
               </div>
-
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">📦</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Automated Reordering</h3>
@@ -46,7 +42,6 @@ export default function AIInventoryManagementPage() {
                   Automatically reorder products when stock levels reach optimal thresholds to prevent stockouts.
                 </p>
               </div>
-
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">bar-chart</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Analytics</h3>
@@ -54,7 +49,6 @@ export default function AIInventoryManagementPage() {
                   Get instant insights into inventory performance, turnover rates, and optimization opportunities.
                 </p>
               </div>
-
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">target</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Stock Optimization</h3>
@@ -62,7 +56,6 @@ export default function AIInventoryManagementPage() {
                   AI optimizes stock levels to minimize carrying costs while maintaining service levels.
                 </p>
               </div>
-
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🚨</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Alert System</h3>
@@ -70,7 +63,6 @@ export default function AIInventoryManagementPage() {
                   Get notified about low stock, overstock, slow-moving items, and other critical inventory issues.
                 </p>
               </div>
-
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">smartphone</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access</h3>
@@ -80,7 +72,6 @@ export default function AIInventoryManagementPage() {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
@@ -97,7 +88,6 @@ export default function AIInventoryManagementPage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-
               <div className="cyber-card p-8 text-center border-2 border-cyan-400">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>
@@ -111,7 +101,6 @@ export default function AIInventoryManagementPage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-
               <div className="cyber-card p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
@@ -127,7 +116,6 @@ export default function AIInventoryManagementPage() {
               </div>
             </div>
           </section>
-
           {/* Results Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>
@@ -137,19 +125,16 @@ export default function AIInventoryManagementPage() {
                 <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>
                 <p className="text-gray-300">40% reduction in inventory costs</p>
               </div>
-
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-4">95%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Forecast Accuracy</h3>
                 <p className="text-gray-300">95% accuracy in demand forecasting</p>
               </div>
-
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-pink-400 mb-4">80%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Stockout Reduction</h3>
                 <p className="text-gray-300">80% reduction in stockouts</p>
               </div>
-
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-yellow-400 mb-4">60%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Time Saved</h3>
@@ -157,7 +142,6 @@ export default function AIInventoryManagementPage() {
               </div>
             </div>
           </section>
-
           {/* Use Cases Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>
@@ -167,19 +151,16 @@ export default function AIInventoryManagementPage() {
                 <h3 className="text-xl font-bold text-white mb-4">E-commerce</h3>
                 <p className="text-gray-300">Optimize inventory for online retail with demand forecasting and automated reordering.</p>
               </div>
-
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">🏭</div>
                 <h3 className="text-xl font-bold text-white mb-4">Manufacturing</h3>
                 <p className="text-gray-300">Manage raw materials and finished goods with AI-powered optimization.</p>
               </div>
-
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">🏪</div>
                 <h3 className="text-xl font-bold text-white mb-4">Retail</h3>
                 <p className="text-gray-300">Optimize store inventory levels and reduce carrying costs with intelligent forecasting.</p>
               </div>
-
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">🚚</div>
                 <h3 className="text-xl font-bold text-white mb-4">Distribution</h3>
@@ -187,7 +168,6 @@ export default function AIInventoryManagementPage() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today</h2>
@@ -204,7 +184,6 @@ export default function AIInventoryManagementPage() {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </div>

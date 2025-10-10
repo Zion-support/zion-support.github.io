@@ -24,7 +24,6 @@ export const generateMetaTags = (data: SEOData): string => {
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <link rel="canonical" href="${canonicalUrl}" />
-
     <!-- Open Graph -->
     <meta property="og:type" content="${ogType}" />
     <meta property="og:title" content="${title}" />
@@ -32,7 +31,6 @@ export const generateMetaTags = (data: SEOData): string => {
     <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:image" content="${ogImage}" />
     <meta property="og:site_name" content="Zion Tech Group" />
-
     <!-- Twitter -->
     <meta name="twitter:card" content="${twitterCard}" />
     <meta name="twitter:title" content="${title}" />

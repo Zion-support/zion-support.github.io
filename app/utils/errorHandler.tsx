@@ -255,7 +255,6 @@ export class ErrorHandler {
           ...error,
           timestamp: error.timestamp.toISOString()
         })
-
     } catch (err) {
       }
   }

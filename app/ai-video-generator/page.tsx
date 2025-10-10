@@ -125,7 +125,6 @@ const AIVideoGenerator: React.FC = memo(() => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-video-generator" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -133,16 +132,13 @@ const AIVideoGenerator: React.FC = memo(() => {
             <Video className="w-4 h-4" />
             <span>AI Video Creation</span>
           </div>
-
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Video Generator
           </h1>
-
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Create professional videos from text prompts in minutes. Our AI-powered platform generates
             engaging content with custom branding, multiple formats, and 4K quality for any platform.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -159,7 +155,6 @@ const AIVideoGenerator: React.FC = memo(() => {
             </a>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -185,7 +180,6 @@ const AIVideoGenerator: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
@@ -205,7 +199,6 @@ const AIVideoGenerator: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
@@ -222,7 +215,6 @@ const AIVideoGenerator: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
@@ -266,7 +258,6 @@ const AIVideoGenerator: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing Videos?</h2>

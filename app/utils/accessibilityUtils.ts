@@ -281,8 +281,7 @@ class AccessibilityEnhancer {
       enableScreenReaderSupport: true,
       enableFocusManagement: true,
       enableAriaLabels: true,
-      ...config,
-    };
+      ...config};
   }
 
   init(): void {
@@ -412,8 +411,7 @@ class AccessibilityEnhancer {
       focusManagement: this.checkFocusManagement(),
       ariaLabels: this.checkAriaLabels(),
       headingStructure: this.checkHeadingStructure(),
-      altText: this.checkAltText(),
-    };
+      altText: this.checkAltText()};
 
     // Calculate overall score
     const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);

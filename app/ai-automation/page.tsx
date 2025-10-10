@@ -117,10 +117,8 @@ const AIAutomationPage: React.FC = () => {
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-automation" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Hero Section */}
@@ -135,7 +133,6 @@ const AIAutomationPage: React.FC = () => {
                 Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase,
                 60% time savings, and zero human error with our intelligent automation platform.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -152,7 +149,6 @@ const AIAutomationPage: React.FC = () => {
                 </a>
               </div>
             </section>
-
             {/* Stats Section */}
             <section className="mb-16">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -165,7 +161,6 @@ const AIAutomationPage: React.FC = () => {
                 ))}
               </div>
             </section>
-
             {/* Features Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -195,7 +190,6 @@ const AIAutomationPage: React.FC = () => {
                 ))}
               </div>
             </section>
-
             {/* Pricing Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -220,7 +214,6 @@ const AIAutomationPage: React.FC = () => {
                         <span className="text-gray-300 ml-1">{plan.period}</span>
                       </div>
                     </div>
-
                     <ul className="space-y-4 mb-8">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
@@ -229,7 +222,6 @@ const AIAutomationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-
                     <a
                       href="/contact"
                       className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -244,7 +236,6 @@ const AIAutomationPage: React.FC = () => {
                 ))}
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center cyber-card">
@@ -276,7 +267,6 @@ const AIAutomationPage: React.FC = () => {
             </section>
           </div>
         </main>
-
         <Footer />
       </div>
     </div>

@@ -70,7 +70,6 @@ const ContentCarousel: React.FC = () => {
         <h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
           Success Stories
         </h2>
-
         <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden rounded-2xl">
             <div
@@ -121,7 +120,6 @@ const ContentCarousel: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation buttons */}
           <button
             onClick={prevSlide}
@@ -130,7 +128,6 @@ const ContentCarousel: React.FC = () => {
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
@@ -138,7 +135,6 @@ const ContentCarousel: React.FC = () => {
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-
           {/* Slide indicators */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (

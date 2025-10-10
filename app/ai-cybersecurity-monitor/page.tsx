@@ -132,7 +132,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -140,16 +139,13 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             <Shield className="w-4 h-4" />
             <span>AI-Powered Security</span>
           </div>
-
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Cybersecurity Monitor
           </h1>
-
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Protect your business with advanced AI-powered cybersecurity monitoring.
             Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -166,7 +162,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             </a>
           </div>
         </section>
-
         {/* Security Metrics */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -179,7 +174,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2>
@@ -199,7 +193,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions</h2>
@@ -216,7 +209,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans</h2>
@@ -260,7 +252,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-red-600/20 to-orange-600/20 p-12 rounded-lg border border-red-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Don't Wait for a Breach</h2>

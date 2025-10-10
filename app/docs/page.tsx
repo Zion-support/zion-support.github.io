@@ -83,7 +83,6 @@ const DocsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
       <Navigation />
-
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -98,7 +97,6 @@ const DocsPage: React.FC = () => {
               Comprehensive documentation for all our services, APIs, and tools.
               Find guides, tutorials, and reference materials to help you succeed.
             </p>
-
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative">
@@ -114,7 +112,6 @@ const DocsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Documentation Categories */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -151,7 +148,6 @@ const DocsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {filteredDocs.length === 0 && searchQuery && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">search</div>
@@ -167,7 +163,6 @@ const DocsPage: React.FC = () => {
             )}
           </div>
         </section>
-
         {/* Quick Links */}
         <section className="py-16 px-4 bg-slate-800/30">
           <div className="max-w-6xl mx-auto">
@@ -185,7 +180,6 @@ const DocsPage: React.FC = () => {
                 </h3>
                 <p className="text-sm text-gray-400">Complete API documentation</p>
               </Link>
-
               <Link
                 to="/micro-saas"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
@@ -196,7 +190,6 @@ const DocsPage: React.FC = () => {
                 </h3>
                 <p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
               </Link>
-
               <Link
                 to="/compliance"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
@@ -207,7 +200,6 @@ const DocsPage: React.FC = () => {
                 </h3>
                 <p className="text-sm text-gray-400">Security and compliance info</p>
               </Link>
-
               <Link
                 to="/contact"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
@@ -221,7 +213,6 @@ const DocsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -249,7 +240,6 @@ const DocsPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

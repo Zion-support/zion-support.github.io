@@ -147,7 +147,6 @@ const AutonomousSystemsPage: React.FC = () => {
         <meta name="description" content="Advanced autonomous systems services including self-healing infrastructure, process automation, and intelligent monitoring solutions." />
         <meta name="keywords" content="autonomous systems, self-healing infrastructure, process automation, intelligent monitoring, business automation" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
@@ -171,7 +170,6 @@ const AutonomousSystemsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,7 +213,6 @@ const AutonomousSystemsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
@@ -236,7 +233,6 @@ const AutonomousSystemsPage: React.FC = () => {
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-green-600">{service.price}</span>
@@ -246,7 +242,6 @@ const AutonomousSystemsPage: React.FC = () => {
                           Save up to 45% vs market rates
                         </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -258,7 +253,6 @@ const AutonomousSystemsPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
@@ -269,7 +263,6 @@ const AutonomousSystemsPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
@@ -281,7 +274,6 @@ const AutonomousSystemsPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                         Get Autonomous Consultation
                       </button>
@@ -337,7 +329,6 @@ const AutonomousSystemsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

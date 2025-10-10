@@ -78,15 +78,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-red-400 cursor-pointer font-medium mb-2">
@@ -113,7 +110,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              
               <button
                 onClick={this.handleReload}
                 className="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
@@ -121,7 +117,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Reload Page
               </button>
-              
               <button
                 onClick={this.handleGoHome}
                 className="w-full bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
@@ -130,7 +125,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-
             <div className="mt-6 pt-4 border-t border-gray-700">
               <p className="text-sm text-gray-400 mb-2">
                 If this problem persists, please contact our support team:

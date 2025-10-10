@@ -156,7 +156,6 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
-
       {/* Quantum Particles */}
       <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
       <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }}></div>
@@ -173,13 +172,11 @@ const Footer: React.FC = memo(() => {
               </div>
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span>
             </div>
-
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing,
               autonomous systems, and digital transformation services. Transforming businesses
               with cutting-edge technology and innovative solutions.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300 group">
@@ -209,7 +206,6 @@ const Footer: React.FC = memo(() => {
                 </div>
               </div>
             </div>
-
             {/* Social Links */}
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -223,7 +219,6 @@ const Footer: React.FC = memo(() => {
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div className="lg:col-span-3">
             <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>
@@ -250,7 +245,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </div>
           </div>
-
           {/* Quick Links */}
           <div className="lg:col-span-2">
             <div className="space-y-8">
@@ -270,7 +264,6 @@ const Footer: React.FC = memo(() => {
                   ))}
                 </ul>
               </div>
-
               {/* Support */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Support</h4>
@@ -287,7 +280,6 @@ const Footer: React.FC = memo(() => {
                   ))}
                 </ul>
               </div>
-
               {/* Legal */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Legal</h4>
@@ -307,7 +299,6 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="max-w-2xl mx-auto text-center">
@@ -332,7 +323,6 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -340,7 +330,6 @@ const Footer: React.FC = memo(() => {
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />

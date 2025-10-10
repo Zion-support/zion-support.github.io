@@ -97,9 +97,7 @@ const BusinessIntelligencePage: React.FC = () => {
         <title>Business Intelligence Services - Zion Tech Group</title>
         <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
       </Helmet>
-
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -123,7 +121,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>
@@ -144,7 +141,6 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="mb-16 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-8">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases</h2>
@@ -163,7 +159,6 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans</h2>
@@ -204,7 +199,6 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -236,7 +230,6 @@ const BusinessIntelligencePage: React.FC = () => {
             </div>
           </div>
         </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -248,7 +241,6 @@ const BusinessIntelligencePage: React.FC = () => {
               Comprehensive business intelligence solutions to unlock the power of your data.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {biServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -262,14 +254,12 @@ const BusinessIntelligencePage: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-2xl font-bold text-white">{service.price}</span>
                     <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -281,7 +271,6 @@ const BusinessIntelligencePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -293,7 +282,6 @@ const BusinessIntelligencePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -304,7 +292,6 @@ const BusinessIntelligencePage: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">
                   Get Started
                 </button>
@@ -313,7 +300,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -325,7 +311,6 @@ const BusinessIntelligencePage: React.FC = () => {
               A proven methodology to deliver successful business intelligence solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
@@ -339,7 +324,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -351,7 +335,6 @@ const BusinessIntelligencePage: React.FC = () => {
               Experience the power of data-driven decision making with our expert BI solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -364,7 +347,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -392,7 +374,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

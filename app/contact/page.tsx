@@ -120,7 +120,6 @@ const ContactPage: React.FC = () => {
         description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -130,17 +129,14 @@ const ContactPage: React.FC = () => {
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">Get In Touch</span>
             </div>
-
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
               Let's Build the
               <span className="block holographic-text cyber-text">Future Together</span>
             </h1>
-
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
               Ready to transform your business with AI and cutting-edge technology?
               Our experts are here to help you achieve your goals.
             </p>
-
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -154,7 +150,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Methods */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -184,14 +179,12 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Enhanced Contact Form */}
       <section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20">
         <div className="container mx-auto px-4">
           <EnhancedContactForm />
         </div>
       </section>
-
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -231,7 +224,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -255,7 +247,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

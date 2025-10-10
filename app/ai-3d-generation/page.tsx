@@ -149,7 +149,6 @@ const AI3DGenerationPage: React.FC = () => {
         <meta name="description" content="Generate high-quality 3D models using AI. Create characters, environments, and objects from text descriptions. Starting at $199/month." />
         <meta name="keywords" content="3D generation, AI 3D, 3D models, game assets, 3D design, virtual reality, augmented reality" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -164,7 +163,6 @@ const AI3DGenerationPage: React.FC = () => {
             Create stunning 3D models, characters, and environments from simple text descriptions.
             Transform your ideas into photorealistic 3D assets in minutes, not months.
           </p>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -184,7 +182,6 @@ const AI3DGenerationPage: React.FC = () => {
               <div className="text-gray-300">Support</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -204,7 +201,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -234,7 +230,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Workflow */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -257,7 +252,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Applications */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -286,7 +280,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -332,7 +325,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -348,7 +340,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">

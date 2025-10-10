@@ -20,7 +20,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </nav>
-
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -42,7 +41,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -54,7 +52,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
               Harness the power of quantum computing to predict market movements and optimize your financial strategy.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
@@ -65,7 +62,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 Process millions of market variables simultaneously using quantum parallel processing for comprehensive analysis.
               </p>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <BarChart className="w-6 h-6 text-white" />
@@ -75,7 +71,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 Advanced AI models that predict market movements with 95%+ accuracy using quantum-enhanced algorithms.
               </p>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
@@ -85,7 +80,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 Quantum-powered risk analysis that identifies potential threats and opportunities in real-time.
               </p>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6 text-white" />
@@ -95,7 +89,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 AI-driven portfolio management that maximizes returns while minimizing risk using quantum algorithms.
               </p>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
@@ -105,7 +98,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 Instant financial insights and recommendations based on live market data and quantum analysis.
               </p>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
@@ -118,7 +110,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
@@ -130,7 +121,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
               Choose the perfect quantum financial oracle plan for your investment needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Basic</h3>
@@ -157,7 +147,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 Get Started
               </a>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400 rounded-lg p-8 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -190,7 +179,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 Get Started
               </a>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Enterprise</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-6">$2,499<span className="text-lg text-gray-400">/month</span></div>
@@ -223,7 +211,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -245,7 +232,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-cyan-400/20 py-12">
         <div className="container mx-auto px-4 text-center">

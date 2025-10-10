@@ -102,7 +102,7 @@ export const createMockPerformance = (): Performance => {
         name,
         entryType: 'mark',
         startTime: Date.now(),
-        duration: 0,}
+        duration: 0}
         toJSON: () => ({})
       } as PerformanceEntry)
     },
@@ -111,7 +111,7 @@ export const createMockPerformance = (): Performance => {
         name,
         entryType: 'measure',
         startTime: Date.now(),
-        duration: 100,}
+        duration: 100}
         toJSON: () => ({})
       } as PerformanceEntry)
     },
