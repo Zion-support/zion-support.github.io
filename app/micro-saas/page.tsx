@@ -22,108 +22,222 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '1',
       icon: '📊',
-      title: 'Analytics Dashboard',
-      description: 'Real-time analytics and reporting for your business metrics',
+      title: 'AI Analytics Dashboard Pro',
+      description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
       features: [
-        'Real-time data visualization',
-        'Custom report generation',
-        'Email alerts and notifications',
-        'Multi-platform integration',
-        'Advanced filtering options'
+        'Real-time AI analytics',
+        'Predictive forecasting',
+        'Custom AI models',
+        'Automated reporting',
+        'Multi-data source integration',
+        'Advanced visualization'
       ],
-      price: '$29/month',
-      users: 'Up to 5 users',
+      price: '$89/month',
+      users: 'Up to 10 users',
       popular: true,
       category: 'Analytics'
     },
     {
       id: '2',
       icon: '💬',
-      title: 'Customer Chat',
-      description: 'AI-powered customer support and live chat solution',
+      title: 'AI Customer Support Suite',
+      description: 'Complete AI-powered customer service solution with advanced chatbot and human handoff',
       features: [
-        'AI chatbot integration',
-        'Live chat support',
-        'Ticket management system',
+        'Advanced AI chatbot',
+        'Sentiment analysis',
         'Multi-language support',
-        'Analytics and reporting'
+        'Human agent handoff',
+        'Knowledge base integration',
+        'Performance analytics'
       ],
-      price: '$49/month',
-      users: 'Up to 10 users',
-      popular: false,
+      price: '$149/month',
+      users: 'Up to 25 users',
+      popular: true,
       category: 'Communication'
     },
     {
       id: '3',
       icon: '🔐',
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection',
+      title: 'AI Security Monitor Pro',
+      description: 'Next-generation AI-powered security monitoring with behavioral analysis and threat prediction',
       features: [
-        'Real-time threat detection',
-        'Automated security scans',
-        'Compliance reporting',
-        'Incident response tools',
-        'Security dashboard'
+        'AI threat detection',
+        'Behavioral analysis',
+        'Automated incident response',
+        'Compliance monitoring',
+        'Security dashboard',
+        'Threat intelligence'
       ],
-      price: '$79/month',
-      users: 'Up to 25 users',
+      price: '$199/month',
+      users: 'Up to 50 users',
       popular: false,
       category: 'Security'
     },
     {
       id: '4',
       icon: '☁️',
-      title: 'Cloud Backup',
-      description: 'Automated cloud backup and disaster recovery solution',
+      title: 'Smart Cloud Backup AI',
+      description: 'Intelligent cloud backup with AI-powered optimization and automated disaster recovery',
       features: [
-        'Automated daily backups',
+        'AI-powered backup optimization',
+        'Smart deduplication',
+        'Automated disaster recovery',
         'Cross-platform sync',
         'Version control',
-        'Disaster recovery',
         'Encrypted storage'
       ],
-      price: '$39/month',
-      users: 'Up to 15 users',
+      price: '$79/month',
+      users: 'Up to 30 users',
       popular: false,
       category: 'Storage'
     },
     {
       id: '5',
       icon: '📈',
-      title: 'Performance Tracker',
-      description: 'Monitor and optimize your application performance',
+      title: 'AI Performance Optimizer',
+      description: 'AI-driven application performance monitoring with automated optimization recommendations',
       features: [
-        'Performance monitoring',
-        'Error tracking',
-        'Uptime monitoring',
-        'Performance insights',
-        'Alert management'
+        'AI performance analysis',
+        'Automated optimization',
+        'Predictive scaling',
+        'Error prediction',
+        'Cost optimization',
+        'Real-time alerts'
       ],
-      price: '$59/month',
-      users: 'Up to 20 users',
+      price: '$129/month',
+      users: 'Up to 40 users',
       popular: false,
       category: 'Monitoring'
     },
     {
       id: '6',
       icon: '🤖',
-      title: 'AI Assistant',
-      description: 'Intelligent automation and workflow optimization',
+      title: 'AI Workflow Automation',
+      description: 'Advanced AI-powered workflow automation with machine learning and intelligent task management',
       features: [
-        'Workflow automation',
-        'AI-powered insights',
-        'Task scheduling',
+        'AI workflow optimization',
+        'Smart task scheduling',
+        'Machine learning insights',
+        'Custom AI models',
         'Integration capabilities',
-        'Custom AI models'
+        'Performance analytics'
       ],
-      price: '$99/month',
-      users: 'Up to 50 users',
+      price: '$179/month',
+      users: 'Up to 100 users',
       popular: true,
       category: 'AI'
+    },
+    {
+      id: '7',
+      icon: '📝',
+      title: 'AI Content Generator Pro',
+      description: 'Advanced AI content creation tool with multi-format support and brand voice customization',
+      features: [
+        'Multi-format content generation',
+        'Brand voice customization',
+        'SEO optimization',
+        'Plagiarism detection',
+        'Content scheduling',
+        'Performance tracking'
+      ],
+      price: '$99/month',
+      users: 'Up to 20 users',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      id: '8',
+      icon: '📧',
+      title: 'AI Email Marketing Suite',
+      description: 'Intelligent email marketing platform with AI-powered personalization and automation',
+      features: [
+        'AI personalization',
+        'Automated campaigns',
+        'A/B testing',
+        'Segmentation',
+        'Performance analytics',
+        'Deliverability optimization'
+      ],
+      price: '$119/month',
+      users: 'Up to 15 users',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '9',
+      icon: '💰',
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense management with AI-powered categorization and financial insights',
+      features: [
+        'AI expense categorization',
+        'Receipt scanning',
+        'Financial insights',
+        'Budget tracking',
+        'Tax preparation',
+        'Multi-currency support'
+      ],
+      price: '$69/month',
+      users: 'Up to 25 users',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '10',
+      icon: '📅',
+      title: 'AI Calendar Assistant',
+      description: 'Intelligent calendar management with AI-powered scheduling and meeting optimization',
+      features: [
+        'AI scheduling optimization',
+        'Meeting conflict resolution',
+        'Time zone management',
+        'Meeting insights',
+        'Integration capabilities',
+        'Smart reminders'
+      ],
+      price: '$79/month',
+      users: 'Up to 30 users',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      id: '11',
+      icon: '🎯',
+      title: 'AI Lead Generation Engine',
+      description: 'Advanced AI-powered lead generation and qualification with automated nurturing',
+      features: [
+        'AI lead scoring',
+        'Automated nurturing',
+        'Lead qualification',
+        'CRM integration',
+        'Performance tracking',
+        'Custom AI models'
+      ],
+      price: '$159/month',
+      users: 'Up to 35 users',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      id: '12',
+      icon: '📱',
+      title: 'AI Social Media Manager',
+      description: 'Comprehensive AI-powered social media management with content optimization and scheduling',
+      features: [
+        'AI content optimization',
+        'Automated posting',
+        'Engagement analysis',
+        'Hashtag optimization',
+        'Multi-platform support',
+        'Performance analytics'
+      ],
+      price: '$139/month',
+      users: 'Up to 20 users',
+      popular: false,
+      category: 'Social Media'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Content', 'Marketing', 'Finance', 'Productivity', 'Sales', 'Social Media'];
 
   const benefits = [
     'Quick setup and deployment',

@@ -7,36 +7,36 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Business Intelligence', url: '/ai-business-intelligence', description: 'Advanced AI analytics' },
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation suite' },
+    { name: 'AI Cybersecurity Suite', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI E-commerce Optimization', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Financial Analytics', url: '/ai-fintech', description: 'Financial AI applications' },
     { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' },
-    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Financial AI applications' },
-    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+    { name: 'AI HR & Recruitment', url: '/ai-hr', description: 'AI-powered HR solutions' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI marketing automation' },
+    { name: 'AI Supply Chain Optimization', url: '/ai-supply-chain', description: 'Supply chain AI' }
   ];
 
   const itServices = [
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
+    { name: 'Cloud Infrastructure', url: '/cloud-services', description: 'Complete cloud solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Expert IT guidance' },
-    { name: 'Database Services', url: '/database-services', description: 'Database management' },
-    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
-    { name: 'IT Support', url: '/it-support', description: 'Technical support' }
+    { name: 'Database Management', url: '/database', description: 'Database optimization' },
+    { name: 'Cybersecurity Solutions', url: '/cybersecurity', description: 'Advanced security' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Infrastructure setup' },
+    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' },
+    { name: 'Business Intelligence', url: '/data-analytics', description: 'Data analytics' }
   ];
 
   const microSaasServices = [
-    { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Business analytics' },
-    { name: 'Content Generator', url: '/micro-saas/content-generator', description: 'AI content creation' },
-    { name: 'Email Marketing', url: '/micro-saas/email-marketing', description: 'Email automation' },
-    { name: 'Social Manager', url: '/micro-saas/social-manager', description: 'Social media management' },
-    { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'Financial tracking' },
-    { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Scheduling system' }
+    { name: 'AI Analytics Dashboard Pro', url: '/micro-saas', description: 'Advanced AI analytics' },
+    { name: 'AI Customer Support Suite', url: '/micro-saas', description: 'AI customer service' },
+    { name: 'AI Content Generator Pro', url: '/micro-saas', description: 'AI content creation' },
+    { name: 'AI Security Monitor Pro', url: '/micro-saas', description: 'AI security monitoring' },
+    { name: 'AI Workflow Automation', url: '/micro-saas', description: 'Workflow automation' },
+    { name: 'AI Lead Generation Engine', url: '/micro-saas', description: 'AI lead generation' }
   ];
 
   return (
@@ -58,16 +58,16 @@ const Footer: React.FC = memo(() => {
             <div className="flex space-x-4">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
             </div>
             <div className="flex items-center text-sm text-gray-300">
               <Mail className="w-4 h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
+              <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center text-sm text-gray-300">
               <MapPin className="w-4 h-4 mr-2" />
-              <span>San Francisco, CA</span>
+              <span>364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {
   Brain,
   Cloud,
@@ -13,7 +14,16 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  MessageSquare,
+  FileText,
+  ShoppingCart,
+  TrendingUp,
+  Heart,
+  Users,
+  Target,
+  Package,
+  Scale
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -25,61 +35,127 @@ const ServicesPage: React.FC = () => {
   const services = [
     {
       id: 1,
-      title: 'AI Solutions',
-      description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
+      title: 'AI-Powered Business Intelligence',
+      description: 'Advanced AI analytics that transform raw data into strategic business insights and automated decision-making.',
       icon: Brain,
       category: 'AI',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $5,000/month'
+      features: ['Predictive Analytics', 'Machine Learning Models', 'Real-time Insights', 'Automated Reporting'],
+      price: 'Starting at $2,500/month',
+      link: '/ai-business-intelligence'
     },
     {
       id: 2,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      icon: Cloud,
-      category: 'Cloud',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'Starting at $2,000/month'
+      title: 'AI Customer Support Automation',
+      description: 'Intelligent chatbots and customer service solutions that provide 24/7 support with human-like interactions.',
+      icon: MessageSquare,
+      category: 'AI',
+      features: ['AI Chatbots', 'Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis'],
+      price: 'Starting at $1,200/month',
+      link: '/ai-customer-support'
     },
     {
       id: 3,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets and data.',
-      icon: Shield,
-      category: 'Security',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
-      price: 'Starting at $3,000/month'
+      title: 'AI Content Generation Suite',
+      description: 'Comprehensive AI-powered content creation tools for marketing, social media, and business communications.',
+      icon: FileText,
+      category: 'AI',
+      features: ['Content Writing', 'Social Media Posts', 'Email Marketing', 'SEO Optimization'],
+      price: 'Starting at $800/month',
+      link: '/ai-content-generation'
     },
     {
       id: 4,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      icon: BarChart3,
-      category: 'Analytics',
-      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
-      price: 'Starting at $1,500/month'
+      title: 'AI Cybersecurity Suite',
+      description: 'Next-generation AI-powered security solutions that detect and prevent threats in real-time.',
+      icon: Shield,
+      category: 'Security',
+      features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Compliance Monitoring'],
+      price: 'Starting at $3,500/month',
+      link: '/ai-cybersecurity'
     },
     {
       id: 5,
-      title: 'Mobile Development',
-      description: 'Custom mobile applications for iOS and Android platforms.',
-      icon: Smartphone,
-      category: 'Development',
-      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design'],
-      price: 'Starting at $8,000/project'
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Complete cloud solutions including migration, optimization, and management across AWS, Azure, and GCP.',
+      icon: Cloud,
+      category: 'Cloud',
+      features: ['Cloud Migration', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
+      price: 'Starting at $2,000/month',
+      link: '/cloud-services'
     },
     {
       id: 6,
-      title: 'Database Services',
-      description: 'Database design, optimization, and management services.',
-      icon: Database,
-      category: 'Database',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $1,000/month'
+      title: 'AI E-commerce Optimization',
+      description: 'AI-driven e-commerce solutions that boost sales through personalized recommendations and automated marketing.',
+      icon: ShoppingCart,
+      category: 'E-commerce',
+      features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Analytics'],
+      price: 'Starting at $1,800/month',
+      link: '/ai-ecommerce-solutions'
+    },
+    {
+      id: 7,
+      title: 'AI Financial Analytics',
+      description: 'Advanced financial AI tools for risk assessment, fraud detection, and investment optimization.',
+      icon: TrendingUp,
+      category: 'Finance',
+      features: ['Risk Assessment', 'Fraud Detection', 'Investment Analysis', 'Financial Forecasting'],
+      price: 'Starting at $2,200/month',
+      link: '/ai-fintech'
+    },
+    {
+      id: 8,
+      title: 'AI Healthcare Solutions',
+      description: 'Medical AI applications for diagnosis assistance, patient monitoring, and healthcare optimization.',
+      icon: Heart,
+      category: 'Healthcare',
+      features: ['Diagnostic Assistance', 'Patient Monitoring', 'Drug Discovery', 'Medical Imaging'],
+      price: 'Starting at $4,000/month',
+      link: '/ai-healthcare'
+    },
+    {
+      id: 9,
+      title: 'AI HR & Recruitment',
+      description: 'Intelligent HR solutions that streamline recruitment, employee management, and workforce optimization.',
+      icon: Users,
+      category: 'HR',
+      features: ['Resume Screening', 'Candidate Matching', 'Employee Analytics', 'Performance Tracking'],
+      price: 'Starting at $1,500/month',
+      link: '/ai-hr'
+    },
+    {
+      id: 10,
+      title: 'AI Marketing Automation',
+      description: 'Complete AI-powered marketing suite for lead generation, campaign optimization, and customer engagement.',
+      icon: Target,
+      category: 'Marketing',
+      features: ['Lead Generation', 'Campaign Optimization', 'Customer Segmentation', 'ROI Tracking'],
+      price: 'Starting at $1,600/month',
+      link: '/ai-marketing'
+    },
+    {
+      id: 11,
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automated optimization.',
+      icon: Package,
+      category: 'Supply Chain',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Analytics'],
+      price: 'Starting at $2,800/month',
+      link: '/ai-supply-chain'
+    },
+    {
+      id: 12,
+      title: 'AI Legal Research Assistant',
+      description: 'AI-powered legal research and document analysis tools for law firms and legal departments.',
+      icon: Scale,
+      category: 'Legal',
+      features: ['Document Analysis', 'Case Research', 'Contract Review', 'Compliance Checking'],
+      price: 'Starting at $2,000/month',
+      link: '/ai-legal'
     }
   ];
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'E-commerce', 'Finance', 'Healthcare', 'HR', 'Marketing', 'Supply Chain', 'Legal'];
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -165,10 +241,13 @@ const ServicesPage: React.FC = () => {
                   </ul>
                   <div className="flex items-center justify-between">
                     <span className="text-blue-400 font-semibold">{service.price}</span>
-                    <button className="flex items-center text-white hover:text-blue-400 transition-colors">
+                    <Link 
+                      to={service.link} 
+                      className="flex items-center text-white hover:text-blue-400 transition-colors"
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

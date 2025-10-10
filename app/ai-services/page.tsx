@@ -36,23 +36,59 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       icon: Zap,
-      title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and plan your AI transformation journey.'
+      title: 'AI Strategy Consulting',
+      description: 'Strategic AI consulting to help you identify opportunities and plan your AI transformation journey.',
+      price: 'Starting at $5,000/month',
+      features: ['AI Roadmap Planning', 'Technology Assessment', 'ROI Analysis', 'Implementation Strategy']
     },
     {
       icon: Shield,
-      title: 'AI Implementation',
-      description: 'End-to-end AI solution implementation with our expert team of AI engineers.'
+      title: 'AI Solution Implementation',
+      description: 'End-to-end AI solution implementation with our expert team of AI engineers and data scientists.',
+      price: 'Starting at $8,000/month',
+      features: ['Custom AI Models', 'Data Pipeline Setup', 'Integration Services', 'Testing & Validation']
     },
     {
       icon: TrendingUp,
-      title: 'AI Optimization',
-      description: 'Optimize your existing AI systems for better performance and efficiency.'
+      title: 'AI System Optimization',
+      description: 'Optimize your existing AI systems for better performance, accuracy, and efficiency.',
+      price: 'Starting at $3,500/month',
+      features: ['Performance Tuning', 'Model Retraining', 'Cost Optimization', 'Scalability Improvements']
     },
     {
       icon: Target,
-      title: 'AI Training',
-      description: 'Comprehensive training programs to upskill your team in AI technologies.'
+      title: 'AI Training & Education',
+      description: 'Comprehensive training programs to upskill your team in AI technologies and best practices.',
+      price: 'Starting at $2,000/month',
+      features: ['Custom Training Programs', 'Hands-on Workshops', 'Certification Programs', 'Ongoing Support']
+    },
+    {
+      icon: Brain,
+      title: 'AI Research & Development',
+      description: 'Cutting-edge AI research and development services for innovative solutions and breakthrough technologies.',
+      price: 'Starting at $10,000/month',
+      features: ['Custom AI Research', 'Prototype Development', 'Proof of Concept', 'Technology Innovation']
+    },
+    {
+      icon: BarChart,
+      title: 'AI Data Analytics',
+      description: 'Advanced AI-powered data analytics and business intelligence solutions for data-driven decisions.',
+      price: 'Starting at $4,500/month',
+      features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Data Visualization']
+    },
+    {
+      icon: MessageSquare,
+      title: 'AI Natural Language Processing',
+      description: 'NLP solutions for text analysis, language understanding, and automated communication systems.',
+      price: 'Starting at $3,000/month',
+      features: ['Text Analysis', 'Language Translation', 'Sentiment Analysis', 'Chatbot Development']
+    },
+    {
+      icon: Eye,
+      title: 'AI Computer Vision',
+      description: 'Computer vision solutions for image recognition, object detection, and visual data analysis.',
+      price: 'Starting at $4,000/month',
+      features: ['Image Recognition', 'Object Detection', 'Video Analysis', 'Visual Search']
     }
   ];
 
@@ -169,12 +205,23 @@ const AIServicesPage: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-center">{service.description}</p>
+                <div className="text-center mb-4">
+                  <span className="text-cyan-400 font-semibold text-lg">{service.price}</span>
+                </div>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
