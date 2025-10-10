@@ -156,6 +156,8 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo' },
     { name: 'AI Time Tracker Pro', href: '/ai-time-tracker', icon: Clock3, category: 'Productivity', price: '$34/mo' },
+    { name: 'AI Focus Timer Pro', href: '/ai-focus-timer', icon: Clock3, category: 'Productivity', price: '$24/mo' },
+    { name: 'AI Memory Palace Pro', href: '/ai-memory-palace', icon: Brain, category: 'Productivity', price: '$39/mo' },
     
     // Content & Marketing
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo' },
@@ -164,10 +166,13 @@ const Navigation: React.FC = () => {
     { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing', price: '$79/mo' },
     { name: 'AI Lead Generation Pro', href: '/ai-lead-generation', icon: Target, category: 'Marketing', price: '$99/mo' },
     { name: 'AI Website Builder Pro', href: '/ai-website-builder', icon: Globe, category: 'Marketing', price: '$89/mo' },
+    { name: 'AI Video Creator Pro', href: '/ai-video-creator', icon: Video, category: 'Content', price: '$149/mo' },
+    { name: 'AI Podcast Studio Pro', href: '/ai-podcast-studio', icon: Music, category: 'Content', price: '$79/mo' },
     
     // Business & Finance
     { name: 'AI CRM Intelligence Pro', href: '/ai-crm', icon: Users, category: 'Business', price: '$89/mo' },
     { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance', price: '$79/mo' },
+    { name: 'AI Personal Finance Optimizer Pro', href: '/ai-personal-finance-optimizer', icon: DollarSign, category: 'Finance', price: '$49/mo' },
     { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator', icon: FileText, category: 'Finance', price: '$49/mo' },
     { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker', icon: CreditCard, category: 'Finance', price: '$29/mo' },
     { name: 'AI Stock Portfolio Manager', href: '/ai-stock-portfolio-manager', icon: TrendingUp, category: 'Finance', price: '$79/mo' },
@@ -176,6 +181,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot', icon: Bot, category: 'Support', price: '$99/mo' },
     { name: 'AI Chatbot Builder Pro', href: '/ai-chatbot-builder', icon: Bot, category: 'Support', price: '$69/mo' },
     { name: 'AI Email Assistant Pro', href: '/ai-email-assistant', icon: Mail, category: 'Support', price: '$39/mo' },
+    { name: 'AI Meeting Assistant Pro', href: '/ai-meeting-assistant', icon: Users, category: 'Support', price: '$79/mo' },
     
     // Development & Technical
     { name: 'AI Code Review Assistant Pro', href: '/ai-code-generation', icon: Code, category: 'Development', price: '$89/mo' },
@@ -183,10 +189,12 @@ const Navigation: React.FC = () => {
     { name: 'AI Cybersecurity Shield Pro', href: '/ai-cybersecurity', icon: Shield, category: 'Security', price: '$199/mo' },
     { name: 'AI Document Processor Pro', href: '/ai-document-processing', icon: FileText, category: 'Development', price: '$79/mo' },
     { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$19/mo' },
+    { name: 'AI Language Translation Pro', href: '/ai-language-translation-pro', icon: Globe, category: 'Development', price: '$69/mo' },
     
     // Analytics & Data
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics', price: '$99/mo' },
     { name: 'AI Data Visualization Pro', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics', price: '$69/mo' },
+    { name: 'AI Blockchain Analytics Pro', href: '/ai-blockchain-analytics', icon: Lock, category: 'Analytics', price: '$199/mo' },
     
     // Creative & Media
     { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative', price: '$149/mo' },
@@ -195,42 +203,60 @@ const Navigation: React.FC = () => {
     { name: 'AI Fashion Design Studio Pro', href: '/ai-fashion-design', icon: Palette, category: 'Creative', price: '$89/mo' },
     { name: 'AI 3D Generation Studio Pro', href: '/ai-3d-generation', icon: Camera, category: 'Creative', price: '$199/mo' },
     { name: 'AI Logo Designer Pro', href: '/ai-logo-designer', icon: Palette, category: 'Creative', price: '$59/mo' },
+    { name: 'AI Metaverse Builder Pro', href: '/ai-metaverse-builder', icon: Globe, category: 'Creative', price: '$249/mo' },
+    { name: 'AI AR Studio Pro', href: '/ai-ar-studio', icon: Smartphone, category: 'Creative', price: '$179/mo' },
     
     // Health & Wellness
     { name: 'AI Healthcare Assistant Pro', href: '/ai-healthcare', icon: Stethoscope, category: 'Health', price: '$49/mo' },
     { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Heart, category: 'Health', price: '$39/mo' },
+    { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion', icon: Heart, category: 'Health', price: '$79/mo' },
+    { name: 'AI Sleep Optimizer Pro', href: '/ai-sleep-optimizer', icon: Clock3, category: 'Health', price: '$34/mo' },
+    { name: 'AI Mood Tracker Pro', href: '/ai-mood-tracker', icon: Heart, category: 'Health', price: '$29/mo' },
+    
+    // Advanced & Emerging
+    { name: 'AI Climate Intelligence Pro', href: '/ai-climate-intelligence', icon: Globe, category: 'Sustainability', price: '$199/mo' },
+    { name: 'AI Quantum Simulator Pro', href: '/ai-quantum-simulator', icon: Cpu, category: 'Quantum', price: '$299/mo' },
+    { name: 'AI Space Analytics Pro', href: '/ai-space-analytics', icon: Globe, category: 'Space', price: '$399/mo' },
+    { name: 'AI Digital Twin Creator Pro', href: '/ai-digital-twin', icon: Settings, category: 'Digital Twin', price: '$329/mo' },
+    { name: 'AI Edge Computing Manager Pro', href: '/ai-edge-computing', icon: Zap, category: 'Edge Computing', price: '$179/mo' },
     
     // Sales & Business
-    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation', icon: Target, category: 'Sales', price: '$149/mo' }
+    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation', icon: Target, category: 'Sales', price: '$149/mo' },
+    { name: 'AI Home Automation Pro', href: '/ai-home-automation', icon: Home, category: 'Smart Home', price: '$89/mo' },
+    { name: 'AI Language Learning Pro', href: '/ai-language-learning', icon: Globe, category: 'Education', price: '$49/mo' }
   ];
 
   const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
-    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
-    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
-    { name: 'AI Human Resources', href: '/ai-hr', icon: Users },
-    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
-    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
-    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
-    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
-    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
-    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
-    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/ai-quantum-computing', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar },
-    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
-    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings }
+    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$1,500/mo' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, price: '$1,300/mo' },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe, price: '$1,800/mo' },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield, price: '$1,200/mo' },
+    { name: 'AI Human Resources', href: '/ai-hr', icon: Users, price: '$1,100/mo' },
+    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText, price: '$2,000/mo' },
+    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home, price: '$1,400/mo' },
+    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory, price: '$3,000/mo' },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck, price: '$2,200/mo' },
+    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap, price: '$1,200/mo' },
+    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap, price: '$1,600/mo' },
+    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield, price: '$1,500/mo' },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare, price: '$1,100/mo' },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye, price: '$1,400/mo' },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, price: '$1,300/mo' },
+    { name: 'Quantum AI Computing', href: '/ai-quantum-computing', icon: Cpu, price: '$5,000/mo' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, price: '$2,200/mo' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope, price: '$2,500/mo' },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard, price: '$1,900/mo' },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone, price: '$2,800/mo' },
+    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users, price: '$1,400/mo' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, price: '$800/mo' },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$1,000/mo' },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings, price: '$4,000/mo' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock, price: '$2,200/mo' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings, price: '$3,500/mo' },
+    { name: 'AI Quantum Machine Learning Pro', href: '/ai-quantum-ml-pro', icon: Brain, price: '$2,999/mo' },
+    { name: 'AI Fraud Detection System', href: '/ai-fraud-detection', icon: Shield, price: '$2,200/mo' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, price: '$1,600/mo' },
+    { name: 'AI Financial Services', href: '/ai-financial-services', icon: CreditCard, price: '$1,900/mo' }
   ];
 
   const itServices = [
@@ -256,7 +282,19 @@ const Navigation: React.FC = () => {
     { name: 'Compliance & Governance', href: '/compliance', icon: FileText, price: '$1,500/mo' },
     { name: 'Developer Tools', href: '/developer-tools', icon: Code, price: '$1,200/mo' },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target, price: '$1,000/mo' },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart, price: '$1,100/mo' }
+    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart, price: '$1,100/mo' },
+    { name: 'AI-Powered IT Operations', href: '/ai-powered-it-operations', icon: Brain, price: '$2,200/mo' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Globe, price: '$1,800/mo' },
+    { name: 'Quantum-Safe Security', href: '/quantum-safe-security', icon: Shield, price: '$2,500/mo' },
+    { name: '5G Network Solutions', href: '/5g-network-solutions', icon: Wifi, price: '$3,500/mo' },
+    { name: 'Hybrid Cloud Management', href: '/hybrid-cloud-management', icon: Cloud, price: '$2,800/mo' },
+    { name: 'AI Data Center Optimization', href: '/ai-data-center-optimization', icon: Database, price: '$4,000/mo' },
+    { name: 'Zero Trust Security Architecture', href: '/zero-trust-security', icon: Lock, price: '$2,200/mo' },
+    { name: 'AI-Powered Network Analytics', href: '/ai-network-analytics', icon: BarChart, price: '$1,600/mo' },
+    { name: 'Sustainable IT Solutions', href: '/sustainable-it-solutions', icon: Globe, price: '$1,400/mo' },
+    { name: 'AI-Powered Backup & Recovery', href: '/ai-backup-recovery', icon: HardDrive, price: '$1,200/mo' },
+    { name: 'Microservices Architecture', href: '/microservices-architecture', icon: Settings, price: '$2,000/mo' },
+    { name: 'AI-Powered IT Support', href: '/ai-it-support', icon: Users, price: '$1,000/mo' }
   ];
 
   const specializedServices = [
@@ -271,7 +309,14 @@ const Navigation: React.FC = () => {
     { name: 'Business Apps', href: '/business-apps', icon: Briefcase, price: '$1,400/mo' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp, price: '$1,300/mo' },
     { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems', icon: Settings, price: '$4,500/mo' },
-    { name: 'Digital Twin Development', href: '/digital-twin-development', icon: Cpu, price: '$3,200/mo' }
+    { name: 'Digital Twin Development', href: '/digital-twin-development', icon: Cpu, price: '$3,200/mo' },
+    { name: 'AI Smart City Manager Pro', href: '/ai-smart-city-manager', icon: Building, price: '$2,999/mo' },
+    { name: 'AI Precision Agriculture Pro', href: '/ai-precision-agriculture', icon: Globe, price: '$149/mo' },
+    { name: 'AI Ocean Intelligence Pro', href: '/ai-ocean-intelligence', icon: Globe, price: '$279/mo' },
+    { name: 'AI Energy Grid Optimizer Pro', href: '/ai-energy-grid-optimizer', icon: Zap, price: '$1,999/mo' },
+    { name: 'AI Autonomous Vehicle Simulator Pro', href: '/ai-autonomous-vehicle-sim', icon: Car, price: '$499/mo' },
+    { name: 'AI Neural Interface Pro', href: '/ai-neural-interface', icon: Brain, price: '$399/mo' },
+    { name: 'AI Synthetic Biology Designer Pro', href: '/ai-synthetic-biology', icon: Cpu, price: '$599/mo' }
   ];
 
   return (
@@ -313,19 +358,19 @@ const Navigation: React.FC = () => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[1000px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-4 gap-6">
+                <div className="absolute top-full left-0 mt-2 w-[1200px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                  <div className="grid grid-cols-5 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Zap className="w-4 h-4 mr-2" />
                         Micro SAAS
                       </h3>
                       <div className="space-y-3">
-                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
+                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Health', 'Creative'].map(category => (
                           <div key={category}>
                             <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
                             <div className="space-y-1">
-                              {microSAASServices.filter(service => service.category === category).slice(0, 2).map((service) => (
+                              {microSAASServices.filter(service => service.category === category).slice(0, 3).map((service) => (
                                 <a key={service.name}
                                   href={service.href}
                                   className="flex items-center justify-between text-xs text-gray-300 hover:text-cyan-400 transition-colors group"
@@ -333,7 +378,7 @@ const Navigation: React.FC = () => {
                                 >
                                   <div className="flex items-center space-x-2">
                                     <service.icon className="w-3 h-3" />
-                                    <span>{service.name}</span>
+                                    <span className="truncate">{service.name}</span>
                                   </div>
                                   <span className="text-cyan-400 text-xs font-medium">{service.price}</span>
                                 </a>
@@ -349,15 +394,15 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 8).map((service) => (
+                        {aiServices.slice(0, 10).map((service) => (
                           <a key={service.name}
                             href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors group"
+                            className="flex items-center justify-between text-xs text-gray-300 hover:text-cyan-400 transition-colors group"
                             onClick={closeAllMenus}
                           >
                             <div className="flex items-center space-x-2">
                               <service.icon className="w-3 h-3" />
-                              <span>{service.name}</span>
+                              <span className="truncate">{service.name}</span>
                             </div>
                             <span className="text-purple-400 text-xs font-medium">{service.price}</span>
                           </a>
@@ -370,16 +415,16 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <div className="space-y-2">
-                        {itServices.slice(0, 8).map((service) => (
+                        {itServices.slice(0, 10).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors group"
+                            className="flex items-center justify-between text-xs text-gray-300 hover:text-cyan-400 transition-colors group"
                             onClick={closeAllMenus}
                           >
                             <div className="flex items-center space-x-2">
                               <service.icon className="w-3 h-3" />
-                              <span>{service.name}</span>
+                              <span className="truncate">{service.name}</span>
                             </div>
                             <span className="text-green-400 text-xs font-medium">{service.price}</span>
                           </a>
@@ -392,25 +437,47 @@ const Navigation: React.FC = () => {
                         Specialized
                       </h3>
                       <div className="space-y-2">
-                        {specializedServices.slice(0, 8).map((service) => (
+                        {specializedServices.slice(0, 10).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors group"
+                            className="flex items-center justify-between text-xs text-gray-300 hover:text-cyan-400 transition-colors group"
                             onClick={closeAllMenus}
                           >
                             <div className="flex items-center space-x-2">
                               <service.icon className="w-3 h-3" />
-                              <span>{service.name}</span>
+                              <span className="truncate">{service.name}</span>
                             </div>
                             <span className="text-orange-400 text-xs font-medium">{service.price}</span>
                           </a>
                         ))}
                       </div>
                     </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        Emerging Tech
+                      </h3>
+                      <div className="space-y-2">
+                        {microSAASServices.filter(service => ['Sustainability', 'Quantum', 'Space', 'Digital Twin', 'Edge Computing', 'Metaverse', 'AR', 'Smart Home', 'Education'].includes(service.category)).slice(0, 10).map((service) => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="flex items-center justify-between text-xs text-gray-300 hover:text-cyan-400 transition-colors group"
+                            onClick={closeAllMenus}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <service.icon className="w-3 h-3" />
+                              <span className="truncate">{service.name}</span>
+                            </div>
+                            <span className="text-pink-400 text-xs font-medium">{service.price}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                   <div className="mt-6 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-4 gap-4">
                       <a
                         href="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
@@ -433,6 +500,14 @@ const Navigation: React.FC = () => {
                         onClick={closeAllMenus}
                       >
                         <span>View Pricing</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </a>
+                      <a
+                        href="/contact"
+                        className="flex items-center justify-center space-x-2 text-orange-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <span>Get Started</span>
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>
