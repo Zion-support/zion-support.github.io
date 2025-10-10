@@ -424,27 +424,27 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
-            </a>
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            </Link>
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
-            </a>
-            <a href="/team" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            </Link>
+            <Link to="/team" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Team
-            </a>
-            <a href="/careers" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            </Link>
+            <Link to="/careers" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Careers
-            </a>
+            </Link>
             <div className="relative group">
               <button
                 onClick={toggleServices}
@@ -583,24 +583,21 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
-            </a>
-            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
               Enterprise
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
-            </a>
+            </Link>
             
             <div className="flex items-center space-x-4">
               <a
@@ -682,27 +679,27 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-              </a>
-              <a href="/team" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/team" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Team
-              </a>
-              <a href="/careers" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/careers" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Careers
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Case Studies
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Blog
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
-              </a>
+              </Link>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
