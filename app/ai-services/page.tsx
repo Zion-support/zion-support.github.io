@@ -2021,7 +2021,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               </div>
               <div className="holographic px-6 py-3 rounded-lg"></div>
                 <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
-
               </div>
             </div>
           </div>
