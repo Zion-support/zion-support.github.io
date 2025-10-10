@@ -1419,35 +1419,65 @@ const HomePage: React.FC = () => {
     <>
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions | Leading Technology Company</title>
+<<<<<<< HEAD
         <meta name="description" content="Transform your business with cutting-edge AI and IT solutions. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
         <meta name="keywords" content="AI solutions, cloud computing, cybersecurity, digital transformation, machine learning, IT consulting, artificial intelligence, business automation, data analytics, cloud migration" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#00ffff" />
+=======
+        <meta name="description" content="Transform your business with cutting-edge AI and IT solutions. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation. 500+ happy clients, 1000+ projects completed." />
+        <meta name="keywords" content="AI solutions, cloud computing, cybersecurity, digital transformation, machine learning, IT consulting, artificial intelligence, cloud infrastructure, data analytics, automation, Zion Tech Group" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <link rel="canonical" href="https://ziontechgroup.com/" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/" />
+<<<<<<< HEAD
         <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+=======
+        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions | Leading Technology Company" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI and IT solutions. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com/" />
+<<<<<<< HEAD
         <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
         <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions" />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+=======
+        <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions | Leading Technology Company" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
         <meta name="twitter:creator" content="@ziontechgroup" />
         <meta name="twitter:site" content="@ziontechgroup" />
         
         {/* Additional SEO */}
+<<<<<<< HEAD
         <link rel="canonical" href="https://ziontechgroup.com/" />
         <meta name="google-site-verification" content="your-google-verification-code" />
         <meta name="msvalidate.01" content="your-bing-verification-code" />
+=======
+        <meta name="theme-color" content="#0f172a" />
+        <meta name="msapplication-TileColor" content="#0f172a" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -1455,9 +1485,16 @@ const HomePage: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
+<<<<<<< HEAD
             "url": "https://ziontechgroup.com",
             "logo": "https://ziontechgroup.com/logo.png",
             "description": "Leading provider of AI and IT solutions for modern businesses",
+=======
+            "url": "https://ziontechgroup.com/",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI and IT solutions for modern businesses. Transform your business with cutting-edge artificial intelligence, cloud computing, cybersecurity, and digital transformation services.",
+            "foundingDate": "2014",
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "364 E Main St STE 1008",
@@ -1469,6 +1506,7 @@ const HomePage: React.FC = () => {
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
+<<<<<<< HEAD
               "contactType": "customer service",
               "email": "kleber@ziontechgroup.com"
             },
@@ -1479,6 +1517,59 @@ const HomePage: React.FC = () => {
             "foundingDate": "2014",
             "numberOfEmployees": "50-100",
             "industry": "Information Technology"
+=======
+              "contactType": "sales",
+              "email": "kleber@ziontechgroup.com",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/ziontechgroup",
+              "https://twitter.com/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ],
+            "serviceArea": {
+              "@type": "Country",
+              "name": "United States"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI & IT Solutions",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Solutions",
+                    "description": "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cloud Infrastructure",
+                    "description": "Scalable and secure cloud solutions including AWS, Azure, GCP, container orchestration, and serverless architecture."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cybersecurity",
+                    "description": "Comprehensive security solutions including threat detection, compliance management, security audits, and incident response."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Digital Transformation",
+                    "description": "Complete digital transformation strategies including process automation, data analytics, API development, and integration services."
+                  }
+                }
+              ]
+            }
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
           })}
         </script>
       </Helmet>

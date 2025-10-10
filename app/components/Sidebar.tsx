@@ -1,10 +1,13 @@
 'use client';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, {Suspense, lazy}from 'react';
 import {Link, useLocation}}from 'react-router-dom';
 import {X,}
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -394,6 +397,7 @@ return (
               aria-label="Close sidebar"
             >,
               <X>
+<<<<<<< HEAD
 =======
               onClick={() =></button> setIsOpen(false)}
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
@@ -402,6 +406,8 @@ return (
               <X></X>
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
             </button>
 =======
       <button

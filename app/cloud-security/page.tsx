@@ -54,6 +54,7 @@ const CloudSecurityPage: React.FC = () => {,
             Cloud Security
   </
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
 =======
@@ -143,6 +144,8 @@ const CloudSecurityPage: React.FC = () => {,
               Email Us
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   </
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
           </div>
         </div>
         <div className="text-center">

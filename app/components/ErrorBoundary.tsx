@@ -15,13 +15,45 @@ interface Props {children: ReactNode;,}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     // Log error for monitoring in production;
     if (process.env.NODE_ENV === 'production') {
+<<<<<<< HEAD
       // In production, you would send this to an error reporting service;
       // Example: errorReportingService.captureException(error, { extra: errorInfo ,)})
+=======
+      // Send to error reporting service
+      this.reportError(error, errorInfo);
+    } else {
+      console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
     }
     this.setState({error, errorInfo)})
   }
 
+<<<<<<< HEAD
   handleReload = () => {window.location.reload();}handleGoHome = () => {window.location.href = '/';}render() {if (this.state.hasError) {
+=======
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to an error reporting service
+    // like Sentry, LogRocket, or Bugsnag
+    try {
+      // Example: Sentry.captureException(error, { extra: errorInfo });
+      // For now, we'll just log it
+      console.error('Production error:', error, errorInfo);
+    } catch (reportingError) {
+      console.error('Failed to report error:', reportingError);
+    }
+  }
+
+  handleReload = () => {
+    window.location.reload();
+  }
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  }
+
+  render() {
+    if (this.state.hasError) {
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
       if (this.props.fallback) {
         return this.props.fallback;}return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">)</div>
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">

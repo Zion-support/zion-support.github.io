@@ -54,9 +54,12 @@ const CloudInfrastructurePage: React.FC = () => {,
             Cloud Infrastructure
   </
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             Transform your business with our advanced cloud infrastructure solutions. 

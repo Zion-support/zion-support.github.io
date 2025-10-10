@@ -29,9 +29,16 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
   ]
 return(<>)
       <Helmet />
+=======
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
         <title>Ai Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -46,17 +53,27 @@ return(<>)
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Agricultural Intelligence Pro;</h1>
             </h1>
             <p>Advanced AI-powered ai agricultural intelligence pro solution for modern businesses.</p>
+=======
+            <p>
+              Advanced AI-powered ai agricultural intelligence pro solution for modern businesses.
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
               </button>
+<<<<<<< HEAD
               <button>View Demo,</button>
+=======
+              <button>
+                View Demo
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
               </button>
             </div>
           </div>

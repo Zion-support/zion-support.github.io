@@ -7,6 +7,7 @@ import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight}}from
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SupportPage: React.FC = () => {,
 =======
 const SupportPage: React.FC = () => {
@@ -17,6 +18,9 @@ const SupportPage: React.FC = () => {
 =======
 const SupportPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+const SupportPage: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
@@ -46,6 +50,7 @@ const SupportPage: React.FC = () => {
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -244,6 +249,8 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   );
 };
 

@@ -5,11 +5,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiCodeAssistantPage: React.FC = () => {,
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCodeAssistantPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
@@ -182,8 +185,11 @@ export default AiCodeAssistantPage;
   </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600

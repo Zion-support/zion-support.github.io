@@ -33,9 +33,14 @@ const Ai3dGenerationPage: React.FC = () => {,
 ];
 =======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+<<<<<<< HEAD
   },
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+  }
+];
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',

@@ -17,8 +17,20 @@ interface PerformanceMetrics {lcp?: number;}
 
     if (!shouldMonitor) return;
 
+<<<<<<< HEAD
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {,
       setMetrics(prev => ({ ...prev, ...newMetrics)}));
+=======
+    // Debounce metric updates to avoid excessive re-renders
+    let updateTimeout: NodeJS.Timeout;
+
+    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+      // Debounce updates to prevent excessive re-renders
+      clearTimeout(updateTimeout);
+      updateTimeout = setTimeout(() => {
+        setMetrics(prev => ({ ...prev, ...newMetrics }));
+      }, 100);
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
     }
 
     // Monitor Core Web Vitals;

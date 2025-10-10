@@ -202,10 +202,13 @@ const MicroSaasPage: React.FC = () => {,
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -420,8 +423,11 @@ const MicroSaasPage: React.FC = () => {
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
               {microSaasTools.map((tool, index) => (
@@ -548,10 +554,13 @@ const MicroSaasPage: React.FC = () => {
                       Try Now
                     </button>
                   </div>
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
                 </div>
               ))}
             </div>

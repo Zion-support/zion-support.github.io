@@ -5,12 +5,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -97,9 +100,12 @@ export class AccessibilityEnhancer {
    */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private handleEscapeKey(event: KeyboardEvent): void {,}
     // Close any open modals or dropdowns;
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
@@ -373,6 +379,7 @@ const liveRegion = document.createElement('div');
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {,
@@ -381,6 +388,8 @@ export const announceToScreenReader = (message: string) => {,
 
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
@@ -399,7 +408,10 @@ export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600

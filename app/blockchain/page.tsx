@@ -50,10 +50,14 @@ const BlockchainPage: React.FC = () => {,
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-gray-300">{feature.description</p>}</p>
 =======
               <p className="text-gray-300">{feature.description}</p>
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+              <p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
             </div>
           ))}
         </div>

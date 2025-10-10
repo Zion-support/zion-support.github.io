@@ -49,7 +49,10 @@ const AIApiManagerPage: React.FC = () => {,
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
   ]
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
       <Helmet />
@@ -109,10 +112,16 @@ const AIApiManagerPage: React.FC = () => {,
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
               Get Started
             </button>
+<<<<<<< HEAD
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               View Demo,
   </
+=======
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
           </div>
         </div>
       </section>

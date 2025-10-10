@@ -20,6 +20,7 @@ Allow: /services
 <<<<<<< HEAD
 =======
 Allow: /contact
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 Allow: /pricing
 Allow: /contact
@@ -42,3 +43,9 @@ Allow: /zion-*
 # Host
 Host: https://ziontechgroup.com
 >>>>>>> cursor/analyze-improve-and-deploy-application-1a78
+=======
+Allow: /pricing
+Allow: /case-studies
+Allow: /blog
+Allow: /careers
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600

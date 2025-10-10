@@ -28,10 +28,18 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
+<<<<<<< HEAD
     'Gain competitive advantage with advanced technology';
   ]
 return(<>)
       <Helmet />
+=======
+    'Gain competitive advantage with advanced technology'
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
         <title>Ai Automation - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

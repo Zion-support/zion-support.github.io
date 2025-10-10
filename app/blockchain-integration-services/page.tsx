@@ -39,8 +39,11 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
           <h1 className="text-5xl font-bold text-white mb-6">Blockchain Integration Services;</h1>
   </
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced blockchain integration solutions.</p>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8

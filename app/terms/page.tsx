@@ -16,10 +16,13 @@ import {FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'}]
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
     }
   ]
@@ -42,12 +45,15 @@ import {FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, 
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   };
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   return (
     <>
       <Helmet></Helmet>

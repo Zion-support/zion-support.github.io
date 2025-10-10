@@ -155,10 +155,14 @@ const BusinessAppsPage: React.FC = () => {,
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               Email Us;
 =======
               Email Us
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+              Email Us
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   </
           </div>
         </div>

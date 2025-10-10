@@ -24,6 +24,7 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Database;,},
     {title: 'Restriction',
 =======
@@ -31,6 +32,8 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
       icon: Database
     },
     {
@@ -60,12 +63,15 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   };
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   return (
     <>
       <Helmet></Helmet>

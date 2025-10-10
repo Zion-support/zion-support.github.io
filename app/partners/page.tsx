@@ -21,9 +21,12 @@ interface Partner {id: string;,}
 =======
   const partners: Partner[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
     {
       id: '1',
       name: 'Microsoft',
@@ -72,8 +75,11 @@ interface Partner {id: string;,}
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">

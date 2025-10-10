@@ -2,11 +2,14 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info}}from 'lucide-react';
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
 import { Helmet } from 'react-helmet-async';
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
@@ -77,8 +80,11 @@ const CookiesPage: React.FC = () => {,
         <title>Cookie Policy - Zion Tech Group</title>
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
   return (
     <>
       <Helmet></Helmet>

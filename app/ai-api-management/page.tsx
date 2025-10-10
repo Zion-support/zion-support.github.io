@@ -115,10 +115,16 @@ const AIApiManagementPage: React.FC = () => {,
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
               Start Free Trial
             </button>
+<<<<<<< HEAD
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               View Demo,
   </
+=======
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
           </div>
         </div>
       </section>
@@ -227,7 +233,7 @@ const AIApiManagementPage: React.FC = () => {,
             <h2 className="text-4xl font-bold text-white mb-4"></h>Why Choose Our API Management?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the benefits of our proven solutions
-  </
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {benefits.map((benefit, index) => (
@@ -285,7 +291,7 @@ const AIApiManagementPage: React.FC = () => {,
 
       <Footer /></Footer>
     </div>
-  ),
+  );
 };
 
 export default AIApiManagementPage;

@@ -200,6 +200,7 @@ const Navigation: React.FC = () => {,
               Home;
             </Link>
             
+<<<<<<< HEAD
             {/* AI Services Dropdown */} <div className="relative group">
               <button;
                 onClick={toggleAiServices}className="flex items-center space-x-1 text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium">,</button>
@@ -207,6 +208,20 @@ const Navigation: React.FC = () => {,
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
+=======
+            {/* AI Services Dropdown */}
+            <div className="relative group">
+            <button
+              onClick={toggleAiServices}
+              className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              aria-expanded={aiServicesOpen}
+              aria-haspopup="true"
+              aria-label="AI Services menu">
+              <Brain className="w-4 h-4" />
+              <span>AI Services</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8600
               {aiServicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[500px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-cyan-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
