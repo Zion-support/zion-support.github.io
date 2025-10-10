@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { CheckCircle, X, Star, Phone, Mail, Calendar, MessageSquare, ArrowRight, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Award, DollarSign, Clock, Globe, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, X, Star, Phone, Mail, Calendar, MessageSquare, ArrowRight, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Award, DollarSign, Clock, Globe, Target, TrendingUp, FileText } from 'lucide-react';
 
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -9,20 +9,22 @@ export default function PricingPage() {
   const plans = [
     {
       name: 'Starter',
-      price: { monthly: 2999, yearly: 29999 },
+      price: { monthly: 99, yearly: 999 },
       description: 'Perfect for small businesses getting started with AI',
       icon: Zap,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       popular: false,
       features: [
+        'Access to 5 AI Micro SAAS Tools',
         'AI Content Generation (10,000 words/month)',
         'Basic Analytics Dashboard',
         'Email Support',
         'Standard Security',
         'Up to 5 users',
         'Basic Integrations',
-        'Monthly Reports'
+        'Monthly Reports',
+        '14-day free trial'
       ],
       limitations: [
         'Limited AI models',
@@ -32,13 +34,14 @@ export default function PricingPage() {
     },
     {
       name: 'Professional',
-      price: { monthly: 7999, yearly: 79999 },
+      price: { monthly: 299, yearly: 2999 },
       description: 'Ideal for growing businesses with advanced AI needs',
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       popular: true,
       features: [
+        'Access to 15 AI Micro SAAS Tools',
         'AI Content Generation (50,000 words/month)',
         'Advanced Analytics Dashboard',
         'Priority Support',
@@ -48,7 +51,8 @@ export default function PricingPage() {
         'Weekly Reports',
         'Custom AI Models',
         'API Access',
-        'Training & Onboarding'
+        'Training & Onboarding',
+        '30-day free trial'
       ],
       limitations: [
         'Limited custom development',
@@ -57,13 +61,14 @@ export default function PricingPage() {
     },
     {
       name: 'Enterprise',
-      price: { monthly: 19999, yearly: 199999 },
+      price: { monthly: 999, yearly: 9999 },
       description: 'Complete AI solution for large organizations',
       icon: Cloud,
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       popular: false,
       features: [
+        'Access to ALL 50+ AI Micro SAAS Tools',
         'Unlimited AI Content Generation',
         'Custom Analytics Dashboard',
         '24/7 Dedicated Support',
@@ -76,7 +81,8 @@ export default function PricingPage() {
         'Dedicated Account Manager',
         'Custom Training Programs',
         'SLA Guarantee',
-        'White-label Options'
+        'White-label Options',
+        '60-day free trial'
       ],
       limitations: []
     }
@@ -86,26 +92,38 @@ export default function PricingPage() {
     {
       name: 'AI Automation Suite',
       description: 'Advanced workflow automation and process optimization',
-      price: { monthly: 2000, yearly: 20000 },
+      price: { monthly: 199, yearly: 1999 },
       icon: Zap
     },
     {
       name: 'AI Analytics Pro',
       description: 'Advanced analytics and business intelligence',
-      price: { monthly: 1500, yearly: 15000 },
+      price: { monthly: 149, yearly: 1499 },
       icon: BarChart
     },
     {
       name: 'AI Security Suite',
       description: 'Enhanced security and compliance features',
-      price: { monthly: 1000, yearly: 10000 },
+      price: { monthly: 99, yearly: 999 },
       icon: Shield
     },
     {
       name: 'Custom Development',
       description: 'Bespoke AI solutions and integrations',
-      price: { monthly: 5000, yearly: 50000 },
+      price: { monthly: 299, yearly: 2999 },
       icon: Code
+    },
+    {
+      name: 'AI Voice Assistant Pro',
+      description: 'Advanced voice AI with natural language processing',
+      price: { monthly: 149, yearly: 1499 },
+      icon: MessageSquare
+    },
+    {
+      name: 'AI Document Scanner Pro',
+      description: 'Intelligent document scanning and OCR',
+      price: { monthly: 79, yearly: 799 },
+      icon: FileText
     }
   ];
 
