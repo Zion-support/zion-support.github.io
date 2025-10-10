@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -37,10 +38,51 @@ const DemoPage: React.FC = () => {
       description: 'Watch our AI create high-quality content in seconds,
       duration: '4 min,
       features: ['Blog posts', 'Social media content', 'Product descriptions]
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+;
+
+const $1Page: React.FC = () => {}
+  const demos = [
+
+const DemoPage: React.FC = () => {}
+  const demos = [
+    {}
+      title: 'AI Analytics Dashboard',
+      description: 'See how our AI analytics can transform your business intelligence',
+      duration: '5 min',
+      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
+    },
+    {}
+      id: 'ai-chatbot',
+      title: 'AI Customer Service Bot',
+      description: 'See how our AI chatbot handles customer inquiries with natural language processing.',
+      features: []
+        'Natural language understanding',
+        'Multi-language support',
+        '24
+        'Seamless handoff to humans'
+      ],
+      icon: Users,
+      duration: '3 min demo',
+      category: 'AI Solutions'
+    },
+    {}
+      title: 'AI Content Generation',
+      description: 'Watch our AI create high-quality content in seconds',
+      duration: '4 min',
+      features: ['Blog posts', 'Social media content', 'Product descriptions']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   ];
 
+<<<<<<< HEAD
   const testimonials = [    {;
       name: 'Sarah Johnson,
       company: 'TechCorp Inc.,
@@ -60,6 +102,28 @@ const DemoPage: React.FC = () => {
       company: 'FinanceFlow,
       role: 'IT Director,
       quote: 'The cloud migration demo convinced us to move forward. The automation saved us months of work.,
+=======
+  const testimonials = [
+    {}
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      quote: 'The AI analytics demo showed us exactly how we could transform our data insights. The implementation was seamless.',
+      rating: 5
+    },
+    {}
+      name: 'Michael Chen',
+      company: 'RetailMax',
+      role: 'Head of Operations',
+      quote: 'The chatbot demo exceeded our expectations. It handled complex queries better than we imagined.',
+      rating: 5
+    },
+    {}
+      name: 'Emily Rodriguez',
+      company: 'FinanceFlow',
+      role: 'IT Director',
+      quote: 'The cloud migration demo convinced us to move forward. The automation saved us months of work.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       rating: 5
     }
 
@@ -76,6 +140,7 @@ const DemoPage: React.FC = () => {
       
       <Navigation 
       
+<<<<<<< HEAD
       {/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
@@ -83,6 +148,14 @@ const DemoPage: React.FC = () => {
 
         <div className="relative max-w-7xl mx-auto text-center>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight>
+=======
+      {/* Hero Section *}
+      <section className="relative py-20 px-4 overflow-hidden">)
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             See It in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent>
 
@@ -101,6 +174,7 @@ const DemoPage: React.FC = () => {
         <
       <
 
+<<<<<<< HEAD
       {/* Demo Selection *
       <section className="py-16 px-4>
         <div className="max-w-7xl mx-auto>
@@ -116,6 +190,22 @@ const DemoPage: React.FC = () => {
                 onClick = { () => setSelectedDemo(demo.id) };
 
                 className={p-6 rounded-xl border transition-all duration-300 text-left ${
+=======
+      {/* Demo Selection *}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Demo<
+            <p className="text-xl text-gray-300">Select a solution to see it in action<
+          <
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-4 gap-6">
+            {demos.map((demo) => (<button}
+                key = { demo.id };)
+                onClick = { () => setSelectedDemo(demo.id) };
+                className={`p-6 rounded-xl border transition-all duration-300 text-left ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   selectedDemo === demo.id
                     ? border-purple-500 bg-purple-500
                     : border-white/10 bg-white/5 hover:bg-white
@@ -138,11 +228,19 @@ const DemoPage: React.FC = () => {
         <
       <
 
+<<<<<<< HEAD
       {/* Selected Demo Details *
       {selectedDemoData && (<section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className=bg-white/5 backdrop-blur-sm border border-white
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
+=======
+      {/* Selected Demo Details *}
+      {selectedDemoData && (<section className="py-16 px-4">}
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm border border-white
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <div>
                   <div className="flex items-center mb-6>
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 flex items-center justify-center>
@@ -187,6 +285,7 @@ const DemoPage: React.FC = () => {
         <
       )}
 
+<<<<<<< HEAD
       {/* Testimonials *
       <section className="py-16 px-4>
         <div className="max-w-7xl mx-auto>
@@ -202,6 +301,21 @@ const DemoPage: React.FC = () => {
 
                   "{testimonial.quote}
 
+=======
+      {/* Testimonials *}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say<
+            <p className="text-xl text-gray-300">See how our demos led to successful implementations<
+          <
+          
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {testimonials.map((testimonial), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white
+                <div className="flex items-center mb-4">)
+                  {[...Array(testimonial.rating)].map((_, i) => (}
+                  "{testimonial.quote}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <
                 <div>
                   <div className="font-semibold text-white>{testimonial.name}<
@@ -214,10 +328,17 @@ const DemoPage: React.FC = () => {
         <
       <
 
+<<<<<<< HEAD
       {/* CTA Section *
       <section className="py-20 px-4>
         <div className="max-w-4xl mx-auto text-center>
           <h2 className="text-4xl font-bold text-white mb-6>
+=======
+      {/* CTA Section *}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             Ready to See More?
           <
           <p className="text-xl text-gray-300 mb-8>

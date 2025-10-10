@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React, { memo } from 'react;
@@ -29,6 +30,31 @@ const aiServices = [;;;
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing },
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation }
 
+=======
+'use client';
+import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+const Footer: React.FC = memo(() => {;}
+const currentYear = new Date().getFullYear();
+const aiServices = [
+    { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Financial AI applications' },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
+    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
+    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   ];
 
 const itServices = [;;
@@ -107,6 +133,7 @@ const supportLinks = [;;
     { name: 'Terms of Service', url: '/terms }
 
   ];
+<<<<<<< HEAD
 
 const contactInfo = {;;
 
@@ -115,6 +142,14 @@ const contactInfo = {;;
     address: '364 E Main St STE 1008, Middletown, DE 19709,
     hours: 'Mon-Fri: 9AM-6PM EST,
     emergency: 24/7 Emergency Support Available
+=======
+const contactInfo = {}
+    phone: '+1 (302) 464-0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    hours: 'Mon-Fri: 9AM-6PM EST',
+    emergency: '24/7 Emergency Support Available'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   };
 
   return (
@@ -129,9 +164,14 @@ const contactInfo = {;;
               <Brain className="w-5 h-5 mr-2 />
               AI Services
             </h3>
+<<<<<<< HEAD
             <ul className="space-y-2>
               {aiServices.slice(0, 8).map((service, index) => (
 
+=======
+            <ul className="space-y-2">
+              {aiServices.slice(0, 8).map((service, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -161,9 +201,14 @@ const contactInfo = {;;
               <Cloud className="w-5 h-5 mr-2 />
               IT Services
             </h3>
+<<<<<<< HEAD
             <ul className="space-y-2>
               {itServices.slice(0, 6).map((service, index) => (
 
+=======
+            <ul className="space-y-2">
+              {itServices.slice(0, 6).map((service, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -193,9 +238,14 @@ const contactInfo = {;;
               <Code className="w-5 h-5 mr-2 />
               Micro SAAS
             </h3>
+<<<<<<< HEAD
             <ul className="space-y-2>
               {microSaasServices.slice(0, 8).map((service, index) => (
 
+=======
+            <ul className="space-y-2">
+              {microSaasServices.slice(0, 8).map((service, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -225,9 +275,14 @@ const contactInfo = {;;
               <Zap className="w-5 h-5 mr-2 />
               Emerging Tech
             </h3>
+<<<<<<< HEAD
             <ul className="space-y-2>
               {emergingTech.map((service, index) => (
 
+=======
+            <ul className="space-y-2">
+              {emergingTech.map((service, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -249,9 +304,14 @@ const contactInfo = {;;
               <Users className="w-5 h-5 mr-2 />
               Company
             </h3>
+<<<<<<< HEAD
             <ul className="space-y-2 mb-6>
               {companyLinks.map((link, index) => (
 
+=======
+            <ul className="space-y-2 mb-6">
+              {companyLinks.map((link, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <li key={index}>
                   <Link 
                     href={link.url}
@@ -265,10 +325,16 @@ const contactInfo = {;;
                 ))}
 
             </ul>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400>Support</h3>
             <ul className="space-y-2 mb-6>
               {supportLinks.map((link, index) => (
 
+=======
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
+            <ul className="space-y-2 mb-6">
+              {supportLinks.map((link, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <li key={index}>
                   <Link 
                     href={link.url}

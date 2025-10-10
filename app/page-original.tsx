@@ -35,12 +35,21 @@ const ContentStatistics = lazy(() => import('./components/ContentStatistics));;
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup));;
 
 // Preload critical components;
+<<<<<<< HEAD
 
 const preloadComponents = () => {  if (typeof window !== 'undefined) {;
     /
     setTimeout (() => {
       import(./components
       import(./components
+=======
+const preloadComponents = () => {}
+  if (typeof window !== 'undefined') {}
+    /
+    setTimeout (() => {}
+      import('./components
+      import('./components
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }, 100);
 
   }
@@ -54,18 +63,31 @@ const ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white round
     <div className="h-4 bg-gray-200 rounded w-5/6><
   <)
 ));
+<<<<<<< HEAD
 
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;const HomePage: React.FC = memo(() => {;
 
+=======
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+const HomePage: React.FC = memo(() => {;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 const [isLoaded, setIsLoaded] = useState(false);
 
 const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
 
   useEffect (() => {
     setIsLoaded(true);    // Trigger visibility animation;
 
 const timer = setTimeout(() => setIsVisible(true), 100);;
 
+=======
+  
+  useEffect (() => {}
+    setIsLoaded(true);
+    // Trigger visibility animation;
+const timer = setTimeout(() => setIsVisible(true), 100);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Preload components
     preloadComponents();
 
@@ -78,11 +100,19 @@ const timer = setTimeout(() => setIsVisible(true), 100);;
   }, []);
 
   /
+<<<<<<< HEAD
   const handlePhoneClick = useCallback (() => {;
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number)
+=======
+  const handlePhoneClick = useCallback (() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'phone_click', {}
+        event_category: 'engagement',
+        event_label: 'main_phone_number')
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       });
 
     }
@@ -95,13 +125,22 @@ const timer = setTimeout(() => setIsVisible(true), 100);;
         
           Skip to main content
         <
+<<<<<<< HEAD
       {/* Content Promotion Banner *
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse><
         
         {/* Hero Section *    return () => clearTimeout(timer);)
+=======
+      {/* Content Promotion Banner *}
+      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"><}
+        
+        {/* Hero Section *}
+    return () => clearTimeout(timer);)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 }, []);
 
   // Analytics tracking for phone clicks - optimized;
+<<<<<<< HEAD
 
 const handlePhoneClick = useCallback(() => {;;
 
@@ -110,15 +149,32 @@ const handlePhoneClick = useCallback(() => {;;
         event_category: 'engagement,
         event_label: 'main_phone_number;)
 }););    return () => clearTimeout(timer)]
+=======
+const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'phone_click', {}
+        event_category: 'engagement',
+        event_label: 'main_phone_number';)
+});;);
+    return () => clearTimeout(timer)]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }, []);
 
   // Analytics tracking for phone clicks - optimized
+<<<<<<< HEAD
   const handlePhoneClick = useCallback(() => {;;
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number]
+=======
+  const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'phone_click', {}
+        event_category: 'engagement',
+        event_label: 'main_phone_number']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     });]
     }
 
@@ -128,6 +184,7 @@ const handlePhoneClick = useCallback(() => {;;
 
     <React.Fragment>
       <SEOOptimizer
+<<<<<<< HEAD
         title="Zion Tech Group - Advanced AI and IT Solutions
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services]}
@@ -165,6 +222,44 @@ const handlePhoneClick = useCallback(() => {;;
             addressRegion: 'DE,
             postalCode: '19709,
 addressCountry: 'US]
+=======
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={{}
+          '@context': 'https://schema.org',
+          '@type': 'TechCompany',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          services: []
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
+          contactPoint: {}
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en']
+    },
+          address: {}
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+addressCountry: 'US']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
         }}
@@ -236,7 +331,11 @@ addressCountry: 'US]
         {/* Hero Section */}
 
         <section
+<<<<<<< HEAD
           className={text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+=======
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0 
               : 'opacity-0 translate-y-8]
@@ -260,6 +359,7 @@ addressCountry: 'US]
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.              Transform your business with our cutting-edge technology and achieve unprecedented growth.
             <
             
+<<<<<<< HEAD
             {/* Key Benefits *
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12><
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300><
@@ -267,6 +367,15 @@ addressCountry: 'US]
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg>AI-Powered Solutions<
                 <p className=text-xs s,
     m:text-sm text-gray-300 leading-relaxed>Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies<
+=======
+            {/* Key Benefits *}
+            <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12"><
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"><
+                <div className="text-2xl sm:text-3xl mb-3">🚀<
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions<
+                <p className="text-xs s,
+    m:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies<
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               <
               <div className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300><
                 <div className="text-2xl sm:text-3xl mb-3>⚡<
@@ -286,8 +395,13 @@ addressCountry: 'US]
               <
             <
             
+<<<<<<< HEAD
             {/* CTA Buttons *
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center><
+=======
+            {/* CTA Buttons *}
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"><
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             <div>
               <a                href=te,
     l:+13024640950
@@ -307,16 +421,27 @@ addressCountry: 'US]
           <
         <
         <
+<<<<<<< HEAD
         {/* Services Section *
         <section className="mb-16" aria-labelledby="services-heading>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text>
+=======
+        {/* Services Section *}
+        <section className="mb-16" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             Our Services
           <
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4>
             Comprehensive AI and IT solutions designed to transform your business operations
           <
+<<<<<<< HEAD
           {/* Primary Services Grid *
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12><
+=======
+          {/* Primary Services Grid *}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"><
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line>🤖<
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text>AI Services<
@@ -362,8 +487,13 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* Secondary Services Grid *
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12><
+=======
+          {/* Secondary Services Grid *}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"><
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center>🏥<
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center>AI Healthcare<
@@ -409,9 +539,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* Micro SAAS Services Grid *
           <div className="mb-12><
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text>
+=======
+          {/* Micro SAAS Services Grid *}
+          <div className="mb-12"><
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Micro SAAS Solutions
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -671,9 +807,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* IT Services & Infrastructure *
           <div className="mb-12><
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text>
+=======
+          {/* IT Services & Infrastructure *}
+          <div className="mb-12"><
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               IT Services & Infrastructure
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -887,9 +1029,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* Advanced AI Services Grid *
           <div className="mb-12><
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text>
+=======
+          {/* Advanced AI Services Grid *}
+          <div className="mb-12"><
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Advanced AI Services
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -1063,9 +1211,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* Emerging Technologies Grid *
           <div className="mb-12><
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text>
+=======
+          {/* Emerging Technologies Grid *}
+          <div className="mb-12"><
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Emerging Technologies
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -1125,9 +1279,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* IT Services Grid *
           <div className="mb-12><
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text>
+=======
+          {/* IT Services Grid *}
+          <div className="mb-12"><
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               IT Services & Infrastructure
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -1176,18 +1336,30 @@ addressCountry: 'US]
             <
           <
         <
+<<<<<<< HEAD
         {/* Micro SAAS Solutions Section *
         <section className="mb-16" aria-labelledby="micro-saas-heading>
           <h2 id="micro-saas-heading" className="text-2xl sm: text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text>
+=======
+        {/* Micro SAAS Solutions Section *}
+        <section className="mb-16" aria-labelledby="micro-saas-heading">
+          <h2 id="micro-saas-heading" className="text-2xl sm: text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             Micro SAAS Solutions
           <
           <p className=text-base s,
     m:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4>
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           <
+<<<<<<< HEAD
           {/* Productivity Tools *
           <div className="mb-12><
             <h3 className="text-xl sm: text-2xl font-bold text-white mb-6 text-center neon-text>
+=======
+          {/* Productivity Tools *}
+          <div className="mb-12"><
+            <h3 className="text-xl sm: text-2xl font-bold text-white mb-6 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Productivity & Business Tools
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -1305,9 +1477,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* Marketing & Sales Tools *
           <div className="mb-12><
             <h3 className="text-xl sm: text-2xl font-bold text-white mb-6 text-center neon-text>
+=======
+          {/* Marketing & Sales Tools *}
+          <div className="mb-12"><
+            <h3 className="text-xl sm: text-2xl font-bold text-white mb-6 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Marketing & Sales Tools
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -1367,9 +1545,15 @@ addressCountry: 'US]
               <
             <
           <
+<<<<<<< HEAD
           {/* Developer Tools *
           <div className="mb-12><
             <h3 className="text-xl sm: text-2xl font-bold text-white mb-6 text-center neon-text>
+=======
+          {/* Developer Tools *}
+          <div className="mb-12"><
+            <h3 className="text-xl sm: text-2xl font-bold text-white mb-6 text-center neon-text">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Developer Tools
             <
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8><
@@ -1432,6 +1616,7 @@ addressCountry: 'US]
             <
           <
         <
+<<<<<<< HEAD
         {/* Statistics Section *
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg><
           <ContentStatistics 
@@ -1446,6 +1631,22 @@ addressCountry: 'US]
         <
         {/* Newsletter Signup *
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg><
+=======
+        {/* Statistics Section *}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"><}
+          <ContentStatistics 
+        <
+        {/* Content Carousel *}
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"><}
+          <ContentCarousel 
+        <
+        {/* Dynamic Content Showcase *}
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"><}
+          <DynamicContentShowcase 
+        <
+        {/* Newsletter Signup *}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"><}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           
           <div className="max-w-6xl mx-auto><
             <h2 id="contact-heading" className="text-3xl sm: text-4xl font-bold text-white mb-8 text-center neon-text>
@@ -1527,10 +1728,17 @@ addressCountry: 'US]
                 <
               <
               
+<<<<<<< HEAD
               {/* Quick Contact Form *
               <div className="cyber-card hologram-card p-8><
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text>Get Free Consultation<
                 <form className="space-y-6>
+=======
+              {/* Quick Contact Form *}
+              <div className="cyber-card hologram-card p-8"><
+                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation<
+                <form className="space-y-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <div><
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2>
                       <Clock className="w-6 h-6 text-white />                    </div>
@@ -1637,7 +1845,7 @@ addressCountry: 'US]
           <
         <
       <
-      {/* Footer *
+      {/* Footer *}
       <Footer 
     <
     <

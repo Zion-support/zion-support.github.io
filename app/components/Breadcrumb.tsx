@@ -8,7 +8,7 @@ import { ChevronRight, Home } from 'lucide-react;
 
 import { Link } from react-router-dom;
 
-interface BreadcrumbItem {
+interface BreadcrumbItem {}
   name: string;
 
   href: string;
@@ -17,6 +17,7 @@ interface BreadcrumbItem {
 
 }
 
+<<<<<<< HEAD
 const Breadcrumb: React.FC = () => {
   const location = useLocation();;;
 
@@ -24,11 +25,19 @@ const Breadcrumb: React.FC = () => {
 
     const pathSegments = location.pathname.split('/').filter(segment => segment !== );;
 
+=======
+const Breadcrumb: React.FC = () => {}
+  const location = useLocation();
+  
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {}
+    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', href: '/ }
 
     ];
 
+<<<<<<< HEAD
     let currentPath = ;;
 
     pathSegments.forEach((segment, index) => {
@@ -36,6 +45,13 @@ const Breadcrumb: React.FC = () => {
 
       const isLast = index === pathSegments.length - 1;;
 
+=======
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {}
+      currentPath += `/${segment}`;
+      const isLast = index === pathSegments.length - 1;
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // Convert segment to readable name
       const name = segment;;
 
@@ -43,7 +59,7 @@ const Breadcrumb: React.FC = () => {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join( );
 
-      breadcrumbs.push({
+      breadcrumbs.push({}
         name,
         href: currentPath,
         current: isLast
@@ -57,13 +73,19 @@ const Breadcrumb: React.FC = () => {
 
   const breadcrumbs = generateBreadcrumbs();;
 
+<<<<<<< HEAD
   // Dont show breadcrumb on home page
   if (location.pathname === '/) {
+=======
+  // Don't show breadcrumb on home page
+  if (location.pathname === '/') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return null;
 
   }
 
   return (
+<<<<<<< HEAD
 
     <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
@@ -78,6 +100,17 @@ const Breadcrumb: React.FC = () => {
 
               {index === 0 ? (
 
+=======
+    <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ol className="flex items-center space-x-2 py-3 text-sm">
+          {breadcrumbs.map((item, index) => (}
+            <li key={item.href} className="flex items-center">
+              {index > 0 && (}
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
+              )}
+              {index === 0 ? (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <Link
                   to={item.href}
 

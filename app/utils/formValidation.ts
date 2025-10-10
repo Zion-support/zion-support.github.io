@@ -5,14 +5,18 @@ use client
  * Provides common validation rules and form handling utilities;
 
  */
-export interface ValidationRule<T = unknown> {
+export interface ValidationRule<T = unknown> {}
   validate: (value: T) => boolean;
 
   message: string;}
 
 }
+<<<<<<< HEAD
 
 export interface ValidationResult {
+=======
+export interface ValidationResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   valid: boolean,
 export interface ValidationRule<T = unknown> {}
 
@@ -54,7 +58,11 @@ export const validationRules = {};;
    * Validate required field;
 
    */
+<<<<<<< HEAD
   required: (message = 'This field is required): ValidationRule<string> => ({,
+=======
+  required: (message = 'This field is required'): ValidationRule<string> => ({,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0;
 
   required: (message = 'This field is required): ValidationRule<string> => ({}
@@ -69,12 +77,19 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
    * Validate email format;
 
    */
+<<<<<<< HEAD
   email: (message = 'Please enter a valid email address): ValidationRule<string> => ({,
     validate: (value: string) => {,
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;;
 
   email: (message = 'Please enter a valid email address): ValidationRule<string> => ({}
 
+=======
+  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,}
+    validate: (value: string) => {,}
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     validate: (value: string) => {}
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
@@ -125,9 +140,14 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   /**
    * Validate phone number (US format)
    */
+<<<<<<< HEAD
   phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({,
   phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({}
 
+=======
+  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({,}
+  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     validate: (value: string) => {}
 
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
@@ -147,9 +167,15 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
    * Validate URL format;
 
    */
+<<<<<<< HEAD
   url: (message = 'Please enter a valid URL): ValidationRule<string> => ({,
     validate: (value: string) => {,
       try {,
+=======
+  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,}
+    validate: (value: string) => {,}
+      try {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         new URL(value),
   url: (message = 'Please enter a valid URL): ValidationRule<string> => ({}
 
@@ -213,7 +239,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
    * Validate custom condition;
 
    */
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
+  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,}
     validate: validator,
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({}
 
@@ -231,6 +257,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
 
    */
   strongPassword: (,
+<<<<<<< HEAD
     message = Password must be at least 8 characters with uppercase, lowercase, number, and special character
   ): ValidationRule<string> => ({
     validate: (value: string) => {,
@@ -238,6 +265,13 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
 
       const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({};;
 
+=======
+    message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
+  ): ValidationRule<string> => ({}
+    validate: (value: string) => {,}
+      const hasUpperCase = /[A-Z]/.test(value),
+      const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     validate: (value: string) => {}
 
       const hasUpperCase = /[A-Z]/.test(value);;
@@ -264,7 +298,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   /**
    * Validate matching fields (e.g., password confirmation)
    */
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,
+  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,}
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
 
     validate: (value: string) => value === otherFieldValue,}
@@ -281,10 +315,16 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
    * Validate file size;
 
    */
+<<<<<<< HEAD
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
     validate: (file: File) => {,
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;;
 
+=======
+  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
+    validate: (file: File) => {,}
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
 
     validate: (file: File) => {}
@@ -326,17 +366,21 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
  * Validate a single field with multiple rules;
 
  */
-export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,
+export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,}
   const errors: string[] = [],
-  for (const rule of rules) {,
-    if (!rule.validate(value)) {,
+  for (const rule of rules) {,}
+    if (!rule.validate(value)) {,}
       errors.push(rule.message);}
 
     }
 
   }
+<<<<<<< HEAD
 
   return {
+=======
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     valid: errors.length === 0;
 
 export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {}
@@ -465,7 +509,7 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
  * Sanitize input string;
 
  */
-export function sanitizeInput(input: string): string {,
+export function sanitizeInput(input: string): string {,}
   return input;
 
     .trim(),
@@ -491,12 +535,17 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
 
   func: T,
   wait: number,
-): (...args: Parameters<T>) => void {
+): (...args: Parameters<T>) => void {}
   let timeout: NodeJS.Timeout | null = null;
+<<<<<<< HEAD
 
   return function executedFunction(...args: Parameters<T>) {,
     const later = useCallback((...args) => {,;;
 
+=======
+  return function executedFunction(...args: Parameters<T>) {,}
+    const later = useCallback((...args) => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       timeout = null;
 
   func: T,

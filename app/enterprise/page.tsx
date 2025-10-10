@@ -12,39 +12,45 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, 
 
 ;
 
+<<<<<<< HEAD
 const EnterprisePage: React.FC = () => {const features = [;;;
 
     {
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Shield,
       title: 'Enterprise Security,
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.,
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control]]
     },
-    {
+    {}
       icon: Cloud,
       title: 'Cloud Infrastructure,
       description: 'Scalable cloud solutions that grow with your business needs.,
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization]]
     },
-    {
+    {}
       icon: Brain,
       title: 'AI Integration,
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.,
       benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights]]
     },
-    {
+    {}
       icon: Database,
       title: 'Data Management,
       description: 'Advanced data management and analytics for enterprise-scale operations.,
       benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence]]
     },
-    {
+    {}
       icon: Users,
       title: 'User Management,
       description: 'Comprehensive user and access management for large organizations.,
       benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails]]
     },
-    {
+    {}
       icon: Settings,
       title: 'System Integration,
       description: 'Seamless integration with existing enterprise systems and workflows.,
@@ -54,30 +60,55 @@ benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'D
   ];
 
 ;
+<<<<<<< HEAD
 
 const solutions = [;;
 
     {
       title: 'Enterprise Resource Planning,
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.,
+=======
+const solutions = [
+    {}
+      title: 'Enterprise Resource Planning',
+      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management]]
     },
+<<<<<<< HEAD
     {
       title: 'Customer Relationship Management,
       description: 'Advanced CRM systems for managing customer relationships and sales processes.,
+=======
+    {}
+      title: 'Customer Relationship Management',
+      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation]]
     },
+<<<<<<< HEAD
     {
       title: 'Business Intelligence,
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.,
+=======
+    {}
+      title: 'Business Intelligence',
+      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: BarChart,
       benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring]]
     },
+<<<<<<< HEAD
     {
       title: 'Workflow Automation,
       description: 'Automate complex business processes to improve efficiency and reduce errors.,
+=======
+    {}
+      title: 'Workflow Automation',
+      description: 'Automate complex business processes to improve efficiency and reduce errors.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Zap,
 benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management]]
     }
@@ -148,6 +179,7 @@ const stats = [;;
       </section>
 
       {/* Stats Section */}
+<<<<<<< HEAD
 
       <section className="py-20 px-4></section>
         <div className="max-w-7xl mx-auto></div>
@@ -157,6 +189,15 @@ const stats = [;;
               <div key={index} className="text-center></div>
                 <div className="flex justify-center mb-4></div>
                   <stat.icon className="w-12 h-12 text-purple-400 />
+=======
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+            {stats.map((stat, index) => (}
+              <div key={index} className="text-center"></div>
+                <div className="flex justify-center mb-4"></div>
+                  <stat.icon className="w-12 h-12 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
                 <div className="text-3xl font-bold text-white mb-2></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm></di>{stat.label}</div>
@@ -184,12 +225,20 @@ const stats = [;;
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3 />
                   <h3 className="text-xl font-semibold text-white></h>{feature.title}</h3>
                 </div>
+<<<<<<< HEAD
                 <p className="text-gray-300 mb-4>{feature.description}</p>
                 <ul className="space-y-2></ul>
                   {feature.benefits.map((benefit, idx) => (
 
                     <li key={idx} className="flex items-center text-sm text-gray-400></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 />
+=======
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2"></ul>
+                  {feature.benefits.map((benefit, idx) => (}
+                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       {benefit}
 
                     </li>

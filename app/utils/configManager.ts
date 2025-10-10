@@ -9,16 +9,20 @@ use client
 
 export type Environment = 'development' | 'staging' | 'production' | test
 
-export interface AppConfig {
+export interface AppConfig {}
   environment: Environment,
-  api: {
+  api: {}
     baseURL: string,
     timeout: number,
     retryAttempts: number,
     enableCaching: boolean,
   }
+<<<<<<< HEAD
 
   features: {
+=======
+  features: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     enableAnalytics: boolean,
     enableErrorReporting: boolean,
     enablePerformanceMonitoring: boolean,
@@ -26,28 +30,44 @@ export interface AppConfig {
     enableSEO: boolean,
     enablePWA: boolean,
   }
+<<<<<<< HEAD
 
   performance: {
+=======
+  performance: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     enableCodeSplitting: boolean,
     enableLazyLoading: boolean,
     enableImageOptimization: boolean,
     enableCaching: boolean,
   }
+<<<<<<< HEAD
 
   security: {
+=======
+  security: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     enableCSP: boolean,
     enableCORS: boolean,
     enableRateLimiting: boolean,
     maxRequestsPerMinute: number,
   }
+<<<<<<< HEAD
 
   ui: {,
+=======
+  ui: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     theme: 'light' | 'dark' | 'auto',
     language: string,
     timezone: string,
   }
+<<<<<<< HEAD
 
   logging: {,
+=======
+  logging: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     level: 'debug' | 'info' | 'warn' | 'error',
     enableConsole: boolean,
     enableNetwork: boolean,
@@ -55,16 +75,21 @@ export interface AppConfig {
 
 }
 
-const defaultConfig: AppConfig = {
+const defaultConfig: AppConfig = {}
   environment: 'development',
   api:
+<<<<<<< HEAD
         api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || https://api.ziontech.com
+=======
+        api: {}
+    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     timeout: 30000,
     retryAttempts: 3,
     enableCaching: true,
   },
-  features: {
+  features: {}
     enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -72,23 +97,23 @@ const defaultConfig: AppConfig = {
     enableSEO: true,
     enablePWA: true,
   },
-  performance: {
+  performance: {}
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
     enableCaching: true,
   },
-  security: {
+  security: {}
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
     maxRequestsPerMinute: 100,
   },
-  ui: {,
+  ui: {,}
     theme: 'auto',
     language: 'en',
     timezone: 'UTC'},
-  logging: {,
+  logging: {,}
     level: 'info',
     enableConsole: true,
     enableNetwork: false,
@@ -96,75 +121,91 @@ const defaultConfig: AppConfig = {
 
 }
 
-class ConfigManager {
+class ConfigManager {}
   private config: AppConfig,
-  constructor() {,
+  constructor() {,}
     this.config = { ...defaultConfig }
 
     this.loadEnvironmentConfig()
   }
 
+<<<<<<< HEAD
   private loadEnvironmentConfig(): void {
     const env = process.env.NODE_ENV as Environment || 'development;;
+=======
+  private loadEnvironmentConfig(): void {}
+    const env = process.env.NODE_ENV as Environment || 'development'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
     this.config.environment = env;
 
     // Override with environment-specific settings;
+<<<<<<< HEAD
 
     if (env === 'production') {
       this.config.logging.level = error
+=======
+    if (env === 'production') {}
+      this.config.logging.level = 'error'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.config.logging.enableConsole = false;
 
       this.config.features.enableAnalytics = true;
 
     } else if (env === 'staging') {
+<<<<<<< HEAD
       this.config.logging.level = warn
       this.config.logging.enableConsole = true;
 
+=======
+      this.config.logging.level = 'warn'
+      this.config.logging.enableConsole = true;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   }
 
-  public getConfig(): AppConfig {
+  public getConfig(): AppConfig {}
     return { ...this.config }
 
   }
 
-  public updateConfig(updates: Partial<AppConfig>): void {,
+  public updateConfig(updates: Partial<AppConfig>): void {,}
     this.config = { ...this.config, ...updates }
 
   }
 
-  public getApiConfig() {
+  public getApiConfig() {}
     return this.config.api;
 
   }
 
-  public getFeatureConfig() {
+  public getFeatureConfig() {}
     return this.config.features;
 
   }
 
-  public getPerformanceConfig() {
+  public getPerformanceConfig() {}
     return this.config.performance;
 
   }
 
-  public getSecurityConfig() {
+  public getSecurityConfig() {}
     return this.config.security;
 
   }
 
-  public getUIConfig() {
+  public getUIConfig() {}
     return this.config.ui;
 
   }
 
-  public getLoggingConfig() {
+  public getLoggingConfig() {}
     return this.config.logging;
 
   }
 
+<<<<<<< HEAD
   public isDevelopment(): boolean {
     return this.config.environment === development
   }
@@ -175,6 +216,18 @@ class ConfigManager {
 
   public isStaging(): boolean {
     return this.config.environment === staging
+=======
+  public isDevelopment(): boolean {}
+    return this.config.environment === 'development'
+  }
+
+  public isProduction(): boolean {}
+    return this.config.environment === 'production'
+  }
+
+  public isStaging(): boolean {}
+    return this.config.environment === 'staging'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
 }

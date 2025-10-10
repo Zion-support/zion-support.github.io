@@ -22,9 +22,14 @@ class ProductionLogger {}
 
   private isProduction = process.env.NODE_ENV === 'production;
 
+<<<<<<< HEAD
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {;
 
 const entry: LogEntry = {,
+=======
+  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {;}
+const entry: LogEntry = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       level;
 
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
@@ -40,9 +45,14 @@ const entry: LogEntry = {,
 };
 
     // Only log in development;
+<<<<<<< HEAD
 
     if (this.isDevelopment) {
       switch (level) {
+=======
+    if (this.isDevelopment) {}
+      switch (level) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Only log in development
     if (this.isDevelopment) {}
 
@@ -65,8 +75,12 @@ const entry: LogEntry = {,
     }
 
     // In production, send critical errors to monitoring service;
+<<<<<<< HEAD
 
     if (this.isProduction && level === 'error') {
+=======
+    if (this.isProduction && level === 'error') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}
 
@@ -75,11 +89,16 @@ this.sendToMonitoring(entry)]
 
   }
 
-  private sendToMonitoring(entry: LogEntry): void {,
+  private sendToMonitoring(entry: LogEntry): void {,}
     // Send to analytics/monitoring service;
+<<<<<<< HEAD
 
     if (typeof window !== 'undefined' && 'gtag' in window) {,
       (window as any).gtag('event', 'error_log', {)
+=======
+    if (typeof window !== 'undefined' && 'gtag' in window) {,}
+      (window as any).gtag('event', 'error_log', {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         error_message: entry.message}
 
         error_context: entry.context),
@@ -90,9 +109,13 @@ this.sendToMonitoring(entry)]
 
     // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
+<<<<<<< HEAD
 
       (window as any).gtag('event', 'error_log, {);
 
+=======
+      (window as any).gtag('event', 'error_log', {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,

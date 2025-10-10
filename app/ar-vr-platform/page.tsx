@@ -8,24 +8,30 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 ;
 
+<<<<<<< HEAD
 const ARVRPlatformPage: React.FC = () => {const features = [;;;
 
     {
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Brain,
       title: 'AI-Powered Solutions,
       description: Advanced AI technology to transform your business operations and improve efficiency
     },
-    {
+    {}
       icon: Zap,
       title: 'High Performance,
       description: Lightning-fast processing and real-time analytics for optimal results
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security,
       description: Bank-level security with encryption and compliance standards
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach,
       description: Worldwide deployment and support for international businesses
@@ -98,6 +104,7 @@ const benefits = [;;
             </p>
           </div>
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {features.map((feature, index) => (
 
@@ -105,6 +112,14 @@ const benefits = [;;
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4 />
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </div>
             ))          </div>
         </div>
@@ -123,12 +138,20 @@ const benefits = [;;
             </p>
           </div>
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
             {benefits.map((benefit, index) => (
 
               <div key={index} className="flex items-center space-x-3>
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 />
                 <span className="text-gray-300>{benefit}</span>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (}
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </div>
             ))          </div>
         </div>

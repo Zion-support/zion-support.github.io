@@ -8,24 +8,30 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 ;
 
+<<<<<<< HEAD
 const CloudMigrationPage: React.FC = () => {const features = [;;;
 
     {
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Zap,
       title: 'High Performance,
       description: Lightning-fast processing and real-time analytics for optimal results
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security,
       description: Bank-level security with encryption and compliance standards
     },
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions,
       description: Advanced AI technology to transform your business operations
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach,
       description: Worldwide deployment and support for international businesses
@@ -83,12 +89,20 @@ const benefits = [;;
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {features.map((feature, index) => (
 
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4>
                   <feature.icon className="h-6 w-6 text-white />
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
@@ -110,12 +124,20 @@ const benefits = [;;
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
             {benefits.map((benefit, index) => (
 
               <div key={index} className="flex items-start space-x-3>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
                 <p className="text-gray-300 text-lg>{benefit}</p>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (}
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </div>
             ))          </div>
         </div>

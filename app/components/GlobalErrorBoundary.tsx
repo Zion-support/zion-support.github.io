@@ -23,12 +23,21 @@ const benefits = [;;
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary 
       <
 
+<<<<<<< HEAD
       {/* Features Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8>
         <div className="max-w-7xl mx-auto>
           <div className="text-center mb-16>
             <h2 className=text-3xl m,
     d:text-4xl font-bold text-white mb-4>
+=======
+      {/* Features Section *}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl m,
+    d:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Why Choose Our GlobalErrorBoundary?
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto>
@@ -49,11 +58,20 @@ const benefits = [;;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Benefits Section *
       <section className=py-20 px-4 sm: px-6 lg:px-8 bg-white
         <div className="max-w-7xl mx-auto>
           <div className="text-center mb-16>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
+=======
+
+      {/* Benefits Section *}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Key Benefits
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto>
@@ -61,22 +79,39 @@ const benefits = [;;
             <
           <
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
             {benefits.map((benefit, index) => (
 
               <div key={index} className="flex items-start space-x-3>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
                 <p className="text-gray-300 text-lg>{benefit}</p>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (}
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </div>
             ))
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8>
         <div className="max-w-4xl mx-auto text-center>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
+=======
+
+      {/* CTA Section *}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Ready to Get Started?
             <
             <p className="text-xl text-purple-100 mb-8>

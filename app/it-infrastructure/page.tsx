@@ -6,22 +6,22 @@ import { Helmet } from 'react-helmet-async;
 
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
 
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions,
       description: Advanced AI technology to transform your business operations and improve efficiency
     },
-    {
+    {}
       icon: Zap,
       title: 'High Performance,
       description: Lightning-fast processing and real-time analytics for optimal results
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security,
       description: Bank-level security with encryption and compliance standards
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach,
       description: Worldwide deployment and support for international businesses
@@ -64,11 +64,20 @@ const benefits = [;;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8>
         <div className="max-w-4xl mx-auto text-center>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
+=======
+
+      {/* CTA Section *}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Ready to Get Started?
             <
             <p className="text-xl text-purple-100 mb-8>

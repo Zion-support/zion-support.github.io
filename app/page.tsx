@@ -18,12 +18,17 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
 
   useEffect(() => {
+=======
+  
+  useEffect(() => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setIsLoaded(true);
 
     const timer = setTimeout(() => setIsVisible(true), 100);;
@@ -32,6 +37,7 @@ const HomePage: React.FC = () => {
 
   }, []);
 
+<<<<<<< HEAD
   const handlePhoneClick = () => {;;
 
     // Analytics tracking
@@ -39,6 +45,14 @@ const HomePage: React.FC = () => {
       window.gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: header_phone
+=======
+  const handlePhoneClick = () => {}
+    // Analytics tracking
+    if (typeof window !== 'undefined' && window.gtag) {}
+      window.gtag('event', 'phone_click', {}
+        event_category: 'engagement',
+        event_label: 'header_phone'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       });
 
     }
@@ -72,7 +86,11 @@ const HomePage: React.FC = () => {
           {/* Hero Section */}
 
           <section
+<<<<<<< HEAD
             className={text-center mb-16 transition-all duration-1000 ${
+=======
+            className={`text-center mb-16 transition-all duration-1000 ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0 
                 : opacity-0 translate-y-8

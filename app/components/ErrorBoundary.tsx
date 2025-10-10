@@ -4,7 +4,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react;
 
 import { AlertTriangle, RefreshCw, Home } from lucide-react;
 
-interface Props {
+interface Props {}
   children: ReactNode;
 
   fallback?: ReactNode;
@@ -13,7 +13,7 @@ interface Props {
 
 }
 
-interface State {
+interface State {}
   hasError: boolean;
 
   error: Error | null;
@@ -22,12 +22,19 @@ interface State {
 
 }
 
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {;
 
 constructor(props: Props) {
     super(props);
 
     this.state = {
+=======
+class ErrorBoundary extends Component<Props, State> {;}
+constructor(props: Props) {}
+    super(props);
+    this.state = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       hasError: false,
       error: null,
       errorInfo: null
@@ -35,8 +42,8 @@ constructor(props: Props) {
 
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
+  static getDerivedStateFromError(error: Error): State {}
+    return {}
       hasError: true,
       error,
       errorInfo: null
@@ -44,36 +51,48 @@ constructor(props: Props) {
 
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({}
       error,
       errorInfo
     })
     // Log error to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development) {
+=======
+    if (process.env.NODE_ENV === 'development') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // console.error removed for production
 }
 
     // Log error to external service in production
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'production) {
+=======
+    if (process.env.NODE_ENV === 'production') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.logErrorToService(error, errorInfo);
 
     }
 
     // Call custom error handler if provided
-    if (this.props.onError) {
+    if (this.props.onError) {}
       this.props.onError(error, errorInfo);
 
     }
 
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag;
+<<<<<<< HEAD
 
 const errorData = {;;
 
+=======
+const errorData = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -83,9 +102,14 @@ const errorData = {;;
     };
 
     // Example: Send to analytics
+<<<<<<< HEAD
     if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;;
 
       gtag('event', 'exception, {
+=======
+    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', 'exception', {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         description: error.message,
         fatal: false
       })    }
@@ -93,22 +117,30 @@ const errorData = {;;
     // console.error removed for production
 };
 
-  handleRetry = () => {
-    this.setState({
+  handleRetry = () => {}
+    this.setState({}
       hasError: false,
       error: null,
       errorInfo: null
+<<<<<<< HEAD
     })  };
 
   handleGoHome = () => {
     window.location.href = /;
 
+=======
+    })
+  };
+  
+  handleGoHome = () => {}
+    window.location.href = '/';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   };
 
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       // Custom fallback UI
-      if (this.props.fallback) {
+      if (this.props.fallback) {}
         return this.props.fallback;
 
       }
@@ -130,10 +162,16 @@ const errorData = {;;
               Were sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development && this.state.error && (
 
               <details className="mb-6 text-left>
                 <summary className="text-red-400 cursor-pointer mb-2>
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
+              <details className="mb-6 text-left">
+                <summary className="text-red-400 cursor-pointer mb-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   Error Details (Development)
                 </summary>
                 <div className="bg-red-900/20 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto>
@@ -141,9 +179,14 @@ const errorData = {;;
                     <strong>Error:</strong> {this.state.error.message}
 
                   </div>
+<<<<<<< HEAD
                   {this.state.error.stack && (
 
                     <div className="mb-2>
+=======
+                  {this.state.error.stack && (}
+                    <div className="mb-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1>
                         {this.state.error.stack}
@@ -151,9 +194,13 @@ const errorData = {;;
                       </pre>
                     </div>
                   )}
+<<<<<<< HEAD
 
                   {this.state.errorInfo && (
 
+=======
+                  {this.state.errorInfo && (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1>

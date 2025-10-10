@@ -6,25 +6,31 @@ import { Helmet } from 'react-helmet-async;
 
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
 
+<<<<<<< HEAD
 const Next.dPage: React.FC = () => {
   const features = [;;;
 
     {
+=======
+const Next.dPage: React.FC = () => {}
+  const features = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Brain,
       title: 'AI-Powered Solutions,
       description: 'Advanced AI technology to transform your business operations and improve efficiency});)
 },
-    {
+    {}
       icon: Zap,
       title: 'High Performance,
       description: 'Lightning-fast processing and real-time analytics for optimal results});)
 },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security,
       description: 'Bank-level security with encryption and compliance standards});)
 },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach,
       description: 'Worldwide deployment and support for international businesses});)
@@ -51,7 +57,12 @@ const Next.dPage: React.FC = () => {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business. />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d />
       </Helmet>
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility in Viteexport interface Metadata {
+=======
+// Type definitions for Next.js compatibility in Vite
+export interface Metadata {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   title?: string;
 
   description?: string;
@@ -63,8 +74,12 @@ const Next.dPage: React.FC = () => {
   creator?: string;
 
   publisher?: string;
+<<<<<<< HEAD
 
   formatDetection?: {
+=======
+  formatDetection?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     email?: boolean;
 
     address?: boolean;
@@ -74,15 +89,23 @@ const Next.dPage: React.FC = () => {
   };
 
   metadataBase?: URL;
+<<<<<<< HEAD
 
   alternates?: {
+=======
+  alternates?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     canonical?: string;
 
     languages?: Record<string, string>;
 
   };
+<<<<<<< HEAD
 
   openGraph?: {
+=======
+  openGraph?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     title?: string;
 
     description?: string;
@@ -90,8 +113,12 @@ const Next.dPage: React.FC = () => {
     url?: string;
 
     siteName?: string;
+<<<<<<< HEAD
 
     images?: Array<{
+=======
+    images?: Array<{}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       url: string,
       width?: number;
 
@@ -110,10 +137,15 @@ const Next.dPage: React.FC = () => {
     publishedTime?: string;
 
   };
+<<<<<<< HEAD
 
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | player;
 
+=======
+  twitter?: {}
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     site?: string;
 
     creator?: string;
@@ -125,13 +157,21 @@ const Next.dPage: React.FC = () => {
     images?: string[];
 
   };
+<<<<<<< HEAD
 
   robots?: {
+=======
+  robots?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     index?: boolean;
 
     follow?: boolean;
+<<<<<<< HEAD
 
     googleBot?: {
+=======
+    googleBot?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       index?: boolean;
 
       follow?: boolean;
@@ -145,8 +185,12 @@ const Next.dPage: React.FC = () => {
     };
 
   };
+<<<<<<< HEAD
 
   verification?: {
+=======
+  verification?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     google?: string;
 
     yandex?: string;
@@ -159,7 +203,7 @@ const Next.dPage: React.FC = () => {
 
 }
 
-export interface MetadataRoute {
+export interface MetadataRoute {}
   url: string,
   lastModified?: string | Date;
 
@@ -169,7 +213,7 @@ export interface MetadataRoute {
 
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute {
+export interface MetadataRouteSitemap extends MetadataRoute {}
   url: string,
   lastModified?: string | Date;
 
@@ -180,7 +224,7 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 }
 
 // Custom Next.js types
-export interface NextPageProps {
+export interface NextPageProps {}
   params: { [key: string]: string };
 
   searchParams: { [key: string]: string | string[] | undefined };
@@ -229,17 +273,25 @@ export interface NextPageProps {
             </p>
           </div>
 // API route types
-export interface ApiRouteHandler {
+export interface ApiRouteHandler {}
   (req: Request): Promise<Response>;
 
 }
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {features.map((feature, index) => (
 
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4>
                   <feature.icon className="h-6 w-6 text-white />
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
@@ -265,9 +317,16 @@ export interface ApiRouteHandler {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
           <div></div>
+<<<<<<< HEAD
             {benefits.map((benefit, index) => (              <div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
                 <p className="text-gray-300 text-lg>{benefit}</p>
+=======
+            {benefits.map((benefit, index) => (}
+              <div></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </div>
             ));
 
@@ -307,7 +366,7 @@ export interface ApiRouteHandler {
 export default Next.dPage;
 
 // Server components types
-export interface ServerComponentProps {
+export interface ServerComponentProps {}
   params: { [key: string]: string };
 
   searchParams: { [key: string]: string | string[] | undefined };
@@ -315,7 +374,7 @@ export interface ServerComponentProps {
 }
 
 // Client components types
-export interface ClientComponentProps {
+export interface ClientComponentProps {}
   children?: React.ReactNode;
 
   className?: string;
@@ -323,7 +382,7 @@ export interface ClientComponentProps {
 }
 
 // Route handlers
-export interface RouteHandler {
+export interface RouteHandler {}
   GET?: (req: Request) => Promise<Response>;
 
   POST?: (req: Request) => Promise<Response>;
@@ -337,13 +396,13 @@ export interface RouteHandler {
 }
 
 // Dynamic route types
-export interface DynamicRoute {
+export interface DynamicRoute {}
   params: { [key: string]: string };
 
 }
 
 // Static generation types
-export interface StaticProps {
+export interface StaticProps {}
   props: { [key: string]: any };
 
   revalidate?: number;
@@ -353,7 +412,7 @@ export interface StaticProps {
 }
 
 // ISR types
-export interface ISRConfig {
+export interface ISRConfig {}
   revalidate: number;
 
   tags?: string[];
@@ -361,6 +420,7 @@ export interface ISRConfig {
 }
 
 // Edge runtime types
+<<<<<<< HEAD
 export interface EdgeRuntime {
   runtime: edge;
 
@@ -376,6 +436,21 @@ export interface NodeRuntime {
 declare module 'next {
   interface NextApiRequest {
     user?: {
+=======
+export interface EdgeRuntime {}
+  runtime: 'edge';
+}
+
+// Node.js runtime types
+export interface NodeRuntime {}
+  runtime: 'nodejs';
+}
+
+// Extend Next.js types
+declare module 'next' {}
+  interface NextApiRequest {}
+    user?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       id: string;
 
       email: string;

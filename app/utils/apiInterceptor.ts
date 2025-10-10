@@ -5,14 +5,14 @@
 
  */
 
-interface InterceptorConfig {
+interface InterceptorConfig {}
   onRequest?: (config: any) => any;
 
   onResponse?: (response: any) => any;
 
   onError?: (error: any) => any}
 
-class APIInterceptor {
+class APIInterceptor {}
   private requestInterceptors: Array<(config: any) => any> = [];
 
   private responseInterceptors: Array<(response: any) => any> = [];
@@ -20,86 +20,138 @@ class APIInterceptor {
   private errorInterceptors: Array<(error: any) => any> = [];
 
   // Add request interceptor;
+<<<<<<< HEAD
 
   addRequestInterceptor(interceptor: (config: any) => any): void {,
+=======
+  addRequestInterceptor(interceptor: (config: any) => any): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.requestInterceptors.push(interceptor);
 
   // Add response interceptor;
+<<<<<<< HEAD
 
   addResponseInterceptor(interceptor: (response: any) => any): void {,
+=======
+  addResponseInterceptor(interceptor: (response: any) => any): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.responseInterceptors.push(interceptor);
 
   // Add error interceptor;
+<<<<<<< HEAD
 
   addErrorInterceptor(interceptor: (error: any) => any): void {,
+=======
+  addErrorInterceptor(interceptor: (error: any) => any): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.errorInterceptors.push(interceptor);
 
   // Remove request interceptor;
+<<<<<<< HEAD
 
   removeRequestInterceptor(interceptor: (config: any) => any): void {,;
 
 const index = this.requestInterceptors.indexOf(interceptor);;
 
     if (index > -1) {,
+=======
+  removeRequestInterceptor(interceptor: (config: any) => any): void {,;}
+const index = this.requestInterceptors.indexOf(interceptor);
+    if (index > -1) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.requestInterceptors.splice(index, 1);
 
   }
 
   // Remove response interceptor;
+<<<<<<< HEAD
 
   removeResponseInterceptor(interceptor: (response: any) => any): void {,;
 
 const index = this.responseInterceptors.indexOf(interceptor);;
 
     if (index > -1) {,
+=======
+  removeResponseInterceptor(interceptor: (response: any) => any): void {,;}
+const index = this.responseInterceptors.indexOf(interceptor);
+    if (index > -1) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.responseInterceptors.splice(index, 1);
 
   }
 
   // Remove error interceptor;
+<<<<<<< HEAD
 
   removeErrorInterceptor(interceptor: (error: any) => any): void {,;
 
 const index = this.errorInterceptors.indexOf(interceptor);;
 
     if (index > -1) {,
+=======
+  removeErrorInterceptor(interceptor: (error: any) => any): void {,;}
+const index = this.errorInterceptors.indexOf(interceptor);
+    if (index > -1) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.errorInterceptors.splice(index, 1);
 
   }
 
   // Apply request interceptors;
+<<<<<<< HEAD
 
   applyRequestInterceptors(config: any): any {,
     return this.requestInterceptors.reduce((acc, interceptor) => {
       try {
+=======
+  applyRequestInterceptors(config: any): any {,}
+    return this.requestInterceptors.reduce((acc, interceptor) => {}
+      try {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         return interceptor(acc)} catch (error) {
         return acc}
 
     }, config);
 
   // Apply response interceptors;
+<<<<<<< HEAD
 
   applyResponseInterceptors(response: any): any {,
     return this.responseInterceptors.reduce((acc, interceptor) => {
       try {
+=======
+  applyResponseInterceptors(response: any): any {,}
+    return this.responseInterceptors.reduce((acc, interceptor) => {}
+      try {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         return interceptor(acc)} catch (error) {
         return acc}
 
     }, response);
 
   // Apply error interceptors;
+<<<<<<< HEAD
 
   applyErrorInterceptors(error: any): any {,
     return this.errorInterceptors.reduce((acc, interceptor) => {
       try {
+=======
+  applyErrorInterceptors(error: any): any {,}
+    return this.errorInterceptors.reduce((acc, interceptor) => {}
+      try {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         return interceptor(acc)} catch (interceptorError) {
         return acc}
 
     }, error);
 
   // Clear all interceptors;
+<<<<<<< HEAD
 
   clearAll(): void {
+=======
+  clearAll(): void {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.requestInterceptors = [];
 
     this.responseInterceptors = [];
@@ -107,12 +159,16 @@ const index = this.errorInterceptors.indexOf(interceptor);;
     this.errorInterceptors = []}
 
   // Get interceptor counts;
+<<<<<<< HEAD
 
   getInterceptorCounts(): {
+=======
+  getInterceptorCounts(): {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     request: number,
     response: number,
     error: number} {
-    return {
+    return {}
       request: this.requestInterceptors.length;
 
       response: this.responseInterceptors.length;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React, { useState } from 'react;
@@ -12,28 +13,51 @@ import SEOOptimizer from ../components/SEOOptimizer;
 
 export default function APIDocsPage() {;
 
+=======
+'use client';
+import React, { useState } from 'react';
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+export default function APIDocsPage() {;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
 const [searchQuery, setSearchQuery] = useState();
 
 ;
+<<<<<<< HEAD
 
 const copyToClipboard = (code: string, id: string) => {;
     navigator.clipboard.writeText(code);    setCopiedCode(id);
 
+=======
+const copyToClipboard = (code: string, id: string) => {}
+    navigator.clipboard.writeText(code);
+    setCopiedCode(id);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setTimeout(() => setCopiedCode(null), 2000);
 
 ;
+<<<<<<< HEAD
 
 const apiEndpoints = [;;
 
     {
       title: 'AI Services,
       description: 'Artificial Intelligence and Machine Learning APIs,
+=======
+const apiEndpoints = [
+    {}
+      title: 'AI Services',
+      description: 'Artificial Intelligence and Machine Learning APIs',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Brain,
-      endpoints: [
-        {
+      endpoints: []
+        {}
           nam,
+<<<<<<< HEAD
     e: 'Text Analysis,
           method: 'POST,
           path: /api/ai
@@ -59,6 +83,31 @@ const apiEndpoints = [;;
   -H Content-Type: application
   -d {
     "image_url": http,
+=======
+    e: 'Text Analysis',
+          method: 'POST',
+          path: '/api/ai
+          description: 'Analyze text sentiment, entities, and key phrases',
+          code: `curl -X POST "https://api.ziontechgroup.com/ai
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Typ,
+    e: application
+  -d '{}
+    "text": "Your text to analyze",
+    "features": ["sentiment", "entities", "key_phrases"]
+  }'`
+        },
+        {}
+          name: 'Image Recognition',
+          method: 'POST',
+          path: '/api/ai
+          description: 'Identify objects, faces, and scenes in images',
+          code: `curl -X POST "https://api.ziontechgroup.com/ai
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application
+  -d '{}
+    "image_url": "http,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     s://example.com
     "features": ["objects", "faces", "text]
   }'
@@ -66,13 +115,20 @@ const apiEndpoints = [;;
 
       ]
     },
+<<<<<<< HEAD
     {
       title: 'Cloud Services,
       description: 'Cloud infrastructure and deployment APIs,
+=======
+    {}
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and deployment APIs',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Cloud,
-      endpoints: [
-        {
+      endpoints: []
+        {}
           nam,
+<<<<<<< HEAD
     e: 'Deploy Application,
           method: 'POST,
           path: /api/cloud
@@ -89,6 +145,23 @@ const apiEndpoints = [;;
       "cpu": "2,
       "memory": "4GB,
       "instances: 3
+=======
+    e: 'Deploy Application',
+          method: 'POST',
+          path: '/api/cloud
+          description: 'Deploy applications to cloud infrastructure',
+          code: `curl -X POST "https://api.ziontechgroup.com/cloud
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Typ,
+    e: application
+  -d '{}
+    "app_name": "my-app",
+    "environment": "production",
+    "config": {}
+      "cpu": "2",
+      "memory": "4GB",
+      "instances": 3
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   }'
@@ -96,13 +169,20 @@ const apiEndpoints = [;;
 
       ]
     },
+<<<<<<< HEAD
     {
       title: 'Data Analytics,
       description: 'Data processing and analytics APIs,
+=======
+    {}
+      title: 'Data Analytics',
+      description: 'Data processing and analytics APIs',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Database,
-      endpoints: [
-        {
+      endpoints: []
+        {}
           nam,
+<<<<<<< HEAD
     e: 'Process Data,
           method: 'POST,
           path: /api/analytics
@@ -117,6 +197,21 @@ const apiEndpoints = [;;
     "operations": ["aggregate", "filter", "transform],
     "output_format": "json
   }'
+=======
+    e: 'Process Data',
+          method: 'POST',
+          path: '/api/analytics
+          description: 'Process and analyze large datasets',
+          code: `curl -X POST "https://api.ziontechgroup.com/analytics
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Typ,
+    e: application
+  -d '{}
+    "dataset_id": "dataset_123",
+    "operations": ["aggregate", "filter", "transform"],
+    "output_format": "json"
+  }'`
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         }
 
       ]
@@ -125,9 +220,13 @@ const apiEndpoints = [;;
   ];
 
 ;
+<<<<<<< HEAD
 
 const filteredEndpoints = apiEndpoints.map(category => ({;;
 
+=======
+const filteredEndpoints = apiEndpoints.map(category => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -195,6 +294,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
         <
       <
 
+<<<<<<< HEAD
       {/* API Endpoints *
       <section className="py-16 px-4>
         <div className="max-w-7xl mx-auto>
@@ -204,6 +304,17 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
                 <div className="flex items-center gap-4 mb-8>
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center>
                     <category.icon className="w-6 h-6 text-white 
+=======
+      {/* API Endpoints *}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints<
+          <div className="space-y-8">)
+            {filteredEndpoints.map((category), categoryIndex) => (<div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <category.icon className="w-6 h-6 text-white" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2>{category.title}<
@@ -211,6 +322,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
                   <
                 <
                 
+<<<<<<< HEAD
                 <div className="space-y-6>)
                   {category.endpoints.map((endpoint, endpointIndex) => (<div key={endpointIndex} className=bg-white/5 rounded-xl p-6 border border-white
                       <div className="flex items-center justify-between mb-4>
@@ -220,6 +332,17 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
                               ? bg-green-500
                               : bg-blue-500
                           }}>
+=======
+                <div className="space-y-6">)
+                  {category.endpoints.map((endpoint, endpointIndex) => (<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-4">
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
+                            endpoint.method === 'POST' 
+                              ? 'bg-green-500
+                              : 'bg-blue-500
+                          }`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                             {endpoint.method}
 
                           </span>
@@ -260,10 +383,18 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section *
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700>
         <div className="max-w-4xl mx-auto text-center>
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6>
+=======
+
+      {/* CTA Section *}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             Ready to Get Started?
           <
           <p className="text-xl text-purple-100 mb-8>

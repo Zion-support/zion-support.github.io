@@ -9,8 +9,13 @@ import Navigation from '../components/Navigation;
 import Footer from '../components/Footer;
 
 ;
+<<<<<<< HEAD
 
 const CookiesPage: React.FC = () => {  return (<div>
+=======
+const CookiesPage: React.FC = () => {}
+  return (<div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         <title>Cookie Policy - Zion Tech Group<
         <meta name="description" content=Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website. 
       <

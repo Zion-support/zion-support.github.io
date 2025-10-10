@@ -10,6 +10,7 @@ import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight }
 
 ;
 
+<<<<<<< HEAD
 const ItServicesPage: React.FC = () => {const itServices = [;
     {
       titl,
@@ -41,12 +42,47 @@ const ItServicesPage: React.FC = () => {const itServices = [;
       icon: '🔄,
       price: Starting at $2,000
       features: [CI
+=======
+const $1Page: React.FC = () => {}
+  const itServices = [
+    {}
+      titl,
+    e: 'Cloud Infrastructure Management',
+      description: 'Complete cloud migration, optimization, and management services for AWS, Azure, and Google Cloud.',
+      icon: '☁️',
+      price: 'Starting at $2,500
+      features: ['Cloud migration strategy', 'Cost optimization', 'Security hardening', '24]
+      benefits: ['Reduce cloud costs by 30%', 'Improve performance by 40%', 'Ensure 99.9% uptime'],
+      marketPrice: '$4,000-8,000
+      category: 'Cloud Services',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker']
+    },
+    {}
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security services including threat detection, vulnerability assessment, and incident response.',
+      icon: '🔒',
+      price: 'Starting at $3,000
+      features: ['Security audits', 'Penetration testing', 'Threat monitoring', 'Incident response', 'Compliance management'],
+      benefits: ['Prevent 99% of cyber attacks', 'Reduce security costs by 50%', 'Ensure compliance'],
+      marketPrice: '$5,000-12,000
+      category: 'Security',
+      technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Zero Trust']
+    },
+    {}
+      title: 'DevOps & CI'
+      descriptio,'
+    n: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.',
+      icon: '🔄',
+      price: 'Starting at $2,000
+      features: ['CI]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       benefit,
     s: ['Deploy 10x faster', 'Reduce deployment errors by 90%', 'Improve team productivity],
       marketPrice: $3,500-7,000
       category: 'DevOps,
       technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Prometheus]
     },
+<<<<<<< HEAD
     {
       title: 'Database Administration,
       description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.,
@@ -76,12 +112,43 @@ const ItServicesPage: React.FC = () => {const itServices = [;
     n: '🛠️,
       price: Starting at $1,200
       features: [24
+=======
+    {}
+      title: 'Database Administration',
+      description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.',
+      icon: '🗄️',
+      price: 'Starting at $1,500
+      features: ['Database design', 'Performance tuning', 'Backup & recovery', 'Security hardening', 'Migration services'],
+      benefits: ['Improve query performance by 60%', 'Ensure data integrity', 'Reduce downtime'],
+      marketPrice: '$2,500-5,000
+      category: 'Database',
+      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
+    },
+    {}
+      title: 'Network Infrastructure',
+      description: 'Network design, implementation, and management for enterprise-grade connectivity.',
+      icon: '🌐',
+      price: 'Starting at $2,200
+      features: ['Network design', 'Router & switch config', 'VPN setup', 'Load balancing', 'Network monitoring'],
+      benefits: ['Improve network performance', 'Reduce latency by 40%', 'Ensure reliability'],
+      marketPrice: '$3,500-6,000
+      category: 'Networking',
+      technologies: ['Cisco', 'Juniper', 'Fortinet', 'SD-WAN', 'MPLS']
+    },
+    {}
+      title: 'IT Support & Helpdesk',
+      description: '24'
+      icon: '🛠️',
+      price: 'Starting at $1,200
+      features: ['24]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       benefit,
     s: ['Reduce downtime by 70%', 'Improve user satisfaction', 'Lower support costs],
       marketPrice: $2,000-4,000
       category: 'Support,
       technologies: ['ServiceNow', 'Jira', 'Remote Desktop', 'Active Directory', 'Office 365]
     },
+<<<<<<< HEAD
     {
       title: 'Data Analytics & BI,
       description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.,
@@ -131,6 +198,57 @@ const ItServicesPage: React.FC = () => {const itServices = [;
       description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.,
       icon: '💡,
       price: Starting at $200
+=======
+    {}
+      title: 'Data Analytics & BI',
+      description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.',
+      icon: '📊',
+      price: 'Starting at $2,800
+      features: ['Data warehouse design', 'ETL development', 'Dashboard creation', 'Report automation', 'Data governance'],
+      benefits: ['Make data-driven decisions', 'Improve business insights', 'Automate reporting'],
+      marketPrice: '$4,500-9,000
+      category: 'Analytics',
+      technologies: ['Tableau', 'Power BI', 'Snowflake', 'Apache Airflow', 'Python']
+    },
+    {}
+      title: 'API Development & Integration',
+      description: 'Custom API development, third-party integrations, and microservices architecture.',
+      icon: '🔌',
+      price: 'Starting at $2,000
+      features: ['RESTful API design', 'GraphQL development', 'Third-party integrations', 'API documentation', 'Rate limiting'],
+      benefits: ['Improve system connectivity', 'Enable rapid development', 'Enhance scalability'],
+      marketPrice: '$3,500-7,500
+      category: 'Integration',
+      technologies: ['Node.js', 'Python', 'GraphQL', 'Kong', 'Postman']
+    },
+    {}
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile application development for iOS and Android.',
+      icon: '📱',
+      price: 'Starting at $3,500
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI]
+      benefits: ['Reach mobile users', 'Improve user engagement', 'Increase revenue'],
+      marketPrice: '$6,000-15,000
+      category: 'Mobile',
+      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
+    },
+    {}
+      title: 'Web Application Development',
+      description: 'Custom web applications, e-commerce solutions, and enterprise web platforms.',
+      icon: '💻',
+      price: 'Starting at $2,500
+      features: ['Custom web apps', 'E-commerce solutions', 'CMS development', 'Responsive design', 'SEO optimization'],
+      benefits: ['Improve online presence', 'Increase conversions', 'Enhance user experience'],
+      marketPrice: '$4,000-10,000
+      category: 'Web Development',
+      technologies: ['React', 'Vue.js', 'Node.js', 'PHP', 'WordPress']
+    },
+    {}
+      title: 'IT Consulting & Strategy',
+      description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.',
+      icon: '💡',
+      price: 'Starting at $200
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       feature,
     s: ['Technology assessment', 'Digital transformation', 'IT strategy planning', 'Vendor evaluation', 'ROI analysis],
       benefits: ['Align IT with business goals', 'Optimize technology investments', 'Reduce risks],
@@ -139,6 +257,7 @@ const ItServicesPage: React.FC = () => {const itServices = [;
     y: 'Consulting,
       technologies: ['Strategic Planning', 'Architecture Design', 'Risk Assessment', 'ROI Analysis]
     },
+<<<<<<< HEAD
     {
       title: 'Disaster Recovery & Backup,
       description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.,
@@ -246,11 +365,120 @@ const ItServicesPage: React.FC = () => {const itServices = [;
       price: Starting at $4,800
       features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring],
       benefits: [Enable AI
+=======
+    {}
+      title: 'Disaster Recovery & Backup',
+      description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.',
+      icon: '🔄',
+      price: 'Starting at $1,800
+      features: ['Backup strategy', 'Disaster recovery planning', 'Data replication', 'Recovery testing', 'Business continuity'],
+      benefits: ['Minimize downtime', 'Protect critical data', 'Ensure business continuity'],
+      marketPrice: '$3,000-6,000
+      category: 'Backup & Recovery',
+      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    {}
+      title: 'Blockchain Infrastructure',
+      description: 'Enterprise blockchain solutions, smart contract development, and decentralized application deployment.',
+      icon: '⛓️',
+      price: 'Starting at $4,500
+      features: ['Blockchain deployment', 'Smart contract development', 'DApp development', 'Node management', 'Security auditing'],
+      benefits: ['Enable decentralized solutions', 'Improve transparency', 'Reduce intermediaries'],
+      marketPrice: '$8,000-25,000
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS']
+    },
+    {}
+      title: 'IoT Platform Management',
+      description: 'Comprehensive IoT infrastructure management and device connectivity solutions.',
+      icon: '🌐',
+      price: 'Starting at $3,200
+      features: ['Device management', 'Data collection', 'Real-time monitoring', 'Edge computing', 'Security management'],
+      benefits: ['Enable IoT deployments', 'Improve operational efficiency', 'Reduce manual monitoring'],
+      marketPrice: '$5,500-18,000
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'CoAP', 'Edge Computing']
+    },
+    {}
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications and edge data processing.',
+      icon: '⚡',
+      price: 'Starting at $3,800
+      features: ['Edge node deployment', 'Data processing', 'Content delivery', 'Load balancing', 'Monitoring'],
+      benefits: ['Reduce latency', 'Improve performance', 'Enable real-time applications'],
+      marketPrice: '$6,500-20,000
+      category: 'Edge Computing',
+      technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Servers', '5G Networks']
+    },
+    {}
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing platform setup and quantum algorithm development services.',
+      icon: '⚛️',
+      price: 'Starting at $8,000
+      features: ['Quantum hardware setup', 'Algorithm development', 'Quantum simulation', 'Hybrid systems', 'Research support'],
+      benefits: ['Enable quantum computing', 'Solve complex problems', 'Gain competitive advantage'],
+      marketPrice: '$15,000-50,000
+      category: 'Quantum Computing',
+      technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti', 'IonQ', 'Quantum Simulators']
+    },
+    {}
+      title: '5G Network Implementation',
+      description: '5G network infrastructure deployment and optimization for enterprise applications.',
+      icon: '📡',
+      price: 'Starting at $5,500
+      features: ['5G network design', 'Infrastructure deployment', 'Performance optimization', 'Security implementation', 'Integration services'],
+      benefits: ['Enable high-speed connectivity', 'Support IoT applications', 'Improve mobile experience'],
+      marketPrice: '$10,000-40,000
+      category: '5G Networks',
+      technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'NFV']
+    },
+    {}
+      title: 'Microservices Architecture',
+      description: 'Modern microservices architecture design and implementation for scalable applications.',
+      icon: '🔧',
+      price: 'Starting at $3,500
+      features: ['Architecture design', 'Service decomposition', 'API gateway setup', 'Service mesh', 'Monitoring'],
+      benefits: ['Improve scalability', 'Enable rapid development', 'Reduce deployment risks'],
+      marketPrice: '$6,000-20,000
+      category: 'Microservices',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'API Gateway', 'Service Mesh']
+    },
+    {}
+      title: 'Serverless Computing Platform',
+      description: 'Serverless architecture implementation and management for event-driven applications.',
+      icon: '☁️',
+      price: 'Starting at $2,800
+      features: ['Function deployment', 'Event handling', 'Auto-scaling', 'Cost optimization', 'Monitoring'],
+      benefits: ['Reduce infrastructure costs', 'Improve scalability', 'Simplify deployment'],
+      marketPrice: '$4,500-15,000
+      category: 'Serverless',
+      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
+    },
+    {}
+      title: 'Data Lake Architecture',
+      description: 'Enterprise data lake design and implementation for big data analytics and storage.',
+      icon: '🏞️',
+      price: 'Starting at $4,200
+      features: ['Data lake design', 'Data ingestion', 'Storage optimization', 'Security implementation', 'Analytics setup'],
+      benefits: ['Centralize data storage', 'Enable advanced analytics', 'Improve data governance'],
+      marketPrice: '$7,000-25,000
+      category: 'Data Architecture',
+      technologies: ['AWS S3', 'Azure Data Lake', 'Hadoop', 'Spark', 'Delta Lake']
+    },
+    {}
+      title: 'AI Infrastructure Setup',
+      description: 'AI'
+      icon: '🤖',
+      price: 'Starting at $4,800
+      features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring'],
+      benefits: ['Enable AI]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       marketPric,
     e: $8,000-30,000
       category: 'AI Infrastructure,
       technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow]
     },
+<<<<<<< HEAD
     {
       title: 'Hybrid Cloud Management,
       description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.,
@@ -338,6 +566,95 @@ const ItServicesPage: React.FC = () => {const itServices = [;
       marketPrice: $5,000-18,000
       category: 'Streaming,
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics]
+=======
+    {}
+      title: 'Hybrid Cloud Management',
+      description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.',
+      icon: '☁️',
+      price: 'Starting at $3,600
+      features: ['Multi-cloud strategy', 'Cost optimization', 'Security management', 'Migration services', 'Monitoring'],
+      benefits: ['Optimize cloud costs', 'Improve reliability', 'Enable vendor flexibility'],
+      marketPrice: '$6,500-22,000
+      category: 'Cloud Management',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'CloudFormation']
+    },
+    {}
+      title: 'Zero Trust Security Architecture',
+      description: 'Zero trust security model implementation for enterprise network protection.',
+      icon: '🔒',
+      price: 'Starting at $4,000
+      features: ['Identity verification', 'Network segmentation', 'Access control', 'Threat detection', 'Compliance'],
+      benefits: ['Improve security posture', 'Reduce attack surface', 'Ensure compliance'],
+      marketPrice: '$7,500-25,000
+      category: 'Security Architecture',
+      technologies: ['Zero Trust', 'Identity Management', 'Network Security', 'SIEM', 'EDR']
+    },
+    {}
+      title: 'High-Performance Computing (HPC)',
+      description: 'High-performance computing cluster setup and management for scientific and engineering workloads.',
+      icon: '💻',
+      price: 'Starting at $6,000
+      features: ['HPC cluster design', 'Job scheduling', 'Performance optimization', 'Storage management', 'Monitoring'],
+      benefits: ['Accelerate computations', 'Enable complex simulations', 'Improve research efficiency'],
+      marketPrice: '$12,000-50,000
+      category: 'HPC',
+      technologies: ['Slurm', 'OpenMPI', 'CUDA', 'InfiniBand', 'Parallel File Systems']
+    },
+    {}
+      title: 'Content Delivery Network (CDN)',
+      description: 'Global CDN implementation and optimization for improved content delivery performance.',
+      icon: '🌍',
+      price: 'Starting at $1,500
+      features: ['CDN setup', 'Content optimization', 'Caching strategy', 'Performance monitoring', 'Security'],
+      benefits: ['Improve load times', 'Reduce bandwidth costs', 'Enhance user experience'],
+      marketPrice: '$2,500-10,000
+      category: 'CDN',
+      technologies: ['CloudFlare', 'AWS CloudFront', 'Azure CDN', 'Akamai', 'Fastly']
+    },
+    {}
+      title: 'Database Performance Optimization',
+      description: 'Database performance tuning and optimization for improved application performance.',
+      icon: '🗄️',
+      price: 'Starting at $2,200
+      features: ['Performance analysis', 'Query optimization', 'Index tuning', 'Capacity planning', 'Monitoring'],
+      benefits: ['Improve query performance', 'Reduce response times', 'Optimize resource usage'],
+      marketPrice: '$4,000-15,000
+      category: 'Database Optimization',
+      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
+    },
+    {}
+      title: 'API Gateway Management',
+      description: 'Enterprise API gateway setup and management for secure and scalable API operations.',
+      icon: '🚪',
+      price: 'Starting at $2,500
+      features: ['API gateway setup', 'Rate limiting', 'Authentication', 'Monitoring', 'Documentation'],
+      benefits: ['Centralize API management', 'Improve security', 'Enable API monetization'],
+      marketPrice: '$4,500-18,000
+      category: 'API Management',
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'Zuul']
+    },
+    {}
+      title: 'Container Orchestration',
+      description: 'Kubernetes and container orchestration platform setup and management.',
+      icon: '🐳',
+      price: 'Starting at $3,200
+      features: ['Kubernetes setup', 'Container management', 'Auto-scaling', 'Service mesh', 'Monitoring'],
+      benefits: ['Improve scalability', 'Simplify deployment', 'Enable microservices'],
+      marketPrice: '$5,500-20,000
+      category: 'Containerization',
+      technologies: ['Kubernetes', 'Docker', 'Helm', 'Istio', 'Prometheus']
+    },
+    {}
+      title: 'Real-time Data Streaming',
+      description: 'Real-time data streaming platform setup and management for live data processing.',
+      icon: '📊',
+      price: 'Starting at $2,800
+      features: ['Stream processing', 'Data pipelines', 'Real-time analytics', 'Event handling', 'Monitoring'],
+      benefits: ['Enable real-time insights', 'Improve decision making', 'Support live applications'],
+      marketPrice: '$5,000-18,000
+      category: 'Streaming',
+      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration },
@@ -389,11 +706,19 @@ const ItServicesPage: React.FC = () => {const itServices = [;
           <
         <
 
+<<<<<<< HEAD
         {/* Key Benefits *
         <section className="py-16 bg-white>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8><
             <div className="text-center mb-12><
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4>
+=======
+        {/* Key Benefits *}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
+            <div className="text-center mb-12"><
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 Why Choose Our IT Services?
               <
               <p className="text-xl text-gray-600>
@@ -434,6 +759,7 @@ const ItServicesPage: React.FC = () => {const itServices = [;
           <
         <
 
+<<<<<<< HEAD
         {/* Services by Category *
         {categories.map(category => (
 
@@ -442,15 +768,30 @@ const ItServicesPage: React.FC = () => {const itServices = [;
               <div className="text-center mb-12><
                 <h2 className=text-3xl m,
     d:text-4xl font-bold text-gray-900 mb-4>
+=======
+        {/* Services by Category *}
+        {categories.map(category => (}
+          <section key={category} className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
+              <div className="text-center mb-12"><
+                <h2 className="text-3xl m,
+    d:text-4xl font-bold text-gray-900 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   {category} Services
                 <
                 <p className="text-xl text-gray-600>
                   Professional {category.toLowerCase()} solutions tailored to your business needs
                 <
               <
+<<<<<<< HEAD
               <div className=grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>
                 {itServices
+=======
+              <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+                {itServices}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow><
@@ -481,11 +822,19 @@ const ItServicesPage: React.FC = () => {const itServices = [;
                         <
                       <
 
+<<<<<<< HEAD
                       <div className="mb-4><
                         <h4 className="font-semibold text-gray-900 mb-2>Technologies: <
                         <div className="flex flex-wrap gap-2>
                           {service.technologies.map((tech), techIndex) => (<
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded>
+=======
+                      <div className="mb-4"><
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
+                        <div className="flex flex-wrap gap-2">
+                          {service.technologies.map((tech), techIndex) => (<}
+                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                               {tech}
 
                             <)
@@ -509,10 +858,17 @@ const ItServicesPage: React.FC = () => {const itServices = [;
           <
         ))}
 
+<<<<<<< HEAD
         {/* Contact Section *
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center><
             <h2 className="text-3xl md:text-4xl font-bold mb-4>
+=======
+        {/* Contact Section *}
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"><
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Ready to Transform Your IT Infrastructure?
             <
             <p className="text-xl mb-8 text-blue-100>
@@ -557,11 +913,18 @@ const ItServicesPage: React.FC = () => {const itServices = [;
           </div>
         </section>
 
+<<<<<<< HEAD
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
               {itServices.map((service, index) => (
 
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <Link
                   key={index}
 

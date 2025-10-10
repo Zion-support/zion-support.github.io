@@ -4,7 +4,13 @@ import React from 'react;
 
 import { Loader2 } from 'lucide-react;
 
+<<<<<<< HEAD
 export const PageLoader: React.FC = () => {
+=======
+import React from 'react';
+import { Loader2 } from 'lucide-react'
+export const PageLoader: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center>
@@ -15,12 +21,16 @@ export const PageLoader: React.FC = () => {
         <h2 className="text-xl font-semibold text-white mb-2>Loading...</h2>
         <p className="text-gray-300>Please wait while we load the page</p>
       </div>
-    </div>
+    </div>;
   );
 
 }
+<<<<<<< HEAD
 
 export const ComponentLoader: React.FC = () => {
+=======
+export const ComponentLoader: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (
 
     <div className="flex items-center justify-center p-8>
@@ -32,8 +42,12 @@ export const ComponentLoader: React.FC = () => {
   );
 
 }
+<<<<<<< HEAD
 
 export const ServiceCardSkeleton: React.FC = () => {
+=======
+export const ServiceCardSkeleton: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (
 
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse>
@@ -44,8 +58,12 @@ export const ServiceCardSkeleton: React.FC = () => {
   );
 
 }
+<<<<<<< HEAD
 
 export const ContentSkeleton: React.FC = () => {
+=======
+export const ContentSkeleton: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (
 
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse>

@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from 'react;
 
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
 
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {}
   enableImageOptimization?: boolean;
 
   enableLazyLoading?: boolean;
@@ -15,13 +15,19 @@ interface PerformanceOptimizerProps {
 
 }
 
+<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), className = ' }) => {
+=======
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), className = '' }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const [optimizations, setOptimizations] = useState<string[]>([]);
 
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
+<<<<<<< HEAD
 
   const optimizeImages = useCallback (() => {;
     const images = document.querySelectorAll('img);;
@@ -35,19 +41,37 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
       if (!img.decoding) {
         img.decoding = 'async;
 
+=======
+}
+  const optimizeImages = useCallback (() => {}
+    const images = document.querySelectorAll('img');
+    images.forEach ((img) => {}
+      if (!img.loading) {}
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {}
+        img.decoding = 'async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       }
 
     });
 
   }, []);
 
+<<<<<<< HEAD
   const optimizeMemory = useCallback (() => {;
     if ('memory in performance) {
       const memory = (performance as any).memory;;
 
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
+=======
+  const optimizeMemory = useCallback (() => {}
+    if ('memory' in performance) {}
+      const memory = (performance as any).memory;
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         /
-        if (window.gc) {
+        if (window.gc) {}
           window.gc();
 
         }
@@ -58,7 +82,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
   }, []);
 
+<<<<<<< HEAD
   const runOptimizations = useCallback (async () => {;
+=======
+  const runOptimizations = useCallback (async () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setIsOptimizing(true);
 
     const newOptimizations: string[] = [];
@@ -86,7 +114,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
   }, [optimizeImages, optimizeMemory]);
 
-  useEffect (() => {
+  useEffect (() => {}
     /
     optimizeImages();
 
@@ -103,8 +131,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
   }, [optimizeImages]);
 
+<<<<<<< HEAD
   useEffect (() => {
     const interval = setInterval(optimizeMemory, 30000); /;
+=======
+  useEffect (() => {}
+    const interval = setInterval(optimizeMemory, 30000); /
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return (<div>)
       {) => clearInterval(interval}
 
@@ -128,10 +161,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
           <
         <
 
+<<<<<<< HEAD
         {optimizations.length > 0 && (
 
           <div className="space-y-2 mb-4>
             {optimizations.map((optimization, index) => (<div key={index} className="flex items-center text-sm text-green-600>
+=======
+        {optimizations.length > 0 && (}
+          <div className="space-y-2 mb-4">
+            {optimizations.map((optimization, index) => (<div key={index} className="flex items-center text-sm text-green-600">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 
             <div className="flex items-center justify-between mb-2>
               <span className="text-sm font-medium text-gray-700>Performance Score<
@@ -139,6 +178,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
             <
             <div className="w-full bg-gray-200 rounded-full h-2>
               <div
+<<<<<<< HEAD
                 className={h-2 rounded-full transition-all duration-500 ${
                   performanceScore >= 90 ? 'bg-green-500 : 
                   performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500
@@ -150,6 +190,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
             {performanceScore < 90 && (
 
               <div className="mt-2 flex items-center>
+=======
+                className={`h-2 rounded-full transition-all duration-500 ${}
+                  performanceScore >= 90 ? 'bg-green-500' : 
+                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                }`}
+                style={{ width: `${performanceScore}%` }}
+              
+            <
+            {performanceScore < 90 && (}
+              <div className="mt-2 flex items-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 
                   Performance can be improved. Consider additional optimizations.
                 <
@@ -167,9 +218,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-  useEffect(() => {
+  useEffect(() => {}
     // Preload critical resources
+<<<<<<< HEAD
     if (enablePreloading && typeof window !== 'undefined) {
+=======
+    if (enablePreloading && typeof window !== 'undefined') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // Preload critical fonts
       const fontPreload = document.createElement(link);;
 
@@ -188,11 +243,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
         /images/logo.png
       ];
 
+<<<<<<< HEAD
       criticalImages.forEach(src => {
         const link = document.createElement(link);;
 
         link.rel = preload;
 
+=======
+      criticalImages.forEach(src => {}
+        const link = document.createElement('link');
+        link.rel = 'preload';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         link.href = src;
 
         link.as = image;
@@ -202,6 +263,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
       })    }
 
     // Optimize images
+<<<<<<< HEAD
     if (enableImageOptimization && typeof window !== 'undefined) {
       const images = document.querySelectorAll(img);;
 
@@ -216,11 +278,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
         if (!img.hasAttribute('decoding)) {
           img.decoding = async;
 
+=======
+    if (enableImageOptimization && typeof window !== 'undefined') {}
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {}
+        // Add loading="lazy" for non-critical images
+        if (enableLazyLoading && !img.hasAttribute('loading')) {}
+          img.loading = 'lazy';
+        }
+
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {}
+          img.decoding = 'async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         }
 
       })    }
 
     // Intersection Observer for lazy loading
+<<<<<<< HEAD
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver in window) {
       const imageObserver = new IntersectionObserver((entries, observer) => {;;
 
@@ -229,6 +305,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
             const img = entry.target as HTMLImageElement;;
 
             if (img.dataset.src) {
+=======
+    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {}
+      const imageObserver = new IntersectionObserver((entries, observer) => {}
+        entries.forEach(entry => {}
+          if (entry.isIntersecting) {}
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               img.src = img.dataset.src;
 
               img.removeAttribute(data-src);
@@ -247,6 +331,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
       lazyImages.forEach(img => imageObserver.observe(img))    }
 
     // Performance monitoring
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'performance in window) {
       const observer = new PerformanceObserver((list) => {;;
 
@@ -259,14 +344,31 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
           if (entry.entryType === 'first-input) {
             console.log(FID:, entry.processingStart - entry.startTime);
 
+=======
+    if (typeof window !== 'undefined' && 'performance' in window) {}
+      const observer = new PerformanceObserver((list) => {}
+        list.getEntries().forEach((entry) => {}
+          if (entry.entryType === 'largest-contentful-paint') {}
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {}
+            console.log('FID:', entry.processingStart - entry.startTime);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           }
 
         })
       })
 
+<<<<<<< HEAD
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input] })      } catch (e) {
         // Fallback for browsers that dont support these entry types
+=======
+      try {}
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
+      } catch (e) {
+        // Fallback for browsers that don't support these entry types}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       }
 
     }

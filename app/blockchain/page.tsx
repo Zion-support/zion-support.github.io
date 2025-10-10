@@ -6,9 +6,15 @@ import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles }
 
 ;
 
+<<<<<<< HEAD
 const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
 
     {
+=======
+const $1Page: React.FC = () => {}
+  const blockchainServices = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       titl,
     e: 'Smart Contract Development,
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.,
@@ -20,6 +26,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
       category: 'Smart Contracts,
       technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript]
     },
+<<<<<<< HEAD
     {
       title: 'DeFi Protocol Development,
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.,
@@ -101,6 +108,91 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
       description: 'Strategic blockchain consulting for enterprise adoption, technology selection, and implementation planning.,
       icon: '💡,
       price: Starting at $300
+=======
+    {}
+      title: 'DeFi Protocol Development',
+      description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
+      icon: '💰',
+      price: 'Starting at $25,000
+      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools', 'Governance tokens'],
+      benefits: ['Enable decentralized finance', 'Increase financial inclusion', 'Reduce traditional banking costs'],
+      marketPrice: '$50,000-200,000
+      category: 'DeFi',
+      technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
+    },
+    {}
+      title: 'NFT Marketplace Development',
+      description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
+      icon: '🎨',
+      price: 'Starting at $15,000
+      features: ['NFT minting', 'Marketplace UI]
+      benefits: ['Enable digital ownership', 'Create new revenue streams', 'Support digital artists'],
+      marketPrice: '$30,000-100,000
+      category: 'NFTs',
+      technologies: ['ERC-721', 'ERC-1155', 'IPFS', 'OpenSea API', 'Web3']
+    },
+    {}
+      title: 'Enterprise Blockchain Solutions',
+      description: 'Private and consortium blockchain solutions for enterprise applications and supply chain management.',
+      icon: '🏢',
+      price: 'Starting at $20,000
+      features: ['Private blockchain setup', 'Consortium management', 'Supply chain tracking', 'Identity management', 'Data privacy'],
+      benefits: ['Improve transparency', 'Reduce fraud', 'Streamline operations'],
+      marketPrice: '$40,000-150,000
+      category: 'Enterprise',
+      technologies: ['Hyperledger', 'Ethereum Enterprise', 'Corda', 'Quorum', 'Fabric']
+    },
+    {}
+      title: 'Cross-Chain Bridge Development',
+      description: 'Interoperability solutions for seamless asset and data transfer between different blockchain networks.',
+      icon: '🌉',
+      price: 'Starting at $30,000
+      features: ['Cross-chain bridges', 'Asset wrapping', 'Liquidity pools', 'Security audits', 'Multi-chain support'],
+      benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],
+      marketPrice: '$60,000-300,000
+      category: 'Interoperability',
+      technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink']
+    },
+    {}
+      title: 'Web3 Application Development',
+      description: 'Full-stack Web3 applications with wallet integration, smart contract interaction, and decentralized storage.',
+      icon: '🌐',
+      price: 'Starting at $12,000/project',
+      features: ['dApp development', 'Wallet integration', 'Smart contract integration', 'IPFS storage', 'User authentication'],
+      benefits: ['Build decentralized applications', 'Enable user ownership', 'Create new business models'],
+      marketPrice: '$25,000-100,000/project',
+      category: 'Web3',
+technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
+      technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
+},
+    {}
+      title: 'Blockchain Analytics Platform',
+      description: 'Comprehensive blockchain data analysis and visualization platform for insights and monitoring.',
+      icon: '📊',
+      price: 'Starting at $8,000
+      features: ['Transaction analysis', 'Address tracking', 'DeFi analytics', 'NFT metrics', 'Custom dashboards'],
+      benefits: ['Gain blockchain insights', 'Monitor network activity', 'Make data-driven decisions'],
+      marketPrice: '$15,000-60,000
+      category: 'Analytics',
+      technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs'];)
+},
+    {}
+      title: 'Staking & Validator Services',
+      description: 'Professional staking services and validator node management for various blockchain networks.',
+      icon: '🏦',
+      price: 'Starting at $2,000
+      features: ['Validator setup', 'Staking management', 'Reward optimization', 'Security monitoring', 'Slashing protection'],
+      benefits: ['Earn passive income', 'Support network security', 'Contribute to decentralization'],
+      marketPrice: '$4,000-20,000
+      category: 'Staking',
+      technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano'];)
+},
+    {}
+      title: 'Blockchain Consulting',
+      description: 'Strategic blockchain consulting for enterprise adoption, technology selection, and implementation planning.',
+      icon: '💡',
+      price: 'Starting at $300
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       feature,
     s: ['Technology assessment', 'Use case analysis', 'Implementation strategy', 'Risk assessment', 'ROI analysis],
       benefits: ['Make informed decisions', 'Reduce implementation risks', 'Maximize blockchain value],
@@ -171,12 +263,21 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         <
 
+<<<<<<< HEAD
         {/* Key Benefits *
         <section className="py-16 bg-white>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8><
             <div className="text-center mb-12><
               <h2 className=text-3xl m,
     d:text-4xl font-bold text-gray-900 mb-4>
+=======
+        {/* Key Benefits *}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
+            <div className="text-center mb-12"><
+              <h2 className="text-3xl m,
+    d:text-4xl font-bold text-gray-900 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 Why Choose Our Blockchain Services?
               <
               <p className="text-xl text-gray-600>
@@ -221,6 +322,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
               {blockchainServices.map((service, index) => (
 
@@ -228,27 +330,51 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                   <div className="text-4xl mb-4>{service.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3>{service.title}</h3>
                   <p className="text-gray-600 mb-4>{service.description}</p>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blockchainServices.map((service, index) => (}
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   
                   <div className="mb-4>
                     <span className="text-2xl font-bold text-blue-600>{service.price}</span>
                     <span className="text-sm text-gray-500 ml-2>(Market: {service.marketPrice})</span>
                   </div>
 
+<<<<<<< HEAD
         {/* Services by Category *
         {categories.map(category => (          <section key={category)} className="py-16 bg-gray-50>
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8><
               <div className="text-center mb-12><
                 <h2 className=text-3xl m,
     d:text-4xl font-bold text-gray-900 mb-4>
+=======
+        {/* Services by Category *}
+        {categories.map(category => (}
+          <section key={category)} className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
+              <div className="text-center mb-12"><
+                <h2 className="text-3xl m,
+    d:text-4xl font-bold text-gray-900 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   {category} Services
                 <
                 <p className="text-xl text-gray-600>
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
                 <
               <
+<<<<<<< HEAD
               <div className=grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>
                 {blockchainServices
+=======
+              <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+                {blockchainServices}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow><
@@ -279,11 +405,19 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                         <
                       <
 
+<<<<<<< HEAD
                       <div className="mb-4><
                         <h4 className="font-semibold text-gray-900 mb-2>Technologies: <
                         <div className="flex flex-wrap gap-2>
                           {service.technologies.map((tech), techIndex) => (<
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded>
+=======
+                      <div className="mb-4"><
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
+                        <div className="flex flex-wrap gap-2">
+                          {service.technologies.map((tech), techIndex) => (<}
+                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                               {tech}
 
                             <)
@@ -307,11 +441,19 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         ))}
 
+<<<<<<< HEAD
         {/* Blockchain Capabilities Showcase *
         <section className="py-16 bg-white>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8><
             <div className="text-center mb-12><
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4>
+=======
+        {/* Blockchain Capabilities Showcase *}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
+            <div className="text-center mb-12"><
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 Our Blockchain Capabilities
               <
               <p className="text-xl text-gray-600>
@@ -353,6 +495,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         <
 
+<<<<<<< HEAD
         {/* Contact Section *
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center><
@@ -360,6 +503,84 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
               Ready to Transform with Blockchain?
             <
             <p className="text-xl mb-8 text-blue-100>
+=======
+        {/* Contact Section *}
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform with Blockchain?
+            <
+            <p className="text-xl mb-8 text-blue-100">
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (}
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, benefitIndex) => (}
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.technologies.map((tech, techIndex) => (}
+                        <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t">
+                    <span className="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Build on Blockchain?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
+              Let's discuss your blockchain project and create a solution that transforms your business
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+              >
+                Start Your Project
+              </a>
+              <a
+                href="/pricing"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
+              >
+                View Pricing
+              Contact our blockchain experts for a free consultation and custom blockchain strategy development
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center><
               <a 

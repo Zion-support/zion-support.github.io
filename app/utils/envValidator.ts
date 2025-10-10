@@ -15,8 +15,12 @@ export interface EnvConfig {}
   NEXT_PUBLIC_GA_ID?: string;
 
   NEXT_PUBLIC_SITE_URL?: string}
+<<<<<<< HEAD
 
 class EnvValidator {
+=======
+class EnvValidator {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private errors: string[] = [],
   private warnings: string[] = [],
   /**,
@@ -41,7 +45,7 @@ class EnvValidator {}
     // Validate optional but recommended variables;
 
     this.validateOptionalVars()
-    return {
+    return {}
       isValid: this.errors.length === 0;
 
       errors: this.errors;
@@ -111,9 +115,14 @@ const validEnvs = ['development', 'production', 'test];;
     const nodeEnv = this.getNodeEnv();;
 
     // In production, these should be set;
+<<<<<<< HEAD
 
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
+=======
+    if (nodeEnv === 'production') {}
+      if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         this.warnings.push(
 
     // In production, these should be set
@@ -141,7 +150,7 @@ const validEnvs = ['development', 'production', 'test];;
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
 
   failed:
-${validation.errors.join('
+${validation.errors.join('}
 ')}`);
 
     if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */}`
@@ -155,7 +164,7 @@ ${validation.errors.join('
 
     }
 
-    if (!validEnvs.includes(nodeEnv)) {
+    if (!validEnvs.includes(nodeEnv)) {}
       this.errors.push(
 
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`);
@@ -184,7 +193,7 @@ ${validation.errors.join('
 export const envValidator = new EnvValidator();;
 
 // Export convenience function
-export function validateEnv(): EnvConfig {
+export function validateEnv(): EnvConfig {}
 // Export convenience function
 export function validateEnv(): EnvConfig {}
 

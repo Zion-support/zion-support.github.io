@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async;
 
 import { CheckCircle, Code, Settings, Zap } from 'lucide-react;
 
-const ApiBuilderPage: React.FC = () => {
+const ApiBuilderPage: React.FC = () => {}
   return (
 
     <>

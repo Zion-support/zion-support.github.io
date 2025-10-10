@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from react;
 
-interface AnimatedCounterProps {
+interface AnimatedCounterProps {}
   end: number;
 
   duration?: number;
@@ -14,8 +14,12 @@ interface AnimatedCounterProps {
   className?: string}
 
 ;
+<<<<<<< HEAD
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+=======
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   end,
   duration = 2000,
   prefix = ',
@@ -25,15 +29,24 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 return (;
 
 const [count, setCount] = useState(0);
+<<<<<<< HEAD
 
   useEffect(() => {;
 
+=======
+}
+  useEffect(() => {;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 let startTime: number;
 
     let animationFrame: number;
+<<<<<<< HEAD
 
 const animate = (currentTime: number) => {;;
 
+=======
+const animate = (currentTime: number) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       if (!startTime) startTime = currentTime;
 
 const progress = Math.min((currentTime - startTime) / duration, 1);;
@@ -45,8 +58,13 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4);;
 const currentCount = Math.floor(easeOutQuart * end);;
 
       setCount(currentCount);
+<<<<<<< HEAD
 
       if (progress < 1) {
+=======
+      
+      if (progress < 1) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         animationFrame = requestAnimationFrame(animate);
 
     };
@@ -57,7 +75,7 @@ const currentCount = Math.floor(easeOutQuart * end);;
 );
 
 } {
-      if (animationFrame) {
+      if (animationFrame) {}
         cancelAnimationFrame(animationFrame);
 
     }}, [end, duration]);

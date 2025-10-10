@@ -2,14 +2,23 @@
 export const debounce = <T extends (...args: any[]) => any>(;;
 
   func: T,
+<<<<<<< HEAD
   wait: number): ((...args: Parameters<T>) => void) => {
   return (
 
+=======
+  wait: number): ((...args: Parameters<T>) => void) => {}
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 ;
 
 let timeout: NodeJS.Timeout;
+<<<<<<< HEAD
 
   return (...args: Parameters<T>) => {,
+=======
+  return (...args: Parameters<T>) => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   func: T,
   wait: number
 ): ((...args: Parameters<T>
@@ -28,14 +37,19 @@ let timeout: NodeJS.Timeout;
 export const throttle = <T extends (...args: any[]) => any>(;;
 
   func: T,
+<<<<<<< HEAD
   limit: number): ((...args: Parameters<T>) => void) => {
   return (
 
+=======
+  limit: number): ((...args: Parameters<T>) => void) => {}
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 ;
 
 let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
+  return (...args: Parameters<T>) => {}
+    if (!inThrottle) {,}
   func: T,
   limit: number
 ): ((...args: Parameters<T>
@@ -79,6 +93,44 @@ const observer = new IntersectionObserver((entries) => {};;
   }, options);
 
   return observer}
+<<<<<<< HEAD
+=======
+export const preloadImage = (src: string): Promise<void> => {}
+return (
+,
+  return new Promise((resolve, reject) => {}
+export const preloadImage = (src: string): Promise<void>
+);
+} => {}
+  return new Promise((resolve, reject) => {}
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = reject;
+    img.src = src}
+export const preloadScript = (src: string): Promise<void> => {}
+return (
+,
+  return new Promise((resolve, reject) => {}
+export const preloadScript = (src: string): Promise<void>
+);
+} => {}
+  return new Promise((resolve, reject) => {}
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => resolve();
+    script.onerror = reject;
+    document.head.appendChild(script)
+export const measurePerformance = (name: string, fn: () => void) => {,}
+  if (typeof window === 'undefined' || !('performance' in window)) {,}
+export const measurePerformance = (name: string, fn: () => void) => {}
+  if (typeof window === 'undefined' || !('performance' in window)) {}
+    fn();
+    return}
+;
+const start = performance.now();
+  fn();
+const end = performance.now();
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
 export const preloadImage = (src: string): Promise<void> => {;;
 
@@ -137,6 +189,7 @@ export const measurePerformance = (name: string, fn: () => void) => {};;
     return}
 
 ;
+<<<<<<< HEAD
 
 const start = performance.now();;
 
@@ -161,6 +214,10 @@ export const getDeviceInfo = () => {};;
 const width = window.innerWidth;;
 
   return {
+=======
+const width = window.innerWidth;
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isMobile: width < 768;
 
     isTablet: width >= 768 && width < 1024;
@@ -170,8 +227,12 @@ const width = window.innerWidth;;
   private observers: PerformanceObserver[] = [];
 
   private isMonitoring: boolean = false;
+<<<<<<< HEAD
 
   constructor(config?: Partial<OptimizationConfig>) {,
+=======
+  constructor(config?: Partial<OptimizationConfig>) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return {}
 
     isMobile: width < 768,
@@ -252,8 +313,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if (typeof window === undefined) return;
 
     // Monitor page load performance;
+<<<<<<< HEAD
 
     window.addEventListener('load, () => {
+=======
+    window.addEventListener('load', () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Monitor page load performance
     window.addEventListener('load, () => {}
 
@@ -383,12 +448,18 @@ const lastEntry = entries[entries.length - 1];;
   private observeFID() {}
 
     try {}
+<<<<<<< HEAD
 
       const observer = new PerformanceObserver((list) => {};;
 
         const entries = list.getEntries();;
 
         entries.forEach((entry: PerformanceEntry) => {,
+=======
+      const observer = new PerformanceObserver((list) => {}
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         entries.forEach((entry: PerformanceEntry) => {}
 
           const fidEntry = entry as PerformanceEntry & { processingStart: number };;
@@ -412,6 +483,7 @@ const lastEntry = entries[entries.length - 1];;
       // Ignore if not supported}
 
   }
+<<<<<<< HEAD
 
   private observeCLS() {
     try {;
@@ -427,6 +499,16 @@ const entries = list.getEntries();;
 const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };;
 
           if (!clsEntry.hadRecentInput) {
+=======
+  private observeCLS() {}
+    try {;}
+let clsValue = 0;
+const observer = new PerformanceObserver((list) => {;}
+const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {,;}
+const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
+          if (!clsEntry.hadRecentInput) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             clsValue += clsEntry.value} catch {}
 
       // Ignore if not supported
@@ -468,6 +550,7 @@ const observer = new PerformanceObserver((list) => {};;
   private observeFCP() {}
 
     try {}
+<<<<<<< HEAD
 
       const observer = new PerformanceObserver((list) => {};;
 
@@ -475,6 +558,12 @@ const observer = new PerformanceObserver((list) => {};;
 
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint) {
+=======
+      const observer = new PerformanceObserver((list) => {}
+        const entries = list.getEntries()
+        entries.forEach((entry) => {}
+          if (entry.name === 'first-contentful-paint') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             this.metrics.fcp = entry.startTime;
 
         entries.forEach((entry) => {}
@@ -527,6 +616,7 @@ const observer = new PerformanceObserver((list) => {};;
   private observeTTFB() {}
 
     try {}
+<<<<<<< HEAD
 
       const observer = new PerformanceObserver((list) => {};;
 
@@ -537,6 +627,13 @@ const observer = new PerformanceObserver((list) => {};;
 const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };;
 
           if (navEntry.responseStart > 0) {
+=======
+      const observer = new PerformanceObserver((list) => {}
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {,;}
+const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
+          if (navEntry.responseStart > 0) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
 
         entries.forEach((entry: PerformanceEntry) => {}
@@ -569,11 +666,17 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
       // Ignore if not supported}
 
   }
+<<<<<<< HEAD
 
   private observeMemory() {
     if ($1) { const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;;
 
       if (memory) {
+=======
+  private observeMemory() {}
+    if ($1) { const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+      if (memory) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         this.metrics.memoryUsage = memory.usedJSHeapSize} catch {}
 
       // Ignore if not supported
@@ -647,6 +750,7 @@ const memory = (window.performance as Performance & {};;
     if (typeof window === undefined) return;
 
     if (!this.config.enableImageOptimization) return;
+<<<<<<< HEAD
 
 const images = document.querySelectorAll(img);;
 
@@ -667,6 +771,20 @@ const images = document.querySelectorAll(img);;
         // Convert to WebP if supported;
 
         if (this.supportsWebP()) {
+=======
+const images = document.querySelectorAll('img');
+    images.forEach((img) => {}
+      // Add loading="lazy" for better performance;
+      if (!img.hasAttribute('loading')) {}
+        img.setAttribute('loading', 'lazy');
+      // Add proper alt text if missing;
+      if (!img.hasAttribute('alt')) {}
+        img.setAttribute('alt', 'Zion Tech Group content');
+      // Optimize image format;
+      if (img.src.includes('.webp') || img.src.includes('.webp')) {}
+        // Convert to WebP if supported;
+        if (this.supportsWebP()) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     images.forEach((img) => {}
 
       // Add loading="lazy for better performance

@@ -5,10 +5,15 @@ import React from 'react;
 import Navigation from ./Navigation;
 
 ;
+<<<<<<< HEAD
 
 const Header: React.FC = () => {
   return (
 
+=======
+const Header: React.FC = () => {}
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     <React.Fragment>
       <Navigation />
 );

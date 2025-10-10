@@ -6,7 +6,7 @@
  * Provides comprehensive error tracking, reporting, and recovery mechanisms;
 
  */
-interface ErrorContext {
+interface ErrorContext {}
   userId?: string;
 
   sessionId?: string;
@@ -22,8 +22,12 @@ interface ErrorContext {
   state?: Record<string, unknown>;}
 
 }
+<<<<<<< HEAD
 
 interface ErrorReport {
+=======
+interface ErrorReport {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   id: string,
 interface ErrorContext {}
 
@@ -61,8 +65,12 @@ interface ErrorReport {}
   resolvedBy?: string;}
 
 }
+<<<<<<< HEAD
 
 interface ErrorHandlerConfig {
+=======
+interface ErrorHandlerConfig {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   enableConsoleLogging: boolean,
   enableRemoteReporting: boolean,
   enableErrorRecovery: boolean,
@@ -76,8 +84,12 @@ interface ErrorHandlerConfig {
   apiKey?: string;}
 
 }
+<<<<<<< HEAD
 
 class EnhancedErrorHandler {
+=======
+class EnhancedErrorHandler {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private config: ErrorHandlerConfig,
   private errors: ErrorReport[] = [],
 interface ErrorHandlerConfig {}
@@ -108,7 +120,7 @@ class EnhancedErrorHandler {}
   private isInitialized: boolean = false;}
 
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = {
+    this.config = {}
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -160,7 +172,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Initialize the error handler;
 
    */
-  private initialize(): void {
+  private initialize(): void {}
     if (this.isInitialized) return;
 
   private initialize(): void {}
@@ -187,9 +199,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup global error handlers;
 
    */
-  private setupGlobalErrorHandlers(): void {
-    window.addEventListener('error', event => {
-      this.handleError({
+  private setupGlobalErrorHandlers(): void {}
+    window.addEventListener('error', event => {}
+      this.handleError({}
         type: 'javascript',
         message:
         message: event.message;)
@@ -225,9 +237,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup unhandled promise rejection handler;
 
    */
-  private setupUnhandledRejectionHandler(): void {
-    window.addEventListener('unhandledrejection', event => {)
-      this.handleError({)
+  private setupUnhandledRejectionHandler(): void {}
+    window.addEventListener('unhandledrejection', event => {)}
+      this.handleError({)}
         type: 'promise'),
   private setupUnhandledRejectionHandler(): void {}
 
@@ -255,19 +267,29 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup resource error handler;
 
    */
-  private setupResourceErrorHandler(): void {
+  private setupResourceErrorHandler(): void {}
     window.addEventListener('error')
+<<<<<<< HEAD
       event => {
         if (event.target !== window) {
           const target = event.target as HTMLElement & {;;
 
+=======
+      event => {}
+        if (event.target !== window) {}
+          const target = event.target as HTMLElement & {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             src?: string;
 
             href?: string;}
 
           }
+<<<<<<< HEAD
 
           this.handleError({)
+=======
+          this.handleError({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             type: 'resource'})
             message: `Failed to load resource: ${target?.src || target?.href}`)
             element: event.target?.constructor.name),
@@ -328,8 +350,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup network error handler;
 
    */
-  private setupNetworkErrorHandler(): void {
+  private setupNetworkErrorHandler(): void {}
     // Monitor fetch requests;
+<<<<<<< HEAD
 
     const originalFetch = window.fetch;;
 
@@ -339,6 +362,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 
         if (!response.ok) {,
           this.handleError({)
+=======
+    const originalFetch = window.fetch;
+    window.fetch = async (...args: Parameters<typeof fetch>) => {,}
+      try {,}
+        const response = await originalFetch(...args),
+        if (!response.ok) {,}
+          this.handleError({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             type: 'network',`})
             message: `Network request failed: ${response.status} ${response.statusText}`)
             url: args[0] as string),
@@ -351,7 +382,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         return response;
 
       } catch (error) {
-        this.handleError({)
+        this.handleError({)}
           type: 'network',`})
           message: `Network request failed: ${error}`)
           url: args[0] as string),
@@ -426,10 +457,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup performance error handler;
 
    */
-  private setupPerformanceErrorHandler(): void {
+  private setupPerformanceErrorHandler(): void {}
     if (!this.config.enablePerformanceImpact) return;
 
     // Monitor long tasks that might indicate performance issues;
+<<<<<<< HEAD
 
     if ('PerformanceObserver' in window) {
       try {
@@ -440,6 +472,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
               // Tasks longer than 100ms;
 
               this.handleError({)
+=======
+    if ('PerformanceObserver' in window) {}
+      try {}
+        const observer = new PerformanceObserver(list => {)}
+          list.getEntries().forEach(entry => {)}
+            if (entry.duration > 100) {}
+              // Tasks longer than 100ms;
+              this.handleError({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 type: 'custom',`})
   private setupPerformanceErrorHandler(): void {}
 
@@ -500,12 +541,16 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup error recovery mechanisms;
 
    */
-  private setupErrorRecovery(): void {
+  private setupErrorRecovery(): void {}
     if (!this.config.enableErrorRecovery) return;
 
     // Auto-recovery for common errors;
+<<<<<<< HEAD
 
     setInterval(() => {
+=======
+    setInterval(() => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private setupErrorRecovery(): void {}
 
     if (!this.config.enableErrorRecovery) return
@@ -524,12 +569,16 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup error cleanup;
 
    */
-  private setupErrorCleanup(): void {
+  private setupErrorCleanup(): void {}
     // Clean up old errors;
 
     setInterval(
+<<<<<<< HEAD
 
       () => {
+=======
+      () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private setupErrorCleanup(): void {}
 
     // Clean up old errors
@@ -576,9 +625,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 // statusText?: string;)
 // duration?: number;),
 // category?: string;)}): void {
+<<<<<<< HEAD
     // Rate limiting;
 
     if (!this.checkRateLimit()) {
+=======
+    // Rate limiting;}
+    if (!this.checkRateLimit()) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // src?: string;
 
 // url?: string;
@@ -647,6 +701,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 // statusText?: string;
 
 // duration?: number;
+<<<<<<< HEAD
 
 // category?: string;
 
@@ -661,6 +716,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const tags = this.generateTags(errorData);;
 
     return {
+=======
+// category?: string;}
+  }): ErrorReport {}
+    const context = this.getErrorContext()
+    const severity = this.determineSeverity(errorData)
+    const category = this.categorizeError(errorData)
+    const tags = this.generateTags(errorData)
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       id: this.generateErrorId()
       type: errorData.type;
 
@@ -678,7 +742,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       severity,
       category,
       tags,
-      metadata: {
+      metadata: {}
         filename: errorData.filename;
 
         lineno: errorData.lineno;
@@ -725,7 +789,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Process error report;
 
    */
-  private processError(errorReport: ErrorReport): void {
+  private processError(errorReport: ErrorReport): void {}
     // Add to errors array;
 
     this.errors.push(errorReport)
@@ -733,29 +797,45 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 
     this.updateErrorCounts(errorReport),
     // Console logging;
+<<<<<<< HEAD
 
     if (this.config.enableConsoleLogging) {,
+=======
+    if (this.config.enableConsoleLogging) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.logError(errorReport);}
 
     }
 
     // Remote reporting;
+<<<<<<< HEAD
 
     if (this.config.enableRemoteReporting) {
+=======
+    if (this.config.enableRemoteReporting) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.reportToRemote(errorReport);}
 
     }
 
     // Error aggregation;
+<<<<<<< HEAD
 
     if (this.config.enableErrorAggregation) {
+=======
+    if (this.config.enableErrorAggregation) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.aggregateError(errorReport);}
 
     }
 
     // Performance impact;
+<<<<<<< HEAD
 
     if (this.config.enablePerformanceImpact) {
+=======
+    if (this.config.enablePerformanceImpact) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private processError(errorReport: ErrorReport): void {}
 
     // Add to errors array
@@ -817,8 +897,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Get error context;
 
    */
-  private getErrorContext(): ErrorContext {
-    return {
+  private getErrorContext(): ErrorContext {}
+    return {}
       url: window.location.href;
 
       userAgent: navigator.userAgent;
@@ -845,7 +925,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Determine error severity;
 
    */
-  private determineSeverity(errorData: {)
+  private determineSeverity(errorData: {)}
     type: ErrorReport['type']),
     message: string;),
     status?: number;),
@@ -854,8 +934,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }): ErrorReport['severity'] {
     if(errorData.type === 'network' &&)
       errorData.status &&)
-      errorData.status >= 500;)
-    ) {
+      errorData.status >= 500;)}
+    ) {}
   private determineSeverity(errorData: {)}
 
     type: ErrorReport['type']
@@ -921,7 +1001,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Categorize error;
 
    */
-  private categorizeError(errorData: {)
+  private categorizeError(errorData: {)}
     type: ErrorReport['type']),
   private categorizeError(errorData: {)}
 
@@ -988,14 +1068,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Generate error tags;
 
    */
-  private generateTags(errorData: {),
+  private generateTags(errorData: {),}
     filename?: string;),
     type: ErrorReport['type']),
     duration?: number;}
 
   }): string[] {
-    const tags: string[] = [],
-    if (errorData.filename) {,
+    const tags: string[] = [],}
+    if (errorData.filename) {,}
   private generateTags(errorData: {)}
 
     filename?: string
@@ -1101,12 +1181,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 
    */
   private checkRateLimit(): boolean {}
+<<<<<<< HEAD
 
     const now = Date.now();;
 
     const timeDiff = now - this.lastErrorTime;;
 
     if (timeDiff < 60000) {
+=======
+    const now = Date.now()
+    const timeDiff = now - this.lastErrorTime;
+    if (timeDiff < 60000) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // Within 1 minute;
 
     const timeDiff = now - this.lastErrorTime;;
@@ -1170,7 +1256,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Log error to console;
 
    */
-  private logError(errorReport: ErrorReport): void {,
+  private logError(errorReport: ErrorReport): void {,}
   private logError(errorReport: ErrorReport): void {}
 
     const emoji = this.getSeverityEmoji(errorReport.severity);`};;
@@ -1217,13 +1303,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Report to remote service;
 
    */
-  private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
+  private async reportToRemote(errorReport: ErrorReport): Promise<void> {,}
     if (!this.config.remoteEndpoint) return;
+<<<<<<< HEAD
 
     try {,
       await fetch(this.config.remoteEndpoint, {)
+=======
+    try {,}
+      await fetch(this.config.remoteEndpoint, {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method: 'POST'),
-        headers: {,
+        headers: {,}
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {}
 
     if (!this.config.remoteEndpoint) return
@@ -1261,7 +1352,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Aggregate error data;
 
    */
-  private aggregateError(errorReport: ErrorReport): void {,
+  private aggregateError(errorReport: ErrorReport): void {,}
   private aggregateError(errorReport: ErrorReport): void {}
 
     // This could be expanded to include more sophisticated aggregation}
@@ -1275,7 +1366,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Assess performance impact;
 
    */
-  private assessPerformanceImpact(errorReport: ErrorReport): void {,
+  private assessPerformanceImpact(errorReport: ErrorReport): void {,}
     if(errorReport.type === 'resource' ||)
       errorReport.category === 'performance'),
   private assessPerformanceImpact(errorReport: ErrorReport): void {}
@@ -1297,9 +1388,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Attempt error recovery;
 
    */
+<<<<<<< HEAD
   private attemptErrorRecovery(): void {
     const recentErrors = this.errors.filter(error =>);;
 
+=======
+  private attemptErrorRecovery(): void {}
+    const recentErrors = this.errors.filter(error =>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         !error.resolved &&)
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;
 
@@ -1336,7 +1432,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Clear error state;
 
    */
-  private clearErrorState(): void {
+  private clearErrorState(): void {}
     // Reset error counters;
 
   private clearErrorState(): void {}
@@ -1382,7 +1478,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Get error statistics;
 
    */
-  public getErrorStatistics(): {
+  public getErrorStatistics(): {}
     totalErrors: number,
   public getErrorStatistics(): {}
 
@@ -1399,8 +1495,12 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const errorsByCategory: Record<string, number> = {}
 
     const errorsBySeverity: Record<string, number> = {}
+<<<<<<< HEAD
 
     this.errors.forEach(error => {)
+=======
+    this.errors.forEach(error => {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
 
     this.errors.forEach(error => {)}
@@ -1437,7 +1537,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           new Date(a.context.timestamp).getTime()
       )
       .slice(0, 10)
-    return {
+    return {}
       totalErrors: this.errors.length;
 
     return {}
@@ -1462,8 +1562,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Export error data;
 
    */
-  public exportErrorData(): string {
-    return JSON.stringify({)
+  public exportErrorData(): string {}
+    return JSON.stringify({)}
         errors: this.errors),
   public exportErrorData(): string {}
 
@@ -1495,9 +1595,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Manually report error;
 
    */
+<<<<<<< HEAD
   public reportError(message: string, context?: Partial<ErrorContext>): string {
     const errorReport = this.createErrorReport({);;
 
+=======
+  public reportError(message: string, context?: Partial<ErrorContext>): string {}
+    const errorReport = this.createErrorReport({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       type: 'custom'),
       message),
   public reportError(message: string, context?: Partial<ErrorContext>): string {}
@@ -1528,8 +1633,12 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 export const errorHandler = new EnhancedErrorHandler();;
 
 // Export class for custom instances;
+<<<<<<< HEAD
 
 export {
+=======
+export {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Export class for custom instances
 export {}
 

@@ -4,7 +4,7 @@ import React from 'react;
 
 import { Helmet } from react-helmet-async;
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps {}
   title: string;
 
   description: string;
@@ -22,13 +22,18 @@ interface SEOOptimizerProps {
   twitterCard?: string}
 
 ;
+<<<<<<< HEAD
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+=======
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   title,
   description,
   keywords,
   canonicalUrl,
   structuredData,
+<<<<<<< HEAD
   ogImage = '/images/og-image.jpg,
   ogType = 'website,
   twitterCard = summary_large_image
@@ -37,6 +42,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
 const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.;;
+=======
+  ogImage = '/images/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
+}) => {;}
+const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
   return (
 
@@ -61,10 +74,15 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       <meta name="twitter:image content={ogImage} />
       
       {/* Structured Data */}
+<<<<<<< HEAD
 
       {structuredData && (
 
         <script type="application/ld+json>
+=======
+      {structuredData && (}
+        <script type="application/ld+json">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           {JSON.stringify(structuredData)}
 
         </script>

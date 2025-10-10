@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react;
 
-interface AccessibilityEnhancerProps {
+interface AccessibilityEnhancerProps {}
   enableKeyboardNavigation?: boolean;
 
   enableScreenReaderSupport?: boolean;
@@ -13,14 +13,15 @@ interface AccessibilityEnhancerProps {
 
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
-  useEffect(() => {
+  useEffect(() => {}
     // Keyboard navigation enhancements
+<<<<<<< HEAD
     if (enableKeyboardNavigation && typeof window !== 'undefined) {
       const handleKeyDown = (event: KeyboardEvent) => {;;
 
@@ -29,6 +30,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const skipLink = document.querySelector('a[href="#main-content]) as HTMLAnchorElement;;
 
           if (skipLink) {
+=======
+    if (enableKeyboardNavigation && typeof window !== 'undefined') {}
+      const handleKeyDown = (event: KeyboardEvent) => {}
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             skipLink.focus();
 
             event.preventDefault();
@@ -38,6 +47,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
 
         // Close dropdowns with Escape key
+<<<<<<< HEAD
         if (event.key === 'Escape) {
           const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;
 
@@ -46,6 +56,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
           })        }
 
+=======
+        if (event.key === 'Escape') {}
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+          openDropdowns.forEach(dropdown => {}
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+          })
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       };
 
       document.addEventListener(keydown, handleKeyDown);
@@ -55,6 +73,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
 
     // Focus management
+<<<<<<< HEAD
     if (enableFocusManagement && typeof window !== 'undefined) {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1]);;
 
@@ -69,9 +88,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const handleTabKey = (e: KeyboardEvent) => {;;
 
           if (e.key !== Tab) return;
+=======
+    if (enableFocusManagement && typeof window !== 'undefined') {}
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      const trapFocus = (container: HTMLElement) => {}
+        const focusableContent = container.querySelectorAll(focusableElements);
+        const firstFocusableElement = focusableContent[0] as HTMLElement;
+        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-          if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
+        const handleTabKey = (e: KeyboardEvent) => {}
+          if (e.key !== 'Tab') return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
+
+          if (e.shiftKey) {}
+            if (document.activeElement === firstFocusableElement) {}
               lastFocusableElement.focus();
 
               e.preventDefault();
@@ -79,7 +110,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             }
 
           } else {
-            if (document.activeElement === lastFocusableElement) {
+            if (document.activeElement === lastFocusableElement) {}
               firstFocusableElement.focus();
 
               e.preventDefault();
@@ -104,7 +135,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       modals.forEach(modal => trapFocus(modal as HTMLElement))    }
 
     // Screen reader support
+<<<<<<< HEAD
     if (enableScreenReaderSupport && typeof window !== 'undefined) {
+=======
+    if (enableScreenReaderSupport && typeof window !== 'undefined') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // Add live region for dynamic content updates
       const liveRegion = document.createElement(div);;
 
@@ -119,11 +154,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(liveRegion);
 
       // Announce page changes
+<<<<<<< HEAD
       const announcePageChange = (message: string) => {;;
 
         const liveRegion = document.getElementById(live-region);;
 
         if (liveRegion) {
+=======
+      const announcePageChange = (message: string) => {}
+        const liveRegion = document.getElementById('live-region');
+        if (liveRegion) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           liveRegion.textContent = message;
 
         }
@@ -135,21 +176,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       const originalReplaceState = history.replaceState;;
 
-      history.pushState = function(...args) {
+      history.pushState = function(...args) {}
         originalPushState.apply(history, args);
 
         announcePageChange(Page changed);
 
       };
 
-      history.replaceState = function(...args) {
+      history.replaceState = function(...args) {}
         originalReplaceState.apply(history, args);
 
         announcePageChange(Page updated);
 
       };
 
-      return () => {
+      return () => {}
         document.body.removeChild(liveRegion);
 
         history.pushState = originalPushState;
@@ -161,6 +202,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
 
     // High contrast mode support
+<<<<<<< HEAD
     if (enableHighContrast && typeof window !== 'undefined) {
       const prefersHighContrast = window.matchMedia((prefers-contrast: high));;
 
@@ -172,6 +214,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         } else {
           document.documentElement.classList.remove(high-contrast);
 
+=======
+    if (enableHighContrast && typeof window !== 'undefined') {}
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      
+      const updateHighContrast = (e: MediaQueryListEvent) => {}
+        if (e.matches) {}
+          document.documentElement.classList.add('high-contrast');
+        } else {
+          document.documentElement.classList.remove('high-contrast');}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         }
 
       };

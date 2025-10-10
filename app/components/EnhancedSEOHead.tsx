@@ -4,7 +4,7 @@ import React from 'react;
 
 import { Helmet } from react-helmet-async;
 
-interface EnhancedSEOHeadProps {
+interface EnhancedSEOHeadProps {}
   title?: string;
 
   description?: string;
@@ -31,12 +31,21 @@ interface EnhancedSEOHeadProps {
 
 }
 
+<<<<<<< HEAD
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions,
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],
   canonicalUrl = 'https://ziontechgroup.com,
   ogImage = 'https://ziontechgroup.com/og-image.jpg,
+=======
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({}
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   structuredData,
   noIndex = false,
   author = 'Zion Tech Group,
@@ -104,6 +113,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous />
       
       {/* Article specific tags */}
+<<<<<<< HEAD
 
       {publishedTime && <meta property="article:published_time content={publishedTime} />}
 
@@ -114,19 +124,32 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       {tags.map((tag, index) => (
 
         <meta key={index} property="article:tag content={tag} />
+=======
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (}
+        <meta key={index} property="article:tag" content={tag} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ))}
 
       {/* Structured Data */}
+<<<<<<< HEAD
 
       {structuredData && (
 
         <script type="application/ld+json>
+=======
+      {structuredData && (}
+        <script type="application/ld+json">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           {JSON.stringify(structuredData)}
 
         </script>
       )}
 
       {/* Default Organization Structured Data */}
+<<<<<<< HEAD
 
       <script type="application/ld+json>
         {JSON.stringify({
@@ -157,6 +180,37 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
           sameAs: [
             'https://linkedin.com/company/ziontechgroup,
             https://twitter.com/ziontechgroup
+=======
+      <script type="application/ld+json">
+        {JSON.stringify({}
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          address: {}
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
+          },
+          contactPoint: {}
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+          },
+          sameAs: []
+            'https://linkedin.com/company/ziontechgroup',
+            'https://twitter.com/ziontechgroup'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           ]
         })}
 

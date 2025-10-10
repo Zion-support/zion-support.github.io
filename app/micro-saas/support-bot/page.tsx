@@ -5,8 +5,12 @@ import { Helmet } from 'react-helmet-async;
 import { Bot, ArrowRight } from 'lucide-react;
 
 ;
+<<<<<<< HEAD
 
 const SmartSupportBotPage: React.FC = () => {
+=======
+const SmartSupportBotPage: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (<div>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation<
         <meta name="description" content=AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses. 

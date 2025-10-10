@@ -6,7 +6,7 @@
  * Tracks Core Web Vitals and custom metrics;
 
  */
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   fcp?: number; // First Contentful Paint;
 
   lcp?: number; // Largest Contentful Paint;
@@ -22,9 +22,14 @@ interface PerformanceMetrics {
   customMetrics: Record<string></string>});
 
 }
+<<<<<<< HEAD
 
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {,
+=======
+class PerformanceMonitor {}
+  private metrics: PerformanceMetrics = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 interface PerformanceMetrics {}
 
   fcp?: number; // First Contentful Paint
@@ -74,9 +79,10 @@ init(): void {/* TODO: Fix JSX expression */});]
    * Initialize performance observers;
 
    */
-  private initializeObservers(): void {
-    try {
+  private initializeObservers(): void {}
+    try {}
       // Observe paint metrics;
+<<<<<<< HEAD
 
       if ('PerformanceObserver' in window) {
         // First Contentful Paint;
@@ -84,6 +90,13 @@ init(): void {/* TODO: Fix JSX expression */});]
         this.observeEntry('paint', (entries) => {
           entries.forEach((entry) => {
             if (entry.name === 'first-contentful-paint') {
+=======
+      if ('PerformanceObserver' in window) {}
+        // First Contentful Paint;
+        this.observeEntry('paint', (entries) => {}
+          entries.forEach((entry) => {}
+            if (entry.name === 'first-contentful-paint') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private initializeObservers(): void {}
 
     try {}
@@ -102,12 +115,18 @@ this.recordMetric('FCP', entry.startTime)]
     }
 
         // Largest Contentful Paint;
+<<<<<<< HEAD
 
         this.observeEntry('largest-contentful-paint, entries => {);
 
 const lastEntry = entries[entries.length - 1]};;
 
           if (lastEntry) {
+=======
+        this.observeEntry('largest-contentful-paint', entries => {);}
+const lastEntry = entries[entries.length - 1]}
+          if (lastEntry) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             this.recordMetric('LCP')
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
 
@@ -115,6 +134,7 @@ const lastEntry = entries[entries.length - 1]};;
     }
 
         // First Input Delay;
+<<<<<<< HEAD
 
         this.observeEntry('first-input, entries => {);
 
@@ -126,6 +146,14 @@ const firstInput = entries[0]};;
 
 const lastEntry = entries[entries.length - 1];;
 
+=======
+        this.observeEntry('first-input', entries => {);}
+const firstInput = entries[0]}
+          if (firstInput && (firstInput as any).processingStart !== undefined) {}
+        // Largest Contentful Paint
+        this.observeEntry('largest-contentful-paint', entries => {);}
+const lastEntry = entries[entries.length - 1];
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           if (lastEntry) {}
 
             this.recordMetric()
@@ -135,10 +163,15 @@ const lastEntry = entries[entries.length - 1];;
     }
 
         // First Input Delay
+<<<<<<< HEAD
         this.observeEntry('first-input, entries => {);
 
 const firstInput = entries[0];;
 
+=======
+        this.observeEntry('first-input', entries => {);}
+const firstInput = entries[0];
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
 
             const fid = (firstInput as any).processingStart - firstInput.startTime;;
@@ -147,6 +180,7 @@ this.recordMetric('FID', fid)]
     }
 
         // Cumulative Layout Shift;
+<<<<<<< HEAD
 
         this.observeEntry('layout-shift, (entries) => {;
 
@@ -154,6 +188,12 @@ let clsValue = 0;;
 
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {,
+=======
+        this.observeEntry('layout-shift', (entries) => {;}
+let clsValue = 0;
+          entries.forEach((entry: PerformanceEntry) => {,}
+            if (!(entry as any).hadRecentInput) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {}
 
@@ -198,6 +238,7 @@ private initializeObservers(): void {/* TODO: Fix JSX expression */});]
 
     } catch (error) {}
       logger.error('Failed to initialize performance observers', error as Error););
+<<<<<<< HEAD
   }  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {,;
 
@@ -205,6 +246,14 @@ const observer = new PerformanceObserver((list) => {,;;
 
         for (const entry of list.getEntries()) {,
           if (entry.name === name) {,
+=======
+  }
+  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
+    try {,;}
+const observer = new PerformanceObserver((list) => {,}
+        for (const entry of list.getEntries()) {,}
+          if (entry.name === name) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             (this.metrics as any)[metricKey] = entry.startTime;,
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
 
@@ -355,17 +404,28 @@ this.observers.push(observer)]
     }
 
   }
+<<<<<<< HEAD
 
   private setupCustomMetrics(): void {
     // Time to First Byte;
 
     if (performance.timing) {
+=======
+  private setupCustomMetrics(): void {}
+    // Time to First Byte;
+    if (performance.timing) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb););
     // Page Load Time;
-    if ($1) { const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    if ($1) { const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;}
       this.addCustomMetric('pageLoadTime', loadTime););
+<<<<<<< HEAD
     // DOM Content Loaded;    if (performance.timing) {
+=======
+    // DOM Content Loaded;
+    if (performance.timing) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private setupCustomMetrics(): void {}
 
     // Time to First Byte
@@ -415,17 +475,26 @@ this.analyzeResource(resourceEntry)]
 const size = entry.transferSize || 0;;
 
     // Track slow resources;
+<<<<<<< HEAD
 
     if (duration > 1000) {,
+=======
+    if (duration > 1000) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.addCustomMetric(`slowResource_${entry.name}`, duration););
 
     // Track large resources;
+<<<<<<< HEAD
 
     if (size > 100000) { // 100KB;
 
+=======
+    if (size > 100000) { // 100KB;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.addCustomMetric(`largeResource_${entry.name}`, size););
 
   }
+<<<<<<< HEAD
 
   addCustomMetric(name: string, value: number): void {,
     this.metrics.customMetrics[name] = value;,
@@ -435,6 +504,16 @@ const size = entry.transferSize || 0;;
     if (process.env.NODE_ENV === 'development') {}ms`););
     // Send to analytics if available;    if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {)
+=======
+  addCustomMetric(name: string, value: number): void {,}
+    this.metrics.customMetrics[name] = value;,
+    this.logMetric(name, value););
+  private logMetric(name: string, value: number): void {,}
+    if (process.env.NODE_ENV === 'development') {}ms`););
+    // Send to analytics if available;
+    if (typeof window !== 'undefined' && (window as any).gtag) {}
+      (window as any).gtag('event', 'performance_metric', {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         metric_name: name),
     // Track slow resources
     if (duration > 1000) {}
@@ -457,10 +536,16 @@ const size = entry.transferSize || 0;;
   private logMetric(name: string, value: number): void {}
     if (process.env.NODE_ENV === 'development') {});;)
 }ms`););
+<<<<<<< HEAD
     // Send to analytics if available    if (typeof window !== 'undefined' && (window as any).gtag) {}
 
       (window as any).gtag('event', 'performance_metric, {);
 
+=======
+    // Send to analytics if available
+    if (typeof window !== 'undefined' && (window as any).gtag) {}
+      (window as any).gtag('event', 'performance_metric', {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance,});
@@ -614,6 +699,7 @@ getScore(): number {/* TODO: Fix JSX expression */});]
 
 }
 
+<<<<<<< HEAD
   generateReport(): string {;
 
 const score = this.getScore();;
@@ -626,6 +712,15 @@ Score: ${score}
 
 Metrics: ${JSON.stringify(metrics, null, 2);
 
+=======
+  generateReport(): string {;}
+const score = this.getScore();
+const metrics = this.getMetrics();
+    return `
+Performance Report:
+Score: ${score}
+Metrics: ${JSON.stringify(metrics, null, 2);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     `});
 
 }

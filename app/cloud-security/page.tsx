@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 ;
 
+<<<<<<< HEAD
 const CloudSecurityPage: React.FC = () => {const features = [;;;
 
     {
@@ -15,22 +16,37 @@ const CloudSecurityPage: React.FC = () => {const features = [;;;
     n: Brain,
       title: 'AI-Powered Solutions,
       description: Advanced AI technology to transform your business operations and improve efficiency
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     },
-    {
+    {}
       icon: Zap,
+<<<<<<< HEAD
       title: 'High Performance,
       description: 'Lightning-fast processing and real-time analytics for optimal results
     },    {
+=======
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Shield,
       title: 'Security Monitoring,
       description: 24/7 security monitoring and threat detection
     },
-    {
+    {}
       icon: Eye,
       title: 'Access Control,
       description: Advanced access control and identity management
     },
-    {
+    {}
       icon: ShieldCheck,
       title: 'Compliance,
       description: Meet industry compliance standards and regulations

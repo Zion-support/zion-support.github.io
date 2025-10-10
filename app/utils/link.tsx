@@ -1,5 +1,5 @@
 
-interface LinkProps {
+interface LinkProps {}
   href: string,
     children: React.ReactNode
 interface LinkProps {}
@@ -13,8 +13,12 @@ interface LinkProps {}
   aria-label?: string;});
 
 }
+<<<<<<< HEAD
 
 export const Link: React.FC<LinkProps></LinkProps>= ({
+=======
+export const Link: React.FC<LinkProps></LinkProps>= ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 export const Link: React.FC<LinkProps></LinkProps> = ({}
 
   href,
@@ -32,8 +36,12 @@ export const Link: React.FC<LinkProps></LinkProps> = ({}
   aria-label?: string;});
 
 }
+<<<<<<< HEAD
 
 export const Link: React.FC<LinkProps></LinkProps> = ({,
+=======
+export const Link: React.FC<LinkProps></LinkProps> = ({,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   href;
 
   children,
@@ -55,8 +63,12 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
 }
 
     // Handle internal navigation;
+<<<<<<< HEAD
 
     if (href.startsWith('/') && !href.startsWith('//)) {
+=======
+    if (href.startsWith('/') && !href.startsWith('//')) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//)) {}
 

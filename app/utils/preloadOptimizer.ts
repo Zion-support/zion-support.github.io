@@ -4,10 +4,15 @@
  * Optimizes resource loading for better performance;
 
  */
+<<<<<<< HEAD
 export const preloadCriticalResources = useCallback((...args) => {;;
 
   if (typeof window === 'undefined) return;
 
+=======
+export const preloadCriticalResources = useCallback((...args) => {}
+  if (typeof window === 'undefined') return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Preload critical fonts
 export const preloadCriticalResources = useCallback((...args) => {};;
 
@@ -19,12 +24,19 @@ const fontPreloads = [;;
     https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
     https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap
   ]
+<<<<<<< HEAD
   fontPreloads.forEach(href => {)
   fontPreloads.forEach(href => {);
 
 const link = document.createElement('link);;
 
     link.rel = preload
+=======
+  fontPreloads.forEach(href => {)}
+  fontPreloads.forEach(href => {);}
+const link = document.createElement('link')
+    link.rel = 'preload'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     link.as = 'style',
     link.href = href;
 
@@ -41,6 +53,7 @@ const criticalImages = [;;
     '/images/logo.webp',
     /images/favicon.ico
   ]
+<<<<<<< HEAD
   criticalImages.forEach(src => {)
   criticalImages.forEach(src => {);
 
@@ -48,11 +61,19 @@ const link = document.createElement('link);;
 
     link.rel = preload
     link.as = image
+=======
+  criticalImages.forEach(src => {)}
+  criticalImages.forEach(src => {);}
+const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     link.href = src;
 
     document.head.appendChild(link);
 
   })
+<<<<<<< HEAD
 export const preloadRoute = useCallback((...args) => {;;
 
   if (typeof window === 'undefined) return;
@@ -63,6 +84,13 @@ const routeResources = {;;
 
 export const preloadRoute = useCallback((...args) => {};;
 
+=======
+export const preloadRoute = useCallback((...args) => {}
+  if (typeof window === 'undefined') return;
+  // Preload route-specific resources;
+const routeResources = {}
+export const preloadRoute = useCallback((...args) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   if (typeof window === 'undefined') return
   // Preload route-specific resources;
 
@@ -73,6 +101,7 @@ const routeResources = {};;
     '/contact': ['/api/contact', '/images/contact-hero.webp']}
 
   }
+<<<<<<< HEAD
 
   const resources = routeResources[route as keyof typeof routeResources];;
 
@@ -85,6 +114,15 @@ const routeResources = {};;
 const link = document.createElement('link);;
 
       link.rel = prefetch
+=======
+  const resources = routeResources[route as keyof typeof routeResources]
+  if (resources) {}
+    resources.forEach(resource => {)}
+  if (resources) {}
+    resources.forEach(resource => {);}
+const link = document.createElement('link')
+      link.rel = 'prefetch'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       link.href = resource;
 
       document.head.appendChild(link);
@@ -92,6 +130,7 @@ const link = document.createElement('link);;
     });
 
 }
+<<<<<<< HEAD
 
 export const optimizeImages = useCallback((...args) => {;;
 
@@ -132,6 +171,31 @@ const images = document.querySelectorAll('img[data-lazy]);;
 
       entries.forEach(entry => {);
 
+=======
+export const optimizeImages = useCallback((...args) => {}
+  if (typeof window === 'undefined') return;
+  // Add loading="lazy" to images below the fold;
+const images = document.querySelectorAll('img[data-lazy]')
+  images.forEach(img => {)}
+    img.setAttribute('loading', 'lazy');
+  })
+  // Add intersection observer for lazy loading;
+  if ($1) { const imageObserver = new IntersectionObserver((entries) => {}
+      entries.forEach(entry => {)}
+        if ($1) { const img = entry.target as HTMLImageElement;}
+          if (img.dataset['src']) {}
+export const optimizeImages = useCallback((...args) => {}
+  if (typeof window === 'undefined') return
+  // Add loading="lazy" to images below the fold;
+const images = document.querySelectorAll('img[data-lazy]')
+  images.forEach(img => {);}
+    img.setAttribute('loading', 'lazy');
+  })
+  // Add intersection observer for lazy loading
+  if ('IntersectionObserver' in window) {}
+    const imageObserver = new IntersectionObserver((entries) => {}
+      entries.forEach(entry => {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         if (entry.isIntersecting) {}
 
           const img = entry.target as HTMLImageElement;;
@@ -179,6 +243,7 @@ const lazyImages = document.querySelectorAll('img[data-src]);;
     lazyImages.forEach(img => imageObserver.observe(img));
 
 }
+<<<<<<< HEAD
 
 export const optimizeThirdPartyScripts = useCallback((...args) => {;;
 
@@ -207,6 +272,24 @@ const scripts = document.querySelectorAll('script[data-defer]);;
 
     script.setAttribute('defer', ');
 
+=======
+export const optimizeThirdPartyScripts = useCallback((...args) => {}
+  if (typeof window === 'undefined') return;
+  // Defer non-critical scripts;
+const scripts = document.querySelectorAll('script[data-defer]')
+  scripts.forEach(script => {)}
+    script.setAttribute('defer', '');
+  })
+  // Load analytics after page load;
+  if (document.readyState === 'loading') {}
+    document.addEventListener('DOMContentLoaded', () => {}
+export const optimizeThirdPartyScripts = useCallback((...args) => {}
+  if (typeof window === 'undefined') return
+  // Defer non-critical scripts;
+const scripts = document.querySelectorAll('script[data-defer]')
+  scripts.forEach(script => {);}
+    script.setAttribute('defer', '');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {}
@@ -223,9 +306,13 @@ const scripts = document.querySelectorAll('script[data-defer]);;
   }
 
 }
+<<<<<<< HEAD
 
 const loadAnalytics = useCallback((...args) => {;;
 
+=======
+const loadAnalytics = useCallback((...args) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Load Google Analytics after page load;
 
 const loadAnalytics = useCallback((...args) => {};;

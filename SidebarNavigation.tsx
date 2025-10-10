@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom;
 
 interface SidebarNavigationProps {
   isOpen: boolean;
+<<<<<<< HEAD
 
   onClose: () => void}
 
@@ -17,6 +18,18 @@ const navigationItems = [;;
     { name: 'About', href: '/about, icon: User },
     { name: 'Services', href: '/services, icon: Settings },
     { name: 'Contact', href: /contact, icon: HelpCircle }];
+=======
+  onClose: () => void;
+}
+
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
+  const navigationItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: User },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: HelpCircle }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
   return (
 
@@ -51,6 +64,7 @@ const navigationItems = [;;
           </button>
         </div>
 
+<<<<<<< HEAD
         <nav className="mt-8>
           {navigationItems.map((item) => (
 
@@ -90,8 +104,27 @@ const navigationItems = [;;
 
           </nav>
         </div>
+=======
+        <nav className="mt-8">
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800 transition-colors"
+                onClick={onClose}
+              >
+                <Icon className="w-5 h-5" />
+                <span>{item.name}</span>
+              </Link>
+            );
+          })}
+        </nav>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       </div>
     </React.Fragment>
-  )};
+  );
+};
 
 export default SidebarNavigation;

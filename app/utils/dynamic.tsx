@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 use client
 import React, { lazy, Suspense, ComponentType } from react;
 
 interface DynamicOptions {
+=======
+'use client'
+import React, { lazy, Suspense, ComponentType } from 'react'
+interface DynamicOptions {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   loading?: () => React.ReactElement;
 
 interface DynamicOptions {}
@@ -13,11 +19,16 @@ interface DynamicOptions {}
 
 export function dynamic<T extends ComponentType<unknown></unknown>>(</<<<T>importFunc</T>: () => Promise<{ default: T }>,
   options: DynamicOptions = {}
+<<<<<<< HEAD
 
 ): ComponentType<unknown></unknown>{;
 
 const LazyComponent = lazy(importFunc)</unknown>;;;
 
+=======
+): ComponentType<unknown></unknown>{;}
+const LazyComponent = lazy(importFunc)</unknown>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div></Suspens>Loading...</Suspense>}>
 ): ComponentType<unknown></unknown> {}
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -14,18 +15,39 @@ const dataTypes = [;;
 
     {
       category: 'Personal Information,
+=======
+'use client';
+import React from 'react';
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
+export default function PrivacyPage() {;}
+const lastUpdated = 'January 1, 2024';
+  ;
+const dataTypes = [
+    {}
+      category: 'Personal Information',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: User,
       description: 'Name, email address, phone number, company information,
       examples: ['Contact forms', 'Newsletter signups', 'Account creation]]
     },
+<<<<<<< HEAD
     {
       category: 'Usage Data,
+=======
+    {}
+      category: 'Usage Data',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Database,
       description: 'Information about how you use our website and services,
       examples: ['Page views', 'Time spent', 'Features used', 'Device information]]
     },
+<<<<<<< HEAD
     {
       category: 'Technical Data,
+=======
+    {}
+      category: 'Technical Data',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Server,
       description: 'IP address, browser type, operating system, cookies,
 examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels]]
@@ -34,26 +56,47 @@ examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookie
   ];
 
 ;
+<<<<<<< HEAD
 
 const purposes = [;;
 
     {
       title: 'Service Provision,
+=======
+const purposes = [
+    {}
+      title: 'Service Provision',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Globe,
       description: 'To provide and maintain our services]
     },
+<<<<<<< HEAD
     {
       title: 'Communication,
+=======
+    {}
+      title: 'Communication',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Mail,
       description: 'To communicate with you about our services]
     },
+<<<<<<< HEAD
     {
       title: 'Improvement,
+=======
+    {}
+      title: 'Improvement',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: ArrowRight,
       description: 'To improve and develop new features]
     },
+<<<<<<< HEAD
     {
       title: 'Security,
+=======
+    {}
+      title: 'Security',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Shield,
 description: 'To protect against fraud and abuse]
     }
@@ -61,6 +104,7 @@ description: 'To protect against fraud and abuse]
   ];
 
 ;
+<<<<<<< HEAD
 
 const rights = [;;
 
@@ -82,6 +126,27 @@ const rights = [;;
     {
       title: 'Portability,
       description: 'Receive your data in a structured format,
+=======
+const rights = [
+    {}
+      title: 'Access',
+      description: 'Request access to your personal data',
+      icon: Eye]
+    },
+    {}
+      title: 'Rectification',
+      description: 'Correct inaccurate or incomplete data',
+      icon: CheckCircle]
+    },
+    {}
+      title: 'Erasure',
+      description: 'Request deletion of your personal data',
+      icon: Lock]
+    },
+    {}
+      title: 'Portability',
+      description: 'Receive your data in a structured format',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 icon: Database]
     }
 
@@ -123,18 +188,30 @@ icon: Database]
             {/* Information We Collect */}
 
             <section></section>
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-gray-900 mb-6></h>Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6></div>
                 {dataTypes.map((type, index) => (</div>
+=======
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
+              <div className="grid md:grid-cols-3 gap-6"></div>
+                {dataTypes.map((type, index) => (</div>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <div>
                     <div>
                       <type.icon className="h-6 w-6 text-blue-600 mr-3 />
                       <h3 className="text-lg font-semibold text-gray-900></h>{type.category}</h3>
                     </div>
+<<<<<<< HEAD
                     <p className="text-gray-700 mb-3>{type.description}</p>
                     <ul className="text-sm text-gray-600 space-y-1></ul>
                       {type.examples.map((example, idx) => (
 
+=======
+                    <p className="text-gray-700 mb-3">{type.description}</p>
+                    <ul className="text-sm text-gray-600 space-y-1"></ul>
+                      {type.examples.map((example, idx) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         <li key={idx}></l>• {example}</li>
                       ));
 
@@ -148,9 +225,15 @@ icon: Database]
             {/* How We Use Information */}
 
             <section></section>
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-gray-900 mb-6></h>How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6></div>
                 {purposes.map((purpose, index) => (</div>
+=======
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
+              <div className="grid md:grid-cols-2 gap-6"></div>
+                {purposes.map((purpose, index) => (</div>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <div>
                     <div>
                       <purpose.icon className="h-6 w-6 text-blue-600 />
@@ -191,9 +274,15 @@ icon: Database]
             {/* Your Rights */}
 
             <section></section>
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-gray-900 mb-6></h>Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6></div>
                 {rights.map((right, index) => (</div>
+=======
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
+              <div className="grid md:grid-cols-2 gap-6"></div>
+                {rights.map((right, index) => (</div>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <div>
                     <div>
                       <right.icon className="h-6 w-6 text-green-600 mr-3 />

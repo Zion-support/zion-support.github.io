@@ -4,14 +4,18 @@ import React, { useState, useEffect } from 'react;
 
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from lucide-react;
 
-interface Feature {
+interface Feature {}
   icon: React.ComponentType<any>;
 
   title: string;
 
   description: string;
+<<<<<<< HEAD
 
   stats?: {
+=======
+  stats?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     value: string;
 
     label: string;
@@ -20,7 +24,7 @@ interface Feature {
 
 }
 
-interface Testimonial {
+interface Testimonial {}
   name: string;
 
   company: string;
@@ -35,14 +39,15 @@ interface Testimonial {
 
 }
 
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = () => {}
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [isPlaying, setIsPlaying] = useState(true);
 
   const features: Feature[] = [
-    {
+    {}
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Intelligence,
       description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time,
       stats: [
@@ -50,10 +55,19 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '10x', label: 'Faster },
         { value: '24/7', label: 'Learning }
 
+=======
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
+      stats: []
+        { value: '95%', label: 'Accuracy' },
+        { value: '10x', label: 'Faster' },
+        { value: '24/7', label: 'Learning' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       icon: Zap,
+<<<<<<< HEAD
       title: 'Lightning Fast Performance,
       description: 'Optimized for speed with sub-second response times and seamless user experience,
       stats: [
@@ -61,10 +75,19 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '99.9%', label: 'Uptime },
         { value: '10M+', label: 'Requests }
 
+=======
+      title: 'Lightning Fast Performance',
+      description: 'Optimized for speed with sub-second response times and seamless user experience',
+      stats: []
+        { value: '< 100ms', label: 'Response' },
+        { value: '99.9%', label: 'Uptime' },
+        { value: '10M+', label: 'Requests' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       icon: Shield,
+<<<<<<< HEAD
       title: 'Enterprise Security,
       description: 'Bank-level security with end-to-end encryption and compliance standards,
       stats: [
@@ -72,10 +95,19 @@ const DynamicContentShowcase: React.FC = () => {
         { value: 'SOC 2', label: 'Compliance },
         { value: 'Zero', label: 'Breaches }
 
+=======
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards',
+      stats: []
+        { value: '256-bit', label: 'Encryption' },
+        { value: 'SOC 2', label: 'Compliance' },
+        { value: 'Zero', label: 'Breaches' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       icon: Globe,
+<<<<<<< HEAD
       title: 'Global Scalability,
       description: 'Scale effortlessly across multiple regions with automatic load balancing,
       stats: [
@@ -83,6 +115,14 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '15+', label: 'Languages },
         { value: '24/7', label: 'Support }
 
+=======
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing',
+      stats: []
+        { value: '50+', label: 'Countries' },
+        { value: '15+', label: 'Languages' },
+        { value: '24/7', label: 'Support' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     }
 
@@ -101,6 +141,7 @@ const DynamicContentShowcase: React.FC = () => {
   ];
 
   const testimonials: Testimonial[] = [
+<<<<<<< HEAD
     {
       name: 'Sarah Johnson,
       company: 'TechCorp Inc.,
@@ -127,16 +168,49 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'CloudFirst Solutions,
       role: 'VP Engineering,
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.,
+=======
+    {}
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
+      rating: 5
+    },
+    {}
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      role: 'CEO',
+      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
+      rating: 5
+    },
+    {}
+      name: 'Emily Rodriguez',
+      company: 'InnovateLab',
+      role: 'Product Manager',
+      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
+      rating: 5
+    },
+    {}
+      name: 'David Kim',
+      company: 'CloudFirst Solutions',
+      role: 'VP Engineering',
+      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       rating: 5
     }
 
   ];
 
-  useEffect(() => {
+  useEffect(() => {}
     if (!isPlaying) return;
+<<<<<<< HEAD
 
     const timer = setInterval(() => {;;
 
+=======
+    
+    const timer = setInterval(() => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
 
     }, 4000);
@@ -145,20 +219,32 @@ const DynamicContentShowcase: React.FC = () => {
 
   }, [isPlaying, testimonials.length]);
 
+<<<<<<< HEAD
   const nextTestimonial = () => {;;
 
+=======
+  const nextTestimonial = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
 
   };
 
+<<<<<<< HEAD
   const prevTestimonial = () => {;;
 
+=======
+  const prevTestimonial = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   };
 
+<<<<<<< HEAD
   const togglePlayPause = () => {;;
 
+=======
+  const togglePlayPause = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setIsPlaying(!isPlaying);
 
   };
@@ -205,12 +291,20 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {features.map((feature, index) => (
 
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group>
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6>
                   <feature.icon className="w-8 h-8 text-white />
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors>
                   {feature.title}
@@ -218,6 +312,7 @@ const DynamicContentShowcase: React.FC = () => {
                 </h3>
                 <p className="text-gray-300 mb-6>{feature.description}</p>
                 
+<<<<<<< HEAD
                 {feature.stats && (
 
                   <div className="grid grid-cols-3 gap-4>
@@ -226,6 +321,14 @@ const DynamicContentShowcase: React.FC = () => {
                       <div key={statIndex} className="text-center>
                         <div className="text-lg font-bold text-white>{stat.value}</div>
                         <div className="text-gray-400 text-xs>{stat.label}</div>
+=======
+                {feature.stats && (}
+                  <div className="grid grid-cols-3 gap-4">
+                    {feature.stats.map((stat, statIndex) => (}
+                      <div key={statIndex} className="text-center">
+                        <div className="text-lg font-bold text-white">{stat.value}</div>
+                        <div className="text-gray-400 text-xs">{stat.label}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       </div>
                     ))}
 
@@ -249,6 +352,7 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="relative>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20>
               <div className="text-center>
@@ -256,6 +360,14 @@ const DynamicContentShowcase: React.FC = () => {
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
 
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current />
+=======
+          <div className="relative">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <div className="text-center">
+                <div className="flex justify-center mb-6">
+                  {[...Array(currentTestimonial.rating)].map((_, i) => (}
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   ))}
 
                 </div>
@@ -308,19 +420,30 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
 
             {/* Dots Indicator */}
+<<<<<<< HEAD
 
             <div className="flex justify-center mt-6 space-x-2>
               {testimonials.map((_, index) => (
 
+=======
+            <div className="flex justify-center mt-6 space-x-2">
+              {testimonials.map((_, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <button
                   key={index}
 
                   onClick={() => setCurrentIndex(index)}
+<<<<<<< HEAD
 
                   className={w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30
                   }}
 
+=======
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${}
+                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
+                  }`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 />
               ))}
 
@@ -338,6 +461,7 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6>
               {benefits.map((benefit, index) => (
@@ -345,6 +469,14 @@ const DynamicContentShowcase: React.FC = () => {
                 <div key={index} className="flex items-start space-x-3>
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />
                   <span className="text-gray-300>{benefit}</span>
+=======
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (}
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">{benefit}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
               ))}
 

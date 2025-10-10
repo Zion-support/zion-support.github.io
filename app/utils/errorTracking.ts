@@ -7,8 +7,12 @@ use client
  */
 export enum ErrorSeverity {/* TODO: Fix JSX expression */});]
     }
+<<<<<<< HEAD
 
 export enum ErrorCategory {
+=======
+export enum ErrorCategory {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   Network = 'network',
   Validation = 'validation',
   Authorization = 'authorization',
@@ -18,7 +22,7 @@ export enum ErrorCategory {
 
 }
 
-export interface ErrorMetadata {
+export interface ErrorMetadata {}
   category: ErrorCategory,
   severity: ErrorSeverity,
   userId?: string;
@@ -35,7 +39,7 @@ export interface ErrorMetadata {
 
 }
 
-export interface TrackedError {
+export interface TrackedError {}
   id: string,
   message: string,
   metadata: ErrorMetadata,
@@ -45,20 +49,25 @@ export interface TrackedError {
 
 }
 
-class ErrorTrackingService {
+class ErrorTrackingService {}
   private static instance: ErrorTrackingService,
   private errors: Map<string></string> = new Map()
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000;
+<<<<<<< HEAD
 
   private constructor() {,
+=======
+  private constructor() {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.setupGlobalErrorHandlers();
 
-  static getInstance(): ErrorTrackingService {
-    if (!ErrorTrackingService.instance) {
+  static getInstance(): ErrorTrackingService {}
+    if (!ErrorTrackingService.instance) {}
       ErrorTrackingService.instance = new ErrorTrackingService(););
     return ErrorTrackingService.instance});}
 
+<<<<<<< HEAD
   private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined) return;
 
@@ -66,11 +75,22 @@ class ErrorTrackingService {
 
     window.addEventListener('error', (event) => {
       this.trackError(new Error(event.message), {
+=======
+  private setupGlobalErrorHandlers(): void {}
+    if (typeof window === 'undefined') return;
+    // Global error handler;
+    window.addEventListener('error', (event) => {}
+      this.trackError(new Error(event.message), {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         category: ErrorCategory.Runtime;
 
         severity: ErrorSeverity.High;
+<<<<<<< HEAD
 
         context: {,
+=======
+        context: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   filename: event.filename;
 
           lineno: event.lineno;
@@ -83,6 +103,7 @@ class ErrorTrackingService {
     });
 
     // Unhandled promise rejection handler;
+<<<<<<< HEAD
 
     window.addEventListener('unhandledrejection', (event) => {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -90,6 +111,12 @@ class ErrorTrackingService {
 
         severity: ErrorSeverity.High;
 
+=======
+    window.addEventListener('unhandledrejection', (event) => {}
+      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
+        category: ErrorCategory.Runtime;
+        severity: ErrorSeverity.High;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 context: { reason: event.reason });]
     });]
     });]
@@ -97,6 +124,7 @@ context: { reason: event.reason });]
 
   trackError(error: Error),
     metadata: Partial<ErrorMetadata></ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+<<<<<<< HEAD
 
   ): string {;
 
@@ -109,6 +137,15 @@ const trackedError: TrackedError = {,
       message: error.message;
 
       metadata: {,
+=======
+  ): string {;}
+const errorId = this.generateErrorId(error.message);
+const now = Date.now();
+const trackedError: TrackedError = {,}
+  id: errorId,
+      message: error.message;
+      metadata: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   category: metadata.category;
 
         severity: metadata.severity;
@@ -136,10 +173,15 @@ const trackedError: TrackedError = {,
 }
 
     // Check if error already exists;
+<<<<<<< HEAD
 
 const existingError = this.errors.get(errorId);;
 
     if (existingError) {
+=======
+const existingError = this.errors.get(errorId)
+    if (existingError) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       existingError.occurrences++
       existingError.lastSeen = now;
 
@@ -147,10 +189,15 @@ const existingError = this.errors.get(errorId);;
     } else {
       this.errors.set(errorId, trackedError)
 
+<<<<<<< HEAD
       // Clean up old errors if we exceed the limit;
 
       if ($1) { const oldestError = Array.from(this.errors.values());;
 
+=======
+      // Clean up old errors if we exceed the limit;}
+      if ($1) { const oldestError = Array.from(this.errors.values())}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           .sort((a, b) => a.firstSeen - b.firstSeen)[0]
 this.errors.delete(oldestError.id)]
     }
@@ -158,8 +205,12 @@ this.errors.delete(oldestError.id)]
     }
 
     // Log the error;
+<<<<<<< HEAD
 
     logger.error('Error tracked', {)
+=======
+    logger.error('Error tracked', {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       errorId)
       message: error.message),
       category: metadata.category),
@@ -172,8 +223,8 @@ this.errors.delete(oldestError.id)]
     this.notifyListeners(trackedError)
 
     // Report to external service (in production)
-    if (process.env.NODE_ENV === 'production') {
-      this.reportToExternalService(errorId).catch(err => {)
+    if (process.env.NODE_ENV === 'production') {}
+      this.reportToExternalService(errorId).catch(err => {)}
 logger.error('Failed to report error to external service', { error: err.message });]
     });
 
@@ -237,16 +288,23 @@ const existingError = this.errors.get(errorId);
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */});;);
     return errorId});}
 
+<<<<<<< HEAD
   private generateErrorId(message: string): string {,;
 
 const timestamp = Date.now().toString(36),;;
 
 const hash = this.simpleHash(message),;;
 
+=======
+  private generateErrorId(message: string): string {,;}
+const timestamp = Date.now().toString(36),;
+const hash = this.simpleHash(message),
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return `err_${timestamp}_${hash}`});
 
 }
 
+<<<<<<< HEAD
   private simpleHash(str: string): string {;
 
 let hash = 0;;
@@ -255,6 +313,12 @@ let hash = 0;;
 
 const char = str.charCodeAt(i),;;
 
+=======
+  private simpleHash(str: string): string {;}
+let hash = 0;
+    for (let i = 0; i < str.length; i++) {;}
+const char = str.charCodeAt(i),
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       hash = ((hash << 5) - hash) + char;
 
       hash = hash & hash // Convert to 32-bit integer});
@@ -263,19 +327,31 @@ const char = str.charCodeAt(i),;;
 
 return Math.abs(hash).toString(36)]
     }
+<<<<<<< HEAD
 
   addListener(listener: (error: TrackedError) => void): void {,
+=======
+  addListener(listener: (error: TrackedError) => void): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.errorListeners.push(listener);
 
-  removeListener(listener: (error: TrackedError) => void): void {,
+  removeListener(listener: (error: TrackedError) => void): void {,}
     this.errorListeners = this.errorListeners.filter(l => l !== listener);
 
+<<<<<<< HEAD
   private notifyListeners(error: TrackedError): void {,
     this.errorListeners.forEach(listener => {)
       try {)
         listener(error); catch (listenerError) {
         logger.error('Error in error listener, { error: listenerError.message });
 
+=======
+  private notifyListeners(error: TrackedError): void {,}
+    this.errorListeners.forEach(listener => {)}
+      try {)}
+        listener(error); catch (listenerError) {}
+        logger.error('Error in error listener', { error: listenerError.message });
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   /**
    * Generate a unique error ID based on the message;
 
@@ -307,48 +383,72 @@ return Math.abs(hash).toString(36)]
   r: TrackedError): void {/* TODO: Fix JSX expression */});;)
 } catch (listenerError) {/* TODO: Fix JSX expression */});;);
     });;);
-  private async reportToExternalService(errorId: string): Promise<void></void> {,
+  private async reportToExternalService(errorId: string): Promise<void></void> {,}
     // In a real implementation, this would send to an external service;
     // like Sentry, LogRocket, or a custom error reporting service;
     logger.info('Error reported to external service', { errorId });;);
-  getErrors(): TrackedError[] {
+  getErrors(): TrackedError[] {}
     return Array.from(this.errors.values()););
+<<<<<<< HEAD
   getErrorById(id: string): TrackedError | undefined {,    return this.errors.get(id);
+=======
+  getErrorById(id: string): TrackedError | undefined {,}
+    return this.errors.get(id);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
-  clearErrors(): void {
+  clearErrors(): void {}
 this.errors.clear()]
     }
+<<<<<<< HEAD
 
   getErrorStats(): {
+=======
+  getErrorStats(): {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     total: number,
     byCategory: Record<ErrorCategory></ErrorCategory>
     bySeverity: Record<ErrorSeverity></ErrorSeverity>});
 
 } {;
+<<<<<<< HEAD
 
 const errors = this.getErrors();;
 
+=======
+const errors = this.getErrors();}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 const byCategory: Record<ErrorCategory></ErrorCategory> = {} as Record<ErrorCategory></ErrorCategory>;
 
 const bySeverity: Record<ErrorSeverity></ErrorSeverity> = {} as Record<ErrorSeverity></ErrorSeverity>
     // Initialize counters;
+<<<<<<< HEAD
 
     Object.values(ErrorCategory).forEach(category => {)
       byCategory[category] = 0});]
     });
 
     Object.values(ErrorSeverity).forEach(severity => {)
+=======
+    Object.values(ErrorCategory).forEach(category => {)}
+      byCategory[category] = 0});]
+    });
+    Object.values(ErrorSeverity).forEach(severity => {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       bySeverity[severity] = 0});]
     });
 
     // Count errors;
+<<<<<<< HEAD
 
     errors.forEach(error => {)
+=======
+    errors.forEach(error => {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       byCategory[error.metadata.category]++)
       bySeverity[error.metadata.severity]++)]
     });
 
-    return {
+    return {}
       total: errors.length;
 
       byCategory,

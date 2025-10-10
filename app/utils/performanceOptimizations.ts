@@ -5,11 +5,15 @@
 // Throttle utility for performance
 export const throttle = <T></T> any>(,  func: T,;
   limit: number,
+<<<<<<< HEAD
 ): ((...args: Parameters<T></T>) => void) => {;
 
+=======
+): ((...args: Parameters<T></T>) => void) => {;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 let inThrottle: boolean,
-  return (...args: Parameters<T></T>) => {
-    if (!inThrottle) {,
+  return (...args: Parameters<T></T>) => {}
+    if (!inThrottle) {,}
       func(...args),
       inThrottle = true;
 
@@ -38,12 +42,20 @@ export const useIntersectionObserver = (  callback: (entries: IntersectionObserv
   const observer = useMemo();;
 
     () =>
+<<<<<<< HEAD
       typeof window !== undefined
         ? new IntersectionObserver(callback, {)
             threshold: 0.1),
             rootMargin: '50px),
         ? new IntersectionObserver(callback, {);
 
+=======
+      typeof window !== 'undefined'
+        ? new IntersectionObserver(callback, {)}
+            threshold: 0.1),
+            rootMargin: '50px'),
+        ? new IntersectionObserver(callback, {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             threshold: 0.1,
             rootMargin: '50px,
             ...options});]
@@ -52,11 +64,17 @@ export const useIntersectionObserver = (  callback: (entries: IntersectionObserv
         : null,
     [callback, options]
   );
+<<<<<<< HEAD
 
 const observe = useCallback(;;
 
     (element: Element | null) => {,
       if (observer && element) {,
+=======
+const observe = useCallback(
+    (element: Element | null) => {,}
+      if (observer && element) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         observer.observe(element),;
 
 const observe = useCallback();;
@@ -131,17 +149,28 @@ const disconnect = useCallback(() => {};;
   return { observe, disconnect }););
 
 // Image lazy loading hook
+<<<<<<< HEAD
 export const useLazyImage = useCallback((...args) => {;;
 
 const [imageSrc, setImageSrc] = useState(placeholder || );
 
+=======
+export const useLazyImage = useCallback((...args) => {;}
+const [imageSrc, setImageSrc] = useState(placeholder || '');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 const [isLoaded, setIsLoaded] = useState(false);
 
 const [isError, setIsError] = useState(false);
 
 const { observe } = useIntersectionObserver(useCallback()
+<<<<<<< HEAD
       (entries) => {        entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
+=======
+      (entries) => {}
+        entries.forEach((entry) => {}
+          if (entry.isIntersecting && !isLoaded && !isError) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Image lazy loading hook
 export const useLazyImage = useCallback((...args) => {};;
 
@@ -200,12 +229,18 @@ return { imageSrc, isLoaded, isError, observe });]
     }
 
 // Performance monitoring hook;
+<<<<<<< HEAD
 
 export const usePerformanceMonitoring = useCallback((...args) => {;;
 
 return (;
 
 const [metrics, setMetrics] = useState<{
+=======
+export const usePerformanceMonitoring = useCallback((...args) => {}
+return (;
+const [metrics, setMetrics] = useState<{}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     fcp?: number;
 
     lcp?: number;
@@ -216,6 +251,7 @@ const [metrics, setMetrics] = useState<{
 
     ttfb?: number;});]
     }>({});
+<<<<<<< HEAD
 
   useEffect(() => {
     if (typeof window === undefined) return;
@@ -231,6 +267,16 @@ const fcp = paint.find(entry => entry.name === first-contentful-paint)?.startTim
 const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;;
 
       setMetrics({)
+=======
+  useEffect(() => {}
+    if (typeof window === 'undefined') return;
+const updateMetrics = useCallback((...args) => {;}
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
+const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+      setMetrics({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         fcp)
         lcp)
 ttfb: navigation?.responseStart - navigation?.requestStart});]
@@ -238,8 +284,12 @@ ttfb: navigation?.responseStart - navigation?.requestStart});]
     }
 
     // Monitor performance after page load;
+<<<<<<< HEAD
 
     if (document.readyState === 'complete) {
+=======
+    if (document.readyState === 'complete') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Performance monitoring hook
 export const usePerformanceMonitoring = useCallback((...args) => {};;
 
@@ -253,6 +303,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {};;
     }>({});
 
   useEffect(() => {}
+<<<<<<< HEAD
 
     if (typeof window === undefined) return;
 
@@ -268,6 +319,15 @@ const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime
 
       setMetrics({);
 
+=======
+    if (typeof window === 'undefined') return;
+const updateMetrics = useCallback((...args) => {}
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
+const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+      setMetrics({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart});)
@@ -299,17 +359,24 @@ const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime
 }
 
 // Memory usage monitoring
+<<<<<<< HEAD
 export const useMemoryMonitoring = useCallback((...args) => {;;
 
 return (;
 
 const [memoryInfo, setMemoryInfo] = useState<{
+=======
+export const useMemoryMonitoring = useCallback((...args) => {}
+return (;
+const [memoryInfo, setMemoryInfo] = useState<{}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     usedJSHeapSize?: number;
 
     totalJSHeapSize?: number;
 
     jsHeapSizeLimit?: number;});]
     }>({});
+<<<<<<< HEAD
 
   useEffect(() => {
     if (typeof window === 'undefined' || !(memory in performance)) return;
@@ -320,6 +387,14 @@ const memory = (performance as any).memory;;
 
       if (memory) {
         setMemoryInfo({)
+=======
+  useEffect(() => {}
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
+const updateMemoryInfo = useCallback((...args) => {;}
+const memory = (performance as any).memory;
+      if (memory) {}
+        setMemoryInfo({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           usedJSHeapSize: memory.usedJSHeapSize),
           totalJSHeapSize: memory.totalJSHeapSize),
 // Memory usage monitoring
@@ -341,9 +416,13 @@ const updateMemoryInfo = useCallback((...args) => {};;
       const memory = (performance as any).memory;;
 
       if (memory) {}
+<<<<<<< HEAD
 
         setMemoryInfo({);
 
+=======
+        setMemoryInfo({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit});]
@@ -419,10 +498,15 @@ const interval = setInterval(updateMemoryInfo, 5000);;
   return memoryInfo});}
 
 // Resource preloading utility
+<<<<<<< HEAD
 export const preloadResource = useCallback((...args) => {;;
 
   if (typeof window === undefined) return;
 
+=======
+export const preloadResource = useCallback((...args) => {}
+  if (typeof window === 'undefined') return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Resource preloading utility
 export const preloadResource = useCallback((...args) => {};;
 
@@ -439,11 +523,16 @@ document.head.appendChild(link);});]
     }
 
 // Critical resource preloading;
+<<<<<<< HEAD
 
 export const preloadCriticalResources = useCallback((...args) => {;;
 
   if (typeof window === undefined) return;
 
+=======
+export const preloadCriticalResources = useCallback((...args) => {}
+  if (typeof window === 'undefined') return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Preload critical fonts;
 
 // Critical resource preloading
@@ -463,12 +552,18 @@ preloadResource('/styles/critical.css', 'style);});]
     }
 
 // Bundle size monitoring;
+<<<<<<< HEAD
 
 export const useBundleSizeMonitoring = useCallback((...args) => {;;
 
 return (;
 
 const [bundleSize, setBundleSize] = useState<{
+=======
+export const useBundleSizeMonitoring = useCallback((...args) => {}
+return (;
+const [bundleSize, setBundleSize] = useState<{}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     totalSize?: number;
 
     jsSize?: number;
@@ -477,6 +572,7 @@ const [bundleSize, setBundleSize] = useState<{
 
     imageSize?: number;});]
     }>({});
+<<<<<<< HEAD
 
   useEffect(() => {
     if (typeof window === undefined) return;
@@ -500,6 +596,20 @@ const size = (resource as PerformanceResourceTiming).transferSize || 0;;
         totalSize += size;
 
         if (resource.name.includes('.js)) {
+=======
+  useEffect(() => {}
+    if (typeof window === 'undefined') return;
+const calculateBundleSize = useCallback((...args) => {;}
+const resources = performance.getEntriesByType('resource');
+let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
+      resources.forEach((resource) => {;}
+const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        totalSize += size;
+        if (resource.name.includes('.js')) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Bundle size monitoring
 export const useBundleSizeMonitoring = useCallback((...args) => {};;
 
@@ -538,10 +648,16 @@ let imageSize = 0;;
 
           cssSize += size;});)
 } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {}
+<<<<<<< HEAD
 
           imageSize += size;}););
 
       });      setBundleSize({)
+=======
+          imageSize += size;});;);
+      });
+      setBundleSize({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         totalSize)
         jsSize)
         cssSize)
@@ -550,10 +666,15 @@ imageSize});]
     }
 
     // Calculate after page load;
+<<<<<<< HEAD
 
     if (document.readyState === 'complete) {
       setBundleSize({);
 
+=======
+    if (document.readyState === 'complete') {}
+      setBundleSize({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         totalSize,
         jsSize,
         cssSize,

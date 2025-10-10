@@ -8,15 +8,23 @@ use client
 import React, { ReactElement, useCallback } from react;
 
 // Test result types;
+<<<<<<< HEAD
 
 export interface PerformanceMetrics {
+=======
+export interface PerformanceMetrics {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   renderTime: number,
     memoryUsage: number
   timestamp: string;}
 
 }
+<<<<<<< HEAD
 
 export interface CoverageMetrics {
+=======
+export interface CoverageMetrics {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   statements: number,
     branches: number
   functions: number,
@@ -27,8 +35,12 @@ export interface CoverageMetrics {
   timestamp: string;}
 
 }
+<<<<<<< HEAD
 
 export interface CoverageMetrics {
+=======
+export interface CoverageMetrics {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   statements: number,
   branches: number,
   functions: number,
@@ -37,8 +49,12 @@ export interface CoverageMetrics {
 }
 
 // Test configuration interface;
+<<<<<<< HEAD
 
 export interface TestConfig {
+=======
+export interface TestConfig {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   enableMocking: boolean,
     enableCoverage: boolean
   enablePerformance: boolean,
@@ -109,7 +125,7 @@ export interface TestConfig {}
 }
 
 // Default test configuration
-export const defaultTestConfig: TestConfig = {,
+export const defaultTestConfig: TestConfig = {,}
     enableMocking: true,
 export const defaultTestConfig: TestConfig = {}
 
@@ -123,8 +139,12 @@ export const defaultTestConfig: TestConfig = {}
   accessibilityThreshold: 90}
 
 }
+<<<<<<< HEAD
 
 interface TestResult {
+=======
+interface TestResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
     status: 'passed' | 'failed' | 'skipped | pending
 interface TestResult {}
@@ -137,8 +157,12 @@ interface TestResult {}
   coverage?: CoverageResult;}
 
 }
+<<<<<<< HEAD
 
 interface AssertionResult {
+=======
+interface AssertionResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
     status: 'passed | failed
 interface AssertionResult {}
@@ -150,8 +174,12 @@ interface AssertionResult {}
   message?: string;}
 
 }
+<<<<<<< HEAD
 
 interface CoverageResult {
+=======
+interface CoverageResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   statements: number,
     branches: number
   functions: number,
@@ -159,20 +187,32 @@ interface CoverageResult {
   uncovered: string[];}
 
 }
+<<<<<<< HEAD
 
 interface TestSuite {
+=======
+interface TestSuite {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
     tests: Test[]
   beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[];}</void>
 }
+<<<<<<< HEAD
 
 interface Test {</void>
+=======
+interface Test {</void>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,</void>
     fn: () => void | Promise<void>timeout?: number
   skip?: boolean
 // Default test configuration;
+<<<<<<< HEAD
 
 export const defaultTestConfig: TestConfig = {
+=======
+export const defaultTestConfig: TestConfig = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   enableMocking: true,
   enableCoverage: true,
   enablePerformance: true,
@@ -183,8 +223,12 @@ export const defaultTestConfig: TestConfig = {
   accessibilityThreshold: 90}
 
 }
+<<<<<<< HEAD
 
 interface TestResult {
+=======
+interface TestResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
   status: 'passed' | 'failed' | 'skipped | pending
   duration: number,
@@ -194,8 +238,12 @@ interface TestResult {
   coverage?: CoverageResult;}
 
 }
+<<<<<<< HEAD
 
 interface AssertionResult {
+=======
+interface AssertionResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
   status: 'passed' | 'failed,
   expected?: unknown;
@@ -205,8 +253,12 @@ interface AssertionResult {
   message?: string;}
 
 }
+<<<<<<< HEAD
 
 interface CoverageResult {
+=======
+interface CoverageResult {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   statements: number,
   branches: number,
   functions: number,
@@ -214,8 +266,12 @@ interface CoverageResult {
   uncovered: string[];}
 
 }
+<<<<<<< HEAD
 
 interface TestSuite {
+=======
+interface TestSuite {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
 interface CoverageResult {}
 
@@ -237,8 +293,12 @@ interface TestSuite {}
   afterEach: (() => void | Promise<void>)[];}
 
 }
+<<<<<<< HEAD
 
 interface Test {
+=======
+interface Test {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   name: string,
   fn: () => void | Promise<void>,
   timeout?: number;
@@ -248,14 +308,18 @@ interface Test {
   only?: boolean;}
 
 }
+<<<<<<< HEAD
 
 export class TestRunner {
+=======
+export class TestRunner {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private static instance: TestRunner,
   private config: TestConfig,
   private suites: TestSuite[] = []
   private currentSuite: TestSuite | null = null</void>
   private results: TestResult[] = []</void>
-  private testResults: Array<{,
+  private testResults: Array<{,}
 interface Test {}
 
   name: string
@@ -285,9 +349,14 @@ export class TestRunner {}
   private startTime: number = 0
   constructor(config: Partial<TestConfig>= {}) {
   private currentSuite: TestSuite | null = null;
+<<<<<<< HEAD
 
   private results: TestResult[] = []
   private testResults: Array<{
+=======
+  private results: TestResult[] = []}
+  private testResults: Array<{}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     name: string,
     status: 'passed' | 'failed' | 'skipped,
     duration: number,
@@ -299,7 +368,7 @@ export class TestRunner {}
   private startTime: number = 0;
 
   constructor(config: Partial<TestConfig> = {}) {
-    this.config = {
+    this.config = {}
   constructor(config: Partial<TestConfig> = {}) {}
 
     this.config = {}
@@ -312,6 +381,7 @@ export class TestRunner {}
       coverage: false,
       watch: false,
       bail: false,
+<<<<<<< HEAD
       reporter: 'console,
       outputDir: './test-results,
       includePattern: [,
@@ -320,11 +390,21 @@ export class TestRunner {}
         '**/*.spec.ts,
         '**/*.spec.tsx],
       excludePattern: ['**/node_modules/**', '**/dist/**],
+=======
+      reporter: 'console',
+      outputDir: './test-results',
+      includePattern: [,]
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/*.spec.ts',
+        '**/*.spec.tsx'],
+      excludePattern: ['**/node_modules/**', '**/dist/**'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...config}
 
     }</TestConfig>
   }</TestConfig>
-  static getInstance(config?: Partial<TestConfig>): TestRunner {
+  static getInstance(config?: Partial<TestConfig>): TestRunner {}
     if (!TestRunner.instance) {}
 
   }
@@ -344,10 +424,15 @@ export class TestRunner {}
   // Custom render function with providers
   customRender(</TestConfig>
     ui: ReactElement)</TestConfig>
+<<<<<<< HEAD
     options?: Omit<RenderOptions, 'wrapper>): RenderResult {}
 
     const AllTheProviders = useCallback((...args) => {</RenderOptions>;;
 
+=======
+    options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
+    const AllTheProviders = useCallback((...args) => {</RenderOptions>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return (<BrowserRouter>}</BrowserRouter>
           {children}</BrowserRouter>
         </BrowserRouter>
@@ -356,9 +441,13 @@ export class TestRunner {}
   customRender(ui: ReactElement),
     options?: Omit<RenderOptions, 'wrapper>
   ): RenderResult {}
+<<<<<<< HEAD
 
     const AllTheProviders = useCallback((...args) => {;;
 
+=======
+    const AllTheProviders = useCallback((...args) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return(<BrowserRouter>})
           {children})
         </BrowserRouter>)
@@ -473,8 +562,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Create a new test suite;
 
    */
-  public describe(name: string, fn: () => void): void {
-    const suite: TestSuite = {
+  public describe(name: string, fn: () => void): void {}
+    const suite: TestSuite = {}
       name;
 
       tests: []
@@ -560,6 +649,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   public it(name: string)
     fn: () => void | Promise<void>
     timeout?: number;
+<<<<<<< HEAD
 
   ): void {,
     if (!this.currentSuite) {,
@@ -568,6 +658,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }
 
     this.currentSuite.tests.push({)
+=======
+  ): void {,}
+    if (!this.currentSuite) {,}
+      throw new Error('Test must be inside a describe block');}
+    }
+    this.currentSuite.tests.push({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       name)
       fn)
       timeout: timeout || this.config.timeout}
@@ -582,7 +679,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
   async runPerformanceTest()
     component: ReactElement,
-    testName: string
+    testName: string}
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {}
 
       const startTime = performance.now();};;
@@ -654,6 +751,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   e: string;)
   ): Promise<{/* TODO: Fix JSX expression */}
 
+<<<<<<< HEAD
   s: PerformanceMetrics }> {/* TODO: Fix JSX expression */}
 
       const { unmount } = this.customRender(component);
@@ -668,6 +766,11 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;;
 
         if (memory) {
+=======
+      if ('memory' in performance) {}
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        if (memory) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           memoryUsage = memory.usedJSHeapSize;
 
         }
@@ -699,6 +802,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Create a skipped test;
 
    */
+<<<<<<< HEAD
   public itSkip(name: string, fn: () => void | Promise<void>): void {,
     if (!this.currentSuite) {,
       throw new Error('Test must be inside a describe block);}
@@ -706,6 +810,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }
 
     this.currentSuite.tests.push({
+=======
+  public itSkip(name: string, fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,}
+      throw new Error('Test must be inside a describe block');}
+    }
+    this.currentSuite.tests.push({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   public itSkip(name: string, fn: () => void | Promise<void>): void {}
 
     if (!this.currentSuite) {}
@@ -726,8 +837,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Create a focused test (only run this test)</void>
    */</void>
-  public itOnly(name: string, fn: () => void | Promise<void>): void {
-    if (!this.currentSuite) {
+  public itOnly(name: string, fn: () => void | Promise<void>): void {}
+    if (!this.currentSuite) {}
    * Create a focused test (only run this test)
    */
   public itOnly(name: string, fn: () => void | Promise<void>): void {}
@@ -750,9 +861,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Setup before all tests in suite</void>
    */</void>
-  public beforeAll(fn: () => void | Promise<void>): void {
-    if (!this.currentSuite) {
-    this.currentSuite.tests.push({)
+  public beforeAll(fn: () => void | Promise<void>): void {}
+    if (!this.currentSuite) {}
+    this.currentSuite.tests.push({)}
       name)
       fn)
       skip: true}
@@ -770,6 +881,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Create a focused test (only run this test)
    */
+<<<<<<< HEAD
   public itOnly(name: string, fn: () => void | Promise<void>): void {,
     if (!this.currentSuite) {,
       throw new Error('Test must be inside a describe block);}
@@ -777,6 +889,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }
 
     this.currentSuite.tests.push({)
+=======
+  public itOnly(name: string, fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,}
+      throw new Error('Test must be inside a describe block');}
+    }
+    this.currentSuite.tests.push({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       name)
       fn)
       only: true}
@@ -795,8 +914,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Setup before all tests in suite;
 
    */
-  public beforeAll(fn: () => void | Promise<void>): void {,
-    if (!this.currentSuite) {,
+  public beforeAll(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,}
   public beforeAll(fn: () => void | Promise<void>): void {}
 
     if (!this.currentSuite) {}
@@ -814,13 +933,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Setup after all tests in suite</void>
    */</void>
-  public afterAll(fn: () => void | Promise<void>): void {
-    if (!this.currentSuite) {
+  public afterAll(fn: () => void | Promise<void>): void {}
+    if (!this.currentSuite) {}
    * Setup after all tests in suite;
 
    */
-  public afterAll(fn: () => void | Promise<void>): void {,
-    if (!this.currentSuite) {,
+  public afterAll(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,}
    * Setup after all tests in suite
    */
   public afterAll(fn: () => void | Promise<void>): void {}
@@ -843,13 +962,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Setup before each test</void>
    */</void>
-  public beforeEach(fn: () => void | Promise<void>): void {
-    if (!this.currentSuite) {
+  public beforeEach(fn: () => void | Promise<void>): void {}
+    if (!this.currentSuite) {}
    * Setup before each test;
 
    */
-  public beforeEach(fn: () => void | Promise<void>): void {,
-    if (!this.currentSuite) {,
+  public beforeEach(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,}
    * Setup before each test
    */
   public beforeEach(fn: () => void | Promise<void>): void {}
@@ -872,13 +991,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Setup after each test</void>
    */</void>
-  public afterEach(fn: () => void | Promise<void>): void {
-    if (!this.currentSuite) {
+  public afterEach(fn: () => void | Promise<void>): void {}
+    if (!this.currentSuite) {}
    * Setup after each test;
 
    */
-  public afterEach(fn: () => void | Promise<void>): void {,
-    if (!this.currentSuite) {,
+  public afterEach(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,}
    * Setup after each test
    */
   public afterEach(fn: () => void | Promise<void>): void {}
@@ -901,12 +1020,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Run all tests</void>
    */</void>
-  public async run(): Promise<TestResult[]>{
+  public async run(): Promise<TestResult[]>{}
    * Run all tests;
 
    */
-  public async run(): Promise<TestResult[]> {
-    if (this.isRunning) {
+  public async run(): Promise<TestResult[]> {}
+    if (this.isRunning) {}
   public async run(): Promise<TestResult[]> {}
 
     if (this.isRunning) {}
@@ -952,7 +1071,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       return this.results;
 
     } finally {
-      return this.results
+      return this.results}
     } finally {}
 
       this.isRunning = false;}
@@ -974,18 +1093,29 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development) { if (import.meta.env.DEV) {} }
 
     // Run beforeAll hooks;
+<<<<<<< HEAD
 
     for (const hook of suite.beforeAll) {
       await this.runHook(hook, 'beforeAll);}
 
+=======
+    for (const hook of suite.beforeAll) {}
+      await this.runHook(hook, 'beforeAll');}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
     // Run tests;
+<<<<<<< HEAD
 
     for (const test of suite.tests) {
       if (test.skip) {
         this.results.push({}
 
+=======
+    for (const test of suite.tests) {}
+      if (test.skip) {}
+        this.results.push({`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {}
 
@@ -1048,8 +1178,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }
 
     // Run afterAll hooks;
+<<<<<<< HEAD
 
     for (const hook of suite.afterAll) {
+=======
+    for (const hook of suite.afterAll) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Run afterAll hooks
     for (const hook of suite.afterAll) {}
 
@@ -1074,10 +1208,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const startTime = Date.now();;
 
     const assertions: AssertionResult[] = [],
-    try {,
+    try {,}
       // Run beforeEach hooks;
+<<<<<<< HEAD
 
       for (const hook of suite.beforeEach) {,
+=======
+      for (const hook of suite.beforeEach) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     const assertions: AssertionResult[] = []
     try {}
 
@@ -1092,6 +1230,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
       await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000)
       // Run afterEach hooks;
+<<<<<<< HEAD
 
       for (const hook of suite.afterEach) {
         await this.runHook(hook, 'afterEach);}
@@ -1099,6 +1238,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       }
 
       this.results.push({
+=======
+      for (const hook of suite.afterEach) {}
+        await this.runHook(hook, 'afterEach');}
+      }
+      this.results.push({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // Run afterEach hooks
       for (const hook of suite.afterEach) {}
 
@@ -1111,7 +1256,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         name: testName,
         status: 'passed)
     duration: Date.now() - startTime,
-      this.results.push({)
+      this.results.push({)}
         name: testName),
         status: 'passed),
         duration: Date.now() - startTime;
@@ -1134,7 +1279,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         status: 'failed)
     duration: Date.now() - startTime,
         error: error as Error,
-      this.results.push({)
+      this.results.push({)}
         name: testName),
         status: 'failed),
         duration: Date.now() - startTime;
@@ -1211,8 +1356,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private async runHook()</void>
     hook: () => void | Promise<void>,</void>
     hookName: string</void>
-  ): Promise<void>{
-    try {
+  ): Promise<void>{}
+    try {}
    * Run a hook;
 
    */
@@ -1220,8 +1365,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
     hook: () => void | Promise<void>
     hookName: string,
-  ): Promise<void> {,
-    try {,
+  ): Promise<void> {,}
+    try {,}
   private async runHook()
     hook: () => void | Promise<void>,
     hookName: string
@@ -1245,15 +1390,15 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private async runWithTimeout()</void>
     fn: () => void | Promise<void>,</void>
     timeout: number</void>
-  ): Promise<void>{
+  ): Promise<void>{}
    * Run function with timeout;
 
    */
   private async runWithTimeout()
     fn: () => void | Promise<void>,
     timeout: number,
-  ): Promise<void> {,
-    return new Promise((resolve, reject) => {
+  ): Promise<void> {,}
+    return new Promise((resolve, reject) => {}
     timeout: number
   ): Promise<void> {}
 
@@ -1270,7 +1415,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           resolve();}
 
         })
-        .catch(error => {)
+        .catch(error => {)}
     clearTimeout(timer)
         .catch(error => {)}
 
@@ -1318,6 +1463,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate test report;
 
    */
+<<<<<<< HEAD
   private generateReport(): void {
     const duration = Date.now() - this.startTime;;
 
@@ -1325,6 +1471,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
     const failed = this.results.filter(r => r.status === failed).length;;
 
+=======
+  private generateReport(): void {}
+    const duration = Date.now() - this.startTime;
+    const passed = this.results.filter(r => r.status === 'passed').length;
+    const failed = this.results.filter(r => r.status === 'failed').length;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private generateReport(): void {}
 
     const duration = Date.now() - this.startTime;;
@@ -1375,10 +1527,16 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JSON report;
 
    */
+<<<<<<< HEAD
   private generateJsonReport(): void {
     const report = {;;
 
       summary: {,
+=======
+  private generateJsonReport(): void {}
+    const report = {}
+      summary: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     total: this.results.length,
   private generateJsonReport(): void {}
 
@@ -1387,10 +1545,17 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       summary: {}
 
         total: this.results.length,
+<<<<<<< HEAD
         passed: this.results.filter(r => r.status === 'passed).length,
         failed: this.results.filter(r => r.status === 'failed).length,
         skipped: this.results.filter(r => r.status === 'skipped).length,
       summary: {
+=======
+        passed: this.results.filter(r => r.status === 'passed').length,
+        failed: this.results.filter(r => r.status === 'failed').length,
+        skipped: this.results.filter(r => r.status === 'skipped').length,
+      summary: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         total: this.results.length;
 
         passed: this.results.filter(r => r.status === passed).length;
@@ -1424,9 +1589,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate HTML report;
 
    */
+<<<<<<< HEAD
   private generateHtmlReport(): void {</void>
     const html =</void>;;
 
+=======
+  private generateHtmlReport(): void {</void>}
+    const html =</void>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private generateHtmlReport(): void {}
 
     const html =;;
@@ -1450,6 +1620,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <h2 id="heading-test-results>Test Results</h2>
     <div class="summary></div>
         <h3 id="heading-summary>Summary<p>Total: ${this.results.length}</p>
@@ -1465,6 +1636,22 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 <h4 id="heading-${result.name}>${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : '}
 
+=======
+    <h2 id="heading-test-results">Test Results</h2>
+    <div class="summary"></div>
+        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
+    <div class="summary"></div>}
+        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
+          .map()</div>}
+    result => `}</div>
+            <div class="test ${result.status}"></div>
+                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
+                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             </div>
 
         <h3 id="heading-summary>Summary</h3>
@@ -1474,11 +1661,17 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped).length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
+<<<<<<< HEAD
     <div class="tests>
         ${this.results;
 
           .map(result => }
 
+=======
+    <div class="tests">
+        ${this.results;}
+          .map(result => `}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         ${this.results}
 
           .map()
@@ -1520,10 +1713,15 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
     const violations: string[] = [],
     // Check for missing alt text on images;
+<<<<<<< HEAD
 
     const images = container.querySelectorAll(img),;;
 
     images.forEach((img, index) => {
+=======
+    const images = container.querySelectorAll('img'),
+    images.forEach((img, index) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Basic accessibility checks
     const violations: string[] = []
     // Check for missing alt text on images
@@ -1556,6 +1754,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
     })
     // Check for proper heading hierarchy;
+<<<<<<< HEAD
 
     const headings = container.querySelectorAll(h1, h2, h3, h4, h5, h6);;
 
@@ -1564,6 +1763,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     headings.forEach((heading, index) => {
     let previousLevel = 0;;
 
+=======
+    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    let previousLevel = 0;
+    headings.forEach((heading, index) => {}
+    let previousLevel = 0
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     headings.forEach((heading, index) => {}
 
       const level = parseInt(heading.tagName.charAt(1));;
@@ -1629,9 +1834,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     assertions: (result: RenderResult) => void;
 
   ): Promise<{ passed: boolean; error?: string }> {
+<<<<<<< HEAD
     try {
       const result = this.customRender(component);;
 
+=======
+    try {}
+      const result = this.customRender(component)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       assertions(result)
       this.testResults.push({}
 
@@ -1861,11 +2071,17 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
    */
   private generateJunitReport(): void {}
+<<<<<<< HEAD
 
     const xml = `<?xml version="1.0" encoding="UTF-8?>;;
 
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}>
         ${this.results
+=======
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+        ${this.results}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           .map()</testsuite>
     result => }</testsuite>
 <testsuites>}
@@ -1883,6 +2099,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             </skipped>
 
 <testsuites>}
+<<<<<<< HEAD
 
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}>
         ${this.results;
@@ -1892,6 +2109,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <testcase name="${result.name}" time="${result.duration / 1000}>)
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : '})
                 ${result.status === 'skipped' ? '<skipped/>' : '})
+=======
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+        ${this.results;}
+          .map(result => `}
+            <testcase name="${result.name}" time="${result.duration / 1000}">)
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
+                ${result.status === 'skipped' ? '<skipped/>' : ''})
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             </testcase>)
 )
           )
@@ -1915,9 +2140,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   async runIntegrationTest(component: ReactElement),
     testName: string),
     userInteractions: (result: RenderResult) => Promise<void>): Promise<{ passed: boolean; error?: string }> {
+<<<<<<< HEAD
     try {
       const result = this.customRender(component);;
 
+=======
+    try {}
+      const result = this.customRender(component)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       await userInteractions(result)
       this.testResults.push({}
 
@@ -1972,6 +2202,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   async runVisualRegressionTest(component: ReactElement),
     testName: string,
   ): Promise<{ passed: boolean; diff?: unknown }> {
+<<<<<<< HEAD
     // This would typically use a tool like Percy or Chromatic;
 
     // For now, well just return a placeholder}
@@ -1980,6 +2211,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
     this.testResults.push({}
 
+=======
+    // This would typically use a tool like Percy or Chromatic;}
+    // For now, we'll just return a placeholder}
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
+    this.testResults.push({`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   async runVisualRegressionTest()
     component: ReactElement,
     testName: string
@@ -2009,8 +2246,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
     // This would typically use Istanbul or similar
+<<<<<<< HEAD
     // For now, well just return a placeholder
     const coverage: CoverageMetrics = {,
+=======
+    // For now, we'll just return a placeholder}
+    const coverage: CoverageMetrics = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     statements: 85,
   // Coverage test
   // Coverage test
@@ -2042,8 +2284,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 
   // Run all tests
   async runAllTests(
+<<<<<<< HEAD
 
     tests: Array<{,
+=======
+    tests: Array<{,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     name: string
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual,
     component: ReactElement)
@@ -2051,16 +2297,22 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
     }></void>
     // This would typically use Istanbul or similar;
+<<<<<<< HEAD
 
     // For now, well just return a placeholder;
 
     const coverage: CoverageMetrics = {
+=======
+    // For now, we'll just return a placeholder;
+    const coverage: CoverageMetrics = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       statements: 85,
       branches: 80,
       functions: 90,
       lines: 85}
 
     }
+<<<<<<< HEAD
 
     const passed = coverage.statements >= this.config.coverageThreshold;;
 
@@ -2070,14 +2322,26 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       duration: 0,}
 
       error: passed ? undefined : Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+=======
+    const passed = coverage.statements >= this.config.coverageThreshold;
+    this.testResults.push({)}
+      name: 'Coverage'),
+      status: passed ? 'passed' : 'failed'),
+      duration: 0,`}
+      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     })
     return { passed, coverage }
 
   }
 
   // Run all tests;
+<<<<<<< HEAD
 
   async runAllTests(tests: Array<{)
+=======
+  async runAllTests(tests: Array<{)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       name: string;)
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual)
       component: ReactElement;)
@@ -2086,7 +2350,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       userInteractions?: (result: RenderResult) => Promise<void>;}
 
     }>
-  ): Promise<{
+  ): Promise<{}
   async runAllTests()
     tests: Array<{}
 
@@ -2105,11 +2369,16 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   }> {}
 
     const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
-    for (const test of tests) {
+    for (const test of tests) {}
       let result;
+<<<<<<< HEAD
 
       switch (test.type) {
         case 'component:
+=======
+      switch (test.type) {}
+        case 'component':
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           result = await this.runComponentTest(
 
     for (const test of tests) {}
@@ -2299,13 +2568,18 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   }
 
   // Get test results;
+<<<<<<< HEAD
 
   getTestResults() {
+=======
+  getTestResults() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return [...this.testResults];}
 
   }
 
   // Get test statistics;
+<<<<<<< HEAD
 
   getTestStatistics() {
     const total = this.testResults.length;;
@@ -2317,6 +2591,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const skipped = this.testResults.filter(result => result.status === skipped).length;;
 
     return {
+=======
+  getTestStatistics() {}
+    const total = this.testResults.length;
+    const passed = this.testResults.filter(result => result.status === 'passed').length;
+    const failed = this.testResults.filter(result => result.status === 'failed').length;
+    const skipped = this.testResults.filter(result => result.status === 'skipped').length;
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Get test results
   getTestResults() {}
 
@@ -2348,13 +2630,18 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   }
 
   // Clear test results;
+<<<<<<< HEAD
 
   clearTestResults() {
+=======
+  clearTestResults() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.testResults = [];}
 
   }
 
   // Generate test report;
+<<<<<<< HEAD
 
   generateTestReport() {
     const statistics = this.getTestStatistics();;
@@ -2362,6 +2649,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const results = this.getTestResults();;
 
     return {
+=======
+  generateTestReport() {}
+    const statistics = this.getTestStatistics()
+    const results = this.getTestResults()
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       summary: statistics,
   // Clear test results
   clearTestResults() {}
@@ -2391,6 +2684,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 }
 
 // React hook for testing;
+<<<<<<< HEAD
 
 export const useTestRunner = useCallback((...args) => {;;
 
@@ -2398,6 +2692,11 @@ export const useTestRunner = useCallback((...args) => {;;
 
   const runTest = useCallback(async (;;
 
+=======
+export const useTestRunner = useCallback((...args) => {}
+  const testRunner = TestRunner.getInstance()
+  const runTest = useCallback(async (
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // React hook for testing
 export const useTestRunner = useCallback((...args) => {};;
 
@@ -2409,8 +2708,8 @@ export const useTestRunner = useCallback((...args) => {};;
     testName: string,
     type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual)
     assertions?: (result: RenderResult) => void,
-    userInteractions?: (result: RenderResult) => Promise<void>) => {
-    switch (type) {
+    userInteractions?: (result: RenderResult) => Promise<void>) => {}
+    switch (type) {}
     userInteractions?: (result: RenderResult) => Promise<void>
   ) => {}
 
@@ -2425,9 +2724,15 @@ export const useTestRunner = useCallback((...args) => {};;
     assertions?: (result: RenderResult) => void;
 
     userInteractions?: (result: RenderResult) => Promise<void>
+<<<<<<< HEAD
   ) => {,
     switch (type) {,
       case 'component:,
+=======
+  ) => {,}
+    switch (type) {,}
+      case 'component':,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         return testRunner.runComponentTest(component, testName, assertions as any)
       case 'integration:
         return testRunner.runIntegrationTest(component, testName, userInteractions as any)
@@ -2457,9 +2762,13 @@ export const useTestRunner = useCallback((...args) => {};;
 }
 
 // Test utilities;
+<<<<<<< HEAD
 
 export const testUtils = {;;
 
+=======
+export const testUtils = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Create mock data</void>
   createMockData: (type: string, count: number = 10) => {}</void>
 // Test utilities
@@ -2484,12 +2793,20 @@ export const testUtils = {};;
   createMockData: (type: string, count: number = 10) => {}
 
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
+<<<<<<< HEAD
     for (let i = 0; i < count; i++) {;;
 
       mockData.push({)
         id: i + 1,})
         name: `Mock ${type} ${i + 1})
         description: `This is a mock ${type} item)
+=======
+    for (let i = 0; i < count; i++) {}
+      mockData.push({)}
+        id: i + 1,`})
+        name: `Mock ${type} ${i + 1}`)
+        description: `This is a mock ${type} item`)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()})
     }
@@ -2498,9 +2815,14 @@ export const testUtils = {};;
 
   },
   // Wait for element to appear;
+<<<<<<< HEAD
 
   waitForElement: (selector: string, timeout: number = 5000) => {,
     return new Promise((resolve, reject) => {
+=======
+  waitForElement: (selector: string, timeout: number = 5000) => {,}
+    return new Promise((resolve, reject) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Wait for element to appear
   waitForElement: (selector: string, timeout: number = 5000) => {}
 
@@ -2527,11 +2849,15 @@ export const testUtils = {};;
         }
 
       })
-      observer.observe(document.body, {
+      observer.observe(document.body, {}
         childList: true)
     subtree: true}
+<<<<<<< HEAD
 
       observer.observe(document.body, {)
+=======
+      observer.observe(document.body, {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         childList: true),
       observer.observe(document.body, {)}
 
@@ -2548,9 +2874,14 @@ export const testUtils = {};;
     })
   },
   // Simulate user interaction;
+<<<<<<< HEAD
 
   simulateUserInteraction: async (element: HTMLElement, action: string) => {
     switch (action) {
+=======
+  simulateUserInteraction: async (element: HTMLElement, action: string) => {}
+    switch (action) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Simulate user interaction
   simulateUserInteraction: async (element: HTMLElement, action: string) => {}
 
@@ -2567,9 +2898,14 @@ export const testUtils = {};;
       case 'blur:
         element.blur()
         break;
+<<<<<<< HEAD
 
       case 'change:,
         if (element instanceof HTMLInputElement) {,
+=======
+      case 'change':,
+        if (element instanceof HTMLInputElement) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         break
       case 'change:
         if (element instanceof HTMLInputElement) {}
@@ -2742,7 +3078,7 @@ export class Assert {/* TODO: Fix JSX expression */}
     actual: unknown,
     expected: unknown)
     message?: string
-  ): void {
+  ): void {}
   public static assertEquals(actual: unknown),
     expected: unknown),
     message?: string;
@@ -2775,7 +3111,7 @@ export class Assert {/* TODO: Fix JSX expression */}
     actual: unknown,
     expected: unknown)
     message?: string
-  ): void {
+  ): void {}
   public static assertNotEquals(actual: unknown),
     expected: unknown),
     message?: string;
@@ -2887,13 +3223,19 @@ export class Assert {/* TODO: Fix JSX expression */}
     fn: () => void;
 
     expectedError?: string | RegExp;
+<<<<<<< HEAD
 
   ): void {,
     try {,
+=======
+  ): void {,}
+    try {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       fn(),
       throw new Error('Expected function to throw an error);}
 
     } catch (error) {
+<<<<<<< HEAD
       if (expectedError) {
         const errorMessage = (error as Error).message;;
 
@@ -2901,13 +3243,27 @@ export class Assert {/* TODO: Fix JSX expression */}
           if (!errorMessage.includes(expectedError)) {
             throw new Error(})
               `Expected error message to contain "${expectedError}", but got "${errorMessage})
+=======
+      if (expectedError) {}
+        const errorMessage = (error as Error).message;
+        if (typeof expectedError === 'string') {}
+          if (!errorMessage.includes(expectedError)) {}
+            throw new Error(`})
+              `Expected error message to contain "${expectedError}", but got "${errorMessage}")
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             )
           }
 
         } else {
+<<<<<<< HEAD
           if (!expectedError.test(errorMessage)) {
             throw new Error(})
               `Expected error message to match ${expectedError}, but got "${errorMessage})
+=======
+          if (!expectedError.test(errorMessage)) {}
+            throw new Error(`})
+              `Expected error message to match ${expectedError}, but got "${errorMessage}")
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     } catch (error) {}
 
       if (expectedError) {}
@@ -2962,8 +3318,8 @@ export class Assert {/* TODO: Fix JSX expression */}
    * Assert that a value does not throw an error;
 
    */
-  public static assertDoesNotThrow(fn: () => void): void {,
-    try {,
+  public static assertDoesNotThrow(fn: () => void): void {,}
+    try {,}
       fn();}
 
     } catch (error) {
@@ -3001,20 +3357,34 @@ export class Assert {/* TODO: Fix JSX expression */}
     value: unknown)
     constructor: new (...args: unknown[]) => unknown,
     message?: string
+<<<<<<< HEAD
   ): void {
     if (!(value instanceof constructor)) {
       throw new Error(})
     message || Expected ${value} to be an instance of ${constructor.name}
 
+=======
+  ): void {}
+    if (!(value instanceof constructor)) {}
+      throw new Error(`})
+    message || `Expected ${value} to be an instance of ${constructor.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   public static assertInstanceOf(value: unknown)
     constructor: new (...args: unknown[]) => unknown;
 
     message?: string;
+<<<<<<< HEAD
 
   ): void {,
     if (!(value instanceof constructor)) {,
       throw new Error(})
         message || Expected ${value} to be an instance of ${constructor.name})
+=======
+  ): void {,}
+    if (!(value instanceof constructor)) {,}
+      throw new Error(`})
+        message || `Expected ${value} to be an instance of ${constructor.name})
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   public static assertInstanceOf()
     value: unknown,
     constructor: new (...args: unknown[]) => unknown,
@@ -3158,7 +3528,7 @@ export class Assert {/* TODO: Fix JSX expression */}
  * Mock utilities;
 
  */
-class Mock {
+class Mock {}
   private static mocks: Map<string, unknown>= new Map()
 class Mock {}
 
@@ -3172,13 +3542,19 @@ class Mock {}
   public static fn(
 
     implementation?: (...args: unknown[]) => unknown;
+<<<<<<< HEAD
 
   ): MockFunction {
     const calls: unknown[][] = []
     const mockFn = useCallback((...args) => {,;;
 
+=======
+  ): MockFunction {}
+    const calls: unknown[][] = []
+    const mockFn = useCallback((...args) => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       calls.push(args),
-      if (implementation) {,
+      if (implementation) {,}
   public static fn()
     implementation?: (...args: unknown[]) => unknown
   ): MockFunction {}
@@ -3214,9 +3590,14 @@ class Mock {}
    */</<<<string>public</string></<<string>static</string> object<T extends Record<string, unknown>>(</T></<<<T>overrides</T>: Partial<T>= {}
 
   ): T {}
+<<<<<<< HEAD
 
     return new Proxy({} as T, {)
     get(target, prop) {
+=======
+    return new Proxy({} as T, {)}
+    get(target, prop) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
    * Create a mock object;
 
    */
@@ -3225,10 +3606,16 @@ class Mock {}
     overrides: Partial<T> = {}
 
   ): T {}
+<<<<<<< HEAD
 
     return new Proxy({} as T, {)
       get(target, prop) {
         if (prop in overrides) {
+=======
+    return new Proxy({} as T, {)}
+      get(target, prop) {}
+        if (prop in overrides) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return new Proxy({} as T, {)}
 
       get(target, prop) {}
@@ -3285,12 +3672,18 @@ class Mock {/* TODO: Fix JSX expression */}
   public static class<T extends new (...args: unknown[]) => unknown>(,
     constructor: T,
     overrides: Partial<InstanceType<T>> = {}
+<<<<<<< HEAD
 
   ): MockFunction {</InstanceType>
     const mockFn = Mock.fn((...args) => {</InstanceType>;;
 
       const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);};;
 
+=======
+  ): MockFunction {</InstanceType>}
+    const mockFn = Mock.fn((...args) => {</InstanceType>}
+      const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   ): MockFunction {}
 
     const mockFn = Mock.fn((...args) => {};;
@@ -3308,9 +3701,14 @@ class Mock {/* TODO: Fix JSX expression */}
    * Create a spy</T>
    */</<<<T>public</T></<<T>static</T> spyOn<T extends object, K extends keyof T>(</T></<<T>object</T>: T,
     method: K
+<<<<<<< HEAD
   ): MockFunction {
     const original = object[method]</<<<T>const</T></<<T>mockFn</T> = Mock.fn()</T>;;
 
+=======
+  ): MockFunction {}
+    const original = object[method]</<<<T>const</T></<<T>mockFn</T> = Mock.fn()</T>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     (object as Record<string, unknown>)[method as string] = mockFn;}</strin>
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {</string>
    * Create a spy;
@@ -3319,12 +3717,19 @@ class Mock {/* TODO: Fix JSX expression */}
   public static spyOn<T extends object, K extends keyof T>(
 
     object: T,
+<<<<<<< HEAD
     method: K,
   ): MockFunction {,
     const original = object[method],;;
 
     const mockFn = Mock.fn(),;;
 
+=======
+    method: K,}
+  ): MockFunction {,}
+    const original = object[method],
+    const mockFn = Mock.fn(),
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     (object as Record<string, unknown>)[method as string] = mockFn;}
 
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {
@@ -3409,10 +3814,14 @@ class Mock {/* TODO: Fix JSX expression */}
   }
 
 }
+<<<<<<< HEAD
 
 interface MockFunction {
+=======
+interface MockFunction {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   (...args: unknown[]): unknown,
-    mock: {
+    mock: {}
     calls: unknown[][],
 interface MockFunction {}
 
@@ -3422,8 +3831,12 @@ interface MockFunction {}
     calls: unknown[][]
     results: unknown[]
   (...args: unknown[]): unknown;
+<<<<<<< HEAD
 
   mock: {,
+=======
+  mock: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     calls: unknown[][],
     results: unknown[],
     instances: unknown[];}

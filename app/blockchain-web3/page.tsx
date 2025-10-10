@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 ;
 
+<<<<<<< HEAD
 const BlockchainWeb3Page: React.FC = () => {const features = [;;;
 
     {
@@ -16,24 +17,39 @@ const BlockchainWeb3Page: React.FC = () => {const features = [;;;
       title: 'Smart Contracts,
       description: 'Automated, self-executing contracts with the terms directly written into code.,
       benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security]
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: Zap,
+      title: 'Smart Contracts',
+      description: 'Automated, self-executing contracts with the terms directly written into code.',
+      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     },
-    {
+    {}
       icon: Shield,
       title: 'Decentralized Security,
       description: 'Enhanced security through decentralized architecture and cryptographic protection.,
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data]
     },
-    {
+    {}
       icon: Brain,
       title: 'AI Integration,
       description: 'AI-powered blockchain solutions for intelligent automation and optimization.,
       benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts]
     },
-    {
+    {}
       icon: Globe,
+<<<<<<< HEAD
       title: 'Global Access,
       description: 'Access blockchain services from anywhere in the world with global connectivity.,
       benefits: [24
+=======
+      title: 'Global Access',
+      description: 'Access blockchain services from anywhere in the world with global connectivity.',
+      benefits: ['24]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   ];

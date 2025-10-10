@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -13,20 +14,39 @@ import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react
 const CloudServicesPage: React.FC = () => {const features = [;;;
 
     {
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Cloud,
       title: 'Cloud Infrastructure,
       description: Scalable and secure cloud infrastructure solutions for your business needs
     },
-    {
+    {}
       icon: Shield,
+<<<<<<< HEAD
       title: 'Security & Compliance,
       description: 'Enterprise-grade security with full compliance and data protection
     },    {
+=======
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance and data protection'
+    },
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Zap,
       title: 'High Performance,
       description: Lightning-fast cloud services with 99.9% uptime guarantee
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach,
       description: Worldwide cloud deployment and support for international businesses
@@ -51,12 +71,21 @@ const benefits = [    'Scalable cloud infrastructure,;
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page 
       <
 
+<<<<<<< HEAD
       {/* Hero Section *
       <section className="relative py-20 px-4 sm: px-6 lg:px-8>
         <div className="max-w-7xl mx-auto>
           <div className="text-center>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent>
+=======
+      {/* Hero Section *}
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
               <
               <br 
@@ -119,6 +148,7 @@ const benefits = [    'Scalable cloud infrastructure,;
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
 
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
@@ -128,6 +158,15 @@ const benefits = [    'Scalable cloud infrastructure,;
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4>
                     <feature.icon className="w-6 h-6 text-white />
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (}
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                   <p className="text-gray-300>{feature.description}</p>
@@ -139,6 +178,7 @@ const benefits = [    'Scalable cloud infrastructure,;
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
@@ -149,6 +189,16 @@ const benefits = [    'Scalable cloud infrastructure,;
                 <div key={index} className="flex items-center space-x-3>
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 />
                   <span className="text-gray-300 text-lg>{benefit}</span>
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (}
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
               ));
 
@@ -186,12 +236,20 @@ const benefits = [    'Scalable cloud infrastructure,;
 
 };
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {features.map((feature, index) => (
 
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4>
                   <feature.icon className="h-6 w-6 text-white />
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
@@ -215,12 +273,20 @@ const benefits = [    'Scalable cloud infrastructure,;
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
             {benefits.map((benefit, index) => (
 
               <div key={index} className="flex items-start space-x-3>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
                 <p className="text-gray-300 text-lg>{benefit}</p>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (}
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </div>
             ))}
 

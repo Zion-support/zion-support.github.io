@@ -5,10 +5,15 @@ import React from 'react;
 import { Helmet } from 'react-helmet-async;
 
 ;
+<<<<<<< HEAD
 
 const AutonomousSystemsPage: React.FC = () => {
   return (
 
+=======
+const AutonomousSystemsPage: React.FC = () => {}
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     <React.Fragment>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>

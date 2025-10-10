@@ -6,9 +6,15 @@ import { Helmet } from 'react-helmet-async;
 
 import { Search, Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react;
 
+<<<<<<< HEAD
 interface BlogPost {
   id: number;  title: string;
 
+=======
+interface BlogPost {}
+  id: number;
+  title: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   excerpt: string;
 
   content: string;
@@ -27,13 +33,19 @@ interface BlogPost {
 
 }
 
+<<<<<<< HEAD
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(');
 
   const [selectedCategory, setSelectedCategory] = useState('all);
+=======
+const BlogPage: React.FC = () => {}
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
   const blogPosts: BlogPost[] = [
-    {
+    {}
       id: 1,
       title: 'The Future of AI in Enterprise: 2024 Trends and Predictions,
       excerpt: 'Explore the latest trends in enterprise AI adoption and how businesses are leveraging artificial intelligence to drive innovation and growth.,
@@ -45,7 +57,7 @@ const BlogPage: React.FC = () => {
       tags: ['AI', 'Enterprise', 'Technology', 'Innovation],
       featured: true
     },
-    {
+    {}
       id: 2,
       title: 'Quantum Computing: Breaking Through Traditional Barriers,
       excerpt: 'Discover how quantum computing is revolutionizing problem-solving and what it means for the future of technology.,
@@ -57,7 +69,7 @@ const BlogPage: React.FC = () => {
       tags: ['Quantum Computing', 'Technology', 'Research],
       featured: true
     },
-    {
+    {}
       id: 3,
       title: 'Building Scalable AI Infrastructure: Best Practices,
       excerpt: 'Learn the essential strategies for building robust, scalable AI infrastructure that can grow with your business needs.,
@@ -69,7 +81,7 @@ const BlogPage: React.FC = () => {
       tags: ['AI Infrastructure', 'Scalability', 'Best Practices],
       featured: false
     },
-    {
+    {}
       id: 4,
       title: 'Cybersecurity in the Age of AI: New Challenges and Solutions,
       excerpt: 'Understanding the evolving cybersecurity landscape and how AI is both creating new challenges and providing innovative solutions.,
@@ -81,7 +93,7 @@ const BlogPage: React.FC = () => {
       tags: ['Cybersecurity', 'AI Security', 'Threat Detection],
       featured: false
     },
-    {
+    {}
       id: 5,
       title: 'The Rise of Autonomous Systems: From Theory to Reality,
       excerpt: 'How autonomous systems are transforming industries and what businesses need to know about implementation.,
@@ -93,7 +105,7 @@ const BlogPage: React.FC = () => {
       tags: ['Autonomous Systems', 'Automation', 'Industry 4.0],
       featured: false
     },
-    {
+    {}
       id: 6,
       title: 'Data Privacy and AI: Navigating the Regulatory Landscape,
       excerpt: 'A comprehensive guide to data privacy regulations and how they impact AI development and deployment.,
@@ -118,8 +130,13 @@ const BlogPage: React.FC = () => {
 
   ];
 
+<<<<<<< HEAD
   const filteredPosts = blogPosts.filter(post => {;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+=======
+  const filteredPosts = blogPosts.filter(post => {}
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -177,16 +194,25 @@ const BlogPage: React.FC = () => {
             </div>
 
             {/* Category Filter */}
+<<<<<<< HEAD
 
             <div className="flex flex-wrap justify-center gap-4>
               {categories.map((category) => (
 
+=======
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <button
                   key={category.id}
 
                   onClick={() => setSelectedCategory(category.id)}
+<<<<<<< HEAD
 
                   className={px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+=======
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                     selectedCategory === category.id
                       ? 'bg-cyan-400 text-slate-900
                       : 'bg-white/10 text-white hover:bg-white/20
@@ -201,6 +227,7 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Featured Posts */}
+<<<<<<< HEAD
 
         {featuredPosts.length > 0 && (
 
@@ -215,6 +242,19 @@ const BlogPage: React.FC = () => {
                       <div className="flex items-center space-x-4 mb-4>
                         <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium>                          {post.category}
 
+=======
+        {featuredPosts.length > 0 && (}
+          <section className="py-8 px-4">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Articles</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {featuredPosts.map((post) => (}
+                  <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
+                    <div className="p-8">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium">
+                          {post.category}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         </span>
                         <div className="flex items-center text-gray-400 text-sm>
                           <Clock className="w-4 h-4 mr-1 />
@@ -258,6 +298,7 @@ const BlogPage: React.FC = () => {
         )}
 
         {/* All Posts */}
+<<<<<<< HEAD
 
         <section className="py-16 px-4">          <div className="max-w-7xl mx-auto>
             <h2 className="text-3xl font-bold text-white mb-12 text-center>All Articles</h2>
@@ -267,6 +308,17 @@ const BlogPage: React.FC = () => {
                 <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">                  <div className="p-6>
                     <div className="flex items-center space-x-4 mb-4>
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium>
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">All Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularPosts.map((post) => (}
+                <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         {post.category}
 
                       </span>
@@ -284,11 +336,18 @@ const BlogPage: React.FC = () => {
                       {post.excerpt}
 
                     </p>
+<<<<<<< HEAD
                     <div className="flex flex-wrap gap-2 mb-4>
                       {post.tags.slice(0, 3).map((tag, index) => (
 
                         <span key={index} className="px-2 py-1 bg-white/10 text-gray-300 rounded text-xs>                          #{tag}
 
+=======
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.slice(0, 3).map((tag, index) => (}
+                        <span key={index} className="px-2 py-1 bg-white/10 text-gray-300 rounded text-xs">
+                          #{tag}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         </span>
                       ))}
 
@@ -315,6 +374,7 @@ const BlogPage: React.FC = () => {
 
             </div>
 
+<<<<<<< HEAD
             {regularPosts.length === 0 && searchQuery && (
 
               <div className="text-center py-16>
@@ -327,6 +387,17 @@ const BlogPage: React.FC = () => {
 
                     setSelectedCategory('all);
 
+=======
+            {regularPosts.length === 0 && searchQuery && (}
+              <div className="text-center py-16">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-4">No articles found</h3>
+                <p className="text-gray-300 mb-8">Try adjusting your search terms or browse all categories</p>
+                <button
+                  onClick={() => {}
+                    setSearchQuery('');
+                    setSelectedCategory('all');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   }}
 
                   className="px-8 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors

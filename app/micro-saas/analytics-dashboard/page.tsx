@@ -6,6 +6,7 @@ import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, Check
 
 ;
 
+<<<<<<< HEAD
 const AIAnalyticsDashboardPage: React.FC = () => {const features = [;;;
 
     {
@@ -13,28 +14,36 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [;;;
     n: BarChart,
       title: 'Real-time Analytics,
       description: 'Live data visualization with instant updates and interactive charts.]
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: BarChart,
+      title: 'Real-time Analytics',
+      description: 'Live data visualization with instant updates and interactive charts.']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     },
-    {
+    {}
       icon: TrendingUp,
       title: 'Predictive Insights,
       description: 'AI-powered forecasting and trend analysis for better decision making.]
     },
-    {
+    {}
       icon: Users,
       title: 'User Behavior Tracking,
       description: 'Comprehensive user analytics and engagement metrics tracking.]
     },
-    {
+    {}
       icon: DollarSign,
       title: 'Revenue Analytics,
       description: 'Detailed financial metrics and revenue optimization insights.]
     },
-    {
+    {}
       icon: Zap,
       title: 'Custom Dashboards,
       description: 'Build personalized dashboards tailored to your business needs.]
     },
-    {
+    {}
       icon: Target,
       title: 'Goal Tracking,
 description: 'Monitor KPIs and business objectives with automated alerts.]
@@ -55,6 +64,7 @@ const benefits = [;;
   ];
 
 ;
+<<<<<<< HEAD
 
 const metrics = [;;
 
@@ -62,6 +72,13 @@ const metrics = [;;
     { label: 'Update Frequency', value: 'Real-time, icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%, icon: Shield },
     { label: 'User Satisfaction', value: 4.9
+=======
+const metrics = [
+    { label: 'Data Sources', value: '50+', icon: BarChart },
+    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
+    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
+    { label: 'User Satisfaction', value: '4.9}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   ];
 
   return (<div>
@@ -99,6 +116,7 @@ const metrics = [;;
                 Everything you need to make data-driven decisions with confidence
               <
             <
+<<<<<<< HEAD
             <div className=grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8>
               {features.map((feature), index) => (<
@@ -106,6 +124,15 @@ const metrics = [;;
                   <div className=w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hove,
     r:scale-110 transition-transform><
                     <feature.icon className="w-6 h-6 text-white 
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+              {features.map((feature), index) => (<}
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"><
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hove,
+    r:scale-110 transition-transform"><
+                    <feature.icon className="w-6 h-6 text-white" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <
                   <h3 className="text-xl font-semibold text-white mb-3>{feature.title}<
                   <p className="text-gray-300>{feature.description}<
@@ -116,6 +143,7 @@ const metrics = [;;
           <
         <
 
+<<<<<<< HEAD
         {/* Metrics Section *
         <section className=py-16 px-4 bg-slate-800
           <div className="max-w-7xl mx-auto><
@@ -130,6 +158,22 @@ const metrics = [;;
                 <div key={index} className="text-center><
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4><
                     <metric.icon className="w-8 h-8 text-white 
+=======
+        {/* Metrics Section *}
+        <section className="py-16 px-4 bg-slate-800
+          <div className="max-w-7xl mx-auto"><
+            <div className="text-center mb-16"><
+              <h2 className="text-4xl font-bold text-white mb-4">Platform Performance<
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Built for scale and reliability
+              <
+            <
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+              {metrics.map((metric), index) => (<}
+                <div key={index} className="text-center"><
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"><
+                    <metric.icon className="w-8 h-8 text-white" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <
                   <div className="text-3xl font-bold text-white mb-2>{metric.value}<
                   <div className="text-gray-300>{metric.label}<
@@ -140,6 +184,7 @@ const metrics = [;;
           <
         <
 
+<<<<<<< HEAD
         {/* Benefits Section *
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto><
@@ -155,6 +200,23 @@ const metrics = [;;
                   <div key={index} className="flex items-start space-x-3><
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1 
                     <span className="text-gray-300 text-lg>{benefit}<
+=======
+        {/* Benefits Section *}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto"><
+            <div className="text-center mb-16"><
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard<
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the difference with our AI-powered analytics platform
+              <
+            <
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"><
+              <div className="space-y-6">
+                {benefits.map((benefit), index) => (<}
+                  <div key={index} className="flex items-start space-x-3"><
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" 
+                    <span className="text-gray-300 text-lg">{benefit}<
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <)
                 ))}
 
@@ -180,11 +242,19 @@ const metrics = [;;
           <
         <
 
+<<<<<<< HEAD
         {/* CTA Section *
         <section className="py-16 px-4>
           <div className="max-w-4xl mx-auto text-center><
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30><
               <h2 className="text-4xl font-bold text-white mb-6>
+=======
+        {/* CTA Section *}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center"><
+            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"><
+              <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 Ready to Transform Your Analytics?
               <
               <p className="text-xl text-gray-300 mb-8>

@@ -1,7 +1,7 @@
 'use client';
 
 // Enhanced Error Handler
-export class AppError extends Error {
+export class AppError extends Error {}
 // Enhanced Error Handler
 export class AppError extends Error {}
 
@@ -29,8 +29,12 @@ const appError = error instanceof AppError ? error : new AppError(error.message)
 
   .toISOString()
     statusCode: appError.statusCode || 500;
+<<<<<<< HEAD
 
   return {,
+=======
+  return {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   .toISOString(),
     statusCode: appError.statusCode || 500
 
@@ -38,6 +42,7 @@ const appError = error instanceof AppError ? error : new AppError(error.message)
 
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500}}
+<<<<<<< HEAD
 
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,;;
 
@@ -45,6 +50,12 @@ export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => 
     if (next && typeof next === 'function') {,
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {};;
 
+=======
+export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,}
+  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,}
+    if (next && typeof next === 'function') {,}
+export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {}
 
     if (next && typeof next === 'function') {}
@@ -58,12 +69,19 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 
 }
 
+<<<<<<< HEAD
 export const errorHandler = (error: AppError | Error) => {;;
 
 const isDevelopment = process.env.NODE_ENV === 'development;;
 
 const appError = error instanceof AppError ? error : new AppError(error.message);;
 
+=======
+export const errorHandler = (error: AppError | Error) => {;}
+const isDevelopment = process.env.NODE_ENV === 'development';
+const appError = error instanceof AppError ? error : new AppError(error.message);
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     message: appError.message,
     stack: appError.stack,
     timestamp: new Date().toISOString(),

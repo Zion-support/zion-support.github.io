@@ -5,8 +5,12 @@ import { Helmet } from 'react-helmet-async;
 import { Settings, ArrowRight } from lucide-react;
 
 ;
+<<<<<<< HEAD
 
 const MicroSaaSPage: React.FC = () => {
+=======
+const MicroSaaSPage: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 return (;
 
 const serviceName = document-processor;;

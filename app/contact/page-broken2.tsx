@@ -8,17 +8,24 @@ import React, { useState, useCallback } from 'react;
 
 import { Helmet } from 'react-helmet-async;
 
+<<<<<<< HEAD
 import {
+=======
+import React, { useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+import {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   Phone,
   Mail,
   MapPin,
   Clock,
-  Send,
+  Send,;
   CheckCircle;)
 } from 'lucide-react;
 
 ;
 
+<<<<<<< HEAD
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({    name: ',
     email: ',
     company: ',
@@ -27,9 +34,22 @@ phone: ',
     budget: ',
     timeline: ',
     message: ';)
+=======
+const $1Page: React.FC = () => {}
+  const [formData, setFormData] = useState({}
+    name: '',
+    email: '',
+    company: '',
+phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
+    message: '';)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 });
 
 const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
@@ -38,24 +58,43 @@ const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | H
 const { name, value } = e.target;
 
     setFormData(prev => ({
+=======
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;}
+const { name, value } = e.target;
+    setFormData(prev => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...prev,
       [name]: value;)
 }););)
 }, []);
+<<<<<<< HEAD
 
 const handleSubmit = async (e: React.FormEvent) => {    message: '];
     });
+=======
+const handleSubmit = async (e: React.FormEvent) => {}
+    message: '']
+    });;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {    const { name, value } = e.target;;
 
     setFormData(prev => ({
+=======
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
+    const { name, value } = e.target;
+    setFormData(prev => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...prev,
       [name]: value]
     });)]
     }, []);
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();;
 
     setIsSubmitting(true);
@@ -80,19 +119,48 @@ message: ']
     });]
     } catch (error) {
       setSubmitStatus('error)]
+=======
+  const handleSubmit = async (e: React.FormEvent) => {}
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    try {}
+      /
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+      setFormData({}
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+message: '']
+    });]
+    } catch (error) {
+      setSubmitStatus('error')]}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     } finally {
-      setIsSubmitting(false)]
+      setIsSubmitting(false)]}
     }
 
         message: ')
       });
 
     } catch (error) {
+<<<<<<< HEAD
       setSubmitStatus('error);
 
     } finally {
       setIsSubmitting(false);
 
+=======
+      setSubmitStatus('error');}
+    } finally {
+      setIsSubmitting(false);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   };
@@ -111,28 +179,33 @@ const services = [;;
   ];
 
 ;
+<<<<<<< HEAD
 
 const contactInfo = [;;
 
     {
+=======
+const contactInfo = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Phone,
       title: 'Phone,
       details: '+1 (302) 464-0950,
       description: 'Mon-Fri 9AM-6PM EST]
     },
-    {
+    {}
       icon: Mail,
       title: 'Email,
       details: 'kleber@ziontechgroup.com,
       description: 'We respond within 24 hours]
     },
-    {
+    {}
       icon: MapPin,
       title: 'Address,
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801,
       description: 'Visit our office]
     },
-    {
+    {}
       icon: Clock,
       title: 'Business Hours,
       details: Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - ,
@@ -150,6 +223,7 @@ const contactInfo = [;;
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch 
       <
 
+<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20>
         <div className="container mx-auto px-4>
           {/* Header *
@@ -157,6 +231,16 @@ const contactInfo = [;;
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6>
               Get in              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent></span>
                 {' }Touch
+=======
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          {/* Header *}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+              Get in
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></span>
+                {' '}Touch
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               <
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto>
@@ -166,6 +250,7 @@ const contactInfo = [;;
           <
         <
 
+<<<<<<< HEAD
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12>
             {/* Contact Form *
             <div className=bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
@@ -181,6 +266,22 @@ const contactInfo = [;;
 
               {submitStatus === 'error' && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
                   <span className="text-red-400>Failed to send message. Please try again.<
+=======
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form *}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message<
+              
+              {submitStatus === 'success' && (}
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500
+                  <CheckCircle className="w-5 h-5 text-green-400" 
+                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.<
+                <
+              )}
+
+              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500}
+                  <span className="text-red-400">Failed to send message. Please try again.<
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <)
               )}
 
@@ -223,13 +324,48 @@ const contactInfo = [;;
                     <
                   <
                 <
+<<<<<<< HEAD
                   and well get back to you as soon as possible.
+=======
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2"></label>
+                    Message *
+                  <
+                  <div className="relative">
+                    
+                  {isSubmitting ? (<>}
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"><
+                      <span>Sending...<
+                    <)
+                  ) : (<>
+                      <Send className="w-5 h-5" 
+                      <span>Send Message<
+                    <)
+                  )}
+                <
+              <
+            <
+
+            {/* Contact Information *}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Contact Information<
+                <p className="text-lg text-gray-300 mb-8">
+                  We're here to help! Reach out to us through any of these channels 
+                  and we'll get back to you as soon as possible.
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <
 
               <
 
+<<<<<<< HEAD
               {/* Contact Information *
               <div className="space-y-8>
+=======
+              {/* Contact Information *}
+              <div className="space-y-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6>Get in Touch<
                   <p className="text-gray-300 mb-8>

@@ -27,6 +27,7 @@ const ContentStatistics = lazy(() => import(./components/ContentStatistics));;
 const ContentNewsletterSignup = lazy(() => import(./components/ContentNewsletterSignup));;
 
 // Preload critical components;
+<<<<<<< HEAD
 
 const preloadComponents = () => {;;
 
@@ -37,6 +38,14 @@ const preloadComponents = () => {;;
 
       import(./components/ContentCarousel);
 
+=======
+const preloadComponents = () => {}
+  if (typeof window !== 'undefined') {}
+    // Preload critical components after initial render
+    setTimeout(() => {}
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }, 100);
 
   }
@@ -55,12 +64,17 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 
 ServiceCardSkeleton.displayName = ServiceCardSkeleton;
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
 
   useEffect(() => {
+=======
+  
+  useEffect(() => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setIsLoaded(true);
 
     // Trigger visibility animation
@@ -74,6 +88,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Analytics tracking for phone clicks - optimized
+<<<<<<< HEAD
   const handlePhoneClick = useCallback(() => {;;
 
     if (typeof window !== 'undefined' && 'gtag in window) {
@@ -82,6 +97,14 @@ const HomePage: React.FC = () => {
       gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: main_phone_number
+=======
+  const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', 'phone_click', {}
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       });
 
     }
@@ -92,6 +115,7 @@ const HomePage: React.FC = () => {
 
     <React.Fragment>
       <SEOOptimizer
+<<<<<<< HEAD
         title="Zion Tech Group - Advanced AI and IT Solutions
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services]}
@@ -129,6 +153,44 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE,
             postalCode: '19709,
             addressCountry: US
+=======
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={{}
+          '@context': 'https://schema.org',
+          '@type': 'TechCompany',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          services: []
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
+          contactPoint: {}
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+    },
+          address: {}
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
         }}
@@ -175,7 +237,11 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
 
         <section
+<<<<<<< HEAD
           className={text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+=======
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0 
               : opacity-0 translate-y-8

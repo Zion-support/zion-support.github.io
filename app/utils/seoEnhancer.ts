@@ -6,9 +6,13 @@ use client
 
  */
 // Generate meta tags;
+<<<<<<< HEAD
 
 export const generateMetaTags = (data: {;;
 
+=======
+export const generateMetaTags = (data: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Generate meta tags
 export const generateMetaTags = (data: {};;
 
@@ -127,8 +131,12 @@ export const generateMetaTags = (dat,;;
 };
 
 // SEO Config interface;
+<<<<<<< HEAD
 
 interface SEOConfig {
+=======
+interface SEOConfig {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   title: string,
   description: string,
 // SEO Config interface
@@ -160,10 +168,16 @@ interface SEOConfig {}
 }
 
 // Default SEO config;
+<<<<<<< HEAD
 
 const defaultSEOConfig: SEOConfig = {
   title: 'Zion Holdings,
   description: 'Leading provider of AI-powered business solutions,
+=======
+const defaultSEOConfig: SEOConfig = {}
+  title: 'Zion Holdings',
+  description: 'Leading provider of AI-powered business solutions',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   keywords: []
 // Default SEO config
 const defaultSEOConfig: SEOConfig = {}
@@ -186,9 +200,13 @@ const defaultSEOConfig: SEOConfig = {}
   author: 'Zion Holdings}
 
 // Generate structured data;
+<<<<<<< HEAD
 
 export const generateStructuredData = (data: {;;
 
+=======
+export const generateStructuredData = (data: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Generate structured data
 export const generateStructuredData = (data: {};;
 
@@ -204,6 +222,7 @@ export const generateStructuredData = (data: {};;
 // [key: string]: unknown;
 
 }) => {
+<<<<<<< HEAD
   const baseStructure = {;;
 
     '@context': 'https: //schema.org}) => {}
@@ -212,6 +231,13 @@ export const generateStructuredData = (data: {};;
 
     '@context': 'https://schema.org,
     '@type: data.type,
+=======
+  const baseStructure = {}
+    '@context': 'https: //schema.org'}) => {}
+  const baseStructure = {}
+    '@context': 'https://schema.org',
+    '@type': data.type,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     name: data.name;
 
     description: data.description;
@@ -227,8 +253,12 @@ export const generateStructuredData = (data: {};;
 }
 
 // SEO Enhancer class;
+<<<<<<< HEAD
 
 export class SEOEnhancer {
+=======
+export class SEOEnhancer {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private static instance: SEOEnhancer,
 // SEO Enhancer class
 export class SEOEnhancer {}
@@ -253,9 +283,14 @@ export class SEOEnhancer {}
   }
 
   // Update page title;
+<<<<<<< HEAD
 
   updateTitle(title: string) {,
     if (typeof document !== 'undefined) {,
+=======
+  updateTitle(title: string) {,}
+    if (typeof document !== 'undefined') {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       document.title = title;}
 
     }
@@ -263,20 +298,31 @@ export class SEOEnhancer {}
   }
 
   // Update meta description;
+<<<<<<< HEAD
 
   updateDescription(description: string) {,
     this.updateMetaTag('description, description);}
 
+=======
+  updateDescription(description: string) {,}
+    this.updateMetaTag('description', description);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
   // Update meta keywords;
+<<<<<<< HEAD
 
   updateKeywords(keywords: string[]) {,
     this.updateMetaTag('keywords', keywords.join(', ));}
 
+=======
+  updateKeywords(keywords: string[]) {,}
+    this.updateMetaTag('keywords', keywords.join(', '));}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
   // Update canonical URL;
+<<<<<<< HEAD
 
   updateCanonicalUrl(url: string) {
     let canonical = document.querySelector('link[rel="canonical]) as HTMLLinkElement;;
@@ -284,6 +330,13 @@ export class SEOEnhancer {}
     if (!canonical) {,
       canonical = document.createElement('link),
       canonical.rel = 'canonical,
+=======
+  updateCanonicalUrl(url: string) {}
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {,}
+      canonical = document.createElement('link'),
+      canonical.rel = 'canonical',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Update page title
   updateTitle(title: string) {}
 
@@ -327,8 +380,12 @@ export class SEOEnhancer {}
   }
 
   // Update Open Graph tags;
+<<<<<<< HEAD
 
   updateOpenGraph(config: Partial<SEOConfig>) {,
+=======
+  updateOpenGraph(config: Partial<SEOConfig>) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 ,
   // Update Open Graph tags
   updateOpenGraph(config: Partial<SEOConfig>) {}
@@ -361,8 +418,12 @@ export class SEOEnhancer {}
   }
 
   // Update Twitter Card tags;
+<<<<<<< HEAD
 
   updateTwitterCard(config: Partial<SEOConfig>) {,
+=======
+  updateTwitterCard(config: Partial<SEOConfig>) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Update Twitter Card tags
   updateTwitterCard(config: Partial<SEOConfig>) {}
 
@@ -382,8 +443,12 @@ export class SEOEnhancer {}
   }
 
   // Update structured data;
+<<<<<<< HEAD
 
   updateStructuredData(data: Record<string, unknown>) {
+=======
+  updateStructuredData(data: Record<string, unknown>) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Update structured data
   updateStructuredData(data: Record<string, unknown>) {}
 
@@ -582,16 +647,26 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 
   // Update robots meta tag;
+<<<<<<< HEAD
 
   updateRobots(robots: string) {,
     this.updateMetaTag('robots, robots);}
 
+=======
+  updateRobots(robots: string) {,}
+    this.updateMetaTag('robots', robots);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
   // Update language;
+<<<<<<< HEAD
 
   updateLanguage(language: string) {,
     if (typeof document !== 'undefined) {,
+=======
+  updateLanguage(language: string) {,}
+    if (typeof document !== 'undefined') {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       document.documentElement.lang = language;}
 
     }
@@ -599,13 +674,19 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 
   // Update author;
+<<<<<<< HEAD
 
   updateAuthor(author: string) {,
     this.updateMetaTag('author, author);}
 
+=======
+  updateAuthor(author: string) {,}
+    this.updateMetaTag('author', author);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
   // Helper method to update meta tags;
+<<<<<<< HEAD
 
   private updateMetaTag(nameOrProperty: string, content: string) {,
     if (typeof document === undefined) return;
@@ -618,6 +699,16 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     if (!meta) {
       meta = document.createElement('meta)
       if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:)) {,
+=======
+  private updateMetaTag(nameOrProperty: string, content: string) {,}
+    if (typeof document === 'undefined') return;
+    let meta = document.querySelector(})
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
+    ) as HTMLMetaElement;
+    if (!meta) {}
+      meta = document.createElement('meta')
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Update robots meta tag
   updateRobots(robots: string) {}
 
@@ -710,12 +801,19 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Generate sitemap;
 
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>)
+<<<<<<< HEAD
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
 
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
 ${pages;
 
+=======
+  ) {}
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+${pages;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   .map(,
   // Generate sitemap
   generateSitemap()
@@ -744,10 +842,15 @@ ${pages}
   }
 
   // Generate robots.txt;
+<<<<<<< HEAD
 
   generateRobotsTxt(disallowPaths: string[] = []) {,
     const robots = User-agent: *,;;
 
+=======
+  generateRobotsTxt(disallowPaths: string[] = []) {,}
+    const robots = `User-agent: *,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Generate robots.txt
   generateRobotsTxt(disallowPaths: string[] = []) {}
 
@@ -763,8 +866,12 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml
   }
 
   // Initialize SEO;
+<<<<<<< HEAD
 
   initialize(config?: Partial<SEOConfig>) {
+=======
+  initialize(config?: Partial<SEOConfig>) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Initialize SEO
   initialize(config?: Partial<SEOConfig>) {}
 
@@ -792,10 +899,15 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml
   // Get current SEO data;
 
   getCurrentSEO() {}
+<<<<<<< HEAD
 
     if (typeof document === 'undefined) return {}
 
     return {
+=======
+    if (typeof document === 'undefined') return {}
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       title: document.title;
 
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || ',
@@ -814,9 +926,13 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml
 }
 
 // Generate structured data with type-specific properties;
+<<<<<<< HEAD
 
 export const generateAdvancedStructuredData = (data: {;;
 
+=======
+export const generateAdvancedStructuredData = (data: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {};;
 
@@ -832,6 +948,7 @@ export const generateAdvancedStructuredData = (data: {};;
 // [key: string]: unknown;
 
 }) => {
+<<<<<<< HEAD
   const baseStructure = {;;
 
     '@context': 'https: //schema.org}) => {}
@@ -840,6 +957,13 @@ export const generateAdvancedStructuredData = (data: {};;
 
     '@context': 'https://schema.org,
     '@type: data.type,
+=======
+  const baseStructure = {}
+    '@context': 'https: //schema.org'}) => {}
+  const baseStructure = {}
+    '@context': 'https://schema.org',
+    '@type': data.type,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     name: data.name;
 
     description: data.description;
@@ -851,11 +975,16 @@ export const generateAdvancedStructuredData = (data: {};;
   }
 
   // Add type-specific properties;
+<<<<<<< HEAD
 
   if (data.type === 'Organization) {
     return {
+=======
+  if (data.type === 'Organization') {}
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...baseStructure,
-      address: {,
+      address: {,}
   // Add type-specific properties
   if (data.type === 'Organization) {}
 
@@ -863,10 +992,16 @@ export const generateAdvancedStructuredData = (data: {};;
 
       ...baseStructure,
       address: {}
+<<<<<<< HEAD
 
 // '@type': 'PostalAddress,
 // addressCountry: 'US},
       contactPoint: {,
+=======
+// '@type': 'PostalAddress',
+// addressCountry: 'US'},
+      contactPoint: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       contactPoint: {}
 
         '@type': 'ContactPoint,
@@ -983,9 +1118,15 @@ export const generateAdvancedStructuredData = (dat,;;
     return {}
 
       ...baseStructure,
+<<<<<<< HEAD
       potentialAction: {,
         '@type': 'SearchAction,
         target: {,
+=======
+      potentialAction: {,}
+        '@type': 'SearchAction',
+        target: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       potentialAction: {}
 
         '@type': 'SearchAction,
@@ -1012,6 +1153,7 @@ export const generateAdvancedStructuredData = (dat,;;
     return {}
 
       ...baseStructure,
+<<<<<<< HEAD
       author: {,
         '@type': 'Organization,
         name: 'Zion Holdings}
@@ -1021,6 +1163,16 @@ export const generateAdvancedStructuredData = (dat,;;
         '@type': 'Organization,
         name: 'Zion Holdings,
         logo: {,
+=======
+      author: {,}
+        '@type': 'Organization',
+        name: 'Zion Holdings'}
+      },
+      publisher: {,}
+        '@type': 'Organization',
+        name: 'Zion Holdings',
+        logo: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       author: {}
 
         '@type': 'Organization,
@@ -1049,6 +1201,7 @@ export const generateAdvancedStructuredData = (dat,;;
 }
 
 // Generate sitemap data;
+<<<<<<< HEAD
 
 export const generateSitemapData = useCallback((...args) => {;;
 
@@ -1056,6 +1209,13 @@ export const generateSitemapData = useCallback((...args) => {;;
     urlset: {
       '@xmlns: http://www.sitemaps.org/schemas/sitemap/0.9
       url: pages.map(page => ({),
+=======
+export const generateSitemapData = useCallback((...args) => {}
+  return {}
+    urlset: {}
+      '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9'
+      url: pages.map(page => ({),}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         loc: page.url;),
         lastmod: page.lastModified),
         changefreq: page.changeFrequency),
@@ -1158,9 +1318,14 @@ Sitema,
 export const validateSEOData = (data: { title: string; description: string; url: string }) => {;;
 
   const issues: string[] = [];
+<<<<<<< HEAD
 
   // Check title length;,
   if (data.title.length < 30) {,
+=======
+  // Check title length;,}
+  if (data.title.length < 30) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // SEO validation
 export const validateSEOData = (data: {// title: string; description: string; url: string}) => {};;
 
@@ -1178,8 +1343,12 @@ export const validateSEOData = (data: {// title: string; description: string; ur
   }
 
   // Check description length;
+<<<<<<< HEAD
 
   if (data.description.length < 120) {
+=======
+  if (data.description.length < 120) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Check description length
   if (data.description.length < 120) {}
 
@@ -1192,8 +1361,12 @@ export const validateSEOData = (data: {// title: string; description: string; ur
   }
 
   // Check URL format;
+<<<<<<< HEAD
 
   if (!data.url.startsWith('http)) {
+=======
+  if (!data.url.startsWith('http')) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Check URL format
   if (!data.url.startsWith('http)) {}
 
@@ -1206,11 +1379,17 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 }
 
 // Generate breadcrumb data;
+<<<<<<< HEAD
 
 export const generateBreadcrumbData = useCallback((...args) => {;;
 
   return {
     '@context': 'https: //schema.org,
+=======
+export const generateBreadcrumbData = useCallback((...args) => {}
+  return {}
+    '@context': 'https: //schema.org',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Generate breadcrumb data
 export const generateBreadcrumbData = useCallback((...args) => {};;
 
@@ -1233,6 +1412,7 @@ export const generateBreadcrumbData = useCallback((...args) => {};;
 }
 
 // Initialize SEO enhancements;
+<<<<<<< HEAD
 
 export const initializeSEOEnhancements = useCallback((...args) => {;;
 
@@ -1247,6 +1427,17 @@ export const initializeSEOEnhancements = useCallback((...args) => {;;
     description: 'Leading provider of AI-powered business solutions)
     url: 'https://zion.app),
     logo: 'https://zion.app/logo.webp),
+=======
+export const initializeSEOEnhancements = useCallback((...args) => {}
+  if (typeof document === 'undefined') return;
+  // Add structured data for organization;
+  const organizationData = generateStructuredData({)}
+    type: 'Organization')
+    name: 'Zion Holdings')
+    description: 'Leading provider of AI-powered business solutions')
+    url: 'https://zion.app'),
+    logo: 'https://zion.app/logo.webp'),
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Initialize SEO enhancements
 export const initializeSEOEnhancements = useCallback((...args) => {};;
 
@@ -1268,6 +1459,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {};;
   script.textContent = JSON.stringify(organizationData)
   document.head.appendChild(script)
 }
+<<<<<<< HEAD
 
   if (data.title.length < 30) {
     issues.push(Title is too short (recommended: 30-60 characters));
@@ -1275,6 +1467,13 @@ export const initializeSEOEnhancements = useCallback((...args) => {};;
   } else if (data.title.length > 60) {
     issues.push(Title is too long (recommended: 30-60 characters));
 
+=======
+  if (data.title.length < 30) {}
+    issues.push('Title is too short (recommended: 30-60 characters)');
+  } else if (data.title.length > 60) {
+    issues.push('Title is too long (recommended: 30-60 characters)');
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
   // Check description length;

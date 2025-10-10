@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React, { useState, useEffect } from 'react;
@@ -18,6 +19,19 @@ const [lastUpdated, setLastUpdated] = useState(new Date())const [isRefreshing, s
 
 const refreshStatus = async () => {;;
 
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+export default function StatusPage() {;}
+const [lastUpdated, setLastUpdated] = useState(new Date())
+const [isRefreshing, setIsRefreshing] = useState(false);
+;
+const refreshStatus = async () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setIsRefreshing(true);
 
     // Simulate API call
@@ -25,6 +39,7 @@ const refreshStatus = async () => {;;
     setLastUpdated(new Date())    setIsRefreshing(false);
 
 ;
+<<<<<<< HEAD
 
 const services = [;;;
 
@@ -75,15 +90,70 @@ const services = [;;;
       responseTime: '5ms,
       lastIncident: 'Never,
       description: System monitoring and alerts
+=======
+const services = [
+    {}
+      name: 'API Services',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '45ms',
+      lastIncident: '2024-01-15',
+      description: 'Core API endpoints and authentication'
+    },
+    {}
+      name: 'AI Services',
+      status: 'operational',
+      uptime: '99.8%',
+      responseTime: '120ms',
+      lastIncident: '2024-01-10',
+      description: 'Machine learning and AI processing'
+    },
+    {}
+      name: 'Cloud Infrastructure',
+      status: 'operational',
+      uptime: '99.95%',
+      responseTime: '25ms',
+      lastIncident: '2024-01-05',
+      description: 'Cloud hosting and storage services'
+    },
+    {}
+      name: 'Database',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '15ms',
+      lastIncident: '2024-01-12',
+      description: 'Primary and backup databases'
+    },
+    {}
+      name: 'CDN',
+      status: 'operational',
+      uptime: '99.99%',
+      responseTime: '8ms',
+      lastIncident: '2024-01-08',
+      description: 'Content delivery network'
+    },
+    {}
+      name: 'Monitoring',
+      status: 'operational',
+      uptime: '100%',
+      responseTime: '5ms',
+      lastIncident: 'Never',
+      description: 'System monitoring and alerts'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   ];
 
 ;
+<<<<<<< HEAD
 
 const incidents = [;;
 
     {
+=======
+const incidents = [
+    {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       id: 1,
       title: 'API Response Time Degradation,
       status: 'resolved,
@@ -93,7 +163,7 @@ const incidents = [;;
       description: 'Some API endpoints experienced increased response times due to high traffic load.,
       affectedServices: ['API Services', 'AI Services]
     },
-    {
+    {}
       id: 2,
       title: 'Database Connection Issues,
       status: 'resolved,
@@ -107,6 +177,7 @@ const incidents = [;;
   ];
 
 ;
+<<<<<<< HEAD
 
 const getStatusIcon = (status: string) => {;;
 
@@ -122,6 +193,18 @@ return (
       case 'outage:
         return <XCircle className="w-5 h-5 text-red-400 />;
 
+=======
+const getStatusIcon = (status: string) => {}
+return (
+
+    switch (status) {}
+      case 'operational':
+        return <CheckCircle className="w-5 h-5 text-green-400" />;
+      case 'degraded':
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+      case 'outage':
+        return <XCircle className="w-5 h-5 text-red-400" />;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       default:
         return <Clock className="w-5 h-5 text-gray-400 />
 );
@@ -131,6 +214,7 @@ return (
   };
 
 ;
+<<<<<<< HEAD
 
 const getStatusColor = (status: string) => {;;
 
@@ -144,12 +228,23 @@ const getStatusColor = (status: string) => {;;
       case 'outage:
         return text-red-400;
 
+=======
+const getStatusColor = (status: string) => {}
+    switch (status) {}
+      case 'operational':
+        return 'text-green-400';
+      case 'degraded':
+        return 'text-yellow-400';
+      case 'outage':
+        return 'text-red-400';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       default:
         return 'text-gray-400}
 
   };
 
 ;
+<<<<<<< HEAD
 
 const getSeverityColor = (severity: string) => {;;
 
@@ -163,6 +258,16 @@ const getSeverityColor = (severity: string) => {;;
       case 'minor:
         return bg-yellow-500/20 text-yellow-400 border-yellow-500/50;
 
+=======
+const getSeverityColor = (severity: string) => {}
+    switch (severity) {}
+      case 'critical':
+        return 'bg-red-500/20 text-red-400 border-red-500/50';
+      case 'major':
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+      case 'minor':
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/50}
 
@@ -185,6 +290,7 @@ const overallStatus = services.every(service => service.status === operational);
             high-performance AI and IT solutions.
           </p>
           
+<<<<<<< HEAD
           <div className="flex items-center justify-center gap-4 mb-8>
             <div className="flex items-center gap-2>
               {getStatusIcon(overallStatus);
@@ -193,6 +299,14 @@ const overallStatus = services.every(service => service.status === operational);
                 {overallStatus === 'operational' ? 'All Systems Operational : 
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage}
 
+=======
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="flex items-center gap-2">
+              {getStatusIcon(overallStatus);}
+              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
+                {overallStatus === 'operational' ? 'All Systems Operational' : }
+                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               </span>
             </div>
             <button
@@ -207,14 +321,20 @@ const overallStatus = services.every(service => service.status === operational);
             </button>
           </div>
           
+<<<<<<< HEAD
           <p className="text-gray-400 text-sm>
             Last updated: {lastUpdated.toLocaleString();
 
+=======
+          <p className="text-gray-400 text-sm">
+            Last updated: {lastUpdated.toLocaleString();}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           </p>
         </div>
       </section>
 
       {/* Services Status */}
+<<<<<<< HEAD
 
       <section className="py-16 px-4>
         <div className="max-w-7xl mx-auto>
@@ -228,6 +348,18 @@ const overallStatus = services.every(service => service.status === operational);
                     {getStatusIcon(service.status);
 
                     <h3 className="text-lg font-semibold text-white>{service.name}</h3>
+=======
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    {getStatusIcon(service.status);}
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   </div>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}}>
                     {service.status}
@@ -257,6 +389,7 @@ const overallStatus = services.every(service => service.status === operational);
       </section>
 
       {/* Recent Incidents */}
+<<<<<<< HEAD
 
       <section className="py-16 px-4>
         <div className="max-w-7xl mx-auto>
@@ -266,6 +399,15 @@ const overallStatus = services.every(service => service.status === operational);
 
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10>
                 <div className="flex items-start justify-between mb-4>
+=======
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
+          <div className="space-y-6">
+            {incidents.map((incident) => (}
+              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="flex items-start justify-between mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2>{incident.title}</h3>
                     <div className="flex items-center gap-4 text-sm text-gray-400>
@@ -278,11 +420,19 @@ const overallStatus = services.every(service => service.status === operational);
                       {incident.severity}
 
                     </span>
+<<<<<<< HEAD
                     <span className={px-3 py-1 rounded-full text-sm font-medium ${
                       incident.status === 'resolved 
                         ? 'bg-green-500/20 text-green-400 
                         : bg-yellow-500/20 text-yellow-400
                     }}>
+=======
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
+                      incident.status === 'resolved' 
+                        ? 'bg-green-500/20 text-green-400' 
+                        : 'bg-yellow-500/20 text-yellow-400'
+                    }`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       {incident.status}
 
                     </span>

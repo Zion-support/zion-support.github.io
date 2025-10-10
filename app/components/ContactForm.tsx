@@ -2,7 +2,7 @@ import React, { useState } from 'react;
 
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from lucide-react;
 
-interface FormData {
+interface FormData {}
   name: string;
 
   email: string;
@@ -17,6 +17,7 @@ interface FormData {
 
 }
 
+<<<<<<< HEAD
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error;
 
@@ -31,17 +32,39 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState<Fo
     phone: ',
     service: ',
     message: ')
+=======
+interface FormStatus {}
+  type: 'idle' | 'loading' | 'success' | 'error';
+  message: string;
+}
+;
+const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData>({}
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '')
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   });
 
 ;
+<<<<<<< HEAD
 
 const [status, setStatus] = useState<FormStatus>({
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle,
     message: ')
+=======
+const [status, setStatus] = useState<FormStatus>({}
+  const [status, setStatus] = useState<FormStatus>({}
+    type: 'idle',
+    message: '')
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   });
 
 ;
+<<<<<<< HEAD
 
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
 
@@ -81,6 +104,42 @@ const handleSubmit = async (e: React.FormEvent) => {;;
       })} catch (error) {
       setStatus({        type: 'error,
         message: 'Sorry, there was an error sending your message. Please try again.)
+=======
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
+const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+    const { name, value } = e.target;
+    setFormData(prev => ({}
+      ...prev,
+      [name]: value
+    }))
+;
+const handleSubmit = async (e: React.FormEvent) => {}
+    e.preventDefault();
+    setStatus({ typ,}
+    e: 'loading', message: 'Sending message...' });
+    try {}
+      /
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setStatus({}
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully.'
+      })
+      
+      // Reset form
+      setFormData({}
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      })} catch (error) {
+      setStatus({}
+        type: 'error',
+        message: 'Sorry, there was an error sending your message. Please try again.')
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       });
 
   }
@@ -190,9 +249,14 @@ const services = [;;
 
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent
             >
+<<<<<<< HEAD
               <option value=">Select a service</option>
               {services.map((service) => (
 
+=======
+              <option value="">Select a service</option>
+              {services.map((service) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <option key={service} value={service}>
                   {service}
 
@@ -219,6 +283,7 @@ const services = [;;
             />
           </div>
 
+<<<<<<< HEAD
           {status.message && (
 
             <div className={p-4 rounded-lg flex items-center ${
@@ -234,6 +299,20 @@ const services = [;;
               ) : status.type === 'error ? (
 
                 <AlertCircle className="w-5 h-5 mr-2 />
+=======
+          {status.message && (}
+            <div className={`p-4 rounded-lg flex items-center ${}
+              status.type === 'success' 
+                ? 'bg-green-100 text-green-800' 
+                : status.type === 'error'
+                ? 'bg-red-100 text-red-800'
+                : 'bg-blue-100 text-blue-800'
+            }`}>
+              {status.type === 'success' ? (}
+                <CheckCircle className="w-5 h-5 mr-2" />
+              ) : status.type === 'error' ? (
+                <AlertCircle className="w-5 h-5 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               ) : null}
 
               <span>{status.message}</span>
@@ -243,8 +322,12 @@ const services = [;;
 
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center
           >
+<<<<<<< HEAD
             {status.type === 'loading ? (
 
+=======
+            {status.type === 'loading' ? (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2></div>
                 Sending...

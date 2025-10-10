@@ -5,8 +5,12 @@ import { Helmet } from 'react-helmet-async;
 import { Mail, ArrowRight } from 'lucide-react;
 
 ;
+<<<<<<< HEAD
 
 const EmailMarketingSuitePage: React.FC = () => {
+=======
+const EmailMarketingSuitePage: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (<div>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns<
         <meta name="description" content=AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation. 

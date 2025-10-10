@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -7,6 +8,13 @@ import React, { memo, useState, useEffect } from 'react;
 import { Link, useLocation } from 'react-router-dom;
 
 import { 
+=======
+'use client';
+import React from 'react';
+import React, { memo, useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   X, 
   Menu, 
   Home, 
@@ -21,11 +29,12 @@ import {
   ChevronRight,
   Phone,
   Mail,
-  MapPin,
+  MapPin,;
   Clock;)
 } from 'lucide-react;
 
 ;
+<<<<<<< HEAD
 
 const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
 
@@ -33,6 +42,17 @@ const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new 
 const location = useLocation();;
 
   useEffect(() => {;
+=======
+const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);}
+const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']))
+const location = useLocation();
+
+  useEffect(() => {;}
+const handleResize = () => {}
+      if (window.innerWidth >= 1024) {}
+        setIsOpen(false););
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
 const handleResize = () => {;
       if (window.innerWidth >= 1024) {        setIsOpen(false););
@@ -44,6 +64,7 @@ const handleResize = () => {;
   );
 
   }, []);
+<<<<<<< HEAD
 
 const toggleSection = (section: string) => {;;
 
@@ -58,14 +79,29 @@ const newExpanded = new Set(expandedSections);;
 
 const navigationSections = [;
     if (newExpanded.has(section)) {
+=======
+const toggleSection = (section: string) => {;}
+const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(section)) {}
+      newExpanded.delete(section);)
+} else {
+      newExpanded.add(section););
+    setExpandedSections(newExpanded););
+const navigationSections = [
+}
+  const toggleSection = (section: string) => {}
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(section)) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       newExpanded.delete(section)]
     } else {
-      newExpanded.add(section)]
+      newExpanded.add(section)]}
     }
 
     setExpandedSections(newExpanded)]
     };
 
+<<<<<<< HEAD
   const navigationSections = [    {;
       title: 'Main,
       items: [
@@ -81,10 +117,29 @@ const navigationSections = [;
     e: Blog, path: 
         { nam,
     e: Case Studies, path: 
+=======
+  const navigationSections = [
+    {}
+      title: 'Main',
+      items: []
+        { nam,}
+    e: 'Home', path: '
+        { nam,}
+    e: 'About', path: '
+        { nam,}
+    e: 'Services', path: '
+        { nam,}
+    e: 'Contact', path: '
+        { nam,}
+    e: 'Blog', path: '
+        { nam,}
+    e: 'Case Studies', path: '
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
       ]]
     },
+<<<<<<< HEAD
     {      title: 'AI Services,
       key: 'ai-services,
       items: [
@@ -114,10 +169,43 @@ const navigationSections = [;
     e: 'Quality Assurance', path: /ai-services
         { nam,
     e: 'Energy Management', path: /ai-services
+=======
+    {}
+      title: 'AI Services',
+      key: 'ai-services',
+      items: []
+        { nam,}
+    e: 'AI Services Overview', path: '
+        { nam,}
+    e: 'Business Intelligence', path: '/ai-services
+        { nam,}
+    e: 'Document Processing', path: '/ai-services
+        { nam,}
+    e: 'Customer Experience', path: '/ai-services
+        { nam,}
+    e: 'Marketing Automation', path: '/ai-services
+        { nam,}
+    e: 'Predictive Maintenance', path: '/ai-services
+        { nam,}
+    e: 'Supply Chain', path: '/ai-services
+        { nam,}
+    e: 'Fraud Detection', path: '/ai-services
+        { nam,}
+    e: 'Content Generation', path: '/ai-services
+        { nam,}
+    e: 'HR Analytics', path: '/ai-services
+        { nam,}
+    e: 'Process Automation', path: '/ai-services
+        { nam,}
+    e: 'Quality Assurance', path: '/ai-services
+        { nam,}
+    e: 'Energy Management', path: '/ai-services
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
       ]]
     },
+<<<<<<< HEAD
     {      title: 'Micro SaaS,
       key: 'micro-saas,
       items: [
@@ -147,10 +235,43 @@ const navigationSections = [;
     e: 'Expense Tracker', path: /micro-saas
         { nam,
     e: 'Content Generator', path: /micro-saas
+=======
+    {}
+      title: 'Micro SaaS',
+      key: 'micro-saas',
+      items: []
+        { nam,}
+    e: 'Micro SaaS Overview', path: '
+        { nam,}
+    e: 'Analytics Dashboard', path: '/micro-saas
+        { nam,}
+    e: 'Support Bot', path: '/micro-saas
+        { nam,}
+    e: 'Social Manager', path: '/micro-saas
+        { nam,}
+    e: 'Email Marketing', path: '/micro-saas
+        { nam,}
+    e: 'Inventory Management', path: '/micro-saas
+        { nam,}
+    e: 'Lead Scoring', path: '/micro-saas
+        { nam,}
+    e: 'Document Processor', path: '/micro-saas
+        { nam,}
+    e: 'SEO Optimizer', path: '/micro-saas
+        { nam,}
+    e: 'Appointment Scheduler', path: '/micro-saas
+        { nam,}
+    e: 'Chat Analytics', path: '/micro-saas
+        { nam,}
+    e: 'Expense Tracker', path: '/micro-saas
+        { nam,}
+    e: 'Content Generator', path: '/micro-saas
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
       ]]
     },
+<<<<<<< HEAD
     {      title: 'IT Services,
       key: 'it-services,
       items: [
@@ -198,6 +319,56 @@ const navigationSections = [;
     e: Support, path: 
         { nam,
     e: Status, path: 
+=======
+    {}
+      title: 'IT Services',
+      key: 'it-services',
+      items: []
+        { nam,}
+    e: 'IT Services Overview', path: '
+        { nam,}
+    e: 'IT Consulting', path: '
+        { nam,}
+    e: 'IT Infrastructure', path: '
+        { nam,}
+    e: 'IT Support', path: '
+        { nam,}
+    e: 'Cloud Infrastructure', path: '
+        { nam,}
+    e: 'Cloud Migration', path: '
+        { nam,}
+    e: 'Cybersecurity', path: '
+        { nam,}
+    e: 'Database Management', path: '
+        { nam,}
+    e: 'Managed IT', path: '
+      ]
+    },
+    {}
+      title: 'Company',
+      items: []
+        { nam,}
+    e: 'Team', path: '
+        { nam,}
+    e: 'Careers', path: '
+        { nam,}
+    e: 'Consultation', path: '
+        { nam,}
+    e: 'Pricing', path: '
+      ]
+    },
+    {}
+      title: 'Resources',
+      items: []
+        { nam,}
+    e: 'Documentation', path: '
+        { nam,}
+    e: 'API Docs', path: '
+        { nam,}
+    e: 'Support', path: '
+        { nam,}
+    e: 'Status', path: '
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     }
 
@@ -205,6 +376,7 @@ const navigationSections = [;
     }
 
   ];
+<<<<<<< HEAD
 
 const contactInfo = {;;
 
@@ -212,10 +384,18 @@ const contactInfo = {;;
     email: 'kleber@ziontechgroup.com,
     address: '364 E Main St STE 1008 Middletown, DE 19709,
 hours: 'Mon-Fri 9AM-6PM EST]
+=======
+;
+const contactInfo = {}
+    phone: '(302) 464-0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+hours: 'Mon-Fri 9AM-6PM EST']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     };
 
   return (<>
-      {/* Mobile Menu Button *
+      {/* Mobile Menu Button *}
       <button)
         onClick = { () => setIsOpen(true) };
 
@@ -225,24 +405,41 @@ hours: 'Mon-Fri 9AM-6PM EST]
       {/* Mobile Menu Button */}
 
       <button
+<<<<<<< HEAD
         onClick={() =></button> setIsOpen(true);
 
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all
         aria-label="Open sidebar
+=======
+        onClick={() =></button> setIsOpen(true);}
+        className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
+        aria-label="Open sidebar"
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       >
         <Menu className="w-6 h-6 
       <
 
+<<<<<<< HEAD
       {/* Sidebar Overlay *
       {isOpen && (<div 
           className=fixed inset-0 bg-black)
+=======
+      {/* Sidebar Overlay *}
+      {isOpen && (<div }
+          className="fixed inset-0 bg-black)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           onClick = { () => setIsOpen(false) };
 
       )}
 
       {/* Sidebar */}<
+<<<<<<< HEAD
       <aside className={fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400
         isOpen ? 'translate-x-0 : -translate-x-full
+=======
+      <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400}
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       } lg: translate-x-0 lg:static l,
     g:z-auto}>
         <div className="flex flex-col h-full>
@@ -272,8 +469,12 @@ hours: 'Mon-Fri 9AM-6PM EST]
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors
                   >
                     <span>{section.title}<
+<<<<<<< HEAD
                     {section.key && (
 
+=======
+                    {section.key && (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4 
                         <ChevronRight className="w-4 h-4 
@@ -281,15 +482,24 @@ hours: 'Mon-Fri 9AM-6PM EST]
 
                   <
                   
+<<<<<<< HEAD
                   {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1>)
                       {section.items.map((item, itemIndex) => (<
+=======
+                  {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1">)}
+                      {section.items.map((item, itemIndex) => (<}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         <Link
                           key = { itemIndex };
 
                           to = { item.path };)
                           onClick = { () => setIsOpen(false) };
+<<<<<<< HEAD
 
                           className={flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
+=======
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                             location.pathname === item.path
                               ? bg-cyan-500/20 text-cyan-400 border border-cyan-400
                               : text-gray-300 hover: text-white hove,
@@ -311,12 +521,21 @@ hours: 'Mon-Fri 9AM-6PM EST]
             <
           <
 
+<<<<<<< HEAD
           {/* Contact Info *
           <div className=border-t border-slate-700
             <h3 className="text-sm font-semibold text-cyan-400 mb-4>Contact Information<
             <div className="space-y-3 text-sm text-gray-300>
               <div className="flex items-center space-x-3>
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0 
+=======
+          {/* Contact Info *}
+          <div className="border-t border-slate-700
+            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information<
+            <div className="space-y-3 text-sm text-gray-300">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <span>{contactInfo.phone}<
               <
               <div className="flex items-center space-x-3>

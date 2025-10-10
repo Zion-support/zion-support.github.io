@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 use client
 /**
  * Advanced Logging System;
@@ -62,6 +63,16 @@ class Logger {
     metadata?: Record<string></string>
   ): void {;
 
+=======
+  debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata););}
+  info(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.INFO, message, context, metadata););}
+  warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata););}
+  error(message: string},
+    errorOrContextOrMetadata?: Error | string | Record<string></string>)
+    contextOrMetadata?: string | Record<string></string>)
+    metadata?: Record<string></string>
+  ): void {;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 let error: Error | undefined;
 
     let context: LogContext | undefined;
@@ -69,8 +80,12 @@ let error: Error | undefined;
     let meta: Record<string></string> | undefined;
 
     // Handle different parameter combinations;
+<<<<<<< HEAD
 
     if (errorOrContextOrMetadata instanceof Error) {
+=======
+    if (errorOrContextOrMetadata instanceof Error) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       error = errorOrContextOrMetadata;
 
       context = typeof contextOrMetadata === string ? { action: contextOrMetadata } : contextOrMetadata;
@@ -89,8 +104,12 @@ let error: Error | undefined;
  * Enhanced Logger Utility;
 
  * Provides structured logging with different levels and contexts;
+<<<<<<< HEAD
 
  */
+=======
+ */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 export enum LogLevel {/* TODO: Fix JSX expression */});]
     }
 
@@ -151,6 +170,7 @@ l: LogLevel): void {/* TODO: Fix JSX expression */});]
   t: errorOrContextOrMetadata };
 
       meta = contextOrMetadata as Record<string></string>});
+<<<<<<< HEAD
 
 } else if (typeof errorOrContextOrMetadata === 'object) {/* TODO: Fix JSX expression */}););
 
@@ -159,13 +179,24 @@ l: LogLevel): void {/* TODO: Fix JSX expression */});]
   fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata););
 
   private log(level: LogLevel},    message: string),
+=======
+} else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});;);
+    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });;);
+  fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata););}
+  private log(level: LogLevel},
+    message: string),
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     context?: LogContext),
     metadata?: Record<string></string>
-  ): void {
+  ): void {}
     if (level < this.logLevel) return;
+<<<<<<< HEAD
 
 const logEntry = {;;
 
+=======
+const logEntry = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       level,
       message,
       context,
@@ -175,11 +206,16 @@ const logEntry = {;;
     this.logs.push(logEntry)
 
     // Keep only last 1000 logs;
+<<<<<<< HEAD
 
     if (this.logs.length > 1000) {
+=======
+    if (this.logs.length > 1000) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.logs = this.logs.slice(-1000););
 
     // Console output;
+<<<<<<< HEAD
 
 const levelName = LogLevel[level];;
 
@@ -190,8 +226,15 @@ const contextStr = context ? ` [${JSON.stringify(context);]` : ';;
 const metaStr = metadata ? ` ${JSON.stringify(metadata);` : ';;
 
 const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr};
+=======
+const levelName = LogLevel[level];
+const timestamp = new Date().toISOString();
+const contextStr = context ? ` [${JSON.stringify(context);]` : '';}
+const metaStr = metadata ? ` ${JSON.stringify(metadata);` : '';}
+const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
-    switch (level) {
+    switch (level) {}
       case LogLevel.DEBUG: break,
       case LogLevel.INFO: break,
       case LogLevel.WARN: break,
@@ -203,7 +246,7 @@ const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaSt
 
   }
 
-  getLogs(level?: LogLevel): Array<{
+  getLogs(level?: LogLevel): Array<{}
     level: LogLevel,
     message: string,
     context?: LogContext;
@@ -212,7 +255,7 @@ const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaSt
     timestamp: number,});
 
 }> {
-    if (level !== undefined) {
+    if (level !== undefined) {}
       return this.logs.filter(log => log.level === level)
   /**
    * Log a fatal error message;
@@ -253,6 +296,7 @@ const formattedMessage = this.formatLogEntry(logEntry);;
    */
   private formatLogEntry(entr)
   y: LogMetadata): string {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 
     const contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';;;
 
@@ -260,6 +304,11 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';;
 
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}});
 
+=======
+    const contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';`;}
+const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`}
+    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`});
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 }
 
   /**
@@ -314,21 +363,27 @@ l: LogLevel): string {/* TODO: Fix JSX expression */});]
    * Send log entry to external logging service;
 
    */
-  private sendToLoggingService(entry: LogMetadata): void {,
+  private sendToLoggingService(entry: LogMetadata): void {,}
     // In a real application, you would send this to your logging service;
 
     // For example: Sentry, LogRocket, DataDog, etc.
     // Example implementation:
+<<<<<<< HEAD
     // fetch('/api/logs, {)
     //   method: 'POST),
     //   headers: {// 'Content-Type': application/json});
 
+=======
+    // fetch('/api/logs', {)}
+    //   method: 'POST'),
+    //   headers: {// 'Content-Type': 'application/json'});
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     //   body: JSON.stringify(entry),
-    // });.catch(err => {)
+    // });.catch(err => {)}
 //   // });]
     }
 
-  exportLogs(): string {
+  exportLogs(): string {}
     return JSON.stringify(this.logs, null, 2)]
     }
 

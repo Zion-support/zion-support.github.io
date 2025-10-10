@@ -3,14 +3,19 @@
   }});};
 
 // Performance monitoring utilities
-export class PerformanceMonitor {
+export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
   private metrics: Map<string></string> = new Map();
 
   private observers: PerformanceObserver[] = [];
+<<<<<<< HEAD
 
   static getInstance(): PerformanceMonitor {,
     if (!PerformanceMonitor.instance) {,
+=======
+  static getInstance(): PerformanceMonitor {,}
+    if (!PerformanceMonitor.instance) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Performance monitoring utilities
 export class PerformanceMonitor {}
 
@@ -28,6 +33,7 @@ export class PerformanceMonitor {}
     return PerformanceMonitor.instance});}
 
   // Track component render time;
+<<<<<<< HEAD
 
   trackRender(componentName: string, renderTime: number) {,
   // Track component render time
@@ -41,6 +47,17 @@ export class PerformanceMonitor {}
 
   trackMemory(componentName: string) {,
     if ('memory in performance) {,
+=======
+  trackRender(componentName: string, renderTime: number) {,}
+  // Track component render time
+  trackRender(componentName: string, renderTime: number) {}
+    this.metrics.set(`${componentName}_render`, renderTime);
+    if (process.env['NODE_ENV'] === 'development') {});;);
+  }
+  // Track memory usage;
+  trackMemory(componentName: string) {,}
+    if ('memory' in performance) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Track memory usage
   trackMemory(componentName: string) {}
 
@@ -112,21 +129,34 @@ this.metrics.set(`${componentName}_memory, memory.usedJSHeapSize)]
     }
 
   // Get performance metrics;
+<<<<<<< HEAD
 
   getMetrics() {
+=======
+  getMetrics() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return Object.fromEntries(this.metrics)]
     }
 
   // Clear metrics;
+<<<<<<< HEAD
 
   clearMetrics() {
+=======
+  clearMetrics() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.metrics.clear()]
     }
 
   // Monitor long tasks;
+<<<<<<< HEAD
 
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver in window)) {
+=======
+  startLongTaskMonitoring() {}
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return;
 
   // Get performance metrics;
@@ -138,12 +168,19 @@ this.metrics.set(`${componentName}_memory, memory.usedJSHeapSize)]
   clearMetrics() {/* TODO: Fix JSX expression */}););
 
   // Monitor long tasks;
+<<<<<<< HEAD
 
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}););
 
 const observer = new PerformanceObserver((list) => {;
       list.getEntries().forEach((entry) => {        if (entry.duration > 50) { // Tasks longer than 50ms;
 
+=======
+  startLongTaskMonitoring() {/* TODO: Fix JSX expression */});;);
+const observer = new PerformanceObserver((list) => {}
+      list.getEntries().forEach((entry) => {}
+        if (entry.duration > 50) { // Tasks longer than 50ms;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Get performance metrics
   getMetrics() {}
 
@@ -175,8 +212,13 @@ return Object.fromEntries(this.metrics)]
     observer.observe({ entryTypes: ['longtask] });
 
     this.observers.push(observer););
+<<<<<<< HEAD
 
   // Cleanup observers;  cleanup() {
+=======
+  // Cleanup observers;
+  cleanup() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Cleanup observers
   cleanup() {}
 
@@ -189,8 +231,12 @@ return Object.fromEntries(this.metrics)]
 }
 
 // React hook for performance monitoring
+<<<<<<< HEAD
 export const usePerformanceMonitor = (componentName: string) => {;;
 
+=======
+export const usePerformanceMonitor = (componentName: string) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {};;
 
@@ -201,8 +247,12 @@ const monitor = PerformanceMonitor.getInstance();;
   useEffect(() => {}
 
     renderStartTime.current = performance.now();
+<<<<<<< HEAD
 
     return () => {,
+=======
+    return () => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return () => {}
 
       const renderTime = performance.now() - renderStartTime.current;;
@@ -264,8 +314,12 @@ monitor.trackRender(`${componentName}_function, duration)]
 };
 
 // Image lazy loading utility
+<<<<<<< HEAD
 export const lazyLoadImages = () => {;;
 
+=======
+export const lazyLoadImages = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Image lazy loading utility
 export const lazyLoadImages = () => {};;
 
@@ -293,6 +347,7 @@ export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}););;
   images.forEach((img) => imageObserver.observe(img)););
 
 // Preload critical resources
+<<<<<<< HEAD
 export const preloadCriticalResources = () => {// Preload critical resources;
 export const preloadCriticalResources = () => {};;
 
@@ -303,6 +358,15 @@ const criticalResources = [;;
     '/fonts/inter-var.woff2,
     /css/critical.css];
 
+=======
+export const preloadCriticalResources = () => {}
+// Preload critical resources
+export const preloadCriticalResources = () => {}
+  if (typeof window === 'undefined') return;
+const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/css/critical.css'];
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   criticalResources.forEach((resource) => {}
 
     const link = document.createElement(link);;
@@ -321,6 +385,7 @@ const criticalResources = [;;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}););;
 
     document.head.appendChild(link););
+<<<<<<< HEAD
 
 };// Optimize scroll performance
 export const optimizeScrollPerformance = () => {;;
@@ -331,6 +396,14 @@ export const optimizeScrollPerformance = () => {;;
 
 const updateScrollPosition = () => {;;
 
+=======
+};
+// Optimize scroll performance
+export const optimizeScrollPerformance = () => {}
+  if (typeof window === 'undefined') return;
+  let ticking = false;
+const updateScrollPosition = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Update scroll position indicators;
 
 // Optimize scroll performance
@@ -365,12 +438,18 @@ const requestTick = () => {};;
   };
 
   // Track Core Web Vitals;
+<<<<<<< HEAD
 
 const trackCLS = () => {let clsValue = 0;;
 
     let clsEntries: PerformanceEntry[] = [];
 
     interface LayoutShiftEntry extends PerformanceEntry {,
+=======
+const trackCLS = () => {let clsValue = 0;}
+    let clsEntries: PerformanceEntry[] = [];
+    interface LayoutShiftEntry extends PerformanceEntry {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Track Core Web Vitals;
 
 const trackCLS = () => {};;
@@ -526,16 +605,26 @@ const cleanupFID = trackFID();;
 };
 
 // Memory usage monitoring
+<<<<<<< HEAD
 export const getMemoryUsage = () => {;;
 
   if (typeof window === 'undefined' || !('memory in performance)) {
+=======
+export const getMemoryUsage = () => {}
+  if (typeof window === 'undefined' || !('memory' in performance)) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return null});
 
 }
+<<<<<<< HEAD
 
   const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;;
 
   return {
+=======
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     used: memory.usedJSHeapSize;
 
     total: memory.totalJSHeapSize;
@@ -549,6 +638,7 @@ export const getMemoryUsage = () => {;;
 };
 
 // Performance metrics collection
+<<<<<<< HEAD
 export const collectPerformanceMetrics = () => {;;
 
   if (typeof window === undefined) return null;
@@ -559,6 +649,14 @@ const paint = performance.getEntriesByType(paint);;
 
   return {
     navigation: {
+=======
+export const collectPerformanceMetrics = () => {}
+  if (typeof window === 'undefined') return null;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
+  return {}
+    navigation: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
@@ -566,11 +664,17 @@ const paint = performance.getEntriesByType(paint);;
 // totalTime: navigation.loadEventEnd - navigation.fetchStart});
 
 },
+<<<<<<< HEAD
     paint: {,
       firstPaint: paint.find((entry) => entry.name === first-paint)?.startTime || 0;
 
       firstContentfulPaint: paint.find((entry) => entry.name === first-contentful-paint)?.startTime || 0;
 
+=======
+    paint: {,}
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Memory usage monitoring
 export const getMemoryUsage = () => {};;
 
@@ -622,8 +726,12 @@ const paint = performance.getEntriesByType(paint);;
 };
 
 // Initialize performance enhancements
+<<<<<<< HEAD
 export const initializePerformanceEnhancements = () => {;;
 
+=======
+export const initializePerformanceEnhancements = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {};;
 

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 use client
 export const useRouter = () => {const push = useCallback((url: string) => {,;;
 
+=======
+'use client'
+export const useRouter = () => {const push = useCallback((url: string) => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     window.location.href = url}
 
   }, []);
+<<<<<<< HEAD
 
 const replace = useCallback((url: string) => {,;;
 
@@ -11,6 +17,11 @@ export const useRouter = () => {};;
 
   const push = useCallback((url: string) => {};;
 
+=======
+const replace = useCallback((url: string) => {,}
+export const useRouter = () => {}
+  const push = useCallback((url: string) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     window.location.href = url}
 
   }, []);

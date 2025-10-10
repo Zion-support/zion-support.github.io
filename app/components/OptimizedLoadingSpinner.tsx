@@ -4,11 +4,17 @@ import React from 'react;
 
 import React, { memo, useMemo } from 'react;
 
+<<<<<<< HEAD
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | xl;
 
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | bars;
 
+=======
+interface OptimizedLoadingSpinnerProps {}
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   text?: string;
 
   className?: string;
@@ -19,6 +25,7 @@ fullScreen?: boolean]
     }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
+<<<<<<< HEAD
 
   ({
     size = md,;
@@ -37,11 +44,29 @@ const sizeClasses = useMemo(;
         md: 'h-8 w-8,
         lg: 'h-12 w-12,
         xl: 'h-16 w-16,]
+=======
+  ({}
+    size = 'md',;
+variant = 'spinner',
+    text = 'Loading...',
+    className = '',
+    color = 'blue',
+    fullScreen = false,;)
+}); => {;
+const sizeClasses = useMemo(}
+      () => ({}
+        xs: 'h-3 w-3',
+        sm: 'h-4 w-4',
+        md: 'h-8 w-8',
+        lg: 'h-12 w-12',
+        xl: 'h-16 w-16',]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     });,
       []
     );
 
 ;
+<<<<<<< HEAD
 
 const textSizeClasses = useMemo(;;
 
@@ -51,11 +76,21 @@ const textSizeClasses = useMemo(;;
         md: 'text-base,
         lg: 'text-lg,
         xl: 'text-xl,]
+=======
+const textSizeClasses = useMemo(
+      () => ({}
+        xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-xl',]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     });,
       []
     );
 
 ;
+<<<<<<< HEAD
 
 const colorClasses = useMemo(;;
 
@@ -65,11 +100,21 @@ const colorClasses = useMemo(;;
         green: 'border-green-600 bg-green-600,
         red: 'border-red-600 bg-red-600,
         purple: 'border-purple-600 bg-purple-600,]
+=======
+const colorClasses = useMemo(
+      () => ({}
+        blue: 'border-blue-600 bg-blue-600',
+        gray: 'border-gray-600 bg-gray-600',
+        green: 'border-green-600 bg-green-600',
+        red: 'border-red-600 bg-red-600',
+        purple: 'border-purple-600 bg-purple-600',]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     });,
       []
     );
 
 ;
+<<<<<<< HEAD
 
 const renderSpinner = useMemo(() => {;;
 
@@ -81,6 +126,15 @@ switch (variant) {
 
             <div className='flex space-x-1' role='status' aria-label='Loading></div>
               {[0, 1, 2].map(i => (</div>
+=======
+const renderSpinner = useMemo(() => {}
+return (
+switch (variant) {}
+        case 'dots':
+          return (
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+              {[0, 1, 2].map(i => (</div>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <div
                   key={i}
 
@@ -113,6 +167,7 @@ switch (variant) {
 
         case 'bars:
           return (
+<<<<<<< HEAD
 
             <div className='flex space-x-1' role='status' aria-label='Loading></div>
               {[0, 1, 2, 3].map(i => (</div>
@@ -124,6 +179,16 @@ switch (variant) {
                   style={{
                     height: `${12 + i * 4}px,
                     animationDelay: `${i * 0.1}s,]
+=======
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+              {[0, 1, 2, 3].map(i => (</div>}
+                <div
+                  key={i}
+                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
+                  style={{}
+                    height: `${12 + i * 4}px`,
+                    animationDelay: `${i * 0.1}s`,]
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }}
 
                 />
@@ -150,9 +215,14 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
       <div>
         <div className='text-center></div>
           {renderSpinner}
+<<<<<<< HEAD
 
           {text && (</div>
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}}></p>
+=======
+          {text && (</div>}
+            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}></p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               {text}
 
             </p>

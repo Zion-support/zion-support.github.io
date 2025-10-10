@@ -5,7 +5,7 @@ use client
  * Provides comprehensive error tracking with detailed context;
 
  */
-export interface ErrorContext {
+export interface ErrorContext {}
   component?: string;
 
   action?: string;
@@ -17,8 +17,12 @@ export interface ErrorContext {
   metadata?: Record<string, unknown>}
 
 }
+<<<<<<< HEAD
 
 export interface TrackedError {
+=======
+export interface TrackedError {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   message: string,
   stack?: string;
 
@@ -51,8 +55,12 @@ class EnhancedErrorTracker {}
   private maxErrors = 100;
 
   private sessionId: string,;
+<<<<<<< HEAD
 
 constructor() {,
+=======
+constructor() {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.sessionId = this.generateSessionId(),
   private maxErrors = 100
   private sessionId: string;
@@ -68,33 +76,49 @@ constructor() {}
 
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`
   }
+<<<<<<< HEAD
 
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {)
         this.trackError(event.error, {)
+=======
+  private setupGlobalErrorHandler(): void {}
+    if (typeof window !== 'undefined') {}
+      window.addEventListener('error', event => {)}
+        this.trackError(event.error, {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           component: 'Global'),
           action: 'Uncaught Error'}
 
         })
       })
-      window.addEventListener('unhandledrejection', event => {)
-        this.trackError(new Error(event.reason), {
+      window.addEventListener('unhandledrejection', event => {)}
+        this.trackError(new Error(event.reason), {}
   private setupGlobalErrorHandler(): void {}
 
     if (typeof window !== 'undefined') {}
+<<<<<<< HEAD
 
       window.addEventListener('error, event => {);
 
         this.trackError(event.error, {);
 
+=======
+      window.addEventListener('error', event => {);}
+        this.trackError(event.error, {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           component: 'Global',
           action: 'Uncaught Error'}
 
         })
       })
+<<<<<<< HEAD
       window.addEventListener('unhandledrejection, event => {);
 
+=======
+      window.addEventListener('unhandledrejection', event => {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         this.trackError(new Error(event.reason), {}
 
           component: 'Global',
@@ -106,14 +130,23 @@ constructor() {}
   }
 
   public trackError(error: Error, context: ErrorContext = {}): void {
+<<<<<<< HEAD
     if (typeof window === 'undefined) return;
 
 const trackedError: TrackedError = {
+=======
+    if (typeof window === 'undefined') return;}
+const trackedError: TrackedError = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       message: error.message;
 
       stack: error.stack;
+<<<<<<< HEAD
 
       context: {,
+=======
+      context: {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         ...context;
 
   public trackError(error: Error, context: ErrorContext = {}): void {}
@@ -137,8 +170,12 @@ const trackedError: TrackedError = {}
 
     this.errors.push(trackedError)
     // Keep only the most recent errors;
+<<<<<<< HEAD
 
     if (this.errors.length > this.maxErrors) {
+=======
+    if (this.errors.length > this.maxErrors) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {}
 
@@ -155,18 +192,26 @@ const trackedError: TrackedError = {}
     // Send to analytics if available;
 
     this.sendToAnalytics(trackedError);
+<<<<<<< HEAD
 
   private sendToAnalytics(error: TrackedError): void {,
+=======
+  private sendToAnalytics(error: TrackedError): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     if(typeof window !== 'undefined' &&)
       ()
-        window as {),
+        window as {),}
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void}
 
         }
 
       ).gtag;
+<<<<<<< HEAD
 
     ) {
+=======
+    ) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private sendToAnalytics(error: TrackedError): void {}
 
     if (
@@ -190,11 +235,17 @@ const trackedError: TrackedError = {}
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}
 
         }
+<<<<<<< HEAD
 
       ).gtag('event', 'exception', {)
         description: error.message),
         fatal: false)).gtag('event', 'exception, {);
 
+=======
+      ).gtag('event', 'exception', {)}
+        description: error.message),
+        fatal: false)).gtag('event', 'exception', {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         description: error.message,
         fatal: false,
         component: error.context.component}
@@ -214,8 +265,12 @@ const trackedError: TrackedError = {}
     this.errors = []}
 
   }
+<<<<<<< HEAD
 
   public getErrorStats(): {
+=======
+  public getErrorStats(): {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     total: number,
   public getErrorStats(): {}
 
@@ -226,21 +281,31 @@ const trackedError: TrackedError = {}
   } {}
 
     const byComponent: Record<string, number> = {}
+<<<<<<< HEAD
 
     this.errors.forEach(error => {);
 
 const component = error.context.component || 'Unknown);;
 
+=======
+    this.errors.forEach(error => {);}
+const component = error.context.component || 'Unknown')
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       byComponent[component] = (byComponent[component] || 0) + 1}
 
     })
-    return {
+    return {}
       total: this.errors.length;
+<<<<<<< HEAD
 
     this.errors.forEach(error => {);
 
 const component = error.context.component || 'Unknown;;
 
+=======
+    this.errors.forEach(error => {);}
+const component = error.context.component || 'Unknown'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       byComponent[component] = (byComponent[component] || 0) + 1}
 
     })

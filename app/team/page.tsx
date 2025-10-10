@@ -9,8 +9,13 @@ import Navigation from '../components/Navigation;
 import Footer from '../components/Footer;
 
 ;
+<<<<<<< HEAD
 
 const TeamPage: React.FC = () => {  return (<div>
+=======
+const TeamPage: React.FC = () => {}
+  return (<div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         <title>Our Team - Zion Tech Group<
         <meta name="description" content=Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions. 
       <

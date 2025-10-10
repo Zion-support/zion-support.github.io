@@ -12,6 +12,7 @@ import Footer from '../components/Footer;
 
 ;
 
+<<<<<<< HEAD
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',    email: ',
     company: ',
@@ -25,17 +26,38 @@ const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(i
 const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
     setFormData(prev => ({
+=======
+const $1Page: React.FC = () => {}
+  const [formData, setFormData] = useState({}
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '';)
+})
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
+    setFormData(prev => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...prev,
       [e.target.name]: e.target.value;)
 })))
 }, []);
+<<<<<<< HEAD
 
 const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({;
+=======
+const handleSubmit = useCallback(async (e: React.FormEvent) => {}
+    setFormData(prev => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...prev,
       [e.target.name]: e.target.value]
     });)]
     }, []);
 
+<<<<<<< HEAD
   const handleSubmit = useCallback(async (e: React.FormEvent) => {;
   const handleSubmit = useCallback (async (e: React.FormEvent) => {;
     e.preventDefault();    setIsSubmitting(true);
@@ -56,19 +78,46 @@ message: ']
     });]
     } catch (error) {
       setSubmitStatus('error)]
+=======
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {}
+  const handleSubmit = useCallback (async (e: React.FormEvent) => {}
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {}
+      /
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+      setFormData({}
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+message: '']
+    });]
+    } catch (error) {
+      setSubmitStatus('error')]}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     } finally {
-      setIsSubmitting(false)]
+      setIsSubmitting(false)]}
     }
 
         message: ')
       });
 
     } catch (error) {
+<<<<<<< HEAD
       setSubmitStatus('error);
 
     } finally {
       setIsSubmitting(false);
 
+=======
+      setSubmitStatus('error');}
+    } finally {
+      setIsSubmitting(false);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
   }, []);
@@ -82,6 +131,7 @@ message: ']
 
       <Navigation 
       
+<<<<<<< HEAD
       {/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
@@ -89,6 +139,14 @@ message: ']
 
         <div className="relative max-w-7xl mx-auto text-center>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight>
+=======
+      {/* Hero Section *}
+      <section className="relative py-20 px-4 overflow-hidden">)
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             Get in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent>
 
@@ -127,6 +185,7 @@ message: ']
         <
       <
 
+<<<<<<< HEAD
       {/* Contact Form and Info *
       <section className="py-20 px-4>
         <div className="max-w-7xl mx-auto>
@@ -144,6 +203,25 @@ message: ']
 
               {submitStatus === 'error' && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
                   <span className="text-red-400>Failed to send message. Please try again.<
+=======
+      {/* Contact Form and Info *}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 l,
+    g:grid-cols-2 gap-12">
+            {/* Contact Form *}
+            <div className="bg-white/5 backdrop-blur-sm border border-white
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a message<
+              
+              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500}
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" 
+                  <span className="text-green-400">Message sent successfully!<
+                <)
+              )}
+
+              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500}
+                  <span className="text-red-400">Failed to send message. Please try again.<
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <)
               )}
 
@@ -237,7 +315,45 @@ message: ']
                     <option value="digital-transformation>Digital Transformation<
                   <
                 <
+<<<<<<< HEAD
                   and well get back to you within 24 hours.
+=======
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                    Message *
+                  <
+                  <textarea
+                    id="message"
+                    name="message"
+                    value = { formData.message };
+                    onChange = { handleChange };
+                    rows = { 5 };
+
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
+    s:border-transparent"
+                    placeholder="Tell us about your project..."
+                  
+                <
+
+                <button
+                  type="submit"
+                  disabled = { isSubmitting };
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
+    d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                >
+                  {isSubmitting ? (<>}
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
+                      Sending...
+                    <)
+                  ) : (<>
+                      
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
+                <p className="text-gray-300 mb-8">
+                  We're here to help you succeed. Reach out to us through any of the channels below, 
+                  and we'll get back to you within 24 hours.
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <
               <
 

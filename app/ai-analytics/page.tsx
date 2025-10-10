@@ -12,6 +12,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
 ;
 
+<<<<<<< HEAD
 const AiAnalyticsPage: React.FC = () => {const features = [;;;
 
     {
@@ -20,25 +21,35 @@ const AiAnalyticsPage: React.FC = () => {const features = [;;;
       title: 'AI-Powered Intelligence,
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]
+=======
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     },
-    {
+    {}
       icon: BarChart,
       title: 'Advanced Analytics,
       description: 'Comprehensive analytics dashboard with real-time data visualization.,
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics]
     },
-    {
+    {}
       icon: Target,
       title: 'Precision Targeting,
       description: 'Target specific goals and objectives with precision and accuracy.,
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics]
     },
-    {
+    {}
       icon: TrendingUp,
       title: 'Growth Optimization,
       description: 'Optimize your business growth with data-driven strategies.,
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization]
     },
+<<<<<<< HEAD
     {
       icon: Globe,;
 
@@ -49,6 +60,28 @@ const benefits = [;;
     'Improve decision-making with AI insights,
     'Scale operations without proportional staff increases,
     Gain competitive advantage with advanced technology
+=======
+    {}
+      icon: Globe,
+      title: 'Real-Time Dashboards',
+      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+    },
+    {}
+      icon: Shield,
+      title: 'Data Security',
+      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+    }
+  ];
+;
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   ];
 
   return (<title>Ai Analytics - Zion Tech Group</title>
@@ -70,6 +103,7 @@ const useCases = [;;
     Gain competitive advantage with advanced technology
   ];
 
+<<<<<<< HEAD
   const useCases = [    {;
       title: 'Business Intelligence,
       description: 'Transform raw data into actionable business insights,
@@ -88,6 +122,27 @@ const useCases = [;;
     {
       title: 'Customer Analytics,
       description: 'Understand customer behavior and preferences,
+=======
+  const useCases = [
+    {}
+      title: 'Business Intelligence',
+      description: 'Transform raw data into actionable business insights',
+      icon: BarChart
+    },
+    {}
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and customer behavior',
+      icon: Brain
+    },
+    {}
+      title: 'Performance Monitoring',
+      description: 'Track and optimize key performance indicators',
+      icon: Target
+    },
+    {}
+      title: 'Customer Analytics',
+      description: 'Understand customer behavior and preferences',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Users
     }
 
@@ -169,6 +224,7 @@ const useCases = [;;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto>                Our comprehensive analytics platform provides everything you need to make data-driven decisions.
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => (
 
@@ -181,6 +237,19 @@ const useCases = [;;
 
                     <ul className="space-y-2>
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (}
+                <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (}
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                           
                           {benefit}
 
@@ -188,6 +257,7 @@ const useCases = [;;
                       ));
 
                     </ul>);
+<<<<<<< HEAD
 
                   <h3 className="text-xl font-semibold text-white mb-4>{feature.title}</h3>
                   <p className="text-gray-300 mb-6>{feature.description}</p>
@@ -197,6 +267,15 @@ const useCases = [;;
                       <li key={benefitIndex} className="flex items-center text-gray-300>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
                         <span className="text-sm>{benefit}</span>
+=======
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (}
+                      <li key={benefitIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-sm">{benefit}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       </li>
                     ))}
 
@@ -223,12 +302,20 @@ const useCases = [;;
                 Discover how our AI analytics platform can transform your business across different industries.
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => (
 
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center>
                   <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4>
                     <useCase.icon className="w-8 h-8 text-purple-400 />
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (}
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
+                  <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <useCase.icon className="w-8 h-8 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3>{useCase.title}</h3>
                   <p className="text-gray-300 text-sm>{useCase.description}</p>
@@ -248,12 +335,20 @@ const useCases = [;;
                   Our AI-powered analytics platform is designed to help you make smarter decisions, 
                   optimize processes, and drive growth through intelligent data analysis.
                 </p>
+<<<<<<< HEAD
                 <ul className="space-y-4>
                   {benefits.map((benefit, index) => (
 
                     <li key={index} className="flex items-start>
                       <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1 />
                       <span className="text-gray-300>{benefit}</span>
+=======
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (}
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
+                      <span className="text-gray-300">{benefit}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                     </li>
                   ))}
 

@@ -8,7 +8,7 @@ import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, S
 
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
 
-interface ConsultationType {
+interface ConsultationType {}
   id: number;
 
   name: string;
@@ -25,8 +25,9 @@ interface ConsultationType {
 
 }
 
-const ConsultationPage: React.FC = () => {
+const ConsultationPage: React.FC = () => {}
   const [selectedType, setSelectedType] = useState<number | null>(null);
+<<<<<<< HEAD
 
   const [formData, setFormData] = useState({
     name: ',
@@ -35,10 +36,19 @@ const ConsultationPage: React.FC = () => {
     company: ',
     message: ',
     consultationType: 
+=======
+  const [formData, setFormData] = useState({}
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: '',
+    consultationType: ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   });
 
   const consultationTypes: ConsultationType[] = [
-    {
+    {}
       id: 1,
   const consultationServices = [;
     'AI Strategy & Implementation,
@@ -50,6 +60,7 @@ const ConsultationPage: React.FC = () => {
   ];
 
   const consultationTypes: ConsultationType[] = [
+<<<<<<< HEAD
     {
       id: '1,
       name: 'Discovery Call,
@@ -61,10 +72,24 @@ const ConsultationPage: React.FC = () => {
         'Technology evaluation,
         'Initial recommendations,
         'Next steps planning
+=======
+    {}
+      id: '1',
+      name: 'Discovery Call',
+      description: 'Initial consultation to understand your business needs and challenges',
+      duration: '30 minutes',
+      price: 'Free',
+      features: []
+        'Business needs assessment',
+        'Technology evaluation',
+        'Initial recommendations',
+        'Next steps planning'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       id: 2,
+<<<<<<< HEAD
       name: 'Strategic Planning,
       description: 'Comprehensive analysis and strategic roadmap for your AI transformation,
       duration: '2 hours,
@@ -76,11 +101,25 @@ const ConsultationPage: React.FC = () => {
         'Implementation timeline,
         'ROI projections,
         'Follow-up support
+=======
+      name: 'Strategic Planning',
+      description: 'Comprehensive analysis and strategic roadmap for your AI transformation',
+      duration: '2 hours',
+      price: '$500',
+      features: []
+        'Deep dive into current systems',
+        'AI readiness assessment',
+        'Strategic roadmap creation',
+        'Implementation timeline',
+        'ROI projections',
+        'Follow-up support'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ],
       popular: true
     },
-    {
+    {}
       id: 3,
+<<<<<<< HEAD
       name: 'Technical Deep Dive,
       description: 'Detailed technical analysis and architecture recommendations,
       duration: '4 hours,
@@ -99,10 +138,53 @@ const ConsultationPage: React.FC = () => {
         'Integration planning,
         'Scalability analysis,
         'Detailed technical documentation
+=======
+      name: 'Technical Deep Dive',
+      description: 'Detailed technical analysis and architecture recommendations',
+      duration: '4 hours',
+      price: '$1,200',
+      features: []
+        'Business needs assessment',
+        'Technology audit',
+        'Solution recommendations',
+        'Next steps planning'
+      ],
+      popular: false});;)
+},
+    {}
+      id: '2',
+      name: 'Strategic Planning',
+      description: 'Comprehensive technology strategy development for your organization',
+      duration: '2-4 hours',
+      price: '$500',
+      features: []
+        'Detailed technology roadmap',
+        'Risk assessment',
+        'Implementation timeline',
+        'Budget planning',
+        'ROI analysis'
+      ],
+      popular: true});;)
+},
+    {}
+      id: '3',
+      name: 'Technical Deep Dive',
+      description: 'In-depth technical analysis and solution architecture design',
+      duration: '4-8 hours',
+      price: '$1,200',
+      features: []
+        'Technical architecture review',
+        'Security assessment',
+        'Performance optimization',
+        'Integration planning',
+        'Scalability analysis',
+        'Detailed technical documentation'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       id: 4,
+<<<<<<< HEAD
       name: 'Executive Briefing,
       description: 'High-level overview for C-level executives and decision makers,
       duration: '1 hour,
@@ -113,12 +195,25 @@ const ConsultationPage: React.FC = () => {
         'Investment recommendations,
         'Risk assessment,
         'Competitive advantages
+=======
+      name: 'Executive Briefing',
+      description: 'High-level overview for C-level executives and decision makers',
+      duration: '1 hour',
+      price: '$300',
+      features: []
+        'Executive summary',
+        'Business impact analysis',
+        'Investment recommendations',
+        'Risk assessment',
+        'Competitive advantages'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
       ],
       popular: false});)}
 
   ];
 
+<<<<<<< HEAD
   const experts = [    {;
       name: 'Dr. Sarah Chen,
       role: 'AI & Machine Learning Consultant,
@@ -138,11 +233,38 @@ const ConsultationPage: React.FC = () => {
       experience: '10+ years,
       expertise: ['Security Audits', 'Compliance', 'Risk Management],
       image: '/images/experts/alex-thompson.jpg});)
+=======
+  const experts = [
+    {}
+      name: 'Dr. Sarah Chen',
+      role: 'AI & Machine Learning Consultant',
+      experience: '15+ years',
+      expertise: ['AI Strategy', 'Machine Learning', 'Data Science'],
+      image: '/images/experts/sarah-chen.jpg'});;)
+},
+    {}
+      name: 'Michael Rodriguez',
+      role: 'Cloud Architecture Specialist',
+      experience: '12+ years',
+      expertise: ['Cloud Migration', 'AWS', 'Azure', 'DevOps'],
+      image: '/images/experts/michael-rodriguez.jpg'
+    },
+    {}
+      name: 'Alex Thompson',
+      role: 'Cybersecurity Consultant',
+      experience: '10+ years',
+      expertise: ['Security Audits', 'Compliance', 'Risk Management'],
+      image: '/images/experts/alex-thompson.jpg'});;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 }
 
   ];
 
+<<<<<<< HEAD
   const handleBooking = (typeId: string) => {;
+=======
+  const handleBooking = (typeId: string) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setSelectedType(typeId);
 
     console.log(`Booking consultation: ${typeId});
@@ -151,17 +273,27 @@ const ConsultationPage: React.FC = () => {
 
   ];
 
+<<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    const { name, value } = e.target;;
 
     setFormData(prev => ({
+=======
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+    const { name, value } = e.target;
+    setFormData(prev => ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ...prev,
       [name]: value
     }));
 
   };
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {;;
 
+=======
+  const handleSubmit = (e: React.FormEvent) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     e.preventDefault();
 
     // Handle form submission
@@ -169,7 +301,7 @@ const ConsultationPage: React.FC = () => {
 
   };
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = () => {}
   return (
 
     <>
@@ -246,6 +378,7 @@ const PagePage: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
               {consultationTypes.map((type) => (
 
@@ -256,13 +389,28 @@ const PagePage: React.FC = () => {
                     selectedType === type.id ? 'border-cyan-400' : 'border-white/20
                   } ${type.popular ? 'ring-2 ring-cyan-400/50' : ''}}
 
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {consultationTypes.map((type) => (}
+                <div
+                  key={type.id}
+                  className={`bg-white/10 backdrop-blur-lg rounded-2xl border p-8 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer ${}
+                    selectedType === type.id ? 'border-cyan-400' : 'border-white/20'
+                  } ${type.popular ? 'ring-2 ring-cyan-400/50' : ''}`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   onClick={() => setSelectedType(type.id)}
 
                 >
+<<<<<<< HEAD
                   {type.popular && (
 
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold>
+=======
+                  {type.popular && (}
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         Most Popular
                       </span>
                     </div>
@@ -280,12 +428,20 @@ const PagePage: React.FC = () => {
                       </div>
                     </div>
                     
+<<<<<<< HEAD
                     <ul className="space-y-3 mb-8>
                       {type.features.map((feature, index) => (
 
                         <li key={index} className="flex items-center text-gray-300>
                           <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 />
                           <span className="text-sm>{feature}</span>
+=======
+                    <ul className="space-y-3 mb-8">
+                      {type.features.map((feature, index) => (}
+                        <li key={index} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         </li>
                       ))}
 
@@ -441,10 +597,16 @@ const PagePage: React.FC = () => {
 
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors
                   >
+<<<<<<< HEAD
                     <option value="" className="bg-slate-800>Select consultation type</option>
                     {consultationTypes.map((type) => (
 
                       <option key={type.id} value={type.name} className="bg-slate-800>
+=======
+                    <option value="" className="bg-slate-800">Select consultation type</option>
+                    {consultationTypes.map((type) => (}
+                      <option key={type.id} value={type.name} className="bg-slate-800">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                         {type.name} - {type.price}
 
                       </option>
@@ -529,6 +691,7 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* Expert Team */}
+<<<<<<< HEAD
 
       <section className="py-16 px-4 bg-white/5>
         <div className="max-w-7xl mx-auto>
@@ -547,6 +710,23 @@ const PagePage: React.FC = () => {
                   {expert.expertise.map((skill, skillIndex) => (
 
                     <span key={skillIndex} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs>
+=======
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Meet Our Experts</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {experts.map((expert, index) => (}
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">{expert.name.split(' ').map(n => n[0]).join('')}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{expert.name}</h3>
+                <p className="text-purple-400 mb-2">{expert.role}</p>
+                <p className="text-gray-400 text-sm mb-4">{expert.experience}</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {expert.expertise.map((skill, skillIndex) => (}
+                    <span key={skillIndex} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       {skill}
 
                     </span>

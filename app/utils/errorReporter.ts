@@ -1,13 +1,22 @@
   context?: Record<string></string>;});;)
+<<<<<<< HEAD
 export interface ErrorReporterConfig {  enableConsoleLogging: boolean,
+=======
+export interface ErrorReporterConfig {}
+  enableConsoleLogging: boolean,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   enableRemoteLogging: boolean,
   remoteEndpoint?: string;
 
   maxErrorsInMemory: number,
 captureContext: boolean;});]
     }
+<<<<<<< HEAD
 
 const defaultConfig: ErrorReporterConfig = {,
+=======
+const defaultConfig: ErrorReporterConfig = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 export interface ErrorReport {}
 
   message: string
@@ -42,7 +51,7 @@ captureContext: true});]
  * ErrorReporter class for comprehensive error handling;
 
  */
-export class ErrorReporter {
+export class ErrorReporter {}
   private static instance: ErrorReporter,
   private config: ErrorReporterConfig,
   private errorQueue: ErrorReport[] = [],
@@ -90,9 +99,14 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   reportError(error: Error),
     severity: ErrorReport['severity'] = 'medium'),
     context?: Record<string></string>
+<<<<<<< HEAD
   ): void {;
 
 const errorReport: ErrorReport = {,
+=======
+  ): void {;}
+const errorReport: ErrorReport = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   message: error.message;
 
       stack: error.stack;
@@ -127,14 +141,22 @@ this.errorQueue.shift();});]
     }
 
     // Console logging;
+<<<<<<< HEAD
 
     if (this.config.enableConsoleLogging) {
+=======
+    if (this.config.enableConsoleLogging) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.logToConsole(errorReport);});]
     }
 
     // Remote logging;
+<<<<<<< HEAD
 
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
+=======
+    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Console logging
     if (this.config.enableConsoleLogging) {}
 
@@ -172,7 +194,7 @@ const errorKey = `${error.name}:${error.message}`;;
    * Log error to console with formatting;
 
    */
-  private logToConsole(report: ErrorReport): void {,
+  private logToConsole(report: ErrorReport): void {,}
   private logToConsole(report: ErrorReport): void {}
     const style = this.getConsoleStyle(report.severity);`});;)}] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development) {}););
@@ -203,10 +225,15 @@ const errorKey = `${error.name}:${error.message}`;;
    * Get console styling based on severity;
 
    */
+<<<<<<< HEAD
   private getConsoleStyle(severity: ErrorReport['severity]): string {;
 
 const styles = {,;;
 
+=======
+  private getConsoleStyle(severity: ErrorReport['severity']): string {;}
+const styles = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
 
     const styles = {};;
@@ -230,20 +257,29 @@ critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'});]
    * Send error to remote logging service;
 
    */
-  private async sendToRemote(report: ErrorReport): Promise<void></void> {,
+  private async sendToRemote(report: ErrorReport): Promise<void></void> {,}
     if (!this.config.remoteEndpoint) return;
+<<<<<<< HEAD
 
     try {,
       await fetch(this.config.remoteEndpoint, {)
+=======
+    try {,}
+      await fetch(this.config.remoteEndpoint, {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method: 'POST'),
-        headers: {,
+        headers: {,}
   private async sendToRemote(report: ErrorReport): Promise<void></void> {}
 
     if (!this.config.remoteEndpoint) return
     try {}
+<<<<<<< HEAD
 
       await fetch(this.config.remoteEndpoint, {);
 
+=======
+      await fetch(this.config.remoteEndpoint, {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method: 'POST',
         headers: {}
 
@@ -252,8 +288,12 @@ critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'});]
 
         body: JSON.stringify(report);)]
     } catch (error) {
+<<<<<<< HEAD
       // Silently fail to avoid infinite loop;
 
+=======
+      // Silently fail to avoid infinite loop;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       if (this.config.enableConsoleLogging) {} catch (error) {}
 
       // Silently fail to avoid infinite loop
@@ -288,12 +328,12 @@ getErrorQueue(): ErrorReport[] {/* TODO: Fix JSX expression */});]
    * Get error statistics;
 
    */
-  getErrorStats(): {
+  getErrorStats(): {}
     totalErrors: number,
     uniqueErrors: number,
     errorsByType: Record<string></string>;});]
     } {
-    return {
+    return {}
       totalErrors: this.errorQueue.length;
 
       uniqueErrors: this.errorCount.size;
@@ -334,8 +374,8 @@ clearQueue(): void {/* TODO: Fix JSX expression */});]
    * Export errors as JSON;
 
    */
-  exportErrors(): string {
-    return JSON.stringify({)
+  exportErrors(): string {}
+    return JSON.stringify({)}
   exportErrors(): string {}
 
     return JSON.stringify()
@@ -381,6 +421,7 @@ export const captureComponentError = (;;
 
   error: Error,
   errorInfo: { componentStack: string },
+<<<<<<< HEAD
   componentName: string): void => {,;
 
 const report = ErrorReporter.getInstance(),;;
@@ -394,6 +435,16 @@ const report = ErrorReporter.getInstance(),;;
 
   report.reportError(error, 'high, {);
 
+=======
+  componentName: string): void => {,;}
+const report = ErrorReporter.getInstance(),
+  report.reportError(error, 'high', {)}
+    componentName)
+  componentName: string
+): void => {}
+  const report = ErrorReporter.getInstance()
+  report.reportError(error, 'high', {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     componentName,
 componentStack: errorInfo.componentStack});]
     });]

@@ -1,5 +1,10 @@
   CRITICAL = 'critical'});;)
+<<<<<<< HEAD
 export interface ErrorLogEntry {  timestamp: string,
+=======
+export interface ErrorLogEntry {}
+  timestamp: string,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   severity: ErrorSeverity,
   message: string,
   error?: Error
@@ -30,9 +35,14 @@ class ErrorLogger {}
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),
     context?: Record<string></string>
+<<<<<<< HEAD
   ): void {;
 
 const entry: ErrorLogEntry = {,
+=======
+  ): void {;}
+const entry: ErrorLogEntry = {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   log()
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
@@ -57,11 +67,15 @@ const entry: ErrorLogEntry = {,
       this.logs.shift();}););
 
     // Console logging in development;
+<<<<<<< HEAD
 
     if (process.env['NODE_ENV'] === 'development') {
+=======
+    if (process.env['NODE_ENV'] === 'development') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       this.logToConsole(entry);});;);
     // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
+    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
     // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {}
       this.logToConsole(entry);});;);    // Send to external logging service in production
@@ -90,9 +104,14 @@ class ErrorLogger {/* TODO: Fix JSX expression */}););
    * Log to console with appropriate styling;
 
    */
+<<<<<<< HEAD
   private logToConsole(entry: ErrorLogEntry): void {,;
 
 const styles: Record<ErrorSeverity></ErrorSeverity> = {
+=======
+  private logToConsole(entry: ErrorLogEntry): void {,;}
+const styles: Record<ErrorSeverity></ErrorSeverity> = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   private logToConsole(entry: ErrorLogEntry): void {}
 
     const styles: Record<ErrorSeverity></ErrorSeverity> = {}
@@ -133,8 +152,8 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
    * Send error to external logging service;
 
    */
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void></void> {,
-    try {,
+  private async sendToExternalService(entry: ErrorLogEntry): Promise<void></void> {,}
+    try {,}
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void></void> {}
 
     try {}
@@ -145,30 +164,49 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
 
 return;});]
     }
+<<<<<<< HEAD
 
       await fetch(endpoint, {
+=======
+      await fetch(endpoint, {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method: 'POST'),
-  headers: {)
+  headers: {)}
           'Content-Type': 'application/json'});]
     });
+<<<<<<< HEAD
 
         body: JSON.stringify({)
+=======
+        body: JSON.stringify({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           ...entry}
 
           error: entry.error}
+<<<<<<< HEAD
 
             ? {),
                 message: entry.error.message),
                 name: entry.error.name),
       await fetch(endpoint, {);
 
+=======
+            ? {),}
+                message: entry.error.message),
+                name: entry.error.name),
+      await fetch(endpoint, {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method: 'POST',
         headers: {}
 
           'Content-Type': 'application/json'});]
     },
+<<<<<<< HEAD
         body: JSON.stringify({);
 
+=======
+        body: JSON.stringify({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           ...entry,
           error: entry.error
             ? {}
@@ -200,7 +238,7 @@ stack: entry.error.stack});]
    * Get recent logs;
 
    */
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {,
+  getRecentLogs(count: number = 10): ErrorLogEntry[] {,}
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
 
     return this.logs.slice(-count);
@@ -210,7 +248,7 @@ stack: entry.error.stack});]
   /**   * Get logs by severity;
 
    */
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {,
+  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {,}
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
 
     return this.logs.filter(log => log.severity === severity);

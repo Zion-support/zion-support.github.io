@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -6,6 +7,13 @@ use client
 import React, { useState, useCallback } from react;
 
 interface ImageProps {
+=======
+'use client';
+import React from 'react';
+'use client'
+import React, { useState, useCallback } from 'react'
+interface ImageProps {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   src: string,
     alt: string
 interface ImageProps {}
@@ -18,7 +26,7 @@ interface ImageProps {}
   priority?: boolean
   _quality?: number
   src: string,
-  alt: string,
+  alt: string,;
   width?: number;
 
   height?: number;
@@ -43,12 +51,16 @@ interface ImageProps {}
   onError?: () => void;}
 
 }
+<<<<<<< HEAD
 
 export const Image: React.FC<ImageProps>= ({
+=======
+export const Image: React.FC<ImageProps>= ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 export const Image: React.FC<ImageProps> = ({}
 
   src,
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps> = ({,}
   src;
 
   alt,
@@ -82,11 +94,16 @@ export const Image: React.FC<ImageProps> = ({,
     if (onError) onError();}
 
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties = {}
     ...style;
+<<<<<<< HEAD
 
     ...(fill && {
       position: 'absolute,
+=======
+    ...(fill && {}
+      position: 'absolute',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       top:
         top: 0,
       left: 0,
@@ -104,16 +121,24 @@ export const Image: React.FC<ImageProps> = ({,
 
     })
   }
+<<<<<<< HEAD
 
   if (hasError) {</ImageProps>
+=======
+  if (hasError) {</ImageProps>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return (</ImageProps>
   if (hasError) {}
 
     return (
 
       <div}
+<<<<<<< HEAD
 
   if (hasError) {
+=======
+  if (hasError) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return(<div}
 
 'use client;

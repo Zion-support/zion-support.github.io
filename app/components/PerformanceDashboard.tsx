@@ -4,13 +4,13 @@ import React from 'react;
 
 import React, { useState, useEffect } from react;
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
   fps: number}
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
@@ -18,8 +18,12 @@ interface PerformanceMetrics {
   [key: string]: number}
 
 ;
+<<<<<<< HEAD
 
 const PerformanceDashboard: React.FC = () => {
+=======
+const PerformanceDashboard: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 return (;
 
 const [metrics, setMetrics] = useState<PerformanceMetrics>
@@ -28,6 +32,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 }({
     loadTime: 0,
     renderTime: 0,
+<<<<<<< HEAD
     memoryUsage: 0,
     fps: 0})const [isVisible, setIsVisible] = useState(false);
 
@@ -36,6 +41,15 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 const updateMetrics = () => {const navigation = performance.getEntriesByType(;;
 
         navigation
+=======
+    memoryUsage: 0,}
+    fps: 0})
+const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {;}
+const updateMetrics = () => {const navigation = performance.getEntriesByType(}
+        'navigation'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       )[0] as PerformanceNavigationTiming;
 
 const loadTime = navigation;;
@@ -50,6 +64,7 @@ let _memoryUsage = 0;;;
       if ('memory in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
 
       // Measure FPS (simplified);
+<<<<<<< HEAD
 
 let _fps = 0;;
 
@@ -64,13 +79,27 @@ const measureFPS = (currentTime: number) => {;;
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime))            frameCount = 0;
 
+=======
+let _fps = 0;
+      if ($1) { let _lastTime = performance.now();}
+        let _frameCount = 0;
+const measureFPS = (currentTime: number) => {}
+          frameCount++;
+          if (currentTime - lastTime >= 1000) {}
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
+            frameCount = 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
             lastTime = currentTime}
 
           requestAnimationFrame(measureFPS);
 
         requestAnimationFrame(measureFPS);
+<<<<<<< HEAD
 
       setMetrics({
+=======
+      setMetrics({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         loadTime,
         renderTime,
         memoryUsage,
@@ -78,6 +107,7 @@ const measureFPS = (currentTime: number) => {;;
 
     // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);
 
+<<<<<<< HEAD
   if (!isVisible) {
   return (
 
@@ -85,6 +115,13 @@ const measureFPS = (currentTime: number) => {;;
         onClick={() => setIsVisible(true);
 
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors
+=======
+  if (!isVisible) {}
+    return (
+      <button
+        onClick={() => setIsVisible(true);}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       >
         Show Performance
       </button>);
@@ -95,9 +132,14 @@ const measureFPS = (currentTime: number) => {;;
       <div className="flex justify-between items-center mb-4>
         <h3 className="text-lg font-semibold text-gray-800>Performance Dashboard</h3>
         <button
+<<<<<<< HEAD
           onClick={() => setIsVisible(false);
 
           className="text-gray-500 hover:text-gray-700
+=======
+          onClick={() => setIsVisible(false);}
+          className="text-gray-500 hover:text-gray-700"
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         >
           ×
         </button>

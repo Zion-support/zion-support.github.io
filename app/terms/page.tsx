@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -14,41 +15,87 @@ const sections = [;;
 
     {
       title: 'Acceptance of Terms,
+=======
+'use client';
+import React from 'react';
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
+export default function TermsPage() {;}
+const lastUpdated = 'January 1, 2024';
+  ;
+const sections = [
+    {}
+      title: 'Acceptance of Terms',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.]
     },
+<<<<<<< HEAD
     {
       title: 'Use License,
+=======
+    {}
+      title: 'Use License',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Key,
       content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.]
     },
+<<<<<<< HEAD
     {
       title: 'Service Availability,
+=======
+    {}
+      title: 'Service Availability',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Server,
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.]
     },
+<<<<<<< HEAD
     {
       title: 'Limitation of Liability,
+=======
+    {}
+      title: 'Limitation of Liability',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Shield,
       content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.]
     },
+<<<<<<< HEAD
     {
       title: 'Privacy Policy,
+=======
+    {}
+      title: 'Privacy Policy',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Lock,
       content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.]
     },
+<<<<<<< HEAD
     {
       title: 'Intellectual Property,
+=======
+    {}
+      title: 'Intellectual Property',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Database,
       content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.]
     },
+<<<<<<< HEAD
     {
       title: 'Termination,
+=======
+    {}
+      title: 'Termination',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: AlertTriangle,
       content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.]
     },
+<<<<<<< HEAD
     {
       title: 'Governing Law,
+=======
+    {}
+      title: 'Governing Law',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       icon: Scale,
 content: 'These terms shall be governed by and construed in accordance with the laws of the United States.]
     }
@@ -77,8 +124,13 @@ content: 'These terms shall be governed by and construed in accordance with the 
       <div>
         <div>
           <div>
+<<<<<<< HEAD
             <div className="space-y-8></div>
               {sections.map((section, index) => (</div>
+=======
+            <div className="space-y-8"></div>
+              {sections.map((section, index) => (</div>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <div>
                   <div>
                     <div>

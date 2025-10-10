@@ -236,8 +236,12 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
 }
 
     // Check if entry has expired;
+<<<<<<< HEAD
 
     if (Date.now() - entry.timestamp > entry.ttl) {
+=======
+    if (Date.now() - entry.timestamp > entry.ttl) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Check if entry has expired
     if (Date.now() - entry.timestamp > entry.ttl) {}
 
@@ -318,14 +322,18 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
     const entry = this.cache.get(key);;
 
 ,
-    if (!entry) {,
+    if (!entry) {,}
       return false});
 
 }
 
     // Check if entry has expired;
+<<<<<<< HEAD
 
     if (Date.now() - entry.timestamp > entry.ttl) {
+=======
+    if (Date.now() - entry.timestamp > entry.ttl) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 
     if (!entry) {}
 
@@ -361,8 +369,12 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
       this.stats.entries = this.cache.size;
 
       // Save to persistent storage if needed;
+<<<<<<< HEAD
 
       if (this.config.storage !== CacheStorage.Memory) {,
+=======
+      if (this.config.storage !== CacheStorage.Memory) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       // Save to persistent storage if needed
       if (this.config.storage !== CacheStorage.Memory) {}
 
@@ -422,8 +434,12 @@ y: string): boolean {/* TODO: Fix JSX expression */});]
     this.stats.entries = 0;
 
     // Clear persistent storage if needed;
+<<<<<<< HEAD
 
     if (this.config.storage !== CacheStorage.Memory) {
+=======
+    if (this.config.storage !== CacheStorage.Memory) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Clear persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
 
@@ -492,8 +508,12 @@ return Array.from(this.cache.keys())]
     this.stats.entries = this.cache.size;
 
     // Save to persistent storage if needed;
+<<<<<<< HEAD
 
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
+=======
+    if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
 
@@ -588,10 +608,15 @@ const duration = performance.now() - start;;
     const { keyGenerator, ...cacheOptions } = options;
 
     return (...arg)
+<<<<<<< HEAD
   s: TArgs): TResult => {/* TODO: Fix JSX expression */}
 
         : `memoize_${fn.name}_${JSON.stringify(args);;
 
+=======
+  s: TArgs): TResult => {/* TODO: Fix JSX expression */}`
+        : `memoize_${fn.name}_${JSON.stringify(args);`;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult});
 
 }});
@@ -713,7 +738,7 @@ storage.removeItem('cache-manager)]
 
     if (typeof window === undefined) return null;
 
-    switch (this.config.storage) {
+    switch (this.config.storage) {}
       case CacheStorage.LocalStorage: return window.localStorage;
 
     switch (this.config.storage) {}
@@ -732,6 +757,7 @@ storage.removeItem('cache-manager)]
   }););
 
 // Create singleton instances for different use cases
+<<<<<<< HEAD
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });;
 
 export const localStorageCache = new CacheManager({)  storage: CacheStorage.LocalStorage),;
@@ -747,6 +773,20 @@ export const localStorageCache = new CacheManager({);;
 
 export const sessionStorageCache = new CacheManager({);;
 
+=======
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
+export const localStorageCache = new CacheManager({)}
+  storage: CacheStorage.LocalStorage),
+  defaultTTL: 30 * 60 * 1000 // 30 minutes
+export const sessionStorageCache = new CacheManager({)}
+  storage: CacheStorage.SessionStorage),
+  defaultTTL: 60 * 60 * 1000 // 1 hour
+export const localStorageCache = new CacheManager({);}
+  storage: CacheStorage.LocalStorage,
+  defaultTTL: 30 * 60 * 1000 // 30 minutes
+
+export const sessionStorageCache = new CacheManager({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
 

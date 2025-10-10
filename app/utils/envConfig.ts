@@ -19,21 +19,34 @@ export interface EnvConfig {}
   gaTrackingId?: string}
 
 }
+<<<<<<< HEAD
 
 class EnvironmentConfig {
   private config: EnvConfig,
   private isInitialized = false;
 
   constructor() {,
+=======
+class EnvironmentConfig {}
+  private config: EnvConfig,
+  private isInitialized = false;
+  constructor() {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.config = this.loadConfig(),
     this.isInitialized = true}
 
   }
+<<<<<<< HEAD
 
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults;
 
     return {
+=======
+  private loadConfig(): EnvConfig {}
+    // Safely access environment variables with defaults;
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 class EnvironmentConfig {}
 
   private config: EnvConfig
@@ -93,7 +106,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Get a specific configuration value;
 
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,}
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
 
     return this.config[key]}
@@ -143,22 +156,32 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Validate required environment variables;
 
    */
-  public validate(requiredVars: (keyof EnvConfig)[]): {,
+  public validate(requiredVars: (keyof EnvConfig)[]): {,}
     valid: boolean,
     missing: string[]}
 
   } {;
+<<<<<<< HEAD
 
 const missing: string[] = [],
     for (const varName of requiredVars) {,
       if (!this.config[varName]) {,
+=======
+const missing: string[] = [],}
+    for (const varName of requiredVars) {,}
+      if (!this.config[varName]) {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         missing.push(varName);
 
       }
 
     }
+<<<<<<< HEAD
 
     return {
+=======
+    return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       valid: missing.length === 0;
 
   public validate(requiredVars: (keyof EnvConfig)[]): {}

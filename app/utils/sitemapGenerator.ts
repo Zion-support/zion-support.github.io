@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const generateSitemap = useCallback((...args) => {;;
 
 const baseUrl = https: //ziontechgroup.com,;;
@@ -57,6 +58,58 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9>
   ${staticPages.map(page =>);
 
+=======
+export const generateSitemap = useCallback((...args) => {;}
+const baseUrl = 'https: //ziontechgroup.com',;
+const staticPages = [,
+export const generateSitemap = useCallback((...args) => {}
+  const baseUrl = 'https://ziontechgroup.com';
+const staticPages = [
+    '',
+    '/services',
+    '/contact',
+    '/ai-solutions',
+    '/it-services',
+    '/about',
+    '/blog',
+    '/case-studies',
+    '/pricing',
+    '/ai-project-manager',
+    '/ai-social-media-manager',
+    '/ai-analytics',
+    '/ai-email-marketing',
+    '/ai-customer-support-bot',
+    '/ai-code-generation',
+    '/ai-video-generation',
+    '/ai-voice-cloning',
+    '/ai-workflow-automation',
+    '/ai-sales-automation',
+    '/ai-content-writer',
+    '/ai-financial-advisor',
+    '/ai-data-visualization',
+    '/ai-3 d-generation',
+    '/ai-customer-support',
+    '/ai-inventory-manager',
+    '/ai-hr-assistant',
+    '/ai-legal-assistant',
+    '/cloud-migration',
+    '/it-consulting',
+    '/cybersecurity',
+    '/devops',
+    '/database-services',
+    '/network-infrastructure',
+    '/it-support',
+    '/compliance',
+    '/developer-tools',
+    '/marketing-tools',
+    '/productivity'
+  ];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+  ${staticPages.map(page =>),}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${staticPages.map(page =>);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   <url>}
 
     <loc>${baseUrl}${page}</loc>

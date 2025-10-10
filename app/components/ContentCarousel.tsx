@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react;
 
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from lucide-react;
 
-interface Slide {
+interface Slide {}
   icon: React.ComponentType<any>;
 
   title: string;
@@ -12,8 +12,12 @@ interface Slide {
   description: string;
 
   features: string[];
+<<<<<<< HEAD
 
   stats?: {
+=======
+  stats?: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     value: string;
 
     label: string;
@@ -22,12 +26,13 @@ interface Slide {
 
 }
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = () => {}
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
-    {
+    {}
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Solutions,
       description: 'Advanced AI technology to transform your business operations and improve efficiency,
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics],
@@ -36,10 +41,20 @@ const ContentCarousel: React.FC = () => {
         { value: '10x', label: 'Faster Processing },
         { value: '24/7', label: 'Automation }
 
+=======
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      stats: []
+        { value: '95%', label: 'Accuracy Rate' },
+        { value: '10x', label: 'Faster Processing' },
+        { value: '24/7', label: 'Automation' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       icon: Zap,
+<<<<<<< HEAD
       title: 'High Performance,
       description: 'Lightning-fast processing and real-time analytics for optimal results,
       features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency],
@@ -48,10 +63,20 @@ const ContentCarousel: React.FC = () => {
         { value: '< 100ms', label: 'Response Time },
         { value: '10M+', label: 'Requests/Day }
 
+=======
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency'],
+      stats: []
+        { value: '99.9%', label: 'Uptime' },
+        { value: '< 100ms', label: 'Response Time' },
+        { value: '10M+', label: 'Requests/Day' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       icon: Shield,
+<<<<<<< HEAD
       title: 'Enterprise Security,
       description: 'Bank-level security with encryption and compliance standards,
       features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring],
@@ -60,10 +85,20 @@ const ContentCarousel: React.FC = () => {
         { value: 'SOC 2', label: 'Compliance },
         { value: 'Zero', label: 'Security Breaches }
 
+=======
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',
+      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
+      stats: []
+        { value: '256-bit', label: 'Encryption' },
+        { value: 'SOC 2', label: 'Compliance' },
+        { value: 'Zero', label: 'Security Breaches' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     },
-    {
+    {}
       icon: Globe,
+<<<<<<< HEAD
       title: 'Global Reach,
       description: 'Worldwide deployment and support for international businesses,
       features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support],
@@ -72,26 +107,48 @@ const ContentCarousel: React.FC = () => {
         { value: '15+', label: 'Languages },
         { value: '24/7', label: 'Global Support }
 
+=======
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',
+      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
+      stats: []
+        { value: '50+', label: 'Countries' },
+        { value: '15+', label: 'Languages' },
+        { value: '24/7', label: 'Global Support' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       ]
     }
 
   ];
 
+<<<<<<< HEAD
   const nextSlide = () => {;;
 
+=======
+  const nextSlide = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setCurrentSlide((prev) => (prev + 1) % slides.length);
 
   };
 
+<<<<<<< HEAD
   const prevSlide = () => {;;
 
+=======
+  const prevSlide = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   };
 
+<<<<<<< HEAD
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);;
 
+=======
+  useEffect(() => {}
+    const timer = setInterval(nextSlide, 5000);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return () => clearInterval(timer);
 
   }, []);
@@ -137,6 +194,7 @@ const ContentCarousel: React.FC = () => {
                 </div>
 
                 {/* Features */}
+<<<<<<< HEAD
 
                 <div className="space-y-4>
                   <h4 className="text-lg font-semibold text-white mb-4>Key Features:</h4>
@@ -146,6 +204,15 @@ const ContentCarousel: React.FC = () => {
                       <div key={index} className="flex items-center space-x-3>
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 />
                         <span className="text-gray-300>{feature}</span>
+=======
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {currentSlideData.features.map((feature, index) => (}
+                      <div key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       </div>
                     ))}
 
@@ -153,6 +220,7 @@ const ContentCarousel: React.FC = () => {
                 </div>
 
                 {/* Stats */}
+<<<<<<< HEAD
 
                 {currentSlideData.stats && (
 
@@ -162,6 +230,14 @@ const ContentCarousel: React.FC = () => {
                       <div key={index} className="text-center>
                         <div className="text-2xl font-bold text-white mb-1>{stat.value}</div>
                         <div className="text-gray-400 text-sm>{stat.label}</div>
+=======
+                {currentSlideData.stats && (}
+                  <div className="grid grid-cols-3 gap-6">
+                    {currentSlideData.stats.map((stat, index) => (}
+                      <div key={index} className="text-center">
+                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                        <div className="text-gray-400 text-sm">{stat.label}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       </div>
                     ))}
 
@@ -220,19 +296,30 @@ const ContentCarousel: React.FC = () => {
           </button>
 
           {/* Dots Indicator */}
+<<<<<<< HEAD
 
           <div className="flex justify-center mt-8 space-x-2>
             {slides.map((_, index) => (
 
+=======
+          <div className="flex justify-center mt-8 space-x-2">
+            {slides.map((_, index) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               <button
                 key={index}
 
                 onClick={() => setCurrentSlide(index)}
+<<<<<<< HEAD
 
                 className={w-3 h-3 rounded-full transition-colors duration-200 ${
                   index === currentSlide ? 'bg-purple-400 : bg-white/30
                 }}
 
+=======
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${}
+                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
+                }`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
               />
             ))}
 

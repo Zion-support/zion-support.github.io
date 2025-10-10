@@ -42,11 +42,15 @@ export const mockFetch = (
   if (typeof global !== 'undefined') {}
 
     (global as typeof global & { fetch: typeof fetch });.fetch = jest.fn(() =>
-      Promise.resolve({)
+      Promise.resolve({)}
         ok: status >= 200 && status < 300),
         status),
+<<<<<<< HEAD
       Promise.resolve({);
 
+=======
+      Promise.resolve({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
@@ -72,26 +76,43 @@ export class MockStorage implements Storage {}
     this.store.clear();});
 
 }
+<<<<<<< HEAD
 
   getItem(key: string): string | null {,
+=======
+  getItem(key: string): string | null {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return this.store.get(key) || null;});
 
 }
+<<<<<<< HEAD
 
   key(index: number): string | null {,;
 
 const keys = Array.from(this.store.keys()),;;
 
+=======
+  key(index: number): string | null {,;}
+const keys = Array.from(this.store.keys()),
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return keys[index] || null;});
 
 }
+<<<<<<< HEAD
 
   removeItem(key: string): void {,
+=======
+  removeItem(key: string): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.store.delete(key);});
 
 }
+<<<<<<< HEAD
 
   setItem(key: string, value: string): void {,
+=======
+  setItem(key: string, value: string): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   getItem(key: string): string | null {}
 
     return this.store.get(key) || null;});
@@ -134,18 +155,29 @@ export const createMockStorage = (): MockStorage => {};;
  * Mock window object;
 
  */
+<<<<<<< HEAD
 export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {;;
 
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {)
       value: {)
+=======
+export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {
+  if (typeof global !== 'undefined') {}
+    Object.defineProperty(global, 'window', {)}
+      value: {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         ...global.window),
 export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {};;
 
   if (typeof global !== 'undefined') {}
+<<<<<<< HEAD
 
     Object.defineProperty(global, 'window, {);
 
+=======
+    Object.defineProperty(global, 'window', {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       value: {}
 
         ...global.window,
@@ -160,8 +192,8 @@ export const wait = (m);;
 
   s: number): Promise<void></void> => {/* TODO: Fix JSX expression */});
   headers: Record<string, string> = {}
-) => {
-  return jest.fn().mockResolvedValue({
+) => {}
+  return jest.fn().mockResolvedValue({}
     ok: status >= 200 && status < 300,
     status,
     headers: new Headers(headers),
@@ -275,19 +307,23 @@ e: true,]
 export const createMockPerformance = (): Performance => {};;
 
   const entries: PerformanceEntry[] = []
-  return {
+  return {}
     now: () => Date.now(),
-  mark: (name: string) => {,
-      entries.push({),
+  mark: (name: string) => {,}
+      entries.push({),}
         name),
         entryType: 'mark'),
   return {}
 
     now: () => Date.now(),
     mark: (name: string) => {}
+<<<<<<< HEAD
 
       entries.push({);
 
+=======
+      entries.push({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         name,
         entryType: 'mark',
         startTime: Date.now(),
@@ -296,14 +332,18 @@ export const createMockPerformance = (): Performance => {};;
         toJSON: () => ({});]
     } as PerformanceEntry)]
     },
-    measure: (name: string, startMark?: string, endMark?: string) => {
-      entries.push({)
+    measure: (name: string, startMark?: string, endMark?: string) => {}
+      entries.push({)}
         name)
         entryType: 'measure'),
     measure: (name: string, startMark?: string, endMark?: string) => {}
+<<<<<<< HEAD
 
       entries.push({);
 
+=======
+      entries.push({);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         name,
         entryType: 'measure',
         startTime: Date.now(),
@@ -315,12 +355,16 @@ export const createMockPerformance = (): Performance => {};;
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries;
+<<<<<<< HEAD
 
     clearMarks: () => {,
+=======
+    clearMarks: () => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       entries.length = 0;});
 
 },
-    clearMeasures: () => {,
+    clearMeasures: () => {,}
     getEntries: () => entries,
     clearMarks: () => {}
 
@@ -392,9 +436,14 @@ n: Date.now()]
  * Generate random test data;
 
  */
+<<<<<<< HEAD
 export const generateTestData = {;;
 
   string: (length = 10): string => {,
+=======
+export const generateTestData = {}
+  string: (length = 10): string => {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     return Math.random(),
       .toString(36),
 export const generateTestData = {};;
@@ -411,21 +460,28 @@ export const generateTestData = {};;
     return Math.floor(Math.random() * (max - min + 1)) + min;});
 
 },
-  boolean: (): boolean => {,
+  boolean: (): boolean => {,}
   boolean: (): boolean => {}
 
     return Math.random() > 0.5;});
 
 },
   email: (): string => {`}
+<<<<<<< HEAD
 
     return `test${generateTestData.string(5);@example.com`]
     },
   url: (): string => {`}
 
     return `https://example.com/${generateTestData.string(10);`]
+=======
+    return `test${generateTestData.string(5);@example.com`]}
     },
-  date: (): Date => {,
+  url: (): string => {`}
+    return `https://example.com/${generateTestData.string(10);`]}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
+    },
+  date: (): Date => {,}
   date: (): Date => {}
 
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);});
@@ -447,11 +503,11 @@ export const generateTestData = {/* TODO: Fix JSX expression */});;
 },
   emai,
   l: (): string => {/* TODO: Fix JSX expression */}`
-    return `test${generateTestData.string(5);@example.com`]
+    return `test${generateTestData.string(5);@example.com`]}
     },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10);`]
+  s://example.com/${generateTestData.string(10);`]}
     },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */});
@@ -470,10 +526,15 @@ return Array.from({ length }, generator)]
  * Deep clone an object;
 
  */
+<<<<<<< HEAD
 export const deepClone = <T></T>(obj: T): T => {,;;
 
 export const deepClone = <T></T>(obj: T): T => {};;
 
+=======
+export const deepClone = <T></T>(obj: T): T => {,}
+export const deepClone = <T></T>(obj: T): T => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return JSON.parse(JSON.stringify(obj));});
 
 }
@@ -482,10 +543,15 @@ export const deepClone = <T></T>(obj: T): T => {};;
  * Compare objects for equality;
 
  */
+<<<<<<< HEAD
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,;;
 
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {};;
 
+=======
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,}
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return JSON.stringify(obj1) === JSON.stringify(obj2);});
 
 }
@@ -494,7 +560,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {};;
  * Spy on console methods;
 
  */
-export class ConsoleSpy {
+export class ConsoleSpy {}
   private originalConsole: Console,
   private logs: string[] = [],
   private errors: string[] = [],
@@ -512,10 +578,15 @@ constructor() {}
 
 this.mock()]
     }
+<<<<<<< HEAD
 
   private mock(): void {
       this.logs.push(args.map(String).join(' ));});
 
+=======
+  private mock(): void {}
+      this.logs.push(args.map(String).join(' '));});
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 }
 
       this.errors.push(args.map(String).join(' ));});
@@ -560,10 +631,10 @@ this.mock()]
 /**
  * Mock window.matchMedia
  */
-export const mockMatchMedia = (matches: boolean) => {
-  Object.defineProperty(window, 'matchMedia', {
+export const mockMatchMedia = (matches: boolean) => {}
+  Object.defineProperty(window, 'matchMedia', {}
     writable: true,
-    value: jest.fn().mockImplementation(query => ({
+    value: jest.fn().mockImplementation(query => ({}
       matches,
       media: query,
       onchange: null,
@@ -603,23 +674,37 @@ export const mockMatchMedia = (matches: boolean) => {
 }
 
 /**
+<<<<<<< HEAD
  * Mock IntersectionObserver */
 export interface Deferred<T></T> {
+=======
+ * Mock IntersectionObserver
+ */
+export interface Deferred<T></T> {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   promise: Promise<T></T>,
   resolve: (value: T) => void;
 
   reject: (reason?: unknown) => void;});
 
 }
+<<<<<<< HEAD
 
 export const createDeferred = <T></T>(): Deferred<T></T> => {;;
 
+=======
+export const createDeferred = <T></T>(): Deferred<T></T> => {;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
 let resolve as any: (value: T) => void;
 
   let reject as any: (reason?: unknown) => void;
+<<<<<<< HEAD
 
 const promise = new Promise<T></T>((res, rej) => {;;
 
+=======
+const promise = new Promise<T></T>((res, rej) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     resolve = res
 export interface Deferred<T></T> {}
 
@@ -666,6 +751,7 @@ export const retryWithBackoff = async <T></T>(f);;
   n: () => Promise<T></T>,
   maxRetries = 3,
   initialDelay = 1000;
+<<<<<<< HEAD
 
 ): Promise<T></T> => {;
 
@@ -673,12 +759,23 @@ let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {,;;
 
     try {,
+=======
+): Promise<T></T> => {;}
+let lastError: Error,
+  for (let i = 0; i < maxRetries; i++) {,}
+    try {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return await fn();});
 
 } catch (error) {
+<<<<<<< HEAD
       lastError = error as Error;
 
       if (i < maxRetries - 1) {
+=======
+      lastError = error as Error;}
+      if (i < maxRetries - 1) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   initialDelay = 1000
 ): Promise<T></T> => {}
 
@@ -718,7 +815,7 @@ throw lastError as any]
 export const measureExecutionTime = async <T></T>(;;
 
   fn: () => T | Promise<T></T>): Promise<{ result: T; duration: number }> => {
-  fn: () => T | Promise<T></T>
+  fn: () => T | Promise<T></T>}
 ): Promise<{ result: T; duration: number }> => {}
 
   const start = performance.now();;
@@ -766,9 +863,9 @@ export default {/* TODO: Fix JSX expression */});
 /**
  * Mock ResizeObserver
  */
-export const mockResizeObserver = () => {
+export const mockResizeObserver = () => {}
   const mockResizeObserver = jest.fn();
-  mockResizeObserver.mockReturnValue({
+  mockResizeObserver.mockReturnValue({}
     observe: () => null,
     unobserve: () => null,
     disconnect: () => null
@@ -779,14 +876,14 @@ export const mockResizeObserver = () => {
 /**
  * Mock scrollTo
  */
-export const mockScrollTo = () => {
+export const mockScrollTo = () => {}
   window.scrollTo = jest.fn();
 };
 
 /**
  * Mock console methods
  */
-export const mockConsole = () => {
+export const mockConsole = () => {}
   jest.spyOn(console, 'log').mockImplementation(() => {});
   jest.spyOn(console, 'warn').mockImplementation(() => {});
   jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -795,7 +892,7 @@ export const mockConsole = () => {
 /**
  * Restore console methods
  */
-export const restoreConsole = () => {
+export const restoreConsole = () => {}
   jest.restoreAllMocks();
 };
 
@@ -803,48 +900,48 @@ export const restoreConsole = () => {
  * Create a mock event
  */
 export const createMockEvent = (type: string, options: any = {}) => {
-  return new Event(type, options);
+  return new Event(type, options);}
 };
 
 /**
  * Create a mock keyboard event
  */
 export const createMockKeyboardEvent = (type: string, options: any = {}) => {
-  return new KeyboardEvent(type, options);
+  return new KeyboardEvent(type, options);}
 };
 
 /**
  * Create a mock mouse event
  */
 export const createMockMouseEvent = (type: string, options: any = {}) => {
-  return new MouseEvent(type, options);
+  return new MouseEvent(type, options);}
 };
 
 /**
  * Create a mock form event
  */
 export const createMockFormEvent = (type: string, options: any = {}) => {
-  return new Event(type, options);
+  return new Event(type, options);}
 };
 
 /**
  * Mock fetch with error
  */
-export const mockFetchError = (error: Error) => {
+export const mockFetchError = (error: Error) => {}
   return jest.fn().mockRejectedValue(error);
 };
 
 /**
  * Mock fetch with network error
  */
-export const mockFetchNetworkError = () => {
+export const mockFetchNetworkError = () => {}
   return jest.fn().mockRejectedValue(new Error('Network error'));
 };
 
 /**
  * Mock fetch with timeout
  */
-export const mockFetchTimeout = () => {
+export const mockFetchTimeout = () => {}
   return jest.fn().mockImplementation(() => 
     new Promise((_, reject) => 
       setTimeout(() => reject(new Error('Request timeout')), 100)
@@ -855,7 +952,7 @@ export const mockFetchTimeout = () => {
 /**
  * Setup test environment
  */
-export const setupTestEnvironment = () => {
+export const setupTestEnvironment = () => {}
   mockMatchMedia(true);
   mockIntersectionObserver();
   mockResizeObserver();
@@ -866,7 +963,7 @@ export const setupTestEnvironment = () => {
 /**
  * Cleanup test environment
  */
-export const cleanupTestEnvironment = () => {
+export const cleanupTestEnvironment = () => {}
   restoreConsole();
   jest.clearAllMocks();
 };

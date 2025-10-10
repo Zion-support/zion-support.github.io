@@ -60,8 +60,12 @@ const url = `${this.baseURL}${endpoint};;
 const cacheKey = apiCache.generateKey(url, body);;
 
     // Check cache for GET requests;
+<<<<<<< HEAD
 
     if (method === 'GET && cache) {
+=======
+    if (method === 'GET' && cache) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     // Check cache for GET requests
     if (method === 'GET && cache) {}
 
@@ -74,21 +78,31 @@ return cachedData]
 
     }
 
+<<<<<<< HEAD
     try {;
 
 const response = await fetch(url, {);;
 
+=======
+    try {;}
+const response = await fetch(url, {)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method)
-        headers: {,
+        headers: {,}
           ...this.defaultHeaders),
           ...headers]
     });
 
         body: body ? JSON.stringify(body) : undefined;
+<<<<<<< HEAD
 
 const data = await response.json();;
 
 const apiResponse: APIResponse<T></T> = {
+=======
+const data = await response.json();
+const apiResponse: APIResponse<T></T> = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         data;
 
         status: response.status;
@@ -98,12 +112,18 @@ const apiResponse: APIResponse<T></T> = {
         headers: Object.fromEntries(response.headers.entries());
 
       // Cache successful GET requests;
+<<<<<<< HEAD
 
       if (method === 'GET && cache && response.ok) {
     try {}
 
       const response = await fetch(url, {);;
 
+=======
+      if (method === 'GET' && cache && response.ok) {}
+    try {}
+      const response = await fetch(url, {);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         method,
         headers: {}
 
@@ -453,18 +473,30 @@ this.abortControllers.clear()]
     return this.makeRequest<T></T>(endpoint, { ...config, method: DELETE }););
 
   // Set base URL;
+<<<<<<< HEAD
 
   setBaseURL(baseURL: string): void {,
+=======
+  setBaseURL(baseURL: string): void {,}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.baseURL = baseURL;);
 
   // Set default headers;
+<<<<<<< HEAD
 
   setDefaultHeaders(headers: Record<string, string></string>): void {
+=======
+  setDefaultHeaders(headers: Record<string, string></string>): void {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };);
 
   // Clear cache;
+<<<<<<< HEAD
 
   clearCache(): void {
+=======
+  clearCache(): void {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   // Set base URL
   setBaseURL(baseURL: string): void {}    this.baseURL = baseURL;);
 

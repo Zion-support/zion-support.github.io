@@ -2,7 +2,7 @@
 
 import React, { useEffect } from react;
 
-interface SecurityEnhancerProps {
+interface SecurityEnhancerProps {}
   enableCSP?: boolean;
 
   enableHSTS?: boolean;
@@ -16,25 +16,39 @@ interface SecurityEnhancerProps {
 }
 
 ;
+<<<<<<< HEAD
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+=======
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   enableCSP = true,
   enableHSTS = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
   enableContentTypeSniffing = true
 }) => {
+<<<<<<< HEAD
   useEffect(() => {
     if (typeof window === 'undefined) {
+=======
+  useEffect(() => {}
+    if (typeof window === 'undefined') {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return;
 
     }
 
     // Content Security Policy
+<<<<<<< HEAD
     if ($1) { const cspMeta = document.createElement(meta);;
 
       cspMeta.httpEquiv = Content-Security-Policy;
 
+=======
+    if ($1) { const cspMeta = document.createElement('meta');}
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       cspMeta.content = [
         "default-src 'self',
         "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com,
@@ -55,34 +69,52 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     }
 
     // XSS Protection
+<<<<<<< HEAD
     if ($1) { const xssMeta = document.createElement(meta);;
 
       xssMeta.httpEquiv = X-XSS-Protection;
 
       xssMeta.content = 1; mode=block;
 
+=======
+    if ($1) { const xssMeta = document.createElement('meta');}
+      xssMeta.httpEquiv = 'X-XSS-Protection';
+      xssMeta.content = '1; mode=block';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       document.head.appendChild(xssMeta);
 
     }
 
     // Clickjacking Protection
+<<<<<<< HEAD
     if ($1) { const frameOptionsMeta = document.createElement(meta);;
 
       frameOptionsMeta.httpEquiv = X-Frame-Options;
 
       frameOptionsMeta.content = DENY;
 
+=======
+    if ($1) { const frameOptionsMeta = document.createElement('meta');}
+      frameOptionsMeta.httpEquiv = 'X-Frame-Options';
+      frameOptionsMeta.content = 'DENY';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       document.head.appendChild(frameOptionsMeta);
 
     }
 
     // Content Type Sniffing Protection
+<<<<<<< HEAD
     if ($1) { const contentTypeMeta = document.createElement(meta);;
 
       contentTypeMeta.httpEquiv = X-Content-Type-Options;
 
       contentTypeMeta.content = nosniff;
 
+=======
+    if ($1) { const contentTypeMeta = document.createElement('meta');}
+      contentTypeMeta.httpEquiv = 'X-Content-Type-Options';
+      contentTypeMeta.content = 'nosniff';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       document.head.appendChild(contentTypeMeta);
 
     }
@@ -108,6 +140,7 @@ const permissionsMeta = document.createElement(meta);;
     document.head.appendChild(permissionsMeta);
 
     // Security headers for API calls;
+<<<<<<< HEAD
 
 const originalFetch = window.fetch;;
 
@@ -121,15 +154,30 @@ const headers = new Headers(init?.headers);;
       headers.set('X-Content-Type-Options', nosniff);
 
       return originalFetch(input, {
+=======
+const originalFetch = window.fetch;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;}
+const headers = new Headers(init?.headers);
+      
+      // Add security headers
+      headers.set('X-Requested-With', 'XMLHttpRequest');
+      headers.set('X-Content-Type-Options', 'nosniff');
+      
+      return originalFetch(input, {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
         ...init,
         headers,
         credentials: 'same-origin
       })    };
 
     // Input sanitization for forms;
+<<<<<<< HEAD
 
 const sanitizeInput = (input: string): string => {;;
 
+=======
+const sanitizeInput = (input: string): string => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       return input
         .replace(/[<>]/g, ') // Remove potential HTML tags
         .replace(/javascript:/gi, ') // Remove javascript: protocol
@@ -139,6 +187,7 @@ const sanitizeInput = (input: string): string => {;;
     };
 
     // Apply input sanitization to all form inputs;
+<<<<<<< HEAD
 
 const inputs = document.querySelectorAll(input, textarea, select);;
 
@@ -148,6 +197,13 @@ const inputs = document.querySelectorAll(input, textarea, select);;
 const target = e.target as HTMLInputElement;;
 
         if (target.value !== sanitizeInput(target.value)) {
+=======
+const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {}
+      input.addEventListener('input', (e) => {;}
+const target = e.target as HTMLInputElement;
+        if (target.value !== sanitizeInput(target.value)) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
           target.value = sanitizeInput(target.value);
 
         }

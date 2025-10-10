@@ -81,8 +81,12 @@ const AppLoadingSpinner = () => (;;
     fullScreen 
   />
 );
+<<<<<<< HEAD
 
 const App: React.FC = () => {
+=======
+const App: React.FC = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
   return (
 
     <ErrorBoundary>

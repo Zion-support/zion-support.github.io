@@ -5,7 +5,7 @@
  * Provides common validation functions for forms and data
  */
 
-export interface ValidationResult {
+export interface ValidationResult {}
   isValid: boolean;
 
   errors: string[];
@@ -37,8 +37,9 @@ const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9
 /**
  * Validate email address
  */
-export function validateEmail(email: string): ValidationResult {
+export function validateEmail(email: string): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
 
   if (!email) {
     errors.push('Email is required);
@@ -52,6 +53,18 @@ export function validateEmail(email: string): ValidationResult {
   }
 
   return {
+=======
+  
+  if (!email) {}
+    errors.push('Email is required');
+  } else if (email.length > 254) {
+    errors.push('Email is too long');}
+  } else if (!EMAIL_REGEX.test(email)) {
+    errors.push('Invalid email format');}
+  }
+  
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isValid: errors.length === 0,
     errors
   };
@@ -61,8 +74,9 @@ export function validateEmail(email: string): ValidationResult {
 /**
  * Validate phone number
  */
-export function validatePhone(phone: string): ValidationResult {
+export function validatePhone(phone: string): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
 
   if (!phone) {
     errors.push('Phone number is required);
@@ -73,6 +87,16 @@ export function validatePhone(phone: string): ValidationResult {
   }
 
   return {
+=======
+  
+  if (!phone) {}
+    errors.push('Phone number is required');
+  } else if (!PHONE_REGEX.test(phone)) {
+    errors.push('Invalid phone number format');}
+  }
+  
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isValid: errors.length === 0,
     errors
   };
@@ -82,8 +106,9 @@ export function validatePhone(phone: string): ValidationResult {
 /**
  * Validate name
  */
-export function validateName(name: string): ValidationResult {
+export function validateName(name: string): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
 
   if (!name) {
     errors.push('Name is required);
@@ -97,6 +122,18 @@ export function validateName(name: string): ValidationResult {
   }
 
   return {
+=======
+  
+  if (!name) {}
+    errors.push('Name is required');
+  } else if (name.length > 100) {
+    errors.push('Name is too long');}
+  } else if (!NAME_REGEX.test(name)) {
+    errors.push('Name contains invalid characters');}
+  }
+  
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isValid: errors.length === 0,
     errors
   };
@@ -106,8 +143,9 @@ export function validateName(name: string): ValidationResult {
 /**
  * Validate URL
  */
-export function validateUrl(url: string): ValidationResult {
+export function validateUrl(url: string): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
 
   if (!url) {
     errors.push('URL is required);
@@ -118,6 +156,16 @@ export function validateUrl(url: string): ValidationResult {
   }
 
   return {
+=======
+  
+  if (!url) {}
+    errors.push('URL is required');
+  } else if (!URL_REGEX.test(url)) {
+    errors.push('Invalid URL format');}
+  }
+  
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isValid: errors.length === 0,
     errors
   };
@@ -127,8 +175,9 @@ export function validateUrl(url: string): ValidationResult {
 /**
  * Validate message
  */
-export function validateMessage(message: string): ValidationResult {
+export function validateMessage(message: string): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
 
   if (!message) {
     errors.push('Message is required);
@@ -139,6 +188,16 @@ export function validateMessage(message: string): ValidationResult {
   }
 
   return {
+=======
+  
+  if (!message) {}
+    errors.push('Message is required');
+  } else if (message.length > 1000) {
+    errors.push('Message is too long');}
+  }
+  
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isValid: errors.length === 0,
     errors
   };
@@ -148,50 +207,83 @@ export function validateMessage(message: string): ValidationResult {
 /**
  * Validate form data
  */
-export function validateFormData(data: Record<string, any>): ValidationResult {
+export function validateFormData(data: Record<string, any>): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
 
   if (data.email) {
     const emailResult = validateEmail(data.email);;
 
     if (!emailResult.isValid) {
+=======
+  
+  if (data.email) {}
+    const emailResult = validateEmail(data.email);
+    if (!emailResult.isValid) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       errors.push(...emailResult.errors);
 
     }
 
   }
+<<<<<<< HEAD
 
   if (data.phone) {
     const phoneResult = validatePhone(data.phone);;
 
     if (!phoneResult.isValid) {
+=======
+  
+  if (data.phone) {}
+    const phoneResult = validatePhone(data.phone);
+    if (!phoneResult.isValid) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       errors.push(...phoneResult.errors);
 
     }
 
   }
+<<<<<<< HEAD
 
   if (data.name) {
     const nameResult = validateName(data.name);;
 
     if (!nameResult.isValid) {
+=======
+  
+  if (data.name) {}
+    const nameResult = validateName(data.name);
+    if (!nameResult.isValid) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       errors.push(...nameResult.errors);
 
     }
 
   }
+<<<<<<< HEAD
 
   if (data.message) {
     const messageResult = validateMessage(data.message);;
 
     if (!messageResult.isValid) {
+=======
+  
+  if (data.message) {}
+    const messageResult = validateMessage(data.message);
+    if (!messageResult.isValid) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
       errors.push(...messageResult.errors);
 
     }
 
   }
+<<<<<<< HEAD
 
   return {
+=======
+  
+  return {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
     isValid: errors.length === 0,
     errors
   };
