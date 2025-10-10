@@ -1,142 +1,159 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, memo } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-  // Image optimization
   useEffect(() => {
-    if (!enableImageOptimization) return;
+    // Image optimization
+    if (enableImageOptimization && typeof window !== 'undefined') {
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach((img) => {
+          const imageElement = img as HTMLImageElement;
+          if (imageElement.dataset.src) {
+            imageElement.src = imageElement.dataset.src;
+            imageElement.removeAttribute('data-src');
+          }
+        });
+      };
 
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach((img) => {
-        const image = img as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.removeAttribute('data-src');
-        }
-      });
-    };
-
-    // Run optimization after component mount
-    const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
+      // Run immediately and on scroll
+      optimizeImages();
+      window.addEventListener('scroll', optimizeImages, { passive: true });
+      
+      return () => window.removeEventListener('scroll', optimizeImages);
+    }
   }, [enableImageOptimization]);
 
-  // Lazy loading
   useEffect(() => {
-    if (!enableLazyLoading) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
+    // Lazy loading for images
+    if (enableLazyLoading && typeof window !== 'undefined') {
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      
+      const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            target.classList.add('loaded');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [enableLazyLoading]);
-
-  // Preloading
-  useEffect(() => {
-    if (!enablePreloading) return;
-
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/styles/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const criticalFont = document.createElement('link');
-      criticalFont.rel = 'preload';
-      criticalFont.href = '/fonts/inter-var.woff2';
-      criticalFont.as = 'font';
-      criticalFont.type = 'font/woff2';
-      criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);
-    };
-
-    preloadCriticalResources();
-  }, [enablePreloading]);
-
-  // Code splitting optimization
-  useEffect(() => {
-    if (!enableCodeSplitting) return;
-
-    const optimizeCodeSplitting = () => {
-      // Preload next likely routes
-      const links = document.querySelectorAll('a[href^="/"]');
-      links.forEach((link) => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href');
-          if (href && !href.startsWith('#')) {
-            // Preload the route
-            import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              imageObserver.unobserve(img);
+            }
           }
         });
       });
-    };
 
-    const timer = setTimeout(optimizeCodeSplitting, 1000);
-    return () => clearTimeout(timer);
-  }, [enableCodeSplitting]);
+      lazyImages.forEach((img) => imageObserver.observe(img));
+      
+      return () => imageObserver.disconnect();
+    }
+  }, [enableLazyLoading]);
 
-  // Performance monitoring
   useEffect(() => {
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
-        const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
+    // Preload critical resources
+    if (enablePreloading && typeof window !== 'undefined') {
+      const preloadCriticalResources = () => {
+        // Preload critical CSS
+        const criticalCSS = document.createElement('link');
+        criticalCSS.rel = 'preload';
+        criticalCSS.href = '/critical.css';
+        criticalCSS.as = 'style';
+        criticalCSS.onload = () => {
+          criticalCSS.rel = 'stylesheet';
         };
+        document.head.appendChild(criticalCSS);
 
-        // Send metrics to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-          gtag('event', 'performance_metrics', {
-            event_category: 'performance',
-            event_label: 'page_load',
-            value: Math.round(metrics.domContentLoaded)
+        // Preload critical fonts
+        const fontPreload = document.createElement('link');
+        fontPreload.rel = 'preload';
+        fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+        fontPreload.as = 'style';
+        fontPreload.crossOrigin = 'anonymous';
+        document.head.appendChild(fontPreload);
+      };
+
+      preloadCriticalResources();
+    }
+  }, [enablePreloading]);
+
+  useEffect(() => {
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const measurePerformance = () => {
+        // Measure Core Web Vitals
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            }
+            if (entry.entryType === 'first-input') {
+              console.log('FID:', entry.processingStart - entry.startTime);
+            }
+            if (entry.entryType === 'layout-shift') {
+              console.log('CLS:', (entry as any).value);
+            }
           });
-        }
-      }
-    };
+        });
 
-    // Measure performance after page load
-    window.addEventListener('load', measurePerformance);
-    return () => window.removeEventListener('load', measurePerformance);
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+        // Measure page load time
+        window.addEventListener('load', () => {
+          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+          console.log('Page Load Time:', loadTime + 'ms');
+        });
+
+        return () => observer.disconnect();
+      };
+
+      measurePerformance();
+    }
   }, []);
 
-  return <>{children}</>;
-};
+  // Resource hints for better performance
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Add resource hints
+      const addResourceHints = () => {
+        const hints = [
+          { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+          { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+          { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+          { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+          { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+        ];
+
+        hints.forEach((hint) => {
+          const link = document.createElement('link');
+          Object.entries(hint).forEach(([key, value]) => {
+            if (key === 'crossOrigin') {
+              link.crossOrigin = value as string;
+            } else {
+              (link as any)[key] = value;
+            }
+          });
+          document.head.appendChild(link);
+        });
+      };
+
+      addResourceHints();
+    }
+  }, []);
+
+  return null;
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;

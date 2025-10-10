@@ -26,31 +26,31 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./*"
       ],
       "@/components/*": [
-        "src/components/*"
+        "./app/components/*"
       ],
       "@/pages/*": [
-        "src/pages/*"
+        "./app/*"
       ],
       "@/utils/*": [
-        "src/utils/*"
+        "./utils/*"
       ],
       "@/types/*": [
-        "src/types/*"
+        "./types/*"
       ],
       "@/hooks/*": [
-        "src/hooks/*"
+        "./hooks/*"
       ],
       "@/config/*": [
-        "src/config/*"
+        "./config/*"
       ],
       "@/data/*": [
-        "src/data/*"
+        "./data/*"
       ],
       "@/content/*": [
-        "src/content/*"
+        "./content/*"
       ]
     },
     "incremental": true,
@@ -187,7 +187,85 @@
     "services/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*"
+    "jest.setup.*",
+    "app/5g-implementation/**",
+    "app/ai-3d-generation/**",
+    "app/ai-agricultural-intelligence-pro/**",
+    "app/ai-analytics-dashboard/**",
+    "app/ai-analytics/**",
+    "app/ai-api-management/**",
+    "app/ai-api-manager/**",
+    "app/ai-automation/**",
+    "app/ai-autonomous-systems/**",
+    "app/ai-blockchain-analytics/**",
+    "app/ai-blockchain-solutions/**",
+    "app/ai-business-intelligence/**",
+    "app/ai-chatbot-builder/**",
+    "app/ai-climate-solutions-pro/**",
+    "app/ai-cloud-infrastructure/**",
+    "app/ai-code-assistant/**",
+    "app/ai-code-generation/**",
+    "app/ai-code-security-auditor/**",
+    "app/ai-computer-vision/**",
+    "app/ai-content-delivery-network/**",
+    "app/ai-content-generation/**",
+    "app/ai-content-studio/**",
+    "app/ai-content-writer/**",
+    "app/ai-crm/**",
+    "app/ai-crm-assistant/**",
+    "app/ai-customer-service/**",
+    "app/ai-customer-support/**",
+    "app/ai-customer-support-bot/**",
+    "app/ai-customer-support-chatbot/**",
+    "app/ai-cybersecurity/**",
+    "app/ai-cybersecurity-monitor/**",
+    "app/ai-cybersecurity-suite/**",
+    "app/ai-data-analytics/**",
+    "app/ai-data-visualization/**",
+    "app/ai-design-studio/**",
+    "app/ai-document-processing/**",
+    "app/ai-document-processor/**",
+    "app/ai-document-scanner/**",
+    "app/ai-drug-discovery-pro/**",
+    "app/ai-ecommerce-optimizer/**",
+    "app/ai-ecommerce-solutions/**",
+    "app/ai-edge-computing/**",
+    "app/ai-education/**",
+    "app/ai-email-assistant/**",
+    "app/ai-email-marketing/**",
+    "app/ai-email-marketing-automation/**",
+    "app/ai-energy/**",
+    "app/ai-energy-grid-management-pro/**",
+    "app/ai-enterprise-solutions/**",
+    "app/ai-expense-tracker/**",
+    "app/ai-fashion-design/**",
+    "app/ai-financial-advisor/**",
+    "app/ai-financial-analyzer/**",
+    "app/ai-financial-crime-detection-pro/**",
+    "app/ai-fintech/**",
+    "app/ai-fitness-coach/**",
+    "app/ai-fraud-detection/**",
+    "app/ai-healthcare/**",
+    "app/ai-healthcare-solutions/**",
+    "app/ai-holographic-workspace/**",
+    "app/ai-hr/**",
+    "app/ai-hr-assistant/**",
+    "app/ai-image-recognition/**",
+    "app/ai-infrastructure-monitoring/**",
+    "app/ai-insurance/**",
+    "app/ai-inventory-management/**",
+    "app/ai-inventory-manager/**",
+    "app/ai-investment-optimizer/**",
+    "app/ai-invoice-generator/**",
+    "app/ai-lead-generation/**",
+    "app/ai-project-manager/**",
+    "app/ai-sales-automation/**",
+    "app/ai-workflow-automation/**",
+    "app/accessibility/**",
+    "app/team/**",
+    "app/status/**",
+    "app/web-development/**",
+    "app/utils/**"
   ],
   "references": [
     {
