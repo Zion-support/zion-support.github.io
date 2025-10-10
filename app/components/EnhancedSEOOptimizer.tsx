@@ -18,7 +18,7 @@ interface SEOOptimizerProps {}
 </string>
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({}
 
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -121,7 +121,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     }
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, noIndex, author, publishedTime, modifiedTime, section, tags]);
 
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {,
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {
   const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {}
@@ -134,7 +134,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const updateCanonicalUrl = (url: string): void => {}
     let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {,
+    if (!canonical) {
     if (!canonical) {}
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
@@ -172,7 +172,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       foundingDate: '2020',
       numberOfEmployees: '50-100',
       industry: 'Technology',
-      services: [,
+      services: [
         'AI Solutions',
         'Quantum Computing',
         'Autonomous Systems',
@@ -196,7 +196,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         addressRegion: 'DE',
         postalCode: '19709',
         addressCountry: 'US'},
-      sameAs: [,
+      sameAs: [
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup']};
 
@@ -241,10 +241,10 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {,
+        {
           '@type': 'Question',
           name: 'What AI services does Zion Tech Group offer?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
   const addFAQStructuredData = (): void => {}
     const faqData = {}
       '@context': 'https://schema.org',
@@ -261,7 +261,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'What is the pricing for AI services?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
             text: 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
@@ -270,7 +270,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'Do you provide 24/7 support?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
             text: 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
@@ -279,7 +279,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'What technologies do you specialize in?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
             text: 'We specialize in AI/ML, quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
@@ -333,7 +333,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         addressRegion: 'DE',
         postalCode: '19709',
         addressCountry: 'US'},
-      sameAs: [,
+      sameAs: [
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup']};
 
@@ -359,12 +359,12 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      publisher: {,
+      publisher: {
       publisher: {}
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com'},
-      potentialAction: {,
+      potentialAction: {
       potentialAction: {}
         '@type': 'SearchAction',
         target: 'https://ziontechgroup.com/search?q={search_term_string}',

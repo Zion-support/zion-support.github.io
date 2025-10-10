@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Star, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
-
-const DynamicContentShowcase: React.FC = () => {,
+const DynamicContentShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -12,23 +11,23 @@ const DynamicContentShowcase: React.FC = () => {,
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      content: {,
+      content: {
     title: 'Revolutionary AI Solutions',
       id: 'ai-solutions'
       title: 'AI Solutions'
-      icon: Brain;
-      color: 'text-purple-400'
+      icon: Brain,
+    color: 'text-purple-400'
       bgColor: 'bg-purple-500/10'
       content: {
         title: 'Revolutionary AI Solutions',
         description: 'Transform your business with cutting-edge artificial intelligence technologies',
-        features: [,
+        features: [
           { name: 'Machine Learning Models', description: 'Custom ML models for your specific needs', icon: '🧠' },
           { name: 'Natural Language Processing', description: 'Advanced text analysis and understanding', icon: '💬' },
           { name: 'Computer Vision', description: 'Image and video analysis capabilities', icon: '👁️' },
           { name: 'Predictive Analytics', description: 'Forecast trends and make data-driven decisions', icon: 'bar-chart' }
         ],
-        stats: [,
+        stats: [
           { label: 'Accuracy', value: '99.5%', icon: TrendingUp },
           { label: 'Processing Speed', value: '10 x Faster', icon: Zap },
           { label: 'Cost Reduction', value: '60%', icon: TrendingUp }
@@ -41,23 +40,23 @@ const DynamicContentShowcase: React.FC = () => {,
       icon: Shield,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      content: {,
+      content: {
     title: 'Enterprise IT Solutions',
       id: 'it-services'
       title: 'IT Services'
-      icon: Shield;
-      color: 'text-blue-400'
+      icon: Shield,
+    color: 'text-blue-400'
       bgColor: 'bg-blue-500/10'
       content: {
         title: 'Enterprise IT Solutions',
         description: 'Comprehensive IT services to keep your business running smoothly',
-        features: [,
+        features: [
           { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions', icon: '☁️' },
           { name: 'Cybersecurity', description: 'Advanced security measures and monitoring', icon: 'lock' },
           { name: 'Network Management', description: 'Optimized network performance and reliability', icon: 'globe' },
           { name: '24/7 Support', description: 'Round-the-clock technical assistance', icon: '🛠️' }
         ],
-        stats: [,
+        stats: [
           { label: 'Uptime', value: '99.9%', icon: Clock },
           { label: 'Response Time', value: '< 1 min', icon: Zap },
           { label: 'Client Satisfaction', value: '98%', icon: Star }
@@ -70,23 +69,23 @@ const DynamicContentShowcase: React.FC = () => {,
       icon: Zap,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      content: {,
+      content: {
     title: 'Digital Transformation',
       id: 'digital-transformation'
       title: 'Digital Transformation'
-      icon: Zap;
-      color: 'text-green-400'
+      icon: Zap,
+    color: 'text-green-400'
       bgColor: 'bg-green-500/10'
       content: {
         title: 'Digital Transformation',
         description: 'Modernize your business processes with our digital transformation services',
-        features: [,
+        features: [
           { name: 'Process Automation', description: 'Streamline workflows with intelligent automation', icon: '⚙️' },
           { name: 'Legacy Modernization', description: 'Update outdated systems and technologies', icon: '🔄' },
           { name: 'Data Migration', description: 'Secure and efficient data transfer solutions', icon: '📦' },
           { name: 'Change Management', description: 'Support your team through digital transitions', icon: 'users' }
         ],
-        stats: [,
+        stats: [
           { label: 'Efficiency Gain', value: '300%', icon: TrendingUp },
           { label: 'Time Saved', value: '40 hrs/week', icon: Clock },
           { label: 'ROI', value: '250%', icon: TrendingUp }
@@ -197,7 +196,6 @@ const DynamicContentShowcase: React.FC = () => {,
           </div>
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-
 const DynamicContentShowcase: React.FC = () => {
   const technologies = [
     {

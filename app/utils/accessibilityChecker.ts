@@ -109,8 +109,8 @@ export class AccessibilityChecker {}
     this.checkLandmarks(element);
     const score = this.calculateScore();
     return {
-      passed: this.issues.length === 0;
-      issueCount: this.issues.length;
+      passed: this.issues.length === 0,
+    issueCount: this.issues.length;
     return {}
       passed: this.issues.length === 0,
       issueCount: this.issues.length,
@@ -128,8 +128,8 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
   public checkDocument(): A11yCheckResult {
     if (typeof document === 'undefined') {
       return {
-        passed: true;
-        issueCount: 0;
+        passed: true,
+    issueCount: 0;
   public checkDocument(): A11yCheckResult {}
     if (typeof document === 'undefined') {}
       return {}
@@ -149,7 +149,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkImages(element: Element): void {,
+  private checkImages(element: Element): void {
   private checkImages(element: Element): void {}
     const images = element.querySelectorAll('img');
     images.forEach((img, index) => {}
@@ -234,7 +234,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkHeadings(element: Element): void {,
+  private checkHeadings(element: Element): void {
   private checkHeadings(element: Element): void {}
     const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     if (headings.length === 0) return;
@@ -340,7 +340,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkLinks(element: Element): void {,
+  private checkLinks(element: Element): void {
   private checkLinks(element: Element): void {}
     const links = element.querySelectorAll('a');
     links.forEach((link, index) => {}
@@ -459,7 +459,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkButtons(element: Element): void {,
+  private checkButtons(element: Element): void {
   private checkButtons(element: Element): void {}
     const buttons = element.querySelectorAll('button');
     buttons.forEach((button, index) => {}
@@ -509,7 +509,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkForms(element: Element): void {,
+  private checkForms(element: Element): void {
   private checkForms(element: Element): void {}
     const inputs = element.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {}
@@ -602,7 +602,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkKeyboardAccess(element: Element): void {,
+  private checkKeyboardAccess(element: Element): void {
     // Check for interactive elements with tabindex="-1",
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {)
@@ -689,7 +689,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkARIA(element: Element): void {,
+  private checkARIA(element: Element): void {
     const elementsWithAria = element.querySelectorAll()
       '[role], [aria-label], [aria-labelledby], [aria-describedby]')
     );
@@ -785,7 +785,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private;
    * @param element - Root element to check;
    */
-  private checkLandmarks(element: Element): void {,
+  private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
     // const _hasNav = element.querySelector('nav, [role="navigation"]');
     if (!hasMain) {
@@ -871,7 +871,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @param severity - Severity level to filter by;
    * @returns Array of issues with the specified severity;
    */
-  public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {,
+  public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {
   public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {}
     return this.issues.filter(issue => issue.severity === severity);
   public getIssuesBySeverity(severit)
@@ -883,7 +883,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @param level - WCAG level to filter by;
    * @returns Array of issues that violate the specified WCAG level;
    */
-  public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {,
+  public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {
   public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {}
     return this.issues.filter(issue => issue.wcagLevel === level);
   public getIssuesByWCAGLevel(leve)

@@ -24,17 +24,17 @@ export interface CacheConfig {}
 
 export interface CacheEntry<T> {}
   value: T;
-  timestamp: number;
-  ttl: number;
-}
+  timestamp: number,
+    ttl: number
+  }
 
 export interface CacheStats {}
   hits: number;
   misses: number;
   hitRate: number;
-  count: number;
-  entries: number;
-}
+  count: number,
+    entries: number
+  }
 
 export class CacheManager<T = unknown> {}
   private cache: Map<string, CacheEntry<T>> = new Map();
@@ -42,15 +42,15 @@ export class CacheManager<T = unknown> {}
     hits: 0;
     misses: 0;
     hitRate: 0;
-    count: 0;
-    entries: 0;
+    count: 0,
+    entries: 0
   };
-  private config: Required<CacheConfig>;
-,
+  private config: Required<CacheConfig>,
+    
   constructor(config: CacheConfig = {}) {
     this.config = {
-      storage: config.storage || CacheStorage.Memory;
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
+      storage: config.storage || CacheStorage.Memory,
+    defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
   private stats: CacheStats = {}
     hits: 0,
     misses: 0,
@@ -77,8 +77,8 @@ export class CacheManager<T = unknown> {}
     const entry: CacheEntry<T> = {}
       value,
       timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL;
-    };
+      ttl: ttl || this.config.defaultTTL
+  };
 
     this.cache.set(key, entry);
     this.stats.entries = this.cache.size;
@@ -238,7 +238,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   has(key: string): boolean {}
     const entry = this.cache.get(key);
 ,
-    if (!entry) {,
+    if (!entry) {
       return false;
     }
 
@@ -268,7 +268,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       this.stats.entries = this.cache.size;
 
       // Save to persistent storage if needed;
-      if (this.config.storage !== CacheStorage.Memory) {,
+      if (this.config.storage !== CacheStorage.Memory) {
       // Save to persistent storage if needed
       if (this.config.storage !== CacheStorage.Memory) {}
         this.saveToStorage();
@@ -457,8 +457,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       if (storage) {}
         const data = {}
           entries: Object.fromEntries(this.cache),
-          stats: this.stats;
-          timestamp: Date.now()};
+          stats: this.stats,
+    timestamp: Date.now()};
         storage.setItem('cache-manager', JSON.stringify(data));
       }
     } catch (error) {}
@@ -519,11 +519,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     switch (this.config.storage) {
       case CacheStorage.LocalStorage: return window.localStorage;
     switch (this.config.storage) {}
-      case CacheStorage.LocalStorage:
-        return window.localStorage;
+      case CacheStorage.LocalStorage: return window.localStorage;
       case CacheStorage.SessionStorage:
-        return window.sessionStorage;
-      default:,
+        return window.sessionStorage,
+    default:,
         return null;
     }
   }

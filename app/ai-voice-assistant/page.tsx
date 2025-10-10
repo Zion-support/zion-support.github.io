@@ -35,8 +35,7 @@ import {
   Battery,
   Signal;
 } from 'lucide-react';
-
-const AIVoiceAssistantPage: React.FC = () => {,
+const AIVoiceAssistantPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -49,33 +48,33 @@ const AIVoiceAssistantPage: React.FC = () => {,
 
   const features = [
     {
-      icon: Brain;
-      title: 'Natural Language Processing',
+      icon: Brain,
+    title: 'Natural Language Processing',
       description: 'Advanced NLP with 99.5% accuracy in understanding context and intent',
       stats: '99.5% accuracy'},
     {
-      icon: Languages;
-      title: 'Multi-Language Support',
+      icon: Languages,
+    title: 'Multi-Language Support',
       description: 'Support for 50+ languages with real-time translation capabilities',
       stats: '50+ languages'},
     {
-      icon: Headphones;
-      title: 'Custom Voice Training',
+      icon: Headphones,
+    title: 'Custom Voice Training',
       description: 'Train the AI with your voice patterns and speaking style',
       stats: 'Custom voices'},
     {
-      icon: Zap;
-      title: 'Real-Time Processing',
+      icon: Zap,
+    title: 'Real-Time Processing',
       description: 'Ultra-low latency voice processing for natural conversations',
       stats: '<100ms latency'},
     {
-      icon: Shield;
-      title: 'Privacy & Security',
+      icon: Shield,
+    title: 'Privacy & Security',
       description: 'End-to-end encryption with local processing options',
       stats: 'Bank-level security'},
     {
-      icon: Globe;
-      title: 'Cloud & Edge Computing',
+      icon: Globe,
+    title: 'Cloud & Edge Computing',
       description: 'Hybrid processing for optimal performance and privacy',
       stats: 'Hybrid processing'}
   ];
@@ -141,8 +140,8 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Email support',
         'Mobile app access'
       ],
-      popular: false;
-      cta: 'Start Free Trial'},
+      popular: false,
+    cta: 'Start Free Trial'},
     {
       name: 'Professional'
       price: '$79',
@@ -157,8 +156,8 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'API access',
         'Team collaboration'
       ],
-      popular: true;
-      cta: 'Start Free Trial'},
+      popular: true,
+    cta: 'Start Free Trial'},
     {
       name: 'Enterprise'
       price: '$199',
@@ -173,8 +172,8 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Advanced analytics',
         'White-label options'
       ],
-      popular: false;
-      cta: 'Contact Sales'}
+      popular: false,
+    cta: 'Contact Sales'}
   ];
 
   const testimonials = [
@@ -183,22 +182,22 @@ const AIVoiceAssistantPage: React.FC = () => {,
       role: 'Product Manager',
       company: 'TechCorp',
       content: 'The AI Voice Assistant has revolutionized how I manage my daily tasks. The natural conversation flow is incredible.',
-      rating: 5;
-      avatar: 'SC'},
+      rating: 5,
+    avatar: 'SC'},
     {
       name: 'Michael Rodriguez'
       role: 'CEO',
       company: 'StartupXYZ',
       content: 'We use it for our international team meetings. The real-time translation feature is a game-changer.',
-      rating: 5;
-      avatar: 'MR'},
+      rating: 5,
+    avatar: 'MR'},
     {
       name: 'Emily Johnson'
       role: 'Executive Assistant',
       company: 'Global Inc',
       content: 'Scheduling and managing my executive\'s calendar has never been easier. The AI understands context perfectly.',
-      rating: 5;
-      avatar: 'EJ'}
+      rating: 5,
+    avatar: 'EJ'}
   ];
 
   return (

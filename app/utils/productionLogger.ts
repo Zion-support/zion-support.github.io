@@ -7,17 +7,17 @@ type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 interface LogEntry {}
   level: LogLevel;
   message: string;
-  data?: unknown;
-  timestamp: string;
-  context?: string;
-}
+  data?: unknown,
+    timestamp: string;
+  context?: string
+  }
 
 class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
 
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
-    const entry: LogEntry = {,
+    const entry: LogEntry = {
       level;
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {}
@@ -53,9 +53,9 @@ class ProductionLogger {}
     }
   }
 
-  private sendToMonitoring(entry: LogEntry): void {,
+  private sendToMonitoring(entry: LogEntry): void {
     // Send to analytics/monitoring service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {,
+    if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'error_log', {)
         error_message: entry.message;)
         error_context: entry.context)

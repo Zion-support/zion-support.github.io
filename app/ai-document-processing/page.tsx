@@ -4,8 +4,7 @@ import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, FileText, Navigation } from 'lucide-react';
-
-const AiDocumentProcessingPage: React.FC = () => {,
+const AiDocumentProcessingPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       <SEOOptimizer;
         title="AI Document Processing - Zion Tech Group",

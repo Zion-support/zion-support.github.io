@@ -16,7 +16,7 @@ interface EnhancedAccessibilityEnhancerProps {}
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({}
   enableKeyboardNavigation = true,
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({,
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true;
   enableScreenReader = true,
   enableHighContrast = true,
@@ -107,7 +107,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     // Announce page changes;
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {,
+      if (liveRegion) {
     // Announce page changes
     const announcePageChange = (message: string) => {}
       const liveRegion = document.getElementById('live-region');
@@ -153,8 +153,8 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     // Detect system high contrast preference;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {,
-      if (e.matches) {,
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
     const handleContrastChange = (e: MediaQueryListEvent) => {}
       if (e.matches) {}
         document.body.classList.add('high-contrast');
@@ -186,26 +186,26 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     style.textContent = `
       *:focus {}
         outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
+        outline-offset: 2px !important
+  }
 
-      .focus-visible: focus {,
+      .focus-visible: focus {
     outline: 2px solid #3b82f6 !important;
       .focus-visible:focus {}
         outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
+        outline-offset: 2px !important
+  }
 
-      .focus-visible: focus:not(:focus-visible) {,
+      .focus-visible: focus:not(:focus-visible) {
     outline: none !important;
       .focus-visible:focus:not(:focus-visible) {}
-        outline: none !important;
-      }
+        outline: none !important
+  }
     `;
     document.head.appendChild(style);
 
     // Trap focus in modals;
-    const trapFocus = (element: HTMLElement) => {,
+    const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll()
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {}
@@ -216,9 +216,9 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
       const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {,
-          if (e.shiftKey) {,
-            if (document.activeElement === firstElement) {,
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
       const handleTabKey = (e: KeyboardEvent) => {}
         if (e.key === 'Tab') {}
           if (e.shiftKey) {}
@@ -251,21 +251,21 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     // Add missing ARIA labels;
     const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
-    buttons.forEach((button) => {,
+    buttons.forEach((button) => {
       const text = button.textContent?.trim();
-      if (text && text.length > 0) {,
+      if (text && text.length > 0) {
         button.setAttribute('aria-label', text);
       }
 
     // Add ARIA labels to images;
     const images = document.querySelectorAll('img: not([alt])');
-    images.forEach((img) => {,
+    images.forEach((img) => {
       img.setAttribute('alt', '');
       img.setAttribute('aria-hidden', 'true');
 
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
-    inputs.forEach((input) => {,
+    inputs.forEach((input) => {
   // ARIA labels enhancement
   const enhanceAriaLabels = useCallback(() => {}
     if (typeof window === 'undefined' || !enableAriaLabels) return;
@@ -311,8 +311,8 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    const handleMotionChange = (e: MediaQueryListEvent) => {,
-      if (e.matches) {,
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
     const handleMotionChange = (e: MediaQueryListEvent) => {}
       if (e.matches) {}
         document.body.classList.add('reduce-motion');
@@ -348,11 +348,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.style.cssText = `
-      position: absolute;,
-    top: -40 px;
-      left: 6 px;
+      position: absolute,
+    
+    top: -40 px,
+    left: 6 px;
       z-index: 1000;
-    `;,
+    `,
+    
 ,
     skipLinks.forEach(({ href, text }) => {
     `;
@@ -363,17 +365,21 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       link.textContent = text;
       link.className = 'skip-link';
       link.style.cssText = `
-        position: absolute;,
-    top: -40 px;
-        left: 6 px;,
-    background: #000;
-        color: #fff;,
+        position: absolute,
+    
+    top: -40 px,
+    left: 6 px,
+    
+    background: #000,
+    color: #fff,
+    
     padding: 8 px;
         text-decoration: none;
-        z-index: 1000;,
+        z-index: 1000,
+    
     transition: top 0.3 s;
-      `;
-,
+      `,
+    
       link.addEventListener('focus', () => {
 
       link.addEventListener('focus', () => {}
@@ -401,23 +407,23 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         --text-secondary: #e5 e7 eb;
         --bg-primary: #000000;
         --bg-secondary: #1 f2937;
-        --accent: #60 a5 fa;
-      }
+        --accent: #60 a5 fa
+  }
 
       .high-contrast * {}
         color: var(--text-primary) !important;
-        background-color: var(--bg-primary) !important;
-      }
+        background-color: var(--bg-primary) !important
+  }
 
       .high-contrast a {}
         color: var(--accent) !important;
-        text-decoration: underline !important;
-      }
+        text-decoration: underline !important
+  }
 
       .high-contrast button {}
         border: 2px solid var(--accent) !important;
-        background-color: var(--bg-secondary) !important;
-      }
+        background-color: var(--bg-secondary) !important
+  }
     `;
     document.head.appendChild(style);
   }, [enableColorContrast]);
@@ -432,32 +438,32 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const style = document.createElement('style');
     style.textContent = `
       html {}
-        font-size: 16px;
-      }
+        font-size: 16px
+  }
 
-      @media (prefers-font-size: large) {,
-        html {,
+      @media (prefers-font-size: large) {
+        html {
       @media (prefers-font-size: large) {}
         html {}
-          font-size: 18px;
-        }
+          font-size: 18px
+  }
       }
 
-      @media (prefers-font-size: x-large) {,
-        html {,
+      @media (prefers-font-size: x-large) {
+        html {
       @media (prefers-font-size: x-large) {}
         html {}
-          font-size: 20px;
-        }
+          font-size: 20px
+  }
       }
 
       .font-scale-large {}
-        font-size: 1.125rem;
-      }
+        font-size: 1.125rem
+  }
 
       .font-scale-x-large {}
-        font-size: 1.25rem;
-      }
+        font-size: 1.25rem
+  }
     `;
     document.head.appendChild(style);
   }, [enableFontScaling]);

@@ -12,13 +12,13 @@ export default function RootLayout({
 export default function RootLayout({)
   children)
 }: {
-  children: React.ReactNode;
-}) {
+  children: React.ReactNode
+  }) {
   return(<html lang="en" className="dark">
 export default function RootLayout({)}
   children}: {}
-  children: React.ReactNode;
-}) {}
+  children: React.ReactNode
+  }) {}
   return (
     <html lang="en" className="dark">
       <head>
@@ -54,7 +54,7 @@ export default function RootLayout({)}
         <script;
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({,
+            __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Zion Tech Group'
@@ -91,8 +91,8 @@ export default function RootLayout({)}
                 'https: //instagram.com/ziontechgroup',
                 'https: //youtube.com/@ziontechgroup',
                 'https: //github.com/ziontechgroup'],
-              service: [,
-                {,
+              service: [
+                {
               service: [
                 {}
                   '@type': 'Service',

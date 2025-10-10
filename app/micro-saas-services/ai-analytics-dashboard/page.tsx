@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIAnalyticsDashboard: React.FC = () => {,
+const AIAnalyticsDashboard: React.FC = () => {
   const [selectedMetric, setSelectedMetric] = useState('revenue');
 
   const metrics = [

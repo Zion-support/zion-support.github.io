@@ -4,8 +4,8 @@ import { Eye, Camera, Target, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVisionPage: React.FC = () => {,
-  const features = [,
+const AIVisionPage: React.FC = () => {
+  const features = [
     'Object Detection & Recognition',
     'Image Classification',
     'Video Analysis',
@@ -27,18 +27,18 @@ const AIVisionPage: React.FC = () => {,
     {
       title: 'Quality Control',
       description: 'Automated quality inspection in manufacturing with defect detection',
-      icon: Target;
-    },
+      icon: Target
+  },
     {
       title: 'Security & Surveillance',
       description: 'Intelligent surveillance systems with real-time threat detection',
-      icon: Camera;
-    },
+      icon: Camera
+  },
     {
       title: 'Medical Imaging',
       description: 'AI-powered medical image analysis for faster diagnosis',
-      icon: Eye;
-    }
+      icon: Eye
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

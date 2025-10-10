@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIContentGenerator: React.FC = () => {,
+const AIContentGenerator: React.FC = () => {
   const [content, setContent] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
 

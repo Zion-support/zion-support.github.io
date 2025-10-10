@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
-
-const ContentStatistics: React.FC = () => {,
+const ContentStatistics: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({)
     projects: 0;)
@@ -10,15 +9,15 @@ const ContentStatistics: React.FC = () => {,
     uptime: 0;)
     satisfaction: 0),
     countries: 0),
-    years: 0;
+    years: 0
   });
 
   const stats = [
     {
       id: 'projects'
       label: 'Projects Completed'
-      value: 500;
-      suffix: '+'
+      value: 500,
+    suffix: '+'
       icon: Award;
 const ContentStatistics: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
@@ -44,8 +43,8 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'clients'
       label: 'Happy Clients'
-      value: 200;
-      suffix: '+'
+      value: 200,
+    suffix: '+'
       icon: Users;
     {}
       id: 'clients',
@@ -59,8 +58,8 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'uptime'
       label: 'Uptime Guarantee'
-      value: 99.9;
-      suffix: '%'
+      value: 99.9,
+    suffix: '%'
       icon: Shield;
     {}
       id: 'uptime',
@@ -74,8 +73,8 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'satisfaction'
       label: 'Client Satisfaction'
-      value: 98;
-      suffix: '%'
+      value: 98,
+    suffix: '%'
       icon: Star;
     {}
       id: 'satisfaction',
@@ -89,8 +88,8 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'countries'
       label: 'Countries Served'
-      value: 25;
-      suffix: '+'
+      value: 25,
+    suffix: '+'
       icon: Globe;
     {}
       id: 'countries',
@@ -104,8 +103,8 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'years'
       label: 'Years Experience'
-      value: 10;
-      suffix: '+'
+      value: 10,
+    suffix: '+'
       icon: Clock;
     {}
       id: 'years',
@@ -262,7 +261,6 @@ const ContentStatistics: React.FC = () => {}
 export default ContentStatistics;
 import React from 'react';
 import { Users, Award, TrendingUp, Clock } from 'lucide-react';
-
 const ContentStatistics: React.FC = () => {
   const stats = [
     {

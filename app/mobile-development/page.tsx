@@ -4,8 +4,8 @@ import { Smartphone, Code, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const MobileDevelopmentPage: React.FC = () => {,
-  const features = [,
+const MobileDevelopmentPage: React.FC = () => {
+  const features = [
     'iOS & Android Development',
     'Cross-platform Solutions',
     'UI/UX Design',
@@ -27,18 +27,18 @@ const MobileDevelopmentPage: React.FC = () => {,
     {
       title: 'Native Apps',
       description: 'High-performance native iOS and Android applications',
-      icon: Smartphone;
-    },
+      icon: Smartphone
+  },
     {
       title: 'Cross-platform',
       description: 'React Native and Flutter apps for maximum reach',
-      icon: Code;
-    },
+      icon: Code
+  },
     {
       title: 'App Optimization',
       description: 'Performance tuning and app store optimization',
-      icon: Zap;
-    }
+      icon: Zap
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

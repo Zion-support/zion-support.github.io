@@ -11,8 +11,8 @@ export enum ErrorSeverity {}
 }
 export interface ErrorLogEntry {
   timestamp: string;
-  severity: ErrorSeverity;
-  message: string;
+  severity: ErrorSeverity,
+    message: string;
   error?: Error;
 export interface ErrorLogEntry {}
   timestamp: string
@@ -35,7 +35,7 @@ class ErrorLogger {}
     error?: Error),
     context?: Record<string, unknown>
   ): void {
-    const entry: ErrorLogEntry = {,
+    const entry: ErrorLogEntry = {
   log()
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
@@ -49,8 +49,8 @@ class ErrorLogger {}
       error,
       context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
-      url: typeof window !== 'undefined' ? window.location.href : undefined;
-      stackTrace: error?.stack}
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+    stackTrace: error?.stack}
     }
     // Add to internal log;
     this.logs.push(entry)
@@ -90,7 +90,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   /**
    * Log to console with appropriate styling;
    */
-  private logToConsole(entry: ErrorLogEntry): void {,
+  private logToConsole(entry: ErrorLogEntry): void {
     const styles: Record<ErrorSeverity, string> = {
   private logToConsole(entry: ErrorLogEntry): void {}
     const styles: Record<ErrorSeverity, string> = {}
@@ -120,8 +120,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   /**
    * Send error to external logging service;
    */
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {,
-    try {,
+  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
+    try {
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
     try {}
       // In production, you would send to a service like Sentry, LogRocket, etc.
@@ -175,7 +175,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   /**
    * Get recent logs;
    */
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {,
+  getRecentLogs(count: number = 10): ErrorLogEntry[] {
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     return this.logs.slice(-count);}
   getRecentLogs(coun)
@@ -184,7 +184,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   /**
    * Get logs by severity;
    */
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {,
+  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
     return this.logs.filter(log => log.severity === severity);}
   getLogsBySeverity(severit)

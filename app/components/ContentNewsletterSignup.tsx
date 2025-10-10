@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Send, CheckCircle, Star, Zap, Shield } from 'lucide-react';
-
-const ContentNewsletterSignup: React.FC = () => {,
+const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -13,23 +12,24 @@ const ContentNewsletterSignup: React.FC = () => {,
     // Simulate API call;
     setTimeout(() => {
       setIsSubscribed(true);
-      setIsLoading(false);,
+      setIsLoading(false),
+    
       setEmail('');
     }, 1500);
   };
 
   const benefits = [
     {
-      icon: Star;
-      title: 'Exclusive AI Insights',
+      icon: Star,
+    title: 'Exclusive AI Insights',
       description: 'Get the latest AI trends and industry updates'},
     {
-      icon: Zap;
-      title: 'Early Access',
+      icon: Zap,
+    title: 'Early Access',
       description: 'Be the first to know about new features and services'},
     {
-      icon: Shield;
-      title: 'Security Tips',
+      icon: Shield,
+    title: 'Security Tips',
       description: 'Weekly cybersecurity tips and best practices'}
   ];
 
@@ -174,7 +174,6 @@ const ContentNewsletterSignup: React.FC = () => {,
             </div>
           </div>
 import { Mail, Send, CheckCircle } from 'lucide-react';
-
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);

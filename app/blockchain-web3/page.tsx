@@ -3,46 +3,46 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const BlockchainWeb3Page: React.FC = () => {,
-  const services = [,
-    {,
-      icon: Code;
-      title: 'Smart Contract Development',
+const BlockchainWeb3Page: React.FC = () => {
+  const services = [
+    {
+      icon: Code,
+    title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise applications.',
       features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Multi-chain support'],
       benefits: ['100% secure contracts', 'Gas-optimized code', 'Multi-chain compatibility', 'Enterprise-grade security']
     },
     {
-      icon: Globe;
-      title: 'DApp Development',
+      icon: Globe,
+    title: 'DApp Development',
       description: 'Decentralized applications with intuitive user interfaces and seamless blockchain integration.',
       features: ['Frontend development', 'Web3 integration', 'Wallet connectivity', 'User experience design'],
       benefits: ['Intuitive interfaces', 'Seamless UX', 'Multi-wallet support', 'Mobile responsive']
     },
     {
-      icon: Shield;
-      title: 'DeFi Solutions',
+      icon: Shield,
+    title: 'DeFi Solutions',
       description: 'Decentralized finance platforms including DEXs, lending protocols, and yield farming.',
       features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity management'],
       benefits: ['High liquidity', 'Low fees', 'Secure protocols', 'Yield optimization']
     },
     {
-      icon: Users;
-      title: 'NFT Marketplace',
+      icon: Users,
+    title: 'NFT Marketplace',
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
       features: ['NFT minting', 'Marketplace trading', 'Auction system', 'Royalty management'],
       benefits: ['Easy minting', 'Secure trading', 'Fair auctions', 'Creator royalties']
     },
     {
-      icon: Database;
-      title: 'Blockchain Integration',
+      icon: Database,
+    title: 'Blockchain Integration',
       description: 'Integrate blockchain technology into existing enterprise systems and workflows.',
       features: ['API development', 'Data synchronization', 'Legacy integration', 'Real-time updates'],
       benefits: ['Seamless integration', 'Real-time data', 'Legacy compatibility', 'Scalable architecture']
     },
     {
-      icon: Lock;
-      title: 'Security Auditing',
+      icon: Lock,
+    title: 'Security Auditing',
       description: 'Comprehensive security audits for smart contracts and blockchain applications.',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking'],
       benefits: ['Zero vulnerabilities', 'Compliance ready', 'Security best practices', 'Risk mitigation']

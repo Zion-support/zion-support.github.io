@@ -15,7 +15,7 @@ interface EnhancedAnalyticsProps {}
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
   enableGoogleAnalytics = true,
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   enableGoogleAnalytics = true;
   enableGoogleTagManager = true,
   enableFacebookPixel = false,
@@ -39,7 +39,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
 
     // Initialize gtag;
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: unknown[]) {,
+    function gtag(...args: unknown[]) {
     function gtag(...args: unknown[]) {}
       window.dataLayer?.push(args);
     }
@@ -116,9 +116,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
 
     const PIXEL_ID = 'XXXXXXXXXXXXXXX'; // Replace with actual Pixel ID;
     // Facebook Pixel initialization;
-    (function(f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement | null) {,
+    (function(f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement | null) {
       if (f.fbq) return;
-      n = f.fbq = function() {,
+      n = f.fbq = function() {
   // Facebook Pixel setup
   const setupFacebookPixel = useCallback(() => {}
     if (typeof window === 'undefined' || !enableFacebookPixel) return;

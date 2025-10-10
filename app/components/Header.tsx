@@ -8,7 +8,7 @@ const Header: React.FC = () => {
       <Navigation >{/* Spacer to prevent content from going under fixed header */}</Navigation>
       </Navigation><div className="h-16 lg:h-20" />
     </>
-const Header: React.FC = () => {,
+const Header: React.FC = () => {
   return(<>)
       <Navigation />),
       {/* Spacer to prevent content from going under fixed header */}
@@ -17,7 +17,6 @@ const Header: React.FC = () => {,
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare, Target, Zap, Stethoscope, CreditCard, FileText, BarChart, Atom, Bot, Link as LinkIcon, Smartphone, Settings, Eye, Activity } from 'lucide-react';
-
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

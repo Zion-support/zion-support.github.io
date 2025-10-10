@@ -17,7 +17,7 @@ interface AdvancedAccessibilityEnhancerProps {}
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({}
   enableKeyboardNavigation = true,
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({,
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true;
   enableScreenReader = true,
   enableHighContrast = true,
@@ -47,7 +47,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     reducedMotion: false;)
     fontSize: 'normal'),
     screenReader: false),
-    keyboardNavigation: false;
+    keyboardNavigation: false
   });
 
   // Detect user preferences;
@@ -73,18 +73,18 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     setAccessibilitySettings(prev => ({)
       ...prev),
       reducedMotion: prefersReducedMotion),
-      highContrast: prefersHighContrast;
-    }));
+      highContrast: prefersHighContrast
+  }));
 
     // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-,
-    const handleMotionChange = (e: MediaQueryListEvent) => {,
+    const contrastQuery = window.matchMedia('(prefers-contrast: high)'),
+    
+    const handleMotionChange = (e: MediaQueryListEvent) => {
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
     };
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {,
+    const handleContrastChange = (e: MediaQueryListEvent) => {
 
     const handleMotionChange = (e: MediaQueryListEvent) => {}
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
@@ -141,7 +141,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
-        if (skipLink) {,
+        if (skipLink) {
   // Keyboard navigation enhancement
   const setupKeyboardNavigation = useCallback(() => {}
     if (typeof window === 'undefined') return;
@@ -204,7 +204,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Announce page changes;
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {,
+      if (liveRegion) {
     // Announce page changes
     const announcePageChange = (message: string) => {}
       const liveRegion = document.getElementById('live-region');
@@ -239,7 +239,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
     // Trap focus in modals;
-    const trapFocus = (element: HTMLElement) => {,
+    const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll()
     const trapFocus = (element: HTMLElement) => {}
       const focusableElements = element.querySelectorAll()
@@ -250,9 +250,9 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       const lastElement = focusableElements[focusableElements.length - 1];
 
       const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {,
-          if (e.shiftKey) {,
-            if (document.activeElement === firstElement) {,
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
       const handleTabKey = (e: KeyboardEvent) => {}
         if (e.key === 'Tab') {}
           if (e.shiftKey) {}
@@ -376,7 +376,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       const color = styles.color;
 
       // Simple contrast check (this would need a more sophisticated implementation),
-      if (backgroundColor && color) {,
+      if (backgroundColor && color) {
         // Add visual indicator for low contrast elements;
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {}
@@ -404,7 +404,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       const command = event.results[0][0].transcript.toLowerCase();
 
       // Voice commands;
-      if (command.includes('go to home')) {,
+      if (command.includes('go to home')) {
       // Voice commands
       if (command.includes('go to home')) {}
         window.location.href = '/';
@@ -415,14 +415,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       } else if (command.includes('go to services')) {}
         window.location.href = '/services';
       } else if (command.includes('call phone')) {
-        window.location.href = 'tel: +13024640950';
-      } else if (command.includes('send email')) {
-        window.location.href = 'mailto: kleber@ziontechgroup.com';
-      } else if (command.includes('call phone')) {}
-        window.location.href = 'tel:+13024640950';
-      } else if (command.includes('send email')) {}
-        window.location.href = 'mailto:kleber@ziontechgroup.com';
-      }
+        window.location.href = 'tel: +13024640950'
+  } else if (command.includes('send email')) {
+        window.location.href = 'mailto: kleber@ziontechgroup.com'
+  } else if (command.includes('call phone')) {}
+        window.location.href = 'tel: +13024640950'
+  } else if (command.includes('send email')) {}
+        window.location.href = 'mailto: kleber@ziontechgroup.com'
+  }
     };
 
     // Add voice navigation button;
@@ -468,8 +468,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   return null;
 interface AdvancedAccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode
+  }
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
@@ -478,22 +478,22 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       // Add high contrast mode toggle
       const contrastToggle = document.createElement('button');
       contrastToggle.textContent = 'Toggle High Contrast';
-      contrastToggle.className = 'sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-md z-50';
+      contrastToggle.className = 'sr-only focus: not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-md z-50';
       contrastToggle.onclick = () => {
-        document.body.classList.toggle('high-contrast');
-      };
+        document.body.classList.toggle('high-contrast')
+  };
       document.body.appendChild(contrastToggle);
 
       // Add font size controls
       const fontSizeControls = document.createElement('div');
-      fontSizeControls.className = 'sr-only focus:not-sr-only fixed top-16 right-4 bg-gray-800 text-white p-2 rounded-md z-50';
+      fontSizeControls.className = 'sr-only focus: not-sr-only fixed top-16 right-4 bg-gray-800 text-white p-2 rounded-md z-50';
       fontSizeControls.innerHTML = `
         <button onclick="document.body.style.fontSize='0.875rem'">A-</button>
         <button onclick="document.body.style.fontSize='1rem'">A</button>
         <button onclick="document.body.style.fontSize='1.125rem'">A+</button>
       `;
-      document.body.appendChild(fontSizeControls);
-    };
+      document.body.appendChild(fontSizeControls)
+  };
 
     enhanceAccessibility();
   }, []);

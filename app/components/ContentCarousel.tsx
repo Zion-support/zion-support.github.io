@@ -1,19 +1,17 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, ArrowRight, Brain, Cpu, Shield, Zap, Target, BarChart, Users, Settings } from 'lucide-react';
-
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 import { ChevronLeft, ChevronRight, Star, Users, TrendingUp, Award } from 'lucide-react';
-
-const ContentCarousel: React.FC = () => {,
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      id: 1;
-      title: "AI-Powered Business Transformation"
+      id: 1,
+    title: "AI-Powered Business Transformation"
       description: "See how we helped a Fortune 500 company achieve 300% ROI with our AI solutions"
       image: "🤖"
       id: 1,
@@ -58,32 +56,32 @@ const ContentCarousel: React.FC = () => {,
       description: "See how we helped a Fortune 500 company achieve 300% ROI with our AI solutions",
       image: "🤖",
       stats: "300% ROI",
-      icon: TrendingUp;
-      color: "from-blue-500 to-cyan-600"},
+      icon: TrendingUp,
+    color: "from-blue-500 to-cyan-600"},
     {
-      id: 2;
-      title: "Enterprise Security Solutions"
+      id: 2,
+    title: "Enterprise Security Solutions"
       description: "Bank-level security implementation for a leading financial institution"
       image: "🔒"
       stats: "99.9% Uptime",
-      icon: Award;
-      color: "from-green-500 to-emerald-600"},
+      icon: Award,
+    color: "from-green-500 to-emerald-600"},
     {
-      id: 3;
-      title: "Cloud Migration Success"
+      id: 3,
+    title: "Cloud Migration Success"
       description: "Seamless cloud migration reducing costs by 40% and improving performance"
       image: "☁️"
       stats: "40% Cost Reduction",
-      icon: Users;
-      color: "from-purple-500 to-pink-600"},
+      icon: Users,
+    color: "from-purple-500 to-pink-600"},
     {
-      id: 4;
-      title: "AI Marketing Automation"
+      id: 4,
+    title: "AI Marketing Automation"
       description: "Automated marketing campaigns increasing lead generation by 250%"
       image: "📈"
       stats: "250% More Leads",
-      icon: Star;
-      color: "from-orange-500 to-red-600",
+      icon: Star,
+    color: "from-orange-500 to-red-600",
       icon: Star,
       color: "from-orange-500 to-red-600"
     }
@@ -113,15 +111,15 @@ const ContentCarousel: React.FC = () => {,
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number) => {,
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
+    setIsAutoPlaying(false)
   };
 
   const formatNumber = (num: number): string => {
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
-    }
+      return (num / 1000).toFixed(1) + 'k'
+  }
     return num.toString();
   };return (
     <div className="bg-gray-50 py-16 px-4">
@@ -363,7 +361,6 @@ const ContentCarousel: React.FC = () => {,
 export default ContentCarousel;
 import React from 'react';
 import { ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
-
 const ContentCarousel: React.FC = () => {
   const testimonials = [
     {

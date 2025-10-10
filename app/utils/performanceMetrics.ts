@@ -7,8 +7,8 @@ export interface PerformanceMetric {
   name: string;
   value: number;
   unit: string;
-  timestamp: Date;
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
+  timestamp: Date,
+    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string, unknown>;}
 }
 export interface WebVitalsMetrics {
@@ -39,26 +39,29 @@ export interface PerformanceReport {}
   summary: {
     avgLoadTime: number;
     totalMetrics: number;
-    performanceScore: number;
-  webVitals: WebVitalsMetrics
+    performanceScore: number,
+    webVitals: WebVitalsMetrics
   summary: {}
     avgLoadTime: number
     totalMetrics: number
     performanceScore: number
-    recommendations: string[];}
+    recommendations: string[]
   }
-  timestamp: Date;
-}
+  }
+  timestamp: Date
+  }
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics;
-  private metrics: PerformanceMetric[] = [];}
+  private metrics: PerformanceMetric[] = []
+  }
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
-  constructor() {,
-    if (typeof window !== 'undefined') {,
+  constructor() {
+    if (typeof window !== 'undefined') {
 export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
-  private metrics: PerformanceMetric[] = [];}
+  private metrics: PerformanceMetric[] = []
+  }
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = []
   constructor() {}
@@ -76,8 +79,8 @@ export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
   };
   timestam,
-  p: Date;
-}
+  p: Date
+  }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {};
   private,
@@ -107,7 +110,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
                 unit: 'ms'),
                 timestamp: new Date(),
                 category: 'load',
-                metadata: {,
+                metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart;
   private initializeObservers(): void {}
     // Observe navigation timing
@@ -257,10 +260,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Record a custom performance metric;
    */
-  recordMetric(metric: PerformanceMetric): void {,
+  recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric),
     // Keep only last 1000 metrics;
-    if (this.metrics.length > 1000) {,
+    if (this.metrics.length > 1000) {
   recordMetric(metric: PerformanceMetric): void {}
     this.metrics.push(metric)
     // Keep only last 1000 metrics
@@ -285,8 +288,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       category: 'load'
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart;
-        tcpConnection: perfData.connectEnd - perfData.connectStart;
-        serverResponse: perfData.responseEnd - perfData.requestStart;
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+    serverResponse: perfData.responseEnd - perfData.requestStart;
   recordPageLoad(): void {}
     if (typeof window === 'undefined') return
     const perfData = window.performance.timing
@@ -316,7 +319,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'ms'),
       timestamp: new Date(),
       category: 'network',
-      metadata: {,
+      metadata: {
         url;
   recordNetworkRequest(url: string, duration: number, status: number): void {}
     this.recordMetric({)}
@@ -348,9 +351,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'bytes')
       timestamp: new Date(),
       category: 'memory',
-      metadata: {,
-        total: memory.totalJSHeapSize;
-        limit: memory.jsHeapSizeLimit;
+      metadata: {
+        total: memory.totalJSHeapSize,
+    limit: memory.jsHeapSizeLimit;
   recordMemoryUsage(): void {}
     if (typeof window === 'undefined') return
     if (!(performance as PerformanceWithMemory).memory) return
@@ -372,7 +375,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Measure function execution time;
    */
-  measureFunction<T>(name: string, fn: () => T): T {,
+  measureFunction<T>(name: string, fn: () => T): T {
     const startTime = performance.now(),
     const result = fn(),
     const endTime = performance.now(),
@@ -408,7 +411,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Measure async function execution time;
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
     const startTime = performance.now(),
     const result = await fn(),
     const endTime = performance.now(),
@@ -451,7 +454,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Get metrics by category;
    */
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,
+  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {}
     return this.metrics.filter(m => m.category === category);}
   getMetricsByCategory(categor)
@@ -527,7 +530,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   getRecommendations(): string[] {
     const recommendations: string[] = [],
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
+    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
       recommendations.push()
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',
   getRecommendations(): string[] {}
@@ -581,8 +584,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       metrics: this.getMetrics()
       webVitals: this.getWebVitals()
       summary: {
-        avgLoadTime;
-        totalMetrics: this.metrics.length;
+        avgLoadTime,
+    totalMetrics: this.metrics.length;
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
     return {}
       metrics: this.getMetrics(),
@@ -632,7 +635,7 @@ interface PerformanceWithMemory extends Performance {}
   memory: {}
 // usedJSHeapSize: number;
 // totalJSHeapSize: number;
-// jsHeapSizeLimit: number;
+// jsHeapSizeLimit: number
   };
 }
 // Type for LayoutShift;
@@ -641,7 +644,8 @@ interface LayoutShift extends PerformanceEntry {
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {}
   value: number
-  hadRecentInput: boolean;}
+  hadRecentInput: boolean
+  }
 }
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance()

@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
 interface FormData {
   name: string;
   email: string;
   company: string;
-  phone: string;
-  service: string;
-  message: string;
-}
+  phone: string,
+    service: string,
+    message: string
+  }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error';
-  message: string;
-}
+  type: 'idle' | 'loading' | 'success' | 'error',
+    message: string
+  }
 
-const ContactForm: React.FC = () => {,
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: ''
     email: '',
@@ -28,7 +27,7 @@ const ContactForm: React.FC = () => {,
     type: 'idle',
     message: ''});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({)
       ...prev)
@@ -36,7 +35,7 @@ const ContactForm: React.FC = () => {,
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
 
@@ -250,7 +249,7 @@ const ContactForm: React.FC = () => {,
             </div>
 ,
             {status.message && (,
-              <div className={`flex items-center space-x-2 p-4 rounded-lg ${,
+              <div className={`flex items-center space-x-2 p-4 rounded-lg ${
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :,
                 status.type === 'error' ? 'bg-red-500/20 text-red-300' :}
                 'bg-blue-500/20 text-blue-300'}

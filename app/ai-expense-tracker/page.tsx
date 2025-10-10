@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Receipt, Target, Users, CheckCircle, Brain, BarChart } from 'lucide-react';
-
-const AIExpenseTracker: React.FC = memo(() => {,
+const AIExpenseTracker: React.FC = memo(() => {
 const AIExpenseTracker: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,7 +49,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
       price: '$9',
       period: '/month',
       description: 'Perfect for individuals',
-      features: [,
+      features: [
         'Unlimited receipts',
         'Basic categorization',
         'Monthly reports',
@@ -59,8 +58,8 @@ const AIExpenseTracker: React.FC = memo(() => {}
         '1 user account'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Business'
     {}
@@ -68,7 +67,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
       price: '$29',
       period: '/month',
       description: 'Ideal for small businesses',
-      features: [,
+      features: [
         'Unlimited receipts',
         'AI categorization',
         'Advanced analytics',
@@ -78,8 +77,8 @@ const AIExpenseTracker: React.FC = memo(() => {}
         '5 user accounts'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
     {}
@@ -87,7 +86,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
       price: '$99',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited everything',
         'Advanced AI features',
         'Custom integrations',
@@ -97,31 +96,31 @@ const AIExpenseTracker: React.FC = memo(() => {}
         'Unlimited users'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Personal Finance',
       description: 'Track personal expenses and build better financial habits',
-      icon: Receipt;
-      result: '30% savings'},
+      icon: Receipt,
+    result: '30% savings'},
     {}
       title: 'Business Expenses',
       description: 'Manage business expenses and improve cash flow visibility',
-      icon: BarChart;
-      result: '50% faster'},
+      icon: BarChart,
+    result: '50% faster'},
     {}
       title: 'Tax Preparation',
       description: 'Organize receipts and expenses for easy tax filing',
-      icon: Target;
-      result: '90% easier'},
+      icon: Target,
+    result: '90% easier'},
     {}
       title: 'Team Management',
       description: 'Track team expenses and enforce spending policies',
-      icon: Users;
-      result: '100% control'}
+      icon: Users,
+    result: '100% control'}
   ];
 
   const benefits = [
@@ -366,8 +365,8 @@ const AIExpenseTracker: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AIExpenseTracker.displayName = 'AIExpenseTracker';
 ,

@@ -9,8 +9,8 @@ import { Helmet } from 'react-helmet-async';
 interface SEOData {
   title: string;
   description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  keywords: string[],
+    canonicalUrl: string;
 interface SEOData {
   title?: string;
   description?: string;
@@ -21,7 +21,8 @@ interface SEOData {
   ogImage?: string;
   twitterCard?: string;
   twitterTitle?: string;
-  twitterDescription?: string;,
+  twitterDescription?: string,
+    
   twitterImage?: string;
 }
 
@@ -30,10 +31,10 @@ interface AdvancedSEOOptimizerProps {}
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
-}
+  enableSchemaMarkup?: boolean
+  }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   seoData,
@@ -55,13 +56,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@type': 'TechCompany',
       name: 'Zion Tech Group'
       description: seoData.description;
-      url: seoData.canonicalUrl;
-      logo: 'https://ziontechgroup.com/logo.webp'
+      url: seoData.canonicalUrl,
+    logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https: //twitter.com/ziontechgroup',
         'https: //github.com/zion-tech-group'],
-      contactPoint: {,
+      contactPoint: {
       contactPoint: {}
 interface AdvancedSEOOptimizerProps {
   seoData?: SEOData;
@@ -118,8 +119,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (seoData.author) {}
       baseStructuredData.author = {}
         '@type': 'Person',
-        name: seoData.author;
-      };
+        name: seoData.author
+  };
     }
 
     if (seoData.publishedTime) {}
@@ -143,8 +144,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 }
 
 interface AdvancedSEOOptimizerProps {
-  title: string;
-  description: string;
+  title: string,
+    description: string;
   keywords?: string[];
   canonicalUrl?: string;
   ogTitle?: string;
@@ -154,8 +155,8 @@ interface AdvancedSEOOptimizerProps {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  children?: React.ReactNode;
-}
+  children?: React.ReactNode
+  }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   title,
@@ -230,10 +231,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {,
+        {
           '@type': 'Question',
           name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
   // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {}
     if (!enableOpenGraph) return {};
@@ -265,14 +266,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {}
           '@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
             text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.'}},
         {}
           '@type': 'Question',
           name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {,
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
             text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.'}}],

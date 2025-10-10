@@ -4,8 +4,8 @@ import { MessageSquare, Globe, Brain, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AINLPPage: React.FC = () => {,
-  const features = [,
+const AINLPPage: React.FC = () => {
+  const features = [
     'Text Analysis & Processing',
     'Sentiment Analysis',
     'Language Translation',
@@ -27,18 +27,18 @@ const AINLPPage: React.FC = () => {,
     {
       title: 'Customer Support Chatbots',
       description: 'Intelligent chatbots that understand and respond to customer queries naturally',
-      icon: MessageSquare;
-    },
+      icon: MessageSquare
+  },
     {
       title: 'Document Analysis',
       description: 'Automatically extract insights and categorize documents at scale',
-      icon: Brain;
-    },
+      icon: Brain
+  },
     {
       title: 'Social Media Monitoring',
       description: 'Analyze social media sentiment and brand mentions in real-time',
-      icon: Globe;
-    }
+      icon: Globe
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

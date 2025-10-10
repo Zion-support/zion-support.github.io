@@ -31,7 +31,7 @@ interface PerformanceEnhancerProps {}
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
   enableWebVitals = true,
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   enableWebVitals = true;
   enableResourceTiming = true,
   enableMemoryMonitoring = true,
@@ -52,8 +52,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     lcp: 2500;
     fid: 100;
     cls: 0.1;
-    fcp: 1800;
-    ttfb: 600;
+    fcp: 1800,
+    ttfb: 600
   }
 }) => {
 
@@ -90,8 +90,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
       context: context || 'PerformanceEnhancer'
       timestamp: Date.now()
       url: window.location.href;
-      userAgent: navigator.userAgent;
-      performanceMetrics: performanceMetrics;
+      userAgent: navigator.userAgent,
+    performanceMetrics: performanceMetrics;
   // Enhanced error reporting
   const reportError = useCallback((error: any, context?: string) => {}
     if (!enableErrorReporting) return;
@@ -115,8 +115,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         event_label: context || 'PerformanceEnhancer')
         value: 1),
         custom_parameter_1: error.message),
-        custom_parameter_2: error.stack;
-    }
+        custom_parameter_2: error.stack
+  }
 
     // Send to custom endpoint)
     // Send to custom endpoint;
@@ -149,9 +149,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         performanceMetrics.webVitals[metric.name] = metric;
 
         // Check performance budget;
-        if (enablePerformanceBudget && performanceBudget[metric.name as keyof typeof performanceBudget]) {,
+        if (enablePerformanceBudget && performanceBudget[metric.name as keyof typeof performanceBudget]) {
           const budget = performanceBudget[metric.name as keyof typeof performanceBudget];,
-          if (budget && metric.value > budget) {,
+          if (budget && metric.value > budget) {
         // Check performance budget
         if (enablePerformanceBudget && performanceBudget[metric.name as keyof typeof performanceBudget]) {}
           const budget = performanceBudget[metric.name as keyof typeof performanceBudget];
@@ -178,9 +178,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             event_label: metric.name)
             value: Math.round(metric.value)
             non_interaction: true;
-            custom_parameter_1: metric.delta;
-            custom_parameter_2: metric.id;
-        }
+            custom_parameter_1: metric.delta,
+    custom_parameter_2: metric.id
+  }
 
         // Send to custom endpoint;
         if (typeof window !== 'undefined' && navigator.sendBeacon) {
@@ -206,8 +206,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             navigationType: metric.navigationType)
             timestamp: Date.now()
             url: window.location.href;
-            userAgent: navigator.userAgent;
-            performanceMetrics: performanceMetrics;
+            userAgent: navigator.userAgent,
+    performanceMetrics: performanceMetrics;
           navigator.sendBeacon('/api/analytics/performance', data);
         }
 
@@ -306,8 +306,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
           performanceMetrics.memoryUsage = {
             usedJSHeapSize: memory.usedJSHeapSize;
             totalJSHeapSize: memory.totalJSHeapSize;
-            jsHeapSizeLimit: memory.jsHeapSizeLimit;
-            timestamp: Date.now()};
+            jsHeapSizeLimit: memory.jsHeapSizeLimit,
+    timestamp: Date.now()};
 
           // Check for memory leaks;
           if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
@@ -351,8 +351,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             effectiveType: connection.effectiveType;
             downlink: connection.downlink;
             rtt: connection.rtt;
-            saveData: connection.saveData;
-            timestamp: Date.now(),
+            saveData: connection.saveData,
+    timestamp: Date.now(),
           performanceMetrics.networkInfo = {}
             effectiveType: connection.effectiveType,
             downlink: connection.downlink,
@@ -477,8 +477,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
           longTaskCount: performanceMetrics.longTasks.length;
           layoutShiftCount: performanceMetrics.layoutShifts.length;
           memoryUsage: performanceMetrics.memoryUsage;
-          networkInfo: performanceMetrics.networkInfo;
-          errorCount: performanceMetrics.errors.length;
+          networkInfo: performanceMetrics.networkInfo,
+    errorCount: performanceMetrics.errors.length;
   // Performance summary reporting
   useEffect(() => {}
     const reportPerformanceSummary = () => {}
@@ -492,8 +492,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
           networkInfo: performanceMetrics.networkInfo,
           errorCount: performanceMetrics.errors.length,
           timestamp: Date.now(),
-          url: window.location.href;
-        };
+          url: window.location.href
+  };
 
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'performance_summary', {

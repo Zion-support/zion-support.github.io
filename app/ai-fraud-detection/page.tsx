@@ -4,8 +4,8 @@ import { CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIFraudDetectionPage: React.FC = () => {,
-  const features = [,
+const AIFraudDetectionPage: React.FC = () => {
+  const features = [
     'Real-time Detection',
     'Pattern Recognition',
     'Risk Scoring',

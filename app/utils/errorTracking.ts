@@ -16,15 +16,16 @@ export enum ErrorCategory {
 }
 
 export interface ErrorMetadata {
-  category: ErrorCategory;
-  severity: ErrorSeverity;
+  category: ErrorCategory,
+    severity: ErrorSeverity;
   userId?: string;
   sessionId?: string;
   context?: Record<string, unknown>
   tags?: string[]
   timestamp: number;
   stackTrace?: string;
-  userAgent?: string;,
+  userAgent?: string,
+    
   url?: string;
 }
 
@@ -33,16 +34,16 @@ export interface TrackedError {
   message: string;
   metadata: ErrorMetadata;
   occurrences: number;
-  firstSeen: number;
-  lastSeen: number;
-}
+  firstSeen: number,
+    lastSeen: number
+  }
 
 class ErrorTrackingService {
   private static instance: ErrorTrackingService;
   private errors: Map<string, TrackedError> = new Map()
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000;
-  private constructor() {,
+  private constructor() {
     this.setupGlobalErrorHandlers()}
 
   static getInstance(): ErrorTrackingService {
@@ -61,9 +62,9 @@ class ErrorTrackingService {
         severity: ErrorSeverity.High;
         context: {
           filename: event.filename;
-          lineno: event.lineno;
-          colno: event.colno;
-        }
+          lineno: event.lineno,
+    colno: event.colno
+  }
       })
     })
 
@@ -71,14 +72,15 @@ class ErrorTrackingService {
     window.addEventListener('unhandledrejection', (event) => {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         category: ErrorCategory.Runtime;
-        severity: ErrorSeverity.High;
-        context: { reason: event.reason }
+        severity: ErrorSeverity.High,
+    context: { reason: event.reason }
       })
     })
   }
 
   trackError(error: Error),
-    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+    metadata: Partial<ErrorMetadata> & { category: ErrorCategory,
+    severity: ErrorSeverity }
   ): string {
     const errorId = this.generateErrorId(error.message)
     const now = Date.now()
@@ -95,13 +97,13 @@ class ErrorTrackingService {
         tags: metadata.tags;
         timestamp: now;
         stackTrace: error.stack;
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
-        url: typeof window !== 'undefined' ? window.location.href : undefined;
-      },
+        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+    url: typeof window !== 'undefined' ? window.location.href : undefined
+  },
       occurrences: 1;
-      firstSeen: now;
-      lastSeen: now;
-    }
+      firstSeen: now,
+    lastSeen: now
+  }
 
     // Check if error already exists;
     const existingError = this.errors.get(errorId)
@@ -125,8 +127,8 @@ class ErrorTrackingService {
       errorId)
       message: error.message),
       category: metadata.category),
-      severity: metadata.severity;
-    })
+      severity: metadata.severity
+  })
 
     // Notify listeners;
     this.notifyListeners(trackedError)
@@ -193,7 +195,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     return errorId;
   }
 
-  private generateErrorId(message: string): string {,
+  private generateErrorId(message: string): string {
     const timestamp = Date.now().toString(36),
     const hash = this.simpleHash(message),
     return `err_${timestamp}_${hash}`
@@ -209,13 +211,13 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     return Math.abs(hash).toString(36)
   }
 
-  addListener(listener: (error: TrackedError) => void): void {,
+  addListener(listener: (error: TrackedError) => void): void {
     this.errorListeners.push(listener)}
 
-  removeListener(listener: (error: TrackedError) => void): void {,
+  removeListener(listener: (error: TrackedError) => void): void {
     this.errorListeners = this.errorListeners.filter(l => l !== listener)}
 
-  private notifyListeners(error: TrackedError): void {,
+  private notifyListeners(error: TrackedError): void {
     this.errorListeners.forEach(listener => {)
       try {)
         listener(error)} catch (listenerError) {
@@ -252,7 +254,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     })
   }
 
-  private async reportToExternalService(errorId: string): Promise<void> {,
+  private async reportToExternalService(errorId: string): Promise<void> {
     // In a real implementation, this would send to an external service;
     // like Sentry, LogRocket, or a custom error reporting service;
     logger.info('Error reported to external service', { errorId })
@@ -262,7 +264,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     return Array.from(this.errors.values())
   }
 
-  getErrorById(id: string): TrackedError | undefined {,
+  getErrorById(id: string): TrackedError | undefined {
     return this.errors.get(id)}
 
   clearErrors(): void {
@@ -270,7 +272,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   getErrorStats(): {
-    total: number;
+    total: number,
     byCategory: Record<ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
   } {

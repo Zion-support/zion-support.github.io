@@ -13,7 +13,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
 export class ValidationError extends Error {
   constructor(message: string)
     public field: string),
-    public errors: string[]) {,
+    public errors: string[]) {
     super(message);
     this.name = 'ValidationError';
 export class ValidationError extends Error {/* TODO: Fix JSX expression */}
@@ -60,9 +60,9 @@ export function validateURL(ur,
     const isValid = requireProtocol ?
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :
       true;
-    return {,
-      isValid;
-      error: isValid ? undefined : 'Invalid URL format or protocol',
+    return {
+      isValid,
+    error: isValid ? undefined : 'Invalid URL format or protocol',
   
   try {/* TODO: Fix JSX expression */}
   p://${url}`;
@@ -112,7 +112,7 @@ export function validateStringLength(valu,
 /**
  * Validate number range;
  */
-export function validateNumberRange(value: number, min: number, max: number): boolean {,
+export function validateNumberRange(value: number, min: number, max: number): boolean {
   return value >= min && value <= max;
 export function validateNumberRange(valu,
   e: number, mi,
@@ -122,7 +122,7 @@ export function validateNumberRange(valu,
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
-export function validateCreditCard(cardNumber: string): boolean {,
+export function validateCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length < 13 || cleaned.length > 19) return false;
@@ -144,8 +144,8 @@ export function validateCreditCard(cardNumbe)
 /**
  * Validate date;
  */
-export function validateDate(value: unknown): boolean {,
-  if (value instanceof Date) {,
+export function validateDate(value: unknown): boolean {
+  if (value instanceof Date) {
     return !isNaN(value.getTime());
 export function validateDate(valu)
   e: unknown): boolean {/* TODO: Fix JSX expression */}
@@ -163,7 +163,7 @@ export function validateDateRange(dat)
 /**
  * Sanitize HTML to prevent XSS;
  */
-export function sanitizeHTML(html: string): string {,
+export function sanitizeHTML(html: string): string {
   // Remove script tags;
   let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
   // Remove event handlers;
@@ -179,12 +179,13 @@ export function sanitizeHTML(htm)
 export function createCustomValidator<T>(
   validator: (value: T) => boolean;
   message: string;
-): (value: T) => { isValid: boolean; errors: string[] } {
+): (value: T) => { isValid: boolean,
+    errors: string[] } {
   return (value: T) => {
     const isValid = validator(value);
-    return {,
-      isValid;
-      errors: isValid ? [] : [message],
+    return {
+      isValid,
+    errors: isValid ? [] : [message],
 export function createCustomValidator<T>(validato,
   r: (valu)
   e: T) => boolean,
@@ -221,7 +222,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       if (rule.maxLength !== undefined && value.<<<length>rule</length></length>.maxLength) return false;
       return true;
     case 'custom':
-      return rule.custom ? rule.custom(value) : true;
+      return rule.custom ? rule.custom(value) : true,
     default:,
       return true;
 function validateFieldRule(valu,
@@ -233,15 +234,15 @@ function validateFieldRule(valu,
  * Validate form data;
  */
 export function validateForm<T extends Record<string, unknown>>(
-  data: T;
-  rules: ValidationRules;
-): ValidationResult {,
+  data: T,
+    rules: ValidationRules;
+): ValidationResult {
   const errors: Record<string, string[]> = {};
   for (const field in rules) {
     const value = data[field];
     const fieldRules = rules[field] || [];
     const fieldErrors: string[] = [];
-    for (const rule of fieldRules) {,
+    for (const rule of fieldRules) {
       if (!validateFieldRule(value, rule)) {
         fieldErrors.push(rule.message);
       }
@@ -254,9 +255,9 @@ export function validateForm<T extends Record<string, unknown>>(
         {
           category: ErrorCategory.Validation;
           severity: ErrorSeverity.Low;
-          context: {,
-            field;
-            errors: fieldErrors;
+          context: {
+            field,
+    errors: fieldErrors;
 export function validateForm<T extends Record<string, unknown>>(dat,
   a: T,
   rule,
@@ -286,31 +287,31 @@ export function validateForm<T extends Record<string, unknown>>(dat,
 export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
     },
     message: 'This field is required'}),
-  email: (): ValidationRule<string> => ({,
+  email: (): ValidationRule<string> => ({
     validate: (value: string) => validateEmail(value),
     message: 'Please enter a valid email address'}),
-  url: (): ValidationRule<string> => ({,
+  url: (): ValidationRule<string> => ({
     validate: (value: string) => validateURL(value),
     message: 'Please enter a valid URL'}),
-  minLength: (min: number): ValidationRule<string> => ({,
-    validate: (value: string) => value.length >= min;
+  minLength: (min: number): ValidationRule<string> => ({
+    validate: (value: string) => value.length >= min,
     message: `Must be at least ${min} characters long`
   }),
-  maxLength: (max: number): ValidationRule<string> => ({,
-    validate: (value: string) => value.length <= max;
+  maxLength: (max: number): ValidationRule<string> => ({
+    validate: (value: string) => value.length <= max,
     message: `Must be no more than ${max} characters long`
   }),
-  pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({,
+  pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
     validate: (value: string) => pattern.test(value),
     message;
   }),
-  range: (min: number, max: number): ValidationRule<number> => ({,
+  range: (min: number, max: number): ValidationRule<number> => ({
     validate: (value: number) => validateNumberRange(value, min, max),
     message: `Must be between ${min} and ${max}`
   }),
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
+  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator;
-    message;
+    message
   })
 };
 // Legacy class-based API for backward compatibility;
@@ -372,7 +373,7 @@ class DataValidator {/* TODO: Fix JSX expression */}
   isRequired(valu)
   e: unknown): boolean {/* TODO: Fix JSX expression */}
   }
-  isArray(value: unknown): value is unknown[] {,
+  isArray(value: unknown): value is unknown[] {
     return Array.isArray(value);
   isArray(valu)
   e: unknown): value is unknown[] {/* TODO: Fix JSX expression */}
@@ -380,7 +381,7 @@ class DataValidator {/* TODO: Fix JSX expression */}
   isObject(valu)
   e: unknown): value is Record<string, unknown> {/* TODO: Fix JSX expression */}
   }
-  matchesPattern(value: string, pattern: RegExp): boolean {,
+  matchesPattern(value: string, pattern: RegExp): boolean {
     return pattern.test(value);
   matchesPattern(valu,
   e: string, patter)
@@ -459,8 +460,8 @@ export function validatePassword(passwor)
 }
 
 export function sanitizeHTML(html: string): string {
-  if (!html || typeof html !== 'string') return '';
-,
+  if (!html || typeof html !== 'string') return '',
+    
   // First escape HTML entities;
   let clean = html.replace(/&/g, '&amp;');
   clean = clean.replace(/</g, '&lt;');
@@ -474,8 +475,8 @@ export function sanitizeHTML(html: string): string {
 
 export function sanitizeInput(input: string, maxLength: number = 1000): string | null {
   if (!input || typeof input !== 'string') return null;
-  if (input.trim() === '') return null;
-,
+  if (input.trim() === '') return null,
+    
   // Remove null bytes and control characters;
   let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
 
@@ -522,12 +523,12 @@ export function validateDate(dateStrin)
                       actualDate.getMonth() === month - 1 &&
                       actualDate.getDate() === day;
     return {
-      isValid: isRealDate;
-      error: isRealDate ? undefined : 'Invalid date'};
+      isValid: isRealDate,
+    error: isRealDate ? undefined : 'Invalid date'};
   }
 
   return {
-    isValid: false;
+    isValid: false,
     error: 'Invalid date'};
 }
 

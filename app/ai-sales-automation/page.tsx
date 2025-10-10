@@ -4,42 +4,41 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap, Shield, Clock } from 'lucide-react';
-
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Target;
-      title: 'Lead Scoring & Qualification',
+      icon: Target,
+    title: 'Lead Scoring & Qualification',
       description: 'AI-powered lead scoring that automatically identifies high-value prospects and prioritizes them for your sales team.',
       benefits: ['Automated scoring', 'Higher conversion rates', 'Time savings']
     },
     {
-      icon: Users;
-      title: 'Automated Outreach',
+      icon: Users,
+    title: 'Automated Outreach',
       description: 'Intelligent email sequences and follow-ups that nurture leads through the sales funnel automatically.',
       benefits: ['Personalized messages', 'Optimal timing', 'Multi-channel approach']
     },
     {
-      icon: BarChart3;
-      title: 'Sales Analytics',
+      icon: BarChart3,
+    title: 'Sales Analytics',
       description: 'Comprehensive analytics and reporting that provide insights into sales performance and opportunities.',
       benefits: ['Real-time insights', 'Performance tracking', 'ROI analysis']
     },
     {
-      icon: Zap;
-      title: 'CRM Integration',
+      icon: Zap,
+    title: 'CRM Integration',
       description: 'Seamless integration with popular CRM systems to streamline your sales workflow.',
       benefits: ['Unified data', 'Automated updates', 'Workflow optimization']
     },
     {
-      icon: Shield;
-      title: 'Predictive Analytics',
+      icon: Shield,
+    title: 'Predictive Analytics',
       description: 'AI models that predict customer behavior, churn risk, and optimal sales strategies.',
       benefits: ['Predictive insights', 'Risk assessment', 'Strategy optimization']
     },
     {
-      icon: Clock;
-      title: 'Automated Scheduling',
+      icon: Clock,
+    title: 'Automated Scheduling',
       description: 'Smart scheduling that finds optimal meeting times and sends automated reminders.',
       benefits: ['Time optimization', 'Reduced no-shows', 'Calendar sync']
     }
@@ -51,21 +50,21 @@ const AISalesAutomationPage: React.FC = () => {
       price: '$299',
       period: '/month',
       description: 'Perfect for small sales teams',
-      features: [,
+      features: [
         'Up to 1,000 leads/month',
         'Basic lead scoring',
         'Email automation',
         'Standard analytics',
         'Email support'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional',
       price: '$799',
       period: '/month',
       description: 'Ideal for growing businesses',
-      features: [,
+      features: [
         'Up to 10,000 leads/month',
         'Advanced AI features',
         'Multi-channel automation',
@@ -74,14 +73,14 @@ const AISalesAutomationPage: React.FC = () => {
         'CRM integration',
         'Team collaboration'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
       description: 'For large sales organizations',
-      features: [,
+      features: [
         'Unlimited leads',
         'Custom AI models',
         'Full automation suite',
@@ -90,26 +89,26 @@ const AISalesAutomationPage: React.FC = () => {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp;
-      title: 'Increase Sales by 300%',
+      icon: TrendingUp,
+    title: 'Increase Sales by 300%',
       description: 'Boost your sales performance with AI-powered automation and optimization'},
     {
-      icon: Clock;
-      title: 'Save 20+ Hours/Week',
+      icon: Clock,
+    title: 'Save 20+ Hours/Week',
       description: 'Automate repetitive tasks and focus on high-value activities'},
     {
-      icon: Target;
-      title: 'Higher Conversion Rates',
+      icon: Target,
+    title: 'Higher Conversion Rates',
       description: 'Convert more leads with intelligent targeting and personalization'},
     {
-      icon: Star;
-      title: 'Better Customer Experience',
+      icon: Star,
+    title: 'Better Customer Experience',
       description: 'Deliver personalized, timely interactions that delight customers'
     }
   ];
@@ -237,7 +236,7 @@ const AISalesAutomationPage: React.FC = () => {
                   </ul>
                   <a;
                     href="mailto: kleber@ziontechgroup.com",
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}

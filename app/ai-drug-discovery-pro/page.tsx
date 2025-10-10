@@ -10,8 +10,8 @@ export default function AIDrugDiscoveryProPage() {
     {
       title: 'Molecular Modeling & Simulation'
       description: 'Advanced AI-powered molecular modeling with quantum-level accuracy for drug design and optimization'
-      icon: Atom;
-      benefits: [,
+      icon: Atom,
+    benefits: [
         '99.7% accuracy in molecular predictions',
         '10 x faster than traditional methods',
         'Real-time molecular visualization',
@@ -21,8 +21,8 @@ export default function AIDrugDiscoveryProPage() {
     {
       title: 'Drug Interaction Analysis',
       description: 'Comprehensive analysis of drug-drug interactions, side effects, and contraindications',
-      icon: TestTube;
-      benefits: [,
+      icon: TestTube,
+    benefits: [
         'Predict 95% of drug interactions',
         'Reduce adverse events by 80%',
         'Real-time safety monitoring',
@@ -32,8 +32,8 @@ export default function AIDrugDiscoveryProPage() {
     {
       title: 'Clinical Trial Optimization',
       description: 'AI-driven clinical trial design, patient selection, and outcome prediction',
-      icon: Microscope;
-      benefits: [,
+      icon: Microscope,
+    benefits: [
         '50% faster trial completion',
         '30% higher success rates',
         'Optimal patient selection',
@@ -43,8 +43,8 @@ export default function AIDrugDiscoveryProPage() {
     {
       title: 'Patent Research & Analysis'
       description: 'Intelligent patent analysis and prior art research for drug development'
-      icon: Search;
-      benefits: [,
+      icon: Search,
+    benefits: [
         'Comprehensive patent database',
         'AI-powered prior art search',
         'Patent landscape analysis',
@@ -56,7 +56,7 @@ export default function AIDrugDiscoveryProPage() {
   const capabilities = [
     {
       category: 'Molecular Design',
-      items: [,
+      items: [
         '3D molecular structure prediction',
         'Drug-target binding affinity',
         'ADMET property prediction',
@@ -67,7 +67,7 @@ export default function AIDrugDiscoveryProPage() {
     },
     {
       category: 'Drug Discovery',
-      items: [,
+      items: [
         'Virtual screening libraries',
         'Hit identification & validation',
         'Lead optimization',
@@ -78,7 +78,7 @@ export default function AIDrugDiscoveryProPage() {
     },
     {
       category: 'Safety & Efficacy',
-      items: [,
+      items: [
         'Toxicity prediction',
         'Side effect analysis',
         'Drug interaction screening',
@@ -89,7 +89,7 @@ export default function AIDrugDiscoveryProPage() {
     },
     {
       category: 'Clinical Development',
-      items: [,
+      items: [
         'Trial design optimization',
         'Patient stratification',
         'Endpoint prediction',
@@ -102,8 +102,8 @@ export default function AIDrugDiscoveryProPage() {
 
   const pricing = {
     monthly: 4500;
-    yearly: 45000;
-    features: [,
+    yearly: 45000,
+    features: [
       'Unlimited molecular modeling',
       'Advanced AI algorithms',
       'Real-time collaboration',
@@ -113,19 +113,19 @@ export default function AIDrugDiscoveryProPage() {
       'Data export/import',
       'White-label options'
     ],
-    addOns: [,
-      {,
+    addOns: [
+      {
         name: 'Custom Model Training',
-        price: 2000;
-        description: 'Train AI models on your specific data'},
+        price: 2000,
+    description: 'Train AI models on your specific data'},
       {
         name: 'Dedicated Support',
-        price: 1000;
-        description: 'Dedicated technical specialist'},
+        price: 1000,
+    description: 'Dedicated technical specialist'},
       {
         name: 'On-premise Deployment',
-        price: 5000;
-        description: 'Deploy on your infrastructure'}
+        price: 5000,
+    description: 'Deploy on your infrastructure'}
     ]
   };
 
@@ -135,22 +135,22 @@ export default function AIDrugDiscoveryProPage() {
       role: 'Head of R&D',
       company: 'PharmaCorp International',
       content: 'AI Drug Discovery Pro accelerated our drug development timeline by 60%. We discovered 3 new potential compounds in just 6 months instead of the usual 2 years.',
-      rating: 5;
-      avatar: 'SC'},
+      rating: 5,
+    avatar: 'SC'},
     {
       name: 'Dr. Michael Rodriguez',
       role: 'Chief Scientific Officer',
       company: 'BioTech Solutions',
       content: 'The molecular modeling accuracy is incredible. We achieved 99.7% accuracy in predicting drug-target interactions, saving us millions in failed experiments.',
-      rating: 5;
-      avatar: 'MR'},
+      rating: 5,
+    avatar: 'MR'},
     {
       name: 'Dr. Emily Watson'
       role: 'Research Director',
       company: 'MediPharm Labs',
       content: 'The clinical trial optimization feature helped us reduce trial costs by 40% while improving success rates. This is game-changing technology.',
-      rating: 5;
-      avatar: 'EW'}
+      rating: 5,
+    avatar: 'EW'}
   ];
 
   const stats = [

@@ -38,22 +38,12 @@ files.forEach(file => {
   content = content.replace(/(\w+):\s*([^,}]+);\s*]/g, '$1: $2\n  ]');
   content = content.replace(/(\w+):\s*([^,}]+);\s*,/g, '$1: $2,\n    ');
 
+  // Fix import statements with semicolons
+  content = content.replace(/from 'lucide-react';\s*$/gm, "from 'lucide-react';");
+
   // Fix specific patterns
   content = content.replace(/\[\s*,/g, '[');
   content = content.replace(/\{\s*,/g, '{');
-
-  // Fix icon assignments with semicolons
-  content = content.replace(/icon:\s*(\w+);/g, 'icon: $1,');
-  content = content.replace(/title:\s*([^,}]+);/g, 'title: $1,');
-  content = content.replace(/description:\s*([^,}]+);/g, 'description: $1,');
-  content = content.replace(/benefits:\s*([^,}]+);/g, 'benefits: $1,');
-
-  // Fix import statements
-  content = content.replace(/from 'lucide-react';\s*$/gm, "from 'lucide-react';");
-
-  // Fix return statements
-  content = content.replace(/return\s*\(<div/g, 'return (\n    <div');
-  content = content.replace(/return\s*\(/g, 'return (\n    ');
 
   if (modified) {
     fs.writeFileSync(filePath, content);

@@ -4,14 +4,14 @@ import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, UserCheck } 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CompliancePage: React.FC = () => {,
-  const complianceFrameworks = [,
-    {,
+const CompliancePage: React.FC = () => {
+  const complianceFrameworks = [
+    {
       name: 'SOC 2 Type II',
       description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
       status: 'Certified'
-      icon: Award;
-      details: [,
+      icon: Award,
+    details: [
         'Annual third-party audits by independent auditors',
         'Comprehensive control testing and validation',
         'Management attestation and reporting',
@@ -22,8 +22,8 @@ const CompliancePage: React.FC = () => {,
       name: 'ISO 27001'
       description: 'International standard for information security management systems'
       status: 'Certified'
-      icon: Shield;
-      details: [,
+      icon: Shield,
+    details: [
         'Information security management system (ISMS)',
         'Risk assessment and treatment procedures',
         'Security controls and implementation guidelines',
@@ -34,8 +34,8 @@ const CompliancePage: React.FC = () => {,
       name: 'GDPR'
       description: 'General Data Protection Regulation compliance for EU data protection'
       status: 'Compliant'
-      icon: Lock;
-      details: [,
+      icon: Lock,
+    details: [
         'Data protection by design and by default',
         'Privacy impact assessments (PIAs)',
         'Data subject rights management',
@@ -46,8 +46,8 @@ const CompliancePage: React.FC = () => {,
       name: 'CCPA'
       description: 'California Consumer Privacy Act compliance for California residents'
       status: 'Compliant'
-      icon: Eye;
-      details: [,
+      icon: Eye,
+    details: [
         'Consumer privacy rights management',
         'Data collection and processing transparency',
         'Opt-out mechanisms for data sales',
@@ -58,8 +58,8 @@ const CompliancePage: React.FC = () => {,
       name: 'HIPAA'
       description: 'Health Insurance Portability and Accountability Act for healthcare data'
       status: 'Compliant'
-      icon: Database;
-      details: [,
+      icon: Database,
+    details: [
         'Protected health information (PHI) safeguards',
         'Administrative, physical, and technical safeguards',
         'Business associate agreements (BAAs)',
@@ -70,8 +70,8 @@ const CompliancePage: React.FC = () => {,
       name: 'PCI DSS'
       description: 'Payment Card Industry Data Security Standard for payment processing'
       status: 'Compliant'
-      icon: UserCheck;
-      details: [,
+      icon: UserCheck,
+    details: [
         'Secure payment card data handling',
         'Network security and monitoring',
         'Regular security testing and vulnerability management',
@@ -83,9 +83,9 @@ const CompliancePage: React.FC = () => {,
   const complianceAreas = [
     {
       title: 'Data Protection'
-      icon: Shield;
-      description: 'Comprehensive data protection measures and privacy controls',
-      measures: [,
+      icon: Shield,
+    description: 'Comprehensive data protection measures and privacy controls',
+      measures: [
         'Data encryption at rest and in transit',
         'Data classification and handling procedures',
         'Privacy by design principles',
@@ -94,9 +94,9 @@ const CompliancePage: React.FC = () => {,
     },
     {
       title: 'Access Controls'
-      icon: Lock;
-      description: 'Robust access management and authentication systems',
-      measures: [,
+      icon: Lock,
+    description: 'Robust access management and authentication systems',
+      measures: [
         'Multi-factor authentication (MFA)',
         'Role-based access control (RBAC)',
         'Privileged access management (PAM)',
@@ -105,9 +105,9 @@ const CompliancePage: React.FC = () => {,
     },
     {
       title: 'Security Monitoring'
-      icon: Eye;
-      description: 'Continuous security monitoring and incident response',
-      measures: [,
+      icon: Eye,
+    description: 'Continuous security monitoring and incident response',
+      measures: [
         'Security information and event management (SIEM)',
         'Real-time threat detection and response',
         'Vulnerability scanning and management',
@@ -116,9 +116,9 @@ const CompliancePage: React.FC = () => {,
     },
     {
       title: 'Audit & Reporting'
-      icon: FileText;
-      description: 'Regular audits and compliance reporting',
-      measures: [,
+      icon: FileText,
+    description: 'Regular audits and compliance reporting',
+      measures: [
         'Internal and external security audits',
         'Compliance monitoring and reporting',
         'Risk assessments and management',

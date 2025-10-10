@@ -5,12 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AISolutionsPage: React.FC = () => {
-  const aiServices = [,
-    {,
+  const aiServices = [
+    {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
-      icon: Brain;
-      price: '$1,500/month',
+      icon: Brain,
+    price: '$1,500/month',
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
       color: 'text-purple-400',
       category: 'AI Development',
@@ -18,8 +18,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding',
-      icon: MessageSquare;
-      price: '$1,200/month',
+      icon: MessageSquare,
+    price: '$1,200/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
       color: 'text-blue-400',
       category: 'AI Development',
@@ -27,8 +27,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection and recognition',
-      icon: Eye;
-      price: '$1,800/month',
+      icon: Eye,
+    price: '$1,800/month',
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
       color: 'text-green-400',
       category: 'AI Development',
@@ -36,8 +36,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities',
-      icon: Zap;
-      price: '$1,400/month',
+      icon: Zap,
+    price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400',
       category: 'Automation',
@@ -45,8 +45,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Data Visualization',
       description: 'Transform complex data into interactive visualizations',
-      icon: BarChart;
-      price: '$1,100/month',
+      icon: BarChart,
+    price: '$1,100/month',
       features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
       color: 'text-orange-400',
       category: 'Data Science',
@@ -54,8 +54,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
-      icon: Cube;
-      price: '$1,600/month',
+      icon: Cube,
+    price: '$1,600/month',
       features: ['3 D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
       category: '3D & Graphics',
@@ -63,8 +63,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Voice Synthesis',
       description: 'Advanced voice cloning and text-to-speech solutions',
-      icon: Mic;
-      price: '$1,300/month',
+      icon: Mic,
+    price: '$1,300/month',
       features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
       color: 'text-indigo-400',
       category: 'Voice Technology',
@@ -72,8 +72,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Content Generation',
       description: 'Automated content creation for marketing and communication',
-      icon: FileText;
-      price: '$1,000/month',
+      icon: FileText,
+    price: '$1,000/month',
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
       color: 'text-yellow-400',
       category: 'Content AI',
@@ -81,8 +81,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Predictive Analytics',
       description: 'Advanced forecasting and trend analysis with machine learning',
-      icon: TrendingUp;
-      price: '$1,700/month',
+      icon: TrendingUp,
+    price: '$1,700/month',
       features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
       color: 'text-red-400',
       category: 'Analytics',
@@ -90,8 +90,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Recommendation Engine',
       description: 'Personalized recommendation systems for e-commerce and content',
-      icon: Target;
-      price: '$1,400/month',
+      icon: Target,
+    price: '$1,400/month',
       features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'],
       color: 'text-teal-400',
       category: 'Personalization',
@@ -99,8 +99,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Fraud Detection',
       description: 'Advanced fraud prevention and security monitoring',
-      icon: Shield;
-      price: '$1,900/month',
+      icon: Shield,
+    price: '$1,900/month',
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
       color: 'text-red-500',
       category: 'Security',
@@ -108,8 +108,8 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'AI Document Processing',
       description: 'Intelligent document analysis and data extraction',
-      icon: Search;
-      price: '$1,200/month',
+      icon: Search,
+    price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400',
       category: 'Document AI',

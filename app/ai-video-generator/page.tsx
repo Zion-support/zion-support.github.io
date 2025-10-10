@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Video, Play, Target, Users, Globe, CheckCircle, Brain } from 'lucide-react';
-
-const AIVideoGenerator: React.FC = memo(() => {,
+const AIVideoGenerator: React.FC = memo(() => {
 const AIVideoGenerator: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,7 +49,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
       price: '$49',
       period: '/month',
       description: 'Perfect for content creators',
-      features: [,
+      features: [
         'Up to 10 videos/month',
         'HD quality (1080 p)',
         'Basic templates',
@@ -59,8 +58,8 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'Commercial license'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
     {}
@@ -68,7 +67,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
       price: '$149',
       period: '/month',
       description: 'Ideal for businesses',
-      features: [,
+      features: [
         'Up to 50 videos/month',
         '4 K quality available',
         'Premium templates',
@@ -78,8 +77,8 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'API access'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
     {}
@@ -87,7 +86,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
       price: '$499',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited videos',
         'All quality options',
         'Custom templates',
@@ -97,31 +96,31 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'Team collaboration'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Marketing Videos',
       description: 'Create compelling product demos and promotional content',
-      icon: Target;
-      result: '10x faster'},
+      icon: Target,
+    result: '10x faster'},
     {}
       title: 'Social Media Content',
       description: 'Generate engaging videos for Instagram, TikTok, and YouTube',
-      icon: Globe;
-      result: '95% engagement'},
+      icon: Globe,
+    result: '95% engagement'},
     {}
       title: 'Training Materials',
       description: 'Produce educational and training videos for your team',
-      icon: Users;
-      result: '80% retention'},
+      icon: Users,
+    result: '80% retention'},
     {}
       title: 'Explainer Videos',
       description: 'Create clear, concise explainer videos for complex topics',
-      icon: Brain;
-      result: '3x clarity'}
+      icon: Brain,
+    result: '3x clarity'}
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -371,8 +370,8 @@ const AIVideoGenerator: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AIVideoGenerator.displayName = 'AIVideoGenerator';
 ,

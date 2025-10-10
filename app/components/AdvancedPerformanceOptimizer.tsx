@@ -16,7 +16,7 @@ interface AdvancedPerformanceOptimizerProps {}
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({}
   enableAdvancedCaching = true,
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   enableAdvancedCaching = true;
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -45,7 +45,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     lcp: 0;)
     fid: 0),
     cls: 0),
-    ttfb: 0;
+    ttfb: 0
   });
 
   // Web Vitals monitoring;
@@ -164,9 +164,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           if (src) {
             // Check for WebP support;
             const canvas = document.createElement('canvas');
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0;
-,
-            if (webpSupported && !src.includes('.webp')) {,
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0,
+    
+            if (webpSupported && !src.includes('.webp')) {
           if (src) {}
             // Check for WebP support
             const canvas = document.createElement('canvas');
@@ -184,8 +184,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         }
 
 interface AdvancedPerformanceOptimizerProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode
+  }
 
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
@@ -259,8 +259,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
     const criticalCSS = `
       .cyber-grid { background-image: linear-gradient(45 deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45 deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45 deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45 deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20 px 20 px; background-position: 0 0, 0 10 px, 10 px -10 px, -10 px 0 px; }
-      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10 px); border: 1 px solid rgba(255, 255, 255, 0.1); }
-      .cyber-button { background: linear-gradient(135 deg, #667 eea 0%, #764 ba2 100%); border: none; color: white; padding: 12 px 24 px; border-radius: 8 px; font-weight: 600; transition: all 0.3 s ease; }
+      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10 px),
+    border: 1 px solid rgba(255, 255, 255, 0.1); }
+      .cyber-button { background: linear-gradient(135 deg, #667 eea 0%, #764 ba2 100%); border: none; color: white; padding: 12 px 24 px; border-radius: 8 px; font-weight: 600,
+    transition: all 0.3 s ease
+  }
       .cyber-button:hover { transform: translateY(-2 px); box-shadow: 0 10 px 20 px rgba(0,0,0,0.2); }
     `;
 
@@ -279,13 +282,13 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         event_category: 'Performance',
         event_label: 'Core Web Vitals')
     value: Math.round(performanceMetrics.lcp),
-        custom_map: {,
+        custom_map: {
     fcp: Math.round(performanceMetrics.fcp),
       (window as any).gtag('event', 'web_vitals', {)
         event_category: 'Performance')
         event_label: 'Core Web Vitals')
         value: Math.round(performanceMetrics.lcp)
-        custom_map: {,
+        custom_map: {
   // Performance monitoring and reporting
   const reportPerformanceMetrics = useCallback(() => {}
     if (typeof window === 'undefined') return;
@@ -300,8 +303,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000;
-        }
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+  }
       });
     }
   }, [performanceMetrics]);

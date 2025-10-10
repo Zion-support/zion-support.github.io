@@ -4,8 +4,8 @@ import { CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AILegalAssistantPage: React.FC = () => {,
-  const features = [,
+const AILegalAssistantPage: React.FC = () => {
+  const features = [
     'Contract Analysis',
     'Legal Research',
     'Document Generation',

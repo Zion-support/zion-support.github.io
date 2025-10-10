@@ -77,8 +77,8 @@ const defaultConfig: LoggerConfig = {
   enableRemote: false;
   enableStructured: true;
   maxLogs: 1000;
-  enablePerformance: true;
-  environment: process.env['NODE_ENV'] || 'development'}
+  enablePerformance: true,
+    environment: process.env['NODE_ENV'] || 'development'}
 const,
   defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */}
 };
@@ -229,9 +229,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (error) {
       logData.error = {
         name: error.name;
-        message: error.message;
-        stack: error.stack;
-      }
+        message: error.message,
+    stack: error.stack
+  }
    * @example;`
    * ```typescript;
    * try {/* TODO: Fix JSX expression */}
@@ -269,9 +269,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (error) {
       logData.error = {
         name: error.name;
-        message: error.message;
-        stack: error.stack;
-      }
+        message: error.message,
+    stack: error.stack
+  }
   public fatal(messag,
   e: string,
     data?: Record<string, unknown>,
@@ -295,7 +295,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.endPerformance('api_call'); // Logs the duration;
    * ``
    */
-  public startPerformance(markName: string): void {,
+  public startPerformance(markName: string): void {
     if (!this.config.enablePerformance) return;
     this.performanceMarks.set(markName, performance.now())
    * @example;`
@@ -362,7 +362,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   ): void {
     // Check if log level meets minimum threshold;
     if (level < this.config.minLevel) return;
-    const logEntry: LogEntry = {,
+    const logEntry: LogEntry = {
       id: this.generateLogId(),
       level,
       message,
@@ -372,8 +372,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      environment: this.config.environment;
-    }
+      environment: this.config.environment
+  }
     // Store log entry;
     this.logs.push(logEntry)
     // Maintain max logs limit;
@@ -424,7 +424,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @param entry - Log entry to output;
    */
-  private logToConsole(entry: LogEntry): void {,
+  private logToConsole(entry: LogEntry): void {
     const levelName = LogLevel[entry.level],
     const timestamp = entry.timestamp.toISOString(),
     const source = entry.source ? ` [${entry.source}]` : ''
@@ -434,15 +434,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         timestamp: entry.timestamp;
         level: levelName;
         message: entry.message;
-        source: entry.source;
-        data: entry.data;
-      }
+        source: entry.source,
+    data: entry.data
+  }
       switch (entry.level) {
-        case LogLevel.DEBUG: if (this.isDevelopment()) {,
+        case LogLevel.DEBUG: if (this.isDevelopment()) {
             logger.debug(message, structuredLog)
           }
           break;
-        case LogLevel.INFO: if (this.isDevelopment()) {,
+        case LogLevel.INFO: if (this.isDevelopment()) {
             logger.info(message, structuredLog)
           }
           break;
@@ -459,11 +459,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     } else {
       // Simple console output;
       switch (entry.level) {
-        case LogLevel.DEBUG: if (this.isDevelopment()) {,
+        case LogLevel.DEBUG: if (this.isDevelopment()) {
             logger.debug(message, entry.data)
           }
           break;
-        case LogLevel.INFO: if (this.isDevelopment()) {,
+        case LogLevel.INFO: if (this.isDevelopment()) {
             logger.info(message, entry.data)
           }
           break;
@@ -527,9 +527,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @param entry - Log entry to send;
    */
-  private async logToRemote(entry: LogEntry): Promise<void> {,
+  private async logToRemote(entry: LogEntry): Promise<void> {
     if (!this.config.remoteEndpoint) return;
-    try {,
+    try {
       await fetch(this.config.remoteEndpoint, {)
         method: 'POST')
         headers: {)
@@ -614,7 +614,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Source identifier;
    * @returns Array of log entries from the specified source;
    */
-  public getLogsBySource(source: string): LogEntry[] {,
+  public getLogsBySource(source: string): LogEntry[] {
     return this.logs.filter(log => log.source === source),
   public getLogsBySource(sourc)
   e: string): LogEntry[] {/* TODO: Fix JSX expression */}
@@ -625,7 +625,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Object containing log statistics;
    */
   public getStatistics(): {
-    total: number;
+    total: number,
     byLevel: Record<string, number>
     bySource: Record<string, number>
   } {
@@ -666,7 +666,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @param config - Partial configuration to merge;
    */
-  public configure(config: Partial<LoggerConfig>): void {,
+  public configure(config: Partial<LoggerConfig>): void {
     this.config = { ...this.config, ...config }
   public configure(confi)
   g: Partial<LoggerConfig>): void {/* TODO: Fix JSX expression */}

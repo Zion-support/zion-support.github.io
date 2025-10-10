@@ -4,42 +4,41 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star } from 'lucide-react';
-
-const AICustomerSupportPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Bot;
-      title: 'AI-Powered Chatbots',
+const AICustomerSupportPage: React.FC = () => {
+  const features = [
+    {
+      icon: Bot,
+    title: 'AI-Powered Chatbots',
       description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
       benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
     },
     {
-      icon: MessageCircle;
-      title: 'Omnichannel Communication',
+      icon: MessageCircle,
+    title: 'Omnichannel Communication',
       description: 'Seamless integration across email, chat, phone, and social media platforms.',
       benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
     },
     {
-      icon: Zap;
-      title: 'Intelligent Automation',
+      icon: Zap,
+    title: 'Intelligent Automation',
       description: 'Automated ticket routing, priority assignment, and resolution suggestions based on AI analysis.',
       benefits: ['Faster resolution', 'Reduced workload', 'Smart prioritization']
     },
     {
-      icon: Shield;
-      title: 'Advanced Security',
+      icon: Shield,
+    title: 'Advanced Security',
       description: 'Enterprise-grade security with data encryption and compliance with industry standards.',
       benefits: ['Data protection', 'Compliance ready', 'Secure communication']
     },
     {
-      icon: BarChart;
-      title: 'Analytics & Insights',
+      icon: BarChart,
+    title: 'Analytics & Insights',
       description: 'Real-time analytics and performance metrics to optimize customer support operations.',
       benefits: ['Performance tracking', 'Data-driven insights', 'Continuous improvement']
     },
     {
-      icon: Users;
-      title: 'Human-AI Collaboration',
+      icon: Users,
+    title: 'Human-AI Collaboration',
       description: 'Seamless handoff between AI and human agents for complex issues requiring human touch.',
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency']
     }
@@ -51,21 +50,21 @@ const AICustomerSupportPage: React.FC = () => {,
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [,
+      features: [
         'Up to 1,000 conversations/month',
         'Basic AI chatbot',
         'Email & chat support',
         'Standard analytics',
         'Email support'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional',
       price: '$499',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [,
+      features: [
         'Up to 10,000 conversations/month',
         'Advanced AI with custom training',
         'Omnichannel support',
@@ -73,14 +72,14 @@ const AICustomerSupportPage: React.FC = () => {,
         'Priority support',
         'API access'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited conversations',
         'Custom AI models',
         'All communication channels',
@@ -89,27 +88,27 @@ const AICustomerSupportPage: React.FC = () => {,
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const benefits = [
     {
-      icon: Clock;
-      title: '24/7 Availability',
+      icon: Clock,
+    title: '24/7 Availability',
       description: 'Never miss a customer inquiry with round-the-clock AI support'},
     {
-      icon: Users;
-      title: 'Scalable Solutions',
+      icon: Users,
+    title: 'Scalable Solutions',
       description: 'Handle increasing support volume without proportional cost increase'},
     {
-      icon: CheckCircle;
-      title: 'Consistent Quality',
+      icon: CheckCircle,
+    title: 'Consistent Quality',
       description: 'Deliver consistent, high-quality support experiences every time'
     },
     {
-      icon: Star;
-      title: 'Customer Satisfaction',
+      icon: Star,
+    title: 'Customer Satisfaction',
       description: 'Improve customer satisfaction scores with faster, more accurate responses'
     }
   ];
@@ -237,7 +236,7 @@ const AICustomerSupportPage: React.FC = () => {,
                   </ul>
                   <a;
                     href="mailto: kleber@ziontechgroup.com",
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}

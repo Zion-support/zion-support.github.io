@@ -2,21 +2,22 @@ import React, { useState, useRef } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface LazyImageProps {
-  src: string;,
+  src: string,
+    
     alt: string;
 interface LazyImageProps {}
-  src: string;
-  alt: string;
+  src: string,
+    alt: string;
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void
+  }
 
 const LazyImage: React.FC<LazyImageProps>= ({
 const LazyImage: React.FC<LazyImageProps> = ({}
   src,
-const LazyImage: React.FC<LazyImageProps> = ({,
+const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt,
   className = '',
@@ -36,8 +37,8 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   const [setNode, entry] = useIntersectionObserver({)
     threshold: 0.1),
     rootMargin: '50px'),
-  React.useEffect(() => {,
-    if (entry?.isIntersecting) {,
+  React.useEffect(() => {
+    if (entry?.isIntersecting) {
   const [setNode, entry] = useIntersectionObserver({)}
     threshold: 0.1,
     rootMargin: '50px',

@@ -6,12 +6,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const BusinessIntelligencePage: React.FC = () => {
-  const features = [,
-    {,
+  const features = [
+    {
       title: 'Real-Time Analytics Dashboard',
       description: 'Live business intelligence dashboards with real-time data visualization and interactive reporting.',
-      icon: BarChart;
-      price: 'Starting at $2,800/month',
+      icon: BarChart,
+    price: 'Starting at $2,800/month',
       features: ['Real-time data streaming', 'Interactive dashboards', 'Custom visualizations', 'Mobile responsive', 'Automated alerts'],
       benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
       marketPrice: '$4,500-12,000/month',
@@ -21,8 +21,8 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'Predictive Analytics & Forecasting',
       description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
-      icon: TrendingUp;
-      price: 'Starting at $3,500/month',
+      icon: TrendingUp,
+    price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
       benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
       marketPrice: '$6,000-18,000/month',
@@ -32,8 +32,8 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'Data Warehouse Design & Implementation',
       description: 'Comprehensive data warehouse solutions for centralized data storage and analytics.',
-      icon: Database;
-      price: 'Starting at $4,200/month',
+      icon: Database,
+    price: 'Starting at $4,200/month',
       features: ['Data modeling', 'ETL processes', 'Data quality management', 'Schema design', 'Performance optimization'],
       benefits: ['Centralize all business data', 'Improve data quality', 'Enable advanced analytics'],
       marketPrice: '$7,000-20,000/month',
@@ -43,8 +43,8 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Intelligent BI systems that automatically identify patterns and generate insights.',
-      icon: Brain;
-      price: 'Starting at $4,500/month',
+      icon: Brain,
+    price: 'Starting at $4,500/month',
       features: ['Automated insights', 'Anomaly detection', 'Natural language queries', 'Pattern recognition', 'Smart recommendations'],
       benefits: ['Discover hidden patterns', 'Reduce analysis time by 80%', 'Make data-driven decisions'],
       marketPrice: '$8,000-25,000/month',
@@ -157,26 +157,26 @@ const BusinessIntelligencePage: React.FC = () => {
       step: '01',
       title: 'Data Assessment',
       description: 'Analyze your current data landscape and identify opportunities',
-      icon: Database;
-    },
+      icon: Database
+  },
     {
       step: '02',
       title: 'Strategy Development',
       description: 'Create a comprehensive BI strategy tailored to your needs',
-      icon: Target;
-    },
+      icon: Target
+  },
     {
       step: '03',
       title: 'Implementation',
       description: 'Build and deploy your BI solution with best practices',
-      icon: Zap;
-    },
+      icon: Zap
+  },
     {
       step: '04',
       title: 'Optimization',
       description: 'Continuously improve and optimize your BI capabilities',
-      icon: TrendingUp;
-    }
+      icon: TrendingUp
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

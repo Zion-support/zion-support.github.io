@@ -4,42 +4,41 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye, Database, Zap, Shield, Users } from 'lucide-react';
-
-const AIDataVisualizationPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: BarChart3;
-      title: 'Interactive Dashboards',
+const AIDataVisualizationPage: React.FC = () => {
+  const features = [
+    {
+      icon: BarChart3,
+    title: 'Interactive Dashboards',
       description: 'Create stunning, interactive dashboards that bring your data to life with real-time updates and drill-down capabilities.',
       benefits: ['Real-time updates', 'Interactive charts', 'Custom layouts']
     },
     {
-      icon: PieChart;
-      title: 'Advanced Chart Types',
+      icon: PieChart,
+    title: 'Advanced Chart Types',
       description: 'Access to 50+ chart types including heatmaps, treemaps, sankey diagrams, and more for comprehensive data representation.',
       benefits: ['50+ chart types', 'Custom styling', 'Responsive design']
     },
     {
-      icon: TrendingUp;
-      title: 'Predictive Analytics',
+      icon: TrendingUp,
+    title: 'Predictive Analytics',
       description: 'AI-powered predictive models that forecast trends and patterns to help you make data-driven decisions.',
       benefits: ['Trend forecasting', 'Pattern recognition', 'Predictive insights']
     },
     {
-      icon: Eye;
-      title: 'Visual Storytelling',
+      icon: Eye,
+    title: 'Visual Storytelling',
       description: 'Transform complex data into compelling visual narratives that engage and inform your audience.',
       benefits: ['Story-driven insights', 'Engaging presentations', 'Clear communication']
     },
     {
-      icon: Database;
-      title: 'Multi-Source Integration',
+      icon: Database,
+    title: 'Multi-Source Integration',
       description: 'Connect to 100+ data sources including databases, APIs, cloud services, and file formats.',
       benefits: ['100+ integrations', 'Real-time sync', 'Data transformation']
     },
     {
-      icon: Zap;
-      title: 'Automated Insights',
+      icon: Zap,
+    title: 'Automated Insights',
       description: 'AI automatically identifies key insights, anomalies, and trends in your data without manual analysis.',
       benefits: ['Auto-discovery', 'Anomaly detection', 'Smart recommendations']
     }
@@ -51,21 +50,21 @@ const AIDataVisualizationPage: React.FC = () => {,
       price: '$149',
       period: '/month',
       description: 'Perfect for small teams',
-      features: [,
+      features: [
         'Up to 5 dashboards',
         'Basic chart types',
         '1 data source',
         'Standard templates',
         'Email support'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
       price: '$399',
       period: '/month',
       description: 'Ideal for growing businesses',
-      features: [,
+      features: [
         'Up to 25 dashboards',
         'All chart types',
         '10 data sources',
@@ -74,14 +73,14 @@ const AIDataVisualizationPage: React.FC = () => {,
         'API access',
         'Team collaboration'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
       price: '$999',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited dashboards',
         'Advanced AI features',
         'Unlimited data sources',
@@ -90,27 +89,27 @@ const AIDataVisualizationPage: React.FC = () => {,
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const benefits = [
     {
-      icon: Users;
-      title: 'Better Decision Making',
+      icon: Users,
+    title: 'Better Decision Making',
       description: 'Make informed decisions with clear, actionable insights from your data'
     },
     {
-      icon: Shield;
-      title: 'Secure & Compliant',
+      icon: Shield,
+    title: 'Secure & Compliant',
       description: 'Enterprise-grade security with compliance to industry standards'},
     {
-      icon: Zap;
-      title: 'Time Saving',
+      icon: Zap,
+    title: 'Time Saving',
       description: 'Reduce time spent on data analysis by up to 80% with automated insights'},
     {
-      icon: Star;
-      title: 'User Friendly',
+      icon: Star,
+    title: 'User Friendly',
       description: 'Intuitive interface that requires no technical expertise to create stunning visualizations'}
   ];
 
@@ -279,7 +278,7 @@ export default function AIDataVisualizationPage() {
                   </ul>
                   <a;
                     href="mailto: kleber@ziontechgroup.com",
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
@@ -373,7 +372,7 @@ export default function AIDataVisualizationPage() {
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Visualize Your Data?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI tools transform your data into actionable insights</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -395,7 +394,7 @@ export default function AIDataVisualizationPage() {
       
       <Footer />
     </div>
-  );
-};
+  )
+  };
 
 export default AIDataVisualizationPage;

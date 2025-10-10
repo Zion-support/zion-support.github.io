@@ -23,8 +23,7 @@ import {
   Reply,
   Flag;
 } from 'lucide-react';
-
-const CommunityPage: React.FC = () => {,
+const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('discussions');
 
   const discussions = [
@@ -35,10 +34,10 @@ const CommunityPage: React.FC = () => {,
       authorAvatar: '👩‍💼'
       category: 'AI Automation'
       replies: 24;
-      likes: 18;
-      time: '2 hours ago',
-      isPinned: true;
-      tags: ['workflow', 'automation', 'best-practices']
+      likes: 18,
+    time: '2 hours ago',
+      isPinned: true,
+    tags: ['workflow', 'automation', 'best-practices']
     },
     {
       id: 2;
@@ -47,10 +46,10 @@ const CommunityPage: React.FC = () => {,
       authorAvatar: '👨‍💻'
       category: 'Customer Support'
       replies: 15;
-      likes: 12;
-      time: '4 hours ago',
-      isPinned: false;
-      tags: ['crm', 'integration', 'customer-support']
+      likes: 12,
+    time: '4 hours ago',
+      isPinned: false,
+    tags: ['crm', 'integration', 'customer-support']
     },
     {
       id: 3;
@@ -59,10 +58,10 @@ const CommunityPage: React.FC = () => {,
       authorAvatar: '👩‍🎨'
       category: 'Content Creation'
       replies: 31;
-      likes: 25;
-      time: '6 hours ago',
-      isPinned: false;
-      tags: ['content', 'generation', 'tips']
+      likes: 25,
+    time: '6 hours ago',
+      isPinned: false,
+    tags: ['content', 'generation', 'tips']
     },
     {
       id: 4;
@@ -71,10 +70,10 @@ const CommunityPage: React.FC = () => {,
       authorAvatar: '👨‍⚕️'
       category: 'Healthcare AI'
       replies: 8;
-      likes: 15;
-      time: '1 day ago',
-      isPinned: false;
-      tags: ['quantum', 'healthcare', 'research']
+      likes: 15,
+    time: '1 day ago',
+      isPinned: false,
+    tags: ['quantum', 'healthcare', 'research']
     }
   ];
 
@@ -84,22 +83,22 @@ const CommunityPage: React.FC = () => {,
       date: 'March 15, 2024',
       time: '9:00 AM - 5:00 PM EST',
       type: 'Conference',
-      attendees: 250;
-      description: 'Join industry leaders for a day of AI innovation and networking'},
+      attendees: 250,
+    description: 'Join industry leaders for a day of AI innovation and networking'},
     {
       title: 'Weekly AI Office Hours'
       date: 'Every Friday',
       time: '2:00 PM - 3:00 PM EST',
       type: 'Office Hours',
-      attendees: 50;
-      description: 'Get help with your AI implementation questions'},
+      attendees: 50,
+    description: 'Get help with your AI implementation questions'},
     {
       title: 'AI Hackathon: Climate Solutions',
       date: 'April 20-22, 2024',
       time: '48 hours',
       type: 'Hackathon',
-      attendees: 100;
-      description: 'Build AI solutions for climate change challenges'}
+      attendees: 100,
+    description: 'Build AI solutions for climate change challenges'}
   ];
 
   const resources = [
@@ -107,20 +106,20 @@ const CommunityPage: React.FC = () => {,
       title: 'AI Implementation Guide'
       type: 'Documentation'
       icon: BookOpen;
-      downloads: 1250;
-      description: 'Complete guide to implementing AI solutions in your organization'},
+      downloads: 1250,
+    description: 'Complete guide to implementing AI solutions in your organization'},
     {
       title: 'API Integration Tutorial'
       type: 'Video'
       icon: Video;
-      views: 3200;
-      description: 'Step-by-step tutorial for integrating our AI APIs'},
+      views: 3200,
+    description: 'Step-by-step tutorial for integrating our AI APIs'},
     {
       title: 'Code Examples Repository'
       type: 'Code'
       icon: Code;
-      stars: 450;
-      description: 'Open source code examples and templates'}
+      stars: 450,
+    description: 'Open source code examples and templates'}
   ];
 
   const stats = [

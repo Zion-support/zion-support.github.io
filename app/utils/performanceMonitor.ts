@@ -13,7 +13,7 @@ interface PerformanceMetrics {
   customMetrics: Record<string, number>;
 }
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {,
+  private metrics: PerformanceMetrics = {
 interface PerformanceMetrics {}
   fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
@@ -99,8 +99,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,
-            if (!(entry as any).hadRecentInput) {,
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as any).hadRecentInput) {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {}
           let clsValue = 0;
@@ -136,11 +136,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {,
-      const observer = new PerformanceObserver((list) => {,
-        for (const entry of list.getEntries()) {,
-          if (entry.name === name) {,
-            (this.metrics as any)[metricKey] = entry.startTime;,
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === name) {
+            (this.metrics as any)[metricKey] = entry.startTime,
+    
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
     try {}
       const observer = new PerformanceObserver((list) => {}
@@ -281,7 +282,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     const duration = entry.responseEnd - entry.startTime;
     const size = entry.transferSize || 0;
     // Track slow resources;
-    if (duration > 1000) {,
+    if (duration > 1000) {
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
     // Track large resources;
@@ -289,11 +290,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
-  addCustomMetric(name: string, value: number): void {,
-    this.metrics.customMetrics[name] = value;,
+  addCustomMetric(name: string, value: number): void {
+    this.metrics.customMetrics[name] = value,
+    
     this.logMetric(name, value);
   }
-  private logMetric(name: string, value: number): void {,
+  private logMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {}ms`);
     }
     // Send to analytics if available;

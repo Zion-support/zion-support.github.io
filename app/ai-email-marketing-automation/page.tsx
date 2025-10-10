@@ -2,42 +2,41 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Brain, Target, Sparkles, Phone, DollarSign, Send, MailCheck, UserPlus, BarChart3, ShoppingCart, RefreshCw, Gift } from 'lucide-react';
-
-const AIEmailMarketingAutomationPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Brain;
-      title: 'AI Content Generation',
+const AIEmailMarketingAutomationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+    title: 'AI Content Generation',
       description: 'Generate compelling email content, subject lines, and CTAs using advanced AI algorithms',
       benefits: ['10 x faster content creation', 'Higher open rates', 'Personalized messaging', 'A/B testing automation']
     },
     {
-      icon: Target;
-      title: 'Smart Segmentation',
+      icon: Target,
+    title: 'Smart Segmentation',
       description: 'AI-powered audience segmentation based on behavior, preferences, and engagement patterns',
       benefits: ['Dynamic segmentation', 'Behavioral triggers', 'Personalization at scale', 'Improved deliverability']
     },
     {
-      icon: BarChart3;
-      title: 'Advanced Analytics',
+      icon: BarChart3,
+    title: 'Advanced Analytics',
       description: 'Comprehensive email analytics with AI insights, predictive modeling, and ROI tracking',
       benefits: ['Real-time performance metrics', 'Predictive analytics', 'Revenue attribution', 'Campaign optimization']
     },
     {
-      icon: Send;
-      title: 'Automated Workflows',
+      icon: Send,
+    title: 'Automated Workflows',
       description: 'Create complex email sequences with AI-powered triggers and intelligent automation',
       benefits: ['Drip campaigns', 'Welcome sequences', 'Abandoned cart recovery', 'Re-engagement campaigns']
     },
     {
-      icon: MailCheck;
-      title: 'Deliverability Optimization',
+      icon: MailCheck,
+    title: 'Deliverability Optimization',
       description: 'AI-powered deliverability optimization to ensure your emails reach the inbox',
       benefits: ['Inbox placement optimization', 'Spam score reduction', 'IP reputation management', 'Authentication setup']
     },
     {
-      icon: UserPlus;
-      title: 'Lead Nurturing',
+      icon: UserPlus,
+    title: 'Lead Nurturing',
       description: 'Intelligent lead nurturing with AI-driven personalization and conversion optimization',
       benefits: ['Lead scoring', 'Behavioral triggers', 'Conversion optimization', 'Lifecycle management']
     }
@@ -47,38 +46,38 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
     {
       name: 'Welcome Series',
       description: 'Automated welcome emails for new subscribers',
-      icon: UserPlus;
-      benefits: ['Increase engagement by 50%', 'Build brand loyalty', 'Set expectations']
+      icon: UserPlus,
+    benefits: ['Increase engagement by 50%', 'Build brand loyalty', 'Set expectations']
     },
     {
       name: 'Abandoned Cart',
       description: 'Recover lost sales with targeted follow-up emails',
-      icon: ShoppingCart;
-      benefits: ['Recover 15-30% of lost sales', 'Personalized recommendations', 'Urgency creation']
+      icon: ShoppingCart,
+    benefits: ['Recover 15-30% of lost sales', 'Personalized recommendations', 'Urgency creation']
     },
     {
       name: 'Re-engagement',
       description: 'Win back inactive subscribers with smart campaigns',
-      icon: RefreshCw;
-      benefits: ['Reactivate dormant users', 'Prevent unsubscribes', 'Improve list health']
+      icon: RefreshCw,
+    benefits: ['Reactivate dormant users', 'Prevent unsubscribes', 'Improve list health']
     },
     {
       name: 'Birthday & Anniversaries',
       description: 'Personalized emails for special occasions',
-      icon: Gift;
-      benefits: ['Increase customer loyalty', 'Drive repeat purchases', 'Personal touch']
+      icon: Gift,
+    benefits: ['Increase customer loyalty', 'Drive repeat purchases', 'Personal touch']
     },
     {
       name: 'Product Recommendations',
       description: 'AI-powered product suggestions based on behavior',
-      icon: Target;
-      benefits: ['Increase average order value', 'Cross-sell opportunities', 'Personalized shopping']
+      icon: Target,
+    benefits: ['Increase average order value', 'Cross-sell opportunities', 'Personalized shopping']
     },
     {
       name: 'Post-Purchase',
       description: 'Follow-up emails after purchase completion',
-      icon: CheckCircle;
-      benefits: ['Improve customer satisfaction', 'Gather feedback', 'Upsell opportunities']
+      icon: CheckCircle,
+    benefits: ['Improve customer satisfaction', 'Gather feedback', 'Upsell opportunities']
     }
   ];
 
@@ -88,7 +87,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
       price: '$39',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [,
+      features: [
         'Up to 1,000 contacts',
         'Unlimited emails',
         'Basic AI features',
@@ -96,14 +95,14 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         'Basic analytics',
         'Email support'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional',
       price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses and marketers',
-      features: [,
+      features: [
         'Up to 10,000 contacts',
         'Unlimited emails',
         'Advanced AI features',
@@ -113,14 +112,14 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         'A/B testing',
         'Automation workflows'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
       price: '$149',
       period: '/month',
       description: 'For large organizations and agencies',
-      features: [,
+      features: [
         'Unlimited contacts',
         'Unlimited emails',
         'Custom AI models',
@@ -130,8 +129,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         'API access',
         'Custom integrations'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const testimonials = [
@@ -140,22 +139,22 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
       role: 'Marketing Manager',
       company: 'E-commerce Plus',
       content: 'AI Email Marketing Automation increased our open rates by 40% and revenue by 60%. The AI content suggestions are game-changing.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Michael Rodriguez',
       role: 'Digital Marketing Director',
       company: 'Tech Solutions Inc.',
       content: 'The automation workflows saved us 15 hours per week and improved our conversion rates by 35%. Highly recommended!',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Emily Chen',
       role: 'Email Marketing Specialist',
       company: 'Growth Agency',
       content: 'Best email marketing platform we\'ve used. The AI segmentation and personalization features are incredible.',
-      rating: 5;
-    }
+      rating: 5
+  }
   ];
 
   const stats = [

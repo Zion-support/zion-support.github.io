@@ -4,8 +4,8 @@ import { Settings, GitBranch, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DevOpsPage: React.FC = () => {,
-  const features = [,
+const DevOpsPage: React.FC = () => {
+  const features = [
     'CI/CD Pipeline Setup',
     'Automated Testing',
     'Container Orchestration',
@@ -27,18 +27,18 @@ const DevOpsPage: React.FC = () => {,
     {
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines for faster releases',
-      icon: GitBranch;
-    },
+      icon: GitBranch
+  },
     {
       title: 'Container Management',
       description: 'Docker and Kubernetes orchestration for scalable applications',
-      icon: Settings;
-    },
+      icon: Settings
+  },
     {
       title: 'Infrastructure Automation',
       description: 'Infrastructure as Code with Terraform and CloudFormation',
-      icon: Zap;
-    }
+      icon: Zap
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

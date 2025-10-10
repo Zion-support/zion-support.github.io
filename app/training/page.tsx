@@ -23,8 +23,7 @@ import {}
   Calendar,
   MapPin;
 } from 'lucide-react';
-
-const TrainingPage: React.FC = () => {,
+const TrainingPage: React.FC = () => {
 const TrainingPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -44,9 +43,9 @@ const TrainingPage: React.FC = () => {}
       category: 'ai-fundamentals'
       duration: '4 hours'
       level: 'Beginner'
-      rating: 4.8;
-      students: 1250;
-      price: 'Free'
+      rating: 4.8,
+    students: 1250,
+    price: 'Free'
       instructor: 'Dr. Sarah Chen'
     {}
       id: 1,
@@ -60,9 +59,9 @@ const TrainingPage: React.FC = () => {}
       price: 'Free',
       instructor: 'Dr. Sarah Chen',
       thumbnail: '🧠',
-      modules: 8;
-      certificate: true;
-    },
+      modules: 8,
+    certificate: true
+  },
     {
       id: 2;
       title: 'Implementing AI Workflow Automation'
@@ -70,9 +69,9 @@ const TrainingPage: React.FC = () => {}
       category: 'implementation'
       duration: '6 hours'
       level: 'Intermediate'
-      rating: 4.9;
-      students: 890;
-      price: '$199'
+      rating: 4.9,
+    students: 890,
+    price: '$199'
       instructor: 'Mike Rodriguez'
     {}
       id: 2,
@@ -86,9 +85,9 @@ const TrainingPage: React.FC = () => {}
       price: '$199',
       instructor: 'Mike Rodriguez',
       thumbnail: '⚡',
-      modules: 12;
-      certificate: true;
-    },
+      modules: 12,
+    certificate: true
+  },
     {
       id: 3;
       title: 'Advanced AI Analytics and Machine Learning'
@@ -96,9 +95,9 @@ const TrainingPage: React.FC = () => {}
       category: 'advanced'
       duration: '10 hours'
       level: 'Advanced'
-      rating: 4.7;
-      students: 456;
-      price: '$399'
+      rating: 4.7,
+    students: 456,
+    price: '$399'
       instructor: 'Dr. James Liu'
     {}
       id: 3,
@@ -112,9 +111,9 @@ const TrainingPage: React.FC = () => {}
       price: '$399',
       instructor: 'Dr. James Liu',
       thumbnail: '📊',
-      modules: 15;
-      certificate: true;
-    },
+      modules: 15,
+    certificate: true
+  },
     {
       id: 4;
       title: 'AI Security and Compliance'
@@ -122,9 +121,9 @@ const TrainingPage: React.FC = () => {}
       category: 'certification'
       duration: '5 hours'
       level: 'Intermediate'
-      rating: 4.6;
-      students: 678;
-      price: '$299'
+      rating: 4.6,
+    students: 678,
+    price: '$299'
       instructor: 'Lisa Wang'
     {}
       id: 4,
@@ -138,9 +137,9 @@ const TrainingPage: React.FC = () => {}
       price: '$299',
       instructor: 'Lisa Wang',
       thumbnail: '🛡️',
-      modules: 10;
-      certificate: true;
-    },
+      modules: 10,
+    certificate: true
+  },
     {
       id: 5;
       title: 'AI Content Generation Masterclass'
@@ -148,9 +147,9 @@ const TrainingPage: React.FC = () => {}
       category: 'implementation'
       duration: '7 hours'
       level: 'Intermediate'
-      rating: 4.8;
-      students: 734;
-      price: '$249'
+      rating: 4.8,
+    students: 734,
+    price: '$249'
       instructor: 'Emily Watson'
     {}
       id: 5,
@@ -164,9 +163,9 @@ const TrainingPage: React.FC = () => {}
       price: '$249',
       instructor: 'Emily Watson',
       thumbnail: '✍️',
-      modules: 14;
-      certificate: true;
-    },
+      modules: 14,
+    certificate: true
+  },
     {
       id: 6;
       title: 'Quantum Computing for AI Applications'
@@ -174,9 +173,9 @@ const TrainingPage: React.FC = () => {}
       category: 'advanced'
       duration: '8 hours'
       level: 'Advanced'
-      rating: 4.5;
-      students: 234;
-      price: '$499'
+      rating: 4.5,
+    students: 234,
+    price: '$499'
       instructor: 'Dr. Alex Quantum'
     {}
       id: 6,
@@ -190,9 +189,9 @@ const TrainingPage: React.FC = () => {}
       price: '$499',
       instructor: 'Dr. Alex Quantum',
       thumbnail: '⚛️',
-      modules: 16;
-      certificate: true;
-    }
+      modules: 16,
+    certificate: true
+  }
   ];
 
   const upcomingEvents = [
@@ -202,16 +201,16 @@ const TrainingPage: React.FC = () => {}
       time: '9:00 AM - 5:00 PM EST',
       location: 'Virtual',
       instructor: 'Dr. Sarah Chen',
-      spots: 25;
-      price: '$299'},
+      spots: 25,
+    price: '$299'},
     {}
       title: 'AI Security Certification Bootcamp',
       date: 'April 5-7, 2024',
       time: '9:00 AM - 5:00 PM EST',
       location: 'New York, NY',
       instructor: 'Lisa Wang',
-      spots: 15;
-      price: '$1,299'
+      spots: 15,
+    price: '$1,299'
     },
     {}
       title: 'Advanced AI Analytics Masterclass',
@@ -219,8 +218,8 @@ const TrainingPage: React.FC = () => {}
       time: '10:00 AM - 4:00 PM EST',
       location: 'Virtual',
       instructor: 'Dr. James Liu',
-      spots: 30;
-      price: '$199'}
+      spots: 30,
+    price: '$199'}
   ];
 
   const stats = [
@@ -360,7 +359,7 @@ const TrainingPage: React.FC = () => {}
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Level: </span>,
-                    <span className={`px-2 py-1 rounded text-xs ${,
+                    <span className={`px-2 py-1 rounded text-xs ${
                       course.level === 'Beginner' ? 'bg-green-500/20 text-green-400' :,
                       course.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :}
                       'bg-red-500/20 text-red-400'}

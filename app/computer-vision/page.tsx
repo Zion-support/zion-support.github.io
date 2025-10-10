@@ -7,32 +7,32 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const ComputerVisionPage: React.FC = () => {,
-  const services = [,
-    {,
+const ComputerVisionPage: React.FC = () => {
+  const services = [
+    {
       title: 'Object Detection',
       description: 'Identify and locate objects in images and videos with high precision',
       features: ['Real-time Detection', 'Multi-class Recognition', 'Bounding Box Localization', 'Confidence Scoring'],
-      icon: Search;
-      color: 'text-blue-400'},
+      icon: Search,
+    color: 'text-blue-400'},
     {
       title: 'Image Classification',
       description: 'Automatically categorize images into predefined classes or categories',
       features: ['Custom Categories', 'High Accuracy', 'Batch Processing', 'API Integration'],
-      icon: Eye;
-      color: 'text-green-400'},
+      icon: Eye,
+    color: 'text-green-400'},
     {
       title: 'Facial Recognition',
       description: 'Identify and verify individuals using facial biometrics',
       features: ['Face Detection', 'Identity Verification', 'Emotion Recognition', 'Privacy Protection'],
-      icon: Camera;
-      color: 'text-purple-400'},
+      icon: Camera,
+    color: 'text-purple-400'},
     {
       title: 'Video Analysis',
       description: 'Extract insights from video content using advanced computer vision',
       features: ['Motion Detection', 'Activity Recognition', 'Scene Analysis', 'Real-time Processing'],
-      icon: Shield;
-      color: 'text-cyan-400'}
+      icon: Shield,
+    color: 'text-cyan-400'}
   ];
 
   const benefits = [

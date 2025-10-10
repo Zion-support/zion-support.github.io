@@ -1,14 +1,13 @@
 import React from 'react';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react';
-
-const AIContentGenerationPage: React.FC = () => {,
-  const contentServices = [,
-    {,
+const AIContentGenerationPage: React.FC = () => {
+  const contentServices = [
+    {
       title: 'AI Blog Content Generator Pro',
       description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
       icon: '✍️',
       price: '$199/month',
-      features: [,
+      features: [
         'SEO-optimized content generation',
         'Research integration',
         'Brand voice consistency',
@@ -16,7 +15,7 @@ const AIContentGenerationPage: React.FC = () => {,
         'Content calendar automation',
         'Performance analytics'
       ],
-      benefits: [,
+      benefits: [
         'Create 10x more content',
         'Improve SEO rankings by 150%',
         'Save 40+ hours per week',
@@ -30,7 +29,7 @@ const AIContentGenerationPage: React.FC = () => {,
       description: 'Comprehensive social media content creation with platform-specific optimization, hashtag research, and engagement prediction.',
       icon: 'smartphone',
       price: '$149/month',
-      features: [,
+      features: [
         'Platform-specific optimization',
         'Hashtag research automation',
         'Engagement prediction',
@@ -38,7 +37,7 @@ const AIContentGenerationPage: React.FC = () => {,
         'Posting schedule optimization',
         'Viral content analysis'
       ],
-      benefits: [,
+      benefits: [
         'Increase engagement by 300%',
         'Grow followers organically',
         'Save 25+ hours per week',

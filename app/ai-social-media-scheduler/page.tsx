@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, Target, Clock, CheckCircle, Brain, Share2, TrendingUp, BarChart, MessageSquare } from 'lucide-react';
-
-const AISocialMediaScheduler: React.FC = memo(() => {,
+const AISocialMediaScheduler: React.FC = memo(() => {
 const AISocialMediaScheduler: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,7 +49,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
       price: '$19',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [,
+      features: [
         'Up to 3 social accounts',
         '30 posts per month',
         'Basic scheduling',
@@ -59,8 +58,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         '1 user'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
     {}
@@ -68,7 +67,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
       price: '$49',
       period: '/month',
       description: 'Ideal for growing businesses',
-      features: [,
+      features: [
         'Up to 10 social accounts',
         'Unlimited posts',
         'AI content generation',
@@ -78,8 +77,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         'Custom branding'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
     {}
@@ -87,7 +86,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
       price: '$149',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited social accounts',
         'Unlimited posts',
         'Advanced AI features',
@@ -97,31 +96,31 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         'Advanced reporting'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Content Planning',
       description: 'Plan and schedule your content calendar weeks in advance',
-      icon: Calendar;
-      result: '3x efficiency'},
+      icon: Calendar,
+    result: '3x efficiency'},
     {}
       title: 'Engagement Boost',
       description: 'Increase engagement with AI-optimized posting times and content',
-      icon: TrendingUp;
-      result: '150% more'},
+      icon: TrendingUp,
+    result: '150% more'},
     {}
       title: 'Brand Consistency',
       description: 'Maintain consistent brand voice across all platforms',
-      icon: Target;
-      result: '100% consistent'},
+      icon: Target,
+    result: '100% consistent'},
     {}
       title: 'Time Saving',
       description: 'Save hours every week with automated scheduling and content generation',
-      icon: Clock;
-      result: '10 hours/week'}
+      icon: Clock,
+    result: '10 hours/week'}
   ];
 
   const supportedPlatforms = [
@@ -400,8 +399,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AISocialMediaScheduler.displayName = 'AISocialMediaScheduler';
 ,

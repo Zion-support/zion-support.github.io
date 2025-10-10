@@ -2,11 +2,11 @@
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T;
-  wait: number;
+  func: T,
+    wait: number;
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout),
   func: T,
   wait: number
@@ -19,12 +19,12 @@ export const debounce = <T extends (...args: any[]) => any>(
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T;
-  limit: number;
+  func: T,
+    limit: number;
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
+    if (!inThrottle) {
       func(...args),
       inThrottle = true;
   func: T,
@@ -41,8 +41,8 @@ export const throttle = <T extends (...args: any[]) => any>(
 }
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void;
-  options: IntersectionObserverInit = {}
+  callback: (entries: IntersectionObserverEntry[]) => void,
+    options: IntersectionObserverInit = {}
 ) => {}
   const observer = useMemo()
     () =>
@@ -59,8 +59,8 @@ export const useIntersectionObserver = (
     [callback, options]
   )
   const observe = useCallback(
-    (element: Element | null) => {,
-      if (observer && element) {,
+    (element: Element | null) => {
+      if (observer && element) {
         observer.observe(element),
   const observe = useCallback()
     (element: Element | null) => {}

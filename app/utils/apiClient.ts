@@ -15,8 +15,8 @@ interface RequestConfig {}
 interface APIResponse<T = any> {}
   data: T;
   status: number;
-  statusText: string;
-  headers: Record<string, string>;</strin>
+  statusText: string,
+    headers: Record<string, string>;</strin>
 }
 
 class APIClient {}
@@ -32,7 +32,7 @@ class APIClient {}
   }
 
   private async makeRequest<T>(
-    endpoint: string;
+    endpoint: string,
     config: RequestConfig = {}
   ): Promise<APIResponse<T>> {}
     const {}
@@ -59,7 +59,7 @@ class APIClient {}
     try {
       const response = await fetch(url, {)
         method)
-        headers: {,
+        headers: {
           ...this.defaultHeaders),
           ...headers;
         })
@@ -69,8 +69,8 @@ class APIClient {}
       const apiResponse: APIResponse<T> = {
         data;
         status: response.status;
-        statusText: response.statusText;
-        headers: Object.fromEntries(response.headers.entries())};
+        statusText: response.statusText,
+    headers: Object.fromEntries(response.headers.entries())};
 
       // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
@@ -119,8 +119,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
       },
       cacheOption,
-  s: config.cacheOptions;
-    };
+  s: config.cacheOptions
+  };
   }
   /**
    * GET request;
@@ -206,8 +206,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
     while (attempt < retries) {/* TODO: Fix JSX expression */}
           },
           signa,
-  l: controller.signal;
-        });
+  l: controller.signal
+  });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
         if (!response.ok) {/* TODO: Fix JSX expression */}`
@@ -324,8 +324,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
   // Set base URL;
-  setBaseURL(baseURL: string): void {,
-    this.baseURL = baseURL;
+  setBaseURL(baseURL: string): void {
+    this.baseURL = baseURL
   }
 
   // Set default headers;

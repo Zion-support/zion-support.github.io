@@ -12,38 +12,38 @@ export interface AppConfig {
   api: {
     baseURL: string;
     timeout: number;
-    retryAttempts: number;
-    enableCaching: boolean;
+    retryAttempts: number,
+    enableCaching: boolean
   }
   features: {
     enableAnalytics: boolean;
     enableErrorReporting: boolean;
     enablePerformanceMonitoring: boolean;
     enableAccessibility: boolean;
-    enableSEO: boolean;
-    enablePWA: boolean;
+    enableSEO: boolean,
+    enablePWA: boolean
   }
   performance: {
     enableCodeSplitting: boolean;
     enableLazyLoading: boolean;
-    enableImageOptimization: boolean;
-    enableCaching: boolean;
+    enableImageOptimization: boolean,
+    enableCaching: boolean
   }
   security: {
     enableCSP: boolean;
     enableCORS: boolean;
-    enableRateLimiting: boolean;
-    maxRequestsPerMinute: number;
+    enableRateLimiting: boolean,
+    maxRequestsPerMinute: number
   }
-  ui: {,
+  ui: {
     theme: 'light' | 'dark' | 'auto',
-    language: string;
-    timezone: string;
+    language: string,
+    timezone: string
   }
-  logging: {,
+  logging: {
     level: 'debug' | 'info' | 'warn' | 'error',
-    enableConsole: boolean;
-    enableNetwork: boolean;
+    enableConsole: boolean,
+    enableNetwork: boolean
   }
 }
 
@@ -52,43 +52,43 @@ const defaultConfig: AppConfig = {
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com'
     timeout: 30000;
-    retryAttempts: 3;
-    enableCaching: true;
+    retryAttempts: 3,
+    enableCaching: true
   },
   features: {
     enableAnalytics: true;
     enableErrorReporting: true;
     enablePerformanceMonitoring: true;
     enableAccessibility: true;
-    enableSEO: true;
-    enablePWA: true;
+    enableSEO: true,
+    enablePWA: true
   },
   performance: {
     enableCodeSplitting: true;
     enableLazyLoading: true;
-    enableImageOptimization: true;
-    enableCaching: true;
+    enableImageOptimization: true,
+    enableCaching: true
   },
   security: {
     enableCSP: true;
     enableCORS: true;
-    enableRateLimiting: true;
-    maxRequestsPerMinute: 100;
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100
   },
-  ui: {,
+  ui: {
     theme: 'auto',
     language: 'en',
     timezone: 'UTC'},
-  logging: {,
+  logging: {
     level: 'info',
-    enableConsole: true;
-    enableNetwork: false;
+    enableConsole: true,
+    enableNetwork: false
   }
 }
 
 class ConfigManager {
   private config: AppConfig;
-  constructor() {,
+  constructor() {
     this.config = { ...defaultConfig }
     this.loadEnvironmentConfig()
   }
@@ -112,7 +112,7 @@ class ConfigManager {
     return { ...this.config }
   }
 
-  public updateConfig(updates: Partial<AppConfig>): void {,
+  public updateConfig(updates: Partial<AppConfig>): void {
     this.config = { ...this.config, ...updates }
   }
 

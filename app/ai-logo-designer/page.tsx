@@ -4,8 +4,8 @@ import { Palette, Download, CheckCircle, Star, Users, ArrowRight, Phone, Mail, M
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AILogoDesignerPage: React.FC = () => {,
-  const features = [,
+const AILogoDesignerPage: React.FC = () => {
+  const features = [
     'AI-powered logo generation',
     'Unlimited logo variations',
     'High-resolution downloads',
@@ -68,7 +68,7 @@ const AILogoDesignerPage: React.FC = () => {,
       price: '$29',
       period: '/month',
       originalPrice: '$49',
-      features: [,
+      features: [
         '10 logo downloads',
         'Basic templates',
         'PNG format only',
@@ -76,14 +76,14 @@ const AILogoDesignerPage: React.FC = () => {,
         'Email support',
         'Commercial use'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
       price: '$59',
       period: '/month',
       originalPrice: '$99',
-      features: [,
+      features: [
         'Unlimited downloads',
         'Premium templates',
         'All formats (PNG, SVG, PDF)',
@@ -93,14 +93,14 @@ const AILogoDesignerPage: React.FC = () => {,
         'Social media templates',
         'Business card designs'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
       price: '$99',
       period: '/month',
       originalPrice: '$149',
-      features: [,
+      features: [
         'Everything in Professional',
         'White-label options',
         'API access',
@@ -110,8 +110,8 @@ const AILogoDesignerPage: React.FC = () => {,
         'Advanced editing tools',
         'Brand asset management'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const testimonials = [
@@ -119,20 +119,20 @@ const AILogoDesignerPage: React.FC = () => {,
       name: 'Alex Rodriguez',
       role: 'Startup Founder',
       content: 'AI Logo Designer Pro created the perfect logo for my startup in just 10 minutes. The AI understood my brand vision and delivered exactly what I needed.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Maria Santos',
       role: 'Graphic Designer',
       content: 'As a designer, I was skeptical about AI tools, but this one is incredible. It helps me generate initial concepts quickly and then I can refine them.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'James Wilson',
       role: 'Small Business Owner',
       content: 'The brand guidelines feature is amazing. It gave me everything I needed to maintain consistency across all my marketing materials.',
-      rating: 5;
-    }
+      rating: 5
+  }
   ];
 
   return (

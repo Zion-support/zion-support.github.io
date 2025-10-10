@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Code, CheckCircle, Terminal, GitBranch, Bug, FileText } from 'lucide-react';
-
-const AICodeAssistant: React.FC = memo(() => {,
+const AICodeAssistant: React.FC = memo(() => {
 const AICodeAssistant: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -48,7 +47,7 @@ const AICodeAssistant: React.FC = memo(() => {}
       price: '$29',
       period: '/month',
       description: 'Perfect for individual developers',
-      features: [,
+      features: [
         'Up to 1,000 code generations/month',
         'Basic debugging assistance',
         '10 programming languages',
@@ -57,15 +56,15 @@ const AICodeAssistant: React.FC = memo(() => {}
         'API access'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
     {}
       name: 'Team',
       price: '$99',
       period: '/month',
       description: 'Ideal for development teams',
-      features: [,
+      features: [
         'Up to 10,000 code generations/month',
         'Advanced debugging & optimization',
         '50+ programming languages',
@@ -75,8 +74,8 @@ const AICodeAssistant: React.FC = memo(() => {}
         'Code review assistance'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
     {}
@@ -84,7 +83,7 @@ const AICodeAssistant: React.FC = memo(() => {}
       price: '$299',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited code generations',
         'AI-powered code review',
         'All programming languages',
@@ -94,31 +93,31 @@ const AICodeAssistant: React.FC = memo(() => {}
         'Custom AI models'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Code Generation',
       description: 'Generate boilerplate code, functions, and complete modules from descriptions',
-      icon: Code;
-      result: '90% faster'},
+      icon: Code,
+    result: '90% faster'},
     {}
       title: 'Bug Fixing',
       description: 'Automatically detect and fix common bugs and security vulnerabilities',
-      icon: Bug;
-      result: '95% accuracy'},
+      icon: Bug,
+    result: '95% accuracy'},
     {}
       title: 'Code Review',
       description: 'AI-powered code review with suggestions for improvements and best practices',
-      icon: FileText;
-      result: '80% quality'},
+      icon: FileText,
+    result: '80% quality'},
     {}
       title: 'Documentation',
       description: 'Generate comprehensive documentation and comments for your code',
-      icon: FileText;
-      result: '100% coverage'}
+      icon: FileText,
+    result: '100% coverage'}
   ];
 
   const supportedLanguages = [
@@ -390,8 +389,8 @@ const AICodeAssistant: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AICodeAssistant.displayName = 'AICodeAssistant';
 ,

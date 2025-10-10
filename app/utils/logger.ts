@@ -17,21 +17,21 @@ export interface LogContext {
   sessionId?: string;
   component?: string;
   action?: string;
-  [key: string]: unknown;
-}
+  [key: string]: unknown
+  }
 
 class Logger {
   private logLevel: LogLevel = LogLevel.INFO;
   private logs: Array<{
-    level: LogLevel;
+    level: LogLevel,
     message: string;
     context?: LogContext;
     metadata?: Record<string, unknown>
-    timestamp: number;
+    timestamp: number
   }> = []
 
-  setLogLevel(level: LogLevel): void {,
-    this.logLevel = level;
+  setLogLevel(level: LogLevel): void {
+    this.logLevel = level
   }
 
   getLogLevel(): LogLevel {
@@ -169,11 +169,11 @@ class Logger {/* TODO: Fix JSX expression */}
   }
 
   getLogs(level?: LogLevel): Array<{
-    level: LogLevel;
+    level: LogLevel,
     message: string;
     context?: LogContext;
     metadata?: Record<string, unknown>
-    timestamp: number;
+    timestamp: number
   }> {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)
@@ -251,7 +251,7 @@ class Logger {/* TODO: Fix JSX expression */}
   /**
    * Send log entry to external logging service;
    */
-  private sendToLoggingService(entry: LogMetadata): void {,
+  private sendToLoggingService(entry: LogMetadata): void {
     // In a real application, you would send this to your logging service;
     // For example: Sentry, LogRocket, DataDog, etc.
     // Example implementation:

@@ -7,32 +7,32 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const NLPPage: React.FC = () => {,
-  const services = [,
-    {,
+const NLPPage: React.FC = () => {
+  const services = [
+    {
       title: 'Text Analysis',
       description: 'Extract insights from unstructured text data with advanced NLP techniques',
       features: ['Sentiment Analysis', 'Entity Recognition', 'Topic Modeling', 'Text Classification'],
-      icon: FileText;
-      color: 'text-blue-400'},
+      icon: FileText,
+    color: 'text-blue-400'},
     {
       title: 'Language Translation',
       description: 'Real-time translation across 100+ languages with high accuracy',
       features: ['Multi-language Support', 'Context-aware Translation', 'Custom Models', 'API Integration'],
-      icon: Globe;
-      color: 'text-green-400'},
+      icon: Globe,
+    color: 'text-green-400'},
     {
       title: 'Chatbot Development',
       description: 'Intelligent conversational AI that understands and responds naturally',
       features: ['Natural Language Understanding', 'Context Management', 'Multi-turn Conversations', 'Integration APIs'],
-      icon: Bot;
-      color: 'text-purple-400'},
+      icon: Bot,
+    color: 'text-purple-400'},
     {
       title: 'Document Processing',
       description: 'Automated extraction and analysis of information from documents',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Knowledge Graphs'],
-      icon: Search;
-      color: 'text-cyan-400'}
+      icon: Search,
+    color: 'text-cyan-400'}
   ];
 
   const benefits = [

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AILeadGeneration: React.FC = () => {,
+const AILeadGeneration: React.FC = () => {
   const [industry, setIndustry] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [budget, setBudget] = useState('');

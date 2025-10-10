@@ -5,9 +5,8 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock,
 import React, { lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-
-const AI3DGenerationPage: React.FC = () => {,
-  const features = [,
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
     'Generate high-quality 3D models from text descriptions',
     'Create photorealistic textures and materials',
     'Automated animation and rigging',
@@ -36,7 +35,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Cube, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';
-
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     {
@@ -148,20 +146,20 @@ const AI3DGenerationPage: React.FC = () => {
       name: 'Creator',
       price: '$199/month',
       description: 'Perfect for individual creators',
-      features: [,
+      features: [
         'Up to 100 3D models/month',
         'Basic texture generation',
         'Standard quality output',
         'Email support',
         'Basic export formats'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Studio',
       price: '$499/month',
       description: 'Ideal for small studios',
-      features: [,
+      features: [
         'Up to 500 3D models/month',
         'Advanced texture generation',
         'High quality output',
@@ -170,13 +168,13 @@ const AI3DGenerationPage: React.FC = () => {
         'Animation support',
         'Batch processing'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise',
       price: '$1,299/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited 3D models',
         'Premium texture generation',
         'Ultra-high quality output',
@@ -186,8 +184,8 @@ const AI3DGenerationPage: React.FC = () => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const technologies = [
@@ -199,23 +197,23 @@ const AI3DGenerationPage: React.FC = () => {
 
   const workflow = [
     {
-      step: 1;
-      title: 'Describe Your Vision',
+      step: 1,
+    title: 'Describe Your Vision',
       description: 'Input text description or upload reference images',
       icon: '✍️'},
     {
-      step: 2;
-      title: 'AI Processing',
+      step: 2,
+    title: 'AI Processing',
       description: 'Our AI generates 3D model with textures and materials',
       icon: '🤖'},
     {
-      step: 3;
-      title: 'Review & Refine',
+      step: 3,
+    title: 'Review & Refine',
       description: 'Review the generated model and make adjustments',
       icon: '👁️'},
     {
-      step: 4;
-      title: 'Export & Use',
+      step: 4,
+    title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
       icon: '📤'}
   ]
@@ -513,7 +511,7 @@ const AI3DGenerationPage: React.FC = () => {
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing 3D Content?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI-powered tools bring your ideas to life</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -539,8 +537,8 @@ const AI3DGenerationPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+  };
 
 export default AI3DGenerationPage;
 export default AI3DGenerationPage;

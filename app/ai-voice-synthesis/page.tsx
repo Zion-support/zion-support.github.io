@@ -4,8 +4,8 @@ import { CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVoiceSynthesisPage: React.FC = () => {,
-  const features = [,
+const AIVoiceSynthesisPage: React.FC = () => {
+  const features = [
     'Voice Cloning',
     'Text-to-Speech',
     'Emotion Control',

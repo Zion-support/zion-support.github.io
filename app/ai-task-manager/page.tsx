@@ -4,38 +4,38 @@ import { CheckCircle, Clock, Users, BarChart, Target, Calendar, TrendingUp } fro
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AITaskManagerPage: React.FC = () => {,
-  const features = [,
-    {,
+const AITaskManagerPage: React.FC = () => {
+  const features = [
+    {
       title: 'Smart Task Prioritization',
       description: 'AI automatically prioritizes tasks based on deadlines, importance, and dependencies.',
-      icon: Target;
-    },
+      icon: Target
+  },
     {
       title: 'Intelligent Scheduling',
       description: 'Automatically schedule tasks based on your availability and workload capacity.',
-      icon: Calendar;
-    },
+      icon: Calendar
+  },
     {
       title: 'Progress Tracking',
       description: 'Real-time progress monitoring with predictive analytics and completion estimates.',
-      icon: BarChart;
-    },
+      icon: BarChart
+  },
     {
       title: 'Team Collaboration',
       description: 'Seamless team coordination with automated task assignment and communication.',
-      icon: Users;
-    },
+      icon: Users
+  },
     {
       title: 'Time Optimization',
       description: 'AI learns your work patterns to suggest optimal time blocks for different task types.',
-      icon: Clock;
-    },
+      icon: Clock
+  },
     {
       title: 'Performance Analytics',
       description: 'Detailed insights into productivity patterns and efficiency improvements.',
-      icon: TrendingUp;
-    }
+      icon: TrendingUp
+  }
   ];
 
   const benefits = [

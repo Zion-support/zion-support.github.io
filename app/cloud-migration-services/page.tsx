@@ -2,42 +2,41 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Clock, TrendingUp, Globe, BarChart, Sparkles, Phone, Cloud, Server, Database, Lock, ArrowUp, RefreshCw, Settings } from 'lucide-react';
-
-const CloudMigrationServicesPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Cloud;
-      title: 'Multi-Cloud Strategy',
+const CloudMigrationServicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Cloud,
+    title: 'Multi-Cloud Strategy',
       description: 'Comprehensive cloud migration strategy supporting AWS, Azure, Google Cloud, and hybrid environments',
       benefits: ['Vendor-agnostic approach', 'Cost optimization', 'Risk mitigation', 'Flexibility & scalability']
     },
     {
-      icon: Shield;
-      title: 'Security-First Migration',
+      icon: Shield,
+    title: 'Security-First Migration',
       description: 'Bank-level security throughout the migration process with zero-downtime deployment',
       benefits: ['End-to-end encryption', 'Compliance adherence', 'Zero data loss', 'Audit trail maintenance']
     },
     {
-      icon: RefreshCw;
-      title: 'Automated Migration',
+      icon: RefreshCw,
+    title: 'Automated Migration',
       description: 'AI-powered migration automation with intelligent workload assessment and optimization',
       benefits: ['90% automation rate', 'Faster migration', 'Reduced errors', 'Cost savings']
     },
     {
-      icon: BarChart;
-      title: 'Performance Optimization',
+      icon: BarChart,
+    title: 'Performance Optimization',
       description: 'Continuous monitoring and optimization of cloud resources for maximum efficiency',
       benefits: ['Real-time monitoring', 'Auto-scaling', 'Cost optimization', 'Performance tuning']
     },
     {
-      icon: Database;
-      title: 'Database Migration',
+      icon: Database,
+    title: 'Database Migration',
       description: 'Seamless database migration with minimal downtime and data integrity guarantees',
       benefits: ['Zero-downtime migration', 'Data validation', 'Backup & recovery', 'Performance optimization']
     },
     {
-      icon: Lock;
-      title: 'Compliance & Governance',
+      icon: Lock,
+    title: 'Compliance & Governance',
       description: 'Ensure compliance with industry standards and implement robust governance frameworks',
       benefits: ['GDPR compliance', 'SOC 2 certification', 'HIPAA compliance', 'Governance frameworks']
     }
@@ -47,38 +46,38 @@ const CloudMigrationServicesPage: React.FC = () => {,
     {
       name: 'Lift & Shift',
       description: 'Move applications to cloud with minimal changes',
-      icon: ArrowUp;
-      benefits: ['Fastest migration', 'Minimal risk', 'Quick ROI', 'Preserve existing architecture']
+      icon: ArrowUp,
+    benefits: ['Fastest migration', 'Minimal risk', 'Quick ROI', 'Preserve existing architecture']
     },
     {
       name: 'Replatforming',
       description: 'Optimize applications for cloud-native features',
-      icon: RefreshCw;
-      benefits: ['Cloud optimization', 'Better performance', 'Cost reduction', 'Enhanced scalability']
+      icon: RefreshCw,
+    benefits: ['Cloud optimization', 'Better performance', 'Cost reduction', 'Enhanced scalability']
     },
     {
       name: 'Refactoring',
       description: 'Completely redesign applications for cloud',
-      icon: Settings;
-      benefits: ['Maximum cloud benefits', 'Modern architecture', 'Best performance', 'Future-proof design']
+      icon: Settings,
+    benefits: ['Maximum cloud benefits', 'Modern architecture', 'Best performance', 'Future-proof design']
     },
     {
       name: 'Hybrid Cloud',
       description: 'Combine on-premises and cloud infrastructure',
-      icon: Server;
-      benefits: ['Flexibility', 'Gradual migration', 'Risk mitigation', 'Cost control']
+      icon: Server,
+    benefits: ['Flexibility', 'Gradual migration', 'Risk mitigation', 'Cost control']
     },
     {
       name: 'Multi-Cloud',
       description: 'Distribute workloads across multiple cloud providers',
-      icon: Globe;
-      benefits: ['Vendor independence', 'Risk distribution', 'Best-of-breed services', 'Cost optimization']
+      icon: Globe,
+    benefits: ['Vendor independence', 'Risk distribution', 'Best-of-breed services', 'Cost optimization']
     },
     {
       name: 'Cloud-Native',
       description: 'Build new applications using cloud-native technologies',
-      icon: Sparkles;
-      benefits: ['Microservices architecture', 'Containerization', 'DevOps integration', 'Auto-scaling']
+      icon: Sparkles,
+    benefits: ['Microservices architecture', 'Containerization', 'DevOps integration', 'Auto-scaling']
     }
   ];
 
@@ -88,7 +87,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
       price: '$5,000',
       period: 'one-time',
       description: 'Comprehensive cloud readiness assessment',
-      features: [,
+      features: [
         'Infrastructure audit',
         'Workload analysis',
         'Cost estimation',
@@ -96,14 +95,14 @@ const CloudMigrationServicesPage: React.FC = () => {,
         'Risk assessment',
         'Recommendations report'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Standard Migration',
       price: '$25,000',
       period: 'per project',
       description: 'Complete migration for small to medium workloads',
-      features: [,
+      features: [
         'Up to 50 servers',
         'Database migration',
         'Application migration',
@@ -111,14 +110,14 @@ const CloudMigrationServicesPage: React.FC = () => {,
         'Testing & validation',
         '30 days support'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise Migration'
       price: 'Custom',
       period: 'per project',
       description: 'Large-scale enterprise migration with custom requirements',
-      features: [,
+      features: [
         'Unlimited servers',
         'Custom architecture',
         'Dedicated team',
@@ -126,8 +125,8 @@ const CloudMigrationServicesPage: React.FC = () => {,
         'SLA guarantee',
         'Ongoing optimization'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const testimonials = [
@@ -136,22 +135,22 @@ const CloudMigrationServicesPage: React.FC = () => {,
       role: 'CTO',
       company: 'Financial Services Inc.',
       content: 'Cloud migration services reduced our infrastructure costs by 40% and improved performance by 60%. Excellent work!',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Sarah Johnson',
       role: 'IT Director',
       company: 'Healthcare Solutions',
       content: 'Zero-downtime migration with complete data integrity. Our business never missed a beat during the transition.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'David Chen',
       role: 'VP of Engineering',
       company: 'E-commerce Platform',
       content: 'The automated migration process was flawless. We saved months of manual work and achieved 99.9% uptime.',
-      rating: 5;
-    }
+      rating: 5
+  }
   ];
 
   const stats = [

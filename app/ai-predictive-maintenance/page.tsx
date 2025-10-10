@@ -4,8 +4,8 @@ import { Settings, Zap, Shield, CheckCircle, Star, Users, ArrowRight, Phone, Mai
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIPredictiveMaintenancePage: React.FC = () => {,
-  const features = [,
+const AIPredictiveMaintenancePage: React.FC = () => {
+  const features = [
     'Machine learning algorithms for failure prediction',
     'Real-time sensor data analysis',
     'Predictive maintenance scheduling',
@@ -34,38 +34,38 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       name: 'Manufacturing',
       description: 'Optimize production equipment maintenance',
       savings: '40% cost reduction',
-      icon: Settings;
-    },
+      icon: Settings
+  },
     {
       name: 'Energy & Utilities',
       description: 'Predict power plant and grid failures',
       savings: '35% cost reduction',
-      icon: Zap;
-    },
+      icon: Zap
+  },
     {
       name: 'Transportation',
       description: 'Maintain fleet vehicles and infrastructure',
       savings: '45% cost reduction',
-      icon: Globe;
-    },
+      icon: Globe
+  },
     {
       name: 'Healthcare',
       description: 'Monitor medical equipment reliability',
       savings: '30% cost reduction',
-      icon: Shield;
-    },
+      icon: Shield
+  },
     {
       name: 'Oil & Gas',
       description: 'Predict equipment failures in harsh environments',
       savings: '50% cost reduction',
-      icon: Database;
-    },
+      icon: Database
+  },
     {
       name: 'Aviation',
       description: 'Aircraft maintenance optimization',
       savings: '25% cost reduction',
-      icon: Target;
-    }
+      icon: Target
+  }
   ];
 
   const pricingPlans = [
@@ -74,21 +74,21 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       price: '$2,500',
       period: '/month',
       originalPrice: '$3,500',
-      features: [,
+      features: [
         'Up to 50 assets',
         'Basic predictive models',
         'Email alerts',
         'Standard dashboard',
         'Email support',
         'Data retention: 1 year'],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional',
       price: '$5,000',
       period: '/month',
       originalPrice: '$7,000',
-      features: [,
+      features: [
         'Up to 200 assets',
         'Advanced ML models',
         'Real-time alerts',
@@ -98,14 +98,14 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
         'Mobile app access',
         'API integration'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise',
       price: '$10,000',
       period: '/month',
       originalPrice: '$15,000',
-      features: [,
+      features: [
         'Unlimited assets',
         'Custom ML models',
         'Multi-site management',
@@ -115,8 +115,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
         'Custom integrations',
         'On-premise deployment'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const testimonials = [
@@ -124,20 +124,20 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       name: 'John Mitchell',
       role: 'Plant Manager, AutoCorp',
       content: 'AI Predictive Maintenance has revolutionized our operations. We reduced unplanned downtime by 60% and saved over $2M in the first year.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Sarah Johnson',
       role: 'Operations Director, PowerGrid',
       content: 'The predictive accuracy is incredible. We can now schedule maintenance exactly when needed, not too early or too late.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Michael Rodriguez',
       role: 'Fleet Manager, TransLogistics',
       content: 'Our maintenance costs dropped by 45% while improving vehicle reliability. The ROI was achieved in just 6 months.',
-      rating: 5;
-    }
+      rating: 5
+  }
   ];
 
   return (

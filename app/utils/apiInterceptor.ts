@@ -6,8 +6,8 @@
 interface InterceptorConfig {
   onRequest?: (config: any) => any;
   onResponse?: (response: any) => any;
-  onError?: (error: any) => any;
-}
+  onError?: (error: any) => any
+  }
 
 class APIInterceptor {
   private requestInterceptors: Array<(config: any) => any> = [];
@@ -15,46 +15,46 @@ class APIInterceptor {
   private errorInterceptors: Array<(error: any) => any> = [];
 
   // Add request interceptor;
-  addRequestInterceptor(interceptor: (config: any) => any): void {,
-    this.requestInterceptors.push(interceptor);
+  addRequestInterceptor(interceptor: (config: any) => any): void {
+    this.requestInterceptors.push(interceptor)
   }
 
   // Add response interceptor;
-  addResponseInterceptor(interceptor: (response: any) => any): void {,
-    this.responseInterceptors.push(interceptor);
+  addResponseInterceptor(interceptor: (response: any) => any): void {
+    this.responseInterceptors.push(interceptor)
   }
 
   // Add error interceptor;
-  addErrorInterceptor(interceptor: (error: any) => any): void {,
-    this.errorInterceptors.push(interceptor);
+  addErrorInterceptor(interceptor: (error: any) => any): void {
+    this.errorInterceptors.push(interceptor)
   }
 
   // Remove request interceptor;
-  removeRequestInterceptor(interceptor: (config: any) => any): void {,
+  removeRequestInterceptor(interceptor: (config: any) => any): void {
     const index = this.requestInterceptors.indexOf(interceptor);
-    if (index > -1) {,
+    if (index > -1) {
       this.requestInterceptors.splice(index, 1);
     }
   }
 
   // Remove response interceptor;
-  removeResponseInterceptor(interceptor: (response: any) => any): void {,
+  removeResponseInterceptor(interceptor: (response: any) => any): void {
     const index = this.responseInterceptors.indexOf(interceptor);
-    if (index > -1) {,
+    if (index > -1) {
       this.responseInterceptors.splice(index, 1);
     }
   }
 
   // Remove error interceptor;
-  removeErrorInterceptor(interceptor: (error: any) => any): void {,
+  removeErrorInterceptor(interceptor: (error: any) => any): void {
     const index = this.errorInterceptors.indexOf(interceptor);
-    if (index > -1) {,
+    if (index > -1) {
       this.errorInterceptors.splice(index, 1);
     }
   }
 
   // Apply request interceptors;
-  applyRequestInterceptors(config: any): any {,
+  applyRequestInterceptors(config: any): any {
     return this.requestInterceptors.reduce((acc, interceptor) => {
       try {
         return interceptor(acc);
@@ -65,7 +65,7 @@ class APIInterceptor {
   }
 
   // Apply response interceptors;
-  applyResponseInterceptors(response: any): any {,
+  applyResponseInterceptors(response: any): any {
     return this.responseInterceptors.reduce((acc, interceptor) => {
       try {
         return interceptor(acc);
@@ -76,7 +76,7 @@ class APIInterceptor {
   }
 
   // Apply error interceptors;
-  applyErrorInterceptors(error: any): any {,
+  applyErrorInterceptors(error: any): any {
     return this.errorInterceptors.reduce((acc, interceptor) => {
       try {
         return interceptor(acc);
@@ -96,14 +96,14 @@ class APIInterceptor {
   // Get interceptor counts;
   getInterceptorCounts(): {
     request: number;
-    response: number;
-    error: number;
+    response: number,
+    error: number
   } {
     return {
       request: this.requestInterceptors.length;
-      response: this.responseInterceptors.length;
-      error: this.errorInterceptors.length;
-    };
+      response: this.responseInterceptors.length,
+    error: this.errorInterceptors.length
+  };
   }
 }
 
@@ -261,8 +261,8 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
       retryAttempt,
   s: config.retryAttempts ?? this.config.retryAttempts,
       cach,
-  e: config.cache ?? this.config.enableCaching;
-    };
+  e: config.cache ?? this.config.enableCaching
+  };
   }
   /**
    * Build full URL with query parameters;

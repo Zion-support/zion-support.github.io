@@ -14,15 +14,16 @@ export interface CacheOptions {}
 export interface CacheEntry<T> {}
   value: T;
   expiry: number;
-  hits: number;
-  lastAccessed: number;
-}
+  hits: number,
+    lastAccessed: number
+  }
 
 class AdvancedCache<T = unknown> {}
   private cache: Map<string, CacheEntry<T>> = new Map();
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';,
+  private storageKey = 'advanced-cache',
+    
 ,
   constructor(options: CacheOptions = {}) {
     this.options = {
@@ -33,8 +34,8 @@ class AdvancedCache<T = unknown> {}
     this.options = {}
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100;
-    };
+      maxSize: options.maxSize || 100
+  };
 
     // Load from persistent storage if needed;
     if (this.options.storage !== 'memory') {
@@ -82,8 +83,8 @@ class AdvancedCache<T = unknown> {}
       const storage = this.getStorage();
       const data = {}
         cache: Object.fromEntries(this.cache),
-        accessOrder: this.accessOrder;
-      };
+        accessOrder: this.accessOrder
+  };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {}
       }
@@ -136,8 +137,8 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
 
   private cleanExpired(): void {}
     const now = Date.now();
-    const expiredKeys: string[] = [];
-,
+    const expiredKeys: string[] = [],
+    
     for (const [key, entry] of this.cache.entries()) {
       if (entry.expiry <= now) {
 
@@ -194,9 +195,9 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     this.accessOrder.shift();
   }
 
-  private updateAccessOrder(key: string): void {,
+  private updateAccessOrder(key: string): void {
     const index = this.accessOrder.indexOf(key);
-    if (index > -1) {,
+    if (index > -1) {
   private updateAccessOrder(key: string): void {}
     const index = this.accessOrder.indexOf(key);
     if (index > -1) {}
@@ -244,8 +245,8 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     const entry: CacheEntry<T> = {
       value;
       expiry: now + ttl;
-      hits: 0;
-      lastAccessed: now;
+      hits: 0,
+    lastAccessed: now;
     // Check if we need to evict entries
     while (this.cache.size >= this.options.maxSize) {}
       this.evictLRU();
@@ -271,7 +272,7 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     if (entry.expiry <= now) {}
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
-      if (index > -1) {,
+      if (index > -1) {
       if (index > -1) {}
         this.accessOrder.splice(index, 1);
       }
@@ -295,7 +296,7 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     if (entry.expiry <= now) {}
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
-      if (index > -1) {,
+      if (index > -1) {
       if (index > -1) {}
         this.accessOrder.splice(index, 1);
       }
@@ -308,9 +309,9 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
 
   delete(key: string): boolean {}
     const deleted = this.cache.delete(key);
-    if (deleted) {,
+    if (deleted) {
       const index = this.accessOrder.indexOf(key);
-      if (index > -1) {,
+      if (index > -1) {
     if (deleted) {}
       const index = this.accessOrder.indexOf(key);
       if (index > -1) {}
@@ -347,8 +348,8 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     size: number;
     maxSize: number;
     hitRate: number;
-    oldestEntry: number;
-    newestEntry: number;
+    oldestEntry: number,
+    newestEntry: number
   } {}
     const entries = Array.from(this.cache.values());
     const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
@@ -359,8 +360,8 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     const newestEntry = timestamps.length > 0 ? Math.max(...timestamps) : 0;
 
     return {
-      size: this.cache.size;
-      maxSize: this.options.maxSize;
+      size: this.cache.size,
+    maxSize: this.options.maxSize;
     return {}
       size: this.cache.size,
       maxSize: this.options.maxSize,

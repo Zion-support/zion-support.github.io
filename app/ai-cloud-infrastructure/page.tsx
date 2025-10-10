@@ -3,7 +3,7 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const AICloudInfrastructurePage: React.FC = memo(() => {,
+const AICloudInfrastructurePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
@@ -12,23 +12,23 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
   const features = [
     {
-      icon: Cloud;
-      title: 'AI-Powered Cloud Management',
+      icon: Cloud,
+    title: 'AI-Powered Cloud Management',
       description: 'Intelligent cloud resource optimization and automated scaling based on demand patterns',
       color: 'text-purple-400'},
     {
-      icon: Server;
-      title: 'Hybrid Cloud Solutions',
+      icon: Server,
+    title: 'Hybrid Cloud Solutions',
       description: 'Seamless integration between on-premises and cloud infrastructure with AI-driven optimization',
       color: 'text-blue-400'},
     {
-      icon: Database;
-      title: 'Smart Data Management',
+      icon: Database,
+    title: 'Smart Data Management',
       description: 'AI-powered data storage, backup, and recovery solutions with predictive analytics',
       color: 'text-green-400'},
     {
-      icon: Shield;
-      title: 'Enterprise Security',
+      icon: Shield,
+    title: 'Enterprise Security',
       description: 'Advanced security monitoring and compliance management for cloud infrastructure',
       color: 'text-orange-400'}
   ];
@@ -39,7 +39,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
       price: '$999',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [,
+      features: [
         'Up to 10 servers',
         'Basic cloud management',
         'Standard security',
@@ -48,14 +48,14 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         '1 cloud engineer'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional',
       price: '$2,499',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [,
+      features: [
         'Up to 50 servers',
         'Advanced AI optimization',
         'Enhanced security',
@@ -65,14 +65,14 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         '3 cloud engineers'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise',
       price: '$4,999',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited servers',
         'Custom AI models',
         '24/7 monitoring',
@@ -82,31 +82,31 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         '10+ cloud engineers'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud with AI-powered optimization and cost reduction',
-      icon: Cloud;
-      result: '50% cost savings'},
+      icon: Cloud,
+    result: '50% cost savings'},
     {
       title: 'Auto Scaling',
       description: 'Intelligent scaling based on demand patterns and performance metrics',
-      icon: Server;
-      result: '99.9% uptime'},
+      icon: Server,
+    result: '99.9% uptime'},
     {
       title: 'Data Backup',
       description: 'AI-powered backup and disaster recovery with predictive failure detection',
-      icon: Database;
-      result: 'Zero data loss'},
+      icon: Database,
+    result: 'Zero data loss'},
     {
       title: 'Security Monitoring',
       description: 'Continuous security monitoring and threat detection across cloud infrastructure',
-      icon: Shield;
-      result: '24/7 protection'}
+      icon: Shield,
+    result: '24/7 protection'}
   ];
 
   const benefits = [
@@ -326,8 +326,8 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AICloudInfrastructurePage.displayName = 'AICloudInfrastructurePage';
 ,

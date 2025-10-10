@@ -2,25 +2,27 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface HeroStats {
-  clients: number;,
-    savings: string;
-  uptime: string;,
-    support: string;
-}
+  clients: number,
+    
+    savings: string,
+    uptime: string,
+    
+    support: string
+  }
 
-const EnhancedHero: React.FC = () => {,
+const EnhancedHero: React.FC = () => {
 interface HeroStats {}
   clients: number;
-  savings: string;
-  uptime: string;
-  support: string;
-}
+  savings: string,
+    uptime: string,
+    support: string
+  }
 
 const EnhancedHero: React.FC = () => {}
   const [currentStat, setCurrentStat] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const stats: HeroStats[] = [,
+  const stats: HeroStats[] = [
     { clients: 500, savings: '$2.5B+', uptime: '99.9%', support: '24/7' },
     { clients: 750, savings: '$3.2B+', uptime: '99.95%', support: '24/7' },
     { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
@@ -52,10 +54,10 @@ const EnhancedHero: React.FC = () => {}
 
   const containerVariants = {}
     hidden: { opacity: 0, y: 50 },
-    visible: {,
+    visible: {
     opacity: 1,
       y: 0,
-      transition: {,
+      transition: {
     duration: 0.8,
     visible: {}
       opacity: 1,
@@ -64,36 +66,36 @@ const EnhancedHero: React.FC = () => {}
         duration: 0.8,
         staggerChildren: 0.2
     visible: {
-      opacity: 1;
-      y: 0;
-      transition: {,
-        duration: 0.8;
-        staggerChildren: 0.2;
-      }
+      opacity: 1,
+    y: 0,
+    transition: {
+        duration: 0.8,
+    staggerChildren: 0.2
+  }
     }
   };
 
   const itemVariants = {}
     hidden: { opacity: 0, y: 30 },
-    visible: {,
+    visible: {
     opacity: 1,
     visible: {}
       opacity: 1,
       y: 0,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 }
+      opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 }
     }
   };
 
   const statVariants = {}
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {,
+    visible: {
     opacity: 1,
       scale: 1,
       transition: { duration: 0.5 }
     },
-    exit: {,
+    exit: {
     opacity: 0,
     visible: {}
       opacity: 1,
@@ -103,14 +105,14 @@ const EnhancedHero: React.FC = () => {}
     exit: {}
       opacity: 0,
       scale: 0.8,
-      opacity: 1;
-      scale: 1;
-      transition: { duration: 0.5 }
+      opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5 }
     },
-    exit: {,
-      opacity: 0;
-      scale: 0.8;
-      transition: { duration: 0.3 }
+    exit: {
+      opacity: 0,
+    scale: 0.8,
+    transition: { duration: 0.3 }
     }
   };
 
@@ -137,8 +139,9 @@ const EnhancedHero: React.FC = () => {}
             scale: [1, 1.1, 1]}
           }}
           transition={{
-            duration: 4;
-            repeat: Infinity;}
+            duration: 4,
+    repeat: Infinity
+  }
             ease: "easeInOut"}
           }}
         />

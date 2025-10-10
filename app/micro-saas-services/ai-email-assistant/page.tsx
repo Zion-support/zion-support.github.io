@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIEmailAssistant: React.FC = () => {,
+const AIEmailAssistant: React.FC = () => {
   const [emailType, setEmailType] = useState('');
   const [recipient, setRecipient] = useState('');
   const [subject, setSubject] = useState('');

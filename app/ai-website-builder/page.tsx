@@ -5,41 +5,41 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIWebsiteBuilderPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Code;
-      title: 'AI Code Generation',
+const AIWebsiteBuilderPage: React.FC = () => {
+  const features = [
+    {
+      icon: Code,
+    title: 'AI Code Generation',
       description: 'Generate clean, optimized code automatically from your descriptions',
       benefits: ['Clean code', 'Best practices', 'Auto-optimization']
     },
     {
-      icon: Palette;
-      title: 'Smart Design System',
+      icon: Palette,
+    title: 'Smart Design System',
       description: 'AI-powered design suggestions that match your brand and industry',
       benefits: ['Brand consistency', 'Industry standards', 'Visual harmony']
     },
     {
-      icon: Zap;
-      title: 'Instant Deployment',
+      icon: Zap,
+    title: 'Instant Deployment',
       description: 'Deploy your website in minutes with our automated hosting and CDN',
       benefits: ['Fast deployment', 'Global CDN', 'Auto-scaling']
     },
     {
-      icon: Smartphone;
-      title: 'Mobile-First Design',
+      icon: Smartphone,
+    title: 'Mobile-First Design',
       description: 'Every website is automatically optimized for all devices and screen sizes',
       benefits: ['Responsive design', 'Touch optimization', 'Performance']
     },
     {
-      icon: Globe;
-      title: 'SEO Optimization',
+      icon: Globe,
+    title: 'SEO Optimization',
       description: 'Built-in SEO tools and optimization for better search engine rankings',
       benefits: ['Meta optimization', 'Schema markup', 'Performance scores']
     },
     {
-      icon: Monitor;
-      title: 'Analytics Integration',
+      icon: Monitor,
+    title: 'Analytics Integration',
       description: 'Comprehensive analytics and performance monitoring built-in',
       benefits: ['Real-time analytics', 'Performance tracking', 'User insights']
     }
@@ -66,7 +66,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses and personal projects',
-      features: [,
+      features: [
         'Up to 5 websites',
         'Basic AI features',
         'Standard templates',
@@ -74,14 +74,14 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         'Basic analytics',
         'Mobile optimization'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
       price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-      features: [,
+      features: [
         'Up to 25 websites',
         'Advanced AI features',
         'Premium templates',
@@ -90,14 +90,14 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         'Custom domains',
         'E-commerce integration'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
       price: '$199',
       period: '/month',
       description: 'For large organizations and white-label solutions',
-      features: [,
+      features: [
         'Unlimited websites',
         'Full AI capabilities',
         'Custom templates',
@@ -107,8 +107,8 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         'Custom integrations',
         'Dedicated support'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

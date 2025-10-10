@@ -10,7 +10,7 @@ export default function AIContentWriterPage() {
   const features = [
     {
       category: 'Content Generation',
-      items: [,
+      items: [
         'GPT-4 powered content creation',
         'Blog posts and articles',
         'Social media content',
@@ -23,7 +23,7 @@ export default function AIContentWriterPage() {
     },
     {
       category: 'SEO & Optimization',
-      items: [,
+      items: [
         'Keyword research and integration',
         'SEO score optimization',
         'Meta descriptions and titles',
@@ -36,7 +36,7 @@ export default function AIContentWriterPage() {
     },
     {
       category: 'Brand & Customization',
-      items: [,
+      items: [
         'Brand voice training',
         'Tone and style customization',
         'Industry-specific templates',
@@ -49,7 +49,7 @@ export default function AIContentWriterPage() {
     },
     {
       category: 'Analytics & Insights',
-      items: [,
+      items: [
         'Content performance tracking',
         'Engagement metrics analysis',
         'ROI measurement',
@@ -65,10 +65,10 @@ export default function AIContentWriterPage() {
   const pricingPlans = [
     {
       name: 'Starter'
-      price: 49;
-      period: 'month',
+      price: 49,
+    period: 'month',
       description: 'Perfect for small businesses and freelancers',
-      features: [,
+      features: [
         '10,000 words per month',
         'Basic SEO optimization',
         '5 brand voice profiles',
@@ -76,14 +76,14 @@ export default function AIContentWriterPage() {
         'Email support',
         'Basic analytics'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
-      price: 99;
-      period: 'month',
+      price: 99,
+    period: 'month',
       description: 'Ideal for growing businesses and marketing teams',
-      features: [,
+      features: [
         '50,000 words per month',
         'Advanced SEO optimization',
         'Unlimited brand voice profiles',
@@ -93,14 +93,14 @@ export default function AIContentWriterPage() {
         'Team collaboration (5 users)',
         'API access'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
-      price: 199;
-      period: 'month'
+      price: 199,
+    period: 'month'
       description: 'For large organizations with high content needs',
-      features: [,
+      features: [
         'Unlimited words',
         'Full SEO suite',
         'Custom integrations',
@@ -110,8 +110,8 @@ export default function AIContentWriterPage() {
         'Unlimited team members',
         'SLA guarantee'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const testimonials = [
@@ -120,22 +120,22 @@ export default function AIContentWriterPage() {
       company: 'TechStart Inc.',
       role: 'Marketing Director',
       content: 'AI Content Writer Pro has revolutionized our content strategy. We\'ve increased our blog traffic by 300% and reduced content creation time by 70%.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Michael Chen',
       company: 'Digital Marketing Agency',
       role: 'Content Manager',
       content: 'The SEO optimization features are incredible. Our content now ranks higher and drives more qualified leads than ever before.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Emily Rodriguez',
       company: 'E-commerce Store',
       role: 'Founder',
       content: 'As a solo entrepreneur, this tool has been a game-changer. I can now produce professional-quality content at scale without a team.',
-      rating: 5;
-    }
+      rating: 5
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -439,8 +439,8 @@ export default function AIContentWriterPage() {
                 </div>
 
                 <div className="space-y-6">
-                  {[,
-                    {,
+                  {[
+                    {
                       question: "How does the AI content generation work?",
                       answer: "Our platform uses GPT-4 technology combined with advanced prompts and your brand guidelines to generate high-quality content. You simply provide a topic, tone, and any specific requirements, and our AI creates content that matches your brand voice."
                     },

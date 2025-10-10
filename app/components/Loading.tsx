@@ -1,6 +1,5 @@
 import React from 'react';
 import { Loader2, Zap } from 'lucide-react';
-
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -8,7 +7,7 @@ interface LoadingProps {
 }
 
 const Loading: React.FC<LoadingProps>= ({
-const Loading: React.FC<LoadingProps> = ({,
+const Loading: React.FC<LoadingProps> = ({
   size = 'md',
   text = 'Loading...',
   fullScreen = false;

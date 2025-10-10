@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Heart, Stethoscope, Brain, Shield, CheckCircle, Phone, Mail, Target, Eye, AlertTriangle } from 'lucide-react';
-
-const AIHealthcarePage: React.FC = memo(() => {,
+const AIHealthcarePage: React.FC = memo(() => {
 const AIHealthcarePage: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -48,7 +47,7 @@ const AIHealthcarePage: React.FC = memo(() => {}
       price: '$1,999',
       period: '/month',
       description: 'Perfect for small clinics',
-      features: [,
+      features: [
         'Up to 100 patients/month',
         'Basic image analysis',
         'Patient monitoring',
@@ -57,15 +56,15 @@ const AIHealthcarePage: React.FC = memo(() => {}
         '1 medical professional'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
     {}
       name: 'Hospital',
       price: '$4,999',
       period: '/month',
       description: 'Ideal for hospitals',
-      features: [,
+      features: [
         'Up to 1,000 patients/month',
         'Advanced AI diagnostics',
         'Real-time monitoring',
@@ -75,15 +74,15 @@ const AIHealthcarePage: React.FC = memo(() => {}
         '5 medical professionals'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
     {}
       name: 'Enterprise',
       price: '$9,999',
       period: '/month',
       description: 'For large healthcare systems',
-      features: [,
+      features: [
         'Unlimited patients',
         'Custom AI models',
         '24/7 monitoring',
@@ -93,31 +92,31 @@ const AIHealthcarePage: React.FC = memo(() => {}
         'Unlimited professionals'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Radiology',
       description: 'AI-powered analysis of medical images for faster and more accurate diagnoses',
-      icon: Eye;
-      result: '95% accuracy'},
+      icon: Eye,
+    result: '95% accuracy'},
     {}
       title: 'Cardiology',
       description: 'Heart disease detection and monitoring with AI-powered ECG analysis',
-      icon: Heart;
-      result: '90% faster'},
+      icon: Heart,
+    result: '90% faster'},
     {}
       title: 'Oncology',
       description: 'Cancer detection and treatment planning with advanced AI algorithms',
-      icon: Target;
-      result: '80% improvement'},
+      icon: Target,
+    result: '80% improvement'},
     {}
       title: 'Emergency Care',
       description: 'Rapid triage and critical care decision support in emergency situations',
-      icon: AlertTriangle;
-      result: '60% faster'}
+      icon: AlertTriangle,
+    result: '60% faster'}
   ];
 
   const benefits = [
@@ -362,8 +361,8 @@ const AIHealthcarePage: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AIHealthcarePage.displayName = 'AIHealthcarePage';
 ,

@@ -671,7 +671,6 @@ import {}
   Zepto as ZeptoIcon,
   Yocto as YoctoIcon;
 } from 'lucide-react';
-
 interface InvestmentOptimizerProps {}
   className?: string;
 }
@@ -705,33 +704,33 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     {}
       title: "AI Portfolio Analysis",
       description: "Advanced AI analyzes your portfolio and suggests optimizations",
-      icon: Brain;
-      price: "Included"},
+      icon: Brain,
+    price: "Included"},
     {}
       title: "Risk Assessment",
       description: "Comprehensive risk analysis and diversification recommendations",
-      icon: Shield;
-      price: "Included"},
+      icon: Shield,
+    price: "Included"},
     {}
       title: "Market Prediction",
       description: "AI-powered market predictions and trend analysis",
-      icon: TrendingUp;
-      price: "Included"},
+      icon: TrendingUp,
+    price: "Included"},
     {}
       title: "Auto Rebalancing",
       description: "Automatically rebalance your portfolio based on market conditions",
-      icon: RefreshCw;
-      price: "Included"},
+      icon: RefreshCw,
+    price: "Included"},
     {}
       title: "Tax Optimization",
       description: "Minimize tax impact with smart tax-loss harvesting",
-      icon: DollarSign;
-      price: "Pro Feature"},
+      icon: DollarSign,
+    price: "Pro Feature"},
     {}
       title: "Professional Advisor",
       description: "Access to certified financial advisors for complex strategies",
-      icon: Users;
-      price: "Enterprise"}
+      icon: Users,
+    price: "Enterprise"}
   ];
 
   const pricingPlans = [
@@ -742,15 +741,15 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       price: "$39",
       period: "/month",
       description: "Perfect for individual investors and small portfolios",
-      features: [,
+      features: [
         "Up to $100K portfolio",
         "Basic AI analysis",
         "Risk assessment",
         "Market predictions",
         "Email support"
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: "Professional"
     {}
@@ -758,7 +757,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       price: "$99",
       period: "/month",
       description: "Ideal for serious investors and larger portfolios",
-      features: [,
+      features: [
         "Up to $1M portfolio",
         "Advanced AI analysis",
         "Auto rebalancing",
@@ -767,8 +766,8 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
         "Real-time alerts",
         "Custom strategies"
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: "Enterprise"
     {}
@@ -776,7 +775,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       price: "$299",
       period: "/month",
       description: "For institutional investors and wealth management firms",
-      features: [,
+      features: [
         "Unlimited portfolio size",
         "Full AI analysis suite",
         "Professional advisor access",
@@ -785,8 +784,8 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
         "White-label options",
         "SLA guarantee"
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const handleOptimizePortfolio = () => {}
@@ -818,11 +817,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     }, 3000);
   };
 
-  const getChangeColor = (change: number) => {,
-    return change >= 0 ? 'text-green-400' : 'text-red-400';
+  const getChangeColor = (change: number) => {
+    return change >= 0 ? 'text-green-400' : 'text-red-400'
   };
 
-  const getChangeIcon = (change: number) => {,
+  const getChangeIcon = (change: number) => {
   const getChangeColor = (change: number) => {}
     return change >= 0 ? 'text-green-400' : 'text-red-400';
   };

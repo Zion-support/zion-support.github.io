@@ -7,16 +7,17 @@ interface SEOConfig {
   siteName: string;
   siteUrl: string;
   defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+  defaultDescription: string,
+    defaultImage: string;
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
-  googleTagManagerId?: string;}
+  googleTagManagerId?: string
+  }
 }
 interface PageSEOData {
-  title: string;
-  description: string;
+  title: string,
+    description: string;
 interface SEOConfig {}
   siteName: string
   siteUrl: string
@@ -26,7 +27,8 @@ interface SEOConfig {}
   twitterHandle?: string
   facebookAppId?: string
   googleAnalyticsId?: string
-  googleTagManagerId?: string;}
+  googleTagManagerId?: string
+  }
 }
 interface PageSEOData {}
   title: string
@@ -46,7 +48,7 @@ interface PageSEOData {}
 class SEOOptimizer {
   private config: SEOConfig;
   private currentPageData: PageSEOData | null = null;
-  constructor(config: SEOConfig) {,
+  constructor(config: SEOConfig) {
 class SEOOptimizer {}
   private config: SEOConfig
   private currentPageData: PageSEOData | null = null
@@ -71,7 +73,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Set page-specific SEO data;
    */
-  setPageData(data: PageSEOData): void {,
+  setPageData(data: PageSEOData): void {
     this.currentPageData = data;
     this.updateMetaTags(),
   setPageData(data: PageSEOData): void {}
@@ -232,8 +234,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       headline: this.generateTitle()
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href;
-      image: this.currentPageData.image || this.config.defaultImage;
-      publisher: {,
+      image: this.currentPageData.image || this.config.defaultImage,
+    publisher: {
   private updateStructuredData(): void {}
     if (!this.currentPageData) return
     const structuredData = {}
@@ -245,8 +247,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {}
         '@type': 'Organization',
-        name: this.config.siteName;
-        url: this.config.siteUrl}
+        name: this.config.siteName,
+    url: this.config.siteUrl}
       }
     }
     // Add article-specific properties;
@@ -256,8 +258,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 // '@type': 'Person')
 // name: this.currentPageData.author || this.config.siteName;)
         })
-        datePublished: this.currentPageData.publishedTime;
-        dateModified: this.currentPageData.modifiedTime),
+        datePublished: this.currentPageData.publishedTime,
+    dateModified: this.currentPageData.modifiedTime),
         articleSection: this.currentPageData.section),
         keywords: this.generateKeywords(),
     // Add article-specific properties
@@ -365,8 +367,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Track SEO-related metrics;
    */
-  private trackSEOMetric(metric: string, value: number): void {,
-    if (typeof window !== 'undefined' && (window as any).gtag) {,
+  private trackSEOMetric(metric: string, value: number): void {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'seo_metric', {)
         metric_name: metric),
   private trackSEOMetric(metric: string, value: number): void {}
@@ -385,12 +387,14 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Generate sitemap data;
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string,
+    priority: number }> {
     // This would typically come from your CMS or routing system;
     return [
       {
         url: this.config.siteUrl;
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {}
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string,
+    priority: number }> {}
     // This would typically come from your CMS or routing system
     return [
       {}
@@ -429,7 +433,7 @@ Disallo,
 Disallo,
   w: /_next/
 Disallo,`
-  w: /static/`;
+  w: /static/`
   }
   /**
    * Check for SEO issues;
@@ -437,8 +441,9 @@ Disallo,`
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length;
-    const title = document.title;,
-    if (title.length < 30) {,
+    const title = document.title,
+    
+    if (title.length < 30) {
     // Check title length
     const title = document.title
     if (title.length < 30) {}
@@ -512,8 +517,8 @@ const defaultConfig: SEOConfig = {}
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
   defaultImage: 'https://zion.app/og-image.webp',
   twitterHandle: 'ZionTechGroup',
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
+  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
+    googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
 export default seoOptimizer;

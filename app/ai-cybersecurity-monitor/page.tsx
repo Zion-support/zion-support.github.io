@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, DollarSign, CheckCircle, Brain, AlertTriangle, Lock } from 'lucide-react';
-
-const AICybersecurityMonitor: React.FC = memo(() => {,
+const AICybersecurityMonitor: React.FC = memo(() => {
 const AICybersecurityMonitor: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,7 +49,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [,
+      features: [
         'Up to 50 endpoints',
         'Basic threat detection',
         'Email alerts',
@@ -59,8 +58,8 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         '1 security analyst'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
     {}
@@ -68,7 +67,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
       price: '$799',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [,
+      features: [
         'Up to 500 endpoints',
         'Advanced threat detection',
         'Real-time alerts',
@@ -78,15 +77,15 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         '3 security analysts'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
     {}
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited endpoints',
         'AI-powered threat hunting',
         '24/7 SOC monitoring',
@@ -96,31 +95,31 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         '10+ security analysts'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Threat Prevention',
       description: 'Prevent cyber attacks before they happen with predictive threat analysis',
-      icon: Shield;
-      result: '99.9% prevention'},
+      icon: Shield,
+    result: '99.9% prevention'},
     {}
       title: 'Incident Response',
       description: 'Rapidly detect and respond to security incidents with automated workflows',
-      icon: AlertTriangle;
-      result: '90% faster'},
+      icon: AlertTriangle,
+    result: '90% faster'},
     {}
       title: 'Compliance',
       description: 'Maintain compliance with GDPR, HIPAA, SOX, and other regulations',
-      icon: Lock;
-      result: '100% compliant'},
+      icon: Lock,
+    result: '100% compliant'},
     {}
       title: 'Cost Reduction',
       description: 'Reduce security costs while improving protection with AI automation',
-      icon: DollarSign;
-      result: '60% savings'}
+      icon: DollarSign,
+    result: '60% savings'}
   ];
 
   const securityMetrics = [
@@ -365,8 +364,8 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AICybersecurityMonitor.displayName = 'AICybersecurityMonitor';
 ,

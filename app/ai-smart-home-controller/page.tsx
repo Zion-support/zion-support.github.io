@@ -678,7 +678,6 @@ import {}
   Zepto as ZeptoIcon,
   Yocto as YoctoIcon;
 } from 'lucide-react';
-
 interface SmartHomeControllerProps {}
   className?: string;
 }
@@ -710,7 +709,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
   const [energyUsage, setEnergyUsage] = useState({
     today: 45.2;
     thisWeek: 312.8;
-    thisMonth: 1284.5;
+    thisMonth: 1284.5,
     savings: 15.3;
     { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false },
     { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false },
@@ -729,33 +728,33 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     {}
       title: "Voice Control",
       description: "Control your home with natural voice commands using AI",
-      icon: Microphone;
-      price: "Included"},
+      icon: Microphone,
+    price: "Included"},
     {}
       title: "Predictive Maintenance",
       description: "AI predicts when devices need maintenance or replacement",
-      icon: Brain;
-      price: "Included"},
+      icon: Brain,
+    price: "Included"},
     {}
       title: "Energy Optimization",
       description: "Automatically optimize energy usage to reduce costs",
-      icon: Zap;
-      price: "Included"},
+      icon: Zap,
+    price: "Included"},
     {}
       title: "Security Integration",
       description: "Comprehensive security monitoring and alerts",
-      icon: Shield;
-      price: "Included"},
+      icon: Shield,
+    price: "Included"},
     {}
       title: "Custom Scenes",
       description: "Create and manage custom automation scenes",
-      icon: Settings;
-      price: "Included"},
+      icon: Settings,
+    price: "Included"},
     {}
       title: "Mobile App",
       description: "Control your home from anywhere with our mobile app",
-      icon: Smartphone;
-      price: "Included"}
+      icon: Smartphone,
+    price: "Included"}
   ];
 
   const pricingPlans = [
@@ -766,15 +765,15 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       price: "$29",
       period: "/month",
       description: "Perfect for small apartments and single rooms",
-      features: [,
+      features: [
         "Up to 10 devices",
         "Basic voice control",
         "Mobile app access",
         "Email support",
         "Basic automation"
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: "Home"
     {}
@@ -782,7 +781,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       price: "$79",
       period: "/month",
       description: "Ideal for medium-sized homes and families",
-      features: [,
+      features: [
         "Up to 50 devices",
         "Advanced voice control",
         "Predictive maintenance",
@@ -791,8 +790,8 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         "Custom scenes",
         "Security monitoring"
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: "Mansion"
     {}
@@ -800,7 +799,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       price: "$199",
       period: "/month",
       description: "For large homes and estates with complex needs",
-      features: [,
+      features: [
         "Unlimited devices",
         "Premium voice control",
         "Full predictive maintenance")
@@ -810,11 +809,11 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         "Professional installation")
         "SLA guarantee"
       ])
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
-  const toggleDevice = (deviceId: number) => {,
+  const toggleDevice = (deviceId: number) => {
     setDevices(devices.map(device =>)
       device.id === deviceId;),
   const toggleDevice = (deviceId: number) => {}
@@ -825,7 +824,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     ));
   };
 
-  const adjustBrightness = (deviceId: number, brightness: number) => {,
+  const adjustBrightness = (deviceId: number, brightness: number) => {
     setDevices(devices.map(device =>)
       device.id === deviceId;),
   const adjustBrightness = (deviceId: number, brightness: number) => {}
@@ -836,7 +835,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     ));
   };
 
-  const adjustTemperature = (deviceId: number, temperature: number) => {,
+  const adjustTemperature = (deviceId: number, temperature: number) => {
     setDevices(devices.map(device =>)
       device.id === deviceId;),
   const adjustTemperature = (deviceId: number, temperature: number) => {}
@@ -847,7 +846,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     ));
   };
 
-  const activateScene = (sceneId: number) => {,
+  const activateScene = (sceneId: number) => {
     setScenes(scenes.map(scene =>)
       scene.id === sceneId;),
   const activateScene = (sceneId: number) => {}

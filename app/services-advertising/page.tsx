@@ -4,36 +4,36 @@ import { Target, BarChart, Users, Zap, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ServicesAdvertisingPage: React.FC = () => {,
-  const advertisingServices = [,
-    {,
+const ServicesAdvertisingPage: React.FC = () => {
+  const advertisingServices = [
+    {
       title: 'AI-Powered Ad Campaigns',
       description: 'Leverage artificial intelligence to create, optimize, and scale your advertising campaigns across all platforms.',
       features: ['Automated A/B Testing', 'Real-time Optimization', 'Cross-platform Management', 'ROI Tracking'],
       price: '$2,500/mo',
-      icon: Target;
-    },
+      icon: Target
+  },
     {
       title: 'Programmatic Advertising',
       description: 'Advanced programmatic advertising solutions that maximize reach and minimize costs.',
       features: ['Real-time Bidding', 'Audience Targeting', 'Budget Optimization', 'Performance Analytics'],
       price: '$3,000/mo',
-      icon: BarChart;
-    },
+      icon: BarChart
+  },
     {
       title: 'Social Media Advertising',
       description: 'Comprehensive social media advertising management across Facebook, Instagram, LinkedIn, and more.',
       features: ['Multi-platform Management', 'Creative Development', 'Audience Insights', 'Campaign Optimization'],
       price: '$1,800/mo',
-      icon: Users;
-    },
+      icon: Users
+  },
     {
       title: 'Search Engine Marketing',
       description: 'Advanced SEM strategies including Google Ads, Bing Ads, and other search platforms.',
       features: ['Keyword Research', 'Ad Copy Optimization', 'Landing Page Testing', 'Conversion Tracking'],
       price: '$2,200/mo',
-      icon: Zap;
-    }
+      icon: Zap
+  }
   ];
 
   const benefits = [

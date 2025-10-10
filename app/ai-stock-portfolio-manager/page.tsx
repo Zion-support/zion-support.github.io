@@ -5,37 +5,37 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIStockPortfolioManagerPage: React.FC = () => {
-  const features = [,
-    {,
+  const features = [
+    {
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms analyze market trends and provide investment recommendations.',
-      icon: TrendingUp;
-    },
+      icon: TrendingUp
+  },
     {
       title: 'Portfolio Optimization',
       description: 'Automatically optimize your portfolio allocation based on risk tolerance and goals.',
-      icon: Target;
-    },
+      icon: Target
+  },
     {
       title: 'Real-time Monitoring',
       description: 'Track your investments in real-time with instant alerts and notifications.',
-      icon: BarChart;
-    },
+      icon: BarChart
+  },
     {
       title: 'Risk Assessment',
       description: 'Comprehensive risk analysis to help you make informed investment decisions.',
-      icon: CheckCircle;
-    },
+      icon: CheckCircle
+  },
     {
       title: 'Performance Tracking',
       description: 'Detailed performance metrics and historical analysis of your investments.',
-      icon: DollarSign;
-    },
+      icon: DollarSign
+  },
     {
       title: 'Market Insights',
       description: 'Get expert market insights and trend analysis to stay ahead of the market.',
-      icon: Zap;
-    }
+      icon: Zap
+  }
   ];
 
   const benefits = [

@@ -4,24 +4,24 @@ interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = () => {,
+const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed;
-    if (window.matchMedia('(display-mode: standalone)').matches) {,
+    if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
-      return;
-    }
+      return
+  }
 
     // Listen for the beforeinstallprompt event;
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallButton(true);
-    };
+      setShowInstallButton(true)
+  };
 
     // Listen for the appinstalled event;
     const handleAppInstalled = () => {

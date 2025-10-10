@@ -4,14 +4,14 @@ import { Shield, Lock, Eye, Database, UserCheck, FileText, AlertTriangle } from 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const GDPRPage: React.FC = () => {,
+const GDPRPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
 
   const rights = [
     {
       title: 'Right of Access'
-      icon: Eye;
-      description: 'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',
+      icon: Eye,
+    description: 'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',
       details: [,
         'Request a copy of your personal data',
         'Know the purposes of processing',
@@ -21,8 +21,8 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Rectification'
-      icon: FileText;
-      description: 'You have the right to have inaccurate personal data corrected and incomplete data completed.',
+      icon: FileText,
+    description: 'You have the right to have inaccurate personal data corrected and incomplete data completed.',
       details: [,
         'Correct factual errors in your data',
         'Update outdated information',
@@ -32,8 +32,8 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Erasure'
-      icon: AlertTriangle;
-      description: 'You have the right to request the deletion of your personal data under certain circumstances.',
+      icon: AlertTriangle,
+    description: 'You have the right to request the deletion of your personal data under certain circumstances.',
       details: [,
         'Data no longer necessary for original purposes',
         'Withdrawal of consent for processing',
@@ -43,8 +43,8 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Restrict Processing'
-      icon: Lock;
-      description: 'You have the right to limit how we process your personal data in certain situations.',
+      icon: Lock,
+    description: 'You have the right to limit how we process your personal data in certain situations.',
       details: [,
         'Contest accuracy of personal data',
         'Unlawful processing but prefer restriction to erasure',
@@ -54,8 +54,8 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Data Portability',
-      icon: Database;
-      description: 'You have the right to receive your personal data in a structured, commonly used format.',
+      icon: Database,
+    description: 'You have the right to receive your personal data in a structured, commonly used format.',
       details: [,
         'Receive data in machine-readable format',
         'Transfer data to another controller',
@@ -65,8 +65,8 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Object'
-      icon: UserCheck;
-      description: 'You have the right to object to processing of your personal data for specific purposes.',
+      icon: UserCheck,
+    description: 'You have the right to object to processing of your personal data for specific purposes.',
       details: [,
         'Object to processing for direct marketing',
         'Object to processing for legitimate interests',

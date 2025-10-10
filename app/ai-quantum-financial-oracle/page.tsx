@@ -1,10 +1,9 @@
 import React from 'react';
 import { Brain, Zap, Target, BarChart, Shield, Cpu, Navigation, Zap, Target, Shield, DollarSign } from 'lucide-react';
-
 const AIQuantumFinancialOraclePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
-const AIQuantumFinancialOraclePage: React.FC = () => {,
+const AIQuantumFinancialOraclePage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Navigation */}
       <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">

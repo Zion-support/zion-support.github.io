@@ -4,41 +4,41 @@ import { BarChart, Target, Zap, TrendingUp, Users, Shield, Globe, CreditCard, Pa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIEcommerceOptimizerPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: BarChart;
-      title: 'AI-Powered Analytics',
+const AIEcommerceOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: BarChart,
+    title: 'AI-Powered Analytics',
       description: 'Advanced machine learning algorithms analyze customer behavior, purchase patterns, and market trends to optimize your e-commerce strategy.',
       benefits: ['Real-time insights', 'Predictive analytics', 'Customer segmentation', 'Performance tracking']
     },
     {
-      icon: Target;
-      title: 'Smart Product Recommendations',
+      icon: Target,
+    title: 'Smart Product Recommendations',
       description: 'Intelligent recommendation engine that increases conversion rates by suggesting relevant products to customers.',
       benefits: ['Personalized suggestions', 'Cross-selling optimization', 'Upselling strategies', 'Customer retention']
     },
     {
-      icon: Zap;
-      title: 'Automated Pricing Optimization',
+      icon: Zap,
+    title: 'Automated Pricing Optimization',
       description: 'Dynamic pricing strategies that adjust product prices based on demand, competition, and market conditions.',
       benefits: ['Competitive pricing', 'Profit maximization', 'Demand forecasting', 'Price elasticity analysis']
     },
     {
-      icon: Users;
-      title: 'Customer Journey Optimization',
+      icon: Users,
+    title: 'Customer Journey Optimization',
       description: 'AI-driven customer journey mapping and optimization to improve user experience and increase conversions.',
       benefits: ['Journey mapping', 'Funnel optimization', 'A/B testing', 'Conversion tracking']
     },
     {
-      icon: Shield;
-      title: 'Fraud Detection & Prevention',
+      icon: Shield,
+    title: 'Fraud Detection & Prevention',
       description: 'Advanced fraud detection system that protects your business from fraudulent transactions and chargebacks.',
       benefits: ['Real-time monitoring', 'Risk assessment', 'Chargeback prevention', 'Security alerts']
     },
     {
-      icon: Globe;
-      title: 'Multi-Channel Optimization',
+      icon: Globe,
+    title: 'Multi-Channel Optimization',
       description: 'Seamless optimization across all sales channels including web, mobile, social media, and marketplaces.',
       benefits: ['Omnichannel strategy', 'Channel performance', 'Unified analytics', 'Cross-platform optimization']
     }
@@ -48,38 +48,38 @@ const AIEcommerceOptimizerPage: React.FC = () => {,
     {
       title: 'Product Catalog Management',
       description: 'AI-powered product categorization, tagging, and optimization for better searchability and discoverability.',
-      icon: Package;
-      metrics: ['40% faster product setup', '60% better search ranking', '35% increased visibility']
+      icon: Package,
+    metrics: ['40% faster product setup', '60% better search ranking', '35% increased visibility']
     },
     {
       title: 'Inventory Optimization',
       description: 'Smart inventory management with demand forecasting and automated reorder points.',
-      icon: Database;
-      metrics: ['50% reduction in stockouts', '30% lower inventory costs', '25% improved turnover']
+      icon: Database,
+    metrics: ['50% reduction in stockouts', '30% lower inventory costs', '25% improved turnover']
     },
     {
       title: 'Search & Filter Enhancement',
       description: 'Intelligent search algorithms and dynamic filtering to help customers find products quickly.',
-      icon: Search;
-      metrics: ['45% faster product discovery', '55% improved search accuracy', '40% higher engagement']
+      icon: Search,
+    metrics: ['45% faster product discovery', '55% improved search accuracy', '40% higher engagement']
     },
     {
       title: 'Checkout Process Optimization',
       description: 'Streamlined checkout experience with AI-powered form completion and payment optimization.',
-      icon: CreditCard;
-      metrics: ['35% reduction in cart abandonment', '50% faster checkout', '25% higher completion rate']
+      icon: CreditCard,
+    metrics: ['35% reduction in cart abandonment', '50% faster checkout', '25% higher completion rate']
     },
     {
       title: 'Mobile Experience Enhancement',
       description: 'Mobile-first optimization with responsive design and touch-friendly interfaces.',
-      icon: Mobile;
-      metrics: ['60% better mobile performance', '45% increased mobile conversions', '30% faster load times']
+      icon: Mobile,
+    metrics: ['60% better mobile performance', '45% increased mobile conversions', '30% faster load times']
     },
     {
       title: 'Customer Support Automation',
       description: 'AI-powered chatbots and automated support systems for 24/7 customer assistance.',
-      icon: Bot;
-      metrics: ['80% faster response times', '70% customer satisfaction', '50% reduced support costs']
+      icon: Bot,
+    metrics: ['80% faster response times', '70% customer satisfaction', '50% reduced support costs']
     }
   ];
 
@@ -88,7 +88,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {,
       name: 'Starter',
       price: '$99/month',
       description: 'Perfect for small e-commerce businesses',
-      features: [,
+      features: [
         'Up to 1,000 products',
         'Basic analytics dashboard',
         'Standard recommendations',
@@ -96,13 +96,13 @@ const AIEcommerceOptimizerPage: React.FC = () => {,
         'Mobile optimization',
         'Basic fraud detection'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional',
       price: '$299/month',
       description: 'Ideal for growing online stores',
-      features: [,
+      features: [
         'Up to 10,000 products',
         'Advanced analytics & insights',
         'AI-powered recommendations',
@@ -112,13 +112,13 @@ const AIEcommerceOptimizerPage: React.FC = () => {,
         'A/B testing tools',
         'Custom integrations'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large-scale e-commerce operations',
-      features: [,
+      features: [
         'Unlimited products',
         'Custom AI models',
         'Dedicated account manager',
@@ -129,8 +129,8 @@ const AIEcommerceOptimizerPage: React.FC = () => {,
         'API access',
         'On-premise deployment'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const testimonials = [
@@ -139,22 +139,22 @@ const AIEcommerceOptimizerPage: React.FC = () => {,
       company: 'TechGear Store',
       role: 'E-commerce Director',
       content: 'AI E-commerce Optimizer increased our conversion rate by 45% and reduced cart abandonment by 35%. The AI recommendations are incredibly accurate.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Michael Chen',
       company: 'Fashion Forward',
       role: 'CEO',
       content: 'The pricing optimization feature alone paid for itself in the first month. We saw a 30% increase in profit margins.',
-      rating: 5;
-    },
+      rating: 5
+  },
     {
       name: 'Emily Rodriguez',
       company: 'Home & Garden Plus',
       role: 'Marketing Manager',
       content: 'The customer journey optimization helped us understand our customers better and increased our average order value by 25%.',
-      rating: 5;
-    }
+      rating: 5
+  }
   ];
 
   return (

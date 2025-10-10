@@ -4,8 +4,8 @@ import { CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIInventoryManagerPage: React.FC = () => {,
-  const features = [,
+const AIInventoryManagerPage: React.FC = () => {
+  const features = [
     'Demand Forecasting',
     'Stock Optimization',
     'Reorder Alerts',

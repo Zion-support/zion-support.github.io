@@ -25,19 +25,22 @@ interface EnhancedSEOProps {
   themeColor?: string;
   colorScheme?: string;
   preload?: Array<{
-    href: string;,
+    href: string,
+    
     as: string;
-    type?: string;}>;
+    type?: string
+  }>;
   prefetch?: Array<{
-    href: string;,
-    as: string;
+    href: string,
+    
+    as: string
   }>;
   dnsPrefetch?: string[];
   preconnect?: string[];
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
@@ -73,7 +76,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
     description: 'Advanced AI and IT Solutions'
     url: 'https://ziontechgroup.com'
     logo: 'https://ziontechgroup.com/logo.webp'
-    contactPoint: {,
+    contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
@@ -92,7 +95,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       'https: //instagram.com/ziontechgroup'
       'https: //github.com/ziontechgroup'
       'https: //youtube.com/@ziontechgroup'],
-    offers: {,
+    offers: {
       '@type': 'Offer',
       name: 'AI Enterprise Transformation Services',
       description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',

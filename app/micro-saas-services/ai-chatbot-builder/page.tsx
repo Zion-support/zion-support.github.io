@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIChatbotBuilder: React.FC = () => {,
+const AIChatbotBuilder: React.FC = () => {
   const [botName, setBotName] = useState('');
   const [botPurpose, setBotPurpose] = useState('');
 

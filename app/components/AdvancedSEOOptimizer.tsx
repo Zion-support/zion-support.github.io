@@ -5,8 +5,8 @@ import { Helmet } from 'react-helmet-async';
 interface SEOData {}
   title: string;
   description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  keywords: string[],
+    canonicalUrl: string;
   author?: string;
   robots?: string;
   ogTitle?: string;
@@ -15,10 +15,12 @@ interface SEOData {}
   ogType?: string;
   twitterCard?: string;
   twitterTitle?: string;
-  twitterDescription?: string;,
+  twitterDescription?: string,
+    
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
-  faq?: Array<{ question: string; answer: string }>;
+  faq?: Array<{ question: string,
+    answer: string }>;
 }
 
 interface AdvancedSEOOptimizerProps {}
@@ -26,10 +28,10 @@ interface AdvancedSEOOptimizerProps {}
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
-}
+  enableSchemaMarkup?: boolean
+  }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   seoData,
@@ -51,13 +53,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@type': 'TechCompany',
       name: 'Zion Tech Group'
       description: seoData.description;
-      url: seoData.canonicalUrl;
-      logo: 'https://ziontechgroup.com/logo.webp'
+      url: seoData.canonicalUrl,
+    logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https: //twitter.com/ziontechgroup',
         'https: //github.com/zion-tech-group'],
-      contactPoint: {,
+      contactPoint: {
       contactPoint: {}
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
@@ -77,8 +79,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (seoData.author) {}
       baseStructuredData.author = {}
         '@type': 'Person',
-        name: seoData.author;
-      };
+        name: seoData.author
+  };
     }
 
     if (seoData.publishedTime) {}
@@ -111,8 +113,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
         '@type': 'ListItem'
         position: index + 1;
-        name: breadcrumb.name;
-        item: breadcrumb.url;
+        name: breadcrumb.name,
+    item: breadcrumb.url;
     return {}
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -135,8 +137,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@type': 'FAQPage',
       mainEntity: seoData.faqs.map((faq: any) => ({
         '@type': 'Question'
-        name: faq.question;
-        acceptedAnswer: {,
+        name: faq.question,
+    acceptedAnswer: {
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -145,8 +147,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         name: faq.question,
         acceptedAnswer: {}
           '@type': 'Answer',
-          text: faq.answer;
-        }
+          text: faq.answer
+  }
       }))
     };
   }, [seoData, enableStructuredData]);
@@ -265,9 +267,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({}
         '@type': 'ListItem',
         position: index + 1;
-        name: breadcrumb.name;
-        item: breadcrumb.url;
-      }))
+        name: breadcrumb.name,
+    item: breadcrumb.url
+  }))
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -293,13 +295,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       mainEntity: seoData.faqs.map(faq => ({)
         '@type': 'Question'),
         name: faq.question),
-        acceptedAnswer: {,
+        acceptedAnswer: {
           '@type': 'Answer'),
           text: faq.answer;
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: seoData.faq.map((faq: { question: string; answer: string }) => ({
+      mainEntity: seoData.faq.map((faq: { question: string,
+    answer: string }) => ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {}

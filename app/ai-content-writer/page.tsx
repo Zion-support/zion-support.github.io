@@ -4,8 +4,8 @@ import { FileText, PenTool, Target, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIContentWriterPage: React.FC = () => {,
-  const features = [,
+const AIContentWriterPage: React.FC = () => {
+  const features = [
     'Blog Post Generation',
     'Social Media Content',
     'Product Descriptions',
@@ -27,18 +27,18 @@ const AIContentWriterPage: React.FC = () => {,
     {
       title: 'Blog Writing',
       description: 'High-quality blog posts that engage readers and rank well in search engines',
-      icon: FileText;
-    },
+      icon: FileText
+  },
     {
       title: 'Social Media',
       description: 'Engaging social media content that drives engagement and conversions',
-      icon: PenTool;
-    },
+      icon: PenTool
+  },
     {
       title: 'Marketing Copy',
       description: 'Compelling marketing copy that converts visitors into customers',
-      icon: Target;
-    }
+      icon: Target
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

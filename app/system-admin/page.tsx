@@ -3,34 +3,34 @@ import React from 'react';
 import { Server, Shield, Monitor, Settings, Users, Database, Cloud, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
-const SystemAdminPage: React.FC = () => {,
-  const services = [,
-    {,
-      icon: Server;
-      title: 'Server Management',
+const SystemAdminPage: React.FC = () => {
+  const services = [
+    {
+      icon: Server,
+    title: 'Server Management',
       description: 'Complete server administration including setup, monitoring, and maintenance'
     },
     {
-      icon: Database;
-      title: 'Database Administration',
+      icon: Database,
+    title: 'Database Administration',
       description: 'Database optimization, backup, recovery, and performance tuning'
     },
     {
-      icon: Cloud;
-      title: 'Cloud Infrastructure',
+      icon: Cloud,
+    title: 'Cloud Infrastructure',
       description: 'Cloud migration, management, and optimization across all major platforms'
     },
     {
-      icon: Shield;
-      title: 'Security Management',
+      icon: Shield,
+    title: 'Security Management',
       description: 'Comprehensive security implementation and monitoring'},
     {
-      icon: Monitor;
-      title: 'System Monitoring',
+      icon: Monitor,
+    title: 'System Monitoring',
       description: '24/7 monitoring with proactive issue detection and resolution'},
     {
-      icon: Users;
-      title: 'User Management',
+      icon: Users,
+    title: 'User Management',
       description: 'User account management, permissions, and access control'
     }
   ];
@@ -60,20 +60,20 @@ const SystemAdminPage: React.FC = () => {,
 
   const benefits = [
     {
-      icon: CheckCircle;
-      title: 'Reduced Downtime',
+      icon: CheckCircle,
+    title: 'Reduced Downtime',
       description: 'Minimize system downtime with proactive monitoring and maintenance'},
     {
-      icon: Shield;
-      title: 'Enhanced Security',
+      icon: Shield,
+    title: 'Enhanced Security',
       description: 'Protect your systems with enterprise-grade security measures'},
     {
-      icon: Settings;
-      title: 'Optimized Performance',
+      icon: Settings,
+    title: 'Optimized Performance',
       description: 'Keep your systems running at peak efficiency'},
     {
-      icon: Users;
-      title: 'Expert Support',
+      icon: Users,
+    title: 'Expert Support',
       description: 'Access to certified system administrators and IT experts'}
   ];
 

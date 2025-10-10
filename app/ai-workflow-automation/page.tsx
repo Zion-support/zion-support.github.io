@@ -6,38 +6,38 @@ import { Helmet } from 'react-helmet-async';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Workflow;
-      title: 'Intelligent Process Automation',
+      icon: Workflow,
+    title: 'Intelligent Process Automation',
       description: 'AI-powered workflow automation that learns from your processes and optimizes them automatically.',
       benefits: ['90% time savings', 'Error reduction', 'Process optimization']
     },
     {
-      icon: Zap;
-      title: '500+ Integrations',
+      icon: Zap,
+    title: '500+ Integrations',
       description: 'Connect with 500+ popular business tools and platforms for seamless automation.',
       benefits: ['Wide compatibility', 'Easy setup', 'Unified workflow']
     },
     {
-      icon: Clock;
-      title: 'Real-time Monitoring',
+      icon: Clock,
+    title: 'Real-time Monitoring',
       description: 'Monitor workflow performance in real-time with detailed analytics and insights.',
       benefits: ['Live tracking', 'Performance metrics', 'Instant alerts']
     },
     {
-      icon: Users;
-      title: 'Team Collaboration',
+      icon: Users,
+    title: 'Team Collaboration',
       description: 'Enable seamless collaboration with role-based access and approval workflows.',
       benefits: ['Role management', 'Approval chains', 'Team coordination']
     },
     {
-      icon: Shield;
-      title: 'Enterprise Security',
+      icon: Shield,
+    title: 'Enterprise Security',
       description: 'Bank-level security with encryption, audit trails, and compliance features.',
       benefits: ['Data protection', 'Audit compliance', 'Secure access']
     },
     {
-      icon: BarChart;
-      title: 'Analytics & Reporting',
+      icon: BarChart,
+    title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to track workflow performance and identify optimization opportunities.',
       benefits: ['Performance insights', 'ROI tracking', 'Optimization suggestions']
     }
@@ -49,21 +49,21 @@ const AIWorkflowAutomationPage: React.FC = () => {
       price: '$99',
       period: '/month',
       description: 'Perfect for small teams',
-      features: [,
+      features: [
         'Up to 10 workflows',
         'Basic integrations',
         'Standard templates',
         'Email support',
         'Basic analytics'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Professional'
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses',
-      features: [,
+      features: [
         'Up to 100 workflows',
         '500+ integrations',
         'Custom templates',
@@ -72,14 +72,14 @@ const AIWorkflowAutomationPage: React.FC = () => {
         'Team collaboration',
         'API access'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
       price: '$799',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited workflows',
         'All integrations',
         'White-label options',
@@ -88,26 +88,26 @@ const AIWorkflowAutomationPage: React.FC = () => {
         'Advanced security',
         'SLA guarantee'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const benefits = [
     {
-      icon: Clock;
-      title: 'Save 20+ Hours/Week',
+      icon: Clock,
+    title: 'Save 20+ Hours/Week',
       description: 'Automate repetitive tasks and focus on high-value activities'},
     {
-      icon: Zap;
-      title: '90% Process Efficiency',
+      icon: Zap,
+    title: '90% Process Efficiency',
       description: 'Dramatically improve process efficiency with intelligent automation'},
     {
-      icon: Users;
-      title: 'Better Team Coordination',
+      icon: Users,
+    title: 'Better Team Coordination',
       description: 'Streamline team workflows and improve collaboration'},
     {
-      icon: Star;
-      title: 'Scalable Solutions',
+      icon: Star,
+    title: 'Scalable Solutions',
       description: 'Scale your automation as your business grows'}
   ];
 
@@ -234,7 +234,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   </ul>
                   <a;
                     href="mailto: kleber@ziontechgroup.com",
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}

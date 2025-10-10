@@ -4,41 +4,41 @@ import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, E
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIRoboticsPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Brain;
-      title: 'Intelligent Robotics',
+const AIRoboticsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+    title: 'Intelligent Robotics',
       description: 'AI-powered robots that can learn, adapt, and make decisions in real-time for complex tasks.',
       benefits: ['Machine learning', 'Adaptive behavior', 'Real-time decisions', 'Continuous improvement']
     },
     {
-      icon: Eye;
-      title: 'Computer Vision',
+      icon: Eye,
+    title: 'Computer Vision',
       description: 'Advanced vision systems that enable robots to see, recognize, and interact with their environment.',
       benefits: ['Object recognition', 'Spatial awareness', 'Quality inspection', 'Navigation assistance']
     },
     {
-      icon: Settings;
-      title: 'Autonomous Operation',
+      icon: Settings,
+    title: 'Autonomous Operation',
       description: 'Robots that can operate independently with minimal human intervention and supervision.',
       benefits: ['Self-navigation', 'Task planning', 'Error recovery', 'Maintenance alerts']
     },
     {
-      icon: Zap;
-      title: 'Precision Control',
+      icon: Zap,
+    title: 'Precision Control',
       description: 'High-precision robotic control systems for delicate and complex manufacturing tasks.',
       benefits: ['Micro-precision', 'Repeatable accuracy', 'Force control', 'Speed optimization']
     },
     {
-      icon: Users;
-      title: 'Human-Robot Collaboration',
+      icon: Users,
+    title: 'Human-Robot Collaboration',
       description: 'Safe and efficient collaboration between humans and robots in shared workspaces.',
       benefits: ['Safety protocols', 'Intuitive interfaces', 'Collaborative tasks', 'Workflow optimization']
     },
     {
-      icon: Shield;
-      title: 'Safety Systems',
+      icon: Shield,
+    title: 'Safety Systems',
       description: 'Advanced safety features and fail-safe mechanisms for secure robotic operations.',
       benefits: ['Collision avoidance', 'Emergency stops', 'Safety monitoring', 'Risk assessment']
     }
@@ -48,38 +48,38 @@ const AIRoboticsPage: React.FC = () => {,
     {
       title: 'Manufacturing',
       description: 'Industrial robots for assembly, welding, painting, and quality control in manufacturing.',
-      icon: Factory;
-      useCases: ['Assembly automation', 'Quality control', 'Welding robots', 'Painting systems']
+      icon: Factory,
+    useCases: ['Assembly automation', 'Quality control', 'Welding robots', 'Painting systems']
     },
     {
       title: 'Healthcare',
       description: 'Medical robots for surgery, rehabilitation, and patient care assistance.',
-      icon: Stethoscope;
-      useCases: ['Surgical robots', 'Rehabilitation', 'Patient monitoring', 'Drug delivery']
+      icon: Stethoscope,
+    useCases: ['Surgical robots', 'Rehabilitation', 'Patient monitoring', 'Drug delivery']
     },
     {
       title: 'Logistics',
       description: 'Warehouse and delivery robots for inventory management and order fulfillment.',
-      icon: Truck;
-      useCases: ['Warehouse automation', 'Order picking', 'Delivery robots', 'Inventory tracking']
+      icon: Truck,
+    useCases: ['Warehouse automation', 'Order picking', 'Delivery robots', 'Inventory tracking']
     },
     {
       title: 'Agriculture',
       description: 'Agricultural robots for planting, harvesting, and crop monitoring.',
-      icon: Home;
-      useCases: ['Precision farming', 'Crop monitoring', 'Harvesting robots', 'Soil analysis']
+      icon: Home,
+    useCases: ['Precision farming', 'Crop monitoring', 'Harvesting robots', 'Soil analysis']
     },
     {
       title: 'Service Industry',
       description: 'Service robots for cleaning, security, and customer assistance.',
-      icon: Users;
-      useCases: ['Cleaning robots', 'Security patrols', 'Customer service', 'Maintenance tasks']
+      icon: Users,
+    useCases: ['Cleaning robots', 'Security patrols', 'Customer service', 'Maintenance tasks']
     },
     {
       title: 'Research & Exploration',
       description: 'Robots for scientific research, space exploration, and underwater missions.',
-      icon: Compass;
-      useCases: ['Space exploration', 'Underwater research', 'Scientific experiments', 'Data collection']
+      icon: Compass,
+    useCases: ['Space exploration', 'Underwater research', 'Scientific experiments', 'Data collection']
     }
   ];
 
@@ -87,23 +87,23 @@ const AIRoboticsPage: React.FC = () => {,
     {
       metric: '99.9%',
       description: 'Accuracy in precision tasks',
-      icon: Target;
-    },
+      icon: Target
+  },
     {
       metric: '24/7',
       description: 'Continuous operation capability',
-      icon: Clock3;
-    },
+      icon: Clock3
+  },
     {
       metric: '50%',
       description: 'Increase in productivity',
-      icon: TrendingUp;
-    },
+      icon: TrendingUp
+  },
     {
       metric: '90%',
       description: 'Reduction in workplace injuries',
-      icon: Shield;
-    }
+      icon: Shield
+  }
   ];
 
   const pricingPlans = [
@@ -111,7 +111,7 @@ const AIRoboticsPage: React.FC = () => {,
       name: 'Robotics Starter',
       price: '$2,499/month',
       description: 'For small-scale robotic applications',
-      features: [,
+      features: [
         'Basic robot programming',
         'Standard sensors',
         'Email support',
@@ -119,13 +119,13 @@ const AIRoboticsPage: React.FC = () => {,
         'Basic analytics',
         'Documentation'
       ],
-      popular: false;
-    },
+      popular: false
+  },
     {
       name: 'Robotics Professional',
       price: '$5,999/month',
       description: 'For enterprise robotic solutions',
-      features: [,
+      features: [
         'Advanced AI programming',
         'Advanced sensors',
         'Priority support',
@@ -135,13 +135,13 @@ const AIRoboticsPage: React.FC = () => {,
         'Training & consultation',
         'API access'
       ],
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Robotics Enterprise',
       price: 'Custom',
       description: 'For large-scale robotic operations',
-      features: [,
+      features: [
         'Custom robot development',
         'On-site deployment',
         'Dedicated support team',
@@ -151,8 +151,8 @@ const AIRoboticsPage: React.FC = () => {,
         'Custom reporting',
         'Full customization'
       ],
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   return (

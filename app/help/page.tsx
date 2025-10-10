@@ -19,8 +19,7 @@ import {}
   Download,
   ExternalLink;
 } from 'lucide-react';
-
-const HelpPage: React.FC = () => {,
+const HelpPage: React.FC = () => {
 const HelpPage: React.FC = () => {}
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
@@ -28,9 +27,9 @@ const HelpPage: React.FC = () => {}
   const faqCategories = [
     {
       title: 'Getting Started'
-      icon: BookOpen;
-      questions: [
-        {,
+      icon: BookOpen,
+    questions: [
+        {
     {}
       title: 'Getting Started',
       icon: BookOpen,
@@ -49,9 +48,9 @@ const HelpPage: React.FC = () => {}
     },
     {
       title: 'Technical Support'
-      icon: HelpCircle;
-      questions: [,
-        {,
+      icon: HelpCircle,
+    questions: [
+        {
     {}
       title: 'Technical Support',
       icon: HelpCircle,
@@ -71,9 +70,9 @@ const HelpPage: React.FC = () => {}
     },
     {
       title: 'Billing & Pricing'
-      icon: FileText;
-      questions: [,
-        {,
+      icon: FileText,
+    questions: [
+        {
     {}
       title: 'Billing & Pricing',
       icon: FileText,
@@ -117,8 +116,8 @@ const HelpPage: React.FC = () => {}
     {}
       title: 'Download Resources',
       description: 'Templates, guides, and tools',
-      icon: Download;
-      link: '/downloads',
+      icon: Download,
+    link: '/downloads',
       color: 'text-green-400'},
     {
       title: 'Community Forum'
@@ -134,8 +133,8 @@ const HelpPage: React.FC = () => {}
 
   const contactMethods = [
     {
-      icon: Phone;
-      title: 'Phone Support'
+      icon: Phone,
+    title: 'Phone Support'
     {}
       icon: Phone,
       title: 'Phone Support',
@@ -143,8 +142,8 @@ const HelpPage: React.FC = () => {}
       contact: '+1 (302) 464-0950',
       action: 'Call Now'},
     {
-      icon: Mail;
-      title: 'Email Support'
+      icon: Mail,
+    title: 'Email Support'
     {}
       icon: Mail,
       title: 'Email Support',
@@ -152,8 +151,8 @@ const HelpPage: React.FC = () => {}
       contact: 'support@ziontechgroup.com',
       action: 'Send Email'},
     {
-      icon: MessageSquare;
-      title: 'Live Chat'
+      icon: MessageSquare,
+    title: 'Live Chat'
     {}
       icon: MessageSquare,
       title: 'Live Chat',
@@ -162,7 +161,7 @@ const HelpPage: React.FC = () => {}
       action: 'Start Chat'}
   ];
 
-  const toggleCategory = (categoryTitle: string) => {,
+  const toggleCategory = (categoryTitle: string) => {
   const toggleCategory = (categoryTitle: string) => {}
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };

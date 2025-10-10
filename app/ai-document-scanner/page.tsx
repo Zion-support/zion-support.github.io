@@ -147,8 +147,7 @@ import {
   PlugFull,
   PowerFull;
 } from 'lucide-react';
-
-const AIDocumentScannerPage: React.FC = () => {,
+const AIDocumentScannerPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isScanning, setIsScanning] = useState(false);
   const [scanProgress, setScanProgress] = useState(0);
@@ -160,33 +159,33 @@ const AIDocumentScannerPage: React.FC = () => {,
 
   const features = [
     {
-      icon: Scan;
-      title: 'Advanced OCR Technology',
+      icon: Scan,
+    title: 'Advanced OCR Technology',
       description: '99% accuracy OCR with support for 100+ languages and handwriting recognition',
       stats: '99% accuracy'},
     {
-      icon: Zap;
-      title: 'Real-Time Processing',
+      icon: Zap,
+    title: 'Real-Time Processing',
       description: 'Process 1000+ documents per hour with instant results and batch processing',
       stats: '1000+ docs/hour'},
     {
-      icon: Brain;
-      title: 'AI Data Extraction',
+      icon: Brain,
+    title: 'AI Data Extraction',
       description: 'Intelligent data extraction with smart field recognition and validation',
       stats: 'Smart extraction'},
     {
-      icon: Shield;
-      title: 'Enterprise Security',
+      icon: Shield,
+    title: 'Enterprise Security',
       description: 'Bank-level encryption with SOC 2 compliance and audit trails',
       stats: 'SOC 2 compliant'},
     {
-      icon: Cloud;
-      title: 'Cloud Storage',
+      icon: Cloud,
+    title: 'Cloud Storage',
       description: 'Secure cloud storage with automatic backup and version control',
       stats: 'Unlimited storage'},
     {
-      icon: Globe;
-      title: 'API Integration',
+      icon: Globe,
+    title: 'API Integration',
       description: 'RESTful API for seamless integration with existing workflows',
       stats: 'RESTful API'}
   ];
@@ -262,8 +261,8 @@ const AIDocumentScannerPage: React.FC = () => {,
         'PDF export',
         'Basic analytics'
       ],
-      popular: false;
-      cta: 'Start Free Trial'},
+      popular: false,
+    cta: 'Start Free Trial'},
     {
       name: 'Professional',
       price: '$149',
@@ -281,8 +280,8 @@ const AIDocumentScannerPage: React.FC = () => {,
         'Team collaboration',
         'Custom fields'
       ],
-      popular: true;
-      cta: 'Start Free Trial'},
+      popular: true,
+    cta: 'Start Free Trial'},
     {
       name: 'Enterprise'
       price: '$399',
@@ -300,8 +299,8 @@ const AIDocumentScannerPage: React.FC = () => {,
         'White-label options',
         'Dedicated support'
       ],
-      popular: false;
-      cta: 'Contact Sales'}
+      popular: false,
+    cta: 'Contact Sales'}
   ];
 
   const testimonials = [
@@ -310,48 +309,48 @@ const AIDocumentScannerPage: React.FC = () => {,
       role: 'Office Manager',
       company: 'Legal Firm Inc',
       content: 'We process hundreds of legal documents daily. This AI scanner has reduced our processing time by 80% and improved accuracy significantly.',
-      rating: 5;
-      avatar: 'JM'},
+      rating: 5,
+    avatar: 'JM'},
     {
       name: 'David Kim'
       role: 'CFO',
       company: 'Retail Corp',
       content: 'The invoice processing automation has been a game-changer. We can now process thousands of invoices in minutes instead of hours.',
-      rating: 5;
-      avatar: 'DK'},
+      rating: 5,
+    avatar: 'DK'},
     {
       name: 'Lisa Thompson'
       role: 'Operations Director',
       company: 'Healthcare Group',
       content: 'HIPAA compliance was crucial for us. The security features and audit trails give us complete confidence in our document processing.',
-      rating: 5;
-      avatar: 'LT'}
+      rating: 5,
+    avatar: 'LT'}
   ];
 
   const useCases = [
     {
       title: 'Invoice Processing',
       description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems',
-      icon: FileText;
-      benefits: ['90% time reduction', '99% accuracy', 'Auto-validation']
+      icon: FileText,
+    benefits: ['90% time reduction', '99% accuracy', 'Auto-validation']
     },
     {
       title: 'Contract Management',
       description: 'Scan and analyze contracts, extract key terms, and track important dates and obligations',
-      icon: Shield;
-      benefits: ['Risk mitigation', 'Compliance tracking', 'Auto-alerts']
+      icon: Shield,
+    benefits: ['Risk mitigation', 'Compliance tracking', 'Auto-alerts']
     },
     {
       title: 'Form Processing',
       description: 'Process application forms, surveys, and questionnaires with intelligent data extraction',
-      icon: Edit;
-      benefits: ['Instant processing', 'Data validation', 'Workflow automation']
+      icon: Edit,
+    benefits: ['Instant processing', 'Data validation', 'Workflow automation']
     },
     {
       title: 'Receipt Management',
       description: 'Capture and categorize receipts for expense tracking and reimbursement processing',
-      icon: Receipt;
-      benefits: ['Auto-categorization', 'Expense tracking', 'Tax preparation']
+      icon: Receipt,
+    benefits: ['Auto-categorization', 'Expense tracking', 'Tax preparation']
     }
   ];
 

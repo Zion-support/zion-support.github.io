@@ -10,8 +10,8 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Satellite Operations Management'
       description: 'AI-powered satellite constellation management with autonomous operations and predictive maintenance'
-      icon: Satellite;
-      benefits: [,
+      icon: Satellite,
+    benefits: [
         'Autonomous satellite operations',
         'Predictive maintenance alerts',
         'Orbital optimization',
@@ -21,8 +21,8 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Space Mission Planning'
       description: 'Intelligent mission planning with trajectory optimization and resource allocation for space missions'
-      icon: Rocket;
-      benefits: [,
+      icon: Rocket,
+    benefits: [
         'Optimal trajectory planning',
         'Resource optimization',
         'Risk assessment',
@@ -32,8 +32,8 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Astronomical Data Analysis'
       description: 'Advanced AI analysis of astronomical data with pattern recognition and discovery algorithms'
-      icon: Telescope;
-      benefits: [,
+      icon: Telescope,
+    benefits: [
         'Automated data processing',
         'Pattern recognition',
         'Discovery algorithms',
@@ -43,8 +43,8 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Orbital Mechanics Optimization'
       description: 'AI-driven orbital mechanics calculations and optimization for spacecraft navigation'
-      icon: Orbit;
-      benefits: [,
+      icon: Orbit,
+    benefits: [
         'Precise orbital calculations',
         'Navigation optimization',
         'Collision avoidance',
@@ -56,7 +56,7 @@ export default function AISpaceTechnologyProPage() {
   const capabilities = [
     {
       category: 'Satellite Management',
-      items: [,
+      items: [
         'Constellation coordination',
         'Orbital positioning',
         'Communication optimization',
@@ -67,7 +67,7 @@ export default function AISpaceTechnologyProPage() {
     },
     {
       category: 'Mission Planning',
-      items: [,
+      items: [
         'Trajectory optimization',
         'Launch window analysis',
         'Resource allocation',
@@ -78,7 +78,7 @@ export default function AISpaceTechnologyProPage() {
     },
     {
       category: 'Data Analysis',
-      items: [,
+      items: [
         'Astronomical data processing',
         'Image analysis',
         'Signal processing',
@@ -89,7 +89,7 @@ export default function AISpaceTechnologyProPage() {
     },
     {
       category: 'Navigation & Control',
-      items: [,
+      items: [
         'Autonomous navigation',
         'Attitude control',
         'Orbital maneuvers',
@@ -102,8 +102,8 @@ export default function AISpaceTechnologyProPage() {
 
   const pricing = {
     monthly: 5500;
-    yearly: 55000;
-    features: [,
+    yearly: 55000,
+    features: [
       'Unlimited satellite operations',
       'Advanced AI algorithms',
       'Real-time data processing',
@@ -113,19 +113,19 @@ export default function AISpaceTechnologyProPage() {
       'Data export/import',
       'White-label options'
     ],
-    addOns: [,
-      {,
+    addOns: [
+      {
         name: 'Custom Space Models',
-        price: 2500;
-        description: 'Train AI models on your specific space data'},
+        price: 2500,
+    description: 'Train AI models on your specific space data'},
       {
         name: 'Dedicated Support',
-        price: 1500;
-        description: 'Dedicated space technology specialist'},
+        price: 1500,
+    description: 'Dedicated space technology specialist'},
       {
         name: 'On-premise Deployment',
-        price: 8000;
-        description: 'Deploy on your infrastructure'}
+        price: 8000,
+    description: 'Deploy on your infrastructure'}
     ]
   };
 
@@ -135,22 +135,22 @@ export default function AISpaceTechnologyProPage() {
       role: 'Mission Director',
       company: 'SpaceX',
       content: 'AI Space Technology Pro revolutionized our satellite operations. We achieved 99.9% uptime and reduced operational costs by 60% while improving mission success rates.',
-      rating: 5;
-      avatar: 'SJ'},
+      rating: 5,
+    avatar: 'SJ'},
     {
       name: 'Michael Chen'
       role: 'Chief Technology Officer',
       company: 'Blue Origin',
       content: 'The mission planning capabilities are incredible. We optimized our launch trajectories and reduced fuel consumption by 40% while maintaining mission success rates.',
-      rating: 5;
-      avatar: 'MC'},
+      rating: 5,
+    avatar: 'MC'},
     {
       name: 'Dr. Emily Rodriguez'
       role: 'Research Director',
       company: 'NASA',
       content: 'The astronomical data analysis helped us discover 3 new exoplanets and identify 15 potential habitable zones. This is exactly what we needed for our research missions.',
-      rating: 5;
-      avatar: 'ER'}
+      rating: 5,
+    avatar: 'ER'}
   ];
 
   const stats = [

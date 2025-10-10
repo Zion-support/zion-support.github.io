@@ -4,8 +4,8 @@ import { Database, Zap, Shield, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DatabasePage: React.FC = () => {,
-  const features = [,
+const DatabasePage: React.FC = () => {
+  const features = [
     'Database Design & Architecture',
     'Performance Tuning',
     'Backup & Recovery',
@@ -27,18 +27,18 @@ const DatabasePage: React.FC = () => {,
     {
       title: 'Database Design',
       description: 'Custom database architecture optimized for your specific needs',
-      icon: Database;
-    },
+      icon: Database
+  },
     {
       title: 'Performance Optimization',
       description: 'Query tuning and indexing for maximum database performance',
-      icon: Zap;
-    },
+      icon: Zap
+  },
     {
       title: 'Data Security',
       description: 'Comprehensive security measures to protect your data',
-      icon: Shield;
-    }
+      icon: Shield
+  }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

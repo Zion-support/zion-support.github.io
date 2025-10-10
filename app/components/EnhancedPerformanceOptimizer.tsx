@@ -18,7 +18,7 @@ interface PerformanceOptimizerProps {}
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
   enableImageOptimization = true,
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true;
   enableLazyLoading = true,
   enableCodeSplitting = true,
@@ -77,8 +77,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     const observerOptions = {}
       root: null,
       rootMargin: '50px',
-      threshold: 0.1;
-    };
+      threshold: 0.1
+  };
 
     const imageObserver = new IntersectionObserver((entries) => {}
       entries.forEach((entry) => {}
@@ -176,7 +176,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         link.href = fontUrl;
         link.as = 'style';
         link.crossOrigin = 'anonymous';
-        link.onload = () => {,
+        link.onload = () => {
         link.onload = () => {}
           link.rel = 'stylesheet';
         };
@@ -232,15 +232,15 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     value: Math.round(metric.value),
               non_interaction: true,
 
-        const reportMetric = (metric: any) => {,
+        const reportMetric = (metric: any) => {
           // Send to analytics;
-          if ('gtag' in window) {,
+          if ('gtag' in window) {
             (window as any).gtag('event', 'web_vitals', {)
               event_category: 'Performance'),
               event_label: metric.name),
               value: Math.round(metric.value),
-              non_interaction: true;
-          }
+              non_interaction: true
+  }
         };
 
         getCLS(reportMetric);
@@ -313,19 +313,20 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           -webkit-transform: translateZ(0);
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
-          -o-transform: translateZ(0);,
-    transform: translateZ(0);
-        }
+          -o-transform: translateZ(0),
+    
+    transform: translateZ(0)
+  }
 
         /* Optimize repaints */
         .cyber-card, .quantum-card {}
-          will-change: transform;
-        }
+          will-change: transform
+  }
 
         /* Optimize scrolling */
         .overflow-auto, .overflow-scroll {}
-          -webkit-overflow-scrolling: touch;
-        }
+          -webkit-overflow-scrolling: touch
+  }
       `;
       document.head.appendChild(style);
     };
@@ -377,9 +378,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       const metrics = {
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
         loadComplete: navigation.loadEventEnd - navigation.fetchStart;
-        firstByte: navigation.responseStart - navigation.fetchStart;
-        domInteractive: navigation.domInteractive - navigation.fetchStart;
-      };
+        firstByte: navigation.responseStart - navigation.fetchStart,
+    domInteractive: navigation.domInteractive - navigation.fetchStart
+  };
 
       // Performance metrics collected;
       // Send to analytics;
@@ -410,8 +411,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
             event_category: 'Performance'),
             event_label: key),
             value: Math.round(value),
-            non_interaction: true;
-      }
+            non_interaction: true
+  }
     }
   }, []);
 

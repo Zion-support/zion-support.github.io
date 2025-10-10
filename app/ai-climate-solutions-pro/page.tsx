@@ -10,8 +10,8 @@ export default function AIClimateSolutionsProPage() {
     {
       title: 'Carbon Footprint Analysis'
       description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations'
-      icon: Leaf;
-      benefits: [,
+      icon: Leaf,
+    benefits: [
         'Real-time carbon tracking',
         'Automated reduction recommendations',
         'Industry-specific benchmarks',
@@ -21,8 +21,8 @@ export default function AIClimateSolutionsProPage() {
     {
       title: 'Weather Prediction & Modeling'
       description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction'
-      icon: Cloud;
-      benefits: [,
+      icon: Cloud,
+    benefits: [
         '95% accuracy in weather predictions',
         'Extreme weather early warning',
         'Climate trend analysis',
@@ -32,8 +32,8 @@ export default function AIClimateSolutionsProPage() {
     {
       title: 'Sustainability Planning'
       description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies'
-      icon: Target;
-      benefits: [,
+      icon: Target,
+    benefits: [
         'Custom sustainability roadmaps',
         'ROI analysis for green initiatives',
         'Resource optimization',
@@ -43,8 +43,8 @@ export default function AIClimateSolutionsProPage() {
     {
       title: 'Emission Tracking & Monitoring'
       description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations'
-      icon: Activity;
-      benefits: [,
+      icon: Activity,
+    benefits: [
         'Real-time emission monitoring',
         'Automated compliance reporting',
         'Predictive emission modeling',
@@ -56,7 +56,7 @@ export default function AIClimateSolutionsProPage() {
   const capabilities = [
     {
       category: 'Environmental Monitoring',
-      items: [,
+      items: [
         'Air quality monitoring',
         'Water quality assessment',
         'Soil health analysis',
@@ -67,7 +67,7 @@ export default function AIClimateSolutionsProPage() {
     },
     {
       category: 'Climate Analytics',
-      items: [,
+      items: [
         'Temperature trend analysis',
         'Precipitation modeling',
         'Sea level rise prediction',
@@ -78,7 +78,7 @@ export default function AIClimateSolutionsProPage() {
     },
     {
       category: 'Sustainability Management',
-      items: [,
+      items: [
         'Carbon footprint calculation',
         'Energy efficiency optimization',
         'Waste reduction strategies',
@@ -89,7 +89,7 @@ export default function AIClimateSolutionsProPage() {
     },
     {
       category: 'Compliance & Reporting',
-      items: [,
+      items: [
         'Environmental regulation tracking',
         'Automated compliance reporting',
         'Audit preparation',
@@ -102,8 +102,8 @@ export default function AIClimateSolutionsProPage() {
 
   const pricing = {
     monthly: 3200;
-    yearly: 32000;
-    features: [,
+    yearly: 32000,
+    features: [
       'Unlimited environmental monitoring',
       'Advanced AI climate models',
       'Real-time data processing',
@@ -113,19 +113,19 @@ export default function AIClimateSolutionsProPage() {
       'Data export/import',
       'White-label options'
     ],
-    addOns: [,
-      {,
+    addOns: [
+      {
         name: 'Custom Climate Models',
-        price: 1500;
-        description: 'Train AI models on your specific climate data'},
+        price: 1500,
+    description: 'Train AI models on your specific climate data'},
       {
         name: 'Dedicated Support',
-        price: 800;
-        description: 'Dedicated environmental specialist'},
+        price: 800,
+    description: 'Dedicated environmental specialist'},
       {
         name: 'On-premise Deployment',
-        price: 3000;
-        description: 'Deploy on your infrastructure'}
+        price: 3000,
+    description: 'Deploy on your infrastructure'}
     ]
   };
 
@@ -135,22 +135,22 @@ export default function AIClimateSolutionsProPage() {
       role: 'VP of Sustainability',
       company: 'GreenTech Solutions',
       content: 'AI Climate Solutions Pro helped us reduce our carbon footprint by 40% while improving operational efficiency. The ROI was evident within the first quarter.',
-      rating: 5;
-      avatar: 'JW'},
+      rating: 5,
+    avatar: 'JW'},
     {
       name: 'Dr. Michael Chen',
       role: 'Environmental Director',
       company: 'EcoCorp International',
       content: 'The weather prediction accuracy is incredible. We achieved 95% accuracy in forecasting extreme weather events, helping us prepare better for climate risks.',
-      rating: 5;
-      avatar: 'MC'},
+      rating: 5,
+    avatar: 'MC'},
     {
       name: 'Sarah Rodriguez'
       role: 'Chief Sustainability Officer',
       company: 'ClimateFirst Industries',
       content: 'The sustainability planning feature helped us create a comprehensive roadmap to net-zero emissions. This is exactly what we needed for our climate goals.',
-      rating: 5;
-      avatar: 'SR'}
+      rating: 5,
+    avatar: 'SR'}
   ];
 
   const stats = [

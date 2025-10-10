@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-const ServiceWorkerRegistration: React.FC = () => {,
-  useEffect(() => {,
-    if ('serviceWorker' in navigator) {,
+const ServiceWorkerRegistration: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {

@@ -3,24 +3,24 @@ import React from 'react';
 import { Zap, Gauge, Database, Cloud, ArrowRight, CheckCircle, TrendingUp, Shield, Clock } from 'lucide-react';
 import Link from 'next/link';
 
-const PerformanceOptimizationPage: React.FC = () => {,
-  const services = [,
-    {,
-      icon: Database;
-      title: 'Database Optimization',
+const PerformanceOptimizationPage: React.FC = () => {
+  const services = [
+    {
+      icon: Database,
+    title: 'Database Optimization',
       description: 'Optimize database queries, indexing, and performance tuning'
     },
     {
-      icon: Cloud;
-      title: 'Cloud Performance',
+      icon: Cloud,
+    title: 'Cloud Performance',
       description: 'Optimize cloud infrastructure and resource allocation'},
     {
-      icon: Gauge;
-      title: 'Application Tuning',
+      icon: Gauge,
+    title: 'Application Tuning',
       description: 'Fine-tune applications for maximum performance and efficiency'},
     {
-      icon: Shield;
-      title: 'Security Optimization',
+      icon: Shield,
+    title: 'Security Optimization',
       description: 'Enhance security without compromising performance'}
   ];
 

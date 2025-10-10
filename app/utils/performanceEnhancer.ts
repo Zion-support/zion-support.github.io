@@ -6,11 +6,11 @@
 import React from 'react';
 // Debounce function for performance optimization;
 export const debounce = <T extends (...args: unknown[]) => unknown>(
-  func: T;
-  wait: number;
+  func: T,
+    wait: number;
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
+  return (...args: Parameters<T>) => {
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {}
@@ -22,12 +22,12 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 };
 // Throttle function for performance optimization;
 export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T;
-  limit: number;
+  func: T,
+    limit: number;
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
+    if (!inThrottle) {
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {}
@@ -45,8 +45,8 @@ export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
-  static getInstance(): PerformanceMonitor {,
-    if (!PerformanceMonitor.instance) {,
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
 // Performance monitoring utilities
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor;
@@ -59,7 +59,7 @@ export class PerformanceMonitor {}
     return PerformanceMonitor.instance;
   }
   // Track component render time;
-  trackRender(componentName: string, renderTime: number) {,
+  trackRender(componentName: string, renderTime: number) {
   // Track component render time
   trackRender(componentName: string, renderTime: number) {}
     this.metrics.set(`${componentName}_render`, renderTime);
@@ -67,8 +67,8 @@ export class PerformanceMonitor {}
       }
   }
   // Track memory usage;
-  trackMemory(componentName: string) {,
-    if ('memory' in performance) {,
+  trackMemory(componentName: string) {
+    if ('memory' in performance) {
   // Track memory usage
   trackMemory(componentName: string) {}
     if ('memory' in performance) {}
@@ -183,7 +183,7 @@ export const usePerformanceMonitor = (componentName: string) => {}
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {}
     renderStartTime.current = performance.now();
-    return () => {,
+    return () => {
     return () => {}
       const renderTime = performance.now() - renderStartTime.current;
       monitor.trackRender(componentName, renderTime);
@@ -286,15 +286,15 @@ export const optimizeScrollPerformance = () => {}
   const trackCLS = () => {
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [];
-    interface LayoutShiftEntry extends PerformanceEntry {,
+    interface LayoutShiftEntry extends PerformanceEntry {
   // Track Core Web Vitals
   const trackCLS = () => {}
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {}
       hadRecentInput?: boolean;
-      value: number;
-    }
+      value: number
+  }
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
         const layoutEntry = entry as LayoutShiftEntry;
@@ -322,8 +322,8 @@ export const optimizeScrollPerformance = () => {}
   };
   const trackFID = () => {}
     interface FirstInputEntry extends PerformanceEntry {}
-      processingStart: number;
-    }
+      processingStart: number
+  }
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
         const fidEntry = entry as FirstInputEntry;
@@ -391,12 +391,13 @@ export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number,
+    jsHeapSizeLimit: number} }).memory;
   return {
     used: memory.usedJSHeapSize;
     total: memory.totalJSHeapSize;
-    limit: memory.jsHeapSizeLimit;
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+    limit: memory.jsHeapSizeLimit,
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
   };
 };
 // Performance metrics collection;
@@ -408,17 +409,18 @@ export const collectPerformanceMetrics = () => {
     navigation: {
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-// totalTime: navigation.loadEventEnd - navigation.fetchStart;
-    },
-    paint: {,
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0;
+// totalTime: navigation.loadEventEnd - navigation.fetchStart
+  },
+    paint: {
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+    firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0;
 // Memory usage monitoring
 export const getMemoryUsage = () => {}
   if (typeof window === 'undefined' || !('memory' in performance)) {}
     return null;
   }
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number,
+    jsHeapSizeLimit: number} }).memory;
   return {}
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,

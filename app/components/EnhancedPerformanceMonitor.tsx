@@ -4,20 +4,22 @@ import React, { useEffect, useState } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  CLS: number | null;,
-    FID: number | null;
-  FCP: number | null;,
-    LCP: number | null;
-  TTFB: number | null;
-}
+  CLS: number | null,
+    
+    FID: number | null,
+    FCP: number | null,
+    
+    LCP: number | null,
+    TTFB: number | null
+  }
 
-const EnhancedPerformanceMonitor: React.FC = () => {,
+const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     CLS: null;
     FID: null;
-    FCP: null;
-    LCP: null;
-    TTFB: null;
+    FCP: null,
+    LCP: null,
+    TTFB: null
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -46,10 +48,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
 
     // Monitor performance in development;
     if (process.env.NODE_ENV === 'development') {
-      const handleKeyPress = (e: KeyboardEvent) => {,
-        if (e.ctrlKey && e.shiftKey && e.key === 'P') {,
-          setIsVisible(prev => !prev);
-        }
+      const handleKeyPress = (e: KeyboardEvent) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+          setIsVisible(prev => !prev)
+  }
       };
 
       window.addEventListener('keydown', handleKeyPress);
@@ -57,12 +59,14 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
     }
   }, []);
 
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value === null) return 'text-gray-400';</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value <= thresholds.good) return 'text-green-400';
+  const getScoreColor = (value: number | null, thresholds: { good: number,
+    needsImprovement: number }) => {</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value === null) return 'text-gray-400';</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreText = (value: number | null, thresholds: { good: number,
+    needsImprovement: number }) => {
     if (value === null) return 'Measuring...';
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';

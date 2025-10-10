@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, X, Zap, Brain, Cpu, Shield, Star, TrendingUp, Users, Award } from 'lucide-react';
-
 const ContentPromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentPromo, setCurrentPromo] = useState(0);
@@ -39,39 +38,38 @@ const ContentPromotionBanner: React.FC = () => {
       href: '/case-studies',
       color: 'from-yellow-400 to-orange-600'
 import { X, Sparkles, ArrowRight, Star, Zap } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {,
+const ContentPromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentBanner, setCurrentBanner] = useState(0);
 
   const banners = [
     {
-      id: 1;
-      title: "🚀 New AI Solutions Available!"
+      id: 1,
+    title: "🚀 New AI Solutions Available!"
       description: "Discover our latest AI-powered tools and services"
       cta: "Explore Now"
       link: "/ai-services",
       color: "from-cyan-500 to-blue-600",
-      icon: Sparkles;
-    },
+      icon: Sparkles
+  },
     {
-      id: 2;
-      title: "⚡ Special Offer: 30% Off First Month"
+      id: 2,
+    title: "⚡ Special Offer: 30% Off First Month"
       description: "Get started with our AI services at a discounted rate"
       cta: "Claim Offer"
       link: "/contact",
       color: "from-purple-500 to-pink-600",
-      icon: Star;
-    },
+      icon: Star
+  },
     {
-      id: 3;
-      title: "🎯 Free AI Consultation"
+      id: 3,
+    title: "🎯 Free AI Consultation"
       description: "Book a free consultation to discuss your AI needs"
       cta: "Book Now"
       link: "/consultation",
       color: "from-green-500 to-emerald-600",
-      icon: Zap;
-      icon: Zap
+      icon: Zap,
+    icon: Zap
     }
   ];
 
@@ -269,7 +267,6 @@ const ContentPromotionBanner: React.FC = () => {,
         ))}</button>
 import React from 'react';
 import { Star, Zap, ArrowRight } from 'lucide-react';
-
 const ContentPromotionBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-b border-cyan-400/20 py-4">
@@ -295,8 +292,8 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+  };
 
 export default ContentPromotionBanner;
 export default ContentPromotionBanner;

@@ -7,32 +7,32 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const MachineLearningPage: React.FC = () => {,
-  const services = [,
-    {,
+const MachineLearningPage: React.FC = () => {
+  const services = [
+    {
       title: 'Predictive Analytics',
       description: 'Build models that forecast future trends and behaviors with high accuracy',
       features: ['Time Series Forecasting', 'Customer Behavior Prediction', 'Sales Forecasting', 'Risk Assessment'],
-      icon: BarChart;
-      color: 'text-blue-400'},
+      icon: BarChart,
+    color: 'text-blue-400'},
     {
       title: 'Custom Model Development',
       description: 'Tailored machine learning models designed for your specific business needs',
       features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Optimization'],
-      icon: Brain;
-      color: 'text-purple-400'},
+      icon: Brain,
+    color: 'text-purple-400'},
     {
       title: 'Data Pipeline Setup',
       description: 'Automated data processing and preparation for machine learning workflows',
       features: ['Data Collection', 'Data Cleaning', 'Feature Extraction', 'Real-time Processing'],
-      icon: Zap;
-      color: 'text-green-400'},
+      icon: Zap,
+    color: 'text-green-400'},
     {
       title: 'Model Monitoring',
       description: 'Continuous monitoring and optimization of deployed machine learning models',
       features: ['Performance Tracking', 'Drift Detection', 'Model Retraining', 'Alert Systems'],
-      icon: Target;
-      color: 'text-cyan-400'}
+      icon: Target,
+    color: 'text-cyan-400'}
   ];
 
   const benefits = [

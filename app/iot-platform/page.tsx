@@ -3,42 +3,41 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-
-const IoTPlatformPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Wifi;
-      title: 'Device Management',
+const IoTPlatformPage: React.FC = () => {
+  const features = [
+    {
+      icon: Wifi,
+    title: 'Device Management',
       description: 'Comprehensive IoT device management with remote monitoring, updates, and configuration.',
       benefits: ['Remote monitoring', 'OTA updates', 'Device configuration']
     },
     {
-      icon: Zap;
-      title: 'Real-time Data Processing',
+      icon: Zap,
+    title: 'Real-time Data Processing',
       description: 'Process IoT data in real-time with edge computing and cloud analytics capabilities.',
       benefits: ['Real-time processing', 'Edge computing', 'Cloud analytics']
     },
     {
-      icon: Clock;
-      title: '24/7 Monitoring',
+      icon: Clock,
+    title: '24/7 Monitoring',
       description: 'Continuous monitoring of IoT devices and networks with instant alerts and notifications.',
       benefits: ['Always-on monitoring', 'Instant alerts', 'Network health']
     },
     {
-      icon: Users;
-      title: 'Scalable Infrastructure',
+      icon: Users,
+    title: 'Scalable Infrastructure',
       description: 'Easily scale your IoT platform as your device fleet grows with millions of connected devices.',
       benefits: ['Auto-scaling', 'Device onboarding', 'Fleet management']
     },
     {
-      icon: Shield;
-      title: 'IoT Security',
+      icon: Shield,
+    title: 'IoT Security',
 description: 'Comprehensive security measures designed specifically for IoT environments and devices.',
       benefits: ['Device security', 'Data encryption', 'Access controls']
     },
     {
-      icon: BarChart;
-      title: 'Analytics & Insights',
+      icon: BarChart,
+    title: 'Analytics & Insights',
       description: 'Advanced analytics and insights from your IoT data to optimize operations and performance.',
       benefits: ['Data analytics', 'Predictive insights', 'Performance optimization']
     }

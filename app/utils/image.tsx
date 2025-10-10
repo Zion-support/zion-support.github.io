@@ -11,8 +11,8 @@ interface ImageProps {}
   className?: string
   priority?: boolean
   _quality?: number
-  src: string;
-  alt: string;
+  src: string,
+    alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -24,12 +24,13 @@ interface ImageProps {}
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;}
+  onError?: () => void
+  }
 }
 export const Image: React.FC<ImageProps>= ({
 export const Image: React.FC<ImageProps> = ({}
   src,
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps> = ({
   src;
   alt,
   width,
@@ -46,7 +47,7 @@ export const Image: React.FC<ImageProps> = ({,
   onError,
   ...props}
 }) => {}
-  const [, setIsLoaded] = useState(false)
+  const [ setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const handleLoad = useCallback(() => {}
     setIsLoaded(true)
@@ -60,8 +61,8 @@ export const Image: React.FC<ImageProps> = ({,
     ...style;
     ...(fill && {
       position: 'absolute'
-      top: 0;
-      left: 0;
+      top: 0,
+    left: 0;
   const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}

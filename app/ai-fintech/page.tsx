@@ -3,9 +3,9 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
-const AIFintechPage: React.FC = () => {,
-  const aiFintechServices = [,
-    {,
+const AIFintechPage: React.FC = () => {
+  const aiFintechServices = [
+    {
       title: 'AI Algorithmic Trading Platform',
       description: 'Advanced algorithmic trading system with machine learning for market prediction, risk management, and automated trading strategies.',
       icon: 'trending-up',

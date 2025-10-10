@@ -2,8 +2,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, BarChart, MessageSquare, CheckCircle, Target, Users, Shield } from 'lucide-react';
-
-const AISentimentAnalyzer: React.FC = memo(() => {,
+const AISentimentAnalyzer: React.FC = memo(() => {
 const AISentimentAnalyzer: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -48,7 +47,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [,
+      features: [
         'Up to 10,000 analyses/month',
         'Basic sentiment detection',
         'Email support',
@@ -56,15 +55,15 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         'API access'
       ],
       popular: false},
-      popular: false;
-    },
+      popular: false
+  },
     {
     {}
       name: 'Professional',
       price: '$299',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [,
+      features: [
         'Up to 100,000 analyses/month',
         'Advanced emotion detection',
         'Priority support',
@@ -73,8 +72,8 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         'Multi-language support'
       ],
       popular: true},
-      popular: true;
-    },
+      popular: true
+  },
     {
       name: 'Enterprise'
     {}
@@ -82,7 +81,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
       price: '$999',
       period: '/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited analyses',
         'Custom AI models',
         '24/7 dedicated support',
@@ -91,31 +90,31 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         'Custom reporting'
       ],
       popular: false}
-      popular: false;
-    }
+      popular: false
+  }
   ];
 
   const useCases = [
     {}
       title: 'Customer Experience Optimization',
       description: 'Identify pain points and improve customer satisfaction by 40%',
-      icon: Users;
-      result: '+40% satisfaction'},
+      icon: Users,
+    result: '+40% satisfaction'},
     {}
       title: 'Brand Reputation Management',
       description: 'Monitor and protect your brand reputation across all platforms',
-      icon: Shield;
-      result: '99.9% uptime'},
+      icon: Shield,
+    result: '99.9% uptime'},
     {}
       title: 'Product Development Insights',
       description: 'Use customer feedback to guide product improvements and new features',
-      icon: TrendingUp;
-      result: '+60% engagement'},
+      icon: TrendingUp,
+    result: '+60% engagement'},
     {}
       title: 'Competitive Intelligence',
       description: 'Track competitor sentiment and market positioning',
-      icon: Target;
-      result: 'Real-time insights'}
+      icon: Target,
+    result: 'Real-time insights'}
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -363,8 +362,8 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         </section>
       </div>
     </div>
-  );
-});
+  )
+  });
 
 AISentimentAnalyzer.displayName = 'AISentimentAnalyzer';
 ,

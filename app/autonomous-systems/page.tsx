@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const AutonomousSystemsPage: React.FC = () => {,
-  const autonomousServices = [,
-    {,
+const AutonomousSystemsPage: React.FC = () => {
+  const autonomousServices = [
+    {
       title: 'Self-Healing Infrastructure',
       description: 'AI-powered infrastructure that automatically detects, diagnoses, and repairs system issues without human intervention.',
       icon: '🔄',
@@ -646,7 +646,7 @@ const AutonomousSystemsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Implement Autonomous Systems?
@@ -675,7 +675,7 @@ const AutonomousSystemsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+  };
 
 export default AutonomousSystemsPage;
