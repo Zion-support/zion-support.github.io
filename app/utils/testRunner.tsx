@@ -4,9 +4,7 @@
  * Provides advanced testing capabilities, mocking, and test automation
  */
 import React, { ReactElement, useCallback } from 'react';
-<<<<<<< HEAD
 // Test result types;
-<<<<<<< HEAD
 export interface PerformanceMetrics {
   renderTime: number,
     memoryUsage: number,
@@ -16,7 +14,6 @@ export interface CoverageMetrics {
   statements: number,
     branches: number,
     functions: number,
-=======
 export interface PerformanceMetrics {;
   renderTime: number,;
     memoryUsage: number;}
@@ -26,7 +23,7 @@ export interface CoverageMetrics {;
   statements: number,;
     branches: number;
   functions: number,;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     lines: number;}
   renderTime: number,;
   memoryUsage: number,;
@@ -39,7 +36,6 @@ export interface CoverageMetrics {;
   lines: number;}
 }
 // Test configuration interface;
-<<<<<<< HEAD
 export interface TestConfig {
   enableMocking: boolean,
     enableCoverage: boolean,
@@ -56,7 +52,6 @@ export interface CoverageMetrics {}
     branches: number
   functions: number,
     lines: number;}
-=======
 export interface TestConfig {;
   enableMocking: boolean,;
     enableCoverage: boolean;
@@ -64,28 +59,24 @@ export interface TestConfig {;
     enableAccessibility: boolean;
 // Test result types;}
 export interface PerformanceMetrics {}
-=======
 import { render, RenderOptions } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-
 // Test result types
 export interface PerformanceMetrics {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89
   renderTime: number;
   memoryUsage: number;
   timestamp: string;
 }
-<<<<<<< HEAD
 export interface CoverageMetrics {}
   statements: number;
   branches: number;
   functions: number;
   lines: number;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 }
 // Test configuration interface;
 export interface TestConfig {}
-<<<<<<< HEAD
   enableMocking: boolean,
     enableCoverage: boolean
   enablePerformance: boolean,
@@ -103,13 +94,12 @@ export interface TestConfig {}
   enablePerformance: boolean,
   enableAccessibility: boolean,
   enableVisualRegression: boolean,
-=======
   enableMocking: boolean;
   enableCoverage: boolean;
   enablePerformance: boolean;
   enableAccessibility: boolean;
   enableVisualRegression: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   mockDataPath?: string;
   coverageThreshold: number,;
     performanceThreshold: number;
@@ -138,7 +128,6 @@ export interface TestConfig {}
   includePattern?: string[],;
   excludePattern?: string[];}
 }
-<<<<<<< HEAD
 // Default test configuration
 export const defaultTestConfig: TestConfig = {,
     enableMocking: true,
@@ -189,8 +178,7 @@ interface Test {</void>
   name: string,</void>
     fn: () => void | Promise<void>timeout?: number
   skip?: boolean
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Default test configuration;
 export const defaultTestConfig: TestConfig = {,;
     enableMocking: true,;}
@@ -277,7 +265,6 @@ interface CoverageResult {;
 interface TestSuite {;
   name: string,;}
 interface CoverageResult {}
-<<<<<<< HEAD
   statements: number,
     branches: number
   functions: number,
@@ -290,17 +277,13 @@ interface TestSuite {}
   beforeAll: (() => void | Promise<void>)[],
   afterAll: (() => void | Promise<void>)[],
   beforeEach: (() => void | Promise<void>)[],
-=======
-=======
-
 export interface CoverageMetrics {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89
   statements: number;
   branches: number;
   functions: number;
   lines: number;
 }
-
 // Test configuration interface
 export interface TestConfig {
   timeout: number;
@@ -308,7 +291,6 @@ export interface TestConfig {
   parallel: boolean;
   coverage: boolean;
 }
-
 // Default test configuration
 export const defaultTestConfig: TestConfig = {
   timeout: 5000,
@@ -316,50 +298,41 @@ export const defaultTestConfig: TestConfig = {
   parallel: true,
   coverage: true
 };
-
 interface TestResult {
   name: string;
   status: 'passed' | 'failed' | 'skipped';
   duration: number;
   error?: string;
 }
-
 interface AssertionResult {
   passed: boolean;
   message: string;
   expected?: unknown;
   actual?: unknown;
 }
-
 interface CoverageResult {
   statements: number;
   branches: number;
   functions: number;
   lines: number;
 }
-
 interface TestSuite {
   name: string;
   tests: Test[];
-<<<<<<< HEAD
   beforeAll: (() => void | Promise<void>)[],;
   afterAll: (() => void | Promise<void>)[],;
   beforeEach: (() => void | Promise<void>)[],;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   afterEach: (() => void | Promise<void>)[];}
-=======
   beforeEach?: () => void;
   afterEach?: () => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89
 }
-
 interface Test {
   name: string;
   fn: () => void | Promise<void>;
   timeout?: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export class TestRunner {
   private static instance: TestRunner,
   private config: TestConfig,
@@ -389,67 +362,55 @@ export class TestRunner {}
   private isRunning: boolean = false
   private startTime: number = 0
   constructor(config: Partial<TestConfig>= {}) {
-=======
 export class TestRunner {}
   private static instance: TestRunner;
   private config: TestConfig;
   private suites: TestSuite[] = [];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   private currentSuite: TestSuite | null = null;
   private results: TestResult[] = [];
   private testResults: Array<{}
     name: string;
     status: 'passed' | 'failed' | 'skipped',;
-=======
-
 export class TestRunner {
   private tests: Test[] = [];
   private suites: TestSuite[] = [];
   private isRunning: boolean = false;
   private config: TestConfig = defaultTestConfig;
-
   constructor(config?: Partial<TestConfig>) {
     if (config) {
       this.config = { ...defaultTestConfig, ...config };
     }
   }
-
   // Add a test to the runner
   addTest(name: string, fn: () => void | Promise<void>, timeout?: number): void {
     this.tests.push({ name, fn, timeout: timeout || this.config.timeout });
   }
-
   // Add a test suite
   addSuite(suite: TestSuite): void {
     this.suites.push(suite);
   }
-
   // Run all tests
   async runTests(): Promise<TestResult[]> {
     if (this.isRunning) {
       throw new Error('Test runner is already running');
     }
-
     this.isRunning = true;
     const results: TestResult[] = [];
-
     try {
       // Run individual tests
       for (const test of this.tests) {
         const result = await this.runSingleTest(test);
         results.push(result);
       }
-
       // Run test suites
       for (const suite of this.suites) {
         for (const test of suite.tests) {
           if (suite.beforeEach) {
             suite.beforeEach();
           }
-          
           const result = await this.runSingleTest(test);
           results.push(result);
-          
           if (suite.afterEach) {
             suite.afterEach();
           }
@@ -458,14 +419,11 @@ export class TestRunner {
     } finally {
       this.isRunning = false;
     }
-
     return results;
   }
-
   // Run a single test
   private async runSingleTest(test: Test): Promise<TestResult> {
     const startTime = performance.now();
-    
     try {
       await Promise.race([
         test.fn(),
@@ -473,7 +431,6 @@ export class TestRunner {
           setTimeout(() => reject(new Error('Test timeout')), test.timeout)
         )
       ]);
-      
       const duration = performance.now() - startTime;
       return {
         name: test.name,
@@ -490,14 +447,13 @@ export class TestRunner {
       };
     }
   }
-
   // Get test statistics
   getStats(results: TestResult[]): {
     total: number;
     passed: number;
     failed: number;
     skipped: number;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89
     duration: number;
   } {
     const total = results.length;
@@ -505,11 +461,9 @@ export class TestRunner {
     const failed = results.filter(r => r.status === 'failed').length;
     const skipped = results.filter(r => r.status === 'skipped').length;
     const duration = results.reduce((sum, r) => sum + r.duration, 0);
-
     return { total, passed, failed, skipped, duration };
   }
 }
-
 // Custom render function with providers
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -518,7 +472,6 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
     </BrowserRouter>
   );
 };
-
 const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
@@ -528,7 +481,6 @@ const customRender = (
   }
   return render(ui, { wrapper: AllTheProviders, ...options });
 };
-<<<<<<< HEAD
 interface TestResult {/* TODO: Fix JSX expression */}
 }
 interface AssertionResult {/* TODO: Fix JSX expression */}
@@ -697,19 +649,15 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
       let memoryUsage = 0;
-<<<<<<< HEAD
       if ('memory' in performance) {
-=======
 ;
       if ('memory' in performance) {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {;
           memoryUsage = memory.usedJSHeapSize;
-<<<<<<< HEAD
-=======
 ;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         }
       }
       unmount();
@@ -1252,7 +1200,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>;
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>;
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
-<<<<<<< HEAD
             </div>
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
@@ -1263,7 +1210,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>
     <div class="tests">
         ${this.results;
-=======
             </div>;
         <h3 id="heading-summary">Summary</h3>;
         <p>Total: ${this.results.length}</p>;
@@ -1274,7 +1220,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>;
     <div class="tests"></div>;
         ${this.results;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           .map(result => `}
         ${this.results}
           .map();
@@ -1544,7 +1490,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JUnit report;
    */;
   private generateJunitReport(): void {}
-<<<<<<< HEAD
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results
@@ -1768,7 +1713,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-=======
     const xml = `<?xml version="1.0" encoding="UTF-8"?>;
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
         ${this.results;
@@ -1780,7 +1724,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           .map();
             result => `}
             <testcase name="${result.name}" time="${result.duration / 1000}">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>;
             </skipped>;
@@ -2295,26 +2239,20 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */}
     }
   }, [testRunner]);
   return {/* TODO: Fix JSX expression */}
-=======
-
 // Performance testing utilities
 export const measurePerformance = (fn: () => void): PerformanceMetrics => {
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
-  
   fn();
-  
   const endTime = performance.now();
   const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
-  
   return {
     renderTime: endTime - startTime,
     memoryUsage: endMemory - startMemory,
     timestamp: new Date().toISOString()
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89
   };
 };
-
 // Mock utilities
 export const createMock = <T extends Record<string, any>>(overrides: Partial<T> = {}): T => {
   return new Proxy({} as T, {
@@ -2326,8 +2264,6 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
     }
   });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 "`
   </T>
   </T>
@@ -2375,11 +2311,8 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
   </void>
   </void>
   </void>
-=======
 "`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
-
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Assertion utilities
 export const expect = (actual: unknown) => ({
   toBe: (expected: unknown): AssertionResult => ({
@@ -2405,8 +2338,7 @@ export const expect = (actual: unknown) => ({
     actual
   })
 });
-
 // Export everything
 export * from '@testing-library/react';
 export { customRender as render };
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89

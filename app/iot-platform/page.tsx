@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
     },
     {
       icon: Clock,
@@ -21,7 +20,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
-=======
 ;
     },;
     {;
@@ -40,12 +38,11 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               Internet of Things solutions for any industry or use case.;
             </p>;
           </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   ))}
                 </ul>;
 </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -115,7 +112,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 export default PagePage;
   </button>
   </h2>
-=======
           </div>;
         </div>;
       </section>;
@@ -184,4 +180,4 @@ export default PagePage;
 };
 ;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

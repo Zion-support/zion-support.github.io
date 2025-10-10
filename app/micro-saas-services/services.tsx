@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const ServicesPage: React.FC = () => {
   const features = [
     {
@@ -147,7 +146,6 @@ export default ServicesPage;
   </h2>
   </button>
   </span>
-=======
 ;
 const ServicesPage: React.FC = () => {;
   const features = [;
@@ -291,4 +289,4 @@ const ServicesPage: React.FC = () => {;
 };
 ;
 export default ServicesPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

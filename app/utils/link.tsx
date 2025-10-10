@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface LinkProps {
   href: string,
     children: React.ReactNode
@@ -15,14 +14,12 @@ export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
-=======
-
 interface LinkProps {;
   href: string,;
     children: React.ReactNode;}
 interface LinkProps {}
   href: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   children: React.ReactNode;
   className?: string;
   target?: string;
@@ -101,10 +98,8 @@ export default Link;
   );
 };
 export default Link;
-<<<<<<< HEAD
   </LinkProps>
   </LinkProps>
   </LinkProps>
-=======
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

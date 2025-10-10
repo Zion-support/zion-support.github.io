@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
 const IoTPage: React.FC = () => {
   const iotServices = [
     {
@@ -247,7 +246,6 @@ const IoTPage: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-=======
 ;
 const IoTPage: React.FC = () => {;
   const iotServices = [;
@@ -496,11 +494,10 @@ const IoTPage: React.FC = () => {;
                           {service.features.map((feature, featureIndex) => (;}
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                               {feature}
                             </li>;
                           ))}
-<<<<<<< HEAD
                         </ul>
                       </div>
                       <div className="mb-4"></div>
@@ -508,7 +505,6 @@ const IoTPage: React.FC = () => {;
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (</div>
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
-=======
                         </ul>;
                       </div>;
                       <div className="mb-4"></div>;
@@ -516,11 +512,10 @@ const IoTPage: React.FC = () => {;
                         <div className="flex flex-wrap gap-2"></div>;
                           {service.technologies.map((tech, techIndex) => (</div>;}
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                               {tech}
                             </span>;
                           ))}
-<<<<<<< HEAD
                         </div>
                       </div>
                       <div className="mb-6"></div>
@@ -529,7 +524,6 @@ const IoTPage: React.FC = () => {;
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-=======
                         </div>;
                       </div>;
                       <div className="mb-6"></div>;
@@ -538,31 +532,28 @@ const IoTPage: React.FC = () => {;
                           {service.benefits.map((benefit, benefitIndex) => (;}
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                               {benefit}
                             </li>;
                           ))}
-<<<<<<< HEAD
                         </ul>
                       </div>
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                         Get IoT Quote;
   </
                     </div>
-=======
                         </ul>;
                       </div>;
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">;
                         Get IoT Quote;
                       </button>;
                     </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   ))}
               </div>;
             </div>;
           </section>;
         ))}
-<<<<<<< HEAD
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -651,7 +642,6 @@ export default IoTPage;
   </button>
   </button>
   </p>
-=======
 ;
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white"></section>;
@@ -732,4 +722,4 @@ export default IoTPage;
 };
 ;
 export default IoTPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

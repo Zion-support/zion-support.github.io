@@ -2,8 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -86,7 +84,6 @@ export default PagePage;
   </button>
   </button>
   </h2>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -168,11 +165,9 @@ const PagePage: React.FC = () => {;
 };
 ;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const SpecializedServicesPage: React.FC = () => {
   const features = [
     {
@@ -196,7 +191,6 @@ const SpecializedServicesPage: React.FC = () => {
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
   ];
-
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
@@ -205,7 +199,6 @@ const SpecializedServicesPage: React.FC = () => {
     'Gain competitive advantage with cutting-edge technology',
     'Ensure 99.9% uptime and reliability'
   ];
-
   return (
     <>
       <Helmet>
@@ -234,7 +227,6 @@ const SpecializedServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -259,7 +251,6 @@ const SpecializedServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -281,7 +272,6 @@ const SpecializedServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -310,6 +300,5 @@ const SpecializedServicesPage: React.FC = () => {
     </>
   );
 };
-
 export default SpecializedServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+cursor/analyze-improve-and-deploy-application-0f89

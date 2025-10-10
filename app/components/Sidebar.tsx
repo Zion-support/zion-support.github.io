@@ -20,7 +20,6 @@ import {;
   MapPin,;
   Clock;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
@@ -35,7 +34,6 @@ const Sidebar: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   const toggleSection = (section: string) => {
-=======
 ;
 const Sidebar: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +56,7 @@ const Sidebar: React.FC = () => {;
   }, []);
 ;
   const toggleSection = (;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {;) => {
   return (
@@ -71,7 +69,6 @@ const Sidebar: React.FC = () => {;
     }
     setExpandedSections(newExpanded);
   };
-<<<<<<< HEAD
   const navigationSections = [
     {
       title: 'Main',
@@ -164,7 +161,6 @@ const Sidebar: React.FC = () => {;
   };
   return (
     <React.Fragment>
-=======
 ;
   const navigationSections = [;
     {;
@@ -260,23 +256,21 @@ const Sidebar: React.FC = () => {;
 ;
   return (;
     <></>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Mobile Menu Button */}
       <button;
         onClick={() => setIsOpen(true)}
-<<<<<<< HEAD
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
         <Menu className="w-6 h-6" />
       </button>
-=======
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all";
         aria-label="Open sidebar";
       >;
         <Menu className="w-6 h-6" />;
       </button>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Sidebar Overlay */}
       {isOpen && (;
         <div;
@@ -284,7 +278,6 @@ const Sidebar: React.FC = () => {;
           onClick={() => setIsOpen(false)}
         />;
       )}
-<<<<<<< HEAD
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -309,7 +302,6 @@ const Sidebar: React.FC = () => {;
               <X className="w-6 h-6" />
             </button>
           </div>
-=======
 ;
       {/* Sidebar */}</div>;
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${;
@@ -335,7 +327,7 @@ const Sidebar: React.FC = () => {;
               <X className="w-6 h-6" />;
             </button>;
           </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Navigation */}
           <div className="flex-1 overflow-y-auto py-6"></div>;
             <nav className="space-y-2 px-4">;
@@ -343,7 +335,6 @@ const Sidebar: React.FC = () => {;
                 <div key={sectionIndex} className="space-y-1"></div>;
                   <button;
                     onClick={() => section.key && toggleSection(section.key)}
-<<<<<<< HEAD
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
                     <span>{section.title}</span>
                     {section.key && (
@@ -356,7 +347,6 @@ const Sidebar: React.FC = () => {;
                     <div className="ml-4 space-y-1">
                       {section.items.map((item, itemIndex) => (</div>
                         <Link
-=======
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors";
                   >;
                     <span>{section.title}</span>;
@@ -370,7 +360,7 @@ const Sidebar: React.FC = () => {;
                     <div className="ml-4 space-y-1"></div>;
                       {section.items.map((item, itemIndex) => (</div>;
                         <Link;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           key={itemIndex}
                           to={item.path}
                           onClick={() => setIsOpen(false)}
@@ -388,7 +378,6 @@ const Sidebar: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
             </nav>
           </div>
           {/* Contact Info */}
@@ -420,7 +409,6 @@ Sidebar.displayName = 'Sidebar';
 export default Sidebar;
   </div>
   </string>
-=======
             </nav>;
           </div>;
           {/* Contact Info */}
@@ -452,4 +440,4 @@ export default Sidebar;
 Sidebar.displayName = 'Sidebar';
 ;
 export default Sidebar;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

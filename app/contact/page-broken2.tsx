@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 'use client';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {;
@@ -15,7 +13,6 @@ import {;
   Send,;
   CheckCircle;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -30,7 +27,6 @@ phone: '',
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
 ;
 const ContactPage: React.FC = () => {;
   const [formData, setFormData] = useState({;
@@ -48,21 +44,19 @@ phone: '',;
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 ;
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
       [name]: value;}
     }));
   }, []);
-<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
       // Simulate form submission
-=======
 ;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
@@ -71,7 +65,7 @@ phone: '',;
 ;
     try {;
       // Simulate form submission;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({;
@@ -90,7 +84,6 @@ phone: '',;
       setIsSubmitting(false);}
     }
   };
-<<<<<<< HEAD
   const services = [
     'AI Solutions',
     'Cloud Computing',
@@ -251,7 +244,6 @@ phone: '',;
                       <option value="">Select a service</option>
                       {services.map((service) => (
                         <option key={service} value={service}>
-=======
 ;
   const services = [;
     'AI Solutions',;
@@ -418,11 +410,10 @@ phone: '',;
                       <option value="">Select a service</option>;
                       {services.map((service) => (;}
                         <option key={service} value={service}>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {service}
                         </option>;
                       ))}
-<<<<<<< HEAD
                     </select>
                   </div>
                 </div>
@@ -434,7 +425,6 @@ phone: '',;
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                     <textarea
                       name="message"
-=======
                     </select>;
                   </div>;
                 </div>;
@@ -446,12 +436,11 @@ phone: '',;
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />;
                     <textarea;
                       name="message";
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       value={formData.message}
                       onChange={handleInputChange}
                       required;
                       rows={6}
-<<<<<<< HEAD
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
@@ -499,7 +488,6 @@ phone: '',;
                     </div>
                     <div>
 <h3 className="text-lg font-semibold text-white mb-1">
-=======
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none";
                       placeholder="Tell us about your project, goals, or any questions you have...";
                     />;
@@ -548,7 +536,7 @@ phone: '',;
                     </div>;
                     <div></div>;
 <h3 className="text-lg font-semibold text-white mb-1">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                         {info.title}
                       </h3>;
                       <p className="text-cyan-400 font-medium mb-1">;
@@ -556,7 +544,6 @@ phone: '',;
                       </p>;
                       <p className="text-gray-300 text-sm">;
                         {info.description}
-<<<<<<< HEAD
                       </p>
                     </div>
                   </div>
@@ -603,7 +590,6 @@ export default ContactPage;
   </label>
   </span>
   </HTMLInputElement>
-=======
                       </p>;
                     </div>;
                   </div>;
@@ -645,4 +631,4 @@ export default ContactPage;
 };
 ;
 export default ContactPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

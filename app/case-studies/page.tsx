@@ -1,10 +1,8 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react';
-
 interface CaseStudy {
   id: string;
   title: string;
@@ -17,18 +15,15 @@ interface CaseStudy {
   duration: string;
   team: string;
 }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, TrendingUp, Users, DollarSign, Clock, CheckCircle } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-<<<<<<< HEAD
       id: '1',
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
@@ -52,7 +47,6 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Services',
       challenge: 'Legacy on-premise infrastructure causing scalability issues and high maintenance costs.',
       solution: 'Complete migration to AWS cloud with microservices architecture and automated CI/CD pipelines.',
-=======
       id: 1,
       title: 'AI-Powered Supply Chain Optimization',
       client: 'Global Manufacturing Corp',
@@ -75,10 +69,9 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Finance',
       challenge: 'Legacy systems causing security vulnerabilities and scalability issues',
       solution: 'Migrated to secure cloud infrastructure with advanced threat detection',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       results: [
         '99.9% uptime achieved',
-<<<<<<< HEAD
         '50% faster deployment times',
         'Enhanced security and compliance'
       ],
@@ -121,21 +114,17 @@ const CaseStudiesPage: React.FC = () => {
       team: '5 specialists'
     }
   ];
-
   const industries = ['All', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Logistics'];
   const [selectedIndustry, setSelectedIndustry] = useState('All');
-
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
     : caseStudies.filter(study => study.industry === selectedIndustry);
-
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-600" />, value: '150+', label: 'Projects Completed' },
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <Award className="w-8 h-8 text-purple-600" />, value: '50+', label: 'Industry Awards' },
     { icon: <TrendingUp className="w-8 h-8 text-orange-600" />, value: '200%', label: 'Average ROI' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -143,7 +132,6 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
         <meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -158,7 +146,6 @@ const CaseStudiesPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -175,7 +162,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Filter Section */}
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -196,7 +182,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -215,14 +200,11 @@ const CaseStudiesPage: React.FC = () => {
                       <span>{study.team}</span>
                     </div>
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
                   <p className="text-gray-300 mb-4"><strong>Client:</strong> {study.client}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300 text-sm">{study.challenge}</p>
-=======
         '60% reduction in security incidents',
         '50% faster application deployment',
         '100% compliance with regulations'
@@ -247,7 +229,6 @@ const CaseStudiesPage: React.FC = () => {
       team: '6 specialists'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -255,9 +236,7 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
         <meta name="keywords" content="case studies, success stories, AI solutions, cloud migration, customer service automation, business transformation" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -271,7 +250,6 @@ const CaseStudiesPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Case Studies */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -305,7 +283,6 @@ const CaseStudiesPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
                     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                       <h3 className="text-2xl font-bold text-white mb-6">Results</h3>
@@ -330,14 +307,12 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300 text-sm">{study.solution}</p>
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Results</h4>
                     <ul className="space-y-2">
@@ -349,23 +324,18 @@ const CaseStudiesPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2">
                     <span>Read Full Case Study</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
-=======
               ))}
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
           </div>
         </section>
-
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -391,7 +361,6 @@ const CaseStudiesPage: React.FC = () => {
                 <span>View Our Services</span>
                 <ExternalLink className="w-5 h-5" />
               </Link>
-=======
         {/* Stats Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -435,7 +404,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -454,15 +422,13 @@ const CaseStudiesPage: React.FC = () => {
                   View Our Services
                 </button>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default CaseStudiesPage;

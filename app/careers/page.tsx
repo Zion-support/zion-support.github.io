@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
-
 interface JobPosition {
   id: string;
   title: string;
@@ -17,13 +15,10 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
-
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -31,7 +26,6 @@ const CareersPage: React.FC = () => {
       title: 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote',
-<<<<<<< HEAD
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
@@ -100,7 +94,6 @@ const CareersPage: React.FC = () => {
       featured: false
     }
   ];
-
   const values = [
     {
       icon: <Users className="w-8 h-8 text-blue-600" />,
@@ -123,7 +116,6 @@ const CareersPage: React.FC = () => {
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
     }
   ];
-
   const benefits = [
     'Competitive salary and equity participation',
     'Comprehensive health, dental, and vision insurance',
@@ -135,13 +127,11 @@ const CareersPage: React.FC = () => {
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
   ];
-
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-600" />, value: '50+', label: 'Team Members' },
     { icon: <Award className="w-8 h-8 text-green-600" />, value: '98%', label: 'Employee Satisfaction' },
     { icon: <GraduationCap className="w-8 h-8 text-purple-600" />, value: '100%', label: 'Learning & Development' },
     { icon: <Star className="w-8 h-8 text-yellow-600" />, value: '4.8/5', label: 'Glassdoor Rating' }
-=======
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.'
@@ -165,7 +155,6 @@ const CareersPage: React.FC = () => {
       description: 'Protect our clients from cyber threats and implement security best practices.'
     }
   ];
-
   const benefits = [
     {
       icon: Star,
@@ -187,18 +176,15 @@ const CareersPage: React.FC = () => {
       title: 'Career Growth',
       description: 'Opportunities for advancement and skill development'
     }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cloud computing, and cybersecurity." />
         <meta name="keywords" content="tech careers, AI jobs, cloud computing jobs, cybersecurity careers, remote work" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -229,7 +215,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -246,7 +231,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -256,7 +240,6 @@ const CareersPage: React.FC = () => {
               These core values guide everything we do and shape our company culture.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center">
@@ -270,7 +253,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -280,7 +262,6 @@ const CareersPage: React.FC = () => {
               We offer comprehensive benefits and perks to support our team members' well-being and career growth.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -291,7 +272,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -301,7 +281,6 @@ const CareersPage: React.FC = () => {
               Explore our current job openings and find the perfect role for your career.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {openPositions.map((position) => (
               <div key={position.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
@@ -329,9 +308,7 @@ const CareersPage: React.FC = () => {
                     </span>
                   )}
                 </div>
-                
                 <p className="text-gray-300 mb-4">{position.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
@@ -346,7 +323,6 @@ const CareersPage: React.FC = () => {
                     )}
                   </ul>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">Posted {position.posted}</span>
                   <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
@@ -358,7 +334,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -381,14 +356,11 @@ const CareersPage: React.FC = () => {
                 <span>Send Resume</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-=======
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's transforming businesses with AI and IT solutions. Explore career opportunities." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, technology careers" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -410,7 +382,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Why Join Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -435,7 +406,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Open Positions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -482,7 +452,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Culture Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -524,15 +493,13 @@ const CareersPage: React.FC = () => {
                   Send Your Resume
                 </button>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default CareersPage;

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
-<<<<<<< HEAD
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
@@ -161,7 +160,6 @@ const EdgeComputingPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-=======
 ;
 const EdgeComputingPage: React.FC = () => {;
   const features = [;
@@ -323,14 +321,13 @@ const EdgeComputingPage: React.FC = () => {;
                   {feature.benefits.map((benefit, benefitIndex) => (;}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">;
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -426,7 +423,6 @@ export default EdgeComputingPage;
   </p>
   </button>
   </span>
-=======
           </div>;
         </div>;
       </section>;
@@ -514,4 +510,4 @@ export default EdgeComputingPage;
 };
 ;
 export default EdgeComputingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

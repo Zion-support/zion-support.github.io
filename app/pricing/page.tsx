@@ -1,15 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const PricingPage: React.FC = () => {
   const pricingPlans = [
     {
@@ -18,20 +15,18 @@ const PricingPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
       features: [
-<<<<<<< HEAD
         'Basic AI consultation',
         'Up to 5 AI models',
         'Email support',
         'Monthly reporting',
         'Basic analytics dashboard',
         'Standard security features'
-=======
         'Basic AI integration',
         'Email support',
         'Standard analytics',
         'Up to 5 users',
         'Basic automation'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       ],
       popular: false,
       cta: 'Get Started'
@@ -40,7 +35,6 @@ const PricingPage: React.FC = () => {
       name: 'Professional',
       price: '$3,999',
       period: '/month',
-<<<<<<< HEAD
       description: 'Ideal for growing businesses with advanced AI needs',
       features: [
         'Advanced AI consultation',
@@ -49,14 +43,13 @@ const PricingPage: React.FC = () => {
         'Weekly reporting',
         'Advanced analytics dashboard',
         'Enhanced security features',
-=======
       description: 'Ideal for growing businesses with advanced needs',
       features: [
         'Advanced AI solutions',
         'Priority support',
         'Advanced analytics',
         'Up to 25 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
         'Custom integrations',
         'Dedicated account manager'
       ],
@@ -69,7 +62,6 @@ const PricingPage: React.FC = () => {
       period: '',
       description: 'For large organizations with complex requirements',
       features: [
-<<<<<<< HEAD
         'Unlimited AI consultation',
         'Unlimited AI models',
         '24/7 dedicated support',
@@ -80,7 +72,6 @@ const PricingPage: React.FC = () => {
         'Dedicated team',
         'SLA guarantee',
         'On-site support'
-=======
         'Custom AI solutions',
         '24/7 dedicated support',
         'Custom analytics',
@@ -88,14 +79,12 @@ const PricingPage: React.FC = () => {
         'White-label options',
         'On-premise deployment',
         'Custom training'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       ],
       popular: false,
       cta: 'Contact Sales'
     }
   ];
-
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -107,7 +96,6 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -122,7 +110,6 @@ const PricingPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -142,7 +129,6 @@ const PricingPage: React.FC = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -151,7 +137,6 @@ const PricingPage: React.FC = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -160,7 +145,6 @@ const PricingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className="text-center">
                   {plan.name === 'Enterprise' ? (
                     <Link
@@ -189,7 +173,6 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
@@ -214,7 +197,6 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -240,7 +222,6 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
   const addOnServices = [
     {
       name: 'AI Consulting',
@@ -263,7 +244,6 @@ const PricingPage: React.FC = () => {
       description: 'Bespoke software development and integration'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -271,9 +251,7 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose the plan that fits your business needs. Starting at $1,500/month." />
         <meta name="keywords" content="pricing, AI solutions pricing, IT services cost, enterprise pricing, custom solutions" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -287,7 +265,6 @@ const PricingPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Pricing Plans */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -327,7 +304,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Add-on Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -350,7 +326,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -379,7 +354,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -402,11 +376,9 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };
-
 export default PricingPage;

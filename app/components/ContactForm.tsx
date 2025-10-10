@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-<<<<<<< HEAD
 interface FormData {
   name: string;
   email: string;
@@ -10,8 +9,6 @@ interface FormData {
   message: string;
 }
 interface FormStatus {
-<<<<<<< HEAD
-=======
 ;
 interface FormData {;
   name: string,;
@@ -23,18 +20,15 @@ interface FormData {;
 }
 ;
 interface FormStatus {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string,;}
 }
-<<<<<<< HEAD
-=======
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string;
 }
-
 const ContactForm: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+cursor/fix-errors-and-merge-to-main-d277
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -48,7 +42,6 @@ const ContactForm: React.FC = () => {
     message: ''
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
 ;
   const [formData, setFormData] = useState<FormData>({;
     name: '',;
@@ -65,14 +58,13 @@ const ContactForm: React.FC = () => {
   });
 ;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
       [name]: value;}
     }));
   };
-<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
@@ -91,7 +83,6 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-=======
 ;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();}
@@ -114,7 +105,7 @@ const ContactForm: React.FC = () => {
         phone: '',;
         service: '',;
         message: '';}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       });
     } catch (error) {;
       setStatus({;
@@ -123,7 +114,6 @@ const ContactForm: React.FC = () => {
       });
     }
   };
-<<<<<<< HEAD
   const services = [
     'AI Solutions',
     'Web Development',
@@ -134,7 +124,6 @@ const ContactForm: React.FC = () => {
     'IT Consulting',
     'Other'
   ];
-<<<<<<< HEAD
               </label>
               <input
                 type="text"
@@ -147,15 +136,12 @@ const ContactForm: React.FC = () => {
                 placeholder="Your full name"
               />
             </div>
-=======
-
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
         <p className="text-gray-600">Ready to transform your business? Let's discuss your project.</p>
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -173,8 +159,7 @@ const ContactForm: React.FC = () => {
               placeholder="Your full name"
             />
           </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+cursor/fix-errors-and-merge-to-main-d277
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address *
@@ -229,9 +214,7 @@ const ContactForm: React.FC = () => {
               name="service"
               value={formData.service}
               onChange={handleChange}
-<<<<<<< HEAD
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
-=======
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
               <option value="">Select a service</option>
@@ -242,7 +225,6 @@ const ContactForm: React.FC = () => {
               ))}
             </select>
           </div>
-
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
               Message *
@@ -258,7 +240,6 @@ const ContactForm: React.FC = () => {
               placeholder="Tell us about your project..."
             />
           </div>
-
           {status.type !== 'idle' && (
             <div className={`flex items-center space-x-2 p-4 rounded-lg ${
               status.type === 'success' ? 'bg-green-50 text-green-800' :
@@ -269,10 +250,9 @@ const ContactForm: React.FC = () => {
                 <CheckCircle className="h-5 w-5" />
               ) : status.type === 'error' ? (
                 <AlertCircle className="h-5 w-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+cursor/fix-errors-and-merge-to-main-d277
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-=======
 ;
   const services = [;
     'AI Solutions',;
@@ -355,12 +335,11 @@ const ContactForm: React.FC = () => {
             >;
               ) : (;
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" /></div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               )}
               <span className="text-sm font-medium">{status.message}</span>;
             </div>;
           )}
-<<<<<<< HEAD
           <button
             type="submit"
             disabled={status.type === 'loading'}
@@ -420,7 +399,6 @@ export default ContactForm;
   </HTMLInputElement>
   </FormStatus>
   </FormData>
-=======
 ;
           <button;
             type="submit";
@@ -476,4 +454,4 @@ export default ContactForm;
 };
 ;
 export default ContactForm;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

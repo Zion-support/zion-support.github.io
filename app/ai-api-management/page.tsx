@@ -3,14 +3,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiApiManagementPage: React.FC = () => {
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-
 const AIApiManagementPage: React.FC = () => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const features = [
     {
       title: 'Intelligent API Monitoring',
@@ -23,7 +20,6 @@ const AIApiManagementPage: React.FC = () => {
       benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
     },
     {
-<<<<<<< HEAD
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
@@ -34,21 +30,18 @@ const AIApiManagementPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       title: 'Automated Documentation',
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
       benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     }
   ];
   const benefits = [
-<<<<<<< HEAD
 'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
     'Reduced API downtime by 95%',
     '50% faster API response times',
     'Automated security scanning',
@@ -56,28 +49,25 @@ const AIApiManagementPage: React.FC = () => {
     'Intelligent load balancing',
     'Cost optimization insights'
   ];
-
   const stats = [
     { icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   ];
   return (
-<<<<<<< HEAD
     <React.Fragment>
       <Helmet>
 <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI API Management | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered API management solutions by Zion Tech Group. Intelligent monitoring, security, and optimization for your APIs." />
         <meta name="keywords" content="API management, AI solutions, API monitoring, rate limiting, API security, Zion Tech Group" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       </Helmet>
       <Navigation />
       {/* Hero Section */}
@@ -85,16 +75,14 @@ const AIApiManagementPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             AI API Management
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
-=======
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI-Powered API Management
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Intelligent API management with AI-driven monitoring, security, and optimization for enterprise-grade performance
@@ -109,9 +97,6 @@ const AIApiManagementPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -128,8 +113,7 @@ const AIApiManagementPage: React.FC = () => {
           </div>
         </div>
       </section>
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -138,18 +122,15 @@ const AIApiManagementPage: React.FC = () => {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Advanced solutions designed for modern business needs;
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
               Comprehensive API management with AI-powered intelligence
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -191,7 +172,6 @@ const AIApiManagementPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Transform your business with our page solutions today;
@@ -287,7 +267,6 @@ export default AiApiManagementPage;
   </p>
   </button>
   </span>
-=======
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -306,11 +285,9 @@ export default AiApiManagementPage;
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
 export default AIApiManagementPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

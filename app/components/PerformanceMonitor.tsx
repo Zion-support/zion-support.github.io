@@ -1,7 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceData {
   lcp?: number;
   fid?: number;
@@ -10,17 +8,14 @@ interface PerformanceData {
   ttfb?: number;
   memory?: number;
 }
-
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceData>({});
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Only show in development
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
-
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -41,7 +36,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       });
     }
-
     // Monitor memory usage
     const updateMemoryInfo = () => {
       if ('memory' in performance) {
@@ -52,13 +46,10 @@ const PerformanceMonitor: React.FC = () => {
         }));
       }
     };
-
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   // Toggle visibility with Ctrl+Shift+P
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -66,22 +57,18 @@ const PerformanceMonitor: React.FC = () => {
         setIsVisible(prev => !prev);
       }
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
   if (!isVisible || process.env.NODE_ENV !== 'development') {
     return null;
   }
-
   const getScoreColor = (value: number | undefined, thresholds: { good: number; needsImprovement: number }) => {
     if (value === undefined) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800 border border-cyan-500/20 rounded-lg p-4 text-xs font-mono z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
@@ -93,7 +80,6 @@ const PerformanceMonitor: React.FC = () => {
           ×
         </button>
       </div>
-      
       <div className="space-y-1">
         <div className="flex justify-between">
           <span className="text-gray-300">LCP:</span>
@@ -101,35 +87,30 @@ const PerformanceMonitor: React.FC = () => {
             {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '--'}
           </span>
         </div>
-        
         <div className="flex justify-between">
           <span className="text-gray-300">FID:</span>
           <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
             {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '--'}
           </span>
         </div>
-        
         <div className="flex justify-between">
           <span className="text-gray-300">CLS:</span>
           <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
             {metrics.cls ? metrics.cls.toFixed(3) : '--'}
           </span>
         </div>
-        
         <div className="flex justify-between">
           <span className="text-gray-300">FCP:</span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
             {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '--'}
           </span>
         </div>
-        
         <div className="flex justify-between">
           <span className="text-gray-300">TTFB:</span>
           <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
             {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '--'}
           </span>
         </div>
-        
         {metrics.memory && (
           <div className="flex justify-between">
             <span className="text-gray-300">Memory:</span>
@@ -137,36 +118,28 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
       </div>
-      
       <div className="mt-2 pt-2 border-t border-gray-600 text-gray-400">
         Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );
-=======
 import React, { useEffect } from 'react';
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-
     const measurePerformance = () => {
       // Measure Core Web Vitals
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      
       const metrics = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        
         // Paint timing
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
         // Resource timing
         totalResources: performance.getEntriesByType('resource').length,
-        
         // Memory usage (if available)
         memoryUsage: (performance as any).memory ? {
           used: (performance as any).memory.usedJSHeapSize,
@@ -174,16 +147,13 @@ const PerformanceMonitor: React.FC = () => {
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };
-
       // Log metrics in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Performance Metrics:', metrics);
       }
-
       // Send metrics to analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-        
         gtag('event', 'performance_metrics', {
           event_category: 'performance',
           dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -193,24 +163,20 @@ const PerformanceMonitor: React.FC = () => {
           total_resources: metrics.totalResources
         });
       }
-
       // Check for performance issues
       if (metrics.firstContentfulPaint > 3000) {
         console.warn('Slow First Contentful Paint detected:', metrics.firstContentfulPaint);
       }
-      
       if (metrics.loadComplete > 5000) {
         console.warn('Slow page load detected:', metrics.loadComplete);
       }
     };
-
     // Measure performance after page load
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
     }
-
     // Monitor for performance regressions
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -219,17 +185,13 @@ const PerformanceMonitor: React.FC = () => {
         }
       }
     });
-
     observer.observe({ entryTypes: ['measure'] });
-
     return () => {
       window.removeEventListener('load', measurePerformance);
       observer.disconnect();
     };
   }, []);
-
   return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 };
-
 export default PerformanceMonitor;

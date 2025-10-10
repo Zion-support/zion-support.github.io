@@ -1,10 +1,8 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, User, ArrowRight, Tag } from 'lucide-react';
-
 interface BlogPost {
   id: string;
   title: string;
@@ -17,12 +15,10 @@ interface BlogPost {
   featured: boolean;
   image?: string;
 }
-
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-
   // Sample blog posts data
   const blogPosts: BlogPost[] = [
     {
@@ -74,9 +70,7 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/digital-transformation.jpg'
     }
   ];
-
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Development'];
-
   useEffect(() => {
     let filtered = blogPosts;
     if (searchTerm) {
@@ -91,9 +85,7 @@ const BlogPage: React.FC = () => {
     }
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-
   const featuredPosts = blogPosts.filter(post => post.featured);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -101,7 +93,6 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Stay updated with the latest technology trends, AI insights, and industry best practices from Zion Tech Group's expert team." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing, cybersecurity, digital transformation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -114,7 +105,6 @@ const BlogPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">
             <div className="relative">
@@ -128,7 +118,6 @@ const BlogPage: React.FC = () => {
               />
             </div>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-8 mt-8">
             {categories.map((category) => (
@@ -147,7 +136,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-16 bg-slate-800/30">
@@ -192,12 +180,10 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
       )}
-
       {/* All Posts */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">All Articles</h2>
-          
           {filteredPosts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">No articles found matching your criteria.</p>
@@ -242,13 +228,11 @@ const BlogPage: React.FC = () => {
           )}
         </div>
       </section>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calendar, User, ArrowRight } from 'lucide-react';
-
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
@@ -279,7 +263,6 @@ const BlogPage: React.FC = () => {
       readTime: '6 min read'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -287,9 +270,7 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group." />
         <meta name="keywords" content="blog, AI insights, technology trends, cloud computing, cybersecurity, tech news" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -303,7 +284,6 @@ const BlogPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Blog Posts */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -343,7 +323,6 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Newsletter Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -368,11 +347,9 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };
-
 export default BlogPage;

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
     }
   ];
   const benefits = [
@@ -97,7 +96,6 @@ export default LazyImagePage;
   </h2>
   </button>
   </span>
-=======
 ;
     }
   ];
@@ -191,4 +189,4 @@ export default LazyImagePage;
 };
 ;
 export default LazyImagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

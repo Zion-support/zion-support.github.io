@@ -1,58 +1,40 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
-
+cursor/analyze-improve-and-deploy-application-6516
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;
   trackConversion: (conversionId: string, value?: number) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
-<<<<<<< HEAD
   if (context === undefined) {
-=======
 import React, { createContext, useContext, useEffect, useState } from 'react';
-
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;
   trackConversion: (conversionType: string, value?: number) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   if (!context) {
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
+cursor/analyze-improve-and-deploy-application-6516
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AnalyticsProvider;
-=======
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const [isInitialized, setIsInitialized] = useState(false);
-
   useEffect(() => {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && !window.gtag) {
@@ -60,23 +42,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX'}`;
       document.head.appendChild(script);
-
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
-
       gtag('js', new Date());
       gtag('config', process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX', {
         page_title: document.title,
         page_location: window.location.href,
       });
-
       setIsInitialized(true);
     }
   }, []);
-
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, {
@@ -85,7 +63,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
   };
-
   const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX', {
@@ -94,7 +71,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
   };
-
   const trackConversion = (conversionType: string, value?: number) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'conversion', {
@@ -105,15 +81,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
   };
-
   const value: AnalyticsContextType = {
-=======
 interface AnalyticsProviderProps {
   children: React.ReactNode;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
 }
-
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
   googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID,
@@ -127,7 +100,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
       document.head.appendChild(script);
-
       // Initialize gtag
       (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: any[]) {
@@ -141,7 +113,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       });
     }
   }, [googleAnalyticsId]);
-
   // Initialize Google Tag Manager
   useEffect(() => {
     if (googleTagManagerId && typeof window !== 'undefined') {
@@ -155,7 +126,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         })(window,document,'script','dataLayer','${googleTagManagerId}');
       `;
       document.head.appendChild(gtmScript);
-
       // GTM noscript
       const noscript = document.createElement('noscript');
       const iframe = document.createElement('iframe');
@@ -168,7 +138,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       document.body.insertBefore(noscript, document.body.firstChild);
     }
   }, [googleTagManagerId]);
-
   const trackEvent = useCallback((eventName: string, parameters: Record<string, any> = {}) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', eventName, {
@@ -178,7 +147,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         ...parameters
       });
     }
-
     // Also send to dataLayer for GTM
     if (typeof window !== 'undefined' && 'dataLayer' in window) {
       (window as any).dataLayer.push({
@@ -187,7 +155,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       });
     }
   }, []);
-
   const trackPageView = useCallback((pageName: string, pagePath: string) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', googleAnalyticsId, {
@@ -195,7 +162,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: window.location.origin + pagePath
       });
     }
-
     // Track page view event
     trackEvent('page_view', {
       page_title: pageName,
@@ -203,7 +169,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       page_location: window.location.href
     });
   }, [googleAnalyticsId, trackEvent]);
-
   const trackConversion = useCallback((conversionId: string, value: number = 0) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'conversion', {
@@ -212,29 +177,24 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         currency: 'USD'
       });
     }
-
     trackEvent('conversion', {
       conversion_id: conversionId,
       value: value,
       currency: 'USD'
     });
   }, [trackEvent]);
-
   const contextValue: AnalyticsContextType = {
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
+cursor/analyze-improve-and-deploy-application-6516
     trackEvent,
     trackPageView,
     trackConversion
   };
-
   return (
-<<<<<<< HEAD
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-
 // Declare global gtag function
 declare global {
   interface Window {
@@ -242,11 +202,10 @@ declare global {
     dataLayer: any[];
   }
 }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
+cursor/analyze-improve-and-deploy-application-6516

@@ -24,7 +24,6 @@ import {;
   Server,;
   Monitor;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const CloudInfrastructureManagerPage: React.FC = () => {
   const features = [
     {
@@ -170,7 +169,6 @@ export default CloudInfrastructureManagerPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const CloudInfrastructureManagerPage: React.FC = () => {;
   const features = [;
@@ -313,4 +311,4 @@ const CloudInfrastructureManagerPage: React.FC = () => {;
 };
 ;
 export default CloudInfrastructureManagerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

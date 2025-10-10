@@ -2,10 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Brain, Cloud, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Github, Linkedin, Twitter } from 'lucide-react';
-
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
   const aiServices = [
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
@@ -14,7 +12,6 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics', url: '/ai-services', description: 'Data-driven insights' },
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' }
   ];
-
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/it-services', description: 'Scalable cloud solutions' },
     { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
@@ -23,7 +20,6 @@ const Footer: React.FC = () => {
     { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' },
     { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' }
   ];
-
   const microSaasServices = [
     { name: 'Project Management', url: '/micro-saas', description: 'Streamlined project tracking' },
     { name: 'Customer Support', url: '/micro-saas', description: 'Efficient support systems' },
@@ -32,7 +28,6 @@ const Footer: React.FC = () => {
     { name: 'Team Collaboration', url: '/micro-saas', description: 'Team productivity tools' },
     { name: 'Financial Tracking', url: '/micro-saas', description: 'Financial management' }
   ];
-
   const resourcesLinks = [
     { name: 'Blog', url: '/blog' },
     { name: 'Case Studies', url: '/case-studies' },
@@ -41,7 +36,6 @@ const Footer: React.FC = () => {
     { name: 'Support', url: '/support' },
     { name: 'FAQ', url: '/faq' }
   ];
-
   return (
     <footer className="bg-slate-900 border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -73,7 +67,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -92,7 +85,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-blue-400 flex items-center">
@@ -111,7 +103,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Micro SaaS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-green-400 flex items-center">
@@ -131,13 +122,11 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
             </div>
             <div className="flex space-x-6">
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -152,7 +141,6 @@ const Footer: React.FC = () => {
               <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact
               </Link>
-=======
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
@@ -164,7 +152,7 @@ const Footer: React.FC = () => {
               <a href="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Cookie Policy
               </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </div>
@@ -172,11 +160,7 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-<<<<<<< HEAD
 export default Footer;
-=======
 Footer.displayName = 'Footer';
-
 export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619

@@ -23,7 +23,6 @@ import {;
   PieChart,;
   LineChart;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const DataAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -169,7 +168,6 @@ export default DataAnalyticsPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const DataAnalyticsPage: React.FC = () => {;
   const features = [;
@@ -312,4 +310,4 @@ const DataAnalyticsPage: React.FC = () => {;
 };
 ;
 export default DataAnalyticsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

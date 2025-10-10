@@ -1,35 +1,26 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useCallback, ReactNode } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
-
 interface PerformanceOptimizerProps {
   children: ReactNode;
-=======
 import React, { useEffect } from 'react';
-
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
-
-<<<<<<< HEAD
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-=======
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-<<<<<<< HEAD
   const { trackEvent } = useAnalytics();
-
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -41,7 +32,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           trackEvent('performance', 'page_load_time', loadTime);
         }
       };
-
       // Track Core Web Vitals
       const trackWebVitals = () => {
         if ('web-vitals' in window) {
@@ -54,7 +44,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           });
         }
       };
-
       // Track resource loading performance
       const trackResourcePerformance = () => {
         const resources = performance.getEntriesByType('resource');
@@ -65,10 +54,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               duration: resource.duration,
               size: resource.transferSize
             });
-=======
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
     // Image optimization
     if (enableImageOptimization) {
       const optimizeImages = () => {
@@ -78,12 +65,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (image.dataset.src) {
             image.src = image.dataset.src;
             image.removeAttribute('data-src');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
           }
         });
       };
-
-<<<<<<< HEAD
       // Run performance tracking
       if (document.readyState === 'complete') {
         trackPerformance();
@@ -98,7 +83,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     }
   }, [trackEvent]);
-
   // Lazy loading optimization
   useEffect(() => {
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -114,15 +98,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           }
         });
       });
-
       // Observe all lazy images
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => imageObserver.observe(img));
-
       return () => imageObserver.disconnect();
     }
   }, [enableLazyLoading]);
-
   // Preload critical resources
   useEffect(() => {
     if (enablePreloading && typeof window !== 'undefined') {
@@ -132,7 +113,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalCSS.href = '/styles/critical.css';
       criticalCSS.as = 'style';
       document.head.appendChild(criticalCSS);
-
       // Preload critical fonts
       const criticalFont = document.createElement('link');
       criticalFont.rel = 'preload';
@@ -141,13 +121,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
       document.head.appendChild(criticalFont);
-
       // Preload critical images
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.svg'
       ];
-
       criticalImages.forEach((src) => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -157,7 +135,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
     }
   }, [enablePreloading]);
-
   // Code splitting optimization
   useEffect(() => {
     if (enableCodeSplitting && typeof window !== 'undefined') {
@@ -168,13 +145,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.href = route;
         document.head.appendChild(link);
       };
-
       // Preload common routes
       const commonRoutes = ['/about', '/services', '/contact'];
       commonRoutes.forEach(preloadRoute);
     }
   }, [enableCodeSplitting]);
-
   // Memory optimization
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -184,17 +159,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         window.removeEventListener('scroll', () => {});
         window.removeEventListener('resize', () => {});
       };
-
       // Run cleanup on page unload
       window.addEventListener('beforeunload', cleanup);
-
       return () => {
         window.removeEventListener('beforeunload', cleanup);
         cleanup();
       };
     }
   }, []);
-
   // Bundle size optimization
   const optimizeBundle = useCallback(() => {
     if (typeof window !== 'undefined') {
@@ -206,7 +178,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.remove();
         }
       });
-
       // Optimize images
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
@@ -217,17 +188,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
     }
   }, []);
-
   useEffect(() => {
     const timer = setTimeout(optimizeBundle, 2000);
     return () => clearTimeout(timer);
   }, [optimizeBundle]);
-
   return <>{children}</>;
 };
-
 export default EnhancedPerformanceOptimizer;
-=======
       // Use Intersection Observer for lazy loading
       if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries) => {
@@ -242,7 +209,6 @@ export default EnhancedPerformanceOptimizer;
             }
           });
         });
-
         const lazyImages = document.querySelectorAll('img[data-src]');
         lazyImages.forEach((img) => imageObserver.observe(img));
       } else {
@@ -250,7 +216,6 @@ export default EnhancedPerformanceOptimizer;
         optimizeImages();
       }
     }
-
     // Preload critical resources
     if (enablePreloading) {
       const preloadCriticalResources = () => {
@@ -259,7 +224,6 @@ export default EnhancedPerformanceOptimizer;
           '/images/hero-bg.jpg',
           '/images/logo.svg'
         ];
-
         criticalResources.forEach((resource) => {
           const link = document.createElement('link');
           link.rel = 'preload';
@@ -274,28 +238,23 @@ export default EnhancedPerformanceOptimizer;
           document.head.appendChild(link);
         });
       };
-
       preloadCriticalResources();
     }
-
     // Performance monitoring
     const measurePerformance = () => {
       if ('performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
-        
         const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
         };
-
         // Log performance metrics in development
         if (process.env.NODE_ENV === 'development') {
           console.log('Performance Metrics:', metrics);
         }
-
         // Send metrics to analytics (if configured)
         if (typeof window !== 'undefined' && 'gtag' in window) {
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
@@ -311,22 +270,18 @@ export default EnhancedPerformanceOptimizer;
         }
       }
     };
-
     // Measure performance after page load
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
     }
-
     // Cleanup
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
-
   return null;
 };
-
 export default PerformanceOptimizer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619

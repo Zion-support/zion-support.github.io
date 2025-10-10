@@ -4,16 +4,12 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-<<<<<<< HEAD
 import StructuredData from './components/StructuredData';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-
 // Performance optimization: Debounce scroll events
 const debounce = (func: Function, wait: number) => {
   let timeout: NodeJS.Timeout;
@@ -26,20 +22,16 @@ const debounce = (func: Function, wait: number) => {
     timeout = setTimeout(later, wait);
   };
 };
-
 // ServiceCardSkeleton is imported from EnhancedLoadingStates
-
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -50,8 +42,6 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
-<<<<<<< HEAD
   const features = [
     {
       icon: Brain,
@@ -84,7 +74,6 @@ const HomePage: React.FC = () => {
       description: 'Enhance productivity with our collaboration and communication tools.'
     }
   ];
-
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -94,7 +83,6 @@ const HomePage: React.FC = () => {
         image="/images/og-image.jpg"
         url="https://ziontechgroup.com"
         type="website"
-=======
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -139,14 +127,13 @@ const HomePage: React.FC = () => {
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-<<<<<<< HEAD
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
@@ -165,7 +152,6 @@ const HomePage: React.FC = () => {
               <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
             </div>
-            
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center">
                 <div className="mb-8">
@@ -183,7 +169,6 @@ const HomePage: React.FC = () => {
                     Unlock the power of artificial intelligence and cutting-edge technology. We deliver enterprise-grade solutions that drive real business value, increase efficiency by 300%, and accelerate your digital transformation journey.
                   </p>
                 </div>
-                
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-up delay-300">
                   <a 
                     href="tel:+13024640950" 
@@ -207,7 +192,6 @@ const HomePage: React.FC = () => {
                     </span>
                   </a>
                 </div>
-
                 {/* Enhanced Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in delay-500">
                   <div className="text-center group">
@@ -234,7 +218,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Services Showcase */}
           <section className="py-16 bg-slate-800/30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -246,7 +229,6 @@ const HomePage: React.FC = () => {
                   Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <div className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -263,7 +245,6 @@ const HomePage: React.FC = () => {
                     <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-400 mr-2" />AI Automation</li>
                   </ul>
                 </div>
-                
                 <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <Cloud className="w-8 h-8 text-white" />
@@ -279,7 +260,6 @@ const HomePage: React.FC = () => {
                     <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-400 mr-2" />24/7 Monitoring</li>
                   </ul>
                 </div>
-                
                 <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <Shield className="w-8 h-8 text-white" />
@@ -298,7 +278,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16 bg-slate-800/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -310,7 +289,6 @@ const HomePage: React.FC = () => {
                   We combine cutting-edge technology with industry expertise to deliver solutions that drive real business value.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
@@ -326,7 +304,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Testimonials Section */}
           <section className="py-16 bg-slate-800/30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -338,7 +315,6 @@ const HomePage: React.FC = () => {
                   Don't just take our word for it. Here's what our satisfied clients have to say about our services.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <div className="flex items-center mb-4">
@@ -361,7 +337,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <div className="flex items-center mb-4">
                     <div className="flex text-yellow-400">
@@ -383,7 +358,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <div className="flex items-center mb-4">
                     <div className="flex text-yellow-400">
@@ -408,7 +382,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -437,7 +410,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* FAQ Section */}
           <section className="py-16 bg-slate-800/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -449,7 +421,6 @@ const HomePage: React.FC = () => {
                   Get answers to common questions about our AI and IT solutions.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <h3 className="text-xl font-semibold text-white mb-3">What AI services do you offer?</h3>
@@ -457,21 +428,18 @@ const HomePage: React.FC = () => {
                     We provide comprehensive AI solutions including machine learning models, natural language processing, computer vision, AI automation, and custom AI development tailored to your business needs.
                   </p>
                 </div>
-                
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <h3 className="text-xl font-semibold text-white mb-3">How long does implementation take?</h3>
                   <p className="text-gray-300">
                     Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months.
                   </p>
                 </div>
-                
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <h3 className="text-xl font-semibold text-white mb-3">Do you provide ongoing support?</h3>
                   <p className="text-gray-300">
                     Yes, we offer 24/7 support and maintenance for all our solutions. Our team ensures your systems run smoothly and provides updates and optimizations as needed.
                   </p>
                 </div>
-                
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
                   <h3 className="text-xl font-semibold text-white mb-3">What's your success rate?</h3>
                   <p className="text-gray-300">
@@ -481,7 +449,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Enhanced Structured Data */}
           <StructuredData type="Organization" />
           <StructuredData type="WebSite" />
@@ -490,7 +457,6 @@ const HomePage: React.FC = () => {
           <StructuredData type="LocalBusiness" />
         </div>
       </PerformanceOptimizer>
-=======
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
@@ -504,12 +470,10 @@ const HomePage: React.FC = () => {
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
         </a>
-        
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
-        
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -591,7 +555,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Services Section */}
           <section className="mb-16" aria-labelledby="services-heading">
             <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -600,7 +563,6 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive AI and IT solutions designed to transform your business operations.
             </p>
-            
             {/* Primary Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
@@ -618,7 +580,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="quantum-card p-4 sm:p-6 energy-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
@@ -634,7 +595,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="quantum-card p-4 sm:p-6 energy-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
@@ -651,7 +611,6 @@ const HomePage: React.FC = () => {
                 </article>
               </Suspense>
             </div>
-
             {/* Micro SAAS Services Grid */}
             <div className="mb-12">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -673,7 +632,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </article>
                 </Suspense>
-                
                 <Suspense fallback={<ServiceCardSkeleton />}>
                   <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
@@ -689,7 +647,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </article>
                 </Suspense>
-                
                 <Suspense fallback={<ServiceCardSkeleton />}>
                   <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
@@ -705,7 +662,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </article>
                 </Suspense>
-                
                 <Suspense fallback={<ServiceCardSkeleton />}>
                   <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
@@ -724,27 +680,22 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Statistics Section */}
           <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
             <ContentStatistics />
           </Suspense>
-          
           {/* Content Carousel */}
           <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
             <ContentCarousel />
           </Suspense>
-          
           {/* Dynamic Content Showcase */}
           <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
             <DynamicContentShowcase />
           </Suspense>
-          
           {/* Newsletter Signup */}
           <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
             <ContentNewsletterSignup />
           </Suspense>
-          
           {/* Contact Section */}
           <section className="mb-16" aria-labelledby="contact-heading">
             <div className="max-w-6xl mx-auto">
@@ -807,7 +758,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 {/* Quick Contact Form */}
                 <div className="cyber-card hologram-card p-8">
                   <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
@@ -891,11 +841,9 @@ const HomePage: React.FC = () => {
         </main>
         <Footer />
       </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </React.Fragment>
   );
 };
-
 HomePage.displayName = 'HomePage';
-
 export default HomePage;

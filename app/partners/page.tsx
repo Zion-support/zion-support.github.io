@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap, ArrowRight } from 'lucide-react';
-
 interface Partner {
   name: string;
   logo: string;
@@ -13,18 +11,14 @@ interface Partner {
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }
-
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',
-<<<<<<< HEAD
       logo: '/images/partners/microsoft.png',
       description: 'Strategic cloud and AI partnership for enterprise solutions',
       category: 'Technology',
@@ -70,7 +64,6 @@ const PartnersPage: React.FC = () => {
       category: 'Cloud',
       website: 'https://aws.amazon.com',
       tier: 'strategic'
-=======
       logo: '🔷',
       description: 'Cloud infrastructure and AI solutions',
       category: 'Technology Partner'
@@ -92,12 +85,10 @@ const PartnersPage: React.FC = () => {
       logo: '🔵',
       description: 'Enterprise AI and quantum computing',
       category: 'Enterprise Partner'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     }
   ];
-
   const benefits = [
-<<<<<<< HEAD
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
@@ -109,7 +100,6 @@ const PartnersPage: React.FC = () => {
     'Global reach and scalability',
     'Certified expertise and solutions'
   ];
-
   const tiers = [
     {
       name: 'Strategic Partners',
@@ -130,14 +120,12 @@ const PartnersPage: React.FC = () => {
       color: 'from-green-400 to-teal-500'
     }
   ];
-
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
     { icon: <Users className="w-8 h-8 text-green-500" />, value: '100+', label: 'Certified Experts' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Joint Projects' },
     { icon: <Zap className="w-8 h-8 text-yellow-500" />, value: '24/7', label: 'Support' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -145,7 +133,6 @@ const PartnersPage: React.FC = () => {
         <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
         <meta name="keywords" content="partners, technology partners, strategic partnerships, ecosystem" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -160,7 +147,6 @@ const PartnersPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -177,7 +163,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partners Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +172,6 @@ const PartnersPage: React.FC = () => {
               We collaborate with leading technology companies to provide you with the best solutions and support.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
@@ -206,10 +190,8 @@ const PartnersPage: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-4">{partner.description}</p>
                 <p className="text-sm text-cyan-400 mb-6">{partner.category}</p>
-                
                 {partner.website && (
                   <a
                     href={partner.website}
@@ -226,7 +208,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partnership Tiers */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -236,7 +217,6 @@ const PartnersPage: React.FC = () => {
               We offer different partnership levels to meet the needs of our diverse partner ecosystem.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {tiers.map((tier, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 text-center">
@@ -250,7 +230,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -260,7 +239,6 @@ const PartnersPage: React.FC = () => {
               Join our partner ecosystem and unlock exclusive benefits and opportunities.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -271,7 +249,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -301,7 +278,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
     {
       icon: Handshake,
       title: 'Strategic Partnerships',
@@ -323,7 +299,6 @@ const PartnersPage: React.FC = () => {
       description: 'Co-marketing opportunities and joint go-to-market strategies'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -331,9 +306,7 @@ const PartnersPage: React.FC = () => {
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, certifications, and joint opportunities." />
         <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, AI partners, business partnerships" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -355,7 +328,6 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Our Partners */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -383,7 +355,6 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Partner Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -408,7 +379,6 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Partnership Types */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -441,7 +411,6 @@ const PartnersPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-              
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 ring-2 ring-blue-500">
                 <div className="text-center mb-4">
                   <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
@@ -469,7 +438,6 @@ const PartnersPage: React.FC = () => {
                   Apply Now
                 </button>
               </div>
-              
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Partner</h3>
                 <ul className="space-y-3 mb-6">
@@ -497,7 +465,6 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -520,11 +487,9 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };
-
 export default PartnersPage;

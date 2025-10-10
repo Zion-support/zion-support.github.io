@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -146,6 +145,5 @@ const AccessibilityCheckerPage: React.FC = () => {;
 };
 ;
 export default AccessibilityCheckerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+f7c4928b2138abffab75f9beb3ca62b8e0c3452d;
+cursor/fix-errors-and-merge-to-main-d277

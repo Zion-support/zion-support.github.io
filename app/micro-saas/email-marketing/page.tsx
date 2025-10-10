@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const EmailMarketingSuitePage: React.FC = () => {
   return (
     <React.Fragment>
@@ -52,7 +51,6 @@ const EmailMarketingSuitePage: React.FC = () => {
 };
 export default EmailMarketingSuitePage;
   </button>
-=======
 ;
 const EmailMarketingSuitePage: React.FC = () => {;
   return (;
@@ -105,4 +103,4 @@ const EmailMarketingSuitePage: React.FC = () => {;
 ;
 export default EmailMarketingSuitePage;
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
