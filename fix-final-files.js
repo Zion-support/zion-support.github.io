@@ -6,6 +6,8 @@ import { fileURLToPath } from 'url';
 // const __dirname = path.dirname(__filename);
 //Files that need to be fixed;
 const filesToFix = [
+  // TODO: Add array items
+]
   'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
   'src/content/blog-posts.ts',
@@ -26,10 +28,14 @@ const filesToFix = [
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
 }
-const ${componentName}: React.FC<${componentName}Props> = ({ 
+const ${componentName}: React.FC<${componentName}Props> = ({
+  // TODO: Add object properties
+}
   className = '', 
   children;
 }) => {
+  // TODO: Add object properties
+}
   return (
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
       {children || (
@@ -48,14 +54,22 @@ const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX exp
 export default ${componentName};`
 `;
   } else if (isTs) {
+  // TODO: Add object properties
+}
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {
+  // TODO: Add object properties
+}
   //Configuration properties;
 }
 export const default${componentName}Config: ${componentName}Config = {
+  // TODO: Add object properties
+}
   //Default configuration;
 };
 export default {
+  // TODO: Add object properties
+}
   default${componentName}Config;
   } else if (isTs) {/* TODO: Fix JSX expression */}`
     return `//${componentName} - TypeScript definitions and utilities;
@@ -69,8 +83,12 @@ export default {/* TODO: Fix JSX expression */}
 };`
 `;
   } else {
+  // TODO: Add object properties
+}
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {
+  // TODO: Add object properties
+}
   //Module implementation;
   } else {/* TODO: Fix JSX expression */}`
     return `//${componentName} - JavaScript module;
