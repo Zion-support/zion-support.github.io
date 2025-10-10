@@ -136,7 +136,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
         { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
-        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
+        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker', description: 'Smart financial management', icon: '💰', popular: true },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoice creation', icon: '📄', popular: true },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Intelligent stock management', icon: '📦', popular: true },
+        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'Smart prospect discovery', icon: '🎯', popular: true },
+        { name: 'AI Legal Assistant', path: '/ai-legal-assistant', description: 'Legal research & analysis', icon: '⚖️', popular: true }
       ]
     },
     {

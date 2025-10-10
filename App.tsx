@@ -124,6 +124,11 @@ const AISpaceTechnologyProPage = React.lazy(() => import('./app/ai-space-technol
 const AISupplyChainOptimizationProPage = React.lazy(() => import('./app/ai-supply-chain-optimization-pro/page'));
 const AIVideoGeneratorPage = React.lazy(() => import('./app/ai-video-generator/page'));
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
+const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'));
+const AIInvoiceGeneratorPage = React.lazy(() => import('./app/ai-invoice-generator/page'));
+const AIInventoryManagerPage = React.lazy(() => import('./app/ai-inventory-manager/page'));
+const AILeadGenerationPage = React.lazy(() => import('./app/ai-lead-generation/page'));
+const AILegalAssistantPage = React.lazy(() => import('./app/ai-legal-assistant/page'));
 
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
@@ -260,6 +265,11 @@ const App: React.FC = memo(() => {
                       <Route path="/ai-supply-chain-optimization-pro" element={<AISupplyChainOptimizationProPage />} />
                       <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                      <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                      <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                      <Route path="/ai-inventory-manager" element={<AIInventoryManagerPage />} />
+                      <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
+                      <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
 
                       {/* IT Services Pages */}
                       <Route path="/cloud-migration" element={<CloudMigrationPage />} />
