@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const stats = [
     {
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
       icon: Zap
@@ -25,11 +25,6 @@ const ContentPromotionBanner: React.FC = () => {
       icon: Users
     }
   ];
-  const benefits = [
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
 
   return (
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
@@ -44,28 +39,13 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
+          {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-8 w-8 text-white" />
+                <stat.icon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-purple-100 text-sm">{feature.description}</p>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-            </div>
-          ))}
-        </div>
-
-        {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <h3 className="text-lg font-semibold mb-2">{stat.title}</h3>
+              <p className="text-purple-100 text-sm">{stat.description}</p>
             </div>
           ))}
         </div>
@@ -88,7 +68,6 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       </div>
     </div>
   );
