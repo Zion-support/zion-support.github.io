@@ -200,16 +200,24 @@ export default function AIAnalyticsDashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}<div className="relative py-20 overflow-hidden">{/* Animated Background */}</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <div className="relative py-20 overflow-hidden">
+        {/* Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse"><div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-2000"><div className="relative z-10 container mx-auto px-4">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BarChart3 className="w-4 h-4" />
-              <span>AI-Powered Analytics<h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">AI Analytics Dashboard</h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Transform Data into Actionable Insights with AI<p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">Unlock the power of your data with our advanced AI analytics platform.</p>
+              <span>AI-Powered Analytics</span>
+            </div>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">AI Analytics Dashboard</h1>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Transform Data into Actionable Insights with AI</p>
+            <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">Unlock the power of your data with our advanced AI analytics platform.
               Get real-time insights, predictive analytics, and automated reporting that drives business growth.</p>
-            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
