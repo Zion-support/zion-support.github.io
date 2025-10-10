@@ -1,224 +1,145 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Common template for AI pages
-const createAIPageTemplate = (pageName, title, description, icon) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+// Get list of files with TypeScript errors
+function getFilesWithErrors() {
+  try {
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+    const lines = output.split('\n');
+    const files = new Set();
+    
+    lines.forEach(line => {
+      const match = line.match(/^([^(]+)\(/);
+      if (match && match[1].endsWith('.tsx')) {
+        files.add(match[1]);
+      }
+    });
+    
+    return Array.from(files);
+  } catch (error) {
+    console.log('Error getting files with errors:', error.message);
+    return [];
+  }
+}
 
-const ${pageName}: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+// Common fixes for syntax errors
+function fixCommonErrors(content) {
+  let fixed = content;
+  
+  // Fix unterminated string literals in meta tags
+  fixed = fixed.replace(/<meta name="description" content="([^"]*?)(?:\n|$)/g, (match, content) => {
+    if (!content.includes('"') && !content.endsWith('"')) {
+      return `<meta name="description" content="${content.trim()}" />`;
     }
-  ];
+    return match;
+  });
+  
+  fixed = fixed.replace(/<meta name="keywords" content="([^"]*?)(?:\n|$)/g, (match, content) => {
+    if (!content.includes('"') && !content.endsWith('"')) {
+      return `<meta name="keywords" content="${content.trim()}" />`;
+    }
+    return match;
+  });
+  
+  // Fix unterminated title tags
+  fixed = fixed.replace(/<title>([^<]*?)(?:\n|$)/g, (match, content) => {
+    if (!content.includes('<') && !content.endsWith('</title>')) {
+      return `<title>${content.trim()}</title>`;
+    }
+    return match;
+  });
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\s*$/gm, '');
+  fixed = fixed.replace(/^\s*>\s*$/gm, '');
+  
+  // Fix incomplete JSX elements
+  fixed = fixed.replace(/<(\w+)([^>]*?)(?:\n|$)(?!>)/g, (match, tag, attrs) => {
+    if (attrs.trim() && !attrs.includes('>')) {
+      return `<${tag}${attrs}>`;
+    }
+    return match;
+  });
+  
+  // Fix incomplete closing tags
+  fixed = fixed.replace(/<\s*$/gm, '');
+  fixed = fixed.replace(/^\s*>\s*$/gm, '');
+  
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className="([^"]*?)(?:\n|$)/g, (match, className) => {
+    if (!className.includes('"') && !className.endsWith('"')) {
+      return `className="${className.trim()}"`;
+    }
+    return match;
+  });
+  
+  // Fix incomplete JSX elements that should be self-closing
+  fixed = fixed.replace(/<(\w+)([^>]*?)(?:\n|$)(?!>)/g, (match, tag, attrs) => {
+    if (attrs.trim() && !attrs.includes('>') && !attrs.includes('/>')) {
+      return `<${tag}${attrs} />`;
+    }
+    return match;
+  });
+  
+  return fixed;
+}
 
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ${description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default ${pageName};`;
-
-// Function to fix a file
+// Fix a single file
 function fixFile(filePath) {
   try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return false;
+    }
+    
     const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixCommonErrors(content);
     
-    // Check if file is too broken to fix
-    if (content.length < 100 || content.includes('export default') && content.length < 200) {
-      const fileName = path.basename(filePath, '.tsx');
-      const pageName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
-      
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const description = `Advanced ${title.toLowerCase()} solutions powered by AI technology.`;
-      
-      const fixedContent = createAIPageTemplate(pageName, title, description, 'Brain');
-      fs.writeFileSync(filePath, fixedContent);
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    // Try to fix common syntax errors
-    let fixedContent = content;
-    
-    // Fix missing imports
-    if (!fixedContent.includes("import React from 'react'") && fixedContent.includes('React.FC')) {
-      fixedContent = "'use client';\nimport React from 'react';\n" + fixedContent;
-    }
-    
-    // Fix missing Helmet import
-    if (fixedContent.includes('<Helmet>') && !fixedContent.includes("import { Helmet }")) {
-      fixedContent = fixedContent.replace(
-        /'use client';\nimport React from 'react';/,
-        "'use client';\nimport React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-      );
-    }
-    
-    // Fix missing Navigation/Footer imports
-    if (fixedContent.includes('<Navigation') && !fixedContent.includes("import Navigation")) {
-      fixedContent = fixedContent.replace(
-        /import { Helmet } from 'react-helmet-async';/,
-        "import { Helmet } from 'react-helmet-async';\nimport Navigation from '../components/Navigation';\nimport Footer from '../components/Footer';"
-      );
-    }
-    
-    // Fix malformed JSX structure
-    if (fixedContent.includes('return (') && !fixedContent.includes('return (')) {
-      fixedContent = fixedContent.replace(/return \(/g, 'return (\n    <>');
-    }
-    
-    // Fix missing closing tags
-    if (fixedContent.includes('<div className="min-h-screen') && !fixedContent.includes('</div>')) {
-      fixedContent = fixedContent.replace(
-        /<div className="min-h-screen[^>]*>/,
-        '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'
-      );
-    }
-    
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Partially fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.log(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all problematic files
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
-
-let fixedCount = 0;
-let totalCount = 0;
-
-files.forEach(file => {
-  totalCount++;
-  if (fixFile(file)) {
-    fixedCount++;
+// Main function
+function main() {
+  console.log('Getting list of files with errors...');
+  const files = getFilesWithErrors();
+  
+  if (files.length === 0) {
+    console.log('No files with errors found.');
+    return;
   }
-});
+  
+  console.log(`Found ${files.length} files with errors.`);
+  
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+  
+  console.log(`Fixed ${fixedCount} files.`);
+  
+  // Run type check again to see if we fixed anything
+  console.log('Running type check again...');
+  try {
+    execSync('pnpm run type-check', { stdio: 'inherit' });
+    console.log('Type check passed!');
+  } catch (error) {
+    console.log('Type check still has errors. Some files may need manual fixing.');
+  }
+}
 
-console.log(`\nFixed ${fixedCount} out of ${totalCount} files`);
+main();
