@@ -2,10 +2,10 @@
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
-export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
-
-  const sections = [
+export default function TermsPage() {;
+const lastUpdated = 'January 1, 2024';
+;
+const sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -37,8 +37,8 @@ export default function TermsPage() {
       content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
     }
   ];
-
-  const prohibitedUses = [
+;
+const prohibitedUses = [
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -48,8 +48,8 @@ export default function TermsPage() {
     'Collecting user information without consent',
     'Engaging in any form of harassment or abuse'
   ];
-
-  const serviceLevels = [
+;
+const serviceLevels = [
     {
       service: 'AI Services',
       uptime: '99.9%',
@@ -317,5 +317,4 @@ export default function TermsPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

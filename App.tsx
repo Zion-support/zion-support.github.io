@@ -22,7 +22,7 @@ import SecurityEnhancer from './app/components/SecurityEnhancer';
 
 // Structured data for SEO - moved to SEOHead component
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -42,7 +42,7 @@ const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 // Main App Component

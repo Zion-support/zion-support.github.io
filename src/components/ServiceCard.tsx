@@ -4,13 +4,13 @@ import { LucideIcon, ArrowRight } from 'lucide-react';
 
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   };
-
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
+;
+const bgColorClasses = {/* TODO: Fix JSX expression */}
   };
 
   return (<article></article>
@@ -103,8 +103,7 @@ const,
         <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
-  );
-});
+  )});
 
 ServiceCard.displayName = 'ServiceCard';
 

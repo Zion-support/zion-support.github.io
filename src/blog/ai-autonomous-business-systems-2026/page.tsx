@@ -3,7 +3,7 @@
 
 import { Link } from 'react-router-dom';
 export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   return (<div></div>
             <Link href="/blog" className="text-indigo-600,"
@@ -40,8 +40,8 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
   Hub:</strong> Real-time system health and performance</li>
             </ul>"
 <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2>
-              The path to 95% automation requires a systematic approach across multiple business,
-  functions:"
+              The path to 95% automation requires a systematic approach across multiple business,;
+functions:"
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase)
   1: Foundation (Months 1-6)</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"></ul>

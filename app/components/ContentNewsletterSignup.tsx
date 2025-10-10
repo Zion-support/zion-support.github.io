@@ -9,11 +9,17 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
+<<<<<<< HEAD
     text: string;)
 }>;
-  onSubscribe?: (email: string) => void;)
-}
+  onSubscribe?: (email: string) => void;);
+=======
+    text: string]
+    }>;
+  onSubscribe?: (email: string) => void]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -22,28 +28,39 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
   features = [
     {
       icon: CheckCircle,
-      text: "Weekly industry insights";)
-},
+      text: "Weekly industry insights"]
+    },
     {
       icon: Star,
-      text: "Exclusive content and tips";)
-},
+      text: "Exclusive content and tips"]
+    },
     {
       icon: Users,
-      text: "Join 10,000+ subscribers";)
-},
+      text: "Join 10,000+ subscribers"]
+    },
     {
       icon: Globe,
-      text: "Global community access";)
-}
+<<<<<<< HEAD
+      text: "Global community access";);
   ],
   onSubscribe;)
-}); => {
+}); => {;
+const [email, setEmail] = useState('');
+const [isSubscribed, setIsSubscribed] = useState(false);
+const [isLoading, setIsLoading] = useState(false);
+const handleSubmit = async (e: React.FormEvent) => {
+=======
+      text: "Global community access"]
+    }
+  ],
+  onSubscribe]
+    }); => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     if (!email) return;
 
@@ -51,19 +68,30 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
     
     try {
       if (onSubscribe) {
-        await onSubscribe(email);)
-} else {
+        await onSubscribe(email)]
+    } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));)
-}
-      
+<<<<<<< HEAD
+        await new Promise(resolve => setTimeout(resolve, 1000)););
       setIsSubscribed(true);
       setEmail('');)
 } catch (error) {
-      console.error('Subscription failed:', error);)
+      // console.error removed for production
+)
 } finally {
-      setIsLoading(false);)
-}
+      setIsLoading(false););
+=======
+        await new Promise(resolve => setTimeout(resolve, 1000))]
+    }
+      
+      setIsSubscribed(true);
+      setEmail('')]
+    } catch (error) {
+      console.error('Subscription failed:', error)]
+    } finally {
+      setIsLoading(false)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 
   if (isSubscribed) {
@@ -87,15 +115,19 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
           </button>
         </div>
       </div>
-    );)
-}
+<<<<<<< HEAD
+    ););
+=======
+    )]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
           {/* Content */}
-          <div></div>
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               {title}
             </h2>
@@ -118,7 +150,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
           {/* Newsletter Form */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
             <form onSubmit={handleSubmit} className="space-y-6"></form>
-              <div></div>
+              <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>
                   Email Address
                 </label>
@@ -140,11 +172,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
               ></button>
                 {isLoading ? (
                   <>
-                    <div></div>
+                    <div>
                     Subscribing...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </>
@@ -159,8 +191,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );)
-};
+=======
+  )]
+    };
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContentNewsletterSignup;
 }

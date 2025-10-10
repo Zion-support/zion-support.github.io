@@ -31,8 +31,7 @@ export type ZionEmergingTechService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -44,9 +43,7 @@ export type ZionEmergingTechService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
-  };
-}
+    period: string}}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform;
     id: 'space-technology-satellite-management',
@@ -145,8 +142,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string};
-}
+  d: string}}
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -182,7 +178,7 @@ export const,
       'Contribute to space exploration advancement'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/space-technology-satellite-management',
@@ -198,17 +194,26 @@ export const,
     useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space communications', 'Space tourism'],
     roi: 'Average customer achieves 300% ROI within 18 months through reduced operational costs and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Planet Labs', 'Maxar Technologies', 'Lockheed Martin'],
+<<<<<<< HEAD
     marketSize: '$469.8B space economy'
-    growthRate: '8.5% annual growth'
-    variant: 'space-tech-futuristic'
+    growthRate: '8.5% annual growth';
+variant: 'space-tech-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$469.8B space economy',
+    growthRate: '8.5% annual growth',
+    variant: 'space-tech-futuristic',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.'
-    launchDate: '2024-01-01'
+    implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.',
+    launchDate: '2024-01-01',
     customers: 34;
     rating: 4.9;
     reviews: 23;
@@ -265,8 +270,8 @@ export const,
     marketSiz,
   e: '$469.8B space economy',
     growthRat,
-  e: '8.5% annual growth',
-    varian,
+  e: '8.5% annual growth',;
+varian,
   t: 'space-tech-futuristic',
     contactInf,
   o: unknown,
@@ -339,7 +344,7 @@ export const,
       'Create sustainable industrial processes'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/biotechnology-synthetic-biology',
@@ -355,17 +360,26 @@ export const,
     useCases: ['Drug discovery', 'Agricultural biotechnology', 'Industrial biotechnology', 'Medical diagnostics', 'Biofuels production'],
     roi: 'Average customer achieves 400% ROI within 24 months through accelerated development and reduced costs.',
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Zymergen', 'Benchling', 'DNA Script'],
+<<<<<<< HEAD
     marketSize: '$83.9B synthetic biology market'
-    growthRate: '26.2% annual growth'
-    variant: 'biotech-synthetic-biology'
+    growthRate: '26.2% annual growth';
+variant: 'biotech-synthetic-biology'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$83.9B synthetic biology market',
+    growthRate: '26.2% annual growth',
+    variant: 'biotech-synthetic-biology',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.'
-    launchDate: '2024-02-01'
+    implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.',
+    launchDate: '2024-02-01',
     customers: 67;
     rating: 4.8;
     reviews: 89;
@@ -422,8 +436,8 @@ export const,
     marketSiz,
   e: '$83.9B synthetic biology market',
     growthRat,
-  e: '26.2% annual growth',
-    varian,
+  e: '26.2% annual growth',;
+varian,
   t: 'biotech-synthetic-biology',
     contactInf,
   o: unknown,
@@ -496,7 +510,7 @@ export const,
       'Accelerate clean energy transition'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/renewable-energy-smart-grid',
@@ -512,17 +526,26 @@ export const,
     useCases: ['Solar energy optimization', 'Wind farm management', 'Grid load balancing', 'Energy storage', 'Demand response'],
     roi: 'Average customer achieves 250% ROI within 18 months through improved energy efficiency and reduced costs.',
     competitors: ['GE Digital Energy', 'Siemens Grid Software', 'Schneider Electric', 'ABB', 'Honeywell'],
+<<<<<<< HEAD
     marketSize: '$1.3T renewable energy market'
-    growthRate: '8.4% annual growth'
-    variant: 'renewable-energy-ai'
+    growthRate: '8.4% annual growth';
+variant: 'renewable-energy-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$1.3T renewable energy market',
+    growthRate: '8.4% annual growth',
+    variant: 'renewable-energy-ai',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.'
-    launchDate: '2024-01-15'
+    implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.',
+    launchDate: '2024-01-15',
     customers: 123;
     rating: 4.8;
     reviews: 234;
@@ -579,8 +602,8 @@ export const,
     marketSiz,
   e: '$1.3T renewable energy market',
     growthRat,
-  e: '8.4% annual growth',
-    varian,
+  e: '8.4% annual growth',;
+varian,
   t: 'renewable-energy-ai',
     contactInf,
   o: unknown,
@@ -653,7 +676,7 @@ export const,
       'Enable 24/7 autonomous operations'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-200',
     link: 'https://ziontechgroup.com/services/advanced-robotics-automation',
@@ -669,17 +692,26 @@ export const,
     useCases: ['Manufacturing automation', 'Warehouse automation', 'Healthcare robotics', 'Construction automation', 'Agricultural robotics'],
     roi: 'Average customer achieves 300% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],
+<<<<<<< HEAD
     marketSize: '$43.8B industrial robotics market'
-    growthRate: '12.5% annual growth'
-    variant: 'robotics-automation-ai'
+    growthRate: '12.5% annual growth';
+variant: 'robotics-automation-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$43.8B industrial robotics market',
+    growthRate: '12.5% annual growth',
+    variant: 'robotics-automation-ai',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.'
-    launchDate: '2024-02-15'
+    implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.',
+    launchDate: '2024-02-15',
     customers: 89;
     rating: 4.9;
     reviews: 156;
@@ -736,8 +768,8 @@ export const,
     marketSiz,
   e: '$43.8B industrial robotics market',
     growthRat,
-  e: '12.5% annual growth',
-    varian,
+  e: '12.5% annual growth',;
+varian,
   t: 'robotics-automation-ai',
     contactInf,
   o: unknown,
@@ -810,7 +842,7 @@ export const,
       'Enable quantum internet applications'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/quantum-internet-secure-communications',
@@ -826,17 +858,26 @@ export const,
     useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data protection', 'Critical infrastructure security', 'Quantum research'],
     roi: 'Average customer achieves 400% ROI within 24 months through enhanced security and new quantum capabilities.',
     competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt', 'Quantum Machines'],
+<<<<<<< HEAD
     marketSize: '$3.9B quantum communications market'
-    growthRate: '35.2% annual growth'
-    variant: 'quantum-internet-futuristic'
+    growthRate: '35.2% annual growth';
+variant: 'quantum-internet-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$3.9B quantum communications market',
+    growthRate: '35.2% annual growth',
+    variant: 'quantum-internet-futuristic',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.'
-    launchDate: '2024-03-01'
+    implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.',
+    launchDate: '2024-03-01',
     customers: 23;
     rating: 4.9;
     reviews: 34;
@@ -893,8 +934,8 @@ export const,
     marketSiz,
   e: '$3.9B quantum communications market',
     growthRat,
-  e: '35.2% annual growth',
-    varian,
+  e: '35.2% annual growth',;
+varian,
   t: 'quantum-internet-futuristic',
     contactInf,
   o: unknown,
@@ -967,7 +1008,7 @@ export const,
       'Create sustainable material solutions'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/advanced-materials-nanotechnology',
@@ -983,17 +1024,26 @@ export const,
     useCases: ['Aerospace materials', 'Electronics materials', 'Healthcare materials', 'Energy materials', 'Construction materials'],
     roi: 'Average customer achieves 350% ROI within 24 months through accelerated development and new material capabilities.',
     competitors: ['Ansys Materials', 'Dassault Materials', 'Autodesk Fusion 360', 'Materialise', '3D Systems'],
+<<<<<<< HEAD
     marketSize: '$67.8B advanced materials market'
-    growthRate: '15.3% annual growth'
-    variant: 'advanced-materials-ai'
+    growthRate: '15.3% annual growth';
+variant: 'advanced-materials-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$67.8B advanced materials market',
+    growthRate: '15.3% annual growth',
+    variant: 'advanced-materials-ai',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.'
-    launchDate: '2024-01-15'
+    implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.',
+    launchDate: '2024-01-15',
     customers: 78;
     rating: 4.8;
     reviews: 123;
@@ -1050,8 +1100,8 @@ export const,
     marketSiz,
   e: '$67.8B advanced materials market',
     growthRat,
-  e: '15.3% annual growth',
-    varian,
+  e: '15.3% annual growth',;
+varian,
   t: 'advanced-materials-ai',
     contactInf,
   o: unknown,
@@ -1124,7 +1174,7 @@ export const,
       'Enable new mobility services'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-transportation-mobility',
@@ -1140,17 +1190,26 @@ export const,
     useCases: ['Autonomous delivery', 'Public transportation', 'Traffic optimization', 'Parking management', 'Logistics optimization'],
     roi: 'Average customer achieves 300% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Aurora', 'Argo AI'],
+<<<<<<< HEAD
     marketSize: '$556.7B autonomous vehicle market'
-    growthRate: '39.7% annual growth'
-    variant: 'autonomous-transportation'
+    growthRate: '39.7% annual growth';
+variant: 'autonomous-transportation'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$556.7B autonomous vehicle market',
+    growthRate: '39.7% annual growth',
+    variant: 'autonomous-transportation',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.'
-    launchDate: '2024-02-01'
+    implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.',
+    launchDate: '2024-02-01',
     customers: 156;
     rating: 4.8;
     reviews: 234;
@@ -1207,8 +1266,8 @@ export const,
     marketSiz,
   e: '$556.7B autonomous vehicle market',
     growthRat,
-  e: '39.7% annual growth',
-    varian,
+  e: '39.7% annual growth',;
+varian,
   t: 'autonomous-transportation',
     contactInf,
   o: unknown,
@@ -1281,7 +1340,7 @@ export const,
       'Optimize operational efficiency'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/digital-twin-simulation',
@@ -1297,17 +1356,26 @@ export const,
     useCases: ['Manufacturing optimization', 'Energy system management', 'Healthcare simulation', 'Smart city planning', 'Product development'],
     roi: 'Average customer achieves 250% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Dassault 3DEXPERIENCE', 'Autodesk Tandem'],
+<<<<<<< HEAD
     marketSize: '$86.1B digital twin market'
-    growthRate: '58.9% annual growth'
-    variant: 'digital-twin-ai'
+    growthRate: '58.9% annual growth';
+variant: 'digital-twin-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$86.1B digital twin market',
+    growthRate: '58.9% annual growth',
+    variant: 'digital-twin-ai',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.'
-    launchDate: '2024-01-01'
+    implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.',
+    launchDate: '2024-01-01',
     customers: 189;
     rating: 4.9;
     reviews: 267;
@@ -1364,8 +1432,8 @@ export const,
     marketSiz,
   e: '$86.1B digital twin market',
     growthRat,
-  e: '58.9% annual growth',
-    varian,
+  e: '58.9% annual growth',;
+varian,
   t: 'digital-twin-ai',
     contactInf,
   o: unknown,
@@ -1438,7 +1506,7 @@ export const,
       'Enable real-time AI applications'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/edge-computing-iot-platform',
@@ -1454,17 +1522,26 @@ export const,
     useCases: ['Industrial IoT', 'Smart cities', 'Healthcare monitoring', 'Autonomous vehicles', 'Retail analytics'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced latency and improved performance.',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Cisco Edge', 'HPE Edge'],
+<<<<<<< HEAD
     marketSize: '$43.4B edge computing market'
-    growthRate: '37.4% annual growth'
-    variant: 'edge-computing-iot'
+    growthRate: '37.4% annual growth';
+variant: 'edge-computing-iot'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$43.4B edge computing market',
+    growthRate: '37.4% annual growth',
+    variant: 'edge-computing-iot',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.'
-    launchDate: '2024-02-15'
+    implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.',
+    launchDate: '2024-02-15',
     customers: 234;
     rating: 4.8;
     reviews: 345;
@@ -1521,8 +1598,8 @@ export const,
     marketSiz,
   e: '$43.4B edge computing market',
     growthRat,
-  e: '37.4% annual growth',
-    varian,
+  e: '37.4% annual growth',;
+varian,
   t: 'edge-computing-iot',
     contactInf,
   o: unknown,
@@ -1595,7 +1672,7 @@ export const,
       'Generate new revenue streams'
     ],
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/metaverse-virtual-reality',
@@ -1611,17 +1688,26 @@ export const,
     useCases: ['Virtual events', 'Virtual training', 'Virtual real estate', 'Virtual commerce', 'Virtual entertainment'],
     roi: 'Average customer achieves 300% ROI within 18 months through new virtual experiences and reduced costs.',
     competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
+<<<<<<< HEAD
     marketSize: '$74.2B metaverse market'
-    growthRate: '37.7% annual growth'
-    variant: 'metaverse-vr-futuristic'
+    growthRate: '37.7% annual growth';
+variant: 'metaverse-vr-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$74.2B metaverse market',
+    growthRate: '37.7% annual growth',
+    variant: 'metaverse-vr-futuristic',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.'
-    launchDate: '2024-03-01'
+    implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.',
+    launchDate: '2024-03-01',
     customers: 123;
     rating: 4.8;
     reviews: 189;
@@ -1673,8 +1759,8 @@ export const getServicesByCategory = (category: string) =>;
     marketSiz,
   e: '$74.2B metaverse market',
     growthRat,
-  e: '37.7% annual growth',
-    varian,
+  e: '37.7% annual growth',;
+varian,
   t: 'metaverse-vr-futuristic',
     contactInf,
   o: unknown,
@@ -1717,15 +1803,12 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionEmergingTechServices2029.filter(service => service.category === category);
-};
+  return zionEmergingTechServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service => service.popular);
-};
+  return zionEmergingTechServices2029.filter(service => service.popular)};
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-};
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})};
 export const getServicesByTechnology = (technology: string) =>;
   return zionEmergingTechServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1735,14 +1818,12 @@ export const getServicesByPriceRange = (minPric)
   return zionEmergingTechServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter;)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-};
+  })};
 export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )};
 export type ZionEmergingTechService2029 = i,
   d: string; nam,
   e: string; taglin,
@@ -1788,7 +1869,7 @@ export type ZionEmergingTechService2029 = i,
   l: number; enterpris,
   e: number; currenc,
   y: string; perio,
-  d: string}; } export const,
+  d: string}} export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [ // 1. Space Technology & Satellite Management Platform,
   id: 'space-technology-satellite-management',' nam,
   e: 'Space Technology & Satellite Management Platform',' taglin,
@@ -2260,7 +2341,7 @@ export type ZionEmergingTechService2029 = i,
   e: 20999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)}; export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'
+  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'

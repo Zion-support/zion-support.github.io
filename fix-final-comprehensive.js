@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const specificFixes = {
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
     keywords:
-      'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',
+      'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',;
 const specificFixes = {/* TODO: Fix JSX expression */}
   },
   'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}
@@ -19,21 +19,20 @@ const specificFixes = {/* TODO: Fix JSX expression */}
   },
   'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx': {/* TODO: Fix JSX expression */}
   }};
-
+;
 function processFile(filePath) {
   try {
     // Apply specific fixes;
     if (specificFixes[relativePath]) {
-      if (fix.keywords) {
-        const keywordArray = fix.keywords;
-          .split(', ')
+      if (fix.keywords) {;
+const keywordArray = fix.keywords;
+          .split(', ');
 function processFile(filePath) {/* TODO: Fix JSX expression */}
           .map(k => `'${k}'`)
           .join(', ');
         if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
   s: [${keywordArray}],`);
-          modified = true;
-        }
+          modified = true}
       }
     }
 
@@ -68,18 +67,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-
+;
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
@@ -88,8 +85,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     }
   });
 
-  return totalFixed;
-}
+  return totalFixed}
 
 // Process the app directory;
 // Process the app directory;"`

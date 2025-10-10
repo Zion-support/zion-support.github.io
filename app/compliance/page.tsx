@@ -1,11 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
-
-const CompliancePage: React.FC = () => {
-  const complianceStandards = [
+const CompliancePage: React.FC = () => {const complianceStandards = [
     {
       icon: Shield,
       title: 'SOC 2 Type II',
@@ -71,7 +68,7 @@ const CompliancePage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -94,6 +91,7 @@ const CompliancePage: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 =======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -240,13 +238,14 @@ const CompliancePage: React.FC = () => {
               </button>
             </div>
           </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         </div>
       </section>
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
-};
-
+}
 export default CompliancePage;
+}
+export default PagePage;

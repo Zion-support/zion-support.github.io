@@ -124,7 +124,7 @@ const fixes = [
     replacement: 'return (\n    <div>{/* content */}')
   })
 ];
-
+;
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
@@ -157,7 +157,7 @@ function fixFile(filePath) {
   n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacemen,
   t: 'return (\n    <div>{/* content */}'}];
-)
+);
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
     });
@@ -165,8 +165,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -183,8 +182,7 @@ async function main() {/* TODO: Fix JSX expression */}
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
   });

@@ -4,10 +4,9 @@ export interface FeaturedItem {
   title: string;
   category: string;
   li, n, k: string;
-  metri, c, s ?  : str, i, n, g;
- }
-export interface UnifiedPromotionalBannerProps {
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
+  metri, c, s ?  : str, i, n, g}
+export interface UnifiedPromotionalBannerProps {;
+varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
   title: string;
   description: string;
   ctaTe, x, t: string;
@@ -72,8 +71,8 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         {/* Tit, l, e */}
         <h2, classNam, e = { `
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
-          ${
-            varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
+          ${;
+varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
               ? 'te, x, t-4 xl, m, d: te, x, t-5, x, l'
               : varia, n, t === 'premi, u, m'
                 ? 'te, x, t-3 xl, m, d:te, x, t-4, x, l'
@@ -138,8 +137,8 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={ `
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
-              ${ 
-                varia, n, t === 'compa, c, t'
+              ${ ;
+varia, n, t === 'compa, c, t'
                   ? 'px-6, p, y-3, tex, t-sm'
                   : varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
                      ? 'px-10, p, y-5, tex, t-lg'
@@ -165,7 +164,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default UnifiedPromotionalBanner;
 `

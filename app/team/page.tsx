@@ -3,26 +3,26 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
+;
 const TeamPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Our Team - Zion Tech Group</title>
+        <title>Our Team - Zion Tech Group</title>
         <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
       </Helmet>
       
-      <div></div>
+      <div>
         <Navigation />
         
         <main className="pt-20"></main>
-          <div></div>
-            <div></div>
+          <div>
+            <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>
                 Our Team</h1>
               </h1>
               
-              <div></div>
+              <div>
                 <p className="text-xl text-gray-600 mb-8"></p>
                   Meet the experts behind our success.
                 </p>
@@ -38,8 +38,12 @@ const TeamPage: React.FC = () => {
         <Footer />
       </div>
     </>
+<<<<<<< HEAD
   );)
-};
+=======
+  )]
+    };
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default TeamPage;
 }

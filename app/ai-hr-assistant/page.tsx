@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiHrAssistantPage: React.FC = () => {
-  const features = [
+;
+const AiHrAssistantPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -32,8 +31,8 @@ const AiHrAssistantPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -42,7 +41,7 @@ const AiHrAssistantPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Ai Hr Assistant - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai hr assistant solution for modern businesses." />
@@ -100,11 +99,10 @@ const AiHrAssistantPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -129,7 +127,7 @@ const AiHrAssistantPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -157,8 +155,5 @@ const AiHrAssistantPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default AiHrAssistantPage;

@@ -18,36 +18,57 @@ import {
   Phone,
   Mail,
   MapPin,
+<<<<<<< HEAD
   Clock;)
 } from 'lucide-react';
+;
+const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+const location = useLocation();
+=======
+  Clock]
+    } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
-const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleResize = () => {
+  useEffect(() => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);)
-}
+<<<<<<< HEAD
+        setIsOpen(false););
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);)
 }, []);
+const toggleSection = (section: string) => {;
+const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(section)) {
+      newExpanded.delete(section);)
+} else {
+      newExpanded.add(section););
+    setExpandedSections(newExpanded););
+const navigationSections = [
+=======
+        setIsOpen(false)]
+    }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize)]
+    }, []);
 
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);)
-} else {
-      newExpanded.add(section);)
-}
-    setExpandedSections(newExpanded);)
-};
+      newExpanded.delete(section)]
+    } else {
+      newExpanded.add(section)]
+    }
+    setExpandedSections(newExpanded)]
+    };
 
   const navigationSections = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Main',
       items: [
@@ -57,8 +78,8 @@ const Sidebar: React.FC = () => {
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Blog', path: '/blog', icon: BarChart },
         { name: 'Case Studies', path: '/case-studies', icon: BarChart },
-      ];)
-},
+      ]]
+    },
     {
       title: 'AI Services',
       key: 'ai-services',
@@ -76,8 +97,8 @@ const Sidebar: React.FC = () => {
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
         { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
-      ];)
-},
+      ]]
+    },
     {
       title: 'Micro SaaS',
       key: 'micro-saas',
@@ -95,8 +116,8 @@ const Sidebar: React.FC = () => {
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-      ];)
-},
+      ]]
+    },
     {
       title: 'IT Services',
       key: 'it-services',
@@ -110,8 +131,8 @@ const Sidebar: React.FC = () => {
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Database Management', path: '/database-management', icon: Settings },
         { name: 'Managed IT', path: '/managed-it', icon: Settings },
-      ];)
-},
+      ]]
+    },
     {
       title: 'Company',
       items: [
@@ -119,8 +140,8 @@ const Sidebar: React.FC = () => {
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
         { name: 'Pricing', path: '/pricing', icon: BarChart },
-      ];)
-},
+      ]]
+    },
     {
       title: 'Resources',
       items: [
@@ -128,19 +149,27 @@ const Sidebar: React.FC = () => {
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-      ];)
-}
+<<<<<<< HEAD
+      ];);
+=======
+      ]]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-
-  const contactInfo = {
+;
+const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST';)
-};
+<<<<<<< HEAD
+    hours: 'Mon-Fri 9AM-6PM EST';);
+=======
+    hours: 'Mon-Fri 9AM-6PM EST']
+    };
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
-    <>
+    <React.Fragment>
       {/* Mobile Menu Button */}
       <button
         onClick={() =></button> setIsOpen(true);
@@ -160,8 +189,8 @@ const Sidebar: React.FC = () => {
 
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full';)
-} lg:translate-x-0 lg:static lg:z-auto`}></aside>
+        isOpen ? 'translate-x-0' : '-translate-x-full']
+    } lg:translate-x-0 lg:static lg:z-auto`}></aside>
         <div className="flex flex-col h-full"></div>
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
@@ -169,7 +198,7 @@ const Sidebar: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <div></div>
+              <div>
                 <h2 className="text-xl font-bold text-white cyber-text"></h>Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
@@ -192,7 +221,7 @@ const Sidebar: React.FC = () => {
                     onClick={() =></button> section.key && toggleSection(section.key);
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    <span></spa>{section.title}</span>
+                    <span>{section.title}</span>
                     {section.key && (
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4" /> : 
@@ -210,11 +239,11 @@ const Sidebar: React.FC = () => {
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50';)
-}`}
+                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50']
+    }`}
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" />
-                          <span></spa>{item.name}</span>
+                          <span>{item.name}</span>
                         </Link>
                       ));
                     </div>
@@ -230,7 +259,7 @@ const Sidebar: React.FC = () => {
             <div className="space-y-3 text-sm text-gray-300"></div>
               <div className="flex items-center space-x-3"></div>
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span></spa>{contactInfo.phone}</span>
+                <span>{contactInfo.phone}</span>
               </div>
               <div className="flex items-center space-x-3"></div>
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
@@ -247,9 +276,14 @@ const Sidebar: React.FC = () => {
           </div>
       </aside>
     </>
-  );)
-};
+<<<<<<< HEAD
+  ););
+Sidebar.displayName = 'Sidebar'
+=======
+  )]
+    };
 
 Sidebar.displayName = 'Sidebar';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Sidebar;

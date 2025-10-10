@@ -3,10 +3,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
-};
+import Footer from '../components/Footer'};
   titl,
   e: 'IoT Device Management Platform',
       descriptio,
@@ -228,7 +225,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-                {iotServices;}
+                {iotServices}
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
@@ -319,8 +316,7 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
             <div className="mt-8 text-sm text-cyan-200">
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-  );
-};
+  )};
 
 
 export default IotEdgePage;

@@ -8,8 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, CloudDevOp, s: Rea, c, t.FC = () => {
-  const, feature, s = [
+const, CloudDevOp, s: Rea, c, t.FC = () => {;
+const, feature, s = [
     {
       i, c, o;
   n: Clo, u, d;
@@ -76,8 +76,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s"
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
     {
       na, m, e: "Grow, t, h"
       pri, c, e: "$8,5, 0, 0"
@@ -95,8 +94,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n"
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e}
     {
       na, m, e: "Enterpri, s, e"
       pri, c, e: "$25,0, 0, 0"
@@ -132,8 +130,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s",";
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
     {
       na, m, e: "Grow, t, h",";
       pri, c, e: "$8,5, 0, 0",";
@@ -151,8 +148,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n",";
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e}
     {
       na, m, e: "Enterpri, s, e",";
       pri, c, e: "$25,0, 0, 0",";
@@ -172,8 +168,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "SLA, guarante, e",";
         "On-premise, integratio, n"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
   ];
   const, testimonial, s = [
     {
@@ -234,33 +229,29 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       tit, l, e: "Cloud, Migratio, n",";
       ic, o, n: Clo, u, d;
       descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.",";
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]";
-    }
+      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"}
     {
       tit, l, e: "Container, Orchestratio, n",";
       ic, o, n: Serv, e, r;
       descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.",";
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]";
-    }
+      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"}
     {
       tit, l, e: "Infrastructure, Automatio, n",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.",";
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]";
-    }
+      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"}
     {
       tit, l, e: "Securi, t, y & Complian, c, e",";
       ic, o, n: Shie, l, d;
       descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.",";
-      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]";
-    }
+      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"}
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>"
+          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>";
 const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -310,7 +301,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
         <me, t, a;"
@@ -552,15 +543,23 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-                const, Ico, n = servi, c, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = servi, c, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-                const, Ico, n = servi, c, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = servi, c, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -569,9 +568,13 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-                const, Ico, n = servi, c, e.ic, o, n;
+return (
+;
+const, Ico, n = servi, c, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
                     </d, i, v>
@@ -612,8 +615,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -652,8 +654,12 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -667,17 +673,25 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0" />";
                     </d, i, v>
@@ -710,8 +724,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -799,7 +812,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-gre, e, n-600, tex, t-white, hove, r: bg-gre, e, n-7, 0, 0'
 ? 'bg-gre, e, n-600, tex, t-white, hov, e;
-  r: bg-gre, e, n-7, 0, 0',';}
+  r: bg-gre, e, n-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -959,8 +972,6 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
-  );
-};
-export default CloudDevOps;
-}}}}"`
+    </React.Fragment>
+  )};
+export default CloudDevOps}}}}"`

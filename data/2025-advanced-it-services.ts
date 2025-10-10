@@ -2,8 +2,8 @@
 export const advancedITServices2025 = [
     };
     marketSize: '$15 && 15.7B',
-    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
-    competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
+    competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
     market_size: '$15.7B',
     target_audience: unknown;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -503,7 +503,8 @@ export const advancedITServices2025 = [
     ]
     pricing: starter: unknown;
         price: 499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -518,7 +519,8 @@ export const advancedITServices2025 = [
           'Basic quantum features',
           'Standard support']}
       professional: price: 1299;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -532,7 +534,8 @@ export const advancedITServices2025 = [
           'Custom solutions',
           'Priority support']}
       enterprise: price: 2999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -593,7 +596,8 @@ export const advancedITServices2025 = [
     ]
     pricing: starter: unknown;
         price: 299;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -624,7 +628,8 @@ export const advancedITServices2025 = [
         ]
       }
       enterprise: price: 1999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -681,7 +686,8 @@ export const advancedITServices2025 = [
     ]
     pricing: starter: unknown;
         price: 199;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -763,7 +769,7 @@ export const advancedITServices2025 = [
 ];
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$15.7B',
-    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
+    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
       emai,
   l: 'kleber@ziontechgroup.com'
@@ -1242,8 +1248,7 @@ export const advancedITServices2025 = [
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
-  }
+]}
 ];
     market_size: '$15.7B',
     target_audience: unknown;
@@ -1695,7 +1700,7 @@ export const advancedITServices2025 = [
   e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'
   }
 ];
-;  }
+}
 ];
 ;
 export const advancedITServices2025 = [ }; marketSiz,
@@ -2165,7 +2170,7 @@ export const advancedITServices2025 = [ }; marketSiz,
   l: 'kleber@ziontechgroup.com' };' marketSiz,
   e: '$15.7B';' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,
-  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; } ];' market_siz,
+  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]} ];' market_siz,
   e: '$15.7B', target_audienc,
   e:  ,' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantag,
   e:  ,' 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'},' ]; phon,
@@ -2350,4 +2355,4 @@ export const advancedITServices2025 = [ }; marketSiz,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' }' market_siz,
   e: '$15.7B',' target_audienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitive_advantag,
-  e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration' } ]; } ]; '
+  e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration' } ]} ]; '

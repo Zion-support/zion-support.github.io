@@ -83,7 +83,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true;
     valueProposition: '$215M annual value'},
   {
-    slug: 'ai-2025-oct-03-autonomous-cloud-security'
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',
     title: 'Autonomous Cloud Security 2025',
     description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
     category: 'Security',
@@ -152,14 +152,13 @@ export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
 export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 }
 
-export function getTotalValueProposition(): string {
-  const totalValue = allBlogPosts.reduce((sum, post) => {
-    const _value = post.valueProposition.match(/\$(\d+)M/);
+export function getTotalValueProposition(): string {;
+const totalValue = allBlogPosts.reduce((sum, post) => {;
+const _value = post.valueProposition.match(/\$(\d+)M/);
 :corrupted-src-backup/content/blog-index.ts;
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
   }, 0);
-  return `$${totalValue}M+ total value proposition`;
-}
+  return `$${totalValue}M+ total value proposition`}
 
 export const blogStats = {
   totalPosts: allBlogPosts.length;

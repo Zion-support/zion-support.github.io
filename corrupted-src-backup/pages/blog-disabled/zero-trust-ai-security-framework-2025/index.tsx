@@ -1,9 +1,11 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-const ZeroTrustAISecurityFramework202, 5 = () => { 
-  return(<>
+;
+const ZeroTrustAISecurityFramework202, 5 = () => {
+return (
+ 
+  return(<React.Fragment>
       <Helm, e, t>
         <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
@@ -21,7 +23,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
         />,
       </Helm, e, t>
 
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' >
+);
+} {/* Hero, Sect, i, o, n */ }</div>;
 const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'></div>
@@ -292,8 +296,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <TrendingUp className="w-5 h-5 mr-2" />
   conten,"
   t: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta,"
-  name: "keywords,"
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link,"
+  name: 'keywords,',
+  content: 'AI security, zero trust, model security, ML security, AI governance, enterprise security', /><link,"
   rel: "canonical;"
   href=",
   http,
@@ -1296,8 +1300,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   Request Security Assessment""
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
-  );
-};
+  )};
 
 export default ZeroTrustAISecurityFramework2025;;
   </div>

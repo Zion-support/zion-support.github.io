@@ -9,9 +9,8 @@ interface ImageOptimizerProps {
   priority?: boolean;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void;
-}
-
+  onError?: () => void}
+;
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
   alt,
@@ -21,49 +20,50 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   priority = false,
   placeholder,
   onLoad,
-  onError;
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  onError}) => {
+return (
+;
+const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>
+);
+}(() => {
     if (priority) return;
-
-    const observer = new IntersectionObserver(
+;
+const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect()}
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.01;
-      }
+        threshold: 0.01}
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+      observer.observe(imgRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
-
-  const handleLoad = () => {
+    return () => observer.disconnect()}, [priority]);
+;
+const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
+    onLoad?.()};
+;
+const handleError = () => {
     setHasError(true);
-    onError?.();
-  };
+    onError?.()};
+;
+const generatePlaceholder = () => {
+return (
 
-  const generatePlaceholder = () => {
     if (placeholder) return placeholder;
-    
-    const svg = `
+    ;
+const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
+);
+}
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
@@ -75,8 +75,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       </svg>,
     `;
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}`;
-  };
+    return `data:image/svg+xml;base64,${btoa(svg)}`};
 
   if (hasError) {
     return(<div;
@@ -88,8 +87,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
           <div className="text-sm">Image failed to load</div>)
         </div>)
       </div>)
-    );
-  }
+    )}
 
   return(<div;
       ref={imgRef}
@@ -125,7 +123,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
         /></img>
       )}
     </div>
-  );
-};
+  )};
 
 export default ImageOptimizer;

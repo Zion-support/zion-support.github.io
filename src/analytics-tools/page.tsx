@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
 import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
+const AnalyticsToolsPage: React.FC = () => {;
+const analyticsTools = [
     {
       title: 'AI Business Intelligence',
       price: '$399/month',
@@ -66,9 +66,10 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
+;
 const PagePage: React.FC = () => {
+return (
+
   return (
     
           
@@ -87,6 +88,8 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
+);
+}
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -262,8 +265,7 @@ Why Choose Our Analytics Tools?"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  );
-};
+  )};
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
@@ -273,8 +275,7 @@ Call (302) 464-0950;
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 
               Email Us;
-  );
-};
+  )};
 
 
 export default AnalyticsToolsPage;

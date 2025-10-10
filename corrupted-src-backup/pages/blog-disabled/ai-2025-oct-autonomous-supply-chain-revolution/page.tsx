@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
-    <>
+    <React.Fragment>
       <Helm, e, t>
         <title>
           Autonomous, AI, Supply Chain, Revolution, 2025 — 99.2% Forecast, Accurac, y,

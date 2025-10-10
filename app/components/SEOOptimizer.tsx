@@ -1,18 +1,32 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
+  title: string;
+  description: string;
+  keywords: string[];
   canonicalUrl?: string;
+  structuredData?: any;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;
-}
-
+  ogType?: string;
+  twitterCard?: string}
+;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+<<<<<<< HEAD
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  structuredData,
+  ogImage = '/images/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
+}) => {;
+const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
+=======
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -71,6 +85,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(script);
     }
   }, [title, structuredData]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   return (
     <Helmet>
@@ -101,11 +116,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {/* Structured data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+          {JSON.stringify(structuredData);
+        </script>);
     </Helmet>
   );
-};
-
+}
 export default SEOOptimizer;

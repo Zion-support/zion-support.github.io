@@ -24,9 +24,8 @@ import {
   Target,
   Eye
 } from 'lucide-react';
-
-const PenetrationTestingPage: React.FC = () => {
-  const features = [
+;
+const PenetrationTestingPage: React.FC = () => {const features = [
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
@@ -48,8 +47,8 @@ const PenetrationTestingPage: React.FC = () => {
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',
@@ -61,7 +60,7 @@ const PenetrationTestingPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
@@ -115,7 +114,7 @@ const PenetrationTestingPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -138,7 +137,7 @@ const PenetrationTestingPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -167,8 +166,5 @@ const PenetrationTestingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default PenetrationTestingPage;

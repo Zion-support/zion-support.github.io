@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-
-const FinancialITPage: React.FC = () => {
-  const features = [
+;
+const FinancialITPage: React.FC = () => {const features = [
     {
       icon: DollarSign,
       title: 'SOX Compliance',
@@ -44,8 +43,8 @@ const FinancialITPage: React.FC = () => {
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
     }
   ];
-
-  const services = [
+;
+const services = [
     {
       icon: '🏦',
       title: 'Banking Solutions',
@@ -67,8 +66,8 @@ const FinancialITPage: React.FC = () => {
       description: 'Cybersecurity and data protection solutions'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
     'Real-time Processing',
@@ -138,10 +137,10 @@ const FinancialITPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -165,7 +164,7 @@ const FinancialITPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -190,7 +189,7 @@ const FinancialITPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -214,8 +213,5 @@ const FinancialITPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default FinancialITPage;

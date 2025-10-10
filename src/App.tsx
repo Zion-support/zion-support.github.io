@@ -4,7 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 
-// Lazy load components for better performance
+// Lazy load components for better performance;
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -13,7 +13,7 @@ const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
 
-// AI Services Pages
+// AI Services Pages;
 const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
 const AIChatbotBuilderPage = lazy(() => import('./ai-chatbot-builder/page'));
 const AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
@@ -36,7 +36,7 @@ const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
 
-// Additional AI Services Pages
+// Additional AI Services Pages;
 const AIProjectManagerPage = lazy(() => import('./ai-project-manager/page'));
 const AISocialMediaManagerPage = lazy(() => import('./ai-social-media-manager/page'));
 const AIEmailMarketingPage = lazy(() => import('./ai-email-marketing/page'));
@@ -58,7 +58,7 @@ const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
 
-// IT Services Pages
+// IT Services Pages;
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
 const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
@@ -106,7 +106,7 @@ const TaskManagerProPage = lazy(() => import('./task-manager-pro/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 
-// Blog Pages
+// Blog Pages;
 const BlogAgentReleaseRunbooksV22026Page = lazy(() => import('./blog/agent-release-runbooks-v2-2026/page'));
 const BlogAI20252026MegaTrendsBreakthroughPage = lazy(() => import('./blog/ai-2025-2026-mega-trends-breakthrough/page'));
 const BlogAI2025JanuaryAdvancedAIRevolutionPage = lazy(() => import('./blog/ai-2025-january-advanced-ai-revolution/page'));
@@ -136,18 +136,17 @@ const BlogAIInnovationLabsProductDevelopment2025Page = lazy(() => import('./blog
 const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./blog/ai-powered-autonomous-business-processes-2026/page'));
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
 
-// Main loading component
+// Main loading component;
 const MainLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
   </div>
 );
-
+;
 const App: React.FC = () => {
   // Initialize performance monitoring
   React.useEffect(() => {
-    performanceMonitor.reportMetrics();
-  }, []);
+    performanceMonitor.reportMetrics()}, []);
 
   return (
     <ErrorBoundary>
@@ -291,7 +290,6 @@ const App: React.FC = () => {
         </Suspense>
       </Router>
     </ErrorBoundary>
-  );
-};
+  )};
 
 export default App;

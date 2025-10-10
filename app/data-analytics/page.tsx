@@ -23,9 +23,8 @@ import {
   PieChart,
   LineChart
 } from 'lucide-react';
-
-const DataAnalyticsPage: React.FC = () => {
-  const features = [
+;
+const DataAnalyticsPage: React.FC = () => {const features = [
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
@@ -47,8 +46,8 @@ const DataAnalyticsPage: React.FC = () => {
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',
@@ -60,7 +59,7 @@ const DataAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
@@ -114,7 +113,7 @@ const DataAnalyticsPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -137,7 +136,7 @@ const DataAnalyticsPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -166,8 +165,5 @@ const DataAnalyticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default DataAnalyticsPage;

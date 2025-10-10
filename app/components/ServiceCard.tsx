@@ -11,7 +11,7 @@ interface ServiceCardProps {
   onClick?: () => void;
   className?: string;
 }
-
+;
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -28,15 +28,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
             Most Popular
           </span>
-        </div>
-      )}
-      
+        </div>);
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         {price && (
-          <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-        )}
+          <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>);
       </div>
 
       <ul className="space-y-3 mb-6">
@@ -45,7 +42,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
             <span className="text-gray-700">{feature}</span>
           </li>
-        ))}
+        ));
       </ul>
 
       {onClick && (
@@ -55,10 +52,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         >
           Get Started
           <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
+        </button>);
     </div>
   );
-};
-
+}
 export default ServiceCard;

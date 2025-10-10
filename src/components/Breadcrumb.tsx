@@ -5,19 +5,18 @@ import { ChevronRight, Home } from 'lucide-react';
 interface BreadcrumbItem {
   name: string;
   href: string;
-  current?: boolean;
-}
-
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {,
-    const pathSegments = location.pathname.split('/').filter(Boolean);
+  current?: boolean}
+;
+const Breadcrumb: React.FC = () => {;
+const location = useLocation();
+  ;
+const generateBreadcrumbs = (): BreadcrumbItem[] => {,;
+const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [,
       { name: 'Home', href: '/' }
     ];
-
-    let currentPath = '';
+;
+let currentPath = '';
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
       const isLast = index === pathSegments.length - 1;
@@ -31,21 +30,17 @@ const Breadcrumb: React.FC = () => {
       breadcrumbs.push({)
         name)
         href: currentPath),
-        current: isLast;
-      });
-    });
+        current: isLast})});
 
-    return breadcrumbs;
-  };
-
-  const breadcrumbs = generateBreadcrumbs();
+    return breadcrumbs};
+;
+const breadcrumbs = generateBreadcrumbs();
 
   // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
-    return null;
-  }
-
-  const structuredData = {
+    return null}
+;
+const structuredData = {
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": breadcrumbs.map((item, index) => ({
@@ -56,12 +51,12 @@ const Breadcrumb: React.FC = () => {
     }))
   };
 
-  return(<>)
+  return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
           <ol className="flex items-center space-x-2 text-sm">),
   return (
-    <>
+    <React.Fragment>
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <ol className="flex items-center space-x-2 text-sm">
@@ -96,7 +91,6 @@ const Breadcrumb: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       /></script>
     
-  );
-};
+  )};
 
 export default Breadcrumb;

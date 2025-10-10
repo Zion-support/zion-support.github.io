@@ -9,24 +9,23 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const LoginPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const LoginPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+;
+const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+    }))};
+;
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
@@ -35,10 +34,9 @@ const LoginPage: React.FC = () => {
     
     setIsLoading(false);
     // Redirect to dashboard or home page
-    window.location.href = '/';
-  };
-
-  const features = [
+    window.location.href = '/'};
+;
+const features = [
     {
       icon: Shield,
       title: 'Secure Access',
@@ -57,7 +55,7 @@ $4}
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
@@ -92,10 +90,9 @@ $4}
                   </div>
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   emai,
   l: '',
@@ -108,18 +105,17 @@ $4}
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     setIsLoading(true);
@@ -127,14 +123,13 @@ $4}
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page;
-    window.location.href = '/';
-  };
+    window.location.href = '/'};
   const features = [
   // TOD,
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Shield,
@@ -144,7 +139,7 @@ $4}
   n: 'Bank-level security with multi-factor authentication'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: CheckCircle,
@@ -154,7 +149,7 @@ $4}
   n: 'Round-the-clock support for all your needs'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Phone,
@@ -167,7 +162,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
         <div className="max-w-6xl mx-auto px-4"></div>"
@@ -561,11 +556,10 @@ type="submit" disabled={isLoading}
       </div>
 
       <Footer />
-    </>
+    </React.Fragment>
 
     </div>
-  );
-};
+  )};
 
 
 export default LoginPage;

@@ -11,9 +11,8 @@ import Analytics from './components/Analytics';
 
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
-}) {
-  const structuredData = {
+  children: React.ReactNode}) {;
+const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -49,9 +48,8 @@ export default function RootLayout({
       postalCode: '19709',
       addressCountry: 'US',
     offers: [
-      {
-
-  const address = {
+      {;
+const address = {
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
@@ -60,7 +58,7 @@ export default function RootLayout({
     addressCountry: 'US',
     offers: [
   // TODO: Add items]
-      {// TODO: Add content;}
+      {// TODO: Add content}
 }
         '@type': 'Offer',
         category: 'AI Solutions',
@@ -80,8 +78,9 @@ $4}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
-geoRadiusgeoRadius: '1000000'
-    hasOfferCatalog: {
+geoRadiusgeoRadius: '1000000',
+    hasOfferCatalog:
+        hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [
@@ -177,12 +176,12 @@ $4]
   );
 
 export default RootLayout;
-        priceSpecification: {// TODO: Add content;}
+        priceSpecification: {// TODO: Add content}
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         };
-  itemOffered: {// TODO: Add content;}
+  itemOffered: {// TODO: Add content}
 }
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
@@ -190,7 +189,4 @@ export default RootLayout;
 
 
 
-export default SrcPage;
-
-
-}
+export default SrcPage}

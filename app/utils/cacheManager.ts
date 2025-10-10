@@ -10,7 +10,7 @@ export enum CacheStorage {}
 }
 
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds;
+  ttl?: number; // Time to live in milliseconds
 export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds
   storage?: CacheStorage;
@@ -70,8 +70,8 @@ export class CacheManager<T></T> {}
   /**
    * Set a value in the cache;
    */
-  set(key: string, value: T, ttl?: number): void {
-    const entry: CacheEntry<T></T> = {
+  set(key: string, value: T, ttl?: number): void {;
+const entry: CacheEntry<T></T> = {
       value;
   set(key: string, value: T, ttl?: number): void {}
     const entry: CacheEntry<T></T> = {}
@@ -87,58 +87,91 @@ export class CacheManager<T></T> {}
     if (this.config.storage !== CacheStorage.Memory) {
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
-      this.saveToStorage();
+<<<<<<< HEAD
+      this.saveToStorage()
 export enum CacheStorage {/* TODO: Fix JSX expression */});;)
-}
 export interface CacheOptions {/* TODO: Fix JSX expression */});;)
-}
 export interface CacheConfig {/* TODO: Fix JSX expression */});;)
-}
 export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});;)
-}
 export interface CacheStats {/* TODO: Fix JSX expression */});;)
-}
 export class CacheManager {/* TODO: Fix JSX expression */}
   s: 0 };
   constructor(confi)
-  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;)
-}
+  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;);
+=======
+      this.saveToStorage();
+export enum CacheStorage {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheOptions {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheConfig {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheStats {/* TODO: Fix JSX expression */});]
+    }
+export class CacheManager {/* TODO: Fix JSX expression */}
+  s: 0 };
+  constructor(confi)
+  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Start periodic cleanup of expired entries;
    */
-  private startCleanup(): void {/* TODO: Fix JSX expression */});;)
-}, 60 * 1000); // Run every minute});
+  private startCleanup(): void {/* TODO: Fix JSX expression */});]
+    }, 60 * 1000); // Run every minute});
 }
   /**
    * Stop cleanup interval;
    */
-  stopCleanup(): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  stopCleanup(): void {/* TODO: Fix JSX expression */});;);
+=======
+  stopCleanup(): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Remove expired entries;
    */
-  private cleanup(): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  private cleanup(): void {/* TODO: Fix JSX expression */});;);
     }
     // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});;)
-}
+    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});;);
             });;)
-} catch {/* TODO: Fix JSX expression */});;)
-}
-        });;)
-}
-      keysToRemove.forEach(key => localStorage.removeItem(key));)
-}
-    logger.debug('Cache cleanup completed');)
-}
+} catch {/* TODO: Fix JSX expression */});;);
+        });;);
+      keysToRemove.forEach(key => localStorage.removeItem(key)););
+    logger.debug('Cache cleanup completed'););
+=======
+  private cleanup(): void {/* TODO: Fix JSX expression */});]
+    }
+    }
+    // Clean localStorage;
+    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});]
+    }
+            });]
+    } catch {/* TODO: Fix JSX expression */});]
+    }
+        });]
+    }
+      keysToRemove.forEach(key => localStorage.removeItem(key))]
+    }
+    logger.debug('Cache cleanup completed')]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Check if cache entry is expired;
    */
   private isExpired(entr)
-  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});;);
+=======
+  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get storage key with prefix;
    */
@@ -152,25 +185,36 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   set<T></T>(ke,
   y: string, valu,
   e: T, option)
-  s: { ttl?: number } = {});: void {/* TODO: Fix JSX expression */});;)
-};`
+  s: { ttl?: number } = {});: void {/* TODO: Fix JSX expression */});]
+    };`
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.LocalStorage &&
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
+<<<<<<< HEAD
     ) {/* TODO: Fix JSX expression */});;)
-} catch (error) {/* TODO: Fix JSX expression */});;)
-}
+} catch (error) {/* TODO: Fix JSX expression */});;);
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
     ) {/* TODO: Fix JSX expression */});;)
-} catch (error) {/* TODO: Fix JSX expression */});;)
-}
-    });;)
-}
+} catch (error) {/* TODO: Fix JSX expression */});;);
+    });;);
+=======
+    ) {/* TODO: Fix JSX expression */});]
+    } catch (error) {/* TODO: Fix JSX expression */});]
+    }
+    } else if (this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+      window.sessionStorage}
+    ) {/* TODO: Fix JSX expression */});]
+    } catch (error) {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get a value from the cache;
    */
@@ -203,21 +247,31 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
     let,
   entry: CacheEntry<T></T> | null = null;
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.LocalStorage &&
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      } catch (error) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+    ) {/* TODO: Fix JSX expression */});;);
+      } catch (error) {/* TODO: Fix JSX expression */});;);
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      } catch (error) {/* TODO: Fix JSX expression */});;)
-}
+    ) {/* TODO: Fix JSX expression */});;);
+      } catch (error) {/* TODO: Fix JSX expression */});;);
+=======
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      } catch (error) {/* TODO: Fix JSX expression */});]
+    }
+    } else if (this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+      window.sessionStorage}
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      } catch (error) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
     if (!entry) {/* TODO: Fix JSX expression */}`
       performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
@@ -275,35 +329,52 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    * Check if key exists and is not expired;
    */
   has(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  y: string): boolean {/* TODO: Fix JSX expression */});;);
+=======
+  y: string): boolean {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Delete a cache entry;
    */
   delete(ke)
-  y: string): void {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.LocalStorage &&
+  y: string): void {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.SessionStorage &&
+    ) {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+    ) {/* TODO: Fix JSX expression */});;);
+=======
+    ) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Clear all cache entries;
    */
-  clear(): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  clear(): void {/* TODO: Fix JSX expression */});;);
     if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      });;)
-}
+    ) {/* TODO: Fix JSX expression */});;);
+      });;);
+=======
+  clear(): void {/* TODO: Fix JSX expression */});]
+    }
+    if (this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+      window.localStorage}
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return deleted});
 }
 
@@ -318,17 +389,25 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.config.storage !== CacheStorage.Memory) {
     // Clear persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
-      this.clearStorage();)
-}
+<<<<<<< HEAD
+      this.clearStorage(););
+=======
+      this.clearStorage()]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
    * Get all keys in the cache;
    */
   keys(): string[] {}
-    return Array.from(this.cache.keys());)
-}
+<<<<<<< HEAD
+    return Array.from(this.cache.keys()););
+=======
+    return Array.from(this.cache.keys())]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get cache statistics;
    */
@@ -357,24 +436,36 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      });;)
-}
+<<<<<<< HEAD
+    ) {/* TODO: Fix JSX expression */});;);
+      });;);
+=======
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      });]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.stats.entries = this.cache.size;
 
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
-      this.saveToStorage();)
-}
+<<<<<<< HEAD
+      this.saveToStorage(););
+    return cleaned;
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */});
+  e: this.storage });;);
+=======
+      this.saveToStorage()]
+    }
 
     return cleaned;
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */});
-  e: this.storage });;)
-}
+  e: this.storage });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get or set with function (handles both sync and async)
    */
@@ -384,16 +475,27 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   n: () => T | Promise<T></T>,
     option,
   s: { ttl?: number } = {}
-  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});;);
+const start = performance.now();
+const value = fn();
+const duration = performance.now() - start;`
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+    // Handle both sync and async values;
+    if (value instanceof Promise) {/* TODO: Fix JSX expression */});;)
+});;);
+=======
+  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});]
+    }
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     // Handle both sync and async values;
-    if (value instanceof Promise) {/* TODO: Fix JSX expression */});;)
-});;)
-}
+    if (value instanceof Promise) {/* TODO: Fix JSX expression */});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.set(key, value, options);
     return value});
 }
@@ -412,11 +514,18 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   n: () => Promise<T></T> | T,
     option,
   s: { ttl?: number } = {}
-  ): Promise<T></T> {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  ): Promise<T></T> {/* TODO: Fix JSX expression */});;);
+const start = performance.now();
+const value = await fn();
+const duration = performance.now() - start;`
+=======
+  ): Promise<T></T> {/* TODO: Fix JSX expression */});]
+    }
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     this.set(key, value, options);
     return value});
@@ -442,8 +551,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   /**
    * Get cache statistics;
    */
-  getStatistics(): CacheStats {/* TODO: Fix JSX expression */});;)
-}});
+  getStatistics(): CacheStats {/* TODO: Fix JSX expression */});]
+    }});
 }
 
   /**
@@ -459,10 +568,15 @@ export class CacheManager {/* TODO: Fix JSX expression */}
           entries: Object.fromEntries(this.cache),
           stats: this.stats;
           timestamp: Date.now();;
-        storage.setItem('cache-manager', JSON.stringify(data));)
-}
-    } catch (error) {});;)
-}
+<<<<<<< HEAD
+        storage.setItem('cache-manager', JSON.stringify(data)););
+    } catch (error) {});;);
+=======
+        storage.setItem('cache-manager', JSON.stringify(data))]
+    }
+    } catch (error) {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
@@ -480,19 +594,27 @@ export class CacheManager {/* TODO: Fix JSX expression */}
           this.cache = new Map(Object.entries(parsed.entries || {}););
           this.stats = { ...this.stats, ...parsed.stats }});
 }
-      });;)
-} catch (error) {}
+      });]
+    } catch (error) {}
    * Get cache count;
    */
+<<<<<<< HEAD
   getStats(): {/* TODO: Fix JSX expression */});;)
-} {/* TODO: Fix JSX expression */});;)
-}
-        });;)
-}
-      if (window.sessionStorage) {/* TODO: Fix JSX expression */});;)
-}
-        });;)
-}
+} {/* TODO: Fix JSX expression */});;);
+        });;);
+      if (window.sessionStorage) {/* TODO: Fix JSX expression */});;);
+        });;);
+=======
+  getStats(): {/* TODO: Fix JSX expression */});]
+    } {/* TODO: Fix JSX expression */});]
+    }
+        });]
+    }
+      if (window.sessionStorage) {/* TODO: Fix JSX expression */});]
+    }
+        });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
@@ -504,10 +626,15 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     try {}
       const storage = this.getStorage();
       if (storage) {}
-        storage.removeItem('cache-manager');)
-}
-    } catch (error) {});;)
-}
+<<<<<<< HEAD
+        storage.removeItem('cache-manager'););
+    } catch (error) {});;);
+=======
+        storage.removeItem('cache-manager')]
+    }
+    } catch (error) {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
@@ -526,17 +653,23 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       default:,
         return null});
 }
-  });;)
-}
+<<<<<<< HEAD
+  });;);
+// Create singleton instances for different use cases
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
+=======
+  });]
+    }
 
 // Create singleton instances for different use cases;
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const localStorageCache = new CacheManager({)
   storage: CacheStorage.LocalStorage),
-  defaultTTL: 30 * 60 * 1000 // 30 minutes;
+  defaultTTL: 30 * 60 * 1000 // 30 minutes
 export const sessionStorageCache = new CacheManager({)
   storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour;
+  defaultTTL: 60 * 60 * 1000 // 1 hour
 export const localStorageCache = new CacheManager({);
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
@@ -546,11 +679,11 @@ export const sessionStorageCache = new CacheManager({);
   defaultTTL: 60 * 60 * 1000 // 1 hour
 
 export default CacheManager;
-    return {/* TODO: Fix JSX expression */});;)
-}});
+    return {/* TODO: Fix JSX expression */});]
+    }});
 }
 }
-export const cacheManager = new CacheManager();
+export const cacheManager = new CacheManager()
 export default CacheManager;
 `
 }

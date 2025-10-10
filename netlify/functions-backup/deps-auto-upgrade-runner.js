@@ -1,5 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // console.log('deps-auto-upgrade-runner function triggered')}
+//     // // console.log removed for production
+}
     // Dependency auto-upgrade simulation;
     const result = {
       statusCode: 200;
@@ -8,8 +9,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Dependency auto-upgrade runner executed successfully)
+<<<<<<< HEAD
+        timestamp: new Date().toISOString();
+function: 'deps-auto-upgrade-runner'
+=======
         timestamp: new Date().toISOString()
-        function: 'deps-auto-upgrade-runner'
+        function: 'deps-auto-upgrade-runner',
+        source:
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         upgrade: {,
           status: 'checking',
@@ -24,8 +31,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   k: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in deps-auto-upgrade-runner: ') error;
-      }
+//   } catch (error) {// // console.error removed for production
+error}
     return {
       statusCode: 500;
       headers: {,
@@ -33,8 +40,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),
-        function: 'deps-auto-upgrade-runner'}
+        message: error.message),;
+function: 'deps-auto-upgrade-runner'}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
@@ -43,22 +50,20 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'deps-auto-upgrade-runner'})
-      });
-    };
-  }
+      })}}
 };
         timestamp: new Date().toISOString(),' function: 'deps-auto-upgrade-runner',' source: event.source || 'unknown', upgrade: {' status: 'checking', dependencies: 0, updatesAvailable: 0;
-        lastCheck: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in deps-auto-upgrade-runner: ') error;
-      } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'deps-auto-upgrade-runner' }) }; } };'
+        lastCheck: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'deps-auto-upgrade-runner' }) }} };'
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'deps-auto-upgrade-runner',' sourc,
   e: event.source || 'unknown', upgrad,
   e: {/* TODO: Fix JSX expression */}
-  k: new Date().toISOString() } }) }; return result; } catch (error) {/* TODO: Fix JSX expression */}
+  k: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
       } return {/* TODO: Fix JSX expression */}
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'deps-auto-upgrade-runner' }) }; } };'
+  n: 'deps-auto-upgrade-runner' }) }} };'

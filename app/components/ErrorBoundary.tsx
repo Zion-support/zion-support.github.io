@@ -15,8 +15,8 @@ interface State {
   errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {;
+constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
@@ -41,8 +41,8 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+      // console.error removed for production
+}
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -57,8 +57,8 @@ class ErrorBoundary extends Component<Props, State> {
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
-    const errorData = {
+    // like Sentry, LogRocket, or Bugsnag;
+const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -68,16 +68,15 @@ class ErrorBoundary extends Component<Props, State> {
     };
 
     // Example: Send to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
     }
 
-    console.error('Error logged:', errorData);
-  };
+    // console.error removed for production
+};
 
   handleRetry = () => {
     this.setState({
@@ -86,7 +85,7 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null
     });
   };
-
+  
   handleGoHome = () => {
     window.location.href = '/';
   };
@@ -129,20 +128,16 @@ class ErrorBoundary extends Component<Props, State> {
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.error.stack}
                       </pre>
-                    </div>
-                  )}
+                    </div>);
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>
-                  )}
+                    </div>);
                 </div>
-              </details>
-            )}
-
+              </details>);
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={this.handleRetry}
@@ -173,12 +168,8 @@ class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
           </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
+        </div>);
+    return this.props.children}
 }
 
 export default ErrorBoundary;

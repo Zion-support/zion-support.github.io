@@ -2,11 +2,11 @@
 export const analyticsUtils = {
   // Performance monitoring;
   measurePerformance: () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const _navigation = performance.getEntriesByType('navigation')[0];
+    if (typeof window !== 'undefined' && 'performance' in window) {;
+const _navigation = performance.getEntriesByType('navigation')[0];
       const _paint = performance.getEntriesByType('paint');
-
-      const metrics = {
+;
+const metrics = {
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
@@ -15,14 +15,12 @@ export const analyticsUtils = {
 export const analyticsUtils = {/* TODO: Fix JSX expression */}
       };
 
-      return metrics;
-    }
-    return null;
-  },
+      return metrics}
+    return null},
 
   // Error tracking;
-  trackError: (error, context = {}) => {
-    const errorData = {
+  trackError: (error, context = {}) => {;
+const errorData = {
       message: error.message;
       stack: error.stack;
       url: window.location.href;
@@ -35,12 +33,11 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
 
     // Send to analytics service;
     //     // You can integrate with services like Sentry, LogRocket, etc.
-    return errorData;
-  },
+    return errorData},
 
   // User behavior tracking;
-  trackUserInteraction: (action, element, metadata = {}) => {
-    const interactionData = {
+  trackUserInteraction: (action, element, metadata = {}) => {;
+const interactionData = {
       action,
       element: element.tagName?.toLowerCase() || 'unknown'
       id: element.id || null;
@@ -52,8 +49,7 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
     };
 
-    //     return interactionData;
-  },
+    //     return interactionData},
 
   // Core Web Vitals;
   measureCoreWebVitals: () => {,
@@ -67,6 +63,5 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
   }};

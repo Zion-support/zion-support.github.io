@@ -11,18 +11,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 
     };
-    this.maxRetries = props.maxRetries || 3;
-  }
+    this.maxRetries = props.maxRetries || 3}
 
 
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}`
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCoun,
-  t: 0;
-
-    };
-  }
+  t: 0}}
 
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -51,8 +47,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   };
 
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-      }));
-    }
+      }))}
     // Enhanced error reporting logic;
     const errorReport = {/* TODO: Fix JSX expression */}
     };
@@ -66,21 +61,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   s: {// 'Content-Type': 'application/json'},
       //   bod,
   y: JSON.stringify(errorReport)
-      // });
-    } catch (reportingError) {/* TODO: Fix JSX expression */}
+      // })} catch (reportingError) {/* TODO: Fix JSX expression */}
     }
   };
   private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
   };
   private getSessionId = (): string => {/* TODO: Fix JSX expression */}`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
+      sessionStorage.setItem('sessionId', sessionId)}
+    return sessionId};
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
-  };
+  o: undefined })};
 
   private handleReload = () => {/* TODO: Fix JSX expression */}
   };
@@ -90,12 +81,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {/* TODO: Fix JSX expression */}
-          }, 2000);
-        }
+          }, 2000)}
       })
       .catch(() => {/* TODO: Fix JSX expression */}
-      });
-  };
+      })};
 
   render() {/* TODO: Fix JSX expression */}
       }
@@ -115,8 +104,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
 
       }
-
-      const { retryCount, error, errorId } = this.state;
+;
+const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
 
 
@@ -171,11 +160,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             )}
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default EnhancedErrorBoundary;

@@ -1,7 +1,6 @@
 import React from 'react';
-
-const SitemapPage: React.FC = () => {
-  const pages = [
+;
+const SitemapPage: React.FC = () => {const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -26,13 +25,12 @@ const SitemapPage: React.FC = () => {
     { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ];
+    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
 
   return (
-    <div></div>
-      <div></div>
-        <div></div>
+    <div>
+      <div>
+        <div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
             Sitemap</h1>
           </h1>
@@ -41,10 +39,10 @@ const SitemapPage: React.FC = () => {
           </p>
         </div>
 
-        <div></div>
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {pages.map((page, index) => (</div>
-              <div></div>
+              <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
                   <a 
                     href={page.path} 
@@ -64,14 +62,14 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
 
-        <div></div>
+        <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
             Need Help Finding Something?
           </h2>
           <p className="text-gray-600 mb-6"></p>
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
-          <div></div>
+          <div>
             <a 
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
@@ -88,7 +86,11 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );)
-};
+=======
+  )]
+    };
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default SitemapPage;

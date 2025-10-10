@@ -293,15 +293,14 @@ isMenuOp, e, n && (
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e;}
+<div, ke, y={it, e, m.na, m, e}
 }>
                   <Li, n, k;
 <div, className="m
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e;
-}></div>
+<div, ke, y={it, e, m.na, m, e}></div>
                   <Li, n, k
   to={it, e, m.hr, e, f}
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;
@@ -364,6 +363,5 @@ isMenuOp, e, n && (
         )}
       </d, i, v>
     </head, e, r>
-  );
-};
+  )};
 export default ModernHeader;"

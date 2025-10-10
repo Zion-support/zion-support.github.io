@@ -6,6 +6,5 @@ export default function ImplementationGuide() {
 export default function ImplementationGuide() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">{/* Header */}</div>)
-  );
-}
+  )}
 "

@@ -4,9 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
-
-const CloudServicesPage: React.FC = () => {
-  const features = [
+const CloudServicesPage: React.FC = () => {const features = [
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -28,8 +26,7 @@ const CloudServicesPage: React.FC = () => {
       description: 'Worldwide cloud deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Scalable cloud infrastructure',
     'Enterprise-grade security',
     '24/7 monitoring and support',
@@ -41,7 +38,6 @@ const CloudServicesPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
@@ -64,6 +60,7 @@ const CloudServicesPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your business with our comprehensive cloud services and AI-powered solutions.
               </p>
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -97,12 +94,11 @@ const CloudServicesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -115,7 +111,7 @@ const CloudServicesPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -130,7 +126,7 @@ const CloudServicesPage: React.FC = () => {
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -160,6 +156,7 @@ const CloudServicesPage: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 =======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -231,11 +228,12 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
-};
-
+}
 export default CloudServicesPage;
+    </div>)
+export default PagePage;

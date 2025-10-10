@@ -9,9 +9,8 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
-}
-
+  structuredData?: object}
+;
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
@@ -21,11 +20,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
-  const defaultStructuredData = {
+}) => {;
+const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+;
+const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -88,10 +87,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData);
       </script>
-    </Helmet>
-  );
-};
-
+    </Helmet>)
 export default SEOHead;

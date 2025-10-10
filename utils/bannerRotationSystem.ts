@@ -24,17 +24,15 @@ interface BannerImpression {/* TODO: Fix JSX expression */}
 const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance;
 /**
  * Get or create session ID;
- */
+ */;
 const getSessionId = (): string => {/* TODO: Fix JSX expression */}
     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    sessionStorage.setItem(SESSION_KEY, sessionId);
-  }
-  return sessionId;
-};
+    sessionStorage.setItem(SESSION_KEY, sessionId)}
+  return sessionId};
 
 /**
  * Get stored impressions;
- */
+ */;
 const getStoredImpressions = (): BannerImpression[] => {/* TODO: Fix JSX expression */}
   } catch {/* TODO: Fix JSX expression */}
   }
@@ -42,11 +40,10 @@ const getStoredImpressions = (): BannerImpression[] => {/* TODO: Fix JSX express
 
 /**
  * Store impressions;
- */
+ */;
 const storeImpressions = (impressions: BannerImpression[]): void => {,
   try {,
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
-  } catch {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions))} catch {
     // Silently fail if localStorage is not available;
 const storeImpressions = (impression)
   s: BannerImpression[]): void => {/* TODO: Fix JSX expression */}
@@ -60,16 +57,20 @@ const storeImpressions = (impression)
 export const recordBannerImpression = (
   impression: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
 ) => {
+return (
+
   if (typeof window === 'undefined') return;
 
-  try {
-    const _impressions = getStoredImpressions();
+  try {;
+const _impressions = getStoredImpressions();
     const newImpression: BannerImpression = {
       ...impression;
       timestamp: Date.now(),
       sessionId: getSessionId(),
 export const recordBannerImpression = (impressio,
-  n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>)
+  n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
+);
+})
 ) => {/* TODO: Fix JSX expression */}
     };
 
@@ -77,8 +78,7 @@ export const recordBannerImpression = (impressio,
 
     // Keep only last 1000 impressions to prevent storage bloat;
     //     const trimmedImpressions = impressions.slice(-1000);
-    storeImpressions(trimmedImpressions);
-  } catch (error) {/* TODO: Fix JSX expression */}
+    storeImpressions(trimmedImpressions)} catch (error) {/* TODO: Fix JSX expression */}
     //     }
 };
 
@@ -93,28 +93,32 @@ export const getBannerImpressionCount = (bannerI,
 /**
  * Check if banner should be shown based on impression limits;
  */
-export const shouldShowBanner = (banner: BannerConfig): boolean => {,
+export const shouldShowBanner = (banner: BannerConfig): boolean => {
+return (
+,
   if (!banner.maxDailyImpressions) return true;
 ,
   //   const todayImpressions = getBannerImpressionCount(banner.id, 24);
   return todayImpressions < banner.maxDailyImpressions;
 export const shouldShowBanner = (banne)
-  r: BannerConfig): boolean => {/* TODO: Fix JSX expression */}
+  r: BannerConfig): boolean =>
+);
+} {/* TODO: Fix JSX expression */}
 };
 
 /**
  * Calculate banner score for rotation;
  */
-export const calculateBannerScore = (banner: BannerConfig): number => {
-  const _impressions = getStoredImpressions();
+export const calculateBannerScore = (banner: BannerConfig): number => {;
+const _impressions = getStoredImpressions();
   const _bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
 
   // Calculate engagement rate;
   //   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
   //   const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0;
 
-  // Calculate recency score (more recent impressions = higher score)
-  const recentImpressions = bannerImpressions.filter()
+  // Calculate recency score (more recent impressions = higher score);
+const recentImpressions = bannerImpressions.filter()
     imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000;
   );
   //   const recencyScore = Math.min(1, recentImpressions.length / 10);
@@ -153,14 +157,13 @@ export const selectBannersForRotation = (allBanner,
   scoredBanners.sort((a, b) => b.score - a.score);
 
   // Take top N banners;
-  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
-};
+  return scoredBanners.slice(0, maxBanners).map(item => item.banner)};
 
 /**
  * Get banner analytics;
  */
-export const getBannerAnalytics = (bannerId?: string) => {
-  const _impressions = getStoredImpressions();
+export const getBannerAnalytics = (bannerId?: string) => {;
+const _impressions = getStoredImpressions();
   const bannerImpressions = bannerId;
     ? impressions.filter(imp => imp.bannerId === bannerId)
     : impressions;
@@ -195,8 +198,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
       imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000;
     ).length;
 export const getBannerAnalytics = (bannerId?: string) => {/* TODO: Fix JSX expression */}
-  };
-};
+  }};
 
 /**
  * Clear old impressions;

@@ -9,11 +9,10 @@ import fs from 'fs';
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
-//   process.exit(1);
-}
+//   process.exit(1)}
 
 //Step 2: Get all branches that might need merging;
-// //Get recent branches (last 7 days),
+// //Get recent branches (last 7 days),;
 const recentBranches = execSync()
   'git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)"',
   { encoding: 'utf8' }
@@ -28,7 +27,7 @@ const recentBranches = execSync()
 
 //Step,
   2: Get all branches that might need merging;
-// //Get recent branches (last 7 days)
+// //Get recent branches (last 7 days);
 const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdat)
   e:short) %(refnam,")
   e:short)"',
@@ -44,8 +43,7 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
   .map(line => {)
     return {)
       date: parts[0]),
-      branch: parts[1].replace('origin/', '')};
-  })
+      branch: parts[1].replace('origin/', '')}})
   .filter(item => {)
 //     const branchDate = new Date(item.date);
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
@@ -89,24 +87,21 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   g: 'utf8' })
     ).trim();
     if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */}
-  d: 'already_merged' };
-    }
+  d: 'already_merged' }}
 
     //Try to merge;
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
       );
-//       return { success: true, method: 'direct' };
-    } catch (mergeError) {
+//       return { success: true, method: 'direct' }} catch (mergeError) {
 //       //Try different conflict resolution strategies;
       try {
         //Strategy 1: Use theirs;
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
         );
-//         return { success: true, method: 'theirs' };
-      } catch (theirsError) {
+//         return { success: true, method: 'theirs' }} catch (theirsError) {
         try {
           //Strategy 2: Use ours;
           execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)
@@ -117,29 +112,24 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
 //       return {/* TODO: Fix JSX expression */}
-  d: 'direct' };
-    } catch (mergeError) {/* TODO: Fix JSX expression */}"`
+  d: 'direct' }} catch (mergeError) {/* TODO: Fix JSX expression */}"`
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           {/* TODO: Fix JSX expression */}
   o: 'inherit' }
         );
 //         return {/* TODO: Fix JSX expression */}
-  d: 'theirs' };
-      } catch (theirsError) {/* TODO: Fix JSX expression */}"`
+  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}"`
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'ours' };
-        } catch (oursError) {/* TODO: Fix JSX expression */}
-  d: 'failed' };
-        }
+  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
+  d: 'failed' }}
       }
     }
   } catch (error) {/* TODO: Fix JSX expression */}
-  d: 'not_found' };
-  }
+  d: 'not_found' }}
 }
 
 //Step 4: Process branches in batches;
@@ -179,8 +169,7 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
         success: true),
         method: result.method)});
       results.summary.successful++;
-      results.summary.methods[result.method]++;
-    } else {
+      results.summary.methods[result.method]++} else {
       results.failed.push({)
         branch: branch;),
         success: false),
@@ -188,12 +177,10 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
   for (const branch of batchBranches) {/* TODO: Fix JSX expression */}
       });
       results.summary.successful++;
-      results.summary.methods[result.method]++;
-    } else {/* TODO: Fix JSX expression */}
+      results.summary.methods[result.method]++} else {/* TODO: Fix JSX expression */}
       });
       results.summary.failed++;
-      results.summary.methods[result.method]++;
-    }
+      results.summary.methods[result.method]++}
   }
 
   //Push changes after each batch;

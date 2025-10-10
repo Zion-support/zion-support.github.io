@@ -1,5 +1,9 @@
 const, October2025NewTechBannerMeg, a = () => {
+return (
+
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
+);
+}
       {/* Animated, Background, Effects */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
@@ -467,7 +471,6 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)
-  );
-};
+  )};
 export default October2025NewTechBannerMega;
 ;"

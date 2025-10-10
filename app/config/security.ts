@@ -13,17 +13,14 @@ export const securityHeaders = {
         "'unsafe-inline'",
         "'unsafe-eval'",
         'https://www.googletagmanager.com',
-        'https://www.google-analytics.com',
-      ],
+        'https://www.google-analytics.com'],
       styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
       imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
-      upgradeInsecureRequests: true,
-    },
-  },
+      upgradeInsecureRequests: true}},
 
   // Security Headers
   headers: {
@@ -33,9 +30,7 @@ export const securityHeaders = {
     'X-Frame-Options': 'SAMEORIGIN',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-  },
-};
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'}};
 
 /**
  * Rate limiting configuration
@@ -43,8 +38,7 @@ export const securityHeaders = {
 export const rateLimitConfig = {
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
-  message: 'Too many requests from this IP, please try again later.',
-};
+  message: 'Too many requests from this IP, please try again later.'};
 
 /**
  * CORS configuration
@@ -68,60 +62,47 @@ export const sessionConfig = {
     secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours
-    sameSite: 'strict' as const,
-  },
-};
+    sameSite: 'strict' as const}};
 
 /**
  * Input validation patterns
  */
 export const validationPatterns = {
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
-  noSpecialChars: /^[a-zA-Z0-9\s]+$/,
-};
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/};
 
 /**
  * Sanitize user input
  */
 export function sanitizeInput(input: string): string {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<React.Fragment>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
-}
-
 /**
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email);
-}
-
 /**
  * Validate URL
  */
 export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url);
-}
-
 /**
  * Generate secure token
  */
 export function generateSecureToken(length: number = 32): string {if (typeof window !== 'undefined' && window.crypto) {
-    window.crypto.getRandomValues(array);
-  } else {
+    window.crypto.getRandomValues(array)} else {
     // Fallback for non-browser environments
     for (let i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
-    }
   }
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-}
-
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
 export default {
   securityHeaders,
   rateLimitConfig,
@@ -131,5 +112,4 @@ export default {
   sanitizeInput,
   validateEmail,
   validateUrl,
-  generateSecureToken,
-};
+  generateSecureToken};

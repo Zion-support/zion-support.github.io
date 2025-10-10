@@ -8,8 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, EdgeComputingA, I: Rea, c, t.FC = () => {
-  const, feature, s = [
+const, EdgeComputingA, I: Rea, c, t.FC = () => {;
+const, feature, s = [
     {
       i, c, o;
   n: C, p, u;
@@ -76,8 +76,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Standard, protocol, s"
         "Cloud, backup, integration"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
     {
       na, m, e: "Edge, Professiona, l"
       pri, c, e: "$5,9, 9, 9"
@@ -95,8 +94,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Custom, model, training"
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e}
     {
       na, m, e: "Edge, Enterpris, e"
       pri, c, e: "$15,9, 9, 9"
@@ -132,8 +130,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Standard, protocol, s",";
         "Cloud, backup, integration"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
     {
       na, m, e: "Edge, Professiona, l",";
       pri, c, e: "$5,9, 9, 9",";
@@ -151,8 +148,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Custom, model, training",";
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e}
     {
       na, m, e: "Edge, Enterpris, e",";
       pri, c, e: "$15,9, 9, 9",";
@@ -172,8 +168,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "SLA, guarante, e",";
         "Traini, n, g & consultati, o, n"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
   ];
   const, testimonial, s = [
     {
@@ -234,20 +229,17 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Industrial, Io, T",";
       ic, o, n: Monit, o, r;
       descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.",";
-      benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]";
-    }
+      benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"}
     {
       tit, l, e: "Smart, Citie, s",";
       ic, o, n: Glo, b, e;
       descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.",";
-      benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]";
-    }
+      benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"}
     {
       tit, l, e: "Healthca, r, e",";
       ic, o, n: Smartpho, n, e;
       descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.",";
-      benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]";
-    }
+      benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"}
     {
       tit, l, e: "Reta, i, l & Commer, c, e",";
       ic, o, n: Databa, s, e;
@@ -326,13 +318,13 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications." /><meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai/>"
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
         <me, t, a;"
@@ -574,15 +566,23 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = useCa, s, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = useCa, s, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -591,9 +591,13 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
+return (
+;
+const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0" />";
                     </d, i, v>
@@ -634,8 +638,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -730,8 +733,12 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -745,17 +752,25 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-te, a, l-6, 0, 0" />";
                     </d, i, v>
@@ -788,8 +803,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -877,7 +891,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-te, a, l-600, tex, t-white, hove, r: bg-te, a, l-7, 0, 0'
 ? 'bg-te, a, l-600, tex, t-white, hov, e;
-  r: bg-te, a, l-7, 0, 0',';}
+  r: bg-te, a, l-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -1037,8 +1051,6 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
-  );
-};
-export default EdgeComputingAI;
-}}}}"`
+    </React.Fragment>
+  )};
+export default EdgeComputingAI}}}}"`

@@ -3,12 +3,12 @@ import { glob } from 'glob';
 
 // Function to remove console.log statements from a file;
 function removeConsoleLogs(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let _content = fs.readFileSync(filePath, 'utf8');
     let _modified = false;
     
-    // Remove console.log statements (but keep console.error and console.warn for debugging)
-    const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
+    // Remove console.log statements (but keep console.error and console.warn for debugging);
+const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
     const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;
     
 //     const originalContent = content;
@@ -21,8 +21,7 @@ function removeConsoleLogs(filePath) {
 function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 //       }
     
-    return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return modified} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -34,12 +33,12 @@ async function processFiles() {/* TODO: Fix JSX expression */}
     'src/**/*.{ts,tsx,js,jsx}',
     'app/**/*.{ts,tsx,js,jsx}'
   ];
-  
-  let _totalFiles = 0;
+  ;
+let _totalFiles = 0;
   let _modifiedFiles = 0;
   
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { )
+  for (const pattern of patterns) {;
+const files = await glob(pattern, { )
       ignore: [)
         '**/node_modules/**')
         '**/dist/**')
@@ -52,15 +51,13 @@ async function processFiles() {/* TODO: Fix JSX expression */}
     files.forEach(file => {)
       totalFiles++;)
       if (removeConsoleLogs(file)) {
-        modifiedFiles++;
-      }
+        modifiedFiles++}
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
     });
     
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
-    });
-  });
+    })});
   
 //   //   //   }
 

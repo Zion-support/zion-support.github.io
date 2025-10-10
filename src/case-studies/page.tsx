@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+const CaseStudiesPage: React.FC = () => {;
+const caseStudies = [
     {
       id: 1,
       title: 'E-commerce Platform Transformation',
@@ -69,7 +69,7 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
@@ -218,7 +218,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 export default CaseStudiesPage;

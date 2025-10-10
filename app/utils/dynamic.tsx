@@ -8,8 +8,8 @@ interface DynamicOptions {}
 }
 export function dynamic<T extends ComponentType<unknown></unknown>>(</<<<T>importFunc</T>: () => Promise<{ default: T }>,
   options: DynamicOptions = {}
-): ComponentType<unknown></unknown>{
-  const LazyComponent = lazy(importFunc)</unknown>
+): ComponentType<unknown></unknown>{;
+const LazyComponent = lazy(importFunc)</unknown>
   return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div></Suspens>Loading...</Suspense>}>
 ): ComponentType<unknown></unknown> {}
   const LazyComponent = lazy(importFunc)
@@ -29,6 +29,10 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
     <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
       <LazyComponent></LazyComponent>
     </Suspense>
+<<<<<<< HEAD
   );)
-}
+=======
+  )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default dynamic;

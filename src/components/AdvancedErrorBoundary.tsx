@@ -5,13 +5,11 @@ interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string | null;
-}
+  errorId: string | null}
 
 interface ErrorBoundaryProps {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode}
 
 interface ErrorReport {
   errorId: string | null;
@@ -23,27 +21,24 @@ interface ErrorReport {
   errorBoundary: string;
   errorTimestamp: string;
   errorUserAgent: string | null;
-  errorUrl: string | null;
-}
+  errorUrl: string | null}
 
-class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
+constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null
-    };
-  }
+    }}
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
+    }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -54,18 +49,17 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      // console.error removed for production
+}
 
     // Send error report in production
     if (process.env.NODE_ENV === 'production') {
-      this.reportError(error, errorInfo);
-    }
+      this.reportError(error, errorInfo)}
   }
 
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      const errorReport: ErrorReport = {
+    try {;
+const errorReport: ErrorReport = {
         errorId: this.state.errorId,
         error,
         errorInfo,
@@ -82,13 +76,10 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       await fetch('/api/error-report', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
-    } catch (reportError) {
-      console.error('Failed to report error:', reportError);
-    }
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(errorReport)})} catch (reportError) {
+      // console.error removed for production
+}
   };
 
   private handleRetry = () => {
@@ -97,20 +88,17 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       error: null,
       errorInfo: null,
       errorId: null
-    });
-  };
+    })};
 
   private handleReload = () => {
     if (typeof window !== 'undefined') {
-      window.location.reload();
-    }
+      window.location.reload()}
   };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -163,11 +151,9 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             )}
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default AdvancedErrorBoundary;

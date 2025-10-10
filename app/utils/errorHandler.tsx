@@ -4,7 +4,7 @@
  * Comprehensive error handling utilities for React applications;
  */
 import React, { ErrorInfo, useCallback } from 'react';
-// Error types;
+// Error types
 export enum ErrorType {
 // Error types
 export enum ErrorType {}
@@ -18,7 +18,7 @@ export enum ErrorType {}
   CLIENT = 'CLIENT',
   UNKNOWN = 'UNKNOWN'});
 }
-// Error severity levels;
+// Error severity levels
 export enum ErrorSeverity {
 // Error severity levels
 export enum ErrorSeverity {}
@@ -27,7 +27,7 @@ export enum ErrorSeverity {}
   HIGH = 'HIGH',
   CRITICAL = 'CRITICAL'});
 }
-// Error interface;
+// Error interface
 export interface AppError {
   id: string;,
     type: ErrorType,
@@ -49,7 +49,7 @@ export interface AppError {}
   context?: Record<stri></stri>;</<<<stri></stri>resolved</strin>?: boolean;
   retryCount?: number});
 }
-// Error handler configuration;
+// Error handler configuration
 export interface ErrorHandlerConfig {
   enableLogging: boolean;,
     enableReporting: boolean,
@@ -85,7 +85,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
   enableConsoleLogging: true,
   enableNetworkLogging: true,
   logLevel: 'error'
-// Default configuration;
+// Default configuration
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
   enableLogging: true,
   enableReporting: true,
@@ -96,7 +96,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
   logLevel: 'error'};
-// Error Handler class;
+// Error Handler class
 export class ErrorHandler {
 // Error Handler class
 export class ErrorHandler {}
@@ -110,31 +110,50 @@ export class ErrorHandler {}
   static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler(config);
+<<<<<<< HEAD
+// Error types
+export enum ErrorType {/* TODO: Fix JSX expression */});;);
+// Error severity levels
+export enum ErrorSeverity {/* TODO: Fix JSX expression */});;);
+// Error interface
+export interface AppError {/* TODO: Fix JSX expression */});;);
+// Error handler configuration
+export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */});;);
+// Default configuration
+export const,
+  defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */});;);
+// Error Handler class
+=======
 // Error types;
-export enum ErrorType {/* TODO: Fix JSX expression */});;)
-}
+export enum ErrorType {/* TODO: Fix JSX expression */});]
+    }
 // Error severity levels;
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
-}
+export enum ErrorSeverity {/* TODO: Fix JSX expression */});]
+    }
 // Error interface;
-export interface AppError {/* TODO: Fix JSX expression */});;)
-}
+export interface AppError {/* TODO: Fix JSX expression */});]
+    }
 // Error handler configuration;
-export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */});;)
-}
+export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */});]
+    }
 // Default configuration;
 export const,
-  defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */});;)
-};
+  defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */});]
+    };
 // Error Handler class;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export class ErrorHandler {/* TODO: Fix JSX expression */}
   t: number }> = [];
   constructor(confi)
   g: Partial<ErrorHandlerConfig></ErrorHandlerConfig> = {}); {/* TODO: Fix JSX expression */}
     this.config = { ...defaultErrorHandlerConfig, ...config }});
 }
-  static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */});;);
+=======
+  static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return ErrorHandler.instance});
 }</ErrorHandlerConfig>
   // Handle error</ErrorHandlerConfi>handleError</ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<stri></stri>): AppError {</<<<stri></stri>const</<<stri></stri>appError</strin>: AppError = {,
@@ -144,8 +163,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
   static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {}
     if (!ErrorHandler.instance) {}
-      ErrorHandler.instance = new ErrorHandler(config);)
-}
+<<<<<<< HEAD
+      ErrorHandler.instance = new ErrorHandler(config););
+=======
+      ErrorHandler.instance = new ErrorHandler(config)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return ErrorHandler.instance});
 }
   // Handle error
@@ -161,8 +184,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       componentStack: errorInfo?.componentStack ?? undefined}
   // Handle error;
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {
-    const appError: AppError = {,
+  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {;
+const appError: AppError = {,
   id: this.generateErrorId(),
   type: this.determineErrorType(error),
   severity: this.determineErrorSeverity(error),
@@ -178,22 +201,32 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 };
     this.errors.push(appError);
     if (this.config.enableLogging) {}
-      this.logError(appError);)
-}
+<<<<<<< HEAD
+      this.logError(appError););
     if (this.config.enableReporting) {}
-      this.reportError(appError);)
-}
+      this.reportError(appError););
     if (this.config.enableUserNotification) {}
-      this.notifyUser(appError);)
-}
+      this.notifyUser(appError););
     if (this.config.enableRetry && this.shouldRetry(appError)) {}
-      this.scheduleRetry(appError);)
-}
+      this.scheduleRetry(appError););
+=======
+      this.logError(appError)]
+    }
+    if (this.config.enableReporting) {}
+      this.reportError(appError)]
+    }
+    if (this.config.enableUserNotification) {}
+      this.notifyUser(appError)]
+    }
+    if (this.config.enableRetry && this.shouldRetry(appError)) {}
+      this.scheduleRetry(appError)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return appError});
 }
   // Handle network error;
-  handleNetworkError(error: Error, url: string, status?: number): AppError {
-    const appError: AppError = {,
+  handleNetworkError(error: Error, url: string, status?: number): AppError {;
+const appError: AppError = {,
     id: this.generateErrorId(),
   // Handle network error
   handleNetworkError(error: Error, url: string, status?: number): AppError {}
@@ -202,8 +235,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       type: ErrorType.NETWORK,
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message,
-      stack: error.stack,
-    const appError: AppError = {,
+      stack: error.stack,;
+const appError: AppError = {,
   id: this.generateErrorId(),
   type: ErrorType.NETWORK;
       severity: this.determineNetworkErrorSeverity(status),
@@ -218,16 +251,22 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 };
     this.errors.push(appError);
     if (this.config.enableLogging) {}
-      this.logError(appError);)
-}
+<<<<<<< HEAD
+      this.logError(appError););
     if (this.config.enableReporting) {}
-      this.reportError(appError);)
-}
+      this.reportError(appError););
+=======
+      this.logError(appError)]
+    }
+    if (this.config.enableReporting) {}
+      this.reportError(appError)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return appError});
 }
   // Handle validation error;
-  handleValidationError(field: string, message: string, value?: unknown): AppError {
-    const appError: AppError = {,
+  handleValidationError(field: string, message: string, value?: unknown): AppError {;
+const appError: AppError = {,
     id: this.generateErrorId(),
   // Handle validation error
   handleValidationError(field: string, message: string, value?: unknown): AppError {}
@@ -247,8 +286,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 };
     this.errors.push(appError);
     if (this.config.enableLogging) {}
-      this.logError(appError);)
-}
+<<<<<<< HEAD
+      this.logError(appError););
+=======
+      this.logError(appError)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return appError});
 }
   // Generate unique error ID;
@@ -256,9 +299,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);`});
 }
   // Determine error type;
-  private determineErrorType(error: Error): ErrorType {
-    const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
+  private determineErrorType(error: Error): ErrorType {;
+const message = error.message.toLowerCase();
+const stack = error.stack?.toLowerCase() || '';
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {,
   // Generate unique error ID
   private generateErrorId(): string {}
@@ -267,7 +310,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Determine error type
   private determineErrorType(error: Error): ErrorType {}
     const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
+const stack = error.stack?.toLowerCase() || '';
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {}
       return ErrorType.NETWORK});
 }
@@ -292,8 +335,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorType.UNKNOWN});
 }
   // Determine error severity;
-  private determineErrorSeverity(error: Error): ErrorSeverity {
-    const message = error.message.toLowerCase();
+  private determineErrorSeverity(error: Error): ErrorSeverity {;
+const message = error.message.toLowerCase();
     if (message.includes('critical') || message.includes('fatal')) {,
   // Determine error severity
   private determineErrorSeverity(error: Error): ErrorSeverity {}
@@ -320,8 +363,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
   // Log error;
   private logError(error: AppError) {,
-    if (this.config.enableConsoleLogging) {,
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+    if (this.config.enableConsoleLogging) {,;
+const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {
         case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
         case ErrorSeverity.MEDIUM: break,
@@ -341,17 +384,26 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
             if (import.meta.env.DEV) {}
   // Handle error;
   handleError(erro)
-  r: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {/* TODO: Fix JSX expression */});;)
-};
+<<<<<<< HEAD
+  r: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {/* TODO: Fix JSX expression */});;);
     this.errors.push(appError);
-    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;)
-}
-    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});;)
-}
-    if (this.config.enableUserNotification) {/* TODO: Fix JSX expression */});;)
-}
-    if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */});;)
-}
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;);
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});;);
+    if (this.config.enableUserNotification) {/* TODO: Fix JSX expression */});;);
+    if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */});;);
+=======
+  r: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {/* TODO: Fix JSX expression */});]
+    };
+    this.errors.push(appError);
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});]
+    }
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});]
+    }
+    if (this.config.enableUserNotification) {/* TODO: Fix JSX expression */});]
+    }
+    if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return appError});
 }
   // Handle network error;
@@ -365,10 +417,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   t: 0,});
 };
     this.errors.push(appError);
-    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;)
-}
-    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;);
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});;);
+=======
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});]
+    }
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return appError});
 }
   // Handle validation error;
@@ -388,8 +445,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   t: 0,});
 };
     this.errors.push(appError);
-    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;);
+=======
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return appError});
 }
   // Generate unique error ID;
@@ -398,48 +459,77 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
   // Determine error type;
   private determineErrorType(erro)
-  r: Error): ErrorType {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */});;)
-}
-    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  r: Error): ErrorType {/* TODO: Fix JSX expression */});;);
+    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */});;);
+    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */});;);
+    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */});;);
+    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */});;);
+    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */});;);
+    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */});;);
+=======
+  r: Error): ErrorType {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */});]
+    }
+    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return ErrorType.UNKNOWN});
 }
   // Determine error severity;
   private determineErrorSeverity(erro)
-  r: Error): ErrorSeverity {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */});;)
-}
-    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  r: Error): ErrorSeverity {/* TODO: Fix JSX expression */});;);
+    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */});;);
+    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */});;);
     return ErrorSeverity.LOW});
 }
   // Determine network error severity;
-  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {/* TODO: Fix JSX expression */});;)
+  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {/* TODO: Fix JSX expression */});;);
+  // Log error;
+  private logError(erro)
+  r: AppError) {/* TODO: Fix JSX expression */}`;
+const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+      switch (error.severity) {/* TODO: Fix JSX expression */});;);
+=======
+  r: Error): ErrorSeverity {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */});]
+    }
+    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */});]
+    }
+    return ErrorSeverity.LOW});
 }
+  // Determine network error severity;
+  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {/* TODO: Fix JSX expression */});]
+    }
   // Log error;
   private logError(erro)
   r: AppError) {/* TODO: Fix JSX expression */}`
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
-      switch (error.severity) {/* TODO: Fix JSX expression */});;)
-}
+      switch (error.severity) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           }
           break});
 }
     }
     if (this.config.enableNetworkLogging) {}
-      this.logToNetwork(error);)
-}
+<<<<<<< HEAD
+      this.logToNetwork(error););
+=======
+      this.logToNetwork(error)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Log to network;
   private async logToNetwork(error: AppError) {,
@@ -463,14 +553,22 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         headers: {,
           'Content-Type': 'application/json'});
         body: JSON.stringify(error),});
-} catch (err) {});;)
-}
+<<<<<<< HEAD
+} catch (err) {});;);
+=======
+} catch (err) {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Report error;
   private async reportError(error: AppError) {,
     if (!this.config.reportEndpoint) return;
     try {
-      await fetch(this.config.reportEndpoint, {} catch (err) {});;)
-}
+<<<<<<< HEAD
+      await fetch(this.config.reportEndpoint, {} catch (err) {});;);
+=======
+      await fetch(this.config.reportEndpoint, {} catch (err) {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Report error
   private async reportError(error: AppError) {}
@@ -494,17 +592,23 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           timestamp: error.timestamp.toISOString(),
         body: JSON.stringify({);
           ...error,
+<<<<<<< HEAD
           timestamp: error.timestamp.toISOString();)
 });;)
-} catch (err) {});;)
-}
+} catch (err) {});;);
+=======
+          timestamp: error.timestamp.toISOString()]
+    });]
+    } catch (err) {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Notify user;
   private notifyUser(error: AppError) {
   // Notify user
   private notifyUser(error: AppError) {}
     if (typeof window === 'undefined') return;
-    const notification = document.createElement('div');
+const notification = document.createElement('div');
     notification.className = 'error-notification';
     notification.style.cssText = `
       position: fixed;,
@@ -520,8 +624,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       font-family: Arial, sans-serif;
     `;</string>
     notification.innerHTML = `</string>
-      <div></div>
-        <div></div>
+      <div>
+        <div>
           <strong></strong>${error.severity} Error<p></p>${error.message}<butto></butto>×</button>
     `;
     notification.innerHTML = `
@@ -531,8 +635,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
         </div>
         <butto></butto>×</button>
-      <div></div>
-        <div></div>
+      <div>
+        <div>
           <strong></strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><butto></butto>×</button>
       </div>
     `;
@@ -546,29 +650,46 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       setTimeout(() => {}
         if (notification.parentElement) {}
           notification.remove();
-    if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+    if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */});;);
+=======
+    if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Log to network;
   private async logToNetwork(erro)
-  r: AppError) {/* TODO: Fix JSX expression */});;)
-},
+  r: AppError) {/* TODO: Fix JSX expression */});]
+    },
         bod,
+<<<<<<< HEAD
   y: JSON.stringify(error);)
 });;)
-} catch (err) {/* TODO: Fix JSX expression */});;)
-}
+} catch (err) {/* TODO: Fix JSX expression */});;);
+=======
+  y: JSON.stringify(error)]
+    });]
+    } catch (err) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Report error;
   private async reportError(erro)
-  r: AppError) {/* TODO: Fix JSX expression */});;)
-},
+  r: AppError) {/* TODO: Fix JSX expression */});]
+    },
         bod,
+<<<<<<< HEAD
   y: JSON.stringify({/* TODO: Fix JSX expression */});;)
 });;)
 });;)
-} catch (err) {/* TODO: Fix JSX expression */});;)
-}
+} catch (err) {/* TODO: Fix JSX expression */});;);
+=======
+  y: JSON.stringify({/* TODO: Fix JSX expression */});]
+    });]
+    });]
+    } catch (err) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Notify user;
   private notifyUser(erro)
@@ -590,8 +711,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   y: Arial, sans-serif;`
     `;`
     notification.innerHTML = `
-      <div></div>
-        <div></div>
+      <div>
+        <div>
           <stron></stron>${error.severity} Error</strong>"
           <p style="margi,
   n: 5px 0 0 0; font-siz,"
@@ -602,10 +723,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
-    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});;)
-}
-      }, 5000);)
-}
+<<<<<<< HEAD
+    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});;);
+      }, 5000););
+=======
+    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});]
+    }
+      }, 5000)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Get notification color based on severity;
   private getNotificationColor(severity: ErrorSeverity): string {
@@ -632,8 +758,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return(error.type === ErrorType.NETWORK &&)
       error.retryCount! < this.config.maxRetries &&)
       error.severity !== ErrorSeverity.CRITICAL}
-    );)
-}
+<<<<<<< HEAD
+    ););
+=======
+    )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Schedule retry;
   private scheduleRetry(error: AppError) {,
   // Check if error should be retried
@@ -642,36 +772,58 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       error.type === ErrorType.NETWORK &&
       error.retryCount! < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
-    );)
-}
+<<<<<<< HEAD
+    ););
+=======
+    )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Schedule retry
   private scheduleRetry(error: AppError) {}
     const retryItem = { error, retryCount: error.retryCount! + 1 };
     this.retryQueue.push(retryItem);
     setTimeout(() => {}
+<<<<<<< HEAD
       this.retryError(retryItem);)
-}, this.config.retryDelay * retryItem.retryCount);)
-}
+}, this.config.retryDelay * retryItem.retryCount););
+=======
+      this.retryError(retryItem)]
+    }, this.config.retryDelay * retryItem.retryCount)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Retry error;
   private async retryError(retryItem: {// error: AppError; retryCount: number}); {
   // Get notification color based on severity;
   private getNotificationColor(severit)
-  y: ErrorSeverity): string {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  y: ErrorSeverity): string {/* TODO: Fix JSX expression */});;);
   }
   // Check if error should be retried;
   private shouldRetry(erro)
-  r: AppError): boolean {/* TODO: Fix JSX expression */});;)
-}
+  r: AppError): boolean {/* TODO: Fix JSX expression */});;);
+=======
+  y: ErrorSeverity): string {/* TODO: Fix JSX expression */});]
+    }
+  }
+  // Check if error should be retried;
+  private shouldRetry(erro)
+  r: AppError): boolean {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Schedule retry;
   private scheduleRetry(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
   t: error.retryCount! + 1 };
     this.retryQueue.push(retryItem);
+<<<<<<< HEAD
     setTimeout(() => {/* TODO: Fix JSX expression */});;)
-}, this.config.retryDelay * retryItem.retryCount);)
-}
+}, this.config.retryDelay * retryItem.retryCount););
+=======
+    setTimeout(() => {/* TODO: Fix JSX expression */});]
+    }, this.config.retryDelay * retryItem.retryCount)]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Retry error
   private async retryError(retryItem: { error: AppError; retryCount: number }); {
     try {
@@ -687,37 +839,57 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       if (retryItem.error.type === ErrorType.NETWORK) {}
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {}
-          if (import.meta.env.DEV) {});;)
-}
+<<<<<<< HEAD
+          if (import.meta.env.DEV) {});;);
+=======
+          if (import.meta.env.DEV) {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }
         // Add your retry logic here});
 }
     } catch {}
       if (retryItem.retryCount < this.config.maxRetries) {}
+<<<<<<< HEAD
         this.scheduleRetry(retryItem.error);)
-} else {});;)
-}
-    });;)
-}
+} else {});;);
+    });;);
+=======
+        this.scheduleRetry(retryItem.error)]
+    } else {});]
+    }
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Get all errors;
   getErrors(): AppError[] {
     return [...this.errors]});
 }
   // Get errors by type;
   getErrorsByType(type: ErrorType): AppError[] {,
-    return this.errors.filter(error => error.type === type);)
-}
+<<<<<<< HEAD
+    return this.errors.filter(error => error.type === type););
   // Get errors by severity;
   getErrorsBySeverity(severity: ErrorSeverity): AppError[] {,
-    return this.errors.filter(error => error.severity === severity);)
-}
+    return this.errors.filter(error => error.severity === severity););
   // Get unresolved errors;
   getUnresolvedErrors(): AppError[] {
-    return this.errors.filter(error => !error.resolved);)
-}
+    return this.errors.filter(error => !error.resolved););
+=======
+    return this.errors.filter(error => error.type === type)]
+    }
+  // Get errors by severity;
+  getErrorsBySeverity(severity: ErrorSeverity): AppError[] {,
+    return this.errors.filter(error => error.severity === severity)]
+    }
+  // Get unresolved errors;
+  getUnresolvedErrors(): AppError[] {
+    return this.errors.filter(error => !error.resolved)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Mark error as resolved;
-  markErrorResolved(errorId: string): boolean {
-    const error = this.errors.find(e => e.id === errorId);
+  markErrorResolved(errorId: string): boolean {;
+const error = this.errors.find(e => e.id === errorId);
     if (error) {,
   // Get all errors
   getErrors(): AppError[] {}
@@ -725,16 +897,26 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
   // Get errors by type
   getErrorsByType(type: ErrorType): AppError[] {}
-    return this.errors.filter(error => error.type === type);)
-}
+<<<<<<< HEAD
+    return this.errors.filter(error => error.type === type););
   // Get errors by severity
   getErrorsBySeverity(severity: ErrorSeverity): AppError[] {}
-    return this.errors.filter(error => error.severity === severity);)
-}
+    return this.errors.filter(error => error.severity === severity););
   // Get unresolved errors
   getUnresolvedErrors(): AppError[] {}
-    return this.errors.filter(error => !error.resolved);)
-}
+    return this.errors.filter(error => !error.resolved););
+=======
+    return this.errors.filter(error => error.type === type)]
+    }
+  // Get errors by severity
+  getErrorsBySeverity(severity: ErrorSeverity): AppError[] {}
+    return this.errors.filter(error => error.severity === severity)]
+    }
+  // Get unresolved errors
+  getUnresolvedErrors(): AppError[] {}
+    return this.errors.filter(error => !error.resolved)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Mark error as resolved
   markErrorResolved(errorId: string): boolean {}
     const error = this.errors.find(e => e.id === errorId);
@@ -746,8 +928,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
   // Clear resolved errors;
   clearResolvedErrors(): void {
-    this.errors = this.errors.filter(error => !error.resolved);)
-}
+<<<<<<< HEAD
+    this.errors = this.errors.filter(error => !error.resolved););
+=======
+    this.errors = this.errors.filter(error => !error.resolved)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Clear all errors;
   clearAllErrors(): void {
     this.errors = [];
@@ -757,8 +943,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   getErrorStatistics() {
   // Clear resolved errors
   clearResolvedErrors(): void {}
-    this.errors = this.errors.filter(error => !error.resolved);)
-}
+<<<<<<< HEAD
+    this.errors = this.errors.filter(error => !error.resolved););
+=======
+    this.errors = this.errors.filter(error => !error.resolved)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Clear all errors
   clearAllErrors(): void {}
     this.errors = [];
@@ -767,77 +957,112 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Get error statistics
   getErrorStatistics() {}
     const total = this.errors.length;
-    const byType = this.errors.reduce()
+const byType = this.errors.reduce()
       (acc, error) => {}
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc});
 },
       {} as Record<ErrorType></ErrorType>);
-    const bySeverity = this.errors.reduce(
+const bySeverity = this.errors.reduce(
       (acc, error) => {
       {} as Record<ErrorType></ErrorType>
-            `);)
-}
+<<<<<<< HEAD
+            `););
+=======
+            `)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 });
 }
         // Add your retry logic here});
 }
+<<<<<<< HEAD
     } catch {/* TODO: Fix JSX expression */});;)
-} else {/* TODO: Fix JSX expression */});;)
-}
-    });;)
-}
+} else {/* TODO: Fix JSX expression */});;);
+    });;);
   // Get all errors;
-  getErrors(): AppError[] {/* TODO: Fix JSX expression */});;)
-}
+  getErrors(): AppError[] {/* TODO: Fix JSX expression */});;);
   // Get errors by type;
   getErrorsByType(typ)
-  e: ErrorType): AppError[] {/* TODO: Fix JSX expression */});;)
-}
+  e: ErrorType): AppError[] {/* TODO: Fix JSX expression */});;);
   // Get errors by severity;
   getErrorsBySeverity(severit)
-  y: ErrorSeverity): AppError[] {/* TODO: Fix JSX expression */});;)
-}
+  y: ErrorSeverity): AppError[] {/* TODO: Fix JSX expression */});;);
   // Get unresolved errors;
-  getUnresolvedErrors(): AppError[] {/* TODO: Fix JSX expression */});;)
-}
+  getUnresolvedErrors(): AppError[] {/* TODO: Fix JSX expression */});;);
   // Mark error as resolved;
   markErrorResolved(errorI)
-  d: string): boolean {/* TODO: Fix JSX expression */});;)
-}
+  d: string): boolean {/* TODO: Fix JSX expression */});;);
     return false});
 }
   // Clear resolved errors;
-  clearResolvedErrors(): void {/* TODO: Fix JSX expression */});;)
-}
+  clearResolvedErrors(): void {/* TODO: Fix JSX expression */});;);
   // Clear all errors;
-  clearAllErrors(): void {/* TODO: Fix JSX expression */});;)
+  clearAllErrors(): void {/* TODO: Fix JSX expression */});;);
+=======
+    } catch {/* TODO: Fix JSX expression */});]
+    } else {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
+  // Get all errors;
+  getErrors(): AppError[] {/* TODO: Fix JSX expression */});]
+    }
+  // Get errors by type;
+  getErrorsByType(typ)
+  e: ErrorType): AppError[] {/* TODO: Fix JSX expression */});]
+    }
+  // Get errors by severity;
+  getErrorsBySeverity(severit)
+  y: ErrorSeverity): AppError[] {/* TODO: Fix JSX expression */});]
+    }
+  // Get unresolved errors;
+  getUnresolvedErrors(): AppError[] {/* TODO: Fix JSX expression */});]
+    }
+  // Mark error as resolved;
+  markErrorResolved(errorI)
+  d: string): boolean {/* TODO: Fix JSX expression */});]
+    }
+    return false});
 }
+  // Clear resolved errors;
+  clearResolvedErrors(): void {/* TODO: Fix JSX expression */});]
+    }
+  // Clear all errors;
+  clearAllErrors(): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Get error statistics;
-  getErrorStatistics() {/* TODO: Fix JSX expression */});;)
-},
+  getErrorStatistics() {/* TODO: Fix JSX expression */});]
+    },
       {} as Record<ErrorType></ErrorType>
     );
-    const bySeverity = this.errors.reduce()
+<<<<<<< HEAD
+const bySeverity = this.errors.reduce()
       (acc, error) => {/* TODO: Fix JSX expression */});;)
 },
+=======
+    const bySeverity = this.errors.reduce()
+      (acc, error) => {/* TODO: Fix JSX expression */});]
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       {} as Record<ErrorSeverity></ErrorSeverity>
     );
-    const bySeverity = this.errors.reduce()
+const bySeverity = this.errors.reduce()
       (acc, error) => {}
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;</ErrorType>});
 },</ErrorType>
       {} as Record<ErrorSeveri></ErrorSeveri>);</<<<ErrorSeveri></ErrorSeveri>const</<<ErrorSeveri></ErrorSeveri>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
-    const unresolved = total - resolved;
+const unresolved = total - resolved;
     return {}
       total,
       resolved,
       unresolved,
       byType,
       bySeverity;
-    return {/* TODO: Fix JSX expression */});;)
-}});
+    return {/* TODO: Fix JSX expression */});]
+    }});
 }
   /**
    * Initialize error handler;
@@ -850,11 +1075,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)
-    this.handleError(new Error(event.reason));)
-}
+<<<<<<< HEAD
+    this.handleError(new Error(event.reason)););
+=======
+    this.handleError(new Error(event.reason))]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 });
-});;)
-}</ErrorSeverity>
+});]
+    }</ErrorSeverity>
 // React error boundary component</ErrorSeverity>
       // Set up global error handler;
       window.addEventListener('error', event => {)
@@ -872,15 +1101,22 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       window.addEventListener('unhandledrejection', event => {);
         this.handleError(new Error(event.reason));
 
-  init(): void {/* TODO: Fix JSX expression */});;)
-});;
+  init(): void {/* TODO: Fix JSX expression */});]
+    });;
       // Set up unhandled promise rejection handler;
+<<<<<<< HEAD
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});;)
-});;)
-}
-  });;)
-}
+});;);
+  });;);
+// React error boundary component
+=======
+      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});]
+    });]
+    }
+  });]
+    }
 // React error boundary component;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean; error?: Error }
@@ -889,8 +1125,12 @@ export class ErrorBoundary extends React.Component<
   constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }); {}
     super(props);
     this.state = { hasError: false };
-    this.errorHandler = ErrorHandler.getInstance();)
-}
+<<<<<<< HEAD
+    this.errorHandler = ErrorHandler.getInstance(););
+=======
+    this.errorHandler = ErrorHandler.getInstance()]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   static getDerivedStateFromError(error: Error) {,
     return { hasError: true, error }});
 }
@@ -911,7 +1151,7 @@ export class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || (
-          <div></div>
+          <div>
             <h2></h2>Something went wrong<p></p>We're sorry, but something unexpected happened.<button
   render() {}
     if (this.state.hasError) {}
@@ -938,17 +1178,26 @@ export class ErrorBoundary extends React.Component<
 > {/* TODO: Fix JSX expression */}
   n: React.ReactNode; fallback?: React.ReactNode }); {/* TODO: Fix JSX expression */}
   r: false };
-    this.errorHandler = ErrorHandler.getInstance();)
-}
+<<<<<<< HEAD
+    this.errorHandler = ErrorHandler.getInstance(););
+=======
+    this.errorHandler = ErrorHandler.getInstance()]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   static getDerivedStateFromError(erro)
   r: Error) {/* TODO: Fix JSX expression */}
   r: true, error }});
 }
   componentDidCatch(erro,
   r: Error, errorInf)
+<<<<<<< HEAD
   o: ErrorInfo) {/* TODO: Fix JSX expression */});;)
-});;)
-}
+});;);
+=======
+  o: ErrorInfo) {/* TODO: Fix JSX expression */});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   render() {/* TODO: Fix JSX expression */}
   n: 'center' }}></div>
             <h></h>Something went wrong</h2>
@@ -956,8 +1205,8 @@ export class ErrorBoundary extends React.Component<
             <button></button>
               onClick={/* TODO: Fix JSX expression */}
   r: undefined });;
-              style={/* TODO: Fix JSX expression */});;)
-}}
+              style={/* TODO: Fix JSX expression */});]
+    }}
             ></button>
               Try again</button>
             >
@@ -965,32 +1214,36 @@ export class ErrorBoundary extends React.Component<
             </button>
           </div>
         )
-      );)
-}
+<<<<<<< HEAD
+      ););
+=======
+      )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return this.props.children});
 }
 }
-// React hook for error handling;
+// React hook for error handling
 export const useErrorHandler = () => {
 // React hook for error handling
 export const useErrorHandler = () => {}
   const errorHandler = ErrorHandler.getInstance();
-  const handleError = useCallback()
+const handleError = useCallback()
     (error: Error, context?: Record<string></string>) => {}
-      return errorHandler.handleError(error, undefined, context);)
-},
+      return errorHandler.handleError(error, undefined, context)]
+    },
     [errorHandler]
   );
-  const handleNetworkError = useCallback()
+const handleNetworkError = useCallback()
     (error: Error, url: string, status?: number) => {}
-      return errorHandler.handleNetworkError(error, url, status);)
-},
+      return errorHandler.handleNetworkError(error, url, status)]
+    },
     [errorHandler]
   );
-  const handleValidationError = useCallback()
+const handleValidationError = useCallback()
     (field: string, message: string, value?: unknown) => {}
-      return errorHandler.handleValidationError(field, message, value);)
-},
+      return errorHandler.handleValidationError(field, message, value)]
+    },
     [errorHandler]
   );
   return {}
@@ -1000,29 +1253,41 @@ export const useErrorHandler = () => {}
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
     clearResolvedErrors: () => errorHandler.clearResolvedErrors();});
-};
+}
 export default ErrorHandler;</string>
 </string>
-// React hook for error handling;
+<<<<<<< HEAD
+// React hook for error handling
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */});;)
 },
+=======
+// React hook for error handling;
+export const useErrorHandler = () => {/* TODO: Fix JSX expression */});]
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     [errorHandler]
   );
-  const handleNetworkError = useCallback((erro,
+const handleNetworkError = useCallback((erro,
   r: Error, ur)
-  l: string, status?: number) => {/* TODO: Fix JSX expression */});;)
-},
+  l: string, status?: number) => {/* TODO: Fix JSX expression */});]
+    },
     [errorHandler]
   );
-  const handleValidationError = useCallback((fiel,
+const handleValidationError = useCallback((fiel,
   d: string, messag)
-  e: string, value?: unknown) => {/* TODO: Fix JSX expression */});;)
-},
+  e: string, value?: unknown) => {/* TODO: Fix JSX expression */});]
+    },
     [errorHandler]
   );
+<<<<<<< HEAD
   return {/* TODO: Fix JSX expression */});;)
 }});
+}
+=======
+  return {/* TODO: Fix JSX expression */});]
+    }});
 };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ErrorHandler;
 "`
 }

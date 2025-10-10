@@ -38,21 +38,27 @@ class Logger {
     return this.logLevel});
 }
 
-  debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata);)
-}
+<<<<<<< HEAD
+  debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata););
+  info(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.INFO, message, context, metadata););
+  warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata););
+=======
+  debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata)]
+    }
 
-  info(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.INFO, message, context, metadata);)
-}
+  info(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.INFO, message, context, metadata)]
+    }
 
-  warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata);)
-}
+  warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata)]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   error(message: string},
     errorOrContextOrMetadata?: Error | string | Record<string></string>)
     contextOrMetadata?: string | Record<string></string>)
     metadata?: Record<string></string>
-  ): void {
-    let error: Error | undefined;
+  ): void {;
+let error: Error | undefined;
     let context: LogContext | undefined;
     let meta: Record<string></string> | undefined;
     // Handle different parameter combinations;
@@ -69,43 +75,70 @@ class Logger {
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
+<<<<<<< HEAD
 export enum LogLevel {/* TODO: Fix JSX expression */});;)
-}
 export interface LogContext {/* TODO: Fix JSX expression */});;)
-}
-export interface LogMetadata {/* TODO: Fix JSX expression */});;)
-}
-class Logger {/* TODO: Fix JSX expression */});;)
-}
+export interface LogMetadata {/* TODO: Fix JSX expression */});;);
+class Logger {/* TODO: Fix JSX expression */});;);
+=======
+export enum LogLevel {/* TODO: Fix JSX expression */});]
+    }
+export interface LogContext {/* TODO: Fix JSX expression */});]
+    }
+export interface LogMetadata {/* TODO: Fix JSX expression */});]
+    }
+class Logger {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Set the minimum log level;
    */
   setLogLevel(leve)
-  l: LogLevel): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  l: LogLevel): void {/* TODO: Fix JSX expression */});;);
   /**
    * Get the current log level;
    */
-  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */});;)
-}
+  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */});;);
+=======
+  l: LogLevel): void {/* TODO: Fix JSX expression */});]
+    }
+  /**
+   * Get the current log level;
+   */
+  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a debug message;
    */
   debug(messag)
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
+=======
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log an info message;
    */
   info(messag)
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
+=======
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a warning message;
    */
   warn(messag)
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
+=======
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log an error message;
    */
@@ -114,26 +147,32 @@ class Logger {/* TODO: Fix JSX expression */});;)
     errorOrContextOrMetadata?: Error | string | Record<string></string>,
     contextOrMetadata?: string | Record<string></string>,
     metadata?: Record<string></string>)
-  ): void {/* TODO: Fix JSX expression */});;)
-} else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
+  ): void {/* TODO: Fix JSX expression */});]
+    } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata };
       meta = contextOrMetadata as Record<string></string>});
-} else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+} else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});;);
+    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });;);
+  fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata););
+=======
+} else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});]
+    }
 
-    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });;)
-}
+    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });]
+    }
 
-  fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata);)
-}
+  fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata)]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private log(level: LogLevel},
     message: string),
     context?: LogContext),
     metadata?: Record<string></string>
   ): void {
     if (level < this.logLevel) return;
-    const logEntry = {
+const logEntry = {
       level,
       message,
       context,
@@ -144,16 +183,19 @@ class Logger {/* TODO: Fix JSX expression */});;)
 
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {
-      this.logs = this.logs.slice(-1000);)
-}
+<<<<<<< HEAD
+      this.logs = this.logs.slice(-1000););
+=======
+      this.logs = this.logs.slice(-1000)]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Console output;
-    const levelName = LogLevel[level]
-    const timestamp = new Date().toISOString()
-    const contextStr = context ? ` [${JSON.stringify(context);]` : ''
-    const metaStr = metadata ? ` ${JSON.stringify(metadata);` : ''
-
-    const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
+const levelName = LogLevel[level];
+const timestamp = new Date().toISOString();
+const contextStr = context ? ` [${JSON.stringify(context);]` : '';
+const metaStr = metadata ? ` ${JSON.stringify(metadata);` : '';
+const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
 
     switch (level) {
       case LogLevel.DEBUG: break,
@@ -178,8 +220,12 @@ class Logger {/* TODO: Fix JSX expression */});;)
    * Log a fatal error message;
    */
   fatal(messag)
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
+=======
+  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Core logging method;
    */
@@ -189,27 +235,39 @@ class Logger {/* TODO: Fix JSX expression */});;)
   e: string,
     context?: LogContext,
     metadata?: Record<string></string>)
-  ): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  ): void {/* TODO: Fix JSX expression */});;);
     const,
-  logEntry: LogMetadata = {/* TODO: Fix JSX expression */});;)
-};
+  logEntry: LogMetadata = {/* TODO: Fix JSX expression */});;);
+=======
+  ): void {/* TODO: Fix JSX expression */});]
+    }
+    const,
+  logEntry: LogMetadata = {/* TODO: Fix JSX expression */});]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Format the log entry;
-    const formattedMessage = this.formatLogEntry(logEntry);
+const formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development;
-    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});;);
     // In production, you might want to send to a logging service;
-    if (!this.isDevelopment) {/* TODO: Fix JSX expression */});;)
-}
+    if (!this.isDevelopment) {/* TODO: Fix JSX expression */});;);
+=======
+    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});]
+    }
+    // In production, you might want to send to a logging service;
+    if (!this.isDevelopment) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Format a log entry for output;
    */
   private formatLogEntry(entr)
   y: LogMetadata): string {/* TODO: Fix JSX expression */}
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';`
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`
+    const contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';`;
+const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`});
 }
   /**
@@ -226,23 +284,35 @@ class Logger {/* TODO: Fix JSX expression */});;)
   n:${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
   t:${context.requestId}`);
-    return parts.join(', ');)
-}
+<<<<<<< HEAD
+    return parts.join(', '););
+=======
+    return parts.join(', ')]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Output to console with appropriate styling;
    */
   private outputToConsole(leve,
   l: LogLevel, messag,
   e: string, entr)
-  y: LogMetadata): void {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  y: LogMetadata): void {/* TODO: Fix JSX expression */});;);
+=======
+  y: LogMetadata): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get console styles for different log levels;
    */
   private getConsoleStyles(leve)
-  l: LogLevel): string {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  l: LogLevel): string {/* TODO: Fix JSX expression */});;);
+=======
+  l: LogLevel): string {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return [...this.logs]});
 }
   /**
@@ -257,15 +327,21 @@ class Logger {/* TODO: Fix JSX expression */});;)
     //   headers: {// 'Content-Type': 'application/json'});
     //   body: JSON.stringify(entry),
     // });.catch(err => {)
-    //   // });;)
-}
+<<<<<<< HEAD
+    //   // });;);
+  exportLogs(): string {
+    return JSON.stringify(this.logs, null, 2););
+=======
+    //   // });]
+    }
 
   exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2);)
-}
+    return JSON.stringify(this.logs, null, 2)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 
-// Export singleton instance;
+// Export singleton instance
 export const logger = new Logger()
   private sendToLoggingService(entr)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
@@ -273,15 +349,24 @@ export const logger = new Logger()
     //   bod,
   y: JSON.stringify(entry)
     // });.catch(err => {/* TODO: Fix JSX expression */});
-    //   // });;)
-}
+<<<<<<< HEAD
+    //   // });;);
+=======
+    //   // });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get string representation of log level;
    */
   private getLevelString(leve)
-  l: LogLevel): string {/* TODO: Fix JSX expression */});;)
-}
+<<<<<<< HEAD
+  l: LogLevel): string {/* TODO: Fix JSX expression */});;);
   });;)
-}
+=======
+  l: LogLevel): string {/* TODO: Fix JSX expression */});]
+    }
+  });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const logger = new Logger();`
 }

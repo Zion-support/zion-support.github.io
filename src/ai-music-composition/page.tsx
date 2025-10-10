@@ -3,9 +3,9 @@ import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Awa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const AIMusicCompositionPage: React.FC = () => {
-  const features = [
+;
+const AIMusicCompositionPage: React.FC = () => {;
+const features = [
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -17,8 +17,8 @@ const AIMusicCompositionPage: React.FC = () => {
     'Tempo Control',
     'Export Options'
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
@@ -26,8 +26,8 @@ const AIMusicCompositionPage: React.FC = () => {
     'Fast generation',
     'Cost-effective'
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
@@ -52,7 +52,7 @@ const AIMusicCompositionPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
         description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
@@ -204,8 +204,7 @@ const AIMusicCompositionPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default AIMusicCompositionPage;

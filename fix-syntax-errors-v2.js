@@ -4,14 +4,14 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to fix specific syntax errors in a file
+// Function to fix specific syntax errors in a file;
 function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix specific patterns found in the files
-    const fixes = [
+    // Fix specific patterns found in the files;
+const fixes = [
       // Fix missing commas in object properties (like the values array in about/page.tsx)
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -68,16 +68,15 @@ function fixSyntaxErrors(filePath) {
       }
     ];
     
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const fix of fixes) {;
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
-    // Additional specific fixes for common patterns
-    const specificFixes = [
+    // Additional specific fixes for common patterns;
+const specificFixes = [
       // Fix the specific pattern in about/page.tsx
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -95,62 +94,54 @@ function fixSyntaxErrors(filePath) {
       }
     ];
     
-    for (const fix of specificFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const fix of specificFixes) {;
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
+      // console.log removed for production
+return true}
     
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false} catch (error) {
+    // console.error removed for production
+return false}
 }
 
-// Function to find files with syntax errors
+// Function to find files with syntax errors;
 function findFilesWithSyntaxErrors() {
-  try {
-    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message);
-    return [];
-  }
+  try {;
+const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
+    // console.error removed for production
+return []}
 }
 
 // Main execution
-console.log('Starting syntax error resolution...');
-
+// console.log removed for production
+;
 const filesWithErrors = findFilesWithSyntaxErrors();
-console.log(`Found ${filesWithErrors.length} files with syntax errors`);
-
+// console.log removed for production
+;
 let fixedCount = 0;
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-
+// console.log removed for production
 // Verify no more syntax errors exist
-try {
-  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+try {;
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-    console.log('✅ All syntax errors resolved!');
-  } else {
-    console.log(`⚠️  ${count} syntax errors still remain`);
-  }
+    // console.log removed for production
+} else {
+    // console.log removed for production
+}
 } catch (error) {
-  console.log('✅ No syntax errors found');
+  // console.log removed for production
 }

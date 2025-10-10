@@ -1,6 +1,6 @@
 
 export default function About() {
-  return(<>
+  return(<React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta;
@@ -136,7 +136,7 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression */}
 }
-  return (<>
+  return (<React.Fragment>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
@@ -434,9 +434,8 @@ export default function About() {/* TODO: Fix JSX expression */}
           </div>
         </section>
       </div>,
-    </>,
+    </React.Fragment>,
       </div>
-    </>)
-  );
-}
+    </React.Fragment>)
+  )}
 "

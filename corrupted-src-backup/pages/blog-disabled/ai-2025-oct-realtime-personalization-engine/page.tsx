@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function RealtimePersonalizationEngine20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
-    <>
+    <React.Fragment>
       <Helm, e, t>
         <title>
           Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group;

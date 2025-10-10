@@ -1,50 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+;
+const Navigation: React.FC = () => {;
+const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
+  useEffect(() => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
+        setIsOpen(false)}
     };
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+;
+const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)};
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const closeAllMenus = () => {
+      window.removeEventListener('scroll', handleScroll)}}, []);
+;
+const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
-
-  const toggleMenu = () => {
+    setIsOpen(false)};
+;
+const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
-      closeAllMenus();
-    }
+      closeAllMenus()}
   };
-
-  const serviceCategories = [
+;
+const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
       icon: Zap,
@@ -441,7 +435,6 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )};
 
 export default Navigation;

@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousInfrastructureHealing20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
-    <>
+    <React.Fragment>
       <Helm, e, t>
         <title>
           Autonomous, Infrastructure, Self-Healing, 202, 5 — 99.97% Upti, m, e, 94%

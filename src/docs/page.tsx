@@ -4,12 +4,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
-
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+;
+const DocsPage: React.FC = () => {;
+const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const docCategories = [
+;
+const docCategories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
@@ -17,8 +17,8 @@ const DocsPage: React.FC = () => {
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
   ];
-
-  const documentation = [
+;
+const documentation = [
     {
       id: 1,
       title: 'Quick Start Guide',
@@ -120,8 +120,8 @@ const DocsPage: React.FC = () => {
       content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
     }
   ];
-
-  const quickLinks = [
+;
+const quickLinks = [
     {
       title: 'API Reference',
       description: 'Complete API documentation',
@@ -151,30 +151,29 @@ const DocsPage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ];
-
-  const filteredDocs = selectedCategory === 'all' 
+;
+const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
-
-  const searchResults = searchQuery 
+;
+const searchResults = searchQuery 
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredDocs;
-
-  const getDifficultyColor = (difficulty: string) => {
+;
+const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
-    }
+      default: return 'text-gray-400 bg-gray-500/20'}
   };
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
@@ -337,8 +336,7 @@ const DocsPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default DocsPage;

@@ -2,9 +2,11 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-const AIMLOpsAutomatio, n = () => { 
-  return(<>
+;
+const AIMLOpsAutomatio, n = () => {
+return (
+ 
+  return(<React.Fragment>
       <Helm, e, t>
         <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</title>
         <meta, nam, e = 'description'
@@ -15,7 +17,9 @@ const AIMLOpsAutomatio, n = () => {
         /></meta>
       </Helm, e, t>
 
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' >
+);
+} {/* Hero, Sect, i, o, n */ }</div>
         <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'>
           <div, className='absolute, inse, t-0, b, g-black, opacit, y-10' /></section>
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'></div>
@@ -31,7 +35,7 @@ const AIMLOpsAutomatio, n = () => {
                   <Link, classNam, e='ml-2 h-5 w-5' />
               <div, classNam, e='p-6'></div>
                 <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%</d, i, v>
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>;
 const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'></section>

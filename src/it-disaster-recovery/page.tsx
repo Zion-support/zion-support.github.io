@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Shield, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  BarChart } from 'lucide-react';
-const ITDisasterRecoveryPage: React.FC = () => {
-  const features = [];
+const ITDisasterRecoveryPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const ITDisasterRecoveryPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive backup and recovery solutions',
       benefit,
-  s: ['Automated backups', 'Data protection', 'Recovery testing'];
-    },
+  s: ['Automated backups', 'Data protection', 'Recovery testing']},
       ico,
   n: Zap,
       titl,
@@ -98,8 +98,7 @@ const ITDisasterRecoveryPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default ItDisasterRecoveryPage;

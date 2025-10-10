@@ -9,52 +9,64 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;)
-}
+<<<<<<< HEAD
+  fullScreen?: boolean;);
+=======
+  fullScreen?: boolean]
+    }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
-    size = 'md',
-    variant = 'spinner',
+    size = 'md',;
+variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
+<<<<<<< HEAD
     fullScreen = false,;)
-}); => {
+}); => {;
+const sizeClasses = useMemo(
+=======
+    fullScreen = false,]
+    }); => {
     const sizeClasses = useMemo(
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
-        xl: 'h-16 w-16',;)
-});,
+        xl: 'h-16 w-16',]
+    });,
       []
     );
-
-    const textSizeClasses = useMemo(
+;
+const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
-        xl: 'text-xl',;)
-});,
+        xl: 'text-xl',]
+    });,
       []
     );
-
-    const colorClasses = useMemo(
+;
+const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',;)
-});,
+        purple: 'border-purple-600 bg-purple-600',]
+    });,
       []
     );
-
-    const renderSpinner = useMemo(() => {switch (variant) {
+;
+const renderSpinner = useMemo(() => {
+return (
+switch (variant) {
         case 'dots':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
@@ -78,10 +90,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
 
         case 'skeleton':
           return (</div>
-            <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div>
+              <div>
+              <div>
+              <div>
           );
 
         case 'bars':
@@ -93,8 +105,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{
                     height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,;)
-}}
+                    animationDelay: `${i * 0.1}s`,]
+    }}
                 />
               ));</div>
           );
@@ -107,15 +119,22 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
               role='status'
               aria-label='Loading'
             />
-          );)
-}
+<<<<<<< HEAD
+          ););
+    }, [size, variant, color, sizeClasses, colorClasses]);
+const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
+}, [fullScreen, className]);
+=======
+          )]
+    }
     }, [size, variant, color, sizeClasses, colorClasses]);
 
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
-}, [fullScreen, className]);
+    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
+    }, [fullScreen, className]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return (</div>
-      <div></div>
+      <div>
         <div className='text-center'></div>
           {renderSpinner}
           {text && (</div>
@@ -124,11 +143,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
             </p>
           );
         </div>
-    );)
-}
+<<<<<<< HEAD
+    ););
+=======
+    )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 );
 
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner;
 }

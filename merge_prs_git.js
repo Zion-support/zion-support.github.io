@@ -4,34 +4,39 @@ import { execSync } from 'child_process';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint) {
-  return new Promise((resolve, reject) => {
-    const options = {
+<<<<<<< HEAD
+  return new Promise((resolve, reject) => {;
+const options = {
       hostname: 'api.github.com'
       port: 443;
+=======
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: 'api.github.com',
+      port:
+        port: 443;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       path: endpoint;
-      method: 'GET'
-      headers: {,
+      method: 'GET',
+      headers:
+        headers: {,
         'User-Agent': 'Zion-App-Automation',
-        'Accept': 'application/vnd.github.v3+json',
+        'Accept': 'application/vnd.github.v3+json',;
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
     };
-
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+;
+const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  JSON: ${error.message}`))}
+      })});
 
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
@@ -44,27 +49,24 @@ async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-
+;
 function runGitCommand(command) {
-  try {
-    const result = execSync(command, { )
+  try {;
+const result = execSync(command, { )
       cwd: '/workspace'),
       encoding: 'utf8'),
       stdio: 'pipe'});
-    return { success: true, output: result };
-  } catch (error) {
+    return { success: true, output: result }} catch (error) {
     return {
       success: false;
       error: error.message;
       output: error.stdout ? error.stdout.toString() : '',
-      stderr: error.stderr ? error.stderr.toString() : '',
+      stderr: error.stderr ? error.stderr.toString() : '',;
 function runGitCommand(command) {/* TODO: Fix JSX expression */}
     });
     return {/* TODO: Fix JSX expression */}
-  t: result };
-  } catch (error) {/* TODO: Fix JSX expression */}
-    };
-  }
+  t: result }} catch (error) {/* TODO: Fix JSX expression */}
+    }}
 }
 
 async function mergePRWithGit(pr) {
@@ -72,8 +74,7 @@ async function mergePRWithGit(pr) {
     // Get detailed PR info;
     if (!prDetails) {
 
-      return false;
-    }
+      return false}
 
     // Check if PR is mergeable;
     if (prDetails.mergeable === false) {}
@@ -81,14 +82,12 @@ async function mergePRWithGit(pr) {
     // Fetch the PR branch;
     if (!fetchResult.success) {
 
-      return false;
-    }
+      return false}
 
     // Try to merge the branch;
     if (mergeResult.success) {
 
-      return true;
-    } else {
+      return true} else {
       // If merge failed due to conflicts, try to resolve them;
       // Check if there are merge conflicts;
       if (statusResult.success && statusResult.output.includes('UU')) {
@@ -101,13 +100,10 @@ async function mergePRWithGit(pr) {
           // Commit the merge;
           if (commitResult.success) {
 
-            return true;
-          } else {
-            return false;
-          }
+            return true} else {
+            return false}
         } else {
-          return false;
-        }
+          return false}
       } else {
         return false;
 async function mergePRWithGit(pr) {/* TODO: Fix JSX expression */}
@@ -158,16 +154,14 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
     // Process PRs one by one;
     for (const pr of mainPRs) {
       if (success) {
-        successCount++;
-      } else {
+        successCount++} else {
         failCount++;
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-    }
+      await new Promise(resolve => setTimeout(resolve, 2000))}
 
 
 
@@ -180,11 +174,9 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
 // Run the merge process;
 mergeAllPRsWithGit().then(() => {
 
-  process.exit(0);
-}).catch(error => {)
+  process.exit(0)}).catch(error => {)
 )
-  process.exit(1);
-});
+  process.exit(1)});
 mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */}
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

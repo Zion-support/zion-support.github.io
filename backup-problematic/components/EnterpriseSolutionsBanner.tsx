@@ -28,6 +28,5 @@ export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>)
-  );
-}
+  )}
 "

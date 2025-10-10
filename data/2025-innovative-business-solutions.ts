@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -29,8 +30,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
 export interface InnovativeBusinessSolution {id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
@@ -52,8 +52,7 @@ export interface InnovativeBusinessSolution {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -73,15 +72,15 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     realService: true, technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],
     integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'], useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.', competitors: ['TableauPower BIQlikViewLooker'],
-    marketSize: '$7.8 B business intelligence market', growthRate: '28% annual growth',
-    variant: 'ai-business-intelligence',
+    marketSize: '$7.8 B business intelligence market', growthRate: '28% annual growth',;
+variant: 'ai-business-intelligence',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     real_implementation: true;
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launch_date: '2025 - 05 - 01'
+    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
+    launch_date: '2025 - 05 - 01',
     customers: 38;
     rating: 4.7;
     reviews: 26;
@@ -210,8 +209,8 @@ export const,
   s: ['TableauPower BIQlikViewLooker'],
     marketSiz,
   e: '$7.8B business intelligence market', growthRat,
-  e: '28% annual growth',
-    varian,
+  e: '28% annual growth',;
+varian,
   t: 'ai-business-intelligence',
     contactInf,
   o: unknown,
@@ -245,23 +244,22 @@ export const,
   s://ziontechgroup.com'
     }
 ];
-;
-  }
+}
 ];
 ;
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-    launchDate: '2025-02-15'
-    customers: 89;
+    launchDate: '2025-02-15',
+    customers:
+        customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
     tagline: 'Intelligent sales optimization and revenue acceleration',
-    price: '$3,500'
+    price: '$3,500',
     period: '/month',
     description:,
     realImplementatio,
@@ -304,8 +302,8 @@ export const,
       'Real-time sales monitoring'
     ]
     popular: true;
-    icon: ''
-    color: 'from-orange-500 to-red-600'
+    icon: '',
+    color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition:,
@@ -367,9 +365,15 @@ export const,
       'Revenue acceleration'],
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.',
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']
+<<<<<<< HEAD
     marketSize: '$5.2 B sales intelligence market'
-    growthRate: '30% annual growth'
+    growthRate: '30% annual growth';
+variant: 'ai-sales',
+=======
+    marketSize: '$5.2 B sales intelligence market',
+    growthRate: '30% annual growth',
     variant: 'ai-sales',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -377,16 +381,16 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered sales intelligence platform with intelligent optimization, forecasting, and seamless CRM integration.'
-    launchDate: '2025-03-01'
-    customers: 67;
+    launchDate: '2025-03-01',
+    customers:
+        customers: 67;
     rating: 4.9;
-    reviews: 45;
-  }
+    reviews: 45}
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
     tagline: 'Intelligent customer service and support automation',
-    price: '$2,500'
+    price: '$2,500',
     period: '/month',
     description:,
       'Revenue acceleration'
@@ -398,8 +402,8 @@ export const,
     marketSiz,
   e: '$5.2B sales intelligence market'
     growthRat,
-  e: '30% annual growth'
-    varian,
+  e: '30% annual growth';
+varian,
   t: 'ai-sales'
     contactInf,
   o: mobil,
@@ -452,8 +456,8 @@ export const,
       'Advanced customer service analytics'
     ]
     popular: false;
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
+    icon: '',
+    color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-service-platform',
     marketPosition:,
@@ -515,9 +519,15 @@ export const,
       'Support analytics'],
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.',
     competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
+<<<<<<< HEAD
     marketSize: '$4.8 B customer service market'
-    growthRate: '22% annual growth'
+    growthRate: '22% annual growth';
+variant: 'ai-customer-service',
+=======
+    marketSize: '$4.8 B customer service market',
+    growthRate: '22% annual growth',
     variant: 'ai-customer-service',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -525,16 +535,16 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered customer service platform with intelligent automation, support optimization, and seamless support tool integration.'
-    launchDate: '2025-03-15'
-    customers: 54;
+    launchDate: '2025-03-15',
+    customers:
+        customers: 54;
     rating: 4.7;
-    reviews: 38;
-  }
+    reviews: 38}
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
     tagline: 'Intelligent HR management and workforce optimization',
-    price: '$3,200'
+    price: '$3,200',
     period: '/month',
     description:,
       'Support analytics'
@@ -546,8 +556,8 @@ export const,
     marketSiz,
   e: '$4.8B customer service market'
     growthRat,
-  e: '22% annual growth'
-    varian,
+  e: '22% annual growth';
+varian,
   t: 'ai-customer-service'
     contactInf,
   o: mobil,
@@ -600,8 +610,8 @@ export const,
       'Comprehensive workforce analytics'
     ]
     popular: false;
-    icon: ''
-    color: 'from-teal-500 to-cyan-600'
+    icon: '',
+    color: 'from-teal-500 to-cyan-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-hr-management-platform',
     marketPosition:,
@@ -663,9 +673,15 @@ export const,
       'HR analytics'],
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.',
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
+<<<<<<< HEAD
     marketSize: '$6.2 B HR technology market'
-    growthRate: '26% annual growth'
+    growthRate: '26% annual growth';
+variant: 'ai-hr',
+=======
+    marketSize: '$6.2 B HR technology market',
+    growthRate: '26% annual growth',
     variant: 'ai-hr',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -673,16 +689,16 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered HR management platform with intelligent automation, workforce optimization, and seamless HR system integration.'
-    launchDate: '2025-04-01'
-    customers: 42;
+    launchDate: '2025-04-01',
+    customers:
+        customers: 42;
     rating: 4.8;
-    reviews: 29;
-  }
+    reviews: 29}
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
     tagline: 'Intelligent financial analysis and optimization',
-    price: '$4,500'
+    price: '$4,500',
     period: '/month',
     description:,
       'HR analytics'
@@ -694,8 +710,8 @@ export const,
     marketSiz,
   e: '$6.2B HR technology market'
     growthRat,
-  e: '26% annual growth'
-    varian,
+  e: '26% annual growth';
+varian,
   t: 'ai-hr'
     contactInf,
   o: mobil,
@@ -748,8 +764,8 @@ export const,
       'Comprehensive financial insights'
     ]
     popular: true;
-    icon: ''
-    color: 'from-emerald-500 to-green-600'
+    icon: '',
+    color: 'from-emerald-500 to-green-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-financial-analytics-platform',
     marketPosition:,
@@ -811,9 +827,15 @@ export const,
       'Performance monitoring'],
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
+<<<<<<< HEAD
     marketSize: '$8.5 B financial analytics market'
-    growthRate: '32% annual growth'
+    growthRate: '32% annual growth';
+variant: 'ai-financial',
+=======
+    marketSize: '$8.5 B financial analytics market',
+    growthRate: '32% annual growth',
     variant: 'ai-financial',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -821,16 +843,16 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered financial analytics platform with intelligent analysis, risk management, and seamless financial system integration.'
-    launchDate: '2025-04-15'
-    customers: 28;
+    launchDate: '2025-04-15',
+    customers:
+        customers: 28;
     rating: 4.9;
-    reviews: 19;
-  }
+    reviews: 19}
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
     tagline: 'Intelligent project management and optimization',
-    price: '$2,800'
+    price: '$2,800',
     period: '/month',
     description:,
       'Performance monitoring'
@@ -842,8 +864,8 @@ export const,
     marketSiz,
   e: '$8.5B financial analytics market'
     growthRat,
-  e: '32% annual growth'
-    varian,
+  e: '32% annual growth';
+varian,
   t: 'ai-financial'
     contactInf,
   o: mobil,
@@ -896,8 +918,8 @@ export const,
       'Comprehensive project insights'
     ]
     popular: false;
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
+    icon: '',
+    color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-project-management-platform',
     marketPosition:,
@@ -959,9 +981,15 @@ export const,
       'Team collaboration'],
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Notion']
+<<<<<<< HEAD
     marketSize: '$5.5 B project management market'
-    growthRate: '24% annual growth'
+    growthRate: '24% annual growth';
+variant: 'ai-project-management',
+=======
+    marketSize: '$5.5 B project management market',
+    growthRate: '24% annual growth',
     variant: 'ai-project-management',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -969,17 +997,17 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launchDate: '2025-05-01'
-    customers: 38;
+    launchDate: '2025-05-01',
+    customers:
+        customers: 38;
     rating: 4.7;
-    reviews: 26;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 26}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true;
-    implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launchDate: '2025-05-01'
+    implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
+    launchDate: '2025-05-01',
     customers: 38;
     rating: 4.7;
     reviews: 26;
@@ -992,8 +1020,8 @@ export const,
     marketSiz,
   e: '$5.5B project management market'
     growthRat,
-  e: '24% annual growth'
-    varian,
+  e: '24% annual growth';
+varian,
   t: 'ai-project-management'
     contactInf,
   o: mobil,
@@ -1051,22 +1079,21 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-    launchDate: '2025-02-15'
-    customers: 89;
+    launchDate: '2025-02-15',
+    customers:
+        customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
     tagline: 'Intelligent sales optimization and revenue acceleration',
-    price: '$3,500'
+    price: '$3,500',
     period: '/month',
     description:,
       'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.'
@@ -1155,7 +1182,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
     tagline: 'Intelligent customer service and support automation',
-    price: '$2,500'
+    price: '$2,500',
     period: '/month',
     description:,
       'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.'
@@ -1220,7 +1247,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
     tagline: 'Intelligent HR management and workforce optimization',
-    price: '$3,200'
+    price: '$3,200',
     period: '/month',
     description:,
       'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.'
@@ -1285,7 +1312,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
     tagline: 'Intelligent financial analysis and optimization',
-    price: '$4,500'
+    price: '$4,500',
     period: '/month',
     description:,
       'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.'
@@ -1350,7 +1377,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
     tagline: 'Intelligent project management and optimization',
-    price: '$2,800'
+    price: '$2,800',
     period: '/month',
     description:,
       'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.'
@@ -1458,8 +1485,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     reviews: 26}
       website: 'https://ziontechgroup.com'}
     real_implementation: true;
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launch_date: '2025 - 05 - 01'
+    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
+    launch_date: '2025 - 05 - 01',
     customers: 38;
     rating: 4.7;
     reviews: 26;
@@ -1600,7 +1627,7 @@ i,
   s: 26; ],' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } ]; } ]; realImplementatio,
+  s://ziontechgroup.com' } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,
   e: '2025-02-15' customer,

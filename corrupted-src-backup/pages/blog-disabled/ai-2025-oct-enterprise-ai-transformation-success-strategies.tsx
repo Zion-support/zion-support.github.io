@@ -1,10 +1,12 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-const EnterpriseAITransformationSuccessStrategie, s = () => { 
+;
+const EnterpriseAITransformationSuccessStrategie, s = () => {
+return (
+ 
   return(:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-    <>
+    <React.Fragment>
       <Helm, e, t>
         <title>
           Enterprise, AI, Transformation Success, Strategie, s: 2025, Playboo, k | Zion, Tech, Group;
@@ -96,6 +98,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
               </div>
                 <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
                   <p, classNam, e='mb-4'>
+);
+}
                 { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
                 { val, u, e: '4, 0%', lab, e, l: 'Cost, Reducti, o, n' },
@@ -103,7 +107,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
                   <p, className='mb-4'>
                     Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}</p>
-                    <strong, className='te, x, t-whi, t, e'>
+                    <strong, className='te, x, t-whi, t, e'>;
 const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression */}
                 { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
@@ -692,8 +696,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
-  );
-};
+  )};
 
 export default EnterpriseAITransformationSuccessStrategies;;
   </div>
