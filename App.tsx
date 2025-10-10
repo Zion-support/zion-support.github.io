@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import UnifiedContentPromotion from './app/components/UnifiedContentPromotion';
+import InteractiveAIROICalculator from './app/components/InteractiveAIROICalculator';
+import ContentShowcase from './app/components/ContentShowcase';
+import InteractiveContentShowcase2026 from './app/components/InteractiveContentShowcase2026';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -106,7 +111,38 @@ const App: React.FC = memo(() => {
             name="twitter:description"
             content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
           />
-          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/images/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/zion-tech-group",
+              "https://github.com/ZionClouds"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "description": "AI Services, Micro SaaS Solutions, IT Services",
+              "category": "Technology Services"
+            }
+          })}</script>
         </Helmet>
         <Router>
           <div className="min-h-screen bg-white">
