@@ -134,7 +134,11 @@ const $1: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
+<<<<<<< HEAD
 </div>
+=======
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
         </div>
       </section>
 
@@ -142,6 +146,7 @@ const $1: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">
               Intelligent IT Operations
             </h2>
@@ -205,25 +210,25 @@ const $1: React.FC = () => {
                   <feature.icon className="w-6 h-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Operations Features</h2>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">AI Ops Features</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Ops solutions combine machine learning, automation, and intelligent monitoring 
-              to revolutionize how you manage your IT infrastructure.
+              Comprehensive AI-powered solutions for modern IT operations
             </p>
           </div>
 <<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                </div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
 =======
@@ -242,13 +247,18 @@ const $1: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   ))}
                 </ul>
+<<<<<<< HEAD
 </div>
+=======
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -257,16 +267,22 @@ const $1: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the transformative power of AI-driven IT operations with measurable results.
+=======
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Ops?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your IT operations with proven AI-powered solutions
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
           </div>
@@ -277,17 +293,15 @@ const $1: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Use Cases
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Ops solutions are designed for various IT environments and use cases.
+              AI Ops solutions for every industry and team
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="text-center">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
@@ -298,6 +312,7 @@ const $1: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -318,9 +333,17 @@ const $1: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Discover how AI Ops can revolutionize your IT infrastructure management. 
             Get started with a free consultation and demo.
+=======
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Operations?</h2>
+          <p className="text-xl text-gray-100 mb-8">
+            Get started with AI Ops today and experience the future of intelligent IT operations.
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
           </p>
 <<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
 =======
@@ -328,17 +351,25 @@ const $1: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial;
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+=======
+            <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
+            <button className="border border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
             </button>
           </div>
         </div>
       </section>
 
       <Footer />
+<<<<<<< HEAD
 </div>
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
   );
 };
 
-export default PagePage;
+export default AIOpsPage;
