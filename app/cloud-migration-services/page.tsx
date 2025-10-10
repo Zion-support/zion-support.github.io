@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
     }
-  ]
+  ];
   const benefits = [
 'Advanced cloud migration technology',
     'Real-time migration monitoring',

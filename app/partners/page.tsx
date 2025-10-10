@@ -43,8 +43,7 @@ const PartnersPage: React.FC = () => {
       description: 'Partner for IT service management and workflow automation',
       category: 'IT Management'
     }
-  ]
-
+  ];
   const benefits = [
     {
       title: 'Certified Expertise',
@@ -66,8 +65,7 @@ const PartnersPage: React.FC = () => {
       description: 'Leverage partner pricing and volume discounts for your projects',
       icon: CheckCircle
     }
-  ]
-
+  ];
   const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
   return (

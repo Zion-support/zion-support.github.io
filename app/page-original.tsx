@@ -76,7 +76,7 @@ useEffect(() => {
         {/* Skip to main content for accessibility */}
 
         <a>
-          Skip to main content;
+          Skip to main content
         </a>
 
       {/* Content Promotion Banner */}
@@ -975,7 +975,14 @@ useEffect(() => {
           </div>
         </section>
         {/* Micro SAAS Solutions Section */}
-        <section className="mb-16" aria-labelledby="micro-saas-heading"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <h2>
             Micro SAAS Solutions
           </h2>
@@ -1178,7 +1185,7 @@ useEffect(() => {
                 <div className="text-center"></div>
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
                   <a>
-                    Try Free →;
+                    Try Free →
                   </a>
                 </div>
               </article>
@@ -1204,7 +1211,14 @@ useEffect(() => {
           <ContentNewsletterSignup>
         </Suspense>
         {/* Contact Section */}
-        <section className="mb-16" aria-labelledby="contact-heading"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.</p>
@@ -1215,8 +1229,7 @@ useEffect(() => {
                 <div className="space-y-6"></div>
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
-                      <Phone>
-                    </div>
+                      <Phone />
                     <div />
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a>
@@ -1226,8 +1239,7 @@ useEffect(() => {
                   </div>
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
-                      <Mail>
-                    </div>
+                      <Mail />
                     <div />
                       <p className="text-gray-300 text-sm">Email</p>
                       <a>
@@ -1237,8 +1249,7 @@ useEffect(() => {
                   </div>
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
-                      <MapPin>
-                    </div>
+                      <MapPin />
                     <div />
                       <p className="text-gray-300 text-sm">Address</p>
                       <p>
@@ -1249,8 +1260,7 @@ useEffect(() => {
                   </div>
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
-                      <Clock>
-                    </div>
+                      <Clock />
                     <div />
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p>
@@ -1267,25 +1277,22 @@ useEffect(() => {
                 <form>
                   <div />
                     <label>
-                      Full Name;
+                      Full Name
                     </label>
-                    <input>
-                  </div>
+                    <input />
                   <div />
                     <label>
-                      Email Address;
+                      Email Address
                     </label>
-                    <input>
-                  </div>
+                    <input />
                   <div />
                     <label>
-                      Phone Number;
+                      Phone Number
                     </label>
-                    <input>
-                  </div>
+                    <input />
                   <div />
                     <label>
-                      Service Interest;
+                      Service Interest
                     </label>
                     <select>
                       <option value="">Select a service</option>
@@ -1298,7 +1305,7 @@ useEffect(() => {
                   </div>
                   <div />
                     <label>
-                      Message;
+                      Message
                     </label>
                     <textarea
                       id="message"
@@ -1317,8 +1324,7 @@ useEffect(() => {
         </section>
       </main>
       {/* Footer */}
-      <Footer>
-    </div>
+      <Footer />
     </>
   )
 })

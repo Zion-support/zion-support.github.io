@@ -109,7 +109,7 @@ export class ErrorHandler {
   }
 export class ErrorHandler {}
   private static instance: ErrorHandler,
-  private config: ErrorHandlerConfig;</string>
+  private config: ErrorHandlerConfig</string>
   private errors: AppError[] = []</string>
   private retryQueue: Array<{ error: AppError, retryCount: number }> = []
   constructor(config: Partial<ErrorHandlerConfig>= {}) {}
@@ -1029,7 +1029,7 @@ export class ErrorBoundary extends React.Component<
             ></button>
               Try again</button>
             >;
-              Try again;
+              Try again
             </button>
           </div>
         );
@@ -1072,8 +1072,9 @@ export const useErrorHandler = () => {}
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()}
-}
-export default ErrorHandler;</string>
+};
+
+export default ErrorHandler</string>
 </string>
 // React hook for error handling
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */},

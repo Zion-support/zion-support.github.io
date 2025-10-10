@@ -1433,8 +1433,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 5 users'
     }
-  ]
-
+  ];
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
@@ -1444,7 +1443,8 @@ description: 'Custom API development, third-party integrations, and microservice
 
   return (
     <React.Fragment>
-      <SEOOptimizer
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -1496,7 +1496,6 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -1529,8 +1528,8 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
-                Advanced AI and IT Solutions
+              <p className="text-xl text-gray-300 mb-8">
+                Advanced AI and IT Solutions for Modern Businesses
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.

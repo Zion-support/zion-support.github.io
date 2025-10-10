@@ -29,8 +29,7 @@ const TeamPage: React.FC = () => {
             </div>
           </div>
         </main>
-        <Footer>
-      </div>
+        <Footer />
     </>,
   )
   }

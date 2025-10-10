@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
     }
-  ]
+  ];
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',

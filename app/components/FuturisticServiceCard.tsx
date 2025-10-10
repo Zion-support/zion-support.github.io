@@ -20,12 +20,19 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
               <span>
-                FuturisticServiceCard;
+                FuturisticServiceCard
               </span>
               <br>
               <span className="text-white">Solutions</span>

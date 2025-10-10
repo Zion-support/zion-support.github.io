@@ -80,7 +80,8 @@ export const,
       {children})
     </a>);
   );
-}
+};
+
 export default Link;
     >;
       {children}

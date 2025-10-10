@@ -191,9 +191,8 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
-    }
-  ]
-
+    },
+  ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },

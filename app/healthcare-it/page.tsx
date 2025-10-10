@@ -40,14 +40,20 @@ icon: Heart,
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
   }
-    }
-  ]
+    ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
       <SEOOptimizer>
       <Navigation>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
@@ -67,7 +73,14 @@ return (
         </div>
       </section>
 {/* Features Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
             <p>
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
@@ -86,7 +99,14 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Healthcare IT Solutions?</h2>
@@ -98,8 +118,7 @@ return (
             {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
-                </div>
+                  <CheckCircle />
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -107,7 +126,14 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<section className="py-20 px-4"></section>
+<section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
             </button>
             <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Case Studies
             </button>

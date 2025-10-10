@@ -58,7 +58,7 @@ return (
           </div>
         </div>
       </section>
-              Ready to Get Started?;
+              Ready to Get Started?
             </h2>
             <p>
               Contact our experts to discuss your page needs and get a customized solution.

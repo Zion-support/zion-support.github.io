@@ -49,7 +49,7 @@ const AiAnalyticsPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
   const useCases = [
     {
       title: 'Business Intelligence',

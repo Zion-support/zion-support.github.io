@@ -32,8 +32,7 @@ const CareersPage: React.FC = () => {
       description: 'Extract insights from complex datasets to drive business decisions.',
       requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
     }
-  ]
-
+  ];
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -42,8 +41,7 @@ const CareersPage: React.FC = () => {
     'Top-tier equipment and tools',
     'Team building events',
     'Career growth opportunities'
-  ]
-
+  ];
   const values = [
     {
       icon: Star,

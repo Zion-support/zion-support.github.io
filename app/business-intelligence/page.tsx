@@ -24,7 +24,7 @@ icon: Brain,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
     }
-  ]
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

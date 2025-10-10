@@ -20,8 +20,8 @@ const AIContentWriterPage: React.FC = () => {
       title: 'Multi-Format Support',
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
-    }
-  ]
+    },
+  ];
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
@@ -29,8 +29,7 @@ const AIContentWriterPage: React.FC = () => {
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ]
-
+  ];
   const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },

@@ -1612,7 +1612,7 @@ if ('memory' in performance) {}
       passRate: total > 0 ? (passed / total) * 100 : 0}
     }
   }
-  // Clear test results;
+  // Clear test results
   clearTestResults() {}
     this.testResults = []}
   }

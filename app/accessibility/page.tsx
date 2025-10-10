@@ -39,7 +39,7 @@ const features = [
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
-    }
+    },
   ]
 const standards = [
     {

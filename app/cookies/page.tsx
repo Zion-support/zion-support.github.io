@@ -53,8 +53,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     }
-  ]
-
+  ];
   const purposes = [
     {
       title: 'Website Functionality',

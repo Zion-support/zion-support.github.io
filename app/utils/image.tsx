@@ -139,7 +139,8 @@ export default Image</img>
       {...props})
     />);
   );
-}
+};
+
 export default Image;
     />);
   )

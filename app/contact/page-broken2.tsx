@@ -115,7 +115,7 @@ return (
             <h1>
               Get in;
               <span>
-                {' '}Touch;
+                {' '}Touch
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ready to transform your business? Let's discuss your project and explore;
@@ -149,8 +149,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <User>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                   <div />
                     <label>
@@ -158,8 +157,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Mail>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -169,8 +167,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Building>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                   <div />
                     <label>
@@ -178,8 +175,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Phone>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                 </div>
                 <div />
@@ -204,12 +200,11 @@ return (
                 </div>
                 <div />
                   <label>
-                    Message *;
+                    Message *
                   </label>
                   <div className="relative"></div>
                     <MessageCircle>
-                    <textarea>
-                  </div>
+                    <textarea />
                 </div>
                 <button>
                   {
@@ -246,8 +241,7 @@ return (
                 <div className="space-y-6"></div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Phone>
-                    </div>
+                      <Phone />
                     <div />
 <h3>
 
@@ -264,8 +258,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail>
-                    </div>
+                      <Mail />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
@@ -273,8 +266,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin>
-                    </div>
+                      <MapPin />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
@@ -282,8 +274,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock>
-                    </div>
+                      <Clock />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>

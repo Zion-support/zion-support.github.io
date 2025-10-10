@@ -2,165 +2,122 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Function to fix common syntax errors in TypeScript/JSX files
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix semicolons after property names in object literals
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix semicolons after property names in object literals (with quotes)
-  // Pattern: "property": value,; -> "property": value,
-  fixed = fixed.replace(/(["']\w+["']):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed JSX closing tags
-  // Pattern: <tag></tag> -> <tag />
-  fixed = fixed.replace(/<(\w+)><\/\1>/g, '<$1 />');
-  
-  // Fix malformed JSX with semicolons
-  // Pattern: <tag>; -> <tag>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with semicolons
-  // Pattern: </tag>; -> </tag>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix array method syntax errors
-  // Pattern: .map((item, index) => (; -> .map((item, index) => (
-  fixed = fixed.replace(/\.map\(\([^)]+\)\s*=>\s*\(;/g, (match) => match.replace('(;', '('));
-  
-  // Fix array method syntax errors with closing
-  // Pattern: }); -> })
-  fixed = fixed.replace(/}\);/g, '})');
-  
-  // Fix malformed return statements
-  // Pattern: return (; -> return (
-  fixed = fixed.replace(/return\s*\(;/g, 'return (');
-  
-  // Fix malformed function declarations
-  // Pattern: function() {; -> function() {
-  fixed = fixed.replace(/function\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed arrow functions
-  // Pattern: () => {; -> () => {
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed JSX fragments
-  // Pattern: <></> -> <>
-  fixed = fixed.replace(/<><\/>/g, '<>');
-  
-  // Fix malformed JSX with extra semicolons
-  // Pattern: <Component>; -> <Component>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with extra semicolons
-  // Pattern: </Component>; -> </Component>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix malformed object property assignments
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed array syntax
-  // Pattern: [item,; -> [item,
-  fixed = fixed.replace(/\[([^,\]]+),;/g, '[$1,');
-  
-  // Fix malformed array closing
-  // Pattern: ]; -> ]
-  fixed = fixed.replace(/\];/g, ']');
-  
-  // Fix malformed object closing
-  // Pattern: }; -> }
-  fixed = fixed.replace(/\};/g, '}');
-  
-  // Fix malformed function calls
-  // Pattern: function(; -> function(
-  fixed = fixed.replace(/function\s*\(;/g, 'function(');
-  
-  // Fix malformed method calls
-  // Pattern: .method(; -> .method(
-  fixed = fixed.replace(/\.(\w+)\(;/g, '.$1(');
-  
-  // Fix malformed conditional statements
-  // Pattern: if (condition) {; -> if (condition) {
-  fixed = fixed.replace(/if\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed for loops
-  // Pattern: for (init; condition; increment) {; -> for (init; condition; increment) {
-  fixed = fixed.replace(/for\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed while loops
-  // Pattern: while (condition) {; -> while (condition) {
-  fixed = fixed.replace(/while\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed switch statements
-  // Pattern: switch (expression) {; -> switch (expression) {
-  fixed = fixed.replace(/switch\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed try-catch blocks
-  // Pattern: try {; -> try {
-  fixed = fixed.replace(/try\s*\{;/g, 'try {');
-  
-  // Fix malformed catch blocks
-  // Pattern: catch (error) {; -> catch (error) {
-  fixed = fixed.replace(/catch\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed finally blocks
-  // Pattern: finally {; -> finally {
-  fixed = fixed.replace(/finally\s*\{;/g, 'finally {');
-  
-  return fixed;
-}
+// Get list of files with errors
+const lintOutput = execSync('cd /workspace && pnpm run lint 2>&1', { encoding: 'utf8' });
+const errorFiles = [...new Set(
+  lintOutput
+    .split('\n')
+    .filter(line => line.includes('error') && line.includes('.tsx:'))
+    .map(line => line.split(':')[0])
+    .filter(file => file.startsWith('/workspace/'))
+)];
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+console.log(`Found ${errorFiles.length} files with errors`);
+
+// Common fixes
+const fixes = [
+  // Fix array syntax with semicolons
+  {
+    pattern: /(\s+)([^;]+),;/g,
+    replacement: '$1$2,'
+  },
+  // Fix array closing with semicolon
+  {
+    pattern: /(\s+)\];\s*$/gm,
+    replacement: '$1];'
+  },
+  // Fix JSX self-closing tags
+  {
+    pattern: /<meta>\s*<meta>/g,
+    replacement: '<meta name="description" content="AI-powered solution" />\n        <meta name="keywords" content="AI, artificial intelligence, business solutions" />'
+  },
+  // Fix Navigation component
+  {
+    pattern: /<Navigation>\s*<div/g,
+    replacement: '<Navigation />\n      <div'
+  },
+  // Fix malformed JSX elements
+  {
+    pattern: /<(\w+)>\s*<\/div>/g,
+    replacement: '<$1 />'
+  },
+  // Fix text content with semicolons
+  {
+    pattern: /([^>])\s*;(\s*<\/[^>]+>)/g,
+    replacement: '$1$2'
+  },
+  // Fix malformed feature mapping
+  {
+    pattern: /{\s*features\.map\(\(feature, index\) => \(\s*}\s*<div/g,
+    replacement: '{features.map((feature, index) => (\n                <div'
+  },
+  // Fix malformed benefits mapping
+  {
+    pattern: /{\s*benefits\.map\(\(benefit, index\) => \(\s*}\s*<div/g,
+    replacement: '{benefits.map((benefit, index) => (\n                <div'
+  },
+  // Fix feature.icon usage
+  {
+    pattern: /<feature>\s*<\/div>/g,
+    replacement: '<feature.icon className="w-8 h-8 text-white" />'
+  },
+  // Fix CheckCircle usage
+  {
+    pattern: /<CheckCircle>\s*<\/div>/g,
+    replacement: '<CheckCircle className="w-8 h-8 text-white" />'
+  },
+  // Fix malformed JSX structure
+  {
+    pattern: /<(\w+)>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
+    replacement: '</div>\n          </div>\n        </section>'
+  },
+  // Fix return statement
+  {
+    pattern: /return \(\s*<>\s*<Helmet>/g,
+    replacement: 'return (\n    <>\n      <Helmet>'
+  },
+  // Fix export statement
+  {
+    pattern: /}\s*export default/g,
+    replacement: '};\n\nexport default'
+  },
+  // Fix function closing
+  {
+    pattern: /,\s*}\s*$/g,
+    replacement: ';\n};'
   }
-}
+];
 
-// Main function
-function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+let fixedCount = 0;
+
+errorFiles.forEach(filePath => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    files.forEach(file => {
-      if (processFile(file)) {
-        fixedFiles++;
-      }
+    // Apply fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
     });
-  });
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
-}
+    
+    // Additional specific fixes
+    // Fix array syntax issues
+    content = content.replace(/(\s+)([^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+);/g, 
+      '$1$2,\n$3,\n$4,\n$5,\n$6');
+    
+    // Fix JSX structure issues
+    content = content.replace(/<section[^>]*>\s*<\/section>/g, '<section className="py-20 px-4">\n          <div className="max-w-7xl mx-auto">\n            <div className="text-center mb-16">\n              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>\n              <p className="text-xl text-gray-300">Section description</p>\n            </div>\n          </div>\n        </section>');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      fixedCount++;
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+});
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixSyntaxErrors, processFile };
+console.log(`Fixed ${fixedCount} files`);

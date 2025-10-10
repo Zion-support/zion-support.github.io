@@ -24,8 +24,7 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing'
     }
-  ]
-
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -35,8 +34,7 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
+  ];
   const testimonials = [
     {
       name: 'Sarah Johnson',

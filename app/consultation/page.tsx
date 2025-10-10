@@ -28,8 +28,7 @@ const ConsultationPage: React.FC = () => {
       price: 'Starting at $3,500',
       duration: '2-3 weeks'
     }
-  ]
-
+  ];
   const process = [
     {
       step: '1',
