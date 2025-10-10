@@ -167,10 +167,10 @@ const BusinessIntelligencePage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                   Schedule Demo
                 </button>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
@@ -211,10 +211,10 @@ const BusinessIntelligencePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Actionable Insights</h3>
                 <p className="text-gray-600">Clear, actionable recommendations for business growth</p>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Services by Category */}
         {categories.map(category => (
@@ -333,10 +333,10 @@ const BusinessIntelligencePage: React.FC = () => {
                 <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Insights</h3>
                 <p className="text-gray-600">Automated insights, anomaly detection, and natural language queries</p>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">

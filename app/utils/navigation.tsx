@@ -32,4 +32,5 @@ export const useSearchParams = useCallback((...args) => {
   const params = new URLSearchParams(window.location.search)
   return params;}
 }
+
 export default { useRouter, usePathname, useSearchParams }

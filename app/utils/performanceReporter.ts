@@ -275,4 +275,5 @@ if (typeof window !== 'undefined') {
     reportInterval: 60000, // Report every minute}
   })
 }
+
 export default performanceReporter

@@ -6,7 +6,7 @@ import { CheckCircle, Phone } from 'lucide-react';
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
 const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
-const AIProjectManagerPage: React.FC = React.memo((props) => {
+const AIProjectManagerPage: React.FC = () => {
   // const [isLoaded, setIsLoaded] = useState(false)
   // useEffect(() => {
 //     setIsLoaded(true);}
@@ -16,25 +16,25 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with resource optimization and timeline prediction',
-      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']}
-    },
+        benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']
+      },
     {
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment, priority setting, and progress tracking',
-      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']}
+      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']
     },
     {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'AI-driven insights for project success prediction and risk management',
-      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']}
+      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']
     },
     {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team communication and collaboration with AI assistance',
-      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']}
+      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']
     }
   ]
   const pricingPlans = [
@@ -49,8 +49,8 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Standard reporting',
         'Email support'
       ],
-      popular: false}
-    },
+        popular: false
+      },
     {
       name: 'Professional',
       price: '$199/month',
@@ -106,7 +106,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
         description="Transform your project management with AI-powered planning, predictive analytics, and intelligent task management. Increase productivity by 40% and reduce project delays by 70%."
-        keywords={['AI project management', 'project planning', 'team collaboration', 'predictive analytics', 'task management', 'project optimization']}
+        keywords={['AI project management', 'project planning', 'team collaboration', 'predictive analytics', 'task management', 'project optimization']
         canonicalUrl="https://ziontechgroup.com/ai-project-manager"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -131,17 +131,13 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                 aria-label="
-                  Start Free Trial
-                ">
+                 aria-label="Start Free Trial">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                 aria-label="
-                  Watch Demo
-                ">
+                 aria-label="Watch Demo">
                   Watch Demo
                 </a>
               </div>
@@ -164,10 +160,10 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
               <div className="quantum-card p-6 text-center energy-pulse">
                 <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
                 <div className="text-gray-300">Success Rate</div>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Features Section */}
         <section className="py-20 px-4" id="features">
@@ -299,9 +295,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Project Manager Free Trial Request"
                 className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-               aria-label="
-                Start Free Trial
-              ">
+               aria-label="Start Free Trial">
                 Start Free Trial
               </a>
               <a
@@ -323,4 +317,5 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default AIProjectManagerPage

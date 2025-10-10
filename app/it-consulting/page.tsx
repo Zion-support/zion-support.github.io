@@ -4,7 +4,7 @@ import { CheckCircle, Users, Target, Zap, Shield, BarChart, Award, ArrowRight, B
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
-const ITConsultingPage: React.FC = React.memo((props) => {
+const ITConsultingPage: React.FC = () => {
   const services = [
     {
       icon: Brain,
@@ -107,10 +107,10 @@ const ITConsultingPage: React.FC = React.memo((props) => {
                 <Phone className="mr-2 w-5 h-5" />
                 (302) 464-0950
               </a>
+                </article>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -235,4 +235,5 @@ const ITConsultingPage: React.FC = React.memo((props) => {
     </div>
   )
 }
+
 export default ITConsultingPage

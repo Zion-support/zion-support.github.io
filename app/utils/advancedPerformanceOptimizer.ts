@@ -130,4 +130,5 @@ export class PerformanceOptimizer {
     return summary
   }
 }
+
 export default PerformanceOptimizer.getInstance()

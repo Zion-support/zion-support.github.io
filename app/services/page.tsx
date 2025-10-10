@@ -4,7 +4,7 @@ import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
-const ServicesPage: React.FC = React.memo((props) => {
+const ServicesPage: React.FC = () => {
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -15,7 +15,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'}
+      category: 'Productivity'
     },
     {
       title: 'AI Social Media Manager',
@@ -26,7 +26,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'}
+      category: 'Marketing'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -37,7 +37,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
       link: '/ai-analytics',
       popular: true,
-      category: 'Analytics'}
+      category: 'Analytics'
     },
     {
       title: 'AI Email Marketing',
@@ -48,7 +48,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
       link: '/ai-email-marketing',
       popular: true,
-      category: 'Marketing'}
+      category: 'Marketing'
     },
     {
       title: 'AI Customer Support Bot',
@@ -59,7 +59,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
       link: '/ai-customer-support-bot',
       popular: true,
-      category: 'Customer Service'}
+      category: 'Customer Service'
     },
     {
       title: 'AI Code Review Assistant',
@@ -70,7 +70,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
       popular: false,
-      category: 'Development'}
+      category: 'Development'
     },
     {
       title: 'AI Video Generator',
@@ -81,7 +81,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports'],
       link: '/ai-video-generation',
       popular: true,
-      category: 'Content Creation'}
+      category: 'Content Creation'
     },
     {
       title: 'AI Voice Cloning',
@@ -92,7 +92,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing'],
       link: '/ai-voice-cloning',
       popular: false,
-      category: 'Content Creation'}
+      category: 'Content Creation'
     },
     {
       title: 'AI Workflow Automation',
@@ -103,7 +103,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring'],
       link: '/ai-workflow-automation',
       popular: true,
-      category: 'Automation'}
+      category: 'Automation'
     },
     {
       title: 'AI Fashion Design',
@@ -114,7 +114,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity'],
       link: '/ai-fashion-design',
       popular: false,
-      category: 'Design'}
+      category: 'Design'
     },
     {
       title: 'AI Music Composition',
@@ -125,7 +125,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues'],
       link: '/ai-music-composition',
       popular: false,
-      category: 'Creative'}
+      category: 'Creative'
     },
     {
       title: 'AI Fitness Coach',
@@ -136,7 +136,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Better results', 'Motivation boost', 'Flexible scheduling'],
       link: '/ai-fitness-coach',
       popular: false,
-      category: 'Health & Fitness'}
+      category: 'Health & Fitness'
     },
     {
       title: 'AI Sales Automation',
@@ -147,7 +147,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['35% more leads', '50% conversion increase', '25% revenue growth'],
       link: '/ai-sales-automation',
       popular: true,
-      category: 'Sales'}
+      category: 'Sales'
     },
     {
       title: 'AI Data Visualization',
@@ -158,7 +158,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Faster insights', 'Better decisions', 'Stunning presentations'],
       link: '/ai-data-visualization',
       popular: false,
-      category: 'Analytics'}
+      category: 'Analytics'
     },
     {
       title: 'AI 3D Generation',
@@ -169,7 +169,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Professional 3D content', 'Time savings', 'Creative freedom'],
       link: '/ai-3d-generation',
       popular: false,
-      category: '3D & Graphics'}
+      category: '3D & Graphics'
     },
     {
       title: 'AI Customer Support',
@@ -180,7 +180,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Faster resolution', 'Higher satisfaction', '24/7 availability'],
       link: '/ai-customer-support',
       popular: true,
-      category: 'Customer Service'}
+      category: 'Customer Service'
     },
     {
       title: 'AI Content Writer',
@@ -191,7 +191,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency'],
       link: '/ai-content-writer',
       popular: true,
-      category: 'Content Creation'}
+      category: 'Content Creation'
     },
     {
       title: 'AI Inventory Manager',
@@ -202,7 +202,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts'],
       link: '/ai-inventory-manager',
       popular: false,
-      category: 'Operations'}
+      category: 'Operations'
     },
     {
       title: 'AI HR Assistant',
@@ -213,7 +213,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['50% faster hiring', 'Better candidate matching', 'Reduced bias'],
       link: '/ai-hr-assistant',
       popular: false,
-      category: 'Human Resources'}
+      category: 'Human Resources'
     },
     {
       title: 'AI Financial Advisor',
@@ -224,7 +224,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Better returns', 'Risk management', 'Tax savings'],
       link: '/ai-financial-advisor',
       popular: false,
-      category: 'Finance'}
+      category: 'Finance'
     },
     {
       title: 'AI Legal Assistant',
@@ -235,8 +235,8 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Faster reviews', 'Risk identification', 'Cost savings'],
       link: '/ai-legal-assistant',
       popular: false,
-      category: 'Legal'}
-    }
+      category: 'Legal'
+    },
   ]
   const aiServices = [
     {
@@ -246,7 +246,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,500/month',
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
       color: 'text-purple-400',
-      category: 'AI Development'}
+      category: 'AI Development'
     },
     {
       title: 'Natural Language Processing',
@@ -255,7 +255,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,200/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
       color: 'text-blue-400',
-      category: 'AI Development'}
+      category: 'AI Development'
     },
     {
       title: 'Computer Vision',
@@ -264,7 +264,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,800/month',
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
       color: 'text-green-400',
-      category: 'AI Development'}
+      category: 'AI Development'
     },
     {
       title: 'AI Automation',
@@ -273,7 +273,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400',
-      category: 'Automation'}
+      category: 'Automation'
     },
     {
       title: 'AI Data Visualization',
@@ -282,7 +282,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,100/month',
       features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
       color: 'text-orange-400',
-      category: 'Data Science'}
+      category: 'Data Science'
     },
     {
       title: 'AI 3D Generation',
@@ -291,7 +291,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
-      category: '3D & Graphics'}
+      category: '3D & Graphics'
     },
     {
       title: 'AI Voice Synthesis',
@@ -300,7 +300,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,300/month',
       features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
       color: 'text-indigo-400',
-      category: 'Voice Technology'}
+      category: 'Voice Technology'
     },
     {
       title: 'AI Content Generation',
@@ -309,7 +309,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,000/month',
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
       color: 'text-yellow-400',
-      category: 'Content AI'}
+      category: 'Content AI'
     },
     {
       title: 'AI Predictive Analytics',
@@ -318,7 +318,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,700/month',
       features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
       color: 'text-red-400',
-      category: 'Analytics'}
+      category: 'Analytics'
     },
     {
       title: 'AI Recommendation Engine',
@@ -327,7 +327,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,400/month',
       features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'],
       color: 'text-teal-400',
-      category: 'Personalization'}
+      category: 'Personalization'
     },
     {
       title: 'AI Fraud Detection',
@@ -336,7 +336,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,900/month',
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
       color: 'text-red-500',
-      category: 'Security'}
+      category: 'Security'
     },
     {
       title: 'AI Document Processing',
@@ -345,8 +345,8 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400',
-      category: 'Document AI'}
-    }
+      category: 'Document AI'
+    },
   ]
   const itServices = [
     {
@@ -356,7 +356,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,299/month',
       features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'],
       color: 'text-blue-400',
-      category: 'Cloud Computing'}
+      category: 'Cloud Computing'
     },
     {
       title: 'Cybersecurity',
@@ -365,7 +365,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,599/month',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
       color: 'text-red-400',
-      category: 'Security'}
+      category: 'Security'
     },
     {
       title: 'DevOps & CI/CD',
@@ -374,7 +374,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,199/month',
       features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'],
       color: 'text-green-400',
-      category: 'Development'}
+      category: 'Development'
     },
     {
       title: 'Database Services',
@@ -383,7 +383,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400',
-      category: 'Data Management'}
+      category: 'Data Management'
     },
     {
       title: 'IT Consulting',
@@ -392,7 +392,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,000/month',
       features: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Process Optimization'],
       color: 'text-yellow-400',
-      category: 'Consulting'}
+      category: 'Consulting'
     },
     {
       title: 'Network Infrastructure',
@@ -401,7 +401,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,400/month',
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
       color: 'text-indigo-400',
-      category: 'Infrastructure'}
+      category: 'Infrastructure'
     },
     {
       title: 'Mobile App Development',
@@ -410,7 +410,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,500/month',
       features: ['iOS/Android Apps', 'Cross-platform Development', 'UI/UX Design', 'App Store Optimization'],
       color: 'text-pink-400',
-      category: 'Mobile Development'}
+      category: 'Mobile Development'
     },
     {
       title: 'Web Development',
@@ -419,7 +419,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,200/month',
       features: ['Frontend Development', 'Backend Development', 'API Integration', 'Performance Optimization'],
       color: 'text-cyan-400',
-      category: 'Web Development'}
+      category: 'Web Development'
     },
     {
       title: 'Data Analytics',
@@ -428,7 +428,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,300/month',
       features: ['Data Warehousing', 'Business Intelligence', 'Reporting Dashboards', 'Data Mining'],
       color: 'text-orange-400',
-      category: 'Analytics'}
+      category: 'Analytics'
     },
     {
       title: 'IT Support & Maintenance',
@@ -437,7 +437,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$800/month',
       features: ['24/7 Support', 'System Maintenance', 'Software Updates', 'Hardware Management'],
       color: 'text-gray-400',
-      category: 'Support'}
+      category: 'Support'
     },
     {
       title: 'Blockchain Solutions',
@@ -446,7 +446,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$2,000/month',
       features: ['Smart Contracts', 'DApp Development', 'Token Creation', 'DeFi Solutions'],
       color: 'text-yellow-500',
-      category: 'Blockchain'}
+      category: 'Blockchain'
     },
     {
       title: 'IoT Solutions',
@@ -455,8 +455,8 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,600/month',
       features: ['IoT Device Development', 'Sensor Integration', 'Data Collection', 'Real-time Monitoring'],
       color: 'text-green-500',
-      category: 'IoT'}
-    }
+      category: 'IoT'
+    },
   ]
   const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Sales', 'Operations', 'Human Resources', 'Finance', 'Legal', '3D & Graphics', 'Voice Technology', 'Content AI', 'Personalization', 'Security', 'Document AI', 'Cloud Computing', 'Data Management', 'Consulting', 'Infrastructure', 'Mobile Development', 'Web Development', 'Support', 'Blockchain', 'IoT']
   return (
@@ -491,7 +491,7 @@ const ServicesPage: React.FC = React.memo((props) => {
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
                       Popular
                     </div>
-                  </div>}
+                  </div>
                 )}
                 <div className="flex items-center justify-between mb-4">
                   <service.icon className="w-8 h-8 text-cyan-400" />
@@ -551,7 +551,7 @@ const ServicesPage: React.FC = React.memo((props) => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {aiServices.map((service, index) => (
-              <a}
+              <a
                 key={index}
                 href={`/ai-solutions#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
@@ -590,7 +590,7 @@ const ServicesPage: React.FC = React.memo((props) => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {itServices.map((service, index) => (
-              <a}
+              <a
                 key={index}
                 href={`/it-services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
@@ -631,9 +631,7 @@ const ServicesPage: React.FC = React.memo((props) => {
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-               aria-label="
-                Get Free Consultation
-              ">
+                aria-label="Get Free Consultation">
                 Get Free Consultation
               </a>
               <a
@@ -652,4 +650,5 @@ const ServicesPage: React.FC = React.memo((props) => {
     </div>
   )
 }
+
 export default ServicesPage

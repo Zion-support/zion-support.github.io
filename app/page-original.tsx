@@ -33,7 +33,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
-const HomePage: React.FC = React.memo((props) => {
+const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
@@ -124,9 +124,7 @@ const HomePage: React.FC = React.memo((props) => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-         aria-label="
-          Skip to main content
-        ">
+         aria-label="Skip to main content">
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
@@ -196,9 +194,7 @@ const HomePage: React.FC = React.memo((props) => {
             <a 
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-             aria-label="
-              Get Free Consultation
-            ">
+             aria-label="Get Free Consultation">
               Get Free Consultation
             </a>
           </div>
@@ -223,9 +219,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -240,9 +234,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -257,9 +249,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -277,9 +267,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
-                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -294,9 +282,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
-                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -311,9 +297,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -335,9 +319,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">$149/month</div>
-                    <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -352,9 +334,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$199/month</div>
-                    <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -369,9 +349,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">$299/month</div>
-                    <a href="/ai-content-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-content-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -386,9 +364,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$99/month</div>
-                    <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -403,9 +379,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$179/month</div>
-                    <a href="/ai-email-marketing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-email-marketing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -420,9 +394,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$399/month</div>
-                    <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -437,9 +409,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$129/month</div>
-                    <a href="/ai-seo-optimizer" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-seo-optimizer" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -454,9 +424,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$79/month</div>
-                    <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -471,9 +439,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$89/month</div>
-                    <a href="/ai-lead-scoring" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-lead-scoring" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -488,9 +454,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$159/month</div>
-                    <a href="/ai-social-media-manager" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-social-media-manager" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -505,9 +469,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">$249/month</div>
-                    <a href="/ai-ecommerce-assistant" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-ecommerce-assistant" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -522,9 +484,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$119/month</div>
-                    <a href="/ai-document-processor" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-document-processor" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -539,9 +499,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">$189/month</div>
-                    <a href="/ai-design-studio" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-design-studio" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -556,9 +514,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$199/month</div>
-                    <a href="/ai-security-monitor" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-security-monitor" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -573,9 +529,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$169/month</div>
-                    <a href="/ai-financial-planner" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-financial-planner" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -590,9 +544,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2">$79/month</div>
-                    <a href="/ai-health-tracker" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-health-tracker" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -607,9 +559,7 @@ const HomePage: React.FC = React.memo((props) => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-fuchsia-400 mb-2">$139/month</div>
-                    <a href="/ai-learning-platform" className="text-fuchsia-400 hover:text-fuchsia-300 font-medium text-sm sm:text-base" aria-label="
-                      Learn More →
-                    ">
+                    <a href="/ai-learning-platform" className="text-fuchsia-400 hover:text-fuchsia-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                       Learn More →
                     </a>
                   </div>
@@ -631,9 +581,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>
-                  <a href="/cloud-migration" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/cloud-migration" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -646,9 +594,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$799/month</div>
-                  <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -661,9 +607,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$599/month</div>
-                  <a href="/devops-cicd" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/devops-cicd" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -676,9 +620,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$399/month</div>
-                  <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -691,9 +633,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$699/month</div>
-                  <a href="/network-solutions" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/network-solutions" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -706,9 +646,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
-                  <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -721,9 +659,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$299/hour</div>
-                  <a href="/it-consulting" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/it-consulting" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -736,9 +672,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$499/month</div>
-                  <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -751,9 +685,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">$799/month</div>
-                  <a href="/system-administration" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/system-administration" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -766,9 +698,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$1,499/month</div>
-                  <a href="/it-infrastructure-design" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/it-infrastructure-design" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -781,9 +711,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">$699/month</div>
-                  <a href="/performance-optimization" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/performance-optimization" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -796,9 +724,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">$399/month</div>
-                  <a href="/backup-recovery" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/backup-recovery" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -811,9 +737,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$899/month</div>
-                  <a href="/it-project-management" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/it-project-management" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -826,9 +750,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$2,999/month</div>
-                  <a href="/enterprise-solutions" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/enterprise-solutions" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -841,9 +763,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2">$299/month</div>
-                  <a href="/it-training" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/it-training" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -864,9 +784,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-customer-support" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-customer-support" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -879,9 +797,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $299/month</div>
-                  <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -894,9 +810,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">Starting at $99/month</div>
-                  <a href="/ai-workflow-automation" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-workflow-automation" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -909,9 +823,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">Starting at $149/month</div>
-                  <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -924,9 +836,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-lead-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-lead-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -939,9 +849,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month</div>
-                  <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -955,9 +863,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Starting at $399/month</div>
-                  <a href="/ai-predictive-analytics" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-predictive-analytics" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -971,9 +877,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">Starting at $249/month</div>
-                  <a href="/ai-image-recognition" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-image-recognition" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -987,9 +891,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">Starting at $179/month</div>
-                  <a href="/ai-voice-processing" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-voice-processing" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1003,9 +905,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">Starting at $299/month</div>
-                  <a href="/ai-recommendation-engine" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-recommendation-engine" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1019,9 +919,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">Starting at $129/month</div>
-                  <a href="/ai-sentiment-analysis" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-sentiment-analysis" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1035,9 +933,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-research-assistant" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-research-assistant" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1058,9 +954,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>
-                  <a href="/robotics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/robotics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1073,9 +967,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-400 mb-2">Starting at $499/month</div>
-                  <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1088,9 +980,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>
-                  <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1103,9 +993,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
-                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1126,9 +1014,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-blue-400 mb-2">Starting at $299/month</div>
-                  <a href="/devops" className="text-blue-400 hover:text-blue-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/devops" className="text-blue-400 hover:text-blue-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1141,9 +1027,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
-                  <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1156,9 +1040,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-teal-400 mb-2">Starting at $199/month</div>
-                  <a href="/database" className="text-teal-400 hover:text-teal-300 font-medium text-sm" aria-label="
-                    Learn More →
-                  ">
+                  <a href="/database" className="text-teal-400 hover:text-teal-300 font-medium text-sm" aria-label="Learn More →">
                     Learn More →
                   </a>
                 </div>
@@ -1188,9 +1070,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
-                  <a href="/ai-writing-assistant" className="text-blue-400 hover:text-blue-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/ai-writing-assistant" className="text-blue-400 hover:text-blue-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1203,9 +1083,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
-                  <a href="/smart-analytics" className="text-green-400 hover:text-green-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/smart-analytics" className="text-green-400 hover:text-green-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1218,9 +1096,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
-                  <a href="/ai-scheduler" className="text-purple-400 hover:text-purple-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/ai-scheduler" className="text-purple-400 hover:text-purple-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1233,9 +1109,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">$15/month</div>
-                  <a href="/expense-tracker" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/expense-tracker" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1248,9 +1122,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>
-                  <a href="/task-manager-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/task-manager-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1263,9 +1135,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-pink-400 mb-2">$59/month</div>
-                  <a href="/crm-lite" className="text-pink-400 hover:text-pink-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/crm-lite" className="text-pink-400 hover:text-pink-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1278,9 +1148,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>
-                  <a href="/email-optimizer" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/email-optimizer" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1293,9 +1161,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-orange-400 mb-2">$45/month</div>
-                  <a href="/social-media-manager" className="text-orange-400 hover:text-orange-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/social-media-manager" className="text-orange-400 hover:text-orange-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1316,9 +1182,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>
-                  <a href="/ai-design-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/ai-design-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1331,9 +1195,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
-                  <a href="/landing-page-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/landing-page-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1346,9 +1208,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
-                  <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1361,9 +1221,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">$79/month</div>
-                  <a href="/ad-campaign-manager" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/ad-campaign-manager" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1384,9 +1242,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>
-                  <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1399,9 +1255,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>
-                  <a href="/api-builder" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/api-builder" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1414,9 +1268,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-red-400 mb-2">$25/month</div>
-                  <a href="/bug-tracker-pro" className="text-red-400 hover:text-red-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/bug-tracker-pro" className="text-red-400 hover:text-red-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1429,9 +1281,7 @@ const HomePage: React.FC = React.memo((props) => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
-                  <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm" aria-label="
-                    Try Free →
-                  ">
+                  <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm" aria-label="Try Free →">
                     Try Free →
                   </a>
                 </div>
@@ -1477,9 +1327,7 @@ const HomePage: React.FC = React.memo((props) => {
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Phone</p>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg" aria-label="
-                        +1 (302) 464-0950
-                      ">
+                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg" aria-label="+1 (302) 464-0950">
                         +1 (302) 464-0950
                       </a>
                     </div>
@@ -1491,9 +1339,7 @@ const HomePage: React.FC = React.memo((props) => {
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg" aria-label="
-                        kleber@ziontechgroup.com
-                      ">
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg" aria-label="kleber@ziontechgroup.com">
                         kleber@ziontechgroup.com
                       </a>
                     </div>
@@ -1608,14 +1454,14 @@ const HomePage: React.FC = React.memo((props) => {
                     className="w-full cyber-button text-center py-4"
                    aria-label="
                     Send Message
-                  " tabIndex="0">
+                  " tabIndex={0}>
                     Send Message
                   </button>
                 </form>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
       </main>
       {/* Footer */}
       <Footer />
@@ -1623,4 +1469,5 @@ const HomePage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default HomePage

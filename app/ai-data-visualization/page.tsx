@@ -4,7 +4,7 @@ const Footer = lazy(() => import('../components/Footer'))
 const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
 import { Phone, Mail } from 'lucide-react';
 
-const AiDataVisualizationPage: React.FC = React.memo((props) => {
+const AiDataVisualizationPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
@@ -32,17 +32,13 @@ const AiDataVisualizationPage: React.FC = React.memo((props) => {
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-                 aria-label="
-                  Get Started Today
-                ">
+                 aria-label="Get Started Today">
                   Get Started Today
                 </a>
                 <a
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-                 aria-label="
-                  Contact Us
-                ">
+                 aria-label="Contact Us">
                   Contact Us
                 </a>
               </div>
@@ -80,4 +76,5 @@ const AiDataVisualizationPage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default PageComponent

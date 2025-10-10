@@ -4,7 +4,7 @@ import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
-const AIAnalyticsPage: React.FC = React.memo((props) => {
+const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -135,12 +135,12 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button px-8 py-4 text-lg" aria-label="
                 Start Free Trial
-              " tabIndex="0">
+              " tabIndex={0}>
                 Start Free Trial
               </button>
               <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
                 View Demo
-              " tabIndex="0">
+              " tabIndex={0}>
                 View Demo
               </button>
             </div>
@@ -163,10 +163,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-gray-300">Real-time Data</div>
+                </article>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -284,7 +284,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                     : 'bg-slate-700 text-white hover:bg-slate-600'`}
                 }`} aria-label="
                   Get Started
-                " tabIndex="0">
+                " tabIndex={0}>
                   Get Started
                 </button>
               </div>
@@ -303,12 +303,12 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg" aria-label="
               Start Free Trial
-            " tabIndex="0">
+            " tabIndex={0}>
               Start Free Trial
             </button>
             <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
               Contact Sales
-            " tabIndex="0">
+            " tabIndex={0}>
               Contact Sales
             </button>
           </div>
@@ -319,4 +319,5 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     </div>
   )
 }
+
 export default AIAnalyticsPage

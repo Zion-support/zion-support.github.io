@@ -6,7 +6,7 @@ import { Phone } from 'lucide-react';
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
 const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
-const AISocialMediaManagerPage: React.FC = React.memo((props) => {
+const AISocialMediaManagerPage: React.FC = () => {
   // const [isLoaded, setIsLoaded] = useState(false)
   // useEffect(() => {
 //     setIsLoaded(true);}
@@ -16,25 +16,25 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Creation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI',
-      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']}
+      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']
     },
     {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum reach and engagement',
-      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']}
+      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics with AI-powered performance predictions',
-      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']}
+      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']
     },
     {
       icon: Users,
       title: 'Audience Intelligence',
       description: 'AI-driven audience analysis and targeting recommendations',
-      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']}
+      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']
     }
   ]
   const platforms = [
@@ -114,7 +114,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Social Media Manager - Automated Social Media Management | Zion Tech Group"
         description="Transform your social media with AI-powered content creation, smart scheduling, and analytics. Increase engagement by 200% and save 20+ hours per week."
-        keywords={['AI social media management', 'social media automation', 'content creation', 'social media analytics', 'social media scheduling', 'AI marketing']}
+        keywords={['AI social media management', 'social media automation', 'content creation', 'social media analytics', 'social media scheduling', 'AI marketing']
         canonicalUrl="https://ziontechgroup.com/ai-social-media-manager"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -139,17 +139,13 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                 aria-label="
-                  Start Free Trial
-                ">
+                 aria-label="Start Free Trial">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
-                 aria-label="
-                  Watch Demo
-                ">
+                 aria-label="Watch Demo">
                   Watch Demo
                 </a>
               </div>
@@ -172,10 +168,10 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
               <div className="quantum-card p-6 text-center energy-pulse">
                 <div className="text-3xl font-bold text-green-400 mb-2">10x</div>
                 <div className="text-gray-300">Faster Content</div>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Features Section */}
         <section className="py-20 px-4" id="features">
@@ -338,9 +334,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Manager Free Trial Request"
                 className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-               aria-label="
-                Start Free Trial
-              ">
+               aria-label="Start Free Trial">
                 Start Free Trial
               </a>
               <a
@@ -362,4 +356,5 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default AISocialMediaManagerPage

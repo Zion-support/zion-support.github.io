@@ -266,6 +266,7 @@ export const measureExecutionTime = async <T>(
   const duration = performance.now() - start;}
   return { result, duration }
 }
+
 export default {
   wait,
   waitFor,

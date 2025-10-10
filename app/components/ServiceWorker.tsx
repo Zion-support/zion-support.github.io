@@ -1,7 +1,7 @@
 'use client';
 import React, { lazy } from 'react';
 import { useEffect } from 'react'
-const ServiceWorker: React.FC = React.memo((props) => {
+const ServiceWorker: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       const registerSW = async () => {
@@ -17,4 +17,5 @@ const ServiceWorker: React.FC = React.memo((props) => {
   }, [])
   return null
 }
+
 export default ServiceWorker

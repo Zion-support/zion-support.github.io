@@ -75,4 +75,5 @@ export class SecurityManager {
     return global._rateLimitStorage
   }
 }
+
 export default SecurityManager.getInstance()

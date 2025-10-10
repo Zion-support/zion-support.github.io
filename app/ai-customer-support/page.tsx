@@ -4,7 +4,7 @@ const Footer = lazy(() => import('../components/Footer'))
 const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = React.memo((props) => {
+const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
       icon: MessageCircle,
@@ -89,9 +89,7 @@ const AICustomerSupportPage: React.FC = React.memo((props) => {
                 <a
                   href="mailto:kleber@ziontechgroup.com?subject=AI Customer Support Inquiry"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg"
-                 aria-label="
-                  Get Started Today
-                ">
+                 aria-label="Get Started Today">
                   Get Started Today
                 </a>
                 <a
@@ -216,4 +214,5 @@ const AICustomerSupportPage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default AICustomerSupportPage

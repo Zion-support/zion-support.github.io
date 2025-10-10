@@ -225,6 +225,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
   }, [])
   return bundleSize
 }
+
 export default {
   debounce,
   throttle,

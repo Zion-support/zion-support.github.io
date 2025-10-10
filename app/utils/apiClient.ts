@@ -297,4 +297,5 @@ class ApiClient {
 
 // Export both the class and default instance
 export { apiClient }
+
 export default ApiClient

@@ -56,4 +56,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Head>
   )
 }
+
 export default SEOEnhancer

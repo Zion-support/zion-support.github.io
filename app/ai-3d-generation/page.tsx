@@ -1,15 +1,9 @@
 'use client';
-<<<<<<< HEAD
 import React, { lazy } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Box } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
 
-const AI3DGenerationPage: React.FC = React.memo((props) => {
+const AI3DGenerationPage: React.FC = () => {
   const features = [
     'Generate high-quality 3D models from text descriptions',
     'Create photorealistic textures and materials',
@@ -206,10 +200,10 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
                 <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>Middletown, DE</span>
               </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -236,10 +230,10 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
                   </div>
                 ))}
               </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Workflow */}
       <section className="py-16 px-4 bg-white/5">
@@ -368,17 +362,13 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-             aria-label="
-              Call (302) 464-0950
-            ">
+             aria-label="Call (302) 464-0950">
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-             aria-label="
-              Email Us
-            ">
+             aria-label="Email Us">
               Email Us
             </a>
           </div>
@@ -387,4 +377,5 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
     </div>
   )
 }
+
 export default AI3DGenerationPage

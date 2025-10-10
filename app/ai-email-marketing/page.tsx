@@ -6,7 +6,7 @@ import { CheckCircle, Phone, Mail } from 'lucide-react';
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
 const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
-const AIEmailMarketingPage: React.FC = React.memo((props) => {
+const AIEmailMarketingPage: React.FC = () => {
   // const [isLoaded, setIsLoaded] = useState(false)
   // useEffect(() => {
 //     setIsLoaded(true);}
@@ -139,17 +139,13 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                 aria-label="
-                  Start Free Trial
-                ">
+                 aria-label="Start Free Trial">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-                 aria-label="
-                  Watch Demo
-                ">
+                 aria-label="Watch Demo">
                   Watch Demo
                 </a>
               </div>
@@ -172,10 +168,10 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
               <div className="quantum-card p-6 text-center energy-pulse">
                 <div className="text-3xl font-bold text-pink-400 mb-2">3x</div>
                 <div className="text-gray-300">Better Engagement</div>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Features Section */}
         <section className="py-20 px-4" id="features">
@@ -331,9 +327,7 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Email Marketing Free Trial Request"
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-               aria-label="
-                Start Free Trial
-              ">
+               aria-label="Start Free Trial">
                 Start Free Trial
               </a>
               <a
@@ -355,4 +349,5 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default AIEmailMarketingPage

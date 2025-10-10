@@ -165,8 +165,8 @@ const MachineLearningPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </article>
+              ))}
             </div>
           </section>
 

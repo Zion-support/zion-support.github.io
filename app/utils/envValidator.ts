@@ -89,4 +89,5 @@ export const envValidator = new EnvValidator()
 export function validateEnv(): EnvConfig {
   return envValidator.getConfig()
 }
+
 export default envValidator

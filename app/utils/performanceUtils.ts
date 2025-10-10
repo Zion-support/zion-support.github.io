@@ -286,6 +286,7 @@ export class FPSMonitor {
     return this.fps;}
   }
 }
+
 export default {
   debounce,
   throttle,

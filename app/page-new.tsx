@@ -33,7 +33,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
-const HomePage: React.FC = React.memo((props) => {
+const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
@@ -248,9 +248,7 @@ const HomePage: React.FC = React.memo((props) => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-         aria-label="
-          Skip to main content
-        ">
+         aria-label="Skip to main content">
           Skip to main content
         </a>
 
@@ -313,9 +311,7 @@ const HomePage: React.FC = React.memo((props) => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                 aria-label="
-                  Get Started Today
-                ">
+                 aria-label="Get Started Today">
                   Get Started Today
                 </a>
                 <a
@@ -430,9 +426,7 @@ const HomePage: React.FC = React.memo((props) => {
                     <a 
                       href="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                     aria-label="
-                      Learn More
-                    ">
+                     aria-label="Learn More">
                       Learn More
                     </a>
                   </div>
@@ -478,9 +472,7 @@ const HomePage: React.FC = React.memo((props) => {
                     <a 
                       href="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                     aria-label="
-                      Learn More
-                    ">
+                     aria-label="Learn More">
                       Learn More
                     </a>
                   </div>
@@ -504,9 +496,7 @@ const HomePage: React.FC = React.memo((props) => {
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                 aria-label="
-                  Call Now
-                ">
+                 aria-label="Call Now">
                   Call Now
                 </a>
               </div>
@@ -518,9 +508,7 @@ const HomePage: React.FC = React.memo((props) => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-                 aria-label="
-                  Send Email
-                ">
+                 aria-label="Send Email">
                   Send Email
                 </a>
               </div>
@@ -549,4 +537,5 @@ const HomePage: React.FC = React.memo((props) => {
     </>
   )
 }
+
 export default HomePage

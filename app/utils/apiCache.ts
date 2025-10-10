@@ -254,4 +254,5 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   }
 }
+
 export default ApiCache

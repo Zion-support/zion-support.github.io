@@ -157,10 +157,10 @@ const AIHealthcarePage: React.FC = () => {
               <div className="text-center">
                 <div className="text-2xl font-bold text-purple-400 mb-2">ISO 27001</div>
                 <div className="text-gray-300">Certified</div>
-              </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Pricing Section */}
         <section className="mb-16">

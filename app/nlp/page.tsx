@@ -166,8 +166,8 @@ const NLPPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </article>
+              ))}
             </div>
           </section>
 

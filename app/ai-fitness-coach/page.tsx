@@ -4,7 +4,7 @@ import { CheckCircle, Phone, Mail } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
-const AIFitnessCoachPage: React.FC = React.memo((props) => {
+const AIFitnessCoachPage: React.FC = () => {
   const features = [
     'AI form analysis',
     'Personalized workout plans',
@@ -81,9 +81,7 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
             <a
               href="/contact"
               className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-             aria-label="
-              Start Free Trial
-            ">
+             aria-label="Start Free Trial">
               Start Free Trial
             </a>
           </div>
@@ -180,7 +178,7 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
                     : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'`}
                 }`} aria-label="
                   Get Started
-                " tabIndex="0">
+                " tabIndex={0}>
                   Get Started
                 </button>
               </div>
@@ -233,4 +231,5 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
     </div>
   )
 }
+
 export default AIFitnessCoachPage

@@ -4,7 +4,7 @@ import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
-const CloudMigrationPage: React.FC = React.memo((props) => {
+const CloudMigrationPage: React.FC = () => {
   const features = [
     {
       icon: Cloud,
@@ -156,12 +156,12 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button px-8 py-4 text-lg" aria-label="
                 Get Free Assessment
-              " tabIndex="0">
+              " tabIndex={0}>
                 Get Free Assessment
               </button>
               <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
                 View Case Studies
-              " tabIndex="0">
+              " tabIndex={0}>
                 View Case Studies
               </button>
             </div>
@@ -184,10 +184,10 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
+                </article>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -310,7 +310,7 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
                     : 'bg-slate-700 text-white hover:bg-slate-600'`}
                 }`} aria-label="
                   Get Started
-                " tabIndex="0">
+                " tabIndex={0}>
                   Get Started
                 </button>
               </div>
@@ -329,12 +329,12 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg" aria-label="
               Get Free Assessment
-            " tabIndex="0">
+            " tabIndex={0}>
               Get Free Assessment
             </button>
             <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
               Contact Our Experts
-            " tabIndex="0">
+            " tabIndex={0}>
               Contact Our Experts
             </button>
           </div>
@@ -345,4 +345,5 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
     </div>
   )
 }
+
 export default CloudMigrationPage

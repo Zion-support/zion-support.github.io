@@ -241,8 +241,8 @@ const BlogPage: React.FC = () => {
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
-                </div>
-              </div>
+                </article>
+              ))}
             </div>
           </section>
 
