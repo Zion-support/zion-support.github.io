@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -358,7 +357,6 @@ const AIChatbotBuilder: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   )}
                 </div>
               ))}
