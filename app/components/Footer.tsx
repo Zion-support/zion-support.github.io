@@ -21,22 +21,27 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
+      { name: 'AI Task Manager Pro', url: '/ai-task-manager', description: 'Smart task management' },
       { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' },
+      { name: 'AI Meeting Intelligence', url: '/ai-meeting-intelligence', description: 'Meeting analytics' },
+      { name: 'AI Habit Tracker Pro', url: '/ai-habit-tracker', description: 'Smart habit formation' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
       { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
       { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
       { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' },
+      { name: 'AI Website Builder Pro', url: '/ai-website-builder', description: 'AI-powered websites' }
     ],
     'Business & Finance': [
       { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
       { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+      { name: 'AI Investment Tracker Pro', url: '/ai-investment-tracker', description: 'Smart investment management' },
+      { name: 'AI Contract Analyzer Pro', url: '/ai-contract-analyzer', description: 'Legal contract analysis' },
+      { name: 'AI Inventory Optimizer Pro', url: '/ai-inventory-optimizer', description: 'Smart inventory management' },
+      { name: 'AI Customer Insights Pro', url: '/ai-customer-insights', description: 'Deep customer analytics' }
     ],
     'Customer Service': [
       { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
@@ -46,72 +51,105 @@ const Footer: React.FC = () => {
     'Development': [
       { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
       { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
-      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' },
+      { name: 'AI Password Manager Pro', url: '/ai-password-manager', description: 'Advanced password management' }
     ],
     'Analytics': [
-      { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
+      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' },
       { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
-      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
+      { name: 'AI Business Intelligence', url: '/ai-business-intelligence', description: 'AI-powered insights' }
     ],
     'Creative': [
       { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
       { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
       { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
       { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' },
+      { name: 'AI Logo Designer Pro', url: '/ai-logo-designer', description: 'Professional logo creation' }
     ],
     'Health & Wellness': [
       { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
-      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
+      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
+      { name: 'AI Sleep Optimizer Pro', url: '/ai-sleep-optimizer', description: 'Intelligent sleep analysis' },
+      { name: 'AI Meditation Guide Pro', url: '/ai-meditation-guide', description: 'Personalized meditation' }
+    ],
+    'Lifestyle': [
+      { name: 'AI Recipe Generator Pro', url: '/ai-recipe-generator', description: 'Creative recipe creation' },
+      { name: 'AI Language Tutor Pro', url: '/ai-language-tutor', description: 'Personalized language learning' },
+      { name: 'AI Garden Planner Pro', url: '/ai-garden-planner', description: 'Smart gardening' },
+      { name: 'AI Pet Care Pro', url: '/ai-pet-care', description: 'Comprehensive pet care' },
+      { name: 'AI Travel Planner Pro', url: '/ai-travel-planner', description: 'Intelligent travel planning' },
+      { name: 'AI Home Automation Pro', url: '/ai-home-automation', description: 'Smart home control' }
+    ],
+    'Career & Education': [
+      { name: 'AI Resume Builder Pro', url: '/ai-resume-builder', description: 'Intelligent resume creation' },
+      { name: 'AI Learning Path Pro', url: '/ai-learning-path', description: 'Personalized learning' },
+      { name: 'AI Event Planner Pro', url: '/ai-event-planner', description: 'Complete event management' }
     ],
     'Sales': [
-      { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+      { name: 'AI Sales Automation Pro', url: '/ai-sales-automation', description: 'Sales optimization' }
     ]
   };
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/machine-learning' },
+    { name: 'Machine Learning Solutions', href: '/machine-learning' },
     { name: 'Natural Language Processing', href: '/nlp' },
     { name: 'Computer Vision', href: '/computer-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
     { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
     { name: 'AI Robotics', href: '/ai-robotics' },
+    { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery' },
+    { name: 'AI Climate Intelligence', href: '/ai-climate-intelligence' },
+    { name: 'AI Space Technology', href: '/ai-space-technology' },
+    { name: 'AI Metaverse Development', href: '/ai-metaverse-development' },
+    { name: 'AI Biotechnology Solutions', href: '/ai-biotechnology' },
+    { name: 'AI Smart City Platform', href: '/ai-smart-city' },
+    { name: 'AI Edge Computing Solutions', href: '/ai-edge-computing' },
+    { name: 'AI Quantum Machine Learning', href: '/ai-quantum-ml' },
+    { name: 'AI Autonomous Vehicles', href: '/ai-autonomous-vehicles' },
+    { name: 'AI Digital Twin Platform', href: '/ai-digital-twin' },
+    { name: 'AI Advanced Robotics', href: '/ai-advanced-robotics' },
+    { name: 'AI Cybersecurity Intelligence', href: '/ai-cybersecurity-intelligence' },
+    { name: 'AI FinTech Solutions', href: '/ai-fintech-solutions' },
+    { name: 'AI HealthTech Platform', href: '/ai-healthtech-platform' },
+    { name: 'AI EdTech Solutions', href: '/ai-edtech-solutions' },
+    { name: 'AI RetailTech Solutions', href: '/ai-retailtech-solutions' }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'IT Consulting', href: '/it-consulting' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Migration Services', href: '/cloud-migration' },
+    { name: 'IT Consulting & Strategy', href: '/it-consulting' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
+    { name: 'Database Services', href: '/database-services' },
     { name: 'Mobile App Development', href: '/ai-mobile-app-development' },
     { name: 'Web Development', href: '/web-development' },
     { name: 'Network Infrastructure', href: '/network-infrastructure' },
-    { name: 'IT Support', href: '/it-support' },
+    { name: 'IT Support & Helpdesk', href: '/it-support' },
     { name: 'Business Intelligence', href: '/business-intelligence' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Blockchain & Web3', href: '/blockchain' },
+    { name: 'AI Infrastructure Management', href: '/ai-infrastructure-management' },
     { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
-    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
-    { name: 'Metaverse Development', href: '/metaverse-development' },
+    { name: 'Metaverse Development Platform', href: '/metaverse-development-platform' },
     { name: 'Edge Computing Solutions', href: '/edge-computing-solutions' },
     { name: 'Climate Technology Solutions', href: '/climate-technology-solutions' },
     { name: 'Space Technology Services', href: '/space-technology-services' },
     { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions' },
     { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems' },
     { name: 'Digital Twin Development', href: '/digital-twin-development' },
-    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
+    { name: 'Advanced Cybersecurity Solutions', href: '/advanced-cybersecurity-solutions' },
     { name: 'Smart City Solutions', href: '/smart-city-solutions' },
-    { name: 'FinTech Solutions', href: '/fintech-solutions' },
+    { name: 'FinTech Infrastructure', href: '/fintech-infrastructure' },
     { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
     { name: 'EdTech Solutions', href: '/edtech-solutions' },
-    { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
+    { name: 'RetailTech Solutions', href: '/retailtech-solutions' }
   ];
 
   const socialLinks = [
@@ -126,9 +164,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-3">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
@@ -188,7 +226,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Micro SAAS Services - Categorized */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS Solutions
@@ -203,8 +241,8 @@ const Footer: React.FC = () => {
                         <a href={service.url}
                           className="group flex items-center text-xs text-gray-300 hover:text-cyan-400 transition-colors"
                         >
-                          <span>{service.name}</span>
-                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                          <span className="truncate">{service.name}</span>
+                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
                         </a>
                       </li>
                     ))}
@@ -219,48 +257,53 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* AI & IT Services */}
+          {/* AI Services */}
           <div className="lg:col-span-2">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
+              AI Services
             </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 6).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 6).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            <ul className="space-y-1">
+              {aiServices.slice(0, 12).map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-xs block py-1"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href="/ai-services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4 text-sm"
             >
-              View All Services →
+              View All AI Services →
+            </a>
+          </div>
+
+          {/* IT Services */}
+          <div className="lg:col-span-3">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Settings className="w-4 h-4 mr-2" />
+              IT Services
+            </h3>
+            <ul className="space-y-1">
+              {itServices.slice(0, 12).map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-xs block py-1"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href="/it-services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4 text-sm"
+            >
+              View All IT Services →
             </a>
           </div>
         </div>
