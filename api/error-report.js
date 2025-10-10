@@ -13,6 +13,7 @@ export default function handler(req, res) {
     // 2. Store in your database
     // 3. Send alerts to your team
 
+    // eslint-disable-next-line no-console
     console.error('Client Error Report:', {
       error: error?.message || error,
       stack,
@@ -32,6 +33,7 @@ export default function handler(req, res) {
     }));
 
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error reporting error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

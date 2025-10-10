@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Simple wrapper function to replace withSentry
+// eslint-disable-next-line no-unused-vars
 const withSentry = (handler) => handler;
 
 const dir = path.join(process.cwd(), 'data');
@@ -29,6 +30,7 @@ export default function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error reading existing requests:', error);
     existing = [];
   }
@@ -57,6 +59,7 @@ export default function handler(req, res) {
       id: newRequest.id
     }));
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

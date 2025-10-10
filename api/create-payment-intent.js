@@ -29,6 +29,7 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ paymentIntent });
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error("Error:", err);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

@@ -30,6 +30,7 @@ export default function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error reading existing rates:', error);
     existing = [];
   }
@@ -61,6 +62,7 @@ export default function handler(req, res) {
       id: newRate.id
     }));
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error saving shipping rate:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

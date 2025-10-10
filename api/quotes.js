@@ -28,6 +28,7 @@ export default async function handler(req, res) {
       status: 'pending'
     };
 
+    // eslint-disable-next-line no-console
     console.log('Quote request received:', quoteData);
 
     res.statusCode = 200;
@@ -40,6 +41,7 @@ export default async function handler(req, res) {
     }));
 
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

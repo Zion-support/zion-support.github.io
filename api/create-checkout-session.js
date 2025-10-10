@@ -42,6 +42,7 @@ async function handler(req, res) {
       data: sessionData
     }));
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Checkout session creation error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

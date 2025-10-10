@@ -8,16 +8,10 @@ import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      title: 'Low-Latency Processing',
-      description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
-      benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
-=======
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
     },
     {
       icon: Globe,
@@ -32,9 +26,6 @@ const EdgeComputingPage: React.FC = () => {
       benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
     },
     {
-<<<<<<< HEAD
-      icon: Users,
-=======
       icon: Database,
       title: 'Edge Storage',
       description: 'Distributed storage solutions optimized for edge computing workloads.',
@@ -74,7 +65,6 @@ const EdgeComputingPage: React.FC = () => {
       title: 'Healthcare',
       description: 'Real-time patient monitoring and medical diagnostics',
       icon: '🏥'
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
     }
   ];
 
@@ -88,9 +78,7 @@ const EdgeComputingPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and IoT integration." />
@@ -98,6 +86,7 @@ const EdgeComputingPage: React.FC = () => {
       </Helmet>
       
       <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -262,7 +251,8 @@ const EdgeComputingPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

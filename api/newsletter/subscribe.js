@@ -32,6 +32,7 @@ async function handler(req, res) {
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
+    // eslint-disable-next-line no-console
     console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
 
     res.statusCode = 200;
@@ -43,6 +44,7 @@ async function handler(req, res) {
     }));
 
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

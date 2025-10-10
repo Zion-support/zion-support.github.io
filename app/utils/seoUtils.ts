@@ -1,12 +1,5 @@
 // SEO utilities for the application
 
-<<<<<<< HEAD
-export interface SEOData {
-  title: string,
-  description: string,
-  keywords: string[];
-  canonicalUrl: string,
-=======
 export interface SEOConfig {
   title: string;
   description: string;
@@ -14,7 +7,6 @@ export interface SEOConfig {
   canonicalUrl?: string;
   ogTitle?: string;
   ogDescription?: string;
->>>>>>> origin/main
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -191,7 +183,6 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   return cleanContent.substring(0, maxLength - 3) + '...';
 };
 
-<<<<<<< HEAD
 export const generateStructuredData = (data: {
   name: string,
   description: string,
@@ -294,7 +285,7 @@ export const generateBreadcrumbs = (items: Array<{
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
 };
 
-export const validateSEO = (data: SEOData): string[] => {
+export const validateSEO = (data: SEOConfig): string[] => {
   const errors: string[] = [];
   
   if (data.title.length < 30 || data.title.length > 60) {
@@ -309,7 +300,7 @@ export const validateSEO = (data: SEOData): string[] => {
     errors.push('Keywords should not be empty');
   }
   
-  if (!data.canonicalUrl.startsWith('http')) {
+  if (data.canonicalUrl && !data.canonicalUrl.startsWith('http')) {
     errors.push('Canonical URL should be a valid URL');
   }
   
@@ -328,7 +319,9 @@ export const generatePageSpeedInsights = (url: string): Promise<{
     accessibility: 90,
     bestPractices: 88,
     seo: 92
-=======
+  });
+};
+
 export const generateKeywords = (content: string, maxKeywords: number = 10): string[] => {
   const words = content
     .toLowerCase()
@@ -369,7 +362,6 @@ export const createStructuredData = (data: any): string => {
   return JSON.stringify({
     '@context': 'https://schema.org',
     ...data,
->>>>>>> origin/main
   });
 };
 

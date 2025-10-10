@@ -1,42 +1,15 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const ApiCachePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
 interface CacheEntry {
-  data: any,
-  timestamp: number,
-  ttl: number,
+  data: any;
+  timestamp: number;
+  ttl: number;
 }
 
 class APICache {
   private cache: Map<string, CacheEntry> = new Map();
   private maxSize: number = 100;
-  private defaultTTL: number = 5 * 60 * 1000; // 5 minutes;
-  constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {,
+  private defaultTTL: number = 5 * 60 * 1000; // 5 minutes
+
+  constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {
     this.maxSize = maxSize;
     this.defaultTTL = defaultTTL;
   }
@@ -44,140 +17,233 @@ class APICache {
   set(key: string, data: any, ttl?: number): void {
     const now = Date.now();
     const entry: CacheEntry = {
-      data;
+      data,
       timestamp: now,
-      ttl: ttl || this.defaultTTL;
+      ttl: ttl || this.defaultTTL
     };
 
-    // Remove oldest entries if cache is full;
+    // Remove old entry if it exists
+    this.cache.delete(key);
+
+    // Check if we need to evict entries
     if (this.cache.size >= this.maxSize) {
-      const oldestKey = this.cache.keys().next().value;
-      this.cache.delete(oldestKey);
->>>>>>> origin/main
+      this.evictOldest();
     }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    this.cache.set(key, entry);
+  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>ApiCache | Zion Tech Group</title>
-        <meta name="description" content="Professional ApiCache services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="apiCache, AI solutions, IT services, Zion Tech Group, apicache" />
-      </Helmet>
+  get(key: string): any | null {
+    const entry = this.cache.get(key);
+    
+    if (!entry) {
+      return null;
+    }
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ApiCache
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced apicache solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    const now = Date.now();
+    
+    // Check if expired
+    if (now - entry.timestamp > entry.ttl) {
+      this.cache.delete(key);
+      return null;
+    }
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our ApiCache?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our apicache solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+    return entry.data;
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  has(key: string): boolean {
+    const entry = this.cache.get(key);
+    
+    if (!entry) {
+      return false;
+    }
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our apicache solutions for your business.
-            </p>
-          </div>
+    const now = Date.now();
+    
+    // Check if expired
+    if (now - entry.timestamp > entry.ttl) {
+      this.cache.delete(key);
+      return false;
+    }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    return true;
+  }
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your apicache needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+  delete(key: string): boolean {
+    return this.cache.delete(key);
+  }
 
-export default ApiCachePage;
+  clear(): void {
+    this.cache.clear();
+  }
+
+  size(): number {
+    this.cleanup();
+    return this.cache.size;
+  }
+
+  keys(): string[] {
+    this.cleanup();
+    return Array.from(this.cache.keys());
+  }
+
+  private evictOldest(): void {
+    let oldestKey = '';
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.timestamp < oldestTime) {
+        oldestTime = entry.timestamp;
+        oldestKey = key;
+      }
+    }
+
+    if (oldestKey) {
+      this.cache.delete(oldestKey);
+    }
+  }
+
+  private cleanup(): void {
+    const now = Date.now();
+    const expiredKeys: string[] = [];
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (now - entry.timestamp > entry.ttl) {
+        expiredKeys.push(key);
+      }
+    }
+
+    expiredKeys.forEach(key => this.cache.delete(key));
+  }
+}
+
+// Create singleton instance
+const apiCache = new APICache();
+
+// Utility functions
+export function cacheRequest<T>(
+  key: string,
+  requestFn: () => Promise<T>,
+  ttl?: number
+): Promise<T> {
+  const cached = apiCache.get(key);
+  
+  if (cached !== null) {
+    return Promise.resolve(cached);
+  }
+
+  return requestFn().then(data => {
+    apiCache.set(key, data, ttl);
+    return data;
+  });
+}
+
+export function cacheGet<T>(key: string): T | null {
+  return apiCache.get(key);
+}
+
+export function cacheSet<T>(key: string, data: T, ttl?: number): void {
+  apiCache.set(key, data, ttl);
+}
+
+export function cacheHas(key: string): boolean {
+  return apiCache.has(key);
+}
+
+export function cacheDelete(key: string): boolean {
+  return apiCache.delete(key);
+}
+
+export function cacheClear(): void {
+  apiCache.clear();
+}
+
+export function cacheSize(): number {
+  return apiCache.size();
+}
+
+export function cacheKeys(): string[] {
+  return apiCache.keys();
+}
+
+// Create cache key generators
+export function createCacheKey(prefix: string, ...parts: (string | number)[]): string {
+  return `${prefix}:${parts.join(':')}`;
+}
+
+export function createRequestCacheKey(url: string, params?: Record<string, any>): string {
+  const paramString = params ? JSON.stringify(params) : '';
+  return `request:${url}:${paramString}`;
+}
+
+export function createUserCacheKey(userId: string, resource: string): string {
+  return `user:${userId}:${resource}`;
+}
+
+export function createSessionCacheKey(sessionId: string, resource: string): string {
+  return `session:${sessionId}:${resource}`;
+}
+
+// Cache middleware for API calls
+export function withCache<T extends (...args: any[]) => Promise<any>>(
+  fn: T,
+  keyGenerator: (...args: Parameters<T>) => string,
+  ttl?: number
+): T {
+  return ((...args: Parameters<T>) => {
+    const key = keyGenerator(...args);
+    const cached = apiCache.get(key);
+    
+    if (cached !== null) {
+      return Promise.resolve(cached);
+    }
+    
+    return fn(...args).then((result: any) => {
+      apiCache.set(key, result, ttl);
+      return result;
+    });
+  }) as T;
+}
+
+// Cache decorator for class methods
+export function cached(ttl?: number) {
+  return function (target: any, propertyName: string, descriptor: PropertyDescriptor) {
+    const method = descriptor.value;
+    
+    descriptor.value = function (...args: any[]) {
+      const key = `${target.constructor.name}:${propertyName}:${JSON.stringify(args)}`;
+      const cached = apiCache.get(key);
+      
+      if (cached !== null) {
+        return Promise.resolve(cached);
+      }
+      
+      const result = method.apply(this, args);
+      
+      if (result instanceof Promise) {
+        return result.then((data: any) => {
+          apiCache.set(key, data, ttl);
+          return data;
+        });
+      } else {
+        apiCache.set(key, result, ttl);
+        return result;
+      }
+    };
+  };
+}
+
+// Cache statistics
+export function getCacheStats(): {
+  size: number;
+  hitRate: number;
+  memoryUsage: number;
+} {
+  return {
+    size: apiCache.size(),
+    hitRate: 0, // Would need to track hits/misses
+    memoryUsage: JSON.stringify(Array.from(apiCache.cache.entries())).length
+  };
+}
+
+export default apiCache;

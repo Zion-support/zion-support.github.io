@@ -33,6 +33,7 @@ export default function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error reading existing subscribers:', error);
     existing = [];
   }
@@ -67,6 +68,7 @@ export default function handler(req, res) {
       id: newSubscriber.id
     }));
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error saving subscriber:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
