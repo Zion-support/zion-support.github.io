@@ -1,56 +1,37 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const testimonials = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      emoji: '🚀',
+      title: 'AI-Powered Growth',
+      content: 'Our AI solutions helped increase our revenue by 300% in just 6 months. The automation and insights are incredible.',
+      author: 'Sarah Johnson, CEO TechCorp'
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
+      emoji: '💡',
+      title: 'Innovation at Scale',
+      content: 'Zion Tech Group transformed our operations with their cutting-edge AI technology. Highly recommended!',
+      author: 'Michael Chen, CTO InnovateLab'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
+      emoji: '⚡',
+      title: 'Efficiency Boost',
+      content: 'The AI automation reduced our processing time by 80%. Our team can now focus on strategic initiatives.',
+      author: 'Emily Rodriguez, Operations Director'
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   useEffect(() => {
@@ -59,36 +40,45 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="relative overflow-hidden rounded-lg">
+      <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="w-full flex-shrink-0">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center">
+              <div className="text-4xl mb-4">{testimonial.emoji}</div>
+              <h3 className="text-xl font-bold text-white mb-4">{testimonial.title}</h3>
+              <p className="text-gray-300 mb-6">{testimonial.content}</p>
+              <div className="text-cyan-400 font-medium">{testimonial.author}</div>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
+      {/* Dots Indicator */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+              index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
