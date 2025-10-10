@@ -1,15 +1,111 @@
 import fs from 'fs';
 import path from 'path';
 
+// Service data from the analysis
+const missingAiServices = [
+  "/ai-financial-services",
+  "/ai-voice-solutions", 
+  "/ai-hr-solutions",
+  "/ai-video-analysis",
+  "/ai-speech-synthesis",
+  "/ai-sentiment-analysis",
+  "/ai-chatbot-enterprise",
+  "/ai-content-moderation",
+  "/ai-predictive-modeling",
+  "/ai-document-intelligence",
+  "/ai-conversation-analytics",
+  "/ai-supply-chain-ai",
+  "/ai-healthcare-diagnostics",
+  "/ai-financial-forecasting",
+  "/ai-iot-analytics",
+  "/ai-conversational-ai",
+  "/ai-automated-testing",
+  "/ai-knowledge-management",
+  "/ai-customer-churn",
+  "/ai-automated-reporting",
+  "/ai-content-generation-pro"
+];
+
+const missingItServices = [
+  "/api-development",
+  "/cybersecurity-solutions",
+  "/data-analytics-bi",
+  "/custom-software",
+  "/it-security-services",
+  "/it-project-management",
+  "/cloud-native-development",
+  "/ai-integration-services",
+  "/blockchain-development",
+  "/iot-development",
+  "/e-commerce-development",
+  "/api-development-advanced",
+  "/data-engineering",
+  "/cybersecurity-advanced",
+  "/cloud-migration-advanced",
+  "/devops-advanced",
+  "/machine-learning-ops",
+  "/enterprise-integration",
+  "/disaster-recovery-advanced",
+  "/compliance-automation",
+  "/cloud-cost-optimization",
+  "/security-automation",
+  "/data-visualization",
+  "/workflow-automation",
+  "/cloud-native-security"
+];
+
+const missingMicroSaasServices = [
+  "/zion-analytics-pro",
+  "/zion-chat-ai",
+  "/zion-security-shield",
+  "/zion-cloud-vault",
+  "/zion-content-studio",
+  "/zion-crm-intelligence",
+  "/zion-data-sync",
+  "/zion-lead-magnet",
+  "/zion-project-master",
+  "/zion-email-automation",
+  "/zion-inventory-smart",
+  "/zion-invoice-genius",
+  "/zion-workflow-automation",
+  "/zion-performance-monitor",
+  "/zion-compliance-manager",
+  "/zion-social-scheduler",
+  "/zion-ai-video-editor",
+  "/zion-ai-translator-pro",
+  "/zion-ai-code-reviewer",
+  "/zion-customer-insights",
+  "/zion-ai-email-assistant",
+  "/zion-ai-meeting-assistant",
+  "/zion-ai-seo-optimizer",
+  "/zion-ai-data-cleaner",
+  "/zion-ai-contract-analyzer",
+  "/zion-ai-survey-builder",
+  "/zion-ai-accounting-assistant",
+  "/zion-ai-recruitment-pro",
+  "/zion-ai-content-moderation",
+  "/zion-ai-predictive-maintenance",
+  "/zion-ai-energy-manager",
+  "/zion-ai-supply-chain-optimizer",
+  "/zion-ai-fraud-detector",
+  "/zion-ai-customer-service-pro",
+  "/zion-ai-marketing-automation",
+  "/zion-ai-document-ai"
+];
+
+const missingEmergingTech = [
+  "/iot-integration"
+];
+
 // Template for AI service pages
-const aiServiceTemplate = (serviceName, serviceTitle, description, features, useCases) => `'use client';
+const aiServiceTemplate = (servicePath, serviceTitle, description, features, useCases) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Eye, Mic, MessageCircle, DollarSign, Heart, FileText, Workflow, Cpu, Lock } from 'lucide-react';
 
-const ${serviceName}Page: React.FC = () => {
+const ${servicePath.split('/').pop().split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {
   const features = ${JSON.stringify(features, null, 4)};
   
   const benefits = [
@@ -162,17 +258,17 @@ const ${serviceName}Page: React.FC = () => {
   );
 };
 
-export default ${serviceName}Page;`;
+export default ${servicePath.split('/').pop().split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
 
 // Template for IT service pages
-const itServiceTemplate = (serviceName, serviceTitle, description, features, useCases) => `'use client';
+const itServiceTemplate = (servicePath, serviceTitle, description, features, useCases) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Cloud, Code, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Eye, Mic, MessageCircle, DollarSign, Heart, FileText, Workflow, Cpu, Lock, Wifi, Monitor, Package } from 'lucide-react';
 
-const ${serviceName}Page: React.FC = () => {
+const ${servicePath.split('/').pop().split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {
   const features = ${JSON.stringify(features, null, 4)};
   
   const benefits = [
@@ -325,72 +421,61 @@ const ${serviceName}Page: React.FC = () => {
   );
 };
 
-export default ${serviceName}Page;`;
+export default ${servicePath.split('/').pop().split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
 
-// Service configurations
-const aiServices = [
-  {
-    path: '/ai-financial-services',
-    name: 'AiFinancialServices',
-    title: 'AI Financial Services',
-    description: 'Revolutionary AI-powered financial solutions for modern businesses.',
+// Service configurations with generic data
+const serviceConfigs = {
+  // AI Services
+  '/ai-hr-solutions': {
+    title: 'AI HR Solutions',
+    description: 'Revolutionary AI-powered human resources solutions for modern businesses.',
     features: [
-      { icon: 'DollarSign', title: 'AI-Powered Analytics', description: 'Advanced financial analytics powered by machine learning algorithms.', benefits: ['Real-time analysis', 'Predictive modeling', 'Risk assessment', 'Portfolio optimization'] },
-      { icon: 'BarChart', title: 'Automated Reporting', description: 'Generate comprehensive financial reports automatically.', benefits: ['Automated reports', 'Custom dashboards', 'Real-time updates', 'Export capabilities'] },
-      { icon: 'Shield', title: 'Fraud Detection', description: 'Advanced AI algorithms to detect and prevent financial fraud.', benefits: ['Real-time monitoring', 'Pattern recognition', 'Risk scoring', 'Alert system'] },
-      { icon: 'TrendingUp', title: 'Investment Optimization', description: 'AI-driven investment strategies and portfolio management.', benefits: ['Smart recommendations', 'Risk management', 'Performance tracking', 'Market analysis'] }
+      { icon: 'Users', title: 'AI-Powered Recruitment', description: 'Advanced AI algorithms for candidate screening and matching.', benefits: ['Resume analysis', 'Skill matching', 'Bias reduction', 'Faster hiring'] },
+      { icon: 'Brain', title: 'Employee Analytics', description: 'Comprehensive analytics for employee performance and engagement.', benefits: ['Performance tracking', 'Engagement metrics', 'Predictive insights', 'Retention analysis'] },
+      { icon: 'Target', title: 'Talent Management', description: 'AI-driven talent acquisition and management strategies.', benefits: ['Skill gap analysis', 'Career pathing', 'Succession planning', 'Training recommendations'] }
     ],
     useCases: [
-      { title: 'Banking & Finance', description: 'Transform banking operations with AI-powered financial services', icon: '🏦' },
-      { title: 'Investment Management', description: 'Optimize investment strategies with AI-driven insights', icon: '📈' },
-      { title: 'Risk Management', description: 'Advanced risk assessment and mitigation strategies', icon: '🛡️' },
-      { title: 'Trading & Markets', description: 'AI-powered trading algorithms and market analysis', icon: '💹' }
+      { title: 'Recruitment', description: 'Streamline hiring with AI-powered candidate screening', icon: '👥' },
+      { title: 'Performance Management', description: 'AI-driven performance analytics and insights', icon: '📊' },
+      { title: 'Employee Engagement', description: 'Improve engagement with predictive analytics', icon: '💼' },
+      { title: 'Talent Development', description: 'Personalized learning and development paths', icon: '🎓' }
     ]
   },
-  {
-    path: '/ai-voice-solutions',
-    name: 'AiVoiceSolutions',
-    title: 'AI Voice Solutions',
-    description: 'Cutting-edge AI voice technology for seamless communication and automation.',
+  '/ai-video-analysis': {
+    title: 'AI Video Analysis',
+    description: 'Advanced AI-powered video analysis and processing solutions.',
     features: [
-      { icon: 'Mic', title: 'Speech Recognition', description: 'Advanced speech-to-text conversion with high accuracy.', benefits: ['Multi-language support', 'Real-time processing', 'Noise cancellation', 'Custom models'] },
-      { icon: 'MessageCircle', title: 'Voice Assistants', description: 'Intelligent voice assistants for business applications.', benefits: ['Natural conversations', 'Context awareness', 'Multi-platform support', 'Custom commands'] },
-      { icon: 'Zap', title: 'Real-time Processing', description: 'Process voice data in real-time for immediate responses.', benefits: ['Low latency', 'High accuracy', 'Scalable processing', 'Cloud integration'] },
-      { icon: 'Brain', title: 'AI-Powered Analysis', description: 'Advanced AI analysis of voice patterns and sentiment.', benefits: ['Sentiment analysis', 'Emotion detection', 'Speaker identification', 'Content analysis'] }
+      { icon: 'Eye', title: 'Computer Vision', description: 'Advanced computer vision algorithms for video analysis.', benefits: ['Object detection', 'Motion tracking', 'Scene recognition', 'Real-time processing'] },
+      { icon: 'Brain', title: 'Content Analysis', description: 'AI-powered content analysis and understanding.', benefits: ['Content categorization', 'Sentiment analysis', 'Quality assessment', 'Automated tagging'] },
+      { icon: 'Zap', title: 'Real-time Processing', description: 'Process video content in real-time for immediate insights.', benefits: ['Live analysis', 'Low latency', 'High accuracy', 'Scalable processing'] }
     ],
     useCases: [
-      { title: 'Customer Service', description: 'AI-powered voice assistants for customer support', icon: '🎧' },
-      { title: 'Voice Analytics', description: 'Analyze customer calls and interactions', icon: '📊' },
+      { title: 'Security Monitoring', description: 'AI-powered security and surveillance systems', icon: '🔒' },
+      { title: 'Content Moderation', description: 'Automated content moderation and filtering', icon: '🛡️' },
+      { title: 'Sports Analytics', description: 'Performance analysis for sports and fitness', icon: '⚽' },
+      { title: 'Retail Analytics', description: 'Customer behavior analysis in retail environments', icon: '🛒' }
+    ]
+  },
+  '/ai-speech-synthesis': {
+    title: 'AI Speech Synthesis',
+    description: 'Natural-sounding AI speech synthesis and text-to-speech solutions.',
+    features: [
+      { icon: 'Mic', title: 'Natural Voice', description: 'Generate natural-sounding speech from text.', benefits: ['Multiple voices', 'Emotion control', 'Language support', 'High quality'] },
+      { icon: 'Brain', title: 'AI-Powered', description: 'Advanced AI algorithms for realistic speech generation.', benefits: ['Neural networks', 'Context awareness', 'Pronunciation accuracy', 'Intonation control'] },
+      { icon: 'Zap', title: 'Real-time Generation', description: 'Generate speech in real-time for interactive applications.', benefits: ['Low latency', 'Streaming support', 'Custom voices', 'API integration'] }
+    ],
+    useCases: [
       { title: 'Accessibility', description: 'Voice interfaces for improved accessibility', icon: '♿' },
-      { title: 'Smart Devices', description: 'Voice control for IoT and smart devices', icon: '🏠' }
+      { title: 'Content Creation', description: 'AI-generated voice content for media', icon: '🎬' },
+      { title: 'Customer Service', description: 'Automated voice responses and support', icon: '📞' },
+      { title: 'Education', description: 'Interactive learning with AI voices', icon: '📚' }
     ]
   }
-];
-
-const itServices = [
-  {
-    path: '/api-development',
-    name: 'ApiDevelopment',
-    title: 'API Development',
-    description: 'Professional API development services for modern applications.',
-    features: [
-      { icon: 'Code', title: 'RESTful APIs', description: 'Build robust and scalable RESTful API solutions.', benefits: ['RESTful design', 'JSON responses', 'HTTP methods', 'Status codes'] },
-      { icon: 'Shield', title: 'Security', description: 'Implement comprehensive security measures for your APIs.', benefits: ['Authentication', 'Authorization', 'Rate limiting', 'Encryption'] },
-      { icon: 'Zap', title: 'Performance', description: 'Optimized APIs for high performance and scalability.', benefits: ['Fast response times', 'Caching strategies', 'Load balancing', 'Monitoring'] },
-      { icon: 'Database', title: 'Data Integration', description: 'Seamless integration with various data sources.', benefits: ['Database connectivity', 'Data validation', 'Error handling', 'Documentation'] }
-    ],
-    useCases: [
-      { title: 'Web Applications', description: 'APIs for modern web applications', icon: '🌐' },
-      { title: 'Mobile Apps', description: 'Backend APIs for mobile applications', icon: '📱' },
-      { title: 'Microservices', description: 'API-first microservices architecture', icon: '🔧' },
-      { title: 'Third-party Integration', description: 'Integrate with external services and platforms', icon: '🔗' }
-    ]
-  }
-];
+};
 
 // Function to create a service page
-function createServicePage(service, template) {
-  const dirPath = path.join('/workspace/app', service.path);
+function createServicePage(servicePath, config, template) {
+  const dirPath = path.join('/workspace/app', servicePath);
   const filePath = path.join(dirPath, 'page.tsx');
   
   // Create directory if it doesn't exist
@@ -400,36 +485,84 @@ function createServicePage(service, template) {
   
   // Generate the page content
   const content = template(
-    service.name,
-    service.title,
-    service.description,
-    service.features,
-    service.useCases
+    servicePath,
+    config.title,
+    config.description,
+    config.features,
+    config.useCases
   );
   
   // Write the file
   fs.writeFileSync(filePath, content);
-  console.log(`✅ Created: ${service.path}/page.tsx`);
+  console.log(`✅ Created: ${servicePath}/page.tsx`);
+}
+
+// Function to create a generic service page
+function createGenericServicePage(servicePath, isAi = true) {
+  const serviceName = servicePath.split('/').pop();
+  const serviceTitle = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  
+  const config = {
+    title: serviceTitle,
+    description: `Advanced ${isAi ? 'AI-powered' : 'technology'} solutions for modern businesses.`,
+    features: [
+      { icon: isAi ? 'Brain' : 'Code', title: `${isAi ? 'AI-Powered' : 'Advanced'} Intelligence`, description: `Advanced ${isAi ? 'AI algorithms' : 'technology solutions'} that provide intelligent insights and recommendations.`, benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'] },
+      { icon: 'BarChart', title: 'Analytics & Reporting', description: 'Comprehensive analytics and reporting capabilities.', benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'] },
+      { icon: 'Zap', title: 'Performance Optimization', description: 'Optimize performance with advanced technology solutions.', benefits: ['High performance', 'Scalable solutions', 'Efficient processing', 'Resource optimization'] },
+      { icon: 'Shield', title: 'Security & Compliance', description: 'Enterprise-grade security and compliance features.', benefits: ['Data protection', 'Access controls', 'Audit trails', 'Compliance support'] }
+    ],
+    useCases: [
+      { title: 'Business Intelligence', description: `Transform your business with ${isAi ? 'AI-powered' : 'advanced'} insights`, icon: '📊' },
+      { title: 'Process Automation', description: `Automate processes with ${isAi ? 'intelligent' : 'advanced'} technology`, icon: '⚙️' },
+      { title: 'Data Analysis', description: 'Advanced data analysis and visualization', icon: '📈' },
+      { title: 'System Integration', description: 'Seamless integration with existing systems', icon: '🔗' }
+    ]
+  };
+  
+  const template = isAi ? aiServiceTemplate : itServiceTemplate;
+  createServicePage(servicePath, config, template);
 }
 
 // Main function to create all missing pages
-function createMissingPages() {
-  console.log('🚀 Creating missing service pages...\n');
+function createAllMissingPages() {
+  console.log('🚀 Creating all missing service pages...\n');
+  
+  let created = 0;
   
   // Create AI service pages
   console.log('🤖 Creating AI service pages...');
-  aiServices.forEach(service => {
-    createServicePage(service, aiServiceTemplate);
+  missingAiServices.forEach(servicePath => {
+    if (serviceConfigs[servicePath]) {
+      createServicePage(servicePath, serviceConfigs[servicePath], aiServiceTemplate);
+    } else {
+      createGenericServicePage(servicePath, true);
+    }
+    created++;
   });
   
   // Create IT service pages
   console.log('\n💻 Creating IT service pages...');
-  itServices.forEach(service => {
-    createServicePage(service, itServiceTemplate);
+  missingItServices.forEach(servicePath => {
+    createGenericServicePage(servicePath, false);
+    created++;
   });
   
-  console.log('\n✅ All missing pages created successfully!');
+  // Create Micro SAAS service pages
+  console.log('\n🔧 Creating Micro SAAS service pages...');
+  missingMicroSaasServices.forEach(servicePath => {
+    createGenericServicePage(servicePath, true);
+    created++;
+  });
+  
+  // Create Emerging Tech service pages
+  console.log('\n⚡ Creating Emerging Tech service pages...');
+  missingEmergingTech.forEach(servicePath => {
+    createGenericServicePage(servicePath, true);
+    created++;
+  });
+  
+  console.log(`\n✅ Created ${created} missing service pages successfully!`);
 }
 
 // Run the script
-createMissingPages();
+createAllMissingPages();
