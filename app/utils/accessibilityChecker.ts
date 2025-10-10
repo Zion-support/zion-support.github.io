@@ -9,23 +9,23 @@ const AccessibilityCheckerPage: React.FC = () => {
       ico,
     n: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'});;)
+},
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
+      description: 'Lightning-fast processing and real-time analytics for optimal results'});;)
+},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
+      description: 'Bank-level security with encryption and compliance standards'});;)
+},
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
+      description: 'Worldwide deployment and support for international businesses'});;)
+}
   ];
 
   const benefits = [
@@ -39,6 +39,7 @@ const AccessibilityCheckerPage: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
         <title>AccessibilityChecker | Zion Tech Group<
@@ -65,6 +66,38 @@ const AccessibilityCheckerPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 
+=======
+  return (
+    <>
+      <div></div>
+      <Helmet></Helmet>
+        <titl></titl>AccessibilityChecker | Zion Tech Group</title>
+        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section></section>
+        <div></div>
+          <div></div>
+            <h1></h1>
+              <span></span>
+                AccessibilityChecker
+              </span>
+              <br />
+              <spa></spa>Solutions</span>
+            </h1>
+            <p></p>
+              Transform your business with our advanced accessibilitychecker solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div></div>
+              <button></button>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button></button>
+>>>>>>> main
                 Learn More
               <
             <
@@ -72,6 +105,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         <
       <
 
+<<<<<<< HEAD
       {/* Features Section *
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -81,10 +115,21 @@ const AccessibilityCheckerPage: React.FC = () => {
               Why Choose Our AccessibilityChecker?
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+      {/* Features Section */}
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2></h2>
+              Why Choose Our AccessibilityChecker?
+            </h2>
+            <p></p>
+>>>>>>> main
               Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
             <
           <
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8">)
             {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
@@ -107,10 +152,35 @@ const AccessibilityCheckerPage: React.FC = () => {
               Key Benefits
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+          <div></div>
+            {features.map((feature, index) => (
+              <div></div>
+                <div></div>
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h></h>{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ));
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2></h2>
+              Key Benefits
+            </h2>
+            <p></p>
+>>>>>>> main
               Experience the power of our accessibilitychecker solutions for your business.
             <
           <
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 m,
     d:grid-cols-2 gap-6">
             {benefits.map((benefit), index) => (<div key={index} className="flex items-start space-x-3">
@@ -145,7 +215,46 @@ const AccessibilityCheckerPage: React.FC = () => {
       <
     <
   );
+=======
+          <div></div>
+            {benefits.map((benefit, index) => (
+              <div></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ));
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2></h2>
+              Ready to Get Started?
+            </h2>
+            <p></p>
+              Contact our experts to discuss your accessibilitychecker needs and get a customized solution.
+            </p>
+            <div></div>
+              <button></button>
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button></button>
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </>
+  ));)
+>>>>>>> main
 };
 
 export default AccessibilityCheckerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
+}

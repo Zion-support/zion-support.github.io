@@ -5,6 +5,7 @@ import Navigation from '../components
 import Footer from '../components
 
 const TeamPage: React.FC = () => {
+<<<<<<< HEAD
   return (<div>
         <title>Our Team - Zion Tech Group<
         <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." 
@@ -20,10 +21,31 @@ const TeamPage: React.FC = () => {
               
               <div className="prose prose-lg max-w-none"><
                 <p className="text-xl text-gray-600 mb-8">
+=======
+  return (
+    <>
+      <Helmet></Helmet>
+        <title></titl>Our Team - Zion Tech Group</title>
+        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
+      </Helmet>
+      
+      <div></div>
+        <Navigation />
+        
+        <main className="pt-20"></main>
+          <div></div>
+            <div></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>
+                Our Team</h1>
+              </h1>
+              
+              <div></div>
+                <p className="text-xl text-gray-600 mb-8"></p>
+>>>>>>> main
                   Meet the experts behind our success.
                 <
                 
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 mb-6"></p>
                   Coming soon - stay tuned to meet our team!
                 <
               <
@@ -31,10 +53,18 @@ const TeamPage: React.FC = () => {
           <
         <
         
+<<<<<<< HEAD
         <Footer 
       <
     <)
   );
+=======
+        <Footer />
+      </div>
+    </>
+  );)
+>>>>>>> main
 };
 
 export default TeamPage;
+}

@@ -119,6 +119,24 @@ export default function APIDocsPage() {
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
+<<<<<<< HEAD
+=======
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            API Documentation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Complete API documentation for Zion Tech Group's AI and IT solutions. 
+            Explore endpoints, authentication, and integration guides.
+          </p>
+        </div>
+      </section>
+
+      {/* Quick Start */}
+      <section className="py-16 px-4">
+>>>>>>> main
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start<
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">

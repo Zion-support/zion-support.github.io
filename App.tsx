@@ -8,6 +8,7 @@ import './src/globals.css';
 // Lazy load pages
 const HomePage = React.lazy(() => import('./app/page'));
 
+<<<<<<< HEAD
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -21,6 +22,80 @@ const App: React.FC = () => {
         </div>
       </Router>
     </HelmetProvider>
+=======
+// Lazy load pages for better performance
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
+const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const BlogPage = React.lazy(() => import('./app/blog/page'));
+const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
+const PartnersPage = React.lazy(() => import('./app/partners/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const FAQPage = React.lazy(() => import('./app/faq/page'));
+const DemoPage = React.lazy(() => import('./app/demo/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+
+// Performance monitoring hook
+const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  usePerformanceMonitor();
+  return <>{children}</>;
+};
+
+// Main App Component
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
+        <SEOHead />
+        <SkipLink />
+        <Router>
+          <AppWithPerformanceMonitoring>
+            <AnalyticsProvider>
+              <PerformanceOptimizer>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer>
+                    <PerformanceMonitor />
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                      <Navigation />
+                      <Breadcrumb />
+                      <main id="main-content" className="flex-1">
+                        <Suspense fallback={<PageLoader />}>
+                          <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/faq" element={<FAQPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      <Footer />
+                    </div>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </PerformanceOptimizer>
+            </AnalyticsProvider>
+          </AppWithPerformanceMonitoring>
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
+>>>>>>> main
   );
 };
 
