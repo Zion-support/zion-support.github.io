@@ -1,14 +1,38 @@
-import React, { useState } from 'react';
+'use client';
+import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Calendar, User, Building, MessageSquare, Target, Zap, Shield, Cloud, Brain, Code, Settings, Headphones, Globe, Award, Star, ArrowRight, Check, X, Plus, Minus, Search, Filter, Eye, EyeOff, Lock, Unlock, Download, Upload, RotateCcw, RotateCw, Maximize, Minimize, X as XIcon, Plus as PlusIcon, Minus as MinusIcon, Divide, Equal, Percent, Hash, AtSign, Euro, Pound, Yen, Bitcoin, Wallet, Banknote, Coins, Receipt, Archive, Folder, File, Image, Film, Headphones as Headphone, Mic, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Repeat, Shuffle, Radio, Tv, Tablet, Watch, Headphones as Headset, Gamepad2, Joystick, Mouse, Keyboard, Webcam, Wifi, Bluetooth, Usb, Hdmi, Ethernet, WifiOff, Signal, SignalZero, SignalLow, SignalMedium, SignalHigh, SignalFull, Send as SendIcon, Reply, Forward, Share, Copy, Paste, Cut, Save, Download as DownloadIcon, Upload as UploadIcon, RotateCcw as RotateCcwIcon, RotateCw as RotateCwIcon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, X as XIcon2, Plus as PlusIcon2, Minus as MinusIcon2, Divide as DivideIcon, Equal as EqualIcon, Percent as PercentIcon, Hash as HashIcon, AtSign as AtSignIcon, Euro as EuroIcon, Pound as PoundIcon, Yen as YenIcon, Bitcoin as BitcoinIcon, Wallet as WalletIcon, Banknote as BanknoteIcon, Coins as CoinsIcon, Receipt as ReceiptIcon, Archive as ArchiveIcon, Folder as FolderIcon, File as FileIcon, Image as ImageIcon, Film as FilmIcon, Music, Headphones as HeadphoneIcon, Mic as Microphone, Speaker as SpeakerIcon, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Repeat as RepeatIcon, Shuffle as ShuffleIcon, Radio as RadioIcon, Tv as TvIcon, Monitor, Laptop, Printer, Key, AlertTriangle, Headphones as Headphone2, MessageSquare as Message, Calendar as CalendarIcon, FileText, Download as DownloadIcon2, Upload as UploadIcon2, RotateCcw as RotateCcwIcon2, RotateCw as RotateCwIcon2, Maximize as MaximizeIcon2, Minimize as MinimizeIcon2, X as XIcon3, Plus as PlusIcon3, Minus as MinusIcon3, Divide as DivideIcon2, Equal as EqualIcon2, Percent as PercentIcon2, Hash as HashIcon2, AtSign as AtSignIcon2, Euro as EuroIcon2, Pound as PoundIcon2, Yen as YenIcon2, Bitcoin as BitcoinIcon2, Wallet as WalletIcon2, Banknote as BanknoteIcon2, Coins as CoinsIcon2, Receipt as ReceiptIcon2, Archive as ArchiveIcon2, Folder as FolderIcon2, File as FileIcon2, Image as ImageIcon2, Film as FilmIcon2, Music as MusicIcon, Headphones as HeadphoneIcon2, Mic as MicrophoneIcon, Speaker as SpeakerIcon2, Volume2 as Volume2Icon2, VolumeX as VolumeXIcon2, Play as PlayIcon2, Pause as PauseIcon2, Stop as StopIcon2, SkipBack as SkipBackIcon2, SkipForward as SkipForwardIcon2, Repeat as RepeatIcon2, Shuffle as ShuffleIcon2, Radio as RadioIcon2, Tv as TvIcon2, Monitor as MonitorIcon, Laptop as LaptopIcon, Smartphone, Tablet, Watch as WatchIcon, Headphones as HeadsetIcon, Gamepad2 as Gamepad, Joystick as JoystickIcon, Mouse as MouseIcon, Keyboard as KeyboardIcon, Webcam as WebcamIcon, Wifi as WifiSignalIcon, Bluetooth as BluetoothIcon, Usb as UsbIcon, Hdmi as HdmiIcon, Ethernet as EthernetIcon, WifiOff as WifiOffSignalIcon, Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon, SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon, Wifi as WifiIcon2, WifiOff as WifiOffIcon2, Loader2 } from 'lucide-react';
+import { 
+  CheckCircle, 
+  AlertCircle, 
+  Send, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock,
+  Calendar,
+  User,
+  Building,
+  DollarSign,
+  MessageSquare,
+  Zap
+} from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Navigation = lazy(() => import('../components/Navigation'));
-const Footer = lazy(() => import('../components/Footer'));
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  budget: string;
+  message: string;
+  urgency: string;
+  preferredContact: string;
+}
 
-const ContactPage: React.FC = React.memo(() => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -19,34 +43,32 @@ const ContactPage: React.FC = React.memo(() => {
     urgency: 'normal',
     preferredContact: 'email'
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
 
   const services = [
-    'AI Services',
-    'Micro SaaS Solutions',
-    'IT Support & Infrastructure',
-    'Cloud Migration',
+    'AI Solutions',
+    'Quantum Computing',
+    'Blockchain Development',
+    'Cloud Services',
     'Cybersecurity',
-    'Custom Development',
-    'Consulting',
+    'Data Analytics',
+    'IoT Solutions',
+    'Custom Software Development',
+    'Digital Transformation',
     'Other'
   ];
 
   const budgetRanges = [
-    'Under $10,000',
-    '$10,000 - $50,000',
+    '$5,000 - $15,000',
+    '$15,000 - $50,000',
     '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    'Over $500,000',
-    'Not sure'
+    '$100,000+',
+    'Not sure yet'
   ];
 
   const urgencyLevels = [
-    { value: 'urgent', label: 'Urgent (Within 1 week)', color: 'text-red-400' },
     { value: 'high', label: 'High (Within 2 weeks)', color: 'text-orange-400' },
     { value: 'normal', label: 'Normal (Within 1 month)', color: 'text-yellow-400' },
     { value: 'low', label: 'Low (Flexible timeline)', color: 'text-green-400' }
@@ -95,7 +117,7 @@ const ContactPage: React.FC = React.memo(() => {
       });
       setSubmitStatus('idle');
     }, 3000);
-  };
+  }, []);
 
   const contactInfo = {
     phone: '(302) 464-0950',
@@ -185,7 +207,7 @@ const ContactPage: React.FC = React.memo(() => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                        Company Name
+                        Company
                       </label>
                       <input
                         type="text"
@@ -254,15 +276,12 @@ const ContactPage: React.FC = React.memo(() => {
                       </select>
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-blue-600 mt-1" />
+
                   <div>
                     <label htmlFor="urgency" className="block text-sm font-medium text-white mb-2">
                       Project Urgency
                     </label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                       {urgencyLevels.map((level) => (
                         <label key={level.value} className="flex items-center space-x-3 cursor-pointer">
                           <input
@@ -280,46 +299,16 @@ const ContactPage: React.FC = React.memo(() => {
                   </div>
 
                   <div>
-                    <label htmlFor="preferredContact" className="block text-sm font-medium text-white mb-2">
-                      Preferred Contact Method
-                    </label>
-                    <div className="flex space-x-6">
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="preferredContact"
-                          value="email"
-                          checked={formData.preferredContact === 'email'}
-                          onChange={handleInputChange}
-                          className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus:ring-cyan-400"
-                        />
-                        <span className="text-white">Email</span>
-                      </label>
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="preferredContact"
-                          value="phone"
-                          checked={formData.preferredContact === 'phone'}
-                          onChange={handleInputChange}
-                          className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus:ring-cyan-400"
-                        />
-                        <span className="text-white">Phone</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                       Project Details *
                     </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleInputChange}
                       required
-                      rows={5}
+                      rows={4}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       placeholder="Tell us about your project, goals, and any specific requirements..."
                     />
@@ -328,11 +317,11 @@ const ContactPage: React.FC = React.memo(() => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-4 px-6 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-slate-900 mr-2"></div>
                         Sending...
                       </>
                     ) : (
@@ -352,51 +341,45 @@ const ContactPage: React.FC = React.memo(() => {
                   <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
                   
                   <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <Phone className="w-6 h-6 text-white" />
-                      </div>
+                    <div className="flex items-start space-x-4">
+                      <Phone className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
-                        <h3 className="text-lg font-semibold text-white">Call Us</h3>
-                        <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                        <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
+                        <a 
+                          href="tel:+13024640950" 
+                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
                           {contactInfo.phone}
                         </a>
-                        <p className="text-sm text-gray-400">Available 24/7 for urgent issues</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <Mail className="w-6 h-6 text-white" />
-                      </div>
+                    <div className="flex items-start space-x-4">
+                      <Mail className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
-                        <h3 className="text-lg font-semibold text-white">Email Us</h3>
-                        <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                        <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
+                        <a 
+                          href="mailto:kleber@ziontechgroup.com" 
+                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
                           {contactInfo.email}
                         </a>
-                        <p className="text-sm text-gray-400">We respond within 24 hours</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <MapPin className="w-6 h-6 text-white" />
-                      </div>
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
-                        <h3 className="text-lg font-semibold text-white">Visit Us</h3>
-                        <p className="text-cyan-400">{contactInfo.address}</p>
-                        <p className="text-sm text-gray-400">By appointment only</p>
+                        <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
+                        <p className="text-gray-300">{contactInfo.address}</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <Clock className="w-6 h-6 text-white" />
-                      </div>
+                    <div className="flex items-start space-x-4">
+                      <Clock className="w-6 h-6 text-cyan-400 mt-1" />
                       <div>
-                        <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                        <p className="text-cyan-400">{contactInfo.hours}</p>
-                        <p className="text-sm text-gray-400">Emergency support available 24/7</p>
+                        <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
+                        <p className="text-gray-300">{contactInfo.hours}</p>
                       </div>
                     </div>
                   </div>
@@ -409,117 +392,22 @@ const ContactPage: React.FC = React.memo(() => {
                   <div className="space-y-4">
                     <a
                       href="tel:+13024640950"
-                      className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                      className="flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-green-400 hover:to-emerald-400 transition-all duration-300"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      Call Now for Immediate Help
+                      Call Now
                     </a>
                     
                     <a
-                      href="/pricing"
-                      className="w-full border-2 border-cyan-400 text-cyan-400 py-4 px-6 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-400 hover:to-cyan-400 transition-all duration-300"
                     >
-                      <Target className="w-5 h-5 mr-2" />
-                      View Pricing Plans
-                    </a>
-                    
-                    <a
-                      href="/services"
-                      className="w-full border-2 border-purple-400 text-purple-400 py-4 px-6 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-                    >
-                      <Settings className="w-5 h-5 mr-2" />
-                      Explore Our Services
+                      <Mail className="w-5 h-5 mr-2" />
+                      Email Us
                     </a>
                   </div>
                 </div>
-
-                {/* Why Choose Us */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-                  <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">Free Consultation</h3>
-                        <p className="text-gray-300 text-sm">No obligation assessment of your needs</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">Expert Team</h3>
-                        <p className="text-gray-300 text-sm">20+ years of combined experience</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">Proven Results</h3>
-                        <p className="text-gray-300 text-sm">300% average ROI for our clients</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">24/7 Support</h3>
-                        <p className="text-gray-300 text-sm">Round-the-clock assistance when you need it</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or question..."
-                  />
-                </div>
-                
-                {/* Submit Status */}
-                {submitStatus === 'success' && (
-                  <div className="flex items-center space-x-2 text-green-600">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Message sent successfully!</span>
-                  </div>
-                )}
-                
-                {submitStatus === 'error' && (
-                  <div className="flex items-center space-x-2 text-red-600">
-                    <AlertCircle className="w-5 h-5" />
-                    <span>Failed to send message. Please try again.</span>
-                  </div>
-                )}
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </button>
-              </form>
+              </div>
             </div>
           </div>
 
@@ -527,25 +415,25 @@ const ContactPage: React.FC = React.memo(() => {
           <section className="container mx-auto px-4 py-16">
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
+                Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Don't wait to start your digital transformation. Contact us today and let's build something amazing together.
+                Join hundreds of companies already using our AI solutions to drive growth and efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                  className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
+                  Call: (302) 464-0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
+                  className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Email Us Now
+                  Get Free Consultation
                 </a>
               </div>
             </div>
@@ -556,6 +444,6 @@ const ContactPage: React.FC = React.memo(() => {
       </div>
     </>
   );
-});
+};
 
 export default ContactPage;
