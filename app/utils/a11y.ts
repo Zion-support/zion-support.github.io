@@ -85,7 +85,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
     isInteractive ||
     (tabindex !== null && tabindex !== '-1') ||
     (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
-  );}
+  );
 }
 /**
  * Add keyboard navigation support to custom interactive elements
@@ -94,25 +94,25 @@ export function makeKeyboardAccessible(
   element: HTMLElement,
   onClick: (e: Event) => void,
   options: {
-    role?: string
-    tabindex?: number;}
+    role?: string;
+    tabindex?: number;
   } = {}
-): () => void {}
-  const { role = 'button', tabindex = 0 } = options
-  element.setAttribute('role', role)
-  element.setAttribute('tabindex', tabindex.toString())
-  const handleKeyDown = useCallback((...args) => {
+): () => void {
+  const { role = 'button', tabindex = 0 } = options;
+  element.setAttribute('role', role);
+  element.setAttribute('tabindex', tabindex.toString());
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      onClick(e);}
+      e.preventDefault();
+      onClick(e);
     }
-  }
-  element.addEventListener('click', onClick)
-  element.addEventListener('keydown', handleKeyDown)
+  }, [onClick]);
+  element.addEventListener('click', onClick);
+  element.addEventListener('keydown', handleKeyDown);
   return () => {
-    element.removeEventListener('click', onClick)
-    element.removeEventListener('keydown', handleKeyDown);}
-  }
+    element.removeEventListener('click', onClick);
+    element.removeEventListener('keydown', handleKeyDown);
+  };
 }
 /**
  * Check color contrast ratio (WCAG 2.1)
@@ -125,10 +125,10 @@ export function getContrastRatio(color1: string, color2: string): number {
       const normalized = val / 255
       return normalized <= 0.03928
         ? normalized / 12.92
-        : Math.pow((normalized + 0.055) / 1.055, 2.4);}
-    })
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b
-  }
+        : Math.pow((normalized + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
   const lum1 = getLuminance(color1)
   const lum2 = getLuminance(color2)
   const brightest = Math.max(lum1, lum2)
@@ -154,25 +154,25 @@ export function meetsContrastRequirements(
  * Skip to content link helper
  */
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
-  const skipLink = document.createElement('a');`}
-  skipLink.href = `#${targetId}`
-  skipLink.textContent = text
-  skipLink.className = 'skip-link'
-  skipLink.style.position = 'absolute'
-  skipLink.style.top = '-40px'
-  skipLink.style.left = '0'
-  skipLink.style.background = '#000'
-  skipLink.style.color = '#fff'
-  skipLink.style.padding = '8px'
-  skipLink.style.textDecoration = 'none'
-  skipLink.style.zIndex = '100'
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'skip-link';
+  skipLink.style.position = 'absolute';
+  skipLink.style.top = '-40px';
+  skipLink.style.left = '0';
+  skipLink.style.background = '#000';
+  skipLink.style.color = '#fff';
+  skipLink.style.padding = '8px';
+  skipLink.style.textDecoration = 'none';
+  skipLink.style.zIndex = '100';
   skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '0';}
-  })
+    skipLink.style.top = '0';
+  });
   skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px';}
-  })
-  return skipLink
+    skipLink.style.top = '-40px';
+  });
+  return skipLink;
 }
 /**
  * Detect if user prefers reduced motion
@@ -227,57 +227,57 @@ export function createAccessibleTooltip(
     tooltip.style.display = 'block'
     const triggerRect = trigger.getBoundingClientRect()
     switch (placement) {
-      case 'top':`}
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
-        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`
-        break
+      case 'top':
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
+        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
+        break;
       case 'bottom':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
-        tooltip.style.top = `${triggerRect.bottom + 5}px`
-        break
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
+        tooltip.style.top = `${triggerRect.bottom + 5}px`;
+        break;
       case 'left':
-        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
-        break
+        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`;
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
+        break;
       case 'right':
-        tooltip.style.left = `${triggerRect.right + 5}px`
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
-        break
+        tooltip.style.left = `${triggerRect.right + 5}px`;
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
+        break;
     }
-  }
-  const hideTooltip = useCallback((...args) => {
-    tooltip.style.display = 'none';}
-  }
-  trigger.addEventListener('mouseenter', showTooltip)
-  trigger.addEventListener('mouseleave', hideTooltip)
-  trigger.addEventListener('focus', showTooltip)
-  trigger.addEventListener('blur', hideTooltip)
+  };
+  const hideTooltip = useCallback(() => {
+    tooltip.style.display = 'none';
+  }, [tooltip]);
+  trigger.addEventListener('mouseenter', showTooltip);
+  trigger.addEventListener('mouseleave', hideTooltip);
+  trigger.addEventListener('focus', showTooltip);
+  trigger.addEventListener('blur', hideTooltip);
   return () => {
-    trigger.removeEventListener('mouseenter', showTooltip)
-    trigger.removeEventListener('mouseleave', hideTooltip)
-    trigger.removeEventListener('focus', showTooltip)
-    trigger.removeEventListener('blur', hideTooltip)
-    document.body.removeChild(tooltip);}
-  }
+    trigger.removeEventListener('mouseenter', showTooltip);
+    trigger.removeEventListener('mouseleave', hideTooltip);
+    trigger.removeEventListener('focus', showTooltip);
+    trigger.removeEventListener('blur', hideTooltip);
+    document.body.removeChild(tooltip);
+  };
 }
 /**
  * Manage focus restoration (useful for modals)
  */
 export class FocusManager {
-  private previousFocus: HTMLElement | null = null
+  private previousFocus: HTMLElement | null = null;
   saveFocus(): void {
-    this.previousFocus = document.activeElement as HTMLElement;}
+    this.previousFocus = document.activeElement as HTMLElement;
   }
   restoreFocus(): void {
     if (this.previousFocus) {
-      this.previousFocus.focus()
-      this.previousFocus = null;}
+      this.previousFocus.focus();
+      this.previousFocus = null;
     }
   }
   moveFocusInside(container: HTMLElement): void {
     const focusable = container.querySelector<HTMLElement>(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    )
-    focusable?.focus();}
+    );
+    focusable?.focus();
   }
 }
