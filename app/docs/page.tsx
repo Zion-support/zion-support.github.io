@@ -1,12 +1,11 @@
 'use client';
-
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
 
-const DocsPage: React.FC = () => {,
+const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const docCategories = [
@@ -14,7 +13,7 @@ const DocsPage: React.FC = () => {,
       title: 'Getting Started',
       icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
-      docs: [,
+      docs: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
@@ -22,301 +21,168 @@ const DocsPage: React.FC = () => {,
     },
     {
       title: 'API Reference',
-      icon: '📚',
+      icon: 'code',
       description: 'Complete API documentation and reference',
-      docs: [,
+      docs: [
         { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
-        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
+        { title: 'Endpoints', description: 'Available API endpoints', link: '/docs/api/endpoints' },
         { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' }
       ]
     },
     {
-      title: 'AI Services',
-      icon: '🤖',
-      description: 'AI and machine learning service documentation',
-      docs: [,
-        { title: 'AI Content Generation', description: 'Generate content with AI', link: '/docs/ai/content' },
-        { title: 'AI Analytics', description: 'AI-powered analytics tools', link: '/docs/ai/analytics' },
-        { title: 'AI Automation', description: 'Automate workflows with AI', link: '/docs/ai/automation' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: 'laptop',
-      description: 'Micro SAAS solutions and tools',
-      docs: [,
-        { title: 'Available Tools', description: 'List of all micro SAAS tools', link: '/docs/micro-saas/tools' },
-        { title: 'Integration Guide', description: 'Integrate with your existing systems', link: '/docs/micro-saas/integration' },
-        { title: 'Pricing & Plans', description: 'Pricing information and plans', link: '/docs/micro-saas/pricing' }
-      ]
-    },
-    {
-      title: 'Security',
-      icon: 'lock',
-      description: 'Security best practices and compliance',
-      docs: [,
-        { title: 'Security Overview', description: 'Our security measures', link: '/docs/security/overview' },
-        { title: 'Compliance', description: 'Compliance and certifications', link: '/docs/security/compliance' },
-        { title: 'Data Protection', description: 'How we protect your data', link: '/docs/security/data-protection' }
-      ]
-    },
-    {
-      title: 'Support',
-      icon: '🆘',
-      description: 'Help and support resources',
-      docs: [,
-        { title: 'FAQ', description: 'Frequently asked questions', link: '/docs/support/faq' },
-        { title: 'Troubleshooting', description: 'Common issues and solutions', link: '/docs/support/troubleshooting' },
-        { title: 'Contact Support', description: 'Get help from our team', link: '/docs/support/contact' }
+      title: 'Guides',
+      icon: 'book',
+      description: 'Comprehensive guides and tutorials',
+      docs: [
+        { title: 'Best Practices', description: 'Recommended practices and patterns', link: '/docs/guides/best-practices' },
+        { title: 'Troubleshooting', description: 'Common issues and solutions', link: '/docs/guides/troubleshooting' },
+        { title: 'Examples', description: 'Code examples and samples', link: '/docs/guides/examples' }
       ]
     }
   ];
 
-  const filteredDocs = docCategories.map(category => ({
+  const recentDocs = [
+    { title: 'API Authentication Guide', category: 'API Reference', updated: '2 days ago' },
+    { title: 'Deployment Best Practices', category: 'Guides', updated: '1 week ago' },
+    { title: 'Configuration Options', category: 'Getting Started', updated: '2 weeks ago' }
+  ];
+
+  const filteredCategories = docCategories.map(category => ({
     ...category,
-    docs: category.docs.filter(doc =>)
-    doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    docs: category.docs.filter(doc => 
+      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  const filteredDocs = docCategories.map(category => ({)
-    ...category)
-    docs: category.docs.filter(doc =>),
-      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-      doc.description.toLowerCase().includes(searchQuery.toLowerCase()))})).filter(category => category.docs.length > 0);
+  })).filter(category => category.docs.length > 0);
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="Documentation - API & Guides | Zion Tech Group"
+        description="Comprehensive documentation for our AI and IT solutions. Find guides, API references, and best practices."
+        keywords="documentation, API docs, guides, tutorials, developer resources"
+      />
       <Navigation />
-
-      <main className="relative z-10 pt-20">{/* Hero Section */}</main>
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto"></section>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced floating">Documentation</h1><p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">Everything You Need to Get Started</p><p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">Comprehensive documentation for all our services, APIs, and tools.</p>
-              Find guides, tutorials, and reference materials to help you succeed.</p>
-      <main className="relative z-10 pt-20">
+      
+      <main className="relative">
         {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced floating">
-              Documentation;)
-            </h1>)
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">)
-              Everything You Need to Get Started;)
-            </p>),
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">),
-              Comprehensive documentation for all our services, APIs, and tools.
-              Find guides, tutorials, and reference materials to help you succeed.
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Documentation
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Center
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Find everything you need to get started with our AI and IT solutions. 
+              Comprehensive guides, API references, and best practices.
             </p>
+          </div>
+        </section>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-12"></div>
-              <div className="relative"></div>
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
-                  type="text"
-                  placeholder="Search documentation..."
-                  value={searchQuery}
-                  onChange={(e) =>setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"</input>
-                /></input>
-              </div>
+        {/* Search Section */}
+        <section className="py-8 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search documentation..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Recent Docs */}
+        <section className="py-8 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-6">Recently Updated</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {recentDocs.map((doc, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-sm rounded">
+                      {doc.category}
+                    </span>
+                    <span className="text-gray-400 text-sm">{doc.updated}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{doc.title}</h3>
+                  <button className="text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1">
+                    Read More
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Documentation Categories */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Documentation Categories</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredDocs.map((category, index) => (</div>
-                <div key={index} className="cyber-card-enhanced p-6 data-stream"></div>
-                  <div className="flex items-center mb-4"></div>
-                    <span className="text-3xl mr-3">{category.icon}</span><h3 className="text-xl font-bold text-white">{category.title}</h3><p className="text-gray-300 mb-6">{category.description}</p><div className="space-y-3">{category.docs.map((doc, docIndex) => (</div>
-                      <Link
-                        key={docIndex}
-                        to={doc.link}
-                        className="block p-3 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-colors group"
-                      >
-                        <div className="flex items-center justify-between"></div>
-                          <div></div>
-                            <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{doc.title}<p className="text-sm text-gray-400">{doc.description}</p>
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"
-                />
-              </div>,
-            </div>,
-          </div>,
-        </section>,
-,
-        {/* Documentation Categories */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Documentation Categories;
-            </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {filteredDocs.map((category, index) => (
-                <div key={index} className="cyber-card-enhanced p-6 data-stream">
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-3">{category.icon}</span>
-                    <h3 className="text-xl font-bold text-white">{category.title}</h3>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse Documentation</h2>
+            
+            <div className="space-y-12">
+              {filteredCategories.map((category, categoryIndex) => (
+                <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+                  <div className="flex items-center mb-6">
+                    <BookOpen className="w-8 h-8 text-purple-400 mr-3" />
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                      <p className="text-gray-300">{category.description}</p>
+                    </div>
                   </div>
-                  <p className="text-gray-300 mb-6">{category.description}</p>
-                  <div className="space-y-3">
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {category.docs.map((doc, docIndex) => (
-                      <Link;
-                        key={docIndex}
-                        to={doc.link}
-                        className="block p-3 bg-slate-800/50 rounded-lg hover: bg-slate-700/50 transition-colors group",
-                      >,
-                        <div className="flex items-center justify-between">,
-                          <div>,
-                            <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">,
-                              {doc.title}
-                            </h4>
-                            <p className="text-sm text-gray-400">{doc.description}</p>
-                          </div>
-                          <ChevronRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 transition-colors" />,
-                        </div>,
-                      </Link>))}
+                      <div key={docIndex} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300 group">
+                        <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                          {doc.title}
+                        </h4>
+                        <p className="text-gray-300 mb-4">{doc.description}</p>
+                        <button className="text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1">
+                          View Documentation
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
             </div>
-
-            {filteredDocs.length === 0 && searchQuery && (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍<h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search terms<button
-              <div className="text-center py-16"></div>
-                <div className="text-6xl mb-4">🔍</div><h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search terms</p><button
-                  onClick={() =>setSearchQuery('')}
-                  className="cyber-button px-6 py-3"
-                ></button>
-                  Clear Search</button>
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search terms</p>
-                <button;
-                  onClick={() => setSearchQuery('')}
-                  className="cyber-button px-6 py-3"
-                >
-                  Clear Search;
-                </button>
-              </div>
-            )}
           </div>
         </section>
 
-        {/* Quick Links */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-6xl mx-auto">
-          <div className="max-w-6xl mx-auto"></section>
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Quick Links</h2>
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Quick Links;
-            </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-              <Link
-                to="/api-docs"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <Code className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">API Reference<p className="text-sm text-gray-400">Complete API documentation</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  API Reference;
-                </h3>
-                <p className="text-sm text-gray-400">Complete API documentation</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">API Reference</h3><p className="text-sm text-gray-400">Complete API documentation</p>
-              </Link>
-
-              <Link;
-                to="/micro-saas"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Micro SAAS<p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  Micro SAAS;
-                </h3>
-                <p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Micro SAAS</h3><p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
-              </Link>
-
-              <Link;
-                to="/compliance"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Compliance<p className="text-sm text-gray-400">Security and compliance info</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  Compliance;
-                </h3>
-                <p className="text-sm text-gray-400">Security and compliance info</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Compliance</h3><p className="text-sm text-gray-400">Security and compliance info</p>
-              </Link>
-
-              <Link;
-                to="/contact"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <Download className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Get Help<p className="text-sm text-gray-400">Contact our support team</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  Get Help;
-                </h3>
-                <p className="text-sm text-gray-400">Contact our support team</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Get Help</h3><p className="text-sm text-gray-400">Contact our support team</p>
-              </Link>
-            </div>
-          </div>,
-        </section>,
-,
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?<p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Can't Find What You're Looking For?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Our support team is here to help you with any questions or issues you might have.
+            <p className="text-xl text-gray-300 mb-8">
+              Our support team is here to help. Get in touch for personalized assistance with our solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?</h2><p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4"
-              >Contact Support</a>
-                <ArrowRight className="w-4 h-4 ml-2" /></ArrowRigh>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >Call: (302) 464-0950</a>
-              >
-                Contact Support;
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-              <a;
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Call: (302) 464-0950;
-              </a>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Support
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Request Feature
+              </button>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />,
-    </div>);
+      <Footer />
+    </div>
+  );
 };
 
 export default DocsPage;

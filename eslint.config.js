@@ -6,23 +6,6 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  // Ignore disabled directories
-  {
-    ignores: [,
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'dist/**',
-      'next-env.d.ts',
-      '**/zion-website_disabled/**',
-      '_app_disabled/**',
-      'app_disabled/**',
-      '_conflicted_disabled/**',
-      '_pages_api_disabled/**',
-      '_pages_disabled/**',
-    ignores: [
-      'admin-api-disabled/**',
   // Global ignores
   {
     ignores: [
@@ -52,76 +35,59 @@ export default [
       'fix-*.js',
       '*.cjs',
       '*.js.broken'
-    ]},
-  // Base JavaScript configuration;
-      'components.disabled_full/**',
-      'backup/**',
-      'backup-merge-conflicts/**',
-      'backup-pages/**',
-      'backup-problematic/**',
-      'backup-problematic-files/**',
-      'clean-build/**',
-      'cache/**',
-      'ci-cd-reports/**',
-      'automation_backup/**',
-      'apps.backup/**',
-      'node_modules/**',
-      'dist/**',
-      '.next/**',
-      'out/**',
-      '*.min.js',
-      '*.min.css',
-      'chunk-*.js'
     ]
   },
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],
-    languageOptions: {,
+    languageOptions: {
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {,
+      parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {,
-          jsx: true;
-        }}},
-    rules: {,
-      ...js.configs.recommended.rules;
-      'no-unused-vars': 'warn',
-      'no-console': 'warn'}},
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
     rules: {
-      ...js.configs.recommended.rules}},
-  // TypeScript configuration;
+      ...js.configs.recommended.rules
+    }
+  },
+  // TypeScript configuration
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {,
+    languageOptions: {
       globals: { ...globals.browser, ...globals.node },
-      parser: tsParser;
+      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest'
+        ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {,
-          jsx: true;
-        }}},
-    plugins: {,
-      '@typescript-eslint': tseslint;
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh},
-    rules: {,
-      ...tseslint.configs.recommended.rules;
-      ...reactHooks.configs.recommended.rules,
+      'react-refresh': reactRefresh
+    },
     rules: {
       ...tseslint.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true }],
+        { allowConstantExport: true }
+      ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       'no-console': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-unused-vars': 'off'}}];
+      'no-unused-vars': 'off'
+    }
+  }
+];
