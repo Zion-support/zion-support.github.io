@@ -3,7 +3,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Brain, Code, Database, Smartphone, Globe, Lock, FileText, Mail, Calendar, Target, Cpu, Settings, Monitor, Wifi, Smartphone as Phone, CreditCard, PieChart, Search, Filter, Download, Upload, Eye, AlertTriangle, CheckSquare, Clock, DollarSign, Award, Rocket, Sparkles } from 'lucide-react';
@@ -23,14 +22,10 @@ interface MicroSaasProduct {
   marketPrice: string;
   savings?: string;
 }
-=======
-import { Zap, CheckCircle, ArrowRight, Brain, Shield, BarChart, Star, Clock, Users } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 
 const MicroSaasPage: React.FC = () => {
   const products = [
     {
-<<<<<<< HEAD
       id: '1',
       icon: BarChart3,
       title: 'ZionAnalytics Pro',
@@ -55,14 +50,6 @@ const MicroSaasPage: React.FC = () => {
       link: 'https://ziontechgroup.com/analytics-pro',
       marketPrice: '$150-300/month',
       savings: '67% off market rate'
-=======
-      icon: Brain,
-      title: 'AI Analytics Dashboard',
-      description: 'Comprehensive business intelligence with AI-powered insights and real-time analytics.',
-      features: ['Real-time data visualization', 'AI-powered insights', 'Custom dashboards', 'Automated reporting'],
-      price: '$29/month',
-      users: 'Up to 10 users'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
     },
     {
       id: '2',
@@ -93,7 +80,6 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '3',
       icon: Shield,
-<<<<<<< HEAD
       title: 'ZionSecure Monitor',
       description: 'Comprehensive cybersecurity monitoring and threat detection platform',
       features: [
@@ -355,48 +341,6 @@ const MicroSaasPage: React.FC = () => {
 
   const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Development', 'Data', 'Mobile', 'Web', 'Finance', 'Business Intelligence'];
 
-=======
-      title: 'Security Monitoring Suite',
-      description: 'Advanced cybersecurity monitoring with threat detection and automated response.',
-      features: ['24/7 threat monitoring', 'Automated incident response', 'Compliance tracking', 'Security analytics'],
-      price: '$49/month',
-      users: 'Up to 25 users'
-    },
-    {
-      icon: BarChart,
-      title: 'Project Management Pro',
-      description: 'AI-enhanced project management with intelligent task allocation and progress tracking.',
-      features: ['Smart task management', 'Team collaboration', 'Progress analytics', 'Resource optimization'],
-      price: '$39/month',
-      users: 'Up to 15 users'
-    },
-    {
-      icon: Star,
-      title: 'Customer Insights AI',
-      description: 'Advanced customer analytics and behavior prediction using machine learning.',
-      features: ['Customer segmentation', 'Behavior prediction', 'Churn analysis', 'Personalization engine'],
-      price: '$59/month',
-      users: 'Up to 50 users'
-    },
-    {
-      icon: Clock,
-      title: 'Time Tracking Intelligence',
-      description: 'Smart time tracking with productivity insights and automated reporting.',
-      features: ['Automatic time tracking', 'Productivity analytics', 'Team performance', 'Billing automation'],
-      price: '$19/month',
-      users: 'Up to 20 users'
-    },
-    {
-      icon: Users,
-      title: 'HR Management Suite',
-      description: 'Complete human resources management with AI-powered recruitment and analytics.',
-      features: ['Recruitment automation', 'Employee analytics', 'Performance tracking', 'Compliance management'],
-      price: '$79/month',
-      users: 'Up to 100 users'
-    }
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
   const benefits = [
     'Quick setup and deployment (under 5 minutes)',
     'Scalable pricing plans with no hidden fees',
@@ -428,7 +372,6 @@ const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Solutions | Zion Tech Group</title>
         <meta name="description" content="Discover our micro SaaS solutions designed to solve specific business problems with AI-powered tools and rapid deployment." />
         <meta name="keywords" content="micro SaaS, AI tools, business automation, SaaS solutions, productivity tools" />
@@ -587,86 +530,11 @@ const MicroSaasPage: React.FC = () => {
                     </div>
                   </div>
                 ))}
-=======
-        <title>Micro SaaS Solutions | Zion Tech Group - 50+ AI-Powered Tools</title>
-        <meta name="description" content="Discover our comprehensive suite of 50+ micro SaaS solutions powered by AI. From analytics to security, find the perfect tool for your business needs." />
-        <meta name="keywords" content="micro SaaS, AI tools, business software, analytics dashboard, project management, security monitoring" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Micro SaaS Solutions
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive suite of 50+ AI-powered micro SaaS tools designed to solve specific business challenges.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {microSaasTools.map((tool, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <tool.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{tool.title}</h3>
-                  <p className="text-gray-300 mb-6">{tool.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="border-t border-white/10 pt-4 mb-4">
-                    <div className="text-2xl font-bold text-white mb-1">{tool.price}</div>
-                    <div className="text-sm text-gray-400">{tool.users}</div>
-                  </div>
-                  <Link
-                    to="/contact"
-                    className="w-full inline-flex items-center justify-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium bg-cyan-500/10 hover:bg-cyan-500/20 py-2 px-4 rounded-lg"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Choose the micro SaaS solution that fits your business needs. Start with a free trial and scale as you grow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center"
-                >
-                  <Zap className="w-5 h-5 mr-2" />
-                  Start Free Trial
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300"
-                >
-                  View All Plans
-                </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -678,24 +546,6 @@ const MicroSaasPage: React.FC = () => {
                 <div key={index} className="text-center glass-card p-6 hover:bg-white/10 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Why Choose Micro SaaS?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get the benefits of enterprise-grade solutions without the complexity or cost.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-cyan-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="h-8 w-8 text-white" />
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
                   </div>
                   <p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
@@ -703,7 +553,6 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -731,9 +580,6 @@ const MicroSaasPage: React.FC = () => {
       </div>
 
       <Footer />
-=======
-      </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
     </>
   );
 };
