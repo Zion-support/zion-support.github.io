@@ -1,222 +1,128 @@
-'use client;
+'use client';
 
-import React, { useEffect } from react;
+import React, { useEffect } from 'react';
 
-interface SecurityEnhancerProps {}
+interface SecurityEnhancerProps {
+  children: React.ReactNode;
   enableCSP?: boolean;
-
   enableHSTS?: boolean;
-
   enableXSSProtection?: boolean;
-
   enableClickjackingProtection?: boolean;
-
   enableContentTypeSniffing?: boolean;
-
 }
 
-;
-<<<<<<< HEAD
-
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-=======
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+  children,
   enableCSP = true,
   enableHSTS = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
   enableContentTypeSniffing = true
 }) => {
-<<<<<<< HEAD
   useEffect(() => {
-    if (typeof window === 'undefined) {
-=======
-  useEffect(() => {}
-    if (typeof window === 'undefined') {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      return;
-
-    }
-
     // Content Security Policy
-<<<<<<< HEAD
-    if ($1) { const cspMeta = document.createElement(meta);;
-
-      cspMeta.httpEquiv = Content-Security-Policy;
-
-=======
-    if ($1) { const cspMeta = document.createElement('meta');}
-      cspMeta.httpEquiv = 'Content-Security-Policy';
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      cspMeta.content = [
-        "default-src 'self',
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com,
-        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,
-        "img-src 'self' data: https: blob:,
-        "font-src 'self' data: https://fonts.gstatic.com,
-        "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com,
-        "frame-ancestors 'none',
-        "base-uri 'self',
-        "form-action 'self',
-        "object-src 'none',
-        "media-src 'self',
-        "worker-src 'self' blob:
-      ].join(; );
-
-      document.head.appendChild(cspMeta);
-
+    if (enableCSP) {
+      const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      if (!cspMeta) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'Content-Security-Policy');
+        meta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;");
+        document.head.appendChild(meta);
+      }
     }
 
     // XSS Protection
-<<<<<<< HEAD
-    if ($1) { const xssMeta = document.createElement(meta);;
-
-      xssMeta.httpEquiv = X-XSS-Protection;
-
-      xssMeta.content = 1; mode=block;
-
-=======
-    if ($1) { const xssMeta = document.createElement('meta');}
-      xssMeta.httpEquiv = 'X-XSS-Protection';
-      xssMeta.content = '1; mode=block';
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      document.head.appendChild(xssMeta);
-
+    if (enableXSSProtection) {
+      const xssMeta = document.querySelector('meta[http-equiv="X-XSS-Protection"]');
+      if (!xssMeta) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'X-XSS-Protection');
+        meta.setAttribute('content', '1; mode=block');
+        document.head.appendChild(meta);
+      }
     }
 
     // Clickjacking Protection
-<<<<<<< HEAD
-    if ($1) { const frameOptionsMeta = document.createElement(meta);;
-
-      frameOptionsMeta.httpEquiv = X-Frame-Options;
-
-      frameOptionsMeta.content = DENY;
-
-=======
-    if ($1) { const frameOptionsMeta = document.createElement('meta');}
-      frameOptionsMeta.httpEquiv = 'X-Frame-Options';
-      frameOptionsMeta.content = 'DENY';
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      document.head.appendChild(frameOptionsMeta);
-
+    if (enableClickjackingProtection) {
+      const frameOptionsMeta = document.querySelector('meta[http-equiv="X-Frame-Options"]');
+      if (!frameOptionsMeta) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'X-Frame-Options');
+        meta.setAttribute('content', 'DENY');
+        document.head.appendChild(meta);
+      }
     }
 
     // Content Type Sniffing Protection
-<<<<<<< HEAD
-    if ($1) { const contentTypeMeta = document.createElement(meta);;
-
-      contentTypeMeta.httpEquiv = X-Content-Type-Options;
-
-      contentTypeMeta.content = nosniff;
-
-=======
-    if ($1) { const contentTypeMeta = document.createElement('meta');}
-      contentTypeMeta.httpEquiv = 'X-Content-Type-Options';
-      contentTypeMeta.content = 'nosniff';
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      document.head.appendChild(contentTypeMeta);
-
+    if (enableContentTypeSniffing) {
+      const contentTypeMeta = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
+      if (!contentTypeMeta) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'X-Content-Type-Options');
+        meta.setAttribute('content', 'nosniff');
+        document.head.appendChild(meta);
+      }
     }
 
-    // Referrer Policy;
+    // Referrer Policy
+    const referrerMeta = document.querySelector('meta[name="referrer"]');
+    if (!referrerMeta) {
+      const meta = document.createElement('meta');
+      meta.setAttribute('name', 'referrer');
+      meta.setAttribute('content', 'strict-origin-when-cross-origin');
+      document.head.appendChild(meta);
+    }
 
-const referrerMeta = document.createElement(meta);;
+    // Permissions Policy
+    const permissionsMeta = document.querySelector('meta[http-equiv="Permissions-Policy"]');
+    if (!permissionsMeta) {
+      const meta = document.createElement('meta');
+      meta.setAttribute('http-equiv', 'Permissions-Policy');
+      meta.setAttribute('content', 'camera=(), microphone=(), geolocation=(), interest-cohort=()');
+      document.head.appendChild(meta);
+    }
 
-    referrerMeta.name = referrer;
-
-    referrerMeta.content = strict-origin-when-cross-origin;
-
-    document.head.appendChild(referrerMeta);
-
-    // Permissions Policy;
-
-const permissionsMeta = document.createElement(meta);;
-
-    permissionsMeta.httpEquiv = Permissions-Policy;
-
-    permissionsMeta.content = camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=();
-
-    document.head.appendChild(permissionsMeta);
-
-    // Security headers for API calls;
-<<<<<<< HEAD
-
-const originalFetch = window.fetch;;
-
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-
-const headers = new Headers(init?.headers);;
-
-      // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
-
-      headers.set('X-Content-Type-Options', nosniff);
-
-      return originalFetch(input, {
-=======
-const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;}
-const headers = new Headers(init?.headers);
-      
-      // Add security headers
-      headers.set('X-Requested-With', 'XMLHttpRequest');
-      headers.set('X-Content-Type-Options', 'nosniff');
-      
-      return originalFetch(input, {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-        ...init,
-        headers,
-        credentials: 'same-origin
-      })    };
-
-    // Input sanitization for forms;
-<<<<<<< HEAD
-
-const sanitizeInput = (input: string): string => {;;
-
-=======
-const sanitizeInput = (input: string): string => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      return input
-        .replace(/[<>]/g, ') // Remove potential HTML tags
-        .replace(/javascript:/gi, ') // Remove javascript: protocol
-        .replace(/on\w+=/gi, ') // Remove event handlers
-        .trim();
-
+    // Secure cookie handling
+    const handleSecureCookies = () => {
+      // Ensure all cookies are secure in production
+      if (process.env.NODE_ENV === 'production') {
+        document.cookie.split(';').forEach(cookie => {
+          const [name, value] = cookie.trim().split('=');
+          if (name && value && !cookie.includes('Secure')) {
+            document.cookie = `${name}=${value}; Secure; SameSite=Strict`;
+          }
+        });
+      }
     };
 
-    // Apply input sanitization to all form inputs;
-<<<<<<< HEAD
+    handleSecureCookies();
 
-const inputs = document.querySelectorAll(input, textarea, select);;
+    // Input sanitization for forms
+    const sanitizeInputs = () => {
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+          const target = e.target as HTMLInputElement;
+          // Basic XSS prevention
+          target.value = target.value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+        });
+      });
+    };
 
-    inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
+    sanitizeInputs();
 
-const target = e.target as HTMLInputElement;;
+    // Console warning for development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Security enhancements applied:', {
+        CSP: enableCSP,
+        XSSProtection: enableXSSProtection,
+        ClickjackingProtection: enableClickjackingProtection,
+        ContentTypeSniffing: enableContentTypeSniffing
+      });
+    }
+  }, [enableCSP, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
 
-        if (target.value !== sanitizeInput(target.value)) {
-=======
-const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach(input => {}
-      input.addEventListener('input', (e) => {;}
-const target = e.target as HTMLInputElement;
-        if (target.value !== sanitizeInput(target.value)) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-          target.value = sanitizeInput(target.value);
-
-        }
-
-      })
-    })
-    // Console warning for security
-    // console.log removed for production
-// console.log removed for production
-}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
-
-  return <React.Fragment>{children}</React.Fragment>;
-
+  return <>{children}</>;
 };
 
 export default SecurityEnhancer;

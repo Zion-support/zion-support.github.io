@@ -1,258 +1,62 @@
-    text: string;)
-}>;
+'use client';
 
-  onSubscribe?: (email: string) => void;);
-<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Mail, Send } from 'lucide-react';
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)
-  title = "Stay Updated with Our Latest Insights),
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
-  title = "Stay Updated with Our Latest Insights,
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",  placeholder = "Enter your email address,
-  buttonText = "Subscribe Now,
-=======
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)}
-  title = "Stay Updated with Our Latest Insights"),
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({}
-  title = "Stay Updated with Our Latest Insights",
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
-  placeholder = "Enter your email address",
-  buttonText = "Subscribe Now",
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-  features = [
-    {}
-      icon: CheckCircle,
-      text: "Weekly industry insights]
-    },
-    {}
-      icon: Star,
-      text: "Exclusive content and tips]
-    },
-    {}
-      icon: Users,
-      text: "Join 10,000+ subscribers]
-    },
-    {}
-      icon: Globe,
-      text: "Global community access;);
+const ContentNewsletterSignup: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  ],
-
-}) => {
-}); => {;
-
-const [email, setEmail] = useState(');
-
-const [isSubscribed, setIsSubscribed] = useState(false);
-<<<<<<< HEAD
-
-const [isLoading, setIsLoading] = useState(false);
-
-const handleSubmit = async (e: React.FormEvent) => {;
-  const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();;
-
-    if (!email) return;
-
-    setIsLoading(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
     try {
-      if (onSubscribe) {
-=======
-const [isLoading, setIsLoading] = useState(false);}
-const handleSubmit = async (e: React.FormEvent) => {}
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {}
-    e.preventDefault();
-    if (!email) return;
-
-    setIsLoading(true);
-    
-    try {}
-      if (onSubscribe) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-        await onSubscribe(email)]
-    } else {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000)););
-<<<<<<< HEAD
-
-        await onSubscribe(email);
-
-      } else {
-        /
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
-=======
-        await onSubscribe(email);}
-      } else {
-        /
-        await new Promise(resolve => setTimeout(resolve, 1000));}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      }
-
-            setIsSubscribed(true);
-
-      setEmail(');)
-} catch (error) {
-      // console.error removed for production
-)}
-} finally {
-      setIsLoading(false););
-<<<<<<< HEAD
-
-        await new Promise(resolve => setTimeout(resolve, 1000))]
-=======
-        await new Promise(resolve => setTimeout(resolve, 1000))]}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-    }
-
-      setIsSubscribed(true);
-
-      setEmail(')]
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setIsSubmitted(true);
+      setEmail('');
     } catch (error) {
-<<<<<<< HEAD
-      console.error('Subscription failed:, error)]
-=======
-      console.error('Subscription failed:', error)]}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+      console.error('Newsletter signup error:', error);
     } finally {
-      setIsLoading(false)]}
+      setIsSubmitting(false);
     }
-
   };
 
-<<<<<<< HEAD
-  if (isSubscribed) {
-    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
-        <div className="max-w-4xl mx-auto text-center>
-          <div className=w-16 h-16 bg-white
-=======
-  if (isSubscribed) {}
-    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="w-16 h-16 bg-white
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-            
-            Welcome to Our Community!
-          <
-          <p className="text-xl text-blue-100 mb-8>
-            Thank you for subscribing. Youll receive our latest insights and updates soon.
-          <
-          <button)
-            onClick = { () => setIsSubscribed(false) };
-
-            className="text-white underline hover:text-blue-200 transition-colors
-          >
-            Subscribe another email
-          <
-        <
-      <
+  if (isSubmitted) {
+    return (
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+        Thank you for subscribing to our newsletter!
+      </div>
     );
-
   }
 
-<<<<<<< HEAD
-  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>
-      <div className="max-w-6xl mx-auto>
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center>
-          {/* Content *
-=======
-  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
-          {/* Content *}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-          <div>
-            <h2 className=text-4xl m,
-    d:text-5xl font-bold text-white mb-6>
-              {title}
-
-            <
-            <p className="text-xl text-blue-100 mb-8>
-              {subtitle}            <
-            
-            <div className="space-y-4>)
-              {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3>
-                  <div className=w-6 h-6 bg-white
-                    <feature.icon className="w-4 h-4 text-white 
-                  <
-                  <span className="text-blue-100>{feature.text}<
-                <)
-              ))}
-
-            <
-          <
-
-<<<<<<< HEAD
-          {/* Newsletter Form *
-          <div className=bg-white/10 backdrop-blur-sm border border-white
-            <form onSubmit={handleSubmit} className="space-y-6>
-=======
-          {/* Newsletter Form *}
-          <div className="bg-white/10 backdrop-blur-sm border border-white
-            <form onSubmit={handleSubmit} className="space-y-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2>
-                  Email Address                <
-                <input
-                  type="email
-                  id="email
-                  value = { email };
-
-                  onChange = { (e) => setEmail(e.target.value) };
-
-                  placeholder = { placeholder };
-
-                  className=w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus: outline-none focus:ring-2 focu,
-    s:ring-white
-                
-              <
-              
-              <button
-                type="submit
-                disabled = { isLoading || !email };
-
-                className=w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
-    d:cursor-not-allowed transition-all duration-300 flex items-center justify-center
-              >
-<<<<<<< HEAD
-                {isLoading ? (<>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2><
-=======
-                {isLoading ? (<>}
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"><
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-                    <div>
-                    Subscribing...
-                  </React.Fragment>
-                ) : (
-
-                  <React.Fragment>
-                    Subscribing...
-                  <)
-                ) : (<>
-                    {buttonText}
-
-                                    We respect your privacy. Unsubscribe at any time.
-              <
-            <
-          <
-        <
-      <
-    <
+  return (
+    <div className="bg-slate-800 rounded-lg p-6">
+      <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>
+      <p className="text-gray-300 mb-4">
+        Subscribe to our newsletter for the latest AI and IT insights.
+      </p>
+      <form onSubmit={handleSubmit} className="flex gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          required
+          className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        />
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50"
+        >
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+        </button>
+      </form>
+    </div>
   );
-
-)]
-    };
-
 };
 
-export default ContentNewsletterSignup;}
+export default ContentNewsletterSignup;

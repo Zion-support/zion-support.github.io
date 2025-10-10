@@ -1,195 +1,96 @@
-import { useEffect, useCallback } from react;
+import { useEffect, useCallback } from 'react';
 
-export const usePerformanceMonitor = () => {;;;
-
-  const measurePerformance = useCallback(() => {;;;
-
-<<<<<<< HEAD
+export const usePerformanceMonitor = () => {
+  const measurePerformance = useCallback(() => {
     // Measure page load time
-    if (typeof window !== 'undefined' && 'performance in window) {
-      const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
-
-      if (navigation) {
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;;
-
-        const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;;
-
-        // Track performance metrics
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'performance_metric, {
-            event_category: 'Performance,
-            event_label: 'Page Load Time,
-=======
-export const usePerformanceMonitor = () => {}
-  const measurePerformance = useCallback(() => {}
-    // Measure page load time
-    if (typeof window !== 'undefined' && 'performance' in window) {}
+    if (typeof window !== 'undefined' && 'performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
-      if (navigation) {}
+      if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         
         // Track performance metrics
-        if (typeof window !== 'undefined' && window.gtag) {}
-          window.gtag('event', 'performance_metric', {}
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'performance_metric', {
             event_category: 'Performance',
             event_label: 'Page Load Time',
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
             value: Math.round(loadTime)
           });
-
         }
-
       }
-
     }
-
   }, []);
 
-<<<<<<< HEAD
-  const measureResourceTiming = useCallback(() => {;;
-
-    if (typeof window !== 'undefined' && 'performance in window) {
-      const resources = performance.getEntriesByType(resource);;
-
-      resources.forEach((resource: PerformanceResourceTiming) => {
-        const loadTime = resource.responseEnd - resource.startTime;;
-
-        // Track slow resources
-        if (loadTime > 1000) {
-          if (typeof window !== 'undefined && window.gtag) {
-            window.gtag('event', 'slow_resource, {
-              event_category: 'Performance,
-=======
-  const measureResourceTiming = useCallback(() => {}
-    if (typeof window !== 'undefined' && 'performance' in window) {}
+  const measureResourceTiming = useCallback(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
       const resources = performance.getEntriesByType('resource');
       
-      resources.forEach((resource: PerformanceResourceTiming) => {}
+      resources.forEach((resource: PerformanceResourceTiming) => {
         const loadTime = resource.responseEnd - resource.startTime;
         
         // Track slow resources
-        if (loadTime > 1000) {}
-          if (typeof window !== 'undefined' && window.gtag) {}
-            window.gtag('event', 'slow_resource', {}
+        if (loadTime > 1000) {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'slow_resource', {
               event_category: 'Performance',
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
               event_label: resource.name,
               value: Math.round(loadTime)
             });
-
           }
-
         }
-
       });
-
     }
-
   }, []);
 
-<<<<<<< HEAD
-  const measureMemoryUsage = useCallback(() => {;;
-
-    if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
-      const memory = (performance as any).memory;;
-
-      const memoryUsage = {;;
-
-=======
-  const measureMemoryUsage = useCallback(() => {}
-    if (typeof window !== 'undefined' && 'performance' in window && (performance as any).memory) {}
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== 'undefined' && 'performance' in window && (performance as any).memory) {
       const memory = (performance as any).memory;
-      const memoryUsage = {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+      const memoryUsage = {
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
         limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
       };
-<<<<<<< HEAD
-
-      if (memoryUsage.used > memoryUsage.limit * 0.8) {
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'high_memory_usage, {
-            event_category: 'Performance,
-            event_label: 'Memory Usage,
-=======
       
-      if (memoryUsage.used > memoryUsage.limit * 0.8) {}
-        if (typeof window !== 'undefined' && window.gtag) {}
-          window.gtag('event', 'high_memory_usage', {}
+      if (memoryUsage.used > memoryUsage.limit * 0.8) {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'high_memory_usage', {
             event_category: 'Performance',
             event_label: 'Memory Usage',
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
             value: memoryUsage.used
           });
-
         }
-
       }
-
     }
-
   }, []);
 
-<<<<<<< HEAD
   useEffect(() => {
-    const handleLoad = () => {;;
-
-=======
-  useEffect(() => {}
-    const handleLoad = () => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+    const handleLoad = () => {
       measurePerformance();
-
       measureResourceTiming();
-
       measureMemoryUsage();
-
     };
 
-<<<<<<< HEAD
-    if (document.readyState === 'complete) {
-=======
-    if (document.readyState === 'complete') {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+    if (document.readyState === 'complete') {
       handleLoad();
-
     } else {
-<<<<<<< HEAD
-      window.addEventListener(load, handleLoad);
-
-=======
-      window.addEventListener('load', handleLoad);}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+      window.addEventListener('load', handleLoad);
     }
 
     // Set up periodic monitoring
-    const performanceInterval = setInterval(measureResourceTiming, 30000);;
+    const performanceInterval = setInterval(measureResourceTiming, 30000);
+    const memoryInterval = setInterval(measureMemoryUsage, 60000);
 
-    const memoryInterval = setInterval(measureMemoryUsage, 60000);;
-
-<<<<<<< HEAD
     return () => {
-      window.removeEventListener(load, handleLoad);
-
-=======
-    return () => {}
       window.removeEventListener('load', handleLoad);
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
       clearInterval(performanceInterval);
-
       clearInterval(memoryInterval);
-
     };
-
   }, [measurePerformance, measureResourceTiming, measureMemoryUsage]);
 
-  return {}
+  return {
     measurePerformance,
     measureResourceTiming,
     measureMemoryUsage
   };
-
 };

@@ -1,100 +1,80 @@
-const fs = require(fs);;
+const fs = require('fs');
+const path = require('path');
 
-const path = require(path);;
-
-;
-
-const dir = path.join(process.cwd(), data);;
-
-const file = path.join(dir, subscribers.json);;
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'subscribers.json');
 
 export default function handler(req, res) {
-  if (req.method !== 'POST) {
+  if (req.method !== 'POST') {
     res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
 
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: Method not allowed }));
-
-    return}
-
-;
-
-const { email, name, preferences } = req.body || {};
+  const { email, name, preferences } = req.body || {};
 
   if (!email) {
     res.statusCode = 400;
-
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: Email is required }));
-
-    return}
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })}
-
-;
-
-let existing = [];;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
 
   try {
-    if (fs.existsSync(file)) {;
+    // Ensure data directory exists
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
 
-const data = fs.readFileSync(file, utf8);;
+    // Read existing subscribers
+    let subscribers = [];
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      subscribers = JSON.parse(data);
+    }
 
-      existing = JSON.parse(data);
+    // Check if email already exists
+    const existingSubscriber = subscribers.find(sub => sub.email === email);
+    if (existingSubscriber) {
+      res.statusCode = 409;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Email already subscribed',
+        message: 'This email is already subscribed to our newsletter'
+      }));
+      return;
+    }
 
-      if (!Array.isArray(existing)) existing = []}
+    // Add new subscriber
+    const newSubscriber = {
+      id: `sub_${Date.now()}`,
+      email,
+      name: name || 'Anonymous',
+      preferences: preferences || {},
+      subscribedAt: new Date().toISOString(),
+      status: 'active'
+    };
 
-  } catch (error) {
-    // console.error removed for production
-existing = []}
+    subscribers.push(newSubscriber);
 
-  // Check if email already exists;
-
-const existingSubscriber = existing.find(sub => sub.email === email);;
-
-  if (existingSubscriber) {
-    res.statusCode = 400;
-
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: Email already subscribed }));
-
-    return}
-
-;
-
-const newSubscriber = {;;
-
-    id: Date.now().toString(),
-    email,
-    name: name || ',
-    preferences: preferences || {},
-    timestamp: new Date().toISOString(),
-    status: active
-  };
-
-  existing.push(newSubscriber);
-
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
 
     res.statusCode = 200;
-
-    res.setHeader('Content-Type', application/json);
-
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Successfully subscribed to newsletter,
-      id: newSubscriber.id
-    }))} catch (error) {
-    // console.error removed for production
-res.statusCode = 500;
+      message: 'Successfully subscribed to newsletter',
+      subscriber: newSubscriber
+    }));
 
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: 'Failed to save subscription }))}
-
+  } catch (error) {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to subscribe',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
+  }
 }

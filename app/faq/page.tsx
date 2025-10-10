@@ -1,177 +1,138 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { ChevronDown, ChevronUp } from lucide-react;
-
-;
-<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const FAQPage: React.FC = () => {
-=======
-const FAQPage: React.FC = () => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-return (;
+  const [openItems, setOpenItems] = useState<number[]>([]);
 
-const [openItems, setOpenItems] = useState<number[]>
-);
-
-}([]);
-
-;
-<<<<<<< HEAD
-
-const toggleItem = (index: number) => {;;
-
-=======
-const toggleItem = (index: number) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+  const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
-        : [...prev, index]);
+        : [...prev, index]
+    );
+  };
 
-;
-<<<<<<< HEAD
-
-const faqs = [;;;
-
+  const faqs = [
     {
-=======
-const faqs = [
-    {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      questio,
-    n: "What services does Zion Tech Group offer?,
-      answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications.
-    },    {
-      question: "How can AI benefit my business?,
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year.
-    },
-<<<<<<< HEAD
-    {
-      question: "Do you provide IT infrastructure services?,
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack.
+      question: 'What AI solutions do you offer?',
+      answer: 'We offer a comprehensive range of AI solutions including machine learning models, natural language processing, computer vision, predictive analytics, and custom AI applications tailored to your business needs.'
     },
     {
-      question: "What is your pricing model?,
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote.
+      question: 'How long does it take to implement your solutions?',
+      answer: 'Implementation timelines vary depending on the complexity of the project. Simple integrations can take 2-4 weeks, while complex AI solutions may require 3-6 months. We provide detailed project timelines during our initial consultation.'
     },
     {
-      question: "Do you offer 24/7 support?,
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock.
+      question: 'Do you provide training for our team?',
+      answer: 'Yes, we provide comprehensive training programs including documentation, video tutorials, live training sessions, and ongoing support to ensure your team can effectively use and maintain our solutions.'
     },
     {
-      question: "Do you provide ongoing support?,
-      answer: Yes, we offer comprehensive support and maintenance services including 24
+      question: 'What is your pricing model?',
+      answer: 'We offer flexible pricing models including subscription-based plans, project-based pricing, and custom enterprise solutions. Contact our sales team for a personalized quote based on your specific requirements.'
     },
     {
-      question: "What technologies do you use?,
-      answer: We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI
-    },    {
-      question: "What industries do you serve?,
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.
-=======
-    {}
-      question: "How can AI benefit my business?",
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."
+      question: 'Do you offer 24/7 support?',
+      answer: 'Yes, we provide 24/7 technical support for all our clients. Our support team is available around the clock to help with any issues or questions you may have.'
     },
-    {}
-      question: "Do you provide IT infrastructure services?",
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack."
+    {
+      question: 'Can you integrate with our existing systems?',
+      answer: 'Absolutely! Our solutions are designed to integrate seamlessly with your existing systems through APIs, webhooks, and custom integration services. We work with all major platforms and can create custom connectors if needed.'
     },
-    {}
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote."
+    {
+      question: 'What security measures do you have in place?',
+      answer: 'We implement enterprise-grade security including end-to-end encryption, access controls, regular security audits, compliance with industry standards (SOC 2, GDPR, HIPAA), and secure data handling practices.'
     },
-    {}
-      question: "Do you offer 24/7 support?",
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock."
+    {
+      question: 'Do you offer custom development?',
+      answer: 'Yes, we specialize in custom development solutions. Our team can build tailored AI applications, web platforms, mobile apps, and integrations specifically designed for your business requirements.'
     },
-    {}
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer comprehensive support and maintenance services including 24
+    {
+      question: 'What is your refund policy?',
+      answer: 'We offer a 30-day money-back guarantee for all our services. If you\'re not satisfied with our solution, we\'ll provide a full refund within 30 days of implementation.'
     },
-    {}
-      question: "What technologies do you use?",
-      answer: "We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI
-    },
-    {}
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+    {
+      question: 'How do I get started?',
+      answer: 'Getting started is easy! Simply contact our sales team through our website, email, or phone. We\'ll schedule a consultation to understand your needs and provide a customized solution proposal.'
     }
-
   ];
 
-  return (<div>
-        <title>Frequently Asked Questions - Zion Tech Group<
-        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business. 
-      <
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20>
-        <div className="container mx-auto px-4>
-          <div className="text-center mb-16>
-            <h1 className="text-5xl font-bold text-white mb-6>
-              Frequently Asked Questions
-            <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto>
-              Find answers to common questions about our AI and IT solutions, 
-              services, and how we can help transform your business.
-            <
-          <
-<<<<<<< HEAD
-=======
+  return (
+    <>
+      <Helmet>
+        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+        <meta name="description" content="Find answers to frequently asked questions about Zion Tech Group's AI and IT solutions, pricing, support, and more." />
+        <meta name="keywords" content="FAQ, frequently asked questions, help, support, AI solutions, IT services" />
+      </Helmet>
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Find answers to common questions about our AI and IT solutions, services, and support.
+            </p>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">)
-              {faqs.map((faq, index) => (<div}
-                  key = { index };
-                  className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white
-                >
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {faq.question}
-                  <
-                  <p className="text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  <
-                <)
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleItem(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center">
+                      <HelpCircle className="w-5 h-5 text-cyan-500 mr-3 flex-shrink-0" />
+                      <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                    </div>
+                    {openItems.includes(index) ? (
+                      <ChevronUp className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                    )}
+                  </button>
+                  
+                  {openItems.includes(index) && (
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
               ))}
-            <
+            </div>
+          </div>
+        </section>
 
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Still have questions?
-              <
-              <p className="text-xl text-gray-300 mb-8">
-                Our team is here to help. Contact us for personalized assistance.
-              <
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="
-                  className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                >
-                  Contact Us
-                <
-                <a
-                  href="
-                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hove,
-    r:bg-purple-700 transition-colors"
-                >
-                  Free Consultation
-                <
-              <
-            <
-          <
-        <
-      <
-    <
-    </React.Fragment>)
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-slate-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Still Have Questions?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Can't find what you're looking for? Our team is here to help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                Contact Support
+              </button>
+              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Schedule a Call
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
 };
 
 export default FAQPage;
