@@ -1,4 +1,5 @@
-import { describe, it, expect, beforeEach  } from '@jest/globals'import { isValidUrl,
+import { describe, it, expect, beforeEach } from '@jest/globals';
+import { isValidUrl,
   validateURL,
   validateLength,
   isValidPassword,

@@ -1,4 +1,9 @@
-'use client'import React, { useState } from 'react'
+'use client';
+;
+;
+;
+;
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'import {
   Brain,
   Cloud,
@@ -14,7 +19,7 @@ import { Helmet } from 'react-helmet-async'import {
   Filter
 } from 'lucide-react';
 const ServicesPage: React.FC = () => {
-  const services = [
+const services = [
     // AI Services
     {
       icon: Brain,
@@ -586,7 +591,9 @@ const ServicesPage: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
   const servicesPerPage = 12;
   const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    ;
+
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
@@ -601,15 +608,15 @@ const ServicesPage: React.FC = () => {
   }, [selectedCategory, searchTerm]);
   return (
     <React.Fragment>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
+        <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." /></meta>
         <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
   </
@@ -620,13 +627,13 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
         {/* Search and Filter Section */}
-        <section className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
-                <div className="flex-1">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <section className="py-8 px-4"></section>
+          <div className="max-w-6xl mx-auto"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"></div>
+              <div className="flex flex-col md:flex-row gap-4 mb-6"></div>
+                <div className="flex-1"></div>
+                  <div className="relative"></div>
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
                     <input
                       type="text"
                       placeholder="Search services..."
@@ -636,9 +643,9 @@ const ServicesPage: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="md:w-64">
-                  <div className="relative">
-                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <div className="md:w-64"></div>
+                  <div className="relative"></div>
+                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Filter>
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
@@ -671,9 +678,9 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
         {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="flex justify-between items-center mb-8"></div>
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
@@ -689,11 +696,11 @@ const ServicesPage: React.FC = () => {
                       Popular
   </
                   )}
-                  <div className="flex items-start mb-6">
-                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
+                  <div className="flex items-start mb-6"></div>
+                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0"></div>
                       <service.icon className="w-8 h-8 text-cyan-400" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1"></div>
                       <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                       <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
                         {service.category}
@@ -703,11 +710,11 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
@@ -719,11 +726,11 @@ const ServicesPage: React.FC = () => {
                       )}
                     </ul>
                   </div>
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                     <div className="text-sm text-gray-300">Contact for custom pricing</div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3"></div>
                     <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
                       Get Quote
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -737,7 +744,7 @@ const ServicesPage: React.FC = () => {
             </div>
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center mt-12 space-x-2">
+              <div className="flex justify-center items-center mt-12 space-x-2"></div>
                 <button
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
@@ -770,15 +777,15 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Free Consultation;
   </

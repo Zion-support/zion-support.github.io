@@ -21,7 +21,7 @@ interface PerformanceMetrics {}
   cls?: number
   ttfb?: number
   fmp?: number
-  customMetrics: Record<string, number></strin>
+  customMetrics: Record</string><string, number></string>
 }
 class PerformanceMonitor {}
   private metrics: PerformanceMetrics = {}
@@ -35,7 +35,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   observers: PerformanceObserver[] = []
   private isInitialized = false
   init(): void {}
-    if (this.isInitialized || typeof window === 'undefined') return
+    if (this.isInitialized || typeof window === 'undefined') ;
+
+return
     this.isInitialized = true
     this.setupWebVitals()
     this.setupCustomMetrics();,
@@ -62,13 +64,17 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
               this.recordMetric('FCP', entry.startTime)
             }
         this.observeEntry('largest-contentful-paint', entries => {)
-          const lastEntry = entries[entries.length - 1])
+          ;
+
+const lastEntry = entries[entries.length - 1])
           if (lastEntry) {
             this.recordMetric('LCP')
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime)}
           }
         this.observeEntry('first-input', entries => {)
-          const firstInput = entries[0])
+          ;
+
+const firstInput = entries[0])
           if (firstInput && (firstInput as any).processingStart !== undefined) {
         this.observeEntry('largest-contentful-paint', entries => {)}
           const lastEntry = entries[entries.length - 1]
@@ -123,7 +129,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
     try {}
       const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
+        for (;
+
+const entry of list.getEntries()) {}
           if (entry.name === name) {}
             (this.metrics as any)[metricKey] = entry.startTime
             this.logMetric(metricKey as string, entry.startTime)
@@ -136,7 +144,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private observeLCP(): void {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      ;
+
+const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
@@ -296,7 +306,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
   }
   getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics }
+    ;
+
+return { ...this.metrics }
   }
   getScore(): number {}
     const scores = []
@@ -326,7 +338,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       else if (this.metrics.cls <= 0.4) scores.push(50)
       else scores.push(25)
     }
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0
+    ;
+
+return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0
   }
   generateReport(): string {}
       })
@@ -395,8 +409,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0}
   generateReport(): string {
     const score = this.getScore()
-    const metrics = this.getMetrics()
-    return `
+    ;
+
+const metrics = this.getMetrics()
+    ;
+
+return `
 Performance Report:}
 Score: ${score}
 Metrics: ${JSON.stringify(metrics, null, 2)}

@@ -14,7 +14,7 @@ import Footer from '../components/Footer';
 import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const faqs: FAQ[] = [
@@ -148,9 +148,10 @@ availability: 'Mon-Fri: 9AM-6PM EST'
   ];
 
   const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
-
   const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    ;
+
+const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
@@ -159,17 +160,17 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
   return (
-    <React.Fragment>
-      <Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>Support | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
+        <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." /></meta>
         <meta name="keywords" content="support, help, FAQ, customer service, technical support, AI solutions" />
       </Helmet>
-      <Navigation />
+      <Navigation /></Navigation>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Support Center
   </
@@ -177,8 +178,8 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               Get help and support for our AI and IT solutions. We're here to help you succeed.
             </p>
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="max-w-2xl mx-auto relative mb-8"></div>
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
                 type="text"
                 placeholder="Search for help..."
@@ -188,16 +189,16 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               />
             </div>
             {/* Quick Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
+              <div className="text-center"></div>
                   <div className="text-3xl font-bold text-white mb-2">&lt; 2min</div>
                 <div className="text-gray-400">Average Response Time</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-3xl font-bold text-white mb-2">98%</div>
                 <div className="text-gray-400">Customer Satisfaction</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-3xl font-bold text-white mb-2">24/7</div>
                 <div className="text-gray-400">Support Availability</div>
               </div>
@@ -205,10 +206,10 @@ availability: 'Mon-Fri: 9AM-6PM EST'
           </div>
         </section>
 {/* Search Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="relative"></div>
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" /></Search>
               <input
                 type="text"
                 placeholder="Search for help..."
@@ -220,9 +221,9 @@ availability: 'Mon-Fri: 9AM-6PM EST'
           </div>
         </section>
         {/* Support Channels */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Contact Support
   </
@@ -232,14 +233,14 @@ availability: 'Mon-Fri: 9AM-6PM EST'
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                <div key={index} className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300"></div>
                   <div className="flex justify-center mb-4">
                     {channel.icon}
                   </div>
         {/* Support Channels */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Get Support</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the support channel that works best for you. All channels are monitored by our expert team.
@@ -247,8 +248,8 @@ availability: 'Mon-Fri: 9AM-6PM EST'
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
-                  <div className={`w-16 h-16 ${channel.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center"></div>
+                  <div className={`w-16 h-16 ${channel.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}></div>
                     <channel.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.name}</h3>
@@ -279,17 +280,17 @@ availability: 'Mon-Fri: 9AM-6PM EST'
             </div>
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden"></div>
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}>
+                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}></div>
                       <HelpCircle className="w-6 h-6 text-purple-400" />
                     </div>
                   </button>
                   {expandedFAQ === index && (
-                    <div className="px-6 pb-6">
+                    <div className="px-6 pb-6"></div>
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
@@ -297,41 +298,41 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               ))}
             </div>
             {filteredFAQs.length === 0 && (
-              <div className="text-center py-12">
-                <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <div className="text-center py-12"></div>
+                <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" /></BookOpen>
                 <p className="text-gray-400 text-lg">No questions found matching your search criteria.</p>
               </div>
             )}
           </div>
         </section>
         {/* Resources Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Additional Resources</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive documentation, tutorials, and community resources.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <BookOpen className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300"></div>
+                <BookOpen className="w-16 h-16 text-purple-400 mx-auto mb-6" /></BookOpen>
                 <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
                 <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                   View Docs
   </
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300"></div>
+                <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" /></Users>
                 <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
                 <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                   Join Community
   </
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300"></div>
+                <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" /></Clock>
                 <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
                 <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
@@ -341,29 +342,29 @@ availability: 'Mon-Fri: 9AM-6PM EST'
             </div>
           </div>
         </section>
-<div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+<div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
               <div className="space-y-6">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="border-b border-white/10 pb-6">
+                  <div key={index} className="border-b border-white/10 pb-6"></div>
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                     <p className="text-gray-300">{faq.answer}</p>
                   </div>
                 ))}
         {/* Contact CTA */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Still Need Help?</h2>
               <p className="text-xl text-gray-300 mb-8">
                 Can't find what you're looking for? Our expert team is here to help with any questions or issues.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
                   <Phone className="w-5 h-5" />
                   Call Support
   </
-                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
                   <Mail className="w-5 h-5" />
                   Email Support
   </
@@ -392,8 +393,8 @@ export default SupportPage;
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
@@ -406,12 +407,12 @@ export default SupportPage;
           </div>
         </section>
         {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto"></div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {filteredFaqs.map((faq, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"></div>
                   <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                   <span className="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mt-3">

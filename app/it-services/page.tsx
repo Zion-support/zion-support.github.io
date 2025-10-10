@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 const ItServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const itServices = [
@@ -349,37 +349,42 @@ const ItServicesPage: React.FC = () => {
   ];
 
   const categories = ['all', 'Cloud', 'Security', 'DevOps', 'Database', 'Infrastructure', 'Support', 'Development', 'Analytics', 'Networking', 'Consulting', 'Automation'];
-
   const filteredServices = itServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    ;
+
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory
+    ;
+
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    ;
+
+return matchesSearch && matchesCategory
   })
   const stats = [
     { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
-    { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
-    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
+    { icon:</Server> <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
+    { icon:</Shield> <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
+    { icon:</Users> <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
   ];
-  return (
-    <React.Fragment>
-      <Helmet>
+  return (</Zap>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions</title>
-        <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
+        <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." /></meta>
         <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+      </meta>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>
+              IT</h1> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
               From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link 
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -395,38 +400,38 @@ const ItServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
+              {itServices.map((service, index) => (</div>
                 <div
                   key={index}
                   to={service.href}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
-                  <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group"></div>
+                  <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" /></service>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.name}
                   </h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    {service.features.map((feature, featureIndex) => (</ul>
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                     <span className="text-sm font-medium">Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
 
-        {/* Stats Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Stats Section */}</ArrowRight>
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+              {stats.map((stat, index) => (</div>
+                <div key={index} className="text-center"></div>
                   <div className="flex justify-center mb-4">
                     {stat.icon}
                   </div>
@@ -434,19 +439,19 @@ const ItServicesPage: React.FC = () => {
                   <div className="text-gray-300">{stat.label}</div>
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group hover:bg-slate-800/70"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <service.icon className="w-8 h-8 text-white" />
-                  </div>
+                  </service>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                     {service.name}
                   </h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                   
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3 mb-6"></div>
                     <div className="text-cyan-400 font-semibold text-lg">{service.price}</div>
                     <div className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray-400 text-sm">
+                      {service.features.map((feature, featureIndex) => (</div>
+                        <div key={featureIndex} className="flex items-center text-gray-400 text-sm"></div>
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                           {feature}
                         </div>
@@ -454,10 +459,10 @@ const ItServicesPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"></button>
                     <span>Get Quote</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </ArrowRight>
                 </div>
               ))}
             </div>
@@ -468,3 +473,5 @@ const ItServicesPage: React.FC = () => {
   );
 };
 export default ItServicesPage;
+}
+}

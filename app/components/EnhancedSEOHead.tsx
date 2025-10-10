@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const EnhancedSEOHead: React.FC = () => {
-  const structuredData = {
+const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -58,50 +58,33 @@ const EnhancedSEOHead: React.FC = () => {
     <Helmet>
       {/* Primary Meta Tags */}
       <title>Zion Tech Group - AI & IT Solutions | Digital Transformation Experts</title>
-      <meta name="title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" />
-      <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." />
-      <meta name="keywords" content="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, business automation, machine learning, data analytics, software development" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
+      <meta name="title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" /></meta>
+      <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." /></meta>
+      <meta name="keywords" content="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, business automation, machine learning, data analytics, software development" /></meta>
+      <meta name="author" content="Zion Tech Group" /></meta>
+      <meta name="robots" content="index, follow" /></meta>
+      <meta name="language" content="English" /></meta>
       <meta name="revisit-after" content="7 days" />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ziontechgroup.com/" />
-      <meta property="og:title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" />
-      <meta property="og:description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." />
-      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:type" content="website" /></meta>
+      <meta property="og:url" content="https://ziontechgroup.com/" /></meta>
+      <meta property="og:title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" /></meta>
+      <meta property="og:description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." /></meta>
+      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" /></meta>
+      <meta property="og:site_name" content="Zion Tech Group" /></meta>
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://ziontechgroup.com/" />
-      <meta property="twitter:title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" />
-      <meta property="twitter:description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." />
+      <meta property="twitter:card" content="summary_large_image" /></meta>
+      <meta property="twitter:url" content="https://ziontechgroup.com/" /></meta>
+      <meta property="twitter:title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" /></meta>
+      <meta property="twitter:description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." /></meta>
       <meta property="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#06b6d4" />
-      <meta name="msapplication-TileColor" content="#06b6d4" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://ziontechgroup.com/" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
-  )}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
+      <meta httpEquiv="Content-Type" content="text/html; charset;
+
 export default EnhancedSEOHead
+}

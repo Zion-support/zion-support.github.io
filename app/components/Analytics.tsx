@@ -29,7 +29,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics
-    const script = document.createElement('script');
+    ;
+
+const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
     document.head.appendChild(script);
@@ -52,12 +54,18 @@ const Analytics: React.FC<AnalyticsProps> = ({
   const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+      ;
+
+const observer = new PerformanceObserver((list) => {
+        for (;
+
+const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
           } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
+            ;
+
+const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));}
           } else if (entry.entryType === 'layout-shift') {;
             if (!(entry as any).hadRecentInput) {;
@@ -132,7 +140,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
       if (tagName === 'a') {
-        const href = (target as HTMLAnchorElement).href;
+        ;
+
+const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {;
           link_url: href,;
           link_text: target.textContent?.trim();}
@@ -163,7 +173,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
       })
     }
   }
-  return null
+  ;
+
+return null
 }
 declare global {
   interface Window {
@@ -173,9 +185,9 @@ declare global {
 }
 export default Analytics;
 // Analytics Provider for context
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AnalyticsProvider: React.FC</AnalyticsProps><{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <React.Fragment>
+    <React.Fragment></React>
       <Analytics />
       {children}
     </React.Fragment>

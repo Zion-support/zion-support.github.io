@@ -12,11 +12,15 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
-      const main = document.querySelector('main')
+      ;
+
+const main = document.querySelector('main')
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main')
       }
-      const nav = document.querySelector('nav')
+      ;
+
+const nav = document.querySelector('nav')
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation')
       }
