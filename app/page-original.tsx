@@ -84,8 +84,9 @@ const HomePage: React.FC = React.memo((props) => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'}
+            addressCountry: 'US'
           }
+        }
         }}
       />
       <PerformanceOptimizer

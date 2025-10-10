@@ -57,14 +57,15 @@ class AdvancedAnalytics {
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true}
+      enableUserJourneyTracking: true
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
   }
+
   static getInstance(): AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {
-      AdvancedAnalytics.instance = new AdvancedAnalytics();}
+      AdvancedAnalytics.instance = new AdvancedAnalytics()
     }
     return AdvancedAnalytics.instance
   }
@@ -85,11 +86,11 @@ class AdvancedAnalytics {
     this.trackDownloads()
     // Track performance
     if (this.config.enablePerformanceTracking) {
-      this.trackPerformance();}
+      this.trackPerformance()
     }
     // Track user journey
     if (this.config.enableUserJourneyTracking) {
-      this.trackUserJourney();}
+      this.trackUserJourney()
     }
     // Setup network monitoring
     this.setupNetworkMonitoring()
@@ -107,7 +108,7 @@ class AdvancedAnalytics {
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer}
+      referrer: document.referrer
     }
   }
   /**
@@ -128,7 +129,7 @@ class AdvancedAnalytics {
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight}
+          height: window.innerHeight
         }
       }
     }
@@ -159,7 +160,7 @@ class AdvancedAnalytics {
           text: element.text?.substring(0, 100),
           position: {
             x: event.clientX,
-            y: event.clientY}
+            y: event.clientY
           }
         }
       }
@@ -190,7 +191,7 @@ class AdvancedAnalytics {
             scrollY: window.scrollY,
             scrollPercentage: Math.round(
               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-            )}
+            )
           }
         }
         this.trackEvent(scrollEvent)
@@ -220,7 +221,7 @@ class AdvancedAnalytics {
           formClass: form.className,
           formAction: form.action,
           formMethod: form.method,
-          fields: formFields}
+          fields: formFields
         }
       }
       this.trackEvent(submitEvent)
@@ -246,7 +247,7 @@ class AdvancedAnalytics {
           url: window.location.href,
           metadata: {
             downloadUrl: link.href,
-            downloadText: link.textContent?.substring(0, 100)}
+            downloadText: link.textContent?.substring(0, 100)
           }
         }
         this.trackEvent(downloadEvent)
@@ -274,7 +275,7 @@ class AdvancedAnalytics {
               url: window.location.href,
               metadata: {
                 metric: entry.name,
-                value: entry.startTime}
+                value: entry.startTime
               }
             }
             this.trackEvent(paintEvent)
@@ -300,7 +301,7 @@ class AdvancedAnalytics {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart}
+            firstByte: navigation.responseStart - navigation.requestStart
           }
         }
         this.trackEvent(performanceEvent)
@@ -316,12 +317,12 @@ class AdvancedAnalytics {
     const observer = new MutationObserver(() => {
       if (window.location.href !== lastUrl) {
         this.trackPageView()
-        lastUrl = window.location.href;}
+        lastUrl = window.location.href
       }
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true}
+      subtree: true
     })
   }
   /**
@@ -330,10 +331,10 @@ class AdvancedAnalytics {
   private setupNetworkMonitoring(): void {
     window.addEventListener('online', () => {
       this.isOnline = true
-      this.flushEventQueue();}
+      this.flushEventQueue()
     })
     window.addEventListener('offline', () => {
-      this.isOnline = false;}
+      this.isOnline = false
     })
   }
   /**
@@ -344,11 +345,11 @@ class AdvancedAnalytics {
     this.eventQueue.push(event)
     // Keep queue size manageable
     if (this.eventQueue.length > this.maxQueueSize) {
-      this.eventQueue.shift();}
+      this.eventQueue.shift()
     }
     // Send to analytics service
     if (this.isOnline) {
-      this.sendEvent(event);}
+      this.sendEvent(event)
     }
   }
   /**
@@ -359,12 +360,13 @@ class AdvancedAnalytics {
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'}
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(event)
       })
-    } catch (error) {}
-      }
+    } catch (error) {
+      // Handle error silently
+    }
   }
   /**
    * Flush event queue when back online
@@ -374,7 +376,7 @@ class AdvancedAnalytics {
     const eventsToSend = [...this.eventQueue]
     this.eventQueue = []
     for (const event of eventsToSend) {
-      await this.sendEvent(event);}
+      await this.sendEvent(event)
     }
   }
   /**
@@ -386,7 +388,7 @@ class AdvancedAnalytics {
     tagName: string
     id: string
     className: string
-    text?: string;}
+    text?: string
   } {
     const tagName = element.tagName.toLowerCase()
     const id = element.id || ''
@@ -395,11 +397,11 @@ class AdvancedAnalytics {
     // Determine category based on element type
     let category = 'interaction'
     if (tagName === 'button' || element.closest('button')) {
-      category = 'button';}
+      category = 'button'
     } else if (tagName === 'a' || element.closest('a')) {
-      category = 'link';}
+      category = 'link'
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
-      category = 'form';}
+      category = 'form'
     }
     // Create label
     let label = id || className || text?.substring(0, 50) || tagName
@@ -409,7 +411,7 @@ class AdvancedAnalytics {
       tagName,
       id,
       className,
-      text}
+      text
     }
   }
   /**
@@ -420,7 +422,7 @@ class AdvancedAnalytics {
       link.download !== '' ||
       !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
       link.getAttribute('data-download') === 'true'
-    );}
+    )
   }
   /**
    * Detect device type
@@ -429,7 +431,7 @@ class AdvancedAnalytics {
     const width = window.innerWidth
     if (width < 768) return 'mobile'
     if (width < 1024) return 'tablet'
-    return 'desktop';}
+    return 'desktop'
   }
   /**
    * Detect browser
@@ -440,7 +442,7 @@ class AdvancedAnalytics {
     if (userAgent.includes('Firefox')) return 'Firefox'
     if (userAgent.includes('Safari')) return 'Safari'
     if (userAgent.includes('Edge')) return 'Edge'
-    return 'Unknown';}
+    return 'Unknown'
   }
   /**
    * Detect operating system
@@ -452,18 +454,18 @@ class AdvancedAnalytics {
     if (userAgent.includes('Linux')) return 'Linux'
     if (userAgent.includes('Android')) return 'Android'
     if (userAgent.includes('iOS')) return 'iOS'
-    return 'Unknown';}
+    return 'Unknown'
   }
   /**
    * Generate session ID
    */
-  private generateSessionId(): string {}
+  private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**
    * Generate event ID
    */
-  private generateEventId(): string {`}
+  private generateEventId(): string {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**
@@ -471,7 +473,7 @@ class AdvancedAnalytics {
    */
   private getUserId(): string | undefined {
     let userId = localStorage.getItem('analytics_user_id')
-    if (!userId) {`}
+    if (!userId) {
       userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       localStorage.setItem('analytics_user_id', userId)
     }
@@ -484,7 +486,7 @@ class AdvancedAnalytics {
     session: UserSession
     totalEvents: number
     eventsByType: Record<string, number>
-    eventsByCategory: Record<string, number>;}
+    eventsByCategory: Record<string, number>
     topPages: Array<{ url: string; views: number }>
     conversionRate: number
   } {
@@ -493,24 +495,25 @@ class AdvancedAnalytics {
     const eventsByType = events.reduce(
       (acc, event) => {
         acc[event.type] = (acc[event.type] || 0) + 1
-        return acc;}
+        return acc
       },
       {} as Record<string, number>
     )
     const eventsByCategory = events.reduce(
       (acc, event) => {
         acc[event.category] = (acc[event.category] || 0) + 1
-        return acc;}
+        return acc
       },
       {} as Record<string, number>
     )
+    const pageViews = events.filter(e => e.type === 'page_view')
     const topPages = pageViews
       .reduce(
         (acc, event) => {
           const existing = acc.find(p => p.url === event.url)
           if (existing) {
-            existing.views++;}
-          } else {}
+            existing.views++
+          } else {
             acc.push({ url: event.url, views: 1 })
           }
           return acc
@@ -526,7 +529,7 @@ class AdvancedAnalytics {
       eventsByType,
       eventsByCategory,
       topPages: topPages.slice(0, 10),
-      conversionRate}
+      conversionRate
     }
   }
   /**
@@ -537,12 +540,13 @@ class AdvancedAnalytics {
       await fetch('/api/analytics/session', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'}
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(session)
       })
-    } catch (error) {}
-      }
+    } catch (error) {
+      // Handle error silently
+    }
   }
   /**
    * End current session
@@ -554,7 +558,7 @@ class AdvancedAnalytics {
       new Date(this.currentSession.startTime).getTime()
     // Send session data
     if (this.isOnline) {
-      this.sendSessionData(this.currentSession);}
+      this.sendSessionData(this.currentSession)
     }
     // Create new session
     this.currentSession = this.createNewSession()
