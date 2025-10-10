@@ -59,6 +59,7 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     // Trigger visibility animation
     const timer = setTimeout(() => {
@@ -66,6 +67,16 @@ const HomePage: React.FC = () => {
     }, 200);
 
     return () => clearTimeout(timer);
+=======
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag?.('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number',
+      });
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
   }, []);
 
   const handleScroll = useCallback(() => {

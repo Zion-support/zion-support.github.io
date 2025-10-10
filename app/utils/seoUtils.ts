@@ -3,6 +3,7 @@
  * Provides SEO optimization and monitoring
  */
 
+<<<<<<< HEAD
 export interface SEOMetrics {
   titleScore: number;
   metaDescriptionScore: number;
@@ -21,6 +22,16 @@ export interface SEOConfig {
   enableSitemapGeneration: boolean;
   enableRobotsTxt: boolean;
   enableCanonicalUrls: boolean;
+=======
+export interface SEOConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogImage: string;
+  twitterCard: string;
+  structuredData: Record<string, any>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
 }
 
 class SEOOptimizer {
