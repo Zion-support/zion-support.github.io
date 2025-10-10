@@ -609,6 +609,196 @@ const microSAASServices = [
     popular: true,
     icon: Shield,
     link: "https://ziontechgroup.com/ai-code-security-auditor"
+  },
+  {
+    name: "AI Voice Assistant Pro",
+    description: "Advanced voice-controlled AI assistant with natural language processing and multi-language support",
+    price: "$149/mo",
+    features: ["Voice Recognition", "Natural Language", "Multi-language", "Custom Commands"],
+    category: "Voice AI",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-voice-assistant-pro"
+  },
+  {
+    name: "AI Document Scanner Pro",
+    description: "Intelligent document scanning with OCR, data extraction, and smart organization",
+    price: "$89/mo",
+    features: ["OCR Processing", "Data Extraction", "Smart Organization", "Batch Processing"],
+    category: "Document Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-document-scanner-pro"
+  },
+  {
+    name: "AI Meeting Transcriber Pro",
+    description: "Real-time meeting transcription with AI-powered insights and action item extraction",
+    price: "$129/mo",
+    features: ["Real-time Transcription", "Action Items", "Meeting Insights", "Multi-speaker"],
+    category: "Productivity",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-meeting-transcriber-pro"
+  },
+  {
+    name: "AI Website Builder Pro",
+    description: "No-code website builder with AI-powered design and content generation",
+    price: "$199/mo",
+    features: ["No-code Builder", "AI Design", "Content Generation", "SEO Optimization"],
+    category: "Web Development",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-website-builder-pro"
+  },
+  {
+    name: "AI Social Media Analytics Pro",
+    description: "Advanced social media analytics with sentiment analysis and competitor tracking",
+    price: "$179/mo",
+    features: ["Sentiment Analysis", "Competitor Tracking", "Performance Metrics", "Trend Analysis"],
+    category: "Analytics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-social-media-analytics-pro"
+  },
+  {
+    name: "AI Email Assistant Pro",
+    description: "Intelligent email management with smart replies, scheduling, and priority sorting",
+    price: "$99/mo",
+    features: ["Smart Replies", "Email Scheduling", "Priority Sorting", "Template Generation"],
+    category: "Communication",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-assistant-pro"
+  },
+  {
+    name: "AI Password Manager Pro",
+    description: "Advanced password management with AI-powered security recommendations and breach monitoring",
+    price: "$79/mo",
+    features: ["Password Generation", "Security Analysis", "Breach Monitoring", "Multi-device Sync"],
+    category: "Security",
+    popular: true,
+    icon: Lock,
+    link: "https://ziontechgroup.com/ai-password-manager-pro"
+  },
+  {
+    name: "AI Time Tracking Pro",
+    description: "Intelligent time tracking with automatic categorization and productivity insights",
+    price: "$69/mo",
+    features: ["Auto Categorization", "Productivity Insights", "Project Tracking", "Billing Integration"],
+    category: "Productivity",
+    popular: true,
+    icon: Clock,
+    link: "https://ziontechgroup.com/ai-time-tracking-pro"
+  },
+  {
+    name: "AI Translation Pro",
+    description: "Advanced translation service with context-aware translations and real-time processing",
+    price: "$119/mo",
+    features: ["Context-aware Translation", "Real-time Processing", "100+ Languages", "Document Translation"],
+    category: "Communication",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-translation-pro"
+  },
+  {
+    name: "AI Backup Manager Pro",
+    description: "Intelligent backup solution with automated scheduling and disaster recovery",
+    price: "$149/mo",
+    features: ["Automated Backups", "Disaster Recovery", "Version Control", "Cloud Storage"],
+    category: "Data Management",
+    popular: true,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-backup-manager-pro"
+  },
+  {
+    name: "AI SEO Optimizer Pro",
+    description: "Advanced SEO optimization with keyword research, content analysis, and ranking tracking",
+    price: "$199/mo",
+    features: ["Keyword Research", "Content Analysis", "Ranking Tracking", "Competitor Analysis"],
+    category: "Marketing",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-seo-optimizer-pro"
+  },
+  {
+    name: "AI Project Estimator Pro",
+    description: "Intelligent project cost estimation with risk analysis and resource planning",
+    price: "$159/mo",
+    features: ["Cost Estimation", "Risk Analysis", "Resource Planning", "Timeline Prediction"],
+    category: "Project Management",
+    popular: true,
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-project-estimator-pro"
+  },
+  {
+    name: "AI Meeting Scheduler Pro",
+    description: "Smart meeting scheduling with calendar integration and conflict resolution",
+    price: "$89/mo",
+    features: ["Calendar Integration", "Conflict Resolution", "Time Zone Handling", "Meeting Optimization"],
+    category: "Productivity",
+    popular: true,
+    icon: Calendar,
+    link: "https://ziontechgroup.com/ai-meeting-scheduler-pro"
+  },
+  {
+    name: "AI Data Cleaner Pro",
+    description: "Intelligent data cleaning and validation with automated error detection and correction",
+    price: "$139/mo",
+    features: ["Data Validation", "Error Detection", "Auto Correction", "Quality Reports"],
+    category: "Data Management",
+    popular: true,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-cleaner-pro"
+  },
+  {
+    name: "AI Contract Analyzer Pro",
+    description: "Advanced contract analysis with risk assessment and compliance checking",
+    price: "$299/mo",
+    features: ["Risk Assessment", "Compliance Checking", "Clause Analysis", "Renewal Alerts"],
+    category: "Legal",
+    popular: true,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-contract-analyzer-pro"
+  },
+  {
+    name: "AI Performance Monitor Pro",
+    description: "Real-time performance monitoring with AI-powered insights and alerting",
+    price: "$179/mo",
+    features: ["Real-time Monitoring", "AI Insights", "Smart Alerting", "Performance Reports"],
+    category: "Monitoring",
+    popular: true,
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-performance-monitor-pro"
+  },
+  {
+    name: "AI Customer Feedback Analyzer Pro",
+    description: "Intelligent customer feedback analysis with sentiment tracking and action recommendations",
+    price: "$129/mo",
+    features: ["Sentiment Analysis", "Action Recommendations", "Trend Tracking", "Report Generation"],
+    category: "Analytics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-customer-feedback-analyzer-pro"
+  },
+  {
+    name: "AI Inventory Optimizer Pro",
+    description: "Smart inventory optimization with demand forecasting and automated reordering",
+    price: "$199/mo",
+    features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Cost Analysis"],
+    category: "Operations",
+    popular: true,
+    icon: Package,
+    link: "https://ziontechgroup.com/ai-inventory-optimizer-pro"
+  },
+  {
+    name: "AI Compliance Manager Pro",
+    description: "Automated compliance management with regulatory tracking and audit preparation",
+    price: "$249/mo",
+    features: ["Regulatory Tracking", "Audit Preparation", "Compliance Reports", "Risk Assessment"],
+    category: "Compliance",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-compliance-manager-pro"
   }
 ];
 
@@ -618,22 +808,43 @@ const testimonials: Testimonial[] = [
     name: "Sarah Johnson",
     role: "CTO",
     company: "TechCorp Solutions",
-    content: "Zion Tech Group's AI solutions transformed our operations completely. We achieved 300% ROI in just 6 months and reduced operational costs by 70%. Their AI workflow automation is game-changing.",
+    content: "Zion Tech Group's AI solutions transformed our operations completely. We achieved 300% ROI in just 6 months and reduced operational costs by 70%. Their AI workflow automation and quantum computing solutions are truly game-changing.",
     avatar: "SJ"
   },
   {
     name: "Michael Chen",
     role: "CEO",
     company: "InnovateLabs",
-    content: "The AI customer support bot they built for us handles 90% of inquiries automatically. Our customer satisfaction increased by 40% while reducing support costs by 60%. Outstanding work!",
+    content: "The AI customer support bot and neural interface platform they built for us handles 90% of inquiries automatically. Our customer satisfaction increased by 40% while reducing support costs by 60%. Their quantum machine learning is revolutionary!",
     avatar: "MC"
   },
   {
     name: "Dr. Emily Rodriguez",
     role: "Chief Medical Officer",
     company: "MedTech Innovations",
-    content: "Their AI healthcare solutions are revolutionary. The diagnostic accuracy improved by 35% and patient processing time decreased by 50%. This is the future of healthcare technology.",
+    content: "Their AI healthcare solutions and medical imaging platform are revolutionary. The diagnostic accuracy improved by 35% and patient processing time decreased by 50%. The AI drug discovery platform is accelerating our research by 10x.",
     avatar: "ER"
+  },
+  {
+    name: "David Kim",
+    role: "VP of Engineering",
+    company: "Quantum Dynamics",
+    content: "Zion Tech Group's quantum computing and AI neural interface solutions have revolutionized our R&D capabilities. We've achieved breakthroughs in materials science that would have taken years using traditional methods.",
+    avatar: "DK"
+  },
+  {
+    name: "Lisa Wang",
+    role: "Head of Operations",
+    company: "Smart City Corp",
+    content: "Their AI smart city management platform has transformed our urban infrastructure. Traffic optimization, energy management, and citizen services have all improved dramatically. The digital twin technology is incredible.",
+    avatar: "LW"
+  },
+  {
+    name: "James Rodriguez",
+    role: "Founder",
+    company: "Blockchain Ventures",
+    content: "The AI blockchain solutions and smart contract security auditing have been instrumental in our success. We've achieved 99.9% uptime and zero security breaches since implementing their solutions.",
+    avatar: "JR"
   }
 ];
 
@@ -831,6 +1042,196 @@ const aiServices: AIService[] = [
     enterprise: true,
     icon: Building,
     link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Neural Interface Platform",
+    description: "Next-generation brain-computer interface with AI-powered neural signal processing and control",
+    price: "$8,500/mo",
+    features: ["Neural Signal Processing", "Brain-Computer Interface", "Real-time Control", "Medical Applications"],
+    category: "Neural Technology",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-interface-platform"
+  },
+  {
+    name: "AI Quantum Machine Learning",
+    description: "Quantum-enhanced machine learning algorithms for solving complex optimization problems",
+    price: "$7,200/mo",
+    features: ["Quantum Algorithms", "ML Optimization", "Complex Problem Solving", "Quantum Speedup"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-machine-learning"
+  },
+  {
+    name: "AI Synthetic Data Generator",
+    description: "Advanced synthetic data generation for training AI models while preserving privacy",
+    price: "$2,800/mo",
+    features: ["Privacy-Preserving", "Realistic Data Generation", "Model Training", "Data Augmentation"],
+    category: "Data Science",
+    enterprise: false,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-synthetic-data-generator"
+  },
+  {
+    name: "AI Edge Intelligence Platform",
+    description: "Distributed AI processing at the edge with real-time decision making and low latency",
+    price: "$3,500/mo",
+    features: ["Edge Processing", "Real-time Decisions", "Low Latency", "Distributed Intelligence"],
+    category: "Edge AI",
+    enterprise: true,
+    icon: Cpu,
+    link: "https://ziontechgroup.com/ai-edge-intelligence-platform"
+  },
+  {
+    name: "AI Digital Twin Platform",
+    description: "Comprehensive digital twin solution with real-time simulation and predictive analytics",
+    price: "$4,800/mo",
+    features: ["Real-time Simulation", "Predictive Analytics", "IoT Integration", "3D Visualization"],
+    category: "Digital Twins",
+    enterprise: true,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-digital-twin-platform"
+  },
+  {
+    name: "AI Robotic Process Automation Pro",
+    description: "Advanced RPA with AI-powered decision making and cognitive automation",
+    price: "$2,200/mo",
+    features: ["Cognitive Automation", "Decision Making", "Process Optimization", "Error Reduction"],
+    category: "Automation",
+    enterprise: false,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-robotic-process-automation-pro"
+  },
+  {
+    name: "AI Cybersecurity Intelligence",
+    description: "Advanced AI-powered cybersecurity with threat hunting and automated response",
+    price: "$3,800/mo",
+    features: ["Threat Hunting", "Automated Response", "Behavioral Analysis", "Zero-day Detection"],
+    category: "Cybersecurity",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-cybersecurity-intelligence"
+  },
+  {
+    name: "AI Predictive Maintenance Pro",
+    description: "Advanced predictive maintenance with IoT integration and failure prediction",
+    price: "$2,600/mo",
+    features: ["Failure Prediction", "IoT Integration", "Maintenance Scheduling", "Cost Optimization"],
+    category: "Industrial AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-predictive-maintenance-pro"
+  },
+  {
+    name: "AI Content Moderation Platform",
+    description: "Advanced content moderation with real-time analysis and automated decision making",
+    price: "$1,800/mo",
+    features: ["Real-time Analysis", "Automated Decisions", "Multi-language Support", "Context Understanding"],
+    category: "Content AI",
+    enterprise: false,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-content-moderation-platform"
+  },
+  {
+    name: "AI Financial Risk Management",
+    description: "Comprehensive financial risk assessment with real-time monitoring and compliance",
+    price: "$4,200/mo",
+    features: ["Risk Assessment", "Real-time Monitoring", "Compliance Checking", "Regulatory Reporting"],
+    category: "Financial AI",
+    enterprise: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-financial-risk-management"
+  },
+  {
+    name: "AI Supply Chain Intelligence",
+    description: "End-to-end supply chain optimization with AI-powered insights and automation",
+    price: "$3,600/mo",
+    features: ["Supply Chain Optimization", "Demand Forecasting", "Risk Management", "Cost Reduction"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-supply-chain-intelligence"
+  },
+  {
+    name: "AI Customer Experience Platform",
+    description: "Comprehensive customer experience management with AI-powered personalization",
+    price: "$2,400/mo",
+    features: ["Personalization", "Customer Journey Mapping", "Sentiment Analysis", "Experience Optimization"],
+    category: "Customer AI",
+    enterprise: false,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-customer-experience-platform"
+  },
+  {
+    name: "AI Energy Trading Platform",
+    description: "Intelligent energy trading with real-time market analysis and automated trading",
+    price: "$5,500/mo",
+    features: ["Market Analysis", "Automated Trading", "Price Prediction", "Risk Management"],
+    category: "Energy AI",
+    enterprise: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-trading-platform"
+  },
+  {
+    name: "AI Medical Imaging Pro",
+    description: "Advanced medical imaging analysis with AI-powered diagnosis and treatment planning",
+    price: "$4,500/mo",
+    features: ["Image Analysis", "Diagnosis Support", "Treatment Planning", "Radiology Integration"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Stethoscope,
+    link: "https://ziontechgroup.com/ai-medical-imaging-pro"
+  },
+  {
+    name: "AI Fraud Prevention Suite",
+    description: "Comprehensive fraud prevention with real-time detection and automated response",
+    price: "$2,800/mo",
+    features: ["Real-time Detection", "Automated Response", "Pattern Recognition", "Risk Scoring"],
+    category: "Security AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-fraud-prevention-suite"
+  },
+  {
+    name: "AI Language Model Platform",
+    description: "Custom language model development with fine-tuning and deployment capabilities",
+    price: "$3,200/mo",
+    features: ["Model Fine-tuning", "Custom Training", "Deployment Tools", "Performance Optimization"],
+    category: "NLP AI",
+    enterprise: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-language-model-platform"
+  },
+  {
+    name: "AI Video Analytics Platform",
+    description: "Advanced video analysis with object detection, tracking, and behavioral analysis",
+    price: "$2,200/mo",
+    features: ["Object Detection", "Behavioral Analysis", "Real-time Tracking", "Event Detection"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Video,
+    link: "https://ziontechgroup.com/ai-video-analytics-platform"
+  },
+  {
+    name: "AI Knowledge Graph Platform",
+    description: "Intelligent knowledge management with graph-based AI and semantic search",
+    price: "$2,600/mo",
+    features: ["Knowledge Graphs", "Semantic Search", "Entity Recognition", "Relationship Mapping"],
+    category: "Knowledge AI",
+    enterprise: true,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-knowledge-graph-platform"
+  },
+  {
+    name: "AI Conversational AI Platform",
+    description: "Advanced conversational AI with multi-modal interactions and context awareness",
+    price: "$1,900/mo",
+    features: ["Multi-modal Interaction", "Context Awareness", "Voice & Text", "Integration APIs"],
+    category: "Conversational AI",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-conversational-ai-platform"
   }
 ];
 
@@ -1068,6 +1469,186 @@ const itServices: ITService[] = [
     category: "Consulting",
     icon: Settings,
     link: "https://ziontechgroup.com/digital-transformation-consulting"
+  },
+  {
+    name: "AI-Powered DevOps Platform",
+    description: "Intelligent DevOps platform with AI-driven automation, monitoring, and optimization",
+    price: "$2,800/mo",
+    features: ["AI Automation", "Smart Monitoring", "Predictive Scaling", "Performance Optimization"],
+    category: "DevOps",
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-powered-devops-platform"
+  },
+  {
+    name: "Quantum-Safe Security Solutions",
+    description: "Post-quantum cryptography and quantum-resistant security implementations",
+    price: "$4,500/mo",
+    features: ["Quantum-Resistant Encryption", "Post-Quantum Algorithms", "Security Auditing", "Migration Support"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/quantum-safe-security-solutions"
+  },
+  {
+    name: "AI-Enhanced Cloud Security",
+    description: "Advanced cloud security with AI-powered threat detection and automated response",
+    price: "$3,200/mo",
+    features: ["AI Threat Detection", "Automated Response", "Cloud Compliance", "Risk Assessment"],
+    category: "Cloud Security",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/ai-enhanced-cloud-security"
+  },
+  {
+    name: "Microservices Architecture Design",
+    description: "Scalable microservices architecture with container orchestration and service mesh",
+    price: "$3,800/mo",
+    features: ["Architecture Design", "Container Orchestration", "Service Mesh", "API Gateway"],
+    category: "Architecture",
+    icon: Code,
+    link: "https://ziontechgroup.com/microservices-architecture-design"
+  },
+  {
+    name: "AI Data Pipeline Platform",
+    description: "Intelligent data pipeline with real-time processing, ETL, and machine learning integration",
+    price: "$2,600/mo",
+    features: ["Real-time Processing", "ETL Automation", "ML Integration", "Data Quality"],
+    category: "Data Engineering",
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-pipeline-platform"
+  },
+  {
+    name: "Zero-Trust Security Architecture",
+    description: "Comprehensive zero-trust security implementation with continuous verification",
+    price: "$4,200/mo",
+    features: ["Zero-Trust Framework", "Continuous Verification", "Identity Management", "Network Segmentation"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/zero-trust-security-architecture"
+  },
+  {
+    name: "AI-Enhanced Monitoring Platform",
+    description: "Intelligent monitoring with predictive analytics, anomaly detection, and automated remediation",
+    price: "$2,400/mo",
+    features: ["Predictive Analytics", "Anomaly Detection", "Automated Remediation", "Performance Insights"],
+    category: "Monitoring",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-enhanced-monitoring-platform"
+  },
+  {
+    name: "Hybrid Cloud Management",
+    description: "Unified hybrid cloud management with seamless integration and cost optimization",
+    price: "$3,600/mo",
+    features: ["Hybrid Integration", "Cost Optimization", "Resource Management", "Security Compliance"],
+    category: "Cloud Management",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/hybrid-cloud-management"
+  },
+  {
+    name: "AI-Powered API Gateway",
+    description: "Intelligent API gateway with AI-driven traffic management and security",
+    price: "$1,800/mo",
+    features: ["AI Traffic Management", "Smart Routing", "Security Policies", "Performance Analytics"],
+    category: "API Management",
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-powered-api-gateway"
+  },
+  {
+    name: "Container Security Platform",
+    description: "Comprehensive container security with vulnerability scanning and runtime protection",
+    price: "$2,200/mo",
+    features: ["Vulnerability Scanning", "Runtime Protection", "Image Security", "Compliance Checking"],
+    category: "Container Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/container-security-platform"
+  },
+  {
+    name: "AI-Enhanced Backup & Recovery",
+    description: "Intelligent backup and disaster recovery with AI-powered optimization and testing",
+    price: "$1,900/mo",
+    features: ["AI Optimization", "Automated Testing", "Disaster Recovery", "Data Integrity"],
+    category: "Backup & Recovery",
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-enhanced-backup-recovery"
+  },
+  {
+    name: "Serverless Architecture Platform",
+    description: "Serverless application development with auto-scaling and cost optimization",
+    price: "$2,000/mo",
+    features: ["Serverless Development", "Auto-scaling", "Cost Optimization", "Event-driven Architecture"],
+    category: "Serverless",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/serverless-architecture-platform"
+  },
+  {
+    name: "AI-Enhanced Network Management",
+    description: "Intelligent network management with AI-powered optimization and security",
+    price: "$2,800/mo",
+    features: ["AI Optimization", "Network Security", "Performance Monitoring", "Traffic Analysis"],
+    category: "Network Management",
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-enhanced-network-management"
+  },
+  {
+    name: "Database Performance Optimization",
+    description: "Advanced database optimization with AI-powered tuning and monitoring",
+    price: "$2,200/mo",
+    features: ["AI Tuning", "Performance Monitoring", "Query Optimization", "Capacity Planning"],
+    category: "Database",
+    icon: Database,
+    link: "https://ziontechgroup.com/database-performance-optimization"
+  },
+  {
+    name: "AI-Enhanced Load Balancing",
+    description: "Intelligent load balancing with AI-powered traffic distribution and optimization",
+    price: "$1,600/mo",
+    features: ["AI Traffic Distribution", "Health Monitoring", "Auto-scaling", "Performance Optimization"],
+    category: "Load Balancing",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-enhanced-load-balancing"
+  },
+  {
+    name: "Cloud Cost Optimization Platform",
+    description: "AI-powered cloud cost optimization with automated resource management",
+    price: "$1,400/mo",
+    features: ["Cost Analysis", "Resource Optimization", "Automated Scaling", "Budget Management"],
+    category: "Cost Optimization",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/cloud-cost-optimization-platform"
+  },
+  {
+    name: "AI-Enhanced Incident Response",
+    description: "Intelligent incident response with automated detection, analysis, and resolution",
+    price: "$2,600/mo",
+    features: ["Automated Detection", "Incident Analysis", "Resolution Automation", "Post-mortem Analysis"],
+    category: "Incident Response",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-enhanced-incident-response"
+  },
+  {
+    name: "Infrastructure as Code Platform",
+    description: "Comprehensive IaC platform with AI-powered validation and deployment automation",
+    price: "$2,000/mo",
+    features: ["IaC Validation", "Deployment Automation", "Configuration Management", "Compliance Checking"],
+    category: "Infrastructure",
+    icon: Code,
+    link: "https://ziontechgroup.com/infrastructure-as-code-platform"
+  },
+  {
+    name: "AI-Enhanced Log Management",
+    description: "Intelligent log management with AI-powered analysis and anomaly detection",
+    price: "$1,800/mo",
+    features: ["AI Log Analysis", "Anomaly Detection", "Pattern Recognition", "Alert Management"],
+    category: "Log Management",
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-enhanced-log-management"
+  },
+  {
+    name: "Cloud-Native Security Platform",
+    description: "Comprehensive cloud-native security with runtime protection and compliance",
+    price: "$3,400/mo",
+    features: ["Runtime Protection", "Cloud Compliance", "Threat Detection", "Policy Enforcement"],
+    category: "Cloud Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/cloud-native-security-platform"
   }
 ];
 
@@ -1093,10 +1674,11 @@ const HomePage: React.FC = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI-Powered Enterprise Solutions
+            Next-Generation AI & IT Solutions
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
+            Revolutionize your business with cutting-edge AI technology, quantum computing, and advanced IT infrastructure. 
+            Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our comprehensive suite of intelligent solutions.
           </p>
           
 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -1111,21 +1693,21 @@ const HomePage: React.FC = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-400">Average ROI</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:scale-110 transition-transform">500+</div>
+              <div className="text-gray-400">AI Services</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
-              <div className="text-gray-400">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-400">Efficiency Gains</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">99.9%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform">24/7</div>
+              <div className="text-gray-400">Support Available</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform">300%</div>
+              <div className="text-gray-400">Average ROI</div>
             </div>
           </div>
 </div>
@@ -1135,15 +1717,19 @@ const HomePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Our Comprehensive Service Portfolio</h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              From cutting-edge AI solutions to robust IT infrastructure, we provide end-to-end technology services 
+              that drive innovation, efficiency, and growth for businesses of all sizes.
+            </p>
           </div>
           
           {/* Micro SAAS Services */}
           <div className="mb-16">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h3>
-            <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Powerful, affordable AI-powered tools designed for modern businesses. Choose from our comprehensive suite of micro SAAS solutions.
+            <p className="text-gray-300 text-center mb-12 max-w-4xl mx-auto">
+              Powerful, affordable AI-powered tools designed for modern businesses. Our micro SAAS solutions offer enterprise-grade 
+              functionality at startup-friendly prices, enabling rapid digital transformation and operational efficiency.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {microSAASServices.map((service, index) => (
@@ -1195,8 +1781,9 @@ const HomePage: React.FC = () => {
           {/* AI Services */}
           <div className="mb-16">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Enterprise AI Solutions</h3>
-            <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence and machine learning.
+            <p className="text-gray-300 text-center mb-12 max-w-4xl mx-auto">
+              Advanced AI solutions for enterprise clients. Our cutting-edge artificial intelligence and machine learning platforms 
+              transform industries, from quantum computing and neural interfaces to autonomous systems and smart city management.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {aiServices.map((service, index) => (
@@ -1259,8 +1846,9 @@ const HomePage: React.FC = () => {
           {/* IT Services */}
           <div className="mb-16">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">IT Infrastructure Services</h3>
-            <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Comprehensive IT solutions to build, secure, and scale your technology infrastructure. From cloud migration to cybersecurity.
+            <p className="text-gray-300 text-center mb-12 max-w-4xl mx-auto">
+              Comprehensive IT solutions to build, secure, and scale your technology infrastructure. From AI-powered DevOps and 
+              quantum-safe security to microservices architecture and zero-trust frameworks, we provide cutting-edge IT solutions.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {itServices.map((service, index) => (
@@ -1420,7 +2008,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <div className="flex items-center mb-4">
@@ -1473,10 +2061,11 @@ const HomePage: React.FC = () => {
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business with Next-Gen AI?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Contact us today for a free consultation and discover how our cutting-edge AI, quantum computing, and IT solutions 
+            can revolutionize your operations. From micro SAAS tools to enterprise AI platforms, we have the perfect solution for your needs.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

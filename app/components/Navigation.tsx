@@ -132,10 +132,14 @@ const Navigation: React.FC = () => {
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
-        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
-        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
+        { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant-pro', description: 'Advanced voice-controlled AI assistant', icon: '🎤', popular: true },
+        { name: 'AI Document Scanner Pro', path: '/ai-document-scanner-pro', description: 'Intelligent document scanning', icon: '📄', popular: true },
+        { name: 'AI Meeting Transcriber Pro', path: '/ai-meeting-transcriber-pro', description: 'Real-time meeting transcription', icon: '📝', popular: true },
+        { name: 'AI Website Builder Pro', path: '/ai-website-builder-pro', description: 'No-code website builder', icon: '🌐', popular: true },
+        { name: 'AI Password Manager Pro', path: '/ai-password-manager-pro', description: 'Advanced password management', icon: '🔐', popular: true },
+        { name: 'AI Time Tracking Pro', path: '/ai-time-tracking-pro', description: 'Intelligent time tracking', icon: '⏱️', popular: true },
+        { name: 'AI Translation Pro', path: '/ai-translation-pro', description: 'Advanced translation service', icon: '🌍', popular: true },
+        { name: 'AI SEO Optimizer Pro', path: '/ai-seo-optimizer-pro', description: 'Advanced SEO optimization', icon: '🔍', popular: true }
       ]
     },
     {
@@ -146,17 +150,23 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-purple-500/20',
       services: [
         { name: 'AI Quantum Computing Platform', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
+        { name: 'AI Neural Interface Platform', path: '/ai-neural-interface-platform', description: 'Brain-computer interface', icon: '🧠', popular: true },
+        { name: 'AI Quantum Machine Learning', path: '/ai-quantum-machine-learning', description: 'Quantum-enhanced ML', icon: '🔬', popular: true },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems', description: 'Self-managing AI systems', icon: '🤖', popular: true },
         { name: 'AI Blockchain Intelligence', path: '/ai-blockchain-solutions', description: 'AI-powered blockchain technology', icon: '⛓️', popular: true },
         { name: 'AI Space Technology Platform', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true },
         { name: 'AI Climate Intelligence Platform', path: '/ai-climate-solutions-pro', description: 'Environmental AI solutions', icon: '🌱', popular: true },
         { name: 'AI Drug Discovery Platform', path: '/ai-drug-discovery-pro', description: 'Advanced pharmaceutical AI', icon: '💊', popular: true },
         { name: 'AI Financial Crime Detection', path: '/ai-financial-crime-detection-pro', description: 'Advanced fraud detection', icon: '🛡️', popular: true },
-        { name: 'AI Agricultural Intelligence', path: '/ai-agricultural-intelligence-pro', description: 'Smart farming solutions', icon: '🌾', popular: true },
-        { name: 'AI Energy Grid Management', path: '/ai-energy-grid-management-pro', description: 'Smart energy optimization', icon: '⚡', popular: true },
-        { name: 'AI Legal Research Platform', path: '/ai-legal-research-pro', description: 'Intelligent legal research', icon: '⚖️', popular: true },
-        { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true },
-        { name: 'AI Music Composition Studio', path: '/ai-music-composition', description: 'AI-powered music creation', icon: '🎵', popular: true }
+        { name: 'AI Digital Twin Platform', path: '/ai-digital-twin-platform', description: 'Real-time simulation platform', icon: '🔄', popular: true },
+        { name: 'AI Edge Intelligence Platform', path: '/ai-edge-intelligence-platform', description: 'Distributed AI processing', icon: '📡', popular: true },
+        { name: 'AI Cybersecurity Intelligence', path: '/ai-cybersecurity-intelligence', description: 'AI-powered cybersecurity', icon: '🔒', popular: true },
+        { name: 'AI Medical Imaging Pro', path: '/ai-medical-imaging-pro', description: 'Advanced medical imaging', icon: '🏥', popular: true },
+        { name: 'AI Smart City Management', path: '/ai-smart-city-management', description: 'Comprehensive smart city solution', icon: '🏙️', popular: true },
+        { name: 'AI Conversational AI Platform', path: '/ai-conversational-ai-platform', description: 'Multi-modal interactions', icon: '💬', popular: true },
+        { name: 'AI Language Model Platform', path: '/ai-language-model-platform', description: 'Custom language models', icon: '📝', popular: true },
+        { name: 'AI Video Analytics Platform', path: '/ai-video-analytics-platform', description: 'Advanced video analysis', icon: '📹', popular: true },
+        { name: 'AI Knowledge Graph Platform', path: '/ai-knowledge-graph-platform', description: 'Intelligent knowledge management', icon: '🕸️', popular: true }
       ]
     },
     {
@@ -167,17 +177,23 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-blue-500/20',
       services: [
         { name: 'AI Infrastructure Monitoring Pro', path: '/ai-infrastructure-monitoring', description: 'Intelligent infrastructure monitoring', icon: '📊', popular: true },
-        { name: 'AI Security Operations Center', path: '/ai-security-operations', description: 'AI-powered security monitoring', icon: '🛡️', popular: true },
-        { name: 'AI Cloud Cost Optimization', path: '/ai-cloud-optimization', description: 'Smart cloud resource management', icon: '☁️', popular: true },
-        { name: 'AI Data Center Management', path: '/ai-data-center', description: 'Intelligent data center operations', icon: '🏢', popular: true },
-        { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
-        { name: 'Smart Contract Security Audit Pro', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true },
-        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence', description: 'Advanced analytics platform', icon: '📈', popular: true },
-        { name: 'Data Lake & Warehouse Solutions', path: '/data-warehouse', description: 'Enterprise data management', icon: '🗄️', popular: true },
-        { name: 'Real-time Analytics Platform', path: '/real-time-analytics', description: 'Live data processing', icon: '⚡', popular: true },
-        { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
-        { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Low-latency edge infrastructure', icon: '📡', popular: true },
-        { name: 'Smart City Solutions', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true }
+        { name: 'AI-Powered DevOps Platform', path: '/ai-powered-devops-platform', description: 'AI-driven automation platform', icon: '⚙️', popular: true },
+        { name: 'Quantum-Safe Security Solutions', path: '/quantum-safe-security-solutions', description: 'Post-quantum cryptography', icon: '🔐', popular: true },
+        { name: 'AI-Enhanced Cloud Security', path: '/ai-enhanced-cloud-security', description: 'AI-powered threat detection', icon: '☁️', popular: true },
+        { name: 'Microservices Architecture Design', path: '/microservices-architecture-design', description: 'Scalable microservices', icon: '🏗️', popular: true },
+        { name: 'AI Data Pipeline Platform', path: '/ai-data-pipeline-platform', description: 'Intelligent data processing', icon: '🔄', popular: true },
+        { name: 'Zero-Trust Security Architecture', path: '/zero-trust-security-architecture', description: 'Comprehensive zero-trust', icon: '🛡️', popular: true },
+        { name: 'AI-Enhanced Monitoring Platform', path: '/ai-enhanced-monitoring-platform', description: 'Predictive analytics monitoring', icon: '📈', popular: true },
+        { name: 'Hybrid Cloud Management', path: '/hybrid-cloud-management', description: 'Unified cloud management', icon: '☁️', popular: true },
+        { name: 'AI-Powered API Gateway', path: '/ai-powered-api-gateway', description: 'Intelligent API management', icon: '🚪', popular: true },
+        { name: 'Container Security Platform', path: '/container-security-platform', description: 'Comprehensive container security', icon: '📦', popular: true },
+        { name: 'AI-Enhanced Backup & Recovery', path: '/ai-enhanced-backup-recovery', description: 'Intelligent backup solution', icon: '💾', popular: true },
+        { name: 'Serverless Architecture Platform', path: '/serverless-architecture-platform', description: 'Serverless development', icon: '⚡', popular: true },
+        { name: 'AI-Enhanced Network Management', path: '/ai-enhanced-network-management', description: 'Intelligent network optimization', icon: '🌐', popular: true },
+        { name: 'Database Performance Optimization', path: '/database-performance-optimization', description: 'AI-powered database tuning', icon: '🗄️', popular: true },
+        { name: 'Cloud Cost Optimization Platform', path: '/cloud-cost-optimization-platform', description: 'AI-powered cost optimization', icon: '💰', popular: true },
+        { name: 'AI-Enhanced Incident Response', path: '/ai-enhanced-incident-response', description: 'Intelligent incident response', icon: '🚨', popular: true },
+        { name: 'Infrastructure as Code Platform', path: '/infrastructure-as-code-platform', description: 'Comprehensive IaC platform', icon: '📋', popular: true }
       ]
     },
     {
@@ -188,13 +204,20 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-pink-500/20',
       services: [
         { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: true },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: true },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: true },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true },
-        { name: 'AI Energy Management', path: '/ai-energy', description: 'Smart energy optimization', icon: '⚡', popular: true },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
+        { name: 'AI Neural Interface Platform', path: '/ai-neural-interface-platform', description: 'Brain-computer interface', icon: '🧠', popular: true },
+        { name: 'Autonomous Systems', path: '/ai-autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
+        { name: 'Blockchain & Web3', path: '/ai-blockchain-solutions', description: 'Decentralized solutions', icon: '⛓️', popular: true },
+        { name: 'IoT & Edge Computing', path: '/ai-edge-intelligence-platform', description: 'Connected devices', icon: '📡', popular: true },
+        { name: 'AR/VR Solutions', path: '/ai-holographic-workspace', description: 'Immersive experiences', icon: '🥽', popular: true },
+        { name: 'Smart Cities', path: '/ai-smart-city-management', description: 'Urban technology solutions', icon: '🏙️', popular: true },
+        { name: 'AI Energy Management', path: '/ai-energy-grid-management-pro', description: 'Smart energy optimization', icon: '⚡', popular: true },
+        { name: 'Digital Twins', path: '/ai-digital-twin-platform', description: 'Real-time simulation', icon: '🔄', popular: true },
+        { name: 'AI Space Technology', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true },
+        { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', description: 'Environmental AI', icon: '🌱', popular: true },
+        { name: 'AI Drug Discovery', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI', icon: '💊', popular: true },
+        { name: 'AI Agricultural Intelligence', path: '/ai-agricultural-intelligence-pro', description: 'Smart farming', icon: '🌾', popular: true },
+        { name: 'AI Fashion Design', path: '/ai-fashion-design', description: 'AI-powered fashion', icon: '👗', popular: true },
+        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI music creation', icon: '🎵', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
       ]
     }
