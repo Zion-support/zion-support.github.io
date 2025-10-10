@@ -1,12 +1,6 @@
 'use client';
-<<<<<<< HEAD
 
 import React from 'react';
-=======
-import React from 'react';
-'use client';
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';

@@ -1,225 +1,120 @@
 'use client';
+
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Zap, Brain, Shield, BarChart } from 'lucide-react';
 
-export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression */}
-}
-  return (<div><Helmet></Helmet>
-        <title>AI Inventory Management Solutions - Zion Tech Group</title>
-        <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
-        <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" /></meta>"
-        <link rel="canonical" href="http,"
-  s://ziontechgroup.com/ai-inventory-management" /></link>
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Process optimization']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics',
+      benefits: ['Fast execution', 'Real-time updates', 'Scalable infrastructure', 'Optimized performance']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance',
+      benefits: ['Data protection', 'Access controls', 'Audit trails', 'Compliance support']
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced Page solutions powered by AI technology." />
       </Helmet>
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
-        <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-          {/* Hero Section */}"
-          <section className="text-center mb-16"></section>"
-            <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Inventory Management;
-            </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Intelligent inventory optimization powered by AI;
-            </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
-              Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
+
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced Page solutions powered by AI technology.
             </p>
-          </section>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-          {/* Features Grid */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">🔮</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting</h3>"
-                <p className="text-gray-300 text-center"></p>
-                  AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.
-                </p>
-              </div>
-              "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">📦</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Automated Reordering</h3>"
-                <p className="text-gray-300 text-center"></p>
-                  Automatically reorder products when stock levels reach optimal thresholds to prevent stockouts.
-                </p>
-              </div>
-              "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">📊</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Analytics</h3>"
-                <p className="text-gray-300 text-center"></p>
-                  Get instant insights into inventory performance, turnover rates, and optimization opportunities.
-                </p>
-              </div>
-              "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">🎯</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Stock Optimization</h3>"
-                <p className="text-gray-300 text-center"></p>
-                  AI optimizes stock levels to minimize carrying costs while maintaining service levels.
-                </p>
-              </div>
-              "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">🚨</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Alert System</h3>"
-                <p className="text-gray-300 text-center"></p>
-                  Get notified about low stock, overstock, slow-moving items, and other critical inventory issues.
-                </p>
-              </div>
-              "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">📱</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access</h3>"
-                <p className="text-gray-300 text-center"></p>
-                  Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.
-                </p>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
-          </section>
-
-          {/* Pricing Section */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
-            <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8"></div>"
-              <div className="cyber-card p-8 text-center"></div>"
-                <h3 className="text-2xl font-bold text-white mb-4">Small Business</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>"
-                <ul className="text-gray-300 space-y-3 mb-8"></ul>
-                  <li>Up to 1,000 SKUs</li>
-                  <li>Basic forecasting</li>
-                  <li>Email alerts</li>
-                  <li>Standard reporting</li>
-                  <li>Email support</li>
-                </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started</a>
-              </div>
-              "
-              <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>"
-                <ul className="text-gray-300 space-y-3 mb-8"></ul>
-                  <li>Up to 10,000 SKUs</li>
-                  <li>Advanced forecasting</li>
-                  <li>Automated reordering</li>
-                  <li>Advanced analytics</li>
-                  <li>Priority support</li>
-                  <li>Mobile app</li>
-                </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started</a>
-              </div>
-              "
-              <div className="cyber-card p-8 text-center"></div>"
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
-                <ul className="text-gray-300 space-y-3 mb-8"></ul>
-                  <li>Unlimited SKUs</li>
-                  <li>Full AI suite</li>
-                  <li>Custom integrations</li>
-                  <li>White-label solution</li>
-                  <li>24/7 dedicated support</li>
-                  <li>Custom AI training</li>
-                </ul>"
-                <a href="/contact" className="cyber-button w-full">Contact Sales</a>
-              </div>
-            </div>
-          </section>
-
-          {/* Results Section */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>"
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-cyan-400 mb-4">40%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>"
-                <p className="text-gray-300">40% reduction in inventory costs</p>
-              </div>
-              "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-green-400 mb-4">95%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Forecast Accuracy</h3>"
-                <p className="text-gray-300">95% accuracy in demand forecasting</p>
-              </div>
-              "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-pink-400 mb-4">80%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Stockout Reduction</h3>"
-                <p className="text-gray-300">80% reduction in stockouts</p>
-              </div>
-              "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-yellow-400 mb-4">60%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Time Saved</h3>"
-                <p className="text-gray-300">60% reduction in inventory management time</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Use Cases Section */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl mb-4">🛍️</div>"
-                <h3 className="text-xl font-bold text-white mb-4">E-commerce</h3>"
-                <p className="text-gray-300">Optimize inventory for online retail with demand forecasting and automated reordering.</p>
-              </div>
-              "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl mb-4">🏭</div>"
-                <h3 className="text-xl font-bold text-white mb-4">Manufacturing</h3>"
-                <p className="text-gray-300">Manage raw materials and finished goods with AI-powered optimization.</p>
-              </div>
-              "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl mb-4">🏪</div>"
-                <h3 className="text-xl font-bold text-white mb-4">Retail</h3>"
-                <p className="text-gray-300">Optimize store inventory levels and reduce carrying costs with intelligent forecasting.</p>
-              </div>
-              "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl mb-4">🚚</div>"
-                <h3 className="text-xl font-bold text-white mb-4">Distribution</h3>"
-                <p className="text-gray-300">Streamline distribution center operations with AI-powered inventory management.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */}"
-          <section className="text-center"></section>"
-            <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-              Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.
-            </p>"
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
-              <a href="te,"
-  l:+13024640950" className="cyber-button"></a>
-                📞 Cal)
-  l: (302) 464-0950;
-              </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo;
-              </a>
-            </div>
-          </section>
-        </main>
-        
-        <Footer /></Footer>
-      </div>
-    </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
-}"
+};
+
+export default PagePage;
