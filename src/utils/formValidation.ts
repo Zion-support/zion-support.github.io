@@ -4,8 +4,7 @@
 export const formValidation = {
   // Add utility functions here
   init: () => {
-    console.log('formValidation initialized');
-  }
+    }
 };
 
 export default formValidation;

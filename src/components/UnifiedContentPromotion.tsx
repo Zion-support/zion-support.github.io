@@ -185,7 +185,7 @@ export default function UnifiedContentPromotion({
 
       {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" role="region" aria-label="Hero content">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text cyber-text">
               {currentSlideData.title}
@@ -232,7 +232,7 @@ export default function UnifiedContentPromotion({
         </div>
 
         {/* Stats Section */}
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} role="region" aria-label="Statistics">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="relative mb-4">
@@ -248,7 +248,7 @@ export default function UnifiedContentPromotion({
         </div>
 
         {/* Featured Services */}
-        <div className="mb-20">
+        <div className="mb-20" role="region" aria-label="Featured AI Solutions">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
               Featured AI Solutions
@@ -317,11 +317,15 @@ export default function UnifiedContentPromotion({
         </div>
 
         {/* Slide Indicators */}
-        <div className="flex justify-center space-x-2">
+        <div className="flex justify-center space-x-2" role="tablist" aria-label="Hero slides">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
+              role="tab"
+              aria-selected={index === currentSlide}
+              aria-controls={`slide-${index}`}
+              aria-label={`Go to slide ${index + 1}`}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide 
                   ? 'bg-cyan-400 scale-125' 

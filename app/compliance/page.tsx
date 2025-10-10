@@ -1,314 +1,441 @@
 'use client';
-
 import React from 'react';
+import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, UserCheck } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Award, FileText, Lock, Users, Globe, Zap } from 'lucide-react';
 
 const CompliancePage: React.FC = () => {
-  const certifications = [
-    {
-      name: 'SOC 2 Type II',
-      status: 'Certified',
-      description: 'Security, availability, and confidentiality controls',
-      icon: Shield,
-      color: 'text-green-400'
-    },
-    {
-      name: 'ISO 27001',
-      status: 'Certified',
-      description: 'Information security management systems',
-      icon: Lock,
-      color: 'text-blue-400'
-    },
-    {
-      name: 'GDPR Compliance',
-      status: 'Certified',
-      description: 'General Data Protection Regulation compliance',
-      icon: Users,
-      color: 'text-purple-400'
-    },
-    {
-      name: 'HIPAA Compliance',
-      status: 'Certified',
-      description: 'Health Insurance Portability and Accountability Act',
-      icon: FileText,
-      color: 'text-red-400'
-    },
-    {
-      name: 'PCI DSS',
-      status: 'Certified',
-      description: 'Payment Card Industry Data Security Standard',
-      icon: Award,
-      color: 'text-yellow-400'
-    },
-    {
-      name: 'FedRAMP',
-      status: 'In Progress',
-      description: 'Federal Risk and Authorization Management Program',
-      icon: Globe,
-      color: 'text-cyan-400'
-    }
-  ];
-
   const complianceFrameworks = [
     {
       name: 'SOC 2 Type II',
-      description: 'Security, availability, and confidentiality controls',
-      requirements: [
-        'Access controls and authentication',
-        'System monitoring and logging',
-        'Data encryption and protection',
-        'Incident response procedures',
-        'Regular security assessments'
+      description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
+      status: 'Certified',
+      icon: Award,
+      details: [
+        'Annual third-party audits by independent auditors',
+        'Comprehensive control testing and validation',
+        'Management attestation and reporting',
+        'Continuous monitoring and improvement'
       ]
     },
     {
       name: 'ISO 27001',
-      description: 'Information security management systems',
-      requirements: [
-        'Information security policies',
-        'Risk assessment and management',
-        'Security awareness training',
-        'Continuous monitoring',
-        'Management review and improvement'
+      description: 'International standard for information security management systems',
+      status: 'Certified',
+      icon: Shield,
+      details: [
+        'Information security management system (ISMS)',
+        'Risk assessment and treatment procedures',
+        'Security controls and implementation guidelines',
+        'Regular audits and continuous improvement'
       ]
     },
     {
       name: 'GDPR',
-      description: 'General Data Protection Regulation',
-      requirements: [
-        'Data protection by design',
-        'Consent management',
-        'Right to be forgotten',
-        'Data breach notification',
-        'Privacy impact assessments'
+      description: 'General Data Protection Regulation compliance for EU data protection',
+      status: 'Compliant',
+      icon: Lock,
+      details: [
+        'Data protection by design and by default',
+        'Privacy impact assessments (PIAs)',
+        'Data subject rights management',
+        'Data breach notification procedures'
+      ]
+    },
+    {
+      name: 'CCPA',
+      description: 'California Consumer Privacy Act compliance for California residents',
+      status: 'Compliant',
+      icon: Eye,
+      details: [
+        'Consumer privacy rights management',
+        'Data collection and processing transparency',
+        'Opt-out mechanisms for data sales',
+        'Privacy policy and notice requirements'
       ]
     },
     {
       name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act',
-      requirements: [
-        'Administrative safeguards',
-        'Physical safeguards',
-        'Technical safeguards',
-        'Organizational requirements',
-        'Policies and procedures'
+      description: 'Health Insurance Portability and Accountability Act for healthcare data',
+      status: 'Compliant',
+      icon: Database,
+      details: [
+        'Protected health information (PHI) safeguards',
+        'Administrative, physical, and technical safeguards',
+        'Business associate agreements (BAAs)',
+        'Workforce training and access controls'
+      ]
+    },
+    {
+      name: 'PCI DSS',
+      description: 'Payment Card Industry Data Security Standard for payment processing',
+      status: 'Compliant',
+      icon: UserCheck,
+      details: [
+        'Secure payment card data handling',
+        'Network security and monitoring',
+        'Regular security testing and vulnerability management',
+        'Information security policy and procedures'
       ]
     }
   ];
 
-  const securityMeasures = [
+  const complianceAreas = [
     {
-      category: 'Data Protection',
+      title: 'Data Protection',
+      icon: Shield,
+      description: 'Comprehensive data protection measures and privacy controls',
       measures: [
-        'End-to-end encryption for all data transmission',
-        'AES-256 encryption for data at rest',
-        'Regular security audits and penetration testing',
-        'Multi-factor authentication for all access points',
-        'Zero-trust network architecture'
+        'Data encryption at rest and in transit',
+        'Data classification and handling procedures',
+        'Privacy by design principles',
+        'Data retention and disposal policies'
       ]
     },
     {
-      category: 'Access Control',
+      title: 'Access Controls',
+      icon: Lock,
+      description: 'Robust access management and authentication systems',
       measures: [
+        'Multi-factor authentication (MFA)',
         'Role-based access control (RBAC)',
-        'Principle of least privilege',
-        'Regular access reviews and audits',
-        'Single sign-on (SSO) integration',
-        'Automated access provisioning and deprovisioning'
+        'Privileged access management (PAM)',
+        'Regular access reviews and audits'
       ]
     },
     {
-      category: 'Monitoring & Logging',
+      title: 'Security Monitoring',
+      icon: Eye,
+      description: 'Continuous security monitoring and incident response',
       measures: [
-        '24/7 security monitoring and alerting',
-        'Comprehensive audit logging',
-        'Real-time threat detection',
-        'Automated incident response',
-        'Regular security reporting'
+        'Security information and event management (SIEM)',
+        'Real-time threat detection and response',
+        'Vulnerability scanning and management',
+        'Security incident response procedures'
       ]
     },
     {
-      category: 'Compliance Management',
+      title: 'Audit & Reporting',
+      icon: FileText,
+      description: 'Regular audits and compliance reporting',
       measures: [
-        'Automated compliance monitoring',
-        'Regular compliance assessments',
-        'Documented policies and procedures',
-        'Staff training and certification',
-        'Third-party security audits'
+        'Internal and external security audits',
+        'Compliance monitoring and reporting',
+        'Risk assessments and management',
+        'Continuous improvement processes'
       ]
+    }
+  ];
+
+  const certifications = [
+    {
+      name: 'SOC 2 Type II',
+      issuer: 'AICPA',
+      validUntil: '2025-12-31',
+      scope: 'Security, Availability, Confidentiality'
+    },
+    {
+      name: 'ISO 27001:2013',
+      issuer: 'ISO',
+      validUntil: '2025-06-30',
+      scope: 'Information Security Management'
+    },
+    {
+      name: 'GDPR Compliance',
+      issuer: 'Internal Assessment',
+      validUntil: 'Ongoing',
+      scope: 'Data Protection and Privacy'
+    },
+    {
+      name: 'CCPA Compliance',
+      issuer: 'Internal Assessment',
+      validUntil: 'Ongoing',
+      scope: 'California Privacy Rights'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="relative z-10 pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced floating">
-              Compliance & Security
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-              Enterprise-Grade Security & Compliance
-            </p>
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              We maintain the highest standards of security and compliance to protect your data 
-              and ensure regulatory adherence across all our services.
-            </p>
-          </div>
-        </section>
-
-        {/* Certifications */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Certifications
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {certifications.map((cert, index) => (
-                <div key={index} className="cyber-card-enhanced p-6 data-stream">
-                  <div className="flex items-center justify-between mb-4">
-                    <cert.icon className={`w-8 h-8 ${cert.color}`} />
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      cert.status === 'Certified' 
-                        ? 'bg-green-400 text-slate-900' 
-                        : 'bg-yellow-400 text-slate-900'
-                    }`}>
-                      {cert.status}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{cert.name}</h3>
-                  <p className="text-gray-300 text-sm">{cert.description}</p>
-                </div>
-              ))}
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Header */}
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+            Compliance & Certifications
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <Award className="w-5 h-5 text-green-400" />
+              <span className="text-white font-medium">SOC 2 Type II</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg">
+              <Shield className="w-5 h-5 text-blue-400" />
+              <span className="text-white font-medium">ISO 27001</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <CheckCircle className="w-5 h-5 text-purple-400" />
+              <span className="text-white font-medium">GDPR Compliant</span>
             </div>
           </div>
         </section>
 
         {/* Compliance Frameworks */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Compliance Frameworks
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {complianceFrameworks.map((framework, index) => (
-                <div key={index} className="cyber-card hologram-card p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3 neon-text">{framework.name}</h3>
-                  <p className="text-gray-300 mb-6">{framework.description}</p>
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Key Requirements:</h4>
-                    <ul className="space-y-2">
-                      {framework.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="text-sm text-gray-300 flex items-center">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index) => (
+              <div key={index} className="cyber-card p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <framework.icon className="w-8 h-8 text-cyan-400" />
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+                    {framework.status}
+                  </span>
                 </div>
-              ))}
+                <h3 className="text-xl font-bold text-white mb-2">{framework.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{framework.description}</p>
+                <ul className="space-y-2">
+                  {framework.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-start text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Compliance Areas */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {complianceAreas.map((area, index) => (
+              <div key={index} className="cyber-card p-6">
+                <div className="flex items-center mb-4">
+                  <area.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-bold text-white">{area.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{area.description}</p>
+                <ul className="space-y-2">
+                  {area.measures.map((measure, measureIndex) => (
+                    <li key={measureIndex} className="flex items-start text-sm text-gray-300">
+                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      {measure}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Current Certifications */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Current Certifications</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-gray-700">
+                    <th className="pb-3 text-cyan-400 font-semibold">Certification</th>
+                    <th className="pb-3 text-cyan-400 font-semibold">Issuer</th>
+                    <th className="pb-3 text-cyan-400 font-semibold">Valid Until</th>
+                    <th className="pb-3 text-cyan-400 font-semibold">Scope</th>
+                    <th className="pb-3 text-cyan-400 font-semibold">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {certifications.map((cert, index) => (
+                    <tr key={index} className="border-b border-gray-800">
+                      <td className="py-3 text-white font-semibold">{cert.name}</td>
+                      <td className="py-3 text-gray-300">{cert.issuer}</td>
+                      <td className="py-3 text-gray-300">{cert.validUntil}</td>
+                      <td className="py-3 text-gray-300">{cert.scope}</td>
+                      <td className="py-3">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+                          <CheckCircle className="w-3 h-3 mr-1" />
+                          Active
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
-        {/* Security Measures */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Security Measures
-            </h2>
+        {/* Compliance Process */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Compliance Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {securityMeasures.map((category, index) => (
-                <div key={index} className="cyber-card-enhanced p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Zap className="w-6 h-6 text-cyan-400 mr-2" />
-                    {category.category}
-                  </h3>
-                  <ul className="space-y-3">
-                    {category.measures.map((measure, measureIndex) => (
-                      <li key={measureIndex} className="text-gray-300 flex items-start">
-                        <span className="text-cyan-400 mr-2 mt-1">•</span>
-                        {measure}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Compliance Benefits */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Why Compliance Matters
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 cyber-glow">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Data Protection</h3>
-                <p className="text-gray-300">
-                  Your sensitive data is protected with enterprise-grade security measures and encryption.
-                </p>
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Continuous Monitoring</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Real-time compliance monitoring and alerting</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Automated compliance checks and reporting</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Regular risk assessments and gap analysis</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Ongoing training and awareness programs</span>
+                  </li>
+                </ul>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 cyber-glow">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Regulatory Compliance</h3>
-                <p className="text-gray-300">
-                  Meet industry standards and regulatory requirements with our certified processes.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 cyber-glow">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Trust & Reliability</h3>
-                <p className="text-gray-300">
-                  Build trust with your customers through transparent security practices and compliance.
-                </p>
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Audit & Assessment</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Annual third-party security audits</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Penetration testing and vulnerability assessments</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Compliance gap analysis and remediation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Management review and attestation</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-              Need Compliance Documentation?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              We provide comprehensive compliance documentation and can assist with your audit requirements.
+        {/* Industry-Specific Compliance */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Industry-Specific Compliance</h2>
+            <p className="text-gray-300 mb-8">
+              We understand that different industries have unique compliance requirements. Our solutions are designed to meet the specific needs of various sectors.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4"
-              >
-                Request Documentation
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Call: (302) 464-0950
-              </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Healthcare (HIPAA)</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>• Protected Health Information (PHI) safeguards</li>
+                  <li>• Administrative, physical, and technical safeguards</li>
+                  <li>• Business Associate Agreements (BAAs)</li>
+                  <li>• Workforce training and access controls</li>
+                </ul>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Financial Services</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>• PCI DSS compliance for payment processing</li>
+                  <li>• SOX compliance for financial reporting</li>
+                  <li>• GLBA compliance for financial privacy</li>
+                  <li>• FFIEC guidelines for cybersecurity</li>
+                </ul>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Government</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>• FedRAMP compliance for cloud services</li>
+                  <li>• FISMA compliance for federal systems</li>
+                  <li>• NIST Cybersecurity Framework</li>
+                  <li>• Security clearance requirements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Documentation */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Documentation</h2>
+            <p className="text-gray-300 mb-6">
+              We maintain comprehensive documentation of our compliance efforts and are happy to provide relevant documentation to our clients and prospects.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Available Documents</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-center">
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+                    <span>SOC 2 Type II Report</span>
+                  </li>
+                  <li className="flex items-center">
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+                    <span>ISO 27001 Certificate</span>
+                  </li>
+                  <li className="flex items-center">
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+                    <span>Privacy Policy and Data Processing Agreement</span>
+                  </li>
+                  <li className="flex items-center">
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+                    <span>Security and Compliance Overview</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation</h3>
+                <p className="text-gray-300 mb-4">
+                  To request compliance documentation or schedule a compliance review, please contact our compliance team.
+                </p>
+                <a
+                  href="mailto:compliance@ziontechgroup.com"
+                  className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+                >
+                  <FileText className="w-4 h-4 mr-2" />
+                  Request Documentation
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>
+                <div className="space-y-2 text-gray-300">
+                  <p>Chief Compliance Officer</p>
+                  <p>Zion Tech Group</p>
+                  <p>364 E Main St STE 1008</p>
+                  <p>Middletown, DE 19709</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
+                <div className="space-y-2 text-gray-300">
+                  <p>Email: <a href="mailto:compliance@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">compliance@ziontechgroup.com</a></p>
+                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
+                  <p>Response Time: Within 24 hours</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

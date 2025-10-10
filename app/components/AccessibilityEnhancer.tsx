@@ -88,8 +88,7 @@ export const AccessibilityEnhancer: React.FC = () => {
     // Store settings in localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
     
-    console.log('Accessibility settings applied', newSettings);
-  }, []);
+    }, []);
 
   // Initialize accessibility settings
   useEffect(() => {
@@ -101,8 +100,7 @@ export const AccessibilityEnhancer: React.FC = () => {
         setSettings(parsedSettings);
         applyAccessibilitySettings(parsedSettings);
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
-      }
+        }
     }
 
     // Apply default settings

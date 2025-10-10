@@ -1172,6 +1172,426 @@ const AIServicesPage: React.FC = () => {
         'Personalized treatment plans'
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       ]
+    },
+    {
+      id: 16,
+      name: 'AI Quantum Computing Platform Pro',
+      description: 'Revolutionary quantum computing platform with AI optimization for complex problem solving and advanced simulations',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Development',
+        'AI-Powered Optimization',
+        'Quantum Machine Learning',
+        'Hybrid Classical-Quantum Computing',
+        'Quantum Simulation',
+        'Error Correction',
+        'Performance Monitoring',
+        'Custom Development'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '120+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '1000x faster computations',
+        'Quantum advantage in ML',
+        'Advanced problem solving',
+        'Unbreakable encryption'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI Holographic Interface Suite',
+      description: 'Immersive 3D holographic interface with AI-powered gesture recognition and spatial computing',
+      icon: Globe,
+      features: [
+        '3D Holographic Display',
+        'Gesture Recognition',
+        'Spatial Computing',
+        'AI-Powered Interactions',
+        'Mixed Reality Integration',
+        'Real-time Rendering',
+        'Multi-user Collaboration',
+        'Custom Applications'
+      ],
+      category: 'Immersive Technology',
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,599/mo',
+      capabilities: [
+        'Immersive 3D interactions',
+        'Gesture-based control',
+        'Spatial computing',
+        'Mixed reality integration'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Neural Network Architect',
+      description: 'Advanced AI system for designing and optimizing neural network architectures with automated search and optimization',
+      icon: Brain,
+      features: [
+        'Architecture Search',
+        'Automated Design',
+        'Performance Optimization',
+        'Hyperparameter Tuning',
+        'Model Compression',
+        'Deployment Optimization',
+        'Custom Architectures',
+        'Performance Analytics'
+      ],
+      category: 'AI Development',
+      popular: true,
+      rating: 4.8,
+      users: '450+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        'Automated architecture design',
+        'Performance optimization',
+        'Model compression',
+        'Deployment optimization'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Quantum Machine Learning Pro',
+      description: 'Quantum-enhanced machine learning with exponential speedup and advanced pattern recognition capabilities',
+      icon: Brain,
+      features: [
+        'Quantum ML Algorithms',
+        'Exponential Speedup',
+        'Pattern Recognition',
+        'Quantum Neural Networks',
+        'Optimization Problems',
+        'Feature Selection',
+        'Model Training',
+        'Performance Analytics'
+      ],
+      category: 'Quantum ML',
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,299/mo',
+      capabilities: [
+        'Exponential speedup',
+        'Advanced pattern recognition',
+        'Quantum neural networks',
+        'Optimization solutions'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Space Technology Suite',
+      description: 'Comprehensive AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.9,
+      users: '75+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Molecular Design Studio',
+      description: 'Advanced AI platform for molecular design, drug discovery, and chemical property prediction',
+      icon: FileText,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Chemical Simulation',
+        'Property Prediction',
+        'Reaction Planning',
+        'Toxicity Analysis',
+        'Patent Search',
+        'Collaboration Tools'
+      ],
+      category: 'Scientific AI',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '90% accuracy in predictions',
+        'Faster drug discovery',
+        'Chemical property analysis',
+        'Patent-safe designs'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Holographic Data Visualization',
+      description: 'Immersive 3D data visualization with AI-powered insights and interactive holographic displays',
+      icon: BarChart,
+      features: [
+        '3D Data Visualization',
+        'Holographic Display',
+        'AI Insights',
+        'Interactive Exploration',
+        'Real-time Updates',
+        'Custom Dashboards',
+        'Collaboration Tools',
+        'Export Options'
+      ],
+      category: 'Data Visualization',
+      popular: true,
+      rating: 4.8,
+      users: '320+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        'Immersive 3D visualization',
+        'Holographic data display',
+        'AI-powered insights',
+        'Interactive exploration'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Quantum Security Suite',
+      description: 'Quantum-resistant security solutions with unbreakable encryption and advanced threat protection',
+      icon: Shield,
+      features: [
+        'Quantum Encryption',
+        'Zero-knowledge Architecture',
+        'Advanced Threat Detection',
+        'Biometric Authentication',
+        'Multi-factor Security',
+        'Audit Logging',
+        'Compliance Tools',
+        'API Security'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        'Unbreakable quantum encryption',
+        'Zero-knowledge security',
+        'Advanced threat protection',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Neural Interface Pro',
+      description: 'Advanced neural interface with brain-computer interaction, thought-to-text, and cognitive enhancement',
+      icon: Brain,
+      features: [
+        'Brain-Computer Interface',
+        'Thought-to-Text',
+        'Cognitive Enhancement',
+        'Neural Training',
+        'Mind Mapping',
+        'Memory Augmentation',
+        'Focus Optimization',
+        'Mental Health Monitoring'
+      ],
+      category: 'Neural Interface',
+      popular: false,
+      rating: 4.8,
+      users: '120+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,799/mo',
+      capabilities: [
+        'Direct brain interaction',
+        'Thought-to-text conversion',
+        'Cognitive enhancement',
+        'Mental health insights'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Quantum Optimization Engine',
+      description: 'Quantum-powered optimization engine for complex problems with exponential speedup and advanced algorithms',
+      icon: Zap,
+      features: [
+        'Quantum Optimization',
+        'Complex Problem Solving',
+        'Exponential Speedup',
+        'Advanced Algorithms',
+        'Real-time Processing',
+        'API Integration',
+        'Custom Solutions',
+        'Performance Analytics'
+      ],
+      category: 'Quantum Optimization',
+      popular: true,
+      rating: 4.9,
+      users: '160+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        'Exponential speedup',
+        'Complex problem solving',
+        'Quantum algorithms',
+        'Real-time optimization'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Holographic Training Simulator',
+      description: 'Immersive 3D training simulator with AI-powered personalized learning and virtual reality integration',
+      icon: Users,
+      features: [
+        '3D Training Environment',
+        'AI Personalization',
+        'Virtual Reality',
+        'Skill Assessment',
+        'Progress Tracking',
+        'Interactive Scenarios',
+        'Multi-user Support',
+        'Analytics Dashboard'
+      ],
+      category: 'Immersive Learning',
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,399/mo',
+      capabilities: [
+        'Immersive 3D training',
+        'AI personalization',
+        'Virtual reality integration',
+        'Skill assessment'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Quantum Neural Networks',
+      description: 'Quantum-enhanced neural networks with exponential computational power and advanced learning capabilities',
+      icon: Brain,
+      features: [
+        'Quantum Neural Networks',
+        'Exponential Power',
+        'Advanced Learning',
+        'Pattern Recognition',
+        'Optimization',
+        'Training Acceleration',
+        'Model Deployment',
+        'Performance Monitoring'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      rating: 4.9,
+      users: '90+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $3,499/mo',
+      capabilities: [
+        'Exponential computational power',
+        'Advanced learning',
+        'Pattern recognition',
+        'Training acceleration'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Autonomous Systems Pro',
+      description: 'Advanced AI platform for autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $2,799/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
+      icon: DollarSign,
+      features: [
+        'Quantum Market Analysis',
+        'Ultra-fast Predictions',
+        'Risk Assessment',
+        'Portfolio Optimization',
+        'Cryptocurrency Analysis',
+        'Real-time Trading Signals',
+        'Quantum Computing',
+        'Advanced Analytics'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '140+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '1000x faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI Holographic Workspace Pro',
+      description: 'Immersive 3D workspace with AI-powered collaboration, virtual meetings, and spatial computing',
+      icon: Globe,
+      features: [
+        '3D Workspace',
+        'Virtual Collaboration',
+        'Spatial Computing',
+        'AI Gestures',
+        'Mixed Reality',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Workspace',
+      popular: true,
+      rating: 4.7,
+      users: '250+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $1,799/mo',
+      capabilities: [
+        'Immersive 3D collaboration',
+        'Spatial computing',
+        'AI-powered gestures',
+        'Mixed reality integration'
+      ]
     }
   ];
 
@@ -1179,7 +1599,7 @@ const AIServicesPage: React.FC = () => {
 <<<<<<< HEAD
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
 =======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
 =======
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
@@ -1196,6 +1616,7 @@ const AIServicesPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1210,11 +1631,15 @@ const AIServicesPage: React.FC = () => {
 =======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid">
 >>>>>>> origin/main
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid-enhanced quantum-particles">
+>>>>>>> cursor/website-audit-and-update-with-deployment-006d
       {/* Header */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden quantum-field">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="inline-block mb-6">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
@@ -1245,19 +1670,22 @@ const AIServicesPage: React.FC = () => {
                 <div className="text-gray-300">AI Support</div>
 =======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+=======
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-enhanced neon-pulse">
+>>>>>>> cursor/website-audit-and-update-with-deployment-006d
               AI Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+              <div className="holographic-card px-6 py-3 rounded-lg">
+                <span className="text-cyan-400 font-semibold">30+ AI Platforms</span>
               </div>
-              <div className="holographic px-6 py-3 rounded-lg">
+              <div className="holographic-card px-6 py-3 rounded-lg">
                 <span className="text-purple-400 font-semibold">25,000+ Companies</span>
               </div>
-              <div className="holographic px-6 py-3 rounded-lg">
+              <div className="holographic-card px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
 >>>>>>> origin/main
               </div>
@@ -1287,10 +1715,14 @@ const AIServicesPage: React.FC = () => {
             <div
               key={service.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
 =======
               className={`futuristic-card hover-lift p-8 ${
+=======
+              className={`futuristic-card-enhanced hover-lift p-8 ${
+>>>>>>> cursor/website-audit-and-update-with-deployment-006d
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
 >>>>>>> origin/main
               }`}
@@ -1385,6 +1817,29 @@ const AIServicesPage: React.FC = () => {
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+              <div className="mb-6">
+                <div className="text-lg font-semibold text-cyan-400 mb-2">
+                  {service.pricing}
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
+                <ul className="space-y-1">
+                  {service.capabilities.map((capability, index) => (
+                    <li key={index} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      {capability}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </button>
+>>>>>>> cursor/website-audit-and-update-with-deployment-006d
             </div>
           ))}
         </div>

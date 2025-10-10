@@ -6,7 +6,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
 
-
   const docCategories = [
     {
       title: 'Getting Started',
