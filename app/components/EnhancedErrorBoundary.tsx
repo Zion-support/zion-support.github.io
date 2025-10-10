@@ -56,7 +56,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // Send to Google Analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'exception', {
+        (window as unknown).gtag('event', 'exception', {
           description: error.message,
           fatal: false,
           custom_map: {

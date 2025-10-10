@@ -46,7 +46,7 @@ const PerformanceMonitor: React.FC = () => {
     const measureFID = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           setMetrics(prev => ({ 
             ...prev, 
             fid: entry.processingStart - entry.startTime 
@@ -61,7 +61,7 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -92,7 +92,7 @@ const PerformanceMonitor: React.FC = () => {
     // Send metrics to analytics
     const sendMetricsToAnalytics = () => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as any).gtag;
+        const gtag = (window as unknown).gtag;
         
         if (metrics.fcp) {
           gtag('event', 'web_vitals', {

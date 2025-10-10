@@ -93,7 +93,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
     {
       name: 'Jessica Martinez',
       role: 'Marketing Director, FashionBrand',
-      content: 'AI Social Media Manager increased our engagement by 200% and saved us 20 hours per week as any',
+      content: 'AI Social Media Manager increased our engagement by 200% and saved us 20 hours per week as unknown',
       rating: 5}
     },
     {
@@ -105,7 +105,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
     {
       name: 'Lisa Thompson',
       role: 'Social Media Manager, Agency',
-      content: 'Managing 20+ client accounts is now effortless with AI automation. Highly recommended as any',
+      content: 'Managing 20+ client accounts is now effortless with AI automation. Highly recommended as unknown',
       rating: 5}
     }
   ]

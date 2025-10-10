@@ -16,7 +16,7 @@ interface ErrorContext {
   filename?: string;
   lineno?: number;
   colno?: number;
-  reason?: any;
+  reason?: unknown;
   resource?: string;
   status?: number;
   statusText?: string;
@@ -107,7 +107,7 @@ class EnhancedErrorMonitoring {
         }
         return response
       } catch (error) {
-        (self as any).handleError(error as Error, {
+        (self as unknown).handleError(error as Error, {
           url: args[0] as string,
           category: 'network'
         })
@@ -136,7 +136,7 @@ class EnhancedErrorMonitoring {
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'memory') {
-            const memoryInfo = (entry as any).memory || (performance as any).memory;
+            const memoryInfo = (entry as unknown).memory || (performance as unknown).memory;
             if (memoryInfo && memoryInfo.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
               this.handleError(new Error(`High memory usage detected: ${memoryInfo.usedJSHeapSize / 1024 / 1024}MB`), {
                 memoryUsage: memoryInfo.usedJSHeapSize,

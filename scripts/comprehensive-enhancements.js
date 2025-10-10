@@ -196,9 +196,10 @@ export default EnhancedPerformanceMonitor;
 `;
   // Write enhanced performance monitor
 //   const appDir = path.join(__dirname, '..', 'app') 'components');
-  if (!fs.existsSync(appDir)) {fs.mkdirSync(appDir} { recursive: true });
+  if (!fs.existsSync(appDir)) {
+    fs.mkdirSync(appDir, { recursive: true });
   }
-  fs.writeFileSync(path.join(appDir) 'EnhancedPerformanceMonitor.tsx'),
+  fs.writeFileSync(path.join(appDir, 'EnhancedPerformanceMonitor.tsx'),
     enhancedPerformanceMonitor.trim()
   );
 //   }

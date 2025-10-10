@@ -200,11 +200,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     _structuredDataRef.current = script;
   };
   const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as unknown).gtag) {
 
   const trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as unknown).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl
       });
@@ -212,11 +212,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   };
 <<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
   const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as unknown).gtag) {
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
+          (window as unknown).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
@@ -230,7 +230,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (typeof window !== 'undefined' && 'performance' in window) {
       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'timing_complete', {
+        (window as unknown).gtag('event', 'timing_complete', {
           name: 'load',
           value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
           event_category: 'Performance',

@@ -36,7 +36,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Send error to analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as unknown).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
       });

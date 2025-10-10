@@ -72,7 +72,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const entries = list.getEntries();
       entries.forEach(entry => {
         if ('processingStart' in entry && entry.startTime) {
-          const fid = (entry as any).processingStart - entry.startTime;
+          const fid = (entry as unknown).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, fid }));
           logger.debug('FID measured', { fid });
         }
@@ -85,8 +85,8 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        if (!(entry as unknown).hadRecentInput) {
+          clsValue += (entry as unknown).value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
           logger.debug('CLS measured', { cls: clsValue });
         }
@@ -158,7 +158,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       url: window.location.href,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      connection: (navigator as any).connection?.effectiveType || 'unknown',
+      connection: (navigator as unknown).connection?.effectiveType || 'unknown',
       ...metrics
     };
 
@@ -167,7 +167,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'performance_metrics', {
+      (window as unknown).gtag('event', 'performance_metrics', {
         event_category: 'performance',
         event_label: 'core_web_vitals',
         custom_map: {

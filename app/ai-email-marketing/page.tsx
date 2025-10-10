@@ -93,7 +93,7 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
     {
       name: 'Jennifer Lee',
       role: 'Marketing Manager, E-commerceCo',
-      content: 'AI Email Marketing increased our open rates by 65% and revenue by 40%. The AI content suggestions are spot-on as any',
+      content: 'AI Email Marketing increased our open rates by 65% and revenue by 40%. The AI content suggestions are spot-on as unknown',
       rating: 5}
     },
     {

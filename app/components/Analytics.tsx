@@ -40,11 +40,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
     document.head.appendChild(script);
 
     // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+    (window as unknown).dataLayer = (window as unknown).dataLayer || [];
+    function gtag(...args: unknown[]) {
+      (window as unknown).dataLayer.push(args);
     }
-    (window as any).gtag = gtag;
+    (window as unknown).gtag = gtag;
     
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
@@ -62,11 +62,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
           } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
+            const fid = (entry as unknown).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));
           } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value);
+            if (!(entry as unknown).hadRecentInput) {
+              trackEvent('web_vitals', 'CLS', (entry as unknown).value);
             }
           }
         }
@@ -108,8 +108,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         trackEvent('error', 'resource_error', {
-          type: (event.target as any).tagName,
-          src: (event.target as any).src || (event.target as any).href,
+          type: (event.target as unknown).tagName,
+          src: (event.target as unknown).src || (event.target as unknown).href,
           error: event.type
         });
       }
@@ -173,9 +173,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
     });
   };
 
-  const trackEvent = (category: string, action: string, value?: any) => {
+  const trackEvent = (category: string, action: string, value?: unknown) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
+      (window as unknown).gtag('event', action, {
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined

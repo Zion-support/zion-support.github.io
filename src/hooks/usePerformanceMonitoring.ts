@@ -6,7 +6,7 @@ const useAnalytics = () => ({
     if (process.env.NODE_ENV === 'development') {
       }
   },
-  trackEvent: (name: string, data: any) => {
+  trackEvent: (name: string, data: unknown) => {
     if (process.env.NODE_ENV === 'development') {
       }
   }

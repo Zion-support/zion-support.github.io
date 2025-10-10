@@ -185,7 +185,7 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: unknown): void {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
@@ -218,8 +218,8 @@ class SEOOptimizer {
       let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;}
+          if (!(entry as unknown).hadRecentInput) {
+            clsValue += (entry as unknown).value;}
           }
         }
         if (clsValue > 0.25) { // Poor CLS
@@ -232,8 +232,8 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'seo_metric', {
+    if (typeof window !== 'undefined' && (window as unknown).gtag) {
+      (window as unknown).gtag('event', 'seo_metric', {
         metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'}

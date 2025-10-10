@@ -6,7 +6,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   preload?: Array<{ href: string; as: string; type?: string }>;
   prefetch?: Array<{ href: string; as: string }>;
   dnsPrefetch?: string[];

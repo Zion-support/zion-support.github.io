@@ -46,15 +46,15 @@ class PerformanceMonitor {
           if (lastEntry) {
             this.recordMetric(
               'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+              (lastEntry as unknown).renderTime || (lastEntry as unknown).loadTime || lastEntry.startTime
             );
           }
         });
         // First Input Delay
         this.observeEntry('first-input', entries => {
           const firstInput = entries[0];
-          if (firstInput && (firstInput as any).processingStart !== undefined) {
-            const fid = (firstInput as any).processingStart - firstInput.startTime;
+          if (firstInput && (firstInput as unknown).processingStart !== undefined) {
+            const fid = (firstInput as unknown).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
         });
@@ -62,8 +62,8 @@ class PerformanceMonitor {
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
+            if (!(entry as unknown).hadRecentInput) {
+              clsValue += (entry as unknown).value;
             }
           });
           if (clsValue > 0) {
@@ -80,7 +80,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            (this.metrics as any)[metricKey] = entry.startTime;
+            (this.metrics as unknown)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -107,7 +107,7 @@ class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          this.metrics.fid = (entry as any).processingStart - entry.startTime;
+          this.metrics.fid = (entry as unknown).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
       });
@@ -121,8 +121,8 @@ class PerformanceMonitor {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as unknown).hadRecentInput) {
+            clsValue += (entry as unknown).value;
           }
         }
         this.metrics.cls = clsValue;
@@ -186,8 +186,8 @@ class PerformanceMonitor {
       }ms`);
     }
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {
+    if (typeof window !== 'undefined' && (window as unknown).gtag) {
+      (window as unknown).gtag('event', 'performance_metric', {
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'

@@ -110,7 +110,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               }
           }
           if (entry.entryType === 'first-input') {
-            const fidEntry = entry as any;
+            const fidEntry = entry as unknown;
             // FID measurement - could be sent to analytics
             if (process.env.NODE_ENV === 'development') {
               }

@@ -196,8 +196,7 @@ export class ConfigManager {
    */
   private detectEnvironment(): Environment {
     if (typeof process !== 'undefined') {
-      
-      
+
       if (nextEnv) {
         return nextEnv as Environment;}
       }

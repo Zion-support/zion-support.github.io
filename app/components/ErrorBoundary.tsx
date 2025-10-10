@@ -38,7 +38,7 @@ class ErrorBoundary extends Component<Props, State> {
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Example error reporting - replace with your preferred service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as unknown).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_parameter_1: errorInfo.componentStack,

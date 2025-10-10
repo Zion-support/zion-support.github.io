@@ -106,7 +106,7 @@ class OptimizedErrorBoundary extends Component<Props, State> {
   private reportError = (error: Error, errorInfo: ErrorInfo, errorId: string) => {
     // Report to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as unknown).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

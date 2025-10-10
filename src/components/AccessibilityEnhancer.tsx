@@ -167,7 +167,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(announcementDiv);
 
       // Function to announce messages to screen readers
-      (window as any).announceToScreenReader = (message: string) => {
+      (window as unknown).announceToScreenReader = (message: string) => {
         announcementDiv.textContent = message;
         setTimeout(() => {
           announcementDiv.textContent = '';
@@ -227,8 +227,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add loading state announcements
     const announceLoadingState = () => {
-      if ((window as any).announceToScreenReader) {
-        (window as any).announceToScreenReader('Page loaded successfully');
+      if ((window as unknown).announceToScreenReader) {
+        (window as unknown).announceToScreenReader('Page loaded successfully');
       }
     };
 

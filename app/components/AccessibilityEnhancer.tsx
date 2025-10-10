@@ -202,7 +202,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Track keyboard usage
       document.addEventListener('keydown', (e) => {
         if ('gtag' in window) {
-          (window as any).gtag('event', 'keyboard_navigation', {
+          (window as unknown).gtag('event', 'keyboard_navigation', {
             event_category: 'Accessibility',
             event_label: e.key,
             value: 1
@@ -212,7 +212,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       // Track screen reader usage
       if ('speechSynthesis' in window) {
-        (window as any).gtag('event', 'screen_reader_detected', {
+        (window as unknown).gtag('event', 'screen_reader_detected', {
           event_category: 'Accessibility',
           event_label: 'Screen Reader',
           value: 1

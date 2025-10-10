@@ -2,7 +2,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 // Simple logger for error reporting
 const logger = {
-  error: (message: string, data?: any) => {
+  error: (message: string, data?: unknown) => {
     }
 };
 interface ErrorBoundaryState {

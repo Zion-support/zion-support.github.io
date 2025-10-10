@@ -668,14 +668,14 @@ export class TestRunner {
           result = await this.runComponentTest(
             test.component,
             test.name,
-            test.assertions as any
+            test.assertions as unknown
           )
           break
         case 'integration':
           result = await this.runIntegrationTest(
             test.component,
             test.name,
-            test.userInteractions as any
+            test.userInteractions as unknown
           )
           break
         case 'performance':
@@ -690,7 +690,7 @@ export class TestRunner {
         default:}
           result = { passed: false, error: 'Unknown test type' }
       }
-    const results: any[] = []
+    const results: unknown[] = []
       results.push({ ...result, name: test.name, type: test.type })
     }
     const passed = results.every(result => result.passed)
@@ -742,9 +742,9 @@ export const useTestRunner = useCallback((...args) => {
   ) => {
     switch (type) {
       case 'component':
-        return testRunner.runComponentTest(component, testName, assertions as any)
+        return testRunner.runComponentTest(component, testName, assertions as unknown)
       case 'integration':
-        return testRunner.runIntegrationTest(component, testName, userInteractions as any)
+        return testRunner.runIntegrationTest(component, testName, userInteractions as unknown)
       case 'performance':
         return testRunner.runPerformanceTest(component, testName)
       case 'accessibility':

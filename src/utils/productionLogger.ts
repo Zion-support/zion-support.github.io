@@ -11,23 +11,23 @@ class ProductionLogger {
     this.isDevelopment = process.env.NODE_ENV === 'development';
   }
 
-  debug(message: string, ...args: any[]): void {
+  debug(message: string, ...args: unknown[]): void {
     if (this.isDevelopment) {
       }
   }
 
-  info(message: string, ...args: any[]): void {
+  info(message: string, ...args: unknown[]): void {
     if (this.isDevelopment) {
       }
   }
 
-  warn(message: string, ...args: any[]): void {
+  warn(message: string, ...args: unknown[]): void {
     }
 
-  error(message: string, ...args: any[]): void {
+  error(message: string, ...args: unknown[]): void {
     }
 
-  log(level: LogLevel, message: string, ...args: any[]): void {
+  log(level: LogLevel, message: string, ...args: unknown[]): void {
     this[level](message, ...args);
   }
 }

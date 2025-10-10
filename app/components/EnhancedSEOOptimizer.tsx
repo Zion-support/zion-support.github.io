@@ -8,7 +8,7 @@ interface EnhancedSEOOptimizerProps {
   keywords: string[];
   canonicalUrl: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   noIndex?: boolean;
   locale?: string;
   alternateLanguages?: { href: string; hreflang: string }[];

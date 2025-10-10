@@ -95,7 +95,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     };
 
     // Add to window for global access
-    (window as any).announcePageChange = announcePageChange;
+    (window as unknown).announcePageChange = announcePageChange;
 
     // Add ARIA landmarks
     const main = document.querySelector('main');
@@ -202,7 +202,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     };
 
     // Add to window for global access
-    (window as any).trapFocus = trapFocus;
+    (window as unknown).trapFocus = trapFocus;
   }, [enableFocusManagement]);
 
   // ARIA labels enhancement

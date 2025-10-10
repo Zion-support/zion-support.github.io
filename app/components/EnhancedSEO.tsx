@@ -10,7 +10,7 @@ interface EnhancedSEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   noIndex?: boolean;
   noFollow?: boolean;
   author?: string;

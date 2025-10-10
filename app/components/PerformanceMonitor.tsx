@@ -45,7 +45,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+            (window as unknown).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'CLS',
               value: Math.round(metric.value * 1000)
@@ -55,7 +55,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
         getFID((metric) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+            (window as unknown).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'FID',
               value: Math.round(metric.value)
@@ -65,7 +65,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
         getFCP((metric) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+            (window as unknown).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'FCP',
               value: Math.round(metric.value)
@@ -75,7 +75,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
         getLCP((metric) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+            (window as unknown).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'LCP',
               value: Math.round(metric.value)
@@ -85,7 +85,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
         getTTFB((metric) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+            (window as unknown).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'TTFB',
               value: Math.round(metric.value)
@@ -100,7 +100,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'resource_timing', {
+            (window as unknown).gtag('event', 'resource_timing', {
               event_category: 'Performance',
               event_label: entry.name,
               value: Math.round(entry.duration)
@@ -114,9 +114,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Memory monitoring
     if (enableMemoryMonitoring && 'memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory;
+        const memory = (performance as unknown).memory;
         if (memory && enableAnalytics && 'gtag' in window) {
-          (window as any).gtag('event', 'memory_usage', {
+          (window as unknown).gtag('event', 'memory_usage', {
             event_category: 'Performance',
             event_label: 'Memory',
             value: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
@@ -132,7 +132,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'long_task', {
+            (window as unknown).gtag('event', 'long_task', {
               event_category: 'Performance',
               event_label: 'Long Task',
               value: Math.round(entry.duration)
@@ -148,7 +148,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (enableAnalytics && 'gtag' in window) {
-            (window as any).gtag('event', 'layout_shift', {
+            (window as unknown).gtag('event', 'layout_shift', {
               event_category: 'Performance',
               event_label: 'Layout Shift',
               value: Math.round(entry.value * 1000)
@@ -163,7 +163,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (enableErrorReporting) {
       window.addEventListener('error', (event) => {
         if (enableAnalytics && 'gtag' in window) {
-          (window as any).gtag('event', 'javascript_error', {
+          (window as unknown).gtag('event', 'javascript_error', {
             event_category: 'Error',
             event_label: event.message,
             value: 1
@@ -173,7 +173,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       window.addEventListener('unhandledrejection', (event) => {
         if (enableAnalytics && 'gtag' in window) {
-          (window as any).gtag('event', 'unhandled_promise_rejection', {
+          (window as unknown).gtag('event', 'unhandled_promise_rejection', {
             event_category: 'Error',
             event_label: event.reason?.toString() || 'Unknown',
             value: 1

@@ -226,8 +226,8 @@ export interface Deferred<T> {
   reject: (reason?: unknown) => void;}
 }
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve as any: (value: T) => void
-  let reject as any: (reason?: unknown) => void
+  let resolve as unknown: (value: T) => void
+  let reject as unknown: (reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
     resolve = res
     reject = rej;}
@@ -253,7 +253,7 @@ export const retryWithBackoff = async <T>(
       }
     }
   }
-  throw lastError as any
+  throw lastError as unknown
 }
 /**
  * Measure execution time of a function

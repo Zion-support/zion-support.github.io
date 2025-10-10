@@ -191,10 +191,10 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
         
-        const reportMetric = (metric: any) => {
+        const reportMetric = (metric: unknown) => {
           // Send to analytics
           if ('gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+            (window as unknown).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: metric.name,
               value: Math.round(metric.value),
@@ -323,7 +323,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Send to analytics
       if ('gtag' in window) {
         Object.entries(metrics).forEach(([key, value]) => {
-          (window as any).gtag('event', 'performance_metric', {
+          (window as unknown).gtag('event', 'performance_metric', {
             event_category: 'Performance',
             event_label: key,
             value: Math.round(value),

@@ -91,13 +91,13 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
     {
       name: 'Michael Chen',
       role: 'CTO, StartupXYZ',
-      content: 'We reduced project delays by 70% and improved team productivity significantly. Highly recommended as any',
+      content: 'We reduced project delays by 70% and improved team productivity significantly. Highly recommended as unknown',
       rating: 5}
     },
     {
       name: 'Emily Rodriguez',
       role: 'Operations Director, GlobalCorp',
-      content: 'The predictive analytics helped us identify potential issues before they became problems. Game changer as any',
+      content: 'The predictive analytics helped us identify potential issues before they became problems. Game changer as unknown',
       rating: 5}
     }
   ]

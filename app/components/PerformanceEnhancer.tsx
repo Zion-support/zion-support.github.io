@@ -59,15 +59,15 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     webVitals: {} as Record<string, any>,
     resourceTiming: [] as PerformanceEntry[],
     userTiming: [] as PerformanceEntry[],
-    memoryUsage: {} as any,
-    networkInfo: {} as any,
+    memoryUsage: {} as unknown,
+    networkInfo: {} as unknown,
     longTasks: [] as PerformanceEntry[],
     layoutShifts: [] as PerformanceEntry[],
-    errors: [] as any[]
+    errors: [] as unknown[]
   }), []);
 
   // Enhanced error reporting
-  const reportError = useCallback((error: any, context?: string) => {
+  const reportError = useCallback((error: unknown, context?: string) => {
     if (!enableErrorReporting) return;
 
     const errorData = {
@@ -84,7 +84,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
     // Send to analytics
     if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'performance_error', {
+      (window as unknown).gtag('event', 'performance_error', {
         event_category: 'Performance',
         event_label: context || 'PerformanceEnhancer',
         value: 1,
@@ -103,7 +103,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   useEffect(() => {
     if (!enableWebVitals || typeof window === 'undefined') return;
 
-    const reportMetric = (metric: any) => {
+    const reportMetric = (metric: unknown) => {
       try {
         performanceMetrics.webVitals[metric.name] = metric;
 
@@ -117,7 +117,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
         // Send to analytics
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'web_vitals', {
+          (window as unknown).gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: metric.name,
             value: Math.round(metric.value),
@@ -225,7 +225,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     const measureMemory = () => {
       try {
         if ('memory' in performance) {
-          const memory = (performance as any).memory;
+          const memory = (performance as unknown).memory;
           performanceMetrics.memoryUsage = {
             usedJSHeapSize: memory.usedJSHeapSize,
             totalJSHeapSize: memory.totalJSHeapSize,
@@ -260,7 +260,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     const measureNetwork = () => {
       try {
         if ('connection' in navigator) {
-          const connection = (navigator as any).connection;
+          const connection = (navigator as unknown).connection;
           performanceMetrics.networkInfo = {
             effectiveType: connection.effectiveType,
             downlink: connection.downlink,
@@ -380,7 +380,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         };
 
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'performance_summary', {
+          (window as unknown).gtag('event', 'performance_summary', {
             event_category: 'Performance',
             event_label: 'Summary',
             value: 1,

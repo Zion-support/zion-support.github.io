@@ -114,9 +114,9 @@ class SecurityEnhancer {
     // Override console methods to detect debugging
     const methods = ['log', 'warn', 'error', 'info'] as const;
     methods.forEach(method => {
-      (console as any)[method] = (...args: unknown[]) => {
+      (console as unknown)[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
-        (originalConsole as any)[method](...args);
+        (originalConsole as unknown)[method](...args);
       }
     });
   }
