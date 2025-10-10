@@ -630,6 +630,7 @@ export default function MicroSaasPage() {
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     {
       icon: TrendingUp,
@@ -748,44 +749,29 @@ export default function MicroSaasPage() {
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
               Powerful AI-driven tools for modern businesses
+=======
+  const categories = ['All', 'Productivity', 'Creative', 'Security', 'Health', 'IoT', 'Finance', 'Education'];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <ScrollToTop />
+      
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Micro SAAS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Powerful, affordable AI-driven tools for modern businesses. 
+              Choose from our comprehensive suite of specialized applications designed to boost productivity and efficiency.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
             </p>
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Choose from 50+ ready-to-use micro SAAS applications designed to streamline your business operations. 
-              Each tool is powered by cutting-edge AI technology and comes with comprehensive support.
-            </p>
-            
-            {/* Search and Filter */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <div className="relative mb-8">
-                <input
-                  type="text"
-                  placeholder="Search micro SAAS tools..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-6 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"
-                />
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-cyan-400">
-                  🔍
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                      selectedCategory === category
-                        ? 'bg-cyan-400 text-slate-900 font-semibold'
-                        : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Services Grid */}
@@ -975,12 +961,75 @@ export default function MicroSaasPage() {
           </div>
         </section>
       </main>
+=======
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                activeTab === category.toLowerCase()
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+              onClick={() => setActiveTab(category.toLowerCase())}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {microSaasServices
+            .filter(service => activeTab === 'all' || service.category.toLowerCase() === activeTab)
+            .map((service) => (
+            <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-4xl">{service.icon}</div>
+                {service.popular && (
+                  <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Popular
+                  </span>
+                )}
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              
+              <div className="mb-6">
+                <div className="text-3xl font-bold text-white mb-1">${service.pricing.monthly}</div>
+                <div className="text-sm text-gray-400">per month</div>
+              </div>
+              
+              <ul className="space-y-2 mb-6">
+                {service.features.slice(0, 4).map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 group-hover:shadow-lg">
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
 
       <Footer />
-      <ScrollToTop />
     </div>
   );
 }
+<<<<<<< HEAD
 =======
       {/* Benefits */}
       <section className="py-20">
@@ -1208,3 +1257,7 @@ export default function MicroSaasPage() {
   );
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
+=======
+
+export default MicroSaasPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a

@@ -1374,6 +1374,7 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     }
   ];
+<<<<<<< HEAD
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -4447,10 +4448,13 @@ const HomePage: React.FC = () => {
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-a74d
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
       <Navigation />
       
       <main className="container mx-auto px-4 py-8">
@@ -4482,6 +4486,66 @@ export default function HomePage() {
       </main>
       
       <Footer />
+=======
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover our comprehensive suite of AI-powered tools and services designed to transform your business and boost productivity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div key={service.id} className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+              {service.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-2">{service.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm">{service.description}</p>
+              </div>
+              
+              <div className="mb-6">
+                <div className="text-3xl font-bold text-white mb-1">{service.price}</div>
+                {service.originalPrice && (
+                  <div className="text-sm text-gray-400 line-through">{service.originalPrice}</div>
+                )}
+                <div className="text-sm text-gray-400">{service.freeTrial} free trial</div>
+              </div>
+              
+              <ul className="space-y-2 mb-6">
+                {service.features.slice(0, 4).map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 group-hover:shadow-lg">
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
     </div>
   );
 }

@@ -196,6 +196,7 @@ const Navigation: React.FC = () => {
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
   };
+<<<<<<< HEAD
 
   const microSAASServices = [
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
@@ -484,3 +485,5 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
