@@ -76,15 +76,35 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
       popular: false
     },
     {
-      plan: 'Professional',
-      price: '$599/month',
-      features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for studios and agencies',
+      features: [
+        'Up to 1,000 3D models/month',
+        'Advanced AI features',
+        'High-quality output',
+        'Priority support',
+        'All format exports',
+        'Batch processing',
+        'API access'
+      ],
       popular: true
     },
     {
-      plan: 'Enterprise',
-      price: '$1,999/month',
-      features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
+      name: 'Enterprise',
+      price: '$999',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited 3D models',
+        'Premium AI features',
+        'Ultra-high quality',
+        'Dedicated support',
+        'Custom integrations',
+        'White-label solution',
+        'SLA guarantee'
+      ],
       popular: false
     }
   ];
@@ -112,15 +132,16 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
       
       <Navigation />
       
-      <main className="pt-24 pb-16 px-4">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI 3D Generation
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create stunning 3D models, animations, and visualizations with AI-powered tools that understand your vision.
+              Create stunning 3D models from text descriptions using cutting-edge AI technology. 
+              Transform your ideas into reality in minutes, not months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -138,12 +159,16 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
                 <span>Get Quote</span>
               </a>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          {/* Features Section */}
-          <section id="features" className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Powerful 3D Generation Features
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful AI Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
