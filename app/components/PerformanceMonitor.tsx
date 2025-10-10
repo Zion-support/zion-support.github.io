@@ -1,4 +1,5 @@
-'use client'import React, { useEffect, useState } from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
   lcp?: number
   fid?: number
@@ -13,7 +14,9 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined') return
     const shouldMonitor = process.env.NODE_ENV === 'development' || 
                          localStorage.getItem('performance-monitoring') === 'true'
-    if (!shouldMonitor) returnconst updateMetrics  = () => {
+    if (!shouldMonitor) return
+    
+    const updateMetrics = () => {
       setMetrics(prev => ({ ...prev, ...newMetrics }))
     }
     if ('web-vitals' in window) {
