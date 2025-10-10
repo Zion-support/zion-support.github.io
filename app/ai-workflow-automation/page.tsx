@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiWorkflowAutomationPage: React.FC = () => {,
-    const features = [
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const AiWorkflowAutomationPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -31,8 +31,9 @@ const benefits = [
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Ai Workflow Automation - Zion Tech Group</title>
         <meta />
         <meta />
@@ -75,13 +76,13 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users}}from 'lucide-react';
+import { Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users } from 'lucide-react';
 
-const AIWorkflowAutomation: React.FC = () => {,
+const AIWorkflowAutomation: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -136,8 +137,9 @@ const AIWorkflowAutomation: React.FC = () => {,
     {number: '500+', label: 'Integrations' ,},
     {number: '24/7', label: 'Automation' ,}];
 
-  return(<>)
-      <SEOOptimizer;
+  return (
+    <>
+  <SEOOptimizer;
         title="AI Workflow Automation Platform - Zion Tech Group"
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}canonicalUrl="https: //ziontechgroup.com/ai-workflow-automation",

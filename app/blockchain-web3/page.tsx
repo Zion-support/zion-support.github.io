@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const BlockchainWeb3Page: React.FC = () => {,
-    const features = [
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+const BlockchainWeb3Page: React.FC = () => {
+  const features = [
     {
       icon: Zap,
       title: 'Smart Contracts',
@@ -21,8 +21,9 @@ const BlockchainWeb3Page: React.FC = () => {,
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
       </Helmet>

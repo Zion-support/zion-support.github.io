@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Shield,}
   Eye,
   AlertTriangle,
@@ -25,9 +25,9 @@ import {Shield,}
 
   Target,
 
-  Monitor;}} from 'lucide-react'
-const SecurityMonitoringSuitePage: React.FC = () => {,
-    const features = [
+  Monitor;} from 'lucide-react'
+const SecurityMonitoringSuitePage: React.FC = () => {
+  const features = [
     {
       icon: Monitor,
       title: 'Real-time Dashboard',
@@ -56,8 +56,9 @@ const benefits = [
 
     'Expert security team support'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

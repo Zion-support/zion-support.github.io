@@ -1,8 +1,8 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles}}from 'lucide-react';
-const IoTPage: React.FC = () => {,
-    const iotServices = [
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
+const IoTPage: React.FC = () => {
+  const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -114,8 +114,9 @@ const IoTPage: React.FC = () => {,
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}}
   ]
 const categories = [...new Set(iotServices.map(service => service.category))]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Mail,}
   Target,
   CheckCircle,
@@ -23,9 +23,9 @@ import {Mail,}
 
   Send,
 
-  PieChart;}} from 'lucide-react'
-const EmailMarketingAutomationPage: React.FC = () => {,
-    const features = [
+  PieChart;} from 'lucide-react'
+const EmailMarketingAutomationPage: React.FC = () => {
+  const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
@@ -54,8 +54,9 @@ const benefits = [
 
     'Save time and resources'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

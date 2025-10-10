@@ -1,9 +1,10 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-const AboutPage: React.FC = () => {,
-  return(<>)
+const AboutPage: React.FC = () => {
+  return (
+    <>
       <Helmet />
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses." />

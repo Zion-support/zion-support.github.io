@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
-const FinancialITPage: React.FC = () => {,
-    const features = [
+import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+const FinancialITPage: React.FC = () => {
+  const features = [
     {
       icon: DollarSign,
       title: 'SOX Compliance',

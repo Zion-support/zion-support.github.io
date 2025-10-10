@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {CheckSquare,}
   Users,
   CheckCircle,
@@ -24,9 +24,9 @@ import {CheckSquare,}
 
   Calendar,
 
-  FileText;}} from 'lucide-react'
-const ProjectManagementProPage: React.FC = () => {,
-    const features = [
+  FileText;} from 'lucide-react'
+const ProjectManagementProPage: React.FC = () => {
+  const features = [
     {
       icon: CheckSquare,
       title: 'Task Management',
@@ -55,8 +55,9 @@ const benefits = [
 
     'Streamline project workflows'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

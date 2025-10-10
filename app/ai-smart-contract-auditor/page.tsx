@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin}}from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin } from 'lucide-react';
 
-const AISmartContractAuditor: React.FC = () => {,
+const AISmartContractAuditor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -91,8 +91,9 @@ const AISmartContractAuditor: React.FC = () => {,
       icon: Globe,
       results: 'Prevented $50M+ in potential losses',}];
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />

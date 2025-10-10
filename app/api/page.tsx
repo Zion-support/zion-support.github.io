@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink}}from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
 
-const ApiPage: React.FC = () => {,
+const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
       category: 'AI Services',
@@ -136,8 +136,9 @@ const ApiPage: React.FC = () => {,
     {tier: 'Pro', requests: '50,000/month', burst: '100/minute' ,},
     {tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute'}]
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
         <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />

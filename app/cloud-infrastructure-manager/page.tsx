@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Cloud,}
   Settings,
   CheckCircle,
@@ -25,9 +25,9 @@ import {Cloud,}
 
   Server,
 
-  Monitor;}} from 'lucide-react'
-const CloudInfrastructureManagerPage: React.FC = () => {,
-    const features = [
+  Monitor;} from 'lucide-react'
+const CloudInfrastructureManagerPage: React.FC = () => {
+  const features = [
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
@@ -56,8 +56,9 @@ const benefits = [
 
     'Expert technical support'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

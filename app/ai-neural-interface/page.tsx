@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Brain, Zap, Eye, Mic, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, MessageSquare, CheckSquare, Cpu}}from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Eye, Mic, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, MessageSquare, CheckSquare, Cpu } from 'lucide-react';
 
-const AINeuralInterface: React.FC = () => {,
+const AINeuralInterface: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -91,8 +91,9 @@ const AINeuralInterface: React.FC = () => {,
       icon: MessageSquare,
       results: 'Restored communication ability',}];
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />

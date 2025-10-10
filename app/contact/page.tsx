@@ -1,11 +1,11 @@
 'use client';
-import React, {useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle}}from 'lucide-react';
+import React, { useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ContactPage: React.FC = () => {,
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({)
     name: '',
     email: '',
@@ -40,8 +40,9 @@ const ContactPage: React.FC = () => {,
         message: '',})
     } catch (error) {setSubmitStatus('error');}finally {setIsSubmitting(false);}}}, []);
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
       </Helmet>

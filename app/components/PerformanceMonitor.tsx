@@ -1,12 +1,12 @@
 'use client';
-import React, {useEffect, useState}from 'react';
+import React, { useEffect, useState } from 'react';
 
 <<<<<<< HEAD
 interface PerformanceMetrics {lcp?: number;}
   fid?: number;
   cls?: number;
   fcp?: number;
-  ttfb?: number;}const PerformanceMonitor: React.FC = () => {,
+  ttfb?: number;}const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
 =======
 interface PerformanceMetrics {

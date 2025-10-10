@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
-    const features = [
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+const PagePage: React.FC = () => {
+  const features = [
     {
             </div>
           </div>
@@ -97,7 +97,7 @@ export default PagePage;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const SpecializedServicesPage: React.FC = () => {,
+const SpecializedServicesPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -121,8 +121,9 @@ const SpecializedServicesPage: React.FC = () => {,
     'Ensure 99.9% uptime and reliability'
   ]
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Specialized Services - Zion Tech Group</title>
         <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
         <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" />

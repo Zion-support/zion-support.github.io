@@ -1,11 +1,11 @@
 'use client';
 <<<<<<< HEAD
 
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Search, Calendar, User, Clock, ArrowRight}}from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 
-const BlogPage: React.FC = () => {,
+const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
 =======
@@ -66,8 +66,9 @@ const BlogPage: React.FC = () => {
     post.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends" />

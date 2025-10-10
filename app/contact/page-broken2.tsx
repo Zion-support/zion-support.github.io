@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 'use client';
-import React, {useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, { useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {Phone,}
   Mail,
 
@@ -12,9 +12,9 @@ import {Phone,}
 
   Send,
 
-  CheckCircle;}} from 'lucide-react'
-const ContactPage: React.FC = () => {,
-    const [formData, setFormData] = useState({)
+  CheckCircle;} from 'lucide-react'
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({)
     name: '',
     email: '',
     company: '',
@@ -81,8 +81,9 @@ const contactInfo = [
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time',}}
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

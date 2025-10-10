@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
+
 interface SEOHeadProps {title: string;,}
   description: string;,
   keywords?: string[]
@@ -37,7 +37,7 @@ interface SEOHeadProps {title: string;,}
       <meta name="twitter: image" content={ogImage,}/>
       
       {/* Additional SEO Tags */} <meta name="robots" content="index, follow" />
-=======
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -100,17 +100,17 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-<<<<<<< HEAD
+
       {/* Structured Data */}{structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)} </script>
       )}
-=======
+
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -157,7 +157,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+
     </Helmet>
   );
 };
