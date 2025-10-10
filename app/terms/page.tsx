@@ -13,10 +13,27 @@ import {FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, 
       icon: Server,},
     {title: 'Governing Law',
       icon: Scale,
+<<<<<<< HEAD
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'}]
+=======
+      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
+    }
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 
   const contactInfo = {email: 'legal@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
+<<<<<<< HEAD
     address: '364 E Main St STE 1008, Middletown, DE 19709'}return(<>)
       <Helmet />
         <title>Terms of Service - Zion Tech Group</title>
+=======
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+
+
+  return (
+    <>
+      <Helmet></Helmet>
+        <title></titl>Terms of Service - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2

@@ -1,8 +1,14 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -16,7 +22,13 @@ const ContentPromotionBanner: React.FC = () => {,
       icon: Star;,},
     {title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
+<<<<<<< HEAD
       icon: Users;,}];
+=======
+      icon: Users
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 
   return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">
@@ -35,12 +47,21 @@ const ContentPromotionBanner: React.FC = () => {,
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+<<<<<<< HEAD
               <p className="text-purple-100 text-sm">{feature.description</p>}</p>
+=======
+              <p className="text-purple-100 text-sm">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
             </div>
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+=======
+        {/* CTA Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
           <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Get Started?
           </h3>

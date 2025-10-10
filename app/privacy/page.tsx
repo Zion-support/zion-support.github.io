@@ -21,8 +21,15 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
       description: 'Request deletion of your personal data',},
     {title: 'Portability',
       description: 'Receive your data in a structured format',
+<<<<<<< HEAD
       icon: Database;,},
     {title: 'Restriction',
+=======
+      icon: Database
+    },
+    {
+      title: 'Restriction',
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       description: 'Limit how we process your data',
       icon: Lock;,},
     {title: 'Objection',
@@ -31,6 +38,17 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
 
   const contactInfo = {email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
+<<<<<<< HEAD
     address: '364 E Main St STE 1008, Middletown, DE 19709'}return(<>)
       <Helmet />
         <title>Privacy Policy - Zion Tech Group</title>
+=======
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+
+
+  return (
+    <>
+      <Helmet></Helmet>
+        <title></titl>Privacy Policy - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
