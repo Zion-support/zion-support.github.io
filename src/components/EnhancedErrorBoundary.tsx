@@ -1,8 +1,8 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import ErrorFallback from './ErrorFallback';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -12,79 +12,27 @@ interface State {
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+  public state: State = {
+    hasError: false
+  };
 
-  static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to monitoring service
-    if (typeof window !== 'undefined') {
-      // In production, send to error monitoring service
-      if (process.env.NODE_ENV === 'development') {
-        console.error('Error caught by boundary:', error, errorInfo);
-      } else {
-        // In production, send to error monitoring service
-        // Example: Sentry.captureException(error, { extra: errorInfo });
-      }
-    }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    this.setState({ error, errorInfo });
   }
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
+  public render() {
+    if (this.state.hasError && this.state.error) {
       return (
-        <div className="min-h-screen bg-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
-            <div className="text-6xl mb-6">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
-            
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Try Again
-              </button>
-              
-              <button
-                onClick={() => window.location.href = '/'}
-                className="w-full border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Go Home
-              </button>
-            </div>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-400 bg-red-900/20 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-          </div>
-        </div>
+        <ErrorFallback
+          error={this.state.error}
+          resetError={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+          componentStack={this.state.errorInfo?.componentStack}
+        />
       );
     }
 
