@@ -150,6 +150,158 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Brain,
+      title: 'AI Quantum Computing Solutions',
+      description: 'Advanced quantum computing applications for optimization, cryptography, and complex problem solving.',
+      features: ['Quantum Optimization', 'Cryptography', 'Machine Learning', 'Simulation', 'Research Support'],
+      price: 'Starting at $4,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Autonomous Vehicle Systems',
+      description: 'Complete autonomous vehicle AI systems with computer vision, sensor fusion, and decision making.',
+      features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Obstacle Detection', 'Safety Systems'],
+      price: 'Starting at $9,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Space Technology Solutions',
+      description: 'AI-powered solutions for space exploration, satellite management, and space mission optimization.',
+      features: ['Satellite Management', 'Mission Planning', 'Space Analytics', 'Orbital Mechanics', 'Communication Systems'],
+      price: 'Starting at $7,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Climate Change Solutions',
+      description: 'Advanced AI systems for climate modeling, carbon tracking, and environmental impact assessment.',
+      features: ['Climate Modeling', 'Carbon Tracking', 'Impact Assessment', 'Predictive Analytics', 'Sustainability Planning'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Biotechnology Platform',
+      description: 'AI-powered biotechnology solutions for drug discovery, genetic analysis, and medical research.',
+      features: ['Drug Discovery', 'Genetic Analysis', 'Protein Folding', 'Medical Research', 'Biomarker Detection'],
+      price: 'Starting at $5,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Smart City Solutions',
+      description: 'Comprehensive AI solutions for smart city infrastructure, traffic management, and urban planning.',
+      features: ['Traffic Management', 'Energy Optimization', 'Waste Management', 'Public Safety', 'Urban Planning'],
+      price: 'Starting at $3,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Agricultural Intelligence',
+      description: 'Precision agriculture with AI-powered crop monitoring, yield prediction, and automated farming systems.',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Pest Detection', 'Automated Farming'],
+      price: 'Starting at $1,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Renewable Energy Optimizer',
+      description: 'AI-powered renewable energy management with grid optimization and energy storage solutions.',
+      features: ['Grid Optimization', 'Energy Storage', 'Demand Forecasting', 'Load Balancing', 'Cost Optimization'],
+      price: 'Starting at $2,499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Cybersecurity AI',
+      description: 'Next-generation AI cybersecurity with threat hunting, behavioral analysis, and automated response.',
+      features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero Trust', 'Incident Response'],
+      price: 'Starting at $3,499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Edge Computing Platform',
+      description: 'AI-powered edge computing solutions for real-time processing and IoT device management.',
+      features: ['Real-time Processing', 'IoT Management', 'Edge Analytics', 'Low Latency', 'Distributed Computing'],
+      price: 'Starting at $1,799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Blockchain Solutions',
+      description: 'AI-enhanced blockchain solutions with smart contracts, DeFi protocols, and cryptocurrency analytics.',
+      features: ['Smart Contracts', 'DeFi Protocols', 'Crypto Analytics', 'Token Economics', 'Security Auditing'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Metaverse Platform',
+      description: 'Complete AI-powered metaverse solutions with virtual worlds, avatars, and immersive experiences.',
+      features: ['Virtual Worlds', 'Avatar Creation', 'Immersive Experiences', 'Social Interaction', 'Content Generation'],
+      price: 'Starting at $4,499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Robotics Solutions',
+      description: 'Advanced AI robotics with autonomous navigation, object manipulation, and human-robot interaction.',
+      features: ['Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction', 'Learning Systems', 'Safety Protocols'],
+      price: 'Starting at $6,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Augmented Reality',
+      description: 'AI-powered AR solutions with object recognition, spatial mapping, and interactive experiences.',
+      features: ['Object Recognition', 'Spatial Mapping', 'Interactive Experiences', 'Real-time Processing', 'Multi-platform'],
+      price: 'Starting at $2,199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Virtual Reality Platform',
+      description: 'Immersive VR experiences with AI-powered content generation and realistic simulations.',
+      features: ['Content Generation', 'Realistic Simulations', 'Haptic Feedback', 'Social VR', 'Training Simulations'],
+      price: 'Starting at $3,299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Digital Twin Solutions',
+      description: 'AI-powered digital twins for predictive maintenance, simulation, and optimization of physical assets.',
+      features: ['Predictive Maintenance', 'Asset Simulation', 'Performance Optimization', 'Real-time Monitoring', 'Predictive Analytics'],
+      price: 'Starting at $2,799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Natural Language Processing',
+      description: 'Advanced NLP solutions with language understanding, translation, and conversational AI.',
+      features: ['Language Understanding', 'Translation', 'Conversational AI', 'Sentiment Analysis', 'Text Generation'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Computer Vision Platform',
+      description: 'Advanced computer vision with image recognition, object detection, and visual analytics.',
+      features: ['Image Recognition', 'Object Detection', 'Visual Analytics', 'Facial Recognition', 'Quality Inspection'],
+      price: 'Starting at $1,599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Speech Recognition',
+      description: 'Advanced speech recognition with voice commands, transcription, and language processing.',
+      features: ['Voice Commands', 'Transcription', 'Language Processing', 'Speaker Identification', 'Noise Cancellation'],
+      price: 'Starting at $899/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
       title: 'AI Marketing Automation',
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
       features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
@@ -523,6 +675,166 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $499/month',
       category: 'IT Services'
     },
+    {
+      icon: Cloud,
+      title: 'Quantum Cloud Computing',
+      description: 'Next-generation quantum cloud computing services with quantum algorithms and hybrid classical-quantum systems.',
+      features: ['Quantum Algorithms', 'Hybrid Systems', 'Quantum Simulation', 'Optimization Problems', 'Research Support'],
+      price: 'Starting at $9,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security Architecture',
+      description: 'Complete zero trust security implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement', 'Threat Detection'],
+      price: 'Starting at $2,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing infrastructure with low-latency processing and IoT device management.',
+      features: ['Low-latency Processing', 'IoT Management', 'Distributed Computing', 'Real-time Analytics', 'Global Deployment'],
+      price: 'Starting at $1,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: '5G Network Implementation',
+      description: 'Complete 5G network deployment with ultra-low latency, massive connectivity, and network slicing.',
+      features: ['Ultra-low Latency', 'Massive Connectivity', 'Network Slicing', 'Edge Computing', 'IoT Integration'],
+      price: 'Starting at $4,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Blockchain Infrastructure',
+      description: 'Enterprise blockchain solutions with smart contracts, DeFi protocols, and cryptocurrency integration.',
+      features: ['Smart Contracts', 'DeFi Protocols', 'Crypto Integration', 'Consensus Mechanisms', 'Security Auditing'],
+      price: 'Starting at $3,499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Orchestration',
+      description: 'Advanced multi-cloud management with workload optimization, cost management, and disaster recovery.',
+      features: ['Workload Optimization', 'Cost Management', 'Disaster Recovery', 'Cloud Migration', 'Performance Monitoring'],
+      price: 'Starting at $2,499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Real-time Data Streaming',
+      description: 'High-performance real-time data streaming with Apache Kafka, Apache Flink, and stream processing.',
+      features: ['Apache Kafka', 'Stream Processing', 'Real-time Analytics', 'Data Pipeline', 'Event Sourcing'],
+      price: 'Starting at $1,799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Advanced Threat Intelligence',
+      description: 'AI-powered threat intelligence with behavioral analysis, threat hunting, and automated response.',
+      features: ['Behavioral Analysis', 'Threat Hunting', 'Automated Response', 'Threat Intelligence', 'Incident Response'],
+      price: 'Starting at $2,299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Serverless Architecture',
+      description: 'Complete serverless architecture implementation with AWS Lambda, Azure Functions, and Google Cloud Functions.',
+      features: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Event-driven Architecture', 'Auto-scaling'],
+      price: 'Starting at $1,299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Graph Database Solutions',
+      description: 'Advanced graph database solutions with Neo4j, Amazon Neptune, and complex relationship analysis.',
+      features: ['Neo4j', 'Amazon Neptune', 'Relationship Analysis', 'Graph Analytics', 'Knowledge Graphs'],
+      price: 'Starting at $1,599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'CDN & Global Distribution',
+      description: 'Global content delivery network with edge caching, DDoS protection, and performance optimization.',
+      features: ['Edge Caching', 'DDoS Protection', 'Performance Optimization', 'Global Distribution', 'SSL/TLS'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Identity & Access Management',
+      description: 'Comprehensive IAM solutions with SSO, MFA, and role-based access control.',
+      features: ['Single Sign-On', 'Multi-Factor Authentication', 'Role-based Access', 'Identity Federation', 'Audit Logging'],
+      price: 'Starting at $899/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Container Orchestration',
+      description: 'Advanced container orchestration with Kubernetes, Docker Swarm, and microservices architecture.',
+      features: ['Kubernetes', 'Docker Swarm', 'Microservices', 'Service Mesh', 'Auto-scaling'],
+      price: 'Starting at $1,499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Time Series Database',
+      description: 'High-performance time series database solutions for IoT, monitoring, and analytics.',
+      features: ['IoT Data', 'Monitoring', 'Real-time Analytics', 'Data Compression', 'High Availability'],
+      price: 'Starting at $799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Security Operations Center',
+      description: '24/7 Security Operations Center with threat monitoring, incident response, and security analytics.',
+      features: ['24/7 Monitoring', 'Incident Response', 'Security Analytics', 'Threat Intelligence', 'Compliance'],
+      price: 'Starting at $3,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Seamless hybrid cloud solutions combining on-premises and cloud infrastructure.',
+      features: ['Hybrid Architecture', 'Data Synchronization', 'Workload Migration', 'Cost Optimization', 'Security Integration'],
+      price: 'Starting at $2,199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Data Lake Solutions',
+      description: 'Comprehensive data lake solutions with data ingestion, processing, and analytics.',
+      features: ['Data Ingestion', 'Data Processing', 'Data Analytics', 'Data Governance', 'Machine Learning'],
+      price: 'Starting at $1,899/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'API Gateway & Management',
+      description: 'Advanced API gateway with rate limiting, authentication, monitoring, and developer portal.',
+      features: ['Rate Limiting', 'Authentication', 'API Monitoring', 'Developer Portal', 'Analytics'],
+      price: 'Starting at $1,099/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance Automation',
+      description: 'Automated compliance management for GDPR, HIPAA, SOX, and other regulatory requirements.',
+      features: ['Regulatory Compliance', 'Automated Monitoring', 'Audit Trails', 'Risk Assessment', 'Reporting'],
+      price: 'Starting at $1,699/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Disaster Recovery Solutions',
+      description: 'Comprehensive disaster recovery with backup, replication, and business continuity planning.',
+      features: ['Backup Solutions', 'Data Replication', 'Business Continuity', 'RTO/RPO Planning', 'Testing'],
+      price: 'Starting at $1,399/month',
+      category: 'IT Services'
+    },
 
     // Micro SAAS Services
     {
@@ -533,6 +845,159 @@ const ServicesPage: React.FC = () => {
       price: '$149/month',
       category: 'Micro SAAS',
       popular: true
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Revenue Optimizer',
+      description: 'Maximize revenue with AI-powered pricing optimization, demand forecasting, and dynamic pricing strategies.',
+      features: ['Dynamic Pricing', 'Demand Forecasting', 'Revenue Analytics', 'A/B Testing', 'ROI Optimization'],
+      price: '$299/month',
+      category: 'Micro SAAS',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'AI Compliance Manager',
+      description: 'Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements with real-time alerts.',
+      features: ['Regulatory Monitoring', 'Automated Alerts', 'Compliance Reports', 'Risk Assessment', 'Audit Trails'],
+      price: '$199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'AI Employee Analytics',
+      description: 'Comprehensive HR analytics with employee performance insights, retention prediction, and engagement tracking.',
+      features: ['Performance Analytics', 'Retention Prediction', 'Engagement Tracking', 'Skills Assessment', 'Workforce Planning'],
+      price: '$179/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Globe,
+      title: 'AI Website Optimizer',
+      description: 'Automated website optimization with AI-powered A/B testing, conversion rate optimization, and user experience enhancement.',
+      features: ['A/B Testing', 'Conversion Optimization', 'UX Analysis', 'Performance Monitoring', 'SEO Enhancement'],
+      price: '$89/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Database,
+      title: 'AI Data Quality Manager',
+      description: 'Automated data cleaning, validation, and quality assurance with AI-powered error detection and correction.',
+      features: ['Data Cleaning', 'Error Detection', 'Quality Validation', 'Data Enrichment', 'Compliance Checks'],
+      price: '$129/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Workflow Automator',
+      description: 'Intelligent workflow automation with AI decision-making, process optimization, and smart task routing.',
+      features: ['Process Automation', 'Smart Routing', 'Decision Making', 'Task Optimization', 'Integration APIs'],
+      price: '$159/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Inventory Optimizer',
+      description: 'Smart inventory management with demand prediction, stock optimization, and automated reordering.',
+      features: ['Demand Prediction', 'Stock Optimization', 'Automated Reordering', 'Waste Reduction', 'Cost Analysis'],
+      price: '$219/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'AI Customer Insights',
+      description: 'Deep customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
+      features: ['Behavior Analysis', 'Sentiment Tracking', 'Churn Prediction', 'Personalization', 'Customer Segmentation'],
+      price: '$139/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Shield,
+      title: 'AI Fraud Detector',
+      description: 'Advanced fraud detection for e-commerce, financial transactions, and identity verification with real-time monitoring.',
+      features: ['Real-time Detection', 'Transaction Monitoring', 'Identity Verification', 'Risk Scoring', 'Alert System'],
+      price: '$249/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Globe,
+      title: 'AI Social Media Manager',
+      description: 'Automated social media management with content creation, scheduling, engagement tracking, and performance analytics.',
+      features: ['Content Creation', 'Auto-scheduling', 'Engagement Tracking', 'Performance Analytics', 'Multi-platform'],
+      price: '$79/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Financial Planner',
+      description: 'Personalized financial planning with budget optimization, investment recommendations, and goal tracking.',
+      features: ['Budget Optimization', 'Investment Advice', 'Goal Tracking', 'Risk Assessment', 'Retirement Planning'],
+      price: '$99/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'AI Project Manager',
+      description: 'Intelligent project management with resource optimization, timeline prediction, and risk assessment.',
+      features: ['Resource Optimization', 'Timeline Prediction', 'Risk Assessment', 'Team Collaboration', 'Progress Tracking'],
+      price: '$119/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Shield,
+      title: 'AI Password Manager',
+      description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
+      features: ['Password Generation', 'Security Scoring', 'Breach Monitoring', 'Team Sharing', 'Compliance'],
+      price: '$49/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Globe,
+      title: 'AI Email Security',
+      description: 'Advanced email security with AI-powered threat detection, phishing prevention, and spam filtering.',
+      features: ['Threat Detection', 'Phishing Prevention', 'Spam Filtering', 'Email Encryption', 'Compliance'],
+      price: '$69/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Market Research',
+      description: 'Automated market research with competitor analysis, trend identification, and opportunity discovery.',
+      features: ['Competitor Analysis', 'Trend Identification', 'Opportunity Discovery', 'Market Reports', 'Data Visualization'],
+      price: '$189/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'AI Learning Management',
+      description: 'Personalized learning platform with AI-powered course recommendations and progress tracking.',
+      features: ['Course Recommendations', 'Progress Tracking', 'Skill Assessment', 'Certification', 'Analytics'],
+      price: '$89/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Shield,
+      title: 'AI Backup Manager',
+      description: 'Intelligent backup management with automated scheduling, data deduplication, and disaster recovery.',
+      features: ['Automated Scheduling', 'Data Deduplication', 'Disaster Recovery', 'Version Control', 'Cloud Storage'],
+      price: '$59/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Globe,
+      title: 'AI API Gateway',
+      description: 'Smart API management with rate limiting, authentication, monitoring, and automated documentation.',
+      features: ['Rate Limiting', 'Authentication', 'API Monitoring', 'Auto Documentation', 'Analytics'],
+      price: '$149/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Performance Monitor',
+      description: 'Real-time application performance monitoring with AI-powered anomaly detection and optimization recommendations.',
+      features: ['Real-time Monitoring', 'Anomaly Detection', 'Optimization Tips', 'Alert System', 'Performance Reports'],
+      price: '$109/month',
+      category: 'Micro SAAS'
     },
     {
       icon: BarChart3,
