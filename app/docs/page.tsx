@@ -1,9 +1,7 @@
 'use client';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -67,112 +65,149 @@ export default function DocsPage() {
   })).filter(category => category.docs.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="Documentation - Zion Tech Group"
-        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
-        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
-      />
-      <Navigation />
-      
+    <>
+      <Helmet>
+        <title>Documentation - Zion Tech Group | Complete API & Technical Docs</title>
+        <meta name="description" content="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices." />
+        <meta name="keywords" content="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Documentation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Center</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Find everything you need to get started with our AI and IT solutions. From quick start guides to advanced API documentation.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search documentation..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Popular Docs */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularDocs.map((doc, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-white" />
+        {/* Popular Docs */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Popular Documentation
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Start with these popular guides and tutorials.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {popularDocs.map((doc, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <BookOpen className="w-6 h-6 text-purple-400" />
+                    <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
                   </div>
-                  <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                    {doc.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
+                  <a
+                    href={doc.link}
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                  {doc.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
-                <a
-                  href={doc.link}
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"
-                >
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Documentation Categories */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredDocs.map((category, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-6 h-6 text-white" />
+        {/* Documentation Categories */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Browse by Category
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Find the documentation you need organized by topic.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {filteredDocs.map((category, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <BookOpen className="w-6 h-6 text-purple-400" />
+                    <h3 className="text-xl font-semibold text-white">{category.title}</h3>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">{category.description}</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  {category.docs.map((doc, docIndex) => (
-                    <a
-                      key={docIndex}
-                      href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
-                    >
-                      <div className="flex items-center justify-between">
+                  <p className="text-gray-300 mb-6">{category.description}</p>
+                  <div className="space-y-3">
+                    {category.docs.map((doc, docIndex) => (
+                      <a
+                        key={docIndex}
+                        href={doc.link}
+                        className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group"
+                      >
                         <div>
-                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                          <h4 className="text-white font-medium group-hover:text-purple-300 transition-colors">
                             {doc.title}
                           </h4>
-                          <p className="text-gray-300 text-sm">{doc.description}</p>
+                          <p className="text-gray-400 text-sm">{doc.description}</p>
                         </div>
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
-                      </div>
-                    </a>
-                  ))}
+                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-400 group-hover:translate-x-1 transition-all duration-300" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Need Help?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Can't find what you're looking for? Our support team is here to help.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Users className="w-5 h-5" />
+                  Contact Support
+                </a>
+                <a
+                  href="/support"
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+                >
+                  <FileText className="w-5 h-5" />
+                  Support Center
+                </a>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Need Help?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Can't find what you're looking for? Our support team is here to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Contact Support
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Join Community
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
