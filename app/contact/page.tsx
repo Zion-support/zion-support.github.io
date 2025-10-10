@@ -58,14 +58,14 @@ const ContactPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16 cyber-grid-ultra neural-network-bg-ultra matrix-rain-ultra futuristic-bg-ultra">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-ultra cyber-text-ultra">
                 Contact Us
               </h1>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto holographic-text-ultra">
                 Ready to transform your business? Get in touch with our experts for a free consultation.
               </p>
             </div>
@@ -73,8 +73,8 @@ const ContactPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
+                <div className="cyber-card-ultra">
+                  <h2 className="text-2xl font-bold text-white mb-6 neon-text-ultra">Get in Touch</h2>
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
                       <Phone className="w-6 h-6 text-cyan-400 mt-1" />
@@ -131,8 +131,8 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+              <div className="cyber-card-ultra holographic-card-ultra">
+                <h2 className="text-2xl font-bold text-white mb-6 neon-text-ultra">Send us a Message</h2>
                 
                 {submitStatus === 'success' && (
                   <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">
@@ -252,7 +252,7 @@ const ContactPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="w-full cyber-button-ultra disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                   >
                     {isSubmitting ? (
                       <>

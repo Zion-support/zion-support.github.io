@@ -1011,6 +1011,942 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
+    },
+    {
+      id: 'ai-3d-modeling',
+      name: 'AI 3D Modeling & Generation',
+      description: 'Advanced 3D model creation and manipulation using AI for gaming, architecture, and manufacturing',
+      price: '$899/month',
+      marketPrice: '$1800-5000/month',
+      features: [
+        'AI-generated 3D models from text descriptions',
+        'Automated 3D model optimization',
+        'Texture generation and mapping',
+        'Animation sequence creation',
+        'CAD file conversion and processing',
+        'Real-time 3D rendering',
+        'VR/AR model preparation',
+        'Integration with 3D software'
+      ],
+      benefits: [
+        'Create 3D models 90% faster',
+        'Reduce design costs by 70%',
+        'Automated optimization',
+        'Professional quality output'
+      ],
+      category: '3D & Visualization',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical research and drug development',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Molecular structure analysis',
+        'Drug-target interaction prediction',
+        'Side effect prediction',
+        'Clinical trial optimization',
+        'Patent analysis and research',
+        'Regulatory compliance checking',
+        'Integration with research databases',
+        'Custom model training'
+      ],
+      benefits: [
+        'Accelerate drug development by 60%',
+        'Reduce research costs',
+        'Improve success rates',
+        'Faster time to market'
+      ],
+      category: 'Healthcare AI',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-climate-modeling',
+      name: 'AI Climate Modeling & Prediction',
+      description: 'Advanced climate modeling and environmental impact prediction using AI',
+      price: '$1,599/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Climate pattern analysis',
+        'Weather prediction modeling',
+        'Environmental impact assessment',
+        'Carbon footprint optimization',
+        'Renewable energy forecasting',
+        'Disaster risk assessment',
+        'Policy impact simulation',
+        'Real-time environmental monitoring'
+      ],
+      benefits: [
+        'Improve climate predictions by 40%',
+        'Better environmental planning',
+        'Optimize sustainability efforts',
+        'Reduce environmental risks'
+      ],
+      category: 'Environmental AI',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Platform',
+      description: 'Quantum computing solutions with AI optimization for complex problem solving',
+      price: '$4,999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum algorithm optimization',
+        'Quantum machine learning',
+        'Cryptographic security analysis',
+        'Optimization problem solving',
+        'Quantum simulation',
+        'Hybrid classical-quantum processing',
+        'Custom quantum circuit design',
+        'Integration with quantum hardware'
+      ],
+      benefits: [
+        'Solve complex problems exponentially faster',
+        'Breakthrough computational capabilities',
+        'Advanced security solutions',
+        'Future-proof technology'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-space-analytics',
+      name: 'AI Space Analytics Platform',
+      description: 'Advanced space data analysis and satellite imagery processing using AI',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Satellite imagery analysis',
+        'Space weather prediction',
+        'Orbital debris tracking',
+        'Planetary surface mapping',
+        'Space mission optimization',
+        'Astronomical data processing',
+        'Earth observation analytics',
+        'Space traffic management'
+      ],
+      benefits: [
+        'Improve space mission success rates',
+        'Better space weather predictions',
+        'Enhanced Earth monitoring',
+        'Optimize space operations'
+      ],
+      category: 'Space AI',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-robotics-control',
+      name: 'AI Robotics Control System',
+      description: 'Advanced AI-powered robotics control and automation for industrial applications',
+      price: '$2,499/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Autonomous robot navigation',
+        'Object recognition and manipulation',
+        'Path planning optimization',
+        'Human-robot collaboration',
+        'Real-time decision making',
+        'Safety monitoring and control',
+        'Multi-robot coordination',
+        'Custom behavior programming'
+      ],
+      benefits: [
+        'Increase manufacturing efficiency by 50%',
+        'Reduce operational costs',
+        'Improve safety standards',
+        'Enable complex automation'
+      ],
+      category: 'Robotics AI',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-cybersecurity-advanced',
+      name: 'AI Advanced Cybersecurity Suite',
+      description: 'Next-generation AI-powered cybersecurity with threat hunting and response',
+      price: '$1,799/month',
+      marketPrice: '$3500-15000/month',
+      features: [
+        'AI threat hunting and detection',
+        'Behavioral anomaly analysis',
+        'Zero-day vulnerability detection',
+        'Automated incident response',
+        'Threat intelligence integration',
+        'Network traffic analysis',
+        'Malware detection and analysis',
+        'Security orchestration'
+      ],
+      benefits: [
+        'Detect threats 95% faster',
+        'Reduce false positives by 80%',
+        'Automated response capabilities',
+        'Advanced threat protection'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-financial-trading',
+      name: 'AI Financial Trading Platform',
+      description: 'Advanced AI-powered algorithmic trading and financial market analysis',
+      price: '$2,999/month',
+      marketPrice: '$6000-30000/month',
+      features: [
+        'Algorithmic trading strategies',
+        'Real-time market analysis',
+        'Risk management optimization',
+        'Portfolio rebalancing',
+        'Sentiment analysis integration',
+        'High-frequency trading support',
+        'Backtesting and simulation',
+        'Regulatory compliance monitoring'
+      ],
+      benefits: [
+        'Increase trading returns by 35%',
+        'Reduce trading risks',
+        '24/7 market monitoring',
+        'Automated decision making'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-autonomous-vehicles',
+      name: 'AI Autonomous Vehicle Platform',
+      description: 'Advanced AI platform for autonomous vehicle development and testing',
+      price: '$3,999/month',
+      marketPrice: '$8000-40000/month',
+      features: [
+        'Computer vision for navigation',
+        'Sensor fusion and processing',
+        'Path planning and optimization',
+        'Real-time decision making',
+        'Safety system integration',
+        'Simulation and testing',
+        'Fleet management',
+        'Regulatory compliance'
+      ],
+      benefits: [
+        'Accelerate AV development',
+        'Improve safety standards',
+        'Reduce development costs',
+        'Enable mass deployment'
+      ],
+      category: 'Autonomous Systems',
+      popular: false,
+      icon: Settings
+    },
+    {
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with AI-powered crop monitoring and optimization',
+      price: '$799/month',
+      marketPrice: '$1500-6000/month',
+      features: [
+        'Crop health monitoring',
+        'Yield prediction and optimization',
+        'Pest and disease detection',
+        'Irrigation management',
+        'Soil analysis and recommendations',
+        'Weather integration',
+        'Precision farming tools',
+        'Farm management automation'
+      ],
+      benefits: [
+        'Increase crop yields by 30%',
+        'Reduce resource usage by 25%',
+        'Improve crop quality',
+        'Sustainable farming practices'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'ai-mental-health',
+      name: 'AI Mental Health Assistant',
+      description: 'AI-powered mental health monitoring and support platform',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Emotional state analysis',
+        'Stress and anxiety monitoring',
+        'Personalized therapy recommendations',
+        'Crisis intervention alerts',
+        'Mood tracking and analytics',
+        'Therapist integration',
+        'Privacy-compliant data handling',
+        'Mobile app support'
+      ],
+      benefits: [
+        'Improve mental health outcomes',
+        'Early intervention capabilities',
+        'Personalized care plans',
+        '24/7 support availability'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-education-personalization',
+      name: 'AI Education Personalization',
+      description: 'AI-powered personalized learning and educational content optimization',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Personalized learning paths',
+        'Adaptive content delivery',
+        'Learning style analysis',
+        'Progress tracking and analytics',
+        'Automated assessment generation',
+        'Tutor recommendation system',
+        'Curriculum optimization',
+        'Student performance prediction'
+      ],
+      benefits: [
+        'Improve learning outcomes by 45%',
+        'Personalized education experience',
+        'Better student engagement',
+        'Optimized curriculum delivery'
+      ],
+      category: 'Education AI',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-legal-research',
+      name: 'AI Legal Research Platform',
+      description: 'Advanced AI platform for legal research, case analysis, and document review',
+      price: '$1,199/month',
+      marketPrice: '$2400-8000/month',
+      features: [
+        'Case law research and analysis',
+        'Legal document review',
+        'Contract analysis and comparison',
+        'Precedent identification',
+        'Legal writing assistance',
+        'Compliance checking',
+        'Litigation strategy optimization',
+        'Integration with legal databases'
+      ],
+      benefits: [
+        'Reduce research time by 70%',
+        'Improve case analysis accuracy',
+        'Faster document review',
+        'Better legal outcomes'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-supply-chain-optimization',
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting and logistics optimization',
+      price: '$1,899/month',
+      marketPrice: '$3800-15000/month',
+      features: [
+        'Demand forecasting algorithms',
+        'Inventory optimization',
+        'Supplier risk assessment',
+        'Route optimization',
+        'Cost optimization analysis',
+        'Real-time supply chain monitoring',
+        'Integration with ERP systems',
+        'Custom optimization models'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 30%',
+        'Improve delivery efficiency',
+        'Minimize inventory waste',
+        'Better supplier management'
+      ],
+      category: 'Supply Chain AI',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'ai-energy-grid-management',
+      name: 'AI Energy Grid Management',
+      description: 'Smart energy grid optimization and renewable energy integration using AI',
+      price: '$2,199/month',
+      marketPrice: '$4400-18000/month',
+      features: [
+        'Grid load balancing',
+        'Renewable energy optimization',
+        'Demand response management',
+        'Predictive maintenance',
+        'Energy storage optimization',
+        'Grid stability monitoring',
+        'Integration with smart meters',
+        'Real-time energy trading'
+      ],
+      benefits: [
+        'Improve grid efficiency by 25%',
+        'Optimize renewable energy usage',
+        'Reduce energy waste',
+        'Better grid stability'
+      ],
+      category: 'Energy AI',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-content-moderation-advanced',
+      name: 'AI Advanced Content Moderation',
+      description: 'Next-generation content moderation with deep learning and context understanding',
+      price: '$699/month',
+      marketPrice: '$1400-5000/month',
+      features: [
+        'Deep learning content analysis',
+        'Context-aware moderation',
+        'Multi-modal content processing',
+        'Real-time content filtering',
+        'Custom moderation policies',
+        'Human review workflows',
+        'Bias detection and mitigation',
+        'Scalable processing architecture'
+      ],
+      benefits: [
+        'Improve moderation accuracy by 90%',
+        'Reduce manual review workload',
+        'Consistent policy enforcement',
+        'Better user experience'
+      ],
+      category: 'Content Moderation',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-personalization-engine',
+      name: 'AI Personalization Engine',
+      description: 'Advanced personalization platform with real-time user behavior analysis',
+      price: '$899/month',
+      marketPrice: '$1800-6000/month',
+      features: [
+        'Real-time user profiling',
+        'Behavioral pattern analysis',
+        'Dynamic content personalization',
+        'A/B testing automation',
+        'Cross-platform personalization',
+        'Privacy-compliant data handling',
+        'Machine learning optimization',
+        'Integration with marketing tools'
+      ],
+      benefits: [
+        'Increase engagement by 200%',
+        'Improve conversion rates',
+        'Better user experience',
+        'Automated optimization'
+      ],
+      category: 'Personalization',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-conversational-ai-advanced',
+      name: 'AI Advanced Conversational AI',
+      description: 'Next-generation conversational AI with emotional intelligence and context awareness',
+      price: '$1,499/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'Emotional intelligence integration',
+        'Context-aware conversations',
+        'Multi-turn dialogue management',
+        'Voice and text processing',
+        'Personality customization',
+        'Learning from interactions',
+        'Integration with business systems',
+        'Advanced analytics and insights'
+      ],
+      benefits: [
+        'Create more natural conversations',
+        'Improve user satisfaction',
+        'Better understanding of user intent',
+        'Enhanced customer experience'
+      ],
+      category: 'Conversational AI',
+      popular: true,
+      icon: MessageSquare
+    },
+    {
+      id: 'ai-predictive-analytics-advanced',
+      name: 'AI Advanced Predictive Analytics',
+      description: 'Enterprise-grade predictive analytics with machine learning and deep learning',
+      price: '$1,799/month',
+      marketPrice: '$3600-15000/month',
+      features: [
+        'Advanced ML algorithms',
+        'Deep learning models',
+        'Time series forecasting',
+        'Anomaly detection',
+        'Feature engineering automation',
+        'Model explainability',
+        'Real-time predictions',
+        'Integration with data platforms'
+      ],
+      benefits: [
+        'Improve prediction accuracy by 60%',
+        'Better business forecasting',
+        'Automated model development',
+        'Data-driven insights'
+      ],
+      category: 'Predictive Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-automated-testing-advanced',
+      name: 'AI Advanced Automated Testing',
+      description: 'Intelligent software testing with AI-powered test generation and execution',
+      price: '$999/month',
+      marketPrice: '$2000-8000/month',
+      features: [
+        'AI test case generation',
+        'Intelligent test execution',
+        'Bug prediction and detection',
+        'Performance testing automation',
+        'Security testing integration',
+        'Visual regression testing',
+        'API testing automation',
+        'Continuous testing integration'
+      ],
+      benefits: [
+        'Reduce testing time by 85%',
+        'Improve test coverage',
+        'Automated bug detection',
+        'Faster release cycles'
+      ],
+      category: 'Software Testing',
+      popular: true,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-knowledge-graph',
+      name: 'AI Knowledge Graph Platform',
+      description: 'Advanced knowledge graph construction and management with AI-powered insights',
+      price: '$1,299/month',
+      marketPrice: '$2600-10000/month',
+      features: [
+        'Automated knowledge extraction',
+        'Entity relationship mapping',
+        'Semantic search capabilities',
+        'Knowledge graph visualization',
+        'Real-time graph updates',
+        'Integration with data sources',
+        'Query optimization',
+        'Custom graph analytics'
+      ],
+      benefits: [
+        'Improve knowledge discovery',
+        'Better data relationships',
+        'Enhanced search capabilities',
+        'Automated knowledge management'
+      ],
+      category: 'Knowledge Management',
+      popular: false,
+      icon: FileText
+    },
+    {
+      id: 'ai-customer-churn-prediction',
+      name: 'AI Customer Churn Prediction',
+      description: 'Advanced customer churn prediction with retention strategy optimization',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'Churn prediction algorithms',
+        'Customer segmentation analysis',
+        'Retention strategy recommendations',
+        'Real-time churn monitoring',
+        'Integration with CRM systems',
+        'Custom prediction models',
+        'A/B testing for strategies',
+        'Detailed analytics and reporting'
+      ],
+      benefits: [
+        'Reduce customer churn by 40%',
+        'Improve retention strategies',
+        'Better customer insights',
+        'Data-driven retention'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-automated-reporting-advanced',
+      name: 'AI Advanced Automated Reporting',
+      description: 'Intelligent reporting platform with natural language generation and insights',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Natural language report generation',
+        'Automated data analysis',
+        'Custom report templates',
+        'Scheduled report delivery',
+        'Interactive dashboards',
+        'Integration with data sources',
+        'Natural language queries',
+        'Advanced visualization options'
+      ],
+      benefits: [
+        'Save 95% report creation time',
+        'Automated data analysis',
+        'Consistent reporting',
+        'Better business insights'
+      ],
+      category: 'Reporting & Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-voice-assistant-advanced',
+      name: 'AI Advanced Voice Assistant',
+      description: 'Enterprise voice assistant with custom commands and advanced integrations',
+      price: '$1,399/month',
+      marketPrice: '$2800-10000/month',
+      features: [
+        'Custom voice command training',
+        'Multi-language voice support',
+        'Integration with business systems',
+        'Voice analytics and insights',
+        'Custom wake word training',
+        'Offline voice processing',
+        'API integration capabilities',
+        'Advanced voice customization'
+      ],
+      benefits: [
+        'Hands-free business operations',
+        'Improve accessibility',
+        'Automate voice interactions',
+        'Enhanced user experience'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-content-generation-advanced',
+      name: 'AI Advanced Content Generation',
+      description: 'Next-generation content generation with multi-format support and brand consistency',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'Multi-format content generation',
+        'Brand voice customization',
+        'SEO-optimized content',
+        'Content planning and scheduling',
+        'Plagiarism detection',
+        'Content performance analytics',
+        'Integration with CMS platforms',
+        'Custom content templates'
+      ],
+      benefits: [
+        'Scale content production',
+        'Maintain brand consistency',
+        'Improve SEO performance',
+        'Reduce content costs'
+      ],
+      category: 'Content Generation',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-blockchain-analytics-advanced',
+      name: 'AI Advanced Blockchain Analytics',
+      description: 'Advanced blockchain data analysis and cryptocurrency market insights using AI',
+      price: '$1,999/month',
+      marketPrice: '$4000-20000/month',
+      features: [
+        'Blockchain transaction analysis',
+        'Cryptocurrency market prediction',
+        'Smart contract auditing',
+        'DeFi protocol analysis',
+        'Risk assessment and monitoring',
+        'Compliance checking',
+        'Integration with exchanges',
+        'Custom analytics models'
+      ],
+      benefits: [
+        'Better investment decisions',
+        'Risk mitigation',
+        'Market opportunity identification',
+        'Compliance monitoring'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'ai-edge-computing-advanced',
+      name: 'AI Advanced Edge Computing',
+      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
+      price: '$2,299/month',
+      marketPrice: '$4600-20000/month',
+      features: [
+        'Edge model deployment',
+        'Real-time processing',
+        'Low latency inference',
+        'Offline capabilities',
+        'Distributed computing',
+        'Edge device management',
+        'Model optimization for edge',
+        'Integration with cloud services'
+      ],
+      benefits: [
+        'Reduce latency by 95%',
+        'Improve response times',
+        'Enable offline AI',
+        'Reduce bandwidth costs'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'ai-video-analysis-advanced',
+      name: 'AI Advanced Video Analysis',
+      description: 'Next-generation video content analysis with object detection and scene understanding',
+      price: '$1,199/month',
+      marketPrice: '$2400-8000/month',
+      features: [
+        'Real-time video object detection',
+        'Scene classification and understanding',
+        'Automated video tagging and metadata',
+        'Content moderation and filtering',
+        'Video search and retrieval',
+        'Live streaming analysis',
+        'Custom model training',
+        'API integration for applications'
+      ],
+      benefits: [
+        'Automate video content processing',
+        'Improve content discoverability',
+        'Enhanced video search capabilities',
+        'Real-time content monitoring'
+      ],
+      category: 'Computer Vision',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-speech-synthesis-advanced',
+      name: 'AI Advanced Speech Synthesis',
+      description: 'Next-generation text-to-speech with emotional expression and natural voice generation',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Natural-sounding voice synthesis',
+        'Multiple voice options and languages',
+        'Emotional expression and tone control',
+        'Real-time speech generation',
+        'Custom voice training',
+        'SSML support for advanced control',
+        'API integration for applications',
+        'Batch processing capabilities'
+      ],
+      benefits: [
+        'Create engaging audio content',
+        'Improve accessibility',
+        'Automate voice generation',
+        'Professional audio quality'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-recommendation-engine-advanced',
+      name: 'AI Advanced Recommendation Engine',
+      description: 'Next-generation recommendation system with deep learning and real-time personalization',
+      price: '$1,099/month',
+      marketPrice: '$2200-8000/month',
+      features: [
+        'Deep learning algorithms',
+        'Real-time personalization',
+        'Multi-modal recommendations',
+        'A/B testing for optimization',
+        'Cold start problem solutions',
+        'Scalable architecture',
+        'Integration with existing systems',
+        'Advanced analytics and insights'
+      ],
+      benefits: [
+        'Increase user engagement by 300%',
+        'Improve conversion rates',
+        'Personalized user experience',
+        'Better content discovery'
+      ],
+      category: 'Personalization',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-sentiment-analysis-advanced',
+      name: 'AI Advanced Sentiment Analysis',
+      description: 'Next-generation sentiment analysis with emotion detection and context understanding',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Advanced sentiment analysis',
+        'Emotion detection and classification',
+        'Context-aware analysis',
+        'Multi-language support',
+        'Real-time analysis',
+        'Custom sentiment models',
+        'API integration',
+        'Detailed analytics and reporting'
+      ],
+      benefits: [
+        'Understand customer emotions',
+        'Monitor brand sentiment',
+        'Improve customer experience',
+        'Data-driven insights'
+      ],
+      category: 'Language Processing',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-chatbot-enterprise-advanced',
+      name: 'AI Enterprise Chatbot Advanced',
+      description: 'Next-generation enterprise chatbot with advanced NLP and integration capabilities',
+      price: '$2,299/month',
+      marketPrice: '$4600-20000/month',
+      features: [
+        'Advanced NLP and understanding',
+        'Multi-channel deployment',
+        'Integration with enterprise systems',
+        'Custom knowledge base management',
+        'Human handoff capabilities',
+        'Advanced analytics and reporting',
+        'White-label solutions',
+        '24/7 support and maintenance'
+      ],
+      benefits: [
+        'Reduce support costs by 80%',
+        'Improve customer satisfaction',
+        '24/7 availability',
+        'Scalable customer service'
+      ],
+      category: 'Customer Service',
+      popular: true,
+      icon: MessageSquare
+    },
+    {
+      id: 'ai-content-moderation-enterprise',
+      name: 'AI Content Moderation Enterprise',
+      description: 'Enterprise content moderation with advanced AI-powered detection and filtering',
+      price: '$1,599/month',
+      marketPrice: '$3200-12000/month',
+      features: [
+        'Advanced content filtering',
+        'Multi-modal content analysis',
+        'Real-time content monitoring',
+        'Custom moderation rules',
+        'Human review workflows',
+        'Multi-language support',
+        'API integration',
+        'Detailed moderation reports'
+      ],
+      benefits: [
+        'Maintain platform safety',
+        'Reduce manual moderation',
+        'Consistent policy enforcement',
+        'Real-time content protection'
+      ],
+      category: 'Content Moderation',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-predictive-modeling-advanced',
+      name: 'AI Advanced Predictive Modeling',
+      description: 'Next-generation predictive modeling with deep learning and automated feature engineering',
+      price: '$2,199/month',
+      marketPrice: '$4400-20000/month',
+      features: [
+        'Deep learning algorithms',
+        'Automated feature engineering',
+        'Model training and validation',
+        'Real-time predictions',
+        'Custom model development',
+        'Integration with data sources',
+        'Model performance monitoring',
+        'A/B testing capabilities'
+      ],
+      benefits: [
+        'Improve prediction accuracy by 80%',
+        'Automated model development',
+        'Better business forecasting',
+        'Data-driven decision making'
+      ],
+      category: 'Predictive Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-document-intelligence-advanced',
+      name: 'AI Advanced Document Intelligence',
+      description: 'Next-generation document processing with AI-powered extraction and analysis',
+      price: '$899/month',
+      marketPrice: '$1800-6000/month',
+      features: [
+        'Advanced OCR and text extraction',
+        'Document classification and routing',
+        'Data extraction and validation',
+        'Document comparison and analysis',
+        'Integration with document management',
+        'Custom extraction templates',
+        'Batch processing capabilities',
+        'API integration for automation'
+      ],
+      benefits: [
+        'Process documents 15x faster',
+        'Automated data extraction',
+        'Reduce manual errors',
+        'Better document insights'
+      ],
+      category: 'Document Processing',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-conversation-analytics-advanced',
+      name: 'AI Advanced Conversation Analytics',
+      description: 'Next-generation conversation analysis with deep insights and optimization',
+      price: '$1,299/month',
+      marketPrice: '$2600-10000/month',
+      features: [
+        'Advanced conversation analysis',
+        'Sentiment and emotion tracking',
+        'Topic modeling and extraction',
+        'Customer journey mapping',
+        'Agent performance analytics',
+        'Real-time conversation monitoring',
+        'Custom analytics dashboards',
+        'Integration with CRM systems'
+      ],
+      benefits: [
+        'Improve conversation quality',
+        'Better customer understanding',
+        'Optimize agent performance',
+        'Data-driven insights'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
     }
   ];
 
@@ -1042,7 +1978,23 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: '3D & Visualization', name: '3D & Visualization', count: services.filter(s => s.category === '3D & Visualization').length },
+    { id: 'Healthcare AI', name: 'Healthcare AI', count: services.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Environmental AI', name: 'Environmental AI', count: services.filter(s => s.category === 'Environmental AI').length },
+    { id: 'Quantum AI', name: 'Quantum AI', count: services.filter(s => s.category === 'Quantum AI').length },
+    { id: 'Space AI', name: 'Space AI', count: services.filter(s => s.category === 'Space AI').length },
+    { id: 'Robotics AI', name: 'Robotics AI', count: services.filter(s => s.category === 'Robotics AI').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Financial AI', name: 'Financial AI', count: services.filter(s => s.category === 'Financial AI').length },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'Agricultural AI', name: 'Agricultural AI', count: services.filter(s => s.category === 'Agricultural AI').length },
+    { id: 'Education AI', name: 'Education AI', count: services.filter(s => s.category === 'Education AI').length },
+    { id: 'Legal AI', name: 'Legal AI', count: services.filter(s => s.category === 'Legal AI').length },
+    { id: 'Supply Chain AI', name: 'Supply Chain AI', count: services.filter(s => s.category === 'Supply Chain AI').length },
+    { id: 'Energy AI', name: 'Energy AI', count: services.filter(s => s.category === 'Energy AI').length },
+    { id: 'Predictive Analytics', name: 'Predictive Analytics', count: services.filter(s => s.category === 'Predictive Analytics').length },
+    { id: 'Blockchain AI', name: 'Blockchain AI', count: services.filter(s => s.category === 'Blockchain AI').length }
   ];
 
   const filteredServices = services.filter(service => 
