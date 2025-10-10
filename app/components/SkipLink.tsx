@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -23,5 +22,3 @@ const SkipLink: React.FC = () => {
 };
 
 export default SkipLink;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -129,10 +129,7 @@ const errorData = {
                         {this.state.error.stack}
                       </pre>
                     </div>
-<<<<<<< HEAD
                   )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
@@ -140,10 +137,7 @@ const errorData = {
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
-<<<<<<< HEAD
                   )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
                 </div>
                 </details>
               )}
@@ -178,14 +172,10 @@ const errorData = {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       );
     }
     return this.props.children;
   }
-=======
-    return this.props.children}
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 }
 
 export default ErrorBoundary;
