@@ -4,7 +4,6 @@ import React from 'react';
 const ContentPromotionBanner: React.FC = () => {
   const stats = [
     {
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
       icon: Zap
@@ -51,8 +50,6 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
               <p className="text-purple-100 text-sm">{feature.description}</p>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </div>
           ))}
         </div>
@@ -88,7 +85,6 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       </div>
     </div>
   );

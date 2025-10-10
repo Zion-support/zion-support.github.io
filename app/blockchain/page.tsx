@@ -42,7 +42,6 @@ const BlockchainPage: React.FC = () => {
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
-<<<<<<< HEAD
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -62,8 +61,6 @@ const BlockchainPage: React.FC = () => {
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </div>
           ))}
         </div>

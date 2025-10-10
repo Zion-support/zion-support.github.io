@@ -18,7 +18,6 @@ const CloudInfrastructurePage: React.FC = () => {
       <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
 <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
@@ -26,8 +25,6 @@ const CloudInfrastructurePage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             Cloud Infrastructure
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
             Powered by cutting-edge AI technology and industry expertise.

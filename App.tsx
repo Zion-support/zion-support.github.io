@@ -30,6 +30,29 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const NewsPage = React.lazy(() => import('./app/news/page'));
+const PartnersPage = React.lazy(() => import('./app/partners/page'));
+const InvestorsPage = React.lazy(() => import('./app/investors/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const StatusPage = React.lazy(() => import('./app/status/page'));
+const FaqPage = React.lazy(() => import('./app/faq/page'));
+const EnterprisePage = React.lazy(() => import('./app/enterprise/page'));
+const CustomDevelopmentPage = React.lazy(() => import('./app/custom-development/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const DemoPage = React.lazy(() => import('./app/demo/page'));
+const SlaPage = React.lazy(() => import('./app/sla/page'));
+const CompliancePage = React.lazy(() => import('./app/compliance/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +90,29 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/news" element={<NewsPage />} />
+                            <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/investors" element={<InvestorsPage />} />
+                            <Route path="/docs" element={<DocsPage />} />
+                            <Route path="/api-docs" element={<ApiDocsPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/status" element={<StatusPage />} />
+                            <Route path="/faq" element={<FaqPage />} />
+                            <Route path="/enterprise" element={<EnterprisePage />} />
+                            <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/sla" element={<SlaPage />} />
+                            <Route path="/compliance" element={<CompliancePage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
                           </Routes>
                         </Suspense>
                       </main>

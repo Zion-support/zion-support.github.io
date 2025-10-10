@@ -1,106 +1,161 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const CompliancePage: React.FC = () => {
   const features = [
     {
-      icon: FileCheck,
-      title: 'Compliance Management',
-      description: 'Comprehensive compliance management solutions for various industry standards'
+      icon: Brain,
+      title: 'Advanced AI Technology',
+      description: 'Cutting-edge AI algorithms that deliver intelligent solutions for your business needs.',
+      benefits: ['Smart automation', 'Predictive insights', 'Real-time processing', 'Scalable solutions']
     },
     {
-      icon: Lock,
-      title: 'Security Compliance',
-      description: 'Ensure your systems meet the highest security and compliance standards'
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with enterprise-grade performance.',
+      benefits: ['Fast processing', 'Low latency', 'High throughput', 'Reliable uptime']
     },
     {
-      icon: Award,
-      title: 'Certification Support',
-      description: 'Get support for achieving and maintaining industry certifications'
+      icon: Target,
+      title: 'Custom Solutions',
+      description: 'Tailored solutions designed to meet your specific business requirements.',
+      benefits: ['Custom configuration', 'Industry-specific features', 'Flexible deployment', 'Personalized support']
     },
     {
       icon: Shield,
-      title: 'Audit Readiness',
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting'
+      title: 'Enterprise Security',
+      description: 'Robust security measures to protect your data and ensure compliance.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
+
   const benefits = [
-    'Advanced compliance technology integration',
-    'Real-time compliance monitoring',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible compliance solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+    'Improve operational efficiency by 60%',
+    'Reduce manual work and human errors',
+    'Scale your operations without proportional costs',
+    'Gain competitive advantage with AI technology',
+    'Enhance customer experience and satisfaction'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Compliance | Zion Tech Group</title>
-        <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />
+        <title>Compliance - Zion Tech Group</title>
+        <meta name="description" content="Ensure your business meets regulatory requirements with our compliance solutions." />
+        <meta name="keywords" content="compliance, regulatory, standards, governance" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Compliance
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ensure your business meets all regulatory and compliance requirements. 
-            Powered by advanced AI technology and industry expertise.
-          </p>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our compliance solutions deliver unmatched performance, security, and scalability.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Compliance Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Compliance
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+                  Regulatory Standards
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Ensure your business meets regulatory requirements with our compliance solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  Learn More
+                </button>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your compliance needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us
-  </
+        </section>
+
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our platform provides comprehensive tools and features for your business needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  ),
+        </section>
+
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions with measurable business benefits.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-4 flex-shrink-0" />
+                  <span className="text-white font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our AI-powered solutions and unlock new possibilities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  );
 };
 
-export default CompliancePage
-  </button>
-  </button>
-  </h1>
+export default CompliancePage;

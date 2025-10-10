@@ -52,6 +52,37 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools' }
   ];
 
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'News', url: '/news' },
+    { name: 'Contact', url: '/contact' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Investors', url: '/investors' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Support Center', url: '/support' },
+    { name: 'System Status', url: '/status' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Tutorials', url: '/tutorials' },
+    { name: 'FAQ', url: '/faq' }
+  ];
+
+  const enterpriseLinks = [
+    { name: 'Enterprise Solutions', url: '/enterprise' },
+    { name: 'Custom Development', url: '/custom-development' },
+    { name: 'Consultation', url: '/consultation' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'SLA', url: '/sla' },
+    { name: 'Compliance', url: '/compliance' }
+  ];
+
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
