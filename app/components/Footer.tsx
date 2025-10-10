@@ -142,15 +142,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Custom Development', url: '/custom-software' }
   ];
 
-  const companyLinks = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'Partners', url: '/partners' },
-    { name: 'Contact', url: '/contact' }
-  ];
-
   const supportLinks = [
     { name: 'Support Center', url: '/support' },
     { name: 'FAQ', url: '/faq' },
@@ -177,7 +168,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
@@ -194,10 +184,6 @@ const Footer: React.FC = memo(() => {
               <div className="flex flex-col">
                 <span className="text-2xl font-bold neon-text-enhanced group-hover:glow">Zion Tech Group</span>
                 <span className="text-sm text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
-=======
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
