@@ -1,21 +1,17 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
-const PartnersPage: React.FC = () => {
+const PartnersPage = () => {
   const partners = [
     {
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
-      description: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI'
     },
     {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
-      description: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing'
     },
     {
       name: 'Google Cloud',
@@ -24,30 +20,100 @@ const PartnersPage: React.FC = () => {
     {
       name: 'IBM',
       logo: '/api/placeholder/200/100',
+    }
+  ];
+
+  const benefits = [
+    'Access to cutting-edge technology',
+    'Joint marketing opportunities',
+    'Technical support and training',
+    'Co-selling programs',
+    'Early access to new features',
+    'Dedicated partner success manager'
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
+        <meta name="description" content="Join our partner ecosystem and unlock new opportunities with Zion Tech Group. Strategic partnerships for mutual growth and innovation." />
+        <meta name="keywords" content="technology partners, strategic partnerships, business partnerships, technology ecosystem, partner program" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Strategic
+              </span>
+              <br />
+              <span className="text-white">Partnerships</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join our ecosystem of technology partners and unlock new opportunities for growth and innovation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Partners</h2>
+            <p className="text-xl text-gray-300">Trusted by leading technology companies worldwide</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center">
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  className="max-h-12 w-auto filter brightness-0 invert"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Partner With Us?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join our partner ecosystem and unlock new opportunities for growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              <Handshake className="mr-2 h-5 w-5" />
+              Become a Partner
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+              <Users className="mr-2 h-5 w-5" />
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
