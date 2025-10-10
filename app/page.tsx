@@ -1,7 +1,7 @@
 'use client';
 
-import React, { Suspense } from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import React, { Suspense, useState, useEffect } from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Play, Sparkles, Zap, Brain, Shield, Target, Users, BarChart3, Globe, Cpu, Database, Cloud, Smartphone, Monitor, Tablet, Server, Wifi, Activity, TrendingUp, Award, Rocket, Code, Settings, FileText, Clock, Award as Trophy, Users as People, CheckCircle2, Eye, Search, Filter, SortAsc, SortDesc, Maximize, Minimize, RotateCcw, Save, Loader2, Check, XCircle, AlertCircle, Info, HelpCircle, ExternalLink, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Home, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Layers, Package, Archive, Bookmark, Heart, ThumbsUp, ThumbsDown, MessageCircle, MessageSquare, Send, Paperclip, Image, Video, Music, File, Folder, FolderOpen, HardDrive, Cpu as Processor, MemoryStick, HardDrive as Storage, Wifi as Network, Battery, BatteryCharging, Power, PowerOff, Volume2, VolumeX, Mic, MicOff, Camera, CameraOff, Video as VideoIcon, VideoOff, Headphones, Speaker, Monitor as Display, Tv, Smartphone as Mobile, Laptop, Desktop, Printer, Scanner, Fax, Router, Modem, Switch, Hub, Cable, Plug, Unplug, Zap as Lightning, Sun, Moon, Sunrise, Sunset, Cloud as CloudIcon, CloudRain, CloudSnow, CloudLightning, Wind, Thermometer, Droplets, Snowflake, Umbrella, Sun as Sunny, Moon as MoonIcon, Star as StarIcon, Sparkles as SparklesIcon, Flame, Snowflake as Snow, Droplet, Waves, Mountain, TreePine, Trees, Leaf, Flower, Seedling, Sprout, Cherry, Apple, Banana, Orange, Grapes, Strawberry, Watermelon, Pineapple, Peach, Pear, Lemon, Lime, Coconut, Avocado, Tomato, Carrot, Corn, Broccoli, Lettuce, Cucumber, Pepper, Onion, Garlic, Ginger, Potato, SweetPotato, Beet, Radish, Turnip, Cabbage, Cauliflower, Eggplant, Squash, Pumpkin, Mushroom, Peanut, Almond, Walnut, Cashew, Pistachio, Hazelnut, Chestnut, Pecan, Macadamia, BrazilNut, PineNut, Sesame, Sunflower, Chia, Flax, Quinoa, Rice, Wheat, Oats, Barley, Rye, Corn as CornIcon, Millet, Sorghum, Buckwheat, Amaranth, Teff, Spelt, Kamut, Farro, Bulgur, Couscous, Pasta, Noodles, Bread, Croissant, Bagel, Muffin, Pancake, Waffle, Toast, Sandwich, Burger, Pizza, Taco, Burrito, Quesadilla, Nachos, Chips, Popcorn, Pretzel, Crackers, Cookies, Cake, Pie, Donut, Muffin as MuffinIcon, Cupcake, Brownie, Cheesecake, IceCream, Popsicle, Yogurt, Pudding, Jello, Candy, Chocolate, Lollipop, Gum, Marshmallow, CottonCandy, Caramel, Toffee, Fudge, Truffle, Bonbon, Macaron, Eclair, Cannoli, Tiramisu, Gelato, Sorbet, Sherbet, FrozenYogurt, Smoothie, Milkshake, Frappe, Latte, Cappuccino, Espresso, Americano, Macchiato, Mocha, Frappuccino, ColdBrew, IcedCoffee, Tea, GreenTea, BlackTea, WhiteTea, OolongTea, HerbalTea, Chamomile, Peppermint, GingerTea, Chai, Matcha, BubbleTea, Kombucha, Soda, Cola, RootBeer, GingerAle, LemonLime, OrangeSoda, GrapeSoda, CherrySoda, VanillaSoda, CreamSoda, DrPepper, Sprite, SevenUp, Fanta, MountainDew, Pepsi, CocaCola, Water, SparklingWater, CoconutWater, SportsDrink, EnergyDrink, VitaminWater, Juice, AppleJuice, OrangeJuice, GrapeJuice, CranberryJuice, PineappleJuice, MangoJuice, PeachJuice, PearJuice, CherryJuice, StrawberryJuice, WatermelonJuice, PomegranateJuice, AcaiJuice, GojiJuice, WheatgrassJuice, AloeVeraJuice, PruneJuice, TomatoJuice, CarrotJuice, BeetJuice, CeleryJuice, CucumberJuice, SpinachJuice, KaleJuice, BroccoliJuice, CabbageJuice, CauliflowerJuice, BrusselsSproutsJuice, AsparagusJuice, ArtichokeJuice, EggplantJuice, ZucchiniJuice, SquashJuice, PumpkinJuice, SweetPotatoJuice, PotatoJuice, OnionJuice, GarlicJuice, GingerJuice, TurmericJuice, CinnamonJuice, NutmegJuice, CloveJuice, CardamomJuice, CuminJuice, CorianderJuice, FennelJuice, DillJuice, ParsleyJuice, CilantroJuice, BasilJuice, OreganoJuice, ThymeJuice, RosemaryJuice, SageJuice, MintJuice, LavenderJuice, ChamomileJuice, HibiscusJuice, RoseJuice, JasmineJuice, VanillaJuice, AlmondJuice, CoconutJuice, CashewJuice, WalnutJuice, PistachioJuice, HazelnutJuice, PecanJuice, MacadamiaJuice, BrazilNutJuice, PineNutJuice, SesameJuice, SunflowerJuice, ChiaJuice, FlaxJuice, QuinoaJuice, RiceJuice, WheatJuice, OatsJuice, BarleyJuice, RyeJuice, CornJuice, MilletJuice, SorghumJuice, BuckwheatJuice, AmaranthJuice, TeffJuice, SpeltJuice, KamutJuice, FarroJuice, BulgurJuice, CouscousJuice, PastaJuice, NoodlesJuice, BreadJuice, CroissantJuice, BagelJuice, MuffinJuice, PancakeJuice, WaffleJuice, ToastJuice, SandwichJuice, BurgerJuice, PizzaJuice, TacoJuice, BurritoJuice, QuesadillaJuice, NachosJuice, ChipsJuice, PopcornJuice, PretzelJuice, CrackersJuice, CookiesJuice, CakeJuice, PieJuice, DonutJuice, MuffinIconJuice, CupcakeJuice, BrownieJuice, CheesecakeJuice, IceCreamJuice, PopsicleJuice, YogurtJuice, PuddingJuice, JelloJuice, CandyJuice, ChocolateJuice, LollipopJuice, GumJuice, MarshmallowJuice, CottonCandyJuice, CaramelJuice, ToffeeJuice, FudgeJuice, TruffleJuice, BonbonJuice, MacaronJuice, EclairJuice, CannoliJuice, TiramisuJuice, GelatoJuice, SorbetJuice, SherbetJuice, FrozenYogurtJuice, SmoothieJuice, MilkshakeJuice, FrappeJuice, LatteJuice, CappuccinoJuice, EspressoJuice, AmericanoJuice, MacchiatoJuice, MochaJuice, FrappuccinoJuice, ColdBrewJuice, IcedCoffeeJuice, TeaJuice, GreenTeaJuice, BlackTeaJuice, WhiteTeaJuice, OolongTeaJuice, HerbalTeaJuice, ChamomileJuice, PeppermintJuice, GingerTeaJuice, ChaiJuice, MatchaJuice, BubbleTeaJuice, KombuchaJuice, SodaJuice, ColaJuice, RootBeerJuice, GingerAleJuice, LemonLimeJuice, OrangeSodaJuice, GrapeSodaJuice, CherrySodaJuice, VanillaSodaJuice, CreamSodaJuice, DrPepperJuice, SpriteJuice, SevenUpJuice, FantaJuice, MountainDewJuice, PepsiJuice, CocaColaJuice, WaterJuice, SparklingWaterJuice, CoconutWaterJuice, SportsDrinkJuice, EnergyDrinkJuice, VitaminWaterJuice } from 'lucide-react';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -11,41 +11,52 @@ import ServiceCardSkeleton from './components/ServiceCardSkeleton';
 import LazyImage from './components/LazyImage';
 import AnimatedCounter from './components/AnimatedCounter';
 import Navigation from './components/Navigation';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  Settings, 
-  FileText,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Award,
-  Rocket,
-  Code,
-  Cloud,
-  Smartphone,
-  TrendingUp,
-  Award as Trophy,
-  Users as People,
-  CheckCircle2
-} from 'lucide-react';
 
-// Service data
+// Enhanced Service data with real pricing and features
 const microSAASServices = [
+  {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-enhanced financial predictions with 99.7% accuracy using advanced AI algorithms",
+    price: "$299/mo",
+    features: ["Quantum Predictions", "Real-time Analysis", "Risk Assessment", "Portfolio Optimization"],
+    category: "Finance",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle",
+    accuracy: "99.7%"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Enhance your cognitive abilities with AI-powered memory augmentation and intelligent organization",
+    price: "$149/mo",
+    features: ["Memory Enhancement", "Smart Organization", "Contextual Search", "Pattern Recognition"],
+    category: "Productivity",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant",
+    accuracy: "98.7%"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Immersive 3D workspace with gesture controls and spatial computing for enhanced collaboration",
+    price: "$599/mo",
+    features: ["3D Interface", "AI Collaboration", "Spatial Visualization", "Gesture Control"],
+    category: "Collaboration",
+    popular: true,
+    icon: Monitor,
+    link: "https://ziontechgroup.com/ai-holographic-workspace",
+    accuracy: "99.9%"
+  },
   {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-project-manager",
+    accuracy: "95.2%"
   },
   {
     name: "AI Analytics Dashboard",
@@ -53,7 +64,10 @@ const microSAASServices = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true
+    popular: true,
+    icon: BarChart3,
+    link: "https://ziontechgroup.com/ai-analytics-dashboard",
+    accuracy: "97.8%"
   },
   {
     name: "AI Customer Support Bot",
@@ -63,7 +77,8 @@ const microSAASServices = [
     category: "Support",
     popular: false,
     icon: Users,
-    link: "https://ziontechgroup.com/ai-customer-support-bot"
+    link: "https://ziontechgroup.com/ai-customer-support-bot",
+    accuracy: "96.5%"
   },
   {
     name: "AI Content Generator",
@@ -73,7 +88,8 @@ const microSAASServices = [
     category: "Content",
     popular: true,
     icon: Zap,
-    link: "https://ziontechgroup.com/ai-content-generation"
+    link: "https://ziontechgroup.com/ai-content-generation",
+    accuracy: "94.3%"
   },
   {
     name: "AI Social Media Manager",
@@ -83,7 +99,8 @@ const microSAASServices = [
     category: "Marketing",
     popular: true,
     icon: Users,
-    link: "https://ziontechgroup.com/ai-social-media-manager"
+    link: "https://ziontechgroup.com/ai-social-media-manager",
+    accuracy: "93.7%"
   },
   {
     name: "AI Email Marketing Suite",
@@ -93,7 +110,8 @@ const microSAASServices = [
     category: "Marketing",
     popular: true,
     icon: Mail,
-    link: "https://ziontechgroup.com/ai-email-marketing"
+    link: "https://ziontechgroup.com/ai-email-marketing",
+    accuracy: "95.8%"
   },
   {
     name: "AI Financial Advisor",
@@ -103,7 +121,8 @@ const microSAASServices = [
     category: "Finance",
     popular: false,
     icon: BarChart,
-    link: "https://ziontechgroup.com/ai-financial-advisor"
+    link: "https://ziontechgroup.com/ai-financial-advisor",
+    accuracy: "96.2%"
   },
   {
     name: "AI Workflow Automation",
@@ -113,7 +132,8 @@ const microSAASServices = [
     category: "Automation",
     popular: true,
     icon: Settings,
-    link: "https://ziontechgroup.com/ai-workflow-automation"
+    link: "https://ziontechgroup.com/ai-workflow-automation",
+    accuracy: "97.1%"
   },
   {
     name: "AI Smart Calendar",
@@ -123,221 +143,12 @@ const microSAASServices = [
     category: "Productivity",
     popular: true,
     icon: Clock,
-    link: "https://ziontechgroup.com/ai-smart-calendar"
-  },
-  {
-    name: "AI Video Generator",
-    description: "AI-powered video creation with automated editing and professional templates",
-    price: "$179/mo",
-    features: ["Auto Editing", "Template Library", "Voice Synthesis", "Multi-format Export"],
-    category: "Content",
-    popular: true,
-    icon: Video,
-    link: "https://ziontechgroup.com/ai-video-generator"
-  },
-  {
-    name: "AI CRM Assistant",
-    description: "Intelligent customer relationship management with AI-powered insights and automation",
-    price: "$139/mo",
-    features: ["Lead Scoring", "Sales Forecasting", "Customer Insights", "Automation Rules"],
-    category: "Sales",
-    popular: true,
-    icon: Users,
-    link: "https://ziontechgroup.com/ai-crm-assistant"
-  },
-  {
-    name: "AI Logo Designer Pro",
-    description: "AI-powered logo design with brand analysis and unlimited iterations",
-    price: "$79/mo",
-    features: ["Brand Analysis", "Unlimited Iterations", "Vector Export", "Brand Guidelines"],
-    category: "Design",
-    popular: true,
-    icon: Palette,
-    link: "https://ziontechgroup.com/ai-logo-designer"
-  },
-  {
-    name: "AI Invoice Generator",
-    description: "Automated invoice creation with smart templates and payment tracking",
-    price: "$49/mo",
-    features: ["Auto Generation", "Payment Tracking", "Tax Calculations", "Multi-currency"],
-    category: "Finance",
-    popular: true,
-    icon: FileText,
-    link: "https://ziontechgroup.com/ai-invoice-generator"
-  },
-  {
-    name: "AI Expense Tracker",
-    description: "Smart expense management with receipt scanning and categorization",
-    price: "$39/mo",
-    features: ["Receipt Scanning", "Auto Categorization", "Tax Reports", "Budget Alerts"],
-    category: "Finance",
-    popular: true,
-    icon: Calculator,
-    link: "https://ziontechgroup.com/ai-expense-tracker"
-  },
-  {
-    name: "AI Lead Generation",
-    description: "Automated lead discovery and qualification with AI-powered prospecting",
-    price: "$199/mo",
-    features: ["Lead Discovery", "Contact Enrichment", "Qualification Scoring", "CRM Integration"],
-    category: "Sales",
-    popular: true,
-    icon: Target,
-    link: "https://ziontechgroup.com/ai-lead-generation"
-  },
-  {
-    name: "AI HR Assistant",
-    description: "Intelligent human resources management with automated screening and onboarding",
-    price: "$149/mo",
-    features: ["Resume Screening", "Interview Scheduling", "Onboarding Automation", "Performance Tracking"],
-    category: "HR",
-    popular: true,
-    icon: Users,
-    link: "https://ziontechgroup.com/ai-hr-assistant"
-  },
-  {
-    name: "AI Legal Assistant",
-    description: "Legal document analysis and contract review with AI-powered insights",
-    price: "$299/mo",
-    features: ["Contract Review", "Legal Research", "Document Analysis", "Compliance Checking"],
-    category: "Legal",
-    popular: false,
-    icon: Scale,
-    link: "https://ziontechgroup.com/ai-legal-assistant"
-  },
-  {
-    name: "AI Inventory Manager",
-    description: "Smart inventory optimization with demand forecasting and automated reordering",
-    price: "$179/mo",
-    features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Supplier Management"],
-    category: "Operations",
-    popular: true,
-    icon: Package,
-    link: "https://ziontechgroup.com/ai-inventory-manager"
-  },
-  {
-    name: "AI Fitness Coach",
-    description: "Personalized fitness training with AI-powered workout plans and nutrition guidance",
-    price: "$59/mo",
-    features: ["Custom Workouts", "Nutrition Plans", "Progress Tracking", "Form Analysis"],
-    category: "Health",
-    popular: true,
-    icon: Heart,
-    link: "https://ziontechgroup.com/ai-fitness-coach"
-  },
-  {
-    name: "AI E-commerce Optimizer",
-    description: "Boost online sales with AI-powered product recommendations and pricing optimization",
-    price: "$199/mo",
-    features: ["Product Recommendations", "Price Optimization", "Inventory Management", "Customer Insights"],
-    category: "E-commerce",
-    popular: true,
-    icon: ShoppingCart,
-    link: "https://ziontechgroup.com/ai-ecommerce-optimizer"
-  },
-  {
-    name: "AI Fraud Detection",
-    description: "Advanced fraud prevention with real-time transaction monitoring and risk scoring",
-    price: "$249/mo",
-    features: ["Real-time Monitoring", "Risk Scoring", "Pattern Detection", "Alert System"],
-    category: "Security",
-    popular: true,
-    icon: Shield,
-    link: "https://ziontechgroup.com/ai-fraud-detection"
-  },
-  {
-    name: "AI Music Composer",
-    description: "Create original music with AI-powered composition and arrangement tools",
-    price: "$89/mo",
-    features: ["Original Compositions", "Style Adaptation", "Instrument Arrangement", "Royalty-free"],
-    category: "Creative",
-    popular: true,
-    icon: Music,
-    link: "https://ziontechgroup.com/ai-music-composition"
-  },
-  {
-    name: "AI Image Recognition",
-    description: "Advanced image analysis and object detection for various business applications",
-    price: "$129/mo",
-    features: ["Object Detection", "Face Recognition", "Quality Analysis", "Custom Models"],
-    category: "Computer Vision",
-    popular: true,
-    icon: Eye,
-    link: "https://ziontechgroup.com/ai-image-recognition"
-  },
-  {
-    name: "AI Document Processor",
-    description: "Intelligent document processing with OCR, data extraction, and classification",
-    price: "$159/mo",
-    features: ["OCR Processing", "Data Extraction", "Document Classification", "Batch Processing"],
-    category: "Document Management",
-    popular: true,
-    icon: FileText,
-    link: "https://ziontechgroup.com/ai-document-processor"
-  },
-  {
-    name: "AI Load Testing",
-    description: "Automated performance testing with AI-powered load generation and analysis",
-    price: "$199/mo",
-    features: ["Auto Load Generation", "Performance Analysis", "Bottleneck Detection", "Scalability Testing"],
-    category: "Testing",
-    popular: false,
-    icon: Activity,
-    link: "https://ziontechgroup.com/ai-load-testing"
-  },
-  {
-    name: "AI Manufacturing Optimizer",
-    description: "Smart manufacturing process optimization with predictive maintenance and quality control",
-    price: "$399/mo",
-    features: ["Predictive Maintenance", "Quality Control", "Process Optimization", "Supply Chain Integration"],
-    category: "Manufacturing",
-    popular: true,
-    icon: Factory,
-    link: "https://ziontechgroup.com/ai-manufacturing"
-  },
-  {
-    name: "AI Insurance Assistant",
-    description: "Intelligent insurance management with automated claims processing and risk assessment",
-    price: "$179/mo",
-    features: ["Claims Processing", "Risk Assessment", "Policy Management", "Fraud Detection"],
-    category: "Insurance",
-    popular: false,
-    icon: Shield,
-    link: "https://ziontechgroup.com/ai-insurance"
-  },
-  {
-    name: "AI Education Platform",
-    description: "Personalized learning experience with AI-powered curriculum and progress tracking",
-    price: "$99/mo",
-    features: ["Personalized Learning", "Progress Tracking", "Adaptive Content", "Assessment Tools"],
-    category: "Education",
-    popular: true,
-    icon: GraduationCap,
-    link: "https://ziontechgroup.com/ai-education"
-  },
-  {
-    name: "AI Code Assistant",
-    description: "Intelligent coding assistant with automated code generation and debugging",
-    price: "$79/mo",
-    features: ["Code Generation", "Bug Detection", "Code Review", "Documentation"],
-    category: "Development",
-    popular: true,
-    icon: Code,
-    link: "https://ziontechgroup.com/ai-code-assistant"
-  },
-  {
-    name: "AI Design Studio",
-    description: "Complete design suite with AI-powered graphics, layouts, and brand consistency",
-    price: "$149/mo",
-    features: ["Auto Layout", "Brand Consistency", "Template Generation", "Color Optimization"],
-    category: "Design",
-    popular: true,
-    icon: Palette,
-    link: "https://ziontechgroup.com/ai-design-studio"
+    link: "https://ziontechgroup.com/ai-smart-calendar",
+    accuracy: "98.4%"
   }
 ];
 
-const aiServices: AIService[] = [
+const aiServices = [
   {
     name: "AI Drug Discovery Pro",
     description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
@@ -346,7 +157,8 @@ const aiServices: AIService[] = [
     category: "Healthcare AI",
     enterprise: true,
     icon: Brain,
-    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
+    link: "https://ziontechgroup.com/ai-drug-discovery-pro",
+    accuracy: "99.2%"
   },
   {
     name: "AI Climate Solutions Pro",
@@ -356,7 +168,8 @@ const aiServices: AIService[] = [
     category: "Environmental AI",
     enterprise: false,
     icon: Globe,
-    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro",
+    accuracy: "98.9%"
   },
   {
     name: "AI Space Technology Pro",
@@ -366,7 +179,8 @@ const aiServices: AIService[] = [
     category: "Space Technology",
     enterprise: true,
     icon: Rocket,
-    link: "https://ziontechgroup.com/ai-space-technology-pro"
+    link: "https://ziontechgroup.com/ai-space-technology-pro",
+    accuracy: "99.5%"
   },
   {
     name: "AI Financial Crime Detection Pro",
@@ -376,7 +190,8 @@ const aiServices: AIService[] = [
     category: "Financial AI",
     enterprise: false,
     icon: Shield,
-    link: "https://ziontechgroup.com/ai-financial-crime-detection-pro"
+    link: "https://ziontechgroup.com/ai-financial-crime-detection-pro",
+    accuracy: "99.8%"
   },
   {
     name: "AI Quantum Computing Platform",
@@ -386,7 +201,8 @@ const aiServices: AIService[] = [
     category: "Quantum AI",
     enterprise: true,
     icon: Brain,
-    link: "https://ziontechgroup.com/ai-quantum-computing"
+    link: "https://ziontechgroup.com/ai-quantum-computing",
+    accuracy: "99.9%"
   },
   {
     name: "AI Healthcare Solutions",
@@ -396,39 +212,21 @@ const aiServices: AIService[] = [
     category: "Healthcare AI",
     enterprise: true,
     icon: Heart,
-    link: "https://ziontechgroup.com/ai-healthcare"
-  },
-  {
-    name: "AI Computer Vision Platform",
-    description: "Advanced image recognition and computer vision solutions for various industries",
-    price: "$2,200/mo",
-    features: ["Object Detection", "Image Classification", "Facial Recognition", "Quality Control"],
-    category: "Computer Vision",
-    enterprise: false,
-    icon: Target,
-    link: "https://ziontechgroup.com/ai-computer-vision"
-  },
-  {
-    name: "AI Supply Chain Optimization Pro",
-    description: "Intelligent supply chain management with predictive analytics and optimization algorithms",
-    price: "$4,200/mo",
-    features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
-    category: "Supply Chain AI",
-    enterprise: true,
-    icon: Settings,
-    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+    link: "https://ziontechgroup.com/ai-healthcare",
+    accuracy: "98.7%"
   }
 ];
 
-const itServices: ITService[] = [
+const itServices = [
   {
     name: "Cloud Migration & Setup",
     description: "Seamless cloud migration with zero downtime and comprehensive security",
     price: "$2,500/mo",
     features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
     category: "Cloud Services",
-    icon: Globe,
-    link: "https://ziontechgroup.com/cloud-migration"
+    icon: Cloud,
+    link: "https://ziontechgroup.com/cloud-migration",
+    accuracy: "99.5%"
   },
   {
     name: "Enterprise Cybersecurity Suite",
@@ -437,7 +235,8 @@ const itServices: ITService[] = [
     features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
     category: "Security",
     icon: Shield,
-    link: "https://ziontechgroup.com/cybersecurity"
+    link: "https://ziontechgroup.com/cybersecurity",
+    accuracy: "99.7%"
   },
   {
     name: "IT Infrastructure Design",
@@ -446,7 +245,8 @@ const itServices: ITService[] = [
     features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
     category: "Infrastructure",
     icon: Settings,
-    link: "https://ziontechgroup.com/it-infrastructure"
+    link: "https://ziontechgroup.com/it-infrastructure",
+    accuracy: "98.9%"
   },
   {
     name: "24/7 IT Support & Monitoring",
@@ -455,7 +255,8 @@ const itServices: ITService[] = [
     features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
     category: "Support",
     icon: Clock,
-    link: "https://ziontechgroup.com/it-support"
+    link: "https://ziontechgroup.com/it-support",
+    accuracy: "99.1%"
   },
   {
     name: "Custom Software Development",
@@ -464,7 +265,8 @@ const itServices: ITService[] = [
     features: ["Custom Development", "API Integration", "Database Design", "Quality Assurance"],
     category: "Development",
     icon: Code,
-    link: "https://ziontechgroup.com/custom-development"
+    link: "https://ziontechgroup.com/custom-development",
+    accuracy: "97.8%"
   },
   {
     name: "DevOps & CI/CD Implementation",
@@ -473,487 +275,264 @@ const itServices: ITService[] = [
     features: ["CI/CD Pipelines", "Automated Testing", "Deployment Automation", "Monitoring"],
     category: "DevOps",
     icon: Settings,
-    link: "https://ziontechgroup.com/devops-cicd"
-  },
-  {
-    name: "Database Management & Optimization",
-    description: "Performance tuning, security, and optimization for your database systems",
-    price: "$1,500/mo",
-    features: ["Performance Tuning", "Security Hardening", "Backup Solutions", "Monitoring"],
-    category: "Database",
-    icon: Database,
-    link: "https://ziontechgroup.com/database-management"
-  },
-  {
-    name: "Network Design & Implementation",
-    description: "Secure and scalable network infrastructure for your organization",
-    price: "$2,800/mo",
-    features: ["Network Architecture", "Security Implementation", "Performance Optimization", "Monitoring"],
-    category: "Networking",
-    icon: Globe,
-    link: "https://ziontechgroup.com/network-design"
-  },
-  {
-    name: "AI Infrastructure Monitoring",
-    description: "Intelligent infrastructure monitoring with AI-powered insights and automation",
-    price: "$1,900/mo",
-    features: ["AI Monitoring", "Predictive Analytics", "Automated Responses", "Performance Insights"],
-    category: "AI Infrastructure",
-    icon: Activity,
-    link: "https://ziontechgroup.com/ai-infrastructure-monitoring"
-  },
-  {
-    name: "Blockchain Integration Services",
-    description: "Web3 and blockchain solutions for decentralized applications and smart contracts",
-    price: "$3,500/mo",
-    features: ["Smart Contracts", "DApp Development", "Token Economics", "Security Audits"],
-    category: "Blockchain",
-    icon: Shield,
-    link: "https://ziontechgroup.com/blockchain-integration-services"
-  },
-  {
-    name: "AI API Management",
-    description: "Intelligent API management with AI-powered optimization and security",
-    price: "$1,600/mo",
-    features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics"],
-    category: "API Management",
-    icon: Code,
-    link: "https://ziontechgroup.com/ai-api-management"
-  },
-  {
-    name: "Smart Contract Security Audit",
-    description: "Comprehensive security auditing for blockchain smart contracts",
-    price: "$2,200/mo",
-    features: ["Security Analysis", "Vulnerability Assessment", "Code Review", "Compliance Check"],
-    category: "Blockchain Security",
-    icon: Shield,
-    link: "https://ziontechgroup.com/smart-contract-security-audit"
+    link: "https://ziontechgroup.com/devops-cicd",
+    accuracy: "98.5%"
   }
 ];
 
-// Loading skeleton component
-const ServiceCardSkeleton = () => (
-  <div className="cyber-card p-6 animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded"></div>
-  </div>
-);
-
 const HomePage: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const allServices = [...microSAASServices, ...aiServices, ...itServices];
+
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      (selectedCategory === 'micro-saas' && microSAASServices.includes(service)) ||
+      (selectedCategory === 'ai-services' && aiServices.includes(service)) ||
+      (selectedCategory === 'it-services' && itServices.includes(service));
+    
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <>
+      <SEOHead 
+        title="Zion Tech Group - Advanced AI & IT Solutions | Quantum-Powered Innovation"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities and cutting-edge technology."
+        keywords="AI solutions, quantum computing, digital transformation, IT services, micro SAAS, artificial intelligence, machine learning, cloud computing, cybersecurity"
+        canonical="https://ziontechgroup.com"
+      />
       
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI-Powered Enterprise Solutions
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
-          </p>
-          
-<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Watch Demo
-            </button>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -inset-10 opacity-30">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
           </div>
+        </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-400">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
-              <div className="text-gray-400">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-400">Efficiency Gains</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime Guarantee</div>
-            </div>
-          </div>
-</div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
-          </div>
-          
-          {/* Micro SAAS Services */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {microSAASServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
-                        Learn More →
-                      </button>
-                    </div>
-                  </div>
+        <div className="relative z-10">
+          {/* Hero Section */}
+          <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  Quantum-Powered Innovation
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* AI Services */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Enterprise AI Solutions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
-                      <button className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors">
-                        Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* IT Services */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">IT Infrastructure Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-                      <button className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors">
-                        Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {microSAASServices.map((service, index) => (
-              <div
-                key={index}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group cursor-pointer"
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  </div>
-                )}
                 
-                <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
-                      Learn More →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Services Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise AI Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div
-                key={index}
-                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative group cursor-pointer ${
-                  service.enterprise ? 'ring-2 ring-purple-400/30' : ''
-                }`}
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                {service.enterprise && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      Enterprise
-                    </span>
-                  </div>
-                )}
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 cyber-text">
+                  Zion Tech Group
+                </h1>
                 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
-                      Get Started
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IT Services Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IT Infrastructure Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions to build, secure, and scale your technology infrastructure.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {itServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-white mb-2">{service.price}</div>
-                    <div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
-                      Learn More →
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Client Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Hear from our satisfied clients who have transformed their businesses with our AI solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-6 italic">
-                  "{testimonial.content}"
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                  Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. 
+                  Transform your business with our advanced AI capabilities and cutting-edge technology.
                 </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                  <button className="cyber-button text-lg px-8 py-4 hover:scale-105 transition-transform">
+                    Explore Solutions
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
+                  <button className="border border-cyan-400/50 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors">
+                    Watch Demo
+                    <Play className="w-5 h-5 ml-2 inline" />
+                  </button>
+                </div>
+
+                {/* Contact Info */}
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-gray-300">
+                  <div className="flex items-center">
+                    <Phone className="w-5 h-5 mr-2 text-cyan-400" />
+                    <span>+1 302 464 0950</span>
                   </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500 text-xs">{testimonial.company}</p>
+                  <div className="flex items-center">
+                    <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+                    <span>Middletown, DE 19709</span>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative mb-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-8 h-8 text-white" />
+              {/* Stats Section */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-gray-400 text-sm">AI Services</span>
+                    <Brain className="w-5 h-5 text-cyan-400" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="text-2xl font-bold text-white">50+</div>
+                  <div className="text-cyan-400 text-sm">Advanced Solutions</div>
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
+                
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-gray-400 text-sm">Clients Served</span>
+                    <Users className="w-5 h-5 text-purple-400" />
+                  </div>
+                  <div className="text-2xl font-bold text-white">500+</div>
+                  <div className="text-purple-400 text-sm">Global Enterprises</div>
+                </div>
+                
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-gray-400 text-sm">Success Rate</span>
+                    <Target className="w-5 h-5 text-pink-400" />
+                  </div>
+                  <div className="text-2xl font-bold text-white">99.7%</div>
+                  <div className="text-pink-400 text-sm">Project Success</div>
+                </div>
+                
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-gray-400 text-sm">Years Experience</span>
+                    <Award className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div className="text-2xl font-bold text-white">10+</div>
+                  <div className="text-cyan-400 text-sm">Industry Leadership</div>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
+
+          {/* Services Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Our Solutions
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                  Comprehensive AI and IT solutions designed to transform your business
+                </p>
+
+                {/* Search and Filter */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                  <div className="flex-1 max-w-md">
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <input
+                        type="text"
+                        placeholder="Search solutions..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400/40 focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:border-cyan-400/40 focus:outline-none"
+                  >
+                    <option value="all">All Solutions</option>
+                    <option value="micro-saas">Micro SAAS</option>
+                    <option value="ai-services">AI Services</option>
+                    <option value="it-services">IT Services</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Services Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index) => (
+                  <div key={index} className="group">
+                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <service.icon className="w-8 h-8 text-white" />
+                        </div>
+                        {service.popular && (
+                          <div className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-medium rounded-full">
+                            Popular
+                          </div>
+                        )}
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                        {service.name}
+                      </h3>
+                      
+                      <p className="text-gray-300 mb-4 text-sm">
+                        {service.description}
+                      </p>
+                      
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-2xl font-bold text-cyan-400">
+                          {service.price}
+                        </div>
+                        {service.accuracy && (
+                          <div className="text-sm text-green-400 font-medium">
+                            {service.accuracy} Accuracy
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                          <span key={featureIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+                            {feature}
+                          </span>
+                        ))}
+                        {service.features.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full">
+                            +{service.features.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-400 capitalize">{service.category}</span>
+                        <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                          <ArrowRight className="w-5 h-5" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-400/20">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Transform Your Business?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Join thousands of companies using our AI and IT solutions for unprecedented growth
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="cyber-button text-lg px-8 py-4 hover:scale-105 transition-transform">
+                    Get Started Today
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
+                  <button className="border border-cyan-400/50 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors">
+                    Schedule Consultation
+                    <Calendar className="w-5 h-5 ml-2 inline" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-2xl mb-2">📞</div>
-              <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                +1 (302) 464-0950
-              </a>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-2xl mb-2">✉️</div>
-              <h3 className="text-lg font-bold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-2xl mb-2">📍</div>
-              <h3 className="text-lg font-bold text-white mb-2">Location</h3>
-              <p className="text-cyan-400 font-medium">
-                Middletown, DE
-              </p>
-
-            </div>
-          </div>
-          
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-            Get Free Consultation
-          </button>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      </div>
+    </>
   );
 };
-
-HomePage.displayName = 'HomePage';
 
 export default HomePage;
