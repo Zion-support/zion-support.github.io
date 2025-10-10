@@ -31,6 +31,7 @@ async function handler(req, res) {
       method: 'POST',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       headers: {,)
         'Content-Type': 'application/json',)
         Authorization: `Bearer ${apiKey}`,)
@@ -63,6 +64,19 @@ async function handler(req, res) {
         }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       }),
+=======
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel
+        }
+      })
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     });
 
     const data = await response.json();
@@ -82,6 +96,7 @@ async function handler(req, res) {
     res.json({ success: true, rates: data.rates });
   } catch (err) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error('Shipping rates error:', err);
     res.status(500).json({ error: err.message });
 =======
@@ -89,6 +104,10 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: err.message }));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+=======
+    res.statusCode = 500;
+    res.json({ error: err.message });
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   }
 }
 

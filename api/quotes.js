@@ -18,6 +18,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Name, email, phone, and details are required' });
     }
 
+<<<<<<< HEAD
     // Process quote submission logic here;
 =======
       res.statusCode = 400;
@@ -28,6 +29,9 @@ export default async function handler(req, res) {
 
     // Process quote submission logic here
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+=======
+    // Process quote submission logic here
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     const quote = {
       id: Date.now().toString(),
       name,
@@ -42,12 +46,21 @@ export default async function handler(req, res) {
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // In a real application, you would save this to a database;
     //     res.statusCode = 200;
     res.json({)
       success: true;),
       message: 'Quote submitted successfully'),
       quote),
+=======
+    // In a real application, you would save this to a database
+    res.statusCode = 200;
+    res.json({
+      success: true,
+      message: 'Quote submitted successfully',
+      quote
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     });
 =======
     // In a real application, you would save this to a database
@@ -57,6 +70,7 @@ export default async function handler(req, res) {
     res.json({ success: true, message: 'Quote submitted successfully', quoteId: quote.id });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   } catch (error) {
+<<<<<<< HEAD
     console.error('Quote submission error:', error);
     res.status(500).json({ error: error.message || 'Quote submission failed' });
 =======
@@ -71,5 +85,9 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: err.message || 'Quote submission failed' }));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+=======
+    res.statusCode = 500;
+    res.json({ error: error.message || 'Quote submission failed' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   }
 }

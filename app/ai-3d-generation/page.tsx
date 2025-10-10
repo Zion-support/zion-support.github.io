@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
@@ -34,35 +35,80 @@ const AI3DGenerationPage: React.FC = () => {,
     'Reduce dependency on 3D artists'
   ]
   const applications = [
+=======
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Cube, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';
+
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Cube,
+      title: 'AI-Powered 3D Modeling',
+      description: 'Generate complex 3D models from text descriptions using advanced AI algorithms.',
+      benefits: ['Text-to-3D conversion', 'Real-time generation', 'High-quality output', 'Multiple formats']
+    },
+    {
+      icon: Zap,
+      title: 'Lightning Fast Processing',
+      description: 'Generate 3D models in seconds with our optimized AI processing pipeline.',
+      benefits: ['Sub-second generation', 'Batch processing', 'GPU acceleration', 'Cloud processing']
+    },
+    {
+      icon: Eye,
+      title: 'Photorealistic Rendering',
+      description: 'Create stunning, photorealistic 3D models with advanced rendering techniques.',
+      benefits: ['Ray tracing', 'Global illumination', 'Material physics', 'Lighting simulation']
+    },
+    {
+      icon: Palette,
+      title: 'Custom Materials & Textures',
+      description: 'Apply custom materials and textures to your 3D models with AI assistance.',
+      benefits: ['Smart material mapping', 'Texture generation', 'Color optimization', 'Surface details']
+    },
+    {
+      icon: Download,
+      title: 'Multiple Export Formats',
+      description: 'Export your 3D models in various industry-standard formats.',
+      benefits: ['OBJ, FBX, GLTF', 'STL for 3D printing', 'USD for pipelines', 'Custom formats']
+    },
+    {
+      icon: Sparkles,
+      title: 'Creative AI Assistance',
+      description: 'Get AI-powered suggestions and improvements for your 3D creations.',
+      benefits: ['Style suggestions', 'Optimization tips', 'Quality improvements', 'Creative variations']
+    }
+  ];
+
+  const useCases = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     {
       title: 'Game Development',
-      description: 'Generate characters, environments, and props for games',
-      icon: '🎮',
-      examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
+      description: 'Create 3D assets, characters, and environments for games',
+      icon: '🎮'
     },
 =======
 const AI3DGenerationPage: React.FC = () => {
   const services = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     {
-      title: 'Architecture & Real Estate',
-      description: 'Create 3D visualizations and virtual tours',
-      icon: '🏗️',
-      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+      title: 'Architecture Visualization',
+      description: 'Generate 3D building models and interior designs',
+      icon: '🏗️'
     },
     {
-      title: 'E-commerce',
-      description: 'Generate product visualizations and AR experiences',
-      icon: '🛒',
-      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+      title: 'Product Design',
+      description: 'Prototype and visualize product concepts in 3D',
+      icon: '📦'
     },
     {
-      title: 'Education & Training',
-      description: 'Create interactive 3D learning materials',
-      icon: '📚',
-      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+      title: '3D Printing',
+      description: 'Create printable 3D models for manufacturing',
+      icon: '🖨️'
     },
     {
+<<<<<<< HEAD
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
@@ -190,16 +236,25 @@ const AI3DGenerationPage: React.FC = () => {
 <<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 =======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-      <Helmet>
-        <title>AI 3D Model Generation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Generate high-quality 3D models using AI. Create characters, environments, and objects from text descriptions. Starting at $199/month." />
-        <meta name="keywords" content="3D generation, AI 3D, 3D models, game assets, 3D design, virtual reality, augmented reality" />
-      </Helmet>
+=======
+      title: 'VR/AR Content',
+      description: 'Generate immersive 3D content for virtual experiences',
+      icon: '🥽'
+    },
+    {
+      title: 'Marketing & Advertising',
+      description: 'Create stunning 3D visuals for campaigns and presentations',
+      icon: '📢'
+    }
+  ];
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-24 pb-16 px-4">
 <<<<<<< HEAD
         <div className="max-w-7xl mx-auto text-center">
@@ -387,263 +442,113 @@ const AI3DGenerationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
+=======
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            AI 3D
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Generation
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your ideas into stunning 3D models with our advanced AI-powered generation technology. 
+            Create photorealistic 3D assets from simple text descriptions in seconds.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Start Creating
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Gallery
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-<<<<<<< HEAD
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-=======
-        <div className="max-w-7xl mx-auto"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Powerful 3D Generation Features</h2>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            <div className="space-y-4">{features.map((feature, index) => (</div>
-<<<<<<< HEAD
-=======
-          <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12">
-            Powerful 3D Generation Features;)
-          </h2>)
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,)
-            <div className="space-y-4">),
-              {features.map((feature, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                <div key={index} className="flex items-start space-x-3">
-=======
-                <div key={index} className="flex items-start space-x-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300"></span><span className="sr-only">Screen reader: </span>{feature}</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Powerful AI 3D Generation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our cutting-edge AI technology makes 3D model creation accessible to everyone, 
+              from beginners to professional designers.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
-              ))}
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8"></div>
-              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our 3D Generation?</h3><div className="space-y-4">{benefits.map((benefit, index) => (</div>
-                  <div key={index} className="flex items-start space-x-3"></div>
-                    <TrendingUp className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300"></span><span className="sr-only">Screen reader: </span>{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow */}
-      <section className="py-16 px-4 bg-white/5">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Simple 4-Step Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{workflow.map((step, index) => (</div>
-=======
-          <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12">
-            Simple 4-Step Process;
-          </h2>,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-            {workflow.map((step, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl"><span className="sr-only">Screen reader: </span>{step.icon}<div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">Step {step.step}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}<p className="text-gray-300 text-sm">{step.description}</p>
-=======
-        <div className="max-w-7xl mx-auto"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Simple 4-Step Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{workflow.map((step, index) => (</div>
-              <div key={index} className="text-center"></div>
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <span className="text-2xl"></span><span className="sr-only">Screen reader: </span>{step.icon}<div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">Step {step.step}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3><p className="text-gray-300 text-sm">{step.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Applications */}
-      <section className="py-16 px-4">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Applications & Use Cases<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-4">{app.icon}<h3 className="text-xl font-bold text-white mb-3">{app.title}<p className="text-gray-300 mb-4">{app.description}</p>
-                <div className="space-y-2">
-=======
-        <div className="max-w-7xl mx-auto"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Applications & Use Cases</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="text-4xl mb-4">{app.icon}</div><h3 className="text-xl font-bold text-white mb-3">{app.title}</h3><p className="text-gray-300 mb-4">{app.description}</p>
-                <div className="space-y-2"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                  <h4 className="text-sm font-semibold text-cyan-400">Examples:<ul className="space-y-1" role="list">{app.examples.map((example, exampleIndex) => (</ul>
-=======
-          <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12">
-            Applications & Use Cases;
-          </h2>,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {applications.map((app, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover: bg-white/20 transition-all duration-300">,
-                <div className="text-4xl mb-4">{app.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{app.title}</h3>
-                <p className="text-gray-300 mb-4">{app.description}</p>
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-cyan-400">Examples: </h4>,
-                  <ul className="space-y-1" role="list">,
-                    {app.examples.map((example, exampleIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                      <li key={exampleIndex} className="text-sm text-gray-400 flex items-center" style={{ color: "#9CA3AF" }}>
-                        <ArrowRight className="w-3 h-3 mr-2" >{example}</ArrowRight>
-                      </ArrowRight>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-16 px-4 bg-white/5">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Flexible Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricing.map((plan, index) => (<div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>{plan.popular && (</div>
-=======
-          <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12">
-            Flexible Pricing Plans;
-          </h2>,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-            {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
-                {plan.popular && (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
-                      Most Popular;
-                    </span>,
-                  </div>,
-=======
-        <div className="max-w-7xl mx-auto"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Flexible Pricing Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricing.map((plan, index) => (</div><div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span><span className="sr-only">Screen reader: </span>
-                      Most Popular
-                    </span>
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                )}
-                <div className="text-center mb-6"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3><p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div><p className="text-gray-500">per month</p><ul className="space-y-3 mb-8" role="list">{plan.features.map((feature, featureIndex) => (</ul>
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" >{feature}</CheckCircle>
-                    </CheckCircle>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
                   ))}
-<<<<<<< HEAD
-                <a
-=======
                 </ul>
-                <a;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} 3D Generation Plan`}
-                  className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
-                    plan.popular;
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700',}
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}
-                  }`}
-<<<<<<< HEAD
-                >Get Started</a>
-=======
-                >
-                  Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies */}
-      <section className="py-16 px-4">
-<<<<<<< HEAD
+      {/* Use Cases Section */}
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Advanced Technologies<div className="flex flex-wrap justify-center gap-4">{technologies.map((tech, index) => (</div>
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm"><span className="sr-only">Screen reader: </span>
-=======
-          <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12">
-            Advanced Technologies;
-          </h2>,
-          <div className="flex flex-wrap justify-center gap-4">,
-            {technologies.map((tech, index) => (
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm"><span className="sr-only">Screen reader: </span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-        <div className="max-w-7xl mx-auto"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Advanced Technologies</h2><div className="flex flex-wrap justify-center gap-4">{technologies.map((tech, index) => (</div>
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm"></span><span className="sr-only">Screen reader: </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                {tech}
-              </span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI 3D generation can transform your creative workflow across various industries.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl mb-4">{useCase.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-<<<<<<< HEAD
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Generate 3D Models?<p className="text-xl text-purple-100 mb-8">Start creating stunning 3D assets with our AI-powered generation technology.</p>
-=======
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-            Ready to Generate 3D Models?
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Create Amazing 3D Models?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Start creating stunning 3D assets with our AI-powered generation technology.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of creators who are already using our AI 3D generation technology 
+            to bring their ideas to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a;
-=======
-        <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Generate 3D Models?</h2><p className="text-xl text-purple-100 mb-8">Start creating stunning 3D assets with our AI-powered generation technology.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              aria-label="Call (302) 464-0950"
-<<<<<<< HEAD
-            >Call (302) 464-0950<a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              aria-label="Email Us"
-            >Email Us</a>
-=======
-            >
-              Call (302) 464-0950;
-            </a>
-            <a;
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              aria-label="Email Us"
-            >
-              Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-            </a>
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
           </div>
         </div>
+<<<<<<< HEAD
       </section>,
     </div>,
 =======
@@ -687,6 +592,12 @@ const AI3DGenerationPage: React.FC = () => {
       <Footer />
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+      </section>
+
+      <Footer />
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   );
 };
 

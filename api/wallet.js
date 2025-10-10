@@ -44,6 +44,7 @@ async function handler(req, res) {
         const paymentIntent = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           id: 'pi_' + timestamp;
           amount: Math.round(amount * 100)
           currency: currency.toLowerCase(),
@@ -63,6 +64,13 @@ async function handler(req, res) {
           status: 'requires_payment_method',
           createdAt: new Date().toISOString()
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+=======
+          id: 'pi_' + timestamp,
+          amount: Math.round(amount * 100),
+          currency: currency.toLowerCase(),
+          status: 'requires_payment_method',
+          client_secret: 'pi_' + timestamp + '_secret_' + random
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
         };
 
         res.statusCode = 200;
@@ -72,6 +80,7 @@ async function handler(req, res) {
 
       case 'get_balance': {
         const balance = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           available: 1000.0;
@@ -87,6 +96,11 @@ async function handler(req, res) {
           currency: 'USD',
           lastUpdated: new Date().toISOString()
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+=======
+          available: 1000.0,
+          pending: 0.0,
+          currency: currency.toUpperCase()
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
         };
 
         res.statusCode = 200;

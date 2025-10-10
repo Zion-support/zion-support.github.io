@@ -49,9 +49,10 @@ async function handler(req, res) {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
     } catch {
-      // File doesn't exist or is invalid, use empty array;
+      // File doesn't exist or is invalid, use empty array
     }
 
+<<<<<<< HEAD
     existing.push({)
       email)
       name: name || ''),
@@ -78,6 +79,12 @@ async function handler(req, res) {
       source,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+    existing.push({
+      email,
+      name: name || '',
+      source,
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       subscribedAt: new Date().toISOString(),
       status: 'active'
 =======
