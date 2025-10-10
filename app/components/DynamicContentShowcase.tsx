@@ -1,126 +1,151 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Zap, Shield, Brain, Globe, Target } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
-  const features = [
+  const tabs = [
     {
+      title: 'AI Solutions',
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
+      color: 'from-purple-500 to-blue-500',
+      features: [
+        {
+          title: 'Machine Learning',
+          description: 'Advanced ML algorithms for predictive analytics and automation',
+          icon: Brain
+        },
+        {
+          title: 'Natural Language Processing',
+          description: 'AI-powered text analysis and language understanding',
+          icon: Zap
+        },
+        {
+          title: 'Computer Vision',
+          description: 'Image recognition and visual data processing',
+          icon: Target
+        }
+      ]
     },
     {
-      icon: Zap,
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
-    },
-    {
+      title: 'IT Services',
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
+      color: 'from-green-500 to-teal-500',
+      features: [
+        {
+          title: 'Cloud Migration',
+          description: 'Seamless migration to cloud platforms with zero downtime',
+          icon: Globe
+        },
+        {
+          title: 'Cybersecurity',
+          description: 'Comprehensive security solutions and threat protection',
+          icon: Shield
+        },
+        {
+          title: 'DevOps & CI/CD',
+          description: 'Automated deployment and continuous integration',
+          icon: Zap
+        }
+      ]
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month.',
-      rating: 5
+      title: 'Micro SAAS',
+      icon: Star,
+      color: 'from-orange-500 to-red-500',
+      features: [
+        {
+          title: 'AI Analytics Dashboard',
+          description: 'Real-time business intelligence and reporting',
+          icon: Star
+        },
+        {
+          title: 'AI-Powered CRM',
+          description: 'Intelligent customer relationship management',
+          icon: Target
+        },
+        {
+          title: 'Security Monitoring',
+          description: '24/7 security monitoring and threat detection',
+          icon: Shield
+        }
+      ]
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+      setActiveTab((prev) => (prev + 1) % tabs.length);
+    }, 8000);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [tabs.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Dynamic <span className="text-cyan-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-              <span>Start Demo</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
+    <div className="w-full max-w-6xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          Dynamic Content Showcase
+        </h2>
+        <p className="text-xl text-gray-300">
+          Explore our comprehensive range of AI and IT solutions
+        </p>
+      </div>
+
+      {/* Tab Navigation */}
+      <div className="flex flex-wrap justify-center mb-8 space-x-2">
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveTab(index)}
+            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+              activeTab === index
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+            }`}
+          >
+            <tab.icon className="w-5 h-5" />
+            <span>{tab.title}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Tab Content */}
+      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <div className="text-center mb-8">
+          <div className={`w-16 h-16 bg-gradient-to-r ${tabs[activeTab].color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+            {React.createElement(tabs[activeTab].icon, { className: "w-8 h-8 text-white" })}
           </div>
+          <h3 className="text-2xl font-bold text-white mb-2">
+            {tabs[activeTab].title}
+          </h3>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions deliver unmatched performance, security, and scalability for modern businesses.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {tabs[activeTab].features.map((feature, index) => (
+            <div key={index} className="bg-white/5 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <feature.icon className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h4 className="text-lg font-semibold text-white">
+                  {feature.title}
+                </h4>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <p className="text-gray-300 text-sm mb-4">
+                {feature.description}
+              </p>
+              <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm flex items-center">
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </button>
             </div>
           ))}
         </div>
+      </div>
     </div>
   );
 };
 
+export default DynamicContentShowcase;
