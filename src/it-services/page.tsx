@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Users, Server, HardDrive, Monitor, Printer, Router, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Users, Server, HardDrive, Monitor, Printer, Router, ArrowRight, CheckCircle, Star, Phone, Award, ShieldCheck, FileText, Activity, Code, Mail, Rocket, Lock, Cog, Target } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

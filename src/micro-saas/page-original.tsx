@@ -1664,11 +1664,16 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+
+  return (
+    <>
+      <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       </Helmet>
-      {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1816,7 +1821,8 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 export default MicroSAASPage;
