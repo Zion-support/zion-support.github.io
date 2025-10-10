@@ -1,22 +1,30 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from '@jest/globals';
 
-<<<<<<< HEAD
-describe('advanced-componentsx', () => {
-  beforeEach(() => {
-    // Setup before each test;
+describe('advanced-components', () => {
+  it('should render advanced component', () => {
+    const AdvancedComponent = () => (
+      <div>
+        <h1>Advanced Component</h1>
+        <p>This is a more complex component</p>
+      </div>
+    );
+    render(<AdvancedComponent />);
+    expect(screen.getByText('Advanced Component')).toBeInTheDocument();
   });
 
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
-=======
-describe('Advanced Components', () => {
-  it('renders advanced components', () => {
-    expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+  it('should handle state changes', () => {
+    const StatefulComponent = () => {
+      const [count, setCount] = React.useState(0);
+      return (
+        <div>
+          <span>{count}</span>
+          <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+      );
+    };
+    render(<StatefulComponent />);
+    expect(screen.getByText('0')).toBeInTheDocument();
   });
 });

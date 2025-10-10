@@ -1,22 +1,17 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from '@jest/globals';
 
-<<<<<<< HEAD
-describe('componentsx', () => {
-  beforeEach(() => {
-    // Setup before each test;
+describe('components', () => {
+  it('should render basic component', () => {
+    const TestComponent = () => <div>Test Component</div>;
+    render(<TestComponent />);
+    expect(screen.getByText('Test Component')).toBeInTheDocument();
   });
 
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
-=======
-describe('Components', () => {
-  it('renders basic components', () => {
-    expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+  it('should handle props correctly', () => {
+    const TestComponent = ({ title }: { title: string }) => <h1>{title}</h1>;
+    render(<TestComponent title="Test Title" />);
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
   });
 });

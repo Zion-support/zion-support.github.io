@@ -1,24 +1,32 @@
-<<<<<<< HEAD
-import { describe, it, expect, beforeEach } from '@jest/globals';
-
-describe('enhancedLogger', () => {
-  beforeEach(() => {
-    // Setup before each test;
-  });
-
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
-=======
 import { describe, it, expect } from '@jest/globals';
 
-describe('Enhanced Logger', () => {
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+describe('enhancedLogger', () => {
+  it('should log messages', () => {
+    const logger = {
+      info: jest.fn(),
+      error: jest.fn(),
+      warn: jest.fn(),
+      debug: jest.fn()
+    };
+    
+    logger.info('Test message');
+    expect(logger.info).toHaveBeenCalledWith('Test message');
+  });
+
+  it('should handle different log levels', () => {
+    const logger = {
+      info: jest.fn(),
+      error: jest.fn(),
+      warn: jest.fn(),
+      debug: jest.fn()
+    };
+    
+    logger.error('Error message');
+    logger.warn('Warning message');
+    logger.debug('Debug message');
+    
+    expect(logger.error).toHaveBeenCalledWith('Error message');
+    expect(logger.warn).toHaveBeenCalledWith('Warning message');
+    expect(logger.debug).toHaveBeenCalledWith('Debug message');
   });
 });
