@@ -1,5 +1,12 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'normal' | 'large';
+  focusVisible: boolean;
+}
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -8,7 +15,25 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     fontSize: 'normal',
     focusVisible: false
   });
-  const { trackEvent } = useAnalytics();
+
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+    
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+    
+    root.style.fontSize = newSettings.fontSize === 'small' ? '14px' : 
+                        newSettings.fontSize === 'large' ? '18px' : '16px';
+  };
 
   useEffect(() => {
     // Add ARIA landmarks
@@ -24,6 +49,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
+      }
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
       }
     };
 
@@ -60,8 +89,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           position: static;
           width: auto;
           height: auto;
-          padding: inherit;
-          margin: inherit;
+          padding: 0.5rem;
+          margin: 0;
           overflow: visible;
           clip: auto;
           white-space: normal;
@@ -70,46 +99,27 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       document.head.appendChild(style);
     };
 
-    // Add keyboard navigation support
+    // Add keyboard navigation
     const addKeyboardNavigation = () => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content with Tab
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
-          }
-        }
-
-        // Close dropdowns with Escape
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
         }
       };
 
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');
+      };
+
       document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
     };
 
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-    const cleanup = addKeyboardNavigation();
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-      }
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -144,17 +154,24 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
 
-    // Setup keyboard navigation
-    setupKeyboardNavigation();
+    // Initialize accessibility features
+    addLandmarks();
+    addSkipLinks();
+    enhanceFocusManagement();
+    const cleanup = addKeyboardNavigation();
 
-    // Setup focus management
-    setupFocusManagement();
-
+    // Cleanup function
     return () => {
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.remove();
+      }
       motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
+      cleanup();
     };
   }, []);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
 
