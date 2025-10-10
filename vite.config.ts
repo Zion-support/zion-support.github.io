@@ -25,11 +25,11 @@ export default defineConfig({
     target: 'es2020',
     cssTarget: 'chrome80',
     reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 300,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -37,8 +37,11 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -46,9 +49,12 @@ export default defineConfig({
             if (id.includes('web-vitals')) {
               return 'vendor-analytics';
             }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
             return 'vendor-misc';
           }
-          // App chunks
+          // App chunks - better organization
           if (id.includes('/app/ai-')) {
             return 'ai-services';
           }
@@ -57,6 +63,12 @@ export default defineConfig({
           }
           if (id.includes('/app/components/')) {
             return 'components';
+          }
+          if (id.includes('/app/blog/')) {
+            return 'blog';
+          }
+          if (id.includes('/app/case-studies/')) {
+            return 'case-studies';
           }
           return 'app';
         },
@@ -109,7 +121,17 @@ export default defineConfig({
     host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+    include: [
+      'react', 
+      'react-dom', 
+      'framer-motion', 
+      'lucide-react', 
+      'react-router-dom',
+      'clsx',
+      'tailwind-merge',
+      'web-vitals'
+    ],
+    exclude: ['@vite/client', '@vite/env']
   },
   css: {
     devSourcemap: true

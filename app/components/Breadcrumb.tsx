@@ -11,38 +11,49 @@ const Breadcrumb: React.FC = () => {
     return null;
   }
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+  const pathSegments = location.pathname.split('/').filter(Boolean);
   
   const breadcrumbItems = [
-    { name: 'Home', path: '/', icon: Home }
+    { name: 'Home', href: '/', icon: Home }
   ];
 
   pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/');
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
+    const href = '/' + pathSegments.slice(0, index + 1).join('/');
+    const name = segment
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    
+    breadcrumbItems.push({ name, href });
   });
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+    <nav 
+      className="bg-slate-800/30 border-b border-cyan-500/20 py-3 px-4"
+      aria-label="Breadcrumb"
+    >
+      <div className="max-w-7xl mx-auto">
         <ol className="flex items-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
+            <li key={item.href} className="flex items-center">
               {index > 0 && (
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
               )}
-              <a
-                href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`}
-              >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
+              
+              {index === breadcrumbItems.length - 1 ? (
+                <span className="text-cyan-400 font-medium" aria-current="page">
+                  {item.icon && <item.icon className="w-4 h-4 inline mr-1" />}
+                  {item.name}
+                </span>
+              ) : (
+                <a
+                  href={item.href}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
+                >
+                  {item.icon && <item.icon className="w-4 h-4 mr-1" />}
+                  {item.name}
+                </a>
+              )}
             </li>
           ))}
         </ol>
