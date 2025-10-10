@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiApiManagementPage: React.FC = () => {
-import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react'
 const AIApiManagementPage: React.FC = () => {
   const features = [
     {
@@ -33,7 +33,7 @@ const AIApiManagementPage: React.FC = () => {
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
       benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
     }
-  ];
+  ]
   const benefits = [
 'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -46,61 +46,36 @@ const AIApiManagementPage: React.FC = () => {
     'Real-time performance monitoring',
     'Intelligent load balancing',
     'Cost optimization insights'
-  ];
+  ]
   const stats = [
     { icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
-  ];
+  ]
   return (
-    <React.Fragment>
-      <Helmet>
-<title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>AI API Management | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered API management solutions by Zion Tech Group. Intelligent monitoring, security, and optimization for your APIs." />
-        <meta name="keywords" content="API management, AI solutions, API monitoring, rate limiting, API security, Zion Tech Group" />
-      </Helmet>
-      <Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI API Management
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            AI-Powered API Management
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Intelligent API management with AI-driven monitoring, security, and optimization for enterprise-grade performance
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo;
-  </
-          </div>
+    <React> </React><Helmet>
+</Helmet><title>Page | Zion Tech Group</title>
+        <meta> </meta><meta> </meta><div> </div><Helmet> </Helmet><title>AI API Management | Zion Tech Group</title>
+        <meta> </meta><meta> </meta></Helmet>
+      <Navigation>{/* Hero Section */}
+      </Navigation><section> </section><div> </div><div> </div><div> </div><h1>AI API Management
+            </h1><span>Solutions
+            </span></span>
+          <h1>AI-Powered API Management
+          </h1></h1>
+          <p>Intelligent API management with AI-driven monitoring, security, and optimization for enterprise-grade performance
+          </p></p>
+          <div> </div><button>Start Free Trial
+            </button></button>
+            <button>View Demo>
+          </button></div>
         </div>
       </section>
       {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {stat.icon}
-                </div>
+      <section> </section><div> </div><div>{stats.map((stat, index) => (
+              </div><div> </div><div>{stat.icon}
+                </div></div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
@@ -109,30 +84,18 @@ const AIApiManagementPage: React.FC = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs;
-  </
+      <section> </section><div> </div><div> </div><h2>Powerful Features
+            </h2></h2>
+            <p>Advanced solutions designed for modern business needs>
+          </p></div>
+          <div>Comprehensive API management with AI-powered intelligence
+            </div></p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              Comprehensive API management with AI-powered intelligence
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+          <div>{features.map((feature, index) => (
+              </div><div> </div><h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>{benefit}</span>
+                <ul>{feature.benefits.map((benefit, benefitIndex) => (
+                    </ul><li> </li><CheckCircle> </CheckCircle><span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -142,20 +105,11 @@ const AIApiManagementPage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our API Management?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions;
-  </
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
+      <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our API Management?</h2>
+            <p>Experience the benefits of our proven solutions>
+          </p></div>
+          <div>{benefits.map((benefit, index) => (
+              </div><div> </div><div> </div><CheckCircle> </CheckCircle></div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -163,47 +117,25 @@ const AIApiManagementPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today;
-  </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
-  </
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
-  </
-          </div>
+      <section> </section><div> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p>Transform your business with our page solutions today>
+          </p><div> </div><button>Start Free Trial>
+            </button><button>Contact Sales>
+          </button></div>
         </div>
       </section>
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI API Management Features;
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how our AI API management platform can revolutionize your development workflow.
-              </p>
+        <section> </section><div> </div><div> </div><h2>Powerful AI API Management Features>
+              </h2><p>Discover how our AI API management platform can revolutionize your development workflow.
+              </p></p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+            <div>{features.map((feature, index) => (
+                </div><div> </div><div> </div><feature> </feature><h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
+                  <ul>{feature.benefits.map((benefit, benefitIndex) => (
+                      </ul><li> </li><CheckCircle>{benefit}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                 </div>
@@ -212,19 +144,11 @@ const AIApiManagementPage: React.FC = () => {
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our AI API Management?
-              </h2>
+        <section> </section><div> </div><div> </div><h2>Why Choose Our AI API Management?
+              </h2></h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                    <p className="text-lg font-medium text-gray-900">{benefit}</p>
+            <div>{benefits.map((benefit, index) => (
+                </div><div> </div><div> </div><CheckCircle> </CheckCircle><p className="text-lg font-medium text-gray-900">{benefit}</p>
                   </div>
                 </div>
               ))}
@@ -232,25 +156,18 @@ const AIApiManagementPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your API Management?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using our AI API management platform.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Start Your Free Trial;
-  </
-          </div>
+        <section> </section><div> </div><h2>Ready to Transform Your API Management?
+            </h2></h2>
+            <p>Join thousands of businesses already using our AI API management platform.
+            </p></p>
+            <button>Start Your Free Trial>
+          </button></div>
         </section>
       </main>
-      <Footer />
-    </React.Fragment>
-  );
-};
-export default AiApiManagementPage;
+      <Footer> </Footer></React.Fragment>
+  )
+}
+export default AiApiManagementPage
   </button>
   </h2>
   </button>
@@ -260,26 +177,19 @@ export default AiApiManagementPage;
   </p>
   </button>
   </span>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact our experts to discuss your API management requirements and get started today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Contact Us
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
+          <div> </div><h2>Ready to Get Started?
+            </h2></h2>
+            <p>Contact our experts to discuss your API management requirements and get started today.
+            </p></p>
+            <div> </div><button>Contact Us
+              </button></button>
+              <button>Learn More
+              </button></button>
             </div>
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
-  );
-};
-export default AIApiManagementPage;
+      <Footer> </Footer></div>
+  )
+}
+export default AIApiManagementPage

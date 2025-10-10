@@ -1,381 +1,217 @@
-'use client';
-import React, { useState, useEffect, useCallback, memo, lazy, Suspense } from 'react';
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-import StructuredData from './components/StructuredData';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect, useCallback, memo, lazy, Suspense } from 'react'
+import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates'
+import StructuredData from './components/StructuredData'
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
 // Performance optimization: Debounce scroll events
 const debounce = (func: Function, wait: number) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: NodeJS.Timeout
   return function executedFunction(...args: any[]) {
     const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-};
-
+      clearTimeout(timeout)
+      func(...args)
+    }
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
+}
 // Memoized components for better performance
 const ServiceCard = memo(({ icon: Icon, title, description, features, href, delay = 0 }: {
   icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  href: string;
-  delay?: number;
+  title: string
+  description: string
+  features: string[]
+  href: string
+  delay?: number
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
+    const timer = setTimeout(() => setIsVisible(true), delay)
+    return () => clearTimeout(timer)
+  }, [delay])
   return (
-    <div
-      className={`group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 transition-all duration-700 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-2 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
-      <div className="relative z-10">
-        <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-8 h-8 text-white" />
-        </div>
+    </any><div> </div><div> </div><div> </div><Icon> </Icon></div>
         
-        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-          {title}
-        </h3>
+        <h3>{title}
+        </h3></h3>
         
-        <p className="text-gray-300 mb-6 leading-relaxed">
-          {description}
-        </p>
+        <p>{description}
+        </p></p>
         
-        <ul className="space-y-3 mb-8">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-sm text-gray-300">
-              <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-              {feature}
-            </li>
+        <ul>{features.map((feature, index) => (
+            </ul><li> </li><CheckCircle>{feature}
+            </CheckCircle></li>
           ))}
         </ul>
         
-        <a
-          href={href}
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-2 transition-all duration-300"
-        >
-          Learn More
-          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-        </a>
+        <a>Learn More
+          </a><ArrowRight> </ArrowRight></a>
       </div>
     </div>
-  );
-});
-
-const StatCard = memo(({ value, label, icon: Icon, delay = 0 }: {
-  value: string;
-  label: string;
-  icon: React.ComponentType<any>;
-  delay?: number;
+  )
+})
+ServiceCard.displayName = 'ServiceCard'
+const StatsCard = memo(({ icon: Icon, value, label, delay = 0 }: {
+  icon: React.ComponentType<any>value: string
+  label: string
+  delay?: number
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [count, setCount] = useState(0);
-
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  useEffect(() => {
-    if (isVisible) {
-      const numericValue = parseInt(value.replace(/[^\d]/g, ''));
-      if (numericValue > 0) {
-        const duration = 2000;
-        const increment = numericValue / (duration / 16);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= numericValue) {
-            setCount(numericValue);
-            clearInterval(timer);
-          } else {
-            setCount(Math.floor(current));
-          }
-        }, 16);
-        
-        return () => clearInterval(timer);
-      }
-    }
-  }, [isVisible, value]);
-
+    const timer = setTimeout(() => setIsVisible(true), delay)
+    return () => clearTimeout(timer)
+  }, [delay])
   return (
-    <div
-      className={`text-center p-6 bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl transition-all duration-700 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/10 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-    >
-      <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-        <Icon className="w-8 h-8 text-white" />
-      </div>
-      <div className="text-4xl font-bold text-white mb-2">
-        {value.includes('%') ? `${count}%` : value.includes('+') ? `${count.toLocaleString()}+` : count.toLocaleString()}
-      </div>
-      <div className="text-gray-300 text-sm">{label}</div>
+    </any><div> </div><div> </div><Icon> </Icon></div>
+      <div className="text-3xl font-bold text-white mb-2">{value}</div>
+      <div className="text-gray-400">{label}</div>
     </div>
-  );
-});
-
+  )
+})
+StatsCard.displayName = 'StatsCard'
 const HomePage: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
-
+  const [isLoading, setIsLoading] = useState(true)
+  const [scrollY, setScrollY] = useState(0)
   // Performance optimization: Debounced scroll handler
   const handleScroll = useCallback(
     debounce(() => {
-      setScrollY(window.scrollY);
+      setScrollY(window.scrollY)
     }, 10),
     []
-  );
-
+  )
   useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => setIsLoading(false), 1000)
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleScroll])
   const services = [
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      href: '/ai-services'
+      description: 'Comprehensive artificial intelligence services including machine learning, natural language processing, and computer vision.',
+      features: ['Machine Learning Models', 'NLP Processing', 'Computer Vision', 'Predictive Analytics'],
+      href: '/ai-solutions'
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and reliable cloud solutions tailored to your business needs.',
-      features: ['AWS/Azure/GCP Migration', 'Cloud Security', 'Auto-scaling', '24/7 Monitoring'],
+      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud Platform integration.',
+      features: ['Cloud Migration', 'Auto-scaling', 'Security', 'Cost Optimization'],
       href: '/cloud-infrastructure'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with comprehensive security solutions and threat monitoring.',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
+      description: 'Advanced security solutions to protect your digital assets and ensure compliance.',
+      features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
       href: '/cybersecurity'
     },
     {
       icon: Code,
       title: 'Custom Development',
-      description: 'Bespoke software solutions designed to meet your unique business requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      description: 'Tailored software solutions built with modern technologies and best practices.',
+      features: ['Web Applications', 'Mobile Apps', 'APIs', 'Database Design'],
       href: '/custom-development'
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
-      description: 'Unlock insights from your data with advanced analytics and business intelligence tools.',
-      features: ['Data Visualization', 'Real-time Dashboards', 'Predictive Modeling', 'Custom Reports'],
+      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+      features: ['Data Visualization', 'Business Intelligence', 'Reporting', 'Predictive Modeling'],
       href: '/data-analytics'
     },
     {
       icon: Users,
-      title: 'IT Consulting',
-      description: 'Strategic technology consulting to optimize your IT infrastructure and processes.',
-      features: ['Technology Assessment', 'Digital Transformation', 'Process Optimization', 'Change Management'],
-      href: '/it-consulting'
+      title: 'Consulting',
+      description: 'Expert guidance on technology strategy, digital transformation, and process optimization.',
+      features: ['Strategy Planning', 'Digital Transformation', 'Process Optimization', 'Training'],
+      href: '/consultation'
     }
-  ];
-
+  ]
   const stats = [
-    { value: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { value: '50+', label: 'Expert Team Members', icon: Users },
-    { value: '24/7', label: 'Support Available', icon: Clock }
-  ];
-
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: CheckCircle, value: '1000+', label: 'Projects Completed' },
+    { icon: Star, value: '99%', label: 'Client Satisfaction' },
+    { icon: Clock, value: '24/7', label: 'Support Available' }
+  ]
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
+      <div> </div><div> </div><div> </div><Brain> </Brain></div>
+          <div className="text-white text-xl font-semibold">Loading...</div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
-        canonicalUrl="https://ziontechgroup.com"
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          },
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'customer service',
-            email: 'info@ziontechgroup.com'
-          },
-          sameAs: [
-            'https://linkedin.com/company/ziontechgroup',
-            'https://twitter.com/ziontechgroup'
-          ]
-        }}
-      />
-      
-      <StructuredData />
-      <PerformanceOptimizer />
-      <AccessibilityEnhancer />
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}AI & IT Solutions
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Leading provider of cutting-edge artificial intelligence, quantum computing, and digital transformation services. 
-              We help enterprises unlock their full potential through innovative technology solutions.
-            </p>
+    <div> </div><PerformanceOptimizer> </PerformanceOptimizer><SEOOptimizer> </SEOOptimizer><AccessibilityEnhancer> </AccessibilityEnhancer><StructuredData>{/* Hero Section */}
+      </StructuredData><section> </section><div> </div><div> </div><div> </div><h1>AI & IT Solutions
+            </h1><span>for the Future
+            </span></span>
+          </h1>
+          <p>Transform your business with cutting-edge artificial intelligence and information technology solutions. 
+            We deliver innovative, scalable, and secure solutions that drive growth and efficiency.
+          </p></p>
+          <div> </div><button>Get Started
+            </button></button>
+            <button>Learn More
+            </button></button>
           </div>
+        </div>
+      </section>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="/contact"
-              className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              <span className="relative z-10">Get Started Today</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </a>
-            <a
-              href="/services"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl transition-all duration-300 hover:bg-cyan-400 hover:text-slate-900 hover:scale-105"
-            >
-              Explore Services
-            </a>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <StatCard
-                key={index}
-                value={stat.value}
-                label={stat.label}
-                icon={stat.icon}
-                delay={index * 200}
-              />
-            ))}
-          </div>
+      {/* Stats Section */}
+      <section> </section><div> </div><div>{stats.map((stat, index) => (
+              </div><StatsCard>))}
+          </StatsCard></div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Services</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
-            </p>
+      <section> </section><div> </div><div> </div><h2>Our Services
+            </h2></h2>
+            <p>Comprehensive solutions designed to accelerate your digital transformation and drive business success.
+            </p></p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                features={service.features}
-                href={service.href}
-                delay={index * 150}
-              />
-            ))}
-          </div>
+          
+          <div>{services.map((service, index) => (
+              </div><ServiceCard>))}
+          </ServiceCard></div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              <span className="relative z-10">Start Your Project</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl transition-all duration-300 hover:bg-cyan-400 hover:text-slate-900 hover:scale-105"
-            >
-              Call Us Now
-            </a>
+      <section> </section><div> </div><div> </div><h2>Ready to Transform Your Business?
+            </h2></h2>
+            <p>Let's discuss how our AI and IT solutions can help you achieve your goals.
+            </p></p>
+            <div> </div><button>Contact Us
+              </button></button>
+              <button>Schedule Demo
+              </button></button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Content Carousel */}
-      <Suspense fallback={<div className="h-96 bg-slate-800 animate-pulse" />}>
-        <ContentCarousel />
-      </Suspense>
+      <Suspense fallback={<div className="h-64 bg-gray-800 rounded-lg animate-pulse" />}>
+        <ContentCarousel> </ContentCarousel></Suspense>
 
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-32 bg-slate-800 animate-pulse" />}>
-        <ContentPromotionBanner />
-      </Suspense>
-    </React.Fragment>
-  );
-};
-
-export default HomePage;
+      <Suspense fallback={<div className="h-32 bg-gray-800 rounded-lg animate-pulse" />}>
+        <ContentPromotionBanner> </ContentPromotionBanner></Suspense>
+    </div>
+  )
+}
+export default HomePage

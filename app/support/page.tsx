@@ -1,19 +1,17 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react'
 interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
+  question: string
+  answer: string
+  category: string
 }
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -55,8 +53,7 @@ const SupportPage: React.FC = () => {
       answer: 'Absolutely! Our solutions are designed to scale with your business. We provide ongoing optimization and scaling support to ensure your systems can handle growth and increased demand.',
       category: 'Scaling'
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       name: 'Phone Support',
@@ -82,46 +79,31 @@ const SupportPage: React.FC = () => {
       availability: 'Mon-Fri: 9AM-6PM EST',
       color: 'text-purple-400'
     }
-  ];
-
-  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Training', 'Service Level', 'Data Management', 'Scaling'];
-
+  ]
+  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Training', 'Service Level', 'Data Management', 'Scaling']
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
-
+    setExpandedFAQ(expandedFAQ === index ? null : index)
+  }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Support | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
-        <meta name="keywords" content="support, help, FAQ, contact, technical assistance" />
-      </Helmet>
+    <div> </div><Helmet> </Helmet><title>Support | Zion Tech Group</title>
+        <meta> </meta><meta> </meta></Helmet>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Support
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Center
-            </span>
+      <section> </section><div> </div><h1>Support
+            </h1><span>Center
+            </span></span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get help and support for our AI and IT solutions. We're here to help you succeed.
-          </p>
+          <p>Get help and support for our AI and IT solutions. We're here to help you succeed.
+          </p></p>
           
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto relative mb-8">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
+          <div> </div><Search> </Search><input
               type="text"
               placeholder="Search for help..."
               value={searchTerm}
@@ -131,9 +113,8 @@ const SupportPage: React.FC = () => {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {categories.map((category) => (
-              <button
+          <div>{categories.map((category) => (
+              </div><button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full border transition-all duration-300 ${
@@ -150,22 +131,13 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* Support Channels */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Contact Support</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the support channel that works best for you. We're here to help 24/7.
-            </p>
+      <section> </section><div> </div><div> </div><h2 className="text-3xl font-bold text-white mb-6">Contact Support</h2>
+            <p>Choose the support channel that works best for you. We're here to help 24/7.
+            </p></p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
-                <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
-                    <channel.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
+          <div>{supportChannels.map((channel, index) => (
+              </div><div> </div><div> </div><div> </div><channel> </channel></div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{channel.name}</h3>
                 <p className="text-gray-300 mb-4">{channel.description}</p>
@@ -178,37 +150,25 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300">
-              Find answers to common questions about our services and solutions.
-            </p>
+      <section> </section><div> </div><div> </div><h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our services and solutions.
+            </p></p>
           </div>
           
-          <div className="space-y-4">
-            {filteredFAQs.map((faq, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg border border-cyan-500/20">
-                <button
+          <div>{filteredFAQs.map((faq, index) => (
+              </div><div> </div><button
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
                 >
                   <span className="text-lg font-semibold text-white">{faq.question}</span>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
-                      {faq.category}
-                    </span>
-                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}>
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
+                  <div> </div><span>{faq.category}
+                    </span></span>
+                    <div> </div><svg> </svg><path> </path></svg>
                     </div>
                   </div>
                 </button>
                 {expandedFAQ === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-300">{faq.answer}</p>
+                  <div> </div><p className="text-gray-300">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -218,38 +178,24 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* Resources Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Additional Resources</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our documentation, guides, and other helpful resources.
-            </p>
+      <section> </section><div> </div><div> </div><h2 className="text-3xl font-bold text-white mb-6">Additional Resources</h2>
+            <p>Explore our documentation, guides, and other helpful resources.
+            </p></p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
-              <div className="flex justify-center mb-6">
-                <BookOpen className="w-12 h-12 text-cyan-400" />
-              </div>
+          <div> </div><div> </div><div> </div><BookOpen> </BookOpen></div>
               <h3 className="text-xl font-semibold text-white mb-4">Documentation</h3>
               <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
               <button className="text-cyan-400 hover:text-cyan-300 font-medium">View Documentation</button>
             </div>
             
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
-              <div className="flex justify-center mb-6">
-                <Users className="w-12 h-12 text-cyan-400" />
-              </div>
+            <div> </div><div> </div><Users> </Users></div>
               <h3 className="text-xl font-semibold text-white mb-4">Community</h3>
               <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
               <button className="text-cyan-400 hover:text-cyan-300 font-medium">Join Community</button>
             </div>
             
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
-              <div className="flex justify-center mb-6">
-                <Zap className="w-12 h-12 text-cyan-400" />
-              </div>
+            <div> </div><div> </div><Zap> </Zap></div>
               <h3 className="text-xl font-semibold text-white mb-4">Status Page</h3>
               <p className="text-gray-300 mb-6">Check the real-time status of our services and systems.</p>
               <button className="text-cyan-400 hover:text-cyan-300 font-medium">View Status</button>
@@ -258,7 +204,6 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default SupportPage;
+  )
+}
+export default SupportPage

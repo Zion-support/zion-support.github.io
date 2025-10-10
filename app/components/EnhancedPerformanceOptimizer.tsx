@@ -1,13 +1,12 @@
-'use client';
-import React, { useEffect, useCallback, ReactNode } from 'react';
-import { useAnalytics } from './EnhancedAnalytics';
-
+'use client'
+import React, { useEffect, useCallback, ReactNode } from 'react'
+import { useAnalytics } from './EnhancedAnalytics'
 interface PerformanceOptimizerProps {
-  children: ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+  children: ReactNode
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
 }
 
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -17,23 +16,21 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-  const { trackPerformance } = useAnalytics();
-
+  const { trackPerformance } = useAnalytics()
   // Image optimization
   useEffect(() => {
     if (enableImageOptimization) {
-      const images = document.querySelectorAll('img');
+      const images = document.querySelectorAll('img')
       images.forEach(img => {
         if (!img.loading) {
-          img.loading = 'lazy';
+          img.loading = 'lazy'
         }
         if (!img.decoding) {
-          img.decoding = 'async';
+          img.decoding = 'async'
         }
-      });
+      })
     }
-  }, [enableImageOptimization]);
-
+  }, [enableImageOptimization])
   // Lazy loading for components
   useEffect(() => {
     if (enableLazyLoading) {
@@ -41,22 +38,19 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         (entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement;
-              element.classList.add('loaded');
-              observer.unobserve(element);
+              const element = entry.target as HTMLElement
+              element.classList.add('loaded')
+              observer.unobserve(element)
             }
-          });
+          })
         },
         { threshold: 0.1 }
-      );
-
-      const lazyElements = document.querySelectorAll('[data-lazy]');
-      lazyElements.forEach(el => observer.observe(el));
-
-      return () => observer.disconnect();
+      )
+      const lazyElements = document.querySelectorAll('[data-lazy]')
+      lazyElements.forEach(el => observer.observe(el))
+      return () => observer.disconnect()
     }
-  }, [enableLazyLoading]);
-
+  }, [enableLazyLoading])
   // Preload critical resources
   useEffect(() => {
     if (enablePreloading) {
@@ -64,79 +58,68 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
         { href: '/images/hero-bg.jpg', as: 'image' },
         { href: '/css/critical.css', as: 'style' }
-      ];
-
+      ]
       preloadResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource.href;
-        link.as = resource.as;
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource.href
+        link.as = resource.as
         if (resource.type) {
-          link.type = resource.type;
+          link.type = resource.type
         }
-        document.head.appendChild(link);
-      });
+        document.head.appendChild(link)
+      })
     }
-  }, [enablePreloading]);
-
+  }, [enablePreloading])
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
-        };
-
-        trackPerformance('page_load', metrics);
+        }
+        trackPerformance('page_load', metrics)
       }
-    };
-
+    }
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance()
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance)
     }
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [trackPerformance]);
-
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [trackPerformance])
   // Code splitting optimization
   const handleRouteChange = useCallback(() => {
     if (enableCodeSplitting) {
       // Preload next likely routes
-      const nextRoutes = ['/about', '/services', '/contact'];
+      const nextRoutes = ['/about', '/services', '/contact']
       nextRoutes.forEach(route => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = route;
-        document.head.appendChild(link);
-      });
+        const link = document.createElement('link')
+        link.rel = 'prefetch'
+        link.href = route
+        document.head.appendChild(link)
+      })
     }
-  }, [enableCodeSplitting]);
-
+  }, [enableCodeSplitting])
   useEffect(() => {
     // Listen for route changes (if using React Router)
-    const handlePopState = () => handleRouteChange();
-    window.addEventListener('popstate', handlePopState);
-    
+    const handlePopState = () => handleRouteChange()
+    window.addEventListener('popstate', handlePopState)
     return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, [handleRouteChange]);
-
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [handleRouteChange])
   return (
-    <div className="performance-optimizer">
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedPerformanceOptimizer;
+    <div>{children}
+    </div></div>
+  )
+}
+export default EnhancedPerformanceOptimizer

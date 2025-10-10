@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { 
   Users, 
   Award, 
@@ -16,8 +16,7 @@ import {
   Zap,
   Shield,
   Brain
-} from 'lucide-react';
-
+} from 'lucide-react'
 const CareersPage: React.FC = () => {
   const jobOpenings = [
     {
@@ -116,8 +115,7 @@ const CareersPage: React.FC = () => {
         'MBA preferred'
       ]
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: <Heart className="w-8 h-8 text-red-500" />,
@@ -149,55 +147,32 @@ const CareersPage: React.FC = () => {
       title: 'Recognition & Rewards',
       description: 'Performance bonuses, stock options, and recognition programs'
     }
-  ];
-
+  ]
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-600" />, value: '50+', label: 'Team Members' },
     { icon: <Award className="w-8 h-8 text-green-600" />, value: '98%', label: 'Employee Satisfaction' },
     { icon: <GraduationCap className="w-8 h-8 text-purple-600" />, value: '100%', label: 'Learning & Development' },
     { icon: <Star className="w-8 h-8 text-yellow-600" />, value: '4.8/5', label: 'Glassdoor Rating' }
-  ];
-
+  ]
   return (
     <>
-      <Helmet>
-        <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and be part of a team that's transforming businesses with cutting-edge AI and IT solutions. Explore our open positions and benefits." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, technology careers, remote work, benefits" />
-      </Helmet>
+      <Helmet> </Helmet><title>Careers - Zion Tech Group | Join Our Team</title>
+        <meta> </meta><meta> </meta></Helmet>
 
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Join Our <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Team</span>
+      <Navigation> </Navigation><main>{/* Hero Section */}
+        </main><section> </section><div> </div><div> </div><div> </div><h1>Join Our </h1><span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Team</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Be part of a team that's shaping the future of technology. Work on cutting-edge AI and IT 
+              <p>Be part of a team that's shaping the future of technology. Work on cutting-edge AI and IT 
                 solutions while enjoying a culture of innovation, growth, and collaboration.
-              </p>
+              </p></p>
             </div>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8"
-                >
-                  <div className="flex justify-center mb-4">
-                    {stat.icon}
-                  </div>
+        <section> </section><div> </div><div>{stats.map((stat, index) => (
+                </div><div> </div><div>{stat.icon}
+                  </div></div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
@@ -207,24 +182,14 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We offer competitive benefits and a culture that values innovation, growth, and work-life balance.
-              </p>
+        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
+              <p>We offer competitive benefits and a culture that values innovation, growth, and work-life balance.
+              </p></p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    {benefit.icon}
-                    <h3 className="text-xl font-bold text-white ml-4">{benefit.title}</h3>
+            <div>{benefits.map((benefit, index) => (
+                </div><div> </div><div>{benefit.icon}
+                    </div><h3 className="text-xl font-bold text-white ml-4">{benefit.title}</h3>
                   </div>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
@@ -234,57 +199,31 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* Job Openings */}
-        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our current job openings and find the perfect role for your skills and career goals.
-              </p>
+        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
+              <p>Explore our current job openings and find the perfect role for your skills and career goals.
+              </p></p>
             </div>
 
-            <div className="space-y-6">
-              {jobOpenings.map((job) => (
-                <div
-                  key={job.id}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300"
-                >
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-4">
-                        <div className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-2" />
-                          <span>{job.location}</span>
+            <div>{jobOpenings.map((job) => (
+                </div><div> </div><div> </div><div> </div><h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
+                      <div> </div><div> </div><MapPin> </MapPin><span>{job.location}</span>
                         </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-2" />
-                          <span>{job.type}</span>
+                        <div> </div><Clock> </Clock><span>{job.type}</span>
                         </div>
-                        <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-2" />
-                          <span>{job.department}</span>
+                        <div> </div><Users> </Users><span>{job.department}</span>
                         </div>
-                        <div className="flex items-center">
-                          <Award className="w-4 h-4 mr-2" />
-                          <span>{job.experience}</span>
+                        <div> </div><Award> </Award><span>{job.experience}</span>
                         </div>
                       </div>
                       <p className="text-gray-300 mb-4">{job.description}</p>
                     </div>
-                    <button className="mt-4 lg:mt-0 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center">
-                      Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
+                    <button>Apply Now
+                      </button><ArrowRight> </ArrowRight></button>
                   </div>
 
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Requirements</h4>
-                    <ul className="space-y-2">
-                      {job.requirements.map((requirement, index) => (
-                        <li key={index} className="flex items-start text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                          <span>{requirement}</span>
+                  <div> </div><h4 className="text-lg font-semibold text-white mb-3">Requirements</h4>
+                    <ul>{job.requirements.map((requirement, index) => (
+                        </ul><li> </li><CheckCircle> </CheckCircle><span>{requirement}</span>
                         </li>
                       ))}
                     </ul>
@@ -296,60 +235,34 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* Culture Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Culture</h2>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  At Zion Tech Group, we believe that great technology comes from great people. 
+        <section> </section><div> </div><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Our Culture</h2>
+                <p>At Zion Tech Group, we believe that great technology comes from great people. 
                   We foster a culture of innovation, collaboration, and continuous learning where 
                   every team member can thrive and make a meaningful impact.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Innovation First</h3>
+                </p></p>
+                <div> </div><div> </div><CheckCircle> </CheckCircle><div> </div><h3 className="text-lg font-semibold text-white mb-1">Innovation First</h3>
                       <p className="text-gray-300">We encourage experimentation and creative problem-solving</p>
                     </div>
                   </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Collaborative Environment</h3>
+                  <div> </div><CheckCircle> </CheckCircle><div> </div><h3 className="text-lg font-semibold text-white mb-1">Collaborative Environment</h3>
                       <p className="text-gray-300">Work with talented professionals from diverse backgrounds</p>
                     </div>
                   </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Growth Opportunities</h3>
+                  <div> </div><CheckCircle> </CheckCircle><div> </div><h3 className="text-lg font-semibold text-white mb-1">Growth Opportunities</h3>
                       <p className="text-gray-300">Continuous learning and career development support</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Ready to Apply?</h3>
-                <p className="text-gray-300 mb-6">
-                  Don't see a position that matches your skills? We're always looking for talented 
+              <div> </div><h3 className="text-2xl font-bold text-white mb-6">Ready to Apply?</h3>
+                <p>Don't see a position that matches your skills? We're always looking for talented 
                   individuals to join our team. Send us your resume and let us know how you can contribute.
-                </p>
-                <div className="space-y-4">
-                  <a
-                    href="/contact"
-                    className="w-full block text-center py-3 px-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Send Your Resume
-                  </a>
-                  <a
-                    href="mailto:careers@ziontechgroup.com"
-                    className="w-full block text-center py-3 px-6 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                  >
-                    Email Us Directly
-                  </a>
+                </p></p>
+                <div> </div><a>Send Your Resume
+                  </a></a>
+                  <a>Email Us Directly
+                  </a></a>
                 </div>
               </div>
             </div>
@@ -357,9 +270,7 @@ const CareersPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
-    </>
-  );
-};
-
-export default CareersPage;
+      <Footer> </Footer></>
+  )
+}
+export default CareersPage
