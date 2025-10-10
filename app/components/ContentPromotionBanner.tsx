@@ -18,241 +18,90 @@ const ContentPromotionBanner: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security measures to protect your data and ensure compliance'
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const stats = [
+      description: 'Scale your business worldwide with our international infrastructure'
+    },
     {
       icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
+      title: 'Expert Support',
+      description: '24/7 support from our team of technology experts and consultants'
     },
     {
       icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service guarantee'
-    },
-    {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
+      title: 'Proven Results',
+      description: 'Track record of successful implementations and satisfied clients'
     }
   ];
 
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Enterprise Clients' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Transform Your Business with AI
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Why Choose Zion Tech Group?
           </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Discover how our AI-powered solutions can revolutionize your operations and drive growth.
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            We deliver cutting-edge technology solutions that drive real business results. 
+            Join hundreds of satisfied clients who trust us with their digital transformation.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-purple-100 text-sm">{feature.description}</p>
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Zap className="w-5 h-5" />
-              Get Started Today
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              Learn More
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-<<<<<<< HEAD
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-              <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
-              <div className="text-lg font-semibold text-gray-300 mb-1">{stat.label}</div>
-              <div className="text-sm text-gray-400">{stat.description}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-blue-100">{stat.label}</div>
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
-              <ul className="space-y-2">
-                {benefits.slice(0, 4).map((benefit, index) => (
-                  <li key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-purple-100">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Additional Benefits</h3>
-              <ul className="space-y-2">
-                {benefits.slice(4).map((benefit, index) => (
-                  <li key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-purple-100">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-=======
-    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
-        <p className="text-xl text-gray-300 mb-6">
-          Join thousands of businesses already using our AI and IT solutions
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {features.map((feature, index) => (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <feature.icon className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm">{feature.description}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="text-center">
-        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
-          Get Started Now
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <feature.icon className="w-8 h-8 text-white" />
-=======
-        {/* Features Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <feature.icon className="w-8 h-8 text-yellow-400 mr-3" />
+                <h3 className="text-xl font-bold text-white">{feature.title}</h3>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
-            What You Get
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300">{benefit}</p>
-              </div>
-            ))}
-          </div>
+              <p className="text-blue-100">{feature.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI and IT solutions to transform their operations.
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg text-blue-100 mb-6">
+              Get started with a free consultation and discover how our solutions can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2">
-                Start Free Trial
-                <ArrowRight className="w-4 h-4" />
+              <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                <Zap className="w-5 h-5 mr-2" />
+                Get Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Sales
+              <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
+                <Star className="w-5 h-5 mr-2" />
+                View Our Portfolio
               </button>
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       </div>
     </div>
   );

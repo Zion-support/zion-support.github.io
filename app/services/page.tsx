@@ -13,7 +13,11 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Phone,
+  Mail,
+  MapPin,
+  Settings
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -25,61 +29,97 @@ const ServicesPage: React.FC = () => {
   const services = [
     {
       id: 1,
-      title: 'AI Solutions',
-      description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
+      title: 'AI-Powered Solutions',
+      description: 'Comprehensive artificial intelligence solutions including chatbots, content generation, and predictive analytics.',
       icon: Brain,
       category: 'AI',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $5,000/month'
+      features: ['AI Chatbots', 'Content Generation', 'Predictive Analytics', 'Computer Vision', 'Natural Language Processing', 'Machine Learning'],
+      price: 'Starting at $299/month',
+      link: '/ai-services'
     },
     {
       id: 2,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+      title: 'Cloud Infrastructure',
+      description: 'Complete cloud solutions with AWS, Azure, and GCP setup, migration, and optimization.',
       icon: Cloud,
       category: 'Cloud',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'Starting at $2,000/month'
+      features: ['Multi-cloud Setup', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization', 'Security Hardening'],
+      price: 'Starting at $2,500/month',
+      link: '/it-services'
     },
     {
       id: 3,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets and data.',
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security services including threat detection, penetration testing, and compliance management.',
       icon: Shield,
       category: 'Security',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
-      price: 'Starting at $3,000/month'
+      features: ['Threat Detection', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Incident Response', 'Security Training'],
+      price: 'Starting at $1,800/month',
+      link: '/it-services'
     },
     {
       id: 4,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
+      title: 'Data Analytics & BI',
+      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
       icon: BarChart3,
       category: 'Analytics',
-      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
-      price: 'Starting at $1,500/month'
+      features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization', 'ETL Pipelines', 'Performance Metrics'],
+      price: 'Starting at $399/month',
+      link: '/ai-services'
     },
     {
       id: 5,
-      title: 'Mobile Development',
-      description: 'Custom mobile applications for iOS and Android platforms.',
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern frameworks.',
       icon: Smartphone,
       category: 'Development',
-      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design'],
-      price: 'Starting at $8,000/project'
+      features: ['Native iOS & Android', 'Cross-platform Apps', 'UI/UX Design', 'API Integration', 'App Store Optimization', 'Maintenance & Support'],
+      price: 'Starting at $8,000/project',
+      link: '/it-services'
     },
     {
       id: 6,
-      title: 'Database Services',
-      description: 'Database design, optimization, and management services.',
+      title: 'Micro SaaS Solutions',
+      description: '50+ specialized business tools including CRM, project management, and analytics dashboards.',
+      icon: Zap,
+      category: 'Micro SaaS',
+      features: ['Analytics Dashboard', 'CRM Suite', 'Project Management', 'Email Marketing', 'Security Tools', 'Content Creation'],
+      price: 'Starting at $19/month',
+      link: '/micro-saas'
+    },
+    {
+      id: 7,
+      title: 'DevOps & CI/CD',
+      description: 'Complete DevOps implementation with automated deployment, monitoring, and infrastructure management.',
+      icon: Settings,
+      category: 'DevOps',
+      features: ['CI/CD Pipelines', 'Container Orchestration', 'Infrastructure as Code', 'Automated Testing', 'Monitoring & Logging', 'Team Training'],
+      price: 'Starting at $3,200/month',
+      link: '/it-services'
+    },
+    {
+      id: 8,
+      title: 'Database Management',
+      description: 'Database design, optimization, migration, and ongoing management for all major database systems.',
       icon: Database,
       category: 'Database',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $1,000/month'
+      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery', 'Security Hardening', 'Monitoring & Maintenance'],
+      price: 'Starting at $1,200/month',
+      link: '/it-services'
+    },
+    {
+      id: 9,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to optimize technology investments and digital transformation initiatives.',
+      icon: Globe,
+      category: 'Consulting',
+      features: ['IT Strategy', 'Technology Assessment', 'Digital Transformation', 'Process Optimization', 'Vendor Management', 'Risk Assessment'],
+      price: 'Starting at $200/hour',
+      link: '/it-services'
     }
   ];
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Micro SaaS', 'DevOps', 'Database', 'Consulting'];
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -165,10 +205,13 @@ const ServicesPage: React.FC = () => {
                   </ul>
                   <div className="flex items-center justify-between">
                     <span className="text-blue-400 font-semibold">{service.price}</span>
-                    <button className="flex items-center text-white hover:text-blue-400 transition-colors">
+                    <Link 
+                      to={service.link}
+                      className="flex items-center text-white hover:text-blue-400 transition-colors"
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -186,13 +229,33 @@ const ServicesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get a customized solution.
               </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center space-x-2">
+                  <Phone className="w-5 h-5 text-blue-400" />
+                  <span className="text-white">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <Mail className="w-5 h-5 text-blue-400" />
+                  <span className="text-white">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <MapPin className="w-5 h-5 text-blue-400" />
+                  <span className="text-white">Middletown, DE</span>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <Link 
+                  to="/contact"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
                   Get Quote
-                </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us
-                </button>
+                </Link>
+                <Link 
+                  to="/pricing"
+                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
               </div>
             </div>
           </div>
