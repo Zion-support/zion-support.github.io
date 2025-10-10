@@ -2,11 +2,15 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
-siteName?: string;
+  siteName?: string;
   structuredData?: object;
 }
 
