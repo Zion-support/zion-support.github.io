@@ -118,6 +118,63 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         })}
       </script>
       
+      {/* Service Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'AI Enterprise Solutions',
+          description: 'Comprehensive AI-powered enterprise solutions including machine learning, automation, and digital transformation services',
+          provider: {
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com'
+          },
+          areaServed: 'United States',
+          serviceType: 'AI and IT Services',
+          offers: {
+            '@type': 'Offer',
+            price: '50000',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock'
+          }
+        })}
+      </script>
+      
+      {/* FAQ Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What AI services does Zion Tech Group offer?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We offer comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, quantum computing, AI cybersecurity, healthcare solutions, fintech solutions, mobile app development, CRM solutions, and more.'
+              }
+            },
+            {
+              '@type': 'Question',
+              name: 'What is the typical ROI for AI implementations?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Our clients typically see 300% ROI increase, 70% cost reduction, and 90% efficiency gains within the first year of implementation.'
+              }
+            },
+            {
+              '@type': 'Question',
+              name: 'Do you offer 24/7 support?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes, we provide 24/7 emergency support for all our enterprise clients, with regular business hours Monday-Friday 9 AM - 6 PM EST.'
+              }
+            }
+          ]
+        })}
+      </script>
+      
       {/* Breadcrumb Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({

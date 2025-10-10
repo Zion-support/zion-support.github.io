@@ -1,10 +1,42 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /case-studies
+Allow: /pricing
+Allow: /enterprise
+
+# Allow AI service pages
+Allow: /ai-*
+Allow: /machine-learning
+Allow: /nlp
+Allow: /computer-vision
+Allow: /quantum-computing
+Allow: /autonomous-systems
+Allow: /blockchain
+Allow: /iot-edge
+
+# Allow IT service pages
+Allow: /cloud-services
+Allow: /cybersecurity
+Allow: /devops
+Allow: /database-services
+Allow: /network-infrastructure
+Allow: /it-support

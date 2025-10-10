@@ -4,25 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-    <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services" />
-    <meta name="theme-color" content="#4f46e5" />
+    <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge technology." />
+    <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, artificial intelligence, business intelligence, data analytics, cybersecurity, cloud migration, DevOps, IT consulting" />
+    <meta name="theme-color" content="#00ffff" />
     <meta name="author" content="Zion Tech Group" />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ziontechgroup.com" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com" />
     <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-    <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+    <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge technology." />
     <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://ziontechgroup.com" />
     <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-    <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+    <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge technology." />
     <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+    <meta name="twitter:site" content="@ziontechgroup" />
+    <meta name="twitter:creator" content="@ziontechgroup" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icon-167x167.png" />
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,10 +56,24 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
-    <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="/og-image.jpg" as="image" />
+    
+    <!-- Critical CSS inline -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif; }
+      #root { min-height: 100vh; }
+      .loading { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #0f172a; color: #00ffff; }
+    </style>
+    
+    <title>Zion Tech Group - Advanced AI and IT Solutions | 300% ROI Guaranteed</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading">Loading...</div>
+    </div>
     <script type="module" src="/main.tsx"></script>
   </body>
 </html>
