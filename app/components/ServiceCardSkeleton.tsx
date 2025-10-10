@@ -1,39 +1,25 @@
 'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ServiceCardSkeletonPage: React.FC = () => {const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-;
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];)
-export default ServiceCardSkeletonPage;
+
+const ServiceCardSkeleton: React.FC = () => {
+  return (
+    <div className="quantum-card p-4 sm:p-6 energy-pulse animate-pulse">
+      <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">
+        <div className="w-12 h-12 bg-gray-600 rounded-lg mx-auto"></div>
+      </div>
+      <div className="text-lg sm:text-xl font-bold text-white mb-3 text-center">
+        <div className="h-6 bg-gray-600 rounded w-3/4 mx-auto"></div>
+      </div>
+      <div className="text-sm text-gray-300 text-center leading-relaxed mb-4">
+        <div className="h-4 bg-gray-600 rounded w-full mb-2"></div>
+        <div className="h-4 bg-gray-600 rounded w-5/6 mx-auto"></div>
+      </div>
+      <div className="flex justify-center">
+        <div className="h-8 bg-gray-600 rounded w-24"></div>
+      </div>
+    </div>
+  );
+};
+
+export default ServiceCardSkeleton;

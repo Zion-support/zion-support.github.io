@@ -15,8 +15,8 @@ interface State {
   errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
@@ -41,8 +41,8 @@ constructor(props: Props) {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error removed for production
-}
+      console.error('Error caught by ErrorBoundary:', error, errorInfo);
+    }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -57,8 +57,8 @@ constructor(props: Props) {
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag;
-const errorData = {
+    // like Sentry, LogRocket, or Bugsnag
+    const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -68,15 +68,16 @@ const errorData = {
     };
 
     // Example: Send to analytics
-    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      const gtag = (window as any).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
     }
 
-    // console.error removed for production
-};
+    console.error('Error logged to service:', errorData);
+  };
 
   handleRetry = () => {
     this.setState({
@@ -128,16 +129,20 @@ const errorData = {
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.error.stack}
                       </pre>
-                    </div>);
+                    </div>
+                  )}
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>);
+                    </div>
+                  )}
                 </div>
-              </details>);
+              </details>
+            )}
+
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={this.handleRetry}
@@ -168,8 +173,12 @@ const errorData = {
               </p>
             </div>
           </div>
-        </div>);
-    return this.props.children}
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
 }
 
 export default ErrorBoundary;
