@@ -127,11 +127,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
       <meta name="format-detection" content="telephone=no" />
       
+      {/* Performance Optimizations */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-tooltip" content="AI-Powered Enterprise Solutions" />
+      
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
+      <meta name="target" content="all" />
+      <meta name="HandheldFriendly" content="true" />
+      <meta name="MobileOptimized" content="width" />
     </Helmet>
   );
 };

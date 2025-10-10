@@ -1,27 +1,28 @@
-const CACHE_NAME = 'zion-tech-group-v2';
-const STATIC_CACHE = 'static-v2';
-const DYNAMIC_CACHE = 'dynamic-v2';
-
-// Assets to cache immediately
-const STATIC_ASSETS = [
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
   '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/manifest.json',
-  '/favicon.ico',
-  '/apple-touch-icon.png'
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
-// Install event - cache static assets
+// Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(CACHE_NAME)
       .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
+        return cache.addAll(urlsToCache);
       })
-      .then(() => {
-        return self.skipWaiting();
+  );
+});
+
+// Fetch event - serve from cache
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
       })
   );
 });
@@ -32,149 +33,11 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+          if (cacheName !== CACHE_NAME) {
             return caches.delete(cacheName);
           }
         })
       );
-    }).then(() => {
-      return self.clients.claim();
     })
   );
 });
-
-// Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
-
-  // Skip external requests
-  if (url.origin !== location.origin) {
-    return;
-  }
-
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        return fetch(request)
-          .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-
-            return response;
-          })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/offline.html');
-            }
-          });
-      })
-  );
-});
-
-// Background sync for analytics
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
-  }
-});
-
-async function doBackgroundSync() {
-  // Sync analytics data when connection is restored
-  try {
-    const analyticsData = await getStoredAnalytics();
-    if (analyticsData.length > 0) {
-      await sendAnalytics(analyticsData);
-      await clearStoredAnalytics();
-    }
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
-
-// Push notification handling
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
-      },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Learn More',
-          icon: '/icon-192x192.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/icon-192x192.png'
-        }
-      ]
-    };
-
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-});
-
-// Notification click handling
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
-});
-
-// Helper functions
-async function getStoredAnalytics() {
-  // Implementation for getting stored analytics data
-  return [];
-}
-
-async function sendAnalytics(data) {
-  // Implementation for sending analytics data
-  return fetch('/api/analytics', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-}
-
-async function clearStoredAnalytics() {
-  // Implementation for clearing stored analytics data
-  return Promise.resolve();
-}

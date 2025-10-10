@@ -30,7 +30,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
       // In production, send to error monitoring service
-      console.error('Error caught by boundary:', error, errorInfo);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error caught by boundary:', error, errorInfo);
+      } else {
+        // In production, send to error monitoring service
+        // Example: Sentry.captureException(error, { extra: errorInfo });
+      }
     }
   }
 

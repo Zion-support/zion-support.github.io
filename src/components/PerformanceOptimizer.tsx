@@ -44,10 +44,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
           .then(registration => {
-            console.log('Service Worker registered:', registration);
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Service Worker registered:', registration);
+            }
           })
           .catch(error => {
-            console.log('Service Worker registration failed:', error);
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Service Worker registration failed:', error);
+            }
           });
       }
     };
@@ -91,11 +95,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
     const monitorWebVitals = () => {
       if ('web-vitals' in window) {
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
+          const logMetric = (metric: any) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log(metric);
+            }
+            // Send to analytics in production
+            if (process.env.NODE_ENV === 'production') {
+              // Send to analytics service
+            }
+          };
+          
+          getCLS(logMetric);
+          getFID(logMetric);
+          getFCP(logMetric);
+          getLCP(logMetric);
+          getTTFB(logMetric);
         });
       }
     };
