@@ -2023,6 +2023,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                 <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
               </div>
             </div>
+            </div>
           </div>
         </div>
       </div>
