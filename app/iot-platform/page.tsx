@@ -1,124 +1,82 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-const IoTPlatformPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Wifi;
+const IoTPlatformPage: React.FC = () => {
+  const features = [
+    {
+      icon: Wifi,
       title: 'Device Management',
       description: 'Comprehensive IoT device management with remote monitoring, updates, and configuration.',
       benefits: ['Remote monitoring', 'OTA updates', 'Device configuration']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Real-time Data Processing',
       description: 'Process IoT data in real-time with edge computing and cloud analytics capabilities.',
       benefits: ['Real-time processing', 'Edge computing', 'Cloud analytics']
     },
     {
-      icon: Clock;
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Advanced analytics and insights from IoT data with machine learning and AI capabilities.',
+      benefits: ['Predictive analytics', 'Machine learning', 'Data insights']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'End-to-end security for IoT devices and data with compliance management.',
+      benefits: ['Device security', 'Data encryption', 'Compliance management']
+    },
+    {
+      icon: Clock,
       title: '24/7 Monitoring',
-      description: 'Continuous monitoring of IoT devices and networks with instant alerts and notifications.',
-      benefits: ['Always-on monitoring', 'Instant alerts', 'Network health']
+      description: 'Continuous monitoring and management of IoT infrastructure and devices.',
+      benefits: ['Continuous monitoring', 'Proactive maintenance', 'Instant alerts']
     },
     {
-      icon: Users;
-      title: 'Scalable Infrastructure',
-      description: 'Easily scale your IoT platform as your device fleet grows with millions of connected devices.',
-      benefits: ['Auto-scaling', 'Device onboarding', 'Fleet management']
-    },
-    {
-      icon: Shield;
-      title: 'IoT Security',
-description: 'Comprehensive security measures designed specifically for IoT environments and devices.',
-      benefits: ['Device security', 'Data encryption', 'Access controls']
-    },
-    {
-      icon: BarChart;
-      title: 'Analytics & Insights',
-      description: 'Advanced analytics and insights from your IoT data to optimize operations and performance.',
-      benefits: ['Data analytics', 'Predictive insights', 'Performance optimization']
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated IoT experts with deep knowledge of connected devices and platforms.',
+      benefits: ['Expert consultation', 'Best practices', 'Ongoing support']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900"></div>
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="relative py-20 px-4 overflow-hidden">
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">)
-      <Navigation />)
-      {/* Hero Section */})
-      <section className="relative py-20 px-4 overflow-hidden">)
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(249,115,22,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">IoT Platform<span className="block bg-gradient-to-r from-orange-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Comprehensive IoT platform for connecting, managing, and analyzing millions of devices.</p>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(249,115,22,0.3)_0%,transparent_50%)] animate-pulse" /></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">IoT Platform</h1><span className="block bg-gradient-to-r from-orange-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Comprehensive IoT platform for connecting, managing, and analyzing millions of devices.</p>
-            Built for smart cities, industrial IoT, and connected device ecosystems.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            IoT
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Platform
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IoT platform for managing connected devices, processing data, and gaining insights. Build, deploy, and scale your IoT solutions with ease.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">Get Started Today</button>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo</button>
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-            IoT Platform;
-            <span className="block bg-gradient-to-r from-orange-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions;
-            </span>,
-          </h1>,
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">,
-            Comprehensive IoT platform for connecting, managing, and analyzing millions of devices.
-            Built for smart cities, industrial IoT, and connected device ecosystems.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
-              Get Started Today;
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo;
-            </button>
-          </div>
-        </div>,
-      </section>,
-,
-{/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IoT platform designed for modern connected device ecosystems<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-orange-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-        <div className="max-w-7xl mx-auto"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IoT platform designed for modern connected device ecosystems</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-orange-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <feature.icon className="w-6 h-6 text-white" />
-            <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IoT platform designed for modern connected device ecosystems;
-            </p>
-          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+      {/* Features Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our IoT Platform Solutions</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-orange-400/50 transition-all duration-300 group">,
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
+              <div key={index} className="card-futuristic glass-dark p-6 hover:shadow-2xl transition-all duration-500">
+                <div className="text-cyan-400 mb-4">
+                  <feature.icon className="w-12 h-12" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
-                    </CheckCircle>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -128,31 +86,24 @@ description: 'Comprehensive security measures designed specifically for IoT envi
       </section>
 
       {/* CTA Section */}
-<section className="py-20 px-4">
+      <section className="py-16 px-4 bg-black/20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?<p className="text-xl text-gray-300 mb-8">Join leading organizations using our IoT platform to connect and manage millions of devices</p>
-        <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2><p className="text-xl text-gray-300 mb-8">Join leading organizations using our IoT platform to connect and manage millions of devices</p>
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Build Your IoT Solution?</h2>
+          <p className="text-gray-300 mb-8">
+            Contact our IoT experts to discuss your specific requirements and get a customized solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations using our IoT platform to connect and manage millions of devices;
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="btn-futuristic text-lg px-8 py-4 float-animation">
+              Get Consultation
             </button>
-            <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
+            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Learn More
             </button>
           </div>
         </div>
       </section>
-
-      <Footer />,
-    </div>);
+    </div>
+  );
 };
 
 export default IoTPlatformPage;
