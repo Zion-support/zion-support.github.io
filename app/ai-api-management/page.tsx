@@ -323,6 +323,7 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <Footer />
       </div>
 <<<<<<< HEAD
@@ -331,6 +332,12 @@ const PagePage: React.FC = () => {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     </>
+=======
+        
+        <Footer />
+      </div>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
 };
 

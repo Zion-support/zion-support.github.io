@@ -475,6 +475,7 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       </div>
     </>
 <<<<<<< HEAD
@@ -583,6 +584,9 @@ const PartnersPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-9948
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
 =======
   ););)

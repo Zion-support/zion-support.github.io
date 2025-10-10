@@ -328,8 +328,6 @@ const ConsultationPage: React.FC = () => {
         <meta name="description" content="Get expert IT consultation from our certified professionals. Strategic planning, technology assessment, and digital transformation guidance." />
         <meta name="keywords" content="IT consultation, technology consulting, digital transformation, IT strategy, technology assessment" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -1146,8 +1144,12 @@ const ConsultationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </section>
+=======
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 
 <<<<<<< HEAD
       {/* Consultation Types */}

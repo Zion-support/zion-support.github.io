@@ -110,6 +110,7 @@ const CaseStudiesPage: React.FC = () => {
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'HealthTech Systems',
       industry: 'Healthcare',
+<<<<<<< HEAD
       challenge: 'Critical security vulnerabilities and compliance requirements for patient data protection.',
       solution: 'Comprehensive cybersecurity overhaul with zero-trust architecture and advanced threat detection.',
       results: [
@@ -117,6 +118,15 @@ const CaseStudiesPage: React.FC = () => {
         'Zero security breaches in 12 months',
         '95% reduction in security incidents',
         'Automated threat response system'
+=======
+      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data management.',
+      solution: 'Comprehensive security framework with advanced threat detection and data encryption.',
+      results: [
+        'Zero security breaches',
+        '100% HIPAA compliance',
+        'Real-time threat monitoring',
+        'Automated incident response'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
       ],
       image: '/images/case-studies/cybersecurity.jpg',
       duration: '4 months',
@@ -125,19 +135,20 @@ const CaseStudiesPage: React.FC = () => {
 },
     {
       id: '4',
-      title: 'Machine Learning for Predictive Analytics',
+      title: 'Data Analytics Platform for E-commerce',
       client: 'RetailMax',
-      industry: 'Retail',
-      challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.',
-      solution: 'ML-powered demand forecasting system with real-time inventory optimization.',
+      industry: 'E-commerce',
+      challenge: 'Lack of actionable insights from customer data affecting sales and marketing decisions.',
+      solution: 'Advanced analytics platform with machine learning for customer behavior prediction.',
       results: [
-        '40% reduction in stockouts',
-        '25% decrease in excess inventory',
-        '15% increase in revenue',
-        'Real-time demand prediction accuracy of 92%'
+        '40% increase in conversion rate',
+        '25% improvement in customer retention',
+        'Real-time analytics dashboard',
+        'Predictive inventory management'
       ],
-      image: '/images/case-studies/ml-predictive-analytics.jpg',
+      image: '/images/case-studies/data-analytics.jpg',
       duration: '5 months',
+<<<<<<< HEAD
       team: '6 specialists'});;)
 },
     {
@@ -253,6 +264,17 @@ const CaseStudiesPage: React.FC = () => {
       team: '11 specialists'});;)
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+      team: '15 specialists'
+    }
+  ];
+
+  const stats = [
+    { label: 'Projects Completed', value: '500+', icon: CheckCircle },
+    { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
+    { label: 'Team Members', value: '50+', icon: Users },
+    { label: 'Industry Awards', value: '25+', icon: Award }
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   ];
 
   return (
@@ -295,6 +317,7 @@ const CaseStudiesPage: React.FC = () => {
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -314,6 +337,8 @@ const CaseStudiesPage: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
             </p>
 =======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -355,15 +380,21 @@ const CaseStudiesPage: React.FC = () => {
             <div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
               {stats.map((stat, index) => (
+<<<<<<< HEAD
                 <div></div>
                   <div></div>
                     <stat.icon className="w-8 h-8 text-white" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
+=======
+                <div key={index} className="text-center">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
+                    <stat.icon className="h-8 w-8 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
 =======
@@ -397,6 +428,9 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
@@ -578,7 +612,10 @@ const CaseStudiesPage: React.FC = () => {
                       </button>
                     </div>
                   </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
                 </div>
 <<<<<<< HEAD
               ));
@@ -615,7 +652,11 @@ const CaseStudiesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
+<<<<<<< HEAD
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+=======
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
                 >
 >>>>>>> cursor/analyze-improve-and-deploy-application-9948
                   Start Your Project

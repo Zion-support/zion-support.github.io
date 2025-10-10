@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -50,6 +51,8 @@ const Next.dPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-9948
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -131,6 +134,7 @@ export interface NextPageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 
@@ -182,10 +186,14 @@ export interface NextPageProps {
 <<<<<<< HEAD
           </div>
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 // API route types
 export interface ApiRouteHandler {
   (req: Request): Promise<Response>;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 
@@ -267,6 +275,9 @@ export interface ApiRouteHandler {
 <<<<<<< HEAD
 export default Next.dPage;
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 // Server components types
 =======
 export default Next.dPage;// Server components types
@@ -331,6 +342,7 @@ declare module 'next' {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
 =======
 }
@@ -338,3 +350,12 @@ export {};
 =======
 export {};
 >>>>>>> cursor/analyze-improve-and-deploy-application-9948
+=======
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
+export {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9d11
