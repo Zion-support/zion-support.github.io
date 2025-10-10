@@ -1,10 +1,30 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
+=======
+
+# Crawl-delay
+Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /blog
+Allow: /case-studies
+Allow: /pricing
+Allow: /enterprise
+Allow: /ai-*
+Allow: /privacy
+Allow: /terms
+>>>>>>> cursor/website-audit-and-update-with-deployment-90da

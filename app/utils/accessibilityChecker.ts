@@ -561,7 +561,6 @@ export class AccessibilityChecker {
     }
     
     return this.issues.map(issue => 
-      `- ${issue.type}: ${issue.message} (${issue.severity})`
     ).join('\n');
   }
 }
