@@ -26,15 +26,6 @@ const Navigation: React.FC = () => {
     setIsSpecializedOpen(false);
   };
 
-  const handlePhoneClick = () => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'navigation_phone_number'
-      });
-    }
-  };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
@@ -224,8 +215,8 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
@@ -236,17 +227,10 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </a>
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </a>
-            
             <div className="relative group">
               <button
                 onClick={toggleServices}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -381,33 +365,35 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Pricing
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+              About
             </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Case Studies
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
             </a>
-            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+              Case Studies
+            </a>
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </a>
+            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
               Enterprise
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
             
             <div className="flex items-center space-x-4">
               <a
                 href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors font-medium"
-                onClick={handlePhoneClick}
+                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
               <a href="/contact"
-                className="cyber-button px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300"
+                className="cyber-button px-4 py-2 text-sm"
               >
                 Get Started
               </a>
@@ -478,33 +464,32 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Pricing
+              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                About
               </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
               </a>
-              <a href="/enterprise" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Enterprise
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Case Studies
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4 font-medium"
-                  onClick={handlePhoneClick}
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
                 >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
                 <a href="/contact"
-                  className="block cyber-button px-6 py-3 text-center font-semibold hover:scale-105 transition-all duration-300"
+                  className="block cyber-button px-4 py-2 text-center"
                   onClick={closeAllMenus}
                 >
                   Get Started
