@@ -33,22 +33,26 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Chatbots',
-      description: 'Advanced conversational AI with natural language processing and sentiment analysis for 24/7 customer support.',
+      description: 'Advanced conversational AI with natural language processing and sentiment analysis for 24/7 customer support. Our GPT-4 powered chatbots understand context, handle complex queries, and provide human-like responses.',
       category: 'ai',
-      features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
+      features: ['GPT-4 Powered AI', 'Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning', 'Voice Integration', 'Custom Training'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions', 'Improved customer satisfaction'],
+      popular: true,
+      link: '/ai-chatbot-builder'
     },
     {
       icon: BarChart3,
       title: 'AI Data Analytics',
-      description: 'Transform your data into actionable insights with our AI-powered analytics platform and predictive modeling.',
+      description: 'Transform your data into actionable insights with our AI-powered analytics platform and predictive modeling. Get real-time business intelligence with automated reporting and advanced machine learning algorithms.',
       category: 'ai',
-      features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection', 'Custom Data Models'],
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection', 'Custom Data Models', 'Natural Language Queries', 'Advanced Visualizations', 'API Integration'],
       price: 'Starting at $399/month',
       marketPrice: '$800-3000/month',
-      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization']
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization', 'Faster decision making'],
+      popular: true,
+      link: '/ai-data-analytics'
     },
     {
       icon: Zap,
