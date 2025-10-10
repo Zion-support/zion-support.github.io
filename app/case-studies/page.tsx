@@ -105,14 +105,14 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['Machine Learning', 'Computer Vision', 'Cloud Computing', 'API Integration'],
-      testimonial: {
-        quote: "The AI diagnostic system has transformed our hospital operations. We can now provide faster, more accurate diagnoses, ultimately saving more lives.",
+      testimonial: {,
+    quote: "The AI diagnostic system has transformed our hospital operations. We can now provide faster, more accurate diagnoses, ultimately saving more lives.",
         author: "Dr. Sarah Johnson",
         role: "Chief Medical Officer",
         avatar: "SJ"
       },
-      metrics: {
-        roi: '400%',
+      metrics: {,
+    roi: '400%',
         timesSaved: '2.5 days',
         accuracy: '95%',
         costReduction: '60%'
@@ -136,14 +136,14 @@ export default function CaseStudiesPage() {
       duration: '4 months',
       teamSize: '8 experts',
       technologies: ['Machine Learning', 'Real-time Analytics', 'Blockchain', 'API Integration'],
-      testimonial: {
-        quote: "Our AI fraud detection system has saved us millions and given our customers peace of mind. The accuracy is remarkable.",
+      testimonial: {,
+    quote: "Our AI fraud detection system has saved us millions and given our customers peace of mind. The accuracy is remarkable.",
         author: "Michael Chen",
         role: "Chief Security Officer",
         avatar: "MC"
       },
-      metrics: {
-        roi: '500%',
+      metrics: {,
+    roi: '500%',
         accuracy: '99.8%',
         falsePositives: '80%',
         lossesReduced: '50%'
@@ -167,14 +167,14 @@ export default function CaseStudiesPage() {
       duration: '8 months',
       teamSize: '15 experts',
       technologies: ['IoT', 'AI Analytics', 'Cloud Computing', 'Automation'],
-      testimonial: {
-        quote: "The smart factory transformation has revolutionized our operations. We're producing more with less waste and higher quality.",
+      testimonial: {,
+    quote: "The smart factory transformation has revolutionized our operations. We're producing more with less waste and higher quality.",
         author: "Emily Rodriguez",
         role: "Operations Director",
         avatar: "ER"
       },
-      metrics: {
-        roi: '350%',
+      metrics: {,
+    roi: '350%',
         efficiency: '30%',
         costReduction: '25%',
         quality: '99.5%'
@@ -198,14 +198,14 @@ export default function CaseStudiesPage() {
       duration: '5 months',
       teamSize: '10 experts',
       technologies: ['Machine Learning', 'NLP', 'Recommendation Engine', 'Chatbot'],
-      testimonial: {
-        quote: "Our AI-powered customer experience has transformed our business. Customers love the personalized recommendations and instant support.",
+      testimonial: {,
+    quote: "Our AI-powered customer experience has transformed our business. Customers love the personalized recommendations and instant support.",
         author: "David Kim",
         role: "Chief Marketing Officer",
         avatar: "DK"
       },
-      metrics: {
-        roi: '280%',
+      metrics: {,
+    roi: '280%',
         engagement: '45%',
         conversion: '35%',
         orderValue: '25%'
@@ -229,14 +229,14 @@ export default function CaseStudiesPage() {
       duration: '7 months',
       teamSize: '14 experts',
       technologies: ['Machine Learning', 'NLP', 'Adaptive Learning', 'Analytics'],
-      testimonial: {
-        quote: "The AI learning platform has revolutionized education. Students are more engaged and achieving better results than ever before.",
+      testimonial: {,
+    quote: "The AI learning platform has revolutionized education. Students are more engaged and achieving better results than ever before.",
         author: "Professor Lisa Wang",
         role: "Dean of Technology",
         avatar: "LW"
       },
-      metrics: {
-        roi: '320%',
+      metrics: {,
+    roi: '320%',
         performance: '50%',
         completion: '40%',
         satisfaction: '85%'
@@ -260,14 +260,14 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
-      testimonial: {
-        quote: "The cloud migration has transformed our business. We can now scale instantly and deploy new features in minutes instead of days.",
+      testimonial: {,
+    quote: "The cloud migration has transformed our business. We can now scale instantly and deploy new features in minutes instead of days.",
         author: "Robert Johnson",
         role: "CTO",
         avatar: "RJ"
       },
-      metrics: {
-        roi: '450%',
+      metrics: {,
+    roi: '450%',
         costReduction: '70%',
         uptime: '99.9%',
         deployment: '5x'
@@ -279,8 +279,8 @@ export default function CaseStudiesPage() {
     const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry;
     const serviceMatch = selectedService === 'all' || study.service === selectedService;
     return industryMatch && serviceMatch;
-
-  const getIndustryIcon = (industry: string) => {
+)
+    const getIndustryIcon = (industry: string) => {
     const icons = {
       healthcare: Stethoscope,
       finance: CreditCard,
@@ -305,18 +305,12 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Success Stories
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Real results from real clients. Discover how we've helped businesses across
-              industries achieve remarkable transformations with AI and technology.
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stories<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses across</p>
+              industries achieve remarkable transformations with AI and technology.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
@@ -348,35 +342,28 @@ export default function CaseStudiesPage() {
                   placeholder="Search case studies..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 />
-              </div>
-              <div className="flex gap-2 overflow-x-auto">
-                {industries.map((industry) => (
-                  <button
+              <div className="flex gap-2 overflow-x-auto">{industries.map((industry) => (<button
                     key={industry.name}
-                    onClick={() => setSelectedIndustry(industry.name)}
+                    onClick={() =>setSelectedIndustry(industry.name)}
                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
                       selectedIndustry === industry.name
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                     }`}
-                  >
-                    {industry.label} ({industry.count})
+                  ></button>
+                    {industry.label} ({industry.count})</button>
                   </button>
                 ))}
-              </div>
-            </div>
-            <div className="flex gap-2 overflow-x-auto">
-              {services.map((service) => (
-                <button
+              <div className="flex gap-2 overflow-x-auto">{services.map((service) => (<button
                   key={service.name}
-                  onClick={() => setSelectedService(service.name)}
+                  onClick={() =>setSelectedService(service.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
                     selectedService === service.name
                       ? 'bg-purple-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
-                >
-                  {service.label} ({service.count})
+                ></button>
+                  {service.label} ({service.count})</button>
                 </button>
               ))}
             </div>
@@ -388,8 +375,7 @@ export default function CaseStudiesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredCaseStudies.map((study) => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) => (</div>
                 <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
                   <div className="relative">
                     <img
@@ -398,20 +384,17 @@ export default function CaseStudiesPage() {
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>
-                        {React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}
+                      <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
                       </div>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        {study.industry.charAt(0).toUpperCase() + study.industry.slice(1)}
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">{study.industry.charAt(0).toUpperCase() + study.industry.slice(1)}</span>
                       </span>
                     </div>
                   </div>
 
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                      {study.title}
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{study.title}</h3>
                     </h3>
 
                     <div className="flex items-center space-x-4 mb-4">
@@ -427,33 +410,24 @@ export default function CaseStudiesPage() {
 
                     <div className="space-y-4 mb-6">
                       <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
-                        <p className="text-gray-300 text-sm">{study.challenge}</p>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:<p className="text-gray-300 text-sm">{study.challenge}</p>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
-                        <p className="text-gray-300 text-sm">{study.solution}</p>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:<p className="text-gray-300 text-sm">{study.solution}</p>
                       </div>
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {study.results.slice(0, 4).map((result, index) => (
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:<div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) => (</div>
                           <div key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {result}
-                          </div>
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{result}</CheckCircle>
+                          </CheckCircle>
                         ))}
                       </div>
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, index) => (
-                          <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
-                            {tech}
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:<div className="flex flex-wrap gap-2">{study.technologies.map((tech, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{tech}</span>
                           </span>
                         ))}
                       </div>
@@ -461,13 +435,10 @@ export default function CaseStudiesPage() {
 
                     <div className="border-t border-gray-700 pt-4">
                       <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                          {study.testimonial.avatar}
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
                         </div>
                         <div className="flex-1">
-                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"</p>
-                          <div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}</div>
-                          <div className="text-gray-400 text-xs">{study.testimonial.role}</div>
+                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}<div className="text-gray-400 text-xs">{study.testimonial.role}</div>
                         </div>
                       </div>
                     </div>
@@ -482,27 +453,21 @@ export default function CaseStudiesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Create Your Success Story?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Start Your Project
-            </Link>
+              <MessageSquare className="w-5 h-5 mr-2" >Start Your Project</MessageSquare>
+            </MessageSquare>
             <Link
               to="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation
-            </Link>
+              <Calendar className="w-5 h-5 mr-2" >Free Consultation</Calendar>
+            </Calendar>
           </div>
         </div>
       </section>

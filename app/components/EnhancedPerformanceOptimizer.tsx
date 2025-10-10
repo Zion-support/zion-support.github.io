@@ -15,7 +15,7 @@ interface PerformanceOptimizerProps {
   enableCriticalResourcePreloading?: boolean;
 }
 
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,
@@ -195,8 +195,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if ('gtag' in window) {
             (window as any).gtag('event', 'web_vitals', {
               event_category: 'Performance',
-              event_label: metric.name,
-              value: Math.round(metric.value),
+              event_label: metric.name,)
+    value: Math.round(metric.value),
               non_interaction: true,
 
           }
@@ -259,8 +259,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           -webkit-transform: translateZ(0);
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
-          -o-transform: translateZ(0);
-          transform: translateZ(0);
+          -o-transform: translateZ(0);,
+    transform: translateZ(0);
         }
 
         /* Optimize repaints */
@@ -324,8 +324,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         Object.entries(metrics).forEach(([key, value]) => {
           (window as any).gtag('event', 'performance_metric', {
             event_category: 'Performance',
-            event_label: key,
-            value: Math.round(value),
+            event_label: key,)
+    value: Math.round(value),
             non_interaction: true,
 
 
@@ -343,5 +343,5 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return null;
 };
-
-export default EnhancedPerformanceOptimizer;
+</PerformanceOptimizerProps>
+export default EnhancedPerformanceOptimizer;</PerformanceOptimizerProps>

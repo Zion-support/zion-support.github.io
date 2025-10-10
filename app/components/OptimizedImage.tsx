@@ -3,8 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string;,
+    alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -16,7 +16,7 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps>= ({
   src,
   alt,
   width,
@@ -30,8 +30,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);</OptimizedImageProps>
+  const [hasError, setHasError] = useState(false);</OptimizedImageProps>
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -87,8 +87,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return canvas.toDataURL();
   };
 
-  if (hasError) {
-    return (
+  if (hasError) {</HTMLImageElement>
+    return (</HTMLImageElement>
       <div
         ref={imgRef}
         className={`bg-slate-700 flex items-center justify-center ${className}`}
@@ -98,9 +98,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <div className="w-8 h-8 mx-auto mb-2">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-            </svg>
-          </div>
-          <p className="text-xs">Failed to load</p>
+            <p className="text-xs">Failed to load</p>
         </div>
       </div>
     );
@@ -111,22 +109,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
-      {/* Placeholder */}
-      {!isLoaded && (
-        <div
+    >{/* Placeholder */}</div>
+      {!isLoaded && (<div
           className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
           style={{
             backgroundImage: `url(${generatePlaceholder()})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
-        />
-      )}
+        >)}
 
-      {/* Actual Image */}
-      {isInView && (
-        <img
+      {/* Actual Image */}</div>
+      {isInView && (<img
           src={src}
           alt={alt}
           width={width}
@@ -144,15 +138,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             height: '100%',
             objectFit: 'cover'
           }}
-        />
-      )}
+        >)}
 
-      {/* Loading indicator */}
-      {!isLoaded && isInView && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" />
-        </div>
-      )}
+      {/* Loading indicator */}</img>
+      {!isLoaded && isInView && (</img>
+        </img><div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)}</div>
     </div>
   );
 };

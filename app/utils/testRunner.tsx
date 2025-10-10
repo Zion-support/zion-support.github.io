@@ -6,26 +6,26 @@
 import React, { ReactElement, useCallback } from 'react';
 // Test result types
 export interface PerformanceMetrics {
-  renderTime: number
-  memoryUsage: number
+  renderTime: number,
+    memoryUsage: number
   timestamp: string;}
 }
 export interface CoverageMetrics {
-  statements: number
-  branches: number
-  functions: number
-  lines: number;}
+  statements: number,
+    branches: number
+  functions: number,
+    lines: number;}
 }
 // Test configuration interface
 export interface TestConfig {
-  enableMocking: boolean
-  enableCoverage: boolean
-  enablePerformance: boolean
-  enableAccessibility: boolean
+  enableMocking: boolean,
+    enableCoverage: boolean
+  enablePerformance: boolean,
+    enableAccessibility: boolean
   enableVisualRegression: boolean
   mockDataPath?: string
-  coverageThreshold: number
-  performanceThreshold: number
+  coverageThreshold: number,
+    performanceThreshold: number
   accessibilityThreshold: number
   timeout?: number
   verbose?: boolean
@@ -40,8 +40,8 @@ export interface TestConfig {
   excludePattern?: string[];}
 }
 // Default test configuration
-export const defaultTestConfig: TestConfig = {
-  enableMocking: true,
+export const defaultTestConfig: TestConfig = {,
+    enableMocking: true,
   enableCoverage: true,
   enablePerformance: true,
   enableAccessibility: true,
@@ -51,39 +51,38 @@ export const defaultTestConfig: TestConfig = {
   accessibilityThreshold: 90}
 }
 interface TestResult {
-  name: string
-  status: 'passed' | 'failed' | 'skipped' | 'pending'
+  name: string,
+    status: 'passed' | 'failed' | 'skipped' | 'pending'
   duration: number
   error?: Error
   assertions: AssertionResult[]
   coverage?: CoverageResult;}
 }
 interface AssertionResult {
-  name: string
-  status: 'passed' | 'failed'
+  name: string,
+    status: 'passed' | 'failed'
   expected?: unknown
   actual?: unknown
   message?: string;}
 }
 interface CoverageResult {
-  statements: number
-  branches: number
-  functions: number
-  lines: number
+  statements: number,
+    branches: number
+  functions: number,
+    lines: number
   uncovered: string[];}
 }
 interface TestSuite {
-  name: string
-  tests: Test[]
-  beforeAll: (() => void | Promise<void>)[]
-  afterAll: (() => void | Promise<void>)[]
-  beforeEach: (() => void | Promise<void>)[]
-  afterEach: (() => void | Promise<void>)[];}
+  name: string,
+    tests: Test[]
+  beforeAll: (() => void | Promise<void>)[],</void>
+    afterAll: (() => void | Promise<void>)[]</void>
+  beforeEach: (() => void | Promise<void>)[],</void>
+    afterEach: (() => void | Promise<void>)[];}
 }
-interface Test {
-  name: string
-  fn: () => void | Promise<void>
-  timeout?: number
+interface Test {</void>
+  name: string,</void>
+    fn: () => void | Promise<void>timeout?: number
   skip?: boolean
   only?: boolean;}
 }
@@ -91,17 +90,17 @@ export class TestRunner {
   private static instance: TestRunner
   private config: TestConfig
   private suites: TestSuite[] = []
-  private currentSuite: TestSuite | null = null
-  private results: TestResult[] = []
-  private testResults: Array<{
+  private currentSuite: TestSuite | null = null</void>
+  private results: TestResult[] = []</void>
+  private testResults: Array<{,
     name: string
-    status: 'passed' | 'failed' | 'skipped'
+    status: 'passed' | 'failed' | 'skipped',
     duration: number
     error?: string;}
   }> = []
   private isRunning: boolean = false
   private startTime: number = 0
-  constructor(config: Partial<TestConfig> = {}) {
+  constructor(config: Partial<TestConfig>= {}) {
     this.config = {
       ...defaultTestConfig,
       timeout: 5000,
@@ -121,8 +120,8 @@ export class TestRunner {
       ],
       excludePattern: ['**/node_modules/**', '**/dist/**'],
       ...config}
-    }
-  }
+    }</TestConfig>
+  }</TestConfig>
   static getInstance(config?: Partial<TestConfig>): TestRunner {
     if (!TestRunner.instance) {
       TestRunner.instance = new TestRunner(config);}
@@ -130,14 +129,12 @@ export class TestRunner {
     return TestRunner.instance
   }
   // Custom render function with providers
-  customRender(
-    ui: ReactElement,
-    options?: Omit<RenderOptions, 'wrapper'>
-  ): RenderResult {}
-    const AllTheProviders = useCallback((...args) => {
-      return (
-        <BrowserRouter>}
-          {children}
+  customRender(</TestConfig>
+    ui: ReactElement,)</TestConfig>
+    options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
+    const AllTheProviders = useCallback((...args) => {</RenderOptions>
+      return (<BrowserRouter>}</BrowserRouter>
+          {children}</BrowserRouter>
         </BrowserRouter>
       )
     }
@@ -168,7 +165,7 @@ export class TestRunner {
    * Create a test case
    */
   public it(
-    name: string,
+    name: string,)
     fn: () => void | Promise<void>,
     timeout?: number
   ): void {
@@ -177,14 +174,14 @@ export class TestRunner {
     }
     this.currentSuite.tests.push({
       name,
-      fn,
-      timeout: timeout || this.config.timeout}
+      fn,)
+    timeout: timeout || this.config.timeout}
     })
   }
   // Performance test
   async runPerformanceTest(
-    component: ReactElement,
-    testName: string
+    component: ReactElement,)</void>
+    testName: string</void>
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
       const startTime = performance.now();}
       const { unmount } = this.customRender(component)
@@ -207,8 +204,8 @@ export class TestRunner {
     this.testResults.push({}
       name: `Performance: ${testName}`,
       status: passed ? 'passed' : 'failed',
-      duration: renderTime,
-      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms
+      duration: renderTime,)
+    error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms
     })
     return { passed, metrics }
   }
@@ -221,26 +218,26 @@ export class TestRunner {
     }
     this.currentSuite.tests.push({
       name,
-      fn,
-      skip: true}
+      fn,)
+    skip: true}
     })
   }
   /**
-   * Create a focused test (only run this test)
-   */
+   * Create a focused test (only run this test)</void>
+   */</void>
   public itOnly(name: string, fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
       throw new Error('Test must be inside a describe block');}
     }
     this.currentSuite.tests.push({
       name,
-      fn,
-      only: true}
+      fn,)
+    only: true}
     })
   }
   /**
-   * Setup before all tests in suite
-   */
+   * Setup before all tests in suite</void>
+   */</void>
   public beforeAll(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
       throw new Error('beforeAll must be inside a describe block');}
@@ -248,8 +245,8 @@ export class TestRunner {
     this.currentSuite.beforeAll.push(fn)
   }
   /**
-   * Setup after all tests in suite
-   */
+   * Setup after all tests in suite</void>
+   */</void>
   public afterAll(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
       throw new Error('afterAll must be inside a describe block');}
@@ -257,8 +254,8 @@ export class TestRunner {
     this.currentSuite.afterAll.push(fn)
   }
   /**
-   * Setup before each test
-   */
+   * Setup before each test</void>
+   */</void>
   public beforeEach(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
       throw new Error('beforeEach must be inside a describe block');}
@@ -266,8 +263,8 @@ export class TestRunner {
     this.currentSuite.beforeEach.push(fn)
   }
   /**
-   * Setup after each test
-   */
+   * Setup after each test</void>
+   */</void>
   public afterEach(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
       throw new Error('afterEach must be inside a describe block');}
@@ -275,9 +272,9 @@ export class TestRunner {
     this.currentSuite.afterEach.push(fn)
   }
   /**
-   * Run all tests
-   */
-  public async run(): Promise<TestResult[]> {
+   * Run all tests</void>
+   */</void>
+  public async run(): Promise<TestResult[]>{
     if (this.isRunning) {
       throw new Error('Test runner is already running');}
     }
@@ -296,9 +293,9 @@ export class TestRunner {
     }
   }
   /**
-   * Run a test suite
-   */
-  private async runSuite(suite: TestSuite): Promise<void> {}
+   * Run a test suite</TestResult>
+   */</TestResult>
+  private async runSuite(suite: TestSuite): Promise<void>{}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
@@ -310,8 +307,8 @@ export class TestRunner {
         this.results.push({`}
           name: `${suite.name} - ${test.name}`,
           status: 'skipped',
-          duration: 0,
-          assertions: []
+          duration: 0,)
+    assertions: []
         })
         continue
       }
@@ -323,9 +320,9 @@ export class TestRunner {
     }
   }
   /**
-   * Run a single test
-   */
-  private async runTest(suite: TestSuite, test: Test): Promise<void> {`}
+   * Run a single test</void>
+   */</void>
+  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
     const testName = `${suite.name} - ${test.name}`
     const startTime = Date.now()
     const assertions: AssertionResult[] = []
@@ -342,8 +339,8 @@ export class TestRunner {
       }
       this.results.push({
         name: testName,
-        status: 'passed',
-        duration: Date.now() - startTime,
+        status: 'passed',)
+    duration: Date.now() - startTime,
         assertions}
       })
       if (this.config.verbose) {`}
@@ -352,8 +349,8 @@ export class TestRunner {
     } catch (error) {
       this.results.push({
         name: testName,
-        status: 'failed',
-        duration: Date.now() - startTime,
+        status: 'failed',)
+    duration: Date.now() - startTime,
         error: error as Error,
         assertions}
       })
@@ -365,11 +362,11 @@ export class TestRunner {
   }
   /**
    * Run a hook
-   */
-  private async runHook(
-    hook: () => void | Promise<void>,
-    hookName: string
-  ): Promise<void> {
+   */</void>
+  private async runHook()</void>
+    hook: () => void | Promise<void>,</void>
+    hookName: string</void>
+  ): Promise<void>{
     try {
       await hook();}
     } catch (error) {
@@ -378,11 +375,11 @@ export class TestRunner {
   }
   /**
    * Run function with timeout
-   */
-  private async runWithTimeout(
-    fn: () => void | Promise<void>,
-    timeout: number
-  ): Promise<void> {
+   */</void>
+  private async runWithTimeout()</void>
+    fn: () => void | Promise<void>,</void>
+    timeout: number</void>
+  ): Promise<void>{
     return new Promise((resolve, reject) => {
       const timer = setTimeout(() => {`}
         reject(new Error(`Test timed out after ${timeout}ms`))
@@ -392,8 +389,8 @@ export class TestRunner {
           clearTimeout(timer)
           resolve();}
         })
-        .catch(error => {
-          clearTimeout(timer)
+        .catch(error => {)
+    clearTimeout(timer)
           reject(error);}
         })
     })
@@ -425,8 +422,8 @@ export class TestRunner {
    */
   private generateJsonReport(): void {
     const report = {
-      summary: {
-        total: this.results.length,
+      summary: {,
+    total: this.results.length,
         passed: this.results.filter(r => r.status === 'passed').length,
         failed: this.results.filter(r => r.status === 'failed').length,
         skipped: this.results.filter(r => r.status === 'skipped').length,
@@ -440,42 +437,33 @@ export class TestRunner {
   /**
    * Generate HTML report
    */
-  private generateHtmlReport(): void {
-    const html =
+  private generateHtmlReport(): void {</void>
+    const html =</void>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
     <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
     <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">
-    <title>Test Results | Zion Tech Group - AI & IT Solutions</title>
-    <style>}
+    <title>Test Results | Zion Tech Group - AI & IT Solutions<style>}
         body { font-family: Arial, sans-serif; margin: 20px; }
         .summary { background: #f5f5f5; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
         .test { margin: 10px 0; padding: 10px; border-left: 4px solid #ccc; }
         .passed { border-left-color: #4CAF50; }
-        .failed { border-left-color: #f44336; }
-        .skipped { border-left-color: #ff9800; }
+        .failed { border-left-color: #f44336; }</style>
+        .skipped { border-left-color: #ff9800; }</style>
     </style>
 </head>
 <body>
     <h2 id="heading-test-results">Test Results</h2>
     <div class="summary">
-        <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
-    </div>
-    <div class="tests">
-        ${this.results
-          .map(
-            result => `}
+        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results
+          .map()</div>
+    result => `}</div>
             <div class="test ${result.status}">
-                <h4 id="heading-${result.name}">${result.name}</h4>
-                <p>Status: ${result.status}</p>
-                <p>Duration: ${result.duration}ms</p>
+                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}<p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
 
@@ -489,7 +477,7 @@ export class TestRunner {
   }
   // Accessibility test
   async runAccessibilityTest(
-    component: ReactElement,
+    component: ReactElement,)
     testName: string
   ): Promise<{ passed: boolean; violations: string[] }> {}
     const { container } = this.customRender(component)
@@ -535,15 +523,15 @@ export class TestRunner {
     this.testResults.push({`}
       name: `Accessibility: ${testName}`,
       status: passed ? 'passed' : 'failed',
-      duration: 0,
-      error: passed ? undefined : `Found ${violations.length} accessibility violations
+      duration: 0,)
+    error: passed ? undefined : `Found ${violations.length} accessibility violations
     })
     return { passed, violations }
   }
   // Component test
   async runComponentTest(
     component: ReactElement,
-    testName: string,
+    testName: string,)
     assertions: (result: RenderResult) => void
   ): Promise<{ passed: boolean; error?: string }> {
     try {
@@ -551,8 +539,8 @@ export class TestRunner {
       assertions(result)
       this.testResults.push({`}
         name: `Component: ${testName}`,
-        status: 'passed',
-        duration: 0
+        status: 'passed',)
+    duration: 0
       })
       return { passed: true }
     } catch (error) {
@@ -560,8 +548,8 @@ export class TestRunner {
       this.testResults.push({`}
         name: `Component: ${testName}`,
         status: 'failed',
-        duration: 0,
-        error: errorMessage
+        duration: 0,)
+    error: errorMessage
       })
       return { passed: false, error: errorMessage }
     }
@@ -571,15 +559,14 @@ export class TestRunner {
    */
   private generateJunitReport(): void {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results
-          .map(
-            result => `}
+          .map()</testsuite>
+    result => `}</testsuite>
             <testcase name="${result.name}" time="${result.duration / 1000}">
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/>' : ''}
-            </testcase>
+                ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
+            </skipped>
 
           )
           .join('')}
@@ -591,7 +578,7 @@ export class TestRunner {
   // Integration test
   async runIntegrationTest(
     component: ReactElement,
-    testName: string,
+    testName: string,)
     userInteractions: (result: RenderResult) => Promise<void>
   ): Promise<{ passed: boolean; error?: string }> {
     try {
@@ -599,8 +586,8 @@ export class TestRunner {
       await userInteractions(result)
       this.testResults.push({`}
         name: `Integration: ${testName}`,
-        status: 'passed',
-        duration: 0
+        status: 'passed',)
+    duration: 0
       })
       return { passed: true }
     } catch (error) {
@@ -608,15 +595,15 @@ export class TestRunner {
       this.testResults.push({`}
         name: `Integration: ${testName}`,
         status: 'failed',
-        duration: 0,
-        error: errorMessage
+        duration: 0,)
+    error: errorMessage
       })
       return { passed: false, error: errorMessage }
     }
   }
   // Visual regression test
   async runVisualRegressionTest(
-    component: ReactElement,
+    component: ReactElement,)
     testName: string
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
@@ -624,8 +611,8 @@ export class TestRunner {
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
     this.testResults.push({`}
       name: `Visual: ${testName}`,
-      status: 'passed',
-      duration: 0
+      status: 'passed',)
+    duration: 0
     })
     return { passed: true }
   }
@@ -634,8 +621,8 @@ export class TestRunner {
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {
-      statements: 85,
+    const coverage: CoverageMetrics = {,
+    statements: 85,
       branches: 80,
       functions: 90,
       lines: 85}
@@ -644,20 +631,20 @@ export class TestRunner {
     this.testResults.push({
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
-      duration: 0,`}
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+      duration: 0,`})
+    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
     })
     return { passed, coverage }
   }
   // Run all tests
   async runAllTests(
-    tests: Array<{
-      name: string
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
-      component: ReactElement
-      assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>
+    tests: Array<{,
+    name: string
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+    component: ReactElement)
+    assertions?: (result: RenderResult) => void
+      userInteractions?: (result: RenderResult) => Promise<void>;}</void>
+    }></void>
   ): Promise<{
     passed: boolean;}
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>
@@ -669,15 +656,15 @@ export class TestRunner {
         case 'component':
           result = await this.runComponentTest(
             test.component,
-            test.name,
-            test.assertions as any
+            test.name,)
+    test.assertions as any
           )
           break
         case 'integration':
           result = await this.runIntegrationTest(
             test.component,
-            test.name,
-            test.userInteractions as any
+            test.name,)
+    test.userInteractions as any
           )
           break
         case 'performance':
@@ -738,10 +725,9 @@ export const useTestRunner = useCallback((...args) => {
   const runTest = useCallback(async (
     component: ReactElement,
     testName: string,
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',)
     assertions?: (result: RenderResult) => void,
-    userInteractions?: (result: RenderResult) => Promise<void>
-  ) => {
+    userInteractions?: (result: RenderResult) => Promise<void>) => {
     switch (type) {
       case 'component':
         return testRunner.runComponentTest(component, testName, assertions as any)
@@ -767,15 +753,15 @@ export const useTestRunner = useCallback((...args) => {
 }
 // Test utilities
 export const testUtils = {
-  // Create mock data
-  createMockData: (type: string, count: number = 10) => {}
+  // Create mock data</void>
+  createMockData: (type: string, count: number = 10) => {}</void>
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,`}
         name: `Mock ${type} ${i + 1}`,
-        description: `This is a mock ${type} item`,
-        createdAt: new Date().toISOString(),
+        description: `This is a mock ${type} item`,)
+    createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
       })
     }
@@ -797,8 +783,8 @@ export const testUtils = {
         }
       })
       observer.observe(document.body, {
-        childList: true,
-        subtree: true}
+        childList: true,)
+    subtree: true}
       })
       setTimeout(() => {
         observer.disconnect();`}
@@ -855,7 +841,7 @@ export class Assert {
    */
   public static assertEquals(
     actual: unknown,
-    expected: unknown,
+    expected: unknown,)
     message?: string
   ): void {
     if (actual !== expected) {`}
@@ -867,7 +853,7 @@ export class Assert {
    */
   public static assertNotEquals(
     actual: unknown,
-    expected: unknown,
+    expected: unknown,)
     message?: string
   ): void {
     if (actual === expected) {`}
@@ -909,7 +895,7 @@ export class Assert {
   /**
    * Assert that a value throws an error
    */
-  public static assertThrows(
+  public static assertThrows()
     fn: () => void,
     expectedError?: string | RegExp
   ): void {
@@ -951,13 +937,13 @@ export class Assert {
    * Assert that a value is an instance of a class
    */
   public static assertInstanceOf(
-    value: unknown,
+    value: unknown,)
     constructor: new (...args: unknown[]) => unknown,
     message?: string
   ): void {
     if (!(value instanceof constructor)) {
-      throw new Error(`}
-        message || `Expected ${value} to be an instance of ${constructor.name}
+      throw new Error(`})
+    message || `Expected ${value} to be an instance of ${constructor.name}
       )
     }
   }
@@ -1014,11 +1000,11 @@ export class Assert {
  * Mock utilities
  */
 class Mock {
-  private static mocks: Map<string, unknown> = new Map()
+  private static mocks: Map<string, unknown>= new Map()
   /**
    * Create a mock function
    */
-  public static fn(
+  public static fn()
     implementation?: (...args: unknown[]) => unknown
   ): MockFunction {
     const calls: unknown[][] = []
@@ -1037,13 +1023,13 @@ class Mock {
     return mockFn as MockFunction
   }
   /**
-   * Create a mock object
-   */
-  public static object<T extends Record<string, unknown>>(
-    overrides: Partial<T> = {}
+   * Create a mock object</string>
+   */</string>
+  public static object<T extends Record<string, unknown>>(</T>
+    overrides: Partial<T>= {}
   ): T {}
-    return new Proxy({} as T, {
-      get(target, prop) {
+    return new Proxy({} as T, {)
+    get(target, prop) {
         if (prop in overrides) {
           return overrides[prop as keyof T];}
         }
@@ -1052,29 +1038,28 @@ class Mock {
     })
   }
   /**
-   * Create a mock class
-   */
-  public static class<T extends new (...args: unknown[]) => unknown>(
-    constructor: T,
+   * Create a mock class</T>
+   */</T>
+  public static class<T extends new (...args: unknown[]) =>unknown>(,</T>
+    constructor: T,</T>
     overrides: Partial<InstanceType<T>> = {}
-  ): MockFunction {
-    const mockFn = Mock.fn((...args) => {
-      const instance = new constructor(...args) as InstanceType<T>
-      return Object.assign(instance as object, overrides);}
+  ): MockFunction {</InstanceType>
+    const mockFn = Mock.fn((...args) => {</InstanceType>
+      const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}
     })
     return mockFn
   }
   /**
-   * Create a spy
-   */
+   * Create a spy</T>
+   */</T>
   public static spyOn<T extends object, K extends keyof T>(
     object: T,
     method: K
   ): MockFunction {
-    const original = object[method]
-    const mockFn = Mock.fn()
-    (object as Record<string, unknown>)[method as string] = mockFn;}
-    (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {
+    const original = object[method]</T>
+    const mockFn = Mock.fn()</T>
+    (object as Record<string, unknown>)[method as string] = mockFn;}</string>
+    (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {</string>
       (object as Record<string, unknown>)[method as string] = original;}
     }
     return mockFn as MockFunction
@@ -1099,9 +1084,9 @@ class Mock {
   }
 }
 interface MockFunction {
-  (...args: unknown[]): unknown
-  mock: {
-    calls: unknown[][]
+  (...args: unknown[]): unknown,
+    mock: {
+    calls: unknown[][],
     results: unknown[]
     instances: unknown[];}
   }
@@ -1114,5 +1099,5 @@ export type {
   TestSuite,
   Test,
   AssertionResult,
-  CoverageResult}
-}
+  CoverageResult}</string>
+}</string>

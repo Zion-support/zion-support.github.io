@@ -7,7 +7,7 @@ interface LoadingProps {
   fullScreen?: boolean;
 }
 
-const Loading: React.FC<LoadingProps> = ({
+const Loading: React.FC<LoadingProps>= ({
   size = 'md',
   text = 'Loading...',
   fullScreen = false
@@ -23,8 +23,8 @@ const Loading: React.FC<LoadingProps> = ({
     md: 'text-base',
     lg: 'text-lg'
   };
-
-  const content = (
+</LoadingProps>
+  const content = (</LoadingProps>
     <div className="flex flex-col items-center justify-center space-y-4">
       <div className="relative">
         <div className={`${sizeClasses[size]} animate-spin`}>
@@ -35,8 +35,7 @@ const Loading: React.FC<LoadingProps> = ({
         </div>
       </div>
       {text && (
-        <p className={`${textSizeClasses[size]} text-gray-300 font-medium animate-pulse`}>
-          {text}
+        <p className={`${textSizeClasses[size]} text-gray-300 font-medium animate-pulse`}>{text}</p>
         </p>
       )}
     </div>
@@ -44,8 +43,7 @@ const Loading: React.FC<LoadingProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        {content}
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">{content}</div>
       </div>
     );
   }

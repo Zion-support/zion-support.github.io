@@ -1,8 +1,8 @@
 'use client'
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
-  src: string
-  alt: string
+  src: string,
+    alt: string
   width?: number
   height?: number
   className?: string
@@ -16,7 +16,7 @@ interface ImageProps {
   onLoad?: () => void
   onError?: () => void;}
 }
-export const Image: React.FC<ImageProps> = ({
+export const Image: React.FC<ImageProps>= ({
   src,
   alt,
   width,
@@ -54,8 +54,8 @@ export const Image: React.FC<ImageProps> = ({
       objectFit: 'cover'}
     })
   }
-  if (hasError) {
-    return (
+  if (hasError) {</ImageProps>
+    return (</ImageProps>
       <div}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -78,7 +78,6 @@ export const Image: React.FC<ImageProps> = ({
       onLoad={handleLoad}
       onError={handleError}
       {...props}
-    />
-  )
-}
-export default Image
+    >)</img>
+}</img>
+export default Image</img>

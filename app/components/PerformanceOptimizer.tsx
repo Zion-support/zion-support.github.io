@@ -2,18 +2,18 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
+  lcp: number;,
+    fid: number;
+  cls: number;,
+    fcp: number;
   ttfb: number;
 }
 
 interface OptimizationStatus {
-  preloaded: number;
-  codeSplit: boolean;
-  serviceWorker: boolean;
-  optimized: boolean;
+  preloaded: number;,
+    codeSplit: boolean;
+  serviceWorker: boolean;,
+    optimized: boolean;
 }
 
 export const PerformanceOptimizer: React.FC = () => {
@@ -27,8 +27,8 @@ export const PerformanceOptimizer: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     // Collect Core Web Vitals
-    const vitals: PerformanceMetrics = {
-      lcp: 0,
+    const vitals: PerformanceMetrics = {,
+    lcp: 0,
       fid: 0,
       cls: 0,
       fcp: 0,
@@ -94,8 +94,8 @@ export const PerformanceOptimizer: React.FC = () => {
       '/js/critical.js'
     ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
+    criticalResources.forEach(resource => {)
+    const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
@@ -119,8 +119,8 @@ export const PerformanceOptimizer: React.FC = () => {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ];
 
-    hints.forEach(hint => {
-      const link = document.createElement('link');
+    hints.forEach(hint => {)
+    const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
@@ -152,5 +152,5 @@ export const PerformanceOptimizer: React.FC = () => {
   // This component doesn't render anything visible
   return null;
 };
-
-export default PerformanceOptimizer;
+</OptimizationStatus>
+export default PerformanceOptimizer;</OptimizationStatus>

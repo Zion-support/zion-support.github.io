@@ -13,7 +13,7 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({
   enableAdvancedCaching = true,
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -32,8 +32,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     ttfb: 0
   });
 
-  // Web Vitals monitoring
-  useEffect(() => {
+  // Web Vitals monitoring)
+    useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
         // First Contentful Paint
@@ -205,10 +205,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(performanceMetrics.lcp),
-        custom_map: {
-          fcp: Math.round(performanceMetrics.fcp),
+        event_label: 'Core Web Vitals',)
+    value: Math.round(performanceMetrics.lcp),
+        custom_map: {,
+    fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
           cls: Math.round(performanceMetrics.cls * 1000) / 1000
@@ -243,5 +243,5 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   return null;
 };
-
-export default AdvancedPerformanceOptimizer;
+</AdvancedPerformanceOptimizerProps>
+export default AdvancedPerformanceOptimizer;</AdvancedPerformanceOptimizerProps>

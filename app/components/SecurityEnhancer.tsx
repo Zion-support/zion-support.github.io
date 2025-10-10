@@ -4,10 +4,10 @@ import React, { useEffect, useCallback, useState } from 'react';
 import { logger } from '../utils/logger';
 
 interface SecurityMetrics {
-  cspViolations: number;
-  xssAttempts: number;
-  csrfAttempts: number;
-  suspiciousActivity: number;
+  cspViolations: number;,
+    xssAttempts: number;
+  csrfAttempts: number;,
+    suspiciousActivity: number;
 }
 
 export const SecurityEnhancer: React.FC = () => {
@@ -16,8 +16,8 @@ export const SecurityEnhancer: React.FC = () => {
     xssAttempts: 0,
     csrfAttempts: 0,
     suspiciousActivity: 0,
-
-  const [isSecure, setIsSecure] = useState(true);
+</SecurityMetrics>
+  const [isSecure, setIsSecure] = useState(true);</SecurityMetrics>
   const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
 
   // Content Security Policy monitoring
@@ -38,8 +38,8 @@ export const SecurityEnhancer: React.FC = () => {
     // Monitor for XSS attempts
     const checkForXSS = () => {
       const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
-        if (script.src && !script.src.startsWith(window.location.origin)) {
+      scripts.forEach(script => {)
+    if (script.src && !script.src.startsWith(window.location.origin)) {
           setMetrics(prev => ({ ...prev, xssAttempts: prev.xssAttempts + 1 }));
           logger.warn('Potential XSS attempt detected', { src: script.src });
         }
@@ -50,8 +50,8 @@ export const SecurityEnhancer: React.FC = () => {
 
     // Monitor form submissions for CSRF
     const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', (e) => {
+    forms.forEach(form => {)
+    form.addEventListener('submit', (e) => {
         const formData = new FormData(form as HTMLFormElement);
         const token = formData.get('csrf_token');
 
@@ -64,8 +64,8 @@ export const SecurityEnhancer: React.FC = () => {
   }, []);
 
   // Input sanitization
-  const sanitizeInput = useCallback((input: string): string => {
-    return input
+  const sanitizeInput = useCallback((input: string): string => {</string>
+    return input</string>
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
       .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
       .replace(/javascript:/gi, '')
@@ -104,11 +104,11 @@ export const SecurityEnhancer: React.FC = () => {
       const scripts = document.querySelectorAll('script');
       scripts.forEach(script => {
         const content = script.textContent || '';
-        suspiciousPatterns.forEach(pattern => {
-          if (pattern.test(content)) {
+        suspiciousPatterns.forEach(pattern => {)
+    if (pattern.test(content)) {
             setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-            logger.warn('Suspicious code pattern detected', {
-              pattern: pattern.toString(),
+            logger.warn('Suspicious code pattern detected', {)
+    pattern: pattern.toString(),
               script: script.id || 'inline'
 
           }
@@ -212,8 +212,8 @@ export const SecurityEnhancer: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
-        event_label: event,
-        custom_map: data,
+        event_label: event,)
+    custom_map: data,
 
     }
   }, [rateLimit]);
@@ -236,18 +236,14 @@ export const SecurityEnhancer: React.FC = () => {
     <>
       {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
-          ⚠️ Security Warning: This site is not served over HTTPS
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">⚠️ Security Warning: This site is not served over HTTPS</div>
         </div>
       )}
 
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1">
-            {securityWarnings.map((warning, index) => (
-              <li key={index}>• {warning}</li>
+          <h4 className="font-bold mb-2">Security Warnings<ul className="text-sm space-y-1">{securityWarnings.map((warning, index) => (<li key={index}>• {warning}</li>
             ))}
           </ul>
         </div>
@@ -258,10 +254,8 @@ export const SecurityEnhancer: React.FC = () => {
         <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
           <h4 className="font-bold mb-2">Security Metrics</h4>
           <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}</div>
-            <div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+            <div>CSP Violations: {metrics.cspViolations}<div>XSS Attempts: {metrics.xssAttempts}</div>
+            <div>CSRF Attempts: {metrics.csrfAttempts}<div>Suspicious Activity: {metrics.suspiciousActivity}</div>
           </div>
         </div>
       )}

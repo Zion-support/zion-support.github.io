@@ -8,7 +8,7 @@ interface AnalyticsProps {
   enableUserBehaviorTracking?: boolean;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({
+const Analytics: React.FC<AnalyticsProps>= ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
@@ -53,8 +53,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
       send_page_view: true
     });
   };
-
-  const initializePerformanceMonitoring = () => {
+)
+    const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
@@ -94,18 +94,18 @@ const Analytics: React.FC<AnalyticsProps> = ({
         error: event.error?.stack
 
 
-    // Track unhandled promise rejections
+    // Track unhandled promise rejections)
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
         promise: event.promise
 
 
-    // Track resource loading errors
+    // Track resource loading errors)
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
-        trackEvent('error', 'resource_error', {
-          type: (event.target as any).tagName,
+        trackEvent('error', 'resource_error', {)
+    type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
 
@@ -121,7 +121,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_path: window.location.pathname
 
     // Track scroll depth
-    let maxScroll = 0;
+    let maxScroll = 0;)
     window.addEventListener('scroll', () => {
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollPercent > maxScroll) {
@@ -145,12 +145,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
       if (tagName === 'a') {
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
-          link_url: href,
-          link_text: target.textContent?.trim()
+          link_url: href,)
+    link_text: target.textContent?.trim()
 
       } else if (tagName === 'button') {
-        trackEvent('engagement', 'button_click', {
-          button_text: target.textContent?.trim(),
+        trackEvent('engagement', 'button_click', {)
+    button_text: target.textContent?.trim(),
           button_class: target.className
 
       }
@@ -165,12 +165,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
 
   };
-
-  const trackEvent = (category: string, action: string, value?: any) => {
+)
+    const trackEvent = (category: string, action: string, value?: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
-        event_category: category,
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,
+        event_category: category,)
+    event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
 
     }
@@ -178,5 +178,5 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
   return null;
 };
-
-export default Analytics;
+</AnalyticsProps>
+export default Analytics;</AnalyticsProps>

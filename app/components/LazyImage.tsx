@@ -2,15 +2,15 @@ import React, { useState, useRef } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface LazyImageProps {
-  src: string;
-  alt: string;
+  src: string;,
+    alt: string;
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps>= ({
   src,
   alt,
   className = '',
@@ -19,15 +19,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(false);</LazyImageProps>
+  const [hasError, setHasError] = useState(false);</LazyImageProps>
   const imgRef = useRef<HTMLImageElement>(null);
 
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px',
-
-  React.useEffect(() => {
+)
+    React.useEffect(() => {
     if (entry?.isIntersecting) {
       setIsInView(true);
     }
@@ -42,11 +42,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
     setHasError(true);
     onError?.();
   };
-
-  return (
-    <div ref={setNode} className={`relative overflow-hidden ${className}`}>
-      {isInView && (
-        <img
+</HTMLImageElement>
+  return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (<img
           ref={imgRef}
           src={src}
           alt={alt}
@@ -56,11 +53,10 @@ const LazyImage: React.FC<LazyImageProps> = ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           loading="lazy"
-        />
-      )}
-
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+        >)}
+</img>
+      {!isLoaded && !hasError && (</img>
+        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">
           <img
             src={placeholder}
             alt="Loading..."

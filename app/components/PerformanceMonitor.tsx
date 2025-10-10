@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { BarChart3, Clock, Wifi } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  connectionSpeed: string;
+  loadTime: number;,
+    firstContentfulPaint: number;
+  largestContentfulPaint: number;,
+    firstInputDelay: number;
+  cumulativeLayoutShift: number;,
+    connectionSpeed: string;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -44,8 +44,8 @@ const PerformanceMonitor: React.FC = () => {
           `${Math.round(connection.downlink)} Mbps` :
           'Unknown';
 
-        const performanceMetrics: PerformanceMetrics = {
-          loadTime: Math.round(navigation.loadEventEnd - navigation.navigationStart),
+        const performanceMetrics: PerformanceMetrics = {,
+    loadTime: Math.round(navigation.loadEventEnd - navigation.navigationStart),
           firstContentfulPaint: fcp ? Math.round(fcp.startTime) : 0,
           largestContentfulPaint: lcp ? Math.round(lcp.startTime) : 0,
           firstInputDelay: 0, // Would need more complex measurement
@@ -82,8 +82,8 @@ const PerformanceMonitor: React.FC = () => {
         `${Math.round(connection.downlink)} Mbps` :
         'Unknown';
 
-      const performanceMetrics: PerformanceMetrics = {
-        loadTime: Math.round(navigation.loadEventEnd - navigation.navigationStart),
+      const performanceMetrics: PerformanceMetrics = {,
+    loadTime: Math.round(navigation.loadEventEnd - navigation.navigationStart),
         firstContentfulPaint: fcp ? Math.round(fcp.startTime) : 0,
         largestContentfulPaint: lcp ? Math.round(lcp.startTime) : 0,
         firstInputDelay: 0,
@@ -95,8 +95,8 @@ const PerformanceMonitor: React.FC = () => {
 
       // Store in localStorage for later analysis
       localStorage.setItem('performance-metrics', JSON.stringify({
-        ...performanceMetrics,
-        timestamp: Date.now()
+        ...performanceMetrics,)
+    timestamp: Date.now()
       }));
     } catch (error) {
 
@@ -104,8 +104,8 @@ const PerformanceMonitor: React.FC = () => {
   };
 
   if (!isVisible || !metrics) return null;
-
-  const getPerformanceColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+</PerformanceMetrics>
+  const getPerformanceColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {</PerformanceMetrics>
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
@@ -116,35 +116,27 @@ const PerformanceMonitor: React.FC = () => {
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center space-x-2">
           <BarChart3 className="w-4 h-4 text-cyan-400" />
-          <h3 className="text-white font-semibold text-sm">Performance</h3>
-        </div>
-        <button
-          onClick={() => setIsVisible(false)}
+          <h3 className="text-white font-semibold text-sm">Performance<button
+          onClick={() =>setIsVisible(false)}
           className="text-gray-400 hover:text-white transition-colors"
-        >
-          ×
+        ></button>
+          ×</button>
         </button>
       </div>
 
       <div className="space-y-2 text-xs">
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">Load Time:</span>
-          <span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
-            {metrics.loadTime}ms
+          <span className="text-gray-300">Load Time:<span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</span>
           </span>
         </div>
 
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">First Paint:</span>
-          <span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>
-            {metrics.firstContentfulPaint}ms
+          <span className="text-gray-300">First Paint:<span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</span>
           </span>
         </div>
 
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">Largest Paint:</span>
-          <span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>
-            {metrics.largestContentfulPaint}ms
+          <span className="text-gray-300">Largest Paint:<span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</span>
           </span>
         </div>
 

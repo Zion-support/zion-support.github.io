@@ -14,7 +14,7 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -34,8 +34,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     keyboardNavigation: false
   });
 
-  // Detect user preferences
-  useEffect(() => {
+  // Detect user preferences)
+    useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Check for reduced motion preference
@@ -49,8 +49,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     setAccessibilitySettings(prev => ({
       ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      reducedMotion: prefersReducedMotion,)
+    highContrast: prefersHighContrast
     }));
 
     // Listen for changes in user preferences
@@ -180,8 +180,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
       ) as NodeListOf<HTMLElement>;
 
       const firstElement = focusableElements[0];
@@ -211,8 +211,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Apply focus trap to modals
     const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {
-      const cleanup = trapFocus(modal as HTMLElement);
+    modals.forEach(modal => {)
+    const cleanup = trapFocus(modal as HTMLElement);
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup;
 
@@ -365,5 +365,5 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   return null;
 };
-
-export default AdvancedAccessibilityEnhancer;
+</HTMLElement>
+export default AdvancedAccessibilityEnhancer;</HTMLElement>

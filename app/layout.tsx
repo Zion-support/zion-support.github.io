@@ -8,8 +8,8 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
+}: {)
+    children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="dark">
@@ -24,20 +24,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
-        <meta name="color-scheme" content="dark light" />
-
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-
-        {/* Fonts */}
-        <link
+        <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</meta>
+        </meta><link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
-        />
-
-        {/* Structured Data */}
-        <script
+        >{/* Structured Data */}</link>
+        </link><script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -83,8 +76,8 @@ export default function RootLayout({
                 },
                 {
                   '@type': 'Service',
-                  name: 'Digital Transformation',
-                  description: 'Business modernization and process automation',
+                  name: 'Digital Transformation',)
+    description: 'Business modernization and process automation',
                 },
               ],
             }),
@@ -95,9 +88,8 @@ export default function RootLayout({
         <EnhancedSEOHead />
         <AccessibilityEnhancer />
         <PerformanceMonitor />
-        <ServiceWorkerRegistration />
-        {children}
-      </body>
+        <ServiceWorkerRegistration >{children}</ServiceWorkerRegistration>
+      </ServiceWorkerRegistration>
     </html>
   );
 }
