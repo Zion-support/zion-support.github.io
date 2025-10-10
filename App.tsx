@@ -1,5 +1,5 @@
 import React, { memo, useMemo, Suspense } from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async'
 import EnhancedSEO from './src/components/EnhancedSEO';
 import PerformanceMonitor from './src/components/PerformanceMonitor';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';

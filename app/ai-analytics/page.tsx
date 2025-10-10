@@ -22,13 +22,13 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-optimized content and visualizations.',
-      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']}
+      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']
     },
     {
       icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',
-      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']}
+      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
     }
   ]
   const analyticsTypes = [
@@ -36,19 +36,19 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       title: 'Sales Analytics',
       description: 'Track sales performance, pipeline health, and revenue trends.',
       icon: TrendingUp,
-      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']}
+      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']
     },
     {
       title: 'Marketing Analytics',
       description: 'Measure marketing campaign effectiveness and ROI.',
       icon: Target,
-      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']}
+      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']
     },
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences.',
       icon: Users,
-      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']}
+      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']
     },
     {
       title: 'Financial Analytics',
