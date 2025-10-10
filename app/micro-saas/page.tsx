@@ -224,8 +224,8 @@ const microSAASServices = [
       trial: '14-day free trial'
     },
     { 
-      name: 'AI API Builder Pro', 
-      href: '/ai-api-builder', 
+      name: 'AI API Manager Pro', 
+      href: '/ai-api-manager', 
       icon: Settings, 
       category: 'Development', 
       price: '$249/mo',
@@ -237,8 +237,8 @@ const microSAASServices = [
       trial: '21-day free trial'
     },
     { 
-      name: 'AI Database Optimizer', 
-      href: '/ai-database-optimizer', 
+      name: 'AI Database Management', 
+      href: '/database-management', 
       icon: Database, 
       category: 'Development', 
       price: '$199/mo',
@@ -253,7 +253,7 @@ const microSAASServices = [
     // Security & Compliance
     { 
       name: 'AI Security Monitor Pro', 
-      href: '/ai-security-monitor', 
+      href: '/ai-cybersecurity-monitor', 
       icon: Shield, 
       category: 'Security', 
       price: '$299/mo',
@@ -281,7 +281,7 @@ const microSAASServices = [
     // Specialized Industry Solutions
     { 
       name: 'AI Healthcare Assistant Pro', 
-      href: '/ai-healthcare-assistant', 
+      href: '/ai-healthcare', 
       icon: Stethoscope, 
       category: 'Healthcare', 
       price: '$399/mo',
