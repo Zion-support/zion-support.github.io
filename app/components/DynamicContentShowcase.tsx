@@ -68,59 +68,118 @@ const DynamicContentShowcase: React.FC = () => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Dynamic <span className="text-cyan-400">Content Showcase</span>
-          </h1>
+    <div className="relative py-20 px-4 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
+      <div className="relative max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
+            Dynamic Content Showcase
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-              <span>Start Demo</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+            <a href="/demo" className="cyber-button">
+              Start Demo
+              <ArrowRight className="w-4 h-4 ml-2 inline" />
+            </a>
+            <a href="/about" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Learn More
-            </button>
+            </a>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+        {/* Features Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white mb-4 neon-text">
               Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </h3>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        {/* Testimonials Section */}
+        <div className="quantum-card p-8 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4 neon-text">
+              What Our Clients Say
+            </h3>
+            <p className="text-gray-300">
+              Real feedback from satisfied customers who have transformed their businesses with our solutions.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg p-8">
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-xl text-white mb-6 italic">
+                  "{testimonials[currentIndex].content}"
+                </blockquote>
+                <div className="text-center">
+                  <div className="text-lg font-semibold text-white">
+                    {testimonials[currentIndex].name}
+                  </div>
+                  <div className="text-cyan-400">
+                    {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="quantum-card p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4 neon-text">
+              Key Benefits
+            </h3>
+            <p className="text-gray-300">
+              Discover why thousands of businesses trust our solutions for their critical operations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300 text-sm">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
+export default DynamicContentShowcase;
