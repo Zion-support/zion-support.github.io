@@ -1,11 +1,8 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {

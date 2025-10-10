@@ -137,7 +137,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
             </div>
             <div className="flex space-x-6">
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -152,19 +151,6 @@ const Footer: React.FC = () => {
               <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact
               </Link>
-=======
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                Cookie Policy
-              </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </div>
@@ -173,10 +159,6 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Footer;
-=======
 Footer.displayName = 'Footer';
 
 export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
