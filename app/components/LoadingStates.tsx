@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
 import { Loader2 } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const PageLoader: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -17,12 +14,8 @@ export const PageLoader: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
 export const ComponentLoader: React.FC = () => {
   return (
     <div className="flex items-center justify-center p-8">
@@ -32,12 +25,8 @@ export const ComponentLoader: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
 export const ServiceCardSkeleton: React.FC = () => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
@@ -47,14 +36,8 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>
       <div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
     </div>
-<<<<<<< HEAD
-  )
-}
-
-=======
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const ContentSkeleton: React.FC = () => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
