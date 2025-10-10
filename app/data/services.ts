@@ -1,1375 +1,2083 @@
-import {;
-  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,;
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,;
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;}
-} from 'lucide-react';
-;
-export const microSAASServices = [;
-  // Productivity & Management Tools;
-  {;
-    title: 'AI Project Manager Pro',;
-    description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',;
-    icon: 'bar-chart',;
-    price: '$99/month',;
-    originalPrice: '$149/month',;
-    features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],;
-    benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],;
-    link: '/ai-project-manager';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.9;
-    users: '10,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Meeting Assistant Pro',;
-    description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',;
-    icon: 'target',;
-    price: '$79/month',;
-    originalPrice: '$119/month',;
-    features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],;
-    benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],;
-    link: '/ai-meeting-assistant';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.8;
-    users: '20,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Document Intelligence Pro',;
-    description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',;
-    icon: '📄',;
-    price: '$89/month',;
-    originalPrice: '$129/month',;
-    features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],;
-    benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],;
-    link: '/ai-document-intelligence';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.7;
-    users: '15,000+',;}
-    freeTrial: '7 days'},;
-  {;
-    title: 'AI Personal Assistant Pro',;
-    description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',;
-    icon: '🤖',;
-    price: '$49/month',;
-    originalPrice: '$79/month',;
-    features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],;
-    benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],;
-    link: '/ai-personal-assistant';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.9;
-    users: '45,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Team Collaboration Hub',;
-    description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',;
-    icon: 'users',;
-    price: '$99/month',;
-    originalPrice: '$149/month',;
-    features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],;
-    benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],;
-    link: '/ai-team-collaboration';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.8;
-    users: '25,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Task Manager Pro',;
-    description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',;
-    icon: 'check',;
-    price: '$49/month',;
-    originalPrice: '$79/month',;
-    features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],;
-    benefits: ['60% productivity boost', 'Never miss deadlines', 'Better focus', 'Achieve more goals'],;
-    link: '/ai-task-manager';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.8;
-    users: '25,000+',;}
-    freeTrial: '7 days'},;
-  {;
-    title: 'AI Workflow Automation Pro',;
-    description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',;
-    icon: 'zap',;
-    price: '$79/month',;
-    originalPrice: '$119/month',;
-    features: ['Visual workflow builder', 'AI optimization', '500+ integrations', 'Custom triggers', 'Error handling', 'Analytics dashboard', 'Team collaboration', 'API access'],;
-    benefits: ['20+ hours saved weekly', '99.9% accuracy', 'Easy setup', 'Scalable automation'],;
-    link: '/ai-workflow-automation';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.7;
-    users: '15,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Meeting Scheduler Pro',;
-    description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',;
-    icon: '📅',;
-    price: '$39/month',;
-    originalPrice: '$59/month',;
-    features: ['Smart scheduling', 'Calendar integration', 'Conflict resolution', 'Time zone handling', 'Meeting analytics', 'Auto-reminders', 'Room booking', 'Catering coordination'],;
-    benefits: ['50% scheduling time saved', 'Zero double bookings', 'Better time utilization', 'Reduced no-shows'],;
-    link: '/ai-meeting-scheduler';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.8;
-    users: '30,000+',;}
-    freeTrial: '7 days'},;
-  {;
-    title: 'AI Time Tracker Pro',;
-    description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',;
-    icon: '⏱️',;
-    price: '$34/month',;
-    originalPrice: '$49/month',;
-    features: ['Auto time tracking', 'Productivity analytics', 'Project billing', 'Team insights', 'Idle detection', 'Detailed reports', 'Screenshot monitoring', 'App usage tracking'],;
-    benefits: ['Accurate time tracking', 'Better productivity', 'Fair billing', 'Team optimization'],;
-    link: '/ai-time-tracker';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.6;
-    users: '50,000+',;}
-    freeTrial: '14 days'},;
-  // Content & Marketing Tools;
-  {;
-    title: 'AI Content Writer Pro',;
-    description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',;
-    icon: '✍️',;
-    price: '$89/month',;
-    originalPrice: '$129/month',;
-    features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content calendar', 'Plagiarism check', 'Tone adjustment', 'Keyword research', 'Content templates'],;
-    benefits: ['10x content output', 'SEO ready', 'Brand consistent', 'Time savings'],;
-    link: '/ai-content-writer';
-    popular: true,;
-    category: 'Content',;
-    rating: 4.9;
-    users: '40,000+',;}
-    freeTrial: '7 days'},;
-  {;
-    title: 'AI Video Creator Pro',;
-    description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',;
-    icon: 'film',;
-    price: '$149/month',;
-    originalPrice: '$199/month',;
-    features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],;
-    benefits: ['90% faster video production', 'Professional quality', 'No editing skills needed', 'Unlimited creativity'],;
-    link: '/ai-video-creator';
-    popular: true,;
-    category: 'Content',;
-    rating: 4.8;
-    users: '30,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Podcast Studio Pro',;
-    description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',;
-    icon: '🎙️',;
-    price: '$79/month',;
-    originalPrice: '$119/month',;
-    features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],;
-    benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],;
-    link: '/ai-podcast-studio';
-    popular: true,;
-    category: 'Content',;
-    rating: 4.7;
-    users: '18,000+',;}
-    freeTrial: '7 days'},;
-  {;
-    title: 'AI Graphic Design Studio',;
-    description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',;
-    icon: 'palette',;
-    price: '$69/month',;
-    originalPrice: '$99/month',;
-    features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],;
-    benefits: ['Professional designs', 'Brand consistency', 'No design skills needed', 'Unlimited creativity'],;
-    link: '/ai-graphic-design';
-    popular: true,;
-    category: 'Content',;
-    rating: 4.8;
-    users: '35,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Website Builder Pro',;
-    description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',;
-    icon: 'globe',;
-    price: '$89/month',;
-    originalPrice: '$129/month',;
-    features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],;
-    benefits: ['Professional websites', 'SEO optimized', 'Mobile responsive', 'Fast loading'],;
-    link: '/ai-website-builder';
-    popular: true,;
-    category: 'Content',;
-    rating: 4.9;
-    users: '50,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Social Media Manager Pro',;
-    description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',;
-    icon: 'smartphone',;
-    price: '$69/month',;
-    originalPrice: '$99/month',;
-    features: ['Auto content creation', 'Smart scheduling', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis', 'Trend monitoring', 'Multi-platform posting', 'Analytics dashboard'],;
-    benefits: ['300% audience growth', 'Consistent posting', 'Better engagement', 'Time savings'],;
-    link: '/ai-social-media-manager';
-    popular: true,;
-    category: 'Marketing',;
-    rating: 4.7;
-    users: '35,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Email Marketing Suite',;
-    description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',;
-    icon: 'Email:',;
-    price: '$59/month',;
-    originalPrice: '$89/month',;
-    features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],;
-    benefits: ['150% higher open rates', 'Better engagement', 'Automated campaigns', 'ROI tracking'],;
-    link: '/ai-email-marketing';
-    popular: true,;
-    category: 'Marketing',;
-    rating: 4.8;
-    users: '28,000+',;}
-    freeTrial: '7 days'},;
-  {;
-    title: 'AI SEO Optimizer Pro',;
-    description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',;
-    icon: 'search',;
-    price: '$79/month',;
-    originalPrice: '$119/month',;
-    features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO audit', 'Link building', 'Local SEO', 'Schema markup'],;
-    benefits: ['200% traffic increase', 'Higher rankings', 'Better visibility', 'Competitive advantage'],;
-    link: '/ai-seo-optimizer';
-    popular: true,;
-    category: 'Marketing',;
-    rating: 4.9;
-    users: '22,000+',;}
-    freeTrial: '14 days'},;
-  {;
-    title: 'AI Lead Generation Pro',;
-    description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',;
-    icon: '🎯',;
-    price: '$99/month',;
-    originalPrice: '$149/month',;
-    features: ['AI prospecting', 'Lead scoring', 'Email sequences', 'CRM integration', 'Data enrichment', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],;
-    benefits: ['5x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],;
-    link: '/ai-lead-generation';
-    popular: true,;
-    category: 'Marketing',;
-    rating: 4.8;
-    users: '18,000+',;}
-    freeTrial: '7 days'}
-];
-;
-export const aiServices = [;
-  {;
-    title: 'Machine Learning Solutions',;
-    description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',;
-    icon: Brain,;
-    price: '$1,500/month',;
-    originalPrice: '$2,000/month',;
-    features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'Model Versioning'],;
-    benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],;
-    link: '/machine-learning';
-    popular: true,;
-    category: 'AI Development';
-    rating: 4.9;
-    users: '500+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Cybersecurity Shield Pro',;
-    description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',;
-    icon: Shield,;
-    price: '$2,200/month',;
-    originalPrice: '$3,000/month',;
-    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Security Monitoring', 'Incident Response', 'Vulnerability Assessment', 'Compliance Reporting', '24/7 Monitoring'],;
-    benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],;
-    link: '/ai-cybersecurity';
-    popular: true,;
-    category: 'Security';
-    rating: 4.8;
-    users: '300+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Healthcare Assistant Pro',;
-    description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',;
-    icon: Stethoscope,;
-    price: '$3,500/month',;
-    originalPrice: '$5,000/month',;
-    features: ['Diagnostic Assistance', 'Patient Monitoring', 'Treatment Optimization', 'Medical Imaging', 'Drug Discovery', 'Clinical Trials', 'Patient Records', 'Telemedicine'],;
-    benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],;
-    link: '/ai-healthcare';
-    popular: true,;
-    category: 'Healthcare';
-    rating: 4.9;
-    users: '200+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Financial Advisor Pro',;
-    description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',;
-    icon: DollarSign,;
-    price: '$1,800/month',;
-    originalPrice: '$2,500/month',;
-    features: ['Portfolio Optimization', 'Risk Assessment', 'Automated Trading', 'Market Analysis', 'Tax Optimization', 'Retirement Planning', 'Insurance Analysis', 'Real-time Alerts'],;
-    benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],;
-    link: '/ai-financial-advisor';
-    popular: true,;
-    category: 'Finance';
-    rating: 4.7;
-    users: '400+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Supply Chain Optimizer',;
-    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',;
-    icon: Truck,;
-    price: '$2,500/month',;
-    originalPrice: '$3,500/month',;
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Cost Optimization', 'Risk Management', 'Sustainability Tracking'],;
-    benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],;
-    link: '/ai-supply-chain';
-    popular: true,;
-    category: 'Logistics';
-    rating: 4.8;
-    users: '250+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Legal Assistant Pro',;
-    description: 'Advanced legal AI with contract analysis, case research, and document automation.',;
-    icon: FileText,;
-    price: '$2,000/month',;
-    originalPrice: '$2,800/month',;
-    features: ['Contract Analysis', 'Case Research', 'Document Automation', 'Legal Research', 'Compliance Checking', 'Risk Assessment', 'Due Diligence', 'Litigation Support'],;
-    benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],;
-    link: '/ai-legal-assistant';
-    popular: true,;
-    category: 'Legal';
-    rating: 4.6;
-    users: '150+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Manufacturing Intelligence',;
-    description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',;
-    icon: Factory,;
-    price: '$3,000/month',;
-    originalPrice: '$4,200/month',;
-    features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration', 'Energy Management', 'Safety Monitoring', 'Performance Analytics', 'IoT Integration'],;
-    benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],;
-    link: '/ai-manufacturing';
-    popular: true,;
-    category: 'Manufacturing';
-    rating: 4.9;
-    users: '180+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'AI Education Platform Pro',;
-    description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',;
-    icon: GraduationCap,;
-    price: '$1,200/month',;
-    originalPrice: '$1,800/month',;
-    features: ['Adaptive Learning', 'Student Analytics', 'Automated Assessment', 'Content Generation', 'Progress Tracking', 'Parent Communication', 'Teacher Tools', 'Accessibility Features'],;
-    benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],;
-    link: '/ai-education';
-    popular: true,;
-    category: 'Education';
-    rating: 4.7;
-    users: '600+',;}
-    freeTrial: '30 days'}
-];
-;
-export const itServices = [;
-  {;
-    title: 'Cloud Migration Services',;
-    description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',;
-    icon: Cloud,;
-    price: '$2,000/month',;
-    originalPrice: '$3,000/month',;
-    features: ['Zero Downtime Migration', 'Performance Optimization', 'Security Hardening', 'Cost Optimization', 'Disaster Recovery', 'Monitoring Setup', 'Training', '24/7 Support'],;
-    benefits: ['Zero downtime', 'Better performance', 'Cost savings', 'Enhanced security'],;
-    link: '/cloud-migration';
-    popular: true,;
-    category: 'Cloud Services';
-    rating: 4.8;
-    users: '600+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'Enterprise IT Infrastructure',;
-    description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',;
-    icon: Building,;
-    price: '$5,000/month',;
-    originalPrice: '$7,500/month',;
-    features: ['High Availability Setup', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery', 'Security Hardening', 'Performance Monitoring', 'Backup Solutions', '24/7 Support'],;
-    benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],;
-    link: '/enterprise-infrastructure';
-    popular: true,;
-    category: 'Infrastructure';
-    rating: 4.9;
-    users: '100+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'DevOps & CI/CD Automation',;
-    description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',;
-    icon: SettingsIcon,;
-    price: '$2,500/month',;
-    originalPrice: '$3,500/month',;
-    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Alerting', 'Security Scanning', 'Automated Testing', 'Deployment Automation', 'Team Training'],;
-    benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],;
-    link: '/devops-automation';
-    popular: true,;
-    category: 'DevOps';
-    rating: 4.8;
-    users: '400+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'Database Management & Optimization',;
-    description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',;
-    icon: Database,;
-    price: '$1,800/month',;
-    originalPrice: '$2,500/month',;
-    features: ['Performance Tuning', 'Backup & Recovery', 'High Availability', 'Security Hardening', 'Monitoring', 'Query Optimization', 'Index Management', 'Capacity Planning'],;
-    benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],;
-    link: '/database-management';
-    popular: true,;
-    category: 'Database';
-    rating: 4.7;
-    users: '350+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'Network Security & Firewall',;
-    description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',;
-    icon: LockIcon,;
-    price: '$1,500/month',;
-    originalPrice: '$2,200/month',;
-    features: ['Next-Gen Firewalls', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring', 'Access Control', 'Compliance Reporting', '24/7 Monitoring'],;
-    benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],;
-    link: '/network-security';
-    popular: true,;
-    category: 'Security';
-    rating: 4.9;
-    users: '500+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'IT Consulting & Strategy',;
-    description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',;
-    icon: Building,;
-    price: '$3,000/month',;
-    originalPrice: '$4,500/month',;
-    features: ['Digital Transformation', 'Technology Roadmaps', 'Implementation Planning', 'Vendor Management', 'Cost Optimization', 'Risk Assessment', 'Compliance Planning', 'Change Management'],;
-    benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],;
-    link: '/it-consulting';
-    popular: true,;
-    category: 'Consulting';
-    rating: 4.8;
-    users: '200+',;}
-    freeTrial: '30 days'}
-];
-;
-export const specializedServices = [;
-  {;
-    title: 'Quantum Computing Solutions',;
-    description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',;
-    icon: Cpu,;
-    price: '$5,000/month',;
-    originalPrice: '$7,500/month',;
-    features: ['Quantum Algorithms', 'Optimization Problems', 'Research & Development', 'Quantum Simulation', 'Cryptography', 'Machine Learning', 'Consulting', 'Training'],;
-    benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-ready technology'],;
-    link: '/quantum-computing';
-    popular: true,;
-    category: 'Quantum';
-    rating: 4.9;
-    users: '50+',;}
-    freeTrial: '60 days'},;
-  {;
-    title: 'Autonomous Systems',;
-    description: 'Advanced autonomous systems with robotics, drones, and self-driving technology. Build the future of automation.',;
-    icon: SettingsIcon,;
-    price: '$4,000/month',;
-    originalPrice: '$6,000/month',;
-    features: ['Robotics Development', 'Drone Technology', 'Self-Driving Systems', 'Sensor Integration', 'AI Integration', 'Safety Systems', 'Testing', 'Deployment'],;
-    benefits: ['Cutting-edge technology', 'Automation solutions', 'Safety first', 'Innovation leadership'],;
-    link: '/autonomous-systems';
-    popular: true,;
-    category: 'Autonomous';
-    rating: 4.8;
-    users: '100+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'Blockchain & Web3',;
-    description: 'Comprehensive blockchain solutions with smart contracts, DeFi, and Web3 development. Build the decentralized future.',;
-    icon: LockIcon,;
-    price: '$2,500/month',;
-    originalPrice: '$3,500/month',;
-    features: ['Smart Contracts', 'DeFi Development', 'NFT Solutions', 'Web3 Integration', 'Token Development', 'Security Audits', 'Consulting', 'Training'],;
-    benefits: ['Decentralized solutions', 'Security & transparency', 'Future-ready technology', 'Innovation leadership'],;
-    link: '/blockchain';
-    popular: true,;
-    category: 'Blockchain';
-    rating: 4.7;
-    users: '300+',;}
-    freeTrial: '30 days'},;
-  {;
-    title: 'IoT & Edge Computing',;
-    description: 'Comprehensive IoT solutions with edge computing, sensor networks, and real-time processing. Connect and optimize everything.',;
-    icon: Globe,;
-    price: '$1,800/month',;
-    originalPrice: '$2,500/month',;
-    features: ['IoT Development', 'Edge Computing', 'Sensor Networks', 'Real-time Processing', 'Data Analytics', 'Security', 'Integration', 'Monitoring'],;
-    benefits: ['Connected solutions', 'Real-time insights', 'Edge efficiency', 'Scalable architecture'],;
-    link: '/iot-edge';
-    popular: true,;
-    category: 'IoT';
-    rating: 4.8;
-    users: '400+',;}
-    freeTrial: '30 days'}
-];
-export interface Service {;
-  id: string,;
-  name: string,;
-  category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech';
-  subcategory: string,;
-  description: string,;
+// Comprehensive Services Data for Zion Tech Group
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  icon: string;
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Emerging Tech' | 'Consulting';
   features: string[];
-  pricing: {;
-    starting: number,;
-    currency: string,;
-    period: 'month' | 'year' | 'one-time';
-    custom?: boolean;}
-  };
   benefits: string[];
-  useCases: string[];
-  icon: string,;
-  popular: boolean,;
+  pricing: {
+    starting: string;
+    enterprise?: string;
+    custom?: boolean;
+  };
+  marketPrice: string;
+  link: string;
+  popular?: boolean;
   new?: boolean;
-  path: string,;
-  contact: {;
-    phone: string,;
-    email: string,;
-    demo: string,;}
-  };
-  marketPrice?: {;
-    min: number,;
-    max: number,;
-    currency: string,;}
-  };
+  tags: string[];
+  useCases: string[];
+  integrations: string[];
+  support: string[];
+  sla: string;
+  compliance: string[];
 }
-;
-export const services: Service[] = [;
-  // AI Services;
-  {;
-    id: 'ai-project-manager',;
-    name: 'AI Project Manager Pro',;
-    category: 'ai',;
-    subcategory: 'Project Management',;
-    description: 'Intelligent project management with AI-powered scheduling, resource allocation, and risk prediction.',;
-    features: [;
-      'AI-powered task prioritization',;
-      'Automated resource allocation',;
-      'Risk prediction and mitigation',;
-      'Real-time progress tracking',;
-      'Team collaboration tools',;
-      'Integration with 50+ tools';
-    ],;
-    pricing: {;
-      starting: 299,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '40% faster project delivery',;
-      '25% reduction in project costs',;
-      '95% accuracy in deadline prediction',;
-      'Real-time risk assessment';
-    ],;
-    useCases: [;
-      'Software development projects',;
-      'Marketing campaign management',;
-      'Construction project oversight',;
-      'Event planning and execution';
-    ],;
-    icon: '📊',;
-    popular: true,;
-    new: true,;
-    path: '/ai-project-manager',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-project-manager';}
-    },;
-    marketPrice: {;
-      min: 200,;
-      max: 500,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-customer-support-bot',;
-    name: 'AI Customer Support Bot',;
-    category: 'ai',;
-    subcategory: 'Customer Service',;
-    description: '24/7 AI-powered customer support with natural language processing and multi-channel support.',;
-    features: [;
-      'Natural language understanding',;
-      'Multi-language support (50+ languages)',;
-      'Integration with CRM systems',;
-      'Sentiment analysis',;
-      'Escalation to human agents',;
-      'Analytics and reporting';
-    ],;
-    pricing: {;
-      starting: 199,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '80% reduction in response time',;
-      '24/7 availability',;
-      '90% customer satisfaction rate',;
-      '60% cost reduction vs human agents';
-    ],;
-    useCases: [;
-      'E-commerce customer support',;
-      'SaaS product support',;
-      'Healthcare patient inquiries',;
-      'Financial services support';
-    ],;
-    icon: '🤖',;
-    popular: true,;
-    path: '/ai-customer-support-bot',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot';}
-    },;
-    marketPrice: {;
-      min: 150,;
-      max: 400,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-content-generator',;
-    name: 'AI Content Generator Studio',;
-    category: 'ai',;
-    subcategory: 'Content Creation',;
-    description: 'Advanced AI-powered content creation for blogs, social media, emails, and marketing materials.',;
-    features: [;
-      'Multi-format content generation',;
-      'SEO optimization',;
-      'Brand voice consistency',;
-      'Plagiarism detection',;
-      'Content scheduling',;
-      'Performance analytics';
-    ],;
-    pricing: {;
-      starting: 149,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '10x faster content creation',;
-      'Consistent brand messaging',;
-      'SEO-optimized content',;
-      'Multi-language support';
-    ],;
-    useCases: [;
-      'Blog content creation',;
-      'Social media marketing',;
-      'Email marketing campaigns',;
-      'Product descriptions';
-    ],;
-    icon: '✍️',;
-    popular: true,;
-    path: '/ai-content-generation',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-content-generator';}
-    },;
-    marketPrice: {;
-      min: 99,;
-      max: 300,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-data-analytics',;
-    name: 'AI Data Analytics Platform',;
-    category: 'ai',;
-    subcategory: 'Analytics',;
-    description: 'Advanced AI-powered data analytics with predictive insights and automated reporting.',;
-    features: [;
-      'Real-time data processing',;
-      'Predictive analytics',;
-      'Automated report generation',;
-      'Custom dashboard creation',;
-      'Data visualization',;
-      'Machine learning models';
-    ],;
-    pricing: {;
-      starting: 499,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '50% faster insights generation',;
-      'Predictive accuracy up to 95%',;
-      'Automated reporting saves 20 hours/week',;
-      'Real-time decision making';
-    ],;
-    useCases: [;
-      'Business intelligence',;
-      'Sales forecasting',;
-      'Customer behavior analysis',;
-      'Financial risk assessment';
-    ],;
-    icon: '📈',;
-    popular: true,;
-    path: '/ai-data-analytics',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-data-analytics';}
-    },;
-    marketPrice: {;
-      min: 300,;
-      max: 1000,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-cybersecurity',;
-    name: 'AI Cybersecurity Suite',;
-    category: 'ai',;
-    subcategory: 'Security',;
-    description: 'Advanced AI-powered cybersecurity with threat detection, prevention, and response automation.',;
-    features: [;
-      'Real-time threat detection',;
-      'Behavioral analysis',;
-      'Automated incident response',;
-      'Vulnerability assessment',;
-      'Compliance monitoring',;
-      'Security training';
-    ],;
-    pricing: {;
-      starting: 799,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '99.9% threat detection accuracy',;
-      '50% faster incident response',;
-      'Automated compliance reporting',;
-      '24/7 security monitoring';
-    ],;
-    useCases: [;
-      'Enterprise security',;
-      'Financial services',;
-      'Healthcare data protection',;
-      'Government agencies';
-    ],;
-    icon: '🔒',;
-    popular: true,;
-    path: '/ai-cybersecurity',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity';}
-    },;
-    marketPrice: {;
-      min: 500,;
-      max: 2000,;
-      currency: 'USD';}
-    }
-  },;
-  // Micro SAAS Services;
-  {;
-    id: 'ai-social-media-manager',;
-    name: 'AI Social Media Manager',;
-    category: 'micro-saas',;
-    subcategory: 'Social Media',;
-    description: 'Automated social media management with AI-powered content creation and scheduling.',;
-    features: [;
-      'Multi-platform posting',;
-      'AI content suggestions',;
-      'Optimal timing analysis',;
-      'Engagement tracking',;
-      'Hashtag optimization',;
-      'Competitor analysis';
-    ],;
-    pricing: {;
-      starting: 79,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '3x more engagement',;
-      'Save 15 hours/week',;
-      'Consistent posting schedule',;
-      'Data-driven content strategy';
-    ],;
-    useCases: [;
-      'Small business marketing',;
-      'Personal branding',;
-      'E-commerce promotion',;
-      'Content creators';
-    ],;
-    icon: '📱',;
-    popular: true,;
-    path: '/ai-social-media-manager',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager';}
-    },;
-    marketPrice: {;
-      min: 50,;
-      max: 150,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-email-marketing',;
-    name: 'AI Email Marketing Pro',;
-    category: 'micro-saas',;
-    subcategory: 'Email Marketing',;
-    description: 'Intelligent email marketing with AI-powered segmentation, personalization, and automation.',;
-    features: [;
-      'AI-powered segmentation',;
-      'Personalized content',;
-      'Send time optimization',;
-      'A/B testing automation',;
-      'Email template library',;
-      'Performance analytics';
-    ],;
-    pricing: {;
-      starting: 99,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '40% higher open rates',;
-      '60% increase in click-through rates',;
-      'Automated campaign optimization',;
-      'Personalized customer journeys';
-    ],;
-    useCases: [;
-      'E-commerce marketing',;
-      'Newsletter campaigns',;
-      'Lead nurturing',;
-      'Customer retention';
-    ],;
-    icon: '📧',;
-    popular: true,;
-    path: '/ai-email-marketing',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-email-marketing';}
-    },;
-    marketPrice: {;
-      min: 60,;
-      max: 200,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-seo-optimizer',;
-    name: 'AI SEO Optimizer',;
-    category: 'micro-saas',;
-    subcategory: 'SEO',;
-    description: 'AI-powered SEO optimization with keyword research, content analysis, and ranking tracking.',;
-    features: [;
-      'AI keyword research',;
-      'Content optimization suggestions',;
-      'Competitor analysis',;
-      'Ranking tracking',;
-      'Technical SEO audit',;
-      'Link building recommendations';
-    ],;
-    pricing: {;
-      starting: 129,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '50% faster SEO results',;
-      'Comprehensive keyword analysis',;
-      'Automated optimization suggestions',;
-      'Competitive advantage insights';
-    ],;
-    useCases: [;
-      'Website optimization',;
-      'Blog content SEO',;
-      'E-commerce SEO',;
-      'Local business SEO';
-    ],;
-    icon: '🎯',;
-    popular: true,;
-    path: '/ai-seo-optimizer',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer';}
-    },;
-    marketPrice: {;
-      min: 80,;
-      max: 250,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-invoice-generator',;
-    name: 'AI Invoice Generator',;
-    category: 'micro-saas',;
-    subcategory: 'Finance',;
-    description: 'Automated invoice generation with AI-powered data extraction and payment tracking.',;
-    features: [;
-      'Automated invoice creation',;
-      'AI data extraction',;
-      'Payment tracking',;
-      'Recurring billing',;
-      'Multi-currency support',;
-      'Tax calculation';
-    ],;
-    pricing: {;
-      starting: 49,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '90% time savings on invoicing',;
-      'Reduced billing errors',;
-      'Faster payment processing',;
-      'Professional invoice templates';
-    ],;
-    useCases: [;
-      'Freelancer billing',;
-      'Small business invoicing',;
-      'Service-based businesses',;
-      'Contractor payments';
-    ],;
-    icon: '💰',;
-    popular: false,;
-    path: '/ai-invoice-generator',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator';}
-    },;
-    marketPrice: {;
-      min: 30,;
-      max: 100,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'ai-time-tracker',;
-    name: 'AI Time Tracker Pro',;
-    category: 'micro-saas',;
-    subcategory: 'Productivity',;
-    description: 'Intelligent time tracking with AI-powered productivity insights and automated reporting.',;
-    features: [;
-      'Automatic time tracking',;
-      'AI productivity insights',;
-      'Project time allocation',;
-      'Team collaboration',;
-      'Detailed reporting',;
-      'Integration with 100+ tools';
-    ],;
-    pricing: {;
-      starting: 39,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      'Accurate time tracking',;
-      'Productivity optimization',;
-      'Project profitability analysis',;
-      'Team performance insights';
-    ],;
-    useCases: [;
-      'Freelancer time tracking',;
-      'Team productivity monitoring',;
-      'Project billing',;
-      'Remote work management';
-    ],;
-    icon: '⏰',;
-    popular: false,;
-    path: '/ai-time-tracker',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/ai-time-tracker';}
-    },;
-    marketPrice: {;
-      min: 20,;
-      max: 80,;
-      currency: 'USD';}
-    }
-  },;
-  // IT Services;
-  {;
-    id: 'cloud-infrastructure',;
-    name: 'Cloud Infrastructure Solutions',;
-    category: 'it',;
-    subcategory: 'Cloud Computing',;
-    description: 'Enterprise-grade cloud infrastructure with 99.9% uptime guarantee and 24/7 support.',;
-    features: [;
-      'Multi-cloud deployment',;
-      'Auto-scaling capabilities',;
-      'Disaster recovery',;
-      'Security compliance',;
-      'Performance monitoring',;
-      'Cost optimization';
-    ],;
-    pricing: {;
-      starting: 999,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '99.9% uptime guarantee',;
-      '50% cost reduction vs on-premise',;
-      'Instant scalability',;
-      'Enhanced security';
-    ],;
-    useCases: [;
-      'Enterprise applications',;
-      'E-commerce platforms',;
-      'Data analytics',;
-      'Web applications';
-    ],;
-    icon: '☁️',;
-    popular: true,;
-    path: '/cloud-infrastructure',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure';}
-    },;
-    marketPrice: {;
-      min: 500,;
-      max: 2000,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'cybersecurity-suite',;
-    name: 'Enterprise Cybersecurity Suite',;
-    category: 'it',;
-    subcategory: 'Security',;
-    description: 'Comprehensive cybersecurity solution with threat detection, prevention, and compliance.',;
-    features: [;
-      'Network security monitoring',;
-      'Endpoint protection',;
-      'Email security',;
-      'Web application firewall',;
-      'Compliance reporting',;
-      'Incident response';
-    ],;
-    pricing: {;
-      starting: 1299,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '360-degree security coverage',;
-      'Compliance with industry standards',;
-      '24/7 security monitoring',;
-      'Rapid threat response';
-    ],;
-    useCases: [;
-      'Enterprise security',;
-      'Healthcare compliance',;
-      'Financial services',;
-      'Government agencies';
-    ],;
-    icon: '🛡️',;
-    popular: true,;
-    path: '/cybersecurity-suite',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite';}
-    },;
-    marketPrice: {;
-      min: 800,;
-      max: 3000,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'devops-automation',;
-    name: 'DevOps & CI/CD Automation',;
-    category: 'it',;
-    subcategory: 'DevOps',;
-    description: 'Complete DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',;
-    features: [;
-      'Automated CI/CD pipelines',;
-      'Infrastructure as Code',;
-      'Container orchestration',;
-      'Monitoring and alerting',;
-      'Security scanning',;
-      'Performance optimization';
-    ],;
-    pricing: {;
-      starting: 799,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      '10x faster deployments',;
-      'Reduced deployment errors',;
-      'Automated testing',;
-      'Improved team productivity';
-    ],;
-    useCases: [;
-      'Software development',;
-      'Microservices deployment',;
-      'Cloud migration',;
-      'Application modernization';
-    ],;
-    icon: '🔄',;
-    popular: true,;
-    path: '/devops-automation',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/devops-automation';}
-    },;
-    marketPrice: {;
-      min: 500,;
-      max: 1500,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'database-management',;
-    name: 'Database Management & Optimization',;
-    category: 'it',;
-    subcategory: 'Database',;
-    description: 'Professional database management with optimization, backup, and performance tuning.',;
-    features: [;
-      'Database optimization',;
-      'Automated backups',;
-      'Performance monitoring',;
-      'Security hardening',;
-      'Migration services',;
-      '24/7 support';
-    ],;
-    pricing: {;
-      starting: 599,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      'Improved database performance',;
-      'Data security and compliance',;
-      'Reduced downtime',;
-      'Expert database administration';
-    ],;
-    useCases: [;
-      'Enterprise databases',;
-      'E-commerce platforms',;
-      'Data analytics',;
-      'Application databases';
-    ],;
-    icon: '🗄️',;
-    popular: false,;
-    path: '/database-management',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/database-management';}
-    },;
-    marketPrice: {;
-      min: 300,;
-      max: 1200,;
-      currency: 'USD';}
-    }
-  },;
-  // Emerging Technologies;
-  {;
-    id: 'quantum-computing',;
-    name: 'Quantum Computing Solutions',;
-    category: 'emerging-tech',;
-    subcategory: 'Quantum',;
-    description: 'Next-generation quantum computing capabilities for complex problem solving and optimization.',;
-    features: [;
-      'Quantum algorithm development',;
-      'Optimization problems',;
-      'Cryptography solutions',;
-      'Simulation capabilities',;
-      'Research collaboration',;
-      'Custom quantum applications';
-    ],;
-    pricing: {;
-      starting: 5000,;
-      currency: 'USD',;
-      period: 'month',;
-      custom: true;}
-    },;
-    benefits: [;
-      'Exponential computational power',;
-      'Revolutionary problem solving',;
-      'Future-proof technology',;
-      'Competitive advantage';
-    ],;
-    useCases: [;
-      'Drug discovery',;
-      'Financial modeling',;
-      'Cryptography',;
-      'Optimization problems';
-    ],;
-    icon: '⚛️',;
-    popular: false,;
-    new: true,;
-    path: '/quantum-computing',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/quantum-computing';}
-    },;
-    marketPrice: {;
-      min: 3000,;
-      max: 10000,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'blockchain-solutions',;
-    name: 'Blockchain & Web3 Solutions',;
-    category: 'emerging-tech',;
-    subcategory: 'Blockchain',;
-    description: 'Comprehensive blockchain solutions including smart contracts, DeFi, and NFT platforms.',;
-    features: [;
-      'Smart contract development',;
-      'DeFi platform creation',;
-      'NFT marketplace development',;
-      'Blockchain integration',;
-      'Token development',;
-      'Security auditing';
-    ],;
-    pricing: {;
-      starting: 2999,;
-      currency: 'USD',;
-      period: 'month',;
-      custom: true;}
-    },;
-    benefits: [;
-      'Decentralized solutions',;
-      'Enhanced security',;
-      'Transparency and trust',;
-      'Future of digital assets';
-    ],;
-    useCases: [;
-      'DeFi applications',;
-      'NFT marketplaces',;
-      'Supply chain tracking',;
-      'Digital identity';
-    ],;
-    icon: '⛓️',;
-    popular: false,;
-    new: true,;
-    path: '/blockchain-solutions',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/blockchain-solutions';}
-    },;
-    marketPrice: {;
-      min: 2000,;
-      max: 8000,;
-      currency: 'USD';}
-    }
-  },;
-  {;
-    id: 'iot-edge-computing',;
-    name: 'IoT & Edge Computing Platform',;
-    category: 'emerging-tech',;
-    subcategory: 'IoT',;
-    description: 'Complete IoT and edge computing solution with real-time data processing and analytics.',;
-    features: [;
-      'IoT device management',;
-      'Edge computing infrastructure',;
-      'Real-time data processing',;
-      'Predictive maintenance',;
-      'Device security',;
-      'Analytics dashboard';
-    ],;
-    pricing: {;
-      starting: 1299,;
-      currency: 'USD',;
-      period: 'month';}
-    },;
-    benefits: [;
-      'Real-time data processing',;
-      'Reduced latency',;
-      'Cost-effective data management',;
-      'Scalable IoT solutions';
-    ],;
-    useCases: [;
-      'Smart manufacturing',;
-      'Smart cities',;
-      'Healthcare monitoring',;
-      'Agriculture automation';
-    ],;
-    icon: '🌐',;
-    popular: false,;
-    path: '/iot-edge-computing',;
-    contact: {;
-      phone: '+1 (302) 464-0950',;
-      email: 'kleber@ziontechgroup.com',;
-      demo: 'https://ziontechgroup.com/demo/iot-edge-computing';}
-    },;
-    marketPrice: {;
-      min: 800,;
-      max: 2500,;
-      currency: 'USD';}
-    }
+
+export const services: Service[] = [
+  // AI Services
+  {
+    id: 'ai-voice-assistant',
+    title: 'AI Voice Assistant Platform',
+    description: 'Build custom voice assistants with natural language understanding and enterprise integration.',
+    longDescription: 'Our AI Voice Assistant Platform enables businesses to create sophisticated voice interfaces that understand natural language, support multiple languages, and integrate seamlessly with existing enterprise systems. Perfect for customer service, internal operations, and smart device control.',
+    icon: '🎤',
+    category: 'AI Services',
+    features: [
+      'Natural Language Processing',
+      'Multi-language Support (50+ languages)',
+      'Custom Wake Words',
+      'Enterprise Integration',
+      'Real-time Speech Recognition',
+      'Voice Analytics Dashboard',
+      'Custom Voice Training',
+      'API Integration'
+    ],
+    benefits: [
+      'Reduce customer service costs by 60%',
+      '24/7 automated support',
+      'Multi-language customer reach',
+      'Improved user experience',
+      'Scalable voice solutions'
+    ],
+    pricing: {
+      starting: '$299/month',
+      enterprise: '$1,999/month',
+      custom: true
+    },
+    marketPrice: '$500-2000/month',
+    link: '/ai-voice-assistant',
+    popular: true,
+    tags: ['NLP', 'Voice AI', 'Customer Service', 'Automation'],
+    useCases: ['Customer Support', 'Smart Home Control', 'Internal Operations', 'Accessibility'],
+    integrations: ['CRM Systems', 'Help Desk', 'IoT Devices', 'Mobile Apps'],
+    support: ['24/7 Technical Support', 'Documentation', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA Ready']
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: 'AI Predictive Maintenance',
+    description: 'Prevent equipment failures with AI-powered predictive maintenance and real-time monitoring.',
+    longDescription: 'Revolutionary AI-powered predictive maintenance system that uses machine learning to predict equipment failures before they happen. Reduces downtime by 80% and maintenance costs by 50% through intelligent scheduling and real-time monitoring.',
+    icon: '⚙️',
+    category: 'AI Services',
+    features: [
+      'Machine Learning Algorithms',
+      'IoT Sensor Integration',
+      'Real-time Monitoring',
+      'Failure Prediction Models',
+      'Maintenance Scheduling',
+      'Cost Optimization',
+      'Alert System',
+      'Performance Analytics'
+    ],
+    benefits: [
+      '80% reduction in unplanned downtime',
+      '50% reduction in maintenance costs',
+      'Extended equipment lifespan',
+      'Improved safety',
+      'Data-driven decisions'
+    ],
+    pricing: {
+      starting: '$599/month',
+      enterprise: '$2,999/month',
+      custom: true
+    },
+    marketPrice: '$1000-5000/month',
+    link: '/ai-predictive-maintenance',
+    popular: true,
+    tags: ['IoT', 'Machine Learning', 'Manufacturing', 'Maintenance'],
+    useCases: ['Manufacturing', 'Fleet Management', 'Building Systems', 'Industrial Equipment'],
+    integrations: ['ERP Systems', 'IoT Platforms', 'Maintenance Software', 'Analytics Tools'],
+    support: ['24/7 Monitoring', 'Expert Consultation', 'Training', 'Custom Models'],
+    sla: '99.95% Uptime',
+    compliance: ['ISO 27001', 'SOC 2', 'Industry Standards']
+  },
+  {
+    id: 'ai-supply-chain-optimization',
+    title: 'AI Supply Chain Optimization',
+    description: 'Optimize supply chain operations with AI-driven demand forecasting and logistics planning.',
+    longDescription: 'Advanced AI-powered supply chain optimization platform that uses machine learning to predict demand, optimize inventory levels, plan routes, and manage suppliers. Reduces costs by 30% and improves efficiency by 40%.',
+    icon: '📦',
+    category: 'AI Services',
+    features: [
+      'Demand Forecasting',
+      'Inventory Optimization',
+      'Route Planning',
+      'Supplier Management',
+      'Risk Assessment',
+      'Cost Analysis',
+      'Real-time Tracking',
+      'Automated Alerts'
+    ],
+    benefits: [
+      '30% reduction in supply chain costs',
+      '40% improvement in efficiency',
+      'Reduced stockouts and overstock',
+      'Better supplier relationships',
+      'Risk mitigation'
+    ],
+    pricing: {
+      starting: '$899/month',
+      enterprise: '$4,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-8000/month',
+    link: '/ai-supply-chain-optimization',
+    tags: ['Supply Chain', 'Logistics', 'Forecasting', 'Optimization'],
+    useCases: ['Retail', 'Manufacturing', 'E-commerce', 'Distribution'],
+    integrations: ['ERP Systems', 'WMS', 'TMS', 'Analytics Platforms'],
+    support: ['24/7 Support', 'Consultation', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['ISO 9001', 'SOC 2', 'Industry Standards']
+  },
+  {
+    id: 'ai-quality-control',
+    title: 'AI Quality Control System',
+    description: 'Automated quality inspection using computer vision and machine learning for manufacturing.',
+    longDescription: 'State-of-the-art AI quality control system that uses computer vision and machine learning to automatically inspect products, detect defects, and ensure quality standards. Reduces inspection time by 90% and improves accuracy by 95%.',
+    icon: '🔍',
+    category: 'AI Services',
+    features: [
+      'Computer Vision',
+      'Defect Detection',
+      'Real-time Inspection',
+      'Quality Reports',
+      'Integration APIs',
+      'Custom Models',
+      'Batch Processing',
+      'Alert System'
+    ],
+    benefits: [
+      '90% reduction in inspection time',
+      '95% improvement in accuracy',
+      'Consistent quality standards',
+      'Reduced human error',
+      'Cost savings'
+    ],
+    pricing: {
+      starting: '$1,199/month',
+      enterprise: '$5,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-10000/month',
+    link: '/ai-quality-control',
+    popular: true,
+    tags: ['Computer Vision', 'Quality Control', 'Manufacturing', 'Automation'],
+    useCases: ['Manufacturing', 'Food Industry', 'Electronics', 'Automotive'],
+    integrations: ['MES Systems', 'ERP', 'Quality Management', 'Analytics'],
+    support: ['24/7 Support', 'Model Training', 'Integration', 'Maintenance'],
+    sla: '99.9% Uptime',
+    compliance: ['ISO 9001', 'FDA', 'CE Marking', 'Industry Standards']
+  },
+  {
+    id: 'ai-energy-management',
+    title: 'AI Energy Management',
+    description: 'Optimize energy consumption with AI-powered smart grid management and renewable integration.',
+    longDescription: 'Intelligent energy management system that uses AI to optimize energy consumption, integrate renewable sources, and reduce costs. Perfect for buildings, campuses, and industrial facilities looking to improve energy efficiency.',
+    icon: '⚡',
+    category: 'AI Services',
+    features: [
+      'Energy Optimization',
+      'Smart Grid Management',
+      'Renewable Integration',
+      'Cost Analysis',
+      'Carbon Footprint Tracking',
+      'Predictive Analytics',
+      'Automated Controls',
+      'Real-time Monitoring'
+    ],
+    benefits: [
+      '25% reduction in energy costs',
+      '30% improvement in efficiency',
+      'Reduced carbon footprint',
+      'Better energy planning',
+      'Compliance reporting'
+    ],
+    pricing: {
+      starting: '$799/month',
+      enterprise: '$3,999/month',
+      custom: true
+    },
+    marketPrice: '$1500-6000/month',
+    link: '/ai-energy-management',
+    tags: ['Energy', 'Sustainability', 'Smart Grid', 'Renewable'],
+    useCases: ['Commercial Buildings', 'Industrial Facilities', 'Campus Management', 'Smart Cities'],
+    integrations: ['Building Management', 'Grid Systems', 'Renewable Sources', 'Analytics'],
+    support: ['24/7 Support', 'Consultation', 'Training', 'Custom Solutions'],
+    sla: '99.9% Uptime',
+    compliance: ['Energy Standards', 'Environmental', 'Safety', 'Industry']
+  },
+  {
+    id: 'ai-legal-document-analysis',
+    title: 'AI Legal Document Analysis',
+    description: 'Automated legal document review, contract analysis, and compliance monitoring with AI.',
+    longDescription: 'Advanced AI-powered legal document analysis platform that automates contract review, compliance monitoring, and legal research. Reduces review time by 85% and improves accuracy while ensuring regulatory compliance.',
+    icon: '⚖️',
+    category: 'AI Services',
+    features: [
+      'Document Review',
+      'Contract Analysis',
+      'Compliance Monitoring',
+      'Risk Assessment',
+      'Legal Research',
+      'Clause Extraction',
+      'Automated Reports',
+      'Version Control'
+    ],
+    benefits: [
+      '85% reduction in review time',
+      'Improved accuracy',
+      'Better compliance',
+      'Cost savings',
+      'Risk mitigation'
+    ],
+    pricing: {
+      starting: '$1,299/month',
+      enterprise: '$6,999/month',
+      custom: true
+    },
+    marketPrice: '$2500-12000/month',
+    link: '/ai-legal-document-analysis',
+    tags: ['Legal Tech', 'Document Analysis', 'Compliance', 'Automation'],
+    useCases: ['Law Firms', 'Corporate Legal', 'Compliance', 'Contract Management'],
+    integrations: ['Document Management', 'Legal Software', 'Compliance Tools', 'Analytics'],
+    support: ['24/7 Support', 'Legal Consultation', 'Training', 'Custom Models'],
+    sla: '99.9% Uptime',
+    compliance: ['GDPR', 'Attorney-Client Privilege', 'SOC 2', 'Legal Standards']
+  },
+  {
+    id: 'ai-real-estate-analytics',
+    title: 'AI Real Estate Analytics',
+    description: 'Property valuation, market analysis, and investment recommendations powered by AI.',
+    longDescription: 'Comprehensive AI-powered real estate analytics platform that provides accurate property valuations, market analysis, and investment recommendations. Uses machine learning to analyze market trends and predict property values.',
+    icon: '🏠',
+    category: 'AI Services',
+    features: [
+      'Property Valuation',
+      'Market Analysis',
+      'Investment Insights',
+      'Trend Prediction',
+      'Portfolio Management',
+      'Risk Assessment',
+      'Comparative Analysis',
+      'ROI Calculations'
+    ],
+    benefits: [
+      'Accurate valuations',
+      'Better investment decisions',
+      'Market insights',
+      'Risk reduction',
+      'Portfolio optimization'
+    ],
+    pricing: {
+      starting: '$499/month',
+      enterprise: '$2,999/month',
+      custom: true
+    },
+    marketPrice: '$1000-4000/month',
+    link: '/ai-real-estate-analytics',
+    tags: ['Real Estate', 'Analytics', 'Valuation', 'Investment'],
+    useCases: ['Real Estate Agents', 'Investors', 'Property Management', 'Banks'],
+    integrations: ['MLS Systems', 'Property Databases', 'Financial Tools', 'Analytics'],
+    support: ['24/7 Support', 'Market Research', 'Training', 'Custom Analysis'],
+    sla: '99.9% Uptime',
+    compliance: ['Real Estate Standards', 'Financial Regulations', 'Data Privacy']
+  },
+  {
+    id: 'ai-hr-assistant',
+    title: 'AI HR Assistant',
+    description: 'Streamline HR processes with AI-powered recruitment, employee analytics, and performance management.',
+    longDescription: 'Comprehensive AI-powered HR assistant that automates recruitment, analyzes employee performance, and provides insights for better workforce management. Reduces hiring time by 70% and improves employee satisfaction.',
+    icon: '👥',
+    category: 'AI Services',
+    features: [
+      'Resume Screening',
+      'Candidate Matching',
+      'Performance Analytics',
+      'Employee Engagement',
+      'Retention Analysis',
+      'Skills Assessment',
+      'Interview Scheduling',
+      'Onboarding Automation'
+    ],
+    benefits: [
+      '70% reduction in hiring time',
+      'Better candidate matching',
+      'Improved employee satisfaction',
+      'Data-driven HR decisions',
+      'Reduced bias'
+    ],
+    pricing: {
+      starting: '$399/month',
+      enterprise: '$2,499/month',
+      custom: true
+    },
+    marketPrice: '$800-3000/month',
+    link: '/ai-hr-assistant',
+    popular: true,
+    tags: ['HR Tech', 'Recruitment', 'Analytics', 'Automation'],
+    useCases: ['HR Departments', 'Recruiting Agencies', 'Large Enterprises', 'Startups'],
+    integrations: ['HRIS Systems', 'ATS', 'Payroll', 'Analytics Platforms'],
+    support: ['24/7 Support', 'HR Consultation', 'Training', 'Custom Workflows'],
+    sla: '99.9% Uptime',
+    compliance: ['EEOC', 'GDPR', 'Labor Laws', 'Data Privacy']
+  },
+  {
+    id: 'ai-insurance-risk-assessment',
+    title: 'AI Insurance Risk Assessment',
+    description: 'Advanced risk evaluation and fraud detection for insurance companies using machine learning.',
+    longDescription: 'Sophisticated AI-powered insurance risk assessment platform that uses machine learning to evaluate risks, detect fraud, and optimize underwriting processes. Reduces fraud by 60% and improves underwriting accuracy.',
+    icon: '🛡️',
+    category: 'AI Services',
+    features: [
+      'Risk Evaluation',
+      'Fraud Detection',
+      'Claims Processing',
+      'Underwriting Support',
+      'Compliance Monitoring',
+      'Predictive Modeling',
+      'Real-time Analysis',
+      'Automated Decisions'
+    ],
+    benefits: [
+      '60% reduction in fraud',
+      'Improved underwriting accuracy',
+      'Faster claims processing',
+      'Better risk management',
+      'Cost savings'
+    ],
+    pricing: {
+      starting: '$1,499/month',
+      enterprise: '$7,999/month',
+      custom: true
+    },
+    marketPrice: '$3000-15000/month',
+    link: '/ai-insurance-risk-assessment',
+    tags: ['Insurance', 'Risk Assessment', 'Fraud Detection', 'Machine Learning'],
+    useCases: ['Insurance Companies', 'Underwriters', 'Claims Adjusters', 'Risk Managers'],
+    integrations: ['Core Systems', 'Claims Management', 'Underwriting Tools', 'Analytics'],
+    support: ['24/7 Support', 'Risk Consultation', 'Training', 'Custom Models'],
+    sla: '99.95% Uptime',
+    compliance: ['Insurance Regulations', 'Financial Standards', 'Data Privacy', 'SOC 2']
+  },
+  {
+    id: 'ai-educational-platform',
+    title: 'AI Educational Platform',
+    description: 'Personalized learning experiences with AI-powered content adaptation and student analytics.',
+    longDescription: 'Revolutionary AI-powered educational platform that personalizes learning experiences, adapts content to individual needs, and provides detailed analytics. Improves learning outcomes by 40% and engagement by 60%.',
+    icon: '🎓',
+    category: 'AI Services',
+    features: [
+      'Personalized Learning',
+      'Content Adaptation',
+      'Performance Analytics',
+      'Learning Paths',
+      'Progress Tracking',
+      'Adaptive Assessments',
+      'Gamification',
+      'Multi-language Support'
+    ],
+    benefits: [
+      '40% improvement in learning outcomes',
+      '60% increase in engagement',
+      'Personalized experience',
+      'Better retention',
+      'Scalable education'
+    ],
+    pricing: {
+      starting: '$299/month',
+      enterprise: '$1,999/month',
+      custom: true
+    },
+    marketPrice: '$600-2500/month',
+    link: '/ai-educational-platform',
+    popular: true,
+    tags: ['EdTech', 'Personalization', 'Learning Analytics', 'Adaptive Learning'],
+    useCases: ['Schools', 'Universities', 'Corporate Training', 'Online Learning'],
+    integrations: ['LMS Systems', 'Student Information', 'Assessment Tools', 'Analytics'],
+    support: ['24/7 Support', 'Educational Consultation', 'Training', 'Custom Content'],
+    sla: '99.9% Uptime',
+    compliance: ['FERPA', 'COPPA', 'Accessibility', 'Educational Standards']
+  },
+  {
+    id: 'ai-transportation-optimization',
+    title: 'AI Transportation Optimization',
+    description: 'Optimize transportation routes, fleet management, and logistics with AI-powered decision making.',
+    longDescription: 'Advanced AI-powered transportation optimization platform that optimizes routes, manages fleets, and improves logistics efficiency. Reduces fuel costs by 25% and improves delivery times by 30%.',
+    icon: '🚛',
+    category: 'AI Services',
+    features: [
+      'Route Optimization',
+      'Fleet Management',
+      'Demand Prediction',
+      'Fuel Optimization',
+      'Driver Scheduling',
+      'Real-time Tracking',
+      'Performance Analytics',
+      'Predictive Maintenance'
+    ],
+    benefits: [
+      '25% reduction in fuel costs',
+      '30% improvement in delivery times',
+      'Better fleet utilization',
+      'Reduced emissions',
+      'Improved customer satisfaction'
+    ],
+    pricing: {
+      starting: '$699/month',
+      enterprise: '$3,999/month',
+      custom: true
+    },
+    marketPrice: '$1500-5000/month',
+    link: '/ai-transportation-optimization',
+    tags: ['Transportation', 'Logistics', 'Fleet Management', 'Optimization'],
+    useCases: ['Logistics Companies', 'Fleet Operators', 'Delivery Services', 'Transportation'],
+    integrations: ['Fleet Management', 'GPS Systems', 'ERP', 'Analytics Platforms'],
+    support: ['24/7 Support', 'Logistics Consultation', 'Training', 'Custom Optimization'],
+    sla: '99.9% Uptime',
+    compliance: ['Transportation Regulations', 'Safety Standards', 'Environmental', 'Data Privacy']
+  },
+  {
+    id: 'ai-environmental-monitoring',
+    title: 'AI Environmental Monitoring',
+    description: 'Monitor environmental conditions and predict climate impacts using AI and IoT sensor data.',
+    longDescription: 'Comprehensive AI-powered environmental monitoring system that uses IoT sensors and machine learning to monitor environmental conditions, predict climate impacts, and provide actionable insights for sustainability.',
+    icon: '🌍',
+    category: 'AI Services',
+    features: [
+      'Environmental Sensing',
+      'Climate Prediction',
+      'Pollution Monitoring',
+      'Data Analysis',
+      'Alert Systems',
+      'Trend Analysis',
+      'Compliance Reporting',
+      'Predictive Modeling'
+    ],
+    benefits: [
+      'Real-time monitoring',
+      'Predictive insights',
+      'Compliance assurance',
+      'Environmental protection',
+      'Cost-effective monitoring'
+    ],
+    pricing: {
+      starting: '$599/month',
+      enterprise: '$2,999/month',
+      custom: true
+    },
+    marketPrice: '$1200-4000/month',
+    link: '/ai-environmental-monitoring',
+    tags: ['Environmental', 'IoT', 'Climate', 'Sustainability'],
+    useCases: ['Environmental Agencies', 'Industrial Facilities', 'Cities', 'Research Institutions'],
+    integrations: ['IoT Platforms', 'Environmental Systems', 'Analytics', 'Reporting Tools'],
+    support: ['24/7 Support', 'Environmental Consultation', 'Training', 'Custom Monitoring'],
+    sla: '99.9% Uptime',
+    compliance: ['Environmental Regulations', 'Data Standards', 'Safety', 'Industry Standards']
+  },
+  {
+    id: 'ai-retail-personalization',
+    title: 'AI Retail Personalization',
+    description: 'Create personalized shopping experiences with AI-driven recommendations and customer insights.',
+    longDescription: 'Advanced AI-powered retail personalization platform that creates personalized shopping experiences through intelligent recommendations, customer segmentation, and dynamic pricing. Increases sales by 35% and customer satisfaction by 50%.',
+    icon: '🛍️',
+    category: 'AI Services',
+    features: [
+      'Product Recommendations',
+      'Customer Segmentation',
+      'Price Optimization',
+      'Inventory Management',
+      'Customer Analytics',
+      'A/B Testing',
+      'Real-time Personalization',
+      'Cross-channel Integration'
+    ],
+    benefits: [
+      '35% increase in sales',
+      '50% improvement in customer satisfaction',
+      'Better inventory management',
+      'Reduced cart abandonment',
+      'Higher customer lifetime value'
+    ],
+    pricing: {
+      starting: '$799/month',
+      enterprise: '$4,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-8000/month',
+    link: '/ai-retail-personalization',
+    popular: true,
+    tags: ['Retail', 'Personalization', 'Recommendations', 'E-commerce'],
+    useCases: ['E-commerce', 'Retail Chains', 'Marketplaces', 'Brands'],
+    integrations: ['E-commerce Platforms', 'CRM', 'Analytics', 'Marketing Tools'],
+    support: ['24/7 Support', 'Retail Consultation', 'Training', 'Custom Personalization'],
+    sla: '99.9% Uptime',
+    compliance: ['Data Privacy', 'PCI DSS', 'GDPR', 'Retail Standards']
+  },
+  {
+    id: 'ai-sports-analytics',
+    title: 'AI Sports Analytics',
+    description: 'Advanced sports performance analysis, injury prediction, and team optimization using AI.',
+    longDescription: 'Cutting-edge AI-powered sports analytics platform that analyzes performance, predicts injuries, and optimizes team strategies. Used by professional teams to improve performance and reduce injury risks.',
+    icon: '⚽',
+    category: 'AI Services',
+    features: [
+      'Performance Analysis',
+      'Injury Prediction',
+      'Team Optimization',
+      'Player Scouting',
+      'Game Strategy',
+      'Biomechanical Analysis',
+      'Real-time Tracking',
+      'Predictive Modeling'
+    ],
+    benefits: [
+      'Improved performance',
+      'Reduced injury risks',
+      'Better team strategies',
+      'Data-driven decisions',
+      'Competitive advantage'
+    ],
+    pricing: {
+      starting: '$999/month',
+      enterprise: '$5,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-10000/month',
+    link: '/ai-sports-analytics',
+    tags: ['Sports', 'Analytics', 'Performance', 'Health'],
+    useCases: ['Professional Teams', 'Sports Academies', 'Fitness Centers', 'Research'],
+    integrations: ['Wearable Devices', 'Video Analysis', 'Health Systems', 'Analytics'],
+    support: ['24/7 Support', 'Sports Science Consultation', 'Training', 'Custom Analysis'],
+    sla: '99.9% Uptime',
+    compliance: ['Health Data', 'Privacy', 'Sports Regulations', 'Medical Standards']
+  },
+  {
+    id: 'ai-mental-health-assistant',
+    title: 'AI Mental Health Assistant',
+    description: 'AI-powered mental health monitoring, mood tracking, and therapeutic support applications.',
+    longDescription: 'Compassionate AI-powered mental health assistant that provides mood tracking, stress analysis, and therapeutic support. Helps users manage their mental health with privacy-focused, evidence-based interventions.',
+    icon: '🧠',
+    category: 'AI Services',
+    features: [
+      'Mood Tracking',
+      'Stress Analysis',
+      'Therapeutic Support',
+      'Crisis Detection',
+      'Wellness Recommendations',
+      'Progress Monitoring',
+      'Personalized Interventions',
+      'Privacy Protection'
+    ],
+    benefits: [
+      'Better mental health awareness',
+      'Early intervention',
+      'Personalized support',
+      'Privacy-focused',
+      'Evidence-based care'
+    ],
+    pricing: {
+      starting: '$199/month',
+      enterprise: '$1,499/month',
+      custom: true
+    },
+    marketPrice: '$400-2000/month',
+    link: '/ai-mental-health-assistant',
+    popular: true,
+    tags: ['Mental Health', 'Wellness', 'AI Therapy', 'Healthcare'],
+    useCases: ['Healthcare Providers', 'Wellness Apps', 'Corporate Wellness', 'Individuals'],
+    integrations: ['Health Systems', 'Wearable Devices', 'Therapy Platforms', 'Analytics'],
+    support: ['24/7 Support', 'Mental Health Consultation', 'Training', 'Custom Interventions'],
+    sla: '99.9% Uptime',
+    compliance: ['HIPAA', 'Mental Health Laws', 'Data Privacy', 'Medical Standards']
+  },
+  {
+    id: 'ai-marketing-automation',
+    title: 'AI Marketing Automation',
+    description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
+    longDescription: 'Advanced AI-powered marketing automation platform that creates personalized campaigns, optimizes content, and maximizes ROI. Increases conversion rates by 45% and reduces marketing costs by 30%.',
+    icon: '📢',
+    category: 'AI Services',
+    features: [
+      'Campaign Automation',
+      'Personalization',
+      'A/B Testing',
+      'ROI Optimization',
+      'Multi-channel',
+      'Content Generation',
+      'Audience Segmentation',
+      'Performance Analytics'
+    ],
+    benefits: [
+      '45% increase in conversion rates',
+      '30% reduction in marketing costs',
+      'Better personalization',
+      'Automated optimization',
+      'Higher ROI'
+    ],
+    pricing: {
+      starting: '$299/month',
+      enterprise: '$2,499/month',
+      custom: true
+    },
+    marketPrice: '$600-3000/month',
+    link: '/ai-marketing-automation',
+    popular: true,
+    tags: ['Marketing', 'Automation', 'Personalization', 'AI'],
+    useCases: ['Marketing Agencies', 'E-commerce', 'SaaS Companies', 'Enterprises'],
+    integrations: ['CRM Systems', 'Email Platforms', 'Social Media', 'Analytics'],
+    support: ['24/7 Support', 'Marketing Consultation', 'Training', 'Custom Campaigns'],
+    sla: '99.9% Uptime',
+    compliance: ['GDPR', 'CAN-SPAM', 'Data Privacy', 'Marketing Standards']
+  },
+  {
+    id: 'ai-customer-support',
+    title: 'AI Customer Support',
+    description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
+    longDescription: 'Comprehensive AI-powered customer support platform that provides intelligent chatbots, sentiment analysis, and automated ticket routing. Reduces support costs by 50% and improves customer satisfaction by 40%.',
+    icon: '💬',
+    category: 'AI Services',
+    features: [
+      'AI Chatbots',
+      'Sentiment Analysis',
+      'Ticket Routing',
+      'Knowledge Base',
+      '24/7 Support',
+      'Multi-language',
+      'Escalation Management',
+      'Performance Analytics'
+    ],
+    benefits: [
+      '50% reduction in support costs',
+      '40% improvement in satisfaction',
+      '24/7 availability',
+      'Faster resolution',
+      'Better insights'
+    ],
+    pricing: {
+      starting: '$199/month',
+      enterprise: '$1,999/month',
+      custom: true
+    },
+    marketPrice: '$400-2500/month',
+    link: '/ai-customer-support',
+    popular: true,
+    tags: ['Customer Support', 'Chatbots', 'Automation', 'AI'],
+    useCases: ['Customer Service', 'E-commerce', 'SaaS', 'Enterprises'],
+    integrations: ['CRM Systems', 'Help Desk', 'Live Chat', 'Analytics'],
+    support: ['24/7 Support', 'Implementation', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['Data Privacy', 'Customer Service Standards', 'Security', 'GDPR']
+  },
+  {
+    id: 'ai-data-analytics',
+    title: 'AI Data Analytics',
+    description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
+    longDescription: 'Powerful AI-powered data analytics platform that transforms raw data into actionable insights through machine learning, predictive modeling, and advanced visualization. Helps businesses make data-driven decisions and discover hidden patterns.',
+    icon: '📊',
+    category: 'AI Services',
+    features: [
+      'Predictive Analytics',
+      'Data Visualization',
+      'Real-time Insights',
+      'Custom Dashboards',
+      'ML Models',
+      'Automated Reports',
+      'Data Integration',
+      'Anomaly Detection'
+    ],
+    benefits: [
+      'Better decision making',
+      'Hidden pattern discovery',
+      'Automated insights',
+      'Real-time analysis',
+      'Cost reduction'
+    ],
+    pricing: {
+      starting: '$399/month',
+      enterprise: '$2,999/month',
+      custom: true
+    },
+    marketPrice: '$800-4000/month',
+    link: '/ai-data-analytics',
+    popular: true,
+    tags: ['Analytics', 'Data Science', 'Machine Learning', 'BI'],
+    useCases: ['Business Intelligence', 'Data Science', 'Analytics Teams', 'Enterprises'],
+    integrations: ['Data Sources', 'BI Tools', 'Databases', 'Cloud Platforms'],
+    support: ['24/7 Support', 'Data Science Consultation', 'Training', 'Custom Models'],
+    sla: '99.9% Uptime',
+    compliance: ['Data Privacy', 'Security', 'Industry Standards', 'GDPR']
+  },
+  {
+    id: 'ai-content-generation',
+    title: 'AI Content Generation',
+    description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
+    longDescription: 'Revolutionary AI-powered content generation platform that creates high-quality text, images, and videos at scale. Perfect for marketing teams, content creators, and businesses looking to scale their content production.',
+    icon: '✍️',
+    category: 'AI Services',
+    features: [
+      'Content Writing',
+      'Image Generation',
+      'Video Creation',
+      'SEO Optimization',
+      'Multi-language',
+      'Brand Consistency',
+      'Content Planning',
+      'Performance Tracking'
+    ],
+    benefits: [
+      '10x faster content creation',
+      'Consistent quality',
+      'Cost reduction',
+      'Scalable production',
+      'Better SEO'
+    ],
+    pricing: {
+      starting: '$149/month',
+      enterprise: '$1,499/month',
+      custom: true
+    },
+    marketPrice: '$300-2000/month',
+    link: '/ai-content-generation',
+    popular: true,
+    tags: ['Content Creation', 'AI Writing', 'Marketing', 'Automation'],
+    useCases: ['Marketing Teams', 'Content Creators', 'Agencies', 'Publishers'],
+    integrations: ['CMS Systems', 'Social Media', 'Marketing Tools', 'Analytics'],
+    support: ['24/7 Support', 'Content Strategy', 'Training', 'Custom Templates'],
+    sla: '99.9% Uptime',
+    compliance: ['Copyright', 'Content Standards', 'Data Privacy', 'Industry']
+  },
+  {
+    id: 'ai-healthcare-solutions',
+    title: 'AI Healthcare Solutions',
+    description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, and patient care optimization.',
+    longDescription: 'Comprehensive AI-powered healthcare solutions that include medical imaging analysis, drug discovery assistance, and patient care optimization. All solutions are HIPAA-compliant and designed to improve patient outcomes.',
+    icon: '🏥',
+    category: 'AI Services',
+    features: [
+      'Medical Imaging',
+      'Drug Discovery',
+      'Patient Analytics',
+      'Diagnostic Support',
+      'HIPAA Compliance',
+      'Clinical Decision Support',
+      'Treatment Optimization',
+      'Risk Assessment'
+    ],
+    benefits: [
+      'Improved diagnostics',
+      'Better patient outcomes',
+      'Reduced costs',
+      'Faster drug discovery',
+      'Enhanced care'
+    ],
+    pricing: {
+      starting: '$1,999/month',
+      enterprise: '$9,999/month',
+      custom: true
+    },
+    marketPrice: '$5000-25000/month',
+    link: '/ai-healthcare-solutions',
+    popular: true,
+    tags: ['Healthcare', 'Medical AI', 'HIPAA', 'Diagnostics'],
+    useCases: ['Hospitals', 'Clinics', 'Pharmaceuticals', 'Research'],
+    integrations: ['EHR Systems', 'Medical Devices', 'Lab Systems', 'Analytics'],
+    support: ['24/7 Support', 'Medical Consultation', 'Training', 'Custom Solutions'],
+    sla: '99.95% Uptime',
+    compliance: ['HIPAA', 'FDA', 'Medical Standards', 'Data Privacy']
+  },
+  {
+    id: 'ai-financial-services',
+    title: 'AI Financial Services',
+    description: 'Advanced AI solutions for fraud detection, risk assessment, and algorithmic trading.',
+    longDescription: 'Sophisticated AI-powered financial services platform that provides fraud detection, risk assessment, and algorithmic trading capabilities. Helps financial institutions improve security, reduce risks, and optimize trading strategies.',
+    icon: '💰',
+    category: 'AI Services',
+    features: [
+      'Fraud Detection',
+      'Risk Assessment',
+      'Algorithmic Trading',
+      'Credit Scoring',
+      'Compliance',
+      'Real-time Monitoring',
+      'Predictive Modeling',
+      'Portfolio Optimization'
+    ],
+    benefits: [
+      '90% fraud detection accuracy',
+      'Reduced financial risks',
+      'Better trading performance',
+      'Compliance automation',
+      'Cost savings'
+    ],
+    pricing: {
+      starting: '$1,499/month',
+      enterprise: '$7,999/month',
+      custom: true
+    },
+    marketPrice: '$3000-15000/month',
+    link: '/ai-financial-services',
+    popular: true,
+    tags: ['FinTech', 'Fraud Detection', 'Risk Management', 'Trading'],
+    useCases: ['Banks', 'Credit Unions', 'Investment Firms', 'FinTech'],
+    integrations: ['Core Banking', 'Trading Platforms', 'Risk Systems', 'Analytics'],
+    support: ['24/7 Support', 'Financial Consultation', 'Training', 'Custom Models'],
+    sla: '99.95% Uptime',
+    compliance: ['Financial Regulations', 'PCI DSS', 'SOC 2', 'Data Privacy']
+  },
+  {
+    id: 'ai-ecommerce-solutions',
+    title: 'AI E-commerce Solutions',
+    description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
+    longDescription: 'Advanced AI-powered e-commerce solutions that include intelligent recommendation engines, dynamic pricing, and customer behavior analysis. Increases sales by 40% and improves customer experience.',
+    icon: '🛒',
+    category: 'AI Services',
+    features: [
+      'Recommendation Engine',
+      'Dynamic Pricing',
+      'Inventory Optimization',
+      'Customer Insights',
+      'Sales Forecasting',
+      'Personalization',
+      'A/B Testing',
+      'Performance Analytics'
+    ],
+    benefits: [
+      '40% increase in sales',
+      'Better customer experience',
+      'Optimized pricing',
+      'Reduced inventory costs',
+      'Higher conversion rates'
+    ],
+    pricing: {
+      starting: '$799/month',
+      enterprise: '$4,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-8000/month',
+    link: '/ai-ecommerce-solutions',
+    popular: true,
+    tags: ['E-commerce', 'Recommendations', 'Personalization', 'AI'],
+    useCases: ['Online Stores', 'Marketplaces', 'Retail Chains', 'Brands'],
+    integrations: ['E-commerce Platforms', 'Payment Systems', 'Analytics', 'Marketing'],
+    support: ['24/7 Support', 'E-commerce Consultation', 'Training', 'Custom Solutions'],
+    sla: '99.9% Uptime',
+    compliance: ['PCI DSS', 'Data Privacy', 'E-commerce Standards', 'GDPR']
+  },
+
+  // Micro SAAS Services
+  {
+    id: 'ai-writing-assistant',
+    title: 'AI Writing Assistant',
+    description: 'Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.',
+    longDescription: 'Professional AI writing assistant that helps create high-quality content for blogs, emails, reports, and marketing materials. Features 50+ templates, grammar checking, and style optimization.',
+    icon: '✍️',
+    category: 'Micro SAAS',
+    features: [
+      '50+ Content Templates',
+      'Grammar & Style Check',
+      'SEO Optimization',
+      'Multi-language Support',
+      'Brand Voice Training',
+      'Plagiarism Detection',
+      'Content Planning',
+      'Collaboration Tools'
+    ],
+    benefits: [
+      '10x faster writing',
+      'Consistent quality',
+      'Better SEO',
+      'Time savings',
+      'Professional results'
+    ],
+    pricing: {
+      starting: '$29/month',
+      enterprise: '$199/month',
+      custom: false
+    },
+    marketPrice: '$50-300/month',
+    link: '/ai-writing-assistant',
+    popular: true,
+    new: true,
+    tags: ['Writing', 'Content Creation', 'AI', 'Productivity'],
+    useCases: ['Content Creators', 'Marketers', 'Writers', 'Businesses'],
+    integrations: ['Google Docs', 'WordPress', 'CMS', 'Social Media'],
+    support: ['Email Support', 'Documentation', 'Templates', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Data Privacy', 'Content Standards', 'Security']
+  },
+  {
+    id: 'smart-analytics',
+    title: 'Smart Analytics',
+    description: 'Real-time business analytics with AI insights, automated reports, and predictive forecasting.',
+    longDescription: 'Intelligent business analytics platform that provides real-time insights, automated reporting, and predictive forecasting. Perfect for small to medium businesses looking to make data-driven decisions.',
+    icon: '📊',
+    category: 'Micro SAAS',
+    features: [
+      'Real-time Dashboards',
+      'Automated Reports',
+      'Predictive Forecasting',
+      'Custom Metrics',
+      'Data Visualization',
+      'Alert System',
+      'Export Options',
+      'Mobile App'
+    ],
+    benefits: [
+      'Better decision making',
+      'Automated reporting',
+      'Real-time insights',
+      'Cost effective',
+      'Easy to use'
+    ],
+    pricing: {
+      starting: '$49/month',
+      enterprise: '$299/month',
+      custom: false
+    },
+    marketPrice: '$100-500/month',
+    link: '/smart-analytics',
+    popular: true,
+    tags: ['Analytics', 'Business Intelligence', 'Reporting', 'Data'],
+    useCases: ['Small Business', 'Startups', 'Agencies', 'Consultants'],
+    integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'Databases'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Data Privacy', 'Security', 'Business Standards']
+  },
+  {
+    id: 'ai-scheduler',
+    title: 'AI Scheduler',
+    description: 'Intelligent scheduling with calendar optimization, meeting coordination, and time management.',
+    longDescription: 'Smart AI-powered scheduling assistant that optimizes calendar management, coordinates meetings, and helps with time management. Reduces scheduling conflicts and improves productivity.',
+    icon: '📅',
+    category: 'Micro SAAS',
+    features: [
+      'Calendar Optimization',
+      'Meeting Coordination',
+      'Time Blocking',
+      'Conflict Resolution',
+      'Recurring Events',
+      'Time Zone Support',
+      'Integration APIs',
+      'Mobile Sync'
+    ],
+    benefits: [
+      'Reduced scheduling conflicts',
+      'Better time management',
+      'Automated coordination',
+      'Improved productivity',
+      'Time savings'
+    ],
+    pricing: {
+      starting: '$19/month',
+      enterprise: '$99/month',
+      custom: false
+    },
+    marketPrice: '$30-150/month',
+    link: '/ai-scheduler',
+    popular: true,
+    tags: ['Scheduling', 'Productivity', 'Time Management', 'AI'],
+    useCases: ['Professionals', 'Teams', 'Consultants', 'Service Providers'],
+    integrations: ['Google Calendar', 'Outlook', 'Slack', 'Zoom'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Data Privacy', 'Security', 'Calendar Standards']
+  },
+  {
+    id: 'expense-tracker',
+    title: 'AI Expense Tracker',
+    description: 'AI-powered expense management with receipt scanning, categorization, and budget insights.',
+    longDescription: 'Intelligent expense tracking app that uses AI to scan receipts, categorize expenses, and provide budget insights. Perfect for freelancers, small businesses, and individuals.',
+    icon: '💰',
+    category: 'Micro SAAS',
+    features: [
+      'Receipt Scanning',
+      'AI Categorization',
+      'Budget Tracking',
+      'Tax Preparation',
+      'Multi-currency',
+      'Export Options',
+      'Mobile App',
+      'Cloud Sync'
+    ],
+    benefits: [
+      'Automated categorization',
+      'Better budget control',
+      'Tax preparation help',
+      'Time savings',
+      'Financial insights'
+    ],
+    pricing: {
+      starting: '$15/month',
+      enterprise: '$79/month',
+      custom: false
+    },
+    marketPrice: '$25-100/month',
+    link: '/expense-tracker',
+    popular: true,
+    tags: ['Expense Tracking', 'Finance', 'AI', 'Productivity'],
+    useCases: ['Freelancers', 'Small Business', 'Individuals', 'Consultants'],
+    integrations: ['Banking APIs', 'Accounting Software', 'Tax Software', 'Cloud Storage'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Financial Data', 'Security', 'Privacy', 'Tax Standards']
+  },
+  {
+    id: 'task-manager-pro',
+    title: 'Task Manager Pro',
+    description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking.',
+    longDescription: 'Comprehensive task management platform with AI-powered prioritization, team collaboration features, and detailed progress tracking. Helps teams stay organized and productive.',
+    icon: '✅',
+    category: 'Micro SAAS',
+    features: [
+      'AI Prioritization',
+      'Team Collaboration',
+      'Progress Tracking',
+      'Time Tracking',
+      'Project Management',
+      'Deadline Alerts',
+      'Custom Workflows',
+      'Mobile App'
+    ],
+    benefits: [
+      'Better prioritization',
+      'Improved collaboration',
+      'Progress visibility',
+      'Time management',
+      'Productivity boost'
+    ],
+    pricing: {
+      starting: '$39/month',
+      enterprise: '$199/month',
+      custom: false
+    },
+    marketPrice: '$60-250/month',
+    link: '/task-manager-pro',
+    popular: true,
+    tags: ['Task Management', 'Productivity', 'Team Collaboration', 'AI'],
+    useCases: ['Teams', 'Project Managers', 'Freelancers', 'Small Business'],
+    integrations: ['Slack', 'Microsoft Teams', 'Google Workspace', 'Calendar Apps'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Data Privacy', 'Security', 'Team Standards']
+  },
+  {
+    id: 'crm-lite',
+    title: 'CRM Lite',
+    description: 'Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.',
+    longDescription: 'Streamlined CRM solution with AI-powered lead scoring, contact management, and sales pipeline automation. Perfect for small businesses and sales teams.',
+    icon: '👥',
+    category: 'Micro SAAS',
+    features: [
+      'AI Lead Scoring',
+      'Contact Management',
+      'Sales Pipeline',
+      'Email Integration',
+      'Task Automation',
+      'Reporting',
+      'Mobile App',
+      'API Access'
+    ],
+    benefits: [
+      'Better lead quality',
+      'Improved sales process',
+      'Automated tasks',
+      'Better insights',
+      'Easy to use'
+    ],
+    pricing: {
+      starting: '$59/month',
+      enterprise: '$299/month',
+      custom: false
+    },
+    marketPrice: '$100-400/month',
+    link: '/crm-lite',
+    popular: true,
+    tags: ['CRM', 'Sales', 'Lead Management', 'AI'],
+    useCases: ['Small Business', 'Sales Teams', 'Startups', 'Consultants'],
+    integrations: ['Email Platforms', 'Calendar', 'Phone Systems', 'Analytics'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Data Privacy', 'Security', 'Sales Standards']
+  },
+  {
+    id: 'email-optimizer',
+    title: 'Email Optimizer',
+    description: 'AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.',
+    longDescription: 'Intelligent email optimization platform that uses AI to improve subject lines, optimize send times, and conduct A/B testing. Increases email open rates by 40% and click-through rates by 25%.',
+    icon: '📧',
+    category: 'Micro SAAS',
+    features: [
+      'Subject Line Suggestions',
+      'Send Time Optimization',
+      'A/B Testing',
+      'Content Analysis',
+      'Performance Tracking',
+      'Segmentation',
+      'Automation',
+      'Analytics'
+    ],
+    benefits: [
+      '40% higher open rates',
+      '25% more clicks',
+      'Better engagement',
+      'Automated optimization',
+      'Data-driven decisions'
+    ],
+    pricing: {
+      starting: '$25/month',
+      enterprise: '$149/month',
+      custom: false
+    },
+    marketPrice: '$50-200/month',
+    link: '/email-optimizer',
+    popular: true,
+    tags: ['Email Marketing', 'Optimization', 'AI', 'Analytics'],
+    useCases: ['Marketers', 'E-commerce', 'Newsletters', 'Businesses'],
+    integrations: ['Email Platforms', 'CRM', 'Analytics', 'Marketing Tools'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Email Standards', 'Data Privacy', 'CAN-SPAM']
+  },
+  {
+    id: 'social-media-manager',
+    title: 'Social Media Manager',
+    description: 'AI-driven social media management with content creation, scheduling, and performance analytics.',
+    longDescription: 'Comprehensive social media management platform with AI-powered content creation, intelligent scheduling, and detailed performance analytics. Manages all major social platforms from one dashboard.',
+    icon: '📱',
+    category: 'Micro SAAS',
+    features: [
+      'Content Creation',
+      'Multi-platform Scheduling',
+      'Performance Analytics',
+      'Hashtag Optimization',
+      'Engagement Tracking',
+      'Competitor Analysis',
+      'Team Collaboration',
+      'Mobile App'
+    ],
+    benefits: [
+      'Consistent posting',
+      'Better engagement',
+      'Time savings',
+      'Performance insights',
+      'Multi-platform management'
+    ],
+    pricing: {
+      starting: '$45/month',
+      enterprise: '$249/month',
+      custom: false
+    },
+    marketPrice: '$80-350/month',
+    link: '/social-media-manager',
+    popular: true,
+    tags: ['Social Media', 'Content Creation', 'Analytics', 'AI'],
+    useCases: ['Social Media Managers', 'Agencies', 'Businesses', 'Influencers'],
+    integrations: ['Social Platforms', 'Analytics', 'Design Tools', 'CRM'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Social Media Standards', 'Data Privacy', 'Content Guidelines']
+  },
+  {
+    id: 'ai-design-studio',
+    title: 'AI Design Studio',
+    description: 'Create stunning graphics, logos, and marketing materials with AI-powered design tools.',
+    longDescription: 'Professional AI-powered design studio that creates stunning graphics, logos, and marketing materials. Features intelligent design suggestions, brand consistency, and automated asset generation.',
+    icon: '🎨',
+    category: 'Micro SAAS',
+    features: [
+      'AI Design Suggestions',
+      'Logo Generation',
+      'Brand Consistency',
+      'Template Library',
+      'Asset Generation',
+      'Collaboration Tools',
+      'Export Options',
+      'Brand Guidelines'
+    ],
+    benefits: [
+      'Professional designs',
+      'Brand consistency',
+      'Time savings',
+      'Cost effective',
+      'Easy to use'
+    ],
+    pricing: {
+      starting: '$35/month',
+      enterprise: '$199/month',
+      custom: false
+    },
+    marketPrice: '$60-300/month',
+    link: '/ai-design-studio',
+    popular: true,
+    tags: ['Design', 'Graphics', 'AI', 'Branding'],
+    useCases: ['Designers', 'Marketers', 'Small Business', 'Agencies'],
+    integrations: ['Design Tools', 'Stock Photos', 'Brand Assets', 'Social Media'],
+    support: ['Email Support', 'Documentation', 'Templates', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Design Standards', 'Copyright', 'Data Privacy']
+  },
+  {
+    id: 'landing-page-builder',
+    title: 'Landing Page Builder',
+    description: 'Build high-converting landing pages with AI optimization and A/B testing capabilities.',
+    longDescription: 'Intelligent landing page builder that creates high-converting pages with AI optimization, A/B testing, and conversion tracking. Perfect for marketers and businesses looking to improve their conversion rates.',
+    icon: '🌐',
+    category: 'Micro SAAS',
+    features: [
+      'AI Optimization',
+      'A/B Testing',
+      'Conversion Tracking',
+      'Template Library',
+      'Mobile Responsive',
+      'Analytics Integration',
+      'Form Builder',
+      'SEO Tools'
+    ],
+    benefits: [
+      'Higher conversions',
+      'AI optimization',
+      'Easy to use',
+      'Mobile responsive',
+      'Better performance'
+    ],
+    pricing: {
+      starting: '$29/month',
+      enterprise: '$149/month',
+      custom: false
+    },
+    marketPrice: '$50-200/month',
+    link: '/landing-page-builder',
+    popular: true,
+    tags: ['Landing Pages', 'Conversion', 'AI', 'Marketing'],
+    useCases: ['Marketers', 'E-commerce', 'Agencies', 'Startups'],
+    integrations: ['Analytics', 'Email Marketing', 'CRM', 'Payment Systems'],
+    support: ['Email Support', 'Documentation', 'Templates', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Web Standards', 'Data Privacy', 'Marketing Compliance']
+  },
+  {
+    id: 'seo-optimizer',
+    title: 'SEO Optimizer',
+    description: 'AI-powered SEO analysis and optimization with keyword research and content suggestions.',
+    longDescription: 'Comprehensive SEO optimization platform that uses AI to analyze websites, research keywords, and provide content suggestions. Helps improve search rankings and organic traffic.',
+    icon: '🔍',
+    category: 'Micro SAAS',
+    features: [
+      'Website Analysis',
+      'Keyword Research',
+      'Content Suggestions',
+      'Competitor Analysis',
+      'Rank Tracking',
+      'Technical SEO',
+      'Local SEO',
+      'Reporting'
+    ],
+    benefits: [
+      'Better search rankings',
+      'More organic traffic',
+      'AI-powered insights',
+      'Competitive advantage',
+      'Easy optimization'
+    ],
+    pricing: {
+      starting: '$49/month',
+      enterprise: '$299/month',
+      custom: false
+    },
+    marketPrice: '$100-400/month',
+    link: '/seo-optimizer',
+    popular: true,
+    tags: ['SEO', 'Search Optimization', 'AI', 'Analytics'],
+    useCases: ['SEO Specialists', 'Marketers', 'Websites', 'Agencies'],
+    integrations: ['Google Analytics', 'Search Console', 'CMS', 'Analytics'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['SEO Standards', 'Data Privacy', 'Search Guidelines']
+  },
+  {
+    id: 'ad-campaign-manager',
+    title: 'Ad Campaign Manager',
+    description: 'Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.',
+    longDescription: 'Intelligent ad campaign management platform that automates campaign creation, optimization, and management across Google, Facebook, LinkedIn, and other platforms. Reduces ad spend waste by 30%.',
+    icon: '📈',
+    category: 'Micro SAAS',
+    features: [
+      'Multi-platform Management',
+      'AI Optimization',
+      'Budget Management',
+      'A/B Testing',
+      'Performance Tracking',
+      'Audience Targeting',
+      'Ad Creation',
+      'Analytics'
+    ],
+    benefits: [
+      '30% less ad waste',
+      'Better performance',
+      'Automated optimization',
+      'Multi-platform',
+      'Time savings'
+    ],
+    pricing: {
+      starting: '$79/month',
+      enterprise: '$399/month',
+      custom: false
+    },
+    marketPrice: '$150-500/month',
+    link: '/ad-campaign-manager',
+    popular: true,
+    tags: ['Advertising', 'Campaign Management', 'AI', 'Optimization'],
+    useCases: ['Advertisers', 'Agencies', 'E-commerce', 'Marketers'],
+    integrations: ['Ad Platforms', 'Analytics', 'CRM', 'Marketing Tools'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Advertising Standards', 'Data Privacy', 'Platform Guidelines']
+  },
+  {
+    id: 'code-assistant',
+    title: 'Code Assistant',
+    description: 'AI-powered code completion, debugging, and optimization for multiple programming languages.',
+    longDescription: 'Intelligent code assistant that provides AI-powered code completion, debugging help, and optimization suggestions for multiple programming languages. Helps developers write better code faster.',
+    icon: '💻',
+    category: 'Micro SAAS',
+    features: [
+      'Code Completion',
+      'Debugging Help',
+      'Code Optimization',
+      'Multi-language Support',
+      'Error Detection',
+      'Code Review',
+      'Documentation',
+      'IDE Integration'
+    ],
+    benefits: [
+      'Faster coding',
+      'Better code quality',
+      'Fewer bugs',
+      'Learning assistance',
+      'Productivity boost'
+    ],
+    pricing: {
+      starting: '$39/month',
+      enterprise: '$199/month',
+      custom: false
+    },
+    marketPrice: '$60-250/month',
+    link: '/code-assistant',
+    popular: true,
+    tags: ['Programming', 'Code Assistant', 'AI', 'Development'],
+    useCases: ['Developers', 'Students', 'Teams', 'Freelancers'],
+    integrations: ['IDEs', 'Git', 'Code Repositories', 'Project Management'],
+    support: ['Email Support', 'Documentation', 'Community', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Code Standards', 'Data Privacy', 'Security']
+  },
+  {
+    id: 'api-builder',
+    title: 'API Builder',
+    description: 'Create and manage APIs with AI assistance, documentation generation, and testing tools.',
+    longDescription: 'Comprehensive API development platform that helps create, manage, and test APIs with AI assistance. Features automatic documentation generation, testing tools, and monitoring capabilities.',
+    icon: '🔧',
+    category: 'Micro SAAS',
+    features: [
+      'API Creation',
+      'Documentation Generation',
+      'Testing Tools',
+      'Monitoring',
+      'Version Control',
+      'Rate Limiting',
+      'Authentication',
+      'Analytics'
+    ],
+    benefits: [
+      'Faster API development',
+      'Automatic documentation',
+      'Better testing',
+      'Easy management',
+      'Professional APIs'
+    ],
+    pricing: {
+      starting: '$59/month',
+      enterprise: '$299/month',
+      custom: false
+    },
+    marketPrice: '$100-400/month',
+    link: '/api-builder',
+    popular: true,
+    tags: ['API Development', 'Backend', 'AI', 'Documentation'],
+    useCases: ['Developers', 'Startups', 'Enterprises', 'Agencies'],
+    integrations: ['Databases', 'Cloud Platforms', 'Monitoring', 'Analytics'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['API Standards', 'Security', 'Data Privacy']
+  },
+  {
+    id: 'bug-tracker-pro',
+    title: 'Bug Tracker Pro',
+    description: 'Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.',
+    longDescription: 'Intelligent bug tracking system that uses AI to detect issues, prioritize bugs, and suggest resolutions. Perfect for development teams looking to improve their bug management process.',
+    icon: '🐛',
+    category: 'Micro SAAS',
+    features: [
+      'AI Issue Detection',
+      'Priority Scoring',
+      'Resolution Suggestions',
+      'Team Collaboration',
+      'Progress Tracking',
+      'Integration APIs',
+      'Reporting',
+      'Mobile App'
+    ],
+    benefits: [
+      'Faster bug resolution',
+      'Better prioritization',
+      'AI suggestions',
+      'Team collaboration',
+      'Improved quality'
+    ],
+    pricing: {
+      starting: '$25/month',
+      enterprise: '$149/month',
+      custom: false
+    },
+    marketPrice: '$40-200/month',
+    link: '/bug-tracker-pro',
+    popular: true,
+    tags: ['Bug Tracking', 'Quality Assurance', 'AI', 'Development'],
+    useCases: ['Development Teams', 'QA Teams', 'Startups', 'Enterprises'],
+    integrations: ['Development Tools', 'CI/CD', 'Project Management', 'Communication'],
+    support: ['Email Support', 'Documentation', 'Training', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Development Standards', 'Data Privacy', 'Security']
+  },
+  {
+    id: 'doc-generator',
+    title: 'Doc Generator',
+    description: 'Automatically generate technical documentation, API docs, and user guides from code.',
+    longDescription: 'Intelligent documentation generator that automatically creates technical documentation, API docs, and user guides from code. Saves time and ensures consistent, up-to-date documentation.',
+    icon: '📚',
+    category: 'Micro SAAS',
+    features: [
+      'Automatic Generation',
+      'Multiple Formats',
+      'Code Analysis',
+      'Custom Templates',
+      'Version Control',
+      'Collaboration',
+      'Export Options',
+      'API Integration'
+    ],
+    benefits: [
+      'Time savings',
+      'Consistent docs',
+      'Always up-to-date',
+      'Multiple formats',
+      'Easy maintenance'
+    ],
+    pricing: {
+      starting: '$19/month',
+      enterprise: '$99/month',
+      custom: false
+    },
+    marketPrice: '$30-150/month',
+    link: '/doc-generator',
+    popular: true,
+    tags: ['Documentation', 'Technical Writing', 'AI', 'Development'],
+    useCases: ['Development Teams', 'Technical Writers', 'Open Source', 'Enterprises'],
+    integrations: ['Code Repositories', 'CI/CD', 'CMS', 'Publishing Platforms'],
+    support: ['Email Support', 'Documentation', 'Templates', 'Updates'],
+    sla: '99.5% Uptime',
+    compliance: ['Documentation Standards', 'Data Privacy', 'Security']
+  },
+
+  // IT Services
+  {
+    id: 'cloud-migration',
+    title: 'Cloud Migration Services',
+    description: 'Seamless cloud migration with AWS, Azure, and GCP. 99.9% uptime guarantee and 24/7 expert support.',
+    longDescription: 'Professional cloud migration services that help businesses seamlessly move to AWS, Azure, or Google Cloud Platform. Includes planning, execution, and ongoing support with 99.9% uptime guarantee.',
+    icon: '☁️',
+    category: 'IT Services',
+    features: [
+      'Multi-cloud Support',
+      'Zero Downtime Migration',
+      'Data Integrity',
+      'Cost Optimization',
+      'Security Compliance',
+      '24/7 Support',
+      'Performance Monitoring',
+      'Disaster Recovery'
+    ],
+    benefits: [
+      '99.9% uptime guarantee',
+      'Zero downtime migration',
+      'Cost optimization',
+      'Better security',
+      'Scalable infrastructure'
+    ],
+    pricing: {
+      starting: '$1,299/month',
+      enterprise: '$5,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-10000/month',
+    link: '/cloud-migration',
+    popular: true,
+    tags: ['Cloud Migration', 'AWS', 'Azure', 'GCP'],
+    useCases: ['Enterprises', 'SMBs', 'Startups', 'Government'],
+    integrations: ['Cloud Platforms', 'Monitoring Tools', 'Security Systems', 'Backup Solutions'],
+    support: ['24/7 Support', 'Migration Planning', 'Training', 'Ongoing Support'],
+    sla: '99.9% Uptime',
+    compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'Industry Standards']
+  },
+  {
+    id: 'cybersecurity-suite',
+    title: 'Cybersecurity Suite',
+    description: 'Comprehensive security solutions with threat detection, vulnerability assessment, and automated response.',
+    longDescription: 'Complete cybersecurity suite that provides comprehensive protection against threats, vulnerability assessments, and automated incident response. Protects businesses from evolving cyber threats.',
+    icon: '🔒',
+    category: 'IT Services',
+    features: [
+      'Threat Detection',
+      'Vulnerability Assessment',
+      'Automated Response',
+      'Incident Management',
+      'Compliance Reporting',
+      'Security Monitoring',
+      'Penetration Testing',
+      'Security Training'
+    ],
+    benefits: [
+      'Comprehensive protection',
+      'Automated response',
+      'Compliance assurance',
+      'Risk reduction',
+      'Expert support'
+    ],
+    pricing: {
+      starting: '$799/month',
+      enterprise: '$3,999/month',
+      custom: true
+    },
+    marketPrice: '$1500-6000/month',
+    link: '/cybersecurity-suite',
+    popular: true,
+    tags: ['Cybersecurity', 'Threat Detection', 'Compliance', 'Security'],
+    useCases: ['Enterprises', 'Healthcare', 'Finance', 'Government'],
+    integrations: ['Security Tools', 'SIEM', 'Firewalls', 'Monitoring'],
+    support: ['24/7 Support', 'Security Consultation', 'Training', 'Incident Response'],
+    sla: '99.95% Uptime',
+    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS']
+  },
+  {
+    id: 'devops-cicd',
+    title: 'DevOps & CI/CD',
+    description: 'Streamline development workflows with automated testing, deployment, and monitoring solutions.',
+    longDescription: 'Complete DevOps and CI/CD solutions that streamline development workflows with automated testing, deployment, and monitoring. Improves development speed and reduces deployment risks.',
+    icon: '⚙️',
+    category: 'IT Services',
+    features: [
+      'Automated Testing',
+      'Continuous Deployment',
+      'Infrastructure Monitoring',
+      'Version Control',
+      'Collaboration Tools',
+      'Performance Monitoring',
+      'Security Scanning',
+      'Rollback Capabilities'
+    ],
+    benefits: [
+      'Faster deployments',
+      'Reduced risks',
+      'Better collaboration',
+      'Automated testing',
+      'Improved quality'
+    ],
+    pricing: {
+      starting: '$599/month',
+      enterprise: '$2,999/month',
+      custom: true
+    },
+    marketPrice: '$1200-5000/month',
+    link: '/devops-cicd',
+    popular: true,
+    tags: ['DevOps', 'CI/CD', 'Automation', 'Development'],
+    useCases: ['Development Teams', 'Enterprises', 'Startups', 'Agencies'],
+    integrations: ['Git', 'Cloud Platforms', 'Monitoring Tools', 'Testing Frameworks'],
+    support: ['24/7 Support', 'DevOps Consultation', 'Training', 'Implementation'],
+    sla: '99.9% Uptime',
+    compliance: ['Development Standards', 'Security', 'Quality Assurance']
+  },
+  {
+    id: 'database-management',
+    title: 'Database Management',
+    description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
+    longDescription: 'Comprehensive database management services including design, optimization, migration, and ongoing management. Uses AI-powered performance tuning to ensure optimal database performance.',
+    icon: '🗄️',
+    category: 'IT Services',
+    features: [
+      'Database Design',
+      'Performance Tuning',
+      'Migration Services',
+      'Backup & Recovery',
+      'Monitoring',
+      'Security Hardening',
+      'Scalability Planning',
+      'AI Optimization'
+    ],
+    benefits: [
+      'Better performance',
+      'Data security',
+      'Reduced downtime',
+      'Cost optimization',
+      'Expert management'
+    ],
+    pricing: {
+      starting: '$399/month',
+      enterprise: '$1,999/month',
+      custom: true
+    },
+    marketPrice: '$800-3000/month',
+    link: '/database-management',
+    popular: true,
+    tags: ['Database', 'Performance', 'Migration', 'AI'],
+    useCases: ['Enterprises', 'E-commerce', 'SaaS', 'Data Companies'],
+    integrations: ['Database Systems', 'Cloud Platforms', 'Monitoring Tools', 'Backup Solutions'],
+    support: ['24/7 Support', 'Database Consultation', 'Training', 'Ongoing Management'],
+    sla: '99.9% Uptime',
+    compliance: ['Data Privacy', 'Security Standards', 'Industry Regulations']
+  },
+  {
+    id: 'network-solutions',
+    title: 'Network Solutions',
+    description: 'Enterprise networking, VPN setup, load balancing, and network security with 24/7 monitoring.',
+    longDescription: 'Complete network solutions including enterprise networking, VPN setup, load balancing, and network security. Provides 24/7 monitoring and support for optimal network performance.',
+    icon: '🌐',
+    category: 'IT Services',
+    features: [
+      'Enterprise Networking',
+      'VPN Setup',
+      'Load Balancing',
+      'Network Security',
+      '24/7 Monitoring',
+      'Performance Optimization',
+      'Disaster Recovery',
+      'Compliance'
+    ],
+    benefits: [
+      'Reliable connectivity',
+      'Enhanced security',
+      'Better performance',
+      '24/7 monitoring',
+      'Expert support'
+    ],
+    pricing: {
+      starting: '$699/month',
+      enterprise: '$3,499/month',
+      custom: true
+    },
+    marketPrice: '$1500-5000/month',
+    link: '/network-solutions',
+    popular: true,
+    tags: ['Networking', 'Security', 'VPN', 'Infrastructure'],
+    useCases: ['Enterprises', 'Remote Teams', 'Branches', 'Government'],
+    integrations: ['Network Equipment', 'Security Tools', 'Monitoring Systems', 'Cloud Platforms'],
+    support: ['24/7 Support', 'Network Consultation', 'Training', 'Ongoing Management'],
+    sla: '99.9% Uptime',
+    compliance: ['Network Standards', 'Security', 'Industry Regulations']
+  },
+  {
+    id: 'mobile-app-development',
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications with AI integration and modern UX design.',
+    longDescription: 'Professional mobile app development services for iOS and Android platforms. Includes AI integration, modern UX design, and ongoing support and maintenance.',
+    icon: '📱',
+    category: 'IT Services',
+    features: [
+      'Native iOS & Android',
+      'Cross-platform Development',
+      'AI Integration',
+      'Modern UX Design',
+      'App Store Optimization',
+      'Push Notifications',
+      'Analytics Integration',
+      'Maintenance & Support'
+    ],
+    benefits: [
+      'Professional apps',
+      'AI integration',
+      'Modern design',
+      'App store optimization',
+      'Ongoing support'
+    ],
+    pricing: {
+      starting: '$1,999/month',
+      enterprise: '$9,999/month',
+      custom: true
+    },
+    marketPrice: '$5000-25000/month',
+    link: '/mobile-app-development',
+    popular: true,
+    tags: ['Mobile Development', 'iOS', 'Android', 'AI'],
+    useCases: ['Startups', 'Enterprises', 'E-commerce', 'SaaS'],
+    integrations: ['Backend Systems', 'APIs', 'Analytics', 'Payment Systems'],
+    support: ['24/7 Support', 'Development Consultation', 'Training', 'Maintenance'],
+    sla: '99.9% Uptime',
+    compliance: ['App Store Guidelines', 'Privacy', 'Security', 'Accessibility']
+  },
+  {
+    id: 'it-consulting',
+    title: 'IT Consulting',
+    description: 'Strategic IT planning, technology assessment, and digital transformation consulting.',
+    longDescription: 'Expert IT consulting services that help businesses with strategic planning, technology assessment, and digital transformation. Provides guidance for technology decisions and implementation.',
+    icon: '🛠️',
+    category: 'IT Services',
+    features: [
+      'Technology Assessment',
+      'Strategic Planning',
+      'Cost Optimization',
+      'Digital Transformation',
+      'Training',
+      'Implementation Support',
+      'Best Practices',
+      'Ongoing Guidance'
+    ],
+    benefits: [
+      'Strategic guidance',
+      'Cost optimization',
+      'Digital transformation',
+      'Expert advice',
+      'Implementation support'
+    ],
+    pricing: {
+      starting: '$299/hour',
+      enterprise: '$499/hour',
+      custom: true
+    },
+    marketPrice: '$200-500/hour',
+    link: '/it-consulting',
+    popular: true,
+    tags: ['Consulting', 'Strategy', 'Digital Transformation', 'Technology'],
+    useCases: ['Enterprises', 'SMBs', 'Startups', 'Government'],
+    integrations: ['Existing Systems', 'Cloud Platforms', 'Software', 'Hardware'],
+    support: ['Consultation', 'Planning', 'Implementation', 'Ongoing Support'],
+    sla: 'Response within 24 hours',
+    compliance: ['Industry Standards', 'Best Practices', 'Regulatory Requirements']
+  },
+  {
+    id: 'it-support',
+    title: 'IT Support & Maintenance',
+    description: 'Comprehensive IT support, system maintenance, and troubleshooting with guaranteed response times.',
+    longDescription: 'Complete IT support and maintenance services with guaranteed response times. Includes system maintenance, troubleshooting, and ongoing support for optimal IT performance.',
+    icon: '📊',
+    category: 'IT Services',
+    features: [
+      '24/7 Support',
+      'System Maintenance',
+      'Troubleshooting',
+      'Performance Monitoring',
+      'Security Updates',
+      'Backup Management',
+      'User Training',
+      'Documentation'
+    ],
+    benefits: [
+      '24/7 support',
+      'Proactive maintenance',
+      'Fast response times',
+      'Reduced downtime',
+      'Expert support'
+    ],
+    pricing: {
+      starting: '$499/month',
+      enterprise: '$2,499/month',
+      custom: true
+    },
+    marketPrice: '$1000-4000/month',
+    link: '/it-support',
+    popular: true,
+    tags: ['IT Support', 'Maintenance', 'Troubleshooting', 'Help Desk'],
+    useCases: ['Enterprises', 'SMBs', 'Remote Teams', 'Branches'],
+    integrations: ['IT Systems', 'Monitoring Tools', 'Help Desk', 'Communication'],
+    support: ['24/7 Support', 'Remote Assistance', 'On-site Support', 'Training'],
+    sla: 'Response within 1 hour',
+    compliance: ['IT Standards', 'Security', 'Service Level Agreements']
+  },
+
+  // Emerging Technologies
+  {
+    id: '5g-implementation',
+    title: '5G Implementation',
+    description: 'Next-generation 5G network implementation with ultra-low latency and high-speed connectivity.',
+    longDescription: 'Advanced 5G network implementation services that provide ultra-low latency, high-speed connectivity, and support for IoT devices. Perfect for businesses looking to leverage 5G technology.',
+    icon: '📡',
+    category: 'Emerging Tech',
+    features: [
+      '5G Network Setup',
+      'Ultra-low Latency',
+      'High-speed Connectivity',
+      'IoT Support',
+      'Edge Computing',
+      'Network Optimization',
+      'Security Implementation',
+      'Performance Monitoring'
+    ],
+    benefits: [
+      'Ultra-fast speeds',
+      'Low latency',
+      'IoT support',
+      'Better performance',
+      'Future-ready'
+    ],
+    pricing: {
+      starting: '$2,999/month',
+      enterprise: '$15,999/month',
+      custom: true
+    },
+    marketPrice: '$5000-25000/month',
+    link: '/5g-implementation',
+    new: true,
+    tags: ['5G', 'Networking', 'IoT', 'Edge Computing'],
+    useCases: ['Enterprises', 'IoT Companies', 'Smart Cities', 'Manufacturing'],
+    integrations: ['Network Infrastructure', 'IoT Devices', 'Cloud Platforms', 'Applications'],
+    support: ['24/7 Support', 'Implementation', 'Training', 'Ongoing Management'],
+    sla: '99.9% Uptime',
+    compliance: ['5G Standards', 'Telecommunications', 'Security', 'Regulatory']
+  },
+  {
+    id: 'ai-3d-generation',
+    title: 'AI 3D Generation',
+    description: 'Create stunning 3D models, animations, and virtual environments using AI-powered generation tools.',
+    longDescription: 'Revolutionary AI-powered 3D generation platform that creates stunning 3D models, animations, and virtual environments. Perfect for gaming, architecture, and entertainment industries.',
+    icon: '🎮',
+    category: 'Emerging Tech',
+    features: [
+      '3D Model Generation',
+      'Animation Creation',
+      'Virtual Environments',
+      'AI-powered Design',
+      'Real-time Rendering',
+      'Asset Optimization',
+      'Collaboration Tools',
+      'Export Options'
+    ],
+    benefits: [
+      'Faster 3D creation',
+      'AI-powered design',
+      'High-quality output',
+      'Cost effective',
+      'Easy to use'
+    ],
+    pricing: {
+      starting: '$399/month',
+      enterprise: '$2,499/month',
+      custom: true
+    },
+    marketPrice: '$800-4000/month',
+    link: '/ai-3d-generation',
+    new: true,
+    tags: ['3D Generation', 'AI', 'Gaming', 'Architecture'],
+    useCases: ['Game Developers', 'Architects', 'Entertainment', 'Education'],
+    integrations: ['3D Software', 'Game Engines', 'Cloud Platforms', 'Design Tools'],
+    support: ['24/7 Support', 'Technical Support', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['3D Standards', 'Content Guidelines', 'Data Privacy', 'Security']
+  },
+  {
+    id: 'ai-holographic-workspace',
+    title: 'AI Holographic Workspace',
+    description: 'Immersive holographic work environments with AI-powered collaboration and virtual presence.',
+    longDescription: 'Cutting-edge holographic workspace technology that creates immersive work environments with AI-powered collaboration tools and virtual presence. Perfect for remote teams and virtual meetings.',
+    icon: '🥽',
+    category: 'Emerging Tech',
+    features: [
+      'Holographic Displays',
+      'Virtual Presence',
+      'AI Collaboration',
+      '3D Workspaces',
+      'Gesture Control',
+      'Real-time Interaction',
+      'Multi-user Support',
+      'Integration APIs'
+    ],
+    benefits: [
+      'Immersive experience',
+      'Better collaboration',
+      'Virtual presence',
+      'Innovative technology',
+      'Future-ready'
+    ],
+    pricing: {
+      starting: '$1,999/month',
+      enterprise: '$9,999/month',
+      custom: true
+    },
+    marketPrice: '$5000-25000/month',
+    link: '/ai-holographic-workspace',
+    new: true,
+    tags: ['Holographic', 'VR/AR', 'Collaboration', 'AI'],
+    useCases: ['Remote Teams', 'Enterprises', 'Education', 'Healthcare'],
+    integrations: ['Video Conferencing', 'Collaboration Tools', 'Cloud Platforms', 'Hardware'],
+    support: ['24/7 Support', 'Technical Support', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['Technology Standards', 'Privacy', 'Security', 'Accessibility']
+  },
+  {
+    id: 'ai-autonomous-systems',
+    title: 'AI Autonomous Systems',
+    description: 'Self-operating systems with AI decision-making capabilities for industrial and commercial applications.',
+    longDescription: 'Advanced AI autonomous systems that provide self-operating capabilities with intelligent decision-making. Perfect for industrial automation, smart cities, and autonomous vehicles.',
+    icon: '🤖',
+    category: 'Emerging Tech',
+    features: [
+      'Autonomous Operation',
+      'AI Decision Making',
+      'Sensor Integration',
+      'Machine Learning',
+      'Real-time Processing',
+      'Safety Systems',
+      'Monitoring & Control',
+      'Adaptive Learning'
+    ],
+    benefits: [
+      'Autonomous operation',
+      'Intelligent decisions',
+      'Improved efficiency',
+      'Safety enhancement',
+      'Cost reduction'
+    ],
+    pricing: {
+      starting: '$2,999/month',
+      enterprise: '$15,999/month',
+      custom: true
+    },
+    marketPrice: '$5000-30000/month',
+    link: '/ai-autonomous-systems',
+    new: true,
+    tags: ['Autonomous Systems', 'AI', 'Automation', 'IoT'],
+    useCases: ['Manufacturing', 'Smart Cities', 'Transportation', 'Agriculture'],
+    integrations: ['IoT Devices', 'Control Systems', 'Sensors', 'Cloud Platforms'],
+    support: ['24/7 Support', 'Technical Support', 'Training', 'Custom Development'],
+    sla: '99.95% Uptime',
+    compliance: ['Safety Standards', 'AI Ethics', 'Regulatory', 'Industry Standards']
+  },
+  {
+    id: 'ai-blockchain-solutions',
+    title: 'AI Blockchain Solutions',
+    description: 'Decentralized AI solutions with smart contracts, blockchain integration, and Web3 applications.',
+    longDescription: 'Innovative AI blockchain solutions that combine artificial intelligence with blockchain technology. Includes smart contracts, decentralized AI, and Web3 applications for the future of business.',
+    icon: '🔗',
+    category: 'Emerging Tech',
+    features: [
+      'Smart Contracts',
+      'Decentralized AI',
+      'Web3 Applications',
+      'Blockchain Integration',
+      'Token Economics',
+      'Security Protocols',
+      'Consensus Mechanisms',
+      'Interoperability'
+    ],
+    benefits: [
+      'Decentralized solutions',
+      'Enhanced security',
+      'Transparency',
+      'Innovation',
+      'Future-ready'
+    ],
+    pricing: {
+      starting: '$1,499/month',
+      enterprise: '$7,999/month',
+      custom: true
+    },
+    marketPrice: '$3000-15000/month',
+    link: '/ai-blockchain-solutions',
+    new: true,
+    tags: ['Blockchain', 'Web3', 'Smart Contracts', 'AI'],
+    useCases: ['DeFi', 'NFTs', 'Supply Chain', 'Identity Management'],
+    integrations: ['Blockchain Networks', 'Web3 Wallets', 'Smart Contracts', 'APIs'],
+    support: ['24/7 Support', 'Technical Support', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['Blockchain Standards', 'Regulatory', 'Security', 'Privacy']
+  },
+  {
+    id: 'ai-edge-computing',
+    title: 'AI Edge Computing',
+    description: 'Distributed AI processing at the edge for real-time decision making and reduced latency.',
+    longDescription: 'Advanced AI edge computing solutions that bring artificial intelligence processing closer to data sources. Provides real-time decision making, reduced latency, and improved performance.',
+    icon: '⚡',
+    category: 'Emerging Tech',
+    features: [
+      'Edge AI Processing',
+      'Real-time Decisions',
+      'Reduced Latency',
+      'Distributed Computing',
+      'IoT Integration',
+      'Bandwidth Optimization',
+      'Offline Capability',
+      'Scalable Architecture'
+    ],
+    benefits: [
+      'Real-time processing',
+      'Reduced latency',
+      'Better performance',
+      'Bandwidth savings',
+      'Offline capability'
+    ],
+    pricing: {
+      starting: '$999/month',
+      enterprise: '$4,999/month',
+      custom: true
+    },
+    marketPrice: '$2000-8000/month',
+    link: '/ai-edge-computing',
+    new: true,
+    tags: ['Edge Computing', 'AI', 'IoT', 'Real-time'],
+    useCases: ['IoT', 'Manufacturing', 'Healthcare', 'Smart Cities'],
+    integrations: ['IoT Devices', 'Cloud Platforms', 'Edge Hardware', 'Applications'],
+    support: ['24/7 Support', 'Technical Support', 'Training', 'Custom Development'],
+    sla: '99.9% Uptime',
+    compliance: ['Edge Standards', 'Security', 'Data Privacy', 'Industry Regulations']
   }
 ];
-;
-export const serviceCategories = [;
-  {;
-    id: 'ai',;
-    name: 'AI Services',;
-    description: 'Advanced artificial intelligence solutions',;
-    icon: '🤖',;
-    color: 'text-purple-400',;
-    bgColor: 'bg-purple-500/10';}
-  },;
-  {;
-    id: 'micro-saas',;
-    name: 'Micro SAAS Solutions',;
-    description: 'Affordable, powerful AI-driven tools',;
-    icon: '⚡',;
-    color: 'text-cyan-400',;
-    bgColor: 'bg-cyan-500/10';}
-  },;
-  {;
-    id: 'it',;
-    name: 'IT Services',;
-    description: 'Enterprise-grade IT solutions',;
-    icon: '☁️',;
-    color: 'text-blue-400',;
-    bgColor: 'bg-blue-500/10';}
-  },;
-  {;
-    id: 'emerging-tech',;
-    name: 'Emerging Technologies',;
-    description: 'Next-generation technology solutions',;
-    icon: '🚀',;
-    color: 'text-pink-400',;
-    bgColor: 'bg-pink-500/10';}
-  }
+
+export const categories = [
+  'All',
+  'AI Services',
+  'IT Services', 
+  'Micro SAAS',
+  'Emerging Tech',
+  'Consulting'
 ];
-;
-export const contactInfo = {;
-  phone: '+1 (302) 464-0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008, Middletown, DE 19709',;
-  website: 'https://ziontechgroup.com',;
-  hours: 'Mon-Fri: 9AM-6PM EST';}
+
+export const getServicesByCategory = (category: string) => {
+  if (category === 'All') return services;
+  return services.filter(service => service.category === category);
 };
-;
+
+export const getPopularServices = () => {
+  return services.filter(service => service.popular);
+};
+
+export const getNewServices = () => {
+  return services.filter(service => service.new);
+};
+
+export const getServiceById = (id: string) => {
+  return services.find(service => service.id === id);
+};

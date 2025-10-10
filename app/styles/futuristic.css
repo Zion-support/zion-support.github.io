@@ -1063,3 +1063,355 @@ body {
     animation: none;
   }
 }
+
+/* Enhanced Cyber Effects */
+.cyber-button {
+  position: relative;
+  background: linear-gradient(45deg, #00ffff, #8b5cf6);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.quantum-card {
+  position: relative;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 50%, 
+    rgba(236, 72, 153, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.quantum-card:hover::before {
+  opacity: 1;
+}
+
+.quantum-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.energy-pulse {
+  animation: energyPulse 2s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  }
+}
+
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.neural-network-bg {
+  position: relative;
+}
+
+.neural-network-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.1) 2px, transparent 2px);
+  background-size: 100px 100px, 80px 80px, 120px 120px;
+  animation: neuralPulse 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+.matrix-rain {
+  position: relative;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  animation: matrixRain 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes matrixRain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.cyber-grid {
+  position: relative;
+}
+
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.holographic-text {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3,
+    #ff0000
+  );
+  background-size: 400% 400%;
+  animation: holographicShift 3s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyber-text {
+  position: relative;
+  color: #00ffff;
+  text-shadow: 
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 15px #00ffff,
+    0 0 20px #00ffff;
+}
+
+.cyber-glow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.neon-glow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+  animation: neonFlicker 2s ease-in-out infinite alternate;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 640px) {
+  .quantum-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .holographic-text {
+    font-size: 2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .quantum-card {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+  
+  .cyber-button {
+    padding: 11px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .quantum-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .cyber-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .quantum-card {
+    padding: 1.75rem;
+    border-radius: 18px;
+  }
+  
+  .cyber-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Ultra-wide screen optimizations */
+@media (min-width: 1920px) {
+  .quantum-card {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .cyber-button {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+  }
+  
+  .holographic-text {
+    font-size: 4rem;
+  }
+  
+  .cyber-text {
+    font-size: 3rem;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-scan-line::before {
+    height: 1px;
+  }
+  
+  .cyber-grid::before {
+    background-size: 25px 25px;
+  }
+  
+  .neural-network-bg::before {
+    background-size: 50px 50px, 40px 40px, 60px 60px;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .quantum-card {
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(0, 255, 255, 0.4);
+  }
+  
+  .cyber-button {
+    background: linear-gradient(45deg, #00ffff, #8b5cf6);
+  }
+}
+
+/* Print optimizations */
+@media print {
+  .quantum-card,
+  .cyber-button,
+  .neon-text,
+  .cyber-text,
+  .holographic-text {
+    background: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    animation: none !important;
+  }
+  
+  .quantum-card::before,
+  .cyber-scan-line::before,
+  .neural-network-bg::before,
+  .matrix-rain::before,
+  .cyber-grid::before {
+    display: none !important;
+  }
+}
