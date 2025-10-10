@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
@@ -8,6 +7,7 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -37,6 +37,7 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setMicroSaasOpen(false);
     setIsOpen(false);
   };
 
@@ -136,10 +137,6 @@ const Navigation: React.FC = () => {
             >
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
-            
             <Link 
               to="/about" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -175,7 +172,7 @@ const Navigation: React.FC = () => {
                           {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              href={service.path}
+                              to={service.path}
                               className="block px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
